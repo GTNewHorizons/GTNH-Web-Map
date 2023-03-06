@@ -1,0 +1,475 @@
+# lotr Beta v20.2 for Minecraft 1.7.10
+version:1.7
+modname:lotr
+
+
+cfgfile:config/lotr.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %tile.lotr:beacon:* (tile.lotr:beacon), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockBeacon
+boxblock:id=%tile.lotr:beacon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8125,zmin=0.0,zmax=1.0,data=*
+
+# %tile.lotr:simbelmyne:* (tile.lotr:simbelmyne), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:simbelmyne,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:sapling:* (tile.lotr:sapling), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockSapling
+patchblock:id=%tile.lotr:sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:woodSlabSingle:* (tile.lotr:woodSlabSingle), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockWoodSlab
+boxblock:id=%tile.lotr:woodSlabSingle,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.lotr:woodSlabSingle,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsPine:* (tile.lotr:stairsPine), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsPine,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:shireHeather:* (tile.lotr:shireHeather), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:shireHeather,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:appleCrumble:* (tile.lotr:appleCrumble), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+boxblock:id=%tile.lotr:appleCrumble,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:appleCrumble,xmin=0.2083333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:appleCrumble,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%tile.lotr:appleCrumble,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%tile.lotr:appleCrumble,xmin=0.6458333730697632,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%tile.lotr:appleCrumble,xmin=0.7916666269302368,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%tile.lotr:appleCrumble,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%tile.lotr:appleCrumble,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:chandelier:* (tile.lotr:chandelier), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockChandelier
+patchblock:id=%tile.lotr:chandelier,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:pipeweedPlant:* (tile.lotr:pipeweedPlant), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockPipeweedPlant
+patchblock:id=%tile.lotr:pipeweedPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:pipeweed:* (tile.lotr:pipeweed), render=(CROPS), opaque=false,cls=lotr.common.block.LOTRBlockPipeweedCrop
+patchblock:id=%tile.lotr:pipeweed,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %tile.lotr:slabSingle:* (tile.lotr:slabSingle), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab
+boxblock:id=%tile.lotr:slabSingle,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.lotr:slabSingle,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsMordorBrick:* (tile.lotr:stairsMordorBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsMordorBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsGondorBrick:* (tile.lotr:stairsGondorBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsGondorBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:wallStone:* (tile.lotr:wallStone), render=(WALL), opaque=false,cls=lotr.common.block.LOTRBlockWall
+customblock:id=%tile.lotr:wallStone,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %tile.lotr:barrel:* (tile.lotr:barrel), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockBarrel
+boxblock:id=%tile.lotr:barrel,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.8125,zmin=0.125,zmax=0.875,data=*
+
+# %tile.lotr:lettuce:* (tile.lotr:lettuce), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockLettuceCrop
+patchblock:id=%tile.lotr:lettuce,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:orcBomb:* (tile.lotr:orcBomb), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockOrcBomb
+boxblock:id=%tile.lotr:orcBomb,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.9375,zmin=0.125,zmax=0.875,data=*
+
+# %tile.lotr:orcTorch:* (tile.lotr:orcTorch), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockOrcTorch
+boxblock:id=%tile.lotr:orcTorch,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=1.0,zmin=0.4000000059604645,zmax=0.6000000238418579,data=0
+boxblock:id=%tile.lotr:orcTorch,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.5375000238418579,zmin=0.4000000059604645,zmax=0.6000000238418579,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:elanor:* (tile.lotr:elanor), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:elanor,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:niphredil:* (tile.lotr:niphredil), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:niphredil,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:stairsMallorn:* (tile.lotr:stairsMallorn), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsMallorn,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:mallornLadder:* (tile.lotr:mallornLadder), render=(LADDER), opaque=false,cls=lotr.common.block.LOTRBlockLadder
+patchblock:id=%tile.lotr:mallornLadder,patch0=VertX0In@270,data=2
+patchblock:id=%tile.lotr:mallornLadder,patch0=VertX0In@90,data=3
+patchblock:id=%tile.lotr:mallornLadder,patch0=VertX0In@180,data=4
+patchblock:id=%tile.lotr:mallornLadder,patch0=VertX0In,data=5
+
+# %tile.lotr:plate:* (tile.lotr:plate), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockPlate
+boxblock:id=%tile.lotr:plate,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.125,zmin=0.125,zmax=0.875,data=*
+
+# %tile.lotr:orcSteelBars:* (tile.lotr:orcSteelBars), render=(PANE), opaque=false,cls=lotr.common.block.LOTRBlockPane
+customblock:id=%tile.lotr:orcSteelBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %tile.lotr:stairsGondorBrickMossy:* (tile.lotr:stairsGondorBrickMossy), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsGondorBrickMossy,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsGondorBrickCracked:* (tile.lotr:stairsGondorBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsGondorBrickCracked,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:athelas:* (tile.lotr:athelas), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:athelas,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:stalactite:* (tile.lotr:stalactite), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockStalactite
+boxblock:id=%tile.lotr:stalactite,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %tile.lotr:stairsRohanBrick:* (tile.lotr:stairsRohanBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsRohanBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:mallornTorch:* (tile.lotr:mallornTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockElvenTorch
+patchblock:id=%tile.lotr:mallornTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%tile.lotr:mallornTorch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%tile.lotr:mallornTorch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%tile.lotr:mallornTorch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%tile.lotr:mallornTorch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%tile.lotr:mallornTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:spawnerChest:* (tile.lotr:spawnerChest), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockSpawnerChest
+boxblock:id=%tile.lotr:spawnerChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %tile.lotr:pressurePlateMordorRock:* (tile.lotr:pressurePlateMordorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+boxblock:id=%tile.lotr:pressurePlateMordorRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:pressurePlateMordorRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:pressurePlateMordorRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:pressurePlateGondorRock:* (tile.lotr:pressurePlateGondorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+boxblock:id=%tile.lotr:pressurePlateGondorRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:pressurePlateGondorRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:pressurePlateGondorRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:buttonMordorRock:* (tile.lotr:buttonMordorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%tile.lotr:buttonMordorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %tile.lotr:buttonGondorRock:* (tile.lotr:buttonGondorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%tile.lotr:buttonGondorRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %tile.lotr:elvenPortal:* (tile.lotr:elvenPortal), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockElvenPortal
+boxblock:id=%tile.lotr:elvenPortal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# %tile.lotr:flowerPot:* (tile.lotr:flowerPot), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockFlowerPot
+boxblock:id=%tile.lotr:flowerPot,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.375,zmin=0.3125,zmax=0.6875,data=*
+
+# %tile.lotr:stairsDwarvenBrick:* (tile.lotr:stairsDwarvenBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsDwarvenBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:elvenBed:* (tile.lotr:elvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+
+# %tile.lotr:fruitSapling:* (tile.lotr:fruitSapling), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFruitSapling
+patchblock:id=%tile.lotr:fruitSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:stairsApple:* (tile.lotr:stairsApple), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsApple,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsPear:* (tile.lotr:stairsPear), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsPear,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsCherry:* (tile.lotr:stairsCherry), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsCherry,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:bluebell:* (tile.lotr:bluebell), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:bluebell,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:morgulShroom:* (tile.lotr:morgulShroom), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockMorgulShroom
+patchblock:id=%tile.lotr:morgulShroom,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:cherryPie:* (tile.lotr:cherryPie), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+boxblock:id=%tile.lotr:cherryPie,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:cherryPie,xmin=0.2083333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:cherryPie,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%tile.lotr:cherryPie,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%tile.lotr:cherryPie,xmin=0.6458333730697632,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%tile.lotr:cherryPie,xmin=0.7916666269302368,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%tile.lotr:cherryPie,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%tile.lotr:cherryPie,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:clover:* (tile.lotr:clover), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockClover
+boxblock:id=%tile.lotr:clover,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.4000000059604645,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+
+# %tile.lotr:slabSingle2:* (tile.lotr:slabSingle2), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab2
+boxblock:id=%tile.lotr:slabSingle2,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.lotr:slabSingle2,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsMirkOak:* (tile.lotr:stairsMirkOak), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsMirkOak,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:webUngoliant:* (tile.lotr:webUngoliant), render=(CROSSEDSQUARES), opaque=false,cls=net.minecraft.block.BlockWeb
+patchblock:id=%tile.lotr:webUngoliant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:woodElvenBed:* (tile.lotr:woodElvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+
+# %tile.lotr:woodElvenTorch:* (tile.lotr:woodElvenTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockWoodElvenTorch
+patchblock:id=%tile.lotr:woodElvenTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%tile.lotr:woodElvenTorch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%tile.lotr:woodElvenTorch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%tile.lotr:woodElvenTorch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%tile.lotr:woodElvenTorch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%tile.lotr:woodElvenTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:pressurePlateRohanRock:* (tile.lotr:pressurePlateRohanRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+boxblock:id=%tile.lotr:pressurePlateRohanRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:pressurePlateRohanRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:pressurePlateRohanRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:deadMarshPlant:* (tile.lotr:deadMarshPlant), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockDeadPlant
+patchblock:id=%tile.lotr:deadMarshPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:dwarvenDoor:* (tile.lotr:dwarvenDoor), render=(DOOR), opaque=false,cls=lotr.common.block.LOTRBlockDwarvenDoor
+customblock:id=%tile.lotr:dwarvenDoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.lotr:stairsCharred:* (tile.lotr:stairsCharred), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsCharred,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:dwarvenBed:* (tile.lotr:dwarvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+
+# %tile.lotr:morgulPortal:* (tile.lotr:morgulPortal), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockMorgulPortal
+boxblock:id=%tile.lotr:morgulPortal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# %tile.lotr:buttonRohanRock:* (tile.lotr:buttonRohanRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%tile.lotr:buttonRohanRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %tile.lotr:asphodel:* (tile.lotr:asphodel), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:asphodel,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:sapling2:* (tile.lotr:sapling2), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockSapling2
+patchblock:id=%tile.lotr:sapling2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:stairsLebethron:* (tile.lotr:stairsLebethron), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsLebethron,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:woodSlabSingle2:* (tile.lotr:woodSlabSingle2), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockWoodSlab2
+boxblock:id=%tile.lotr:woodSlabSingle2,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.lotr:woodSlabSingle2,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:dwarfHerb:* (tile.lotr:dwarfHerb), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+patchblock:id=%tile.lotr:dwarfHerb,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:mug:* (tile.lotr:mug), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockMug
+boxblock:id=%tile.lotr:mug,xmin=0.359375,xmax=0.640625,ymin=0.0,ymax=0.375,zmin=0.359375,zmax=0.640625,data=*
+
+# %tile.lotr:stairsBeech:* (tile.lotr:stairsBeech), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsBeech,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:entJar:* (tile.lotr:entJar), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockEntJar
+boxblock:id=%tile.lotr:entJar,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.875,zmin=0.25,zmax=0.75,data=*
+
+# %tile.lotr:mordorThorn:* (tile.lotr:mordorThorn), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockMordorThorn
+patchblock:id=%tile.lotr:mordorThorn,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:mordorMoss:* (tile.lotr:mordorMoss), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockMordorMoss
+boxblock:id=%tile.lotr:mordorMoss,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# %tile.lotr:stairsMordorBrickCracked:* (tile.lotr:stairsMordorBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsMordorBrickCracked,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:orcBed:* (tile.lotr:orcBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+
+# %tile.lotr:stairsElvenBrick:* (tile.lotr:stairsElvenBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsElvenBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsElvenBrickMossy:* (tile.lotr:stairsElvenBrickMossy), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsElvenBrickMossy,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsElvenBrickCracked:* (tile.lotr:stairsElvenBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsElvenBrickCracked,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsHolly:* (tile.lotr:stairsHolly), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsHolly,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:pressurePlateBlueRock:* (tile.lotr:pressurePlateBlueRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+boxblock:id=%tile.lotr:pressurePlateBlueRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:pressurePlateBlueRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:pressurePlateBlueRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:buttonBlueRock:* (tile.lotr:buttonBlueRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%tile.lotr:buttonBlueRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %tile.lotr:slabSingle3:* (tile.lotr:slabSingle3), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab3
+boxblock:id=%tile.lotr:slabSingle3,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.lotr:slabSingle3,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsBlueRockBrick:* (tile.lotr:stairsBlueRockBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsBlueRockBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:fence:* (tile.lotr:fence), render=(FENCE), opaque=false,cls=lotr.common.block.LOTRBlockFence
+customblock:id=%tile.lotr:fence,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# %tile.lotr:wallStone2:* (tile.lotr:wallStone2), render=(WALL), opaque=false,cls=lotr.common.block.LOTRBlockWall2
+customblock:id=%tile.lotr:wallStone2,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %tile.lotr:stairsAngmarBrick:* (tile.lotr:stairsAngmarBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsAngmarBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsAngmarBrickCracked:* (tile.lotr:stairsAngmarBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsAngmarBrickCracked,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsMango:* (tile.lotr:stairsMango), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsMango,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsBanana:* (tile.lotr:stairsBanana), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsBanana,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:banana:* (tile.lotr:banana), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockBanana
+boxblock:id=%tile.lotr:banana,xmin=0.375,xmax=0.625,ymin=0.1875,ymax=0.9375,zmin=0.0,zmax=0.25,data=0
+boxblock:id=%tile.lotr:banana,xmin=0.375,xmax=0.625,ymin=0.1875,ymax=0.9375,zmin=0.75,zmax=1.0,data=1
+boxblock:id=%tile.lotr:banana,xmin=0.0,xmax=0.25,ymin=0.1875,ymax=0.9375,zmin=0.375,zmax=0.625,data=2
+boxblock:id=%tile.lotr:banana,xmin=0.75,xmax=1.0,ymin=0.1875,ymax=0.9375,zmin=0.375,zmax=0.625,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:bananaCake:* (tile.lotr:bananaCake), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+boxblock:id=%tile.lotr:bananaCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:bananaCake,xmin=0.2083333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:bananaCake,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%tile.lotr:bananaCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%tile.lotr:bananaCake,xmin=0.6458333730697632,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%tile.lotr:bananaCake,xmin=0.7916666269302368,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%tile.lotr:bananaCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%tile.lotr:bananaCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:lionBed:* (tile.lotr:lionBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+
+# %tile.lotr:sapling3:* (tile.lotr:sapling3), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockSapling3
+patchblock:id=%tile.lotr:sapling3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:stairsMaple:* (tile.lotr:stairsMaple), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsMaple,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsLarch:* (tile.lotr:stairsLarch), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsLarch,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:highElvenTorch:* (tile.lotr:highElvenTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockElvenTorch
+patchblock:id=%tile.lotr:highElvenTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%tile.lotr:highElvenTorch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%tile.lotr:highElvenTorch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%tile.lotr:highElvenTorch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%tile.lotr:highElvenTorch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%tile.lotr:highElvenTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:highElvenBed:* (tile.lotr:highElvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+
+# %tile.lotr:pressurePlateRedRock:* (tile.lotr:pressurePlateRedRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+boxblock:id=%tile.lotr:pressurePlateRedRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.lotr:pressurePlateRedRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.lotr:pressurePlateRedRock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:buttonRedRock:* (tile.lotr:buttonRedRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%tile.lotr:buttonRedRock,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsRedRockBrick:* (tile.lotr:stairsRedRockBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsRedRockBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:slabSingle4:* (tile.lotr:slabSingle4), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab4
+boxblock:id=%tile.lotr:slabSingle4,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.lotr:slabSingle4,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsNearHaradBrick:* (tile.lotr:stairsNearHaradBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsNearHaradBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsDatePalm:* (tile.lotr:stairsDatePalm), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsDatePalm,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:date:* (tile.lotr:date), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockDate
+boxblock:id=%tile.lotr:date,xmin=0.375,xmax=0.625,ymin=0.3125,ymax=0.6875,zmin=0.0,zmax=0.25,data=0
+boxblock:id=%tile.lotr:date,xmin=0.375,xmax=0.625,ymin=0.3125,ymax=0.6875,zmin=0.75,zmax=1.0,data=1
+boxblock:id=%tile.lotr:date,xmin=0.0,xmax=0.25,ymin=0.3125,ymax=0.6875,zmin=0.375,zmax=0.625,data=2
+boxblock:id=%tile.lotr:date,xmin=0.75,xmax=1.0,ymin=0.3125,ymax=0.6875,zmin=0.375,zmax=0.625,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:slabSingleThatch:* (tile.lotr:slabSingleThatch), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlabThatch
+boxblock:id=%tile.lotr:slabSingleThatch,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.lotr:slabSingleThatch,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsThatch:* (tile.lotr:stairsThatch), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsThatch,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:fangornPlant:* (tile.lotr:fangornPlant), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFangornPlant
+patchblock:id=%tile.lotr:fangornPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.lotr:fangornRiverweed:* (tile.lotr:fangornRiverweed), render=(LILYPAD), opaque=false,cls=lotr.common.block.LOTRBlockFangornRiverweed
+patchblock:id=%tile.lotr:fangornRiverweed,patch0=HorizY001ZTop,data=*
+
+# %tile.lotr:morgulTorch:* (tile.lotr:morgulTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockMorgulTorch
+patchblock:id=%tile.lotr:morgulTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%tile.lotr:morgulTorch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%tile.lotr:morgulTorch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%tile.lotr:morgulTorch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%tile.lotr:morgulTorch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%tile.lotr:morgulTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.lotr:stairsArnorBrick:* (tile.lotr:stairsArnorBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsArnorBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsArnorBrickMossy:* (tile.lotr:stairsArnorBrickMossy), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsArnorBrickMossy,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsArnorBrickCracked:* (tile.lotr:stairsArnorBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsArnorBrickCracked,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsUrukBrick:* (tile.lotr:stairsUrukBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsUrukBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:strawBed:* (tile.lotr:strawBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+
+# %tile.lotr:stairsDolGuldurBrick:* (tile.lotr:stairsDolGuldurBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsDolGuldurBrick,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:stairsDolGuldurBrickCracked:* (tile.lotr:stairsDolGuldurBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+customblock:id=%tile.lotr:stairsDolGuldurBrickCracked,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.lotr:fallenLeaves:* (tile.lotr:fallenLeaves), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockFallenLeaves
+boxblock:id=%tile.lotr:fallenLeaves,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+
+# %tile.lotr:fallenLeavesLOTR:* (tile.lotr:fallenLeavesLOTR), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockFallenLeaves
+boxblock:id=%tile.lotr:fallenLeavesLOTR,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=*
+
+# %tile.lotr:thatchFloor:* (tile.lotr:thatchFloor), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockThatchFloor
+boxblock:id=%tile.lotr:thatchFloor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# %tile.lotr:dalishPastry:* (tile.lotr:dalishPastry), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=0
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.2916666865348816,xmax=0.8125,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=1
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.3958333432674408,xmax=0.8125,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=2
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.5,xmax=0.8125,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=3
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.6041666865348816,xmax=0.8125,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=4
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.7083333134651184,xmax=0.8125,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=5
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.8125,xmax=0.8126,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=6
+boxblock:id=%tile.lotr:dalishPastry,xmin=0.9166666269302368,xmax=0.9167666269302368,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=7
+boxblock:id=%tile.lotr:dalishPastry,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.1875,zmax=0.8125,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

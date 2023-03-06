@@ -1,0 +1,108 @@
+# PeripheralsPlusPlus 1.3.6
+version:1.7
+modname:PeripheralsPlusPlus
+
+
+cfgfile:config/PeripheralsPlusPlus.cfg
+
+
+texturepath:assets/peripheralsplusplus/textures/blocks/
+texture:id=peripheralsplusplus/aiChatBox,filename=assets/peripheralsplusplus/textures/blocks/aiChatBox.png
+texture:id=peripheralsplusplus/beeAnalyzer,filename=assets/peripheralsplusplus/textures/blocks/beeAnalyzer.png
+texture:id=peripheralsplusplus/butterflyAnalyzer,filename=assets/peripheralsplusplus/textures/blocks/butterflyAnalyzer.png
+texture:id=peripheralsplusplus/chatBox,filename=assets/peripheralsplusplus/textures/blocks/chatBox.png
+texture:id=peripheralsplusplus/chunkLoaderUpgrade,filename=assets/peripheralsplusplus/textures/blocks/chunkLoaderUpgrade.png
+texture:id=peripheralsplusplus/environmentScanner,filename=assets/peripheralsplusplus/textures/blocks/environmentScanner.png
+texture:id=peripheralsplusplus/feederUpgrade,filename=assets/peripheralsplusplus/textures/blocks/feederUpgrade.png
+texture:id=peripheralsplusplus/gardenerUpgrade,filename=assets/peripheralsplusplus/textures/blocks/gardenerUpgrade.png
+texture:id=peripheralsplusplus/interactiveSorter,filename=assets/peripheralsplusplus/textures/blocks/interactiveSorter.png
+texture:id=peripheralsplusplus/meBridge,filename=assets/peripheralsplusplus/textures/blocks/meBridge.png
+texture:id=peripheralsplusplus/noteBlock,filename=assets/peripheralsplusplus/textures/blocks/noteBlock.png
+texture:id=peripheralsplusplus/oreDictionary,filename=assets/peripheralsplusplus/textures/blocks/oreDictionary.png
+texture:id=peripheralsplusplus/peripheralContainer,filename=assets/peripheralsplusplus/textures/blocks/peripheralContainer.png
+texture:id=peripheralsplusplus/playerInterface,filename=assets/peripheralsplusplus/textures/blocks/playerInterface.png
+texture:id=peripheralsplusplus/playerSensor,filename=assets/peripheralsplusplus/textures/blocks/playerSensor.png
+texture:id=peripheralsplusplus/resupplyStation,filename=assets/peripheralsplusplus/textures/blocks/resupplyStation.png
+texture:id=peripheralsplusplus/rfCharger,filename=assets/peripheralsplusplus/textures/blocks/rfCharger.png
+texture:id=peripheralsplusplus/ridableUpgrade,filename=assets/peripheralsplusplus/textures/blocks/ridableUpgrade.png
+texture:id=peripheralsplusplus/signUpgrade,filename=assets/peripheralsplusplus/textures/blocks/signUpgrade.png
+texture:id=peripheralsplusplus/speaker,filename=assets/peripheralsplusplus/textures/blocks/speaker.png
+texture:id=peripheralsplusplus/tank,filename=assets/peripheralsplusplus/textures/blocks/tank.png
+texture:id=peripheralsplusplus/teleporter,filename=assets/peripheralsplusplus/textures/blocks/teleporter.png
+texture:id=peripheralsplusplus/teleporterFront,filename=assets/peripheralsplusplus/textures/blocks/teleporterFront.png
+texture:id=peripheralsplusplus/teleporterT2Front,filename=assets/peripheralsplusplus/textures/blocks/teleporterT2Front.png
+texture:id=peripheralsplusplus/timeSensor,filename=assets/peripheralsplusplus/textures/blocks/timeSensor.png
+texture:id=peripheralsplusplus/treeAnalyzer,filename=assets/peripheralsplusplus/textures/blocks/treeAnalyzer.png
+
+
+
+# %chatBox:* (chatBox), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockChatBox
+block:id=%chatBox,data=*,stdrot=true,face0-5=0:peripheralsplusplus/chatBox
+
+# %aiChatBox:* (aiChatBox), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockAIChatBox
+block:id=%aiChatBox,data=*,stdrot=true,face0-5=0:peripheralsplusplus/aiChatBox
+
+# %playerSensor:* (playerSensor), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockPlayerSensor
+block:id=%playerSensor,data=*,stdrot=true,face0-5=0:peripheralsplusplus/playerSensor
+
+# %rfCharger:* (rfCharger), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockRFCharger
+block:id=%rfCharger,data=*,stdrot=true,face0-5=0:peripheralsplusplus/rfCharger
+
+# %oreDictionary:* (oreDictionary), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockOreDictionary
+block:id=%oreDictionary,data=*,stdrot=true,face0-5=0:peripheralsplusplus/oreDictionary
+
+# %beeAnalyzer:* (beeAnalyzer), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockAnalyzerBee
+block:id=%beeAnalyzer,data=*,stdrot=true,face0-5=0:peripheralsplusplus/beeAnalyzer
+
+# %treeAnalyzer:* (treeAnalyzer), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockAnalyzerTree
+block:id=%treeAnalyzer,data=*,stdrot=true,face0-5=0:peripheralsplusplus/treeAnalyzer
+
+# %butterflyAnalyzer:* (butterflyAnalyzer), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockAnalyzerButterfly
+block:id=%butterflyAnalyzer,data=*,stdrot=true,face0-5=0:peripheralsplusplus/butterflyAnalyzer
+
+# %teleporter:* (teleporter), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockTeleporter
+block:id=%teleporter,data=*,stdrot=true,face0=0:peripheralsplusplus/teleporter,face1=0:peripheralsplusplus/teleporterFront,face2-5=0:peripheralsplusplus/teleporter
+
+# %teleporterT2:* (teleporterT2), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockTeleporterT2
+block:id=%teleporterT2,data=*,stdrot=true,face0=0:peripheralsplusplus/teleporter,face1=0:peripheralsplusplus/teleporterT2Front,face2-5=0:peripheralsplusplus/teleporter
+
+# %environmentScanner:* (environmentScanner), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockEnvironmentScanner
+block:id=%environmentScanner,data=*,stdrot=true,face0-5=0:peripheralsplusplus/environmentScanner
+
+# %speaker:* (speaker), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockSpeaker
+block:id=%speaker,data=*,stdrot=true,face0-1=0:peripheralsplusplus/chatBox,face2-5=0:peripheralsplusplus/speaker
+
+# %antenna:* (antenna), render=(CUSTOM), opaque=false,cls=com.austinv11.peripheralsplusplus.blocks.BlockAntenna
+block:id=%antenna,data=*,stdrot=true,face0-5=0:peripheralsplusplus/peripheralContainer
+
+# %peripheralContainer:* (peripheralContainer), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockPeripheralContainer
+block:id=%peripheralContainer,data=*,stdrot=true,face0-5=0:peripheralsplusplus/peripheralContainer
+
+# %meBridge:* (meBridge), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockMEBridge
+block:id=%meBridge,data=*,stdrot=true,face0-5=0:peripheralsplusplus/meBridge
+
+# %dummyBlock:* (dummyBlock), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockDummyBlock
+block:id=%dummyBlock,data=0,stdrot=true,face0-5=0:peripheralsplusplus/feederUpgrade
+block:id=%dummyBlock,data=1,stdrot=true,face0-5=0:peripheralsplusplus/tank
+block:id=%dummyBlock,data=2,stdrot=true,face0-5=0:peripheralsplusplus/signUpgrade
+block:id=%dummyBlock,data=3,stdrot=true,face0-5=0:peripheralsplusplus/gardenerUpgrade
+block:id=%dummyBlock,data=4,stdrot=true,face0-5=0:peripheralsplusplus/ridableUpgrade
+block:id=%dummyBlock,data=5,stdrot=true,face0-5=0:peripheralsplusplus/chunkLoaderUpgrade
+
+# %noteBlock:* (noteBlock), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockNote
+block:id=%noteBlock,data=*,stdrot=true,face0-5=0:peripheralsplusplus/noteBlock
+
+# %turtle:* (turtle), render=(CUSTOM), opaque=false,cls=com.austinv11.peripheralsplusplus.blocks.BlockTurtle
+block:id=%turtle,data=*,stdrot=true,face0-5=0:peripheralsplusplus/peripheralContainer
+
+# %timeSensor:* (timeSensor), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockTimeSensor
+block:id=%timeSensor,data=*,stdrot=true,face0-5=0:peripheralsplusplus/timeSensor
+
+# %interactiveSorter:* (interactiveSorter), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockInteractiveSorter
+block:id=%interactiveSorter,data=*,stdrot=true,face0-5=0:peripheralsplusplus/interactiveSorter
+
+# %playerInterface:* (playerInterface), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockPlayerInterface
+block:id=%playerInterface,data=*,stdrot=true,face0-5=0:peripheralsplusplus/playerInterface
+
+# %resupplyStation:* (resupplyStation), render=(STANDARD), opaque=true,cls=com.austinv11.peripheralsplusplus.blocks.BlockResupplyStation
+block:id=%resupplyStation,data=*,stdrot=true,face0-5=0:peripheralsplusplus/resupplyStation

@@ -1,0 +1,15 @@
+# FlatSigns 2.1.0.19
+version:1.7
+modname:FlatSigns
+
+
+cfgfile:config/FlatSigns.cfg
+
+
+texturepath:assets/flatsigns/textures/blocks/
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+
+
+# %blockFlatSign:* (blockFlatSign), render=(CUSTOM), opaque=false,cls=myrathi.flatsigns.block.BlockFlatSign
+block:id=%blockFlatSign,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak

@@ -1,0 +1,16 @@
+# PFAAChemica 0.2.23
+version:1.7
+modname:PFAAChemica
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/pfaachemica/textures/blocks/
+texture:id=Chemica/pollutedSoil,filename=assets/chemica/textures/blocks/pollutedSoil.png
+
+
+
+# %pollutedSoil:* (pollutedSoil), render=(STANDARD), opaque=true,cls=org.pfaa.chemica.block.PollutedSoil
+block:id=%pollutedSoil,data=*,stdrot=true,face0-5=0:Chemica/pollutedSoil

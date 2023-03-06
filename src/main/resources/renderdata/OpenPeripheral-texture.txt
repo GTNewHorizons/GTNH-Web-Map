@@ -1,0 +1,79 @@
+# OpenPeripheral 0.5.1
+version:1.7
+modname:OpenPeripheral
+
+
+cfgfile:config/OpenPeripheral.cfg
+
+
+texturepath:assets/openperipheral/textures/blocks/
+texture:id=openperipheraladdons/bridge,filename=assets/openperipheraladdons/textures/blocks/bridge.png
+texture:id=openperipheraladdons/pim_blue,filename=assets/openperipheraladdons/textures/blocks/pim_blue.png
+texture:id=openperipheraladdons/proxy_bottom,filename=assets/openperipheraladdons/textures/blocks/proxy_bottom.png
+texture:id=openperipheraladdons/proxy_side,filename=assets/openperipheraladdons/textures/blocks/proxy_side.png
+texture:id=openperipheraladdons/proxy_top,filename=assets/openperipheraladdons/textures/blocks/proxy_top.png
+texture:id=openperipheraladdons/selector_bottom,filename=assets/openperipheraladdons/textures/blocks/selector_bottom.png
+texture:id=openperipheraladdons/selector_front,filename=assets/openperipheraladdons/textures/blocks/selector_front.png
+texture:id=openperipheraladdons/selector_side,filename=assets/openperipheraladdons/textures/blocks/selector_side.png
+texture:id=openperipheraladdons/sensor,filename=assets/openperipheraladdons/textures/blocks/sensor.png
+texture:id=openperipheraladdons/ticketmachine_back,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_back.png
+texture:id=openperipheraladdons/ticketmachine_bottom,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_bottom.png
+texture:id=openperipheraladdons/ticketmachine_front_empty,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_front_empty.png
+texture:id=openperipheraladdons/ticketmachine_left,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_left.png
+texture:id=openperipheraladdons/ticketmachine_right,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_right.png
+texture:id=openperipheraladdons/ticketmachine_top,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_top.png
+
+
+
+# %ticketmachine:* (ticketmachine), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.ticketmachine.BlockTicketMachine
+block:id=%ticketmachine,data=0,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_back,face3=0:openperipheraladdons/ticketmachine_front_empty,face4=0:openperipheraladdons/ticketmachine_right,face5=0:openperipheraladdons/ticketmachine_left
+block:id=%ticketmachine,data=1,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_left,face3=0:openperipheraladdons/ticketmachine_right,face4=0:openperipheraladdons/ticketmachine_back,face5=0:openperipheraladdons/ticketmachine_front_empty
+block:id=%ticketmachine,data=2,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_front_empty,face3=0:openperipheraladdons/ticketmachine_back,face4=0:openperipheraladdons/ticketmachine_left,face5=0:openperipheraladdons/ticketmachine_right
+block:id=%ticketmachine,data=3,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_right,face3=0:openperipheraladdons/ticketmachine_left,face4=0:openperipheraladdons/ticketmachine_front_empty,face5=0:openperipheraladdons/ticketmachine_back
+block:id=%ticketmachine,data=4,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_back,face3=0:openperipheraladdons/ticketmachine_front_empty,face4=0:openperipheraladdons/ticketmachine_right,face5=0:openperipheraladdons/ticketmachine_left
+block:id=%ticketmachine,data=5,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_left,face3=0:openperipheraladdons/ticketmachine_right,face4=0:openperipheraladdons/ticketmachine_back,face5=0:openperipheraladdons/ticketmachine_front_empty
+block:id=%ticketmachine,data=6,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_front_empty,face3=0:openperipheraladdons/ticketmachine_back,face4=0:openperipheraladdons/ticketmachine_left,face5=0:openperipheraladdons/ticketmachine_right
+block:id=%ticketmachine,data=7,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_right,face3=0:openperipheraladdons/ticketmachine_left,face4=0:openperipheraladdons/ticketmachine_front_empty,face5=0:openperipheraladdons/ticketmachine_back
+block:id=%ticketmachine,data=8,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_back,face3=0:openperipheraladdons/ticketmachine_front_empty,face4=0:openperipheraladdons/ticketmachine_right,face5=0:openperipheraladdons/ticketmachine_left
+block:id=%ticketmachine,data=9,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_left,face3=0:openperipheraladdons/ticketmachine_right,face4=0:openperipheraladdons/ticketmachine_back,face5=0:openperipheraladdons/ticketmachine_front_empty
+block:id=%ticketmachine,data=10,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_front_empty,face3=0:openperipheraladdons/ticketmachine_back,face4=0:openperipheraladdons/ticketmachine_left,face5=0:openperipheraladdons/ticketmachine_right
+block:id=%ticketmachine,data=11,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_right,face3=0:openperipheraladdons/ticketmachine_left,face4=0:openperipheraladdons/ticketmachine_front_empty,face5=0:openperipheraladdons/ticketmachine_back
+block:id=%ticketmachine,data=12,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_back,face3=0:openperipheraladdons/ticketmachine_front_empty,face4=0:openperipheraladdons/ticketmachine_right,face5=0:openperipheraladdons/ticketmachine_left
+block:id=%ticketmachine,data=13,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_left,face3=0:openperipheraladdons/ticketmachine_right,face4=0:openperipheraladdons/ticketmachine_back,face5=0:openperipheraladdons/ticketmachine_front_empty
+block:id=%ticketmachine,data=14,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_front_empty,face3=0:openperipheraladdons/ticketmachine_back,face4=0:openperipheraladdons/ticketmachine_left,face5=0:openperipheraladdons/ticketmachine_right
+block:id=%ticketmachine,data=15,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_right,face3=0:openperipheraladdons/ticketmachine_left,face4=0:openperipheraladdons/ticketmachine_front_empty,face5=0:openperipheraladdons/ticketmachine_back
+
+# %peripheralproxy:* (peripheralproxy), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.peripheralproxy.BlockPeripheralProxy
+block:id=%peripheralproxy,data=0,stdrot=true,face0=0:openperipheraladdons/proxy_top,face1=0:openperipheraladdons/proxy_bottom,face2-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=1,stdrot=true,face0=0:openperipheraladdons/proxy_bottom,face1=0:openperipheraladdons/proxy_top,face2-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=2,stdrot=true,face0-1=0:openperipheraladdons/proxy_side,face2=0:openperipheraladdons/proxy_top,face3=0:openperipheraladdons/proxy_bottom,face4-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=3,stdrot=true,face0-1=0:openperipheraladdons/proxy_side,face2=0:openperipheraladdons/proxy_bottom,face3=0:openperipheraladdons/proxy_top,face4-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=4,stdrot=true,face0-3=0:openperipheraladdons/proxy_side,face4=0:openperipheraladdons/proxy_top,face5=0:openperipheraladdons/proxy_bottom
+block:id=%peripheralproxy,data=5,stdrot=true,face0-3=0:openperipheraladdons/proxy_side,face4=0:openperipheraladdons/proxy_bottom,face5=0:openperipheraladdons/proxy_top
+block:id=%peripheralproxy,data=6,data=7,data=8,stdrot=true,face0=0:openperipheraladdons/proxy_top,face1=0:openperipheraladdons/proxy_bottom,face2-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=9,stdrot=true,face0=0:openperipheraladdons/proxy_bottom,face1=0:openperipheraladdons/proxy_top,face2-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=10,stdrot=true,face0-1=0:openperipheraladdons/proxy_side,face2=0:openperipheraladdons/proxy_top,face3=0:openperipheraladdons/proxy_bottom,face4-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=11,stdrot=true,face0-1=0:openperipheraladdons/proxy_side,face2=0:openperipheraladdons/proxy_bottom,face3=0:openperipheraladdons/proxy_top,face4-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=12,stdrot=true,face0-3=0:openperipheraladdons/proxy_side,face4=0:openperipheraladdons/proxy_top,face5=0:openperipheraladdons/proxy_bottom
+block:id=%peripheralproxy,data=13,stdrot=true,face0-3=0:openperipheraladdons/proxy_side,face4=0:openperipheraladdons/proxy_bottom,face5=0:openperipheraladdons/proxy_top
+block:id=%peripheralproxy,data=14,data=15,stdrot=true,face0=0:openperipheraladdons/proxy_top,face1=0:openperipheraladdons/proxy_bottom,face2-5=0:openperipheraladdons/proxy_side
+
+# %glassesbridge:* (glassesbridge), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.glasses.BlockGlassesBridge
+block:id=%glassesbridge,data=*,stdrot=true,face0-5=0:openperipheraladdons/bridge
+
+# %pim:* (pim), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openperipheral.addons.pim.BlockPIM
+block:id=%pim,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openperipheraladdons/pim_blue
+
+# %sensor:* (sensor), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openperipheral.addons.sensors.BlockSensor
+block:id=%sensor,data=*,stdrot=true,face0-5=0:openperipheraladdons/sensor
+
+# %selector:* (selector), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openperipheral.addons.selector.BlockSelector
+block:id=%selector,data=0,stdrot=true,face0=0:openperipheraladdons/selector_front,face1=0:openperipheraladdons/selector_bottom,face2-5=0:openperipheraladdons/selector_side
+block:id=%selector,data=1,stdrot=true,face0=0:openperipheraladdons/selector_bottom,face1=0:openperipheraladdons/selector_front,face2-5=0:openperipheraladdons/selector_side
+block:id=%selector,data=2,stdrot=true,face0-1=0:openperipheraladdons/selector_side,face2=0:openperipheraladdons/selector_front,face3=0:openperipheraladdons/selector_bottom,face4-5=0:openperipheraladdons/selector_side
+block:id=%selector,data=3,stdrot=true,face0-1=0:openperipheraladdons/selector_side,face2=0:openperipheraladdons/selector_bottom,face3=0:openperipheraladdons/selector_front,face4-5=0:openperipheraladdons/selector_side
+block:id=%selector,data=4,stdrot=true,face0-3=0:openperipheraladdons/selector_side,face4=0:openperipheraladdons/selector_front,face5=0:openperipheraladdons/selector_bottom
+block:id=%selector,data=5,stdrot=true,face0-3=0:openperipheraladdons/selector_side,face4=0:openperipheraladdons/selector_bottom,face5=0:openperipheraladdons/selector_front
+block:id=%selector,data=6,data=7,data=8,stdrot=true,face0=0:openperipheraladdons/selector_front,face1=0:openperipheraladdons/selector_bottom,face2-5=0:openperipheraladdons/selector_side
+block:id=%selector,data=9,data=10,data=11,stdrot=true,face0=0:openperipheraladdons/selector_bottom,face1=0:openperipheraladdons/selector_front,face2-5=0:openperipheraladdons/selector_side
+block:id=%selector,data=12,data=13,data=14,data=15,stdrot=true,face0=0:openperipheraladdons/selector_front,face1=0:openperipheraladdons/selector_bottom,face2-5=0:openperipheraladdons/selector_side

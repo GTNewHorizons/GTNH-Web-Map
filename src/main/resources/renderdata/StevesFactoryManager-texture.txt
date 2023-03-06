@@ -1,0 +1,90 @@
+# StevesFactoryManager A93
+version:1.7
+modname:StevesFactoryManager
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/stevesfactorymanager/textures/blocks/
+texture:id=stevesfactory/cable,filename=assets/stevesfactory/textures/blocks/cable.png
+texture:id=stevesfactory/cable_breaker,filename=assets/stevesfactory/textures/blocks/cable_breaker.png
+texture:id=stevesfactory/cable_bud,filename=assets/stevesfactory/textures/blocks/cable_bud.png
+texture:id=stevesfactory/cable_camo,filename=assets/stevesfactory/textures/blocks/cable_camo.png
+texture:id=stevesfactory/cable_camo_inside,filename=assets/stevesfactory/textures/blocks/cable_camo_inside.png
+texture:id=stevesfactory/cable_camo_shape,filename=assets/stevesfactory/textures/blocks/cable_camo_shape.png
+texture:id=stevesfactory/cable_cluster,filename=assets/stevesfactory/textures/blocks/cable_cluster.png
+texture:id=stevesfactory/cable_cluster_adv,filename=assets/stevesfactory/textures/blocks/cable_cluster_adv.png
+texture:id=stevesfactory/cable_cluster_adv_front,filename=assets/stevesfactory/textures/blocks/cable_cluster_adv_front.png
+texture:id=stevesfactory/cable_cluster_front,filename=assets/stevesfactory/textures/blocks/cable_cluster_front.png
+texture:id=stevesfactory/cable_creative,filename=assets/stevesfactory/textures/blocks/cable_creative.png
+texture:id=stevesfactory/cable_idle,filename=assets/stevesfactory/textures/blocks/cable_idle.png
+texture:id=stevesfactory/cable_input,filename=assets/stevesfactory/textures/blocks/cable_input.png
+texture:id=stevesfactory/cable_intake,filename=assets/stevesfactory/textures/blocks/cable_intake.png
+texture:id=stevesfactory/cable_intake_instant,filename=assets/stevesfactory/textures/blocks/cable_intake_instant.png
+texture:id=stevesfactory/cable_intake_out,filename=assets/stevesfactory/textures/blocks/cable_intake_out.png
+texture:id=stevesfactory/cable_intake_out_instant,filename=assets/stevesfactory/textures/blocks/cable_intake_out_instant.png
+texture:id=stevesfactory/cable_output_weak,filename=assets/stevesfactory/textures/blocks/cable_output_weak.png
+texture:id=stevesfactory/cable_relay,filename=assets/stevesfactory/textures/blocks/cable_relay.png
+texture:id=stevesfactory/cable_relay_advanced,filename=assets/stevesfactory/textures/blocks/cable_relay_advanced.png
+texture:id=stevesfactory/cable_sign,filename=assets/stevesfactory/textures/blocks/cable_sign.png
+texture:id=stevesfactory/manager_bot,filename=assets/stevesfactory/textures/blocks/manager_bot.png
+texture:id=stevesfactory/manager_side,filename=assets/stevesfactory/textures/blocks/manager_side.png
+texture:id=stevesfactory/manager_top,filename=assets/stevesfactory/textures/blocks/manager_top.png
+
+
+
+# %BlockMachineManagerName:* (BlockMachineManagerName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockManager
+block:id=%BlockMachineManagerName,data=*,stdrot=true,face0=0:stevesfactory/manager_bot,face1=0:stevesfactory/manager_top,face2-5=0:stevesfactory/manager_side
+
+# %BlockCableName:* (BlockCableName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCable
+block:id=%BlockCableName,data=*,stdrot=true,face0-5=0:stevesfactory/cable
+
+# %BlockCableRelayName:* (BlockCableRelayName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableRelay
+block:id=%BlockCableRelayName,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_relay,face4-5=0:stevesfactory/cable_idle
+block:id=%BlockCableRelayName,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_relay_advanced,face4-5=0:stevesfactory/cable_idle
+
+# %BlockCableOutputName:* (BlockCableOutputName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableOutput
+block:id=%BlockCableOutputName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_output_weak
+
+# %BlockCableInputName:* (BlockCableInputName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableInput
+block:id=%BlockCableInputName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_input
+
+# %BlockCableCreativeName:* (BlockCableCreativeName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableCreative
+block:id=%BlockCableCreativeName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_creative
+
+# %BlockCableIntakeName:* (BlockCableIntakeName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableIntake
+block:id=%BlockCableIntakeName,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-2=0:stevesfactory/cable_intake,face3=0:stevesfactory/cable_intake_out,face4-5=0:stevesfactory/cable_intake
+block:id=%BlockCableIntakeName,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=0:stevesfactory/cable_intake_instant,face3=0:stevesfactory/cable_intake_out_instant,face4-5=0:stevesfactory/cable_intake_instant
+
+# %BlockCableBUDName:* (BlockCableBUDName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableBUD
+block:id=%BlockCableBUDName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_bud
+
+# %BlockCableBreakerName:* (BlockCableBreakerName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableBreaker
+block:id=%BlockCableBreakerName,data=*,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_breaker,face4-5=0:stevesfactory/cable_idle
+
+# %BlockCableClusterName:* (BlockCableClusterName), render=vswe.stevesfactory.blocks.RenderCamouflage(CUSTOM), opaque=false,cls=vswe.stevesfactory.blocks.BlockCableCluster
+block:id=%BlockCableClusterName,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-2=0:stevesfactory/cable_cluster,face3=0:stevesfactory/cable_cluster_front,face4-5=0:stevesfactory/cable_cluster
+block:id=%BlockCableClusterName,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=0:stevesfactory/cable_cluster_adv,face3=0:stevesfactory/cable_cluster_adv_front,face4-5=0:stevesfactory/cable_cluster_adv
+
+# %BlockCableCamouflageName:* (BlockCableCamouflageName), render=vswe.stevesfactory.blocks.RenderCamouflage(CUSTOM), opaque=false,cls=vswe.stevesfactory.blocks.BlockCableCamouflages
+block:id=%BlockCableCamouflageName,data=0,stdrot=true,face0-5=0:stevesfactory/cable_camo
+block:id=%BlockCableCamouflageName,data=1,stdrot=true,face0-5=0:stevesfactory/cable_camo_inside
+block:id=%BlockCableCamouflageName,data=2,stdrot=true,face0-5=0:stevesfactory/cable_camo_shape
+block:id=%BlockCableCamouflageName,data=3,stdrot=true,face0-5=0:stevesfactory/cable_camo
+block:id=%BlockCableCamouflageName,data=4,stdrot=true,face0-5=0:stevesfactory/cable_camo_inside
+block:id=%BlockCableCamouflageName,data=5,stdrot=true,face0-5=0:stevesfactory/cable_camo_shape
+block:id=%BlockCableCamouflageName,data=6,stdrot=true,face0-5=0:stevesfactory/cable_camo
+block:id=%BlockCableCamouflageName,data=7,stdrot=true,face0-5=0:stevesfactory/cable_camo_inside
+block:id=%BlockCableCamouflageName,data=8,stdrot=true,face0-5=0:stevesfactory/cable_camo_shape
+block:id=%BlockCableCamouflageName,data=9,stdrot=true,face0-5=0:stevesfactory/cable_camo
+block:id=%BlockCableCamouflageName,data=10,stdrot=true,face0-5=0:stevesfactory/cable_camo_inside
+block:id=%BlockCableCamouflageName,data=11,stdrot=true,face0-5=0:stevesfactory/cable_camo_shape
+block:id=%BlockCableCamouflageName,data=12,stdrot=true,face0-5=0:stevesfactory/cable_camo
+block:id=%BlockCableCamouflageName,data=13,stdrot=true,face0-5=0:stevesfactory/cable_camo_inside
+block:id=%BlockCableCamouflageName,data=14,stdrot=true,face0-5=0:stevesfactory/cable_camo_shape
+block:id=%BlockCableCamouflageName,data=15,stdrot=true,face0-5=0:stevesfactory/cable_camo
+
+# %BlockCableSignName:* (BlockCableSignName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableSign
+block:id=%BlockCableSignName,data=*,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_sign,face4-5=0:stevesfactory/cable_idle

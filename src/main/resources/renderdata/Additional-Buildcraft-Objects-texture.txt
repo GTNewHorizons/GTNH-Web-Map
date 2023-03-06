@@ -1,0 +1,118 @@
+# Additional-Buildcraft-Objects MC1.7.10-BC7.1release4.0.9
+version:1.7
+modname:Additional-Buildcraft-Objects
+
+
+cfgfile:config/abo/main.conf
+
+
+texturepath:assets/additional-buildcraft-objects/textures/blocks/
+texture:id=additional-buildcraft-objects/PipeItemsBounceClosed,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsBounceClosed.png
+texture:id=additional-buildcraft-objects/PipeItemsCompactorOff,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsCompactorOff.png
+texture:id=additional-buildcraft-objects/PipeItemsCrossover,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsCrossover.png
+texture:id=additional-buildcraft-objects/PipeItemsDivide,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsDivide.png
+texture:id=additional-buildcraft-objects/PipeItemsEnderExtract,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsEnderExtract.png
+texture:id=additional-buildcraft-objects/PipeItemsExtract,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsExtract.png
+texture:id=additional-buildcraft-objects/PipeItemsInsertNew,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsInsertNew.png
+texture:id=additional-buildcraft-objects/PipeItemsRoundRobin,filename=assets/additional-buildcraft-objects/textures/blocks/PipeItemsRoundRobin.png
+texture:id=additional-buildcraft-objects/PipeLiquidsBalance,filename=assets/additional-buildcraft-objects/textures/blocks/PipeLiquidsBalance.png
+texture:id=additional-buildcraft-objects/PipeLiquidsDrain,filename=assets/additional-buildcraft-objects/textures/blocks/PipeLiquidsDrain.png
+texture:id=additional-buildcraft-objects/PipeLiquidsGoldenIron,filename=assets/additional-buildcraft-objects/textures/blocks/PipeLiquidsGoldenIron.png
+texture:id=additional-buildcraft-objects/PipeLiquidsInsertion,filename=assets/additional-buildcraft-objects/textures/blocks/PipeLiquidsInsertion.png
+texture:id=additional-buildcraft-objects/PipeLiquidsReinforcedGolden,filename=assets/additional-buildcraft-objects/textures/blocks/PipeLiquidsReinforcedGolden.png
+texture:id=additional-buildcraft-objects/PipeLiquidsReinforcedGoldenIron,filename=assets/additional-buildcraft-objects/textures/blocks/PipeLiquidsReinforcedGoldenIron.png
+texture:id=additional-buildcraft-objects/PipeLiquidsValveClosed,filename=assets/additional-buildcraft-objects/textures/blocks/PipeLiquidsValveClosed.png
+texture:id=additional-buildcraft-objects/PipePowerIron,filename=assets/additional-buildcraft-objects/textures/blocks/PipePowerIron.png
+texture:id=additional-buildcraft-objects/PipePowerSwitchUnpowered,filename=assets/additional-buildcraft-objects/textures/blocks/PipePowerSwitchUnpowered.png
+texture:id=additional-buildcraft-objects/blockAccelerator,filename=assets/additional-buildcraft-objects/textures/blocks/blockAccelerator.png
+texture:id=additional-buildcraft-objects/sandstone_bottom,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_bottom.png
+texture:id=additional-buildcraft-objects/sandstone_bricks,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_bricks.png
+texture:id=additional-buildcraft-objects/sandstone_cracked_bricks,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_cracked_bricks.png
+texture:id=additional-buildcraft-objects/sandstone_cracked_smooth,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_cracked_smooth.png
+texture:id=additional-buildcraft-objects/sandstone_mossy_bricks,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_mossy_bricks.png
+texture:id=additional-buildcraft-objects/sandstone_mossy_smooth,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_mossy_smooth.png
+texture:id=additional-buildcraft-objects/sandstone_smooth,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_smooth.png
+texture:id=additional-buildcraft-objects/sandstone_top,filename=assets/additional-buildcraft-objects/textures/blocks/sandstone_top.png
+texture:id=minecraft/brick,filename=assets/minecraft/textures/blocks/brick.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/planks_acacia,filename=assets/minecraft/textures/blocks/planks_acacia.png
+texture:id=minecraft/planks_big_oak,filename=assets/minecraft/textures/blocks/planks_big_oak.png
+texture:id=minecraft/planks_birch,filename=assets/minecraft/textures/blocks/planks_birch.png
+texture:id=minecraft/planks_jungle,filename=assets/minecraft/textures/blocks/planks_jungle.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %sandStone:* (sandStone), render=(STANDARD), opaque=true,cls=da3dsoul.scaryGen.blocks.BlockSandStone
+block:id=%sandStone,data=0,stdrot=true,face0-5=0:additional-buildcraft-objects/sandstone_bricks
+block:id=%sandStone,data=1,stdrot=true,face0-5=0:additional-buildcraft-objects/sandstone_cracked_bricks
+block:id=%sandStone,data=2,stdrot=true,face0-5=0:additional-buildcraft-objects/sandstone_mossy_bricks
+block:id=%sandStone,data=3,stdrot=true,face0=0:additional-buildcraft-objects/sandstone_bottom,face1=0:additional-buildcraft-objects/sandstone_top,face2-5=0:additional-buildcraft-objects/sandstone_smooth
+block:id=%sandStone,data=4,stdrot=true,face0=0:additional-buildcraft-objects/sandstone_bottom,face1=0:additional-buildcraft-objects/sandstone_top,face2-5=0:additional-buildcraft-objects/sandstone_mossy_smooth
+block:id=%sandStone,data=5,stdrot=true,face0=0:additional-buildcraft-objects/sandstone_bottom,face1=0:additional-buildcraft-objects/sandstone_top,face2-5=0:additional-buildcraft-objects/sandstone_cracked_smooth
+block:id=%sandStone,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:additional-buildcraft-objects/sandstone_bottom,face1=0:additional-buildcraft-objects/sandstone_top,face2-5=0:additional-buildcraft-objects/sandstone_bricks
+
+# %windmillBlock:* (windmillBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=abo.energy.BlockWindmill
+block:id=%windmillBlock,data=*,stdrot=true,face0-5=0:minecraft/iron_block
+
+# %waterwheelBlock:* (waterwheelBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=abo.energy.BlockWaterwheel
+block:id=%waterwheelBlock,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%waterwheelBlock,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%waterwheelBlock,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%waterwheelBlock,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%waterwheelBlock,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%waterwheelBlock,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%waterwheelBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %acceleratorBlock:* (acceleratorBlock), render=(STANDARD), opaque=true,cls=abo.machines.BlockAccelerator
+block:id=%acceleratorBlock,data=*,stdrot=true,face0-5=0:additional-buildcraft-objects/blockAccelerator
+
+# %brickNoCrossing:* (brickNoCrossing), render=(STANDARD), opaque=true,cls=da3dsoul.scaryGen.blocks.BlockNoCrossing
+block:id=%brickNoCrossing,data=*,stdrot=true,face0-5=0:minecraft/brick
+
+# %null:* (null), render=(CUSTOM), opaque=false,cls=abo.energy.BlockNull
+block:id=%null,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%null,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%null,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%null,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%null,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%null,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%null,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %nullCollide:* (nullCollide), render=(CUSTOM), opaque=false,cls=abo.energy.BlockNullCollide
+block:id=%nullCollide,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%nullCollide,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%nullCollide,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%nullCollide,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%nullCollide,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%nullCollide,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%nullCollide,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %largebuttonwood:* (largebuttonwood), render=(STANDARD), opaque=false,cls=da3dsoul.scaryGen.blocks.BlockLargeButton
+block:id=%largebuttonwood,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%largebuttonwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %largebuttonstone:* (largebuttonstone), render=(STANDARD), opaque=false,cls=da3dsoul.scaryGen.blocks.BlockLargeButton
+block:id=%largebuttonstone,data=0,stdrot=true,face0-5=0:minecraft/stone
+block:id=%largebuttonstone,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+# BuildCraft pipes
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsvalve=0:additional-buildcraft-objects/PipeLiquidsValveClosed
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsdrain=0:additional-buildcraft-objects/PipeLiquidsDrain
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsgoldeniron=0:additional-buildcraft-objects/PipeLiquidsGoldenIron
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsreinforcedgolden=0:additional-buildcraft-objects/PipeLiquidsReinforcedGolden
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsreinforcedgoldeniron=0:additional-buildcraft-objects/PipeLiquidsReinforcedGoldenIron
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsbalance=0:additional-buildcraft-objects/PipeLiquidsBalance
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsroundrobin=0:additional-buildcraft-objects/PipeItemsRoundRobin
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsbounce=0:additional-buildcraft-objects/PipeItemsBounceClosed
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsdivide=0:additional-buildcraft-objects/PipeItemsDivide
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemscompactor=0:additional-buildcraft-objects/PipeItemsCompactorOff
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsinsertion=0:additional-buildcraft-objects/PipeItemsInsertNew
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsinsertion=0:additional-buildcraft-objects/PipeLiquidsInsertion
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsextraction=0:additional-buildcraft-objects/PipeItemsExtract
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsenderextraction=0:additional-buildcraft-objects/PipeItemsEnderExtract
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemscrossover=0:additional-buildcraft-objects/PipeItemsCrossover
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowerswitch=0:additional-buildcraft-objects/PipePowerSwitchUnpowered
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowerdirected=0:additional-buildcraft-objects/PipePowerIron
+

@@ -1,0 +1,265 @@
+# PneumaticCraft 1.12.7-150
+version:1.7
+modname:PneumaticCraft
+
+
+cfgfile:config/PneumaticCraft.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %plasticBlock:* (plasticBlock), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+boxblock:id=%plasticBlock,ymax=0.875,data=1
+boxblock:id=%plasticBlock,ymax=0.75,data=2
+boxblock:id=%plasticBlock,ymax=0.625,data=3
+boxblock:id=%plasticBlock,ymax=0.5,data=4
+boxblock:id=%plasticBlock,ymax=0.375,data=5
+boxblock:id=%plasticBlock,ymax=0.25,data=6
+boxblock:id=%plasticBlock,ymax=0.125,data=7
+boxblock:id=%plasticBlock,ymax=0.875,data=9
+boxblock:id=%plasticBlock,ymax=0.75,data=10
+boxblock:id=%plasticBlock,ymax=0.625,data=11
+boxblock:id=%plasticBlock,ymax=0.5,data=12
+boxblock:id=%plasticBlock,ymax=0.375,data=13
+boxblock:id=%plasticBlock,ymax=0.25,data=14
+boxblock:id=%plasticBlock,ymax=0.125,data=15
+
+# %etchingAcid:* (etchingAcid), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidEtchingAcid
+boxblock:id=%etchingAcid,ymax=0.875,data=1
+boxblock:id=%etchingAcid,ymax=0.75,data=2
+boxblock:id=%etchingAcid,ymax=0.625,data=3
+boxblock:id=%etchingAcid,ymax=0.5,data=4
+boxblock:id=%etchingAcid,ymax=0.375,data=5
+boxblock:id=%etchingAcid,ymax=0.25,data=6
+boxblock:id=%etchingAcid,ymax=0.125,data=7
+boxblock:id=%etchingAcid,ymax=0.875,data=9
+boxblock:id=%etchingAcid,ymax=0.75,data=10
+boxblock:id=%etchingAcid,ymax=0.625,data=11
+boxblock:id=%etchingAcid,ymax=0.5,data=12
+boxblock:id=%etchingAcid,ymax=0.375,data=13
+boxblock:id=%etchingAcid,ymax=0.25,data=14
+boxblock:id=%etchingAcid,ymax=0.125,data=15
+
+# %lpg:* (lpg), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+boxblock:id=%lpg,ymax=0.875,data=1
+boxblock:id=%lpg,ymax=0.75,data=2
+boxblock:id=%lpg,ymax=0.625,data=3
+boxblock:id=%lpg,ymax=0.5,data=4
+boxblock:id=%lpg,ymax=0.375,data=5
+boxblock:id=%lpg,ymax=0.25,data=6
+boxblock:id=%lpg,ymax=0.125,data=7
+boxblock:id=%lpg,ymax=0.875,data=9
+boxblock:id=%lpg,ymax=0.75,data=10
+boxblock:id=%lpg,ymax=0.625,data=11
+boxblock:id=%lpg,ymax=0.5,data=12
+boxblock:id=%lpg,ymax=0.375,data=13
+boxblock:id=%lpg,ymax=0.25,data=14
+boxblock:id=%lpg,ymax=0.125,data=15
+
+# %fuel:* (fuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+boxblock:id=%fuel,ymax=0.875,data=1
+boxblock:id=%fuel,ymax=0.75,data=2
+boxblock:id=%fuel,ymax=0.625,data=3
+boxblock:id=%fuel,ymax=0.5,data=4
+boxblock:id=%fuel,ymax=0.375,data=5
+boxblock:id=%fuel,ymax=0.25,data=6
+boxblock:id=%fuel,ymax=0.125,data=7
+boxblock:id=%fuel,ymax=0.875,data=9
+boxblock:id=%fuel,ymax=0.75,data=10
+boxblock:id=%fuel,ymax=0.625,data=11
+boxblock:id=%fuel,ymax=0.5,data=12
+boxblock:id=%fuel,ymax=0.375,data=13
+boxblock:id=%fuel,ymax=0.25,data=14
+boxblock:id=%fuel,ymax=0.125,data=15
+
+# %kerosene:* (kerosene), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+boxblock:id=%kerosene,ymax=0.875,data=1
+boxblock:id=%kerosene,ymax=0.75,data=2
+boxblock:id=%kerosene,ymax=0.625,data=3
+boxblock:id=%kerosene,ymax=0.5,data=4
+boxblock:id=%kerosene,ymax=0.375,data=5
+boxblock:id=%kerosene,ymax=0.25,data=6
+boxblock:id=%kerosene,ymax=0.125,data=7
+boxblock:id=%kerosene,ymax=0.875,data=9
+boxblock:id=%kerosene,ymax=0.75,data=10
+boxblock:id=%kerosene,ymax=0.625,data=11
+boxblock:id=%kerosene,ymax=0.5,data=12
+boxblock:id=%kerosene,ymax=0.375,data=13
+boxblock:id=%kerosene,ymax=0.25,data=14
+boxblock:id=%kerosene,ymax=0.125,data=15
+
+# %diesel:* (diesel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+boxblock:id=%diesel,ymax=0.875,data=1
+boxblock:id=%diesel,ymax=0.75,data=2
+boxblock:id=%diesel,ymax=0.625,data=3
+boxblock:id=%diesel,ymax=0.5,data=4
+boxblock:id=%diesel,ymax=0.375,data=5
+boxblock:id=%diesel,ymax=0.25,data=6
+boxblock:id=%diesel,ymax=0.125,data=7
+boxblock:id=%diesel,ymax=0.875,data=9
+boxblock:id=%diesel,ymax=0.75,data=10
+boxblock:id=%diesel,ymax=0.625,data=11
+boxblock:id=%diesel,ymax=0.5,data=12
+boxblock:id=%diesel,ymax=0.375,data=13
+boxblock:id=%diesel,ymax=0.25,data=14
+boxblock:id=%diesel,ymax=0.125,data=15
+
+# %oil:* (oil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+boxblock:id=%oil,ymax=0.875,data=1
+boxblock:id=%oil,ymax=0.75,data=2
+boxblock:id=%oil,ymax=0.625,data=3
+boxblock:id=%oil,ymax=0.5,data=4
+boxblock:id=%oil,ymax=0.375,data=5
+boxblock:id=%oil,ymax=0.25,data=6
+boxblock:id=%oil,ymax=0.125,data=7
+boxblock:id=%oil,ymax=0.875,data=9
+boxblock:id=%oil,ymax=0.75,data=10
+boxblock:id=%oil,ymax=0.625,data=11
+boxblock:id=%oil,ymax=0.5,data=12
+boxblock:id=%oil,ymax=0.375,data=13
+boxblock:id=%oil,ymax=0.25,data=14
+boxblock:id=%oil,ymax=0.125,data=15
+
+# %lubricant:* (lubricant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+boxblock:id=%lubricant,ymax=0.875,data=1
+boxblock:id=%lubricant,ymax=0.75,data=2
+boxblock:id=%lubricant,ymax=0.625,data=3
+boxblock:id=%lubricant,ymax=0.5,data=4
+boxblock:id=%lubricant,ymax=0.375,data=5
+boxblock:id=%lubricant,ymax=0.25,data=6
+boxblock:id=%lubricant,ymax=0.125,data=7
+boxblock:id=%lubricant,ymax=0.875,data=9
+boxblock:id=%lubricant,ymax=0.75,data=10
+boxblock:id=%lubricant,ymax=0.625,data=11
+boxblock:id=%lubricant,ymax=0.5,data=12
+boxblock:id=%lubricant,ymax=0.375,data=13
+boxblock:id=%lubricant,ymax=0.25,data=14
+boxblock:id=%lubricant,ymax=0.125,data=15
+
+# %airCannon:* (airCannon), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAirCannon
+boxblock:id=%airCannon,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.625,zmin=0.0625,zmax=0.9375,data=*
+
+# %slimePlant:* (slimePlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockSlimePlant
+patchblock:id=%slimePlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %creeperPlant:* (creeperPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockCreeperPlant
+patchblock:id=%creeperPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %squidPlant:* (squidPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockSquidPlant
+patchblock:id=%squidPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %fireFlower:* (fireFlower), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockFireFlower
+patchblock:id=%fireFlower,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %rainPlant:* (rainPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockRainPlant
+patchblock:id=%rainPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %enderPlant:* (enderPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockEnderPlant
+patchblock:id=%enderPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %lightningPlant:* (lightningPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockLightningPlant
+patchblock:id=%lightningPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %burstPlant:* (burstPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockBurstPlant
+patchblock:id=%burstPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %potionPlant:* (potionPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockPotionPlant
+patchblock:id=%potionPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %heliumPlant:* (heliumPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockHeliumPlant
+patchblock:id=%heliumPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %propulsionPlant:* (propulsionPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockPropulsionPlant
+patchblock:id=%propulsionPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %repulsionPlant:* (repulsionPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockRepulsionPlant
+patchblock:id=%repulsionPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %flyingFlower:* (flyingFlower), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockFlyingFlower
+patchblock:id=%flyingFlower,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %chopperPlant:* (chopperPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockChopperPlant
+patchblock:id=%chopperPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %vacuumPump:* (vacuumPump), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockVacuumPump
+boxblock:id=%vacuumPump,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.6875,zmin=0.125,zmax=0.875,data=*
+
+# %pneumaticDoor:* (pneumaticDoor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPneumaticDoor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%pneumaticDoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %assemblyIOUnit:* (assemblyIOUnit), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyIOUnit
+boxblock:id=%assemblyIOUnit,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.875,zmin=0.125,zmax=0.875,data=*
+
+# %assemblyPlatform:* (assemblyPlatform), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyPlatform
+boxblock:id=%assemblyPlatform,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.4375,zmin=0.125,zmax=0.875,data=*
+
+# %assemblyDrill:* (assemblyDrill), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyDrill
+boxblock:id=%assemblyDrill,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.875,zmin=0.125,zmax=0.875,data=*
+
+# %assemblyLaser:* (assemblyLaser), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyLaser
+boxblock:id=%assemblyLaser,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.875,zmin=0.125,zmax=0.875,data=*
+
+# %assemblyController:* (assemblyController), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyController
+boxblock:id=%assemblyController,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=1.0,zmin=0.1875,zmax=0.8125,data=*
+
+# %uvLightBox:* (uvLightBox), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockUVLightBox
+boxblock:id=%uvLightBox,xmin=0.28125,xmax=0.71875,ymin=0.0,ymax=0.4375,zmin=0.0625,zmax=0.9375,data=0,data=1
+boxblock:id=%uvLightBox,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.4375,zmin=0.28125,zmax=0.71875,data=2,data=3
+boxblock:id=%uvLightBox,xmin=0.28125,xmax=0.71875,ymin=0.0,ymax=0.4375,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %securityStation:* (securityStation), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockSecurityStation
+boxblock:id=%securityStation,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %universalSensor:* (universalSensor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockUniversalSensor
+boxblock:id=%universalSensor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %aphorismTile:* (aphorismTile), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockAphorismTile
+boxblock:id=%aphorismTile,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%aphorismTile,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%aphorismTile,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.0625,data=2
+boxblock:id=%aphorismTile,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9375,zmax=1.0,data=3
+boxblock:id=%aphorismTile,xmin=0.0,xmax=0.0625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%aphorismTile,xmin=0.9375,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %programmer:* (programmer), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockProgrammer
+boxblock:id=%programmer,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %plasticMixer:* (plasticMixer), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPlasticMixer
+boxblock:id=%plasticMixer,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=1.0,zmin=0.0625,zmax=0.9375,data=*
+
+# %heatSink:* (heatSink), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockHeatSink
+boxblock:id=%heatSink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%heatSink,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%heatSink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.5,data=2
+boxblock:id=%heatSink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.5,zmax=1.0,data=3
+boxblock:id=%heatSink,xmin=0.0,xmax=0.5,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%heatSink,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %gasLift:* (gasLift), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockGasLift
+boxblock:id=%gasLift,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=*
+
+# %thermopneumaticProcessingPlant:* (thermopneumaticProcessingPlant), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockThermopneumaticProcessingPlant
+boxblock:id=%thermopneumaticProcessingPlant,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=*
+
+# %keroseneLamp:* (keroseneLamp), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockKeroseneLamp
+boxblock:id=%keroseneLamp,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.625,zmin=0.1875,zmax=0.8125,data=0,data=1
+boxblock:id=%keroseneLamp,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2,data=3
+boxblock:id=%keroseneLamp,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.625,zmin=0.1875,zmax=0.8125,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %sentryTurret:* (sentryTurret), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockSentryTurret
+boxblock:id=%sentryTurret,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.875,zmin=0.1875,zmax=0.8125,data=*

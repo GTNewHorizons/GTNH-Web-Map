@@ -1,0 +1,16 @@
+# HatStand 4.0.0
+version:1.7
+modname:HatStand
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/hatstand/textures/blocks/
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+
+
+# %hats.addon.hatstands.block:* (hats.addon.hatstands.block), render=hats.addons.hatstand.client.render.BlockRenderHatStand(CUSTOM), opaque=false,cls=hats.addons.hatstand.common.block.BlockHatStand
+block:id=%hats.addon.hatstands.block,data=*,stdrot=true,face0-5=0:minecraft/planks_oak

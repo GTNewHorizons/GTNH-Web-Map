@@ -1,0 +1,16 @@
+# BuildCraft_Compat 
+version:1.7
+modname:BuildCraft|Compat
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/buildcraft_compat/textures/blocks/
+texture:id=buildcraftcompat/pipes/pipe_prop.item,filename=assets/buildcraftcompat/textures/blocks/pipes/pipe_prop.item.png
+
+
+# BuildCraft pipes
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemspropolis=0:buildcraftcompat/pipes/pipe_prop.item
+

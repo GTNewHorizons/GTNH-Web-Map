@@ -1,0 +1,151 @@
+# factorization 0.8.100
+version:1.7
+modname:factorization
+
+
+cfgfile:config/factorization.cfg
+
+
+texturepath:assets/factorization/textures/blocks/
+texture:id=factorization/blastBlock,filename=assets/factorization/textures/blocks/blastBlock.png
+texture:id=factorization/blasted_bedrock,filename=assets/factorization/textures/blocks/blasted_bedrock.png
+texture:id=factorization/ceramics/bisque,filename=assets/factorization/textures/blocks/ceramics/bisque.png
+texture:id=factorization/ceramics/dry,filename=assets/factorization/textures/blocks/ceramics/dry.png
+texture:id=factorization/charge/battery_bottom,filename=assets/factorization/textures/blocks/charge/battery_bottom.png
+texture:id=factorization/charge/battery_side,filename=assets/factorization/textures/blocks/charge/battery_side.png
+texture:id=factorization/charge/battery_top,filename=assets/factorization/textures/blocks/charge/battery_top.png
+texture:id=factorization/charge/wire,filename=assets/factorization/textures/blocks/charge/wire.png
+texture:id=factorization/colossi/arm_side,filename=assets/factorization/textures/blocks/colossi/arm_side.png
+texture:id=factorization/colossi/body,filename=assets/factorization/textures/blocks/colossi/body.png
+texture:id=factorization/colossi/body_cracked,filename=assets/factorization/textures/blocks/colossi/body_cracked.png
+texture:id=factorization/colossi/core,filename=assets/factorization/textures/blocks/colossi/core.png
+texture:id=factorization/colossi/core_back,filename=assets/factorization/textures/blocks/colossi/core_back.png
+texture:id=factorization/colossi/eye,filename=assets/factorization/textures/blocks/colossi/eye.png
+texture:id=factorization/colossi/eye_open,filename=assets/factorization/textures/blocks/colossi/eye_open.png
+texture:id=factorization/colossi/gargantuan_end,filename=assets/factorization/textures/blocks/colossi/gargantuan_end.png
+texture:id=factorization/colossi/gargantuan_high,filename=assets/factorization/textures/blocks/colossi/gargantuan_high.png
+texture:id=factorization/colossi/gargantuan_high_f,filename=assets/factorization/textures/blocks/colossi/gargantuan_high_f.png
+texture:id=factorization/colossi/gargantuan_low,filename=assets/factorization/textures/blocks/colossi/gargantuan_low.png
+texture:id=factorization/colossi/gargantuan_low_f,filename=assets/factorization/textures/blocks/colossi/gargantuan_low_f.png
+texture:id=factorization/colossi/leg,filename=assets/factorization/textures/blocks/colossi/leg.png
+texture:id=factorization/colossi/mask,filename=assets/factorization/textures/blocks/colossi/mask.png
+texture:id=factorization/colossi/mask_cracked,filename=assets/factorization/textures/blocks/colossi/mask_cracked.png
+texture:id=factorization/craft/packager_bottom,filename=assets/factorization/textures/blocks/craft/packager_bottom.png
+texture:id=factorization/craft/packager_side,filename=assets/factorization/textures/blocks/craft/packager_side.png
+texture:id=factorization/craft/packager_top,filename=assets/factorization/textures/blocks/craft/packager_top.png
+texture:id=factorization/craft/stamper_bottom,filename=assets/factorization/textures/blocks/craft/stamper_bottom.png
+texture:id=factorization/craft/stamper_side,filename=assets/factorization/textures/blocks/craft/stamper_side.png
+texture:id=factorization/craft/stamper_top,filename=assets/factorization/textures/blocks/craft/stamper_top.png
+texture:id=factorization/default_icon,filename=assets/factorization/textures/blocks/default_icon.png
+texture:id=factorization/error,filename=assets/factorization/textures/blocks/error.png
+texture:id=factorization/fractured_bedrock,filename=assets/factorization/textures/blocks/fractured_bedrock.png
+texture:id=factorization/machine/heater_spiral,filename=assets/factorization/textures/blocks/machine/heater_spiral.png
+texture:id=factorization/machine/slag_furnace_bottom,filename=assets/factorization/textures/blocks/machine/slag_furnace_bottom.png
+texture:id=factorization/machine/slag_furnace_face,filename=assets/factorization/textures/blocks/machine/slag_furnace_face.png
+texture:id=factorization/machine/slag_furnace_side,filename=assets/factorization/textures/blocks/machine/slag_furnace_side.png
+texture:id=factorization/machine/slag_furnace_top,filename=assets/factorization/textures/blocks/machine/slag_furnace_top.png
+texture:id=factorization/mantlerock,filename=assets/factorization/textures/blocks/mantlerock.png
+texture:id=factorization/material/transparent,filename=assets/factorization/textures/blocks/material/transparent.png
+texture:id=factorization/redstone/matcher_face,filename=assets/factorization/textures/blocks/redstone/matcher_face.png
+texture:id=factorization/redstone/matcher_side,filename=assets/factorization/textures/blocks/redstone/matcher_side.png
+texture:id=factorization/resource/dark_iron_block,filename=assets/factorization/textures/blocks/resource/dark_iron_block.png
+texture:id=factorization/resource/galena_ore,filename=assets/factorization/textures/blocks/resource/galena_ore.png
+texture:id=factorization/resource/lead_block,filename=assets/factorization/textures/blocks/resource/lead_block.png
+texture:id=factorization/resource/ore_dark_iron,filename=assets/factorization/textures/blocks/resource/ore_dark_iron.png
+texture:id=factorization/resource/silver_block,filename=assets/factorization/textures/blocks/resource/silver_block.png
+
+
+
+# %FzBlock:* (FzBlock), render=factorization.shared.FactorizationRender(CUSTOM), opaque=false,cls=factorization.shared.BlockFactorization
+block:id=%FzBlock,data=0,data=1,data=2,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=3,stdrot=true,face0=12000:factorization/craft/stamper_bottom,face1=12000:factorization/craft/stamper_top,face2-5=12000:factorization/craft/stamper_side
+block:id=%FzBlock,data=4,data=5,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=6,stdrot=true,face0-5=12000:factorization/resource/dark_iron_block
+block:id=%FzBlock,data=7,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=8,stdrot=true,face0=12000:factorization/craft/packager_bottom,face1=12000:factorization/craft/packager_top,face2-5=12000:factorization/craft/packager_side
+block:id=%FzBlock,data=9,data=10,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=11,stdrot=true,face0=12000:factorization/machine/slag_furnace_bottom,face1=12000:factorization/machine/slag_furnace_top,face2=12000:factorization/machine/slag_furnace_side,face3=12000:factorization/machine/slag_furnace_face,face4-5=12000:factorization/machine/slag_furnace_side
+block:id=%FzBlock,data=12,stdrot=true,face0=12000:factorization/charge/battery_bottom,face1=12000:factorization/charge/battery_top,face2-5=12000:factorization/charge/battery_side
+block:id=%FzBlock,data=13,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=14,stdrot=true,face0-5=12000:factorization/charge/wire
+block:id=%FzBlock,data=15,stdrot=true,face0-5=12000:factorization/machine/heater_spiral
+
+# %FzBlockBarrel:* (FzBlockBarrel), render=factorization.shared.FactorizationRender(CUSTOM), opaque=false,cls=factorization.shared.BlockFactorization
+block:id=%FzBlockBarrel,data=0,data=1,data=2,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlockBarrel,data=3,stdrot=true,face0=12000:factorization/craft/stamper_bottom,face1=12000:factorization/craft/stamper_top,face2-5=12000:factorization/craft/stamper_side
+block:id=%FzBlockBarrel,data=4,data=5,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlockBarrel,data=6,stdrot=true,face0-5=12000:factorization/resource/dark_iron_block
+block:id=%FzBlockBarrel,data=7,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlockBarrel,data=8,stdrot=true,face0=12000:factorization/craft/packager_bottom,face1=12000:factorization/craft/packager_top,face2-5=12000:factorization/craft/packager_side
+block:id=%FzBlockBarrel,data=9,data=10,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlockBarrel,data=11,stdrot=true,face0=12000:factorization/machine/slag_furnace_bottom,face1=12000:factorization/machine/slag_furnace_top,face2=12000:factorization/machine/slag_furnace_side,face3=12000:factorization/machine/slag_furnace_face,face4-5=12000:factorization/machine/slag_furnace_side
+block:id=%FzBlockBarrel,data=12,stdrot=true,face0=12000:factorization/charge/battery_bottom,face1=12000:factorization/charge/battery_top,face2-5=12000:factorization/charge/battery_side
+block:id=%FzBlockBarrel,data=13,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlockBarrel,data=14,stdrot=true,face0-5=12000:factorization/charge/wire
+block:id=%FzBlockBarrel,data=15,stdrot=true,face0-5=12000:factorization/machine/heater_spiral
+
+# %Lightair:* (Lightair), render=(CUSTOM), opaque=false,cls=factorization.wrath.BlockLightAir
+block:id=%Lightair,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:factorization/material/transparent
+
+# %ResourceBlock:* (ResourceBlock), render=(STANDARD), opaque=true,cls=factorization.common.BlockResource
+block:id=%ResourceBlock,data=0,stdrot=true,face0-5=0:factorization/resource/galena_ore
+block:id=%ResourceBlock,data=1,stdrot=true,face0-5=0:factorization/resource/silver_block
+block:id=%ResourceBlock,data=2,stdrot=true,face0-5=0:factorization/resource/lead_block
+block:id=%ResourceBlock,data=3,stdrot=true,face0-5=0:factorization/resource/dark_iron_block
+block:id=%ResourceBlock,data=5,stdrot=true,face0-5=0:factorization/ceramics/dry
+block:id=%ResourceBlock,data=6,stdrot=true,face0-5=0:factorization/ceramics/bisque
+block:id=%ResourceBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:factorization/error
+
+# %DarkIronOre:* (DarkIronOre), render=(STANDARD), opaque=true,cls=factorization.darkiron.BlockDarkIronOre
+block:id=%DarkIronOre,data=*,stdrot=true,face0-5=0:factorization/resource/ore_dark_iron
+
+# %FracturedBedrock:* (FracturedBedrock), render=(STANDARD), opaque=true,cls=factorization.common.FracturedBedrock
+block:id=%FracturedBedrock,data=*,stdrot=true,face0-5=0:factorization/fractured_bedrock
+
+# %BlastedBedrock:* (BlastedBedrock), render=(STANDARD), opaque=true,cls=factorization.common.BlastedBedrock
+block:id=%BlastedBedrock,data=*,stdrot=true,face0-5=0:factorization/blasted_bedrock
+
+# %GargantuanBlock:* (GargantuanBlock), render=(STANDARD), opaque=true,cls=factorization.colossi.GargantuanBlock
+block:id=%GargantuanBlock,data=0,stdrot=true,face0-1=0:factorization/colossi/gargantuan_end,face2-5=0:factorization/colossi/gargantuan_high_f
+block:id=%GargantuanBlock,data=1,stdrot=true,face0-1=0:factorization/colossi/gargantuan_end,face2-5=0:factorization/colossi/gargantuan_low_f
+block:id=%GargantuanBlock,data=2,stdrot=true,face0-1=0:factorization/colossi/gargantuan_low_f,face2-3=0:factorization/colossi/gargantuan_end,face4=0:factorization/colossi/gargantuan_low,face5=0:factorization/colossi/gargantuan_high
+block:id=%GargantuanBlock,data=3,stdrot=true,face0-1=0:factorization/colossi/gargantuan_high_f,face2-3=0:factorization/colossi/gargantuan_end,face4=0:factorization/colossi/gargantuan_high,face5=0:factorization/colossi/gargantuan_low
+block:id=%GargantuanBlock,data=4,stdrot=true,face0-1=0:factorization/colossi/gargantuan_low,face2=0:factorization/colossi/gargantuan_high,face3=0:factorization/colossi/gargantuan_low,face4-5=0:factorization/colossi/gargantuan_end
+block:id=%GargantuanBlock,data=5,stdrot=true,face0-1=0:factorization/colossi/gargantuan_high,face2=0:factorization/colossi/gargantuan_low,face3=0:factorization/colossi/gargantuan_high,face4-5=0:factorization/colossi/gargantuan_end
+block:id=%GargantuanBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:factorization/colossi/gargantuan_end
+
+# %MantleRock:* (MantleRock), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockNetherrack
+block:id=%MantleRock,data=*,stdrot=true,face0-5=0:factorization/mantlerock
+
+# %BlockMatcher:* (BlockMatcher), render=(STANDARD), opaque=true,cls=factorization.redstone.BlockMatcher
+block:id=%BlockMatcher,data=0,stdrot=true,face0-1=0:factorization/redstone/matcher_face,face2-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=1,stdrot=true,face0-1=0:factorization/redstone/matcher_side,face2-3=0:factorization/redstone/matcher_face,face4-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=2,stdrot=true,face0-3=0:factorization/redstone/matcher_side,face4-5=0:factorization/redstone/matcher_face
+block:id=%BlockMatcher,data=3,data=4,stdrot=true,face0-1=0:factorization/redstone/matcher_face,face2-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=5,stdrot=true,face0-1=0:factorization/redstone/matcher_side,face2-3=0:factorization/redstone/matcher_face,face4-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=6,stdrot=true,face0-3=0:factorization/redstone/matcher_side,face4-5=0:factorization/redstone/matcher_face
+block:id=%BlockMatcher,data=7,data=8,stdrot=true,face0-1=0:factorization/redstone/matcher_face,face2-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=9,stdrot=true,face0-1=0:factorization/redstone/matcher_side,face2-3=0:factorization/redstone/matcher_face,face4-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=10,stdrot=true,face0-3=0:factorization/redstone/matcher_side,face4-5=0:factorization/redstone/matcher_face
+block:id=%BlockMatcher,data=11,data=12,stdrot=true,face0-1=0:factorization/redstone/matcher_face,face2-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=13,stdrot=true,face0-1=0:factorization/redstone/matcher_side,face2-3=0:factorization/redstone/matcher_face,face4-5=0:factorization/redstone/matcher_side
+block:id=%BlockMatcher,data=14,stdrot=true,face0-3=0:factorization/redstone/matcher_side,face4-5=0:factorization/redstone/matcher_face
+block:id=%BlockMatcher,data=15,stdrot=true,face0-1=0:factorization/redstone/matcher_face,face2-5=0:factorization/redstone/matcher_side
+
+# %ArtifactForge:* (ArtifactForge), render=(ANVIL), opaque=false,cls=factorization.artifact.BlockForge
+block:id=%ArtifactForge,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:factorization/resource/dark_iron_block
+
+# %ColossalBlock:* (ColossalBlock), render=(STANDARD), opaque=true,cls=factorization.colossi.ColossalBlock
+block:id=%ColossalBlock,data=0,stdrot=true,face0-5=0:factorization/colossi/mask
+block:id=%ColossalBlock,data=1,stdrot=true,face0-5=0:factorization/colossi/body_cracked
+block:id=%ColossalBlock,data=2,stdrot=true,face0-5=0:factorization/colossi/arm_side
+block:id=%ColossalBlock,data=3,stdrot=true,face0-5=0:factorization/colossi/leg
+block:id=%ColossalBlock,data=4,stdrot=true,face0-5=0:factorization/colossi/body
+block:id=%ColossalBlock,data=5,stdrot=true,face0-5=0:factorization/colossi/eye
+block:id=%ColossalBlock,data=6,stdrot=true,face0-4=0:factorization/colossi/core_back,face5=0:factorization/colossi/core
+block:id=%ColossalBlock,data=7,stdrot=true,face0-5=0:factorization/colossi/eye_open
+block:id=%ColossalBlock,data=8,stdrot=true,face0-5=0:factorization/colossi/body
+block:id=%ColossalBlock,data=9,stdrot=true,face0-5=0:factorization/colossi/mask_cracked
+
+# %BlastBlock:* (BlastBlock), render=(STANDARD), opaque=true,cls=factorization.colossi.BlockBlast
+block:id=%BlastBlock,data=*,stdrot=true,face0-5=0:factorization/blastBlock

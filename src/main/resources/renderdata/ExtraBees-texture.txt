@@ -1,0 +1,30 @@
+# ExtraBees 2.0-dev5
+version:1.7
+modname:ExtraBees
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/extrabees/textures/blocks/
+texture:id=extrabees/ectoplasm,filename=assets/extrabees/textures/blocks/ectoplasm.png
+texture:id=extrabees/hive/marble.0,filename=assets/extrabees/textures/blocks/hive/marble.0.png
+texture:id=extrabees/hive/marble.1,filename=assets/extrabees/textures/blocks/hive/marble.1.png
+texture:id=extrabees/hive/nether.0,filename=assets/extrabees/textures/blocks/hive/nether.0.png
+texture:id=extrabees/hive/nether.1,filename=assets/extrabees/textures/blocks/hive/nether.1.png
+texture:id=extrabees/hive/rock.0,filename=assets/extrabees/textures/blocks/hive/rock.0.png
+texture:id=extrabees/hive/rock.1,filename=assets/extrabees/textures/blocks/hive/rock.1.png
+texture:id=extrabees/hive/water.0,filename=assets/extrabees/textures/blocks/hive/water.0.png
+texture:id=extrabees/hive/water.1,filename=assets/extrabees/textures/blocks/hive/water.1.png
+
+
+
+# %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
+block:id=%ectoplasm,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabees/ectoplasm
+
+# %hive:* (hive), render=(STANDARD), opaque=true,cls=binnie.extrabees.worldgen.BlockExtraBeeHive
+block:id=%hive,data=0,stdrot=true,face0-1=0:extrabees/hive/water.1,face2-5=0:extrabees/hive/water.0
+block:id=%hive,data=1,stdrot=true,face0-1=0:extrabees/hive/rock.1,face2-5=0:extrabees/hive/rock.0
+block:id=%hive,data=2,stdrot=true,face0-1=0:extrabees/hive/nether.1,face2-5=0:extrabees/hive/nether.0
+block:id=%hive,data=3,stdrot=true,face0-1=0:extrabees/hive/marble.1,face2-5=0:extrabees/hive/marble.0

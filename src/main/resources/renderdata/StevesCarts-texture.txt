@@ -1,0 +1,127 @@
+# StevesCarts 2.0.0.b18
+version:1.7
+modname:StevesCarts
+
+
+cfgfile:config/StevesCarts.cfg
+
+
+texturepath:assets/stevescarts/textures/blocks/
+texture:id=stevescarts/advanced_detector_rail,filename=assets/stevescarts/textures/blocks/advanced_detector_rail.png
+texture:id=stevescarts/advanced_detector_rail_corner,filename=assets/stevescarts/textures/blocks/advanced_detector_rail_corner.png
+texture:id=stevescarts/cargo_distributor_blue,filename=assets/stevescarts/textures/blocks/cargo_distributor_blue.png
+texture:id=stevescarts/cargo_distributor_green,filename=assets/stevescarts/textures/blocks/cargo_distributor_green.png
+texture:id=stevescarts/cargo_distributor_orange,filename=assets/stevescarts/textures/blocks/cargo_distributor_orange.png
+texture:id=stevescarts/cargo_distributor_purple,filename=assets/stevescarts/textures/blocks/cargo_distributor_purple.png
+texture:id=stevescarts/cargo_distributor_red,filename=assets/stevescarts/textures/blocks/cargo_distributor_red.png
+texture:id=stevescarts/cargo_distributor_yellow,filename=assets/stevescarts/textures/blocks/cargo_distributor_yellow.png
+texture:id=stevescarts/cargo_manager_blue,filename=assets/stevescarts/textures/blocks/cargo_manager_blue.png
+texture:id=stevescarts/cargo_manager_bot,filename=assets/stevescarts/textures/blocks/cargo_manager_bot.png
+texture:id=stevescarts/cargo_manager_green,filename=assets/stevescarts/textures/blocks/cargo_manager_green.png
+texture:id=stevescarts/cargo_manager_red,filename=assets/stevescarts/textures/blocks/cargo_manager_red.png
+texture:id=stevescarts/cargo_manager_top,filename=assets/stevescarts/textures/blocks/cargo_manager_top.png
+texture:id=stevescarts/cargo_manager_yellow,filename=assets/stevescarts/textures/blocks/cargo_manager_yellow.png
+texture:id=stevescarts/cart_assembler_bot,filename=assets/stevescarts/textures/blocks/cart_assembler_bot.png
+texture:id=stevescarts/cart_assembler_side_1,filename=assets/stevescarts/textures/blocks/cart_assembler_side_1.png
+texture:id=stevescarts/cart_assembler_side_2,filename=assets/stevescarts/textures/blocks/cart_assembler_side_2.png
+texture:id=stevescarts/cart_assembler_side_3,filename=assets/stevescarts/textures/blocks/cart_assembler_side_3.png
+texture:id=stevescarts/cart_assembler_side_4,filename=assets/stevescarts/textures/blocks/cart_assembler_side_4.png
+texture:id=stevescarts/cart_assembler_top,filename=assets/stevescarts/textures/blocks/cart_assembler_top.png
+texture:id=stevescarts/detector_junction_blue,filename=assets/stevescarts/textures/blocks/detector_junction_blue.png
+texture:id=stevescarts/detector_junction_green,filename=assets/stevescarts/textures/blocks/detector_junction_green.png
+texture:id=stevescarts/detector_junction_red,filename=assets/stevescarts/textures/blocks/detector_junction_red.png
+texture:id=stevescarts/detector_junction_top,filename=assets/stevescarts/textures/blocks/detector_junction_top.png
+texture:id=stevescarts/detector_junction_yellow,filename=assets/stevescarts/textures/blocks/detector_junction_yellow.png
+texture:id=stevescarts/detector_manager_blue,filename=assets/stevescarts/textures/blocks/detector_manager_blue.png
+texture:id=stevescarts/detector_manager_bot,filename=assets/stevescarts/textures/blocks/detector_manager_bot.png
+texture:id=stevescarts/detector_manager_green,filename=assets/stevescarts/textures/blocks/detector_manager_green.png
+texture:id=stevescarts/detector_manager_red,filename=assets/stevescarts/textures/blocks/detector_manager_red.png
+texture:id=stevescarts/detector_manager_top,filename=assets/stevescarts/textures/blocks/detector_manager_top.png
+texture:id=stevescarts/detector_manager_yellow,filename=assets/stevescarts/textures/blocks/detector_manager_yellow.png
+texture:id=stevescarts/detector_redstone_blue,filename=assets/stevescarts/textures/blocks/detector_redstone_blue.png
+texture:id=stevescarts/detector_redstone_bot,filename=assets/stevescarts/textures/blocks/detector_redstone_bot.png
+texture:id=stevescarts/detector_redstone_green,filename=assets/stevescarts/textures/blocks/detector_redstone_green.png
+texture:id=stevescarts/detector_redstone_red,filename=assets/stevescarts/textures/blocks/detector_redstone_red.png
+texture:id=stevescarts/detector_redstone_yellow,filename=assets/stevescarts/textures/blocks/detector_redstone_yellow.png
+texture:id=stevescarts/detector_station_blue,filename=assets/stevescarts/textures/blocks/detector_station_blue.png
+texture:id=stevescarts/detector_station_green,filename=assets/stevescarts/textures/blocks/detector_station_green.png
+texture:id=stevescarts/detector_station_red,filename=assets/stevescarts/textures/blocks/detector_station_red.png
+texture:id=stevescarts/detector_station_top,filename=assets/stevescarts/textures/blocks/detector_station_top.png
+texture:id=stevescarts/detector_station_yellow,filename=assets/stevescarts/textures/blocks/detector_station_yellow.png
+texture:id=stevescarts/detector_unit_blue,filename=assets/stevescarts/textures/blocks/detector_unit_blue.png
+texture:id=stevescarts/detector_unit_green,filename=assets/stevescarts/textures/blocks/detector_unit_green.png
+texture:id=stevescarts/detector_unit_red,filename=assets/stevescarts/textures/blocks/detector_unit_red.png
+texture:id=stevescarts/detector_unit_yellow,filename=assets/stevescarts/textures/blocks/detector_unit_yellow.png
+texture:id=stevescarts/enhanced_galgadorian_block,filename=assets/stevescarts/textures/blocks/enhanced_galgadorian_block.png
+texture:id=stevescarts/galgadorian_block,filename=assets/stevescarts/textures/blocks/galgadorian_block.png
+texture:id=stevescarts/junction_rail,filename=assets/stevescarts/textures/blocks/junction_rail.png
+texture:id=stevescarts/junction_rail_corner,filename=assets/stevescarts/textures/blocks/junction_rail_corner.png
+texture:id=stevescarts/liquid_manager_blue,filename=assets/stevescarts/textures/blocks/liquid_manager_blue.png
+texture:id=stevescarts/liquid_manager_bot,filename=assets/stevescarts/textures/blocks/liquid_manager_bot.png
+texture:id=stevescarts/liquid_manager_green,filename=assets/stevescarts/textures/blocks/liquid_manager_green.png
+texture:id=stevescarts/liquid_manager_red,filename=assets/stevescarts/textures/blocks/liquid_manager_red.png
+texture:id=stevescarts/liquid_manager_top,filename=assets/stevescarts/textures/blocks/liquid_manager_top.png
+texture:id=stevescarts/liquid_manager_yellow,filename=assets/stevescarts/textures/blocks/liquid_manager_yellow.png
+texture:id=stevescarts/module_toggler_bot,filename=assets/stevescarts/textures/blocks/module_toggler_bot.png
+texture:id=stevescarts/module_toggler_side,filename=assets/stevescarts/textures/blocks/module_toggler_side.png
+texture:id=stevescarts/module_toggler_top,filename=assets/stevescarts/textures/blocks/module_toggler_top.png
+texture:id=stevescarts/reinforced_metal_block,filename=assets/stevescarts/textures/blocks/reinforced_metal_block.png
+texture:id=stevescarts/upgrade_side_0_icon,filename=assets/stevescarts/textures/blocks/upgrade_side_0_icon.png
+
+
+
+# %BlockCargoManager:* (BlockCargoManager), render=(STANDARD), opaque=true,cls=vswe.stevescarts.Blocks.BlockCargoManager
+block:id=%BlockCargoManager,data=*,stdrot=true,face0=0:stevescarts/cargo_manager_bot,face1=0:stevescarts/cargo_manager_top,face2=0:stevescarts/cargo_manager_yellow,face3=0:stevescarts/cargo_manager_blue,face4=0:stevescarts/cargo_manager_green,face5=0:stevescarts/cargo_manager_red
+
+# %BlockJunction:* (BlockJunction), render=(MINECARTTRACK), opaque=false,cls=vswe.stevescarts.Blocks.BlockRailJunction
+block:id=%BlockJunction,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:stevescarts/junction_rail
+block:id=%BlockJunction,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:stevescarts/junction_rail_corner
+
+# %BlockAdvDetector:* (BlockAdvDetector), render=(MINECARTTRACK), opaque=false,cls=vswe.stevescarts.Blocks.BlockRailAdvDetector
+block:id=%BlockAdvDetector,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:stevescarts/advanced_detector_rail
+block:id=%BlockAdvDetector,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:stevescarts/advanced_detector_rail_corner
+
+# %BlockCartAssembler:* (BlockCartAssembler), render=(STANDARD), opaque=true,cls=vswe.stevescarts.Blocks.BlockCartAssembler
+block:id=%BlockCartAssembler,data=*,stdrot=true,face0=0:stevescarts/cart_assembler_bot,face1=0:stevescarts/cart_assembler_top,face2=0:stevescarts/cart_assembler_side_1,face3=0:stevescarts/cart_assembler_side_2,face4=0:stevescarts/cart_assembler_side_3,face5=0:stevescarts/cart_assembler_side_4
+
+# %BlockActivator:* (BlockActivator), render=(STANDARD), opaque=true,cls=vswe.stevescarts.Blocks.BlockActivator
+block:id=%BlockActivator,data=*,stdrot=true,face0=0:stevescarts/module_toggler_bot,face1=0:stevescarts/module_toggler_top,face2-5=0:stevescarts/module_toggler_side
+
+# %BlockDistributor:* (BlockDistributor), render=(STANDARD), opaque=true,cls=vswe.stevescarts.Blocks.BlockDistributor
+block:id=%BlockDistributor,data=*,stdrot=true,face0=0:stevescarts/cargo_distributor_purple,face1=0:stevescarts/cargo_distributor_orange,face2=0:stevescarts/cargo_distributor_yellow,face3=0:stevescarts/cargo_distributor_blue,face4=0:stevescarts/cargo_distributor_green,face5=0:stevescarts/cargo_distributor_red
+
+# %BlockDetector:* (BlockDetector), render=(STANDARD), opaque=true,cls=vswe.stevescarts.Blocks.BlockDetector
+block:id=%BlockDetector,data=0,stdrot=true,face0=0:stevescarts/detector_manager_bot,face1=0:stevescarts/detector_manager_top,face2=0:stevescarts/detector_manager_yellow,face3=0:stevescarts/detector_manager_blue,face4=0:stevescarts/detector_manager_green,face5=0:stevescarts/detector_manager_red
+block:id=%BlockDetector,data=1,stdrot=true,face0-1=0:stevescarts/detector_manager_bot,face2=0:stevescarts/detector_unit_yellow,face3=0:stevescarts/detector_unit_blue,face4=0:stevescarts/detector_unit_green,face5=0:stevescarts/detector_unit_red
+block:id=%BlockDetector,data=2,stdrot=true,face0=0:stevescarts/detector_manager_bot,face1=0:stevescarts/detector_station_top,face2=0:stevescarts/detector_station_yellow,face3=0:stevescarts/detector_station_blue,face4=0:stevescarts/detector_station_green,face5=0:stevescarts/detector_station_red
+block:id=%BlockDetector,data=3,stdrot=true,face0=0:stevescarts/detector_manager_bot,face1=0:stevescarts/detector_junction_top,face2=0:stevescarts/detector_junction_yellow,face3=0:stevescarts/detector_junction_blue,face4=0:stevescarts/detector_junction_green,face5=0:stevescarts/detector_junction_red
+block:id=%BlockDetector,data=4,stdrot=true,face0-1=0:stevescarts/detector_redstone_bot,face2=0:stevescarts/detector_redstone_yellow,face3=0:stevescarts/detector_redstone_blue,face4=0:stevescarts/detector_redstone_green,face5=0:stevescarts/detector_redstone_red
+block:id=%BlockDetector,data=8,stdrot=true,face0=0:stevescarts/detector_manager_bot,face1=0:stevescarts/detector_manager_top,face2=0:stevescarts/detector_manager_yellow,face3=0:stevescarts/detector_manager_blue,face4=0:stevescarts/detector_manager_green,face5=0:stevescarts/detector_manager_red
+block:id=%BlockDetector,data=9,stdrot=true,face0-1=0:stevescarts/detector_manager_bot,face2=0:stevescarts/detector_unit_yellow,face3=0:stevescarts/detector_unit_blue,face4=0:stevescarts/detector_unit_green,face5=0:stevescarts/detector_unit_red
+block:id=%BlockDetector,data=10,stdrot=true,face0=0:stevescarts/detector_manager_bot,face1=0:stevescarts/detector_station_top,face2=0:stevescarts/detector_station_yellow,face3=0:stevescarts/detector_station_blue,face4=0:stevescarts/detector_station_green,face5=0:stevescarts/detector_station_red
+block:id=%BlockDetector,data=11,stdrot=true,face0=0:stevescarts/detector_manager_bot,face1=0:stevescarts/detector_junction_top,face2=0:stevescarts/detector_junction_yellow,face3=0:stevescarts/detector_junction_blue,face4=0:stevescarts/detector_junction_green,face5=0:stevescarts/detector_junction_red
+block:id=%BlockDetector,data=12,stdrot=true,face0-1=0:stevescarts/detector_redstone_bot,face2=0:stevescarts/detector_redstone_yellow,face3=0:stevescarts/detector_redstone_blue,face4=0:stevescarts/detector_redstone_green,face5=0:stevescarts/detector_redstone_red
+
+# %upgrade:* (upgrade), render=vswe.stevescarts.Renders.RendererUpgrade(CUSTOM), opaque=false,cls=vswe.stevescarts.Blocks.BlockUpgrade
+block:id=%upgrade,data=*,stdrot=true,face0-5=0:stevescarts/upgrade_side_0_icon
+
+# %BlockLiquidManager:* (BlockLiquidManager), render=(STANDARD), opaque=true,cls=vswe.stevescarts.Blocks.BlockLiquidManager
+block:id=%BlockLiquidManager,data=*,stdrot=true,face0=0:stevescarts/liquid_manager_bot,face1=0:stevescarts/liquid_manager_top,face2=0:stevescarts/liquid_manager_yellow,face3=0:stevescarts/liquid_manager_blue,face4=0:stevescarts/liquid_manager_green,face5=0:stevescarts/liquid_manager_red
+
+# %BlockMetalStorage:* (BlockMetalStorage), render=(STANDARD), opaque=true,cls=vswe.stevescarts.Blocks.BlockMetalStorage
+block:id=%BlockMetalStorage,data=0,stdrot=true,face0-5=0:stevescarts/reinforced_metal_block
+block:id=%BlockMetalStorage,data=1,stdrot=true,face0-5=0:stevescarts/galgadorian_block
+block:id=%BlockMetalStorage,data=2,stdrot=true,face0-5=0:stevescarts/enhanced_galgadorian_block
+block:id=%BlockMetalStorage,data=3,stdrot=true,face0-5=0:stevescarts/reinforced_metal_block
+block:id=%BlockMetalStorage,data=4,stdrot=true,face0-5=0:stevescarts/galgadorian_block
+block:id=%BlockMetalStorage,data=5,stdrot=true,face0-5=0:stevescarts/enhanced_galgadorian_block
+block:id=%BlockMetalStorage,data=6,stdrot=true,face0-5=0:stevescarts/reinforced_metal_block
+block:id=%BlockMetalStorage,data=7,stdrot=true,face0-5=0:stevescarts/galgadorian_block
+block:id=%BlockMetalStorage,data=8,stdrot=true,face0-5=0:stevescarts/enhanced_galgadorian_block
+block:id=%BlockMetalStorage,data=9,stdrot=true,face0-5=0:stevescarts/reinforced_metal_block
+block:id=%BlockMetalStorage,data=10,stdrot=true,face0-5=0:stevescarts/galgadorian_block
+block:id=%BlockMetalStorage,data=11,stdrot=true,face0-5=0:stevescarts/enhanced_galgadorian_block
+block:id=%BlockMetalStorage,data=12,stdrot=true,face0-5=0:stevescarts/reinforced_metal_block
+block:id=%BlockMetalStorage,data=13,stdrot=true,face0-5=0:stevescarts/galgadorian_block
+block:id=%BlockMetalStorage,data=14,stdrot=true,face0-5=0:stevescarts/enhanced_galgadorian_block
+block:id=%BlockMetalStorage,data=15,stdrot=true,face0-5=0:stevescarts/reinforced_metal_block

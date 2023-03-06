@@ -1,0 +1,61 @@
+# ThermalDynamics 1.7.10R1.2.0
+version:1.7
+modname:ThermalDynamics
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/thermaldynamics/textures/blocks/
+texture:id=thermaldynamics/Duct_copper,filename=assets/thermaldynamics/textures/blocks/duct/base/copper.png
+texture:id=thermaldynamics/Duct_copper_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/copper_trans.png
+texture:id=thermaldynamics/Duct_electrum_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/electrum_trans.png
+texture:id=thermaldynamics/Duct_enderium,filename=assets/thermaldynamics/textures/blocks/duct/base/enderium.png
+texture:id=thermaldynamics/Duct_enderium_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/enderium_trans.png
+texture:id=thermaldynamics/Duct_fluxElectrum,filename=assets/thermaldynamics/textures/blocks/duct/base/fluxElectrum.png
+texture:id=thermaldynamics/Duct_invar,filename=assets/thermaldynamics/textures/blocks/duct/base/invar.png
+texture:id=thermaldynamics/Duct_invar_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/invar_trans.png
+texture:id=thermaldynamics/Duct_lead_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/lead_trans.png
+texture:id=thermaldynamics/Duct_lumium,filename=assets/thermaldynamics/textures/blocks/duct/base/lumium.png
+texture:id=thermaldynamics/Duct_support,filename=assets/thermaldynamics/textures/blocks/duct/base/support.png
+texture:id=thermaldynamics/Duct_tin,filename=assets/thermaldynamics/textures/blocks/duct/base/tin.png
+texture:id=thermaldynamics/Duct_tin_1,filename=assets/thermaldynamics/textures/blocks/duct/base/tin_1.png
+texture:id=thermaldynamics/Duct_tin_2,filename=assets/thermaldynamics/textures/blocks/duct/base/tin_2.png
+texture:id=thermaldynamics/Duct_tin_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/tin_trans.png
+
+
+
+# %ThermalDynamics_0:* (ThermalDynamics_0), render=cofh.thermaldynamics.render.RenderDuct(CUSTOM), opaque=false,cls=cofh.thermaldynamics.duct.BlockDuct
+block:id=%ThermalDynamics_0,data=0,stdrot=true,face0-5=12000:thermaldynamics/Duct_lead_trans
+block:id=%ThermalDynamics_0,data=1,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar_trans
+block:id=%ThermalDynamics_0,data=2,data=3,stdrot=true,face0-5=12000:thermaldynamics/Duct_electrum_trans
+block:id=%ThermalDynamics_0,data=4,data=5,stdrot=true,face0-5=12000:thermaldynamics/Duct_enderium_trans
+block:id=%ThermalDynamics_0,data=6,data=7,stdrot=true,face0-5=12000:thermaldynamics/Duct_electrum_trans
+block:id=%ThermalDynamics_0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:thermaldynamics/Duct_support
+
+# %ThermalDynamics_16:* (ThermalDynamics_16), render=cofh.thermaldynamics.render.RenderDuct(CUSTOM), opaque=false,cls=cofh.thermaldynamics.duct.BlockDuct
+block:id=%ThermalDynamics_16,data=0,stdrot=true,face0-5=12000:thermaldynamics/Duct_copper_trans
+block:id=%ThermalDynamics_16,data=1,stdrot=true,face0-5=12000:thermaldynamics/Duct_copper
+block:id=%ThermalDynamics_16,data=2,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar_trans
+block:id=%ThermalDynamics_16,data=3,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar
+block:id=%ThermalDynamics_16,data=5,stdrot=true,face0-5=12000:thermaldynamics/Duct_fluxElectrum
+block:id=%ThermalDynamics_16,data=6,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar_trans
+block:id=%ThermalDynamics_16,data=7,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar
+block:id=%ThermalDynamics_16,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:thermaldynamics/Duct_support
+
+# %ThermalDynamics_32:* (ThermalDynamics_32), render=cofh.thermaldynamics.render.RenderDuct(CUSTOM), opaque=false,cls=cofh.thermaldynamics.duct.BlockDuct
+block:id=%ThermalDynamics_32,data=0,stdrot=true,face0-5=12000:thermaldynamics/Duct_tin_trans
+block:id=%ThermalDynamics_32,data=1,stdrot=true,face0-5=12000:thermaldynamics/Duct_tin
+block:id=%ThermalDynamics_32,data=2,stdrot=true,face0-5=12000:thermaldynamics/Duct_tin_trans
+block:id=%ThermalDynamics_32,data=3,stdrot=true,face0-5=12000:thermaldynamics/Duct_tin_1
+block:id=%ThermalDynamics_32,data=4,stdrot=true,face0-5=12000:thermaldynamics/Duct_enderium_trans
+block:id=%ThermalDynamics_32,data=5,stdrot=true,face0-5=12000:thermaldynamics/Duct_enderium
+block:id=%ThermalDynamics_32,data=6,stdrot=true,face0-5=12000:thermaldynamics/Duct_tin_trans
+block:id=%ThermalDynamics_32,data=7,stdrot=true,face0-5=12000:thermaldynamics/Duct_tin_2
+block:id=%ThermalDynamics_32,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:thermaldynamics/Duct_support
+
+# %ThermalDynamics_48:* (ThermalDynamics_48), render=cofh.thermaldynamics.render.RenderDuct(CUSTOM), opaque=false,cls=cofh.thermaldynamics.duct.BlockDuct
+block:id=%ThermalDynamics_48,data=0,stdrot=true,face0-5=12000:thermaldynamics/Duct_support
+block:id=%ThermalDynamics_48,data=1,stdrot=true,face0-5=12000:thermaldynamics/Duct_lumium
+block:id=%ThermalDynamics_48,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:thermaldynamics/Duct_support

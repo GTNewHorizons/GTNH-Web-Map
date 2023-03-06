@@ -1,0 +1,75 @@
+# ThaumicExploration 0.6.0
+version:1.7
+modname:ThaumicExploration
+
+
+cfgfile:config/ThaumicExploration.cfg
+
+
+texturepath:assets/thaumicexploration/textures/blocks/
+texture:id=minecraft/ice,filename=assets/minecraft/textures/blocks/ice.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=thaumcraft/candle,filename=assets/thaumcraft/textures/blocks/candle.png
+texture:id=thaumcraft/jar_bottom,filename=assets/thaumcraft/textures/blocks/jar_bottom.png
+texture:id=thaumcraft/jar_side,filename=assets/thaumcraft/textures/blocks/jar_side.png
+texture:id=thaumcraft/jar_side_void,filename=assets/thaumcraft/textures/blocks/jar_side_void.png
+texture:id=thaumcraft/jar_top,filename=assets/thaumcraft/textures/blocks/jar_top.png
+texture:id=thaumcraft/jar_top_void,filename=assets/thaumcraft/textures/blocks/jar_top_void.png
+texture:id=thaumicExploration/blankTexture,filename=assets/thaumicexploration/textures/blocks/blankTexture.png
+texture:id=thaumicExploration/everfullUrn,filename=assets/thaumicexploration/textures/blocks/everfullUrn.png
+texture:id=thaumicExploration/soulBrazier,filename=assets/thaumicexploration/textures/blocks/soulBrazier.png
+texture:id=thaumicexploration/replicatorBottom,filename=assets/thaumicexploration/textures/blocks/replicatorBottom.png
+
+
+
+# %autoSorter:* (autoSorter), render=(STANDARD), opaque=true,cls=flaxbeard.thaumicexploration.block.BlockAutoSorter
+block:id=%autoSorter,data=*,stdrot=true,face0-5=0:thaumicexploration/replicatorBottom
+
+# %trashJar:* (trashJar), render=flaxbeard.thaumicexploration.client.render.BlockTrashJarRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockTrashJar
+block:id=%trashJar,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top,face2-5=0:thaumcraft/jar_side
+block:id=%trashJar,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top_void,face2-5=0:thaumcraft/jar_side_void
+block:id=%trashJar,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/jar_bottom
+
+# %boundChest:* (boundChest), render=(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockBoundChest
+block:id=%boundChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %floatCandle:* (floatCandle), render=flaxbeard.thaumicexploration.client.render.BlockFloatyCandleRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockFloatyCandle
+block:id=%floatCandle,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=F0F0F0,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=EB8844,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=C354CD,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=6689D3,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=DECF2A,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=41CD34,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=D88198,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=434343,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=A0A0A0,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=287697,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=7B2FBE,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=253192,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=51301A,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=3B511A,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=B3312C,face0-5=17000:thaumcraft/candle
+block:id=%floatCandle,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=1E1B1B,face0-5=17000:thaumcraft/candle
+
+# %meltyIce:* (meltyIce), render=(STANDARD), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockBootsIce
+block:id=%meltyIce,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %boundJar:* (boundJar), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockBoundJar
+block:id=%boundJar,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top,face2-5=0:thaumcraft/jar_side
+block:id=%boundJar,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top_void,face2-5=0:thaumcraft/jar_side_void
+block:id=%boundJar,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/jar_bottom
+
+# %thinkTankJar:* (thinkTankJar), render=(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockThinkTank
+block:id=%thinkTankJar,data=*,stdrot=true,face0-5=0:thaumicExploration/blankTexture
+
+# %everfullUrn:* (everfullUrn), render=flaxbeard.thaumicexploration.client.render.BlockEverfullUrnRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockEverfullUrn
+block:id=%everfullUrn,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicExploration/everfullUrn
+
+# %everburnUrn:* (everburnUrn), render=flaxbeard.thaumicexploration.client.render.BlockEverfullUrnRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockEverburnUrn
+block:id=%everburnUrn,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicExploration/everfullUrn
+
+# %soulBrazier:* (soulBrazier), render=flaxbeard.thaumicexploration.client.render.BlockSoulBrazierRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockSoulBrazier
+block:id=%soulBrazier,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicExploration/soulBrazier
+
+# %replicator:* (replicator), render=flaxbeard.thaumicexploration.client.render.BlockReplicatorRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockReplicator
+block:id=%replicator,data=*,stdrot=true,face0-5=0:thaumicexploration/replicatorBottom

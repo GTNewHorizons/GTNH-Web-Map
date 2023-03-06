@@ -1,0 +1,67 @@
+# BiblioWoodsEBXL 1.4
+version:1.7
+modname:BiblioWoodsEBXL
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/bibliowoodsebxl/textures/blocks/
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+
+
+
+# %BiblioWoodBookcase:* (BiblioWoodBookcase), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomBookcase
+block:id=%BiblioWoodBookcase,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodpotshelf:* (BiblioWoodpotshelf), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomPotionShelf
+block:id=%BiblioWoodpotshelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodshelf:* (BiblioWoodshelf), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomShelf
+block:id=%BiblioWoodshelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodrack:* (BiblioWoodrack), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomToolrack
+block:id=%BiblioWoodrack,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodcase:* (BiblioWoodcase), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomCase0
+block:id=%BiblioWoodcase,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodlabel:* (BiblioWoodlabel), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomLabel
+block:id=%BiblioWoodlabel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWooddesk:* (BiblioWooddesk), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomDesk
+block:id=%BiblioWooddesk,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodtable:* (BiblioWoodtable), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomTable
+block:id=%BiblioWoodtable,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodSeat:* (BiblioWoodSeat), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomSeat
+block:id=%BiblioWoodSeat,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodMapFrame:* (BiblioWoodMapFrame), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomMapFrame
+block:id=%BiblioWoodMapFrame,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodFancySign:* (BiblioWoodFancySign), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomFancySign
+block:id=%BiblioWoodFancySign,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodFancyWorkbench:* (BiblioWoodFancyWorkbench), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomFancyWorkbench
+block:id=%BiblioWoodFancyWorkbench,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodClock:* (BiblioWoodClock), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomClock
+block:id=%BiblioWoodClock,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT0:* (BiblioWoodPaintingT0), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomPaintingFrameT0
+block:id=%BiblioWoodPaintingT0,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT1:* (BiblioWoodPaintingT1), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomPaintingFrameT1
+block:id=%BiblioWoodPaintingT1,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT2:* (BiblioWoodPaintingT2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomPaintingFrameT2
+block:id=%BiblioWoodPaintingT2,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT3:* (BiblioWoodPaintingT3), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomPaintingFrameT3
+block:id=%BiblioWoodPaintingT3,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT4:* (BiblioWoodPaintingT4), render=(CUSTOM), opaque=false,cls=jds.bibliowood.ebxlwood.blocks.BlockCustomPaintingFrameT4
+block:id=%BiblioWoodPaintingT4,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce

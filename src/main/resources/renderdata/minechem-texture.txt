@@ -1,0 +1,907 @@
+# minechem 5.0.5.406
+version:1.7
+modname:minechem
+
+
+cfgfile:config/minechem.cfg
+
+
+texturepath:assets/minechem/textures/blocks/
+texture:id=minechem/blockBlueprintProjector,filename=assets/minechem/textures/blocks/blockBlueprintProjector.png
+texture:id=minechem/blockMicroscope,filename=assets/minechem/textures/blocks/blockMicroscope.png
+texture:id=minechem/blockSynthesis,filename=assets/minechem/textures/blocks/blockSynthesis.png
+texture:id=minechem/blueprint1,filename=assets/minechem/textures/blocks/blueprint1.png
+texture:id=minechem/blueprint2,filename=assets/minechem/textures/blocks/blueprint2.png
+texture:id=minechem/decomposer,filename=assets/minechem/textures/blocks/decomposer.png
+texture:id=minechem/default,filename=assets/minechem/textures/blocks/default.png
+texture:id=minechem/fluid_flow,filename=assets/minechem/textures/blocks/fluid_flow.png
+texture:id=minechem/fluid_still,filename=assets/minechem/textures/blocks/fluid_still.png
+texture:id=minechem/fusion1,filename=assets/minechem/textures/blocks/fusion1.png
+texture:id=minechem/fusion2,filename=assets/minechem/textures/blocks/fusion2.png
+texture:id=minechem/leadedchest,filename=assets/minechem/textures/blocks/leadedchest.png
+texture:id=minechem/uraniumOre,filename=assets/minechem/textures/blocks/uraniumOre.png
+
+
+
+# %tile.chemicalDecomposer:* (tile.chemicalDecomposer), render=(CUSTOM), opaque=false,cls=minechem.tileentity.decomposer.DecomposerBlock
+block:id=%tile.chemicalDecomposer,data=*,stdrot=true,face0-5=0:minechem/decomposer
+
+# %tile.opticalMicroscope:* (tile.opticalMicroscope), render=(CUSTOM), opaque=false,cls=minechem.tileentity.microscope.MicroscopeBlock
+block:id=%tile.opticalMicroscope,data=*,stdrot=true,face0-5=0:minechem/blockMicroscope
+
+# %tile.chemicalSynthesizer:* (tile.chemicalSynthesizer), render=(CUSTOM), opaque=false,cls=minechem.tileentity.synthesis.SynthesisBlock
+block:id=%tile.chemicalSynthesizer,data=*,stdrot=true,face0-5=0:minechem/blockSynthesis
+
+# %tile.fusionWall:* (tile.fusionWall), render=(STANDARD), opaque=true,cls=minechem.tileentity.multiblock.fusion.FusionBlock
+block:id=%tile.fusionWall,data=0,stdrot=true,face0-5=0:minechem/fusion1
+block:id=%tile.fusionWall,data=1,stdrot=true,face0-5=0:minechem/fusion2
+block:id=%tile.fusionWall,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minechem/default
+
+# %tile.ghostBlock:* (tile.ghostBlock), render=(STANDARD), opaque=false,cls=minechem.tileentity.multiblock.ghostblock.GhostBlock
+block:id=%tile.ghostBlock,data=0,stdrot=true,face0-5=12000:minechem/blueprint1
+block:id=%tile.ghostBlock,data=1,stdrot=true,face0-5=12000:minechem/blueprint2
+block:id=%tile.ghostBlock,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minechem/default
+
+# %tile.blueprintProjector:* (tile.blueprintProjector), render=(CUSTOM), opaque=false,cls=minechem.tileentity.blueprintprojector.BlueprintProjectorBlock
+block:id=%tile.blueprintProjector,data=*,stdrot=true,face0-5=0:minechem/blockBlueprintProjector
+
+# %tile.oreUranium:* (tile.oreUranium), render=(STANDARD), opaque=true,cls=minechem.block.BlockUraniumOre
+block:id=%tile.oreUranium,data=*,stdrot=true,face0-5=0:minechem/uraniumOre
+
+# %tile.leadChest:* (tile.leadChest), render=(CUSTOM), opaque=false,cls=minechem.tileentity.leadedchest.LeadedChestBlock
+block:id=%tile.leadChest,data=*,stdrot=true,face0-5=0:minechem/leadedchest
+
+# %fluid.element.H.name:* (fluid.element.H.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.H.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF8000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.He.name:* (fluid.element.He.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.He.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FFFF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Li.name:* (fluid.element.Li.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Li.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Be.name:* (fluid.element.Be.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Be.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0000FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.B.name:* (fluid.element.B.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.B.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF80,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.C.name:* (fluid.element.C.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.C.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF8000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.N.name:* (fluid.element.N.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.N.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF8000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.O.name:* (fluid.element.O.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.O.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF8000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.F.name:* (fluid.element.F.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.F.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFFFF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ne.name:* (fluid.element.Ne.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ne.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FFFF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Na.name:* (fluid.element.Na.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Na.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Mg.name:* (fluid.element.Mg.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Mg.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0000FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Al.name:* (fluid.element.Al.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Al.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Si.name:* (fluid.element.Si.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Si.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.P.name:* (fluid.element.P.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.P.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF8000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.S.name:* (fluid.element.S.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.S.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF8000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cl.name:* (fluid.element.Cl.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cl.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFFFF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ar.name:* (fluid.element.Ar.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ar.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FFFF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.K.name:* (fluid.element.K.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.K.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ca.name:* (fluid.element.Ca.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ca.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0000FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Sc.name:* (fluid.element.Sc.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Sc.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ti.name:* (fluid.element.Ti.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ti.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.V.name:* (fluid.element.V.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.V.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cr.name:* (fluid.element.Cr.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cr.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Mn.name:* (fluid.element.Mn.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Mn.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Fe.name:* (fluid.element.Fe.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Fe.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Co.name:* (fluid.element.Co.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Co.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ni.name:* (fluid.element.Ni.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ni.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cu.name:* (fluid.element.Cu.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cu.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Zn.name:* (fluid.element.Zn.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Zn.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ga.name:* (fluid.element.Ga.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ga.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ge.name:* (fluid.element.Ge.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ge.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF80,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.As.name:* (fluid.element.As.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.As.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF80,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Se.name:* (fluid.element.Se.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Se.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF8000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Br.name:* (fluid.element.Br.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Br.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFFFF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Kr.name:* (fluid.element.Kr.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Kr.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FFFF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Rb.name:* (fluid.element.Rb.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Rb.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Sr.name:* (fluid.element.Sr.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Sr.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0000FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Y.name:* (fluid.element.Y.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Y.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Zr.name:* (fluid.element.Zr.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Zr.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Nb.name:* (fluid.element.Nb.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Nb.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Mo.name:* (fluid.element.Mo.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Mo.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Tc.name:* (fluid.element.Tc.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Tc.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ru.name:* (fluid.element.Ru.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ru.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Rh.name:* (fluid.element.Rh.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Rh.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Pd.name:* (fluid.element.Pd.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Pd.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ag.name:* (fluid.element.Ag.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ag.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cd.name:* (fluid.element.Cd.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cd.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.In.name:* (fluid.element.In.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.In.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Sn.name:* (fluid.element.Sn.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Sn.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Sb.name:* (fluid.element.Sb.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Sb.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF80,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Te.name:* (fluid.element.Te.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Te.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF80,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.I.name:* (fluid.element.I.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.I.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFFFF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Xe.name:* (fluid.element.Xe.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Xe.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FFFF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cs.name:* (fluid.element.Cs.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cs.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ba.name:* (fluid.element.Ba.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ba.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0000FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.La.name:* (fluid.element.La.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.La.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ce.name:* (fluid.element.Ce.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ce.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Pr.name:* (fluid.element.Pr.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Pr.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Nd.name:* (fluid.element.Nd.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Nd.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Pm.name:* (fluid.element.Pm.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Pm.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Sm.name:* (fluid.element.Sm.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Sm.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Eu.name:* (fluid.element.Eu.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Eu.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Gd.name:* (fluid.element.Gd.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Gd.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Tb.name:* (fluid.element.Tb.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Tb.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Dy.name:* (fluid.element.Dy.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Dy.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ho.name:* (fluid.element.Ho.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ho.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Er.name:* (fluid.element.Er.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Er.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Tm.name:* (fluid.element.Tm.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Tm.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Yb.name:* (fluid.element.Yb.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Yb.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Lu.name:* (fluid.element.Lu.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Lu.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF00FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Hf.name:* (fluid.element.Hf.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Hf.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ta.name:* (fluid.element.Ta.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ta.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.W.name:* (fluid.element.W.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.W.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Re.name:* (fluid.element.Re.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Re.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Os.name:* (fluid.element.Os.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Os.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ir.name:* (fluid.element.Ir.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ir.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Pt.name:* (fluid.element.Pt.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Pt.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Au.name:* (fluid.element.Au.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Au.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Hg.name:* (fluid.element.Hg.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Hg.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Tl.name:* (fluid.element.Tl.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Tl.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Pb.name:* (fluid.element.Pb.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Pb.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Bi.name:* (fluid.element.Bi.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Bi.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF80FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Po.name:* (fluid.element.Po.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Po.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF80,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.At.name:* (fluid.element.At.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.At.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFFFF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Rn.name:* (fluid.element.Rn.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Rn.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FFFF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Fr.name:* (fluid.element.Fr.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Fr.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ra.name:* (fluid.element.Ra.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ra.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0000FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ac.name:* (fluid.element.Ac.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ac.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Th.name:* (fluid.element.Th.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Th.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Pa.name:* (fluid.element.Pa.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Pa.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.U.name:* (fluid.element.U.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.U.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Np.name:* (fluid.element.Np.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Np.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Pu.name:* (fluid.element.Pu.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Pu.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Am.name:* (fluid.element.Am.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Am.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cm.name:* (fluid.element.Cm.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cm.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Bk.name:* (fluid.element.Bk.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Bk.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cf.name:* (fluid.element.Cf.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cf.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Es.name:* (fluid.element.Es.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Es.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Fm.name:* (fluid.element.Fm.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Fm.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Md.name:* (fluid.element.Md.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Md.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.No.name:* (fluid.element.No.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.No.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Lr.name:* (fluid.element.Lr.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Lr.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFF0000,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Rf.name:* (fluid.element.Rf.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Rf.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Db.name:* (fluid.element.Db.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Db.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Sg.name:* (fluid.element.Sg.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Sg.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Bh.name:* (fluid.element.Bh.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Bh.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Hs.name:* (fluid.element.Hs.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Hs.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Mt.name:* (fluid.element.Mt.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Mt.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Ds.name:* (fluid.element.Ds.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Ds.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Rg.name:* (fluid.element.Rg.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Rg.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Cn.name:* (fluid.element.Cn.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Cn.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.element.Uut.name:* (fluid.element.Uut.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockElement
+block:id=%fluid.element.Uut.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0080FF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.cellulose.name:* (fluid.molecule.cellulose.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.cellulose.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00FF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.carbonDioxide.name:* (fluid.molecule.carbonDioxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.carbonDioxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF7F7F7F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.nitrogenDioxide.name:* (fluid.molecule.nitrogenDioxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.nitrogenDioxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFFA500,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.toluene.name:* (fluid.molecule.toluene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.toluene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.potassiumNitrate.name:* (fluid.molecule.potassiumNitrate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.potassiumNitrate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE5E5E5,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.tnt.name:* (fluid.molecule.tnt.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.tnt.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFFFF00,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.siliconDioxide.name:* (fluid.molecule.siliconDioxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.siliconDioxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.calcicPyroxene.name:* (fluid.molecule.calcicPyroxene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.calcicPyroxene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF4D5E5B,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.pyrite.name:* (fluid.molecule.pyrite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.pyrite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF49506A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.nepheline.name:* (fluid.molecule.nepheline.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.nepheline.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFBDFC39,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sulfate.name:* (fluid.molecule.sulfate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sulfate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFC83B20,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.noselite.name:* (fluid.molecule.noselite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.noselite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF48161D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sodalite.name:* (fluid.molecule.sodalite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sodalite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFA71402,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.nitrate.name:* (fluid.molecule.nitrate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.nitrate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF6E2F68,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.carbonate.name:* (fluid.molecule.carbonate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.carbonate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF7441BF,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.cyanide.name:* (fluid.molecule.cyanide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.cyanide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF25EDCA,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.phosphate.name:* (fluid.molecule.phosphate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.phosphate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFB67F7D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.acetate.name:* (fluid.molecule.acetate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.acetate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF11EFC5,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.chromate.name:* (fluid.molecule.chromate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.chromate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFD489AC,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hydroxide.name:* (fluid.molecule.hydroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hydroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8E1D71,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.ammonium.name:* (fluid.molecule.ammonium.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.ammonium.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF43B129,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hydronium.name:* (fluid.molecule.hydronium.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hydronium.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1CF6D1,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.peroxide.name:* (fluid.molecule.peroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.peroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFD472C3,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.calciumOxide.name:* (fluid.molecule.calciumOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.calciumOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF5EEB82,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.calciumCarbonate.name:* (fluid.molecule.calciumCarbonate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.calciumCarbonate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFF4EB47,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.magnesiumCarbonate.name:* (fluid.molecule.magnesiumCarbonate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.magnesiumCarbonate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFCB08D8,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.lazurite.name:* (fluid.molecule.lazurite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.lazurite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFCB0993,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.isoprene.name:* (fluid.molecule.isoprene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.isoprene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF20D22C,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.butene.name:* (fluid.molecule.butene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.butene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8ADBFE,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.polyisobutylene.name:* (fluid.molecule.polyisobutylene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.polyisobutylene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0C4A5A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.malicAcid.name:* (fluid.molecule.malicAcid.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.malicAcid.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFDD4C6E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.vinylChloride.name:* (fluid.molecule.vinylChloride.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.vinylChloride.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF9CBB14,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.polyvinylChloride.name:* (fluid.molecule.polyvinylChloride.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.polyvinylChloride.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF9624D4,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.methamphetamine.name:* (fluid.molecule.methamphetamine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.methamphetamine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8E225E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.psilocybin.name:* (fluid.molecule.psilocybin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.psilocybin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFCF9FD4,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.iron3oxide.name:* (fluid.molecule.iron3oxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.iron3oxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF35AE90,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.strontiumNitrate.name:* (fluid.molecule.strontiumNitrate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.strontiumNitrate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF645EEC,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.magnetite.name:* (fluid.molecule.magnetite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.magnetite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE0E60E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.magnesiumOxide.name:* (fluid.molecule.magnesiumOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.magnesiumOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF6DD1A9,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.cucurbitacin.name:* (fluid.molecule.cucurbitacin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.cucurbitacin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFD66057,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.asparticAcid.name:* (fluid.molecule.asparticAcid.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.asparticAcid.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFF2303D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hydroxylapatite.name:* (fluid.molecule.hydroxylapatite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hydroxylapatite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF263A36,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.alinine.name:* (fluid.molecule.alinine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.alinine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF2A0BE0,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.glycine.name:* (fluid.molecule.glycine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.glycine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF573A89,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.serine.name:* (fluid.molecule.serine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.serine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF14C76A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.mescaline.name:* (fluid.molecule.mescaline.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.mescaline.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF824FAB,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.methyl.name:* (fluid.molecule.methyl.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.methyl.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF44B399,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.methylene.name:* (fluid.molecule.methylene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.methylene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFBFD904,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.memethacrylate.name:* (fluid.molecule.memethacrylate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.memethacrylate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF774AF2,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.pmma.name:* (fluid.molecule.pmma.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.pmma.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFBD4F52,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.redPigment.name:* (fluid.molecule.redPigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.redPigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF3007B0,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.orangePigment.name:* (fluid.molecule.orangePigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.orangePigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFDCD8B3,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.yellowPigment.name:* (fluid.molecule.yellowPigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.yellowPigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF9A07DC,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.limePigment.name:* (fluid.molecule.limePigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.limePigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFB39911,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.lightbluePigment.name:* (fluid.molecule.lightbluePigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.lightbluePigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE37F43,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.purplePigment.name:* (fluid.molecule.purplePigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.purplePigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF052B12,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.greenPigment.name:* (fluid.molecule.greenPigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.greenPigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFBFC262,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.blackPigment.name:* (fluid.molecule.blackPigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.blackPigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFF36AA6,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.whitePigment.name:* (fluid.molecule.whitePigment.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.whitePigment.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE13D66,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.metasilicate.name:* (fluid.molecule.metasilicate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.metasilicate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8E263C,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.beryl.name:* (fluid.molecule.beryl.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.beryl.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF40DCFA,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.ethanol.name:* (fluid.molecule.ethanol.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.ethanol.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8DF23C,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.amphetamine.name:* (fluid.molecule.amphetamine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.amphetamine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE5ED65,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.theobromine.name:* (fluid.molecule.theobromine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.theobromine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0CC6C4,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.starch.name:* (fluid.molecule.starch.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.starch.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF950F49,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sucrose.name:* (fluid.molecule.sucrose.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sucrose.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF3F7A2D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.pantherine.name:* (fluid.molecule.pantherine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.pantherine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF77C6BC,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.aluminiumOxide.name:* (fluid.molecule.aluminiumOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.aluminiumOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF474F38,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.fullrene.name:* (fluid.molecule.fullrene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.fullrene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF777777,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.valine.name:* (fluid.molecule.valine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.valine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFB6C97C,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.penicillin.name:* (fluid.molecule.penicillin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.penicillin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFD91B37,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.testosterone.name:* (fluid.molecule.testosterone.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.testosterone.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFDDCD7,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.kaolinite.name:* (fluid.molecule.kaolinite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.kaolinite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFA777D6,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.fingolimod.name:* (fluid.molecule.fingolimod.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.fingolimod.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF9DCB21,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.arginine.name:* (fluid.molecule.arginine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.arginine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF7F6A18,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.shikimicAcid.name:* (fluid.molecule.shikimicAcid.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.shikimicAcid.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF98B527,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sulfuricAcid.name:* (fluid.molecule.sulfuricAcid.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sulfuricAcid.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF141A32,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.glyphosate.name:* (fluid.molecule.glyphosate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.glyphosate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF92B7C7,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.asprin.name:* (fluid.molecule.asprin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.asprin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF84C094,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.ddt.name:* (fluid.molecule.ddt.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.ddt.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFA53A7A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.dota.name:* (fluid.molecule.dota.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.dota.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF33ED95,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.mycotoxin.name:* (fluid.molecule.mycotoxin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.mycotoxin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE2D311,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.salt.name:* (fluid.molecule.salt.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.salt.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFC6D9D3,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.ammonia.name:* (fluid.molecule.ammonia.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.ammonia.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1E2A63,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.nodularin.name:* (fluid.molecule.nodularin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.nodularin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE70123,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.tetrodotoxin.name:* (fluid.molecule.tetrodotoxin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.tetrodotoxin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFA8F76F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.thc.name:* (fluid.molecule.thc.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.thc.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF3069AA,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.mt.name:* (fluid.molecule.mt.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.mt.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFD9402F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.buli.name:* (fluid.molecule.buli.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.buli.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF14C33F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.plat.name:* (fluid.molecule.plat.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.plat.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8842FB,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.phosgene.name:* (fluid.molecule.phosgene.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.phosgene.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1D0D09,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.aalc.name:* (fluid.molecule.aalc.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.aalc.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFC0D0E8,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hist.name:* (fluid.molecule.hist.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hist.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFD3BD7A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.pal2.name:* (fluid.molecule.pal2.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.pal2.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF12B112,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.retinol.name:* (fluid.molecule.retinol.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.retinol.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF2D5C07,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.xylitol.name:* (fluid.molecule.xylitol.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.xylitol.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFDB4069,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.weedex.name:* (fluid.molecule.weedex.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.weedex.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF096BC8,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.xanax.name:* (fluid.molecule.xanax.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.xanax.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8E1D1A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hcl.name:* (fluid.molecule.hcl.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hcl.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFD8C1F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.cocaine.name:* (fluid.molecule.cocaine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.cocaine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF3B609C,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.cocainehcl.name:* (fluid.molecule.cocainehcl.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.cocainehcl.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE8207E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.blueorgodye.name:* (fluid.molecule.blueorgodye.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.blueorgodye.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFB9F7F0,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.redorgodye.name:* (fluid.molecule.redorgodye.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.redorgodye.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFA6AA8B,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.purpleorgodye.name:* (fluid.molecule.purpleorgodye.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.purpleorgodye.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF7A3C3B,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.olivine.name:* (fluid.molecule.olivine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.olivine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF9A10B7,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.metblue.name:* (fluid.molecule.metblue.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.metblue.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1F259D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.meoh.name:* (fluid.molecule.meoh.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.meoh.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFB2CBA1,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.lcd.name:* (fluid.molecule.lcd.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.lcd.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFF4DC08,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.radchlor.name:* (fluid.molecule.radchlor.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.radchlor.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF5AE438,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.caulerpenyne.name:* (fluid.molecule.caulerpenyne.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.caulerpenyne.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF82C72A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.latropine.name:* (fluid.molecule.latropine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.latropine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF59E70E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.gallicacid.name:* (fluid.molecule.gallicacid.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.gallicacid.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFA3A36B,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.glucose.name:* (fluid.molecule.glucose.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.glucose.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF68258C,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.tannicacid.name:* (fluid.molecule.tannicacid.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.tannicacid.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF4616EB,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hperox.name:* (fluid.molecule.hperox.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hperox.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1E86F7,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.galliumarsenide.name:* (fluid.molecule.galliumarsenide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.galliumarsenide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF81D75F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.fibroin.name:* (fluid.molecule.fibroin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.fibroin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF798BFD,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.aluminiumPhosphate.name:* (fluid.molecule.aluminiumPhosphate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.aluminiumPhosphate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF0220F2,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.potassiumOxide.name:* (fluid.molecule.potassiumOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.potassiumOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFEBBAA4,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sodiumOxide.name:* (fluid.molecule.sodiumOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sodiumOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF34416C,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.plagioclaseAnorthite.name:* (fluid.molecule.plagioclaseAnorthite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.plagioclaseAnorthite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF91D285,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.plagioclaseAlbite.name:* (fluid.molecule.plagioclaseAlbite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.plagioclaseAlbite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFF27399,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.orthoclase.name:* (fluid.molecule.orthoclase.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.orthoclase.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE7D364,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.biotite.name:* (fluid.molecule.biotite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.biotite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFFD63FC,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.augite.name:* (fluid.molecule.augite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.augite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFE52855,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.talc.name:* (fluid.molecule.talc.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.talc.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF9AAEB0,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.propane.name:* (fluid.molecule.propane.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.propane.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFEC771F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.peridot.name:* (fluid.molecule.peridot.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.peridot.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF69B947,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.topaz.name:* (fluid.molecule.topaz.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.topaz.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF96BB07,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.zoisite.name:* (fluid.molecule.zoisite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.zoisite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF065FAE,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.cysteine.name:* (fluid.molecule.cysteine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.cysteine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF43F787,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.threonine.name:* (fluid.molecule.threonine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.threonine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFAFED30,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.lysine.name:* (fluid.molecule.lysine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.lysine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF17ED68,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.methionine.name:* (fluid.molecule.methionine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.methionine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF329B9B,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.tyrosine.name:* (fluid.molecule.tyrosine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.tyrosine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF37B32F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.histidine.name:* (fluid.molecule.histidine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.histidine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF6F79A4,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.phenylalanine.name:* (fluid.molecule.phenylalanine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.phenylalanine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFB52B9E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.glutamine.name:* (fluid.molecule.glutamine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.glutamine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFDB0E6E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.proline.name:* (fluid.molecule.proline.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.proline.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF5D23A5,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.leucine.name:* (fluid.molecule.leucine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.leucine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF8FA2F8,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.tryptophan.name:* (fluid.molecule.tryptophan.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.tryptophan.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF4A9651,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.isoleucine.name:* (fluid.molecule.isoleucine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.isoleucine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF607044,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.glutamates.name:* (fluid.molecule.glutamates.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.glutamates.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF789A9F,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.asparagine.name:* (fluid.molecule.asparagine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.asparagine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF32CF11,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.keratin.name:* (fluid.molecule.keratin.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.keratin.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF5DB81D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.asbestos.name:* (fluid.molecule.asbestos.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.asbestos.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1B8154,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.lithiumHydroxide.name:* (fluid.molecule.lithiumHydroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.lithiumHydroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF7BD82A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sodiumHydroxide.name:* (fluid.molecule.sodiumHydroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sodiumHydroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF47F3D1,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.potassiumHydroxide.name:* (fluid.molecule.potassiumHydroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.potassiumHydroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF816A70,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.rubidiumHydroxide.name:* (fluid.molecule.rubidiumHydroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.rubidiumHydroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF9B9845,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.cesiumHydroxide.name:* (fluid.molecule.cesiumHydroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.cesiumHydroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFC88EC2,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.franciumHydroxide.name:* (fluid.molecule.franciumHydroxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.franciumHydroxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFF97D0E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hypophosphite.name:* (fluid.molecule.hypophosphite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hypophosphite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF3D771E,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.aluminiumHypophosphite.name:* (fluid.molecule.aluminiumHypophosphite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.aluminiumHypophosphite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFF93E34,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.omphacite.name:* (fluid.molecule.omphacite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.omphacite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF79A439,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.silicate.name:* (fluid.molecule.silicate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.silicate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1413C9,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.pyrope.name:* (fluid.molecule.pyrope.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.pyrope.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF6A35AC,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.almadine.name:* (fluid.molecule.almadine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.almadine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF6A49FB,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.spessartine.name:* (fluid.molecule.spessartine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.spessartine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00B139,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.redGarnet.name:* (fluid.molecule.redGarnet.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.redGarnet.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF593776,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.forsterite.name:* (fluid.molecule.forsterite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.forsterite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFBCDBB3,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.chromite.name:* (fluid.molecule.chromite.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.chromite.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF242A3D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.siliconOxide.name:* (fluid.molecule.siliconOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.siliconOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF656A02,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.ironOxide.name:* (fluid.molecule.ironOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.ironOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFED4E61,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.galliumOxide.name:* (fluid.molecule.galliumOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.galliumOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF6E65B2,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.arsenicOxide.name:* (fluid.molecule.arsenicOxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.arsenicOxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF5C9E10,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sulfurDioxide.name:* (fluid.molecule.sulfurDioxide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sulfurDioxide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFCCA54D,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.hydrogenSulfide.name:* (fluid.molecule.hydrogenSulfide.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.hydrogenSulfide.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF3AC3F7,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sodiumBisulfate.name:* (fluid.molecule.sodiumBisulfate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sodiumBisulfate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF025D23,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.sodiumSulfate.name:* (fluid.molecule.sodiumSulfate.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.sodiumSulfate.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFC6FB0A,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.dimethyltryptamine.name:* (fluid.molecule.dimethyltryptamine.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.dimethyltryptamine.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF1D7F95,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow
+
+# %fluid.molecule.oleicAcid.name:* (fluid.molecule.oleicAcid.name), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=minechem.fluid.FluidBlockMolecule
+block:id=%fluid.molecule.oleicAcid.name,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFA07020,face0-1=12000:minechem/fluid_still,face2-5=12000:minechem/fluid_flow

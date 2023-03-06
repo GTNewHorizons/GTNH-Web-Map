@@ -1,0 +1,106 @@
+# ThermalFoundation 1.7.10R1.2.6B1
+version:1.7
+modname:ThermalFoundation
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/thermalfoundation/textures/blocks/
+texture:id=thermalfoundation/fluid/Fluid_Aerotheum_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Aerotheum_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Aerotheum_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Aerotheum_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Coal_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Coal_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Coal_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Coal_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Cryotheum_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Cryotheum_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Cryotheum_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Cryotheum_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Ender_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Ender_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Ender_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Ender_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Glowstone_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Glowstone_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Glowstone_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Glowstone_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Mana_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Mana_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Mana_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Mana_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Petrotheum_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Petrotheum_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Petrotheum_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Petrotheum_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Pyrotheum_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Pyrotheum_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Pyrotheum_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Pyrotheum_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Redstone_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Redstone_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Redstone_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Redstone_Still.png
+texture:id=thermalfoundation/fluid/Fluid_Steam_Flow,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Steam_Flow.png
+texture:id=thermalfoundation/fluid/Fluid_Steam_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Steam_Still.png
+texture:id=thermalfoundation/ore/Ore_Copper,filename=assets/thermalfoundation/textures/blocks/ore/Ore_Copper.png
+texture:id=thermalfoundation/ore/Ore_Lead,filename=assets/thermalfoundation/textures/blocks/ore/Ore_Lead.png
+texture:id=thermalfoundation/ore/Ore_Mithril,filename=assets/thermalfoundation/textures/blocks/ore/Ore_Mithril.png
+texture:id=thermalfoundation/ore/Ore_Nickel,filename=assets/thermalfoundation/textures/blocks/ore/Ore_Nickel.png
+texture:id=thermalfoundation/ore/Ore_Platinum,filename=assets/thermalfoundation/textures/blocks/ore/Ore_Platinum.png
+texture:id=thermalfoundation/ore/Ore_Silver,filename=assets/thermalfoundation/textures/blocks/ore/Ore_Silver.png
+texture:id=thermalfoundation/ore/Ore_Tin,filename=assets/thermalfoundation/textures/blocks/ore/Ore_Tin.png
+texture:id=thermalfoundation/storage/Block_Bronze,filename=assets/thermalfoundation/textures/blocks/storage/Block_Bronze.png
+texture:id=thermalfoundation/storage/Block_Copper,filename=assets/thermalfoundation/textures/blocks/storage/Block_Copper.png
+texture:id=thermalfoundation/storage/Block_Electrum,filename=assets/thermalfoundation/textures/blocks/storage/Block_Electrum.png
+texture:id=thermalfoundation/storage/Block_Enderium,filename=assets/thermalfoundation/textures/blocks/storage/Block_Enderium.png
+texture:id=thermalfoundation/storage/Block_Invar,filename=assets/thermalfoundation/textures/blocks/storage/Block_Invar.png
+texture:id=thermalfoundation/storage/Block_Lead,filename=assets/thermalfoundation/textures/blocks/storage/Block_Lead.png
+texture:id=thermalfoundation/storage/Block_Lumium,filename=assets/thermalfoundation/textures/blocks/storage/Block_Lumium.png
+texture:id=thermalfoundation/storage/Block_Mithril,filename=assets/thermalfoundation/textures/blocks/storage/Block_Mithril.png
+texture:id=thermalfoundation/storage/Block_Nickel,filename=assets/thermalfoundation/textures/blocks/storage/Block_Nickel.png
+texture:id=thermalfoundation/storage/Block_Platinum,filename=assets/thermalfoundation/textures/blocks/storage/Block_Platinum.png
+texture:id=thermalfoundation/storage/Block_Signalum,filename=assets/thermalfoundation/textures/blocks/storage/Block_Signalum.png
+texture:id=thermalfoundation/storage/Block_Silver,filename=assets/thermalfoundation/textures/blocks/storage/Block_Silver.png
+texture:id=thermalfoundation/storage/Block_Tin,filename=assets/thermalfoundation/textures/blocks/storage/Block_Tin.png
+
+
+
+# %Ore:* (Ore), render=(STANDARD), opaque=true,cls=cofh.thermalfoundation.block.BlockOre
+block:id=%Ore,data=0,stdrot=true,face0-5=0:thermalfoundation/ore/Ore_Copper
+block:id=%Ore,data=1,stdrot=true,face0-5=0:thermalfoundation/ore/Ore_Tin
+block:id=%Ore,data=2,stdrot=true,face0-5=0:thermalfoundation/ore/Ore_Silver
+block:id=%Ore,data=3,stdrot=true,face0-5=0:thermalfoundation/ore/Ore_Lead
+block:id=%Ore,data=4,stdrot=true,face0-5=0:thermalfoundation/ore/Ore_Nickel
+block:id=%Ore,data=5,stdrot=true,face0-5=0:thermalfoundation/ore/Ore_Platinum
+block:id=%Ore,data=6,stdrot=true,face0-5=0:thermalfoundation/ore/Ore_Mithril
+
+# %Storage:* (Storage), render=(STANDARD), opaque=true,cls=cofh.thermalfoundation.block.BlockStorage
+block:id=%Storage,data=0,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Copper
+block:id=%Storage,data=1,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Tin
+block:id=%Storage,data=2,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Silver
+block:id=%Storage,data=3,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Lead
+block:id=%Storage,data=4,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Nickel
+block:id=%Storage,data=5,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Platinum
+block:id=%Storage,data=6,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Mithril
+block:id=%Storage,data=7,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Electrum
+block:id=%Storage,data=8,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Invar
+block:id=%Storage,data=9,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Bronze
+block:id=%Storage,data=10,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Signalum
+block:id=%Storage,data=11,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Lumium
+block:id=%Storage,data=12,stdrot=true,face0-5=0:thermalfoundation/storage/Block_Enderium
+
+# %FluidRedstone:* (FluidRedstone), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidRedstone
+block:id=%FluidRedstone,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Redstone_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Redstone_Flow
+
+# %FluidGlowstone:* (FluidGlowstone), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidGlowstone
+block:id=%FluidGlowstone,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Glowstone_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Glowstone_Flow
+
+# %FluidEnder:* (FluidEnder), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidEnder
+block:id=%FluidEnder,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Ender_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Ender_Flow
+
+# %FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidPyrotheum
+block:id=%FluidPyrotheum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Pyrotheum_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Pyrotheum_Flow
+
+# %FluidCryotheum:* (FluidCryotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidCryotheum
+block:id=%FluidCryotheum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Cryotheum_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Cryotheum_Flow
+
+# %FluidAerotheum:* (FluidAerotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidAerotheum
+block:id=%FluidAerotheum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Aerotheum_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Aerotheum_Flow
+
+# %FluidPetrotheum:* (FluidPetrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidPetrotheum
+block:id=%FluidPetrotheum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Petrotheum_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Petrotheum_Flow
+
+# %FluidMana:* (FluidMana), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidMana
+block:id=%FluidMana,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Mana_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Mana_Flow
+
+# %FluidSteam:* (FluidSteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidSteam
+block:id=%FluidSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Steam_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Steam_Flow
+
+# %FluidCoal:* (FluidCoal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=cofh.thermalfoundation.fluid.BlockFluidCoal
+block:id=%FluidCoal,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalfoundation/fluid/Fluid_Coal_Still,face2-5=12000:thermalfoundation/fluid/Fluid_Coal_Flow

@@ -1,0 +1,63 @@
+# recycling 1.1.0.5
+version:1.7
+modname:recycling
+
+
+cfgfile:config/recycling.cfg
+
+
+texturepath:assets/recycling/textures/blocks/
+texture:id=ThermalExpansion/machine/Machine_Bottom,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Bottom.png
+texture:id=ThermalExpansion/machine/Machine_Side,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Side.png
+texture:id=ThermalExpansion/machine/Machine_Top,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Top.png
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=minecraft/farmland_wet,filename=assets/minecraft/textures/blocks/farmland_wet.png
+texture:id=minecraft/grass_side,filename=assets/minecraft/textures/blocks/grass_side.png
+texture:id=minecraft/redstone_ore,filename=assets/minecraft/textures/blocks/redstone_ore.png
+texture:id=recycling/Assessor_Front,filename=assets/recycling/textures/blocks/Assessor_Front.png
+texture:id=recycling/Assessor_Top,filename=assets/recycling/textures/blocks/Assessor_Top.png
+texture:id=recycling/BatteryRack_Front,filename=assets/recycling/textures/blocks/BatteryRack_Front.png
+texture:id=recycling/Composter_Side,filename=assets/recycling/textures/blocks/Composter_Side.png
+texture:id=recycling/Composter_Top,filename=assets/recycling/textures/blocks/Composter_Top.png
+texture:id=recycling/Recycler_Front_Off,filename=assets/recycling/textures/blocks/Recycler_Front_Off.png
+texture:id=recycling/lawn_eastwest,filename=assets/recycling/textures/blocks/lawn_eastwest.png
+texture:id=recycling/lawn_northsouth,filename=assets/recycling/textures/blocks/lawn_northsouth.png
+texture:id=recycling/pileOfRubble,filename=assets/recycling/textures/blocks/pileOfRubble.png
+texture:id=recycling/scrap_block,filename=assets/recycling/textures/blocks/scrap_block.png
+
+
+
+# %ScrapBlock:* (ScrapBlock), render=(STANDARD), opaque=true,cls=org.blockartistry.mod.ThermalRecycling.blocks.ScrapBlock
+block:id=%ScrapBlock,data=*,stdrot=true,face0-5=0:recycling/scrap_block
+
+# %tile.FertileLand:* (tile.FertileLand), render=(STANDARD), opaque=false,cls=org.blockartistry.mod.ThermalRecycling.blocks.FertileLand
+block:id=%tile.FertileLand,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:minecraft/farmland_wet,face2-5=0:minecraft/dirt
+
+# %tile.PileOfRubble:* (tile.PileOfRubble), render=(CROSSEDSQUARES), opaque=false,cls=org.blockartistry.mod.ThermalRecycling.blocks.PileOfRubble
+block:id=%tile.PileOfRubble,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:recycling/pileOfRubble
+
+# %tile.Lawn:* (tile.Lawn), render=(STANDARD), opaque=true,cls=org.blockartistry.mod.ThermalRecycling.blocks.Lawn
+block:id=%tile.Lawn,data=0,stdrot=true,colorMult=FF7CBD6B,face0=17000:minecraft/dirt,face1=17000:recycling/lawn_northsouth,face2-5=17000:minecraft/grass_side
+block:id=%tile.Lawn,data=1,stdrot=true,colorMult=FF7CBD6B,face0=17000:minecraft/dirt,face1=17000:recycling/lawn_eastwest,face2-5=17000:minecraft/grass_side
+block:id=%tile.Lawn,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0=17000:minecraft/dirt,face2-5=17000:minecraft/grass_side
+
+# %tile.EnergeticRedstoneOre:* (tile.EnergeticRedstoneOre), render=(STANDARD), opaque=true,cls=org.blockartistry.mod.ThermalRecycling.blocks.EnergeticRedstoneOre
+block:id=%tile.EnergeticRedstoneOre,data=*,stdrot=true,face0-5=0:minecraft/redstone_ore
+
+# %MachineThermalRecycler:* (MachineThermalRecycler), render=(STANDARD), opaque=true,cls=org.blockartistry.mod.ThermalRecycling.machines.MachineThermalRecycler
+block:id=%MachineThermalRecycler,data=*,stdrot=true,face0=0:ThermalExpansion/machine/Machine_Bottom,face1=0:ThermalExpansion/machine/Machine_Top,face2=0:ThermalExpansion/machine/Machine_Side,face3=0:recycling/Recycler_Front_Off,face4-5=0:ThermalExpansion/machine/Machine_Side
+
+# %MachineScrapAssessor:* (MachineScrapAssessor), render=(STANDARD), opaque=true,cls=org.blockartistry.mod.ThermalRecycling.machines.MachineScrapAssessor
+block:id=%MachineScrapAssessor,data=*,stdrot=true,face0=0:ThermalExpansion/machine/Machine_Bottom,face1=0:recycling/Assessor_Top,face2=0:ThermalExpansion/machine/Machine_Side,face3=0:recycling/Assessor_Front,face4-5=0:ThermalExpansion/machine/Machine_Side
+
+# %MachineComposter:* (MachineComposter), render=(STANDARD), opaque=true,cls=org.blockartistry.mod.ThermalRecycling.machines.MachineComposter
+block:id=%MachineComposter,data=*,stdrot=true,face0=0:ThermalExpansion/machine/Machine_Bottom,face1=0:recycling/Composter_Top,face2-5=0:recycling/Composter_Side
+
+# %MachineVending:* (MachineVending), render=(CUSTOM), opaque=false,cls=org.blockartistry.mod.ThermalRecycling.machines.MachineVending
+block:id=%MachineVending,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:ThermalExpansion/machine/Machine_Bottom,face1=0:ThermalExpansion/machine/Machine_Top,face2-5=0:ThermalExpansion/machine/Machine_Side
+
+# %MachineVendingTop:* (MachineVendingTop), render=(STANDARD), opaque=false,cls=org.blockartistry.mod.ThermalRecycling.machines.MachineVendingTop
+block:id=%MachineVendingTop,data=*,stdrot=true,face0=0:ThermalExpansion/machine/Machine_Bottom,face1=0:ThermalExpansion/machine/Machine_Top,face2-5=0:ThermalExpansion/machine/Machine_Side
+
+# %MachineBatteryRack:* (MachineBatteryRack), render=(STANDARD), opaque=false,cls=org.blockartistry.mod.ThermalRecycling.machines.MachineBatteryRack
+block:id=%MachineBatteryRack,data=*,stdrot=true,face0=12000:ThermalExpansion/machine/Machine_Bottom,face1=12000:ThermalExpansion/machine/Machine_Top,face2=12000:ThermalExpansion/machine/Machine_Side,face3=12000:recycling/BatteryRack_Front,face4-5=12000:ThermalExpansion/machine/Machine_Side

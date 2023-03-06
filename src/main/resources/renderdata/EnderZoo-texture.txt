@@ -1,0 +1,30 @@
+# EnderZoo 1.7.10-1.0.15.32
+version:1.7
+modname:EnderZoo
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/enderzoo/textures/blocks/
+texture:id=enderzoo/blockConcussionCharge_bottom,filename=assets/enderzoo/textures/blocks/blockConcussionCharge_bottom.png
+texture:id=enderzoo/blockConcussionCharge_side,filename=assets/enderzoo/textures/blocks/blockConcussionCharge_side.png
+texture:id=enderzoo/blockConcussionCharge_top,filename=assets/enderzoo/textures/blocks/blockConcussionCharge_top.png
+texture:id=enderzoo/blockConfusingCharge_bottom,filename=assets/enderzoo/textures/blocks/blockConfusingCharge_bottom.png
+texture:id=enderzoo/blockConfusingCharge_side,filename=assets/enderzoo/textures/blocks/blockConfusingCharge_side.png
+texture:id=enderzoo/blockConfusingCharge_top,filename=assets/enderzoo/textures/blocks/blockConfusingCharge_top.png
+texture:id=enderzoo/blockEnderCharge_bottom,filename=assets/enderzoo/textures/blocks/blockEnderCharge_bottom.png
+texture:id=enderzoo/blockEnderCharge_side,filename=assets/enderzoo/textures/blocks/blockEnderCharge_side.png
+texture:id=enderzoo/blockEnderCharge_top,filename=assets/enderzoo/textures/blocks/blockEnderCharge_top.png
+
+
+
+# %blockConfusingCharge:* (blockConfusingCharge), render=(STANDARD), opaque=true,cls=crazypants.enderzoo.charge.BlockConfusingCharge
+block:id=%blockConfusingCharge,data=*,stdrot=true,face0=0:enderzoo/blockConfusingCharge_bottom,face1=0:enderzoo/blockConfusingCharge_top,face2-5=0:enderzoo/blockConfusingCharge_side
+
+# %blockEnderCharge:* (blockEnderCharge), render=(STANDARD), opaque=true,cls=crazypants.enderzoo.charge.BlockEnderCharge
+block:id=%blockEnderCharge,data=*,stdrot=true,face0=0:enderzoo/blockEnderCharge_bottom,face1=0:enderzoo/blockEnderCharge_top,face2-5=0:enderzoo/blockEnderCharge_side
+
+# %blockConcussionCharge:* (blockConcussionCharge), render=(STANDARD), opaque=true,cls=crazypants.enderzoo.charge.BlockConcussionCharge
+block:id=%blockConcussionCharge,data=*,stdrot=true,face0=0:enderzoo/blockConcussionCharge_bottom,face1=0:enderzoo/blockConcussionCharge_top,face2-5=0:enderzoo/blockConcussionCharge_side

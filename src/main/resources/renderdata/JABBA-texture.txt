@@ -1,0 +1,15 @@
+# JABBA 1.2.2
+version:1.7
+modname:JABBA
+
+
+cfgfile:config/JABBA.cfg
+
+
+texturepath:assets/jabba/textures/blocks/
+texture:id=JABBA/overlay_linked,filename=assets/jabba/textures/blocks/overlay_linked.png
+
+
+
+# %barrel:* (barrel), render=mcp.mobius.betterbarrels.client.render.BlockBarrelRenderer(CUSTOM), opaque=true,cls=mcp.mobius.betterbarrels.common.blocks.BlockBarrel
+block:id=%barrel,data=*,stdrot=true,face0-5=0:JABBA/overlay_linked

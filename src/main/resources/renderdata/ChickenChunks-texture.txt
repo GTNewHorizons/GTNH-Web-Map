@@ -1,0 +1,21 @@
+# ChickenChunks 1.3.4.19
+version:1.7
+modname:ChickenChunks
+
+
+cfgfile:config/ChickenChunks.cfg
+
+
+texturepath:assets/chickenchunks/textures/blocks/
+texture:id=chickenchunks/block_0_0,filename=assets/chickenchunks/textures/blocks/block_0_0.png
+texture:id=chickenchunks/block_0_1,filename=assets/chickenchunks/textures/blocks/block_0_1.png
+texture:id=chickenchunks/block_0_2,filename=assets/chickenchunks/textures/blocks/block_0_2.png
+texture:id=chickenchunks/block_1_0,filename=assets/chickenchunks/textures/blocks/block_1_0.png
+texture:id=chickenchunks/block_1_1,filename=assets/chickenchunks/textures/blocks/block_1_1.png
+texture:id=chickenchunks/block_1_2,filename=assets/chickenchunks/textures/blocks/block_1_2.png
+
+
+
+# %chickenChunkLoader:* (chickenChunkLoader), render=codechicken.chunkloader.ChunkLoaderSBRH(CUSTOM), opaque=false,cls=codechicken.chunkloader.BlockChunkLoader
+block:id=%chickenChunkLoader,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:chickenchunks/block_0_0,face1=0:chickenchunks/block_0_1,face2-5=0:chickenchunks/block_0_2
+block:id=%chickenChunkLoader,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:chickenchunks/block_1_0,face1=0:chickenchunks/block_1_1,face2-5=0:chickenchunks/block_1_2

@@ -1,0 +1,70 @@
+# CarpentersBlocks 3.3.8.1
+version:1.7
+modname:CarpentersBlocks
+
+
+cfgfile:config/CarpentersBlocks.cfg
+
+
+texturepath:assets/carpentersblocks/textures/blocks/
+texture:id=CarpentersBlocks/flowerpot/flower_pot,filename=assets/carpentersblocks/textures/blocks/flowerpot/flower_pot.png
+texture:id=CarpentersBlocks/lever/lever,filename=assets/carpentersblocks/textures/blocks/lever/lever.png
+texture:id=CarpentersBlocks/torch/torch,filename=assets/carpentersblocks/textures/blocks/torch/torch.png
+texture:id=minecraft/redstone_dust_cross_overlay,filename=assets/minecraft/textures/blocks/redstone_dust_cross_overlay.png
+
+
+
+# %blockCarpentersBlock:* (blockCarpentersBlock), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBlock(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBlock
+block:id=%blockCarpentersBlock,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersBarrier:* (blockCarpentersBarrier), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBarrier(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBarrier
+block:id=%blockCarpentersBarrier,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersBed:* (blockCarpentersBed), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBed(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBed
+block:id=%blockCarpentersBed,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersButton:* (blockCarpentersButton), render=com.carpentersblocks.renderer.BlockHandlerCarpentersButton(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersButton
+block:id=%blockCarpentersButton,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersCollapsibleBlock:* (blockCarpentersCollapsibleBlock), render=com.carpentersblocks.renderer.BlockHandlerCarpentersCollapsibleBlock(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersCollapsibleBlock
+block:id=%blockCarpentersCollapsibleBlock,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersDaylightSensor:* (blockCarpentersDaylightSensor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersDaylightSensor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersDaylightSensor
+block:id=%blockCarpentersDaylightSensor,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersDoor:* (blockCarpentersDoor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersDoor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersDoor
+block:id=%blockCarpentersDoor,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersFlowerPot:* (blockCarpentersFlowerPot), render=com.carpentersblocks.renderer.BlockHandlerCarpentersFlowerPot(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersFlowerPot
+block:id=%blockCarpentersFlowerPot,data=0,stdrot=true,face0=12000:minecraft/redstone_dust_cross_overlay,face1=12000:CarpentersBlocks/flowerpot/flower_pot,face2-5=12000:minecraft/redstone_dust_cross_overlay
+block:id=%blockCarpentersFlowerPot,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersGarageDoor:* (blockCarpentersGarageDoor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGarageDoor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGarageDoor
+block:id=%blockCarpentersGarageDoor,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersGate:* (blockCarpentersGate), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGate(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGate
+block:id=%blockCarpentersGate,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersHatch:* (blockCarpentersHatch), render=com.carpentersblocks.renderer.BlockHandlerCarpentersHatch(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersHatch
+block:id=%blockCarpentersHatch,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersLadder:* (blockCarpentersLadder), render=com.carpentersblocks.renderer.BlockHandlerCarpentersLadder(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersLadder
+block:id=%blockCarpentersLadder,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersLever:* (blockCarpentersLever), render=com.carpentersblocks.renderer.BlockHandlerCarpentersLever(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersLever
+block:id=%blockCarpentersLever,data=*,stdrot=true,face0-5=12000:CarpentersBlocks/lever/lever
+
+# %blockCarpentersPressurePlate:* (blockCarpentersPressurePlate), render=com.carpentersblocks.renderer.BlockHandlerCarpentersPressurePlate(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersPressurePlate
+block:id=%blockCarpentersPressurePlate,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersSafe:* (blockCarpentersSafe), render=com.carpentersblocks.renderer.BlockHandlerCarpentersSafe(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersSafe
+block:id=%blockCarpentersSafe,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersSlope:* (blockCarpentersSlope), render=com.carpentersblocks.renderer.BlockHandlerCarpentersSlope(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersSlope
+block:id=%blockCarpentersSlope,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersStairs:* (blockCarpentersStairs), render=com.carpentersblocks.renderer.BlockHandlerCarpentersStairs(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersStairs
+block:id=%blockCarpentersStairs,data=*,stdrot=true,face0-5=12000:minecraft/redstone_dust_cross_overlay
+
+# %blockCarpentersTorch:* (blockCarpentersTorch), render=com.carpentersblocks.renderer.BlockHandlerCarpentersTorch(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersTorch
+block:id=%blockCarpentersTorch,data=*,stdrot=true,face0-5=12000:CarpentersBlocks/torch/torch

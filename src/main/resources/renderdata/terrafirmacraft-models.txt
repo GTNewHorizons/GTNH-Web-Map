@@ -1,0 +1,517 @@
+# terrafirmacraft 0.79.8
+version:1.7
+modname:terrafirmacraft
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %Ore1:* (Ore1), render=com.bioxx.tfc.Render.Blocks.RenderOre(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockOre
+
+# %Ore2:* (Ore2), render=com.bioxx.tfc.Render.Blocks.RenderOre(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockOre2
+
+# %Ore3:* (Ore3), render=com.bioxx.tfc.Render.Blocks.RenderOre(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockOre3
+
+# %Grass:* (Grass), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockGrass
+
+# %Grass2:* (Grass2), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockGrass
+
+# %ClayGrass:* (ClayGrass), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockClayGrass
+
+# %ClayGrass2:* (ClayGrass2), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockClayGrass
+
+# %PeatGrass:* (PeatGrass), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockPeatGrass
+
+# %DryGrass:* (DryGrass), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockDryGrass
+
+# %DryGrass2:* (DryGrass2), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Terrain.BlockDryGrass
+
+# %TallGrass:* (TallGrass), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomTallGrass
+patchblock:id=%TallGrass,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %LooseRock:* (LooseRock), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockWorldItem
+boxblock:id=%LooseRock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.05000000074505806,zmin=0.0,zmax=1.0,data=*
+
+# %Charcoal:* (Charcoal), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockCharcoal
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=3
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%Charcoal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %WoodSupportV:* (WoodSupportV), render=com.bioxx.tfc.Render.Blocks.RenderSupportBeam(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.BlockWoodSupport
+boxblock:id=%WoodSupportV,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %WoodSupportH:* (WoodSupportH), render=com.bioxx.tfc.Render.Blocks.RenderSupportBeam(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.BlockWoodSupport
+boxblock:id=%WoodSupportH,xmin=0.25,xmax=0.75,ymin=0.5,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %WoodSupportV2:* (WoodSupportV2), render=com.bioxx.tfc.Render.Blocks.RenderSupportBeam(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.BlockWoodSupport2
+boxblock:id=%WoodSupportV2,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %WoodSupportH2:* (WoodSupportH2), render=com.bioxx.tfc.Render.Blocks.RenderSupportBeam(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.BlockWoodSupport2
+boxblock:id=%WoodSupportH2,xmin=0.25,xmax=0.75,ymin=0.5,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %sapling:* (sapling), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockSapling
+patchblock:id=%sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %sapling2:* (sapling2), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockSapling2
+patchblock:id=%sapling2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0
+
+# %Firepit:* (Firepit), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockFirepit
+boxblock:id=%Firepit,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.10000000149011612,zmin=0.0,zmax=1.0,data=*
+
+# %Forge:* (Forge), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockForge
+boxblock:id=%Forge,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8999999761581421,zmin=0.0,zmax=1.0,data=*
+
+# %Molten:* (Molten), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockMolten
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=3
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=8
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=9
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=10
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=11
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=12
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%Molten,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=14
+
+# %EarlyBloomery:* (EarlyBloomery), render=com.bioxx.tfc.Render.Blocks.RenderBloomery(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockEarlyBloomery
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%EarlyBloomery,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=*
+
+# %Sluice:* (Sluice), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockSluice
+boxblock:id=%Sluice,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stoneStalac:* (stoneStalac), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockStalactite
+boxblock:id=%stoneStalac,xmin=0.35482257604599,xmax=0.64517742395401,ymin=0.08427953720092773,ymax=1.0,zmin=0.35482257604599,zmax=0.64517742395401,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stoneStalac,xmin=0.35482257604599,xmax=0.64517742395401,ymin=0.0,ymax=0.9157204627990723,zmin=0.35482257604599,zmax=0.64517742395401,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %WoodConstruct:* (WoodConstruct), render=com.bioxx.tfc.Render.Blocks.RenderWoodConstruct(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.BlockWoodConstruct
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%WoodConstruct,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=*
+
+# %ToolRack:* (ToolRack), render=com.bioxx.tfc.Render.Blocks.RenderToolRack(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockToolRack
+boxblock:id=%ToolRack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8500000238418579,zmax=1.0,data=0
+boxblock:id=%ToolRack,xmin=0.0,xmax=0.15000000596046448,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%ToolRack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.15000000596046448,data=2
+boxblock:id=%ToolRack,xmin=0.8500000238418579,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %WallCobbleIgIn:* (WallCobbleIgIn), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallCobbleIgIn,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2
+customblock:id=%WallCobbleIgIn,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10
+
+# %WallCobbleIgEx:* (WallCobbleIgEx), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallCobbleIgEx,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3
+customblock:id=%WallCobbleIgEx,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10,data=11
+
+# %WallCobbleSed:* (WallCobbleSed), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallCobbleSed,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %WallCobbleMM:* (WallCobbleMM), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallCobbleMM,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5
+customblock:id=%WallCobbleMM,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10,data=11,data=12,data=13
+
+# %WallRawIgIn:* (WallRawIgIn), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallRawIgIn,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %WallRawIgEx:* (WallRawIgEx), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallRawIgEx,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %WallRawSed:* (WallRawSed), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallRawSed,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %WallRawMM:* (WallRawMM), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallRawMM,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %WallBrickIgIn:* (WallBrickIgIn), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallBrickIgIn,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2
+customblock:id=%WallBrickIgIn,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10
+
+# %WallBrickIgEx:* (WallBrickIgEx), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallBrickIgEx,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3
+customblock:id=%WallBrickIgEx,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10,data=11
+
+# %WallBrickSed:* (WallBrickSed), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallBrickSed,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %WallBrickMM:* (WallBrickMM), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallBrickMM,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5
+customblock:id=%WallBrickMM,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10,data=11,data=12,data=13
+
+# %WallSmoothIgIn:* (WallSmoothIgIn), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallSmoothIgIn,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2
+customblock:id=%WallSmoothIgIn,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10
+
+# %WallSmoothIgEx:* (WallSmoothIgEx), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallSmoothIgEx,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3
+customblock:id=%WallSmoothIgEx,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10,data=11
+
+# %WallSmoothSed:* (WallSmoothSed), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallSmoothSed,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %WallSmoothMM:* (WallSmoothMM), render=(WALL), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomWall
+customblock:id=%WallSmoothMM,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5
+customblock:id=%WallSmoothMM,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=8,data=9,data=10,data=11,data=12,data=13
+
+# %SaltWater:* (SaltWater), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockSaltWater
+boxblock:id=%SaltWater,ymax=0.875,data=1
+boxblock:id=%SaltWater,ymax=0.75,data=2
+boxblock:id=%SaltWater,ymax=0.625,data=3
+boxblock:id=%SaltWater,ymax=0.5,data=4
+boxblock:id=%SaltWater,ymax=0.375,data=5
+boxblock:id=%SaltWater,ymax=0.25,data=6
+boxblock:id=%SaltWater,ymax=0.125,data=7
+boxblock:id=%SaltWater,ymax=0.875,data=9
+boxblock:id=%SaltWater,ymax=0.75,data=10
+boxblock:id=%SaltWater,ymax=0.625,data=11
+boxblock:id=%SaltWater,ymax=0.5,data=12
+boxblock:id=%SaltWater,ymax=0.375,data=13
+boxblock:id=%SaltWater,ymax=0.25,data=14
+boxblock:id=%SaltWater,ymax=0.125,data=15
+
+# %SaltWaterStationary:* (SaltWaterStationary), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockLiquidStatic
+boxblock:id=%SaltWaterStationary,ymax=0.875,data=1
+boxblock:id=%SaltWaterStationary,ymax=0.75,data=2
+boxblock:id=%SaltWaterStationary,ymax=0.625,data=3
+boxblock:id=%SaltWaterStationary,ymax=0.5,data=4
+boxblock:id=%SaltWaterStationary,ymax=0.375,data=5
+boxblock:id=%SaltWaterStationary,ymax=0.25,data=6
+boxblock:id=%SaltWaterStationary,ymax=0.125,data=7
+boxblock:id=%SaltWaterStationary,ymax=0.875,data=9
+boxblock:id=%SaltWaterStationary,ymax=0.75,data=10
+boxblock:id=%SaltWaterStationary,ymax=0.625,data=11
+boxblock:id=%SaltWaterStationary,ymax=0.5,data=12
+boxblock:id=%SaltWaterStationary,ymax=0.375,data=13
+boxblock:id=%SaltWaterStationary,ymax=0.25,data=14
+boxblock:id=%SaltWaterStationary,ymax=0.125,data=15
+
+# %FreshWater:* (FreshWater), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockFreshWater
+boxblock:id=%FreshWater,ymax=0.875,data=1
+boxblock:id=%FreshWater,ymax=0.75,data=2
+boxblock:id=%FreshWater,ymax=0.625,data=3
+boxblock:id=%FreshWater,ymax=0.5,data=4
+boxblock:id=%FreshWater,ymax=0.375,data=5
+boxblock:id=%FreshWater,ymax=0.25,data=6
+boxblock:id=%FreshWater,ymax=0.125,data=7
+boxblock:id=%FreshWater,ymax=0.875,data=9
+boxblock:id=%FreshWater,ymax=0.75,data=10
+boxblock:id=%FreshWater,ymax=0.625,data=11
+boxblock:id=%FreshWater,ymax=0.5,data=12
+boxblock:id=%FreshWater,ymax=0.375,data=13
+boxblock:id=%FreshWater,ymax=0.25,data=14
+boxblock:id=%FreshWater,ymax=0.125,data=15
+
+# %FreshWaterStationary:* (FreshWaterStationary), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockLiquidStatic
+boxblock:id=%FreshWaterStationary,ymax=0.875,data=1
+boxblock:id=%FreshWaterStationary,ymax=0.75,data=2
+boxblock:id=%FreshWaterStationary,ymax=0.625,data=3
+boxblock:id=%FreshWaterStationary,ymax=0.5,data=4
+boxblock:id=%FreshWaterStationary,ymax=0.375,data=5
+boxblock:id=%FreshWaterStationary,ymax=0.25,data=6
+boxblock:id=%FreshWaterStationary,ymax=0.125,data=7
+boxblock:id=%FreshWaterStationary,ymax=0.875,data=9
+boxblock:id=%FreshWaterStationary,ymax=0.75,data=10
+boxblock:id=%FreshWaterStationary,ymax=0.625,data=11
+boxblock:id=%FreshWaterStationary,ymax=0.5,data=12
+boxblock:id=%FreshWaterStationary,ymax=0.375,data=13
+boxblock:id=%FreshWaterStationary,ymax=0.25,data=14
+boxblock:id=%FreshWaterStationary,ymax=0.125,data=15
+
+# %HotWater:* (HotWater), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockHotWater
+boxblock:id=%HotWater,ymax=0.875,data=1
+boxblock:id=%HotWater,ymax=0.75,data=2
+boxblock:id=%HotWater,ymax=0.625,data=3
+boxblock:id=%HotWater,ymax=0.5,data=4
+boxblock:id=%HotWater,ymax=0.375,data=5
+boxblock:id=%HotWater,ymax=0.25,data=6
+boxblock:id=%HotWater,ymax=0.125,data=7
+boxblock:id=%HotWater,ymax=0.875,data=9
+boxblock:id=%HotWater,ymax=0.75,data=10
+boxblock:id=%HotWater,ymax=0.625,data=11
+boxblock:id=%HotWater,ymax=0.5,data=12
+boxblock:id=%HotWater,ymax=0.375,data=13
+boxblock:id=%HotWater,ymax=0.25,data=14
+boxblock:id=%HotWater,ymax=0.125,data=15
+
+# %HotWaterStationary:* (HotWaterStationary), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockHotWaterStatic
+boxblock:id=%HotWaterStationary,ymax=0.875,data=1
+boxblock:id=%HotWaterStationary,ymax=0.75,data=2
+boxblock:id=%HotWaterStationary,ymax=0.625,data=3
+boxblock:id=%HotWaterStationary,ymax=0.5,data=4
+boxblock:id=%HotWaterStationary,ymax=0.375,data=5
+boxblock:id=%HotWaterStationary,ymax=0.25,data=6
+boxblock:id=%HotWaterStationary,ymax=0.125,data=7
+boxblock:id=%HotWaterStationary,ymax=0.875,data=9
+boxblock:id=%HotWaterStationary,ymax=0.75,data=10
+boxblock:id=%HotWaterStationary,ymax=0.625,data=11
+boxblock:id=%HotWaterStationary,ymax=0.5,data=12
+boxblock:id=%HotWaterStationary,ymax=0.375,data=13
+boxblock:id=%HotWaterStationary,ymax=0.25,data=14
+boxblock:id=%HotWaterStationary,ymax=0.125,data=15
+
+# %Lava:* (Lava), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockLava
+boxblock:id=%Lava,ymax=0.875,data=1
+boxblock:id=%Lava,ymax=0.75,data=2
+boxblock:id=%Lava,ymax=0.625,data=3
+boxblock:id=%Lava,ymax=0.5,data=4
+boxblock:id=%Lava,ymax=0.375,data=5
+boxblock:id=%Lava,ymax=0.25,data=6
+boxblock:id=%Lava,ymax=0.125,data=7
+boxblock:id=%Lava,ymax=0.875,data=9
+boxblock:id=%Lava,ymax=0.75,data=10
+boxblock:id=%Lava,ymax=0.625,data=11
+boxblock:id=%Lava,ymax=0.5,data=12
+boxblock:id=%Lava,ymax=0.375,data=13
+boxblock:id=%Lava,ymax=0.25,data=14
+boxblock:id=%Lava,ymax=0.125,data=15
+
+# %LavaStationary:* (LavaStationary), render=(FLUIDS), opaque=false,cls=com.bioxx.tfc.Blocks.Liquids.BlockLiquidStatic
+boxblock:id=%LavaStationary,ymax=0.875,data=1
+boxblock:id=%LavaStationary,ymax=0.75,data=2
+boxblock:id=%LavaStationary,ymax=0.625,data=3
+boxblock:id=%LavaStationary,ymax=0.5,data=4
+boxblock:id=%LavaStationary,ymax=0.375,data=5
+boxblock:id=%LavaStationary,ymax=0.25,data=6
+boxblock:id=%LavaStationary,ymax=0.125,data=7
+boxblock:id=%LavaStationary,ymax=0.875,data=9
+boxblock:id=%LavaStationary,ymax=0.75,data=10
+boxblock:id=%LavaStationary,ymax=0.625,data=11
+boxblock:id=%LavaStationary,ymax=0.5,data=12
+boxblock:id=%LavaStationary,ymax=0.375,data=13
+boxblock:id=%LavaStationary,ymax=0.25,data=14
+boxblock:id=%LavaStationary,ymax=0.125,data=15
+
+# %SeaGrassStill:* (SeaGrassStill), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=true,cls=com.bioxx.tfc.Blocks.Flora.BlockWaterPlant
+
+# %DoorOak:* (DoorOak), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorOak,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorAspen:* (DoorAspen), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorAspen,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorBirch:* (DoorBirch), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorBirch,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorChestnut:* (DoorChestnut), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorChestnut,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorDouglasFir:* (DoorDouglasFir), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorDouglasFir,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorHickory:* (DoorHickory), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorHickory,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorMaple:* (DoorMaple), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorMaple,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorAsh:* (DoorAsh), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorAsh,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorPine:* (DoorPine), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorPine,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorSequoia:* (DoorSequoia), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorSequoia,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorSpruce:* (DoorSpruce), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorSpruce,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorSycamore:* (DoorSycamore), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorSycamore,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorWhiteCedar:* (DoorWhiteCedar), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorWhiteCedar,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorWhiteElm:* (DoorWhiteElm), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorWhiteElm,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorWillow:* (DoorWillow), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorWillow,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorKapok:* (DoorKapok), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorKapok,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %DoorAcacia:* (DoorAcacia), render=(DOOR), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomDoor
+customblock:id=%DoorAcacia,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %Barrel:* (Barrel), render=com.bioxx.tfc.Render.Blocks.RenderBarrel(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockBarrel
+boxblock:id=%Barrel,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %Loom:* (Loom), render=com.bioxx.tfc.Render.Blocks.RenderLoom(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockLoom
+boxblock:id=%Loom,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %Moss:* (Moss), render=(VINE), opaque=false,cls=com.bioxx.tfc.Blocks.Terrain.BlockMoss
+patchblock:id=%Moss,patch0=VertX0In@270#0,data=1
+patchblock:id=%Moss,patch0=VertX0In#0,data=2
+patchblock:id=%Moss,patch0=VertX0In@270#0,patch1=VertX0In#0,data=3
+patchblock:id=%Moss,patch0=VertX0In@90#0,data=4
+patchblock:id=%Moss,patch0=VertX0In@90#0,patch1=VertX0In@270#0,data=5
+patchblock:id=%Moss,patch0=VertX0In#0,patch1=VertX0In@90#0,data=6
+patchblock:id=%Moss,patch0=VertX0In@90#0,patch1=VertX0In@270#0,patch2=VertX0In#0,data=7
+patchblock:id=%Moss,patch0=VertX0In@180#0,data=8
+patchblock:id=%Moss,patch0=VertX0In@180#0,patch1=VertX0In@270#0,data=9
+patchblock:id=%Moss,patch0=VertX0In#0,patch1=VertX0In@180#0,data=10
+patchblock:id=%Moss,patch0=VertX0In#0,patch1=VertX0In@180#0,patch2=VertX0In@270#0,data=11
+patchblock:id=%Moss,patch0=VertX0In@90#0,patch1=VertX0In@180#0,data=12
+patchblock:id=%Moss,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,data=13
+patchblock:id=%Moss,patch0=VertX0In@180#0,patch1=VertX0In#0,patch2=VertX0In@90#0,data=14
+patchblock:id=%Moss,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,patch3=VertX0In#0,data=15
+
+# %Flora:* (Flora), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockFlora
+patchblock:id=%Flora,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %ClayPottery:* (ClayPottery), render=com.bioxx.tfc.Render.Blocks.RenderPottery(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockPottery
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%ClayPottery,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %Crucible:* (Crucible), render=com.bioxx.tfc.Render.Blocks.RenderCrucible(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockCrucible
+boxblock:id=%Crucible,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=*
+
+# %NestBox:* (NestBox), render=com.bioxx.tfc.Render.Blocks.RenderNestBox(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockNestBox
+boxblock:id=%NestBox,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.4000000059604645,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %Fence:* (Fence), render=com.bioxx.tfc.Render.Blocks.RenderFence(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockTFCFence
+boxblock:id=%Fence,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
+
+# %Fence2:* (Fence2), render=com.bioxx.tfc.Render.Blocks.RenderFence(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockTFCFence2
+boxblock:id=%Fence2,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+
+# %StrawHideBed:* (StrawHideBed), render=(BED), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockBed
+
+# %ArmourStand:* (ArmourStand), render=com.bioxx.tfc.Render.Blocks.RenderStand(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockStand
+boxblock:id=%ArmourStand,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %ArmourStand2:* (ArmourStand2), render=com.bioxx.tfc.Render.Blocks.RenderStand(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockStand2
+boxblock:id=%ArmourStand2,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %BerryBush:* (BerryBush), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockBerryBush
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.20000000298023224,zmin=0.10000000149011612,zmax=0.8999999761581421,data=0
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.8500000238418579,zmin=0.10000000149011612,zmax=0.8999999761581421,data=1,data=2
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.20000000298023224,zmin=0.10000000149011612,zmax=0.8999999761581421,data=3
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.8500000238418579,zmin=0.10000000149011612,zmax=0.8999999761581421,data=4
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.20000000298023224,zmin=0.10000000149011612,zmax=0.8999999761581421,data=5
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.6000000238418579,zmin=0.10000000149011612,zmax=0.8999999761581421,data=6
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.20000000298023224,zmin=0.10000000149011612,zmax=0.8999999761581421,data=7
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.8500000238418579,zmin=0.10000000149011612,zmax=0.8999999761581421,data=8
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.75,zmin=0.10000000149011612,zmax=0.8999999761581421,data=9
+boxblock:id=%BerryBush,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.3499999940395355,zmin=0.10000000149011612,zmax=0.8999999761581421,data=10
+
+# %LilyPad:* (LilyPad), render=(LILYPAD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomLilyPad
+patchblock:id=%LilyPad,patch0=HorizY001ZTop,data=*
+
+# %Flowers:* (Flowers), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockFlower
+patchblock:id=%Flowers,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %Flowers2:* (Flowers2), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockFlower2
+patchblock:id=%Flowers2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %Fungi:* (Fungi), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Terrain.BlockFungi
+patchblock:id=%Fungi,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %Chest TFC:* (Chest TFC), render=com.bioxx.tfc.Render.Blocks.RenderChest(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockChestTFC
+boxblock:id=%Chest TFC,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %Cactus:* (Cactus), render=(CACTUS), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomCactus
+patchblock:id=%Cactus,patch0=VertX00625,patch1=VertX00625@90,patch2=VertX00625@180,patch3=VertX00625@270,patch4=HorizY100ZTop,patch5=HorizY100ZTop@180/0/0,data=*
+
+# %Reeds:* (Reeds), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomReed
+patchblock:id=%Reeds,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %ButtonWood:* (ButtonWood), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomButtonWood
+boxblock:id=%ButtonWood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%ButtonWood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%ButtonWood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%ButtonWood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%ButtonWood,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%ButtonWood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%ButtonWood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%ButtonWood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %Vine:* (Vine), render=(VINE), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomVine
+patchblock:id=%Vine,patch0=VertX0In@270#0,data=1
+patchblock:id=%Vine,patch0=VertX0In#0,data=2
+patchblock:id=%Vine,patch0=VertX0In@270#0,patch1=VertX0In#0,data=3
+patchblock:id=%Vine,patch0=VertX0In@90#0,data=4
+patchblock:id=%Vine,patch0=VertX0In@90#0,patch1=VertX0In@270#0,data=5
+patchblock:id=%Vine,patch0=VertX0In#0,patch1=VertX0In@90#0,data=6
+patchblock:id=%Vine,patch0=VertX0In@90#0,patch1=VertX0In@270#0,patch2=VertX0In#0,data=7
+patchblock:id=%Vine,patch0=VertX0In@180#0,data=8
+patchblock:id=%Vine,patch0=VertX0In@180#0,patch1=VertX0In@270#0,data=9
+patchblock:id=%Vine,patch0=VertX0In#0,patch1=VertX0In@180#0,data=10
+patchblock:id=%Vine,patch0=VertX0In#0,patch1=VertX0In@180#0,patch2=VertX0In@270#0,data=11
+patchblock:id=%Vine,patch0=VertX0In@90#0,patch1=VertX0In@180#0,data=12
+patchblock:id=%Vine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,data=13
+patchblock:id=%Vine,patch0=VertX0In@180#0,patch1=VertX0In#0,patch2=VertX0In@90#0,data=14
+patchblock:id=%Vine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,patch3=VertX0In#0,data=15
+
+# %LeatherRack:* (LeatherRack), render=com.bioxx.tfc.Render.Blocks.RenderLeatherRack(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockLeatherRack
+boxblock:id=%LeatherRack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0010000000474974513,zmin=0.0,zmax=1.0,data=*
+
+# %Grill:* (Grill), render=com.bioxx.tfc.Render.Blocks.RenderGrill(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockGrill
+boxblock:id=%Grill,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.05000000074505806,zmin=0.0,zmax=1.0,data=*
+
+# %MetalTrapDoor:* (MetalTrapDoor), render=com.bioxx.tfc.Render.Blocks.RenderMetalTrapDoor(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.BlockMetalTrapDoor
+boxblock:id=%MetalTrapDoor,xmin=0.0,xmax=0.0010000000474974513,ymin=0.0,ymax=0.0010000000474974513,zmin=0.0,zmax=0.0010000000474974513,data=*
+
+# %Vessel:* (Vessel), render=com.bioxx.tfc.Render.Blocks.RenderVessel(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockLargeVessel
+boxblock:id=%Vessel,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.699999988079071,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+
+# %SmokeRack:* (SmokeRack), render=com.bioxx.tfc.Render.Blocks.RenderSmokeRack(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.BlockSmokeRack
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=1
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=3
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=5
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=7
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=8
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=9
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=10
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=11
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=12
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=13
+boxblock:id=%SmokeRack,xmin=0.44999998807907104,xmax=0.550000011920929,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%SmokeRack,xmin=0.0,xmax=1.0,ymin=0.44999998807907104,ymax=0.550000011920929,zmin=0.44999998807907104,zmax=0.550000011920929,data=15
+
+# %Snow:* (Snow), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomSnow
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=3
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=8
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=9
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=10
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=11
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=12
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%Snow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=14

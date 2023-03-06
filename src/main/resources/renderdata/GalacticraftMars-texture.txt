@@ -1,0 +1,187 @@
+# GalacticraftMars 3.0.11
+version:1.7
+modname:GalacticraftMars
+
+
+cfgfile:config/Galacticraft/mars.conf
+
+
+texturepath:assets/galacticraftmars/textures/blocks/
+texture:id=galacticraftasteroids/asteroid0,filename=assets/galacticraftasteroids/textures/blocks/asteroid0.png
+texture:id=galacticraftasteroids/asteroid1,filename=assets/galacticraftasteroids/textures/blocks/asteroid1.png
+texture:id=galacticraftasteroids/asteroid2,filename=assets/galacticraftasteroids/textures/blocks/asteroid2.png
+texture:id=galacticraftasteroids/denseIce,filename=assets/galacticraftasteroids/textures/blocks/denseIce.png
+texture:id=galacticraftasteroids/electrolyzer,filename=assets/galacticraftasteroids/textures/blocks/electrolyzer.png
+texture:id=galacticraftasteroids/gasLiquefier,filename=assets/galacticraftasteroids/textures/blocks/gasLiquefier.png
+texture:id=galacticraftasteroids/machine,filename=assets/galacticraftasteroids/textures/blocks/machine.png
+texture:id=galacticraftasteroids/machine_input,filename=assets/galacticraftasteroids/textures/blocks/machine_input.png
+texture:id=galacticraftasteroids/machine_oxygen_input_warning,filename=assets/galacticraftasteroids/textures/blocks/machine_oxygen_input_warning.png
+texture:id=galacticraftasteroids/machine_oxygen_output_warning,filename=assets/galacticraftasteroids/textures/blocks/machine_oxygen_output_warning.png
+texture:id=galacticraftasteroids/machine_side_warning,filename=assets/galacticraftasteroids/textures/blocks/machine_side_warning.png
+texture:id=galacticraftasteroids/machine_water_input_warning,filename=assets/galacticraftasteroids/textures/blocks/machine_water_input_warning.png
+texture:id=galacticraftasteroids/machineframe,filename=assets/galacticraftasteroids/textures/blocks/machineframe.png
+texture:id=galacticraftasteroids/methaneSynthesizer,filename=assets/galacticraftasteroids/textures/blocks/methaneSynthesizer.png
+texture:id=galacticraftasteroids/oreAluminum,filename=assets/galacticraftasteroids/textures/blocks/oreAluminum.png
+texture:id=galacticraftasteroids/oreIlmenite,filename=assets/galacticraftasteroids/textures/blocks/oreIlmenite.png
+texture:id=galacticraftasteroids/oreIron,filename=assets/galacticraftasteroids/textures/blocks/oreIron.png
+texture:id=galacticraftasteroids/treasureChestAsteroids,filename=assets/galacticraftasteroids/textures/blocks/treasureChestAsteroids.png
+texture:id=galacticraftasteroids/walkway,filename=assets/galacticraftasteroids/textures/blocks/walkway.png
+texture:id=galacticraftcore/blank,filename=assets/galacticraftcore/textures/blocks/blank.png
+texture:id=galacticraftcore/launch_pad,filename=assets/galacticraftcore/textures/blocks/launch_pad.png
+texture:id=galacticraftcore/machine_blank,filename=assets/galacticraftcore/textures/blocks/machine_blank.png
+texture:id=galacticraftcore/machine_input,filename=assets/galacticraftcore/textures/blocks/machine_input.png
+texture:id=galacticraftmars/blueEgg_0,filename=assets/galacticraftmars/textures/blocks/blueEgg_0.png
+texture:id=galacticraftmars/blueEgg_1,filename=assets/galacticraftmars/textures/blocks/blueEgg_1.png
+texture:id=galacticraftmars/bottom,filename=assets/galacticraftmars/textures/blocks/bottom.png
+texture:id=galacticraftmars/brick,filename=assets/galacticraftmars/textures/blocks/brick.png
+texture:id=galacticraftmars/cobblestone,filename=assets/galacticraftmars/textures/blocks/cobblestone.png
+texture:id=galacticraftmars/copper,filename=assets/galacticraftmars/textures/blocks/copper.png
+texture:id=galacticraftmars/creeperEgg,filename=assets/galacticraftmars/textures/blocks/creeperEgg.png
+texture:id=galacticraftmars/cryoDummy,filename=assets/galacticraftmars/textures/blocks/cryoDummy.png
+texture:id=galacticraftmars/decoration_desh,filename=assets/galacticraftmars/textures/blocks/decoration_desh.png
+texture:id=galacticraftmars/desh,filename=assets/galacticraftmars/textures/blocks/desh.png
+texture:id=galacticraftmars/iron,filename=assets/galacticraftmars/textures/blocks/iron.png
+texture:id=galacticraftmars/launchController,filename=assets/galacticraftmars/textures/blocks/launchController.png
+texture:id=galacticraftmars/middle,filename=assets/galacticraftmars/textures/blocks/middle.png
+texture:id=galacticraftmars/pipe_hydrogen,filename=assets/galacticraftmars/textures/blocks/pipe_hydrogen.png
+texture:id=galacticraftmars/redEgg_0,filename=assets/galacticraftmars/textures/blocks/redEgg_0.png
+texture:id=galacticraftmars/redEgg_1,filename=assets/galacticraftmars/textures/blocks/redEgg_1.png
+texture:id=galacticraftmars/sludge_flow,filename=assets/galacticraftmars/textures/blocks/sludge_flow.png
+texture:id=galacticraftmars/sludge_still,filename=assets/galacticraftmars/textures/blocks/sludge_still.png
+texture:id=galacticraftmars/terraformer_0,filename=assets/galacticraftmars/textures/blocks/terraformer_0.png
+texture:id=galacticraftmars/tin,filename=assets/galacticraftmars/textures/blocks/tin.png
+texture:id=galacticraftmars/top,filename=assets/galacticraftmars/textures/blocks/top.png
+texture:id=galacticraftmars/treasureChestMars,filename=assets/galacticraftmars/textures/blocks/treasureChestMars.png
+texture:id=galacticraftmars/vine_0,filename=assets/galacticraftmars/textures/blocks/vine_0.png
+texture:id=galacticraftmars/vine_1,filename=assets/galacticraftmars/textures/blocks/vine_1.png
+texture:id=galacticraftmars/vine_2,filename=assets/galacticraftmars/textures/blocks/vine_2.png
+texture:id=galacticraftmars/yellowEgg_0,filename=assets/galacticraftmars/textures/blocks/yellowEgg_0.png
+texture:id=galacticraftmars/yellowEgg_1,filename=assets/galacticraftmars/textures/blocks/yellowEgg_1.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %tile.treasureT2:* (tile.treasureT2), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererTier2TreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockTier2TreasureChest
+block:id=%tile.treasureT2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/treasureChestMars
+
+# %tile.treasureT3:* (tile.treasureT3), render=micdoodle8.mods.galacticraft.planets.asteroids.client.render.block.BlockRendererTier3TreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockTier3TreasureChest
+block:id=%tile.treasureT3,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftasteroids/treasureChestAsteroids
+
+# %tile.asteroidsBlock:* (tile.asteroidsBlock), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBasicAsteroids
+block:id=%tile.asteroidsBlock,data=0,stdrot=true,face0-5=0:galacticraftasteroids/asteroid0
+block:id=%tile.asteroidsBlock,data=1,stdrot=true,face0-5=0:galacticraftasteroids/asteroid1
+block:id=%tile.asteroidsBlock,data=2,stdrot=true,face0-5=0:galacticraftasteroids/asteroid2
+block:id=%tile.asteroidsBlock,data=3,stdrot=true,face0-5=0:galacticraftasteroids/oreAluminum
+block:id=%tile.asteroidsBlock,data=4,stdrot=true,face0-5=0:galacticraftasteroids/oreIlmenite
+block:id=%tile.asteroidsBlock,data=5,stdrot=true,face0-5=0:galacticraftasteroids/oreIron
+block:id=%tile.asteroidsBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftasteroids/asteroid0
+
+# %tile.walkway:* (tile.walkway), render=micdoodle8.mods.galacticraft.planets.asteroids.client.render.block.BlockRendererWalkway(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockWalkway
+block:id=%tile.walkway,data=*,stdrot=true,face0-5=0:galacticraftasteroids/walkway
+
+# %tile.walkwayWire:* (tile.walkwayWire), render=micdoodle8.mods.galacticraft.planets.asteroids.client.render.block.BlockRendererWalkway(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockWalkway
+block:id=%tile.walkwayWire,data=*,stdrot=true,face0-5=0:galacticraftasteroids/walkway
+
+# %tile.walkwayOxygenPipe:* (tile.walkwayOxygenPipe), render=micdoodle8.mods.galacticraft.planets.asteroids.client.render.block.BlockRendererWalkway(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockWalkway
+block:id=%tile.walkwayOxygenPipe,data=*,stdrot=true,face0-5=0:galacticraftasteroids/walkway
+
+# %tile.beamReflector:* (tile.beamReflector), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBeamReflector
+block:id=%tile.beamReflector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %tile.beamReceiver:* (tile.beamReceiver), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBeamReceiver
+block:id=%tile.beamReceiver,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %tile.telepadShort:* (tile.telepadShort), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockShortRangeTelepad
+block:id=%tile.telepadShort,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %tile.telepadFake:* (tile.telepadFake), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockTelepadFake
+block:id=%tile.telepadFake,data=0,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
+block:id=%tile.telepadFake,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/launch_pad
+
+# %tile.denseIce:* (tile.denseIce), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockIceAsteroids
+block:id=%tile.denseIce,data=*,stdrot=true,face0-5=12000:galacticraftasteroids/denseIce
+
+# %tile.minerBase:* (tile.minerBase), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockMinerBase
+block:id=%tile.minerBase,data=*,stdrot=true,face0-5=0:galacticraftasteroids/machineframe
+
+# %tile.minerBaseFull:* (tile.minerBaseFull), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockMinerBaseFull
+block:id=%tile.minerBaseFull,data=*,stdrot=true,face0-5=0:galacticraftasteroids/machineframe
+
+# %tile.mars:* (tile.mars), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars
+block:id=%tile.mars,data=0,stdrot=true,face0-5=0:galacticraftmars/copper
+block:id=%tile.mars,data=1,stdrot=true,face0-5=0:galacticraftmars/tin
+block:id=%tile.mars,data=2,stdrot=true,face0-5=0:galacticraftmars/desh
+block:id=%tile.mars,data=3,stdrot=true,face0-5=0:galacticraftmars/iron
+block:id=%tile.mars,data=4,stdrot=true,face0-5=0:galacticraftmars/cobblestone
+block:id=%tile.mars,data=5,stdrot=true,face0-5=0:galacticraftmars/top
+block:id=%tile.mars,data=6,stdrot=true,face0-5=0:galacticraftmars/middle
+block:id=%tile.mars,data=7,stdrot=true,face0-5=0:galacticraftmars/brick
+block:id=%tile.mars,data=8,stdrot=true,face0-5=0:galacticraftmars/decoration_desh
+block:id=%tile.mars,data=9,stdrot=true,face0-5=0:galacticraftmars/bottom
+block:id=%tile.mars,data=10,stdrot=true,face0-5=0:galacticraftcore/blank
+block:id=%tile.mars,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftmars/decoration_desh
+
+# %tile.sludge:* (tile.sludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockSludge
+block:id=%tile.sludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:galacticraftmars/sludge_still,face2-5=12000:galacticraftmars/sludge_flow
+
+# %tile.cavernVines:* (tile.cavernVines), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererCavernousVines(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockCavernousVine
+block:id=%tile.cavernVines,data=0,stdrot=true,face0-5=0:galacticraftmars/vine_0
+block:id=%tile.cavernVines,data=1,stdrot=true,face0-5=0:galacticraftmars/vine_1
+block:id=%tile.cavernVines,data=2,stdrot=true,face0-5=0:galacticraftmars/vine_2
+
+# %tile.slimelingEgg:* (tile.slimelingEgg), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererEgg(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockSlimelingEgg
+block:id=%tile.slimelingEgg,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
+block:id=%tile.slimelingEgg,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
+block:id=%tile.slimelingEgg,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=%tile.slimelingEgg,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
+block:id=%tile.slimelingEgg,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_1
+block:id=%tile.slimelingEgg,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_1
+block:id=%tile.slimelingEgg,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
+block:id=%tile.slimelingEgg,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
+block:id=%tile.slimelingEgg,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=%tile.slimelingEgg,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
+block:id=%tile.slimelingEgg,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_1
+block:id=%tile.slimelingEgg,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_1
+block:id=%tile.slimelingEgg,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
+block:id=%tile.slimelingEgg,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
+block:id=%tile.slimelingEgg,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=%tile.slimelingEgg,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
+
+# %tile.creeperEgg:* (tile.creeperEgg), render=(DRAGONEGG), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockCreeperEgg
+block:id=%tile.creeperEgg,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/creeperEgg
+
+# %tile.marsMachine:* (tile.marsMachine), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererMachine(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockMachineMars
+block:id=%tile.marsMachine,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/terraformer_0
+block:id=%tile.marsMachine,data=1,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/terraformer_0,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/terraformer_0
+block:id=%tile.marsMachine,data=2,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/terraformer_0,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/terraformer_0
+block:id=%tile.marsMachine,data=3,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/terraformer_0,face5=0:galacticraftcore/machine_input
+block:id=%tile.marsMachine,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/cryoDummy
+block:id=%tile.marsMachine,data=8,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/launchController
+block:id=%tile.marsMachine,data=9,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/launchController,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/launchController
+block:id=%tile.marsMachine,data=10,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/launchController,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/launchController
+block:id=%tile.marsMachine,data=11,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/launchController,face5=0:galacticraftcore/machine_input
+block:id=%tile.marsMachine,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/launchController
+
+# %tile.marsMachineT2:* (tile.marsMachineT2), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockMachineMarsT2
+block:id=%tile.marsMachineT2,data=0,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_oxygen_input_warning,face3=0:galacticraftasteroids/machine_side_warning,face4=0:galacticraftasteroids/gasLiquefier,face5=0:galacticraftasteroids/machine_side_warning
+block:id=%tile.marsMachineT2,data=1,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_side_warning,face3=0:galacticraftasteroids/machine_oxygen_input_warning,face4=0:galacticraftasteroids/machine_side_warning,face5=0:galacticraftasteroids/gasLiquefier
+block:id=%tile.marsMachineT2,data=2,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_side_warning,face3=0:galacticraftasteroids/gasLiquefier,face4=0:galacticraftasteroids/machine_oxygen_input_warning,face5=0:galacticraftasteroids/machine_side_warning
+block:id=%tile.marsMachineT2,data=3,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/gasLiquefier,face3-4=0:galacticraftasteroids/machine_side_warning,face5=0:galacticraftasteroids/machine_oxygen_input_warning
+block:id=%tile.marsMachineT2,data=4,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_oxygen_input_warning,face3=0:galacticraftasteroids/machine_oxygen_output_warning,face4=0:galacticraftasteroids/methaneSynthesizer,face5=0:galacticraftasteroids/machine_side_warning
+block:id=%tile.marsMachineT2,data=5,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_oxygen_output_warning,face3=0:galacticraftasteroids/machine_oxygen_input_warning,face4=0:galacticraftasteroids/machine_side_warning,face5=0:galacticraftasteroids/methaneSynthesizer
+block:id=%tile.marsMachineT2,data=6,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_side_warning,face3=0:galacticraftasteroids/methaneSynthesizer,face4=0:galacticraftasteroids/machine_oxygen_input_warning,face5=0:galacticraftasteroids/machine_oxygen_output_warning
+block:id=%tile.marsMachineT2,data=7,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/methaneSynthesizer,face3=0:galacticraftasteroids/machine_side_warning,face4=0:galacticraftasteroids/machine_oxygen_output_warning,face5=0:galacticraftasteroids/machine_oxygen_input_warning
+block:id=%tile.marsMachineT2,data=8,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_water_input_warning,face3=0:galacticraftasteroids/machine_oxygen_output_warning,face4=0:galacticraftasteroids/electrolyzer,face5=0:galacticraftasteroids/machine_oxygen_output_warning
+block:id=%tile.marsMachineT2,data=9,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_oxygen_output_warning,face3=0:galacticraftasteroids/machine_water_input_warning,face4=0:galacticraftasteroids/machine_oxygen_output_warning,face5=0:galacticraftasteroids/electrolyzer
+block:id=%tile.marsMachineT2,data=10,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_oxygen_output_warning,face3=0:galacticraftasteroids/electrolyzer,face4=0:galacticraftasteroids/machine_water_input_warning,face5=0:galacticraftasteroids/machine_oxygen_output_warning
+block:id=%tile.marsMachineT2,data=11,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/electrolyzer,face3-4=0:galacticraftasteroids/machine_oxygen_output_warning,face5=0:galacticraftasteroids/machine_water_input_warning
+block:id=%tile.marsMachineT2,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galacticraftasteroids/machine_input,face1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side_warning
+
+# %tile.marsCobblestoneStairs:* (tile.marsCobblestoneStairs), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+block:id=%tile.marsCobblestoneStairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:galacticraftmars/cobblestone
+
+# %tile.marsDungeonBricksStairs:* (tile.marsDungeonBricksStairs), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+block:id=%tile.marsDungeonBricksStairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:galacticraftmars/brick
+
+# %tile.hydrogenPipe:* (tile.hydrogenPipe), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererHydrogenPipe(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockHydrogenPipe
+block:id=%tile.hydrogenPipe,data=*,stdrot=true,face0-5=0:galacticraftmars/pipe_hydrogen

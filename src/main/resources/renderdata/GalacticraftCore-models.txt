@@ -1,0 +1,140 @@
+# GalacticraftCore 3.0.11
+version:1.7
+modname:GalacticraftCore
+
+
+cfgfile:config/Galacticraft/core.conf
+cfgfile:config/Galacticraft/moon.conf
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %tile.crudeOilStill:* (tile.crudeOilStill), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockFluidGC
+boxblock:id=%tile.crudeOilStill,ymax=0.875,data=1
+boxblock:id=%tile.crudeOilStill,ymax=0.75,data=2
+boxblock:id=%tile.crudeOilStill,ymax=0.625,data=3
+boxblock:id=%tile.crudeOilStill,ymax=0.5,data=4
+boxblock:id=%tile.crudeOilStill,ymax=0.375,data=5
+boxblock:id=%tile.crudeOilStill,ymax=0.25,data=6
+boxblock:id=%tile.crudeOilStill,ymax=0.125,data=7
+boxblock:id=%tile.crudeOilStill,ymax=0.875,data=9
+boxblock:id=%tile.crudeOilStill,ymax=0.75,data=10
+boxblock:id=%tile.crudeOilStill,ymax=0.625,data=11
+boxblock:id=%tile.crudeOilStill,ymax=0.5,data=12
+boxblock:id=%tile.crudeOilStill,ymax=0.375,data=13
+boxblock:id=%tile.crudeOilStill,ymax=0.25,data=14
+boxblock:id=%tile.crudeOilStill,ymax=0.125,data=15
+
+# %tile.fuel:* (tile.fuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockFluidGC
+boxblock:id=%tile.fuel,ymax=0.875,data=1
+boxblock:id=%tile.fuel,ymax=0.75,data=2
+boxblock:id=%tile.fuel,ymax=0.625,data=3
+boxblock:id=%tile.fuel,ymax=0.5,data=4
+boxblock:id=%tile.fuel,ymax=0.375,data=5
+boxblock:id=%tile.fuel,ymax=0.25,data=6
+boxblock:id=%tile.fuel,ymax=0.125,data=7
+boxblock:id=%tile.fuel,ymax=0.875,data=9
+boxblock:id=%tile.fuel,ymax=0.75,data=10
+boxblock:id=%tile.fuel,ymax=0.625,data=11
+boxblock:id=%tile.fuel,ymax=0.5,data=12
+boxblock:id=%tile.fuel,ymax=0.375,data=13
+boxblock:id=%tile.fuel,ymax=0.25,data=14
+boxblock:id=%tile.fuel,ymax=0.125,data=15
+
+# %tile.landingPad:* (tile.landingPad), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockLandingPad
+boxblock:id=%tile.landingPad,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.20000000298023224,zmin=0.0,zmax=1.0,data=0,data=1,data=2
+boxblock:id=%tile.landingPad,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.20000000298023224,zmin=0.0,zmax=1.0,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.landingPadFull:* (tile.landingPadFull), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererLandingPad(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockLandingPadFull
+boxblock:id=%tile.landingPadFull,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.39,zmin=0.0,zmax=1.0,data=*
+
+# %tile.oxygenCollector:* (tile.oxygenCollector), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockOxygenCollector
+
+# %tile.oxygenCompressor:* (tile.oxygenCompressor), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockOxygenCompressor
+
+# %tile.distributor:* (tile.distributor), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockOxygenDistributor
+
+# %tile.sealer:* (tile.sealer), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockOxygenSealer
+
+# %tile.oxygenDetector:* (tile.oxygenDetector), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockOxygenDetector
+
+# %tile.refinery:* (tile.refinery), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockRefinery
+
+# %tile.fuelLoader:* (tile.fuelLoader), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockFuelLoader
+
+# %tile.cargo:* (tile.cargo), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockCargoLoader
+
+# %tile.rocketWorkbench:* (tile.rocketWorkbench), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererNasaWorkbench(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockNasaWorkbench
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.rocketWorkbench,xmin=-0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=-0.0,zmax=1.0,data=*
+
+# %tile.airLockSeal:* (tile.airLockSeal), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockAirLockWall
+boxblock:id=%tile.airLockSeal,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %tile.dummyblock:* (tile.dummyblock), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockMulti
+boxblock:id=%tile.dummyblock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.20000000298023224,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%tile.dummyblock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.20000000298023224,zmin=0.0,zmax=1.0,data=6
+
+# %tile.parachest:* (tile.parachest), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererParachest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockParaChest
+boxblock:id=%tile.parachest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %tile.machine:* (tile.machine), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockMachine
+
+# %tile.machine2:* (tile.machine2), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockMachine2
+
+# %tile.machineTiered:* (tile.machineTiered), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockMachineTiered
+
+# %tile.aluminumWire:* (tile.aluminumWire), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockAluminumWire
+boxblock:id=%tile.aluminumWire,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %tile.fallenMeteor:* (tile.fallenMeteor), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMeteor(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockFallenMeteor
+boxblock:id=%tile.fallenMeteor,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+
+# %tile.cheeseBlock:* (tile.cheeseBlock), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockCheese
+boxblock:id=%tile.cheeseBlock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%tile.cheeseBlock,xmin=0.1875,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%tile.cheeseBlock,xmin=0.3125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%tile.cheeseBlock,xmin=0.4375,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%tile.cheeseBlock,xmin=0.5625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%tile.cheeseBlock,xmin=0.6875,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%tile.cheeseBlock,xmin=0.8125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%tile.cheeseBlock,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7
+boxblock:id=%tile.cheeseBlock,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.telemetry:* (tile.telemetry), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockTelemetry
+
+# %tile.treasureChest:* (tile.treasureChest), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererTreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockT1TreasureChest
+boxblock:id=%tile.treasureChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %tile.tinStairs1:* (tile.tinStairs1), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+customblock:id=%tile.tinStairs1,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.tinStairs2:* (tile.tinStairs2), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+customblock:id=%tile.tinStairs2,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.moonStoneStairs:* (tile.moonStoneStairs), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+customblock:id=%tile.moonStoneStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.moonBricksStairs:* (tile.moonBricksStairs), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+customblock:id=%tile.moonBricksStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.wallGC:* (tile.wallGC), render=(WALL), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockWallGC
+customblock:id=%tile.wallGC,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5
+
+# %slabGCHalf:* (slabGCHalf), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSlabGC
+boxblock:id=%slabGCHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5
+boxblock:id=%slabGCHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13

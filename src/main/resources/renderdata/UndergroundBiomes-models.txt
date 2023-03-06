@@ -1,0 +1,107 @@
+# UndergroundBiomes 0.6h
+version:1.7
+modname:UndergroundBiomes
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %metamorphic_oreCoal:* (metamorphic_oreCoal), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %sedimentary_oreGold:* (sedimentary_oreGold), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %sedimentaryStoneHalfSlab:* (sedimentaryStoneHalfSlab), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.common.block.BlockStoneSlab
+boxblock:id=%sedimentaryStoneHalfSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%sedimentaryStoneHalfSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %igneous_oreCoal:* (igneous_oreCoal), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %metamorphicCobblestoneHalfSlab:* (metamorphicCobblestoneHalfSlab), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.common.block.BlockStoneSlab
+boxblock:id=%metamorphicCobblestoneHalfSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%metamorphicCobblestoneHalfSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %sedimentary_oreLapis:* (sedimentary_oreLapis), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %metamorphicStoneBrickHalfSlab:* (metamorphicStoneBrickHalfSlab), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.common.block.BlockStoneSlab
+boxblock:id=%metamorphicStoneBrickHalfSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%metamorphicStoneBrickHalfSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %metamorphic_oreRedstone:* (metamorphic_oreRedstone), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %wall:* (wall), render=(WALL), opaque=false,cls=exterminatorJeff.undergroundBiomes.constructs.block.UBWallBase
+customblock:id=%wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %igneousCobblestoneHalfSlab:* (igneousCobblestoneHalfSlab), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.common.block.BlockStoneSlab
+boxblock:id=%igneousCobblestoneHalfSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%igneousCobblestoneHalfSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %metamorphic_oreLapis:* (metamorphic_oreLapis), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %igneous_oreEmerald:* (igneous_oreEmerald), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %sedimentary_oreRedstone:* (sedimentary_oreRedstone), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %igneous_oreIron:* (igneous_oreIron), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %igneousStoneBrickHalfSlab:* (igneousStoneBrickHalfSlab), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.common.block.BlockStoneSlab
+boxblock:id=%igneousStoneBrickHalfSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%igneousStoneBrickHalfSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %igneous_oreDiamond:* (igneous_oreDiamond), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %metamorphic_oreEmerald:* (metamorphic_oreEmerald), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %igneous_oreGold:* (igneous_oreGold), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %button:* (button), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.constructs.block.UBButtonBase
+boxblock:id=%button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %igneous_oreRedstone:* (igneous_oreRedstone), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %metamorphic_oreIron:* (metamorphic_oreIron), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %metamorphicStoneHalfSlab:* (metamorphicStoneHalfSlab), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.common.block.BlockStoneSlab
+boxblock:id=%metamorphicStoneHalfSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%metamorphicStoneHalfSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %metamorphic_oreGold:* (metamorphic_oreGold), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %igneous_oreLapis:* (igneous_oreLapis), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %metamorphic_oreDiamond:* (metamorphic_oreDiamond), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %sedimentary_oreEmerald:* (sedimentary_oreEmerald), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %sedimentary_oreCoal:* (sedimentary_oreCoal), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %sedimentary_oreIron:* (sedimentary_oreIron), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre
+
+# %igneousStoneHalfSlab:* (igneousStoneHalfSlab), render=(STANDARD), opaque=false,cls=exterminatorJeff.undergroundBiomes.common.block.BlockStoneSlab
+boxblock:id=%igneousStoneHalfSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%igneousStoneHalfSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %sedimentary_oreDiamond:* (sedimentary_oreDiamond), render=exterminatorJeff.undergroundBiomes.client.RenderUBOre(CUSTOM), opaque=true,cls=exterminatorJeff.undergroundBiomes.common.block.BlockUBOre

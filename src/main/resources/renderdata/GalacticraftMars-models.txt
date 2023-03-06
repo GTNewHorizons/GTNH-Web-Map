@@ -1,0 +1,76 @@
+# GalacticraftMars 3.0.11
+version:1.7
+modname:GalacticraftMars
+
+
+cfgfile:config/Galacticraft/mars.conf
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %tile.treasureT2:* (tile.treasureT2), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererTier2TreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockTier2TreasureChest
+boxblock:id=%tile.treasureT2,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %tile.treasureT3:* (tile.treasureT3), render=micdoodle8.mods.galacticraft.planets.asteroids.client.render.block.BlockRendererTier3TreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockTier3TreasureChest
+boxblock:id=%tile.treasureT3,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %tile.beamReflector:* (tile.beamReflector), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBeamReflector
+boxblock:id=%tile.beamReflector,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.800000011920929,zmin=0.25,zmax=0.75,data=*
+
+# %tile.beamReceiver:* (tile.beamReceiver), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBeamReceiver
+boxblock:id=%tile.beamReceiver,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.41999998688697815,zmin=0.20000000298023224,zmax=0.800000011920929,data=0
+boxblock:id=%tile.beamReceiver,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.30000001192092896,ymax=1.0,zmin=0.30000001192092896,zmax=0.699999988079071,data=1
+boxblock:id=%tile.beamReceiver,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.0,zmax=0.41999998688697815,data=2
+boxblock:id=%tile.beamReceiver,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.5799999833106995,zmax=1.0,data=3
+boxblock:id=%tile.beamReceiver,xmin=0.0,xmax=0.41999998688697815,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=4
+boxblock:id=%tile.beamReceiver,xmin=0.5799999833106995,xmax=1.0,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.telepadShort:* (tile.telepadShort), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockShortRangeTelepad
+boxblock:id=%tile.telepadShort,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.44999998807907104,zmin=0.0,zmax=1.0,data=*
+
+# %tile.telepadFake:* (tile.telepadFake), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockTelepadFake
+boxblock:id=%tile.telepadFake,xmin=0.0,xmax=1.0,ymin=0.550000011920929,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%tile.telepadFake,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.3799999952316284,zmin=0.0,zmax=1.0,data=1
+
+# %tile.sludge:* (tile.sludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockSludge
+boxblock:id=%tile.sludge,ymax=0.875,data=1
+boxblock:id=%tile.sludge,ymax=0.75,data=2
+boxblock:id=%tile.sludge,ymax=0.625,data=3
+boxblock:id=%tile.sludge,ymax=0.5,data=4
+boxblock:id=%tile.sludge,ymax=0.375,data=5
+boxblock:id=%tile.sludge,ymax=0.25,data=6
+boxblock:id=%tile.sludge,ymax=0.125,data=7
+boxblock:id=%tile.sludge,ymax=0.875,data=9
+boxblock:id=%tile.sludge,ymax=0.75,data=10
+boxblock:id=%tile.sludge,ymax=0.625,data=11
+boxblock:id=%tile.sludge,ymax=0.5,data=12
+boxblock:id=%tile.sludge,ymax=0.375,data=13
+boxblock:id=%tile.sludge,ymax=0.25,data=14
+boxblock:id=%tile.sludge,ymax=0.125,data=15
+
+# %tile.slimelingEgg:* (tile.slimelingEgg), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererEgg(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockSlimelingEgg
+boxblock:id=%tile.slimelingEgg,xmin=0.17000000178813934,xmax=0.8299999833106995,ymin=0.0,ymax=0.699999988079071,zmin=0.10999999940395355,zmax=0.8899999856948853,data=*
+
+# %tile.creeperEgg:* (tile.creeperEgg), render=(DRAGONEGG), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockCreeperEgg
+
+# %tile.marsMachineT2:* (tile.marsMachineT2), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockMachineMarsT2
+
+# %tile.marsCobblestoneStairs:* (tile.marsCobblestoneStairs), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+customblock:id=%tile.marsCobblestoneStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.marsDungeonBricksStairs:* (tile.marsDungeonBricksStairs), render=(STAIRS), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockStairsGC
+customblock:id=%tile.marsDungeonBricksStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*

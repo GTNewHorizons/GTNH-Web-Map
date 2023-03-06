@@ -1,0 +1,137 @@
+# appliedenergistics2 rv3-beta-6
+version:1.7
+modname:appliedenergistics2
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %tile.OreQuartz:* (tile.OreQuartz), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartz
+
+# %tile.OreQuartzCharged:* (tile.OreQuartzCharged), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartzCharged
+
+# %tile.BlockQuartzPillar:* (tile.BlockQuartzPillar), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.BlockQuartzPillar
+
+# %tile.BlockSkyStone:* (tile.BlockSkyStone), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.BlockSkyStone
+
+# %tile.BlockGrinder:* (tile.BlockGrinder), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.grindstone.BlockGrinder
+
+# %tile.BlockTinyTNT:* (tile.BlockTinyTNT), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.misc.BlockTinyTNT
+boxblock:id=%tile.BlockTinyTNT,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=*
+
+# %tile.BlockSecurity:* (tile.BlockSecurity), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockSecurity
+
+# %tile.BlockQuantumRing:* (tile.BlockQuantumRing), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.qnb.BlockQuantumRing
+boxblock:id=%tile.BlockQuantumRing,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.875,zmin=0.125,zmax=0.875,data=*
+
+# %tile.BlockQuantumLinkChamber:* (tile.BlockQuantumLinkChamber), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.qnb.BlockQuantumLinkChamber
+boxblock:id=%tile.BlockQuantumLinkChamber,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.875,zmin=0.125,zmax=0.875,data=*
+
+# %tile.BlockSpatialPylon:* (tile.BlockSpatialPylon), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialPylon
+
+# %tile.BlockSpatialIOPort:* (tile.BlockSpatialIOPort), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialIOPort
+
+# %tile.BlockController:* (tile.BlockController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockController
+
+# %tile.BlockDrive:* (tile.BlockDrive), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.storage.BlockDrive
+
+# %tile.BlockChest:* (tile.BlockChest), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.storage.BlockChest
+
+# %tile.BlockInterface:* (tile.BlockInterface), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockInterface
+
+# %tile.BlockCellWorkbench:* (tile.BlockCellWorkbench), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockCellWorkbench
+
+# %tile.BlockIOPort:* (tile.BlockIOPort), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.storage.BlockIOPort
+
+# %tile.BlockCondenser:* (tile.BlockCondenser), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockCondenser
+
+# %tile.BlockEnergyAcceptor:* (tile.BlockEnergyAcceptor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockEnergyAcceptor
+
+# %tile.BlockVibrationChamber:* (tile.BlockVibrationChamber), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockVibrationChamber
+
+# %tile.BlockQuartzGrowthAccelerator:* (tile.BlockQuartzGrowthAccelerator), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockQuartzGrowthAccelerator
+
+# %tile.BlockEnergyCell:* (tile.BlockEnergyCell), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockEnergyCell
+
+# %tile.BlockDenseEnergyCell:* (tile.BlockDenseEnergyCell), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockDenseEnergyCell
+
+# %tile.BlockCreativeEnergyCell:* (tile.BlockCreativeEnergyCell), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockCreativeEnergyCell
+
+# %tile.BlockCraftingUnit:* (tile.BlockCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingUnit
+
+# %tile.BlockCraftingStorage:* (tile.BlockCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingStorage
+
+# %tile.BlockCraftingMonitor:* (tile.BlockCraftingMonitor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingMonitor
+
+# %tile.SkyStoneStairBlock:* (tile.SkyStoneStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.SkyStoneStairBlock
+customblock:id=%tile.SkyStoneStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.SkyStoneBlockStairBlock:* (tile.SkyStoneBlockStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.SkyStoneBlockStairBlock
+customblock:id=%tile.SkyStoneBlockStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.SkyStoneBrickStairBlock:* (tile.SkyStoneBrickStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.SkyStoneBrickStairBlock
+customblock:id=%tile.SkyStoneBrickStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.SkyStoneSmallBrickStairBlock:* (tile.SkyStoneSmallBrickStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.SkyStoneSmallBrickStairBlock
+customblock:id=%tile.SkyStoneSmallBrickStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.FluixStairBlock:* (tile.FluixStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.FluixStairBlock
+customblock:id=%tile.FluixStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.QuartzStairBlock:* (tile.QuartzStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.QuartzStairBlock
+customblock:id=%tile.QuartzStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.ChiseledQuartzStairBlock:* (tile.ChiseledQuartzStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.ChiseledQuartzStairBlock
+customblock:id=%tile.ChiseledQuartzStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.QuartzPillarStairBlock:* (tile.QuartzPillarStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.QuartzPillarStairBlock
+customblock:id=%tile.QuartzPillarStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.SkyStoneSlabBlock:* (tile.SkyStoneSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.SkyStoneSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.SkyStoneSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.SkyStoneBlockSlabBlock:* (tile.SkyStoneBlockSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.SkyStoneBlockSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.SkyStoneBlockSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.SkyStoneBrickSlabBlock:* (tile.SkyStoneBrickSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.SkyStoneBrickSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.SkyStoneBrickSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.SkyStoneSmallBrickSlabBlock:* (tile.SkyStoneSmallBrickSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.SkyStoneSmallBrickSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.SkyStoneSmallBrickSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.FluixSlabBlock:* (tile.FluixSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.FluixSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.FluixSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.QuartzSlabBlock:* (tile.QuartzSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.QuartzSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.QuartzSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.ChiseledQuartzSlabBlock:* (tile.ChiseledQuartzSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.ChiseledQuartzSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.ChiseledQuartzSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.QuartzPillarSlabBlock:* (tile.QuartzPillarSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+boxblock:id=%tile.QuartzPillarSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.QuartzPillarSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

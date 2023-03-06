@@ -1,0 +1,355 @@
+# EnderIO 1.7.10-2.3.0.429_beta
+version:1.7
+modname:EnderIO
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/enderio/textures/blocks/
+texture:id=enderIO/conduitConnector,filename=assets/enderio/textures/blocks/conduitConnector.png
+texture:id=enderio/alloySmelterFront,filename=assets/enderio/textures/blocks/alloySmelterFront.png
+texture:id=enderio/anvil_base,filename=assets/enderio/textures/blocks/anvil_base.png
+texture:id=enderio/blankMachinePanel,filename=assets/enderio/textures/blocks/blankMachinePanel.png
+texture:id=enderio/blockAttractorSide,filename=assets/enderio/textures/blocks/blockAttractorSide.png
+texture:id=enderio/blockAttractorSideOn,filename=assets/enderio/textures/blocks/blockAttractorSideOn.png
+texture:id=enderio/blockBufferCreative,filename=assets/enderio/textures/blocks/blockBufferCreative.png
+texture:id=enderio/blockBufferItem,filename=assets/enderio/textures/blocks/blockBufferItem.png
+texture:id=enderio/blockBufferOmni,filename=assets/enderio/textures/blocks/blockBufferOmni.png
+texture:id=enderio/blockBufferPower,filename=assets/enderio/textures/blocks/blockBufferPower.png
+texture:id=enderio/blockDarkIronBars,filename=assets/enderio/textures/blocks/blockDarkIronBars.png
+texture:id=enderio/blockDarkSteelLadder,filename=assets/enderio/textures/blocks/blockDarkSteelLadder.png
+texture:id=enderio/blockDarkSteelPressurePlate,filename=assets/enderio/textures/blocks/blockDarkSteelPressurePlate.png
+texture:id=enderio/blockElectricLightFace,filename=assets/enderio/textures/blocks/blockElectricLightFace.png
+texture:id=enderio/blockEnchanter,filename=assets/enderio/textures/blocks/blockEnchanter.png
+texture:id=enderio/blockEnderIo,filename=assets/enderio/textures/blocks/blockEnderIo.png
+texture:id=enderio/blockEnderRail,filename=assets/enderio/textures/blocks/blockEnderRail.png
+texture:id=enderio/blockEnderRailEastWest,filename=assets/enderio/textures/blocks/blockEnderRailEastWest.png
+texture:id=enderio/blockEnderRailEastWest_turned,filename=assets/enderio/textures/blocks/blockEnderRailEastWest_turned.png
+texture:id=enderio/blockEnderRail_turned,filename=assets/enderio/textures/blocks/blockEnderRail_turned.png
+texture:id=enderio/blockReinforcedObsidian,filename=assets/enderio/textures/blocks/blockReinforcedObsidian.png
+texture:id=enderio/blockSoulMachineBack,filename=assets/enderio/textures/blocks/blockSoulMachineBack.png
+texture:id=enderio/blockSoulMachineBlank,filename=assets/enderio/textures/blocks/blockSoulMachineBlank.png
+texture:id=enderio/blockSoulMachineBottom,filename=assets/enderio/textures/blocks/blockSoulMachineBottom.png
+texture:id=enderio/blockSoulMachineSide,filename=assets/enderio/textures/blocks/blockSoulMachineSide.png
+texture:id=enderio/blockSoulMachineTop,filename=assets/enderio/textures/blocks/blockSoulMachineTop.png
+texture:id=enderio/blockTank,filename=assets/enderio/textures/blocks/blockTank.png
+texture:id=enderio/blockTankAdvanced,filename=assets/enderio/textures/blocks/blockTankAdvanced.png
+texture:id=enderio/blockTankTopAdvanced,filename=assets/enderio/textures/blocks/blockTankTopAdvanced.png
+texture:id=enderio/blockTravelAnchor,filename=assets/enderio/textures/blocks/blockTravelAnchor.png
+texture:id=enderio/blockVacuumChest,filename=assets/enderio/textures/blocks/blockVacuumChest.png
+texture:id=enderio/blockWirelessChargerOff,filename=assets/enderio/textures/blocks/blockWirelessChargerOff.png
+texture:id=enderio/capacitorBank,filename=assets/enderio/textures/blocks/capacitorBank.png
+texture:id=enderio/cloud_seed_concentrated_flow,filename=assets/enderio/textures/blocks/cloud_seed_concentrated_flow.png
+texture:id=enderio/cloud_seed_concentrated_still,filename=assets/enderio/textures/blocks/cloud_seed_concentrated_still.png
+texture:id=enderio/cloud_seed_flow,filename=assets/enderio/textures/blocks/cloud_seed_flow.png
+texture:id=enderio/cloud_seed_still,filename=assets/enderio/textures/blocks/cloud_seed_still.png
+texture:id=enderio/conductiveIronBlock,filename=assets/enderio/textures/blocks/conductiveIronBlock.png
+texture:id=enderio/conduitConnector,filename=assets/enderio/textures/blocks/conduitConnector.png
+texture:id=enderio/conduitFacade,filename=assets/enderio/textures/blocks/conduitFacade.png
+texture:id=enderio/crafter,filename=assets/enderio/textures/blocks/crafter.png
+texture:id=enderio/crafterSide,filename=assets/enderio/textures/blocks/crafterSide.png
+texture:id=enderio/crafterTop,filename=assets/enderio/textures/blocks/crafterTop.png
+texture:id=enderio/crusherFront,filename=assets/enderio/textures/blocks/crusherFront.png
+texture:id=enderio/darkSteelBlock,filename=assets/enderio/textures/blocks/darkSteelBlock.png
+texture:id=enderio/electricalSteelBlock,filename=assets/enderio/textures/blocks/electricalSteelBlock.png
+texture:id=enderio/endermanSkullFront,filename=assets/enderio/textures/blocks/endermanSkullFront.png
+texture:id=enderio/endermanSkullFrontEyes,filename=assets/enderio/textures/blocks/endermanSkullFrontEyes.png
+texture:id=enderio/endermanSkullSide,filename=assets/enderio/textures/blocks/endermanSkullSide.png
+texture:id=enderio/endermanSkullTop,filename=assets/enderio/textures/blocks/endermanSkullTop.png
+texture:id=enderio/energeticAlloyBlock,filename=assets/enderio/textures/blocks/energeticAlloyBlock.png
+texture:id=enderio/fire_water_flow,filename=assets/enderio/textures/blocks/fire_water_flow.png
+texture:id=enderio/fire_water_still,filename=assets/enderio/textures/blocks/fire_water_still.png
+texture:id=enderio/fusedGlass,filename=assets/enderio/textures/blocks/fusedGlass.png
+texture:id=enderio/fusedQuartz,filename=assets/enderio/textures/blocks/fusedQuartz.png
+texture:id=enderio/hootch_flow,filename=assets/enderio/textures/blocks/hootch_flow.png
+texture:id=enderio/hootch_still,filename=assets/enderio/textures/blocks/hootch_still.png
+texture:id=enderio/invPanelFrontOn,filename=assets/enderio/textures/blocks/invPanelFrontOn.png
+texture:id=enderio/liquid_sunshine_flow,filename=assets/enderio/textures/blocks/liquid_sunshine_flow.png
+texture:id=enderio/liquid_sunshine_still,filename=assets/enderio/textures/blocks/liquid_sunshine_still.png
+texture:id=enderio/machineBack,filename=assets/enderio/textures/blocks/machineBack.png
+texture:id=enderio/machineBottom,filename=assets/enderio/textures/blocks/machineBottom.png
+texture:id=enderio/machineSide,filename=assets/enderio/textures/blocks/machineSide.png
+texture:id=enderio/machineTop,filename=assets/enderio/textures/blocks/machineTop.png
+texture:id=enderio/nutrient_distillation_flow,filename=assets/enderio/textures/blocks/nutrient_distillation_flow.png
+texture:id=enderio/nutrient_distillation_still,filename=assets/enderio/textures/blocks/nutrient_distillation_still.png
+texture:id=enderio/obeliskBottom,filename=assets/enderio/textures/blocks/obeliskBottom.png
+texture:id=enderio/painterFrontOff,filename=assets/enderio/textures/blocks/painterFrontOff.png
+texture:id=enderio/phasedGoldBlock,filename=assets/enderio/textures/blocks/phasedGoldBlock.png
+texture:id=enderio/phasedIronBlock,filename=assets/enderio/textures/blocks/phasedIronBlock.png
+texture:id=enderio/powerMonitor,filename=assets/enderio/textures/blocks/powerMonitor.png
+texture:id=enderio/poweredSpawnerFront,filename=assets/enderio/textures/blocks/poweredSpawnerFront.png
+texture:id=enderio/redstoneAlloyBlock,filename=assets/enderio/textures/blocks/redstoneAlloyBlock.png
+texture:id=enderio/reservoir,filename=assets/enderio/textures/blocks/reservoir.png
+texture:id=enderio/rocket_fuel_flow,filename=assets/enderio/textures/blocks/rocket_fuel_flow.png
+texture:id=enderio/rocket_fuel_still,filename=assets/enderio/textures/blocks/rocket_fuel_still.png
+texture:id=enderio/sliceAndSpliceFront,filename=assets/enderio/textures/blocks/sliceAndSpliceFront.png
+texture:id=enderio/solarPanelAdvancedSide,filename=assets/enderio/textures/blocks/solarPanelAdvancedSide.png
+texture:id=enderio/solarPanelAdvancedTop,filename=assets/enderio/textures/blocks/solarPanelAdvancedTop.png
+texture:id=enderio/solarPanelSide,filename=assets/enderio/textures/blocks/solarPanelSide.png
+texture:id=enderio/solarPanelTop,filename=assets/enderio/textures/blocks/solarPanelTop.png
+texture:id=enderio/soulariumBlock,filename=assets/enderio/textures/blocks/soulariumBlock.png
+texture:id=enderio/stirlingGenFrontOff,filename=assets/enderio/textures/blocks/stirlingGenFrontOff.png
+texture:id=enderio/telePadBottom,filename=assets/enderio/textures/blocks/telePadBottom.png
+texture:id=enderio/telePadSide,filename=assets/enderio/textures/blocks/telePadSide.png
+texture:id=enderio/telePadTop,filename=assets/enderio/textures/blocks/telePadTop.png
+texture:id=enderio/tesseractPortal,filename=assets/enderio/textures/blocks/tesseractPortal.png
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=minecraft/cobblestone_mossy,filename=assets/minecraft/textures/blocks/cobblestone_mossy.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+texture:id=minecraft/wool_colored_black,filename=assets/minecraft/textures/blocks/wool_colored_black.png
+texture:id=minecraft/wool_colored_blue,filename=assets/minecraft/textures/blocks/wool_colored_blue.png
+texture:id=minecraft/wool_colored_brown,filename=assets/minecraft/textures/blocks/wool_colored_brown.png
+texture:id=minecraft/wool_colored_cyan,filename=assets/minecraft/textures/blocks/wool_colored_cyan.png
+texture:id=minecraft/wool_colored_gray,filename=assets/minecraft/textures/blocks/wool_colored_gray.png
+texture:id=minecraft/wool_colored_green,filename=assets/minecraft/textures/blocks/wool_colored_green.png
+texture:id=minecraft/wool_colored_light_blue,filename=assets/minecraft/textures/blocks/wool_colored_light_blue.png
+texture:id=minecraft/wool_colored_lime,filename=assets/minecraft/textures/blocks/wool_colored_lime.png
+texture:id=minecraft/wool_colored_magenta,filename=assets/minecraft/textures/blocks/wool_colored_magenta.png
+texture:id=minecraft/wool_colored_orange,filename=assets/minecraft/textures/blocks/wool_colored_orange.png
+texture:id=minecraft/wool_colored_pink,filename=assets/minecraft/textures/blocks/wool_colored_pink.png
+texture:id=minecraft/wool_colored_purple,filename=assets/minecraft/textures/blocks/wool_colored_purple.png
+texture:id=minecraft/wool_colored_red,filename=assets/minecraft/textures/blocks/wool_colored_red.png
+texture:id=minecraft/wool_colored_silver,filename=assets/minecraft/textures/blocks/wool_colored_silver.png
+texture:id=minecraft/wool_colored_white,filename=assets/minecraft/textures/blocks/wool_colored_white.png
+texture:id=minecraft/wool_colored_yellow,filename=assets/minecraft/textures/blocks/wool_colored_yellow.png
+
+
+
+# %blockStirlingGenerator:* (blockStirlingGenerator), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.generator.stirling.BlockStirlingGenerator
+block:id=%blockStirlingGenerator,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/stirlingGenFrontOff,face4-5=0:enderio/machineSide
+
+# %blockCombustionGenerator:* (blockCombustionGenerator), render=crazypants.enderio.machine.TechneMachineRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.generator.combustion.BlockCombustionGenerator
+block:id=%blockCombustionGenerator,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-3=0:enderio/machineBack,face4-5=0:enderio/machineSide
+
+# %blockZombieGenerator:* (blockZombieGenerator), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.generator.zombie.BlockZombieGenerator
+block:id=%blockZombieGenerator,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/stirlingGenFrontOff,face4-5=0:enderio/machineSide
+
+# %blockSolarPanel:* (blockSolarPanel), render=crazypants.enderio.machine.solar.SolarPanelRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.solar.BlockSolarPanel
+block:id=%blockSolarPanel,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/solarPanelSide,face1=0:enderio/solarPanelTop,face2-5=0:enderio/solarPanelSide
+block:id=%blockSolarPanel,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/solarPanelAdvancedSide,face1=0:enderio/solarPanelAdvancedTop,face2-5=0:enderio/solarPanelAdvancedSide
+
+# %blockSagMill:* (blockSagMill), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.crusher.BlockCrusher
+block:id=%blockSagMill,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/crusherFront,face4-5=0:enderio/machineSide
+
+# %blockAlloySmelter:* (blockAlloySmelter), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.alloy.BlockAlloySmelter
+block:id=%blockAlloySmelter,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/alloySmelterFront,face4-5=0:enderio/machineSide
+
+# %blockCapacitorBank:* (blockCapacitorBank), render=crazypants.enderio.machine.power.CapBankRenderer2(CUSTOM), opaque=false,cls=crazypants.enderio.machine.power.BlockCapacitorBank
+block:id=%blockCapacitorBank,data=*,stdrot=true,face0-5=0:enderio/capacitorBank
+
+# %blockCapBank:* (blockCapBank), render=crazypants.enderio.machine.capbank.render.CapBankRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.capbank.BlockCapBank
+block:id=%blockCapBank,data=*,stdrot=true,face0-5=0:enderio/capacitorBank
+
+# %blockPainter:* (blockPainter), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.painter.BlockPainter
+block:id=%blockPainter,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/painterFrontOff,face4-5=0:enderio/machineSide
+
+# %blockPaintedFence:* (blockPaintedFence), render=(FENCE), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedFence
+block:id=%blockPaintedFence,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:enderio/conduitConnector
+
+# %blockPaintedFenceGate:* (blockPaintedFenceGate), render=crazypants.enderio.machine.painter.BlockPaintedFenceGateRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedFenceGate
+block:id=%blockPaintedFenceGate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %blockPaintedWall:* (blockPaintedWall), render=(WALL), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedWall
+block:id=%blockPaintedWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/cobblestone
+block:id=%blockPaintedWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/cobblestone_mossy
+block:id=%blockPaintedWall,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/cobblestone
+
+# %blockPaintedStair:* (blockPaintedStair), render=(STAIRS), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedStair
+block:id=%blockPaintedStair,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/stone
+
+# %blockPaintedSlab:* (blockPaintedSlab), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
+block:id=%blockPaintedSlab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:enderio/conduitConnector
+
+# %blockPaintedDoubleSlab:* (blockPaintedDoubleSlab), render=(STANDARD), opaque=true,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
+block:id=%blockPaintedDoubleSlab,data=*,stdrot=true,face0-5=0:enderio/conduitConnector
+
+# %blockCrafter:* (blockCrafter), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.crafter.BlockCrafter
+block:id=%blockCrafter,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/crafterTop,face2=0:enderio/crafterSide,face3=0:enderio/crafter,face4-5=0:enderio/crafterSide
+
+# %blockPaintedGlowstone:* (blockPaintedGlowstone), render=crazypants.enderio.machine.painter.PaintedBlockRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.painter.BlockPaintedGlowstone
+block:id=%blockPaintedGlowstone,data=*,stdrot=true,face0-5=0:enderio/conduitConnector
+
+# %blockPaintedCarpet:* (blockPaintedCarpet), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedCarpet
+block:id=%blockPaintedCarpet,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white
+block:id=%blockPaintedCarpet,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_orange
+block:id=%blockPaintedCarpet,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_magenta
+block:id=%blockPaintedCarpet,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_light_blue
+block:id=%blockPaintedCarpet,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_yellow
+block:id=%blockPaintedCarpet,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_lime
+block:id=%blockPaintedCarpet,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_pink
+block:id=%blockPaintedCarpet,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_gray
+block:id=%blockPaintedCarpet,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_silver
+block:id=%blockPaintedCarpet,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_cyan
+block:id=%blockPaintedCarpet,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_purple
+block:id=%blockPaintedCarpet,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_blue
+block:id=%blockPaintedCarpet,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_brown
+block:id=%blockPaintedCarpet,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_green
+block:id=%blockPaintedCarpet,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_red
+block:id=%blockPaintedCarpet,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_black
+
+# %blockVat:* (blockVat), render=crazypants.enderio.machine.TechneMachineRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.vat.BlockVat
+block:id=%blockVat,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-3=0:enderio/machineBack,face4-5=0:enderio/machineSide
+
+# %blockPowerMonitor:* (blockPowerMonitor), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.monitor.BlockPowerMonitor
+block:id=%blockPowerMonitor,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/powerMonitor,face4-5=0:enderio/machineSide
+
+# %blockFarmStation:* (blockFarmStation), render=crazypants.enderio.machine.farm.FarmingStationRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.farm.BlockFarmStation
+block:id=%blockFarmStation,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/machineBack
+
+# %blockWirelessCharger:* (blockWirelessCharger), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.wireless.BlockWirelessCharger
+block:id=%blockWirelessCharger,data=*,stdrot=true,face0-5=0:enderio/blockWirelessChargerOff
+
+# %blockHyperCube:* (blockHyperCube), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.hypercube.BlockHyperCube
+block:id=%blockHyperCube,data=*,stdrot=true,face0-5=0:enderio/tesseractPortal
+
+# %blockTank:* (blockTank), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.tank.BlockTank
+block:id=%blockTank,data=0,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/blockTank
+block:id=%blockTank,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/blockTankTopAdvanced,face2-5=0:enderio/blockTankAdvanced
+
+# %blockReservoir:* (blockReservoir), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.reservoir.BlockReservoir
+block:id=%blockReservoir,data=*,stdrot=true,face0-5=0:enderio/reservoir
+
+# %blockVacuumChest:* (blockVacuumChest), render=crazypants.enderio.machine.vacuum.VacuumChestRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.vacuum.BlockVacuumChest
+block:id=%blockVacuumChest,data=*,stdrot=true,face0-5=0:enderio/blockVacuumChest
+
+# %blockTransceiver:* (blockTransceiver), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.transceiver.BlockTransceiver
+block:id=%blockTransceiver,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/alloySmelterFront,face4-5=0:enderio/machineSide
+
+# %blockBuffer:* (blockBuffer), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.buffer.BlockBuffer
+block:id=%blockBuffer,data=0,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/blockBufferItem
+block:id=%blockBuffer,data=1,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/blockBufferPower
+block:id=%blockBuffer,data=2,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/blockBufferOmni
+block:id=%blockBuffer,data=3,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/blockBufferCreative
+block:id=%blockBuffer,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop
+
+# %blockInventoryPanel:* (blockInventoryPanel), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.invpanel.BlockInventoryPanel
+block:id=%blockInventoryPanel,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/invPanelFrontOn,face4-5=0:enderio/machineSide
+
+# %blockEnderIo:* (blockEnderIo), render=(CUSTOM), opaque=false,cls=crazypants.enderio.enderface.BlockEnderIO
+block:id=%blockEnderIo,data=*,stdrot=true,face0-5=12000:enderio/blockEnderIo
+
+# %blockTravelAnchor:* (blockTravelAnchor), render=crazypants.enderio.machine.painter.PaintedBlockRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.teleport.anchor.BlockTravelAnchor
+block:id=%blockTravelAnchor,data=*,stdrot=true,face0-5=0:enderio/blockTravelAnchor
+
+# %blockTelePad:* (blockTelePad), render=crazypants.enderio.teleport.telepad.TelePadRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.teleport.telepad.BlockTelePad
+block:id=%blockTelePad,data=*,stdrot=true,face0=0:enderio/telePadBottom,face1=0:enderio/telePadTop,face2-5=0:enderio/telePadSide
+
+# %blockSliceAndSplice:* (blockSliceAndSplice), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.slicensplice.BlockSliceAndSplice
+block:id=%blockSliceAndSplice,data=*,stdrot=true,face0=0:enderio/blockSoulMachineBottom,face1=0:enderio/blockSoulMachineTop,face2=0:enderio/blockSoulMachineBack,face3=0:enderio/sliceAndSpliceFront,face4-5=0:enderio/blockSoulMachineSide
+
+# %blockSoulBinder:* (blockSoulBinder), render=crazypants.enderio.machine.soul.SoulBinderRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.soul.BlockSoulBinder
+block:id=%blockSoulBinder,data=*,stdrot=true,face0=0:enderio/blockSoulMachineBottom,face1=0:enderio/blockSoulMachineTop,face2=0:enderio/machineBack,face3-5=0:enderio/blockSoulMachineBlank
+
+# %blockPoweredSpawner:* (blockPoweredSpawner), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.spawner.BlockPoweredSpawner
+block:id=%blockPoweredSpawner,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/poweredSpawnerFront,face4-5=0:enderio/machineSide
+
+# %blockKillerJoe:* (blockKillerJoe), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.killera.BlockKillerJoe
+block:id=%blockKillerJoe,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/blankMachinePanel,face4-5=0:enderio/machineSide
+
+# %blockAttractor:* (blockAttractor), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.attractor.BlockAttractor
+block:id=%blockAttractor,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/obeliskBottom,face1=0:enderio/blockSoulMachineTop,face2-5=0:enderio/blockAttractorSide
+
+# %blockSpawnGuard:* (blockSpawnGuard), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.aversion.BlockAversionObelisk
+block:id=%blockSpawnGuard,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/obeliskBottom,face1=0:enderio/blockSoulMachineTop,face2-5=0:enderio/blockAttractorSide
+
+# %blockExperienceObelisk:* (blockExperienceObelisk), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.xp.BlockExperienceObelisk
+block:id=%blockExperienceObelisk,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/obeliskBottom,face1=0:enderio/blockSoulMachineTop,face2-5=0:enderio/blockAttractorSideOn
+
+# %blockWeatherObelisk:* (blockWeatherObelisk), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.weather.BlockWeatherObelisk
+block:id=%blockWeatherObelisk,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/obeliskBottom,face1=0:enderio/blockSoulMachineTop,face2-5=0:enderio/blockAttractorSide
+
+# %blockInhibitorObelisk:* (blockInhibitorObelisk), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.inhibitor.BlockInhibitorObelisk
+block:id=%blockInhibitorObelisk,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/obeliskBottom,face1=0:enderio/blockSoulMachineTop,face2-5=0:enderio/blockAttractorSide
+
+# %blockEnchanter:* (blockEnchanter), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.enchanter.BlockEnchanter
+block:id=%blockEnchanter,data=*,stdrot=true,face0-5=0:enderio/blockEnchanter
+
+# %blockDarkSteelPressurePlate:* (blockDarkSteelPressurePlate), render=(STANDARD), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelPressurePlate
+block:id=%blockDarkSteelPressurePlate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:enderio/blockDarkSteelPressurePlate
+
+# %blockDarkSteelAnvil:* (blockDarkSteelAnvil), render=(ANVIL), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelAnvil
+block:id=%blockDarkSteelAnvil,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:enderio/anvil_base
+
+# %blockDarkSteelLadder:* (blockDarkSteelLadder), render=(LADDER), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelLadder
+block:id=%blockDarkSteelLadder,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockDarkSteelLadder
+
+# %blockElectricLight:* (blockElectricLight), render=crazypants.enderio.machine.light.ElectricLightRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.light.BlockElectricLight
+block:id=%blockElectricLight,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/conduitConnector,face1=0:enderio/blockElectricLightFace,face2-5=0:enderio/conduitConnector
+
+# %blockReinforcedObsidian:* (blockReinforcedObsidian), render=(STANDARD), opaque=true,cls=crazypants.enderio.block.BlockReinforcedObsidian
+block:id=%blockReinforcedObsidian,data=*,stdrot=true,face0-5=0:enderio/blockReinforcedObsidian
+
+# %blockFusedQuartz:* (blockFusedQuartz), render=crazypants.enderio.material.FusedQuartzRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.material.BlockFusedQuartz
+block:id=%blockFusedQuartz,data=0,stdrot=true,face0-5=0:enderio/fusedQuartz
+block:id=%blockFusedQuartz,data=1,stdrot=true,face0-5=0:enderio/fusedGlass
+block:id=%blockFusedQuartz,data=2,stdrot=true,face0-5=0:enderio/fusedQuartz
+block:id=%blockFusedQuartz,data=3,stdrot=true,face0-5=0:enderio/fusedGlass
+block:id=%blockFusedQuartz,data=4,stdrot=true,face0-5=0:enderio/fusedQuartz
+block:id=%blockFusedQuartz,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:enderio/fusedGlass
+
+# %blockEnderRail:* (blockEnderRail), render=(MINECARTTRACK), opaque=false,cls=crazypants.enderio.rail.BlockEnderRail
+block:id=%blockEnderRail,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail
+block:id=%blockEnderRail,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest
+block:id=%blockEnderRail,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail
+block:id=%blockEnderRail,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest
+block:id=%blockEnderRail,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail
+block:id=%blockEnderRail,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest
+block:id=%blockEnderRail,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail_turned
+block:id=%blockEnderRail,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest
+block:id=%blockEnderRail,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail_turned
+block:id=%blockEnderRail,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest_turned
+block:id=%blockEnderRail,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail_turned
+block:id=%blockEnderRail,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest_turned
+block:id=%blockEnderRail,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail_turned
+block:id=%blockEnderRail,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest_turned
+block:id=%blockEnderRail,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRail_turned
+block:id=%blockEnderRail,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest_turned
+
+# %blockConduitBundle:* (blockConduitBundle), render=crazypants.enderio.conduit.render.ConduitBundleRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.conduit.BlockConduitBundle
+block:id=%blockConduitBundle,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:enderIO/conduitConnector
+
+# %blockConduitFacade:* (blockConduitFacade), render=(STANDARD), opaque=true,cls=crazypants.enderio.conduit.facade.BlockConduitFacade
+block:id=%blockConduitFacade,data=*,stdrot=true,face0-5=0:enderio/conduitFacade
+
+# %blockEndermanSkull:* (blockEndermanSkull), render=crazypants.enderio.item.skull.EndermanSkullRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.item.skull.BlockEndermanSkull
+block:id=%blockEndermanSkull,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:enderio/endermanSkullTop,face2=0:enderio/endermanSkullFront,face3=0:enderio/endermanSkullTop,face4-5=0:enderio/endermanSkullSide
+block:id=%blockEndermanSkull,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:enderio/endermanSkullTop,face2=0:enderio/endermanSkullFrontEyes,face3=0:enderio/endermanSkullTop,face4-5=0:enderio/endermanSkullSide
+block:id=%blockEndermanSkull,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:enderio/endermanSkullTop,face2=0:enderio/endermanSkullFront,face3=0:enderio/endermanSkullTop,face4-5=0:enderio/endermanSkullSide
+block:id=%blockEndermanSkull,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:enderio/endermanSkullTop,face2=0:enderio/endermanSkullFrontEyes,face3=0:enderio/endermanSkullTop,face4-5=0:enderio/endermanSkullSide
+
+# %blockNutrient_distillation:* (blockNutrient_distillation), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockNutrient_distillation,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/nutrient_distillation_still,face2-5=12000:enderio/nutrient_distillation_flow
+
+# %blockHootch:* (blockHootch), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockHootch,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/hootch_still,face2-5=12000:enderio/hootch_flow
+
+# %blockRocket_fuel:* (blockRocket_fuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockRocket_fuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/rocket_fuel_still,face2-5=12000:enderio/rocket_fuel_flow
+
+# %blockFire_water:* (blockFire_water), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockFire_water,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/fire_water_still,face2-5=12000:enderio/fire_water_flow
+
+# %blockLiquid_sunshine:* (blockLiquid_sunshine), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockLiquid_sunshine,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/liquid_sunshine_still,face2-5=12000:enderio/liquid_sunshine_flow
+
+# %blockCloud_seed:* (blockCloud_seed), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockCloud_seed,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/cloud_seed_still,face2-5=12000:enderio/cloud_seed_flow
+
+# %blockCloud_seed_concentrated:* (blockCloud_seed_concentrated), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockCloud_seed_concentrated,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/cloud_seed_concentrated_still,face2-5=12000:enderio/cloud_seed_concentrated_flow
+
+# %blockIngotStorage:* (blockIngotStorage), render=(STANDARD), opaque=true,cls=crazypants.enderio.material.BlockIngotStorage
+block:id=%blockIngotStorage,data=0,stdrot=true,face0-5=0:enderio/electricalSteelBlock
+block:id=%blockIngotStorage,data=1,stdrot=true,face0-5=0:enderio/energeticAlloyBlock
+block:id=%blockIngotStorage,data=2,stdrot=true,face0-5=0:enderio/phasedGoldBlock
+block:id=%blockIngotStorage,data=3,stdrot=true,face0-5=0:enderio/redstoneAlloyBlock
+block:id=%blockIngotStorage,data=4,stdrot=true,face0-5=0:enderio/conductiveIronBlock
+block:id=%blockIngotStorage,data=5,stdrot=true,face0-5=0:enderio/phasedIronBlock
+block:id=%blockIngotStorage,data=6,stdrot=true,face0-5=0:enderio/darkSteelBlock
+block:id=%blockIngotStorage,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:enderio/soulariumBlock
+
+# %blockDarkIronBars:* (blockDarkIronBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkIronBars
+block:id=%blockDarkIronBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:enderio/blockDarkIronBars

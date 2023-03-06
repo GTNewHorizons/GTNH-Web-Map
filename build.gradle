@@ -1,0 +1,79 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'forge'
+
+// define the properties file
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+version = "${config.Dynmap_version}${config.Dynmap_extversion}"
+group= "us.dynmap.forge" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Dynmap"
+targetCompatibility = '1.7'
+sourceCompatibility = '1.7'
+ext.buildNumber = System.getenv().BUILD_NUMBER ?: "Dev"
+
+minecraft {
+    version = config.minecraft_version + "-" + config.forge_version
+    assetDir = "run/assets"
+
+	replaceIn "Version.java"
+    	replace "@VERSION@", config.Dynmap_version + config.Dynmap_extversion + '-' + project.ext.buildNumber
+    	replace "@BUILD_NUMBER@", project.ext.buildNumber
+}
+
+repositories {
+    mavenLocal()
+}
+
+configurations {
+    dynmap
+    compile.extendsFrom dynmap
+}
+
+dependencies {
+    dynmap group: 'us.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}${config.DynmapCore_devversion}", ext: 'jar'
+    dynmap group: 'us.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}${config.DynmapCore_devversion}", ext: 'jar'
+}
+
+processResources
+{
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':config.Dynmap_version + config.Dynmap_extversion + '-' + project.ext.buildNumber, 'mcversion':config.minecraft_version
+    }
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+jar {
+   classifier = "forge-1.7.10"
+   destinationDir = project.projectDir
+   from { configurations.dynmap.collect { it.isDirectory() ? it : zipTree(it) } }
+}

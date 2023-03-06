@@ -1,0 +1,123 @@
+# BigReactors 0.4.3A
+version:1.7
+modname:BigReactors
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/bigreactors/textures/blocks/
+texture:id=bigreactors/fuelRod.end,filename=assets/bigreactors/textures/blocks/fuelRod.end.png
+texture:id=bigreactors/fuelRod.side,filename=assets/bigreactors/textures/blocks/fuelRod.side.png
+texture:id=bigreactors/oreYellorite,filename=assets/bigreactors/textures/blocks/oreYellorite.png
+texture:id=bigreactors/tile.blockBRDevice,filename=assets/bigreactors/textures/blocks/tile.blockBRDevice.png
+texture:id=bigreactors/tile.blockBRDevice.cyaniteReprocessor,filename=assets/bigreactors/textures/blocks/tile.blockBRDevice.cyaniteReprocessor.png
+texture:id=bigreactors/tile.blockMBCreativePart,filename=assets/bigreactors/textures/blocks/tile.blockMBCreativePart.png
+texture:id=bigreactors/tile.blockMBCreativePart.reactor.coolantPort,filename=assets/bigreactors/textures/blocks/tile.blockMBCreativePart.reactor.coolantPort.png
+texture:id=bigreactors/tile.blockMBCreativePart.turbine.fluidPort,filename=assets/bigreactors/textures/blocks/tile.blockMBCreativePart.turbine.fluidPort.png
+texture:id=bigreactors/tile.blockReactorPart,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.png
+texture:id=bigreactors/tile.blockReactorPart.accessPort.inlet,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.accessPort.inlet.png
+texture:id=bigreactors/tile.blockReactorPart.casing.default,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.casing.default.png
+texture:id=bigreactors/tile.blockReactorPart.computerPort.default,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.computerPort.default.png
+texture:id=bigreactors/tile.blockReactorPart.controlRod.top,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.controlRod.top.png
+texture:id=bigreactors/tile.blockReactorPart.controller.off,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.controller.off.png
+texture:id=bigreactors/tile.blockReactorPart.coolantPort.inlet,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.coolantPort.inlet.png
+texture:id=bigreactors/tile.blockReactorPart.powerTap.disconnected,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.powerTap.disconnected.png
+texture:id=bigreactors/tile.blockReactorPart.redNetPort.default,filename=assets/bigreactors/textures/blocks/tile.blockReactorPart.redNetPort.default.png
+texture:id=bigreactors/tile.blockReactorRedstonePort.lit,filename=assets/bigreactors/textures/blocks/tile.blockReactorRedstonePort.lit.png
+texture:id=bigreactors/tile.blockReactorRedstonePort.unlit,filename=assets/bigreactors/textures/blocks/tile.blockReactorRedstonePort.unlit.png
+texture:id=bigreactors/tile.blockTurbinePart.bearing,filename=assets/bigreactors/textures/blocks/tile.blockTurbinePart.bearing.png
+texture:id=bigreactors/tile.blockTurbinePart.computerPort,filename=assets/bigreactors/textures/blocks/tile.blockTurbinePart.computerPort.png
+texture:id=bigreactors/tile.blockTurbinePart.controller,filename=assets/bigreactors/textures/blocks/tile.blockTurbinePart.controller.png
+texture:id=bigreactors/tile.blockTurbinePart.fluidPort,filename=assets/bigreactors/textures/blocks/tile.blockTurbinePart.fluidPort.png
+texture:id=bigreactors/tile.blockTurbinePart.housing,filename=assets/bigreactors/textures/blocks/tile.blockTurbinePart.housing.png
+texture:id=bigreactors/tile.blockTurbinePart.powerTap,filename=assets/bigreactors/textures/blocks/tile.blockTurbinePart.powerTap.png
+texture:id=bigreactors/tile.blockTurbineRotorPart.blade,filename=assets/bigreactors/textures/blocks/tile.blockTurbineRotorPart.blade.png
+texture:id=bigreactors/tile.blockTurbineRotorPart.rotor,filename=assets/bigreactors/textures/blocks/tile.blockTurbineRotorPart.rotor.png
+texture:id=bigreactors/tile.brMetal.blockBlutonium,filename=assets/bigreactors/textures/blocks/tile.brMetal.blockBlutonium.png
+texture:id=bigreactors/tile.brMetal.blockCyanite,filename=assets/bigreactors/textures/blocks/tile.brMetal.blockCyanite.png
+texture:id=bigreactors/tile.brMetal.blockGraphite,filename=assets/bigreactors/textures/blocks/tile.brMetal.blockGraphite.png
+texture:id=bigreactors/tile.brMetal.blockLudicrite,filename=assets/bigreactors/textures/blocks/tile.brMetal.blockLudicrite.png
+texture:id=bigreactors/tile.brMetal.blockYellorium,filename=assets/bigreactors/textures/blocks/tile.brMetal.blockYellorium.png
+texture:id=bigreactors/tile.fluid.cyanite.flowing,filename=assets/bigreactors/textures/blocks/tile.fluid.cyanite.flowing.png
+texture:id=bigreactors/tile.fluid.cyanite.still,filename=assets/bigreactors/textures/blocks/tile.fluid.cyanite.still.png
+texture:id=bigreactors/tile.fluid.yellorium.flowing,filename=assets/bigreactors/textures/blocks/tile.fluid.yellorium.flowing.png
+texture:id=bigreactors/tile.fluid.yellorium.still,filename=assets/bigreactors/textures/blocks/tile.fluid.yellorium.still.png
+texture:id=bigreactors/tile.multiblockGlass.reactor.0,filename=assets/bigreactors/textures/blocks/tile.multiblockGlass.reactor.0.png
+texture:id=bigreactors/tile.multiblockGlass.turbine.0,filename=assets/bigreactors/textures/blocks/tile.multiblockGlass.turbine.0.png
+
+
+
+# %YelloriteOre:* (YelloriteOre), render=(STANDARD), opaque=true,cls=erogenousbeef.bigreactors.common.block.BlockBROre
+block:id=%YelloriteOre,data=*,stdrot=true,face0-5=0:bigreactors/oreYellorite
+
+# %BRMetalBlock:* (BRMetalBlock), render=(STANDARD), opaque=true,cls=erogenousbeef.bigreactors.common.block.BlockBRMetal
+block:id=%BRMetalBlock,data=0,stdrot=true,face0-5=0:bigreactors/tile.brMetal.blockYellorium
+block:id=%BRMetalBlock,data=1,stdrot=true,face0-5=0:bigreactors/tile.brMetal.blockCyanite
+block:id=%BRMetalBlock,data=2,stdrot=true,face0-5=0:bigreactors/tile.brMetal.blockGraphite
+block:id=%BRMetalBlock,data=3,stdrot=true,face0-5=0:bigreactors/tile.brMetal.blockBlutonium
+block:id=%BRMetalBlock,data=4,stdrot=true,face0-5=0:bigreactors/tile.brMetal.blockLudicrite
+
+# %YelloriumFuelRod:* (YelloriumFuelRod), render=erogenousbeef.bigreactors.client.renderer.SimpleRendererFuelRod(CUSTOM), opaque=false,cls=erogenousbeef.bigreactors.common.multiblock.block.BlockFuelRod
+block:id=%YelloriumFuelRod,data=*,stdrot=true,face0-1=0:bigreactors/fuelRod.end,face2-5=0:bigreactors/fuelRod.side
+
+# %BRReactorPart:* (BRReactorPart), render=(STANDARD), opaque=true,cls=erogenousbeef.bigreactors.common.multiblock.block.BlockReactorPart
+block:id=%BRReactorPart,data=0,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorPart.casing.default
+block:id=%BRReactorPart,data=1,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorPart.controller.off
+block:id=%BRReactorPart,data=2,stdrot=true,face0=0:bigreactors/tile.blockReactorPart,face1=0:bigreactors/tile.blockReactorPart.controlRod.top,face2-5=0:bigreactors/tile.blockReactorPart
+block:id=%BRReactorPart,data=3,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorPart.powerTap.disconnected
+block:id=%BRReactorPart,data=4,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorPart.accessPort.inlet
+block:id=%BRReactorPart,data=5,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorPart.coolantPort.inlet
+block:id=%BRReactorPart,data=6,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorPart.redNetPort.default
+block:id=%BRReactorPart,data=7,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorPart.computerPort.default
+block:id=%BRReactorPart,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bigreactors/tile.blockReactorPart
+
+# %BRMultiblockGlass:* (BRMultiblockGlass), render=(STANDARD), opaque=false,cls=erogenousbeef.bigreactors.common.multiblock.block.BlockMultiblockGlass
+block:id=%BRMultiblockGlass,data=0,stdrot=true,face0-5=0:bigreactors/tile.multiblockGlass.reactor.0
+block:id=%BRMultiblockGlass,data=1,stdrot=true,face0-5=0:bigreactors/tile.multiblockGlass.turbine.0
+
+# %BRReactorRedstonePort:* (BRReactorRedstonePort), render=(STANDARD), opaque=true,cls=erogenousbeef.bigreactors.common.multiblock.block.BlockReactorRedstonePort
+block:id=%BRReactorRedstonePort,data=0,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorRedstonePort.unlit
+block:id=%BRReactorRedstonePort,data=1,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorRedstonePort.lit
+block:id=%BRReactorRedstonePort,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:bigreactors/tile.blockReactorPart,face2-5=0:bigreactors/tile.blockReactorRedstonePort.unlit
+
+# %BRTurbinePart:* (BRTurbinePart), render=(STANDARD), opaque=true,cls=erogenousbeef.bigreactors.common.multiblock.block.BlockTurbinePart
+block:id=%BRTurbinePart,data=0,stdrot=true,face0-5=0:bigreactors/tile.blockTurbinePart.housing
+block:id=%BRTurbinePart,data=1,stdrot=true,face0-5=0:bigreactors/tile.blockTurbinePart.controller
+block:id=%BRTurbinePart,data=2,stdrot=true,face0-5=0:bigreactors/tile.blockTurbinePart.powerTap
+block:id=%BRTurbinePart,data=3,stdrot=true,face0-5=0:bigreactors/tile.blockTurbinePart.fluidPort
+block:id=%BRTurbinePart,data=4,stdrot=true,face0-5=0:bigreactors/tile.blockTurbinePart.bearing
+block:id=%BRTurbinePart,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bigreactors/tile.blockTurbinePart.computerPort
+
+# %BRTurbineRotorPart:* (BRTurbineRotorPart), render=erogenousbeef.bigreactors.client.renderer.RotorSimpleRenderer(CUSTOM), opaque=false,cls=erogenousbeef.bigreactors.common.multiblock.block.BlockTurbineRotorPart
+block:id=%BRTurbineRotorPart,data=0,stdrot=true,face0-5=0:bigreactors/tile.blockTurbineRotorPart.rotor
+block:id=%BRTurbineRotorPart,data=1,stdrot=true,face0-5=0:bigreactors/tile.blockTurbineRotorPart.blade
+
+# %BRDevice:* (BRDevice), render=(STANDARD), opaque=false,cls=erogenousbeef.bigreactors.common.block.BlockBRDevice
+block:id=%BRDevice,data=0,stdrot=true,face0-3=0:bigreactors/tile.blockBRDevice,face4=0:bigreactors/tile.blockBRDevice.cyaniteReprocessor,face5=0:bigreactors/tile.blockBRDevice
+block:id=%BRDevice,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-3=0:bigreactors/tile.blockBRDevice,face5=0:bigreactors/tile.blockBRDevice
+
+# %tile.fluid.yellorium.still:* (tile.fluid.yellorium.still), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=erogenousbeef.bigreactors.common.block.BlockBRGenericFluid
+block:id=%tile.fluid.yellorium.still,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:bigreactors/tile.fluid.yellorium.still,face2-5=12000:bigreactors/tile.fluid.yellorium.flowing
+
+# %tile.fluid.cyanite.still:* (tile.fluid.cyanite.still), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=erogenousbeef.bigreactors.common.block.BlockBRGenericFluid
+block:id=%tile.fluid.cyanite.still,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:bigreactors/tile.fluid.cyanite.still,face2-5=12000:bigreactors/tile.fluid.cyanite.flowing
+
+# %BRMultiblockCreativePart:* (BRMultiblockCreativePart), render=(STANDARD), opaque=true,cls=erogenousbeef.bigreactors.common.multiblock.block.BlockMBCreativePart
+block:id=%BRMultiblockCreativePart,data=0,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=1,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort
+block:id=%BRMultiblockCreativePart,data=2,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=3,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort
+block:id=%BRMultiblockCreativePart,data=4,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=5,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort
+block:id=%BRMultiblockCreativePart,data=6,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=7,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort
+block:id=%BRMultiblockCreativePart,data=8,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=9,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort
+block:id=%BRMultiblockCreativePart,data=10,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=11,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort
+block:id=%BRMultiblockCreativePart,data=12,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=13,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort
+block:id=%BRMultiblockCreativePart,data=14,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.reactor.coolantPort
+block:id=%BRMultiblockCreativePart,data=15,stdrot=true,face0-1=0:bigreactors/tile.blockMBCreativePart,face2-5=0:bigreactors/tile.blockMBCreativePart.turbine.fluidPort

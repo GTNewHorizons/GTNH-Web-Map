@@ -1,0 +1,1527 @@
+# lotr Beta v20.2 for Minecraft 1.7.10
+version:1.7
+modname:lotr
+
+
+cfgfile:config/lotr.cfg
+
+
+texturepath:assets/lotr/textures/blocks/
+texture:id=lotr/angmarCraftingTable_side,filename=assets/lotr/textures/blocks/angmarCraftingTable_side.png
+texture:id=lotr/angmarCraftingTable_top,filename=assets/lotr/textures/blocks/angmarCraftingTable_top.png
+texture:id=lotr/appleCrumble_bottom,filename=assets/lotr/textures/blocks/appleCrumble_bottom.png
+texture:id=lotr/appleCrumble_eaten,filename=assets/lotr/textures/blocks/appleCrumble_eaten.png
+texture:id=lotr/appleCrumble_side,filename=assets/lotr/textures/blocks/appleCrumble_side.png
+texture:id=lotr/appleCrumble_top,filename=assets/lotr/textures/blocks/appleCrumble_top.png
+texture:id=lotr/asphodel,filename=assets/lotr/textures/blocks/asphodel.png
+texture:id=lotr/athelas,filename=assets/lotr/textures/blocks/athelas.png
+texture:id=lotr/bananaCake_bottom,filename=assets/lotr/textures/blocks/bananaCake_bottom.png
+texture:id=lotr/bananaCake_eaten,filename=assets/lotr/textures/blocks/bananaCake_eaten.png
+texture:id=lotr/bananaCake_side,filename=assets/lotr/textures/blocks/bananaCake_side.png
+texture:id=lotr/bananaCake_top,filename=assets/lotr/textures/blocks/bananaCake_top.png
+texture:id=lotr/banana_bottom,filename=assets/lotr/textures/blocks/banana_bottom.png
+texture:id=lotr/banana_side,filename=assets/lotr/textures/blocks/banana_side.png
+texture:id=lotr/banana_top,filename=assets/lotr/textures/blocks/banana_top.png
+texture:id=lotr/barrel_side,filename=assets/lotr/textures/blocks/barrel_side.png
+texture:id=lotr/barrel_top,filename=assets/lotr/textures/blocks/barrel_top.png
+texture:id=lotr/blueDwarvenCraftingTable_side,filename=assets/lotr/textures/blocks/blueDwarvenCraftingTable_side.png
+texture:id=lotr/blueDwarvenCraftingTable_top,filename=assets/lotr/textures/blocks/blueDwarvenCraftingTable_top.png
+texture:id=lotr/bluebell,filename=assets/lotr/textures/blocks/bluebell.png
+texture:id=lotr/brick2_angmar,filename=assets/lotr/textures/blocks/brick2_angmar.png
+texture:id=lotr/brick2_angmarCracked,filename=assets/lotr/textures/blocks/brick2_angmarCracked.png
+texture:id=lotr/brick2_arnor,filename=assets/lotr/textures/blocks/brick2_arnor.png
+texture:id=lotr/brick2_arnorCarved,filename=assets/lotr/textures/blocks/brick2_arnorCarved.png
+texture:id=lotr/brick2_arnorCracked,filename=assets/lotr/textures/blocks/brick2_arnorCracked.png
+texture:id=lotr/brick2_arnorMossy,filename=assets/lotr/textures/blocks/brick2_arnorMossy.png
+texture:id=lotr/brick2_dolGuldur,filename=assets/lotr/textures/blocks/brick2_dolGuldur.png
+texture:id=lotr/brick2_dolGuldurCracked,filename=assets/lotr/textures/blocks/brick2_dolGuldurCracked.png
+texture:id=lotr/brick2_redRock,filename=assets/lotr/textures/blocks/brick2_redRock.png
+texture:id=lotr/brick2_uruk,filename=assets/lotr/textures/blocks/brick2_uruk.png
+texture:id=lotr/brick_blueRock,filename=assets/lotr/textures/blocks/brick_blueRock.png
+texture:id=lotr/brick_dwarven,filename=assets/lotr/textures/blocks/brick_dwarven.png
+texture:id=lotr/brick_dwarvenGold,filename=assets/lotr/textures/blocks/brick_dwarvenGold.png
+texture:id=lotr/brick_dwarvenMithril,filename=assets/lotr/textures/blocks/brick_dwarvenMithril.png
+texture:id=lotr/brick_dwarvenSilver,filename=assets/lotr/textures/blocks/brick_dwarvenSilver.png
+texture:id=lotr/brick_elven,filename=assets/lotr/textures/blocks/brick_elven.png
+texture:id=lotr/brick_elvenCracked,filename=assets/lotr/textures/blocks/brick_elvenCracked.png
+texture:id=lotr/brick_elvenMossy,filename=assets/lotr/textures/blocks/brick_elvenMossy.png
+texture:id=lotr/brick_gondor,filename=assets/lotr/textures/blocks/brick_gondor.png
+texture:id=lotr/brick_gondorCracked,filename=assets/lotr/textures/blocks/brick_gondorCracked.png
+texture:id=lotr/brick_gondorMossy,filename=assets/lotr/textures/blocks/brick_gondorMossy.png
+texture:id=lotr/brick_gondorRuins,filename=assets/lotr/textures/blocks/brick_gondorRuins.png
+texture:id=lotr/brick_mordor,filename=assets/lotr/textures/blocks/brick_mordor.png
+texture:id=lotr/brick_mordorCracked,filename=assets/lotr/textures/blocks/brick_mordorCracked.png
+texture:id=lotr/brick_nearHarad,filename=assets/lotr/textures/blocks/brick_nearHarad.png
+texture:id=lotr/brick_rohan,filename=assets/lotr/textures/blocks/brick_rohan.png
+texture:id=lotr/chandelier_blueDwarven,filename=assets/lotr/textures/blocks/chandelier_blueDwarven.png
+texture:id=lotr/chandelier_bronze,filename=assets/lotr/textures/blocks/chandelier_bronze.png
+texture:id=lotr/chandelier_dwarven,filename=assets/lotr/textures/blocks/chandelier_dwarven.png
+texture:id=lotr/chandelier_elven,filename=assets/lotr/textures/blocks/chandelier_elven.png
+texture:id=lotr/chandelier_gold,filename=assets/lotr/textures/blocks/chandelier_gold.png
+texture:id=lotr/chandelier_highElven,filename=assets/lotr/textures/blocks/chandelier_highElven.png
+texture:id=lotr/chandelier_iron,filename=assets/lotr/textures/blocks/chandelier_iron.png
+texture:id=lotr/chandelier_mithril,filename=assets/lotr/textures/blocks/chandelier_mithril.png
+texture:id=lotr/chandelier_orc,filename=assets/lotr/textures/blocks/chandelier_orc.png
+texture:id=lotr/chandelier_silver,filename=assets/lotr/textures/blocks/chandelier_silver.png
+texture:id=lotr/chandelier_uruk,filename=assets/lotr/textures/blocks/chandelier_uruk.png
+texture:id=lotr/chandelier_woodElven,filename=assets/lotr/textures/blocks/chandelier_woodElven.png
+texture:id=lotr/cherryPie_bottom,filename=assets/lotr/textures/blocks/cherryPie_bottom.png
+texture:id=lotr/cherryPie_eaten,filename=assets/lotr/textures/blocks/cherryPie_eaten.png
+texture:id=lotr/cherryPie_side,filename=assets/lotr/textures/blocks/cherryPie_side.png
+texture:id=lotr/cherryPie_top,filename=assets/lotr/textures/blocks/cherryPie_top.png
+texture:id=lotr/clover_petal,filename=assets/lotr/textures/blocks/clover_petal.png
+texture:id=lotr/dalishPastry_bottom,filename=assets/lotr/textures/blocks/dalishPastry_bottom.png
+texture:id=lotr/dalishPastry_eaten,filename=assets/lotr/textures/blocks/dalishPastry_eaten.png
+texture:id=lotr/dalishPastry_side,filename=assets/lotr/textures/blocks/dalishPastry_side.png
+texture:id=lotr/dalishPastry_top,filename=assets/lotr/textures/blocks/dalishPastry_top.png
+texture:id=lotr/date_bottom,filename=assets/lotr/textures/blocks/date_bottom.png
+texture:id=lotr/date_side,filename=assets/lotr/textures/blocks/date_side.png
+texture:id=lotr/date_top,filename=assets/lotr/textures/blocks/date_top.png
+texture:id=lotr/deadMarshPlant,filename=assets/lotr/textures/blocks/deadMarshPlant.png
+texture:id=lotr/dolGuldurCraftingTable_side,filename=assets/lotr/textures/blocks/dolGuldurCraftingTable_side.png
+texture:id=lotr/dolGuldurCraftingTable_top,filename=assets/lotr/textures/blocks/dolGuldurCraftingTable_top.png
+texture:id=lotr/doubleFlower_pink_bottom,filename=assets/lotr/textures/blocks/doubleFlower_pink_bottom.png
+texture:id=lotr/doubleFlower_red_bottom,filename=assets/lotr/textures/blocks/doubleFlower_red_bottom.png
+texture:id=lotr/doubleFlower_yellowIris_bottom,filename=assets/lotr/textures/blocks/doubleFlower_yellowIris_bottom.png
+texture:id=lotr/dunlendingCraftingTable_side,filename=assets/lotr/textures/blocks/dunlendingCraftingTable_side.png
+texture:id=lotr/dunlendingCraftingTable_top,filename=assets/lotr/textures/blocks/dunlendingCraftingTable_top.png
+texture:id=lotr/dwarfHerb,filename=assets/lotr/textures/blocks/dwarfHerb.png
+texture:id=lotr/dwarvenBed_feet_end,filename=assets/lotr/textures/blocks/dwarvenBed_feet_end.png
+texture:id=lotr/dwarvenBed_feet_side,filename=assets/lotr/textures/blocks/dwarvenBed_feet_side.png
+texture:id=lotr/dwarvenBed_feet_top,filename=assets/lotr/textures/blocks/dwarvenBed_feet_top.png
+texture:id=lotr/dwarvenBed_head_end,filename=assets/lotr/textures/blocks/dwarvenBed_head_end.png
+texture:id=lotr/dwarvenBed_head_side,filename=assets/lotr/textures/blocks/dwarvenBed_head_side.png
+texture:id=lotr/dwarvenBed_head_top,filename=assets/lotr/textures/blocks/dwarvenBed_head_top.png
+texture:id=lotr/dwarvenCraftingTable_side,filename=assets/lotr/textures/blocks/dwarvenCraftingTable_side.png
+texture:id=lotr/dwarvenCraftingTable_top,filename=assets/lotr/textures/blocks/dwarvenCraftingTable_top.png
+texture:id=lotr/dwarvenForge_front,filename=assets/lotr/textures/blocks/dwarvenForge_front.png
+texture:id=lotr/dwarvenForge_side,filename=assets/lotr/textures/blocks/dwarvenForge_side.png
+texture:id=lotr/dwarvenForge_top,filename=assets/lotr/textures/blocks/dwarvenForge_top.png
+texture:id=lotr/elanor,filename=assets/lotr/textures/blocks/elanor.png
+texture:id=lotr/elvenBed_feet_end,filename=assets/lotr/textures/blocks/elvenBed_feet_end.png
+texture:id=lotr/elvenBed_feet_side,filename=assets/lotr/textures/blocks/elvenBed_feet_side.png
+texture:id=lotr/elvenBed_feet_top,filename=assets/lotr/textures/blocks/elvenBed_feet_top.png
+texture:id=lotr/elvenBed_head_end,filename=assets/lotr/textures/blocks/elvenBed_head_end.png
+texture:id=lotr/elvenBed_head_side,filename=assets/lotr/textures/blocks/elvenBed_head_side.png
+texture:id=lotr/elvenBed_head_top,filename=assets/lotr/textures/blocks/elvenBed_head_top.png
+texture:id=lotr/elvenCraftingTable_side,filename=assets/lotr/textures/blocks/elvenCraftingTable_side.png
+texture:id=lotr/elvenCraftingTable_top,filename=assets/lotr/textures/blocks/elvenCraftingTable_top.png
+texture:id=lotr/entJar_side,filename=assets/lotr/textures/blocks/entJar_side.png
+texture:id=lotr/entJar_top,filename=assets/lotr/textures/blocks/entJar_top.png
+texture:id=lotr/fangornPlant_brown,filename=assets/lotr/textures/blocks/fangornPlant_brown.png
+texture:id=lotr/fangornPlant_gold,filename=assets/lotr/textures/blocks/fangornPlant_gold.png
+texture:id=lotr/fangornPlant_green,filename=assets/lotr/textures/blocks/fangornPlant_green.png
+texture:id=lotr/fangornPlant_red,filename=assets/lotr/textures/blocks/fangornPlant_red.png
+texture:id=lotr/fangornPlant_silver,filename=assets/lotr/textures/blocks/fangornPlant_silver.png
+texture:id=lotr/fangornPlant_yellow,filename=assets/lotr/textures/blocks/fangornPlant_yellow.png
+texture:id=lotr/fangornRiverweed,filename=assets/lotr/textures/blocks/fangornRiverweed.png
+texture:id=lotr/fruitLeaves_apple_fancy,filename=assets/lotr/textures/blocks/fruitLeaves_apple_fancy.png
+texture:id=lotr/fruitLeaves_cherry_fancy,filename=assets/lotr/textures/blocks/fruitLeaves_cherry_fancy.png
+texture:id=lotr/fruitLeaves_mango_fancy,filename=assets/lotr/textures/blocks/fruitLeaves_mango_fancy.png
+texture:id=lotr/fruitLeaves_pear_fancy,filename=assets/lotr/textures/blocks/fruitLeaves_pear_fancy.png
+texture:id=lotr/fruitSapling_apple,filename=assets/lotr/textures/blocks/fruitSapling_apple.png
+texture:id=lotr/fruitSapling_cherry,filename=assets/lotr/textures/blocks/fruitSapling_cherry.png
+texture:id=lotr/fruitSapling_mango,filename=assets/lotr/textures/blocks/fruitSapling_mango.png
+texture:id=lotr/fruitSapling_pear,filename=assets/lotr/textures/blocks/fruitSapling_pear.png
+texture:id=lotr/fruitWood_apple_side,filename=assets/lotr/textures/blocks/fruitWood_apple_side.png
+texture:id=lotr/fruitWood_apple_top,filename=assets/lotr/textures/blocks/fruitWood_apple_top.png
+texture:id=lotr/fruitWood_cherry_side,filename=assets/lotr/textures/blocks/fruitWood_cherry_side.png
+texture:id=lotr/fruitWood_cherry_top,filename=assets/lotr/textures/blocks/fruitWood_cherry_top.png
+texture:id=lotr/fruitWood_mango_side,filename=assets/lotr/textures/blocks/fruitWood_mango_side.png
+texture:id=lotr/fruitWood_mango_top,filename=assets/lotr/textures/blocks/fruitWood_mango_top.png
+texture:id=lotr/fruitWood_pear_side,filename=assets/lotr/textures/blocks/fruitWood_pear_side.png
+texture:id=lotr/fruitWood_pear_top,filename=assets/lotr/textures/blocks/fruitWood_pear_top.png
+texture:id=lotr/gondorianCraftingTable_side,filename=assets/lotr/textures/blocks/gondorianCraftingTable_side.png
+texture:id=lotr/gondorianCraftingTable_top,filename=assets/lotr/textures/blocks/gondorianCraftingTable_top.png
+texture:id=lotr/goran,filename=assets/lotr/textures/blocks/goran.png
+texture:id=lotr/gundabadCraftingTable_side,filename=assets/lotr/textures/blocks/gundabadCraftingTable_side.png
+texture:id=lotr/gundabadCraftingTable_top,filename=assets/lotr/textures/blocks/gundabadCraftingTable_top.png
+texture:id=lotr/hearth_bottom,filename=assets/lotr/textures/blocks/hearth_bottom.png
+texture:id=lotr/hearth_side,filename=assets/lotr/textures/blocks/hearth_side.png
+texture:id=lotr/hearth_top,filename=assets/lotr/textures/blocks/hearth_top.png
+texture:id=lotr/highElvenBed_feet_end,filename=assets/lotr/textures/blocks/highElvenBed_feet_end.png
+texture:id=lotr/highElvenBed_feet_side,filename=assets/lotr/textures/blocks/highElvenBed_feet_side.png
+texture:id=lotr/highElvenBed_feet_top,filename=assets/lotr/textures/blocks/highElvenBed_feet_top.png
+texture:id=lotr/highElvenBed_head_end,filename=assets/lotr/textures/blocks/highElvenBed_head_end.png
+texture:id=lotr/highElvenBed_head_side,filename=assets/lotr/textures/blocks/highElvenBed_head_side.png
+texture:id=lotr/highElvenBed_head_top,filename=assets/lotr/textures/blocks/highElvenBed_head_top.png
+texture:id=lotr/highElvenCraftingTable_side,filename=assets/lotr/textures/blocks/highElvenCraftingTable_side.png
+texture:id=lotr/highElvenCraftingTable_top,filename=assets/lotr/textures/blocks/highElvenCraftingTable_top.png
+texture:id=lotr/highElvenTorch,filename=assets/lotr/textures/blocks/highElvenTorch.png
+texture:id=lotr/hobbitOven_front,filename=assets/lotr/textures/blocks/hobbitOven_front.png
+texture:id=lotr/hobbitOven_side,filename=assets/lotr/textures/blocks/hobbitOven_side.png
+texture:id=lotr/hobbitOven_top,filename=assets/lotr/textures/blocks/hobbitOven_top.png
+texture:id=lotr/leaves2_banana_fancy,filename=assets/lotr/textures/blocks/leaves2_banana_fancy.png
+texture:id=lotr/leaves2_beech_fancy,filename=assets/lotr/textures/blocks/leaves2_beech_fancy.png
+texture:id=lotr/leaves2_holly_fancy,filename=assets/lotr/textures/blocks/leaves2_holly_fancy.png
+texture:id=lotr/leaves2_lebethron_fancy,filename=assets/lotr/textures/blocks/leaves2_lebethron_fancy.png
+texture:id=lotr/leaves3_datePalm_fancy,filename=assets/lotr/textures/blocks/leaves3_datePalm_fancy.png
+texture:id=lotr/leaves3_larch_fancy,filename=assets/lotr/textures/blocks/leaves3_larch_fancy.png
+texture:id=lotr/leaves3_maple_fancy,filename=assets/lotr/textures/blocks/leaves3_maple_fancy.png
+texture:id=lotr/leaves_mallorn_fancy,filename=assets/lotr/textures/blocks/leaves_mallorn_fancy.png
+texture:id=lotr/leaves_mirkOakRed_fancy,filename=assets/lotr/textures/blocks/leaves_mirkOakRed_fancy.png
+texture:id=lotr/leaves_mirkOak_fancy,filename=assets/lotr/textures/blocks/leaves_mirkOak_fancy.png
+texture:id=lotr/leaves_shirePine_fancy,filename=assets/lotr/textures/blocks/leaves_shirePine_fancy.png
+texture:id=lotr/lettuce_0,filename=assets/lotr/textures/blocks/lettuce_0.png
+texture:id=lotr/lettuce_1,filename=assets/lotr/textures/blocks/lettuce_1.png
+texture:id=lotr/lettuce_2,filename=assets/lotr/textures/blocks/lettuce_2.png
+texture:id=lotr/lettuce_3,filename=assets/lotr/textures/blocks/lettuce_3.png
+texture:id=lotr/lionBed_feet_end,filename=assets/lotr/textures/blocks/lionBed_feet_end.png
+texture:id=lotr/lionBed_feet_side,filename=assets/lotr/textures/blocks/lionBed_feet_side.png
+texture:id=lotr/lionBed_feet_top,filename=assets/lotr/textures/blocks/lionBed_feet_top.png
+texture:id=lotr/lionBed_head_end,filename=assets/lotr/textures/blocks/lionBed_head_end.png
+texture:id=lotr/lionBed_head_side,filename=assets/lotr/textures/blocks/lionBed_head_side.png
+texture:id=lotr/lionBed_head_top,filename=assets/lotr/textures/blocks/lionBed_head_top.png
+texture:id=lotr/mallornLadder,filename=assets/lotr/textures/blocks/mallornLadder.png
+texture:id=lotr/mallornTorch,filename=assets/lotr/textures/blocks/mallornTorch.png
+texture:id=lotr/mordorMoss,filename=assets/lotr/textures/blocks/mordorMoss.png
+texture:id=lotr/mordorThorn,filename=assets/lotr/textures/blocks/mordorThorn.png
+texture:id=lotr/morgulCraftingTable_side,filename=assets/lotr/textures/blocks/morgulCraftingTable_side.png
+texture:id=lotr/morgulCraftingTable_top,filename=assets/lotr/textures/blocks/morgulCraftingTable_top.png
+texture:id=lotr/morgulShroom,filename=assets/lotr/textures/blocks/morgulShroom.png
+texture:id=lotr/morgulTorch,filename=assets/lotr/textures/blocks/morgulTorch.png
+texture:id=lotr/nearHaradCraftingTable_side,filename=assets/lotr/textures/blocks/nearHaradCraftingTable_side.png
+texture:id=lotr/nearHaradCraftingTable_top,filename=assets/lotr/textures/blocks/nearHaradCraftingTable_top.png
+texture:id=lotr/niphredil,filename=assets/lotr/textures/blocks/niphredil.png
+texture:id=lotr/orcBed_feet_end,filename=assets/lotr/textures/blocks/orcBed_feet_end.png
+texture:id=lotr/orcBed_feet_side,filename=assets/lotr/textures/blocks/orcBed_feet_side.png
+texture:id=lotr/orcBed_feet_top,filename=assets/lotr/textures/blocks/orcBed_feet_top.png
+texture:id=lotr/orcBed_head_end,filename=assets/lotr/textures/blocks/orcBed_head_end.png
+texture:id=lotr/orcBed_head_side,filename=assets/lotr/textures/blocks/orcBed_head_side.png
+texture:id=lotr/orcBed_head_top,filename=assets/lotr/textures/blocks/orcBed_head_top.png
+texture:id=lotr/orcBomb_fire_side,filename=assets/lotr/textures/blocks/orcBomb_fire_side.png
+texture:id=lotr/orcBomb_fire_top,filename=assets/lotr/textures/blocks/orcBomb_fire_top.png
+texture:id=lotr/orcBomb_side,filename=assets/lotr/textures/blocks/orcBomb_side.png
+texture:id=lotr/orcBomb_top,filename=assets/lotr/textures/blocks/orcBomb_top.png
+texture:id=lotr/orcForge_front,filename=assets/lotr/textures/blocks/orcForge_front.png
+texture:id=lotr/orcForge_side,filename=assets/lotr/textures/blocks/orcForge_side.png
+texture:id=lotr/orcForge_top,filename=assets/lotr/textures/blocks/orcForge_top.png
+texture:id=lotr/orcSteelBars,filename=assets/lotr/textures/blocks/orcSteelBars.png
+texture:id=lotr/orcTorch_bottom,filename=assets/lotr/textures/blocks/orcTorch_bottom.png
+texture:id=lotr/orcTorch_top,filename=assets/lotr/textures/blocks/orcTorch_top.png
+texture:id=lotr/oreCopper,filename=assets/lotr/textures/blocks/oreCopper.png
+texture:id=lotr/oreGlowstone,filename=assets/lotr/textures/blocks/oreGlowstone.png
+texture:id=lotr/oreGulduril,filename=assets/lotr/textures/blocks/oreGulduril.png
+texture:id=lotr/oreGulduril_mordor,filename=assets/lotr/textures/blocks/oreGulduril_mordor.png
+texture:id=lotr/oreMithril,filename=assets/lotr/textures/blocks/oreMithril.png
+texture:id=lotr/oreMorgulIron,filename=assets/lotr/textures/blocks/oreMorgulIron.png
+texture:id=lotr/oreMorgulIron_mordor,filename=assets/lotr/textures/blocks/oreMorgulIron_mordor.png
+texture:id=lotr/oreNaurite,filename=assets/lotr/textures/blocks/oreNaurite.png
+texture:id=lotr/oreQuendite,filename=assets/lotr/textures/blocks/oreQuendite.png
+texture:id=lotr/oreSaltpeter,filename=assets/lotr/textures/blocks/oreSaltpeter.png
+texture:id=lotr/oreSilver,filename=assets/lotr/textures/blocks/oreSilver.png
+texture:id=lotr/oreStorage_blueDwarfSteel,filename=assets/lotr/textures/blocks/oreStorage_blueDwarfSteel.png
+texture:id=lotr/oreStorage_bronze,filename=assets/lotr/textures/blocks/oreStorage_bronze.png
+texture:id=lotr/oreStorage_copper,filename=assets/lotr/textures/blocks/oreStorage_copper.png
+texture:id=lotr/oreStorage_dwarfSteel,filename=assets/lotr/textures/blocks/oreStorage_dwarfSteel.png
+texture:id=lotr/oreStorage_galvorn,filename=assets/lotr/textures/blocks/oreStorage_galvorn.png
+texture:id=lotr/oreStorage_gulduril,filename=assets/lotr/textures/blocks/oreStorage_gulduril.png
+texture:id=lotr/oreStorage_mithril,filename=assets/lotr/textures/blocks/oreStorage_mithril.png
+texture:id=lotr/oreStorage_morgulSteel,filename=assets/lotr/textures/blocks/oreStorage_morgulSteel.png
+texture:id=lotr/oreStorage_morgulSteel_side,filename=assets/lotr/textures/blocks/oreStorage_morgulSteel_side.png
+texture:id=lotr/oreStorage_naurite,filename=assets/lotr/textures/blocks/oreStorage_naurite.png
+texture:id=lotr/oreStorage_orcSteel,filename=assets/lotr/textures/blocks/oreStorage_orcSteel.png
+texture:id=lotr/oreStorage_orcSteel_side,filename=assets/lotr/textures/blocks/oreStorage_orcSteel_side.png
+texture:id=lotr/oreStorage_quendite,filename=assets/lotr/textures/blocks/oreStorage_quendite.png
+texture:id=lotr/oreStorage_saltpeter,filename=assets/lotr/textures/blocks/oreStorage_saltpeter.png
+texture:id=lotr/oreStorage_silver,filename=assets/lotr/textures/blocks/oreStorage_silver.png
+texture:id=lotr/oreStorage_sulfur,filename=assets/lotr/textures/blocks/oreStorage_sulfur.png
+texture:id=lotr/oreStorage_tin,filename=assets/lotr/textures/blocks/oreStorage_tin.png
+texture:id=lotr/oreStorage_urukSteel,filename=assets/lotr/textures/blocks/oreStorage_urukSteel.png
+texture:id=lotr/oreSulfur,filename=assets/lotr/textures/blocks/oreSulfur.png
+texture:id=lotr/oreTin,filename=assets/lotr/textures/blocks/oreTin.png
+texture:id=lotr/pillar_blueRock_face,filename=assets/lotr/textures/blocks/pillar_blueRock_face.png
+texture:id=lotr/pillar_blueRock_side,filename=assets/lotr/textures/blocks/pillar_blueRock_side.png
+texture:id=lotr/pillar_dwarven_face,filename=assets/lotr/textures/blocks/pillar_dwarven_face.png
+texture:id=lotr/pillar_dwarven_side,filename=assets/lotr/textures/blocks/pillar_dwarven_side.png
+texture:id=lotr/pillar_elvenCracked_face,filename=assets/lotr/textures/blocks/pillar_elvenCracked_face.png
+texture:id=lotr/pillar_elvenCracked_side,filename=assets/lotr/textures/blocks/pillar_elvenCracked_side.png
+texture:id=lotr/pillar_elven_face,filename=assets/lotr/textures/blocks/pillar_elven_face.png
+texture:id=lotr/pillar_elven_side,filename=assets/lotr/textures/blocks/pillar_elven_side.png
+texture:id=lotr/pillar_redRock_face,filename=assets/lotr/textures/blocks/pillar_redRock_face.png
+texture:id=lotr/pillar_redRock_side,filename=assets/lotr/textures/blocks/pillar_redRock_side.png
+texture:id=lotr/pipeweedPlant,filename=assets/lotr/textures/blocks/pipeweedPlant.png
+texture:id=lotr/pipeweed_0,filename=assets/lotr/textures/blocks/pipeweed_0.png
+texture:id=lotr/pipeweed_1,filename=assets/lotr/textures/blocks/pipeweed_1.png
+texture:id=lotr/pipeweed_2,filename=assets/lotr/textures/blocks/pipeweed_2.png
+texture:id=lotr/pipeweed_3,filename=assets/lotr/textures/blocks/pipeweed_3.png
+texture:id=lotr/planks_apple,filename=assets/lotr/textures/blocks/planks_apple.png
+texture:id=lotr/planks_banana,filename=assets/lotr/textures/blocks/planks_banana.png
+texture:id=lotr/planks_beech,filename=assets/lotr/textures/blocks/planks_beech.png
+texture:id=lotr/planks_charred,filename=assets/lotr/textures/blocks/planks_charred.png
+texture:id=lotr/planks_cherry,filename=assets/lotr/textures/blocks/planks_cherry.png
+texture:id=lotr/planks_datePalm,filename=assets/lotr/textures/blocks/planks_datePalm.png
+texture:id=lotr/planks_holly,filename=assets/lotr/textures/blocks/planks_holly.png
+texture:id=lotr/planks_larch,filename=assets/lotr/textures/blocks/planks_larch.png
+texture:id=lotr/planks_lebethron,filename=assets/lotr/textures/blocks/planks_lebethron.png
+texture:id=lotr/planks_mallorn,filename=assets/lotr/textures/blocks/planks_mallorn.png
+texture:id=lotr/planks_mango,filename=assets/lotr/textures/blocks/planks_mango.png
+texture:id=lotr/planks_maple,filename=assets/lotr/textures/blocks/planks_maple.png
+texture:id=lotr/planks_mirkOak,filename=assets/lotr/textures/blocks/planks_mirkOak.png
+texture:id=lotr/planks_pear,filename=assets/lotr/textures/blocks/planks_pear.png
+texture:id=lotr/planks_shirePine,filename=assets/lotr/textures/blocks/planks_shirePine.png
+texture:id=lotr/plate_base,filename=assets/lotr/textures/blocks/plate_base.png
+texture:id=lotr/plate_top,filename=assets/lotr/textures/blocks/plate_top.png
+texture:id=lotr/quagmire,filename=assets/lotr/textures/blocks/quagmire.png
+texture:id=lotr/quenditeGrass_side,filename=assets/lotr/textures/blocks/quenditeGrass_side.png
+texture:id=lotr/quenditeGrass_top,filename=assets/lotr/textures/blocks/quenditeGrass_top.png
+texture:id=lotr/rangerCraftingTable_side,filename=assets/lotr/textures/blocks/rangerCraftingTable_side.png
+texture:id=lotr/rangerCraftingTable_top,filename=assets/lotr/textures/blocks/rangerCraftingTable_top.png
+texture:id=lotr/remains,filename=assets/lotr/textures/blocks/remains.png
+texture:id=lotr/rock_blue,filename=assets/lotr/textures/blocks/rock_blue.png
+texture:id=lotr/rock_gondor,filename=assets/lotr/textures/blocks/rock_gondor.png
+texture:id=lotr/rock_mordor,filename=assets/lotr/textures/blocks/rock_mordor.png
+texture:id=lotr/rock_red,filename=assets/lotr/textures/blocks/rock_red.png
+texture:id=lotr/rock_rohan,filename=assets/lotr/textures/blocks/rock_rohan.png
+texture:id=lotr/rohirricCraftingTable_side,filename=assets/lotr/textures/blocks/rohirricCraftingTable_side.png
+texture:id=lotr/rohirricCraftingTable_top,filename=assets/lotr/textures/blocks/rohirricCraftingTable_top.png
+texture:id=lotr/sapling2_banana,filename=assets/lotr/textures/blocks/sapling2_banana.png
+texture:id=lotr/sapling2_beech,filename=assets/lotr/textures/blocks/sapling2_beech.png
+texture:id=lotr/sapling2_holly,filename=assets/lotr/textures/blocks/sapling2_holly.png
+texture:id=lotr/sapling2_lebethron,filename=assets/lotr/textures/blocks/sapling2_lebethron.png
+texture:id=lotr/sapling3_datePalm,filename=assets/lotr/textures/blocks/sapling3_datePalm.png
+texture:id=lotr/sapling3_larch,filename=assets/lotr/textures/blocks/sapling3_larch.png
+texture:id=lotr/sapling3_maple,filename=assets/lotr/textures/blocks/sapling3_maple.png
+texture:id=lotr/sapling_mallorn,filename=assets/lotr/textures/blocks/sapling_mallorn.png
+texture:id=lotr/sapling_mirkOak,filename=assets/lotr/textures/blocks/sapling_mirkOak.png
+texture:id=lotr/sapling_mirkOakRed,filename=assets/lotr/textures/blocks/sapling_mirkOakRed.png
+texture:id=lotr/sapling_shirePine,filename=assets/lotr/textures/blocks/sapling_shirePine.png
+texture:id=lotr/shireHeather,filename=assets/lotr/textures/blocks/shireHeather.png
+texture:id=lotr/simbelmyne,filename=assets/lotr/textures/blocks/simbelmyne.png
+texture:id=lotr/slab_blueRock_side,filename=assets/lotr/textures/blocks/slab_blueRock_side.png
+texture:id=lotr/slab_blueRock_top,filename=assets/lotr/textures/blocks/slab_blueRock_top.png
+texture:id=lotr/slab_gondorRock_side,filename=assets/lotr/textures/blocks/slab_gondorRock_side.png
+texture:id=lotr/slab_gondorRock_top,filename=assets/lotr/textures/blocks/slab_gondorRock_top.png
+texture:id=lotr/slab_mordorRock_side,filename=assets/lotr/textures/blocks/slab_mordorRock_side.png
+texture:id=lotr/slab_mordorRock_top,filename=assets/lotr/textures/blocks/slab_mordorRock_top.png
+texture:id=lotr/slab_redRock_side,filename=assets/lotr/textures/blocks/slab_redRock_side.png
+texture:id=lotr/slab_redRock_top,filename=assets/lotr/textures/blocks/slab_redRock_top.png
+texture:id=lotr/slab_rohanRock_side,filename=assets/lotr/textures/blocks/slab_rohanRock_side.png
+texture:id=lotr/slab_rohanRock_top,filename=assets/lotr/textures/blocks/slab_rohanRock_top.png
+texture:id=lotr/strawBed_feet_end,filename=assets/lotr/textures/blocks/strawBed_feet_end.png
+texture:id=lotr/strawBed_feet_side,filename=assets/lotr/textures/blocks/strawBed_feet_side.png
+texture:id=lotr/strawBed_feet_top,filename=assets/lotr/textures/blocks/strawBed_feet_top.png
+texture:id=lotr/strawBed_head_end,filename=assets/lotr/textures/blocks/strawBed_head_end.png
+texture:id=lotr/strawBed_head_side,filename=assets/lotr/textures/blocks/strawBed_head_side.png
+texture:id=lotr/strawBed_head_top,filename=assets/lotr/textures/blocks/strawBed_head_top.png
+texture:id=lotr/thatch,filename=assets/lotr/textures/blocks/thatch.png
+texture:id=lotr/thatchFloor,filename=assets/lotr/textures/blocks/thatchFloor.png
+texture:id=lotr/urukCraftingTable_side,filename=assets/lotr/textures/blocks/urukCraftingTable_side.png
+texture:id=lotr/urukCraftingTable_top,filename=assets/lotr/textures/blocks/urukCraftingTable_top.png
+texture:id=lotr/webUngoliant,filename=assets/lotr/textures/blocks/webUngoliant.png
+texture:id=lotr/wood2_banana_side,filename=assets/lotr/textures/blocks/wood2_banana_side.png
+texture:id=lotr/wood2_banana_top,filename=assets/lotr/textures/blocks/wood2_banana_top.png
+texture:id=lotr/wood2_beech_side,filename=assets/lotr/textures/blocks/wood2_beech_side.png
+texture:id=lotr/wood2_beech_top,filename=assets/lotr/textures/blocks/wood2_beech_top.png
+texture:id=lotr/wood2_holly_side,filename=assets/lotr/textures/blocks/wood2_holly_side.png
+texture:id=lotr/wood2_holly_top,filename=assets/lotr/textures/blocks/wood2_holly_top.png
+texture:id=lotr/wood2_lebethron_side,filename=assets/lotr/textures/blocks/wood2_lebethron_side.png
+texture:id=lotr/wood2_lebethron_top,filename=assets/lotr/textures/blocks/wood2_lebethron_top.png
+texture:id=lotr/wood3_datePalm_side,filename=assets/lotr/textures/blocks/wood3_datePalm_side.png
+texture:id=lotr/wood3_datePalm_top,filename=assets/lotr/textures/blocks/wood3_datePalm_top.png
+texture:id=lotr/wood3_larch_side,filename=assets/lotr/textures/blocks/wood3_larch_side.png
+texture:id=lotr/wood3_larch_top,filename=assets/lotr/textures/blocks/wood3_larch_top.png
+texture:id=lotr/wood3_maple_side,filename=assets/lotr/textures/blocks/wood3_maple_side.png
+texture:id=lotr/wood3_maple_top,filename=assets/lotr/textures/blocks/wood3_maple_top.png
+texture:id=lotr/woodElvenBed_feet_end,filename=assets/lotr/textures/blocks/woodElvenBed_feet_end.png
+texture:id=lotr/woodElvenBed_feet_side,filename=assets/lotr/textures/blocks/woodElvenBed_feet_side.png
+texture:id=lotr/woodElvenBed_feet_top,filename=assets/lotr/textures/blocks/woodElvenBed_feet_top.png
+texture:id=lotr/woodElvenBed_head_end,filename=assets/lotr/textures/blocks/woodElvenBed_head_end.png
+texture:id=lotr/woodElvenBed_head_side,filename=assets/lotr/textures/blocks/woodElvenBed_head_side.png
+texture:id=lotr/woodElvenBed_head_top,filename=assets/lotr/textures/blocks/woodElvenBed_head_top.png
+texture:id=lotr/woodElvenCraftingTable_side,filename=assets/lotr/textures/blocks/woodElvenCraftingTable_side.png
+texture:id=lotr/woodElvenCraftingTable_top,filename=assets/lotr/textures/blocks/woodElvenCraftingTable_top.png
+texture:id=lotr/woodElvenTorch,filename=assets/lotr/textures/blocks/woodElvenTorch.png
+texture:id=lotr/wood_charred_side,filename=assets/lotr/textures/blocks/wood_charred_side.png
+texture:id=lotr/wood_charred_top,filename=assets/lotr/textures/blocks/wood_charred_top.png
+texture:id=lotr/wood_mallorn_side,filename=assets/lotr/textures/blocks/wood_mallorn_side.png
+texture:id=lotr/wood_mallorn_top,filename=assets/lotr/textures/blocks/wood_mallorn_top.png
+texture:id=lotr/wood_mirkOak_side,filename=assets/lotr/textures/blocks/wood_mirkOak_side.png
+texture:id=lotr/wood_mirkOak_top,filename=assets/lotr/textures/blocks/wood_mirkOak_top.png
+texture:id=lotr/wood_shirePine_side,filename=assets/lotr/textures/blocks/wood_shirePine_side.png
+texture:id=lotr/wood_shirePine_top,filename=assets/lotr/textures/blocks/wood_shirePine_top.png
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=minecraft/flower_pot,filename=assets/minecraft/textures/blocks/flower_pot.png
+texture:id=minecraft/leaves_acacia,filename=assets/minecraft/textures/blocks/leaves_acacia.png
+texture:id=minecraft/leaves_big_oak,filename=assets/minecraft/textures/blocks/leaves_big_oak.png
+texture:id=minecraft/leaves_birch,filename=assets/minecraft/textures/blocks/leaves_birch.png
+texture:id=minecraft/leaves_jungle,filename=assets/minecraft/textures/blocks/leaves_jungle.png
+texture:id=minecraft/leaves_oak,filename=assets/minecraft/textures/blocks/leaves_oak.png
+texture:id=minecraft/leaves_spruce,filename=assets/minecraft/textures/blocks/leaves_spruce.png
+texture:id=minecraft/mob_spawner,filename=assets/minecraft/textures/blocks/mob_spawner.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
+texture:id=minecraft/sandstone_bottom,filename=assets/minecraft/textures/blocks/sandstone_bottom.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %tile.lotr:rock:* (tile.lotr:rock), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockRock
+block:id=%tile.lotr:rock,data=0,stdrot=true,face0-5=0:lotr/rock_mordor
+block:id=%tile.lotr:rock,data=1,stdrot=true,face0-5=0:lotr/rock_gondor
+block:id=%tile.lotr:rock,data=2,stdrot=true,face0-5=0:lotr/rock_rohan
+block:id=%tile.lotr:rock,data=3,stdrot=true,face0-5=0:lotr/rock_blue
+block:id=%tile.lotr:rock,data=4,stdrot=true,face0-5=0:lotr/rock_red
+block:id=%tile.lotr:rock,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:lotr/rock_mordor
+
+# %tile.lotr:oreCopper:* (tile.lotr:oreCopper), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreCopper,data=*,stdrot=true,face0-5=0:lotr/oreCopper
+
+# %tile.lotr:oreTin:* (tile.lotr:oreTin), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreTin,data=*,stdrot=true,face0-5=0:lotr/oreTin
+
+# %tile.lotr:oreSilver:* (tile.lotr:oreSilver), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreSilver,data=*,stdrot=true,face0-5=0:lotr/oreSilver
+
+# %tile.lotr:oreMithril:* (tile.lotr:oreMithril), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreMithril,data=*,stdrot=true,face0-5=0:lotr/oreMithril
+
+# %tile.lotr:beacon:* (tile.lotr:beacon), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockBeacon
+block:id=%tile.lotr:beacon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %tile.lotr:simbelmyne:* (tile.lotr:simbelmyne), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:simbelmyne,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/simbelmyne
+
+# %tile.lotr:wood:* (tile.lotr:wood), render=(LOG), opaque=true,cls=lotr.common.block.LOTRBlockWood
+block:id=%tile.lotr:wood,data=0,stdrot=true,face0-1=0:lotr/wood_shirePine_top,face2-5=0:lotr/wood_shirePine_side
+block:id=%tile.lotr:wood,data=1,stdrot=true,face0-1=0:lotr/wood_mallorn_top,face2-5=0:lotr/wood_mallorn_side
+block:id=%tile.lotr:wood,data=2,stdrot=true,face0-1=0:lotr/wood_mirkOak_top,face2-5=0:lotr/wood_mirkOak_side
+block:id=%tile.lotr:wood,data=3,stdrot=true,face0-1=0:lotr/wood_charred_top,face2-5=0:lotr/wood_charred_side
+block:id=%tile.lotr:wood,data=4,face0-1=0:lotr/wood_shirePine_side,face2-3=4000:lotr/wood_shirePine_side,face4-5=0:lotr/wood_shirePine_top
+block:id=%tile.lotr:wood,data=5,face0-1=0:lotr/wood_mallorn_side,face2-3=4000:lotr/wood_mallorn_side,face4-5=0:lotr/wood_mallorn_top
+block:id=%tile.lotr:wood,data=6,face0-1=0:lotr/wood_mirkOak_side,face2-3=4000:lotr/wood_mirkOak_side,face4-5=0:lotr/wood_mirkOak_top
+block:id=%tile.lotr:wood,data=7,face0-1=0:lotr/wood_charred_side,face2-3=4000:lotr/wood_charred_side,face4-5=0:lotr/wood_charred_top
+block:id=%tile.lotr:wood,data=8,face0-1=4000:lotr/wood_shirePine_side,face2-3=0:lotr/wood_shirePine_top,face4-5=4000:lotr/wood_shirePine_side
+block:id=%tile.lotr:wood,data=9,face0-1=4000:lotr/wood_mallorn_side,face2-3=0:lotr/wood_mallorn_top,face4-5=4000:lotr/wood_mallorn_side
+block:id=%tile.lotr:wood,data=10,face0-1=4000:lotr/wood_mirkOak_side,face2-3=0:lotr/wood_mirkOak_top,face4-5=4000:lotr/wood_mirkOak_side
+block:id=%tile.lotr:wood,data=11,face0-1=4000:lotr/wood_charred_side,face2-3=0:lotr/wood_charred_top,face4-5=4000:lotr/wood_charred_side
+block:id=%tile.lotr:wood,data=12,stdrot=true,face0-5=0:lotr/wood_shirePine_side
+block:id=%tile.lotr:wood,data=13,stdrot=true,face0-5=0:lotr/wood_mallorn_side
+block:id=%tile.lotr:wood,data=14,stdrot=true,face0-5=0:lotr/wood_mirkOak_side
+block:id=%tile.lotr:wood,data=15,stdrot=true,face0-5=0:lotr/wood_charred_side
+
+# %tile.lotr:leaves:* (tile.lotr:leaves), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockLeaves
+block:id=%tile.lotr:leaves,data=0,stdrot=true,face0-5=0:lotr/leaves_shirePine_fancy
+block:id=%tile.lotr:leaves,data=1,stdrot=true,face0-5=0:lotr/leaves_mallorn_fancy
+block:id=%tile.lotr:leaves,data=2,stdrot=true,face0-5=0:lotr/leaves_mirkOak_fancy
+block:id=%tile.lotr:leaves,data=3,stdrot=true,face0-5=0:lotr/leaves_mirkOakRed_fancy
+block:id=%tile.lotr:leaves,data=4,stdrot=true,face0-5=0:lotr/leaves_shirePine_fancy
+block:id=%tile.lotr:leaves,data=5,stdrot=true,face0-5=0:lotr/leaves_mallorn_fancy
+block:id=%tile.lotr:leaves,data=6,stdrot=true,face0-5=0:lotr/leaves_mirkOak_fancy
+block:id=%tile.lotr:leaves,data=7,stdrot=true,face0-5=0:lotr/leaves_mirkOakRed_fancy
+block:id=%tile.lotr:leaves,data=8,stdrot=true,face0-5=0:lotr/leaves_shirePine_fancy
+block:id=%tile.lotr:leaves,data=9,stdrot=true,face0-5=0:lotr/leaves_mallorn_fancy
+block:id=%tile.lotr:leaves,data=10,stdrot=true,face0-5=0:lotr/leaves_mirkOak_fancy
+block:id=%tile.lotr:leaves,data=11,stdrot=true,face0-5=0:lotr/leaves_mirkOakRed_fancy
+block:id=%tile.lotr:leaves,data=12,stdrot=true,face0-5=0:lotr/leaves_shirePine_fancy
+block:id=%tile.lotr:leaves,data=13,stdrot=true,face0-5=0:lotr/leaves_mallorn_fancy
+block:id=%tile.lotr:leaves,data=14,stdrot=true,face0-5=0:lotr/leaves_mirkOak_fancy
+block:id=%tile.lotr:leaves,data=15,stdrot=true,face0-5=0:lotr/leaves_mirkOakRed_fancy
+
+# %tile.lotr:planks:* (tile.lotr:planks), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockPlanks
+block:id=%tile.lotr:planks,data=0,stdrot=true,face0-5=0:lotr/planks_shirePine
+block:id=%tile.lotr:planks,data=1,stdrot=true,face0-5=0:lotr/planks_mallorn
+block:id=%tile.lotr:planks,data=2,stdrot=true,face0-5=0:lotr/planks_mirkOak
+block:id=%tile.lotr:planks,data=3,stdrot=true,face0-5=0:lotr/planks_charred
+block:id=%tile.lotr:planks,data=4,stdrot=true,face0-5=0:lotr/planks_apple
+block:id=%tile.lotr:planks,data=5,stdrot=true,face0-5=0:lotr/planks_pear
+block:id=%tile.lotr:planks,data=6,stdrot=true,face0-5=0:lotr/planks_cherry
+block:id=%tile.lotr:planks,data=7,stdrot=true,face0-5=0:lotr/planks_mango
+block:id=%tile.lotr:planks,data=8,stdrot=true,face0-5=0:lotr/planks_lebethron
+block:id=%tile.lotr:planks,data=9,stdrot=true,face0-5=0:lotr/planks_beech
+block:id=%tile.lotr:planks,data=10,stdrot=true,face0-5=0:lotr/planks_holly
+block:id=%tile.lotr:planks,data=11,stdrot=true,face0-5=0:lotr/planks_banana
+block:id=%tile.lotr:planks,data=12,stdrot=true,face0-5=0:lotr/planks_maple
+block:id=%tile.lotr:planks,data=13,stdrot=true,face0-5=0:lotr/planks_larch
+block:id=%tile.lotr:planks,data=14,stdrot=true,face0-5=0:lotr/planks_datePalm
+block:id=%tile.lotr:planks,data=15,stdrot=true,face0-5=0:lotr/planks_maple
+
+# %tile.lotr:sapling:* (tile.lotr:sapling), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockSapling
+block:id=%tile.lotr:sapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_shirePine
+block:id=%tile.lotr:sapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mallorn
+block:id=%tile.lotr:sapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOak
+block:id=%tile.lotr:sapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOakRed
+block:id=%tile.lotr:sapling,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_shirePine
+block:id=%tile.lotr:sapling,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mallorn
+block:id=%tile.lotr:sapling,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOak
+block:id=%tile.lotr:sapling,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOakRed
+block:id=%tile.lotr:sapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_shirePine
+block:id=%tile.lotr:sapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mallorn
+block:id=%tile.lotr:sapling,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOak
+block:id=%tile.lotr:sapling,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOakRed
+block:id=%tile.lotr:sapling,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_shirePine
+block:id=%tile.lotr:sapling,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mallorn
+block:id=%tile.lotr:sapling,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOak
+block:id=%tile.lotr:sapling,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling_mirkOakRed
+
+# %tile.lotr:woodSlabSingle:* (tile.lotr:woodSlabSingle), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockWoodSlab
+block:id=%tile.lotr:woodSlabSingle,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_shirePine
+block:id=%tile.lotr:woodSlabSingle,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mallorn
+block:id=%tile.lotr:woodSlabSingle,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mirkOak
+block:id=%tile.lotr:woodSlabSingle,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_charred
+block:id=%tile.lotr:woodSlabSingle,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_apple
+block:id=%tile.lotr:woodSlabSingle,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_pear
+block:id=%tile.lotr:woodSlabSingle,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_cherry
+block:id=%tile.lotr:woodSlabSingle,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mango
+block:id=%tile.lotr:woodSlabSingle,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_shirePine
+block:id=%tile.lotr:woodSlabSingle,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mallorn
+block:id=%tile.lotr:woodSlabSingle,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mirkOak
+block:id=%tile.lotr:woodSlabSingle,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_charred
+block:id=%tile.lotr:woodSlabSingle,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_apple
+block:id=%tile.lotr:woodSlabSingle,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_pear
+block:id=%tile.lotr:woodSlabSingle,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_cherry
+block:id=%tile.lotr:woodSlabSingle,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mango
+
+# %tile.lotr:woodSlabDouble:* (tile.lotr:woodSlabDouble), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockWoodSlab
+block:id=%tile.lotr:woodSlabDouble,data=0,stdrot=true,face0-5=0:lotr/planks_shirePine
+block:id=%tile.lotr:woodSlabDouble,data=1,stdrot=true,face0-5=0:lotr/planks_mallorn
+block:id=%tile.lotr:woodSlabDouble,data=2,stdrot=true,face0-5=0:lotr/planks_mirkOak
+block:id=%tile.lotr:woodSlabDouble,data=3,stdrot=true,face0-5=0:lotr/planks_charred
+block:id=%tile.lotr:woodSlabDouble,data=4,stdrot=true,face0-5=0:lotr/planks_apple
+block:id=%tile.lotr:woodSlabDouble,data=5,stdrot=true,face0-5=0:lotr/planks_pear
+block:id=%tile.lotr:woodSlabDouble,data=6,stdrot=true,face0-5=0:lotr/planks_cherry
+block:id=%tile.lotr:woodSlabDouble,data=7,stdrot=true,face0-5=0:lotr/planks_mango
+block:id=%tile.lotr:woodSlabDouble,data=8,stdrot=true,face0-5=0:lotr/planks_shirePine
+block:id=%tile.lotr:woodSlabDouble,data=9,stdrot=true,face0-5=0:lotr/planks_mallorn
+block:id=%tile.lotr:woodSlabDouble,data=10,stdrot=true,face0-5=0:lotr/planks_mirkOak
+block:id=%tile.lotr:woodSlabDouble,data=11,stdrot=true,face0-5=0:lotr/planks_charred
+block:id=%tile.lotr:woodSlabDouble,data=12,stdrot=true,face0-5=0:lotr/planks_apple
+block:id=%tile.lotr:woodSlabDouble,data=13,stdrot=true,face0-5=0:lotr/planks_pear
+block:id=%tile.lotr:woodSlabDouble,data=14,stdrot=true,face0-5=0:lotr/planks_cherry
+block:id=%tile.lotr:woodSlabDouble,data=15,stdrot=true,face0-5=0:lotr/planks_mango
+
+# %tile.lotr:stairsPine:* (tile.lotr:stairsPine), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsPine,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_shirePine
+
+# %tile.lotr:shireHeather:* (tile.lotr:shireHeather), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:shireHeather,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/shireHeather
+
+# %tile.lotr:brick:* (tile.lotr:brick), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockBrick
+block:id=%tile.lotr:brick,data=0,stdrot=true,face0-5=0:lotr/brick_mordor
+block:id=%tile.lotr:brick,data=1,stdrot=true,face0-5=0:lotr/brick_gondor
+block:id=%tile.lotr:brick,data=2,stdrot=true,face0-5=0:lotr/brick_gondorMossy
+block:id=%tile.lotr:brick,data=3,stdrot=true,face0-5=0:lotr/brick_gondorCracked
+block:id=%tile.lotr:brick,data=4,stdrot=true,face0-5=0:lotr/brick_rohan
+block:id=%tile.lotr:brick,data=5,stdrot=true,face0-5=0:lotr/brick_gondorRuins
+block:id=%tile.lotr:brick,data=6,stdrot=true,face0-5=0:lotr/brick_dwarven
+block:id=%tile.lotr:brick,data=7,stdrot=true,face0-5=0:lotr/brick_mordorCracked
+block:id=%tile.lotr:brick,data=8,stdrot=true,face0-5=0:lotr/brick_dwarvenSilver
+block:id=%tile.lotr:brick,data=9,stdrot=true,face0-5=0:lotr/brick_dwarvenGold
+block:id=%tile.lotr:brick,data=10,stdrot=true,face0-5=0:lotr/brick_dwarvenMithril
+block:id=%tile.lotr:brick,data=11,stdrot=true,face0-5=0:lotr/brick_elven
+block:id=%tile.lotr:brick,data=12,stdrot=true,face0-5=0:lotr/brick_elvenMossy
+block:id=%tile.lotr:brick,data=13,stdrot=true,face0-5=0:lotr/brick_elvenCracked
+block:id=%tile.lotr:brick,data=14,stdrot=true,face0-5=0:lotr/brick_blueRock
+block:id=%tile.lotr:brick,data=15,stdrot=true,face0-5=0:lotr/brick_nearHarad
+
+# %tile.lotr:appleCrumble:* (tile.lotr:appleCrumble), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+block:id=%tile.lotr:appleCrumble,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/appleCrumble_bottom,face1=0:lotr/appleCrumble_top,face2-5=0:lotr/appleCrumble_side
+block:id=%tile.lotr:appleCrumble,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/appleCrumble_bottom,face1=0:lotr/appleCrumble_top,face2-3=0:lotr/appleCrumble_side,face4=0:lotr/appleCrumble_eaten,face5=0:lotr/appleCrumble_side
+
+# %tile.lotr:hobbitOven:* (tile.lotr:hobbitOven), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockHobbitOven
+block:id=%tile.lotr:hobbitOven,data=*,stdrot=true,face0-1=0:lotr/hobbitOven_top,face2=0:lotr/hobbitOven_side,face3=0:lotr/hobbitOven_front,face4-5=0:lotr/hobbitOven_side
+
+# %tile.lotr:oreStorage:* (tile.lotr:oreStorage), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOreStorage
+block:id=%tile.lotr:oreStorage,data=0,stdrot=true,face0-5=0:lotr/oreStorage_copper
+block:id=%tile.lotr:oreStorage,data=1,stdrot=true,face0-5=0:lotr/oreStorage_tin
+block:id=%tile.lotr:oreStorage,data=2,stdrot=true,face0-5=0:lotr/oreStorage_bronze
+block:id=%tile.lotr:oreStorage,data=3,stdrot=true,face0-5=0:lotr/oreStorage_silver
+block:id=%tile.lotr:oreStorage,data=4,stdrot=true,face0-5=0:lotr/oreStorage_mithril
+block:id=%tile.lotr:oreStorage,data=5,stdrot=true,face0-1=0:lotr/oreStorage_orcSteel,face2-5=0:lotr/oreStorage_orcSteel_side
+block:id=%tile.lotr:oreStorage,data=6,stdrot=true,face0-5=0:lotr/oreStorage_quendite
+block:id=%tile.lotr:oreStorage,data=7,stdrot=true,face0-5=0:lotr/oreStorage_dwarfSteel
+block:id=%tile.lotr:oreStorage,data=8,stdrot=true,face0-5=0:lotr/oreStorage_galvorn
+block:id=%tile.lotr:oreStorage,data=9,stdrot=true,face0-5=0:lotr/oreStorage_urukSteel
+block:id=%tile.lotr:oreStorage,data=10,stdrot=true,face0-5=0:lotr/oreStorage_naurite
+block:id=%tile.lotr:oreStorage,data=11,stdrot=true,face0-5=0:lotr/oreStorage_gulduril
+block:id=%tile.lotr:oreStorage,data=12,stdrot=true,face0-1=0:lotr/oreStorage_morgulSteel,face2-5=0:lotr/oreStorage_morgulSteel_side
+block:id=%tile.lotr:oreStorage,data=13,stdrot=true,face0-5=0:lotr/oreStorage_sulfur
+block:id=%tile.lotr:oreStorage,data=14,stdrot=true,face0-5=0:lotr/oreStorage_saltpeter
+block:id=%tile.lotr:oreStorage,data=15,stdrot=true,face0-5=0:lotr/oreStorage_blueDwarfSteel
+
+# %tile.lotr:oreNaurite:* (tile.lotr:oreNaurite), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreNaurite,data=*,stdrot=true,face0-5=0:lotr/oreNaurite
+
+# %tile.lotr:oreMorgulIron:* (tile.lotr:oreMorgulIron), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOreMordorVariant
+block:id=%tile.lotr:oreMorgulIron,data=0,stdrot=true,face0-5=0:lotr/oreMorgulIron
+block:id=%tile.lotr:oreMorgulIron,data=1,stdrot=true,face0-5=0:lotr/oreMorgulIron_mordor
+block:id=%tile.lotr:oreMorgulIron,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:lotr/oreMorgulIron
+
+# %tile.lotr:morgulCraftingTable:* (tile.lotr:morgulCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockMorgulTable
+block:id=%tile.lotr:morgulCraftingTable,data=*,stdrot=true,face0=0:lotr/rock_mordor,face1=0:lotr/morgulCraftingTable_top,face2-5=0:lotr/morgulCraftingTable_side
+
+# %tile.lotr:chandelier:* (tile.lotr:chandelier), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockChandelier
+block:id=%tile.lotr:chandelier,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_bronze
+block:id=%tile.lotr:chandelier,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_iron
+block:id=%tile.lotr:chandelier,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_silver
+block:id=%tile.lotr:chandelier,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_gold
+block:id=%tile.lotr:chandelier,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_mithril
+block:id=%tile.lotr:chandelier,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_elven
+block:id=%tile.lotr:chandelier,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_woodElven
+block:id=%tile.lotr:chandelier,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_orc
+block:id=%tile.lotr:chandelier,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_dwarven
+block:id=%tile.lotr:chandelier,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_uruk
+block:id=%tile.lotr:chandelier,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_highElven
+block:id=%tile.lotr:chandelier,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_blueDwarven
+block:id=%tile.lotr:chandelier,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/chandelier_bronze
+
+# %tile.lotr:pipeweedPlant:* (tile.lotr:pipeweedPlant), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockPipeweedPlant
+block:id=%tile.lotr:pipeweedPlant,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/pipeweedPlant
+
+# %tile.lotr:pipeweed:* (tile.lotr:pipeweed), render=(CROPS), opaque=false,cls=lotr.common.block.LOTRBlockPipeweedCrop
+block:id=%tile.lotr:pipeweed,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/pipeweed_0
+block:id=%tile.lotr:pipeweed,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/pipeweed_1
+block:id=%tile.lotr:pipeweed,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/pipeweed_2
+block:id=%tile.lotr:pipeweed,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/pipeweed_3
+
+# %tile.lotr:slabSingle:* (tile.lotr:slabSingle), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab
+block:id=%tile.lotr:slabSingle,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_mordorRock_top,face2-5=0:lotr/slab_mordorRock_side
+block:id=%tile.lotr:slabSingle,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_mordor
+block:id=%tile.lotr:slabSingle,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_gondorRock_top,face2-5=0:lotr/slab_gondorRock_side
+block:id=%tile.lotr:slabSingle,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondor
+block:id=%tile.lotr:slabSingle,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondorMossy
+block:id=%tile.lotr:slabSingle,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondorCracked
+block:id=%tile.lotr:slabSingle,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_rohan
+block:id=%tile.lotr:slabSingle,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_dwarven
+block:id=%tile.lotr:slabSingle,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_mordorRock_top,face2-5=0:lotr/slab_mordorRock_side
+block:id=%tile.lotr:slabSingle,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_mordor
+block:id=%tile.lotr:slabSingle,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_gondorRock_top,face2-5=0:lotr/slab_gondorRock_side
+block:id=%tile.lotr:slabSingle,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondor
+block:id=%tile.lotr:slabSingle,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondorMossy
+block:id=%tile.lotr:slabSingle,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondorCracked
+block:id=%tile.lotr:slabSingle,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_rohan
+block:id=%tile.lotr:slabSingle,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_dwarven
+
+# %tile.lotr:slabDouble:* (tile.lotr:slabDouble), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockSlab
+block:id=%tile.lotr:slabDouble,data=0,stdrot=true,face0-1=0:lotr/slab_mordorRock_top,face2-5=0:lotr/slab_mordorRock_side
+block:id=%tile.lotr:slabDouble,data=1,stdrot=true,face0-5=0:lotr/brick_mordor
+block:id=%tile.lotr:slabDouble,data=2,stdrot=true,face0-1=0:lotr/slab_gondorRock_top,face2-5=0:lotr/slab_gondorRock_side
+block:id=%tile.lotr:slabDouble,data=3,stdrot=true,face0-5=0:lotr/brick_gondor
+block:id=%tile.lotr:slabDouble,data=4,stdrot=true,face0-5=0:lotr/brick_gondorMossy
+block:id=%tile.lotr:slabDouble,data=5,stdrot=true,face0-5=0:lotr/brick_gondorCracked
+block:id=%tile.lotr:slabDouble,data=6,stdrot=true,face0-5=0:lotr/brick_rohan
+block:id=%tile.lotr:slabDouble,data=7,stdrot=true,face0-5=0:lotr/brick_dwarven
+block:id=%tile.lotr:slabDouble,data=8,stdrot=true,face0-1=0:lotr/slab_mordorRock_top,face2-5=0:lotr/slab_mordorRock_side
+block:id=%tile.lotr:slabDouble,data=9,stdrot=true,face0-5=0:lotr/brick_mordor
+block:id=%tile.lotr:slabDouble,data=10,stdrot=true,face0-1=0:lotr/slab_gondorRock_top,face2-5=0:lotr/slab_gondorRock_side
+block:id=%tile.lotr:slabDouble,data=11,stdrot=true,face0-5=0:lotr/brick_gondor
+block:id=%tile.lotr:slabDouble,data=12,stdrot=true,face0-5=0:lotr/brick_gondorMossy
+block:id=%tile.lotr:slabDouble,data=13,stdrot=true,face0-5=0:lotr/brick_gondorCracked
+block:id=%tile.lotr:slabDouble,data=14,stdrot=true,face0-5=0:lotr/brick_rohan
+block:id=%tile.lotr:slabDouble,data=15,stdrot=true,face0-5=0:lotr/brick_dwarven
+
+# %tile.lotr:stairsMordorBrick:* (tile.lotr:stairsMordorBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsMordorBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_mordor
+
+# %tile.lotr:stairsGondorBrick:* (tile.lotr:stairsGondorBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsGondorBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondor
+
+# %tile.lotr:wallStone:* (tile.lotr:wallStone), render=(WALL), opaque=false,cls=lotr.common.block.LOTRBlockWall
+block:id=%tile.lotr:wallStone,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/rock_mordor
+block:id=%tile.lotr:wallStone,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_mordor
+block:id=%tile.lotr:wallStone,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/rock_gondor
+block:id=%tile.lotr:wallStone,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_gondor
+block:id=%tile.lotr:wallStone,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_gondorMossy
+block:id=%tile.lotr:wallStone,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_gondorCracked
+block:id=%tile.lotr:wallStone,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_rohan
+block:id=%tile.lotr:wallStone,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_dwarven
+block:id=%tile.lotr:wallStone,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/rock_rohan
+block:id=%tile.lotr:wallStone,data=9,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_mordorCracked
+block:id=%tile.lotr:wallStone,data=10,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_elven
+block:id=%tile.lotr:wallStone,data=11,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_elvenMossy
+block:id=%tile.lotr:wallStone,data=12,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_elvenCracked
+block:id=%tile.lotr:wallStone,data=13,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/rock_blue
+block:id=%tile.lotr:wallStone,data=14,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_blueRock
+block:id=%tile.lotr:wallStone,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick_nearHarad
+
+# %tile.lotr:barrel:* (tile.lotr:barrel), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockBarrel
+block:id=%tile.lotr:barrel,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:lotr/barrel_top,face2-5=0:lotr/barrel_side
+
+# %tile.lotr:lettuce:* (tile.lotr:lettuce), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockLettuceCrop
+block:id=%tile.lotr:lettuce,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/lettuce_0
+block:id=%tile.lotr:lettuce,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/lettuce_1
+block:id=%tile.lotr:lettuce,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/lettuce_2
+block:id=%tile.lotr:lettuce,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/lettuce_3
+
+# %tile.lotr:orcBomb:* (tile.lotr:orcBomb), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockOrcBomb
+block:id=%tile.lotr:orcBomb,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/orcBomb_side,face1=0:lotr/orcBomb_top,face2-5=0:lotr/orcBomb_side
+block:id=%tile.lotr:orcBomb,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=B6B6B6,face0=17000:lotr/orcBomb_side,face1=17000:lotr/orcBomb_top,face2-5=17000:lotr/orcBomb_side
+block:id=%tile.lotr:orcBomb,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=777777,face0=17000:lotr/orcBomb_side,face1=17000:lotr/orcBomb_top,face2-5=17000:lotr/orcBomb_side
+block:id=%tile.lotr:orcBomb,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/orcBomb_side,face1=0:lotr/orcBomb_top,face2-5=0:lotr/orcBomb_side
+block:id=%tile.lotr:orcBomb,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/orcBomb_fire_side,face1=0:lotr/orcBomb_fire_top,face2-5=0:lotr/orcBomb_fire_side
+block:id=%tile.lotr:orcBomb,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=B6B6B6,face0=17000:lotr/orcBomb_fire_side,face1=17000:lotr/orcBomb_fire_top,face2-5=17000:lotr/orcBomb_fire_side
+block:id=%tile.lotr:orcBomb,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=777777,face0=17000:lotr/orcBomb_fire_side,face1=17000:lotr/orcBomb_fire_top,face2-5=17000:lotr/orcBomb_fire_side
+block:id=%tile.lotr:orcBomb,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/orcBomb_fire_side,face1=0:lotr/orcBomb_fire_top,face2-5=0:lotr/orcBomb_fire_side
+
+# %tile.lotr:orcTorch:* (tile.lotr:orcTorch), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockOrcTorch
+block:id=%tile.lotr:orcTorch,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/orcTorch_bottom
+block:id=%tile.lotr:orcTorch,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/orcTorch_top
+block:id=%tile.lotr:orcTorch,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/orcTorch_bottom
+
+# %tile.lotr:elanor:* (tile.lotr:elanor), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:elanor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/elanor
+
+# %tile.lotr:niphredil:* (tile.lotr:niphredil), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:niphredil,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/niphredil
+
+# %tile.lotr:stairsMallorn:* (tile.lotr:stairsMallorn), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsMallorn,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mallorn
+
+# %tile.lotr:elvenCraftingTable:* (tile.lotr:elvenCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockElvenTable
+block:id=%tile.lotr:elvenCraftingTable,data=*,stdrot=true,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenCraftingTable_top,face2-5=0:lotr/elvenCraftingTable_side
+
+# %tile.lotr:mobSpawner:* (tile.lotr:mobSpawner), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockMobSpawner
+block:id=%tile.lotr:mobSpawner,data=*,stdrot=true,face0-5=0:minecraft/mob_spawner
+
+# %tile.lotr:mallornLadder:* (tile.lotr:mallornLadder), render=(LADDER), opaque=false,cls=lotr.common.block.LOTRBlockLadder
+block:id=%tile.lotr:mallornLadder,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/mallornLadder
+
+# %tile.lotr:plate:* (tile.lotr:plate), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockPlate
+block:id=%tile.lotr:plate,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/plate_base,face1=0:lotr/plate_top,face2-5=0:lotr/plate_base
+
+# %tile.lotr:orcSteelBars:* (tile.lotr:orcSteelBars), render=(PANE), opaque=false,cls=lotr.common.block.LOTRBlockPane
+block:id=%tile.lotr:orcSteelBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:lotr/orcSteelBars
+
+# %tile.lotr:stairsGondorBrickMossy:* (tile.lotr:stairsGondorBrickMossy), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsGondorBrickMossy,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondorMossy
+
+# %tile.lotr:stairsGondorBrickCracked:* (tile.lotr:stairsGondorBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsGondorBrickCracked,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_gondorCracked
+
+# %tile.lotr:athelas:* (tile.lotr:athelas), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:athelas,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/athelas
+
+# %tile.lotr:stalactite:* (tile.lotr:stalactite), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockStalactite
+block:id=%tile.lotr:stalactite,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %tile.lotr:stairsRohanBrick:* (tile.lotr:stairsRohanBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsRohanBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_rohan
+
+# %tile.lotr:oreQuendite:* (tile.lotr:oreQuendite), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreQuendite,data=*,stdrot=true,face0-5=0:lotr/oreQuendite
+
+# %tile.lotr:mallornTorch:* (tile.lotr:mallornTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockElvenTorch
+block:id=%tile.lotr:mallornTorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/mallornTorch
+
+# %tile.lotr:spawnerChest:* (tile.lotr:spawnerChest), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockSpawnerChest
+block:id=%tile.lotr:spawnerChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %tile.lotr:quenditeGrass:* (tile.lotr:quenditeGrass), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockQuenditeGrass
+block:id=%tile.lotr:quenditeGrass,data=*,stdrot=true,face0=0:minecraft/dirt,face1=0:lotr/quenditeGrass_top,face2-5=0:lotr/quenditeGrass_side
+
+# %tile.lotr:pressurePlateMordorRock:* (tile.lotr:pressurePlateMordorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+block:id=%tile.lotr:pressurePlateMordorRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_mordor
+
+# %tile.lotr:pressurePlateGondorRock:* (tile.lotr:pressurePlateGondorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+block:id=%tile.lotr:pressurePlateGondorRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_gondor
+
+# %tile.lotr:buttonMordorRock:* (tile.lotr:buttonMordorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+block:id=%tile.lotr:buttonMordorRock,data=0,stdrot=true,face0-5=0:lotr/rock_mordor
+block:id=%tile.lotr:buttonMordorRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_mordor
+
+# %tile.lotr:buttonGondorRock:* (tile.lotr:buttonGondorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+block:id=%tile.lotr:buttonGondorRock,data=0,stdrot=true,face0-5=0:lotr/rock_gondor
+block:id=%tile.lotr:buttonGondorRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_gondor
+
+# %tile.lotr:elvenPortal:* (tile.lotr:elvenPortal), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockElvenPortal
+block:id=%tile.lotr:elvenPortal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/portal
+
+# %tile.lotr:flowerPot:* (tile.lotr:flowerPot), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockFlowerPot
+block:id=%tile.lotr:flowerPot,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/flower_pot
+
+# %tile.lotr:stairsDwarvenBrick:* (tile.lotr:stairsDwarvenBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsDwarvenBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_dwarven
+
+# %tile.lotr:elvenBed:* (tile.lotr:elvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+block:id=%tile.lotr:elvenBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_feet_top,face2=0:lotr/elvenBed_feet_end,face3=0:lotr/elvenBed_feet_top,face4-5=0:lotr/elvenBed_feet_side
+block:id=%tile.lotr:elvenBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_feet_top,face2-3=0:lotr/elvenBed_feet_side,face4=0:lotr/elvenBed_feet_top,face5=0:lotr/elvenBed_feet_end
+block:id=%tile.lotr:elvenBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1-2=0:lotr/elvenBed_feet_top,face3=0:lotr/elvenBed_feet_end,face4-5=0:lotr/elvenBed_feet_side
+block:id=%tile.lotr:elvenBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_feet_top,face2-3=0:lotr/elvenBed_feet_side,face4=0:lotr/elvenBed_feet_end,face5=0:lotr/elvenBed_feet_top
+block:id=%tile.lotr:elvenBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_feet_top,face2=0:lotr/elvenBed_feet_end,face3=0:lotr/elvenBed_feet_top,face4-5=0:lotr/elvenBed_feet_side
+block:id=%tile.lotr:elvenBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_feet_top,face2-3=0:lotr/elvenBed_feet_side,face4=0:lotr/elvenBed_feet_top,face5=0:lotr/elvenBed_feet_end
+block:id=%tile.lotr:elvenBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1-2=0:lotr/elvenBed_feet_top,face3=0:lotr/elvenBed_feet_end,face4-5=0:lotr/elvenBed_feet_side
+block:id=%tile.lotr:elvenBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_feet_top,face2-3=0:lotr/elvenBed_feet_side,face4=0:lotr/elvenBed_feet_end,face5=0:lotr/elvenBed_feet_top
+block:id=%tile.lotr:elvenBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1-2=0:lotr/elvenBed_head_top,face3=0:lotr/elvenBed_head_end,face4-5=0:lotr/elvenBed_head_side
+block:id=%tile.lotr:elvenBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_head_top,face2-3=0:lotr/elvenBed_head_side,face4=0:lotr/elvenBed_head_end,face5=0:lotr/elvenBed_head_top
+block:id=%tile.lotr:elvenBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_head_top,face2=0:lotr/elvenBed_head_end,face3=0:lotr/elvenBed_head_top,face4-5=0:lotr/elvenBed_head_side
+block:id=%tile.lotr:elvenBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_head_top,face2-3=0:lotr/elvenBed_head_side,face4=0:lotr/elvenBed_head_top,face5=0:lotr/elvenBed_head_end
+block:id=%tile.lotr:elvenBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1-2=0:lotr/elvenBed_head_top,face3=0:lotr/elvenBed_head_end,face4-5=0:lotr/elvenBed_head_side
+block:id=%tile.lotr:elvenBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_head_top,face2-3=0:lotr/elvenBed_head_side,face4=0:lotr/elvenBed_head_end,face5=0:lotr/elvenBed_head_top
+block:id=%tile.lotr:elvenBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_head_top,face2=0:lotr/elvenBed_head_end,face3=0:lotr/elvenBed_head_top,face4-5=0:lotr/elvenBed_head_side
+block:id=%tile.lotr:elvenBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mallorn,face1=0:lotr/elvenBed_head_top,face2-3=0:lotr/elvenBed_head_side,face4=0:lotr/elvenBed_head_top,face5=0:lotr/elvenBed_head_end
+
+# %tile.lotr:pillar:* (tile.lotr:pillar), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockPillar
+block:id=%tile.lotr:pillar,data=0,stdrot=true,face0-1=0:lotr/pillar_dwarven_face,face2-5=0:lotr/pillar_dwarven_side
+block:id=%tile.lotr:pillar,data=1,stdrot=true,face0-1=0:lotr/pillar_elven_face,face2-5=0:lotr/pillar_elven_side
+block:id=%tile.lotr:pillar,data=2,stdrot=true,face0-1=0:lotr/pillar_elvenCracked_face,face2-5=0:lotr/pillar_elvenCracked_side
+block:id=%tile.lotr:pillar,data=3,stdrot=true,face0-1=0:lotr/pillar_blueRock_face,face2-5=0:lotr/pillar_blueRock_side
+block:id=%tile.lotr:pillar,data=4,stdrot=true,face0-1=0:lotr/pillar_redRock_face,face2-5=0:lotr/pillar_redRock_side
+block:id=%tile.lotr:pillar,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:lotr/pillar_dwarven_face,face2-5=0:lotr/pillar_dwarven_side
+
+# %tile.lotr:oreGlowstone:* (tile.lotr:oreGlowstone), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreGlowstone,data=*,stdrot=true,face0-5=0:lotr/oreGlowstone
+
+# %tile.lotr:fruitWood:* (tile.lotr:fruitWood), render=(LOG), opaque=true,cls=lotr.common.block.LOTRBlockFruitWood
+block:id=%tile.lotr:fruitWood,data=0,stdrot=true,face0-1=0:lotr/fruitWood_apple_top,face2-5=0:lotr/fruitWood_apple_side
+block:id=%tile.lotr:fruitWood,data=1,stdrot=true,face0-1=0:lotr/fruitWood_pear_top,face2-5=0:lotr/fruitWood_pear_side
+block:id=%tile.lotr:fruitWood,data=2,stdrot=true,face0-1=0:lotr/fruitWood_cherry_top,face2-5=0:lotr/fruitWood_cherry_side
+block:id=%tile.lotr:fruitWood,data=3,stdrot=true,face0-1=0:lotr/fruitWood_mango_top,face2-5=0:lotr/fruitWood_mango_side
+block:id=%tile.lotr:fruitWood,data=4,face0-1=0:lotr/fruitWood_apple_side,face2-3=4000:lotr/fruitWood_apple_side,face4-5=0:lotr/fruitWood_apple_top
+block:id=%tile.lotr:fruitWood,data=5,face0-1=0:lotr/fruitWood_pear_side,face2-3=4000:lotr/fruitWood_pear_side,face4-5=0:lotr/fruitWood_pear_top
+block:id=%tile.lotr:fruitWood,data=6,face0-1=0:lotr/fruitWood_cherry_side,face2-3=4000:lotr/fruitWood_cherry_side,face4-5=0:lotr/fruitWood_cherry_top
+block:id=%tile.lotr:fruitWood,data=7,face0-1=0:lotr/fruitWood_mango_side,face2-3=4000:lotr/fruitWood_mango_side,face4-5=0:lotr/fruitWood_mango_top
+block:id=%tile.lotr:fruitWood,data=8,face0-1=4000:lotr/fruitWood_apple_side,face2-3=0:lotr/fruitWood_apple_top,face4-5=4000:lotr/fruitWood_apple_side
+block:id=%tile.lotr:fruitWood,data=9,face0-1=4000:lotr/fruitWood_pear_side,face2-3=0:lotr/fruitWood_pear_top,face4-5=4000:lotr/fruitWood_pear_side
+block:id=%tile.lotr:fruitWood,data=10,face0-1=4000:lotr/fruitWood_cherry_side,face2-3=0:lotr/fruitWood_cherry_top,face4-5=4000:lotr/fruitWood_cherry_side
+block:id=%tile.lotr:fruitWood,data=11,face0-1=4000:lotr/fruitWood_mango_side,face2-3=0:lotr/fruitWood_mango_top,face4-5=4000:lotr/fruitWood_mango_side
+block:id=%tile.lotr:fruitWood,data=12,stdrot=true,face0-5=0:lotr/fruitWood_apple_side
+block:id=%tile.lotr:fruitWood,data=13,stdrot=true,face0-5=0:lotr/fruitWood_pear_side
+block:id=%tile.lotr:fruitWood,data=14,stdrot=true,face0-5=0:lotr/fruitWood_cherry_side
+block:id=%tile.lotr:fruitWood,data=15,stdrot=true,face0-5=0:lotr/fruitWood_mango_side
+
+# %tile.lotr:fruitLeaves:* (tile.lotr:fruitLeaves), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockFruitLeaves
+block:id=%tile.lotr:fruitLeaves,data=0,stdrot=true,face0-5=0:lotr/fruitLeaves_apple_fancy
+block:id=%tile.lotr:fruitLeaves,data=1,stdrot=true,face0-5=0:lotr/fruitLeaves_pear_fancy
+block:id=%tile.lotr:fruitLeaves,data=2,stdrot=true,face0-5=0:lotr/fruitLeaves_cherry_fancy
+block:id=%tile.lotr:fruitLeaves,data=3,stdrot=true,face0-5=0:lotr/fruitLeaves_mango_fancy
+block:id=%tile.lotr:fruitLeaves,data=4,stdrot=true,face0-5=0:lotr/fruitLeaves_apple_fancy
+block:id=%tile.lotr:fruitLeaves,data=5,stdrot=true,face0-5=0:lotr/fruitLeaves_pear_fancy
+block:id=%tile.lotr:fruitLeaves,data=6,stdrot=true,face0-5=0:lotr/fruitLeaves_cherry_fancy
+block:id=%tile.lotr:fruitLeaves,data=7,stdrot=true,face0-5=0:lotr/fruitLeaves_mango_fancy
+block:id=%tile.lotr:fruitLeaves,data=8,stdrot=true,face0-5=0:lotr/fruitLeaves_apple_fancy
+block:id=%tile.lotr:fruitLeaves,data=9,stdrot=true,face0-5=0:lotr/fruitLeaves_pear_fancy
+block:id=%tile.lotr:fruitLeaves,data=10,stdrot=true,face0-5=0:lotr/fruitLeaves_cherry_fancy
+block:id=%tile.lotr:fruitLeaves,data=11,stdrot=true,face0-5=0:lotr/fruitLeaves_mango_fancy
+block:id=%tile.lotr:fruitLeaves,data=12,stdrot=true,face0-5=0:lotr/fruitLeaves_apple_fancy
+block:id=%tile.lotr:fruitLeaves,data=13,stdrot=true,face0-5=0:lotr/fruitLeaves_pear_fancy
+block:id=%tile.lotr:fruitLeaves,data=14,stdrot=true,face0-5=0:lotr/fruitLeaves_cherry_fancy
+block:id=%tile.lotr:fruitLeaves,data=15,stdrot=true,face0-5=0:lotr/fruitLeaves_mango_fancy
+
+# %tile.lotr:fruitSapling:* (tile.lotr:fruitSapling), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFruitSapling
+block:id=%tile.lotr:fruitSapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_apple
+block:id=%tile.lotr:fruitSapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_pear
+block:id=%tile.lotr:fruitSapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_cherry
+block:id=%tile.lotr:fruitSapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_mango
+block:id=%tile.lotr:fruitSapling,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_apple
+block:id=%tile.lotr:fruitSapling,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_pear
+block:id=%tile.lotr:fruitSapling,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_cherry
+block:id=%tile.lotr:fruitSapling,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_mango
+block:id=%tile.lotr:fruitSapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_apple
+block:id=%tile.lotr:fruitSapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_pear
+block:id=%tile.lotr:fruitSapling,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_cherry
+block:id=%tile.lotr:fruitSapling,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_mango
+block:id=%tile.lotr:fruitSapling,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_apple
+block:id=%tile.lotr:fruitSapling,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_pear
+block:id=%tile.lotr:fruitSapling,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_cherry
+block:id=%tile.lotr:fruitSapling,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fruitSapling_mango
+
+# %tile.lotr:stairsApple:* (tile.lotr:stairsApple), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsApple,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_apple
+
+# %tile.lotr:stairsPear:* (tile.lotr:stairsPear), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsPear,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_pear
+
+# %tile.lotr:stairsCherry:* (tile.lotr:stairsCherry), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsCherry,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_cherry
+
+# %tile.lotr:dwarvenCraftingTable:* (tile.lotr:dwarvenCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockDwarvenTable
+block:id=%tile.lotr:dwarvenCraftingTable,data=*,stdrot=true,face0=0:lotr/brick_dwarven,face1=0:lotr/dwarvenCraftingTable_top,face2-5=0:lotr/dwarvenCraftingTable_side
+
+# %tile.lotr:bluebell:* (tile.lotr:bluebell), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:bluebell,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/bluebell
+
+# %tile.lotr:dwarvenForge:* (tile.lotr:dwarvenForge), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockDwarvenForge
+block:id=%tile.lotr:dwarvenForge,data=*,stdrot=true,face0-1=0:lotr/dwarvenForge_top,face2=0:lotr/dwarvenForge_side,face3=0:lotr/dwarvenForge_front,face4-5=0:lotr/dwarvenForge_side
+
+# %tile.lotr:hearth:* (tile.lotr:hearth), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockHearth
+block:id=%tile.lotr:hearth,data=*,stdrot=true,face0=0:lotr/hearth_bottom,face1=0:lotr/hearth_top,face2-5=0:lotr/hearth_side
+
+# %tile.lotr:morgulShroom:* (tile.lotr:morgulShroom), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockMorgulShroom
+block:id=%tile.lotr:morgulShroom,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/morgulShroom
+
+# %tile.lotr:urukCraftingTable:* (tile.lotr:urukCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockUrukTable
+block:id=%tile.lotr:urukCraftingTable,data=*,stdrot=true,face0=0:lotr/brick2_uruk,face1=0:lotr/urukCraftingTable_top,face2-5=0:lotr/urukCraftingTable_side
+
+# %tile.lotr:cherryPie:* (tile.lotr:cherryPie), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+block:id=%tile.lotr:cherryPie,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/cherryPie_bottom,face1=0:lotr/cherryPie_top,face2-5=0:lotr/cherryPie_side
+block:id=%tile.lotr:cherryPie,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/cherryPie_bottom,face1=0:lotr/cherryPie_top,face2-3=0:lotr/cherryPie_side,face4=0:lotr/cherryPie_eaten,face5=0:lotr/cherryPie_side
+
+# %tile.lotr:clover:* (tile.lotr:clover), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockClover
+block:id=%tile.lotr:clover,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=FF47CD33,face0-5=17000:lotr/clover_petal
+
+# %tile.lotr:slabSingle2:* (tile.lotr:slabSingle2), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab2
+block:id=%tile.lotr:slabSingle2,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_dwarven_face,face2-5=0:lotr/pillar_dwarven_side
+block:id=%tile.lotr:slabSingle2,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_rohanRock_top,face2-5=0:lotr/slab_rohanRock_side
+block:id=%tile.lotr:slabSingle2,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_mordorCracked
+block:id=%tile.lotr:slabSingle2,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elven
+block:id=%tile.lotr:slabSingle2,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elvenMossy
+block:id=%tile.lotr:slabSingle2,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elvenCracked
+block:id=%tile.lotr:slabSingle2,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_elven_face,face2-5=0:lotr/pillar_elven_side
+block:id=%tile.lotr:slabSingle2,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_elvenCracked_face,face2-5=0:lotr/pillar_elvenCracked_side
+block:id=%tile.lotr:slabSingle2,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_dwarven_face,face2-5=0:lotr/pillar_dwarven_side
+block:id=%tile.lotr:slabSingle2,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_rohanRock_top,face2-5=0:lotr/slab_rohanRock_side
+block:id=%tile.lotr:slabSingle2,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_mordorCracked
+block:id=%tile.lotr:slabSingle2,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elven
+block:id=%tile.lotr:slabSingle2,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elvenMossy
+block:id=%tile.lotr:slabSingle2,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elvenCracked
+block:id=%tile.lotr:slabSingle2,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_elven_face,face2-5=0:lotr/pillar_elven_side
+block:id=%tile.lotr:slabSingle2,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_elvenCracked_face,face2-5=0:lotr/pillar_elvenCracked_side
+
+# %tile.lotr:slabDouble2:* (tile.lotr:slabDouble2), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockSlab2
+block:id=%tile.lotr:slabDouble2,data=0,stdrot=true,face0-1=0:lotr/pillar_dwarven_face,face2-5=0:lotr/pillar_dwarven_side
+block:id=%tile.lotr:slabDouble2,data=1,stdrot=true,face0-1=0:lotr/slab_rohanRock_top,face2-5=0:lotr/slab_rohanRock_side
+block:id=%tile.lotr:slabDouble2,data=2,stdrot=true,face0-5=0:lotr/brick_mordorCracked
+block:id=%tile.lotr:slabDouble2,data=3,stdrot=true,face0-5=0:lotr/brick_elven
+block:id=%tile.lotr:slabDouble2,data=4,stdrot=true,face0-5=0:lotr/brick_elvenMossy
+block:id=%tile.lotr:slabDouble2,data=5,stdrot=true,face0-5=0:lotr/brick_elvenCracked
+block:id=%tile.lotr:slabDouble2,data=6,stdrot=true,face0-1=0:lotr/pillar_elven_face,face2-5=0:lotr/pillar_elven_side
+block:id=%tile.lotr:slabDouble2,data=7,stdrot=true,face0-1=0:lotr/pillar_elvenCracked_face,face2-5=0:lotr/pillar_elvenCracked_side
+block:id=%tile.lotr:slabDouble2,data=8,stdrot=true,face0-1=0:lotr/pillar_dwarven_face,face2-5=0:lotr/pillar_dwarven_side
+block:id=%tile.lotr:slabDouble2,data=9,stdrot=true,face0-1=0:lotr/slab_rohanRock_top,face2-5=0:lotr/slab_rohanRock_side
+block:id=%tile.lotr:slabDouble2,data=10,stdrot=true,face0-5=0:lotr/brick_mordorCracked
+block:id=%tile.lotr:slabDouble2,data=11,stdrot=true,face0-5=0:lotr/brick_elven
+block:id=%tile.lotr:slabDouble2,data=12,stdrot=true,face0-5=0:lotr/brick_elvenMossy
+block:id=%tile.lotr:slabDouble2,data=13,stdrot=true,face0-5=0:lotr/brick_elvenCracked
+block:id=%tile.lotr:slabDouble2,data=14,stdrot=true,face0-1=0:lotr/pillar_elven_face,face2-5=0:lotr/pillar_elven_side
+block:id=%tile.lotr:slabDouble2,data=15,stdrot=true,face0-1=0:lotr/pillar_elvenCracked_face,face2-5=0:lotr/pillar_elvenCracked_side
+
+# %tile.lotr:stairsMirkOak:* (tile.lotr:stairsMirkOak), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsMirkOak,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mirkOak
+
+# %tile.lotr:webUngoliant:* (tile.lotr:webUngoliant), render=(CROSSEDSQUARES), opaque=false,cls=net.minecraft.block.BlockWeb
+block:id=%tile.lotr:webUngoliant,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/webUngoliant
+
+# %tile.lotr:woodElvenCraftingTable:* (tile.lotr:woodElvenCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockWoodElvenTable
+block:id=%tile.lotr:woodElvenCraftingTable,data=*,stdrot=true,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenCraftingTable_top,face2-5=0:lotr/woodElvenCraftingTable_side
+
+# %tile.lotr:woodElvenBed:* (tile.lotr:woodElvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+block:id=%tile.lotr:woodElvenBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_feet_top,face2=0:lotr/woodElvenBed_feet_end,face3=0:lotr/woodElvenBed_feet_top,face4-5=0:lotr/woodElvenBed_feet_side
+block:id=%tile.lotr:woodElvenBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_feet_top,face2-3=0:lotr/woodElvenBed_feet_side,face4=0:lotr/woodElvenBed_feet_top,face5=0:lotr/woodElvenBed_feet_end
+block:id=%tile.lotr:woodElvenBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1-2=0:lotr/woodElvenBed_feet_top,face3=0:lotr/woodElvenBed_feet_end,face4-5=0:lotr/woodElvenBed_feet_side
+block:id=%tile.lotr:woodElvenBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_feet_top,face2-3=0:lotr/woodElvenBed_feet_side,face4=0:lotr/woodElvenBed_feet_end,face5=0:lotr/woodElvenBed_feet_top
+block:id=%tile.lotr:woodElvenBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_feet_top,face2=0:lotr/woodElvenBed_feet_end,face3=0:lotr/woodElvenBed_feet_top,face4-5=0:lotr/woodElvenBed_feet_side
+block:id=%tile.lotr:woodElvenBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_feet_top,face2-3=0:lotr/woodElvenBed_feet_side,face4=0:lotr/woodElvenBed_feet_top,face5=0:lotr/woodElvenBed_feet_end
+block:id=%tile.lotr:woodElvenBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1-2=0:lotr/woodElvenBed_feet_top,face3=0:lotr/woodElvenBed_feet_end,face4-5=0:lotr/woodElvenBed_feet_side
+block:id=%tile.lotr:woodElvenBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_feet_top,face2-3=0:lotr/woodElvenBed_feet_side,face4=0:lotr/woodElvenBed_feet_end,face5=0:lotr/woodElvenBed_feet_top
+block:id=%tile.lotr:woodElvenBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1-2=0:lotr/woodElvenBed_head_top,face3=0:lotr/woodElvenBed_head_end,face4-5=0:lotr/woodElvenBed_head_side
+block:id=%tile.lotr:woodElvenBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_head_top,face2-3=0:lotr/woodElvenBed_head_side,face4=0:lotr/woodElvenBed_head_end,face5=0:lotr/woodElvenBed_head_top
+block:id=%tile.lotr:woodElvenBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_head_top,face2=0:lotr/woodElvenBed_head_end,face3=0:lotr/woodElvenBed_head_top,face4-5=0:lotr/woodElvenBed_head_side
+block:id=%tile.lotr:woodElvenBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_head_top,face2-3=0:lotr/woodElvenBed_head_side,face4=0:lotr/woodElvenBed_head_top,face5=0:lotr/woodElvenBed_head_end
+block:id=%tile.lotr:woodElvenBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1-2=0:lotr/woodElvenBed_head_top,face3=0:lotr/woodElvenBed_head_end,face4-5=0:lotr/woodElvenBed_head_side
+block:id=%tile.lotr:woodElvenBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_head_top,face2-3=0:lotr/woodElvenBed_head_side,face4=0:lotr/woodElvenBed_head_end,face5=0:lotr/woodElvenBed_head_top
+block:id=%tile.lotr:woodElvenBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_head_top,face2=0:lotr/woodElvenBed_head_end,face3=0:lotr/woodElvenBed_head_top,face4-5=0:lotr/woodElvenBed_head_side
+block:id=%tile.lotr:woodElvenBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_mirkOak,face1=0:lotr/woodElvenBed_head_top,face2-3=0:lotr/woodElvenBed_head_side,face4=0:lotr/woodElvenBed_head_top,face5=0:lotr/woodElvenBed_head_end
+
+# %tile.lotr:gondorianCraftingTable:* (tile.lotr:gondorianCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockGondorianTable
+block:id=%tile.lotr:gondorianCraftingTable,data=*,stdrot=true,face0=0:lotr/rock_gondor,face1=0:lotr/gondorianCraftingTable_top,face2-5=0:lotr/gondorianCraftingTable_side
+
+# %tile.lotr:woodElvenTorch:* (tile.lotr:woodElvenTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockWoodElvenTorch
+block:id=%tile.lotr:woodElvenTorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/woodElvenTorch
+
+# %tile.lotr:rohirricCraftingTable:* (tile.lotr:rohirricCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockRohirricTable
+block:id=%tile.lotr:rohirricCraftingTable,data=*,stdrot=true,face0=0:minecraft/planks_spruce,face1=0:lotr/rohirricCraftingTable_top,face2-5=0:lotr/rohirricCraftingTable_side
+
+# %tile.lotr:pressurePlateRohanRock:* (tile.lotr:pressurePlateRohanRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+block:id=%tile.lotr:pressurePlateRohanRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_rohan
+
+# %tile.lotr:remains:* (tile.lotr:remains), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockRemains
+block:id=%tile.lotr:remains,data=*,stdrot=true,face0-5=0:lotr/remains
+
+# %tile.lotr:deadMarshPlant:* (tile.lotr:deadMarshPlant), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockDeadPlant
+block:id=%tile.lotr:deadMarshPlant,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/deadMarshPlant
+
+# %tile.lotr:oreGulduril:* (tile.lotr:oreGulduril), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOreMordorVariant
+block:id=%tile.lotr:oreGulduril,data=0,stdrot=true,face0-5=0:lotr/oreGulduril
+block:id=%tile.lotr:oreGulduril,data=1,stdrot=true,face0-5=0:lotr/oreGulduril_mordor
+block:id=%tile.lotr:oreGulduril,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:lotr/oreGulduril
+
+# %tile.lotr:guldurilBrick:* (tile.lotr:guldurilBrick), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockGuldurilBrick
+block:id=%tile.lotr:guldurilBrick,data=0,stdrot=true,face0-5=0:lotr/brick_mordor
+block:id=%tile.lotr:guldurilBrick,data=1,stdrot=true,face0-5=0:lotr/brick_mordorCracked
+block:id=%tile.lotr:guldurilBrick,data=2,stdrot=true,face0-5=0:lotr/brick2_angmar
+block:id=%tile.lotr:guldurilBrick,data=3,stdrot=true,face0-5=0:lotr/brick2_angmarCracked
+block:id=%tile.lotr:guldurilBrick,data=4,stdrot=true,face0-5=0:lotr/brick2_dolGuldur
+block:id=%tile.lotr:guldurilBrick,data=5,stdrot=true,face0-5=0:lotr/brick2_dolGuldurCracked
+
+# %tile.lotr:dwarvenDoor:* (tile.lotr:dwarvenDoor), render=(DOOR), opaque=false,cls=lotr.common.block.LOTRBlockDwarvenDoor
+block:id=%tile.lotr:dwarvenDoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:minecraft/stone
+
+# %tile.lotr:stairsCharred:* (tile.lotr:stairsCharred), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsCharred,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_charred
+
+# %tile.lotr:dwarvenBed:* (tile.lotr:dwarvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+block:id=%tile.lotr:dwarvenBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_feet_top,face2=0:lotr/dwarvenBed_feet_end,face3=0:lotr/dwarvenBed_feet_top,face4-5=0:lotr/dwarvenBed_feet_side
+block:id=%tile.lotr:dwarvenBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_feet_top,face2-3=0:lotr/dwarvenBed_feet_side,face4=0:lotr/dwarvenBed_feet_top,face5=0:lotr/dwarvenBed_feet_end
+block:id=%tile.lotr:dwarvenBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1-2=0:lotr/dwarvenBed_feet_top,face3=0:lotr/dwarvenBed_feet_end,face4-5=0:lotr/dwarvenBed_feet_side
+block:id=%tile.lotr:dwarvenBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_feet_top,face2-3=0:lotr/dwarvenBed_feet_side,face4=0:lotr/dwarvenBed_feet_end,face5=0:lotr/dwarvenBed_feet_top
+block:id=%tile.lotr:dwarvenBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_feet_top,face2=0:lotr/dwarvenBed_feet_end,face3=0:lotr/dwarvenBed_feet_top,face4-5=0:lotr/dwarvenBed_feet_side
+block:id=%tile.lotr:dwarvenBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_feet_top,face2-3=0:lotr/dwarvenBed_feet_side,face4=0:lotr/dwarvenBed_feet_top,face5=0:lotr/dwarvenBed_feet_end
+block:id=%tile.lotr:dwarvenBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1-2=0:lotr/dwarvenBed_feet_top,face3=0:lotr/dwarvenBed_feet_end,face4-5=0:lotr/dwarvenBed_feet_side
+block:id=%tile.lotr:dwarvenBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_feet_top,face2-3=0:lotr/dwarvenBed_feet_side,face4=0:lotr/dwarvenBed_feet_end,face5=0:lotr/dwarvenBed_feet_top
+block:id=%tile.lotr:dwarvenBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1-2=0:lotr/dwarvenBed_head_top,face3=0:lotr/dwarvenBed_head_end,face4-5=0:lotr/dwarvenBed_head_side
+block:id=%tile.lotr:dwarvenBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_head_top,face2-3=0:lotr/dwarvenBed_head_side,face4=0:lotr/dwarvenBed_head_end,face5=0:lotr/dwarvenBed_head_top
+block:id=%tile.lotr:dwarvenBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_head_top,face2=0:lotr/dwarvenBed_head_end,face3=0:lotr/dwarvenBed_head_top,face4-5=0:lotr/dwarvenBed_head_side
+block:id=%tile.lotr:dwarvenBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_head_top,face2-3=0:lotr/dwarvenBed_head_side,face4=0:lotr/dwarvenBed_head_top,face5=0:lotr/dwarvenBed_head_end
+block:id=%tile.lotr:dwarvenBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1-2=0:lotr/dwarvenBed_head_top,face3=0:lotr/dwarvenBed_head_end,face4-5=0:lotr/dwarvenBed_head_side
+block:id=%tile.lotr:dwarvenBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_head_top,face2-3=0:lotr/dwarvenBed_head_side,face4=0:lotr/dwarvenBed_head_end,face5=0:lotr/dwarvenBed_head_top
+block:id=%tile.lotr:dwarvenBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_head_top,face2=0:lotr/dwarvenBed_head_end,face3=0:lotr/dwarvenBed_head_top,face4-5=0:lotr/dwarvenBed_head_side
+block:id=%tile.lotr:dwarvenBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_spruce,face1=0:lotr/dwarvenBed_head_top,face2-3=0:lotr/dwarvenBed_head_side,face4=0:lotr/dwarvenBed_head_top,face5=0:lotr/dwarvenBed_head_end
+
+# %tile.lotr:morgulPortal:* (tile.lotr:morgulPortal), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockMorgulPortal
+block:id=%tile.lotr:morgulPortal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/portal
+
+# %tile.lotr:armorStand:* (tile.lotr:armorStand), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockArmorStand
+block:id=%tile.lotr:armorStand,data=*,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %tile.lotr:buttonRohanRock:* (tile.lotr:buttonRohanRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+block:id=%tile.lotr:buttonRohanRock,data=0,stdrot=true,face0-5=0:lotr/rock_rohan
+block:id=%tile.lotr:buttonRohanRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_rohan
+
+# %tile.lotr:asphodel:* (tile.lotr:asphodel), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:asphodel,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/asphodel
+
+# %tile.lotr:wood2:* (tile.lotr:wood2), render=(LOG), opaque=true,cls=lotr.common.block.LOTRBlockWood2
+block:id=%tile.lotr:wood2,data=0,stdrot=true,face0-1=0:lotr/wood2_lebethron_top,face2-5=0:lotr/wood2_lebethron_side
+block:id=%tile.lotr:wood2,data=1,stdrot=true,face0-1=0:lotr/wood2_beech_top,face2-5=0:lotr/wood2_beech_side
+block:id=%tile.lotr:wood2,data=2,stdrot=true,face0-1=0:lotr/wood2_holly_top,face2-5=0:lotr/wood2_holly_side
+block:id=%tile.lotr:wood2,data=3,stdrot=true,face0-1=0:lotr/wood2_banana_top,face2-5=0:lotr/wood2_banana_side
+block:id=%tile.lotr:wood2,data=4,face0-1=0:lotr/wood2_lebethron_side,face2-3=4000:lotr/wood2_lebethron_side,face4-5=0:lotr/wood2_lebethron_top
+block:id=%tile.lotr:wood2,data=5,face0-1=0:lotr/wood2_beech_side,face2-3=4000:lotr/wood2_beech_side,face4-5=0:lotr/wood2_beech_top
+block:id=%tile.lotr:wood2,data=6,face0-1=0:lotr/wood2_holly_side,face2-3=4000:lotr/wood2_holly_side,face4-5=0:lotr/wood2_holly_top
+block:id=%tile.lotr:wood2,data=7,face0-1=0:lotr/wood2_banana_side,face2-3=4000:lotr/wood2_banana_side,face4-5=0:lotr/wood2_banana_top
+block:id=%tile.lotr:wood2,data=8,face0-1=4000:lotr/wood2_lebethron_side,face2-3=0:lotr/wood2_lebethron_top,face4-5=4000:lotr/wood2_lebethron_side
+block:id=%tile.lotr:wood2,data=9,face0-1=4000:lotr/wood2_beech_side,face2-3=0:lotr/wood2_beech_top,face4-5=4000:lotr/wood2_beech_side
+block:id=%tile.lotr:wood2,data=10,face0-1=4000:lotr/wood2_holly_side,face2-3=0:lotr/wood2_holly_top,face4-5=4000:lotr/wood2_holly_side
+block:id=%tile.lotr:wood2,data=11,face0-1=4000:lotr/wood2_banana_side,face2-3=0:lotr/wood2_banana_top,face4-5=4000:lotr/wood2_banana_side
+block:id=%tile.lotr:wood2,data=12,stdrot=true,face0-5=0:lotr/wood2_lebethron_side
+block:id=%tile.lotr:wood2,data=13,stdrot=true,face0-5=0:lotr/wood2_beech_side
+block:id=%tile.lotr:wood2,data=14,stdrot=true,face0-5=0:lotr/wood2_holly_side
+block:id=%tile.lotr:wood2,data=15,stdrot=true,face0-5=0:lotr/wood2_banana_side
+
+# %tile.lotr:leaves2:* (tile.lotr:leaves2), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockLeaves2
+block:id=%tile.lotr:leaves2,data=0,stdrot=true,face0-5=0:lotr/leaves2_lebethron_fancy
+block:id=%tile.lotr:leaves2,data=1,stdrot=true,face0-5=0:lotr/leaves2_beech_fancy
+block:id=%tile.lotr:leaves2,data=2,stdrot=true,face0-5=0:lotr/leaves2_holly_fancy
+block:id=%tile.lotr:leaves2,data=3,stdrot=true,face0-5=0:lotr/leaves2_banana_fancy
+block:id=%tile.lotr:leaves2,data=4,stdrot=true,face0-5=0:lotr/leaves2_lebethron_fancy
+block:id=%tile.lotr:leaves2,data=5,stdrot=true,face0-5=0:lotr/leaves2_beech_fancy
+block:id=%tile.lotr:leaves2,data=6,stdrot=true,face0-5=0:lotr/leaves2_holly_fancy
+block:id=%tile.lotr:leaves2,data=7,stdrot=true,face0-5=0:lotr/leaves2_banana_fancy
+block:id=%tile.lotr:leaves2,data=8,stdrot=true,face0-5=0:lotr/leaves2_lebethron_fancy
+block:id=%tile.lotr:leaves2,data=9,stdrot=true,face0-5=0:lotr/leaves2_beech_fancy
+block:id=%tile.lotr:leaves2,data=10,stdrot=true,face0-5=0:lotr/leaves2_holly_fancy
+block:id=%tile.lotr:leaves2,data=11,stdrot=true,face0-5=0:lotr/leaves2_banana_fancy
+block:id=%tile.lotr:leaves2,data=12,stdrot=true,face0-5=0:lotr/leaves2_lebethron_fancy
+block:id=%tile.lotr:leaves2,data=13,stdrot=true,face0-5=0:lotr/leaves2_beech_fancy
+block:id=%tile.lotr:leaves2,data=14,stdrot=true,face0-5=0:lotr/leaves2_holly_fancy
+block:id=%tile.lotr:leaves2,data=15,stdrot=true,face0-5=0:lotr/leaves2_banana_fancy
+
+# %tile.lotr:sapling2:* (tile.lotr:sapling2), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockSapling2
+block:id=%tile.lotr:sapling2,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_lebethron
+block:id=%tile.lotr:sapling2,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_beech
+block:id=%tile.lotr:sapling2,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_holly
+block:id=%tile.lotr:sapling2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_banana
+block:id=%tile.lotr:sapling2,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_lebethron
+block:id=%tile.lotr:sapling2,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_beech
+block:id=%tile.lotr:sapling2,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_holly
+block:id=%tile.lotr:sapling2,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_banana
+block:id=%tile.lotr:sapling2,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_lebethron
+block:id=%tile.lotr:sapling2,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_beech
+block:id=%tile.lotr:sapling2,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_holly
+block:id=%tile.lotr:sapling2,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_banana
+block:id=%tile.lotr:sapling2,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_lebethron
+block:id=%tile.lotr:sapling2,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_beech
+block:id=%tile.lotr:sapling2,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_holly
+block:id=%tile.lotr:sapling2,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling2_banana
+
+# %tile.lotr:stairsLebethron:* (tile.lotr:stairsLebethron), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsLebethron,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_lebethron
+
+# %tile.lotr:woodSlabSingle2:* (tile.lotr:woodSlabSingle2), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockWoodSlab2
+block:id=%tile.lotr:woodSlabSingle2,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_lebethron
+block:id=%tile.lotr:woodSlabSingle2,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_beech
+block:id=%tile.lotr:woodSlabSingle2,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_holly
+block:id=%tile.lotr:woodSlabSingle2,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_banana
+block:id=%tile.lotr:woodSlabSingle2,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_maple
+block:id=%tile.lotr:woodSlabSingle2,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_larch
+block:id=%tile.lotr:woodSlabSingle2,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_datePalm
+block:id=%tile.lotr:woodSlabSingle2,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_maple
+block:id=%tile.lotr:woodSlabSingle2,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_lebethron
+block:id=%tile.lotr:woodSlabSingle2,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_beech
+block:id=%tile.lotr:woodSlabSingle2,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_holly
+block:id=%tile.lotr:woodSlabSingle2,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_banana
+block:id=%tile.lotr:woodSlabSingle2,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_maple
+block:id=%tile.lotr:woodSlabSingle2,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_larch
+block:id=%tile.lotr:woodSlabSingle2,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_datePalm
+block:id=%tile.lotr:woodSlabSingle2,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_maple
+
+# %tile.lotr:woodSlabDouble2:* (tile.lotr:woodSlabDouble2), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockWoodSlab2
+block:id=%tile.lotr:woodSlabDouble2,data=0,stdrot=true,face0-5=0:lotr/planks_lebethron
+block:id=%tile.lotr:woodSlabDouble2,data=1,stdrot=true,face0-5=0:lotr/planks_beech
+block:id=%tile.lotr:woodSlabDouble2,data=2,stdrot=true,face0-5=0:lotr/planks_holly
+block:id=%tile.lotr:woodSlabDouble2,data=3,stdrot=true,face0-5=0:lotr/planks_banana
+block:id=%tile.lotr:woodSlabDouble2,data=4,stdrot=true,face0-5=0:lotr/planks_maple
+block:id=%tile.lotr:woodSlabDouble2,data=5,stdrot=true,face0-5=0:lotr/planks_larch
+block:id=%tile.lotr:woodSlabDouble2,data=6,stdrot=true,face0-5=0:lotr/planks_datePalm
+block:id=%tile.lotr:woodSlabDouble2,data=7,stdrot=true,face0-5=0:lotr/planks_maple
+block:id=%tile.lotr:woodSlabDouble2,data=8,stdrot=true,face0-5=0:lotr/planks_lebethron
+block:id=%tile.lotr:woodSlabDouble2,data=9,stdrot=true,face0-5=0:lotr/planks_beech
+block:id=%tile.lotr:woodSlabDouble2,data=10,stdrot=true,face0-5=0:lotr/planks_holly
+block:id=%tile.lotr:woodSlabDouble2,data=11,stdrot=true,face0-5=0:lotr/planks_banana
+block:id=%tile.lotr:woodSlabDouble2,data=12,stdrot=true,face0-5=0:lotr/planks_maple
+block:id=%tile.lotr:woodSlabDouble2,data=13,stdrot=true,face0-5=0:lotr/planks_larch
+block:id=%tile.lotr:woodSlabDouble2,data=14,stdrot=true,face0-5=0:lotr/planks_datePalm
+block:id=%tile.lotr:woodSlabDouble2,data=15,stdrot=true,face0-5=0:lotr/planks_maple
+
+# %tile.lotr:dwarfHerb:* (tile.lotr:dwarfHerb), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
+block:id=%tile.lotr:dwarfHerb,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/dwarfHerb
+
+# %tile.lotr:mug:* (tile.lotr:mug), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockMug
+block:id=%tile.lotr:mug,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/oreStorage_tin
+
+# %tile.lotr:dunlendingCraftingTable:* (tile.lotr:dunlendingCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockDunlendingTable
+block:id=%tile.lotr:dunlendingCraftingTable,data=*,stdrot=true,face0=0:minecraft/cobblestone,face1=0:lotr/dunlendingCraftingTable_top,face2-5=0:lotr/dunlendingCraftingTable_side
+
+# %tile.lotr:stairsBeech:* (tile.lotr:stairsBeech), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsBeech,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_beech
+
+# %tile.lotr:entJar:* (tile.lotr:entJar), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockEntJar
+block:id=%tile.lotr:entJar,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:lotr/entJar_top,face2-5=0:lotr/entJar_side
+
+# %tile.lotr:mordorThorn:* (tile.lotr:mordorThorn), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockMordorThorn
+block:id=%tile.lotr:mordorThorn,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/mordorThorn
+
+# %tile.lotr:mordorMoss:* (tile.lotr:mordorMoss), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockMordorMoss
+block:id=%tile.lotr:mordorMoss,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/mordorMoss
+
+# %tile.lotr:stairsMordorBrickCracked:* (tile.lotr:stairsMordorBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsMordorBrickCracked,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_mordorCracked
+
+# %tile.lotr:orcForge:* (tile.lotr:orcForge), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOrcForge
+block:id=%tile.lotr:orcForge,data=*,stdrot=true,face0-1=0:lotr/orcForge_top,face2=0:lotr/orcForge_side,face3=0:lotr/orcForge_front,face4-5=0:lotr/orcForge_side
+
+# %tile.lotr:trollTotem:* (tile.lotr:trollTotem), render=lotr.client.render.LOTRRenderBlocks(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockTrollTotem
+block:id=%tile.lotr:trollTotem,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %tile.lotr:orcBed:* (tile.lotr:orcBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+block:id=%tile.lotr:orcBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_feet_top,face2=0:lotr/orcBed_feet_end,face3=0:lotr/orcBed_feet_top,face4-5=0:lotr/orcBed_feet_side
+block:id=%tile.lotr:orcBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_feet_top,face2-3=0:lotr/orcBed_feet_side,face4=0:lotr/orcBed_feet_top,face5=0:lotr/orcBed_feet_end
+block:id=%tile.lotr:orcBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1-2=0:lotr/orcBed_feet_top,face3=0:lotr/orcBed_feet_end,face4-5=0:lotr/orcBed_feet_side
+block:id=%tile.lotr:orcBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_feet_top,face2-3=0:lotr/orcBed_feet_side,face4=0:lotr/orcBed_feet_end,face5=0:lotr/orcBed_feet_top
+block:id=%tile.lotr:orcBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_feet_top,face2=0:lotr/orcBed_feet_end,face3=0:lotr/orcBed_feet_top,face4-5=0:lotr/orcBed_feet_side
+block:id=%tile.lotr:orcBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_feet_top,face2-3=0:lotr/orcBed_feet_side,face4=0:lotr/orcBed_feet_top,face5=0:lotr/orcBed_feet_end
+block:id=%tile.lotr:orcBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1-2=0:lotr/orcBed_feet_top,face3=0:lotr/orcBed_feet_end,face4-5=0:lotr/orcBed_feet_side
+block:id=%tile.lotr:orcBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_feet_top,face2-3=0:lotr/orcBed_feet_side,face4=0:lotr/orcBed_feet_end,face5=0:lotr/orcBed_feet_top
+block:id=%tile.lotr:orcBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1-2=0:lotr/orcBed_head_top,face3=0:lotr/orcBed_head_end,face4-5=0:lotr/orcBed_head_side
+block:id=%tile.lotr:orcBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_head_top,face2-3=0:lotr/orcBed_head_side,face4=0:lotr/orcBed_head_end,face5=0:lotr/orcBed_head_top
+block:id=%tile.lotr:orcBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_head_top,face2=0:lotr/orcBed_head_end,face3=0:lotr/orcBed_head_top,face4-5=0:lotr/orcBed_head_side
+block:id=%tile.lotr:orcBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_head_top,face2-3=0:lotr/orcBed_head_side,face4=0:lotr/orcBed_head_top,face5=0:lotr/orcBed_head_end
+block:id=%tile.lotr:orcBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1-2=0:lotr/orcBed_head_top,face3=0:lotr/orcBed_head_end,face4-5=0:lotr/orcBed_head_side
+block:id=%tile.lotr:orcBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_head_top,face2-3=0:lotr/orcBed_head_side,face4=0:lotr/orcBed_head_end,face5=0:lotr/orcBed_head_top
+block:id=%tile.lotr:orcBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_head_top,face2=0:lotr/orcBed_head_end,face3=0:lotr/orcBed_head_top,face4-5=0:lotr/orcBed_head_side
+block:id=%tile.lotr:orcBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/planks_charred,face1=0:lotr/orcBed_head_top,face2-3=0:lotr/orcBed_head_side,face4=0:lotr/orcBed_head_top,face5=0:lotr/orcBed_head_end
+
+# %tile.lotr:stairsElvenBrick:* (tile.lotr:stairsElvenBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsElvenBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elven
+
+# %tile.lotr:stairsElvenBrickMossy:* (tile.lotr:stairsElvenBrickMossy), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsElvenBrickMossy,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elvenMossy
+
+# %tile.lotr:stairsElvenBrickCracked:* (tile.lotr:stairsElvenBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsElvenBrickCracked,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_elvenCracked
+
+# %tile.lotr:stairsHolly:* (tile.lotr:stairsHolly), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsHolly,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_holly
+
+# %tile.lotr:pressurePlateBlueRock:* (tile.lotr:pressurePlateBlueRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+block:id=%tile.lotr:pressurePlateBlueRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_blue
+
+# %tile.lotr:buttonBlueRock:* (tile.lotr:buttonBlueRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+block:id=%tile.lotr:buttonBlueRock,data=0,stdrot=true,face0-5=0:lotr/rock_blue
+block:id=%tile.lotr:buttonBlueRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_blue
+
+# %tile.lotr:slabSingle3:* (tile.lotr:slabSingle3), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab3
+block:id=%tile.lotr:slabSingle3,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_blueRock_top,face2-5=0:lotr/slab_blueRock_side
+block:id=%tile.lotr:slabSingle3,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_blueRock
+block:id=%tile.lotr:slabSingle3,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_blueRock_face,face2-5=0:lotr/pillar_blueRock_side
+block:id=%tile.lotr:slabSingle3,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_angmar
+block:id=%tile.lotr:slabSingle3,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_angmarCracked
+block:id=%tile.lotr:slabSingle3,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_redRock_top,face2-5=0:lotr/slab_redRock_side
+block:id=%tile.lotr:slabSingle3,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_redRock
+block:id=%tile.lotr:slabSingle3,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_redRock_face,face2-5=0:lotr/pillar_redRock_side
+block:id=%tile.lotr:slabSingle3,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_blueRock_top,face2-5=0:lotr/slab_blueRock_side
+block:id=%tile.lotr:slabSingle3,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_blueRock
+block:id=%tile.lotr:slabSingle3,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_blueRock_face,face2-5=0:lotr/pillar_blueRock_side
+block:id=%tile.lotr:slabSingle3,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_angmar
+block:id=%tile.lotr:slabSingle3,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_angmarCracked
+block:id=%tile.lotr:slabSingle3,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/slab_redRock_top,face2-5=0:lotr/slab_redRock_side
+block:id=%tile.lotr:slabSingle3,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_redRock
+block:id=%tile.lotr:slabSingle3,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:lotr/pillar_redRock_face,face2-5=0:lotr/pillar_redRock_side
+
+# %tile.lotr:slabDouble3:* (tile.lotr:slabDouble3), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockSlab3
+block:id=%tile.lotr:slabDouble3,data=0,stdrot=true,face0-1=0:lotr/slab_blueRock_top,face2-5=0:lotr/slab_blueRock_side
+block:id=%tile.lotr:slabDouble3,data=1,stdrot=true,face0-5=0:lotr/brick_blueRock
+block:id=%tile.lotr:slabDouble3,data=2,stdrot=true,face0-1=0:lotr/pillar_blueRock_face,face2-5=0:lotr/pillar_blueRock_side
+block:id=%tile.lotr:slabDouble3,data=3,stdrot=true,face0-5=0:lotr/brick2_angmar
+block:id=%tile.lotr:slabDouble3,data=4,stdrot=true,face0-5=0:lotr/brick2_angmarCracked
+block:id=%tile.lotr:slabDouble3,data=5,stdrot=true,face0-1=0:lotr/slab_redRock_top,face2-5=0:lotr/slab_redRock_side
+block:id=%tile.lotr:slabDouble3,data=6,stdrot=true,face0-5=0:lotr/brick2_redRock
+block:id=%tile.lotr:slabDouble3,data=7,stdrot=true,face0-1=0:lotr/pillar_redRock_face,face2-5=0:lotr/pillar_redRock_side
+block:id=%tile.lotr:slabDouble3,data=8,stdrot=true,face0-1=0:lotr/slab_blueRock_top,face2-5=0:lotr/slab_blueRock_side
+block:id=%tile.lotr:slabDouble3,data=9,stdrot=true,face0-5=0:lotr/brick_blueRock
+block:id=%tile.lotr:slabDouble3,data=10,stdrot=true,face0-1=0:lotr/pillar_blueRock_face,face2-5=0:lotr/pillar_blueRock_side
+block:id=%tile.lotr:slabDouble3,data=11,stdrot=true,face0-5=0:lotr/brick2_angmar
+block:id=%tile.lotr:slabDouble3,data=12,stdrot=true,face0-5=0:lotr/brick2_angmarCracked
+block:id=%tile.lotr:slabDouble3,data=13,stdrot=true,face0-1=0:lotr/slab_redRock_top,face2-5=0:lotr/slab_redRock_side
+block:id=%tile.lotr:slabDouble3,data=14,stdrot=true,face0-5=0:lotr/brick2_redRock
+block:id=%tile.lotr:slabDouble3,data=15,stdrot=true,face0-1=0:lotr/pillar_redRock_face,face2-5=0:lotr/pillar_redRock_side
+
+# %tile.lotr:stairsBlueRockBrick:* (tile.lotr:stairsBlueRockBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsBlueRockBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_blueRock
+
+# %tile.lotr:fence:* (tile.lotr:fence), render=(FENCE), opaque=false,cls=lotr.common.block.LOTRBlockFence
+block:id=%tile.lotr:fence,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_shirePine
+block:id=%tile.lotr:fence,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_mallorn
+block:id=%tile.lotr:fence,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_mirkOak
+block:id=%tile.lotr:fence,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_charred
+block:id=%tile.lotr:fence,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_apple
+block:id=%tile.lotr:fence,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_pear
+block:id=%tile.lotr:fence,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_cherry
+block:id=%tile.lotr:fence,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_mango
+block:id=%tile.lotr:fence,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_lebethron
+block:id=%tile.lotr:fence,data=9,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_beech
+block:id=%tile.lotr:fence,data=10,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_holly
+block:id=%tile.lotr:fence,data=11,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_banana
+block:id=%tile.lotr:fence,data=12,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_maple
+block:id=%tile.lotr:fence,data=13,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_larch
+block:id=%tile.lotr:fence,data=14,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_datePalm
+block:id=%tile.lotr:fence,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/planks_maple
+
+# %tile.lotr:doubleFlower:* (tile.lotr:doubleFlower), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockDoubleFlower
+block:id=%tile.lotr:doubleFlower,data=1,stdrot=true,face0-5=0:lotr/doubleFlower_yellowIris_bottom
+block:id=%tile.lotr:doubleFlower,data=2,stdrot=true,face0-5=0:lotr/doubleFlower_pink_bottom
+block:id=%tile.lotr:doubleFlower,data=3,stdrot=true,face0-5=0:lotr/doubleFlower_red_bottom
+block:id=%tile.lotr:doubleFlower,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:lotr/doubleFlower_yellowIris_bottom
+
+# %tile.lotr:oreSulfur:* (tile.lotr:oreSulfur), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreSulfur,data=*,stdrot=true,face0-5=0:lotr/oreSulfur
+
+# %tile.lotr:oreSaltpeter:* (tile.lotr:oreSaltpeter), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockOre
+block:id=%tile.lotr:oreSaltpeter,data=*,stdrot=true,face0-5=0:lotr/oreSaltpeter
+
+# %tile.lotr:quagmire:* (tile.lotr:quagmire), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockQuagmire
+block:id=%tile.lotr:quagmire,data=*,stdrot=true,face0-5=0:lotr/quagmire
+
+# %tile.lotr:angmarCraftingTable:* (tile.lotr:angmarCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockAngmarTable
+block:id=%tile.lotr:angmarCraftingTable,data=*,stdrot=true,face0=0:lotr/brick2_angmar,face1=0:lotr/angmarCraftingTable_top,face2-5=0:lotr/angmarCraftingTable_side
+
+# %tile.lotr:brick2:* (tile.lotr:brick2), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockBrick2
+block:id=%tile.lotr:brick2,data=0,stdrot=true,face0-5=0:lotr/brick2_angmar
+block:id=%tile.lotr:brick2,data=1,stdrot=true,face0-5=0:lotr/brick2_angmarCracked
+block:id=%tile.lotr:brick2,data=2,stdrot=true,face0-5=0:lotr/brick2_redRock
+block:id=%tile.lotr:brick2,data=3,stdrot=true,face0-5=0:lotr/brick2_arnor
+block:id=%tile.lotr:brick2,data=4,stdrot=true,face0-5=0:lotr/brick2_arnorMossy
+block:id=%tile.lotr:brick2,data=5,stdrot=true,face0-5=0:lotr/brick2_arnorCracked
+block:id=%tile.lotr:brick2,data=6,stdrot=true,face0-5=0:lotr/brick2_arnorCarved
+block:id=%tile.lotr:brick2,data=7,stdrot=true,face0-5=0:lotr/brick2_uruk
+block:id=%tile.lotr:brick2,data=8,stdrot=true,face0-5=0:lotr/brick2_dolGuldur
+block:id=%tile.lotr:brick2,data=9,stdrot=true,face0-5=0:lotr/brick2_dolGuldurCracked
+block:id=%tile.lotr:brick2,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:lotr/brick2_angmar
+
+# %tile.lotr:wallStone2:* (tile.lotr:wallStone2), render=(WALL), opaque=false,cls=lotr.common.block.LOTRBlockWall2
+block:id=%tile.lotr:wallStone2,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_angmar
+block:id=%tile.lotr:wallStone2,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_angmarCracked
+block:id=%tile.lotr:wallStone2,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/rock_red
+block:id=%tile.lotr:wallStone2,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_redRock
+block:id=%tile.lotr:wallStone2,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_arnor
+block:id=%tile.lotr:wallStone2,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_arnorMossy
+block:id=%tile.lotr:wallStone2,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_arnorCracked
+block:id=%tile.lotr:wallStone2,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_uruk
+block:id=%tile.lotr:wallStone2,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_dolGuldur
+block:id=%tile.lotr:wallStone2,data=9,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_dolGuldurCracked
+block:id=%tile.lotr:wallStone2,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:lotr/brick2_angmar
+
+# %tile.lotr:stairsAngmarBrick:* (tile.lotr:stairsAngmarBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsAngmarBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_angmar
+
+# %tile.lotr:stairsAngmarBrickCracked:* (tile.lotr:stairsAngmarBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsAngmarBrickCracked,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_angmarCracked
+
+# %tile.lotr:stairsMango:* (tile.lotr:stairsMango), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsMango,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_mango
+
+# %tile.lotr:stairsBanana:* (tile.lotr:stairsBanana), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsBanana,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_banana
+
+# %tile.lotr:banana:* (tile.lotr:banana), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockBanana
+block:id=%tile.lotr:banana,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/banana_bottom,face1=0:lotr/banana_top,face2-5=0:lotr/banana_side
+
+# %tile.lotr:bananaCake:* (tile.lotr:bananaCake), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+block:id=%tile.lotr:bananaCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/bananaCake_bottom,face1=0:lotr/bananaCake_top,face2-5=0:lotr/bananaCake_side
+block:id=%tile.lotr:bananaCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/bananaCake_bottom,face1=0:lotr/bananaCake_top,face2-3=0:lotr/bananaCake_side,face4=0:lotr/bananaCake_eaten,face5=0:lotr/bananaCake_side
+
+# %tile.lotr:lionBed:* (tile.lotr:lionBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+block:id=%tile.lotr:lionBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_feet_top,face2=0:lotr/lionBed_feet_end,face3=0:lotr/lionBed_feet_top,face4-5=0:lotr/lionBed_feet_side
+block:id=%tile.lotr:lionBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_feet_top,face2-3=0:lotr/lionBed_feet_side,face4=0:lotr/lionBed_feet_top,face5=0:lotr/lionBed_feet_end
+block:id=%tile.lotr:lionBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/lionBed_feet_top,face3=0:lotr/lionBed_feet_end,face4-5=0:lotr/lionBed_feet_side
+block:id=%tile.lotr:lionBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_feet_top,face2-3=0:lotr/lionBed_feet_side,face4=0:lotr/lionBed_feet_end,face5=0:lotr/lionBed_feet_top
+block:id=%tile.lotr:lionBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_feet_top,face2=0:lotr/lionBed_feet_end,face3=0:lotr/lionBed_feet_top,face4-5=0:lotr/lionBed_feet_side
+block:id=%tile.lotr:lionBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_feet_top,face2-3=0:lotr/lionBed_feet_side,face4=0:lotr/lionBed_feet_top,face5=0:lotr/lionBed_feet_end
+block:id=%tile.lotr:lionBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/lionBed_feet_top,face3=0:lotr/lionBed_feet_end,face4-5=0:lotr/lionBed_feet_side
+block:id=%tile.lotr:lionBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_feet_top,face2-3=0:lotr/lionBed_feet_side,face4=0:lotr/lionBed_feet_end,face5=0:lotr/lionBed_feet_top
+block:id=%tile.lotr:lionBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/lionBed_head_top,face3=0:lotr/lionBed_head_end,face4-5=0:lotr/lionBed_head_side
+block:id=%tile.lotr:lionBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_head_top,face2-3=0:lotr/lionBed_head_side,face4=0:lotr/lionBed_head_end,face5=0:lotr/lionBed_head_top
+block:id=%tile.lotr:lionBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_head_top,face2=0:lotr/lionBed_head_end,face3=0:lotr/lionBed_head_top,face4-5=0:lotr/lionBed_head_side
+block:id=%tile.lotr:lionBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_head_top,face2-3=0:lotr/lionBed_head_side,face4=0:lotr/lionBed_head_top,face5=0:lotr/lionBed_head_end
+block:id=%tile.lotr:lionBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/lionBed_head_top,face3=0:lotr/lionBed_head_end,face4-5=0:lotr/lionBed_head_side
+block:id=%tile.lotr:lionBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_head_top,face2-3=0:lotr/lionBed_head_side,face4=0:lotr/lionBed_head_end,face5=0:lotr/lionBed_head_top
+block:id=%tile.lotr:lionBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_head_top,face2=0:lotr/lionBed_head_end,face3=0:lotr/lionBed_head_top,face4-5=0:lotr/lionBed_head_side
+block:id=%tile.lotr:lionBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/lionBed_head_top,face2-3=0:lotr/lionBed_head_side,face4=0:lotr/lionBed_head_top,face5=0:lotr/lionBed_head_end
+
+# %tile.lotr:wood3:* (tile.lotr:wood3), render=(LOG), opaque=true,cls=lotr.common.block.LOTRBlockWood3
+block:id=%tile.lotr:wood3,data=0,stdrot=true,face0-1=0:lotr/wood3_maple_top,face2-5=0:lotr/wood3_maple_side
+block:id=%tile.lotr:wood3,data=1,stdrot=true,face0-1=0:lotr/wood3_larch_top,face2-5=0:lotr/wood3_larch_side
+block:id=%tile.lotr:wood3,data=2,stdrot=true,face0-1=0:lotr/wood3_datePalm_top,face2-5=0:lotr/wood3_datePalm_side
+block:id=%tile.lotr:wood3,data=3,stdrot=true,face0-1=0:lotr/wood3_maple_top,face2-5=0:lotr/wood3_maple_side
+block:id=%tile.lotr:wood3,data=4,face0-1=0:lotr/wood3_maple_side,face2-3=4000:lotr/wood3_maple_side,face4-5=0:lotr/wood3_maple_top
+block:id=%tile.lotr:wood3,data=5,face0-1=0:lotr/wood3_larch_side,face2-3=4000:lotr/wood3_larch_side,face4-5=0:lotr/wood3_larch_top
+block:id=%tile.lotr:wood3,data=6,face0-1=0:lotr/wood3_datePalm_side,face2-3=4000:lotr/wood3_datePalm_side,face4-5=0:lotr/wood3_datePalm_top
+block:id=%tile.lotr:wood3,data=7,face0-1=0:lotr/wood3_maple_side,face2-3=4000:lotr/wood3_maple_side,face4-5=0:lotr/wood3_maple_top
+block:id=%tile.lotr:wood3,data=8,face0-1=4000:lotr/wood3_maple_side,face2-3=0:lotr/wood3_maple_top,face4-5=4000:lotr/wood3_maple_side
+block:id=%tile.lotr:wood3,data=9,face0-1=4000:lotr/wood3_larch_side,face2-3=0:lotr/wood3_larch_top,face4-5=4000:lotr/wood3_larch_side
+block:id=%tile.lotr:wood3,data=10,face0-1=4000:lotr/wood3_datePalm_side,face2-3=0:lotr/wood3_datePalm_top,face4-5=4000:lotr/wood3_datePalm_side
+block:id=%tile.lotr:wood3,data=11,face0-1=4000:lotr/wood3_maple_side,face2-3=0:lotr/wood3_maple_top,face4-5=4000:lotr/wood3_maple_side
+block:id=%tile.lotr:wood3,data=12,stdrot=true,face0-5=0:lotr/wood3_maple_side
+block:id=%tile.lotr:wood3,data=13,stdrot=true,face0-5=0:lotr/wood3_larch_side
+block:id=%tile.lotr:wood3,data=14,stdrot=true,face0-5=0:lotr/wood3_datePalm_side
+block:id=%tile.lotr:wood3,data=15,stdrot=true,face0-5=0:lotr/wood3_maple_side
+
+# %tile.lotr:leaves3:* (tile.lotr:leaves3), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockLeaves3
+block:id=%tile.lotr:leaves3,data=0,stdrot=true,face0-5=0:lotr/leaves3_maple_fancy
+block:id=%tile.lotr:leaves3,data=1,stdrot=true,face0-5=0:lotr/leaves3_larch_fancy
+block:id=%tile.lotr:leaves3,data=2,stdrot=true,face0-5=0:lotr/leaves3_datePalm_fancy
+block:id=%tile.lotr:leaves3,data=3,data=4,stdrot=true,face0-5=0:lotr/leaves3_maple_fancy
+block:id=%tile.lotr:leaves3,data=5,stdrot=true,face0-5=0:lotr/leaves3_larch_fancy
+block:id=%tile.lotr:leaves3,data=6,stdrot=true,face0-5=0:lotr/leaves3_datePalm_fancy
+block:id=%tile.lotr:leaves3,data=7,data=8,stdrot=true,face0-5=0:lotr/leaves3_maple_fancy
+block:id=%tile.lotr:leaves3,data=9,stdrot=true,face0-5=0:lotr/leaves3_larch_fancy
+block:id=%tile.lotr:leaves3,data=10,stdrot=true,face0-5=0:lotr/leaves3_datePalm_fancy
+block:id=%tile.lotr:leaves3,data=11,data=12,stdrot=true,face0-5=0:lotr/leaves3_maple_fancy
+block:id=%tile.lotr:leaves3,data=13,stdrot=true,face0-5=0:lotr/leaves3_larch_fancy
+block:id=%tile.lotr:leaves3,data=14,stdrot=true,face0-5=0:lotr/leaves3_datePalm_fancy
+block:id=%tile.lotr:leaves3,data=15,stdrot=true,face0-5=0:lotr/leaves3_maple_fancy
+
+# %tile.lotr:sapling3:* (tile.lotr:sapling3), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockSapling3
+block:id=%tile.lotr:sapling3,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_maple
+block:id=%tile.lotr:sapling3,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_larch
+block:id=%tile.lotr:sapling3,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_datePalm
+block:id=%tile.lotr:sapling3,data=3,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_maple
+block:id=%tile.lotr:sapling3,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_larch
+block:id=%tile.lotr:sapling3,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_datePalm
+block:id=%tile.lotr:sapling3,data=7,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_maple
+block:id=%tile.lotr:sapling3,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_larch
+block:id=%tile.lotr:sapling3,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_datePalm
+block:id=%tile.lotr:sapling3,data=11,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_maple
+block:id=%tile.lotr:sapling3,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_larch
+block:id=%tile.lotr:sapling3,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_datePalm
+block:id=%tile.lotr:sapling3,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/sapling3_maple
+
+# %tile.lotr:stairsMaple:* (tile.lotr:stairsMaple), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsMaple,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_maple
+
+# %tile.lotr:stairsLarch:* (tile.lotr:stairsLarch), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsLarch,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_larch
+
+# %tile.lotr:nearHaradCraftingTable:* (tile.lotr:nearHaradCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockNearHaradTable
+block:id=%tile.lotr:nearHaradCraftingTable,data=*,stdrot=true,face0=0:minecraft/sandstone_bottom,face1=0:lotr/nearHaradCraftingTable_top,face2-5=0:lotr/nearHaradCraftingTable_side
+
+# %tile.lotr:highElvenCraftingTable:* (tile.lotr:highElvenCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockHighElvenTable
+block:id=%tile.lotr:highElvenCraftingTable,data=*,stdrot=true,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenCraftingTable_top,face2-5=0:lotr/highElvenCraftingTable_side
+
+# %tile.lotr:highElvenTorch:* (tile.lotr:highElvenTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockElvenTorch
+block:id=%tile.lotr:highElvenTorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/highElvenTorch
+
+# %tile.lotr:highElvenBed:* (tile.lotr:highElvenBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+block:id=%tile.lotr:highElvenBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_feet_top,face2=0:lotr/highElvenBed_feet_end,face3=0:lotr/highElvenBed_feet_top,face4-5=0:lotr/highElvenBed_feet_side
+block:id=%tile.lotr:highElvenBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_feet_top,face2-3=0:lotr/highElvenBed_feet_side,face4=0:lotr/highElvenBed_feet_top,face5=0:lotr/highElvenBed_feet_end
+block:id=%tile.lotr:highElvenBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/highElvenBed_feet_top,face3=0:lotr/highElvenBed_feet_end,face4-5=0:lotr/highElvenBed_feet_side
+block:id=%tile.lotr:highElvenBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_feet_top,face2-3=0:lotr/highElvenBed_feet_side,face4=0:lotr/highElvenBed_feet_end,face5=0:lotr/highElvenBed_feet_top
+block:id=%tile.lotr:highElvenBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_feet_top,face2=0:lotr/highElvenBed_feet_end,face3=0:lotr/highElvenBed_feet_top,face4-5=0:lotr/highElvenBed_feet_side
+block:id=%tile.lotr:highElvenBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_feet_top,face2-3=0:lotr/highElvenBed_feet_side,face4=0:lotr/highElvenBed_feet_top,face5=0:lotr/highElvenBed_feet_end
+block:id=%tile.lotr:highElvenBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/highElvenBed_feet_top,face3=0:lotr/highElvenBed_feet_end,face4-5=0:lotr/highElvenBed_feet_side
+block:id=%tile.lotr:highElvenBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_feet_top,face2-3=0:lotr/highElvenBed_feet_side,face4=0:lotr/highElvenBed_feet_end,face5=0:lotr/highElvenBed_feet_top
+block:id=%tile.lotr:highElvenBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/highElvenBed_head_top,face3=0:lotr/highElvenBed_head_end,face4-5=0:lotr/highElvenBed_head_side
+block:id=%tile.lotr:highElvenBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_head_top,face2-3=0:lotr/highElvenBed_head_side,face4=0:lotr/highElvenBed_head_end,face5=0:lotr/highElvenBed_head_top
+block:id=%tile.lotr:highElvenBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_head_top,face2=0:lotr/highElvenBed_head_end,face3=0:lotr/highElvenBed_head_top,face4-5=0:lotr/highElvenBed_head_side
+block:id=%tile.lotr:highElvenBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_head_top,face2-3=0:lotr/highElvenBed_head_side,face4=0:lotr/highElvenBed_head_top,face5=0:lotr/highElvenBed_head_end
+block:id=%tile.lotr:highElvenBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/highElvenBed_head_top,face3=0:lotr/highElvenBed_head_end,face4-5=0:lotr/highElvenBed_head_side
+block:id=%tile.lotr:highElvenBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_head_top,face2-3=0:lotr/highElvenBed_head_side,face4=0:lotr/highElvenBed_head_end,face5=0:lotr/highElvenBed_head_top
+block:id=%tile.lotr:highElvenBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_head_top,face2=0:lotr/highElvenBed_head_end,face3=0:lotr/highElvenBed_head_top,face4-5=0:lotr/highElvenBed_head_side
+block:id=%tile.lotr:highElvenBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/highElvenBed_head_top,face2-3=0:lotr/highElvenBed_head_side,face4=0:lotr/highElvenBed_head_top,face5=0:lotr/highElvenBed_head_end
+
+# %tile.lotr:pressurePlateRedRock:* (tile.lotr:pressurePlateRedRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPressurePlate
+block:id=%tile.lotr:pressurePlateRedRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_red
+
+# %tile.lotr:buttonRedRock:* (tile.lotr:buttonRedRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
+block:id=%tile.lotr:buttonRedRock,data=0,stdrot=true,face0-5=0:lotr/rock_red
+block:id=%tile.lotr:buttonRedRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_red
+
+# %tile.lotr:stairsRedRockBrick:* (tile.lotr:stairsRedRockBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsRedRockBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_redRock
+
+# %tile.lotr:slabSingle4:* (tile.lotr:slabSingle4), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab4
+block:id=%tile.lotr:slabSingle4,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_nearHarad
+block:id=%tile.lotr:slabSingle4,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnor
+block:id=%tile.lotr:slabSingle4,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnorMossy
+block:id=%tile.lotr:slabSingle4,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnorCracked
+block:id=%tile.lotr:slabSingle4,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_uruk
+block:id=%tile.lotr:slabSingle4,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_dolGuldur
+block:id=%tile.lotr:slabSingle4,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_dolGuldurCracked
+block:id=%tile.lotr:slabSingle4,data=7,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_nearHarad
+block:id=%tile.lotr:slabSingle4,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnor
+block:id=%tile.lotr:slabSingle4,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnorMossy
+block:id=%tile.lotr:slabSingle4,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnorCracked
+block:id=%tile.lotr:slabSingle4,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_uruk
+block:id=%tile.lotr:slabSingle4,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_dolGuldur
+block:id=%tile.lotr:slabSingle4,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_dolGuldurCracked
+block:id=%tile.lotr:slabSingle4,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_nearHarad
+
+# %tile.lotr:slabDouble4:* (tile.lotr:slabDouble4), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockSlab4
+block:id=%tile.lotr:slabDouble4,data=0,stdrot=true,face0-5=0:lotr/brick_nearHarad
+block:id=%tile.lotr:slabDouble4,data=1,stdrot=true,face0-5=0:lotr/brick2_arnor
+block:id=%tile.lotr:slabDouble4,data=2,stdrot=true,face0-5=0:lotr/brick2_arnorMossy
+block:id=%tile.lotr:slabDouble4,data=3,stdrot=true,face0-5=0:lotr/brick2_arnorCracked
+block:id=%tile.lotr:slabDouble4,data=4,stdrot=true,face0-5=0:lotr/brick2_uruk
+block:id=%tile.lotr:slabDouble4,data=5,stdrot=true,face0-5=0:lotr/brick2_dolGuldur
+block:id=%tile.lotr:slabDouble4,data=6,stdrot=true,face0-5=0:lotr/brick2_dolGuldurCracked
+block:id=%tile.lotr:slabDouble4,data=7,data=8,stdrot=true,face0-5=0:lotr/brick_nearHarad
+block:id=%tile.lotr:slabDouble4,data=9,stdrot=true,face0-5=0:lotr/brick2_arnor
+block:id=%tile.lotr:slabDouble4,data=10,stdrot=true,face0-5=0:lotr/brick2_arnorMossy
+block:id=%tile.lotr:slabDouble4,data=11,stdrot=true,face0-5=0:lotr/brick2_arnorCracked
+block:id=%tile.lotr:slabDouble4,data=12,stdrot=true,face0-5=0:lotr/brick2_uruk
+block:id=%tile.lotr:slabDouble4,data=13,stdrot=true,face0-5=0:lotr/brick2_dolGuldur
+block:id=%tile.lotr:slabDouble4,data=14,stdrot=true,face0-5=0:lotr/brick2_dolGuldurCracked
+block:id=%tile.lotr:slabDouble4,data=15,stdrot=true,face0-5=0:lotr/brick_nearHarad
+
+# %tile.lotr:stairsNearHaradBrick:* (tile.lotr:stairsNearHaradBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsNearHaradBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick_nearHarad
+
+# %tile.lotr:stairsDatePalm:* (tile.lotr:stairsDatePalm), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsDatePalm,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/planks_datePalm
+
+# %tile.lotr:date:* (tile.lotr:date), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockDate
+block:id=%tile.lotr:date,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/date_bottom,face1=0:lotr/date_top,face2-5=0:lotr/date_side
+
+# %tile.lotr:blueDwarvenCraftingTable:* (tile.lotr:blueDwarvenCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockBlueDwarvenTable
+block:id=%tile.lotr:blueDwarvenCraftingTable,data=*,stdrot=true,face0=0:lotr/brick_blueRock,face1=0:lotr/blueDwarvenCraftingTable_top,face2-5=0:lotr/blueDwarvenCraftingTable_side
+
+# %tile.lotr:goran:* (tile.lotr:goran), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockGoran
+block:id=%tile.lotr:goran,data=*,stdrot=true,face0-5=0:lotr/goran
+
+# %tile.lotr:thatch:* (tile.lotr:thatch), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockThatch
+block:id=%tile.lotr:thatch,data=*,stdrot=true,face0-5=0:lotr/thatch
+
+# %tile.lotr:slabSingleThatch:* (tile.lotr:slabSingleThatch), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlabThatch
+block:id=%tile.lotr:slabSingleThatch,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/thatch
+
+# %tile.lotr:slabDoubleThatch:* (tile.lotr:slabDoubleThatch), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockSlabThatch
+block:id=%tile.lotr:slabDoubleThatch,data=*,stdrot=true,face0-5=0:lotr/thatch
+
+# %tile.lotr:stairsThatch:* (tile.lotr:stairsThatch), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsThatch,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/thatch
+
+# %tile.lotr:fangornPlant:* (tile.lotr:fangornPlant), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFangornPlant
+block:id=%tile.lotr:fangornPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornPlant_green
+block:id=%tile.lotr:fangornPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornPlant_brown
+block:id=%tile.lotr:fangornPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornPlant_gold
+block:id=%tile.lotr:fangornPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornPlant_yellow
+block:id=%tile.lotr:fangornPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornPlant_red
+block:id=%tile.lotr:fangornPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornPlant_silver
+block:id=%tile.lotr:fangornPlant,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornPlant_green
+
+# %tile.lotr:fangornRiverweed:* (tile.lotr:fangornRiverweed), render=(LILYPAD), opaque=false,cls=lotr.common.block.LOTRBlockFangornRiverweed
+block:id=%tile.lotr:fangornRiverweed,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/fangornRiverweed
+
+# %tile.lotr:morgulTorch:* (tile.lotr:morgulTorch), render=(TORCH), opaque=false,cls=lotr.common.block.LOTRBlockMorgulTorch
+block:id=%tile.lotr:morgulTorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:lotr/morgulTorch
+
+# %tile.lotr:rangerCraftingTable:* (tile.lotr:rangerCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockRangerTable
+block:id=%tile.lotr:rangerCraftingTable,data=*,stdrot=true,face0=0:minecraft/planks_spruce,face1=0:lotr/rangerCraftingTable_top,face2-5=0:lotr/rangerCraftingTable_side
+
+# %tile.lotr:stairsArnorBrick:* (tile.lotr:stairsArnorBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsArnorBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnor
+
+# %tile.lotr:stairsArnorBrickMossy:* (tile.lotr:stairsArnorBrickMossy), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsArnorBrickMossy,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnorMossy
+
+# %tile.lotr:stairsArnorBrickCracked:* (tile.lotr:stairsArnorBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsArnorBrickCracked,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_arnorCracked
+
+# %tile.lotr:stairsUrukBrick:* (tile.lotr:stairsUrukBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsUrukBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_uruk
+
+# %tile.lotr:strawBed:* (tile.lotr:strawBed), render=(BED), opaque=false,cls=lotr.common.block.LOTRBlockBed
+block:id=%tile.lotr:strawBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_feet_top,face2=0:lotr/strawBed_feet_end,face3=0:lotr/strawBed_feet_top,face4-5=0:lotr/strawBed_feet_side
+block:id=%tile.lotr:strawBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_feet_top,face2-3=0:lotr/strawBed_feet_side,face4=0:lotr/strawBed_feet_top,face5=0:lotr/strawBed_feet_end
+block:id=%tile.lotr:strawBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/strawBed_feet_top,face3=0:lotr/strawBed_feet_end,face4-5=0:lotr/strawBed_feet_side
+block:id=%tile.lotr:strawBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_feet_top,face2-3=0:lotr/strawBed_feet_side,face4=0:lotr/strawBed_feet_end,face5=0:lotr/strawBed_feet_top
+block:id=%tile.lotr:strawBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_feet_top,face2=0:lotr/strawBed_feet_end,face3=0:lotr/strawBed_feet_top,face4-5=0:lotr/strawBed_feet_side
+block:id=%tile.lotr:strawBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_feet_top,face2-3=0:lotr/strawBed_feet_side,face4=0:lotr/strawBed_feet_top,face5=0:lotr/strawBed_feet_end
+block:id=%tile.lotr:strawBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/strawBed_feet_top,face3=0:lotr/strawBed_feet_end,face4-5=0:lotr/strawBed_feet_side
+block:id=%tile.lotr:strawBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_feet_top,face2-3=0:lotr/strawBed_feet_side,face4=0:lotr/strawBed_feet_end,face5=0:lotr/strawBed_feet_top
+block:id=%tile.lotr:strawBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/strawBed_head_top,face3=0:lotr/strawBed_head_end,face4-5=0:lotr/strawBed_head_side
+block:id=%tile.lotr:strawBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_head_top,face2-3=0:lotr/strawBed_head_side,face4=0:lotr/strawBed_head_end,face5=0:lotr/strawBed_head_top
+block:id=%tile.lotr:strawBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_head_top,face2=0:lotr/strawBed_head_end,face3=0:lotr/strawBed_head_top,face4-5=0:lotr/strawBed_head_side
+block:id=%tile.lotr:strawBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_head_top,face2-3=0:lotr/strawBed_head_side,face4=0:lotr/strawBed_head_top,face5=0:lotr/strawBed_head_end
+block:id=%tile.lotr:strawBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:lotr/strawBed_head_top,face3=0:lotr/strawBed_head_end,face4-5=0:lotr/strawBed_head_side
+block:id=%tile.lotr:strawBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_head_top,face2-3=0:lotr/strawBed_head_side,face4=0:lotr/strawBed_head_end,face5=0:lotr/strawBed_head_top
+block:id=%tile.lotr:strawBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_head_top,face2=0:lotr/strawBed_head_end,face3=0:lotr/strawBed_head_top,face4-5=0:lotr/strawBed_head_side
+block:id=%tile.lotr:strawBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:lotr/strawBed_head_top,face2-3=0:lotr/strawBed_head_side,face4=0:lotr/strawBed_head_top,face5=0:lotr/strawBed_head_end
+
+# %tile.lotr:stairsDolGuldurBrick:* (tile.lotr:stairsDolGuldurBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsDolGuldurBrick,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_dolGuldur
+
+# %tile.lotr:stairsDolGuldurBrickCracked:* (tile.lotr:stairsDolGuldurBrickCracked), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs
+block:id=%tile.lotr:stairsDolGuldurBrickCracked,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:lotr/brick2_dolGuldurCracked
+
+# %tile.lotr:dolGuldurCraftingTable:* (tile.lotr:dolGuldurCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockDolGuldurTable
+block:id=%tile.lotr:dolGuldurCraftingTable,data=*,stdrot=true,face0=0:lotr/brick2_dolGuldur,face1=0:lotr/dolGuldurCraftingTable_top,face2-5=0:lotr/dolGuldurCraftingTable_side
+
+# %tile.lotr:fallenLeaves:* (tile.lotr:fallenLeaves), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockFallenLeaves
+block:id=%tile.lotr:fallenLeaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.lotr:fallenLeaves,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_spruce
+block:id=%tile.lotr:fallenLeaves,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%tile.lotr:fallenLeaves,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_jungle
+block:id=%tile.lotr:fallenLeaves,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_acacia
+block:id=%tile.lotr:fallenLeaves,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_big_oak
+block:id=%tile.lotr:fallenLeaves,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_acacia
+
+# %tile.lotr:fallenLeavesLOTR:* (tile.lotr:fallenLeavesLOTR), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockFallenLeaves
+block:id=%tile.lotr:fallenLeavesLOTR,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves_shirePine_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves_mallorn_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves_mirkOak_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves_mirkOakRed_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/fruitLeaves_apple_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/fruitLeaves_pear_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/fruitLeaves_cherry_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/fruitLeaves_mango_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves2_lebethron_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves2_beech_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves2_holly_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves2_banana_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves3_maple_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves3_larch_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves3_datePalm_fancy
+block:id=%tile.lotr:fallenLeavesLOTR,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/leaves3_maple_fancy
+
+# %tile.lotr:gundabadCraftingTable:* (tile.lotr:gundabadCraftingTable), render=(STANDARD), opaque=true,cls=lotr.common.block.LOTRBlockGundabadTable
+block:id=%tile.lotr:gundabadCraftingTable,data=*,stdrot=true,face0=0:minecraft/cobblestone,face1=0:lotr/gundabadCraftingTable_top,face2-5=0:lotr/gundabadCraftingTable_side
+
+# %tile.lotr:thatchFloor:* (tile.lotr:thatchFloor), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockThatchFloor
+block:id=%tile.lotr:thatchFloor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/thatchFloor
+
+# %tile.lotr:dalishPastry:* (tile.lotr:dalishPastry), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockPlaceableFood
+block:id=%tile.lotr:dalishPastry,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/dalishPastry_bottom,face1=0:lotr/dalishPastry_top,face2-5=0:lotr/dalishPastry_side
+block:id=%tile.lotr:dalishPastry,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:lotr/dalishPastry_bottom,face1=0:lotr/dalishPastry_top,face2-3=0:lotr/dalishPastry_side,face4=0:lotr/dalishPastry_eaten,face5=0:lotr/dalishPastry_side

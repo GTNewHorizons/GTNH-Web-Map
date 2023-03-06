@@ -1,0 +1,585 @@
+# PFAAGeologica 0.2.23
+version:1.7
+modname:PFAAGeologica
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/pfaageologica/textures/blocks/
+texture:id=Geologica/crudeGround_peat,filename=assets/geologica/textures/blocks/crudeGround_peat.png
+texture:id=Geologica/crudeRock_oilShale,filename=assets/geologica/textures/blocks/crudeRock_oilShale.png
+texture:id=Geologica/crudeSand_oilSand,filename=assets/geologica/textures/blocks/crudeSand_oilSand.png
+texture:id=Geologica/mediumOreRock_alunite,filename=assets/geologica/textures/blocks/mediumOreRock_alunite.png
+texture:id=Geologica/mediumOreRock_dolomite,filename=assets/geologica/textures/blocks/mediumOreRock_dolomite.png
+texture:id=Geologica/mediumOreRock_wollastonite,filename=assets/geologica/textures/blocks/mediumOreRock_wollastonite.png
+texture:id=Geologica/mediumOreRock_zeolite,filename=assets/geologica/textures/blocks/mediumOreRock_zeolite.png
+texture:id=Geologica/mediumStone_limestone,filename=assets/geologica/textures/blocks/mediumStone_limestone.png
+texture:id=Geologica/mediumStone_schist,filename=assets/geologica/textures/blocks/mediumStone_schist.png
+texture:id=Geologica/mediumStone_serpentinite,filename=assets/geologica/textures/blocks/mediumStone_serpentinite.png
+texture:id=Geologica/mediumStone_skarn,filename=assets/geologica/textures/blocks/mediumStone_skarn.png
+texture:id=Geologica/mediumStone_slate,filename=assets/geologica/textures/blocks/mediumStone_slate.png
+texture:id=Geologica/strongOreRock_pumice,filename=assets/geologica/textures/blocks/strongOreRock_pumice.png
+texture:id=Geologica/strongStone_andesite,filename=assets/geologica/textures/blocks/strongStone_andesite.png
+texture:id=Geologica/strongStone_basalt,filename=assets/geologica/textures/blocks/strongStone_basalt.png
+texture:id=Geologica/strongStone_gneiss,filename=assets/geologica/textures/blocks/strongStone_gneiss.png
+texture:id=Geologica/strongStone_granite,filename=assets/geologica/textures/blocks/strongStone_granite.png
+texture:id=Geologica/strongStone_greenschist,filename=assets/geologica/textures/blocks/strongStone_greenschist.png
+texture:id=Geologica/strongStone_marble,filename=assets/geologica/textures/blocks/strongStone_marble.png
+texture:id=Geologica/strongStone_pegmatite,filename=assets/geologica/textures/blocks/strongStone_pegmatite.png
+texture:id=Geologica/strongStone_rhyolite,filename=assets/geologica/textures/blocks/strongStone_rhyolite.png
+texture:id=Geologica/strongStone_sandstone,filename=assets/geologica/textures/blocks/strongStone_sandstone.png
+texture:id=Geologica/veryStrongStone_diorite,filename=assets/geologica/textures/blocks/veryStrongStone_diorite.png
+texture:id=Geologica/veryStrongStone_gabbro,filename=assets/geologica/textures/blocks/veryStrongStone_gabbro.png
+texture:id=Geologica/veryStrongStone_hornfels,filename=assets/geologica/textures/blocks/veryStrongStone_hornfels.png
+texture:id=Geologica/veryStrongStone_peridotite,filename=assets/geologica/textures/blocks/veryStrongStone_peridotite.png
+texture:id=Geologica/veryStrongStone_quartzite,filename=assets/geologica/textures/blocks/veryStrongStone_quartzite.png
+texture:id=Geologica/weakClay_laterite,filename=assets/geologica/textures/blocks/weakClay_laterite.png
+texture:id=Geologica/weakOreClay_bentonite,filename=assets/geologica/textures/blocks/weakOreClay_bentonite.png
+texture:id=Geologica/weakOreClay_fullersEarth,filename=assets/geologica/textures/blocks/weakOreClay_fullersEarth.png
+texture:id=Geologica/weakOreClay_kaolinite,filename=assets/geologica/textures/blocks/weakOreClay_kaolinite.png
+texture:id=Geologica/weakOreClay_vermiculite,filename=assets/geologica/textures/blocks/weakOreClay_vermiculite.png
+texture:id=Geologica/weakOreRock_borax,filename=assets/geologica/textures/blocks/weakOreRock_borax.png
+texture:id=Geologica/weakOreRock_diatomite,filename=assets/geologica/textures/blocks/weakOreRock_diatomite.png
+texture:id=Geologica/weakOreRock_graphite,filename=assets/geologica/textures/blocks/weakOreRock_graphite.png
+texture:id=Geologica/weakOreRock_gypsum,filename=assets/geologica/textures/blocks/weakOreRock_gypsum.png
+texture:id=Geologica/weakOreRock_mirabilite,filename=assets/geologica/textures/blocks/weakOreRock_mirabilite.png
+texture:id=Geologica/weakOreRock_rockSalt,filename=assets/geologica/textures/blocks/weakOreRock_rockSalt.png
+texture:id=Geologica/weakOreRock_trona,filename=assets/geologica/textures/blocks/weakOreRock_trona.png
+texture:id=Geologica/weakOreSand_basalticMineralSand,filename=assets/geologica/textures/blocks/weakOreSand_basalticMineralSand.png
+texture:id=Geologica/weakOreSand_cassiteriteSand,filename=assets/geologica/textures/blocks/weakOreSand_cassiteriteSand.png
+texture:id=Geologica/weakOreSand_garnetSand,filename=assets/geologica/textures/blocks/weakOreSand_garnetSand.png
+texture:id=Geologica/weakOreSand_glauconite,filename=assets/geologica/textures/blocks/weakOreSand_glauconite.png
+texture:id=Geologica/weakOreSand_graniticMineralSand,filename=assets/geologica/textures/blocks/weakOreSand_graniticMineralSand.png
+texture:id=Geologica/weakOreSand_quartzSand,filename=assets/geologica/textures/blocks/weakOreSand_quartzSand.png
+texture:id=Geologica/weakOreSand_volcanicAsh,filename=assets/geologica/textures/blocks/weakOreSand_volcanicAsh.png
+texture:id=Geologica/weakStone_breccia,filename=assets/geologica/textures/blocks/weakStone_breccia.png
+texture:id=Geologica/weakStone_carbonatite,filename=assets/geologica/textures/blocks/weakStone_carbonatite.png
+texture:id=Geologica/weakStone_claystone,filename=assets/geologica/textures/blocks/weakStone_claystone.png
+texture:id=Geologica/weakStone_conglomerate,filename=assets/geologica/textures/blocks/weakStone_conglomerate.png
+texture:id=Geologica/weakStone_mudstone,filename=assets/geologica/textures/blocks/weakStone_mudstone.png
+texture:id=chemica/fluid_flow_opaque,filename=assets/chemica/textures/blocks/fluid_flow_opaque.png
+texture:id=chemica/fluid_still_opaque,filename=assets/chemica/textures/blocks/fluid_still_opaque.png
+texture:id=chemica/gas_flow,filename=assets/chemica/textures/blocks/gas_flow.png
+texture:id=chemica/gas_still,filename=assets/chemica/textures/blocks/gas_still.png
+texture:id=minecraft/clay,filename=assets/minecraft/textures/blocks/clay.png
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %weakStone:* (weakStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%weakStone,data=0,stdrot=true,face0-5=0:Geologica/weakStone_breccia
+block:id=%weakStone,data=1,stdrot=true,face0-5=0:Geologica/weakStone_claystone
+block:id=%weakStone,data=2,stdrot=true,face0-5=0:Geologica/weakStone_carbonatite
+block:id=%weakStone,data=3,stdrot=true,face0-5=0:Geologica/weakStone_conglomerate
+block:id=%weakStone,data=4,stdrot=true,face0-5=0:Geologica/weakStone_mudstone
+
+# %mediumStone:* (mediumStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%mediumStone,data=0,stdrot=true,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumStone,data=1,stdrot=true,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumStone,data=2,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStone,data=3,stdrot=true,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumStone,data=4,stdrot=true,face0-5=0:Geologica/mediumStone_skarn
+
+# %strongStone:* (strongStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%strongStone,data=0,stdrot=true,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongStone,data=1,stdrot=true,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongStone,data=2,stdrot=true,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongStone,data=3,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%strongStone,data=4,stdrot=true,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongStone,data=5,stdrot=true,face0-5=0:Geologica/strongStone_marble
+block:id=%strongStone,data=6,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongStone,data=7,stdrot=true,face0-5=0:Geologica/strongStone_rhyolite
+block:id=%strongStone,data=8,stdrot=true,face0-5=0:Geologica/strongStone_sandstone
+
+# %veryStrongStone:* (veryStrongStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%veryStrongStone,data=0,stdrot=true,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStone,data=1,stdrot=true,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStone,data=2,stdrot=true,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStone,data=3,stdrot=true,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStone,data=4,stdrot=true,face0-5=0:Geologica/veryStrongStone_quartzite
+
+# %mediumCobble:* (mediumCobble), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.BrokenGeoBlock
+block:id=%mediumCobble,data=0,stdrot=true,face0-5=12000:Geologica/mediumStone_limestone
+block:id=%mediumCobble,data=1,stdrot=true,face0-5=12000:Geologica/mediumStone_schist
+block:id=%mediumCobble,data=2,stdrot=true,face0-5=12000:Geologica/mediumStone_serpentinite
+block:id=%mediumCobble,data=3,stdrot=true,face0-5=12000:Geologica/mediumStone_slate
+block:id=%mediumCobble,data=4,stdrot=true,face0-5=12000:Geologica/mediumStone_skarn
+
+# %strongCobble:* (strongCobble), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.BrokenGeoBlock
+block:id=%strongCobble,data=0,stdrot=true,face0-5=12000:Geologica/strongStone_andesite
+block:id=%strongCobble,data=1,stdrot=true,face0-5=12000:Geologica/strongStone_basalt
+block:id=%strongCobble,data=2,stdrot=true,face0-5=12000:Geologica/strongStone_gneiss
+block:id=%strongCobble,data=3,stdrot=true,face0-5=12000:Geologica/strongStone_granite
+block:id=%strongCobble,data=4,stdrot=true,face0-5=12000:Geologica/strongStone_greenschist
+block:id=%strongCobble,data=5,stdrot=true,face0-5=12000:Geologica/strongStone_marble
+block:id=%strongCobble,data=6,stdrot=true,face0-5=12000:Geologica/strongStone_pegmatite
+block:id=%strongCobble,data=7,stdrot=true,face0-5=12000:Geologica/strongStone_rhyolite
+block:id=%strongCobble,data=8,stdrot=true,face0-5=12000:Geologica/strongStone_sandstone
+
+# %veryStrongCobble:* (veryStrongCobble), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.BrokenGeoBlock
+block:id=%veryStrongCobble,data=0,stdrot=true,face0-5=12000:Geologica/veryStrongStone_diorite
+block:id=%veryStrongCobble,data=1,stdrot=true,face0-5=12000:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongCobble,data=2,stdrot=true,face0-5=12000:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongCobble,data=3,stdrot=true,face0-5=12000:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongCobble,data=4,stdrot=true,face0-5=12000:Geologica/veryStrongStone_quartzite
+
+# %mediumStoneBrick:* (mediumStoneBrick), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.BrickGeoBlock
+block:id=%mediumStoneBrick,data=0,stdrot=true,face0-5=12000:Geologica/mediumStone_limestone
+block:id=%mediumStoneBrick,data=1,stdrot=true,face0-5=12000:Geologica/mediumStone_schist
+block:id=%mediumStoneBrick,data=2,stdrot=true,face0-5=12000:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneBrick,data=3,stdrot=true,face0-5=12000:Geologica/mediumStone_slate
+block:id=%mediumStoneBrick,data=4,stdrot=true,face0-5=12000:Geologica/mediumStone_skarn
+
+# %strongStoneBrick:* (strongStoneBrick), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.BrickGeoBlock
+block:id=%strongStoneBrick,data=0,stdrot=true,face0-5=12000:Geologica/strongStone_andesite
+block:id=%strongStoneBrick,data=1,stdrot=true,face0-5=12000:Geologica/strongStone_basalt
+block:id=%strongStoneBrick,data=2,stdrot=true,face0-5=12000:Geologica/strongStone_gneiss
+block:id=%strongStoneBrick,data=3,stdrot=true,face0-5=12000:Geologica/strongStone_granite
+block:id=%strongStoneBrick,data=4,stdrot=true,face0-5=12000:Geologica/strongStone_greenschist
+block:id=%strongStoneBrick,data=5,stdrot=true,face0-5=12000:Geologica/strongStone_marble
+block:id=%strongStoneBrick,data=6,stdrot=true,face0-5=12000:Geologica/strongStone_pegmatite
+block:id=%strongStoneBrick,data=7,stdrot=true,face0-5=12000:Geologica/strongStone_rhyolite
+block:id=%strongStoneBrick,data=8,stdrot=true,face0-5=12000:Geologica/strongStone_sandstone
+
+# %veryStrongStoneBrick:* (veryStrongStoneBrick), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.BrickGeoBlock
+block:id=%veryStrongStoneBrick,data=0,stdrot=true,face0-5=12000:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneBrick,data=1,stdrot=true,face0-5=12000:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneBrick,data=2,stdrot=true,face0-5=12000:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneBrick,data=3,stdrot=true,face0-5=12000:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneBrick,data=4,stdrot=true,face0-5=12000:Geologica/veryStrongStone_quartzite
+
+# %weakRubble:* (weakRubble), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.LooseGeoBlock
+block:id=%weakRubble,data=0,stdrot=true,face0-5=12000:Geologica/weakStone_breccia
+block:id=%weakRubble,data=1,stdrot=true,face0-5=12000:Geologica/weakStone_claystone
+block:id=%weakRubble,data=2,stdrot=true,face0-5=12000:Geologica/weakStone_carbonatite
+block:id=%weakRubble,data=3,stdrot=true,face0-5=12000:Geologica/weakStone_conglomerate
+block:id=%weakRubble,data=4,stdrot=true,face0-5=12000:Geologica/weakStone_mudstone
+
+# %weakOreSand:* (weakOreSand), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.LooseGeoBlock
+block:id=%weakOreSand,data=0,stdrot=true,face0-5=0:Geologica/weakOreSand_basalticMineralSand
+block:id=%weakOreSand,data=1,stdrot=true,face0-5=0:Geologica/weakOreSand_cassiteriteSand
+block:id=%weakOreSand,data=2,stdrot=true,face0-5=0:Geologica/weakOreSand_garnetSand
+block:id=%weakOreSand,data=3,stdrot=true,face0-5=0:Geologica/weakOreSand_graniticMineralSand
+block:id=%weakOreSand,data=4,stdrot=true,face0-5=0:Geologica/weakOreSand_quartzSand
+block:id=%weakOreSand,data=5,stdrot=true,face0-5=0:Geologica/weakOreSand_volcanicAsh
+block:id=%weakOreSand,data=6,stdrot=true,face0-5=0:Geologica/weakOreSand_glauconite
+
+# %weakOreRock:* (weakOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%weakOreRock,data=0,stdrot=true,face0-5=0:Geologica/weakOreRock_borax
+block:id=%weakOreRock,data=1,stdrot=true,face0-5=0:Geologica/strongStone_basalt
+block:id=%weakOreRock,data=2,stdrot=true,face0-5=0:minecraft/stone
+block:id=%weakOreRock,data=3,stdrot=true,face0-5=0:Geologica/weakStone_breccia
+block:id=%weakOreRock,data=4,stdrot=true,face0-5=0:minecraft/stone
+block:id=%weakOreRock,data=5,stdrot=true,face0-5=0:Geologica/weakOreRock_rockSalt
+block:id=%weakOreRock,data=6,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%weakOreRock,data=7,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%weakOreRock,data=8,stdrot=true,face0-5=0:Geologica/weakOreRock_diatomite
+block:id=%weakOreRock,data=9,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%weakOreRock,data=10,stdrot=true,face0-5=0:Geologica/weakOreRock_graphite
+block:id=%weakOreRock,data=11,stdrot=true,face0-5=0:Geologica/weakOreRock_gypsum
+block:id=%weakOreRock,data=12,stdrot=true,face0-5=0:Geologica/weakOreRock_mirabilite
+block:id=%weakOreRock,data=13,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%weakOreRock,data=14,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%weakOreRock,data=15,stdrot=true,face0-5=0:Geologica/weakOreRock_trona
+
+# %mediumOreRock:* (mediumOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%mediumOreRock,data=0,stdrot=true,face0-5=0:minecraft/stone
+block:id=%mediumOreRock,data=1,stdrot=true,face0-5=0:Geologica/weakStone_carbonatite
+block:id=%mediumOreRock,data=2,stdrot=true,face0-5=0:minecraft/stone
+block:id=%mediumOreRock,data=3,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumOreRock,data=4,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%mediumOreRock,data=5,stdrot=true,face0-5=0:minecraft/stone
+block:id=%mediumOreRock,data=6,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumOreRock,data=7,data=8,stdrot=true,face0-5=0:minecraft/stone
+block:id=%mediumOreRock,data=9,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%mediumOreRock,data=10,stdrot=true,face0-5=0:Geologica/mediumOreRock_alunite
+block:id=%mediumOreRock,data=11,stdrot=true,face0-5=0:Geologica/weakOreRock_gypsum
+block:id=%mediumOreRock,data=12,stdrot=true,face0-5=0:Geologica/mediumOreRock_dolomite
+block:id=%mediumOreRock,data=13,stdrot=true,face0-5=0:minecraft/stone
+block:id=%mediumOreRock,data=14,stdrot=true,face0-5=0:Geologica/mediumOreRock_wollastonite
+block:id=%mediumOreRock,data=15,stdrot=true,face0-5=0:Geologica/mediumOreRock_zeolite
+
+# %strongOreRock:* (strongOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%strongOreRock,data=0,stdrot=true,face0-5=0:Geologica/weakStone_mudstone
+block:id=%strongOreRock,data=1,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%strongOreRock,data=2,stdrot=true,face0-5=0:minecraft/stone
+block:id=%strongOreRock,data=3,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%strongOreRock,data=4,stdrot=true,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%strongOreRock,data=5,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%strongOreRock,data=6,data=7,data=8,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongOreRock,data=9,stdrot=true,face0-5=0:minecraft/stone
+block:id=%strongOreRock,data=10,stdrot=true,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%strongOreRock,data=11,stdrot=true,face0-5=0:minecraft/stone
+block:id=%strongOreRock,data=12,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongOreRock,data=13,stdrot=true,face0-5=0:minecraft/obsidian
+block:id=%strongOreRock,data=14,stdrot=true,face0-5=0:Geologica/strongOreRock_pumice
+block:id=%strongOreRock,data=15,stdrot=true,face0-5=0:minecraft/stone
+
+# %weakClay:* (weakClay), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%weakClay,data=0,stdrot=true,face0-5=0:Geologica/weakClay_laterite
+
+# %weakOreClay:* (weakOreClay), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%weakOreClay,data=0,stdrot=true,face0-5=0:Geologica/weakClay_laterite
+block:id=%weakOreClay,data=1,stdrot=true,face0-5=0:Geologica/weakOreClay_bentonite
+block:id=%weakOreClay,data=2,stdrot=true,face0-5=0:Geologica/weakOreClay_fullersEarth
+block:id=%weakOreClay,data=3,stdrot=true,face0-5=0:Geologica/weakOreClay_kaolinite
+block:id=%weakOreClay,data=4,data=5,stdrot=true,face0-5=0:minecraft/clay
+block:id=%weakOreClay,data=6,stdrot=true,face0-5=0:Geologica/weakOreClay_vermiculite
+
+# %weakClayBrick:* (weakClayBrick), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.BrickGeoBlock
+block:id=%weakClayBrick,data=0,stdrot=true,face0-5=12000:Geologica/weakClay_laterite
+
+# %crudeSand:* (crudeSand), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.LooseGeoBlock
+block:id=%crudeSand,data=0,stdrot=true,face0-5=0:Geologica/crudeSand_oilSand
+
+# %crudeRock:* (crudeRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%crudeRock,data=0,stdrot=true,face0-5=0:Geologica/crudeRock_oilShale
+block:id=%crudeRock,data=1,data=2,data=3,stdrot=true,face0-5=0:minecraft/stone
+
+# %crudeGround:* (crudeGround), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%crudeGround,data=0,stdrot=true,face0-5=0:Geologica/crudeGround_peat
+
+# %vanillaOreRock:* (vanillaOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+block:id=%vanillaOreRock,data=0,stdrot=true,face0-5=0:minecraft/stone
+block:id=%vanillaOreRock,data=1,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%vanillaOreRock,data=2,stdrot=true,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%vanillaOreRock,data=3,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%vanillaOreRock,data=4,stdrot=true,face0-5=0:minecraft/stone
+
+# %mediumCobbleWall:* (mediumCobbleWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+block:id=%mediumCobbleWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_limestone
+block:id=%mediumCobbleWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_schist
+block:id=%mediumCobbleWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_serpentinite
+block:id=%mediumCobbleWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_slate
+block:id=%mediumCobbleWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_skarn
+
+# %strongCobbleWall:* (strongCobbleWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+block:id=%strongCobbleWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_andesite
+block:id=%strongCobbleWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_basalt
+block:id=%strongCobbleWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_gneiss
+block:id=%strongCobbleWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_granite
+block:id=%strongCobbleWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_greenschist
+block:id=%strongCobbleWall,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_marble
+block:id=%strongCobbleWall,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_pegmatite
+block:id=%strongCobbleWall,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_rhyolite
+block:id=%strongCobbleWall,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_sandstone
+
+# %veryStrongCobbleWall:* (veryStrongCobbleWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+block:id=%veryStrongCobbleWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongCobbleWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongCobbleWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongCobbleWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongCobbleWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_quartzite
+
+# %mediumStoneBrickWall:* (mediumStoneBrickWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+block:id=%mediumStoneBrickWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_limestone
+block:id=%mediumStoneBrickWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_schist
+block:id=%mediumStoneBrickWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneBrickWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_slate
+block:id=%mediumStoneBrickWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/mediumStone_skarn
+
+# %strongStoneBrickWall:* (strongStoneBrickWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+block:id=%strongStoneBrickWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_andesite
+block:id=%strongStoneBrickWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_basalt
+block:id=%strongStoneBrickWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_gneiss
+block:id=%strongStoneBrickWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_granite
+block:id=%strongStoneBrickWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_greenschist
+block:id=%strongStoneBrickWall,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_marble
+block:id=%strongStoneBrickWall,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_pegmatite
+block:id=%strongStoneBrickWall,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_rhyolite
+block:id=%strongStoneBrickWall,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/strongStone_sandstone
+
+# %veryStrongStoneBrickWall:* (veryStrongStoneBrickWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+block:id=%veryStrongStoneBrickWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneBrickWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneBrickWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneBrickWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneBrickWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:Geologica/veryStrongStone_quartzite
+
+# %mediumCobbleSlab:* (mediumCobbleSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%mediumCobbleSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumCobbleSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumCobbleSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumCobbleSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumCobbleSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_skarn
+block:id=%mediumCobbleSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumCobbleSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumCobbleSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumCobbleSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumCobbleSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_skarn
+
+# %mediumCobbleDoubleSlab:* (mediumCobbleDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%mediumCobbleDoubleSlab,data=0,stdrot=true,face0-5=12000:Geologica/mediumStone_limestone
+block:id=%mediumCobbleDoubleSlab,data=1,stdrot=true,face0-5=12000:Geologica/mediumStone_schist
+block:id=%mediumCobbleDoubleSlab,data=2,stdrot=true,face0-5=12000:Geologica/mediumStone_serpentinite
+block:id=%mediumCobbleDoubleSlab,data=3,stdrot=true,face0-5=12000:Geologica/mediumStone_slate
+block:id=%mediumCobbleDoubleSlab,data=4,stdrot=true,face0-5=12000:Geologica/mediumStone_skarn
+block:id=%mediumCobbleDoubleSlab,data=8,stdrot=true,face0-5=12000:Geologica/mediumStone_limestone
+block:id=%mediumCobbleDoubleSlab,data=9,stdrot=true,face0-5=12000:Geologica/mediumStone_schist
+block:id=%mediumCobbleDoubleSlab,data=10,stdrot=true,face0-5=12000:Geologica/mediumStone_serpentinite
+block:id=%mediumCobbleDoubleSlab,data=11,stdrot=true,face0-5=12000:Geologica/mediumStone_slate
+block:id=%mediumCobbleDoubleSlab,data=12,stdrot=true,face0-5=12000:Geologica/mediumStone_skarn
+
+# %strongCobbleSlab:* (strongCobbleSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%strongCobbleSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongCobbleSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongCobbleSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongCobbleSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+block:id=%strongCobbleSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongCobbleSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+block:id=%strongCobbleSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongCobbleSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_rhyolite
+block:id=%strongCobbleSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongCobbleSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongCobbleSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongCobbleSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+block:id=%strongCobbleSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongCobbleSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+block:id=%strongCobbleSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongCobbleSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_rhyolite
+
+# %veryStrongCobbleSlab:* (veryStrongCobbleSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%veryStrongCobbleSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongCobbleSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongCobbleSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongCobbleSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongCobbleSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_quartzite
+block:id=%veryStrongCobbleSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongCobbleSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongCobbleSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongCobbleSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongCobbleSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_quartzite
+
+# %strongCobbleDoubleSlab:* (strongCobbleDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%strongCobbleDoubleSlab,data=0,stdrot=true,face0-5=12000:Geologica/strongStone_andesite
+block:id=%strongCobbleDoubleSlab,data=1,stdrot=true,face0-5=12000:Geologica/strongStone_basalt
+block:id=%strongCobbleDoubleSlab,data=2,stdrot=true,face0-5=12000:Geologica/strongStone_gneiss
+block:id=%strongCobbleDoubleSlab,data=3,stdrot=true,face0-5=12000:Geologica/strongStone_granite
+block:id=%strongCobbleDoubleSlab,data=4,stdrot=true,face0-5=12000:Geologica/strongStone_greenschist
+block:id=%strongCobbleDoubleSlab,data=5,stdrot=true,face0-5=12000:Geologica/strongStone_marble
+block:id=%strongCobbleDoubleSlab,data=6,stdrot=true,face0-5=12000:Geologica/strongStone_pegmatite
+block:id=%strongCobbleDoubleSlab,data=7,stdrot=true,face0-5=12000:Geologica/strongStone_rhyolite
+block:id=%strongCobbleDoubleSlab,data=8,stdrot=true,face0-5=12000:Geologica/strongStone_andesite
+block:id=%strongCobbleDoubleSlab,data=9,stdrot=true,face0-5=12000:Geologica/strongStone_basalt
+block:id=%strongCobbleDoubleSlab,data=10,stdrot=true,face0-5=12000:Geologica/strongStone_gneiss
+block:id=%strongCobbleDoubleSlab,data=11,stdrot=true,face0-5=12000:Geologica/strongStone_granite
+block:id=%strongCobbleDoubleSlab,data=12,stdrot=true,face0-5=12000:Geologica/strongStone_greenschist
+block:id=%strongCobbleDoubleSlab,data=13,stdrot=true,face0-5=12000:Geologica/strongStone_marble
+block:id=%strongCobbleDoubleSlab,data=14,stdrot=true,face0-5=12000:Geologica/strongStone_pegmatite
+block:id=%strongCobbleDoubleSlab,data=15,stdrot=true,face0-5=12000:Geologica/strongStone_rhyolite
+
+# %veryStrongCobbleDoubleSlab:* (veryStrongCobbleDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%veryStrongCobbleDoubleSlab,data=0,stdrot=true,face0-5=12000:Geologica/veryStrongStone_diorite
+block:id=%veryStrongCobbleDoubleSlab,data=1,stdrot=true,face0-5=12000:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongCobbleDoubleSlab,data=2,stdrot=true,face0-5=12000:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongCobbleDoubleSlab,data=3,stdrot=true,face0-5=12000:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongCobbleDoubleSlab,data=4,stdrot=true,face0-5=12000:Geologica/veryStrongStone_quartzite
+block:id=%veryStrongCobbleDoubleSlab,data=8,stdrot=true,face0-5=12000:Geologica/veryStrongStone_diorite
+block:id=%veryStrongCobbleDoubleSlab,data=9,stdrot=true,face0-5=12000:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongCobbleDoubleSlab,data=10,stdrot=true,face0-5=12000:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongCobbleDoubleSlab,data=11,stdrot=true,face0-5=12000:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongCobbleDoubleSlab,data=12,stdrot=true,face0-5=12000:Geologica/veryStrongStone_quartzite
+
+# %mediumStoneBrickSlab:* (mediumStoneBrickSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%mediumStoneBrickSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumStoneBrickSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumStoneBrickSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneBrickSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumStoneBrickSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_skarn
+block:id=%mediumStoneBrickSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumStoneBrickSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumStoneBrickSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneBrickSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumStoneBrickSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_skarn
+
+# %mediumStoneBrickDoubleSlab:* (mediumStoneBrickDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%mediumStoneBrickDoubleSlab,data=0,stdrot=true,face0-5=12000:Geologica/mediumStone_limestone
+block:id=%mediumStoneBrickDoubleSlab,data=1,stdrot=true,face0-5=12000:Geologica/mediumStone_schist
+block:id=%mediumStoneBrickDoubleSlab,data=2,stdrot=true,face0-5=12000:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneBrickDoubleSlab,data=3,stdrot=true,face0-5=12000:Geologica/mediumStone_slate
+block:id=%mediumStoneBrickDoubleSlab,data=4,stdrot=true,face0-5=12000:Geologica/mediumStone_skarn
+block:id=%mediumStoneBrickDoubleSlab,data=8,stdrot=true,face0-5=12000:Geologica/mediumStone_limestone
+block:id=%mediumStoneBrickDoubleSlab,data=9,stdrot=true,face0-5=12000:Geologica/mediumStone_schist
+block:id=%mediumStoneBrickDoubleSlab,data=10,stdrot=true,face0-5=12000:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneBrickDoubleSlab,data=11,stdrot=true,face0-5=12000:Geologica/mediumStone_slate
+block:id=%mediumStoneBrickDoubleSlab,data=12,stdrot=true,face0-5=12000:Geologica/mediumStone_skarn
+
+# %strongStoneBrickSlab:* (strongStoneBrickSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%strongStoneBrickSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongStoneBrickSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongStoneBrickSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongStoneBrickSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+block:id=%strongStoneBrickSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongStoneBrickSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+block:id=%strongStoneBrickSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongStoneBrickSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_rhyolite
+block:id=%strongStoneBrickSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongStoneBrickSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongStoneBrickSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongStoneBrickSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+block:id=%strongStoneBrickSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongStoneBrickSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+block:id=%strongStoneBrickSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongStoneBrickSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_rhyolite
+
+# %strongStoneBrickDoubleSlab:* (strongStoneBrickDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%strongStoneBrickDoubleSlab,data=0,stdrot=true,face0-5=12000:Geologica/strongStone_andesite
+block:id=%strongStoneBrickDoubleSlab,data=1,stdrot=true,face0-5=12000:Geologica/strongStone_basalt
+block:id=%strongStoneBrickDoubleSlab,data=2,stdrot=true,face0-5=12000:Geologica/strongStone_gneiss
+block:id=%strongStoneBrickDoubleSlab,data=3,stdrot=true,face0-5=12000:Geologica/strongStone_granite
+block:id=%strongStoneBrickDoubleSlab,data=4,stdrot=true,face0-5=12000:Geologica/strongStone_greenschist
+block:id=%strongStoneBrickDoubleSlab,data=5,stdrot=true,face0-5=12000:Geologica/strongStone_marble
+block:id=%strongStoneBrickDoubleSlab,data=6,stdrot=true,face0-5=12000:Geologica/strongStone_pegmatite
+block:id=%strongStoneBrickDoubleSlab,data=7,stdrot=true,face0-5=12000:Geologica/strongStone_rhyolite
+block:id=%strongStoneBrickDoubleSlab,data=8,stdrot=true,face0-5=12000:Geologica/strongStone_andesite
+block:id=%strongStoneBrickDoubleSlab,data=9,stdrot=true,face0-5=12000:Geologica/strongStone_basalt
+block:id=%strongStoneBrickDoubleSlab,data=10,stdrot=true,face0-5=12000:Geologica/strongStone_gneiss
+block:id=%strongStoneBrickDoubleSlab,data=11,stdrot=true,face0-5=12000:Geologica/strongStone_granite
+block:id=%strongStoneBrickDoubleSlab,data=12,stdrot=true,face0-5=12000:Geologica/strongStone_greenschist
+block:id=%strongStoneBrickDoubleSlab,data=13,stdrot=true,face0-5=12000:Geologica/strongStone_marble
+block:id=%strongStoneBrickDoubleSlab,data=14,stdrot=true,face0-5=12000:Geologica/strongStone_pegmatite
+block:id=%strongStoneBrickDoubleSlab,data=15,stdrot=true,face0-5=12000:Geologica/strongStone_rhyolite
+
+# %veryStrongStoneBrickSlab:* (veryStrongStoneBrickSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%veryStrongStoneBrickSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneBrickSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneBrickSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneBrickSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneBrickSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_quartzite
+block:id=%veryStrongStoneBrickSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneBrickSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneBrickSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneBrickSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneBrickSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_quartzite
+
+# %veryStrongStoneBrickDoubleSlab:* (veryStrongStoneBrickDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%veryStrongStoneBrickDoubleSlab,data=0,stdrot=true,face0-5=12000:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneBrickDoubleSlab,data=1,stdrot=true,face0-5=12000:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneBrickDoubleSlab,data=2,stdrot=true,face0-5=12000:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneBrickDoubleSlab,data=3,stdrot=true,face0-5=12000:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneBrickDoubleSlab,data=4,stdrot=true,face0-5=12000:Geologica/veryStrongStone_quartzite
+block:id=%veryStrongStoneBrickDoubleSlab,data=8,stdrot=true,face0-5=12000:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneBrickDoubleSlab,data=9,stdrot=true,face0-5=12000:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneBrickDoubleSlab,data=10,stdrot=true,face0-5=12000:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneBrickDoubleSlab,data=11,stdrot=true,face0-5=12000:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneBrickDoubleSlab,data=12,stdrot=true,face0-5=12000:Geologica/veryStrongStone_quartzite
+
+# %mediumStoneSlab:* (mediumStoneSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%mediumStoneSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumStoneSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumStoneSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumStoneSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_skarn
+block:id=%mediumStoneSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumStoneSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumStoneSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumStoneSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_skarn
+
+# %mediumStoneDoubleSlab:* (mediumStoneDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%mediumStoneDoubleSlab,data=0,stdrot=true,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumStoneDoubleSlab,data=1,stdrot=true,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumStoneDoubleSlab,data=2,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneDoubleSlab,data=3,stdrot=true,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumStoneDoubleSlab,data=4,stdrot=true,face0-5=0:Geologica/mediumStone_skarn
+block:id=%mediumStoneDoubleSlab,data=8,stdrot=true,face0-5=0:Geologica/mediumStone_limestone
+block:id=%mediumStoneDoubleSlab,data=9,stdrot=true,face0-5=0:Geologica/mediumStone_schist
+block:id=%mediumStoneDoubleSlab,data=10,stdrot=true,face0-5=0:Geologica/mediumStone_serpentinite
+block:id=%mediumStoneDoubleSlab,data=11,stdrot=true,face0-5=0:Geologica/mediumStone_slate
+block:id=%mediumStoneDoubleSlab,data=12,stdrot=true,face0-5=0:Geologica/mediumStone_skarn
+
+# %strongStoneSlab:* (strongStoneSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%strongStoneSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongStoneSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongStoneSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongStoneSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+block:id=%strongStoneSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongStoneSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+block:id=%strongStoneSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongStoneSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_rhyolite
+block:id=%strongStoneSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongStoneSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongStoneSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongStoneSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+block:id=%strongStoneSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongStoneSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+block:id=%strongStoneSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongStoneSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_rhyolite
+
+# %strongStoneDoubleSlab:* (strongStoneDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%strongStoneDoubleSlab,data=0,stdrot=true,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongStoneDoubleSlab,data=1,stdrot=true,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongStoneDoubleSlab,data=2,stdrot=true,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongStoneDoubleSlab,data=3,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%strongStoneDoubleSlab,data=4,stdrot=true,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongStoneDoubleSlab,data=5,stdrot=true,face0-5=0:Geologica/strongStone_marble
+block:id=%strongStoneDoubleSlab,data=6,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongStoneDoubleSlab,data=7,stdrot=true,face0-5=0:Geologica/strongStone_rhyolite
+block:id=%strongStoneDoubleSlab,data=8,stdrot=true,face0-5=0:Geologica/strongStone_andesite
+block:id=%strongStoneDoubleSlab,data=9,stdrot=true,face0-5=0:Geologica/strongStone_basalt
+block:id=%strongStoneDoubleSlab,data=10,stdrot=true,face0-5=0:Geologica/strongStone_gneiss
+block:id=%strongStoneDoubleSlab,data=11,stdrot=true,face0-5=0:Geologica/strongStone_granite
+block:id=%strongStoneDoubleSlab,data=12,stdrot=true,face0-5=0:Geologica/strongStone_greenschist
+block:id=%strongStoneDoubleSlab,data=13,stdrot=true,face0-5=0:Geologica/strongStone_marble
+block:id=%strongStoneDoubleSlab,data=14,stdrot=true,face0-5=0:Geologica/strongStone_pegmatite
+block:id=%strongStoneDoubleSlab,data=15,stdrot=true,face0-5=0:Geologica/strongStone_rhyolite
+
+# %veryStrongStoneSlab:* (veryStrongStoneSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%veryStrongStoneSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_quartzite
+block:id=%veryStrongStoneSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/veryStrongStone_quartzite
+
+# %veryStrongStoneDoubleSlab:* (veryStrongStoneDoubleSlab), render=(STANDARD), opaque=true,cls=org.pfaa.geologica.block.SlabBlock
+block:id=%veryStrongStoneDoubleSlab,data=0,stdrot=true,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneDoubleSlab,data=1,stdrot=true,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneDoubleSlab,data=2,stdrot=true,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneDoubleSlab,data=3,stdrot=true,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneDoubleSlab,data=4,stdrot=true,face0-5=0:Geologica/veryStrongStone_quartzite
+block:id=%veryStrongStoneDoubleSlab,data=8,stdrot=true,face0-5=0:Geologica/veryStrongStone_diorite
+block:id=%veryStrongStoneDoubleSlab,data=9,stdrot=true,face0-5=0:Geologica/veryStrongStone_gabbro
+block:id=%veryStrongStoneDoubleSlab,data=10,stdrot=true,face0-5=0:Geologica/veryStrongStone_hornfels
+block:id=%veryStrongStoneDoubleSlab,data=11,stdrot=true,face0-5=0:Geologica/veryStrongStone_peridotite
+block:id=%veryStrongStoneDoubleSlab,data=12,stdrot=true,face0-5=0:Geologica/veryStrongStone_quartzite
+
+# %mediumCobbleStairs.limestone:* (mediumCobbleStairs.limestone), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+block:id=%mediumCobbleStairs.limestone,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+
+# %strongCobbleStairs.granite:* (strongCobbleStairs.granite), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+block:id=%strongCobbleStairs.granite,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+
+# %strongCobbleStairs.marble:* (strongCobbleStairs.marble), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+block:id=%strongCobbleStairs.marble,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+
+# %mediumStoneBrickStairs.limestone:* (mediumStoneBrickStairs.limestone), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+block:id=%mediumStoneBrickStairs.limestone,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/mediumStone_limestone
+
+# %strongStoneBrickStairs.granite:* (strongStoneBrickStairs.granite), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+block:id=%strongStoneBrickStairs.granite,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_granite
+
+# %strongStoneBrickStairs.marble:* (strongStoneBrickStairs.marble), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+block:id=%strongStoneBrickStairs.marble,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Geologica/strongStone_marble
+
+# %lightOil:* (lightOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+block:id=%lightOil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chemica/fluid_still_opaque,face2-5=12000:chemica/fluid_flow_opaque
+
+# %mediumOil:* (mediumOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+block:id=%mediumOil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chemica/fluid_still_opaque,face2-5=12000:chemica/fluid_flow_opaque
+
+# %heavyOil:* (heavyOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+block:id=%heavyOil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chemica/fluid_still_opaque,face2-5=12000:chemica/fluid_flow_opaque
+
+# %extraHeavyOil:* (extraHeavyOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+block:id=%extraHeavyOil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chemica/fluid_still_opaque,face2-5=12000:chemica/fluid_flow_opaque
+
+# %naturalGas:* (naturalGas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+block:id=%naturalGas,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chemica/gas_still,face2-5=12000:chemica/gas_flow

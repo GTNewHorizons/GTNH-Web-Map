@@ -1,0 +1,544 @@
+# PneumaticCraft 1.12.7-150
+version:1.7
+modname:PneumaticCraft
+
+
+cfgfile:config/PneumaticCraft.cfg
+
+
+texturepath:assets/pneumaticcraft/textures/blocks/
+texture:id=minecraft/water_flow,filename=assets/minecraft/textures/blocks/water_flow.png
+texture:id=minecraft/water_still,filename=assets/minecraft/textures/blocks/water_still.png
+texture:id=pneumaticcraft/AerialInterfaceBottom,filename=assets/pneumaticcraft/textures/blocks/AerialInterfaceBottom.png
+texture:id=pneumaticcraft/AerialInterfaceSide,filename=assets/pneumaticcraft/textures/blocks/AerialInterfaceSide.png
+texture:id=pneumaticcraft/AerialInterfaceTop,filename=assets/pneumaticcraft/textures/blocks/AerialInterfaceTop.png
+texture:id=pneumaticcraft/AphorismTile,filename=assets/pneumaticcraft/textures/blocks/AphorismTile.png
+texture:id=pneumaticcraft/BlockPressureTube,filename=assets/pneumaticcraft/textures/blocks/BlockPressureTube.png
+texture:id=pneumaticcraft/CompressedIronBlock,filename=assets/pneumaticcraft/textures/blocks/CompressedIronBlock.png
+texture:id=pneumaticcraft/ElevatorCaller,filename=assets/pneumaticcraft/textures/blocks/ElevatorCaller.png
+texture:id=pneumaticcraft/diesel_flow,filename=assets/pneumaticcraft/textures/blocks/diesel_flow.png
+texture:id=pneumaticcraft/diesel_still,filename=assets/pneumaticcraft/textures/blocks/diesel_still.png
+texture:id=pneumaticcraft/fuel_flow,filename=assets/pneumaticcraft/textures/blocks/fuel_flow.png
+texture:id=pneumaticcraft/fuel_still,filename=assets/pneumaticcraft/textures/blocks/fuel_still.png
+texture:id=pneumaticcraft/kerosene_flow,filename=assets/pneumaticcraft/textures/blocks/kerosene_flow.png
+texture:id=pneumaticcraft/kerosene_still,filename=assets/pneumaticcraft/textures/blocks/kerosene_still.png
+texture:id=pneumaticcraft/lpg_flow,filename=assets/pneumaticcraft/textures/blocks/lpg_flow.png
+texture:id=pneumaticcraft/lpg_still,filename=assets/pneumaticcraft/textures/blocks/lpg_still.png
+texture:id=pneumaticcraft/lubricant_flow,filename=assets/pneumaticcraft/textures/blocks/lubricant_flow.png
+texture:id=pneumaticcraft/lubricant_still,filename=assets/pneumaticcraft/textures/blocks/lubricant_still.png
+texture:id=pneumaticcraft/oil_flow,filename=assets/pneumaticcraft/textures/blocks/oil_flow.png
+texture:id=pneumaticcraft/oil_still,filename=assets/pneumaticcraft/textures/blocks/oil_still.png
+texture:id=pneumaticcraft/plants/burstPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant0.png
+texture:id=pneumaticcraft/plants/burstPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant1.png
+texture:id=pneumaticcraft/plants/burstPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant2.png
+texture:id=pneumaticcraft/plants/burstPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant3.png
+texture:id=pneumaticcraft/plants/burstPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant4.png
+texture:id=pneumaticcraft/plants/burstPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant5.png
+texture:id=pneumaticcraft/plants/burstPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant6.png
+texture:id=pneumaticcraft/plants/chopperPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/chopperPlant0.png
+texture:id=pneumaticcraft/plants/chopperPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/chopperPlant1.png
+texture:id=pneumaticcraft/plants/chopperPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/chopperPlant2.png
+texture:id=pneumaticcraft/plants/chopperPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/chopperPlant3.png
+texture:id=pneumaticcraft/plants/chopperPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/chopperPlant4.png
+texture:id=pneumaticcraft/plants/chopperPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/chopperPlant5.png
+texture:id=pneumaticcraft/plants/chopperPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/chopperPlant6.png
+texture:id=pneumaticcraft/plants/creeperPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/creeperPlant0.png
+texture:id=pneumaticcraft/plants/creeperPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/creeperPlant1.png
+texture:id=pneumaticcraft/plants/creeperPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/creeperPlant2.png
+texture:id=pneumaticcraft/plants/creeperPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/creeperPlant3.png
+texture:id=pneumaticcraft/plants/creeperPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/creeperPlant4.png
+texture:id=pneumaticcraft/plants/creeperPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/creeperPlant5.png
+texture:id=pneumaticcraft/plants/creeperPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/creeperPlant6.png
+texture:id=pneumaticcraft/plants/enderPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/enderPlant0.png
+texture:id=pneumaticcraft/plants/enderPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/enderPlant1.png
+texture:id=pneumaticcraft/plants/enderPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/enderPlant2.png
+texture:id=pneumaticcraft/plants/enderPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/enderPlant3.png
+texture:id=pneumaticcraft/plants/enderPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/enderPlant4.png
+texture:id=pneumaticcraft/plants/enderPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/enderPlant5.png
+texture:id=pneumaticcraft/plants/enderPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/enderPlant6.png
+texture:id=pneumaticcraft/plants/fireFlower0,filename=assets/pneumaticcraft/textures/blocks/plants/fireFlower0.png
+texture:id=pneumaticcraft/plants/fireFlower1,filename=assets/pneumaticcraft/textures/blocks/plants/fireFlower1.png
+texture:id=pneumaticcraft/plants/fireFlower2,filename=assets/pneumaticcraft/textures/blocks/plants/fireFlower2.png
+texture:id=pneumaticcraft/plants/fireFlower3,filename=assets/pneumaticcraft/textures/blocks/plants/fireFlower3.png
+texture:id=pneumaticcraft/plants/fireFlower4,filename=assets/pneumaticcraft/textures/blocks/plants/fireFlower4.png
+texture:id=pneumaticcraft/plants/fireFlower5,filename=assets/pneumaticcraft/textures/blocks/plants/fireFlower5.png
+texture:id=pneumaticcraft/plants/fireFlower6,filename=assets/pneumaticcraft/textures/blocks/plants/fireFlower6.png
+texture:id=pneumaticcraft/plants/flyingFlower0,filename=assets/pneumaticcraft/textures/blocks/plants/flyingFlower0.png
+texture:id=pneumaticcraft/plants/flyingFlower1,filename=assets/pneumaticcraft/textures/blocks/plants/flyingFlower1.png
+texture:id=pneumaticcraft/plants/flyingFlower2,filename=assets/pneumaticcraft/textures/blocks/plants/flyingFlower2.png
+texture:id=pneumaticcraft/plants/flyingFlower3,filename=assets/pneumaticcraft/textures/blocks/plants/flyingFlower3.png
+texture:id=pneumaticcraft/plants/flyingFlower4,filename=assets/pneumaticcraft/textures/blocks/plants/flyingFlower4.png
+texture:id=pneumaticcraft/plants/flyingFlower5,filename=assets/pneumaticcraft/textures/blocks/plants/flyingFlower5.png
+texture:id=pneumaticcraft/plants/flyingFlower6,filename=assets/pneumaticcraft/textures/blocks/plants/flyingFlower6.png
+texture:id=pneumaticcraft/plants/heliumPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/heliumPlant0.png
+texture:id=pneumaticcraft/plants/heliumPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/heliumPlant1.png
+texture:id=pneumaticcraft/plants/heliumPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/heliumPlant2.png
+texture:id=pneumaticcraft/plants/heliumPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/heliumPlant3.png
+texture:id=pneumaticcraft/plants/heliumPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/heliumPlant4.png
+texture:id=pneumaticcraft/plants/heliumPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/heliumPlant5.png
+texture:id=pneumaticcraft/plants/heliumPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/heliumPlant6.png
+texture:id=pneumaticcraft/plants/lightningPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/lightningPlant0.png
+texture:id=pneumaticcraft/plants/lightningPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/lightningPlant1.png
+texture:id=pneumaticcraft/plants/lightningPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/lightningPlant2.png
+texture:id=pneumaticcraft/plants/lightningPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/lightningPlant3.png
+texture:id=pneumaticcraft/plants/lightningPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/lightningPlant4.png
+texture:id=pneumaticcraft/plants/lightningPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/lightningPlant5.png
+texture:id=pneumaticcraft/plants/lightningPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/lightningPlant6.png
+texture:id=pneumaticcraft/plants/potionPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/potionPlant0.png
+texture:id=pneumaticcraft/plants/potionPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/potionPlant1.png
+texture:id=pneumaticcraft/plants/potionPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/potionPlant2.png
+texture:id=pneumaticcraft/plants/potionPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/potionPlant3.png
+texture:id=pneumaticcraft/plants/potionPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/potionPlant4.png
+texture:id=pneumaticcraft/plants/potionPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/potionPlant5.png
+texture:id=pneumaticcraft/plants/potionPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/potionPlant6.png
+texture:id=pneumaticcraft/plants/propulsionPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/propulsionPlant0.png
+texture:id=pneumaticcraft/plants/propulsionPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/propulsionPlant1.png
+texture:id=pneumaticcraft/plants/propulsionPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/propulsionPlant2.png
+texture:id=pneumaticcraft/plants/propulsionPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/propulsionPlant3.png
+texture:id=pneumaticcraft/plants/propulsionPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/propulsionPlant4.png
+texture:id=pneumaticcraft/plants/propulsionPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/propulsionPlant5.png
+texture:id=pneumaticcraft/plants/propulsionPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/propulsionPlant6.png
+texture:id=pneumaticcraft/plants/rainPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/rainPlant0.png
+texture:id=pneumaticcraft/plants/rainPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/rainPlant1.png
+texture:id=pneumaticcraft/plants/rainPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/rainPlant2.png
+texture:id=pneumaticcraft/plants/rainPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/rainPlant3.png
+texture:id=pneumaticcraft/plants/rainPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/rainPlant4.png
+texture:id=pneumaticcraft/plants/rainPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/rainPlant5.png
+texture:id=pneumaticcraft/plants/rainPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/rainPlant6.png
+texture:id=pneumaticcraft/plants/repulsionPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/repulsionPlant0.png
+texture:id=pneumaticcraft/plants/repulsionPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/repulsionPlant1.png
+texture:id=pneumaticcraft/plants/repulsionPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/repulsionPlant2.png
+texture:id=pneumaticcraft/plants/repulsionPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/repulsionPlant3.png
+texture:id=pneumaticcraft/plants/repulsionPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/repulsionPlant4.png
+texture:id=pneumaticcraft/plants/repulsionPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/repulsionPlant5.png
+texture:id=pneumaticcraft/plants/repulsionPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/repulsionPlant6.png
+texture:id=pneumaticcraft/plants/slimePlant0,filename=assets/pneumaticcraft/textures/blocks/plants/slimePlant0.png
+texture:id=pneumaticcraft/plants/slimePlant1,filename=assets/pneumaticcraft/textures/blocks/plants/slimePlant1.png
+texture:id=pneumaticcraft/plants/slimePlant2,filename=assets/pneumaticcraft/textures/blocks/plants/slimePlant2.png
+texture:id=pneumaticcraft/plants/slimePlant3,filename=assets/pneumaticcraft/textures/blocks/plants/slimePlant3.png
+texture:id=pneumaticcraft/plants/slimePlant4,filename=assets/pneumaticcraft/textures/blocks/plants/slimePlant4.png
+texture:id=pneumaticcraft/plants/slimePlant5,filename=assets/pneumaticcraft/textures/blocks/plants/slimePlant5.png
+texture:id=pneumaticcraft/plants/slimePlant6,filename=assets/pneumaticcraft/textures/blocks/plants/slimePlant6.png
+texture:id=pneumaticcraft/plants/squidPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant0.png
+texture:id=pneumaticcraft/plants/squidPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant1.png
+texture:id=pneumaticcraft/plants/squidPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant2.png
+texture:id=pneumaticcraft/plants/squidPlant3,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant3.png
+texture:id=pneumaticcraft/plants/squidPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant4.png
+texture:id=pneumaticcraft/plants/squidPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant5.png
+texture:id=pneumaticcraft/plants/squidPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant6.png
+texture:id=pneumaticcraft/plastic_flow,filename=assets/pneumaticcraft/textures/blocks/plastic_flow.png
+texture:id=pneumaticcraft/plastic_still,filename=assets/pneumaticcraft/textures/blocks/plastic_still.png
+texture:id=pneumaticcraft/pressureChamber/pressureChamberWall,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/pressureChamberWall.png
+texture:id=pneumaticcraft/pressureChamber/valve,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/valve.png
+texture:id=pneumaticcraft/pressureChamber/valve_side,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/valve_side.png
+texture:id=pneumaticcraft/pressureChamber/windows/window_1,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/windows/window_1.png
+texture:id=pneumaticcraft/programmableController,filename=assets/pneumaticcraft/textures/blocks/programmableController.png
+
+
+
+# %plasticBlock:* (plasticBlock), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%plasticBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/plastic_still,face2-5=12000:pneumaticcraft/plastic_flow
+
+# %etchingAcid:* (etchingAcid), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidEtchingAcid
+block:id=%etchingAcid,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %lpg:* (lpg), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%lpg,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/lpg_still,face2-5=12000:pneumaticcraft/lpg_flow
+
+# %fuel:* (fuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%fuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/fuel_still,face2-5=12000:pneumaticcraft/fuel_flow
+
+# %kerosene:* (kerosene), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%kerosene,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/kerosene_still,face2-5=12000:pneumaticcraft/kerosene_flow
+
+# %diesel:* (diesel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%diesel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/diesel_still,face2-5=12000:pneumaticcraft/diesel_flow
+
+# %oil:* (oil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%oil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/oil_still,face2-5=12000:pneumaticcraft/oil_flow
+
+# %lubricant:* (lubricant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%lubricant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/lubricant_still,face2-5=12000:pneumaticcraft/lubricant_flow
+
+# %pressureTube:* (pressureTube), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPressureTube
+block:id=%pressureTube,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %airCompressor:* (airCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAirCompressor
+block:id=%airCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %advancedAirCompressor:* (advancedAirCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAdvancedAirCompressor
+block:id=%advancedAirCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %airCannon:* (airCannon), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAirCannon
+block:id=%airCannon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %pressureChamberWall:* (pressureChamberWall), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockPressureChamberWall
+block:id=%pressureChamberWall,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,face0-5=0:pneumaticcraft/pressureChamber/pressureChamberWall
+block:id=%pressureChamberWall,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/pressureChamber/windows/window_1
+
+# %pressureChamberValve:* (pressureChamberValve), render=(STANDARD), opaque=true,cls=pneumaticCraft.common.block.BlockPressureChamberValve
+block:id=%pressureChamberValve,data=*,stdrot=true,face0-1=0:pneumaticcraft/pressureChamber/valve_side,face2-3=0:pneumaticcraft/pressureChamber/valve,face4-5=0:pneumaticcraft/pressureChamber/valve_side
+
+# %slimePlant:* (slimePlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockSlimePlant
+block:id=%slimePlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant0
+block:id=%slimePlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant1
+block:id=%slimePlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant2
+block:id=%slimePlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant3
+block:id=%slimePlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant4
+block:id=%slimePlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant5
+block:id=%slimePlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant6
+block:id=%slimePlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant0
+block:id=%slimePlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant1
+block:id=%slimePlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant2
+block:id=%slimePlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant3
+block:id=%slimePlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant4
+block:id=%slimePlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant5
+block:id=%slimePlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant6
+block:id=%slimePlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/slimePlant1
+
+# %creeperPlant:* (creeperPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockCreeperPlant
+block:id=%creeperPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant0
+block:id=%creeperPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant1
+block:id=%creeperPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant2
+block:id=%creeperPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant3
+block:id=%creeperPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant4
+block:id=%creeperPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant5
+block:id=%creeperPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant6
+block:id=%creeperPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant0
+block:id=%creeperPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant1
+block:id=%creeperPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant2
+block:id=%creeperPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant3
+block:id=%creeperPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant4
+block:id=%creeperPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant5
+block:id=%creeperPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant6
+block:id=%creeperPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/creeperPlant1
+
+# %squidPlant:* (squidPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockSquidPlant
+block:id=%squidPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant0
+block:id=%squidPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant1
+block:id=%squidPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant2
+block:id=%squidPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant3
+block:id=%squidPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant4
+block:id=%squidPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant5
+block:id=%squidPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant6
+block:id=%squidPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant0
+block:id=%squidPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant1
+block:id=%squidPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant2
+block:id=%squidPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant3
+block:id=%squidPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant4
+block:id=%squidPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant5
+block:id=%squidPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant6
+block:id=%squidPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/squidPlant1
+
+# %fireFlower:* (fireFlower), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockFireFlower
+block:id=%fireFlower,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower0
+block:id=%fireFlower,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower1
+block:id=%fireFlower,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower2
+block:id=%fireFlower,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower3
+block:id=%fireFlower,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower4
+block:id=%fireFlower,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower5
+block:id=%fireFlower,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower6
+block:id=%fireFlower,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower0
+block:id=%fireFlower,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower1
+block:id=%fireFlower,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower2
+block:id=%fireFlower,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower3
+block:id=%fireFlower,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower4
+block:id=%fireFlower,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower5
+block:id=%fireFlower,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower6
+block:id=%fireFlower,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/fireFlower1
+
+# %rainPlant:* (rainPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockRainPlant
+block:id=%rainPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant0
+block:id=%rainPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant1
+block:id=%rainPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant2
+block:id=%rainPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant3
+block:id=%rainPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant4
+block:id=%rainPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant5
+block:id=%rainPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant6
+block:id=%rainPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant0
+block:id=%rainPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant1
+block:id=%rainPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant2
+block:id=%rainPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant3
+block:id=%rainPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant4
+block:id=%rainPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant5
+block:id=%rainPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant6
+block:id=%rainPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/rainPlant1
+
+# %enderPlant:* (enderPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockEnderPlant
+block:id=%enderPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant0
+block:id=%enderPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant1
+block:id=%enderPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant2
+block:id=%enderPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant3
+block:id=%enderPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant4
+block:id=%enderPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant5
+block:id=%enderPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant6
+block:id=%enderPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant0
+block:id=%enderPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant1
+block:id=%enderPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant2
+block:id=%enderPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant3
+block:id=%enderPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant4
+block:id=%enderPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant5
+block:id=%enderPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant6
+block:id=%enderPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/enderPlant1
+
+# %lightningPlant:* (lightningPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockLightningPlant
+block:id=%lightningPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant0
+block:id=%lightningPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant1
+block:id=%lightningPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant2
+block:id=%lightningPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant3
+block:id=%lightningPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant4
+block:id=%lightningPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant5
+block:id=%lightningPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant6
+block:id=%lightningPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant0
+block:id=%lightningPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant1
+block:id=%lightningPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant2
+block:id=%lightningPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant3
+block:id=%lightningPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant4
+block:id=%lightningPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant5
+block:id=%lightningPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant6
+block:id=%lightningPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/lightningPlant1
+
+# %burstPlant:* (burstPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockBurstPlant
+block:id=%burstPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant0
+block:id=%burstPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant1
+block:id=%burstPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant2
+block:id=%burstPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant3
+block:id=%burstPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant4
+block:id=%burstPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant5
+block:id=%burstPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant6
+block:id=%burstPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant0
+block:id=%burstPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant1
+block:id=%burstPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant2
+block:id=%burstPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant3
+block:id=%burstPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant4
+block:id=%burstPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant5
+block:id=%burstPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant6
+block:id=%burstPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/burstPlant1
+
+# %potionPlant:* (potionPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockPotionPlant
+block:id=%potionPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant0
+block:id=%potionPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant1
+block:id=%potionPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant2
+block:id=%potionPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant3
+block:id=%potionPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant4
+block:id=%potionPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant5
+block:id=%potionPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant6
+block:id=%potionPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant0
+block:id=%potionPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant1
+block:id=%potionPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant2
+block:id=%potionPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant3
+block:id=%potionPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant4
+block:id=%potionPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant5
+block:id=%potionPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant6
+block:id=%potionPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/potionPlant1
+
+# %heliumPlant:* (heliumPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockHeliumPlant
+block:id=%heliumPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant0
+block:id=%heliumPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant1
+block:id=%heliumPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant2
+block:id=%heliumPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant3
+block:id=%heliumPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant4
+block:id=%heliumPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant5
+block:id=%heliumPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant6
+block:id=%heliumPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant0
+block:id=%heliumPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant1
+block:id=%heliumPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant2
+block:id=%heliumPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant3
+block:id=%heliumPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant4
+block:id=%heliumPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant5
+block:id=%heliumPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant6
+block:id=%heliumPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/heliumPlant1
+
+# %propulsionPlant:* (propulsionPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockPropulsionPlant
+block:id=%propulsionPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant0
+block:id=%propulsionPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant1
+block:id=%propulsionPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant2
+block:id=%propulsionPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant3
+block:id=%propulsionPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant4
+block:id=%propulsionPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant5
+block:id=%propulsionPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant6
+block:id=%propulsionPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant0
+block:id=%propulsionPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant1
+block:id=%propulsionPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant2
+block:id=%propulsionPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant3
+block:id=%propulsionPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant4
+block:id=%propulsionPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant5
+block:id=%propulsionPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant6
+block:id=%propulsionPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/propulsionPlant1
+
+# %repulsionPlant:* (repulsionPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockRepulsionPlant
+block:id=%repulsionPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant0
+block:id=%repulsionPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant1
+block:id=%repulsionPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant2
+block:id=%repulsionPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant3
+block:id=%repulsionPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant4
+block:id=%repulsionPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant5
+block:id=%repulsionPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant6
+block:id=%repulsionPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant0
+block:id=%repulsionPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant1
+block:id=%repulsionPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant2
+block:id=%repulsionPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant3
+block:id=%repulsionPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant4
+block:id=%repulsionPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant5
+block:id=%repulsionPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant6
+block:id=%repulsionPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/repulsionPlant1
+
+# %flyingFlower:* (flyingFlower), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockFlyingFlower
+block:id=%flyingFlower,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower0
+block:id=%flyingFlower,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower1
+block:id=%flyingFlower,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower2
+block:id=%flyingFlower,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower3
+block:id=%flyingFlower,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower4
+block:id=%flyingFlower,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower5
+block:id=%flyingFlower,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower6
+block:id=%flyingFlower,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower0
+block:id=%flyingFlower,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower1
+block:id=%flyingFlower,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower2
+block:id=%flyingFlower,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower3
+block:id=%flyingFlower,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower4
+block:id=%flyingFlower,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower5
+block:id=%flyingFlower,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower6
+block:id=%flyingFlower,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/flyingFlower1
+
+# %chopperPlant:* (chopperPlant), render=(CROSSEDSQUARES), opaque=false,cls=pneumaticCraft.common.block.pneumaticPlants.BlockChopperPlant
+block:id=%chopperPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant0
+block:id=%chopperPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant1
+block:id=%chopperPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant2
+block:id=%chopperPlant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant3
+block:id=%chopperPlant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant4
+block:id=%chopperPlant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant5
+block:id=%chopperPlant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant6
+block:id=%chopperPlant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant0
+block:id=%chopperPlant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant1
+block:id=%chopperPlant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant2
+block:id=%chopperPlant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant3
+block:id=%chopperPlant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant4
+block:id=%chopperPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant5
+block:id=%chopperPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant6
+block:id=%chopperPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant1
+
+# %chargingStation:* (chargingStation), render=pneumaticCraft.client.render.block.RenderChargingStationPad(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockChargingStation
+block:id=%chargingStation,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %elevatorBase:* (elevatorBase), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockElevatorBase
+block:id=%elevatorBase,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %elevatorFrame:* (elevatorFrame), render=pneumaticCraft.client.render.block.RenderElevatorFrame(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockElevatorFrame
+block:id=%elevatorFrame,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %pressureChamberInterface:* (pressureChamberInterface), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPressureChamberInterface
+block:id=%pressureChamberInterface,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,face0-5=0:pneumaticcraft/pressureChamber/pressureChamberWall
+block:id=%pressureChamberInterface,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/pressureChamber/windows/window_1
+
+# %vacuumPump:* (vacuumPump), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockVacuumPump
+block:id=%vacuumPump,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %pneumaticDoorBase:* (pneumaticDoorBase), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockPneumaticDoorBase
+block:id=%pneumaticDoorBase,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %pneumaticDoor:* (pneumaticDoor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPneumaticDoor
+block:id=%pneumaticDoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %assemblyIOUnit:* (assemblyIOUnit), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyIOUnit
+block:id=%assemblyIOUnit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %assemblyPlatform:* (assemblyPlatform), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyPlatform
+block:id=%assemblyPlatform,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %assemblyDrill:* (assemblyDrill), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyDrill
+block:id=%assemblyDrill,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %assemblyLaser:* (assemblyLaser), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyLaser
+block:id=%assemblyLaser,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %assemblyController:* (assemblyController), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAssemblyController
+block:id=%assemblyController,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %advancedPressureTube:* (advancedPressureTube), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPressureTube
+block:id=%advancedPressureTube,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %compressedIronBlock:* (compressedIronBlock), render=(STANDARD), opaque=true,cls=pneumaticCraft.common.block.BlockCompressedIron
+block:id=%compressedIronBlock,data=*,stdrot=true,face0-5=0:pneumaticcraft/CompressedIronBlock
+
+# %uvLightBox:* (uvLightBox), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockUVLightBox
+block:id=%uvLightBox,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %securityStation:* (securityStation), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockSecurityStation
+block:id=%securityStation,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %universalSensor:* (universalSensor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockUniversalSensor
+block:id=%universalSensor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %aerialInterface:* (aerialInterface), render=(STANDARD), opaque=true,cls=pneumaticCraft.common.block.BlockAerialInterface
+block:id=%aerialInterface,data=*,stdrot=true,face0=0:pneumaticcraft/AerialInterfaceBottom,face1=0:pneumaticcraft/AerialInterfaceTop,face2-5=0:pneumaticcraft/AerialInterfaceSide
+
+# %electrostaticCompressor:* (electrostaticCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockElectrostaticCompressor
+block:id=%electrostaticCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %aphorismTile:* (aphorismTile), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockAphorismTile
+block:id=%aphorismTile,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/AphorismTile
+block:id=%aphorismTile,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/AphorismTile
+
+# %omnidirectionalHopper:* (omnidirectionalHopper), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockOmnidirectionalHopper
+block:id=%omnidirectionalHopper,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %liquidHopper:* (liquidHopper), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockLiquidHopper
+block:id=%liquidHopper,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %elevatorCaller:* (elevatorCaller), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockElevatorCaller
+block:id=%elevatorCaller,data=*,stdrot=true,face0-5=0:pneumaticcraft/ElevatorCaller
+
+# %programmer:* (programmer), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockProgrammer
+block:id=%programmer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %creativeCompressor:* (creativeCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockCreativeCompressor
+block:id=%creativeCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %plasticMixer:* (plasticMixer), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPlasticMixer
+block:id=%plasticMixer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %liquidCompressor:* (liquidCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockLiquidCompressor
+block:id=%liquidCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %advancedLiquidCompressor:* (advancedLiquidCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAdvancedLiquidCompressor
+block:id=%advancedLiquidCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %heatSink:* (heatSink), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockHeatSink
+block:id=%heatSink,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+block:id=%heatSink,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %vortexTube:* (vortexTube), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockVortexTube
+block:id=%vortexTube,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %programmableController:* (programmableController), render=(STANDARD), opaque=true,cls=pneumaticCraft.common.block.BlockProgrammableController
+block:id=%programmableController,data=*,stdrot=true,face0-5=0:pneumaticcraft/programmableController
+
+# %gasLift:* (gasLift), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockGasLift
+block:id=%gasLift,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %refinery:* (refinery), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockRefinery
+block:id=%refinery,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %thermopneumaticProcessingPlant:* (thermopneumaticProcessingPlant), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockThermopneumaticProcessingPlant
+block:id=%thermopneumaticProcessingPlant,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %keroseneLamp:* (keroseneLamp), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockKeroseneLamp
+block:id=%keroseneLamp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %sentryTurret:* (sentryTurret), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockSentryTurret
+block:id=%sentryTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %droneInterface:* (droneInterface), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.computercraft.BlockDroneInterface
+block:id=%droneInterface,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %pneumaticDynamo:* (pneumaticDynamo), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.cofh.BlockPneumaticDynamo
+block:id=%pneumaticDynamo,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %fluxCompressor:* (fluxCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.cofh.BlockFluxCompressor
+block:id=%fluxCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %pneumaticGenerator:* (pneumaticGenerator), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.ic2.BlockPneumaticGenerator
+block:id=%pneumaticGenerator,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %electricCompressor:* (electricCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.ic2.BlockElectricCompressor
+block:id=%electricCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube

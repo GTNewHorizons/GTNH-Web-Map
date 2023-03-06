@@ -1,0 +1,25 @@
+# CompactSolars 4.4.37.314
+version:1.7
+modname:CompactSolars
+
+
+cfgfile:config/CompactSolars.cfg
+
+
+texturepath:assets/compactsolars/textures/blocks/
+texture:id=compactsolars/hvBottom,filename=assets/compactsolars/textures/blocks/hvBottom.png
+texture:id=compactsolars/hvSide,filename=assets/compactsolars/textures/blocks/hvSide.png
+texture:id=compactsolars/hvTop,filename=assets/compactsolars/textures/blocks/hvTop.png
+texture:id=compactsolars/lvBottom,filename=assets/compactsolars/textures/blocks/lvBottom.png
+texture:id=compactsolars/lvSide,filename=assets/compactsolars/textures/blocks/lvSide.png
+texture:id=compactsolars/lvTop,filename=assets/compactsolars/textures/blocks/lvTop.png
+texture:id=compactsolars/mvBottom,filename=assets/compactsolars/textures/blocks/mvBottom.png
+texture:id=compactsolars/mvSide,filename=assets/compactsolars/textures/blocks/mvSide.png
+texture:id=compactsolars/mvTop,filename=assets/compactsolars/textures/blocks/mvTop.png
+
+
+
+# %CompactSolarBlock:* (CompactSolarBlock), render=(STANDARD), opaque=true,cls=cpw.mods.compactsolars.BlockCompactSolar
+block:id=%CompactSolarBlock,data=0,stdrot=true,face0=0:compactsolars/lvBottom,face1=0:compactsolars/lvTop,face2-5=0:compactsolars/lvSide
+block:id=%CompactSolarBlock,data=1,stdrot=true,face0=0:compactsolars/mvBottom,face1=0:compactsolars/mvTop,face2-5=0:compactsolars/mvSide
+block:id=%CompactSolarBlock,data=2,stdrot=true,face0=0:compactsolars/hvBottom,face1=0:compactsolars/hvTop,face2-5=0:compactsolars/hvSide

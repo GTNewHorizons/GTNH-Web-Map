@@ -1,0 +1,19 @@
+# StevesAddons 0.10.16
+version:1.7
+modname:StevesAddons
+
+
+cfgfile:config/StevesAddons.cfg
+
+
+texturepath:assets/stevesaddons/textures/blocks/
+texture:id=StevesAddons/cable_ae,filename=assets/stevesaddons/textures/blocks/cable_ae.png
+texture:id=StevesAddons/cable_rf_3,filename=assets/stevesaddons/textures/blocks/cable_rf_3.png
+
+
+
+# %cable_rf:* (cable_rf), render=(STANDARD), opaque=true,cls=stevesaddons.blocks.BlockCableRF
+block:id=%cable_rf,data=*,stdrot=true,face0-5=0:StevesAddons/cable_rf_3
+
+# %cable_ae:* (cable_ae), render=(STANDARD), opaque=true,cls=stevesaddons.blocks.BlockCableAE
+block:id=%cable_ae,data=*,stdrot=true,face0-5=0:StevesAddons/cable_ae

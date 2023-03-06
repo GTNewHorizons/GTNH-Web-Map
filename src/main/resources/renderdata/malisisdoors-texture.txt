@@ -1,0 +1,349 @@
+# malisisdoors 1.7.10-1.13.2
+version:1.7
+modname:malisisdoors
+
+
+cfgfile:config/malisisdoors.cfg
+
+
+texturepath:assets/malisisdoors/textures/blocks/
+texture:id=malisisdoors/block_mixer,filename=assets/malisisdoors/textures/blocks/block_mixer.png
+texture:id=malisisdoors/block_mixer_side,filename=assets/malisisdoors/textures/blocks/block_mixer_side.png
+texture:id=malisisdoors/camo_fencegate,filename=assets/malisisdoors/textures/blocks/camo_fencegate.png
+texture:id=malisisdoors/carriage_door,filename=assets/malisisdoors/textures/blocks/carriage_door.png
+texture:id=malisisdoors/curtains/curtain_black_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_black_lower.png
+texture:id=malisisdoors/curtains/curtain_black_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_black_side.png
+texture:id=malisisdoors/curtains/curtain_black_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_black_upper.png
+texture:id=malisisdoors/curtains/curtain_blue_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_blue_lower.png
+texture:id=malisisdoors/curtains/curtain_blue_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_blue_side.png
+texture:id=malisisdoors/curtains/curtain_blue_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_blue_upper.png
+texture:id=malisisdoors/curtains/curtain_brown_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_brown_lower.png
+texture:id=malisisdoors/curtains/curtain_brown_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_brown_side.png
+texture:id=malisisdoors/curtains/curtain_brown_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_brown_upper.png
+texture:id=malisisdoors/curtains/curtain_cyan_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_cyan_lower.png
+texture:id=malisisdoors/curtains/curtain_cyan_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_cyan_side.png
+texture:id=malisisdoors/curtains/curtain_cyan_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_cyan_upper.png
+texture:id=malisisdoors/curtains/curtain_gray_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_gray_lower.png
+texture:id=malisisdoors/curtains/curtain_gray_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_gray_side.png
+texture:id=malisisdoors/curtains/curtain_gray_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_gray_upper.png
+texture:id=malisisdoors/curtains/curtain_green_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_green_lower.png
+texture:id=malisisdoors/curtains/curtain_green_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_green_side.png
+texture:id=malisisdoors/curtains/curtain_green_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_green_upper.png
+texture:id=malisisdoors/curtains/curtain_light_blue_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_light_blue_lower.png
+texture:id=malisisdoors/curtains/curtain_light_blue_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_light_blue_side.png
+texture:id=malisisdoors/curtains/curtain_light_blue_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_light_blue_upper.png
+texture:id=malisisdoors/curtains/curtain_lime_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_lime_lower.png
+texture:id=malisisdoors/curtains/curtain_lime_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_lime_side.png
+texture:id=malisisdoors/curtains/curtain_lime_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_lime_upper.png
+texture:id=malisisdoors/curtains/curtain_magenta_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_magenta_lower.png
+texture:id=malisisdoors/curtains/curtain_magenta_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_magenta_side.png
+texture:id=malisisdoors/curtains/curtain_magenta_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_magenta_upper.png
+texture:id=malisisdoors/curtains/curtain_orange_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_orange_lower.png
+texture:id=malisisdoors/curtains/curtain_orange_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_orange_side.png
+texture:id=malisisdoors/curtains/curtain_orange_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_orange_upper.png
+texture:id=malisisdoors/curtains/curtain_pink_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_pink_lower.png
+texture:id=malisisdoors/curtains/curtain_pink_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_pink_side.png
+texture:id=malisisdoors/curtains/curtain_pink_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_pink_upper.png
+texture:id=malisisdoors/curtains/curtain_purple_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_purple_lower.png
+texture:id=malisisdoors/curtains/curtain_purple_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_purple_side.png
+texture:id=malisisdoors/curtains/curtain_purple_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_purple_upper.png
+texture:id=malisisdoors/curtains/curtain_red_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_red_lower.png
+texture:id=malisisdoors/curtains/curtain_red_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_red_side.png
+texture:id=malisisdoors/curtains/curtain_red_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_red_upper.png
+texture:id=malisisdoors/curtains/curtain_silver_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_silver_lower.png
+texture:id=malisisdoors/curtains/curtain_silver_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_silver_side.png
+texture:id=malisisdoors/curtains/curtain_silver_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_silver_upper.png
+texture:id=malisisdoors/curtains/curtain_white_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_white_lower.png
+texture:id=malisisdoors/curtains/curtain_white_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_white_side.png
+texture:id=malisisdoors/curtains/curtain_white_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_white_upper.png
+texture:id=malisisdoors/curtains/curtain_yellow_lower,filename=assets/malisisdoors/textures/blocks/curtains/curtain_yellow_lower.png
+texture:id=malisisdoors/curtains/curtain_yellow_side,filename=assets/malisisdoors/textures/blocks/curtains/curtain_yellow_side.png
+texture:id=malisisdoors/curtains/curtain_yellow_upper,filename=assets/malisisdoors/textures/blocks/curtains/curtain_yellow_upper.png
+texture:id=malisisdoors/door_acacia_lower,filename=assets/malisisdoors/textures/blocks/door_acacia_lower.png
+texture:id=malisisdoors/door_acacia_side,filename=assets/malisisdoors/textures/blocks/door_acacia_side.png
+texture:id=malisisdoors/door_acacia_upper,filename=assets/malisisdoors/textures/blocks/door_acacia_upper.png
+texture:id=malisisdoors/door_birch_lower,filename=assets/malisisdoors/textures/blocks/door_birch_lower.png
+texture:id=malisisdoors/door_birch_side,filename=assets/malisisdoors/textures/blocks/door_birch_side.png
+texture:id=malisisdoors/door_birch_upper,filename=assets/malisisdoors/textures/blocks/door_birch_upper.png
+texture:id=malisisdoors/door_dark_oak_lower,filename=assets/malisisdoors/textures/blocks/door_dark_oak_lower.png
+texture:id=malisisdoors/door_dark_oak_side,filename=assets/malisisdoors/textures/blocks/door_dark_oak_side.png
+texture:id=malisisdoors/door_dark_oak_upper,filename=assets/malisisdoors/textures/blocks/door_dark_oak_upper.png
+texture:id=malisisdoors/door_factory,filename=assets/malisisdoors/textures/blocks/door_factory.png
+texture:id=malisisdoors/door_factory_side,filename=assets/malisisdoors/textures/blocks/door_factory_side.png
+texture:id=malisisdoors/door_jungle_lower,filename=assets/malisisdoors/textures/blocks/door_jungle_lower.png
+texture:id=malisisdoors/door_jungle_side,filename=assets/malisisdoors/textures/blocks/door_jungle_side.png
+texture:id=malisisdoors/door_jungle_upper,filename=assets/malisisdoors/textures/blocks/door_jungle_upper.png
+texture:id=malisisdoors/door_spruce_lower,filename=assets/malisisdoors/textures/blocks/door_spruce_lower.png
+texture:id=malisisdoors/door_spruce_side,filename=assets/malisisdoors/textures/blocks/door_spruce_side.png
+texture:id=malisisdoors/door_spruce_upper,filename=assets/malisisdoors/textures/blocks/door_spruce_upper.png
+texture:id=malisisdoors/factory_door_lower,filename=assets/malisisdoors/textures/blocks/factory_door_lower.png
+texture:id=malisisdoors/factory_door_side,filename=assets/malisisdoors/textures/blocks/factory_door_side.png
+texture:id=malisisdoors/factory_door_upper,filename=assets/malisisdoors/textures/blocks/factory_door_upper.png
+texture:id=malisisdoors/forcefield,filename=assets/malisisdoors/textures/blocks/forcefield.png
+texture:id=malisisdoors/garage_door,filename=assets/malisisdoors/textures/blocks/garage_door.png
+texture:id=malisisdoors/garage_door_top,filename=assets/malisisdoors/textures/blocks/garage_door_top.png
+texture:id=malisisdoors/iron_trapdoor,filename=assets/malisisdoors/textures/blocks/iron_trapdoor.png
+texture:id=malisisdoors/jail_door_lower,filename=assets/malisisdoors/textures/blocks/jail_door_lower.png
+texture:id=malisisdoors/jail_door_side,filename=assets/malisisdoors/textures/blocks/jail_door_side.png
+texture:id=malisisdoors/jail_door_upper,filename=assets/malisisdoors/textures/blocks/jail_door_upper.png
+texture:id=malisisdoors/laboratory_door_lower,filename=assets/malisisdoors/textures/blocks/laboratory_door_lower.png
+texture:id=malisisdoors/laboratory_door_side,filename=assets/malisisdoors/textures/blocks/laboratory_door_side.png
+texture:id=malisisdoors/laboratory_door_upper,filename=assets/malisisdoors/textures/blocks/laboratory_door_upper.png
+texture:id=malisisdoors/medieval_door,filename=assets/malisisdoors/textures/blocks/medieval_door.png
+texture:id=malisisdoors/player_sensor,filename=assets/malisisdoors/textures/blocks/player_sensor.png
+texture:id=malisisdoors/rusty_hatch,filename=assets/malisisdoors/textures/blocks/rusty_hatch.png
+texture:id=malisisdoors/rusty_hatch_handle,filename=assets/malisisdoors/textures/blocks/rusty_hatch_handle.png
+texture:id=malisisdoors/saloon_door,filename=assets/malisisdoors/textures/blocks/saloon_door.png
+texture:id=malisisdoors/shoji_door_lower,filename=assets/malisisdoors/textures/blocks/shoji_door_lower.png
+texture:id=malisisdoors/shoji_door_side,filename=assets/malisisdoors/textures/blocks/shoji_door_side.png
+texture:id=malisisdoors/shoji_door_upper,filename=assets/malisisdoors/textures/blocks/shoji_door_upper.png
+texture:id=malisisdoors/sliding_door_iron_lower,filename=assets/malisisdoors/textures/blocks/sliding_door_iron_lower.png
+texture:id=malisisdoors/sliding_door_iron_side,filename=assets/malisisdoors/textures/blocks/sliding_door_iron_side.png
+texture:id=malisisdoors/sliding_door_iron_upper,filename=assets/malisisdoors/textures/blocks/sliding_door_iron_upper.png
+texture:id=malisisdoors/sliding_door_wood_lower,filename=assets/malisisdoors/textures/blocks/sliding_door_wood_lower.png
+texture:id=malisisdoors/sliding_door_wood_side,filename=assets/malisisdoors/textures/blocks/sliding_door_wood_side.png
+texture:id=malisisdoors/sliding_door_wood_upper,filename=assets/malisisdoors/textures/blocks/sliding_door_wood_upper.png
+texture:id=malisisdoors/sliding_trapdoor,filename=assets/malisisdoors/textures/blocks/sliding_trapdoor.png
+texture:id=malisisdoors/trapdoor_acacia,filename=assets/malisisdoors/textures/blocks/trapdoor_acacia.png
+texture:id=malisisdoors/trapdoor_birch,filename=assets/malisisdoors/textures/blocks/trapdoor_birch.png
+texture:id=malisisdoors/trapdoor_dark_oak,filename=assets/malisisdoors/textures/blocks/trapdoor_dark_oak.png
+texture:id=malisisdoors/trapdoor_jungle,filename=assets/malisisdoors/textures/blocks/trapdoor_jungle.png
+texture:id=malisisdoors/trapdoor_spruce,filename=assets/malisisdoors/textures/blocks/trapdoor_spruce.png
+texture:id=malisisdoors/vanishing_block_diamond,filename=assets/malisisdoors/textures/blocks/vanishing_block_diamond.png
+texture:id=malisisdoors/vanishing_block_gold,filename=assets/malisisdoors/textures/blocks/vanishing_block_gold.png
+texture:id=malisisdoors/vanishing_block_iron,filename=assets/malisisdoors/textures/blocks/vanishing_block_iron.png
+texture:id=malisisdoors/vanishing_block_wood,filename=assets/malisisdoors/textures/blocks/vanishing_block_wood.png
+texture:id=minecraft/planks_acacia,filename=assets/minecraft/textures/blocks/planks_acacia.png
+texture:id=minecraft/planks_big_oak,filename=assets/minecraft/textures/blocks/planks_big_oak.png
+texture:id=minecraft/planks_birch,filename=assets/minecraft/textures/blocks/planks_birch.png
+texture:id=minecraft/planks_jungle,filename=assets/minecraft/textures/blocks/planks_jungle.png
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+
+
+
+# %door_acacia:* (door_acacia), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%door_acacia,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_acacia_side,face2-3=0:malisisdoors/door_acacia_lower,face4-5=0:malisisdoors/door_acacia_side
+block:id=%door_acacia,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_acacia_side,face2-3=0:malisisdoors/door_acacia_upper,face4-5=0:malisisdoors/door_acacia_side
+
+# %door_birch:* (door_birch), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%door_birch,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_birch_side,face2-3=0:malisisdoors/door_birch_lower,face4-5=0:malisisdoors/door_birch_side
+block:id=%door_birch,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_birch_side,face2-3=0:malisisdoors/door_birch_upper,face4-5=0:malisisdoors/door_birch_side
+
+# %door_dark_oak:* (door_dark_oak), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%door_dark_oak,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_dark_oak_side,face2-3=0:malisisdoors/door_dark_oak_lower,face4-5=0:malisisdoors/door_dark_oak_side
+block:id=%door_dark_oak,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_dark_oak_side,face2-3=0:malisisdoors/door_dark_oak_upper,face4-5=0:malisisdoors/door_dark_oak_side
+
+# %door_jungle:* (door_jungle), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%door_jungle,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_jungle_side,face2-3=0:malisisdoors/door_jungle_lower,face4-5=0:malisisdoors/door_jungle_side
+block:id=%door_jungle,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_jungle_side,face2-3=0:malisisdoors/door_jungle_upper,face4-5=0:malisisdoors/door_jungle_side
+
+# %door_spruce:* (door_spruce), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%door_spruce,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_spruce_side,face2-3=0:malisisdoors/door_spruce_lower,face4-5=0:malisisdoors/door_spruce_side
+block:id=%door_spruce,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/door_spruce_side,face2-3=0:malisisdoors/door_spruce_upper,face4-5=0:malisisdoors/door_spruce_side
+
+# %wood_sliding_door:* (wood_sliding_door), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%wood_sliding_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/sliding_door_wood_side,face2-3=0:malisisdoors/sliding_door_wood_lower,face4-5=0:malisisdoors/sliding_door_wood_side
+block:id=%wood_sliding_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/sliding_door_wood_side,face2-3=0:malisisdoors/sliding_door_wood_upper,face4-5=0:malisisdoors/sliding_door_wood_side
+
+# %iron_sliding_door:* (iron_sliding_door), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%iron_sliding_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/sliding_door_iron_side,face2-3=0:malisisdoors/sliding_door_iron_lower,face4-5=0:malisisdoors/sliding_door_iron_side
+block:id=%iron_sliding_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/sliding_door_iron_side,face2-3=0:malisisdoors/sliding_door_iron_upper,face4-5=0:malisisdoors/sliding_door_iron_side
+
+# %jail_door:* (jail_door), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%jail_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/jail_door_side,face2-3=0:malisisdoors/jail_door_lower,face4-5=0:malisisdoors/jail_door_side
+block:id=%jail_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/jail_door_side,face2-3=0:malisisdoors/jail_door_upper,face4-5=0:malisisdoors/jail_door_side
+
+# %laboratory_door:* (laboratory_door), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%laboratory_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/laboratory_door_side,face2-3=0:malisisdoors/laboratory_door_lower,face4-5=0:malisisdoors/laboratory_door_side
+block:id=%laboratory_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/laboratory_door_side,face2-3=0:malisisdoors/laboratory_door_upper,face4-5=0:malisisdoors/laboratory_door_side
+
+# %factory_door:* (factory_door), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%factory_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/factory_door_side,face2-3=0:malisisdoors/factory_door_lower,face4-5=0:malisisdoors/factory_door_side
+block:id=%factory_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/factory_door_side,face2-3=0:malisisdoors/factory_door_upper,face4-5=0:malisisdoors/factory_door_side
+
+# %shoji_door:* (shoji_door), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%shoji_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/shoji_door_side,face2-3=0:malisisdoors/shoji_door_lower,face4-5=0:malisisdoors/shoji_door_side
+block:id=%shoji_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/shoji_door_side,face2-3=0:malisisdoors/shoji_door_upper,face4-5=0:malisisdoors/shoji_door_side
+
+# %curtain_black:* (curtain_black), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_black,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_black_side,face2-3=0:malisisdoors/curtains/curtain_black_lower,face4-5=0:malisisdoors/curtains/curtain_black_side
+block:id=%curtain_black,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_black_side,face2-3=0:malisisdoors/curtains/curtain_black_upper,face4-5=0:malisisdoors/curtains/curtain_black_side
+
+# %curtain_red:* (curtain_red), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_red,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_red_side,face2-3=0:malisisdoors/curtains/curtain_red_lower,face4-5=0:malisisdoors/curtains/curtain_red_side
+block:id=%curtain_red,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_red_side,face2-3=0:malisisdoors/curtains/curtain_red_upper,face4-5=0:malisisdoors/curtains/curtain_red_side
+
+# %curtain_green:* (curtain_green), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_green,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_green_side,face2-3=0:malisisdoors/curtains/curtain_green_lower,face4-5=0:malisisdoors/curtains/curtain_green_side
+block:id=%curtain_green,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_green_side,face2-3=0:malisisdoors/curtains/curtain_green_upper,face4-5=0:malisisdoors/curtains/curtain_green_side
+
+# %curtain_brown:* (curtain_brown), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_brown,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_brown_side,face2-3=0:malisisdoors/curtains/curtain_brown_lower,face4-5=0:malisisdoors/curtains/curtain_brown_side
+block:id=%curtain_brown,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_brown_side,face2-3=0:malisisdoors/curtains/curtain_brown_upper,face4-5=0:malisisdoors/curtains/curtain_brown_side
+
+# %curtain_blue:* (curtain_blue), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_blue,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_blue_side,face2-3=0:malisisdoors/curtains/curtain_blue_lower,face4-5=0:malisisdoors/curtains/curtain_blue_side
+block:id=%curtain_blue,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_blue_side,face2-3=0:malisisdoors/curtains/curtain_blue_upper,face4-5=0:malisisdoors/curtains/curtain_blue_side
+
+# %curtain_purple:* (curtain_purple), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_purple,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_purple_side,face2-3=0:malisisdoors/curtains/curtain_purple_lower,face4-5=0:malisisdoors/curtains/curtain_purple_side
+block:id=%curtain_purple,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_purple_side,face2-3=0:malisisdoors/curtains/curtain_purple_upper,face4-5=0:malisisdoors/curtains/curtain_purple_side
+
+# %curtain_cyan:* (curtain_cyan), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_cyan,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_cyan_side,face2-3=0:malisisdoors/curtains/curtain_cyan_lower,face4-5=0:malisisdoors/curtains/curtain_cyan_side
+block:id=%curtain_cyan,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_cyan_side,face2-3=0:malisisdoors/curtains/curtain_cyan_upper,face4-5=0:malisisdoors/curtains/curtain_cyan_side
+
+# %curtain_silver:* (curtain_silver), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_silver,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_silver_side,face2-3=0:malisisdoors/curtains/curtain_silver_lower,face4-5=0:malisisdoors/curtains/curtain_silver_side
+block:id=%curtain_silver,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_silver_side,face2-3=0:malisisdoors/curtains/curtain_silver_upper,face4-5=0:malisisdoors/curtains/curtain_silver_side
+
+# %curtain_gray:* (curtain_gray), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_gray,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_gray_side,face2-3=0:malisisdoors/curtains/curtain_gray_lower,face4-5=0:malisisdoors/curtains/curtain_gray_side
+block:id=%curtain_gray,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_gray_side,face2-3=0:malisisdoors/curtains/curtain_gray_upper,face4-5=0:malisisdoors/curtains/curtain_gray_side
+
+# %curtain_pink:* (curtain_pink), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_pink,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_pink_side,face2-3=0:malisisdoors/curtains/curtain_pink_lower,face4-5=0:malisisdoors/curtains/curtain_pink_side
+block:id=%curtain_pink,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_pink_side,face2-3=0:malisisdoors/curtains/curtain_pink_upper,face4-5=0:malisisdoors/curtains/curtain_pink_side
+
+# %curtain_lime:* (curtain_lime), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_lime,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_lime_side,face2-3=0:malisisdoors/curtains/curtain_lime_lower,face4-5=0:malisisdoors/curtains/curtain_lime_side
+block:id=%curtain_lime,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_lime_side,face2-3=0:malisisdoors/curtains/curtain_lime_upper,face4-5=0:malisisdoors/curtains/curtain_lime_side
+
+# %curtain_yellow:* (curtain_yellow), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_yellow,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_yellow_side,face2-3=0:malisisdoors/curtains/curtain_yellow_lower,face4-5=0:malisisdoors/curtains/curtain_yellow_side
+block:id=%curtain_yellow,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_yellow_side,face2-3=0:malisisdoors/curtains/curtain_yellow_upper,face4-5=0:malisisdoors/curtains/curtain_yellow_side
+
+# %curtain_light_blue:* (curtain_light_blue), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_light_blue,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_light_blue_side,face2-3=0:malisisdoors/curtains/curtain_light_blue_lower,face4-5=0:malisisdoors/curtains/curtain_light_blue_side
+block:id=%curtain_light_blue,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_light_blue_side,face2-3=0:malisisdoors/curtains/curtain_light_blue_upper,face4-5=0:malisisdoors/curtains/curtain_light_blue_side
+
+# %curtain_magenta:* (curtain_magenta), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_magenta,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_magenta_side,face2-3=0:malisisdoors/curtains/curtain_magenta_lower,face4-5=0:malisisdoors/curtains/curtain_magenta_side
+block:id=%curtain_magenta,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_magenta_side,face2-3=0:malisisdoors/curtains/curtain_magenta_upper,face4-5=0:malisisdoors/curtains/curtain_magenta_side
+
+# %curtain_orange:* (curtain_orange), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_orange,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_orange_side,face2-3=0:malisisdoors/curtains/curtain_orange_lower,face4-5=0:malisisdoors/curtains/curtain_orange_side
+block:id=%curtain_orange,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_orange_side,face2-3=0:malisisdoors/curtains/curtain_orange_upper,face4-5=0:malisisdoors/curtains/curtain_orange_side
+
+# %curtain_white:* (curtain_white), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.Door
+block:id=%curtain_white,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_white_side,face2-3=0:malisisdoors/curtains/curtain_white_lower,face4-5=0:malisisdoors/curtains/curtain_white_side
+block:id=%curtain_white,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:malisisdoors/curtains/curtain_white_side,face2-3=0:malisisdoors/curtains/curtain_white_upper,face4-5=0:malisisdoors/curtains/curtain_white_side
+
+# %saloon:* (saloon), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.SaloonDoorBlock
+block:id=%saloon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/saloon_door
+
+# %acaciaFenceGate:* (acaciaFenceGate), render=net.malisis.doors.door.renderer.FenceGateRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.FenceGate
+block:id=%acaciaFenceGate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
+
+# %birchFenceGate:* (birchFenceGate), render=net.malisis.doors.door.renderer.FenceGateRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.FenceGate
+block:id=%birchFenceGate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
+
+# %darkOakFenceGate:* (darkOakFenceGate), render=net.malisis.doors.door.renderer.FenceGateRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.FenceGate
+block:id=%darkOakFenceGate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+
+# %jungleFenceGate:* (jungleFenceGate), render=net.malisis.doors.door.renderer.FenceGateRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.FenceGate
+block:id=%jungleFenceGate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
+
+# %spruceFenceGate:* (spruceFenceGate), render=net.malisis.doors.door.renderer.FenceGateRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.FenceGate
+block:id=%spruceFenceGate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %camoFenceGate:* (camoFenceGate), render=net.malisis.doors.door.renderer.FenceGateRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.FenceGate
+block:id=%camoFenceGate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/camo_fencegate
+
+# %iron_trapdoor:* (iron_trapdoor), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
+block:id=%iron_trapdoor,data=*,stdrot=true,face0-5=0:malisisdoors/iron_trapdoor
+
+# %sliding_trapdoor:* (sliding_trapdoor), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
+block:id=%sliding_trapdoor,data=*,stdrot=true,face0-5=0:malisisdoors/sliding_trapdoor
+
+# %trapdoor_acacia:* (trapdoor_acacia), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
+block:id=%trapdoor_acacia,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_acacia
+
+# %trapdoor_birch:* (trapdoor_birch), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
+block:id=%trapdoor_birch,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_birch
+
+# %trapdoor_dark_oak:* (trapdoor_dark_oak), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
+block:id=%trapdoor_dark_oak,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_dark_oak
+
+# %trapdoor_jungle:* (trapdoor_jungle), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
+block:id=%trapdoor_jungle,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_jungle
+
+# %trapdoor_spruce:* (trapdoor_spruce), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
+block:id=%trapdoor_spruce,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_spruce
+
+# %player_sensor:* (player_sensor), render=(STANDARD), opaque=false,cls=net.malisis.doors.block.PlayerSensor
+block:id=%player_sensor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/player_sensor
+
+# %vanishing_block:* (vanishing_block), render=net.malisis.doors.renderer.VanishingBlockRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.VanishingBlock
+block:id=%vanishing_block,data=0,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block,data=1,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block,data=2,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block,data=3,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
+
+# %vanishing_block_diamond:* (vanishing_block_diamond), render=net.malisis.doors.renderer.VanishingBlockRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.VanishingDiamondBlock
+block:id=%vanishing_block_diamond,data=0,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block_diamond,data=1,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block_diamond,data=2,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block_diamond,data=3,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block_diamond,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block_diamond,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block_diamond,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block_diamond,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block_diamond,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block_diamond,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block_diamond,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block_diamond,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block_diamond,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
+block:id=%vanishing_block_diamond,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
+block:id=%vanishing_block_diamond,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
+block:id=%vanishing_block_diamond,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
+
+# %block_mixer:* (block_mixer), render=(STANDARD), opaque=true,cls=net.malisis.doors.block.BlockMixer
+block:id=%block_mixer,data=0,stdrot=true,face0-2=0:malisisdoors/block_mixer_side,face3=0:malisisdoors/block_mixer,face4-5=0:malisisdoors/block_mixer_side
+block:id=%block_mixer,data=1,stdrot=true,face0=0:malisisdoors/block_mixer_side,face1=0:malisisdoors/block_mixer,face2-5=0:malisisdoors/block_mixer_side
+block:id=%block_mixer,data=2,stdrot=true,face0-1=0:malisisdoors/block_mixer_side,face2=0:malisisdoors/block_mixer,face3-5=0:malisisdoors/block_mixer_side
+block:id=%block_mixer,data=3,stdrot=true,face0-2=0:malisisdoors/block_mixer_side,face3=0:malisisdoors/block_mixer,face4-5=0:malisisdoors/block_mixer_side
+block:id=%block_mixer,data=4,stdrot=true,face0-3=0:malisisdoors/block_mixer_side,face4=0:malisisdoors/block_mixer,face5=0:malisisdoors/block_mixer_side
+block:id=%block_mixer,data=5,stdrot=true,face0-4=0:malisisdoors/block_mixer_side,face5=0:malisisdoors/block_mixer
+block:id=%block_mixer,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:malisisdoors/block_mixer_side
+
+# %garage_door:* (garage_door), render=(CUSTOM), opaque=false,cls=net.malisis.doors.block.GarageDoor
+block:id=%garage_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:malisisdoors/garage_door
+block:id=%garage_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-3=0:malisisdoors/garage_door,face4-5=0:malisisdoors/garage_door_top
+
+# %door_factory:* (door_factory), render=(STANDARD), opaque=true,cls=net.malisis.doors.block.DoorFactory
+block:id=%door_factory,data=0,stdrot=true,face0-2=0:malisisdoors/door_factory_side,face3=0:malisisdoors/door_factory,face4-5=0:malisisdoors/door_factory_side
+block:id=%door_factory,data=1,stdrot=true,face0=0:malisisdoors/door_factory_side,face1=0:malisisdoors/door_factory,face2-5=0:malisisdoors/door_factory_side
+block:id=%door_factory,data=2,stdrot=true,face0-1=0:malisisdoors/door_factory_side,face2=0:malisisdoors/door_factory,face3-5=0:malisisdoors/door_factory_side
+block:id=%door_factory,data=3,stdrot=true,face0-2=0:malisisdoors/door_factory_side,face3=0:malisisdoors/door_factory,face4-5=0:malisisdoors/door_factory_side
+block:id=%door_factory,data=4,stdrot=true,face0-3=0:malisisdoors/door_factory_side,face4=0:malisisdoors/door_factory,face5=0:malisisdoors/door_factory_side
+block:id=%door_factory,data=5,stdrot=true,face0-4=0:malisisdoors/door_factory_side,face5=0:malisisdoors/door_factory
+block:id=%door_factory,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:malisisdoors/door_factory_side
+
+# %rustyHatch:* (rustyHatch), render=net.malisis.doors.door.renderer.RustyHatchRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.RustyHatch
+block:id=%rustyHatch,data=*,stdrot=true,face0-5=0:malisisdoors/rusty_hatch
+
+# %rustyLadder:* (rustyLadder), render=net.malisis.doors.renderer.RustyLadderRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.RustyLadder
+block:id=%rustyLadder,data=0,data=1,stdrot=true,face0-5=0:malisisdoors/rusty_hatch_handle
+block:id=%rustyLadder,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/rusty_hatch_handle
+
+# %carriage_door:* (carriage_door), render=net.malisis.doors.door.renderer.BigDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.BigDoor
+block:id=%carriage_door,data=*,stdrot=true,face0-5=12000:malisisdoors/carriage_door
+
+# %medieval_door:* (medieval_door), render=net.malisis.doors.door.renderer.BigDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.BigDoor
+block:id=%medieval_door,data=*,stdrot=true,face0-5=12000:malisisdoors/medieval_door
+
+# %forcefieldDoor:* (forcefieldDoor), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.ForcefieldDoor
+block:id=%forcefieldDoor,data=*,stdrot=true,face0-5=0:malisisdoors/forcefield

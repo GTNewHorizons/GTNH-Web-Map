@@ -1,0 +1,204 @@
+# bcadditions 2.2.5
+version:1.7
+modname:bcadditions
+
+
+cfgfile:config/bcadditions.cfg
+
+
+texturepath:assets/bcadditions/textures/blocks/
+texture:id=BuildCraftEnergy/fluids/fuel_flow,filename=assets/buildcraftenergy/textures/blocks/fluids/fuel_flow.png
+texture:id=BuildCraftEnergy/fluids/fuel_still,filename=assets/buildcraftenergy/textures/blocks/fluids/fuel_still.png
+texture:id=bcadditions/KEB/T1/0,filename=assets/bcadditions/textures/blocks/KEB/T1/0.png
+texture:id=bcadditions/KEB/T1/1,filename=assets/bcadditions/textures/blocks/KEB/T1/1.png
+texture:id=bcadditions/KEB/T1/2,filename=assets/bcadditions/textures/blocks/KEB/T1/2.png
+texture:id=bcadditions/KEB/T1/3,filename=assets/bcadditions/textures/blocks/KEB/T1/3.png
+texture:id=bcadditions/KEB/T1/4,filename=assets/bcadditions/textures/blocks/KEB/T1/4.png
+texture:id=bcadditions/KEB/T1/5,filename=assets/bcadditions/textures/blocks/KEB/T1/5.png
+texture:id=bcadditions/KEB/T1/6,filename=assets/bcadditions/textures/blocks/KEB/T1/6.png
+texture:id=bcadditions/KEB/T1/7,filename=assets/bcadditions/textures/blocks/KEB/T1/7.png
+texture:id=bcadditions/KEB/T1/8,filename=assets/bcadditions/textures/blocks/KEB/T1/8.png
+texture:id=bcadditions/KEB/T1/creative,filename=assets/bcadditions/textures/blocks/KEB/T1/creative.png
+texture:id=bcadditions/KEB/T2/5,filename=assets/bcadditions/textures/blocks/KEB/T2/5.png
+texture:id=bcadditions/KEB/T2/unformed,filename=assets/bcadditions/textures/blocks/KEB/T2/unformed.png
+texture:id=bcadditions/KEB/T3/4,filename=assets/bcadditions/textures/blocks/KEB/T3/4.png
+texture:id=bcadditions/KEB/T3/core,filename=assets/bcadditions/textures/blocks/KEB/T3/core.png
+texture:id=bcadditions/KEB/T3/plating,filename=assets/bcadditions/textures/blocks/KEB/T3/plating.png
+texture:id=bcadditions/charging station/Back,filename=assets/bcadditions/textures/blocks/charging station/Back.png
+texture:id=bcadditions/charging station/Bottom,filename=assets/bcadditions/textures/blocks/charging station/Bottom.png
+texture:id=bcadditions/charging station/Front,filename=assets/bcadditions/textures/blocks/charging station/Front.png
+texture:id=bcadditions/charging station/Left,filename=assets/bcadditions/textures/blocks/charging station/Left.png
+texture:id=bcadditions/charging station/Right,filename=assets/bcadditions/textures/blocks/charging station/Right.png
+texture:id=bcadditions/charging station/Top,filename=assets/bcadditions/textures/blocks/charging station/Top.png
+texture:id=bcadditions/coils/basic/Bottom,filename=assets/bcadditions/textures/blocks/coils/basic/Bottom.png
+texture:id=bcadditions/coils/basic/Sides,filename=assets/bcadditions/textures/blocks/coils/basic/Sides.png
+texture:id=bcadditions/coils/basic/Top,filename=assets/bcadditions/textures/blocks/coils/basic/Top.png
+texture:id=bcadditions/coils/kinetic/Bottom,filename=assets/bcadditions/textures/blocks/coils/kinetic/Bottom.png
+texture:id=bcadditions/coils/kinetic/Sides,filename=assets/bcadditions/textures/blocks/coils/kinetic/Sides.png
+texture:id=bcadditions/coils/kinetic/Top,filename=assets/bcadditions/textures/blocks/coils/kinetic/Top.png
+texture:id=bcadditions/coils/lava/Bottom,filename=assets/bcadditions/textures/blocks/coils/lava/Bottom.png
+texture:id=bcadditions/coils/lava/Sides,filename=assets/bcadditions/textures/blocks/coils/lava/Sides.png
+texture:id=bcadditions/coils/lava/Top,filename=assets/bcadditions/textures/blocks/coils/lava/Top.png
+texture:id=bcadditions/coolingTowerFormed,filename=assets/bcadditions/textures/blocks/coolingTowerFormed.png
+texture:id=bcadditions/coolingTowerPlating,filename=assets/bcadditions/textures/blocks/coolingTowerPlating.png
+texture:id=bcadditions/coolingtowerValve,filename=assets/bcadditions/textures/blocks/coolingtowerValve.png
+texture:id=bcadditions/dusterBack,filename=assets/bcadditions/textures/blocks/dusterBack.png
+texture:id=bcadditions/dusterBottom,filename=assets/bcadditions/textures/blocks/dusterBottom.png
+texture:id=bcadditions/dusterFront,filename=assets/bcadditions/textures/blocks/dusterFront.png
+texture:id=bcadditions/dusterSides,filename=assets/bcadditions/textures/blocks/dusterSides.png
+texture:id=bcadditions/dusterTop,filename=assets/bcadditions/textures/blocks/dusterTop.png
+texture:id=bcadditions/dusters/mechanical/Bottom,filename=assets/bcadditions/textures/blocks/dusters/mechanical/Bottom.png
+texture:id=bcadditions/dusters/mechanical/Front,filename=assets/bcadditions/textures/blocks/dusters/mechanical/Front.png
+texture:id=bcadditions/dusters/mechanical/Sides,filename=assets/bcadditions/textures/blocks/dusters/mechanical/Sides.png
+texture:id=bcadditions/dusters/mechanical/Top0,filename=assets/bcadditions/textures/blocks/dusters/mechanical/Top0.png
+texture:id=bcadditions/dusters/semiAutomatic/Back,filename=assets/bcadditions/textures/blocks/dusters/semiAutomatic/Back.png
+texture:id=bcadditions/dusters/semiAutomatic/Bottom,filename=assets/bcadditions/textures/blocks/dusters/semiAutomatic/Bottom.png
+texture:id=bcadditions/dusters/semiAutomatic/Front,filename=assets/bcadditions/textures/blocks/dusters/semiAutomatic/Front.png
+texture:id=bcadditions/dusters/semiAutomatic/Sides,filename=assets/bcadditions/textures/blocks/dusters/semiAutomatic/Sides.png
+texture:id=bcadditions/dusters/semiAutomatic/Top,filename=assets/bcadditions/textures/blocks/dusters/semiAutomatic/Top.png
+texture:id=bcadditions/fluidicCompressor/Back,filename=assets/bcadditions/textures/blocks/fluidicCompressor/Back.png
+texture:id=bcadditions/fluidicCompressor/Bottom,filename=assets/bcadditions/textures/blocks/fluidicCompressor/Bottom.png
+texture:id=bcadditions/fluidicCompressor/Front,filename=assets/bcadditions/textures/blocks/fluidicCompressor/Front.png
+texture:id=bcadditions/fluidicCompressor/Sides,filename=assets/bcadditions/textures/blocks/fluidicCompressor/Sides.png
+texture:id=bcadditions/fluidicCompressor/Top,filename=assets/bcadditions/textures/blocks/fluidicCompressor/Top.png
+texture:id=bcadditions/heatedFurnace/Bottom,filename=assets/bcadditions/textures/blocks/heatedFurnace/Bottom.png
+texture:id=bcadditions/heatedFurnace/Front,filename=assets/bcadditions/textures/blocks/heatedFurnace/Front.png
+texture:id=bcadditions/heatedFurnace/Side,filename=assets/bcadditions/textures/blocks/heatedFurnace/Side.png
+texture:id=bcadditions/heatedFurnace/Top,filename=assets/bcadditions/textures/blocks/heatedFurnace/Top.png
+texture:id=bcadditions/heaterPlating,filename=assets/bcadditions/textures/blocks/heaterPlating.png
+texture:id=bcadditions/heaterSidesMultiblock,filename=assets/bcadditions/textures/blocks/heaterSidesMultiblock.png
+texture:id=bcadditions/multiBlockSeeInvisible,filename=assets/bcadditions/textures/blocks/multiBlockSeeInvisible.png
+texture:id=bcadditions/refineryValve,filename=assets/bcadditions/textures/blocks/refineryValve.png
+texture:id=bcadditions/refineryValve_2,filename=assets/bcadditions/textures/blocks/refineryValve_2.png
+texture:id=bcadditions/sorter/In,filename=assets/bcadditions/textures/blocks/sorter/In.png
+texture:id=bcadditions/sorter/Out,filename=assets/bcadditions/textures/blocks/sorter/Out.png
+texture:id=bcadditions/sorter/Side,filename=assets/bcadditions/textures/blocks/sorter/Side.png
+texture:id=bcadditions/sorter/Side2,filename=assets/bcadditions/textures/blocks/sorter/Side2.png
+texture:id=forestry/liquid/bioethanol_still,filename=assets/forestry/textures/blocks/liquid/bioethanol_still.png
+
+
+
+# %blockFluidicCompressor:* (blockFluidicCompressor), render=buildcraftAdditions.client.render.blocks.RendererSidedTextures(CUSTOM), opaque=true,cls=buildcraftAdditions.blocks.BlockFluidicCompressor
+block:id=%blockFluidicCompressor,data=0,stdrot=true,face0=0:bcadditions/fluidicCompressor/Bottom,face1=0:bcadditions/fluidicCompressor/Back,face2=0:bcadditions/fluidicCompressor/Sides,face3=0:bcadditions/fluidicCompressor/Front,face4-5=0:bcadditions/fluidicCompressor/Sides
+block:id=%blockFluidicCompressor,data=1,stdrot=true,face0=0:bcadditions/fluidicCompressor/Back,face1=0:bcadditions/fluidicCompressor/Top,face2-5=0:bcadditions/fluidicCompressor/Sides
+block:id=%blockFluidicCompressor,data=2,stdrot=true,face0=0:bcadditions/fluidicCompressor/Bottom,face1=0:bcadditions/fluidicCompressor/Top,face2=0:bcadditions/fluidicCompressor/Front,face3=0:bcadditions/fluidicCompressor/Back,face4-5=0:bcadditions/fluidicCompressor/Sides
+block:id=%blockFluidicCompressor,data=3,stdrot=true,face0=0:bcadditions/fluidicCompressor/Bottom,face1=0:bcadditions/fluidicCompressor/Top,face2=0:bcadditions/fluidicCompressor/Back,face3=0:bcadditions/fluidicCompressor/Front,face4-5=0:bcadditions/fluidicCompressor/Sides
+block:id=%blockFluidicCompressor,data=4,stdrot=true,face0=0:bcadditions/fluidicCompressor/Bottom,face1=0:bcadditions/fluidicCompressor/Top,face2-3=0:bcadditions/fluidicCompressor/Sides,face4=0:bcadditions/fluidicCompressor/Front,face5=0:bcadditions/fluidicCompressor/Back
+block:id=%blockFluidicCompressor,data=5,stdrot=true,face0=0:bcadditions/fluidicCompressor/Bottom,face1=0:bcadditions/fluidicCompressor/Top,face2-3=0:bcadditions/fluidicCompressor/Sides,face4=0:bcadditions/fluidicCompressor/Back,face5=0:bcadditions/fluidicCompressor/Front
+block:id=%blockFluidicCompressor,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:bcadditions/fluidicCompressor/Bottom,face1=0:bcadditions/fluidicCompressor/Top,face2-5=0:bcadditions/fluidicCompressor/Sides
+
+# %blockChargingStation:* (blockChargingStation), render=buildcraftAdditions.client.render.blocks.RendererSidedTextures(CUSTOM), opaque=true,cls=buildcraftAdditions.blocks.BlockChargingStation
+block:id=%blockChargingStation,data=0,stdrot=true,face0=0:bcadditions/charging station/Bottom,face1=0:bcadditions/charging station/Back,face2=0:bcadditions/charging station/Left,face3=0:bcadditions/charging station/Front,face4=0:bcadditions/charging station/Left,face5=0:bcadditions/charging station/Right
+block:id=%blockChargingStation,data=1,stdrot=true,face0=0:bcadditions/charging station/Back,face1=0:bcadditions/charging station/Top,face2=0:bcadditions/charging station/Left,face3=0:bcadditions/charging station/Right,face4=0:bcadditions/charging station/Left,face5=0:bcadditions/charging station/Right
+block:id=%blockChargingStation,data=2,stdrot=true,face0=0:bcadditions/charging station/Bottom,face1=0:bcadditions/charging station/Top,face2=0:bcadditions/charging station/Front,face3=0:bcadditions/charging station/Back,face4=0:bcadditions/charging station/Left,face5=0:bcadditions/charging station/Right
+block:id=%blockChargingStation,data=3,stdrot=true,face0=0:bcadditions/charging station/Bottom,face1=0:bcadditions/charging station/Top,face2=0:bcadditions/charging station/Back,face3=0:bcadditions/charging station/Front,face4=0:bcadditions/charging station/Right,face5=0:bcadditions/charging station/Left
+block:id=%blockChargingStation,data=4,stdrot=true,face0=0:bcadditions/charging station/Bottom,face1=0:bcadditions/charging station/Top,face2=0:bcadditions/charging station/Right,face3=0:bcadditions/charging station/Left,face4=0:bcadditions/charging station/Front,face5=0:bcadditions/charging station/Back
+block:id=%blockChargingStation,data=5,stdrot=true,face0=0:bcadditions/charging station/Bottom,face1=0:bcadditions/charging station/Top,face2=0:bcadditions/charging station/Left,face3=0:bcadditions/charging station/Right,face4=0:bcadditions/charging station/Back,face5=0:bcadditions/charging station/Front
+block:id=%blockChargingStation,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:bcadditions/charging station/Bottom,face1=0:bcadditions/charging station/Top,face2=0:bcadditions/charging station/Left,face3=0:bcadditions/charging station/Right,face4=0:bcadditions/charging station/Left,face5=0:bcadditions/charging station/Right
+
+# %blockHeatedFurnace:* (blockHeatedFurnace), render=(STANDARD), opaque=true,cls=buildcraftAdditions.blocks.BlockHeatedFurnace
+block:id=%blockHeatedFurnace,data=0,stdrot=true,face0=0:bcadditions/heatedFurnace/Side,face1=0:bcadditions/heatedFurnace/Top,face2=0:bcadditions/heatedFurnace/Side,face3=0:bcadditions/heatedFurnace/Front,face4-5=0:bcadditions/heatedFurnace/Side
+block:id=%blockHeatedFurnace,data=1,stdrot=true,face0=0:bcadditions/heatedFurnace/Bottom,face1-5=0:bcadditions/heatedFurnace/Side
+block:id=%blockHeatedFurnace,data=2,stdrot=true,face0-1=0:bcadditions/heatedFurnace/Side,face2=0:bcadditions/heatedFurnace/Front,face3-5=0:bcadditions/heatedFurnace/Side
+block:id=%blockHeatedFurnace,data=3,stdrot=true,face0-2=0:bcadditions/heatedFurnace/Side,face3=0:bcadditions/heatedFurnace/Front,face4-5=0:bcadditions/heatedFurnace/Side
+block:id=%blockHeatedFurnace,data=4,stdrot=true,face0-3=0:bcadditions/heatedFurnace/Side,face4=0:bcadditions/heatedFurnace/Front,face5=0:bcadditions/heatedFurnace/Side
+block:id=%blockHeatedFurnace,data=5,stdrot=true,face0-4=0:bcadditions/heatedFurnace/Side,face5=0:bcadditions/heatedFurnace/Front
+block:id=%blockHeatedFurnace,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/heatedFurnace/Side
+
+# %blockCoilBasic:* (blockCoilBasic), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.BlockBasicCoil
+block:id=%blockCoilBasic,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:bcadditions/coils/basic/Bottom,face1=0:bcadditions/coils/basic/Top,face2-5=0:bcadditions/coils/basic/Sides
+
+# %blockCoilLava:* (blockCoilLava), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.BlockLavaCoil
+block:id=%blockCoilLava,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:bcadditions/coils/lava/Bottom,face1=0:bcadditions/coils/lava/Top,face2-5=0:bcadditions/coils/lava/Sides
+
+# %blockCoilKinetic:* (blockCoilKinetic), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.BlockKineticCoil
+block:id=%blockCoilKinetic,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:bcadditions/coils/kinetic/Bottom,face1=0:bcadditions/coils/kinetic/Top,face2-5=0:bcadditions/coils/kinetic/Sides
+
+# %blockDusterBasic:* (blockDusterBasic), render=buildcraftAdditions.client.render.blocks.RendererSidedTextures(CUSTOM), opaque=false,cls=buildcraftAdditions.blocks.BlockBasicDuster
+block:id=%blockDusterBasic,data=0,stdrot=true,face0=0:bcadditions/dusterBottom,face1=0:bcadditions/dusterBack,face2=0:bcadditions/dusterSides,face3=0:bcadditions/dusterFront,face4-5=0:bcadditions/dusterSides
+block:id=%blockDusterBasic,data=1,stdrot=true,face0=0:bcadditions/dusterBack,face1=0:bcadditions/dusterTop,face2-5=0:bcadditions/dusterSides
+block:id=%blockDusterBasic,data=2,stdrot=true,face0=0:bcadditions/dusterBottom,face1=0:bcadditions/dusterTop,face2=0:bcadditions/dusterFront,face3=0:bcadditions/dusterBack,face4-5=0:bcadditions/dusterSides
+block:id=%blockDusterBasic,data=3,stdrot=true,face0=0:bcadditions/dusterBottom,face1=0:bcadditions/dusterTop,face2=0:bcadditions/dusterBack,face3=0:bcadditions/dusterFront,face4-5=0:bcadditions/dusterSides
+block:id=%blockDusterBasic,data=4,stdrot=true,face0=0:bcadditions/dusterBottom,face1=0:bcadditions/dusterTop,face2-3=0:bcadditions/dusterSides,face4=0:bcadditions/dusterFront,face5=0:bcadditions/dusterBack
+block:id=%blockDusterBasic,data=5,stdrot=true,face0=0:bcadditions/dusterBottom,face1=0:bcadditions/dusterTop,face2-3=0:bcadditions/dusterSides,face4=0:bcadditions/dusterBack,face5=0:bcadditions/dusterFront
+block:id=%blockDusterBasic,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:bcadditions/dusterBottom,face1=0:bcadditions/dusterTop,face2-5=0:bcadditions/dusterSides
+
+# %blockDusterSemiAutomatic:* (blockDusterSemiAutomatic), render=buildcraftAdditions.client.render.blocks.RendererSidedTextures(CUSTOM), opaque=false,cls=buildcraftAdditions.blocks.BlockSemiAutomaticDuster
+block:id=%blockDusterSemiAutomatic,data=0,stdrot=true,face0=0:bcadditions/dusters/semiAutomatic/Bottom,face1=0:bcadditions/dusters/semiAutomatic/Back,face2=0:bcadditions/dusters/semiAutomatic/Sides,face3=0:bcadditions/dusters/semiAutomatic/Front,face4-5=0:bcadditions/dusters/semiAutomatic/Sides
+block:id=%blockDusterSemiAutomatic,data=1,stdrot=true,face0=0:bcadditions/dusters/semiAutomatic/Back,face1=0:bcadditions/dusters/semiAutomatic/Top,face2-5=0:bcadditions/dusters/semiAutomatic/Sides
+block:id=%blockDusterSemiAutomatic,data=2,stdrot=true,face0=0:bcadditions/dusters/semiAutomatic/Bottom,face1=0:bcadditions/dusters/semiAutomatic/Top,face2=0:bcadditions/dusters/semiAutomatic/Front,face3=0:bcadditions/dusters/semiAutomatic/Back,face4-5=0:bcadditions/dusters/semiAutomatic/Sides
+block:id=%blockDusterSemiAutomatic,data=3,stdrot=true,face0=0:bcadditions/dusters/semiAutomatic/Bottom,face1=0:bcadditions/dusters/semiAutomatic/Top,face2=0:bcadditions/dusters/semiAutomatic/Back,face3=0:bcadditions/dusters/semiAutomatic/Front,face4-5=0:bcadditions/dusters/semiAutomatic/Sides
+block:id=%blockDusterSemiAutomatic,data=4,stdrot=true,face0=0:bcadditions/dusters/semiAutomatic/Bottom,face1=0:bcadditions/dusters/semiAutomatic/Top,face2-3=0:bcadditions/dusters/semiAutomatic/Sides,face4=0:bcadditions/dusters/semiAutomatic/Front,face5=0:bcadditions/dusters/semiAutomatic/Back
+block:id=%blockDusterSemiAutomatic,data=5,stdrot=true,face0=0:bcadditions/dusters/semiAutomatic/Bottom,face1=0:bcadditions/dusters/semiAutomatic/Top,face2-3=0:bcadditions/dusters/semiAutomatic/Sides,face4=0:bcadditions/dusters/semiAutomatic/Back,face5=0:bcadditions/dusters/semiAutomatic/Front
+block:id=%blockDusterSemiAutomatic,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:bcadditions/dusters/semiAutomatic/Bottom,face1=0:bcadditions/dusters/semiAutomatic/Top,face2-5=0:bcadditions/dusters/semiAutomatic/Sides
+
+# %blockDusterMechanical:* (blockDusterMechanical), render=buildcraftAdditions.client.render.blocks.RendererSidedTextures(CUSTOM), opaque=false,cls=buildcraftAdditions.blocks.BlockMechanicalDuster
+block:id=%blockDusterMechanical,data=0,stdrot=true,face0=0:bcadditions/dusters/mechanical/Bottom,face1=0:bcadditions/dusters/mechanical/Top0,face2=0:bcadditions/dusters/mechanical/Sides,face3=0:bcadditions/dusters/mechanical/Front,face4-5=0:bcadditions/dusters/mechanical/Sides
+block:id=%blockDusterMechanical,data=1,stdrot=true,face0=0:bcadditions/dusters/mechanical/Bottom,face1=0:bcadditions/dusters/mechanical/Top0,face2-5=0:bcadditions/dusters/mechanical/Sides
+block:id=%blockDusterMechanical,data=2,stdrot=true,face0=0:bcadditions/dusters/mechanical/Bottom,face1=0:bcadditions/dusters/mechanical/Top0,face2=0:bcadditions/dusters/mechanical/Front,face3-5=0:bcadditions/dusters/mechanical/Sides
+block:id=%blockDusterMechanical,data=3,stdrot=true,face0=0:bcadditions/dusters/mechanical/Bottom,face1=0:bcadditions/dusters/mechanical/Top0,face2=0:bcadditions/dusters/mechanical/Sides,face3=0:bcadditions/dusters/mechanical/Front,face4-5=0:bcadditions/dusters/mechanical/Sides
+block:id=%blockDusterMechanical,data=4,stdrot=true,face0=0:bcadditions/dusters/mechanical/Bottom,face1=0:bcadditions/dusters/mechanical/Top0,face2-3=0:bcadditions/dusters/mechanical/Sides,face4=0:bcadditions/dusters/mechanical/Front,face5=0:bcadditions/dusters/mechanical/Sides
+block:id=%blockDusterMechanical,data=5,stdrot=true,face0=0:bcadditions/dusters/mechanical/Bottom,face1=0:bcadditions/dusters/mechanical/Top0,face2-4=0:bcadditions/dusters/mechanical/Sides,face5=0:bcadditions/dusters/mechanical/Front
+block:id=%blockDusterMechanical,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:bcadditions/dusters/mechanical/Bottom,face1=0:bcadditions/dusters/mechanical/Top0,face2-5=0:bcadditions/dusters/mechanical/Sides
+
+# %KEBT1:* (KEBT1), render=(STANDARD), opaque=true,cls=buildcraftAdditions.blocks.BlockKineticEnergyBufferTier1
+block:id=%KEBT1,data=0,stdrot=true,face0-5=0:bcadditions/KEB/T1/0
+block:id=%KEBT1,data=1,stdrot=true,face0-5=0:bcadditions/KEB/T1/1
+block:id=%KEBT1,data=2,stdrot=true,face0-5=0:bcadditions/KEB/T1/2
+block:id=%KEBT1,data=3,stdrot=true,face0-5=0:bcadditions/KEB/T1/3
+block:id=%KEBT1,data=4,stdrot=true,face0-5=0:bcadditions/KEB/T1/4
+block:id=%KEBT1,data=5,stdrot=true,face0-5=0:bcadditions/KEB/T1/5
+block:id=%KEBT1,data=6,stdrot=true,face0-5=0:bcadditions/KEB/T1/6
+block:id=%KEBT1,data=7,stdrot=true,face0-5=0:bcadditions/KEB/T1/7
+block:id=%KEBT1,data=8,stdrot=true,face0-5=0:bcadditions/KEB/T1/8
+block:id=%KEBT1,data=9,stdrot=true,face0-5=0:bcadditions/KEB/T1/creative
+block:id=%KEBT1,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/KEB/T1/8
+
+# %KEBT2:* (KEBT2), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.multiBlocks.MultiBlockKEBT2
+block:id=%KEBT2,data=0,stdrot=true,face0-5=0:bcadditions/KEB/T2/unformed
+block:id=%KEBT2,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/multiBlockSeeInvisible
+
+# %KEBT3Core:* (KEBT3Core), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.multiBlocks.MultiBlockKEBT3Core
+block:id=%KEBT3Core,data=0,stdrot=true,face0-5=0:bcadditions/KEB/T3/core
+block:id=%KEBT3Core,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/multiBlockSeeInvisible
+
+# %KEBT3Plating:* (KEBT3Plating), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.multiBlocks.MultiBlockKEBT3Plating
+block:id=%KEBT3Plating,data=0,stdrot=true,face0-5=0:bcadditions/KEB/T3/plating
+block:id=%KEBT3Plating,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/multiBlockSeeInvisible
+
+# %refinerywals:* (refinerywals), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.multiBlocks.MultiBlockRefineryWalls
+block:id=%refinerywals,data=0,stdrot=true,face0-5=0:bcadditions/heaterPlating
+block:id=%refinerywals,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/heaterSidesMultiblock
+
+# %refineryValve:* (refineryValve), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.multiBlocks.MultiBlockRefineryValve
+block:id=%refineryValve,data=0,stdrot=true,face0-5=0:bcadditions/refineryValve_2
+block:id=%refineryValve,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/refineryValve
+
+# %blockCoolingTowerWalls):* (blockCoolingTowerWalls)), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.multiBlocks.MultiBlockCoolingTowerWalls
+block:id=%blockCoolingTowerWalls),data=0,stdrot=true,face0-5=0:bcadditions/coolingTowerPlating
+block:id=%blockCoolingTowerWalls),data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/coolingTowerFormed
+
+# %blockCoolingTowerValve:* (blockCoolingTowerValve), render=(STANDARD), opaque=false,cls=buildcraftAdditions.blocks.multiBlocks.MultiBlockCoolingTowerValve
+block:id=%blockCoolingTowerValve,data=0,stdrot=true,face0-5=0:bcadditions/refineryValve_2
+block:id=%blockCoolingTowerValve,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/coolingtowerValve
+
+# %blockItemSorter:* (blockItemSorter), render=buildcraftAdditions.client.render.blocks.RendererSorter(CUSTOM), opaque=true,cls=buildcraftAdditions.blocks.BlockItemSorter
+block:id=%blockItemSorter,data=0,stdrot=true,face0=0:bcadditions/sorter/Out,face1=0:bcadditions/sorter/In,face2-3=0:bcadditions/sorter/Side2,face4-5=0:bcadditions/sorter/Side
+block:id=%blockItemSorter,data=1,stdrot=true,face0=0:bcadditions/sorter/In,face1=0:bcadditions/sorter/Out,face2-3=0:bcadditions/sorter/Side2,face4-5=0:bcadditions/sorter/Side
+block:id=%blockItemSorter,data=2,stdrot=true,face0-1=0:bcadditions/sorter/Side,face2=0:bcadditions/sorter/Out,face3=0:bcadditions/sorter/In,face4-5=0:bcadditions/sorter/Side2
+block:id=%blockItemSorter,data=3,stdrot=true,face0-1=0:bcadditions/sorter/Side,face2=0:bcadditions/sorter/In,face3=0:bcadditions/sorter/Out,face4-5=0:bcadditions/sorter/Side2
+block:id=%blockItemSorter,data=4,stdrot=true,face0-1=0:bcadditions/sorter/Side,face2-3=0:bcadditions/sorter/Side2,face4=0:bcadditions/sorter/Out,face5=0:bcadditions/sorter/In
+block:id=%blockItemSorter,data=5,stdrot=true,face0-1=0:bcadditions/sorter/Side,face2-3=0:bcadditions/sorter/Side2,face4=0:bcadditions/sorter/In,face5=0:bcadditions/sorter/Out
+block:id=%blockItemSorter,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bcadditions/sorter/Side
+
+# %bioethanolgasBlock:* (bioethanolgasBlock), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=buildcraftAdditions.blocks.FluidBlockBase
+block:id=%bioethanolgasBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=B0B3B6,face0-5=12000:forestry/liquid/bioethanol_still
+
+# %fuelgasBlock:* (fuelgasBlock), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=buildcraftAdditions.blocks.FluidBlockBase
+block:id=%fuelgasBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=B0B3B6,face0-1=12000:BuildCraftEnergy/fluids/fuel_still,face2-5=12000:BuildCraftEnergy/fluids/fuel_flow
+
+# %kebT2DisplayItem:* (kebT2DisplayItem), render=(STANDARD), opaque=true,cls=buildcraftAdditions.blocks.BlockBasic
+block:id=%kebT2DisplayItem,data=*,stdrot=true,face0-5=0:bcadditions/KEB/T2/5
+
+# %kebT3DisplayItem:* (kebT3DisplayItem), render=(STANDARD), opaque=true,cls=buildcraftAdditions.blocks.BlockBasic
+block:id=%kebT3DisplayItem,data=*,stdrot=true,face0-5=0:bcadditions/KEB/T3/4

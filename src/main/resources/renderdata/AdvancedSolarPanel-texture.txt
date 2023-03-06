@@ -1,0 +1,31 @@
+# AdvancedSolarPanel 1.7.10-3.5.1
+version:1.7
+modname:AdvancedSolarPanel
+
+
+cfgfile:config/AdvancedSolarPanel.cfg
+
+
+texturepath:assets/advancedsolarpanel/textures/blocks/
+texture:id=advancedsolarpanel/asp_bottom,filename=assets/advancedsolarpanel/textures/blocks/asp_bottom.png
+texture:id=advancedsolarpanel/asp_side,filename=assets/advancedsolarpanel/textures/blocks/asp_side.png
+texture:id=advancedsolarpanel/asp_top,filename=assets/advancedsolarpanel/textures/blocks/asp_top.png
+texture:id=advancedsolarpanel/hsp_bottom,filename=assets/advancedsolarpanel/textures/blocks/hsp_bottom.png
+texture:id=advancedsolarpanel/hsp_side,filename=assets/advancedsolarpanel/textures/blocks/hsp_side.png
+texture:id=advancedsolarpanel/hsp_top,filename=assets/advancedsolarpanel/textures/blocks/hsp_top.png
+texture:id=advancedsolarpanel/qgen_a_side,filename=assets/advancedsolarpanel/textures/blocks/qgen_a_side.png
+texture:id=advancedsolarpanel/qsp_bottom,filename=assets/advancedsolarpanel/textures/blocks/qsp_bottom.png
+texture:id=advancedsolarpanel/qsp_side,filename=assets/advancedsolarpanel/textures/blocks/qsp_side.png
+texture:id=advancedsolarpanel/qsp_top,filename=assets/advancedsolarpanel/textures/blocks/qsp_top.png
+texture:id=advancedsolarpanel/usp_bottom,filename=assets/advancedsolarpanel/textures/blocks/usp_bottom.png
+texture:id=advancedsolarpanel/usp_side,filename=assets/advancedsolarpanel/textures/blocks/usp_side.png
+texture:id=advancedsolarpanel/usp_top,filename=assets/advancedsolarpanel/textures/blocks/usp_top.png
+
+
+
+# %BlockAdvSolarPanel:* (BlockAdvSolarPanel), render=(STANDARD), opaque=true,cls=advsolar.common.blocks.BlockAdvSolarPanel
+block:id=%BlockAdvSolarPanel,data=0,stdrot=true,face0=0:advancedsolarpanel/asp_bottom,face1=0:advancedsolarpanel/asp_top,face2-5=0:advancedsolarpanel/asp_side
+block:id=%BlockAdvSolarPanel,data=1,stdrot=true,face0=0:advancedsolarpanel/hsp_bottom,face1=0:advancedsolarpanel/hsp_top,face2-5=0:advancedsolarpanel/hsp_side
+block:id=%BlockAdvSolarPanel,data=2,stdrot=true,face0=0:advancedsolarpanel/usp_bottom,face1=0:advancedsolarpanel/usp_top,face2-5=0:advancedsolarpanel/usp_side
+block:id=%BlockAdvSolarPanel,data=3,stdrot=true,face0=0:advancedsolarpanel/qsp_bottom,face1=0:advancedsolarpanel/qsp_top,face2-5=0:advancedsolarpanel/qsp_side
+block:id=%BlockAdvSolarPanel,data=4,stdrot=true,face0-5=0:advancedsolarpanel/qgen_a_side

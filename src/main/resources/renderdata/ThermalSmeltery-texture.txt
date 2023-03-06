@@ -1,0 +1,46 @@
+# ThermalSmeltery 1.0
+version:1.7
+modname:ThermalSmeltery
+
+
+cfgfile:config/ThermalSmeltery.cfg
+
+
+texturepath:assets/thermalsmeltery/textures/blocks/
+texture:id=thermalsmeltery/liquid/liquid_ConductiveIron,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_ConductiveIron.png
+texture:id=thermalsmeltery/liquid/liquid_ConductiveIron_flow,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_ConductiveIron_flow.png
+texture:id=thermalsmeltery/liquid/liquid_DarkSteel,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_DarkSteel.png
+texture:id=thermalsmeltery/liquid/liquid_DarkSteel_flow,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_DarkSteel_flow.png
+texture:id=thermalsmeltery/liquid/liquid_EnergeticAlloy,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_EnergeticAlloy.png
+texture:id=thermalsmeltery/liquid/liquid_EnergeticAlloy_flow,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_EnergeticAlloy_flow.png
+texture:id=thermalsmeltery/liquid/liquid_PhasedGold,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_PhasedGold.png
+texture:id=thermalsmeltery/liquid/liquid_PhasedGold_flow,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_PhasedGold_flow.png
+texture:id=thermalsmeltery/liquid/liquid_PhasedIron,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_PhasedIron.png
+texture:id=thermalsmeltery/liquid/liquid_PhasedIron_flow,filename=assets/thermalsmeltery/textures/blocks/liquid/liquid_PhasedIron_flow.png
+texture:id=thermalsmeltery/machine/machineBottom,filename=assets/thermalsmeltery/textures/blocks/machine/machineBottom.png
+texture:id=thermalsmeltery/machine/machineFaceExtruder,filename=assets/thermalsmeltery/textures/blocks/machine/machineFaceExtruder.png
+texture:id=thermalsmeltery/machine/machineFaceStamper,filename=assets/thermalsmeltery/textures/blocks/machine/machineFaceStamper.png
+texture:id=thermalsmeltery/machine/machineSide,filename=assets/thermalsmeltery/textures/blocks/machine/machineSide.png
+texture:id=thermalsmeltery/machine/machineTop,filename=assets/thermalsmeltery/textures/blocks/machine/machineTop.png
+
+
+
+# %fluid.molten.EnergeticAlloy:* (fluid.molten.EnergeticAlloy), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=us.drullk.thermalsmeltery.common.lib.TSmeltFluid
+block:id=%fluid.molten.EnergeticAlloy,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalsmeltery/liquid/liquid_EnergeticAlloy,face2-5=12000:thermalsmeltery/liquid/liquid_EnergeticAlloy_flow
+
+# %fluid.molten.PhasedGold:* (fluid.molten.PhasedGold), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=us.drullk.thermalsmeltery.common.lib.TSmeltFluid
+block:id=%fluid.molten.PhasedGold,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalsmeltery/liquid/liquid_PhasedGold,face2-5=12000:thermalsmeltery/liquid/liquid_PhasedGold_flow
+
+# %fluid.molten.ConductiveIron:* (fluid.molten.ConductiveIron), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=us.drullk.thermalsmeltery.common.lib.TSmeltFluid
+block:id=%fluid.molten.ConductiveIron,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalsmeltery/liquid/liquid_ConductiveIron,face2-5=12000:thermalsmeltery/liquid/liquid_ConductiveIron_flow
+
+# %fluid.molten.PhasedIron:* (fluid.molten.PhasedIron), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=us.drullk.thermalsmeltery.common.lib.TSmeltFluid
+block:id=%fluid.molten.PhasedIron,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalsmeltery/liquid/liquid_PhasedIron,face2-5=12000:thermalsmeltery/liquid/liquid_PhasedIron_flow
+
+# %fluid.molten.DarkSteel:* (fluid.molten.DarkSteel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=us.drullk.thermalsmeltery.common.lib.TSmeltFluid
+block:id=%fluid.molten.DarkSteel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:thermalsmeltery/liquid/liquid_DarkSteel,face2-5=12000:thermalsmeltery/liquid/liquid_DarkSteel_flow
+
+# %SmelteryMachine:* (SmelteryMachine), render=(STANDARD), opaque=false,cls=us.drullk.thermalsmeltery.common.blocks.BlockMachine
+block:id=%SmelteryMachine,data=0,stdrot=true,face0=12000:thermalsmeltery/machine/machineBottom,face1=12000:thermalsmeltery/machine/machineTop,face2=12000:thermalsmeltery/machine/machineSide,face3=12000:thermalsmeltery/machine/machineFaceExtruder,face4-5=12000:thermalsmeltery/machine/machineSide
+block:id=%SmelteryMachine,data=1,stdrot=true,face0=12000:thermalsmeltery/machine/machineBottom,face1=12000:thermalsmeltery/machine/machineTop,face2=12000:thermalsmeltery/machine/machineSide,face3=12000:thermalsmeltery/machine/machineFaceStamper,face4-5=12000:thermalsmeltery/machine/machineSide
+block:id=%SmelteryMachine,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=12000:thermalsmeltery/machine/machineBottom,face1=12000:thermalsmeltery/machine/machineTop,face2=12000:thermalsmeltery/machine/machineSide,face4-5=12000:thermalsmeltery/machine/machineSide

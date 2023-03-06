@@ -1,0 +1,50 @@
+# MekanismGenerators 9.1.0
+version:1.7
+modname:MekanismGenerators
+
+
+cfgfile:config/Mekanism.cfg
+
+
+texturepath:assets/mekanismgenerators/textures/blocks/
+texture:id=mekanism/RotationalComplexSide,filename=assets/mekanism/textures/blocks/RotationalComplexSide.png
+texture:id=mekanism/RotationalComplexTop,filename=assets/mekanism/textures/blocks/RotationalComplexTop.png
+texture:id=mekanism/SteelCasing,filename=assets/mekanism/textures/blocks/SteelCasing.png
+texture:id=mekanism/TurbineRod,filename=assets/mekanism/textures/blocks/TurbineRod.png
+texture:id=mekanism/ctm/ElectromagneticCoil,filename=assets/mekanism/textures/blocks/ctm/ElectromagneticCoil.png
+texture:id=mekanism/ctm/ReactorControllerOff,filename=assets/mekanism/textures/blocks/ctm/ReactorControllerOff.png
+texture:id=mekanism/ctm/ReactorFrame,filename=assets/mekanism/textures/blocks/ctm/ReactorFrame.png
+texture:id=mekanism/ctm/ReactorGlass,filename=assets/mekanism/textures/blocks/ctm/ReactorGlass.png
+texture:id=mekanism/ctm/ReactorLaserFocus,filename=assets/mekanism/textures/blocks/ctm/ReactorLaserFocus.png
+texture:id=mekanism/ctm/ReactorLogicAdapter,filename=assets/mekanism/textures/blocks/ctm/ReactorLogicAdapter.png
+texture:id=mekanism/ctm/ReactorNeutronCapture,filename=assets/mekanism/textures/blocks/ctm/ReactorNeutronCapture.png
+texture:id=mekanism/ctm/ReactorPortInput,filename=assets/mekanism/textures/blocks/ctm/ReactorPortInput.png
+texture:id=mekanism/ctm/SaturatingCondenser,filename=assets/mekanism/textures/blocks/ctm/SaturatingCondenser.png
+texture:id=mekanism/ctm/TurbineCasing,filename=assets/mekanism/textures/blocks/ctm/TurbineCasing.png
+texture:id=mekanism/ctm/TurbineValve,filename=assets/mekanism/textures/blocks/ctm/TurbineValve.png
+texture:id=mekanism/ctm/TurbineVent,filename=assets/mekanism/textures/blocks/ctm/TurbineVent.png
+
+
+
+# %Generator:* (Generator), render=mekanism.client.render.block.CTMRenderingHandler(CUSTOM), opaque=false,cls=mekanism.generators.common.block.BlockGenerator
+block:id=%Generator,data=0,stdrot=true,face0-5=0:mekanism/SteelCasing
+block:id=%Generator,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:mekanism/SteelCasing
+block:id=%Generator,data=3,data=4,data=5,data=6,stdrot=true,face0-5=0:mekanism/SteelCasing
+block:id=%Generator,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:mekanism/TurbineRod
+block:id=%Generator,data=8,stdrot=true,face0-1=0:mekanism/RotationalComplexTop,face2-5=0:mekanism/RotationalComplexSide
+block:id=%Generator,data=9,stdrot=true,face0-5=0:mekanism/ctm/ElectromagneticCoil
+block:id=%Generator,data=10,stdrot=true,face0-5=0:mekanism/ctm/TurbineCasing
+block:id=%Generator,data=11,stdrot=true,face0-5=0:mekanism/ctm/TurbineValve
+block:id=%Generator,data=12,stdrot=true,face0-5=0:mekanism/ctm/TurbineVent
+block:id=%Generator,data=13,stdrot=true,face0-5=0:mekanism/ctm/SaturatingCondenser
+
+# %Reactor:* (Reactor), render=mekanism.client.render.block.CTMRenderingHandler(CUSTOM), opaque=false,cls=mekanism.generators.common.block.BlockReactor
+block:id=%Reactor,data=0,stdrot=true,face0=0:mekanism/ctm/ReactorFrame,face1=0:mekanism/ctm/ReactorControllerOff,face2-5=0:mekanism/ctm/ReactorFrame
+block:id=%Reactor,data=1,stdrot=true,face0-5=0:mekanism/ctm/ReactorFrame
+block:id=%Reactor,data=2,stdrot=true,face0-5=0:mekanism/ctm/ReactorNeutronCapture
+block:id=%Reactor,data=3,stdrot=true,face0-5=0:mekanism/ctm/ReactorPortInput
+block:id=%Reactor,data=4,stdrot=true,face0-5=0:mekanism/ctm/ReactorLogicAdapter
+
+# %ReactorGlass:* (ReactorGlass), render=mekanism.client.render.block.CTMRenderingHandler(CUSTOM), opaque=false,cls=mekanism.generators.common.block.BlockReactor
+block:id=%ReactorGlass,data=0,stdrot=true,face0-5=12000:mekanism/ctm/ReactorGlass
+block:id=%ReactorGlass,data=1,stdrot=true,face0-5=12000:mekanism/ctm/ReactorLaserFocus

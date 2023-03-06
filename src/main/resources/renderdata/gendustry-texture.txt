@@ -1,0 +1,86 @@
+# gendustry 1.6.4.135
+version:1.7
+modname:gendustry
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/gendustry/textures/blocks/
+texture:id=gendustry/apiary/side,filename=assets/gendustry/textures/blocks/apiary/side.png
+texture:id=gendustry/apiary/top,filename=assets/gendustry/textures/blocks/apiary/top.png
+texture:id=gendustry/extractor/bottom,filename=assets/gendustry/textures/blocks/extractor/bottom.png
+texture:id=gendustry/extractor/side,filename=assets/gendustry/textures/blocks/extractor/side.png
+texture:id=gendustry/extractor/top,filename=assets/gendustry/textures/blocks/extractor/top.png
+texture:id=gendustry/fluids/liquiddna/flowing,filename=assets/gendustry/textures/blocks/fluids/liquiddna/flowing.png
+texture:id=gendustry/fluids/liquiddna/still,filename=assets/gendustry/textures/blocks/fluids/liquiddna/still.png
+texture:id=gendustry/fluids/mutagen/flowing,filename=assets/gendustry/textures/blocks/fluids/mutagen/flowing.png
+texture:id=gendustry/fluids/mutagen/still,filename=assets/gendustry/textures/blocks/fluids/mutagen/still.png
+texture:id=gendustry/fluids/protein/flowing,filename=assets/gendustry/textures/blocks/fluids/protein/flowing.png
+texture:id=gendustry/fluids/protein/still,filename=assets/gendustry/textures/blocks/fluids/protein/still.png
+texture:id=gendustry/imprinter/bottom,filename=assets/gendustry/textures/blocks/imprinter/bottom.png
+texture:id=gendustry/imprinter/side,filename=assets/gendustry/textures/blocks/imprinter/side.png
+texture:id=gendustry/imprinter/top,filename=assets/gendustry/textures/blocks/imprinter/top.png
+texture:id=gendustry/liquifier/bottom,filename=assets/gendustry/textures/blocks/liquifier/bottom.png
+texture:id=gendustry/liquifier/side,filename=assets/gendustry/textures/blocks/liquifier/side.png
+texture:id=gendustry/liquifier/top,filename=assets/gendustry/textures/blocks/liquifier/top.png
+texture:id=gendustry/mutagen_producer/bottom,filename=assets/gendustry/textures/blocks/mutagen_producer/bottom.png
+texture:id=gendustry/mutagen_producer/side,filename=assets/gendustry/textures/blocks/mutagen_producer/side.png
+texture:id=gendustry/mutagen_producer/top,filename=assets/gendustry/textures/blocks/mutagen_producer/top.png
+texture:id=gendustry/mutatron/bottom,filename=assets/gendustry/textures/blocks/mutatron/bottom.png
+texture:id=gendustry/mutatron/side,filename=assets/gendustry/textures/blocks/mutatron/side.png
+texture:id=gendustry/mutatron/top,filename=assets/gendustry/textures/blocks/mutatron/top.png
+texture:id=gendustry/mutatron_adv/bottom,filename=assets/gendustry/textures/blocks/mutatron_adv/bottom.png
+texture:id=gendustry/mutatron_adv/side,filename=assets/gendustry/textures/blocks/mutatron_adv/side.png
+texture:id=gendustry/mutatron_adv/top,filename=assets/gendustry/textures/blocks/mutatron_adv/top.png
+texture:id=gendustry/replicator/bottom,filename=assets/gendustry/textures/blocks/replicator/bottom.png
+texture:id=gendustry/replicator/side,filename=assets/gendustry/textures/blocks/replicator/side.png
+texture:id=gendustry/replicator/top,filename=assets/gendustry/textures/blocks/replicator/top.png
+texture:id=gendustry/sampler/bottom,filename=assets/gendustry/textures/blocks/sampler/bottom.png
+texture:id=gendustry/sampler/side,filename=assets/gendustry/textures/blocks/sampler/side.png
+texture:id=gendustry/sampler/top,filename=assets/gendustry/textures/blocks/sampler/top.png
+texture:id=gendustry/transposer/bottom,filename=assets/gendustry/textures/blocks/transposer/bottom.png
+texture:id=gendustry/transposer/side,filename=assets/gendustry/textures/blocks/transposer/side.png
+texture:id=gendustry/transposer/top,filename=assets/gendustry/textures/blocks/transposer/top.png
+
+
+
+# %fluid.Mutagen:* (fluid.Mutagen), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=net.bdew.gendustry.fluids.BlockFluid
+block:id=%fluid.Mutagen,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:gendustry/fluids/mutagen/still,face2-5=12000:gendustry/fluids/mutagen/flowing
+
+# %fluid.LiquidDNA:* (fluid.LiquidDNA), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=net.bdew.gendustry.fluids.BlockFluid
+block:id=%fluid.LiquidDNA,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:gendustry/fluids/liquiddna/still,face2-5=12000:gendustry/fluids/liquiddna/flowing
+
+# %fluid.Protein:* (fluid.Protein), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=net.bdew.gendustry.fluids.BlockFluid
+block:id=%fluid.Protein,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:gendustry/fluids/protein/still,face2-5=12000:gendustry/fluids/protein/flowing
+
+# %MutagenProducer:* (MutagenProducer), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.mproducer.BlockMutagenProducer$
+block:id=%MutagenProducer,data=*,stdrot=true,face0=0:gendustry/mutagen_producer/bottom,face1=0:gendustry/mutagen_producer/top,face2-5=0:gendustry/mutagen_producer/side
+
+# %Mutatron:* (Mutatron), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.mutatron.BlockMutatron$
+block:id=%Mutatron,data=*,stdrot=true,face0=0:gendustry/mutatron/bottom,face1=0:gendustry/mutatron/top,face2-5=0:gendustry/mutatron/side
+
+# %IndustrialApiary:* (IndustrialApiary), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.apiary.BlockApiary$
+block:id=%IndustrialApiary,data=*,stdrot=true,face0-1=0:gendustry/apiary/top,face2-5=0:gendustry/apiary/side
+
+# %Imprinter:* (Imprinter), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.imprinter.BlockImprinter$
+block:id=%Imprinter,data=*,stdrot=true,face0=0:gendustry/imprinter/bottom,face1=0:gendustry/imprinter/top,face2-5=0:gendustry/imprinter/side
+
+# %Sampler:* (Sampler), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.sampler.BlockSampler$
+block:id=%Sampler,data=*,stdrot=true,face0=0:gendustry/sampler/bottom,face1=0:gendustry/sampler/top,face2-5=0:gendustry/sampler/side
+
+# %MutatronAdv:* (MutatronAdv), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.advmutatron.BlockMutatronAdv$
+block:id=%MutatronAdv,data=*,stdrot=true,face0=0:gendustry/mutatron_adv/bottom,face1=0:gendustry/mutatron_adv/top,face2-5=0:gendustry/mutatron_adv/side
+
+# %Liquifier:* (Liquifier), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.liquifier.BlockLiquifier$
+block:id=%Liquifier,data=*,stdrot=true,face0=0:gendustry/liquifier/bottom,face1=0:gendustry/liquifier/top,face2-5=0:gendustry/liquifier/side
+
+# %Extractor:* (Extractor), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.extractor.BlockExtractor$
+block:id=%Extractor,data=*,stdrot=true,face0=0:gendustry/extractor/bottom,face1=0:gendustry/extractor/top,face2-5=0:gendustry/extractor/side
+
+# %Transposer:* (Transposer), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.transposer.BlockTransposer$
+block:id=%Transposer,data=*,stdrot=true,face0=0:gendustry/transposer/bottom,face1=0:gendustry/transposer/top,face2-5=0:gendustry/transposer/side
+
+# %Replicator:* (Replicator), render=net.bdew.lib.covers.CoverRenderer$(CUSTOM), opaque=true,cls=net.bdew.gendustry.machines.replicator.BlockReplicator$
+block:id=%Replicator,data=*,stdrot=true,face0=0:gendustry/replicator/bottom,face1=0:gendustry/replicator/top,face2-5=0:gendustry/replicator/side

@@ -1,0 +1,29 @@
+# denseores 1.0
+version:1.7
+modname:denseores
+
+
+cfgfile:config/denseores.cfg
+
+
+texturepath:assets/denseores/textures/blocks/
+texture:id=denseores/minecraft/coal_ore,filename=assets/minecraft/textures/blocks/coal_ore.png
+texture:id=denseores/minecraft/diamond_ore,filename=assets/minecraft/textures/blocks/diamond_ore.png
+texture:id=denseores/minecraft/emerald_ore,filename=assets/minecraft/textures/blocks/emerald_ore.png
+texture:id=denseores/minecraft/gold_ore,filename=assets/minecraft/textures/blocks/gold_ore.png
+texture:id=denseores/minecraft/iron_ore,filename=assets/minecraft/textures/blocks/iron_ore.png
+texture:id=denseores/minecraft/lapis_ore,filename=assets/minecraft/textures/blocks/lapis_ore.png
+texture:id=denseores/minecraft/quartz_ore,filename=assets/minecraft/textures/blocks/quartz_ore.png
+texture:id=denseores/minecraft/redstone_ore,filename=assets/minecraft/textures/blocks/redstone_ore.png
+
+
+
+# %block0:* (block0), render=(STANDARD), opaque=true,cls=com.rwtema.denseores.BlockDenseOre
+block:id=%block0,data=0,stdrot=true,face0-5=0:denseores/minecraft/iron_ore
+block:id=%block0,data=1,stdrot=true,face0-5=0:denseores/minecraft/gold_ore
+block:id=%block0,data=2,stdrot=true,face0-5=0:denseores/minecraft/lapis_ore
+block:id=%block0,data=3,stdrot=true,face0-5=0:denseores/minecraft/diamond_ore
+block:id=%block0,data=4,stdrot=true,face0-5=0:denseores/minecraft/emerald_ore
+block:id=%block0,data=5,stdrot=true,face0-5=0:denseores/minecraft/redstone_ore
+block:id=%block0,data=6,stdrot=true,face0-5=0:denseores/minecraft/coal_ore
+block:id=%block0,data=7,stdrot=true,face0-5=0:denseores/minecraft/quartz_ore

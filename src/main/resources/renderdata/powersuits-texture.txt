@@ -1,0 +1,19 @@
+# powersuits @VERSION@
+version:1.7
+modname:powersuits
+
+
+cfgfile:config/machinemuse/powersuits.cfg
+
+
+texturepath:assets/powersuits/textures/blocks/
+texture:id=powersuits/bluelight,filename=assets/powersuits/textures/blocks/bluelight.png
+texture:id=powersuits/heatresistantplating,filename=assets/powersuits/textures/blocks/heatresistantplating.png
+
+
+
+# %tile.tinkerTable:* (tile.tinkerTable), render=net.machinemuse.powersuits.client.render.block.TinkerTableRenderer(CUSTOM), opaque=false,cls=net.machinemuse.powersuits.block.BlockTinkerTable
+block:id=%tile.tinkerTable,data=*,stdrot=true,face0-5=0:powersuits/heatresistantplating
+
+# %tile.luxCapacitor:* (tile.luxCapacitor), render=net.machinemuse.powersuits.client.render.block.RenderLuxCapacitorTESR(CUSTOM), opaque=false,cls=net.machinemuse.powersuits.block.BlockLuxCapacitor
+block:id=%tile.luxCapacitor,data=*,stdrot=true,face0-5=0:powersuits/bluelight

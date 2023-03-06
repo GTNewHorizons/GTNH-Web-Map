@@ -1,0 +1,209 @@
+# OpenComputers 1.6.1.11
+version:1.7
+modname:OpenComputers
+
+
+cfgfile:config/OpenComputers.cfg
+
+
+texturepath:assets/opencomputers/textures/blocks/
+texture:id=minecraft/end_stone,filename=assets/minecraft/textures/blocks/end_stone.png
+texture:id=opencomputers/AccessPointTop,filename=assets/opencomputers/textures/blocks/AccessPointTop.png
+texture:id=opencomputers/AdapterSide,filename=assets/opencomputers/textures/blocks/AdapterSide.png
+texture:id=opencomputers/AdapterTop,filename=assets/opencomputers/textures/blocks/AdapterTop.png
+texture:id=opencomputers/AssemblerSide,filename=assets/opencomputers/textures/blocks/AssemblerSide.png
+texture:id=opencomputers/AssemblerTop,filename=assets/opencomputers/textures/blocks/AssemblerTop.png
+texture:id=opencomputers/CablePart,filename=assets/opencomputers/textures/blocks/CablePart.png
+texture:id=opencomputers/CapacitorSide,filename=assets/opencomputers/textures/blocks/CapacitorSide.png
+texture:id=opencomputers/CapacitorTop,filename=assets/opencomputers/textures/blocks/CapacitorTop.png
+texture:id=opencomputers/CaseBack,filename=assets/opencomputers/textures/blocks/CaseBack.png
+texture:id=opencomputers/CaseFront,filename=assets/opencomputers/textures/blocks/CaseFront.png
+texture:id=opencomputers/CaseSide,filename=assets/opencomputers/textures/blocks/CaseSide.png
+texture:id=opencomputers/CaseTop,filename=assets/opencomputers/textures/blocks/CaseTop.png
+texture:id=opencomputers/ChargerFront,filename=assets/opencomputers/textures/blocks/ChargerFront.png
+texture:id=opencomputers/ChargerSide,filename=assets/opencomputers/textures/blocks/ChargerSide.png
+texture:id=opencomputers/DisassemblerSide,filename=assets/opencomputers/textures/blocks/DisassemblerSide.png
+texture:id=opencomputers/DisassemblerTop,filename=assets/opencomputers/textures/blocks/DisassemblerTop.png
+texture:id=opencomputers/DiskDriveFront,filename=assets/opencomputers/textures/blocks/DiskDriveFront.png
+texture:id=opencomputers/DiskDriveSide,filename=assets/opencomputers/textures/blocks/DiskDriveSide.png
+texture:id=opencomputers/GenericSide,filename=assets/opencomputers/textures/blocks/GenericSide.png
+texture:id=opencomputers/GenericTop,filename=assets/opencomputers/textures/blocks/GenericTop.png
+texture:id=opencomputers/GeolyzerSide,filename=assets/opencomputers/textures/blocks/GeolyzerSide.png
+texture:id=opencomputers/GeolyzerTop,filename=assets/opencomputers/textures/blocks/GeolyzerTop.png
+texture:id=opencomputers/HologramSide,filename=assets/opencomputers/textures/blocks/HologramSide.png
+texture:id=opencomputers/HologramTop0,filename=assets/opencomputers/textures/blocks/HologramTop0.png
+texture:id=opencomputers/HologramTop1,filename=assets/opencomputers/textures/blocks/HologramTop1.png
+texture:id=opencomputers/Keyboard,filename=assets/opencomputers/textures/blocks/Keyboard.png
+texture:id=opencomputers/MicrocontrollerFront,filename=assets/opencomputers/textures/blocks/MicrocontrollerFront.png
+texture:id=opencomputers/MicrocontrollerSide,filename=assets/opencomputers/textures/blocks/MicrocontrollerSide.png
+texture:id=opencomputers/MicrocontrollerTop,filename=assets/opencomputers/textures/blocks/MicrocontrollerTop.png
+texture:id=opencomputers/MotionSensorSide,filename=assets/opencomputers/textures/blocks/MotionSensorSide.png
+texture:id=opencomputers/MotionSensorTop,filename=assets/opencomputers/textures/blocks/MotionSensorTop.png
+texture:id=opencomputers/NetSplitterSide,filename=assets/opencomputers/textures/blocks/NetSplitterSide.png
+texture:id=opencomputers/NetSplitterTop,filename=assets/opencomputers/textures/blocks/NetSplitterTop.png
+texture:id=opencomputers/PowerConverterSide,filename=assets/opencomputers/textures/blocks/PowerConverterSide.png
+texture:id=opencomputers/PowerDistributorSide,filename=assets/opencomputers/textures/blocks/PowerDistributorSide.png
+texture:id=opencomputers/PowerDistributorTop,filename=assets/opencomputers/textures/blocks/PowerDistributorTop.png
+texture:id=opencomputers/PrinterSide,filename=assets/opencomputers/textures/blocks/PrinterSide.png
+texture:id=opencomputers/PrinterTop,filename=assets/opencomputers/textures/blocks/PrinterTop.png
+texture:id=opencomputers/RackFront,filename=assets/opencomputers/textures/blocks/RackFront.png
+texture:id=opencomputers/RackSide,filename=assets/opencomputers/textures/blocks/RackSide.png
+texture:id=opencomputers/RaidFront,filename=assets/opencomputers/textures/blocks/RaidFront.png
+texture:id=opencomputers/RaidSide,filename=assets/opencomputers/textures/blocks/RaidSide.png
+texture:id=opencomputers/RedstoneSide,filename=assets/opencomputers/textures/blocks/RedstoneSide.png
+texture:id=opencomputers/RedstoneTop,filename=assets/opencomputers/textures/blocks/RedstoneTop.png
+texture:id=opencomputers/SwitchSide,filename=assets/opencomputers/textures/blocks/SwitchSide.png
+texture:id=opencomputers/SwitchTop,filename=assets/opencomputers/textures/blocks/SwitchTop.png
+texture:id=opencomputers/TransposerSide,filename=assets/opencomputers/textures/blocks/TransposerSide.png
+texture:id=opencomputers/TransposerTop,filename=assets/opencomputers/textures/blocks/TransposerTop.png
+texture:id=opencomputers/WaypointBack,filename=assets/opencomputers/textures/blocks/WaypointBack.png
+texture:id=opencomputers/WaypointFront,filename=assets/opencomputers/textures/blocks/WaypointFront.png
+texture:id=opencomputers/WaypointSide,filename=assets/opencomputers/textures/blocks/WaypointSide.png
+texture:id=opencomputers/WaypointTop,filename=assets/opencomputers/textures/blocks/WaypointTop.png
+texture:id=opencomputers/White,filename=assets/opencomputers/textures/blocks/White.png
+texture:id=opencomputers/screen/b,filename=assets/opencomputers/textures/blocks/screen/b.png
+texture:id=opencomputers/screen/b2,filename=assets/opencomputers/textures/blocks/screen/b2.png
+texture:id=opencomputers/screen/f2,filename=assets/opencomputers/textures/blocks/screen/f2.png
+
+
+
+# %accessPoint:* (accessPoint), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.AccessPoint
+block:id=%accessPoint,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/AccessPointTop,face2-5=0:opencomputers/SwitchSide
+
+# %adapter:* (adapter), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Adapter
+block:id=%adapter,data=*,stdrot=true,face0-1=0:opencomputers/AdapterTop,face2-5=0:opencomputers/AdapterSide
+
+# %assembler:* (assembler), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Assembler
+block:id=%assembler,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/AssemblerTop,face2-5=0:opencomputers/AssemblerSide
+
+# %cable:* (cable), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Cable
+block:id=%cable,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=000001,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=000002,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=000003,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=000004,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=000005,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=000006,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=000007,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=000008,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=000009,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=00000A,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=00000B,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=00000C,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=00000D,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=00000E,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=00000F,face0-5=17000:opencomputers/CablePart
+
+# %capacitor:* (capacitor), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Capacitor
+block:id=%capacitor,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/CapacitorTop,face2-5=0:opencomputers/CapacitorSide
+
+# %case1:* (case1), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Case
+block:id=%case1,data=*,stdrot=true,colorMult=ABABAB,face0-1=17000:opencomputers/CaseTop,face2=17000:opencomputers/CaseBack,face3=17000:opencomputers/CaseFront,face4-5=17000:opencomputers/CaseSide
+
+# %case3:* (case3), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Case
+block:id=%case3,data=*,stdrot=true,colorMult=66FFFF,face0-1=17000:opencomputers/CaseTop,face2=17000:opencomputers/CaseBack,face3=17000:opencomputers/CaseFront,face4-5=17000:opencomputers/CaseSide
+
+# %case2:* (case2), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Case
+block:id=%case2,data=*,stdrot=true,colorMult=FFFF66,face0-1=17000:opencomputers/CaseTop,face2=17000:opencomputers/CaseBack,face3=17000:opencomputers/CaseFront,face4-5=17000:opencomputers/CaseSide
+
+# %charger:* (charger), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Charger
+block:id=%charger,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2=0:opencomputers/ChargerSide,face3=0:opencomputers/ChargerFront,face4-5=0:opencomputers/ChargerSide
+
+# %disassembler:* (disassembler), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Disassembler
+block:id=%disassembler,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/DisassemblerTop,face2-5=0:opencomputers/DisassemblerSide
+
+# %diskDrive:* (diskDrive), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.DiskDrive
+block:id=%diskDrive,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2=0:opencomputers/DiskDriveSide,face3=0:opencomputers/DiskDriveFront,face4-5=0:opencomputers/DiskDriveSide
+
+# %geolyzer:* (geolyzer), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Geolyzer
+block:id=%geolyzer,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/GeolyzerTop,face2-5=0:opencomputers/GeolyzerSide
+
+# %hologram1:* (hologram1), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Hologram
+block:id=%hologram1,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:opencomputers/GenericTop,face1=0:opencomputers/HologramTop0,face2-5=0:opencomputers/HologramSide
+
+# %hologram2:* (hologram2), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Hologram
+block:id=%hologram2,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:opencomputers/GenericTop,face1=0:opencomputers/HologramTop1,face2-5=0:opencomputers/HologramSide
+
+# %keyboard:* (keyboard), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Keyboard
+block:id=%keyboard,data=*,stdrot=true,face0-5=0:opencomputers/Keyboard
+
+# %motionSensor:* (motionSensor), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.MotionSensor
+block:id=%motionSensor,data=*,stdrot=true,face0-1=0:opencomputers/MotionSensorTop,face2-5=0:opencomputers/MotionSensorSide
+
+# %powerConverter:* (powerConverter), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.PowerConverter
+block:id=%powerConverter,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2-5=0:opencomputers/PowerConverterSide
+
+# %powerDistributor:* (powerDistributor), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.PowerDistributor
+block:id=%powerDistributor,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/PowerDistributorTop,face2-5=0:opencomputers/PowerDistributorSide
+
+# %raid:* (raid), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Raid
+block:id=%raid,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2=0:opencomputers/RaidSide,face3=0:opencomputers/RaidFront,face4-5=0:opencomputers/RaidSide
+
+# %redstone:* (redstone), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Redstone
+block:id=%redstone,data=*,stdrot=true,face0-1=0:opencomputers/RedstoneTop,face2-5=0:opencomputers/RedstoneSide
+
+# %relay:* (relay), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Relay
+block:id=%relay,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/SwitchTop,face2-5=0:opencomputers/SwitchSide
+
+# %screen1:* (screen1), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Screen
+block:id=%screen1,data=*,stdrot=true,colorMult=ABABAB,face0-1=17000:opencomputers/screen/b,face2=17000:opencomputers/screen/b2,face3=17000:opencomputers/screen/f2,face4-5=17000:opencomputers/screen/b2
+
+# %screen3:* (screen3), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Screen
+block:id=%screen3,data=*,stdrot=true,colorMult=66FFFF,face0-1=17000:opencomputers/screen/b,face2=17000:opencomputers/screen/b2,face3=17000:opencomputers/screen/f2,face4-5=17000:opencomputers/screen/b2
+
+# %screen2:* (screen2), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Screen
+block:id=%screen2,data=*,stdrot=true,colorMult=FFFF66,face0-1=17000:opencomputers/screen/b,face2=17000:opencomputers/screen/b2,face3=17000:opencomputers/screen/f2,face4-5=17000:opencomputers/screen/b2
+
+# %rack:* (rack), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Rack
+block:id=%rack,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2=0:opencomputers/RackSide,face3=0:opencomputers/RackFront,face4-5=0:opencomputers/RackSide
+
+# %switch:* (switch), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Switch
+block:id=%switch,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/SwitchTop,face2-5=0:opencomputers/SwitchSide
+
+# %caseCreative:* (caseCreative), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Case
+block:id=%caseCreative,data=*,stdrot=true,colorMult=C354CD,face0-1=17000:opencomputers/CaseTop,face2=17000:opencomputers/CaseBack,face3=17000:opencomputers/CaseFront,face4-5=17000:opencomputers/CaseSide
+
+# %microcontroller:* (microcontroller), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Microcontroller
+block:id=%microcontroller,data=*,stdrot=true,face0-1=0:opencomputers/MicrocontrollerTop,face2=0:opencomputers/MicrocontrollerSide,face3=0:opencomputers/MicrocontrollerFront,face4-5=0:opencomputers/MicrocontrollerSide
+
+# %robotAfterimage:* (robotAfterimage), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.RobotAfterimage
+block:id=%robotAfterimage,data=*,stdrot=true,face0-5=0:opencomputers/GenericTop
+
+# %robot:* (robot), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.RobotProxy
+block:id=%robot,data=*,stdrot=true,face0-5=0:opencomputers/GenericTop
+
+# %print:* (print), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Print
+block:id=%print,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2-5=0:opencomputers/GenericSide
+
+# %printer:* (printer), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Printer
+block:id=%printer,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/PrinterTop,face2-5=0:opencomputers/PrinterSide
+
+# %chameliumBlock:* (chameliumBlock), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.ChameliumBlock
+block:id=%chameliumBlock,data=0,stdrot=true,colorMult=444444,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=1,stdrot=true,colorMult=B3312C,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=2,stdrot=true,colorMult=339911,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=3,stdrot=true,colorMult=51301A,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=4,stdrot=true,colorMult=6666FF,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=5,stdrot=true,colorMult=7B2FBE,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=6,stdrot=true,colorMult=66FFFF,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=7,stdrot=true,colorMult=ABABAB,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=8,stdrot=true,colorMult=666666,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=9,stdrot=true,colorMult=D88198,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=10,stdrot=true,colorMult=66FF66,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=11,stdrot=true,colorMult=FFFF66,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=12,stdrot=true,colorMult=AAAAFF,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=13,stdrot=true,colorMult=C354CD,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=14,stdrot=true,colorMult=EB8844,face0-5=17000:opencomputers/White
+block:id=%chameliumBlock,data=15,stdrot=true,colorMult=F0F0F0,face0-5=17000:opencomputers/White
+
+# %waypoint:* (waypoint), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Waypoint
+block:id=%waypoint,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/WaypointTop,face2=0:opencomputers/WaypointBack,face3=0:opencomputers/WaypointFront,face4-5=0:opencomputers/WaypointSide
+
+# %endstone:* (endstone), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.FakeEndstone
+block:id=%endstone,data=*,stdrot=true,face0-5=0:minecraft/end_stone
+
+# %netSplitter:* (netSplitter), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.NetSplitter
+block:id=%netSplitter,data=*,stdrot=true,face0-1=0:opencomputers/NetSplitterTop,face2-5=0:opencomputers/NetSplitterSide
+
+# %transposer:* (transposer), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Transposer
+block:id=%transposer,data=*,stdrot=true,face0-1=0:opencomputers/TransposerTop,face2-5=0:opencomputers/TransposerSide

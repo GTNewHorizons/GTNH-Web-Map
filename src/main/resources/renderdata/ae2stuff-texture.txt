@@ -1,0 +1,43 @@
+# ae2stuff 0.5.1.61
+version:1.7
+modname:ae2stuff
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/ae2stuff/textures/blocks/
+texture:id=ae2stuff/encoder/side,filename=assets/ae2stuff/textures/blocks/encoder/side.png
+texture:id=ae2stuff/encoder/top_off,filename=assets/ae2stuff/textures/blocks/encoder/top_off.png
+texture:id=ae2stuff/encoder/top_on,filename=assets/ae2stuff/textures/blocks/encoder/top_on.png
+texture:id=ae2stuff/grower/main_off,filename=assets/ae2stuff/textures/blocks/grower/main_off.png
+texture:id=ae2stuff/grower/main_on,filename=assets/ae2stuff/textures/blocks/grower/main_on.png
+texture:id=ae2stuff/inscriber/side_off,filename=assets/ae2stuff/textures/blocks/inscriber/side_off.png
+texture:id=ae2stuff/inscriber/side_on,filename=assets/ae2stuff/textures/blocks/inscriber/side_on.png
+texture:id=ae2stuff/inscriber/top,filename=assets/ae2stuff/textures/blocks/inscriber/top.png
+texture:id=ae2stuff/wireless/side_off,filename=assets/ae2stuff/textures/blocks/wireless/side_off.png
+texture:id=ae2stuff/wireless/side_on,filename=assets/ae2stuff/textures/blocks/wireless/side_on.png
+texture:id=ae2stuff/wireless/top_off,filename=assets/ae2stuff/textures/blocks/wireless/top_off.png
+texture:id=ae2stuff/wireless/top_on,filename=assets/ae2stuff/textures/blocks/wireless/top_on.png
+
+
+
+# %Encoder:* (Encoder), render=(STANDARD), opaque=true,cls=net.bdew.ae2stuff.machines.encoder.BlockEncoder$
+block:id=%Encoder,data=0,stdrot=true,face0=0:ae2stuff/encoder/side,face1=0:ae2stuff/encoder/top_off,face2-5=0:ae2stuff/encoder/side
+block:id=%Encoder,data=1,stdrot=true,face0=0:ae2stuff/encoder/side,face1=0:ae2stuff/encoder/top_on,face2-5=0:ae2stuff/encoder/side
+block:id=%Encoder,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:ae2stuff/encoder/side,face1=0:ae2stuff/encoder/top_off,face2-5=0:ae2stuff/encoder/side
+
+# %Grower:* (Grower), render=(STANDARD), opaque=true,cls=net.bdew.ae2stuff.machines.grower.BlockGrower$
+block:id=%Grower,data=0,stdrot=true,face0-5=0:ae2stuff/grower/main_off
+block:id=%Grower,data=1,stdrot=true,face0-5=0:ae2stuff/grower/main_on
+block:id=%Grower,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:ae2stuff/grower/main_off
+
+# %Inscriber:* (Inscriber), render=(STANDARD), opaque=true,cls=net.bdew.ae2stuff.machines.inscriber.BlockInscriber$
+block:id=%Inscriber,data=0,stdrot=true,face0-1=0:ae2stuff/inscriber/top,face2-5=0:ae2stuff/inscriber/side_off
+block:id=%Inscriber,data=1,stdrot=true,face0-1=0:ae2stuff/inscriber/top,face2-5=0:ae2stuff/inscriber/side_on
+block:id=%Inscriber,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ae2stuff/inscriber/top,face2-5=0:ae2stuff/inscriber/side_off
+
+# %Wireless:* (Wireless), render=(STANDARD), opaque=true,cls=net.bdew.ae2stuff.machines.wireless.BlockWireless$
+block:id=%Wireless,data=0,stdrot=true,face0-1=0:ae2stuff/wireless/top_off,face2-5=0:ae2stuff/wireless/side_off
+block:id=%Wireless,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ae2stuff/wireless/top_on,face2-5=0:ae2stuff/wireless/side_on

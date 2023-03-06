@@ -1,0 +1,662 @@
+# Botania r1.8-249
+version:1.7
+modname:Botania
+
+
+cfgfile:config/Botania.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %flower:* (flower), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockModFlower
+boxblock:id=%flower,xmin=0.30000001192092896,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.30000001192092896,zmax=0.800000011920929,data=*
+
+# %altar:* (altar), render=vazkii.botania.client.render.block.RenderAltar(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockAltar
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%altar,xmin=0.125,xmax=0.875,ymin=0.125,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %specialFlower:* (specialFlower), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockSpecialFlower
+boxblock:id=%specialFlower,xmin=0.30000001192092896,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.30000001192092896,zmax=0.800000011920929,data=*
+
+# %pool:* (pool), render=vazkii.botania.client.render.block.RenderPool(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockPool
+boxblock:id=%pool,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %runeAltar:* (runeAltar), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockRuneAltar
+boxblock:id=%runeAltar,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
+
+# %unstableBlock:* (unstableBlock), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockUnstable
+boxblock:id=%unstableBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=*
+
+# %pylon:* (pylon), render=vazkii.botania.client.render.block.RenderPylon(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockPylon
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%pylon,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %manaBeacon:* (manaBeacon), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockManaBeacon
+boxblock:id=%manaBeacon,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=*
+
+# %tinyPlanetBlock:* (tinyPlanetBlock), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockTinyPlanet
+boxblock:id=%tinyPlanetBlock,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=*
+
+# %forestEye:* (forestEye), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockForestEye
+boxblock:id=%forestEye,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=*
+
+# %forestDrum:* (forestDrum), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockForestDrum
+boxblock:id=%forestDrum,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.875,zmin=0.1875,zmax=0.8125,data=*
+
+# %shinyFlower:* (shinyFlower), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockShinyFlower
+boxblock:id=%shinyFlower,xmin=0.30000001192092896,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.30000001192092896,zmax=0.800000011920929,data=*
+
+# %solidVine:* (solidVine), render=(VINE), opaque=false,cls=vazkii.botania.common.block.BlockSolidVines
+patchblock:id=%solidVine,patch0=VertX0In@270#0,data=1
+patchblock:id=%solidVine,patch0=VertX0In#0,data=2
+patchblock:id=%solidVine,patch0=VertX0In@270#0,patch1=VertX0In#0,data=3
+patchblock:id=%solidVine,patch0=VertX0In@90#0,data=4
+patchblock:id=%solidVine,patch0=VertX0In@90#0,patch1=VertX0In@270#0,data=5
+patchblock:id=%solidVine,patch0=VertX0In#0,patch1=VertX0In@90#0,data=6
+patchblock:id=%solidVine,patch0=VertX0In@90#0,patch1=VertX0In@270#0,patch2=VertX0In#0,data=7
+patchblock:id=%solidVine,patch0=VertX0In@180#0,data=8
+patchblock:id=%solidVine,patch0=VertX0In@180#0,patch1=VertX0In@270#0,data=9
+patchblock:id=%solidVine,patch0=VertX0In#0,patch1=VertX0In@180#0,data=10
+patchblock:id=%solidVine,patch0=VertX0In#0,patch1=VertX0In@180#0,patch2=VertX0In@270#0,data=11
+patchblock:id=%solidVine,patch0=VertX0In@90#0,patch1=VertX0In@180#0,data=12
+patchblock:id=%solidVine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,data=13
+patchblock:id=%solidVine,patch0=VertX0In@180#0,patch1=VertX0In#0,patch2=VertX0In@90#0,data=14
+patchblock:id=%solidVine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,patch3=VertX0In#0,data=15
+
+# %buriedPetals:* (buriedPetals), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockBuriedPetals
+boxblock:id=%buriedPetals,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.10000000149011612,zmin=0.0,zmax=1.0,data=*
+
+# %miniIsland:* (miniIsland), render=vazkii.botania.client.render.block.RenderFloatingFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockFloatingFlower
+boxblock:id=%miniIsland,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.10000000149011612,ymax=0.8999999761581421,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %tinyPotato:* (tinyPotato), render=vazkii.botania.client.render.block.RenderTinyPotato(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockTinyPotato
+boxblock:id=%tinyPotato,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.375,zmin=0.375,zmax=0.625,data=*
+
+# %starfield:* (starfield), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockStarfield
+boxblock:id=%starfield,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=*
+
+# %brewery:* (brewery), render=vazkii.botania.client.render.block.RenderBrewery(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockBrewery
+boxblock:id=%brewery,xmin=0.375,xmax=0.625,ymin=0.05000000074505806,ymax=0.949999988079071,zmin=0.375,zmax=0.625,data=*
+
+# %terraPlate:* (terraPlate), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockTerraPlate
+boxblock:id=%terraPlate,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=*
+
+# %floatingSpecialFlower:* (floatingSpecialFlower), render=vazkii.botania.client.render.block.RenderFloatingFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockFloatingSpecialFlower
+boxblock:id=%floatingSpecialFlower,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.10000000149011612,ymax=0.8999999761581421,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %manaFlame:* (manaFlame), render=(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockManaFlame
+boxblock:id=%manaFlame,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=*
+
+# %prism:* (prism), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockPrism
+boxblock:id=%prism,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %dirtPath:* (dirtPath), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockDirtPath
+boxblock:id=%dirtPath,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %mushroom:* (mushroom), render=(CROSSEDSQUARES), opaque=false,cls=vazkii.botania.common.block.decor.BlockModMushroom
+patchblock:id=%mushroom,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pump:* (pump), render=vazkii.botania.client.render.block.RenderPump(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockPump
+boxblock:id=%pump,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%pump,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %corporeaCrystalCube:* (corporeaCrystalCube), render=vazkii.botania.client.render.block.RenderCorporeaCrystalCube(CUSTOM), opaque=false,cls=vazkii.botania.common.block.corporea.BlockCorporeaCrystalCube
+boxblock:id=%corporeaCrystalCube,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=1.0,zmin=0.1875,zmax=0.8125,data=*
+
+# %incensePlate:* (incensePlate), render=vazkii.botania.client.render.block.RenderIncensePlate(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockIncensePlate
+boxblock:id=%incensePlate,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=0,data=1,data=2,data=3
+boxblock:id=%incensePlate,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.0625,zmin=0.125,zmax=0.875,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %hourglass:* (hourglass), render=vazkii.botania.client.render.block.RenderHourglass(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockHourglass
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%hourglass,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %ghostRail:* (ghostRail), render=(MINECARTTRACK), opaque=false,cls=vazkii.botania.common.block.BlockGhostRail
+patchblock:id=%ghostRail,patch0=HorizY001ZTop,data=0
+patchblock:id=%ghostRail,patch0=HorizY001ZTop@90,data=1
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop,data=2
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=%ghostRail,patch0=HorizY001ZTop@90,data=6
+patchblock:id=%ghostRail,patch0=HorizY001ZTop@180,data=7
+patchblock:id=%ghostRail,patch0=HorizY001ZTop,data=8
+patchblock:id=%ghostRail,patch0=HorizY001ZTop@90,data=9
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop,data=10
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=%ghostRail,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=%ghostRail,patch0=HorizY001ZTop@90,data=14
+patchblock:id=%ghostRail,patch0=HorizY001ZTop@180,data=15
+
+# %sparkChanger:* (sparkChanger), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockSparkChanger
+boxblock:id=%sparkChanger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=*
+
+# %cocoon:* (cocoon), render=vazkii.botania.client.render.block.RenderCocoon(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockCocoon
+boxblock:id=%cocoon,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.875,zmin=0.1875,zmax=0.8125,data=*
+
+# %lightRelay:* (lightRelay), render=(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockLightRelay
+boxblock:id=%lightRelay,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=*
+
+# %lightLauncher:* (lightLauncher), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockLightLauncher
+boxblock:id=%lightLauncher,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=*
+
+# %bellows:* (bellows), render=vazkii.botania.client.render.block.RenderBellows(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockBellows
+boxblock:id=%bellows,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.625,zmin=0.1875,zmax=0.8125,data=*
+
+# %gaiaHeadBlock:* (gaiaHeadBlock), render=(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockGaiaHead
+boxblock:id=%gaiaHeadBlock,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=0,data=1
+boxblock:id=%gaiaHeadBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.5,zmax=1.0,data=2
+boxblock:id=%gaiaHeadBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.0,zmax=0.5,data=3
+boxblock:id=%gaiaHeadBlock,xmin=0.5,xmax=1.0,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=4
+boxblock:id=%gaiaHeadBlock,xmin=0.0,xmax=0.5,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=5
+boxblock:id=%gaiaHeadBlock,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=6,data=7,data=8,data=9
+boxblock:id=%gaiaHeadBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.5,zmax=1.0,data=10
+boxblock:id=%gaiaHeadBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.0,zmax=0.5,data=11
+boxblock:id=%gaiaHeadBlock,xmin=0.5,xmax=1.0,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=12
+boxblock:id=%gaiaHeadBlock,xmin=0.0,xmax=0.5,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=13
+boxblock:id=%gaiaHeadBlock,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=14,data=15
+
+# %teruTeruBozu:* (teruTeruBozu), render=vazkii.botania.client.render.block.RenderTeruTeruBozu(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockTeruTeruBozu
+boxblock:id=%teruTeruBozu,xmin=0.25,xmax=0.75,ymin=0.009999999776482582,ymax=0.9900000095367432,zmin=0.25,zmax=0.75,data=*
+
+# %avatar:* (avatar), render=vazkii.botania.client.render.block.RenderAvatar(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockAvatar
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%avatar,xmin=0.21875,xmax=0.78125,ymin=0.0,ymax=1.0,zmin=0.3125,zmax=0.6875,data=0,data=1,data=2,data=3
+boxblock:id=%avatar,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=1.0,zmin=0.21875,zmax=0.78125,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %livingwood0Stairs:* (livingwood0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockLivingwoodStairs
+customblock:id=%livingwood0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %livingwood0Wall:* (livingwood0Wall), render=(WALL), opaque=false,cls=vazkii.botania.common.block.decor.walls.living.BlockLivingwoodWall
+customblock:id=%livingwood0Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %livingwood1Stairs:* (livingwood1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockLivingwoodPlankStairs
+customblock:id=%livingwood1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %livingrock0Stairs:* (livingrock0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockLivingrockStairs
+customblock:id=%livingrock0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %livingrock0Wall:* (livingrock0Wall), render=(WALL), opaque=false,cls=vazkii.botania.common.block.decor.walls.living.BlockLivingrockWall
+customblock:id=%livingrock0Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %livingrock1Stairs:* (livingrock1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockLivingrockBrickStairs
+customblock:id=%livingrock1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %dreamwood0Stairs:* (dreamwood0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockDreamwoodStairs
+customblock:id=%dreamwood0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %dreamwood0Wall:* (dreamwood0Wall), render=(WALL), opaque=false,cls=vazkii.botania.common.block.decor.walls.living.BlockDreamwoodWall
+customblock:id=%dreamwood0Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %dreamwood1Stairs:* (dreamwood1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockDreamwoodPlankStairs
+customblock:id=%dreamwood1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %prismarine0Stairs:* (prismarine0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.prismarine.BlockPrismarineStairs
+customblock:id=%prismarine0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %prismarine0Wall:* (prismarine0Wall), render=(WALL), opaque=false,cls=vazkii.botania.common.block.decor.walls.BlockPrismarineWall
+customblock:id=%prismarine0Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %prismarine1Stairs:* (prismarine1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.prismarine.BlockPrismarineBrickStairs
+customblock:id=%prismarine1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %prismarine2Stairs:* (prismarine2Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.prismarine.BlockDarkPrismarineStairs
+customblock:id=%prismarine2Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %reedBlock0Stairs:* (reedBlock0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockReedStairs
+customblock:id=%reedBlock0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %reedBlock0Wall:* (reedBlock0Wall), render=(WALL), opaque=false,cls=vazkii.botania.common.block.decor.walls.BlockReedWall
+customblock:id=%reedBlock0Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %thatch0Stairs:* (thatch0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockThatchStairs
+customblock:id=%thatch0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %customBrick0Stairs:* (customBrick0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.bricks.BlockCustomBrickStairs
+customblock:id=%customBrick0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %customBrick1Stairs:* (customBrick1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.bricks.BlockSoulBrickStairs
+customblock:id=%customBrick1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %customBrick2Stairs:* (customBrick2Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.bricks.BlockSnowBrickStairs
+customblock:id=%customBrick2Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %customBrick3Stairs:* (customBrick3Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.bricks.BlockTileStairs
+customblock:id=%customBrick3Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %quartzStairsDark:* (quartzStairsDark), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs
+customblock:id=%quartzStairsDark,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %quartzStairsMana:* (quartzStairsMana), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs
+customblock:id=%quartzStairsMana,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %quartzStairsBlaze:* (quartzStairsBlaze), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs
+customblock:id=%quartzStairsBlaze,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %quartzStairsLavender:* (quartzStairsLavender), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs
+customblock:id=%quartzStairsLavender,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %quartzStairsRed:* (quartzStairsRed), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs
+customblock:id=%quartzStairsRed,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %quartzStairsElf:* (quartzStairsElf), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs
+customblock:id=%quartzStairsElf,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %quartzStairsSunny:* (quartzStairsSunny), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs
+customblock:id=%quartzStairsSunny,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA0Stairs:* (biomeStoneA0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA1Stairs:* (biomeStoneA1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA2Stairs:* (biomeStoneA2Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA2Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA3Stairs:* (biomeStoneA3Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA3Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA4Stairs:* (biomeStoneA4Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA4Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA5Stairs:* (biomeStoneA5Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA5Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA6Stairs:* (biomeStoneA6Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA6Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA7Stairs:* (biomeStoneA7Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA7Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA8Stairs:* (biomeStoneA8Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA8Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA9Stairs:* (biomeStoneA9Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA9Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA10Stairs:* (biomeStoneA10Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA10Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA11Stairs:* (biomeStoneA11Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA11Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA12Stairs:* (biomeStoneA12Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA12Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA13Stairs:* (biomeStoneA13Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA13Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA14Stairs:* (biomeStoneA14Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA14Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA15Stairs:* (biomeStoneA15Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneA15Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB0Stairs:* (biomeStoneB0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB1Stairs:* (biomeStoneB1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB2Stairs:* (biomeStoneB2Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB2Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB3Stairs:* (biomeStoneB3Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB3Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB4Stairs:* (biomeStoneB4Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB4Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB5Stairs:* (biomeStoneB5Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB5Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB6Stairs:* (biomeStoneB6Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB6Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneB7Stairs:* (biomeStoneB7Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockBiomeStoneStairs
+customblock:id=%biomeStoneB7Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %biomeStoneA0Wall:* (biomeStoneA0Wall), render=(WALL), opaque=false,cls=vazkii.botania.common.block.decor.walls.BlockBiomeStoneWall
+customblock:id=%biomeStoneA0Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %stone0Stairs:* (stone0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone1Stairs:* (stone1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone2Stairs:* (stone2Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone2Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone3Stairs:* (stone3Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone3Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone8Stairs:* (stone8Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone8Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone9Stairs:* (stone9Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone9Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone10Stairs:* (stone10Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone10Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone11Stairs:* (stone11Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.Block18StoneStairs
+customblock:id=%stone11Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone0Wall:* (stone0Wall), render=(WALL), opaque=false,cls=vazkii.botania.common.block.decor.walls.Block18StoneWall
+customblock:id=%stone0Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %pavement0Stairs:* (pavement0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockPavementStairs
+customblock:id=%pavement0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %pavement1Stairs:* (pavement1Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockPavementStairs
+customblock:id=%pavement1Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %pavement2Stairs:* (pavement2Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockPavementStairs
+customblock:id=%pavement2Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %pavement3Stairs:* (pavement3Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockPavementStairs
+customblock:id=%pavement3Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %pavement4Stairs:* (pavement4Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockPavementStairs
+customblock:id=%pavement4Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %pavement5Stairs:* (pavement5Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockPavementStairs
+customblock:id=%pavement5Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %endStoneBrick0Stairs:* (endStoneBrick0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockEndStoneStairs
+customblock:id=%endStoneBrick0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %endStoneBrick2Stairs:* (endStoneBrick2Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.BlockEnderBrickStairs
+customblock:id=%endStoneBrick2Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %shimmerrock0Stairs:* (shimmerrock0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockShimmerrockStairs
+customblock:id=%shimmerrock0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %shimmerwoodPlanks0Stairs:* (shimmerwoodPlanks0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockShimmerwoodPlankStairs
+customblock:id=%shimmerwoodPlanks0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %manaGlassPane:* (manaGlassPane), render=(PANE), opaque=false,cls=vazkii.botania.common.block.decor.panes.BlockManaglassPane
+customblock:id=%manaGlassPane,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %elfGlassPane:* (elfGlassPane), render=(PANE), opaque=false,cls=vazkii.botania.common.block.decor.panes.BlockAlfglassPane
+customblock:id=%elfGlassPane,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %bifrostPermPane:* (bifrostPermPane), render=(PANE), opaque=false,cls=vazkii.botania.common.block.decor.panes.BlockBifrostPane
+customblock:id=%bifrostPermPane,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %quartzSlabDarkHalf:* (quartzSlabDarkHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+boxblock:id=%quartzSlabDarkHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%quartzSlabDarkHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %quartzSlabManaHalf:* (quartzSlabManaHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+boxblock:id=%quartzSlabManaHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%quartzSlabManaHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %quartzSlabBlazeHalf:* (quartzSlabBlazeHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+boxblock:id=%quartzSlabBlazeHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%quartzSlabBlazeHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %quartzSlabLavenderHalf:* (quartzSlabLavenderHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+boxblock:id=%quartzSlabLavenderHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%quartzSlabLavenderHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %quartzSlabRedHalf:* (quartzSlabRedHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+boxblock:id=%quartzSlabRedHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%quartzSlabRedHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %quartzSlabElfHalf:* (quartzSlabElfHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+boxblock:id=%quartzSlabElfHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%quartzSlabElfHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %quartzSlabSunnyHalf:* (quartzSlabSunnyHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+boxblock:id=%quartzSlabSunnyHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%quartzSlabSunnyHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %livingwood0Slab:* (livingwood0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodSlab
+boxblock:id=%livingwood0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%livingwood0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %livingwood1Slab:* (livingwood1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodPlankSlab
+boxblock:id=%livingwood1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%livingwood1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %livingrock0Slab:* (livingrock0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingrockSlab
+boxblock:id=%livingrock0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%livingrock0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %livingrock1Slab:* (livingrock1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingrockBrickSlab
+boxblock:id=%livingrock1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%livingrock1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %dreamwood0Slab:* (dreamwood0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockDreamwoodSlab
+boxblock:id=%dreamwood0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%dreamwood0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %dreamwood1Slab:* (dreamwood1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockDreamwoodPlankSlab
+boxblock:id=%dreamwood1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%dreamwood1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %reedBlock0Slab:* (reedBlock0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockReedSlab
+boxblock:id=%reedBlock0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%reedBlock0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %thatch0Slab:* (thatch0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockThatchSlab
+boxblock:id=%thatch0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%thatch0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %prismarine0Slab:* (prismarine0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineSlab
+boxblock:id=%prismarine0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%prismarine0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %prismarine1Slab:* (prismarine1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineBrickSlab
+boxblock:id=%prismarine1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%prismarine1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %prismarine2Slab:* (prismarine2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockDarkPrismarineSlab
+boxblock:id=%prismarine2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%prismarine2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %customBrick0Slab:* (customBrick0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockCustomBrickSlab
+boxblock:id=%customBrick0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%customBrick0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %customBrick1Slab:* (customBrick1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockSoulBrickSlab
+boxblock:id=%customBrick1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%customBrick1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %customBrick2Slab:* (customBrick2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockSnowBrickSlab
+boxblock:id=%customBrick2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%customBrick2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %customBrick3Slab:* (customBrick3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockTileSlab
+boxblock:id=%customBrick3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%customBrick3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %dirtPath0Slab:* (dirtPath0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockDirtPathSlab
+boxblock:id=%dirtPath0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%dirtPath0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %endStoneBrick0Slab:* (endStoneBrick0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockEndStoneSlab
+boxblock:id=%endStoneBrick0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%endStoneBrick0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %endStoneBrick2Slab:* (endStoneBrick2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockEnderBrickSlab
+boxblock:id=%endStoneBrick2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%endStoneBrick2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %shimmerrock0Slab:* (shimmerrock0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockShimmerrockSlab
+boxblock:id=%shimmerrock0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%shimmerrock0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %shimmerwoodPlanks0Slab:* (shimmerwoodPlanks0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockShimmerwoodPlankSlab
+boxblock:id=%shimmerwoodPlanks0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%shimmerwoodPlanks0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA0Slab:* (biomeStoneA0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA1Slab:* (biomeStoneA1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA2Slab:* (biomeStoneA2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA3Slab:* (biomeStoneA3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA4Slab:* (biomeStoneA4Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA4Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA4Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA5Slab:* (biomeStoneA5Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA5Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA5Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA6Slab:* (biomeStoneA6Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA6Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA6Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA7Slab:* (biomeStoneA7Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA7Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA7Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA8Slab:* (biomeStoneA8Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA8Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA8Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA9Slab:* (biomeStoneA9Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA9Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA9Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA10Slab:* (biomeStoneA10Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA10Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA10Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA11Slab:* (biomeStoneA11Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA11Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA11Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA12Slab:* (biomeStoneA12Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA12Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA12Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA13Slab:* (biomeStoneA13Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA13Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA13Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA14Slab:* (biomeStoneA14Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA14Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA14Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneA15Slab:* (biomeStoneA15Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneA15Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneA15Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB0Slab:* (biomeStoneB0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB1Slab:* (biomeStoneB1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB2Slab:* (biomeStoneB2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB3Slab:* (biomeStoneB3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB4Slab:* (biomeStoneB4Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB4Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB4Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB5Slab:* (biomeStoneB5Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB5Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB5Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB6Slab:* (biomeStoneB6Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB6Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB6Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %biomeStoneB7Slab:* (biomeStoneB7Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+boxblock:id=%biomeStoneB7Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%biomeStoneB7Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone0Slab:* (stone0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone1Slab:* (stone1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone2Slab:* (stone2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone3Slab:* (stone3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone8Slab:* (stone8Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone8Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone8Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone9Slab:* (stone9Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone9Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone9Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone10Slab:* (stone10Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone10Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone10Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone11Slab:* (stone11Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+boxblock:id=%stone11Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone11Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pavement0Slab:* (pavement0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+boxblock:id=%pavement0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%pavement0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pavement1Slab:* (pavement1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+boxblock:id=%pavement1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%pavement1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pavement2Slab:* (pavement2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+boxblock:id=%pavement2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%pavement2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pavement3Slab:* (pavement3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+boxblock:id=%pavement3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%pavement3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pavement4Slab:* (pavement4Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+boxblock:id=%pavement4Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%pavement4Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pavement5Slab:* (pavement5Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+boxblock:id=%pavement5Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%pavement5Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

@@ -1,0 +1,63 @@
+# DraconicEvolution 1.0.2h
+version:1.7
+modname:DraconicEvolution
+
+
+cfgfile:config/DraconicEvolution.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %xRayBlock:* (xRayBlock), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.XRayBlock
+
+# %potentiometer:* (potentiometer), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.Potentiometer
+boxblock:id=%potentiometer,xmin=0.0,xmax=0.125,ymin=0.20600000023841858,ymax=0.7960000038146973,zmin=0.20399999618530273,zmax=0.7960000038146973,data=1
+boxblock:id=%potentiometer,xmin=0.875,xmax=1.0,ymin=0.20600000023841858,ymax=0.7960000038146973,zmin=0.20399999618530273,zmax=0.7960000038146973,data=2
+boxblock:id=%potentiometer,xmin=0.20399999618530273,xmax=0.7960000038146973,ymin=0.20600000023841858,ymax=0.7960000038146973,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%potentiometer,xmin=0.20399999618530273,xmax=0.7960000038146973,ymin=0.20600000023841858,ymax=0.7960000038146973,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%potentiometer,xmin=0.20399999618530273,xmax=0.7960000038146973,ymin=0.875,ymax=1.0,zmin=0.20399999618530273,zmax=0.7960000038146973,data=5
+boxblock:id=%potentiometer,xmin=0.20399999618530273,xmax=0.7960000038146973,ymin=0.0,ymax=0.125,zmin=0.20399999618530273,zmax=0.7960000038146973,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %rainSensor:* (rainSensor), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.RainSensor
+boxblock:id=%rainSensor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %energyInfuser:* (energyInfuser), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.EnergyInfuser
+boxblock:id=%energyInfuser,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=*
+
+# %placedItem:* (placedItem), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.PlacedItem
+boxblock:id=%placedItem,xmin=0.0,xmax=1.0,ymin=0.800000011920929,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%placedItem,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.20000000298023224,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%placedItem,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.800000011920929,zmax=1.0,data=2
+boxblock:id=%placedItem,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.20000000298023224,data=3
+boxblock:id=%placedItem,xmin=0.800000011920929,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%placedItem,xmin=0.0,xmax=0.20000000298023224,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %safetyFlame:* (safetyFlame), render=(FIRE), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.SafetyFlame
+
+# %dissEnchanter:* (dissEnchanter), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.DissEnchanter
+boxblock:id=%dissEnchanter,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
+
+# %teleporterStand:* (teleporterStand), render=com.brandon3055.draconicevolution.client.render.block.RenderTeleporterStand(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.TeleporterStand
+boxblock:id=%teleporterStand,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.0,ymax=0.800000011920929,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %draconiumChest:* (draconiumChest), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumChest
+boxblock:id=%draconiumChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %energyCrystal:* (energyCrystal), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.EnergyCrystal
+boxblock:id=%energyCrystal,xmin=0.3700000047683716,xmax=0.6299999952316284,ymin=0.13500000536441803,ymax=0.8650000095367432,zmin=0.3700000047683716,zmax=0.6299999952316284,data=*
+
+# %chaosCrystal:* (chaosCrystal), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.ChaosCrystal

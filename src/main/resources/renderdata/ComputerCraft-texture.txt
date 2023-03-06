@@ -1,0 +1,65 @@
+# ComputerCraft 1.75
+version:1.7
+modname:ComputerCraft
+
+
+cfgfile:config/ComputerCraft.cfg
+
+
+texturepath:assets/computercraft/textures/blocks/
+texture:id=computercraft/advMonitor0,filename=assets/computercraft/textures/blocks/advMonitor0.png
+texture:id=computercraft/advMonitor15,filename=assets/computercraft/textures/blocks/advMonitor15.png
+texture:id=computercraft/advMonitor32,filename=assets/computercraft/textures/blocks/advMonitor32.png
+texture:id=computercraft/cableCore,filename=assets/computercraft/textures/blocks/cableCore.png
+texture:id=computercraft/cableSide,filename=assets/computercraft/textures/blocks/cableSide.png
+texture:id=computercraft/commandComputerFrontBlink,filename=assets/computercraft/textures/blocks/commandComputerFrontBlink.png
+texture:id=computercraft/commandComputerSide,filename=assets/computercraft/textures/blocks/commandComputerSide.png
+texture:id=computercraft/commandComputerTop,filename=assets/computercraft/textures/blocks/commandComputerTop.png
+texture:id=computercraft/computerFrontBlink,filename=assets/computercraft/textures/blocks/computerFrontBlink.png
+texture:id=computercraft/computerSide,filename=assets/computercraft/textures/blocks/computerSide.png
+texture:id=computercraft/computerTop,filename=assets/computercraft/textures/blocks/computerTop.png
+texture:id=computercraft/diskDriveFront,filename=assets/computercraft/textures/blocks/diskDriveFront.png
+texture:id=computercraft/diskDriveSide,filename=assets/computercraft/textures/blocks/diskDriveSide.png
+texture:id=computercraft/diskDriveTop,filename=assets/computercraft/textures/blocks/diskDriveTop.png
+texture:id=computercraft/monitor0,filename=assets/computercraft/textures/blocks/monitor0.png
+texture:id=computercraft/monitor15,filename=assets/computercraft/textures/blocks/monitor15.png
+texture:id=computercraft/monitor32,filename=assets/computercraft/textures/blocks/monitor32.png
+texture:id=computercraft/printerFrontEmpty,filename=assets/computercraft/textures/blocks/printerFrontEmpty.png
+texture:id=computercraft/printerSide,filename=assets/computercraft/textures/blocks/printerSide.png
+texture:id=computercraft/printerTop,filename=assets/computercraft/textures/blocks/printerTop.png
+texture:id=computercraft/turtle,filename=assets/computercraft/textures/blocks/turtle.png
+texture:id=computercraft/turtleAdvanced,filename=assets/computercraft/textures/blocks/turtleAdvanced.png
+texture:id=computercraft/wiredModemFace,filename=assets/computercraft/textures/blocks/wiredModemFace.png
+texture:id=computercraft/wiredModemSide,filename=assets/computercraft/textures/blocks/wiredModemSide.png
+texture:id=computercraft/wirelessModemFace,filename=assets/computercraft/textures/blocks/wirelessModemFace.png
+texture:id=computercraft/wirelessModemSide,filename=assets/computercraft/textures/blocks/wirelessModemSide.png
+
+
+
+# %CC-Computer:* (CC-Computer), render=dan200.computercraft.client.proxy.ComputerCraftProxyClient$ComputerBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computercraft.shared.computer.blocks.BlockComputer
+block:id=%CC-Computer,data=*,stdrot=true,face0-1=0:computercraft/computerTop,face2=0:computercraft/computerSide,face3=0:computercraft/computerFrontBlink,face4-5=0:computercraft/computerSide
+
+# %CC-Peripheral:* (CC-Peripheral), render=dan200.computercraft.client.proxy.ComputerCraftProxyClient$PeripheralBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computercraft.shared.peripheral.common.BlockPeripheral
+block:id=%CC-Peripheral,data=0,stdrot=true,face0-1=0:computercraft/diskDriveTop,face2=0:computercraft/diskDriveSide,face3=0:computercraft/diskDriveFront,face4-5=0:computercraft/diskDriveSide
+block:id=%CC-Peripheral,data=1,stdrot=true,face0-1=0:computercraft/wirelessModemFace,face2=0:computercraft/wirelessModemSide,face3-4=0:computercraft/wirelessModemFace,face5=0:computercraft/wirelessModemSide
+block:id=%CC-Peripheral,data=2,stdrot=true,face0-1=0:computercraft/monitor0,face2=0:computercraft/monitor32,face3=0:computercraft/monitor15,face4-5=0:computercraft/monitor32
+block:id=%CC-Peripheral,data=3,stdrot=true,face0-1=0:computercraft/printerTop,face2=0:computercraft/printerSide,face3=0:computercraft/printerFrontEmpty,face4-5=0:computercraft/printerSide
+block:id=%CC-Peripheral,data=4,stdrot=true,face0-1=0:computercraft/advMonitor0,face2=0:computercraft/advMonitor32,face3=0:computercraft/advMonitor15,face4-5=0:computercraft/advMonitor32
+block:id=%CC-Peripheral,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:computercraft/diskDriveTop,face2=0:computercraft/diskDriveSide,face3=0:computercraft/diskDriveFront,face4-5=0:computercraft/diskDriveSide
+
+# %CC-Cable:* (CC-Cable), render=dan200.computercraft.client.proxy.ComputerCraftProxyClient$CableBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computercraft.shared.peripheral.common.BlockCable
+block:id=%CC-Cable,data=0,stdrot=true,face0-1=0:computercraft/cableSide,face2-3=0:computercraft/cableCore,face4-5=0:computercraft/cableSide
+block:id=%CC-Cable,data=1,stdrot=true,face0-1=0:computercraft/wiredModemFace,face2=0:computercraft/wiredModemSide,face3-4=0:computercraft/wiredModemFace,face5=0:computercraft/wiredModemSide
+block:id=%CC-Cable,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:computercraft/cableSide,face2-3=0:computercraft/cableCore,face4-5=0:computercraft/cableSide
+
+# %command_computer:* (command_computer), render=dan200.computercraft.client.proxy.ComputerCraftProxyClient$ComputerBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computercraft.shared.computer.blocks.BlockCommandComputer
+block:id=%command_computer,data=*,stdrot=true,face0-1=0:computercraft/commandComputerTop,face2=0:computercraft/commandComputerSide,face3=0:computercraft/commandComputerFrontBlink,face4-5=0:computercraft/commandComputerSide
+
+# %CC-Turtle:* (CC-Turtle), render=dan200.computercraft.client.proxy.CCTurtleProxyClient$TurtleRenderer(CUSTOM), opaque=false,cls=dan200.computercraft.shared.turtle.blocks.BlockTurtle
+block:id=%CC-Turtle,data=*,stdrot=true,face0-5=0:computercraft/turtle
+
+# %CC-TurtleExpanded:* (CC-TurtleExpanded), render=(CUSTOM), opaque=false,cls=dan200.computercraft.shared.turtle.blocks.BlockTurtle
+block:id=%CC-TurtleExpanded,data=*,stdrot=true,face0-5=0:computercraft/turtle
+
+# %CC-TurtleAdvanced:* (CC-TurtleAdvanced), render=(CUSTOM), opaque=false,cls=dan200.computercraft.shared.turtle.blocks.BlockTurtle
+block:id=%CC-TurtleAdvanced,data=*,stdrot=true,face0-5=0:computercraft/turtleAdvanced

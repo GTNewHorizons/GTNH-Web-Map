@@ -1,0 +1,23 @@
+# MCFrames 1.0
+version:1.7
+modname:MCFrames
+
+
+cfgfile:config/MCFrames.cfg
+
+
+texturepath:assets/mcframes/textures/blocks/
+texture:id=mcframes/frame,filename=assets/mcframes/textures/blocks/frame.png
+texture:id=mcframes/motor/bottom,filename=assets/mcframes/textures/blocks/motor/bottom.png
+texture:id=mcframes/motor/side,filename=assets/mcframes/textures/blocks/motor/side.png
+texture:id=mcframes/motor/sidee,filename=assets/mcframes/textures/blocks/motor/sidee.png
+texture:id=mcframes/motor/sidew,filename=assets/mcframes/textures/blocks/motor/sidew.png
+texture:id=mcframes/motor/top,filename=assets/mcframes/textures/blocks/motor/top.png
+
+
+
+# %mcframes.motor:* (mcframes.motor), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=false,cls=mrtjp.mcframes.BlockMotor
+block:id=%mcframes.motor,data=0,stdrot=true,face0=0:mcframes/motor/bottom,face1=0:mcframes/motor/top,face2-3=0:mcframes/motor/side,face4=0:mcframes/motor/sidew,face5=0:mcframes/motor/sidee
+
+# %mcframes.frame:* (mcframes.frame), render=mrtjp.mcframes.RenderFrame$(CUSTOM), opaque=false,cls=mrtjp.mcframes.BlockFrame
+block:id=%mcframes.frame,data=*,stdrot=true,face0-5=0:mcframes/frame

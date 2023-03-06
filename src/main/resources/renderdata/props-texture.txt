@@ -1,0 +1,18 @@
+# props 2.3.6.1
+version:1.7
+modname:props
+
+
+cfgfile:config/props.cfg
+
+
+texturepath:assets/props/textures/blocks/
+texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
+
+
+
+# %blockProps:* (blockProps), render=(CUSTOM), opaque=false,cls=com.mia.props.common.BlockProps
+block:id=%blockProps,data=*,stdrot=true,face0-5=0:minecraft/soul_sand
+
+# %blockFake:* (blockFake), render=(CUSTOM), opaque=false,cls=com.mia.props.common.BlockFake
+block:id=%blockFake,data=*,stdrot=true,face0-5=0:minecraft/soul_sand

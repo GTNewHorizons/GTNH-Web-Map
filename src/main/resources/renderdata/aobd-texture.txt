@@ -1,0 +1,60 @@
+# aobd 2.9.2
+version:1.7
+modname:aobd
+
+
+cfgfile:config/aobd.cfg
+
+
+texturepath:assets/aobd/textures/blocks/
+texture:id=aobdbb/orebush_fancy,filename=assets/aobdbb/textures/blocks/orebush_fancy.png
+
+
+
+# %orebushSilver:* (orebushSilver), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushSilver,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=AFB7BE,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushSilver,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=AFB7BE,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushLead:* (orebushLead), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushLead,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=60636C,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushLead,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=60636C,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushNickel:* (orebushNickel), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushNickel,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=BBB8A1,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushNickel,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=BBB8A1,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushPlatinum:* (orebushPlatinum), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushPlatinum,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=A4C8E8,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushPlatinum,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=A4C8E8,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushMithril:* (orebushMithril), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushMithril,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=A6B9C3,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushMithril,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=A6B9C3,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushUranium:* (orebushUranium), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushUranium,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=8D9433,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushUranium,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=8D9433,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushYellorium:* (orebushYellorium), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushYellorium,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=8D9433,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushYellorium,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=8D9433,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushDraconium:* (orebushDraconium), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushDraconium,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=B39CCA,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushDraconium,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=B39CCA,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushFzDarkIron:* (orebushFzDarkIron), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushFzDarkIron,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=3F0076,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushFzDarkIron,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=3F0076,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushCobalt:* (orebushCobalt), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushCobalt,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=2376DD,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushCobalt,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=2376DD,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushArdite:* (orebushArdite), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushArdite,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=F48A00,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushArdite,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=F48A00,face0-5=17000:aobdbb/orebush_fancy
+
+# %orebushOsmium:* (orebushOsmium), render=ganymedes01.aobdbb.BushBlockRenderer(CUSTOM), opaque=false,cls=ganymedes01.aobdbb.AOBDBBBushBlock
+block:id=%orebushOsmium,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=ACB5C0,face0-5=17000:aobdbb/orebush_fancy
+block:id=%orebushOsmium,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=ACB5C0,face0-5=17000:aobdbb/orebush_fancy

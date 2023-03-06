@@ -1,0 +1,83 @@
+# Mystcraft 0.12.3.03
+version:1.7
+modname:Mystcraft
+
+
+cfgfile:config/mystcraft/core.cfg
+
+
+texturepath:assets/mystcraft/textures/blocks/
+texture:id=minecraft/bookshelf,filename=assets/minecraft/textures/blocks/bookshelf.png
+texture:id=minecraft/crafting_table_top,filename=assets/minecraft/textures/blocks/crafting_table_top.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=mystcraft/book_receptacle,filename=assets/mystcraft/textures/blocks/book_receptacle.png
+texture:id=mystcraft/bookbinder_bottom,filename=assets/mystcraft/textures/blocks/bookbinder_bottom.png
+texture:id=mystcraft/bookbinder_side,filename=assets/mystcraft/textures/blocks/bookbinder_side.png
+texture:id=mystcraft/bookbinder_top,filename=assets/mystcraft/textures/blocks/bookbinder_top.png
+texture:id=mystcraft/crystal,filename=assets/mystcraft/textures/blocks/crystal.png
+texture:id=mystcraft/decay_black,filename=assets/mystcraft/textures/blocks/decay_black.png
+texture:id=mystcraft/decay_blue,filename=assets/mystcraft/textures/blocks/decay_blue.png
+texture:id=mystcraft/decay_purple,filename=assets/mystcraft/textures/blocks/decay_purple.png
+texture:id=mystcraft/decay_red,filename=assets/mystcraft/textures/blocks/decay_red.png
+texture:id=mystcraft/decay_white,filename=assets/mystcraft/textures/blocks/decay_white.png
+texture:id=mystcraft/fluid,filename=assets/mystcraft/textures/blocks/fluid.png
+texture:id=mystcraft/fluid_flow,filename=assets/mystcraft/textures/blocks/fluid_flow.png
+texture:id=mystcraft/inkmixer_bottom,filename=assets/mystcraft/textures/blocks/inkmixer_bottom.png
+texture:id=mystcraft/inkmixer_side,filename=assets/mystcraft/textures/blocks/inkmixer_side.png
+texture:id=mystcraft/inkmixer_top,filename=assets/mystcraft/textures/blocks/inkmixer_top.png
+texture:id=mystcraft/linkmodifier_bottom,filename=assets/mystcraft/textures/blocks/linkmodifier_bottom.png
+texture:id=mystcraft/linkmodifier_side1,filename=assets/mystcraft/textures/blocks/linkmodifier_side1.png
+texture:id=mystcraft/linkmodifier_side2,filename=assets/mystcraft/textures/blocks/linkmodifier_side2.png
+texture:id=mystcraft/linkmodifier_top,filename=assets/mystcraft/textures/blocks/linkmodifier_top.png
+texture:id=mystcraft/portal,filename=assets/mystcraft/textures/blocks/portal.png
+
+
+
+# %BlockInkMixer:* (BlockInkMixer), render=(CUSTOM), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockInkMixer
+block:id=%BlockInkMixer,data=*,stdrot=true,face0=0:mystcraft/inkmixer_bottom,face1=0:mystcraft/inkmixer_top,face2-5=0:mystcraft/inkmixer_side
+
+# %BlockBookBinder:* (BlockBookBinder), render=(CUSTOM), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockBookBinder
+block:id=%BlockBookBinder,data=*,stdrot=true,face0=0:mystcraft/bookbinder_bottom,face1=0:mystcraft/bookbinder_top,face2-5=0:mystcraft/bookbinder_side
+
+# %BlockBookReceptacle:* (BlockBookReceptacle), render=(STANDARD), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockBookReceptacle
+block:id=%BlockBookReceptacle,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:mystcraft/book_receptacle,face1-5=0:mystcraft/crystal
+block:id=%BlockBookReceptacle,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:mystcraft/crystal,face1=0:mystcraft/book_receptacle,face2-5=0:mystcraft/crystal
+block:id=%BlockBookReceptacle,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:mystcraft/crystal,face2=0:mystcraft/book_receptacle,face3-5=0:mystcraft/crystal
+block:id=%BlockBookReceptacle,data=3,stdrot=true,transparency=TRANSPARENT,face0-2=0:mystcraft/crystal,face3=0:mystcraft/book_receptacle,face4-5=0:mystcraft/crystal
+block:id=%BlockBookReceptacle,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:mystcraft/crystal,face4=0:mystcraft/book_receptacle,face5=0:mystcraft/crystal
+block:id=%BlockBookReceptacle,data=5,stdrot=true,transparency=TRANSPARENT,face0-4=0:mystcraft/crystal,face5=0:mystcraft/book_receptacle
+block:id=%BlockBookReceptacle,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:mystcraft/crystal
+
+# %BlockBookstand:* (BlockBookstand), render=(CUSTOM), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockBookstand
+block:id=%BlockBookstand,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %BlockLectern:* (BlockLectern), render=(CUSTOM), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockLectern
+block:id=%BlockLectern,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %BlockDecay:* (BlockDecay), render=(STANDARD), opaque=true,cls=com.xcompwiz.mystcraft.block.BlockDecay
+block:id=%BlockDecay,data=0,stdrot=true,face0-5=0:mystcraft/decay_black
+block:id=%BlockDecay,data=1,stdrot=true,face0-5=0:mystcraft/decay_red
+block:id=%BlockDecay,data=2,stdrot=true,face0-5=0:mystcraft/decay_black
+block:id=%BlockDecay,data=3,stdrot=true,face0-5=0:mystcraft/decay_blue
+block:id=%BlockDecay,data=4,stdrot=true,face0-5=0:mystcraft/decay_purple
+block:id=%BlockDecay,data=5,stdrot=true,face0-5=0:mystcraft/decay_black
+block:id=%BlockDecay,data=6,stdrot=true,face0-5=0:mystcraft/decay_white
+block:id=%BlockDecay,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mystcraft/decay_black
+
+# %BlockLinkModifier:* (BlockLinkModifier), render=(CUSTOM), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockLinkModifier
+block:id=%BlockLinkModifier,data=*,stdrot=true,face0=0:mystcraft/linkmodifier_bottom,face1=0:mystcraft/linkmodifier_top,face2=0:mystcraft/linkmodifier_side2,face3=0:mystcraft/linkmodifier_side1,face4=0:mystcraft/linkmodifier_side2,face5=0:mystcraft/linkmodifier_side1
+
+# %BlockCrystal:* (BlockCrystal), render=(STANDARD), opaque=true,cls=com.xcompwiz.mystcraft.block.BlockCrystal
+block:id=%BlockCrystal,data=*,stdrot=true,face0-5=0:mystcraft/crystal
+
+# %LinkPortal:* (LinkPortal), render=(STANDARD), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockLinkPortal
+block:id=%LinkPortal,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=3333FF,face0-5=17000:mystcraft/portal
+
+# %WritingDesk:* (WritingDesk), render=(CUSTOM), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockWritingDesk
+block:id=%WritingDesk,data=0,data=1,data=2,data=3,stdrot=true,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
+block:id=%WritingDesk,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
+block:id=%WritingDesk,data=8,data=9,data=10,data=11,stdrot=true,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
+block:id=%WritingDesk,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
+
+# %BlockFluidMyst:* (BlockFluidMyst), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockFluidWrapper
+block:id=%BlockFluidMyst,data=*,stdrot=true,transparency=SEMITRANSPARENT,colorMult=191919,face0-1=12000:mystcraft/fluid,face2-5=12000:mystcraft/fluid_flow

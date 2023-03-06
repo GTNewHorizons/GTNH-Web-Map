@@ -1,0 +1,195 @@
+# DraconicEvolution 1.0.2h
+version:1.7
+modname:DraconicEvolution
+
+
+cfgfile:config/DraconicEvolution.cfg
+
+
+texturepath:assets/draconicevolution/textures/blocks/
+texture:id=draconicevolution/advanced_player_detector_side_active,filename=assets/draconicevolution/textures/blocks/advanced_player_detector_side_active.png
+texture:id=draconicevolution/animated/dislocatorReceptacle_active,filename=assets/draconicevolution/textures/blocks/animated/dislocatorReceptacle_active.png
+texture:id=draconicevolution/animated/draconium_ore,filename=assets/draconicevolution/textures/blocks/animated/draconium_ore.png
+texture:id=draconicevolution/animated/generator_front_active,filename=assets/draconicevolution/textures/blocks/animated/generator_front_active.png
+texture:id=draconicevolution/animated/grinder_front_active,filename=assets/draconicevolution/textures/blocks/animated/grinder_front_active.png
+texture:id=draconicevolution/animated/infusedObsidian,filename=assets/draconicevolution/textures/blocks/animated/infusedObsidian.png
+texture:id=draconicevolution/animated/machine_fan,filename=assets/draconicevolution/textures/blocks/animated/machine_fan.png
+texture:id=draconicevolution/dissEnchanter_bottom,filename=assets/draconicevolution/textures/blocks/dissEnchanter_bottom.png
+texture:id=draconicevolution/dissEnchanter_side,filename=assets/draconicevolution/textures/blocks/dissEnchanter_side.png
+texture:id=draconicevolution/dissEnchanter_top,filename=assets/draconicevolution/textures/blocks/dissEnchanter_top.png
+texture:id=draconicevolution/draconic_block,filename=assets/draconicevolution/textures/blocks/draconic_block.png
+texture:id=draconicevolution/draconic_block_blank,filename=assets/draconicevolution/textures/blocks/draconic_block_blank.png
+texture:id=draconicevolution/draconiumChest,filename=assets/draconicevolution/textures/blocks/draconiumChest.png
+texture:id=draconicevolution/draconium_block_0,filename=assets/draconicevolution/textures/blocks/draconium_block_0.png
+texture:id=draconicevolution/draconium_block_1,filename=assets/draconicevolution/textures/blocks/draconium_block_1.png
+texture:id=draconicevolution/draconium_block_2,filename=assets/draconicevolution/textures/blocks/draconium_block_2.png
+texture:id=draconicevolution/energy_pylon_active_face,filename=assets/draconicevolution/textures/blocks/energy_pylon_active_face.png
+texture:id=draconicevolution/energy_pylon_input,filename=assets/draconicevolution/textures/blocks/energy_pylon_input.png
+texture:id=draconicevolution/energy_storage_core,filename=assets/draconicevolution/textures/blocks/energy_storage_core.png
+texture:id=draconicevolution/gates/fluidGate0,filename=assets/draconicevolution/textures/blocks/gates/fluidGate0.png
+texture:id=draconicevolution/gates/fluidGate1,filename=assets/draconicevolution/textures/blocks/gates/fluidGate1.png
+texture:id=draconicevolution/gates/fluidGate2,filename=assets/draconicevolution/textures/blocks/gates/fluidGate2.png
+texture:id=draconicevolution/gates/fluidGate3,filename=assets/draconicevolution/textures/blocks/gates/fluidGate3.png
+texture:id=draconicevolution/gates/fluxGate0,filename=assets/draconicevolution/textures/blocks/gates/fluxGate0.png
+texture:id=draconicevolution/gates/fluxGate1,filename=assets/draconicevolution/textures/blocks/gates/fluxGate1.png
+texture:id=draconicevolution/gates/fluxGate2,filename=assets/draconicevolution/textures/blocks/gates/fluxGate2.png
+texture:id=draconicevolution/gates/fluxGate3,filename=assets/draconicevolution/textures/blocks/gates/fluxGate3.png
+texture:id=draconicevolution/key_stone_active,filename=assets/draconicevolution/textures/blocks/key_stone_active.png
+texture:id=draconicevolution/machine_io_i,filename=assets/draconicevolution/textures/blocks/machine_io_i.png
+texture:id=draconicevolution/machine_io_o,filename=assets/draconicevolution/textures/blocks/machine_io_o.png
+texture:id=draconicevolution/machine_side,filename=assets/draconicevolution/textures/blocks/machine_side.png
+texture:id=draconicevolution/machine_top_0,filename=assets/draconicevolution/textures/blocks/machine_top_0.png
+texture:id=draconicevolution/machine_top_1,filename=assets/draconicevolution/textures/blocks/machine_top_1.png
+texture:id=draconicevolution/machine_top_2,filename=assets/draconicevolution/textures/blocks/machine_top_2.png
+texture:id=draconicevolution/machine_top_3,filename=assets/draconicevolution/textures/blocks/machine_top_3.png
+texture:id=draconicevolution/player_detector_side_active,filename=assets/draconicevolution/textures/blocks/player_detector_side_active.png
+texture:id=draconicevolution/potentiometer/potentiometer_0,filename=assets/draconicevolution/textures/blocks/potentiometer/potentiometer_0.png
+texture:id=draconicevolution/rain_sensor_active,filename=assets/draconicevolution/textures/blocks/rain_sensor_active.png
+texture:id=draconicevolution/rain_sensor_inactive,filename=assets/draconicevolution/textures/blocks/rain_sensor_inactive.png
+texture:id=draconicevolution/rain_sensor_side,filename=assets/draconicevolution/textures/blocks/rain_sensor_side.png
+texture:id=draconicevolution/sun_dial_front,filename=assets/draconicevolution/textures/blocks/sun_dial_front.png
+texture:id=draconicevolution/teleporter_front,filename=assets/draconicevolution/textures/blocks/teleporter_front.png
+texture:id=draconicevolution/transparency,filename=assets/draconicevolution/textures/blocks/transparency.png
+texture:id=draconicevolution/weather_controller/weatherController_sun_active,filename=assets/draconicevolution/textures/blocks/weather_controller/weatherController_sun_active.png
+texture:id=draconicevolution/weather_controller/weather_controller_top,filename=assets/draconicevolution/textures/blocks/weather_controller/weather_controller_top.png
+texture:id=draconicevolution/xRayBlock,filename=assets/draconicevolution/textures/blocks/xRayBlock.png
+texture:id=minecraft/fire_layer_0,filename=assets/minecraft/textures/blocks/fire_layer_0.png
+texture:id=minecraft/furnace_top,filename=assets/minecraft/textures/blocks/furnace_top.png
+texture:id=minecraft/glass,filename=assets/minecraft/textures/blocks/glass.png
+texture:id=minecraft/mob_spawner,filename=assets/minecraft/textures/blocks/mob_spawner.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %xRayBlock:* (xRayBlock), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.XRayBlock
+block:id=%xRayBlock,data=*,stdrot=true,face0-5=0:draconicevolution/xRayBlock
+
+# %weatherController:* (weatherController), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.WeatherController
+block:id=%weatherController,data=*,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/weather_controller/weather_controller_top,face2-5=0:draconicevolution/weather_controller/weatherController_sun_active
+
+# %sunDial:* (sunDial), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.SunDial
+block:id=%sunDial,data=*,stdrot=true,face0-1=0:draconicevolution/machine_side,face2-3=0:draconicevolution/sun_dial_front,face4-5=0:draconicevolution/machine_side
+
+# %draconiumOre:* (draconiumOre), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumOre
+block:id=%draconiumOre,data=*,stdrot=true,face0-5=0:draconicevolution/animated/draconium_ore
+
+# %grinder:* (grinder), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.Grinder
+block:id=%grinder,data=0,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2=0:draconicevolution/animated/grinder_front_active,face3=0:draconicevolution/animated/machine_fan,face4-5=0:draconicevolution/machine_side
+block:id=%grinder,data=1,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_1,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/machine_fan,face5=0:draconicevolution/animated/grinder_front_active
+block:id=%grinder,data=2,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_2,face2=0:draconicevolution/animated/machine_fan,face3=0:draconicevolution/animated/grinder_front_active,face4-5=0:draconicevolution/machine_side
+block:id=%grinder,data=3,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_3,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/grinder_front_active,face5=0:draconicevolution/animated/machine_fan
+block:id=%grinder,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:draconicevolution/machine_side,face2-5=0:draconicevolution/machine_side
+
+# %potentiometer:* (potentiometer), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.Potentiometer
+block:id=%potentiometer,data=0,stdrot=true,face0-5=0:draconicevolution/potentiometer/potentiometer_0
+block:id=%potentiometer,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/potentiometer/potentiometer_0
+
+# %rainSensor:* (rainSensor), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.RainSensor
+block:id=%rainSensor,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:draconicevolution/rain_sensor_side,face1=0:draconicevolution/rain_sensor_inactive,face2-5=0:draconicevolution/rain_sensor_side
+block:id=%rainSensor,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:draconicevolution/rain_sensor_side,face1=0:draconicevolution/rain_sensor_active,face2-5=0:draconicevolution/rain_sensor_side
+
+# %particleGenerator:* (particleGenerator), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.ParticleGenerator
+block:id=%particleGenerator,data=*,stdrot=true,face0-5=0:draconicevolution/machine_side
+
+# %playerDetector:* (playerDetector), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.PlayerDetector
+block:id=%playerDetector,data=*,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/player_detector_side_active
+
+# %playerDetectorAdvanced:* (playerDetectorAdvanced), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.PlayerDetectorAdvanced
+block:id=%playerDetectorAdvanced,data=*,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/advanced_player_detector_side_active
+
+# %energyInfuser:* (energyInfuser), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.EnergyInfuser
+block:id=%energyInfuser,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/machine_side
+
+# %customSpawner:* (customSpawner), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.CustomSpawner
+block:id=%customSpawner,data=*,stdrot=true,face0-5=0:minecraft/mob_spawner
+
+# %generator:* (generator), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.Generator
+block:id=%generator,data=0,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2=0:draconicevolution/animated/generator_front_active,face3=0:draconicevolution/animated/machine_fan,face4-5=0:draconicevolution/machine_side
+block:id=%generator,data=1,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_1,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/machine_fan,face5=0:draconicevolution/animated/generator_front_active
+block:id=%generator,data=2,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_2,face2=0:draconicevolution/animated/machine_fan,face3=0:draconicevolution/animated/generator_front_active,face4-5=0:draconicevolution/machine_side
+block:id=%generator,data=3,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_3,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/generator_front_active,face5=0:draconicevolution/animated/machine_fan
+block:id=%generator,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:draconicevolution/machine_side,face2-5=0:draconicevolution/machine_side
+
+# %energyStorageCore:* (energyStorageCore), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.EnergyStorageCore
+block:id=%energyStorageCore,data=*,stdrot=true,face0-5=0:draconicevolution/energy_storage_core
+
+# %draconium:* (draconium), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumBlock
+block:id=%draconium,data=0,stdrot=true,face0-5=0:draconicevolution/draconium_block_0
+block:id=%draconium,data=1,stdrot=true,face0-5=0:draconicevolution/draconium_block_1
+block:id=%draconium,data=2,stdrot=true,face0-5=0:draconicevolution/draconium_block_2
+block:id=%draconium,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:draconicevolution/draconium_block_0
+
+# %invisibleMultiblock:* (invisibleMultiblock), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.InvisibleMultiblock
+block:id=%invisibleMultiblock,data=*,stdrot=true,face0-5=0:draconicevolution/draconium_block_0
+
+# %energyPylon:* (energyPylon), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.EnergyPylon
+block:id=%energyPylon,data=0,stdrot=true,face0-5=0:draconicevolution/energy_pylon_input
+block:id=%energyPylon,data=1,stdrot=true,face0=0:draconicevolution/energy_pylon_input,face1=0:draconicevolution/energy_pylon_active_face,face2-5=0:draconicevolution/energy_pylon_input
+block:id=%energyPylon,data=2,stdrot=true,face0=0:draconicevolution/energy_pylon_active_face,face1-5=0:draconicevolution/energy_pylon_input
+block:id=%energyPylon,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:draconicevolution/energy_pylon_input
+
+# %placedItem:* (placedItem), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.PlacedItem
+block:id=%placedItem,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/glass
+
+# %safetyFlame:* (safetyFlame), render=(FIRE), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.SafetyFlame
+block:id=%safetyFlame,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/fire_layer_0
+
+# %cKeyStone:* (cKeyStone), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.CKeyStone
+block:id=%cKeyStone,data=*,stdrot=true,face0-1=0:minecraft/furnace_top,face2-5=0:draconicevolution/key_stone_active
+
+# %dissEnchanter:* (dissEnchanter), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.DissEnchanter
+block:id=%dissEnchanter,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:draconicevolution/dissEnchanter_bottom,face1=0:draconicevolution/dissEnchanter_top,face2-5=0:draconicevolution/dissEnchanter_side
+
+# %teleporterStand:* (teleporterStand), render=com.brandon3055.draconicevolution.client.render.block.RenderTeleporterStand(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.TeleporterStand
+block:id=%teleporterStand,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %draconiumChest:* (draconiumChest), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumChest
+block:id=%draconiumChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/draconiumChest
+
+# %draconicBlock:* (draconicBlock), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconicBlock
+block:id=%draconicBlock,data=*,stdrot=true,face0-1=0:draconicevolution/draconic_block_blank,face2-5=0:draconicevolution/draconic_block
+
+# %energyCrystal:* (energyCrystal), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.EnergyCrystal
+block:id=%energyCrystal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/draconium_block_0
+
+# %infusedObsidian:* (infusedObsidian), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.InfusedObsidian
+block:id=%infusedObsidian,data=*,stdrot=true,face0-5=0:draconicevolution/animated/infusedObsidian
+
+# %dislocatorReceptacle:* (dislocatorReceptacle), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.DislocatorReceptacle
+block:id=%dislocatorReceptacle,data=*,stdrot=true,face0-5=0:draconicevolution/animated/dislocatorReceptacle_active
+
+# %portal:* (portal), render=com.brandon3055.draconicevolution.client.render.block.RenderPortal(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.Portal
+block:id=%portal,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
+
+# %reactorCore:* (reactorCore), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.ReactorCore
+block:id=%reactorCore,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
+
+# %flowGate:* (flowGate), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.FlowGate
+block:id=%flowGate,data=0,stdrot=true,face0=0:draconicevolution/machine_io_o,face1=0:draconicevolution/machine_io_i,face2-5=0:draconicevolution/gates/fluxGate1
+block:id=%flowGate,data=1,stdrot=true,face0=0:draconicevolution/machine_io_i,face1=0:draconicevolution/machine_io_o,face2-5=0:draconicevolution/gates/fluxGate3
+block:id=%flowGate,data=2,stdrot=true,face0-1=0:draconicevolution/gates/fluxGate3,face2=0:draconicevolution/machine_io_o,face3=0:draconicevolution/machine_io_i,face4=0:draconicevolution/gates/fluxGate2,face5=0:draconicevolution/gates/fluxGate0
+block:id=%flowGate,data=3,stdrot=true,face0-1=0:draconicevolution/gates/fluxGate1,face2=0:draconicevolution/machine_io_i,face3=0:draconicevolution/machine_io_o,face4=0:draconicevolution/gates/fluxGate0,face5=0:draconicevolution/gates/fluxGate2
+block:id=%flowGate,data=4,stdrot=true,face0-1=0:draconicevolution/gates/fluxGate2,face2=0:draconicevolution/gates/fluxGate0,face3=0:draconicevolution/gates/fluxGate2,face4=0:draconicevolution/machine_io_o,face5=0:draconicevolution/machine_io_i
+block:id=%flowGate,data=5,stdrot=true,face0-1=0:draconicevolution/gates/fluxGate0,face2=0:draconicevolution/gates/fluxGate2,face3=0:draconicevolution/gates/fluxGate0,face4=0:draconicevolution/machine_io_i,face5=0:draconicevolution/machine_io_o
+block:id=%flowGate,data=6,stdrot=true,face0=0:draconicevolution/machine_io_o,face1=0:draconicevolution/machine_io_i,face2-5=0:draconicevolution/gates/fluidGate1
+block:id=%flowGate,data=7,stdrot=true,face0=0:draconicevolution/machine_io_i,face1=0:draconicevolution/machine_io_o,face2-5=0:draconicevolution/gates/fluidGate3
+block:id=%flowGate,data=8,stdrot=true,face0-1=0:draconicevolution/gates/fluidGate3,face2=0:draconicevolution/machine_io_o,face3=0:draconicevolution/machine_io_i,face4=0:draconicevolution/gates/fluidGate2,face5=0:draconicevolution/gates/fluidGate0
+block:id=%flowGate,data=9,stdrot=true,face0-1=0:draconicevolution/gates/fluidGate1,face2=0:draconicevolution/machine_io_i,face3=0:draconicevolution/machine_io_o,face4=0:draconicevolution/gates/fluidGate0,face5=0:draconicevolution/gates/fluidGate2
+block:id=%flowGate,data=10,stdrot=true,face0-1=0:draconicevolution/gates/fluidGate2,face2=0:draconicevolution/gates/fluidGate0,face3=0:draconicevolution/gates/fluidGate2,face4=0:draconicevolution/machine_io_o,face5=0:draconicevolution/machine_io_i
+block:id=%flowGate,data=11,stdrot=true,face0-1=0:draconicevolution/gates/fluidGate0,face2=0:draconicevolution/gates/fluidGate2,face3=0:draconicevolution/gates/fluidGate0,face4=0:draconicevolution/machine_io_i,face5=0:draconicevolution/machine_io_o
+block:id=%flowGate,data=12,stdrot=true,face0=0:draconicevolution/machine_io_o,face1=0:draconicevolution/machine_io_i,face2-5=0:draconicevolution/gates/fluidGate1
+block:id=%flowGate,data=13,stdrot=true,face0=0:draconicevolution/machine_io_i,face1=0:draconicevolution/machine_io_o,face2-5=0:draconicevolution/gates/fluidGate3
+block:id=%flowGate,data=14,stdrot=true,face0-1=0:draconicevolution/gates/fluidGate3,face2=0:draconicevolution/machine_io_o,face3=0:draconicevolution/machine_io_i,face4=0:draconicevolution/gates/fluidGate2,face5=0:draconicevolution/gates/fluidGate0
+block:id=%flowGate,data=15,stdrot=true,face0-1=0:draconicevolution/gates/fluidGate1,face2=0:draconicevolution/machine_io_i,face3=0:draconicevolution/machine_io_o,face4=0:draconicevolution/gates/fluidGate0,face5=0:draconicevolution/gates/fluidGate2
+
+# %reactorStabilizer:* (reactorStabilizer), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.ReactorStabilizer
+block:id=%reactorStabilizer,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
+
+# %reactorEnergyInjector:* (reactorEnergyInjector), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.ReactorEnergyInjector
+block:id=%reactorEnergyInjector,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
+
+# %chaosCrystal:* (chaosCrystal), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.ChaosCrystal
+block:id=%chaosCrystal,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
+
+# %longRangeDislocator:* (longRangeDislocator), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.LongRangeDislocator
+block:id=%longRangeDislocator,data=*,stdrot=true,face0-1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/teleporter_front

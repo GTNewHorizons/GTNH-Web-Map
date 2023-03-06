@@ -1,0 +1,171 @@
+# computronics 1.6.1
+version:1.7
+modname:computronics
+
+
+cfgfile:config/computronics.cfg
+
+
+texturepath:assets/computronics/textures/blocks/
+texture:id=computronics/advanced/cipher_front,filename=assets/computronics/textures/blocks/advanced/cipher_front.png
+texture:id=computronics/advanced/machine_bottom,filename=assets/computronics/textures/blocks/advanced/machine_bottom.png
+texture:id=computronics/advanced/machine_side,filename=assets/computronics/textures/blocks/advanced/machine_side.png
+texture:id=computronics/advanced/machine_top,filename=assets/computronics/textures/blocks/advanced/machine_top.png
+texture:id=computronics/audio_cable,filename=assets/computronics/textures/blocks/audio_cable.png
+texture:id=computronics/camera_front,filename=assets/computronics/textures/blocks/camera_front.png
+texture:id=computronics/chatbox_side,filename=assets/computronics/textures/blocks/chatbox_side.png
+texture:id=computronics/cipher_front,filename=assets/computronics/textures/blocks/cipher_front.png
+texture:id=computronics/digital_controller_box,filename=assets/computronics/textures/blocks/digital_controller_box.png
+texture:id=computronics/digital_detector,filename=assets/computronics/textures/blocks/digital_detector.png
+texture:id=computronics/digital_receiver_box,filename=assets/computronics/textures/blocks/digital_receiver_box.png
+texture:id=computronics/lamp_layer_0,filename=assets/computronics/textures/blocks/lamp_layer_0.png
+texture:id=computronics/locorelay_top,filename=assets/computronics/textures/blocks/locorelay_top.png
+texture:id=computronics/machine_bottom,filename=assets/computronics/textures/blocks/machine_bottom.png
+texture:id=computronics/machine_side,filename=assets/computronics/textures/blocks/machine_side.png
+texture:id=computronics/machine_side_bundled_input,filename=assets/computronics/textures/blocks/machine_side_bundled_input.png
+texture:id=computronics/machine_side_bundled_output,filename=assets/computronics/textures/blocks/machine_side_bundled_output.png
+texture:id=computronics/machine_top,filename=assets/computronics/textures/blocks/machine_top.png
+texture:id=computronics/noteblock,filename=assets/computronics/textures/blocks/noteblock.png
+texture:id=computronics/radar_side,filename=assets/computronics/textures/blocks/radar_side.png
+texture:id=computronics/speaker_front,filename=assets/computronics/textures/blocks/speaker_front.png
+texture:id=computronics/tape_drive_front,filename=assets/computronics/textures/blocks/tape_drive_front.png
+texture:id=computronics/ticket_machine_front,filename=assets/computronics/textures/blocks/ticket_machine_front.png
+texture:id=railcraft/signal.box,filename=assets/railcraft/textures/blocks/signal.box.png
+
+
+
+# %computronics.ironNoteBlock:* (computronics.ironNoteBlock), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockIronNote
+block:id=%computronics.ironNoteBlock,data=*,stdrot=true,face0-5=0:computronics/noteblock
+
+# %computronics.audioCable:* (computronics.audioCable), render=pl.asie.computronics.client.AudioCableRender(CUSTOM), opaque=false,cls=pl.asie.computronics.block.BlockAudioCable
+block:id=%computronics.audioCable,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=ABABAB,face0-5=17000:computronics/audio_cable
+
+# %computronics.speaker:* (computronics.speaker), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockSpeaker
+block:id=%computronics.speaker,data=0,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/speaker_front,face3-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=1,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/speaker_front,face4-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=2,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/speaker_front,face5=0:computronics/machine_side
+block:id=%computronics.speaker,data=3,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/speaker_front
+block:id=%computronics.speaker,data=4,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/speaker_front,face3-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=5,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/speaker_front,face4-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=6,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/speaker_front,face5=0:computronics/machine_side
+block:id=%computronics.speaker,data=7,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/speaker_front
+block:id=%computronics.speaker,data=8,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/speaker_front,face3-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=9,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/speaker_front,face4-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=10,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/speaker_front,face5=0:computronics/machine_side
+block:id=%computronics.speaker,data=11,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/speaker_front
+block:id=%computronics.speaker,data=12,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/speaker_front,face3-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=13,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/speaker_front,face4-5=0:computronics/machine_side
+block:id=%computronics.speaker,data=14,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/speaker_front,face5=0:computronics/machine_side
+block:id=%computronics.speaker,data=15,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/speaker_front
+
+# %computronics.tapeReader:* (computronics.tapeReader), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockTapeReader
+block:id=%computronics.tapeReader,data=0,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/tape_drive_front,face3-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=1,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/tape_drive_front,face4-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=2,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/tape_drive_front,face5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=3,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/tape_drive_front
+block:id=%computronics.tapeReader,data=4,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/tape_drive_front,face3-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=5,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/tape_drive_front,face4-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=6,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/tape_drive_front,face5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=7,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/tape_drive_front
+block:id=%computronics.tapeReader,data=8,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/tape_drive_front,face3-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=9,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/tape_drive_front,face4-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=10,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/tape_drive_front,face5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=11,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/tape_drive_front
+block:id=%computronics.tapeReader,data=12,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/tape_drive_front,face3-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=13,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/tape_drive_front,face4-5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=14,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/tape_drive_front,face5=0:computronics/machine_side
+block:id=%computronics.tapeReader,data=15,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/tape_drive_front
+
+# %computronics.camera:* (computronics.camera), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockCamera
+block:id=%computronics.camera,data=0,stdrot=true,face0=0:computronics/camera_front,face1=0:computronics/machine_side,face2=0:computronics/machine_bottom,face3=0:computronics/machine_top,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=1,stdrot=true,face0=0:computronics/machine_side,face1=0:computronics/camera_front,face2=0:computronics/machine_top,face3=0:computronics/machine_bottom,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=2,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/camera_front,face3-5=0:computronics/machine_side
+block:id=%computronics.camera,data=3,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/camera_front,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=4,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/camera_front,face5=0:computronics/machine_side
+block:id=%computronics.camera,data=5,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/camera_front
+block:id=%computronics.camera,data=6,stdrot=true,face0=0:computronics/camera_front,face1=0:computronics/machine_side,face2=0:computronics/machine_bottom,face3=0:computronics/machine_top,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=7,stdrot=true,face0=0:computronics/machine_side,face1=0:computronics/camera_front,face2=0:computronics/machine_top,face3=0:computronics/machine_bottom,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=8,stdrot=true,face0=0:computronics/camera_front,face1=0:computronics/machine_side,face2=0:computronics/machine_bottom,face3=0:computronics/machine_top,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=9,stdrot=true,face0=0:computronics/machine_side,face1=0:computronics/camera_front,face2=0:computronics/machine_top,face3=0:computronics/machine_bottom,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=10,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/camera_front,face3-5=0:computronics/machine_side
+block:id=%computronics.camera,data=11,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/camera_front,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=12,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/camera_front,face5=0:computronics/machine_side
+block:id=%computronics.camera,data=13,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/camera_front
+block:id=%computronics.camera,data=14,stdrot=true,face0=0:computronics/camera_front,face1=0:computronics/machine_side,face2=0:computronics/machine_bottom,face3=0:computronics/machine_top,face4-5=0:computronics/machine_side
+block:id=%computronics.camera,data=15,stdrot=true,face0=0:computronics/machine_side,face1=0:computronics/camera_front,face2=0:computronics/machine_top,face3=0:computronics/machine_bottom,face4-5=0:computronics/machine_side
+
+# %computronics.chatBox:* (computronics.chatBox), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockChatBox
+block:id=%computronics.chatBox,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-5=0:computronics/chatbox_side
+block:id=%computronics.chatBox,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF60FF,face0=17000:computronics/machine_bottom,face1=17000:computronics/machine_top,face2-5=17000:computronics/chatbox_side
+
+# %computronics.cipher:* (computronics.cipher), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockCipher
+block:id=%computronics.cipher,data=0,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/cipher_front,face3=0:computronics/machine_side,face4=0:computronics/machine_side_bundled_output,face5=0:computronics/machine_side_bundled_input
+block:id=%computronics.cipher,data=1,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/cipher_front,face4=0:computronics/machine_side_bundled_input,face5=0:computronics/machine_side_bundled_output
+block:id=%computronics.cipher,data=2,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_input,face3=0:computronics/machine_side_bundled_output,face4=0:computronics/cipher_front,face5=0:computronics/machine_side
+block:id=%computronics.cipher,data=3,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_output,face3=0:computronics/machine_side_bundled_input,face4=0:computronics/machine_side,face5=0:computronics/cipher_front
+block:id=%computronics.cipher,data=4,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/cipher_front,face3=0:computronics/machine_side,face4=0:computronics/machine_side_bundled_output,face5=0:computronics/machine_side_bundled_input
+block:id=%computronics.cipher,data=5,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/cipher_front,face4=0:computronics/machine_side_bundled_input,face5=0:computronics/machine_side_bundled_output
+block:id=%computronics.cipher,data=6,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_input,face3=0:computronics/machine_side_bundled_output,face4=0:computronics/cipher_front,face5=0:computronics/machine_side
+block:id=%computronics.cipher,data=7,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_output,face3=0:computronics/machine_side_bundled_input,face4=0:computronics/machine_side,face5=0:computronics/cipher_front
+block:id=%computronics.cipher,data=8,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/cipher_front,face3=0:computronics/machine_side,face4=0:computronics/machine_side_bundled_output,face5=0:computronics/machine_side_bundled_input
+block:id=%computronics.cipher,data=9,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/cipher_front,face4=0:computronics/machine_side_bundled_input,face5=0:computronics/machine_side_bundled_output
+block:id=%computronics.cipher,data=10,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_input,face3=0:computronics/machine_side_bundled_output,face4=0:computronics/cipher_front,face5=0:computronics/machine_side
+block:id=%computronics.cipher,data=11,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_output,face3=0:computronics/machine_side_bundled_input,face4=0:computronics/machine_side,face5=0:computronics/cipher_front
+block:id=%computronics.cipher,data=12,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/cipher_front,face3=0:computronics/machine_side,face4=0:computronics/machine_side_bundled_output,face5=0:computronics/machine_side_bundled_input
+block:id=%computronics.cipher,data=13,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/cipher_front,face4=0:computronics/machine_side_bundled_input,face5=0:computronics/machine_side_bundled_output
+block:id=%computronics.cipher,data=14,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_input,face3=0:computronics/machine_side_bundled_output,face4=0:computronics/cipher_front,face5=0:computronics/machine_side
+block:id=%computronics.cipher,data=15,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side_bundled_output,face3=0:computronics/machine_side_bundled_input,face4=0:computronics/machine_side,face5=0:computronics/cipher_front
+
+# %computronics.cipher_advanced:* (computronics.cipher_advanced), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockCipherAdvanced
+block:id=%computronics.cipher_advanced,data=0,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/cipher_front,face3-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=1,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/machine_side,face3=0:computronics/advanced/cipher_front,face4-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=2,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-3=0:computronics/advanced/machine_side,face4=0:computronics/advanced/cipher_front,face5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=3,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-4=0:computronics/advanced/machine_side,face5=0:computronics/advanced/cipher_front
+block:id=%computronics.cipher_advanced,data=4,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/cipher_front,face3-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=5,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/machine_side,face3=0:computronics/advanced/cipher_front,face4-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=6,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-3=0:computronics/advanced/machine_side,face4=0:computronics/advanced/cipher_front,face5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=7,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-4=0:computronics/advanced/machine_side,face5=0:computronics/advanced/cipher_front
+block:id=%computronics.cipher_advanced,data=8,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/cipher_front,face3-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=9,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/machine_side,face3=0:computronics/advanced/cipher_front,face4-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=10,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-3=0:computronics/advanced/machine_side,face4=0:computronics/advanced/cipher_front,face5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=11,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-4=0:computronics/advanced/machine_side,face5=0:computronics/advanced/cipher_front
+block:id=%computronics.cipher_advanced,data=12,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/cipher_front,face3-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=13,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2=0:computronics/advanced/machine_side,face3=0:computronics/advanced/cipher_front,face4-5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=14,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-3=0:computronics/advanced/machine_side,face4=0:computronics/advanced/cipher_front,face5=0:computronics/advanced/machine_side
+block:id=%computronics.cipher_advanced,data=15,stdrot=true,face0=0:computronics/advanced/machine_bottom,face1=0:computronics/advanced/machine_top,face2-4=0:computronics/advanced/machine_side,face5=0:computronics/advanced/cipher_front
+
+# %computronics.radar:* (computronics.radar), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockRadar
+block:id=%computronics.radar,data=*,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-5=0:computronics/radar_side
+
+# %computronics.colorfulLamp:* (computronics.colorfulLamp), render=pl.asie.computronics.client.LampRender(CUSTOM), opaque=true,cls=pl.asie.computronics.block.BlockColorfulLamp
+block:id=%computronics.colorfulLamp,data=*,stdrot=true,face0-5=0:computronics/lamp_layer_0
+
+# %computronics.locomotiveRelay:* (computronics.locomotiveRelay), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.integration.railcraft.block.BlockLocomotiveRelay
+block:id=%computronics.locomotiveRelay,data=*,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/locorelay_top,face2-5=0:computronics/machine_side
+
+# %computronics.digitalReceiverBox:* (computronics.digitalReceiverBox), render=pl.asie.computronics.integration.railcraft.client.SignalBoxRenderer(CUSTOM), opaque=false,cls=pl.asie.computronics.integration.railcraft.block.BlockDigitalReceiverBox
+block:id=%computronics.digitalReceiverBox,data=*,stdrot=true,face0=0:railcraft/signal.box.2,face1=0:computronics/digital_receiver_box,face2-5=0:railcraft/signal.box.0
+
+# %computronics.digitalControllerBox:* (computronics.digitalControllerBox), render=pl.asie.computronics.integration.railcraft.client.SignalBoxRenderer(CUSTOM), opaque=false,cls=pl.asie.computronics.integration.railcraft.block.BlockDigitalControllerBox
+block:id=%computronics.digitalControllerBox,data=*,stdrot=true,face0=0:railcraft/signal.box.2,face1=0:computronics/digital_controller_box,face2-5=0:railcraft/signal.box.0
+
+# %computronics.detector:* (computronics.detector), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.integration.railcraft.block.BlockDigitalDetector
+block:id=%computronics.detector,data=*,stdrot=true,face0-1=0:computronics/digital_detector.0,face2=0:computronics/digital_detector.1,face3-5=0:computronics/digital_detector.0
+
+# %computronics.ticketMachine:* (computronics.ticketMachine), render=pl.asie.lib.client.BlockBaseRender(CUSTOM), opaque=true,cls=pl.asie.computronics.integration.railcraft.block.BlockTicketMachine
+block:id=%computronics.ticketMachine,data=0,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/ticket_machine_front,face3-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=1,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/ticket_machine_front,face4-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=2,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/ticket_machine_front,face5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=3,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/ticket_machine_front
+block:id=%computronics.ticketMachine,data=4,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/ticket_machine_front,face3-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=5,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/ticket_machine_front,face4-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=6,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/ticket_machine_front,face5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=7,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/ticket_machine_front
+block:id=%computronics.ticketMachine,data=8,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/ticket_machine_front,face3-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=9,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/ticket_machine_front,face4-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=10,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/ticket_machine_front,face5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=11,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/ticket_machine_front
+block:id=%computronics.ticketMachine,data=12,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/ticket_machine_front,face3-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=13,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2=0:computronics/machine_side,face3=0:computronics/ticket_machine_front,face4-5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=14,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-3=0:computronics/machine_side,face4=0:computronics/ticket_machine_front,face5=0:computronics/machine_side
+block:id=%computronics.ticketMachine,data=15,stdrot=true,face0=0:computronics/machine_bottom,face1=0:computronics/machine_top,face2-4=0:computronics/machine_side,face5=0:computronics/ticket_machine_front

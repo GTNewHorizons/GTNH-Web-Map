@@ -1,0 +1,204 @@
+# PFAAGeologica 0.2.23
+version:1.7
+modname:PFAAGeologica
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %weakStone:* (weakStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %mediumStone:* (mediumStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %strongStone:* (strongStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %veryStrongStone:* (veryStrongStone), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %weakOreSand:* (weakOreSand), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.LooseGeoBlock
+
+# %weakOreRock:* (weakOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %mediumOreRock:* (mediumOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %strongOreRock:* (strongOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %weakClay:* (weakClay), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %weakOreClay:* (weakOreClay), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %crudeSand:* (crudeSand), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.LooseGeoBlock
+
+# %crudeRock:* (crudeRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %crudeGround:* (crudeGround), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %vanillaOreRock:* (vanillaOreRock), render=org.pfaa.geologica.client.render.CompositeBlockRenderer(CUSTOM), opaque=true,cls=org.pfaa.geologica.block.IntactGeoBlock
+
+# %mediumCobbleWall:* (mediumCobbleWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+customblock:id=%mediumCobbleWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4
+
+# %strongCobbleWall:* (strongCobbleWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+customblock:id=%strongCobbleWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8
+
+# %veryStrongCobbleWall:* (veryStrongCobbleWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+customblock:id=%veryStrongCobbleWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4
+
+# %mediumStoneBrickWall:* (mediumStoneBrickWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+customblock:id=%mediumStoneBrickWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4
+
+# %strongStoneBrickWall:* (strongStoneBrickWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+customblock:id=%strongStoneBrickWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8
+
+# %veryStrongStoneBrickWall:* (veryStrongStoneBrickWall), render=(WALL), opaque=false,cls=org.pfaa.geologica.block.WallBlock
+customblock:id=%veryStrongStoneBrickWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4
+
+# %mediumCobbleSlab:* (mediumCobbleSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%mediumCobbleSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4
+boxblock:id=%mediumCobbleSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12
+
+# %strongCobbleSlab:* (strongCobbleSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%strongCobbleSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%strongCobbleSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %veryStrongCobbleSlab:* (veryStrongCobbleSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%veryStrongCobbleSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4
+boxblock:id=%veryStrongCobbleSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12
+
+# %mediumStoneBrickSlab:* (mediumStoneBrickSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%mediumStoneBrickSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4
+boxblock:id=%mediumStoneBrickSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12
+
+# %strongStoneBrickSlab:* (strongStoneBrickSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%strongStoneBrickSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%strongStoneBrickSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %veryStrongStoneBrickSlab:* (veryStrongStoneBrickSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%veryStrongStoneBrickSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4
+boxblock:id=%veryStrongStoneBrickSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12
+
+# %mediumStoneSlab:* (mediumStoneSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%mediumStoneSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4
+boxblock:id=%mediumStoneSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12
+
+# %strongStoneSlab:* (strongStoneSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%strongStoneSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%strongStoneSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %veryStrongStoneSlab:* (veryStrongStoneSlab), render=(STANDARD), opaque=false,cls=org.pfaa.geologica.block.SlabBlock
+boxblock:id=%veryStrongStoneSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4
+boxblock:id=%veryStrongStoneSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12
+
+# %mediumCobbleStairs.limestone:* (mediumCobbleStairs.limestone), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+customblock:id=%mediumCobbleStairs.limestone,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %strongCobbleStairs.granite:* (strongCobbleStairs.granite), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+customblock:id=%strongCobbleStairs.granite,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %strongCobbleStairs.marble:* (strongCobbleStairs.marble), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+customblock:id=%strongCobbleStairs.marble,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %mediumStoneBrickStairs.limestone:* (mediumStoneBrickStairs.limestone), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+customblock:id=%mediumStoneBrickStairs.limestone,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %strongStoneBrickStairs.granite:* (strongStoneBrickStairs.granite), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+customblock:id=%strongStoneBrickStairs.granite,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %strongStoneBrickStairs.marble:* (strongStoneBrickStairs.marble), render=(STAIRS), opaque=false,cls=org.pfaa.geologica.block.StairsBlock
+customblock:id=%strongStoneBrickStairs.marble,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %lightOil:* (lightOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+boxblock:id=%lightOil,ymax=0.875,data=1
+boxblock:id=%lightOil,ymax=0.75,data=2
+boxblock:id=%lightOil,ymax=0.625,data=3
+boxblock:id=%lightOil,ymax=0.5,data=4
+boxblock:id=%lightOil,ymax=0.375,data=5
+boxblock:id=%lightOil,ymax=0.25,data=6
+boxblock:id=%lightOil,ymax=0.125,data=7
+boxblock:id=%lightOil,ymax=0.875,data=9
+boxblock:id=%lightOil,ymax=0.75,data=10
+boxblock:id=%lightOil,ymax=0.625,data=11
+boxblock:id=%lightOil,ymax=0.5,data=12
+boxblock:id=%lightOil,ymax=0.375,data=13
+boxblock:id=%lightOil,ymax=0.25,data=14
+boxblock:id=%lightOil,ymax=0.125,data=15
+
+# %mediumOil:* (mediumOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+boxblock:id=%mediumOil,ymax=0.875,data=1
+boxblock:id=%mediumOil,ymax=0.75,data=2
+boxblock:id=%mediumOil,ymax=0.625,data=3
+boxblock:id=%mediumOil,ymax=0.5,data=4
+boxblock:id=%mediumOil,ymax=0.375,data=5
+boxblock:id=%mediumOil,ymax=0.25,data=6
+boxblock:id=%mediumOil,ymax=0.125,data=7
+boxblock:id=%mediumOil,ymax=0.875,data=9
+boxblock:id=%mediumOil,ymax=0.75,data=10
+boxblock:id=%mediumOil,ymax=0.625,data=11
+boxblock:id=%mediumOil,ymax=0.5,data=12
+boxblock:id=%mediumOil,ymax=0.375,data=13
+boxblock:id=%mediumOil,ymax=0.25,data=14
+boxblock:id=%mediumOil,ymax=0.125,data=15
+
+# %heavyOil:* (heavyOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+boxblock:id=%heavyOil,ymax=0.875,data=1
+boxblock:id=%heavyOil,ymax=0.75,data=2
+boxblock:id=%heavyOil,ymax=0.625,data=3
+boxblock:id=%heavyOil,ymax=0.5,data=4
+boxblock:id=%heavyOil,ymax=0.375,data=5
+boxblock:id=%heavyOil,ymax=0.25,data=6
+boxblock:id=%heavyOil,ymax=0.125,data=7
+boxblock:id=%heavyOil,ymax=0.875,data=9
+boxblock:id=%heavyOil,ymax=0.75,data=10
+boxblock:id=%heavyOil,ymax=0.625,data=11
+boxblock:id=%heavyOil,ymax=0.5,data=12
+boxblock:id=%heavyOil,ymax=0.375,data=13
+boxblock:id=%heavyOil,ymax=0.25,data=14
+boxblock:id=%heavyOil,ymax=0.125,data=15
+
+# %extraHeavyOil:* (extraHeavyOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+boxblock:id=%extraHeavyOil,ymax=0.875,data=1
+boxblock:id=%extraHeavyOil,ymax=0.75,data=2
+boxblock:id=%extraHeavyOil,ymax=0.625,data=3
+boxblock:id=%extraHeavyOil,ymax=0.5,data=4
+boxblock:id=%extraHeavyOil,ymax=0.375,data=5
+boxblock:id=%extraHeavyOil,ymax=0.25,data=6
+boxblock:id=%extraHeavyOil,ymax=0.125,data=7
+boxblock:id=%extraHeavyOil,ymax=0.875,data=9
+boxblock:id=%extraHeavyOil,ymax=0.75,data=10
+boxblock:id=%extraHeavyOil,ymax=0.625,data=11
+boxblock:id=%extraHeavyOil,ymax=0.5,data=12
+boxblock:id=%extraHeavyOil,ymax=0.375,data=13
+boxblock:id=%extraHeavyOil,ymax=0.25,data=14
+boxblock:id=%extraHeavyOil,ymax=0.125,data=15
+
+# %naturalGas:* (naturalGas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=org.pfaa.chemica.block.IndustrialFluidBlock
+boxblock:id=%naturalGas,ymax=0.875,data=1
+boxblock:id=%naturalGas,ymax=0.75,data=2
+boxblock:id=%naturalGas,ymax=0.625,data=3
+boxblock:id=%naturalGas,ymax=0.5,data=4
+boxblock:id=%naturalGas,ymax=0.375,data=5
+boxblock:id=%naturalGas,ymax=0.25,data=6
+boxblock:id=%naturalGas,ymax=0.125,data=7
+boxblock:id=%naturalGas,ymax=0.875,data=9
+boxblock:id=%naturalGas,ymax=0.75,data=10
+boxblock:id=%naturalGas,ymax=0.625,data=11
+boxblock:id=%naturalGas,ymax=0.5,data=12
+boxblock:id=%naturalGas,ymax=0.375,data=13
+boxblock:id=%naturalGas,ymax=0.25,data=14
+boxblock:id=%naturalGas,ymax=0.125,data=15
