@@ -1,4 +1,4 @@
-# IC2NuclearControl 2.4.2a
+# IC2NuclearControl 2.4.16
 version:1.7
 modname:IC2NuclearControl
 
@@ -7,8 +7,6 @@ cfgfile:config/IC2NuclearControl.cfg
 
 
 texturepath:assets/ic2nuclearcontrol/textures/blocks/
-texture:id=nuclearcontrol/BRBlock/RFReactorPart,filename=assets/nuclearcontrol/textures/blocks/BRBlock/RFReactorPart.png
-texture:id=nuclearcontrol/BRBlock/blockReactorPart,filename=assets/nuclearcontrol/textures/blocks/BRBlock/blockReactorPart.png
 texture:id=nuclearcontrol/aeMonitor/monitorSide,filename=assets/nuclearcontrol/textures/blocks/aeMonitor/monitorSide.png
 texture:id=nuclearcontrol/averageCounter/input,filename=assets/nuclearcontrol/textures/blocks/averageCounter/input.png
 texture:id=nuclearcontrol/averageCounter/output,filename=assets/nuclearcontrol/textures/blocks/averageCounter/output.png
@@ -57,16 +55,12 @@ block:id=%blockNuclearControlMain,data=8,stdrot=true,face0=0:nuclearcontrol/rang
 block:id=%blockNuclearControlMain,data=9,stdrot=true,face0=0:nuclearcontrol/infoPanel/panelAdvancedSide,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/panelAdvancedSide
 block:id=%blockNuclearControlMain,data=10,stdrot=true,face0=0:nuclearcontrol/infoPanel/extenderAdvancedSide,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/extenderAdvancedSide
 
-# %blockNuclearControlLight:* (blockNuclearControlLight), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.blocks.BlockNuclearControlLight
+# %blockNuclearControlLight:* (blockNuclearControlLight), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.blocks.BlockNuclearControlLight
 block:id=%blockNuclearControlLight,data=0,stdrot=true,face0-5=0:nuclearcontrol/light/lamp0
 block:id=%blockNuclearControlLight,data=1,stdrot=true,face0-5=0:nuclearcontrol/light/lamp1
 block:id=%blockNuclearControlLight,data=2,stdrot=true,face0-5=0:nuclearcontrol/light/lamp2
 block:id=%blockNuclearControlLight,data=3,stdrot=true,face0-5=0:nuclearcontrol/light/lamp3
 block:id=%blockNuclearControlLight,data=4,stdrot=true,face0-5=0:nuclearcontrol/light/lamp4
 
-# %NC-BRinfoFetch:* (NC-BRinfoFetch), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.crossmod.bigreactors.BlockActiveReactorInfoFetch
-block:id=%NC-BRinfoFetch,data=0,data=1,stdrot=true,face0-1=0:nuclearcontrol/BRBlock/blockReactorPart,face2-5=0:nuclearcontrol/BRBlock/RFReactorPart
-block:id=%NC-BRinfoFetch,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:nuclearcontrol/BRBlock/blockReactorPart
-
-# %networkLink:* (networkLink), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.crossmod.appeng.BlockNetworkLink
+# %networkLink:* (networkLink), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.crossmod.appeng.BlockNetworkLink
 block:id=%networkLink,data=*,stdrot=true,face0-5=0:nuclearcontrol/aeMonitor/monitorSide

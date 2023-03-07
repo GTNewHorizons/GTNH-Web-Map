@@ -1,0 +1,110 @@
+# BloodArsenal 1.2.9
+version:1.7
+modname:BloodArsenal
+
+
+cfgfile:config/BloodArsenal.cfg
+
+
+texturepath:assets/bloodarsenal/textures/blocks/
+texture:id=AlchemicalWizardry/BloodAltar_Bottom,filename=assets/alchemicalwizardry/textures/blocks/BloodAltar_Bottom.png
+texture:id=AlchemicalWizardry/BloodAltar_SideType2,filename=assets/alchemicalwizardry/textures/blocks/BloodAltar_SideType2.png
+texture:id=AlchemicalWizardry/BloodAltar_Top,filename=assets/alchemicalwizardry/textures/blocks/BloodAltar_Top.png
+texture:id=BloodArsenal/block_burned_string,filename=assets/bloodarsenal/textures/blocks/block_burned_string.png
+texture:id=BloodArsenal/blood_cake_bottom,filename=assets/bloodarsenal/textures/blocks/blood_cake_bottom.png
+texture:id=BloodArsenal/blood_cake_side,filename=assets/bloodarsenal/textures/blocks/blood_cake_side.png
+texture:id=BloodArsenal/blood_cake_top,filename=assets/bloodarsenal/textures/blocks/blood_cake_top.png
+texture:id=BloodArsenal/blood_infused_diamond_block,filename=assets/bloodarsenal/textures/blocks/blood_infused_diamond_block.png
+texture:id=BloodArsenal/blood_infused_glowstone,filename=assets/bloodarsenal/textures/blocks/blood_infused_glowstone.png
+texture:id=BloodArsenal/blood_infused_iron_block,filename=assets/bloodarsenal/textures/blocks/blood_infused_iron_block.png
+texture:id=BloodArsenal/blood_infused_planks,filename=assets/bloodarsenal/textures/blocks/blood_infused_planks.png
+texture:id=BloodArsenal/blood_infused_wood,filename=assets/bloodarsenal/textures/blocks/blood_infused_wood.png
+texture:id=BloodArsenal/blood_infused_wood_top,filename=assets/bloodarsenal/textures/blocks/blood_infused_wood_top.png
+texture:id=BloodArsenal/blood_lamp,filename=assets/bloodarsenal/textures/blocks/blood_lamp.png
+texture:id=BloodArsenal/blood_stained_glass,filename=assets/bloodarsenal/textures/blocks/blood_stained_glass.png
+texture:id=BloodArsenal/blood_stained_ice,filename=assets/bloodarsenal/textures/blocks/blood_stained_ice.png
+texture:id=BloodArsenal/blood_stained_ice_packed,filename=assets/bloodarsenal/textures/blocks/blood_stained_ice_packed.png
+texture:id=BloodArsenal/blood_stone_1,filename=assets/bloodarsenal/textures/blocks/blood_stone_1.png
+texture:id=BloodArsenal/blood_stone_2,filename=assets/bloodarsenal/textures/blocks/blood_stone_2.png
+texture:id=BloodArsenal/blood_stone_3,filename=assets/bloodarsenal/textures/blocks/blood_stone_3.png
+texture:id=BloodArsenal/blood_stone_4,filename=assets/bloodarsenal/textures/blocks/blood_stone_4.png
+texture:id=BloodArsenal/blood_stone_5,filename=assets/bloodarsenal/textures/blocks/blood_stone_5.png
+texture:id=BloodArsenal/blood_tnt_bottom,filename=assets/bloodarsenal/textures/blocks/blood_tnt_bottom.png
+texture:id=BloodArsenal/blood_tnt_side,filename=assets/bloodarsenal/textures/blocks/blood_tnt_side.png
+texture:id=BloodArsenal/blood_tnt_top,filename=assets/bloodarsenal/textures/blocks/blood_tnt_top.png
+texture:id=BloodArsenal/blood_torch,filename=assets/bloodarsenal/textures/blocks/blood_torch.png
+texture:id=BloodArsenal/compacted_mrs,filename=assets/bloodarsenal/textures/blocks/compacted_mrs.png
+texture:id=BloodArsenal/compacter_bottom,filename=assets/bloodarsenal/textures/blocks/compacter_bottom.png
+texture:id=BloodArsenal/compacter_side,filename=assets/bloodarsenal/textures/blocks/compacter_side.png
+texture:id=BloodArsenal/compacter_top,filename=assets/bloodarsenal/textures/blocks/compacter_top.png
+texture:id=BloodArsenal/life_infuser,filename=assets/bloodarsenal/textures/blocks/life_infuser.png
+texture:id=BloodArsenal/lp_materializer_output,filename=assets/bloodarsenal/textures/blocks/lp_materializer_output.png
+texture:id=BloodArsenal/lp_materializer_side,filename=assets/bloodarsenal/textures/blocks/lp_materializer_side.png
+
+
+
+# %blood_stone:* (blood_stone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodStone
+block:id=%blood_stone,data=0,stdrot=true,face0-5=0:BloodArsenal/blood_stone_1
+block:id=%blood_stone,data=1,stdrot=true,face0-5=0:BloodArsenal/blood_stone_2
+block:id=%blood_stone,data=2,stdrot=true,face0-5=0:BloodArsenal/blood_stone_3
+block:id=%blood_stone,data=3,stdrot=true,face0-5=0:BloodArsenal/blood_stone_4
+block:id=%blood_stone,data=4,stdrot=true,face0-5=0:BloodArsenal/blood_stone_5
+block:id=%blood_stone,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:BloodArsenal/blood_stone_1
+
+# %blood_tnt:* (blood_tnt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodTNT
+block:id=%blood_tnt,data=*,stdrot=true,face0=0:BloodArsenal/blood_tnt_bottom,face1=0:BloodArsenal/blood_tnt_top,face2-5=0:BloodArsenal/blood_tnt_side
+
+# %blood_stained_glass:* (blood_stained_glass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodStainedGlass
+block:id=%blood_stained_glass,data=*,stdrot=true,face0-5=12000:BloodArsenal/blood_stained_glass
+
+# %blood_infused_wood:* (blood_infused_wood), render=(LOG), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodInfusedWood
+block:id=%blood_infused_wood,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:BloodArsenal/blood_infused_wood_top,face2-5=0:BloodArsenal/blood_infused_wood
+block:id=%blood_infused_wood,data=4,data=5,data=6,data=7,face0-1=0:BloodArsenal/blood_infused_wood,face2-3=4000:BloodArsenal/blood_infused_wood,face4-5=0:BloodArsenal/blood_infused_wood_top
+block:id=%blood_infused_wood,data=8,data=9,data=10,data=11,face0-1=4000:BloodArsenal/blood_infused_wood,face2-3=0:BloodArsenal/blood_infused_wood_top,face4-5=4000:BloodArsenal/blood_infused_wood
+block:id=%blood_infused_wood,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:BloodArsenal/blood_infused_wood
+
+# %blood_infused_planks:* (blood_infused_planks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodInfusedPlanks
+block:id=%blood_infused_planks,data=*,stdrot=true,face0-5=0:BloodArsenal/blood_infused_planks
+
+# %blood_stained_ice:* (blood_stained_ice), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodStainedIce
+block:id=%blood_stained_ice,data=*,stdrot=true,face0-5=12000:BloodArsenal/blood_stained_ice
+
+# %blood_stained_ice_packed:* (blood_stained_ice_packed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodStainedPackedIce
+block:id=%blood_stained_ice_packed,data=*,stdrot=true,face0-5=0:BloodArsenal/blood_stained_ice_packed
+
+# %blood_infused_iron_block:* (blood_infused_iron_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockInfusedIron
+block:id=%blood_infused_iron_block,data=*,stdrot=true,face0-5=0:BloodArsenal/blood_infused_iron_block
+
+# %blood_cake:* (blood_cake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodCake
+block:id=%blood_cake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:BloodArsenal/blood_cake_bottom,face1=0:BloodArsenal/blood_cake_top,face2-5=0:BloodArsenal/blood_cake_side
+block:id=%blood_cake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:BloodArsenal/blood_cake_bottom,face1=0:BloodArsenal/blood_cake_top,face2-3=0:BloodArsenal/blood_cake_side,face5=0:BloodArsenal/blood_cake_side
+
+# %blood_torch:* (blood_torch), render=(TORCH), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodTorch
+block:id=%blood_torch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:BloodArsenal/blood_torch
+
+# %blood_infused_glowstone:* (blood_infused_glowstone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodInfusedGlowstone
+block:id=%blood_infused_glowstone,data=*,stdrot=true,face0-5=0:BloodArsenal/blood_infused_glowstone
+
+# %blood_lamp:* (blood_lamp), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodLamp
+block:id=%blood_lamp,data=*,stdrot=true,face0-5=0:BloodArsenal/blood_lamp
+
+# %blood_infused_diamond_block:* (blood_infused_diamond_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockBloodInfusedDiamond
+block:id=%blood_infused_diamond_block,data=*,stdrot=true,face0-5=0:BloodArsenal/blood_infused_diamond_block
+
+# %portable_altar:* (portable_altar), render=(CUSTOM), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockPortableAltar
+block:id=%portable_altar,data=*,stdrot=true,face0=0:AlchemicalWizardry/BloodAltar_Bottom,face1=0:AlchemicalWizardry/BloodAltar_Top,face2-5=0:AlchemicalWizardry/BloodAltar_SideType2
+
+# %life_infuser:* (life_infuser), render=(CUSTOM), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockLifeInfuser
+block:id=%life_infuser,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:BloodArsenal/life_infuser
+
+# %compacter:* (compacter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockCompacter
+block:id=%compacter,data=*,stdrot=true,face0=0:BloodArsenal/compacter_bottom,face1=0:BloodArsenal/compacter_top,face2-5=0:BloodArsenal/compacter_side
+
+# %lp_materializer:* (lp_materializer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockLPMaterializer
+block:id=%lp_materializer,data=*,stdrot=true,face0-1=12000:BloodArsenal/lp_materializer_output,face2-5=12000:BloodArsenal/lp_materializer_side
+
+# %compacted_mrs:* (compacted_mrs), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.arc.bloodarsenal.common.block.BlockCompactedMRS
+block:id=%compacted_mrs,data=*,stdrot=true,face0-5=0:BloodArsenal/compacted_mrs
+
+# %block_burned_string:* (block_burned_string), render=(TRIPWIRE), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBurnedString
+block:id=%block_burned_string,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:BloodArsenal/block_burned_string

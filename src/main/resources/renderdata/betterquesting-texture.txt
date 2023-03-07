@@ -1,0 +1,31 @@
+# betterquesting 3.1.8-GTNH
+version:1.7
+modname:betterquesting
+
+
+cfgfile:config/betterquesting.cfg
+
+
+texturepath:assets/betterquesting/textures/blocks/
+texture:id=betterquesting/observation_station_side,filename=assets/betterquesting/textures/blocks/observation_station_side.png
+texture:id=betterquesting/observation_station_top,filename=assets/betterquesting/textures/blocks/observation_station_top.png
+texture:id=betterquesting/submit_station_side,filename=assets/betterquesting/textures/blocks/submit_station_side.png
+texture:id=betterquesting/submit_station_top,filename=assets/betterquesting/textures/blocks/submit_station_top.png
+texture:id=minecraft/command_block,filename=assets/minecraft/textures/blocks/command_block.png
+
+
+
+# %submit_station:* (submit_station), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=betterquesting.blocks.BlockSubmitStation
+block:id=%submit_station,data=*,stdrot=true,face0-1=0:betterquesting/submit_station_top,face2-5=0:betterquesting/submit_station_side
+
+# %observation_station:* (observation_station), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=betterquesting.blocks.BlockObservationStation
+block:id=%observation_station,data=*,stdrot=true,face0-1=0:betterquesting/observation_station_top,face2-5=0:betterquesting/observation_station_side
+
+# %BlockDLB:* (BlockDLB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockDLB
+block:id=%BlockDLB,data=*,stdrot=true,face0-5=0:minecraft/command_block
+
+# %BlockHSB:* (BlockHSB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockHSB
+block:id=%BlockHSB,data=*,stdrot=true,face0-5=0:minecraft/command_block
+
+# %BlockREB:* (BlockREB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockREB
+block:id=%BlockREB,data=*,stdrot=true,face0-5=0:minecraft/command_block

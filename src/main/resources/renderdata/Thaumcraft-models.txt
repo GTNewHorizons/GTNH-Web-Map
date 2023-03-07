@@ -134,7 +134,7 @@ boxblock:id=%blockJar,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.75,zmin=0.1875,zma
 # %blockCandle:* (blockCandle), render=thaumcraft.client.renderers.block.BlockCandleRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCandle
 boxblock:id=%blockCandle,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.5,zmin=0.375,zmax=0.625,data=*
 
-# %blockAiry:* (blockAiry), render=(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockAiry
+# %blockAiry:* (blockAiry), render=(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockNode
 boxblock:id=%blockAiry,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.30000001192092896,zmax=0.699999988079071,data=0,data=1,data=2
 boxblock:id=%blockAiry,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=3,data=4
 boxblock:id=%blockAiry,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.30000001192092896,zmax=0.699999988079071,data=5,data=6,data=7,data=8,data=9
@@ -158,10 +158,10 @@ customblock:id=%blockStairsSilverwood,class=org.dynmap.hdmap.renderer.StairBlock
 # %blockStairsEldritch:* (blockStairsEldritch), render=(STAIRS), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStairs
 customblock:id=%blockStairsEldritch,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %blockCosmeticSlabWood:* (blockCosmeticSlabWood), render=(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticWoodSlab
+# %blockCosmeticSlabWood:* (blockCosmeticSlabWood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticWoodSlab
 boxblock:id=%blockCosmeticSlabWood,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%blockCosmeticSlabWood,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %blockCosmeticSlabStone:* (blockCosmeticSlabStone), render=(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStoneSlab
+# %blockCosmeticSlabStone:* (blockCosmeticSlabStone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStoneSlab
 boxblock:id=%blockCosmeticSlabStone,ymax=0.5,data=0,data=1
 boxblock:id=%blockCosmeticSlabStone,ymin=0.5,data=8,data=9

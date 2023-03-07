@@ -1,9 +1,10 @@
-# GalacticraftMars 3.0.11
+# GalacticraftMars 3.0.66-GTNH
 version:1.7
 modname:GalacticraftMars
 
 
-cfgfile:config/Galacticraft/mars.conf
+
+# Configuration file not found!
 
 
 texturepath:assets/galacticraftmars/textures/blocks/
@@ -67,7 +68,7 @@ block:id=%tile.treasureT2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 # %tile.treasureT3:* (tile.treasureT3), render=micdoodle8.mods.galacticraft.planets.asteroids.client.render.block.BlockRendererTier3TreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockTier3TreasureChest
 block:id=%tile.treasureT3,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftasteroids/treasureChestAsteroids
 
-# %tile.asteroidsBlock:* (tile.asteroidsBlock), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBasicAsteroids
+# %tile.asteroidsBlock:* (tile.asteroidsBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBasicAsteroids
 block:id=%tile.asteroidsBlock,data=0,stdrot=true,face0-5=0:galacticraftasteroids/asteroid0
 block:id=%tile.asteroidsBlock,data=1,stdrot=true,face0-5=0:galacticraftasteroids/asteroid1
 block:id=%tile.asteroidsBlock,data=2,stdrot=true,face0-5=0:galacticraftasteroids/asteroid2
@@ -98,16 +99,19 @@ block:id=%tile.telepadShort,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=
 block:id=%tile.telepadFake,data=0,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
 block:id=%tile.telepadFake,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/launch_pad
 
-# %tile.denseIce:* (tile.denseIce), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockIceAsteroids
+# %tile.denseIce:* (tile.denseIce), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockIceAsteroids
 block:id=%tile.denseIce,data=*,stdrot=true,face0-5=12000:galacticraftasteroids/denseIce
 
-# %tile.minerBase:* (tile.minerBase), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockMinerBase
+# %tile.minerBase:* (tile.minerBase), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockMinerBase
 block:id=%tile.minerBase,data=*,stdrot=true,face0-5=0:galacticraftasteroids/machineframe
 
 # %tile.minerBaseFull:* (tile.minerBaseFull), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockMinerBaseFull
 block:id=%tile.minerBaseFull,data=*,stdrot=true,face0-5=0:galacticraftasteroids/machineframe
 
-# %tile.mars:* (tile.mars), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars
+# %tile.sludge:* (tile.sludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockSludge
+block:id=%tile.sludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:galacticraftmars/sludge_still,face2-5=12000:galacticraftmars/sludge_flow
+
+# %tile.mars:* (tile.mars), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars
 block:id=%tile.mars,data=0,stdrot=true,face0-5=0:galacticraftmars/copper
 block:id=%tile.mars,data=1,stdrot=true,face0-5=0:galacticraftmars/tin
 block:id=%tile.mars,data=2,stdrot=true,face0-5=0:galacticraftmars/desh
@@ -120,9 +124,6 @@ block:id=%tile.mars,data=8,stdrot=true,face0-5=0:galacticraftmars/decoration_des
 block:id=%tile.mars,data=9,stdrot=true,face0-5=0:galacticraftmars/bottom
 block:id=%tile.mars,data=10,stdrot=true,face0-5=0:galacticraftcore/blank
 block:id=%tile.mars,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftmars/decoration_desh
-
-# %tile.sludge:* (tile.sludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockSludge
-block:id=%tile.sludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:galacticraftmars/sludge_still,face2-5=12000:galacticraftmars/sludge_flow
 
 # %tile.cavernVines:* (tile.cavernVines), render=micdoodle8.mods.galacticraft.planets.mars.client.render.block.BlockRendererCavernousVines(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.planets.mars.blocks.BlockCavernousVine
 block:id=%tile.cavernVines,data=0,stdrot=true,face0-5=0:galacticraftmars/vine_0

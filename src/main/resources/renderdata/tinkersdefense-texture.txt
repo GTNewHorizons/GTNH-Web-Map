@@ -1,0 +1,50 @@
+# tinkersdefense 1.2
+version:1.7
+modname:tinkersdefense
+
+
+cfgfile:config/tinkersdefense.cfg
+
+
+texturepath:assets/tinkersdefense/textures/blocks/
+texture:id=minecraft/MISSING_ICON_BLOCK_3481_CrestMount,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3481_CrestMount.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3482_ArmorAnvil,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3482_ArmorAnvil.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3483_JewelersBench,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3483_JewelersBench.png
+texture:id=tinkersdefense/AeonSteelBlock,filename=assets/tinkersdefense/textures/blocks/AeonSteelBlock.png
+texture:id=tinkersdefense/DogbeariumBlock,filename=assets/tinkersdefense/textures/blocks/DogbeariumBlock.png
+texture:id=tinkersdefense/QueensGoldBlock,filename=assets/tinkersdefense/textures/blocks/QueensGoldBlock.png
+texture:id=tinkersdefense/molten_Aeonsteel,filename=assets/tinkersdefense/textures/blocks/molten_Aeonsteel.png
+texture:id=tinkersdefense/molten_Aeonsteel_flow,filename=assets/tinkersdefense/textures/blocks/molten_Aeonsteel_flow.png
+texture:id=tinkersdefense/molten_Dogbearium,filename=assets/tinkersdefense/textures/blocks/molten_Dogbearium.png
+texture:id=tinkersdefense/molten_Dogbearium_flow,filename=assets/tinkersdefense/textures/blocks/molten_Dogbearium_flow.png
+texture:id=tinkersdefense/molten_QueensGold,filename=assets/tinkersdefense/textures/blocks/molten_QueensGold.png
+texture:id=tinkersdefense/molten_QueensGold_flow,filename=assets/tinkersdefense/textures/blocks/molten_QueensGold_flow.png
+
+
+
+# %Block_CrestMount:* (Block_CrestMount), render=(CUSTOM), opaque=false,cls=gmail.Lance5057.blocks.CrestMount
+block:id=%Block_CrestMount,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3481_CrestMount
+
+# %Block_ArmorAnvil:* (Block_ArmorAnvil), render=(CUSTOM), opaque=false,cls=gmail.Lance5057.blocks.ArmorAnvil
+block:id=%Block_ArmorAnvil,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3482_ArmorAnvil
+
+# %Block_JewelersBench:* (Block_JewelersBench), render=(CUSTOM), opaque=false,cls=gmail.Lance5057.blocks.JewelersBench
+block:id=%Block_JewelersBench,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3483_JewelersBench
+
+# %AeonSteelBlock:* (AeonSteelBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gmail.Lance5057.blocks.AeonSteelBlock
+block:id=%AeonSteelBlock,data=*,stdrot=true,face0-5=0:tinkersdefense/AeonSteelBlock
+
+# %moltenaeonsteel:* (moltenaeonsteel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gmail.Lance5057.liquids.moltenAeonsteelFluid
+block:id=%moltenaeonsteel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinkersdefense/molten_Aeonsteel,face2-5=12000:tinkersdefense/molten_Aeonsteel_flow
+
+# %QueensGoldBlock:* (QueensGoldBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gmail.Lance5057.blocks.QueensGoldBlock
+block:id=%QueensGoldBlock,data=*,stdrot=true,face0-5=0:tinkersdefense/QueensGoldBlock
+
+# %moltenQueensGold:* (moltenQueensGold), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gmail.Lance5057.liquids.moltenQueensGoldFluid
+block:id=%moltenQueensGold,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinkersdefense/molten_QueensGold,face2-5=12000:tinkersdefense/molten_QueensGold_flow
+
+# %DogbeariumBlock:* (DogbeariumBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gmail.Lance5057.blocks.DogbeariumBlock
+block:id=%DogbeariumBlock,data=*,stdrot=true,face0-5=0:tinkersdefense/DogbeariumBlock
+
+# %moltenDogbearium:* (moltenDogbearium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gmail.Lance5057.liquids.moltenDogbeariumFluid
+block:id=%moltenDogbearium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinkersdefense/molten_Dogbearium,face2-5=12000:tinkersdefense/molten_Dogbearium_flow

@@ -1,0 +1,202 @@
+# Automagy 0.28.2
+version:1.7
+modname:Automagy
+
+
+cfgfile:config/Automagy.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %blockRedcrystal:* (blockRedcrystal), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRedcrystal
+boxblock:id=%blockRedcrystal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.30000001192092896,zmin=0.0,zmax=1.0,data=*
+
+# %blockRedcrystalAmp:* (blockRedcrystalAmp), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRedcrystalAmp
+boxblock:id=%blockRedcrystalAmp,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.30000001192092896,zmin=0.0,zmax=1.0,data=*
+
+# %blockRedcrystalDim:* (blockRedcrystalDim), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRedcrystalDim
+boxblock:id=%blockRedcrystalDim,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.30000001192092896,zmin=0.0,zmax=1.0,data=*
+
+# %blockRedcrystalDense:* (blockRedcrystalDense), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRedcrystalDense
+boxblock:id=%blockRedcrystalDense,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.30000001192092896,zmin=0.0,zmax=1.0,data=*
+
+# %blockRedcrystalRes:* (blockRedcrystalRes), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRedcrystalRes
+boxblock:id=%blockRedcrystalRes,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.30000001192092896,zmin=0.0,zmax=1.0,data=*
+
+# %blockRedcrystalMerc:* (blockRedcrystalMerc), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRedcrystalMerc
+boxblock:id=%blockRedcrystalMerc,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.3199999928474426,zmin=0.0,zmax=1.0,data=*
+
+# %blockTorchInversion:* (blockTorchInversion), render=(TORCH), opaque=false,cls=tuhljin.automagy.blocks.BlockTorchInversion
+patchblock:id=%blockTorchInversion,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%blockTorchInversion,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%blockTorchInversion,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%blockTorchInversion,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%blockTorchInversion,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%blockTorchInversion,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %blockTorchInversion_off:* (blockTorchInversion_off), render=(TORCH), opaque=false,cls=tuhljin.automagy.blocks.BlockTorchInversion
+patchblock:id=%blockTorchInversion_off,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%blockTorchInversion_off,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%blockTorchInversion_off,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%blockTorchInversion_off,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%blockTorchInversion_off,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%blockTorchInversion_off,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %blockRemoteComparator:* (blockRemoteComparator), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRemoteComparator
+boxblock:id=%blockRemoteComparator,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %blockHourglass:* (blockHourglass), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockHourglass
+boxblock:id=%blockHourglass,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.0,ymax=0.4000000059604645,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHourglassMagic:* (blockHourglassMagic), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockHourglassMagic
+boxblock:id=%blockHourglassMagic,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.0,ymax=0.4000000059604645,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockGreedyChest:* (blockGreedyChest), render=tuhljin.automagy.renderers.BlockModChestRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockGreedyChest
+boxblock:id=%blockGreedyChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %blockEagerChest:* (blockEagerChest), render=tuhljin.automagy.renderers.BlockModChestRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockEagerChest
+boxblock:id=%blockEagerChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %blockTenaciousChest:* (blockTenaciousChest), render=tuhljin.automagy.renderers.BlockModChestRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockTenaciousChest
+boxblock:id=%blockTenaciousChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %blockHungryMaw:* (blockHungryMaw), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockMawHungry
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%blockHungryMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.949999988079071,ymax=1.0,zmin=0.3149999976158142,zmax=0.6850000023841858,data=0
+boxblock:id=%blockHungryMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.0,ymax=0.05000000074505806,zmin=0.3149999976158142,zmax=0.6850000023841858,data=1
+boxblock:id=%blockHungryMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.949999988079071,zmax=1.0,data=2
+boxblock:id=%blockHungryMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.05000000074505806,zmax=0.05010000074505806,data=3
+boxblock:id=%blockHungryMaw,xmin=0.949999988079071,xmax=1.0,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.3149999976158142,zmax=0.6850000023841858,data=4
+boxblock:id=%blockHungryMaw,xmin=0.0,xmax=0.05000000074505806,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.3149999976158142,zmax=0.6850000023841858,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %blockFinicalMaw:* (blockFinicalMaw), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockMawFinical
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%blockFinicalMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.949999988079071,ymax=1.0,zmin=0.3149999976158142,zmax=0.6850000023841858,data=0
+boxblock:id=%blockFinicalMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.0,ymax=0.05000000074505806,zmin=0.3149999976158142,zmax=0.6850000023841858,data=1
+boxblock:id=%blockFinicalMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.949999988079071,zmax=1.0,data=2
+boxblock:id=%blockFinicalMaw,xmin=0.3149999976158142,xmax=0.6850000023841858,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.05000000074505806,zmax=0.05010000074505806,data=3
+boxblock:id=%blockFinicalMaw,xmin=0.949999988079071,xmax=1.0,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.3149999976158142,zmax=0.6850000023841858,data=4
+boxblock:id=%blockFinicalMaw,xmin=0.0,xmax=0.05000000074505806,ymin=0.3149999976158142,ymax=0.6850000023841858,zmin=0.3149999976158142,zmax=0.6850000023841858,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %blockGolemInhibitor:* (blockGolemInhibitor), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockGolemInhibitor
+boxblock:id=%blockGolemInhibitor,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.8500000238418579,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+
+# %blockEssentiaLocus:* (blockEssentiaLocus), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockEssentiaLocus
+boxblock:id=%blockEssentiaLocus,xmin=0.25,xmax=0.75,ymin=0.3199999928474426,ymax=0.8999999761581421,zmin=0.25,zmax=0.75,data=*
+
+# %blockEssentiaLocusAggregator:* (blockEssentiaLocusAggregator), render=tuhljin.automagy.renderers.RenderBlockGlowOverlay(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockEssentiaLocusAggregator
+boxblock:id=%blockEssentiaLocusAggregator,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%blockEssentiaLocusAggregator,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %blockInventarium:* (blockInventarium), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockInventarium
+boxblock:id=%blockInventarium,xmin=0.25,xmax=0.75,ymin=0.3199999928474426,ymax=0.8999999761581421,zmin=0.25,zmax=0.75,data=*
+
+# %blockScribePointer:* (blockScribePointer), render=tuhljin.automagy.renderers.ItemBlockBasicRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockScribePointer
+boxblock:id=%blockScribePointer,xmin=0.7149999737739563,xmax=0.9800000190734863,ymin=0.003000000026077032,ymax=0.3100000023841858,zmin=0.019999999552965164,zmax=0.2849999964237213,data=0
+boxblock:id=%blockScribePointer,xmin=0.7149999737739563,xmax=0.9800000190734863,ymin=0.003000000026077032,ymax=0.3100000023841858,zmin=0.7149999737739563,zmax=0.9800000190734863,data=1
+boxblock:id=%blockScribePointer,xmin=0.019999999552965164,xmax=0.2849999964237213,ymin=0.003000000026077032,ymax=0.3100000023841858,zmin=0.7149999737739563,zmax=0.9800000190734863,data=2
+boxblock:id=%blockScribePointer,xmin=0.019999999552965164,xmax=0.2849999964237213,ymin=0.003000000026077032,ymax=0.3100000023841858,zmin=0.019999999552965164,zmax=0.2849999964237213,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %blockGolemTaskmaster:* (blockGolemTaskmaster), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockGolemTaskmaster
+boxblock:id=%blockGolemTaskmaster,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.8500000238418579,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+
+# %blockMetalGlow:* (blockMetalGlow), render=tuhljin.automagy.renderers.RenderBlockGlowOverlay(CUSTOM), opaque=true,cls=tuhljin.automagy.blocks.BlockMetalGlow
+
+# %blockNethermind:* (blockNethermind), render=tuhljin.automagy.renderers.RenderBlockGlowOverlay(CUSTOM), opaque=true,cls=tuhljin.automagy.blocks.BlockNethermind
+
+# %blockGolemWorkbench:* (blockGolemWorkbench), render=tuhljin.automagy.renderers.ItemBlockBasicRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockGolemWorkbench
+boxblock:id=%blockGolemWorkbench,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %blockThirstyTank:* (blockThirstyTank), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockThirstyTank
+boxblock:id=%blockThirstyTank,xmin=0.03099999949336052,xmax=0.968999981880188,ymin=0.0,ymax=0.9390000104904175,zmin=0.03099999949336052,zmax=0.968999981880188,data=*
+
+# %blockCreativeJar:* (blockCreativeJar), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockJarCreative
+boxblock:id=%blockCreativeJar,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.75,zmin=0.1875,zmax=0.8125,data=*
+
+# %blockXPJar:* (blockXPJar), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockJarXP
+boxblock:id=%blockXPJar,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.75,zmin=0.1875,zmax=0.8125,data=*
+
+# %blockMirrorAlt:* (blockMirrorAlt), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockMirrorAlt
+boxblock:id=%blockMirrorAlt,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%blockMirrorAlt,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%blockMirrorAlt,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9375,zmax=1.0,data=2
+boxblock:id=%blockMirrorAlt,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.0625,data=3
+boxblock:id=%blockMirrorAlt,xmin=0.9375,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%blockMirrorAlt,xmin=0.0,xmax=0.0625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %blockMirrorMultiDest:* (blockMirrorMultiDest), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockMirrorMultiDest
+boxblock:id=%blockMirrorMultiDest,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%blockMirrorMultiDest,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%blockMirrorMultiDest,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9375,zmax=1.0,data=2
+boxblock:id=%blockMirrorMultiDest,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.0625,data=3
+boxblock:id=%blockMirrorMultiDest,xmin=0.9375,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%blockMirrorMultiDest,xmin=0.0,xmax=0.0625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %blockFluidMilk:* (blockFluidMilk), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tuhljin.automagy.blocks.fluid.BlockFluidMilk
+boxblock:id=%blockFluidMilk,ymax=0.875,data=1
+boxblock:id=%blockFluidMilk,ymax=0.75,data=2
+boxblock:id=%blockFluidMilk,ymax=0.625,data=3
+boxblock:id=%blockFluidMilk,ymax=0.5,data=4
+boxblock:id=%blockFluidMilk,ymax=0.375,data=5
+boxblock:id=%blockFluidMilk,ymax=0.25,data=6
+boxblock:id=%blockFluidMilk,ymax=0.125,data=7
+boxblock:id=%blockFluidMilk,ymax=0.875,data=9
+boxblock:id=%blockFluidMilk,ymax=0.75,data=10
+boxblock:id=%blockFluidMilk,ymax=0.625,data=11
+boxblock:id=%blockFluidMilk,ymax=0.5,data=12
+boxblock:id=%blockFluidMilk,ymax=0.375,data=13
+boxblock:id=%blockFluidMilk,ymax=0.25,data=14
+boxblock:id=%blockFluidMilk,ymax=0.125,data=15
+
+# %blockFluidMushroom:* (blockFluidMushroom), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tuhljin.automagy.blocks.fluid.BlockFluidMushroom
+boxblock:id=%blockFluidMushroom,ymax=0.875,data=1
+boxblock:id=%blockFluidMushroom,ymax=0.75,data=2
+boxblock:id=%blockFluidMushroom,ymax=0.625,data=3
+boxblock:id=%blockFluidMushroom,ymax=0.5,data=4
+boxblock:id=%blockFluidMushroom,ymax=0.375,data=5
+boxblock:id=%blockFluidMushroom,ymax=0.25,data=6
+boxblock:id=%blockFluidMushroom,ymax=0.125,data=7
+boxblock:id=%blockFluidMushroom,ymax=0.875,data=9
+boxblock:id=%blockFluidMushroom,ymax=0.75,data=10
+boxblock:id=%blockFluidMushroom,ymax=0.625,data=11
+boxblock:id=%blockFluidMushroom,ymax=0.5,data=12
+boxblock:id=%blockFluidMushroom,ymax=0.375,data=13
+boxblock:id=%blockFluidMushroom,ymax=0.25,data=14
+boxblock:id=%blockFluidMushroom,ymax=0.125,data=15
+
+# %blockFluidVishroom:* (blockFluidVishroom), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tuhljin.automagy.blocks.fluid.BlockFluidVishroom
+boxblock:id=%blockFluidVishroom,ymax=0.875,data=1
+boxblock:id=%blockFluidVishroom,ymax=0.75,data=2
+boxblock:id=%blockFluidVishroom,ymax=0.625,data=3
+boxblock:id=%blockFluidVishroom,ymax=0.5,data=4
+boxblock:id=%blockFluidVishroom,ymax=0.375,data=5
+boxblock:id=%blockFluidVishroom,ymax=0.25,data=6
+boxblock:id=%blockFluidVishroom,ymax=0.125,data=7
+boxblock:id=%blockFluidVishroom,ymax=0.875,data=9
+boxblock:id=%blockFluidVishroom,ymax=0.75,data=10
+boxblock:id=%blockFluidVishroom,ymax=0.625,data=11
+boxblock:id=%blockFluidVishroom,ymax=0.5,data=12
+boxblock:id=%blockFluidVishroom,ymax=0.375,data=13
+boxblock:id=%blockFluidVishroom,ymax=0.25,data=14
+boxblock:id=%blockFluidVishroom,ymax=0.125,data=15
+
+# %blockPhenomenon:* (blockPhenomenon), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockSpecialProcess
+boxblock:id=%blockPhenomenon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.009999999776482582,zmin=0.0,zmax=1.0,data=*
+
+# %blockThaumostaticSpire:* (blockThaumostaticSpire), render=tuhljin.automagy.renderers.ItemBlockBasicRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockThaumostaticRefuelerSpire
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%blockThaumostaticSpire,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*

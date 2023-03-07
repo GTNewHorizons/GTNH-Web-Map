@@ -1,4 +1,4 @@
-# OpenBlocks 1.5.1
+# OpenBlocks 1.6.10-GTNH
 version:1.7
 modname:OpenBlocks
 
@@ -8,6 +8,7 @@ cfgfile:config/OpenBlocks.cfg
 
 texturepath:assets/openblocks/textures/blocks/
 texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/stone_slab_side,filename=assets/minecraft/textures/blocks/stone_slab_side.png
 texture:id=minecraft/stone_slab_top,filename=assets/minecraft/textures/blocks/stone_slab_top.png
 texture:id=openblocks/autoanvil,filename=assets/openblocks/textures/blocks/autoanvil.png
 texture:id=openblocks/autoenchantmenttable,filename=assets/openblocks/textures/blocks/autoenchantmenttable.png
@@ -35,7 +36,6 @@ texture:id=openblocks/fan,filename=assets/openblocks/textures/blocks/fan.png
 texture:id=openblocks/grave,filename=assets/openblocks/textures/blocks/grave.png
 texture:id=openblocks/guide_side_new,filename=assets/openblocks/textures/blocks/guide_side_new.png
 texture:id=openblocks/guide_top_new,filename=assets/openblocks/textures/blocks/guide_top_new.png
-texture:id=openblocks/heal,filename=assets/openblocks/textures/blocks/heal.png
 texture:id=openblocks/itemDropper,filename=assets/openblocks/textures/blocks/itemDropper.png
 texture:id=openblocks/itemDropper_down,filename=assets/openblocks/textures/blocks/itemDropper_down.png
 texture:id=openblocks/ladder,filename=assets/openblocks/textures/blocks/ladder.png
@@ -53,7 +53,6 @@ texture:id=openblocks/scaffolding,filename=assets/openblocks/textures/blocks/sca
 texture:id=openblocks/sky_inactive,filename=assets/openblocks/textures/blocks/sky_inactive.png
 texture:id=openblocks/sponge,filename=assets/openblocks/textures/blocks/sponge.png
 texture:id=openblocks/sprinkler,filename=assets/openblocks/textures/blocks/sprinkler.png
-texture:id=openblocks/tank,filename=assets/openblocks/textures/blocks/tank.png
 texture:id=openblocks/target,filename=assets/openblocks/textures/blocks/target.png
 texture:id=openblocks/trophy,filename=assets/openblocks/textures/blocks/trophy.png
 texture:id=openblocks/vacuumhopper,filename=assets/openblocks/textures/blocks/vacuumhopper.png
@@ -68,7 +67,7 @@ texture:id=openblocks/xpshower,filename=assets/openblocks/textures/blocks/xpshow
 
 
 
-# %ladder:* (ladder), render=(STANDARD), opaque=false,cls=openblocks.common.block.BlockLadder
+# %ladder:* (ladder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=openblocks.common.block.BlockLadder
 block:id=%ladder,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/ladder
 
 # %guide:* (guide), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockGuide
@@ -119,9 +118,6 @@ block:id=%elevator_rotating,data=13,stdrot=true,colorMult=3B511A,face0=17000:ope
 block:id=%elevator_rotating,data=14,stdrot=true,colorMult=B3312C,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
 block:id=%elevator_rotating,data=15,stdrot=true,colorMult=1E1B1B,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
 
-# %heal:* (heal), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockHeal
-block:id=%heal,data=*,stdrot=true,face0-5=0:openblocks/heal
-
 # %target:* (target), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTarget
 block:id=%target,data=*,stdrot=true,face0-5=0:openblocks/target
 
@@ -130,9 +126,6 @@ block:id=%grave,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks
 
 # %flag:* (flag), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockFlag
 block:id=%flag,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
-
-# %tank:* (tank), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTank
-block:id=%tank,data=*,stdrot=true,face0-5=0:openblocks/tank
 
 # %trophy:* (trophy), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTrophy
 block:id=%trophy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/trophy
@@ -261,7 +254,7 @@ block:id=%paintcan,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openbloc
 block:id=%canvasglass,data=*,stdrot=true,face0-5=0:openblocks/canvasglass
 
 # %projector:* (projector), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockProjector
-block:id=%projector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone_slab_top
+block:id=%projector,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/stone_slab_top,face2-5=0:minecraft/stone_slab_side
 
 # %drawingtable:* (drawingtable), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockDrawingTable
 block:id=%drawingtable,data=0,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable,face3=0:openblocks/drawingtable_front,face4-5=0:openblocks/drawingtable

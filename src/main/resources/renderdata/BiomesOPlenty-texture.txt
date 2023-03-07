@@ -6,9 +6,9 @@ var:biome_ids/Rainforest_ID=0,biome_ids/Shield_ID=0,biome_ids/Eucalyptus_Forest_
 var:biome_ids/Fen_ID=0,biome_ids/Temperate_Rainforest_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Outback_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Ominous_Woods_ID=0,biome_ids/Wetland_ID=0,biome_ids/Meadow_Forest_ID=0,biome_ids/Bamboo_Forest_ID=0,biome_ids/Polar_Chasm_ID=0
 var:biome_ids/Redwood_Forest_ID=0,biome_ids/Bayou_ID=0,biome_ids/Visceral_Heap_ID=0,biome_ids/Grove_ID=0,biome_ids/Lush_Desert_ID=0,biome_ids/Tropical_Rainforest_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Meadow_ID=0,biome_ids/Alps_ID=0,biome_ids/Spectral_Garden_ID=0
 var:biome_ids/Lush_Swamp_ID=0,biome_ids/Woodland_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Grassland_ID=0,biome_ids/Boneyard_ID=0,biome_ids/Mangrove_ID=0,biome_ids/Moor_ID=0,biome_ids/Marsh_ID=0,biome_ids/Orchard_ID=0,biome_ids/Prairie_ID=0
-var:biome_ids/Tropics_ID=0,biome_ids/Phantasmagoric_Inferno_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Coral_Reef_ID=0,biome_ids/Thicket_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Arctic_ID=0,biome_ids/Brushland_ID=0
+var:biome_ids/Tropics_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Phantasmagoric_Inferno_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Coral_Reef_ID=0,biome_ids/Thicket_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Arctic_ID=0,biome_ids/Brushland_ID=0
 var:biome_ids/Seasonal_Forest_Clearing_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Heathland_ID=0,biome_ids/Chaparral_ID=0,biome_ids/Land_of_Lakes_ID=0,biome_ids/Canyon_Ravine_ID=0,biome_ids/Xeric_Shrubland_ID=0,biome_ids/Origin_Valley_ID=0,biome_ids/Canyon_ID=0,biome_ids/Lush_River_ID=0
-var:biome_ids/Volcano_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Snowy_Coniferous_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Dense_Forest_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Maple_Woods_ID=0,biome_ids/Crag_ID=0,biome_ids/Kelp_Forest_ID=0
+var:biome_ids/Volcano_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Snowy_Coniferous_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Dense_Forest_ID=0,biome_ids/Maple_Woods_ID=0,biome_ids/Crag_ID=0,biome_ids/Kelp_Forest_ID=0
 var:biome_ids/Land_of_Lakes_Marsh_ID=0,biome_ids/Undergarden_ID=0,biome_ids/Steppe_ID=0,biome_ids/Flower_Field_ID=0,biome_ids/Glacier_ID=0,biome_ids/Mountain_ID=0,biome_ids/Dead_Swamp_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Oasis_ID=0,biome_ids/Bog_ID=0
 var:biome_ids/Highland_ID=0,biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Frost_Forest_ID=0,biome_ids/Dead_Forest_ID=0
 
@@ -292,6 +292,8 @@ texture:id=biomesoplenty/wisteria,filename=assets/biomesoplenty/textures/blocks/
 texture:id=biomesoplenty/witherwart,filename=assets/biomesoplenty/textures/blocks/witherwart.png
 texture:id=minecraft/grass_top,filename=assets/minecraft/textures/blocks/grass_top.png
 
+# biome_ids/Alps_Forest_ID
+biome:id=biome_ids/Alps_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Alps_ID
 biome:id=biome_ids/Alps_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Arctic_ID
@@ -308,14 +310,16 @@ biome:id=biome_ids/Boreal_Forest_ID,grassColorMult=19FB771,foliageColorMult=1C9C
 biome:id=biome_ids/Brushland_ID,grassColorMult=1C9C17F,foliageColorMult=1B2C67F,waterColorMult=FFFFFF
 # biome_ids/Canyon_ID
 biome:id=biome_ids/Canyon_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
+# biome_ids/Canyon_Ravine_ID
+biome:id=biome_ids/Canyon_Ravine_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
 # biome_ids/Chaparral_ID
 biome:id=biome_ids/Chaparral_ID,grassColorMult=1C0D85D,foliageColorMult=163AE2A,waterColorMult=FFFFFF
 # biome_ids/Cherry_Blossom_Grove_ID
 biome:id=biome_ids/Cherry_Blossom_Grove_ID,grassColorMult=1A3FFAA,foliageColorMult=1A3FFAA,waterColorMult=FFFFFF
 # biome_ids/Coniferous_Forest_ID
 biome:id=biome_ids/Coniferous_Forest_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
-# biome_ids/Snowy_Coniferous_Forest_ID
-biome:id=biome_ids/Snowy_Coniferous_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Coral_Reef_ID
+biome:id=biome_ids/Coral_Reef_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
 # biome_ids/Crag_ID
 biome:id=biome_ids/Crag_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=0E6A35
 # biome_ids/Dead_Forest_ID
@@ -324,8 +328,8 @@ biome:id=biome_ids/Dead_Forest_ID,grassColorMult=1BCA165,foliageColorMult=1BCA16
 biome:id=biome_ids/Dead_Swamp_ID,grassColorMult=166704C,foliageColorMult=166704C,waterColorMult=A2AD51
 # biome_ids/Deciduous_Forest_ID
 biome:id=biome_ids/Deciduous_Forest_ID,grassColorMult=1AD8E41,foliageColorMult=1AFA248,waterColorMult=FFFFFF
-# biome_ids/Dense_Forest_ID
-biome:id=biome_ids/Dense_Forest_ID,grassColorMult=17DD671,foliageColorMult=198EF56,waterColorMult=FFFFFF
+# biome_ids/Dry_River_ID
+biome:id=biome_ids/Dry_River_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Eucalyptus_Forest_ID
 biome:id=biome_ids/Eucalyptus_Forest_ID,grassColorMult=184D168,foliageColorMult=167CE52,waterColorMult=FFFFFF
 # biome_ids/Fen_ID
@@ -338,6 +342,8 @@ biome:id=biome_ids/Frost_Forest_ID,grassColorMult=1ABD6BC,foliageColorMult=1ABD6
 biome:id=biome_ids/Fungi_Forest_ID,grassColorMult=157ED64,foliageColorMult=157ED64,waterColorMult=00FF2E
 # biome_ids/Garden_ID
 biome:id=biome_ids/Garden_ID,grassColorMult=174D374,foliageColorMult=166E266,waterColorMult=FFFFFF
+# biome_ids/Glacier_ID
+biome:id=biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Grassland_ID
 biome:id=biome_ids/Grassland_ID,grassColorMult=17FDB7D,foliageColorMult=17FDB7D,waterColorMult=FFFFFF
 # biome_ids/Grove_ID
@@ -348,18 +354,28 @@ biome:id=biome_ids/Heathland_ID,grassColorMult=1CEC577,foliageColorMult=1AEC681,
 biome:id=biome_ids/Highland_ID,grassColorMult=183BB6D,foliageColorMult=163A948,waterColorMult=FFFFFF
 # biome_ids/Jade_Cliffs_ID
 biome:id=biome_ids/Jade_Cliffs_ID,grassColorMult=17CA568,foliageColorMult=18ACC6A,waterColorMult=FFFFFF
+# biome_ids/Kelp_Forest_ID
+biome:id=biome_ids/Kelp_Forest_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
 # biome_ids/Land_of_Lakes_ID
 biome:id=biome_ids/Land_of_Lakes_ID,grassColorMult=1CCC46C,foliageColorMult=1A3BC62,waterColorMult=FFFFFF
+# biome_ids/Land_of_Lakes_Marsh_ID
+biome:id=biome_ids/Land_of_Lakes_Marsh_ID,grassColorMult=1CCC46C,foliageColorMult=1A3BC62,waterColorMult=FFFFFF
 # biome_ids/Lavender_Fields_ID
 biome:id=biome_ids/Lavender_Fields_ID,grassColorMult=1A1C36D,foliageColorMult=1A1C36D,waterColorMult=FFFFFF
 # biome_ids/Lush_Desert_ID
 biome:id=biome_ids/Lush_Desert_ID,grassColorMult=182C245,foliageColorMult=164B216,waterColorMult=FFFFFF
+# biome_ids/Lush_River_ID
+biome:id=biome_ids/Lush_River_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
 # biome_ids/Lush_Swamp_ID
 biome:id=biome_ids/Lush_Swamp_ID,grassColorMult=16DC257,foliageColorMult=148B22C,waterColorMult=FFFFFF
+# biome_ids/Mangrove_ID
+biome:id=biome_ids/Mangrove_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
 # biome_ids/Maple_Woods_ID
 biome:id=biome_ids/Maple_Woods_ID,grassColorMult=186B688,foliageColorMult=167A369,waterColorMult=FFFFFF
 # biome_ids/Marsh_ID
 biome:id=biome_ids/Marsh_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Meadow_Forest_ID
+biome:id=biome_ids/Meadow_Forest_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
 # biome_ids/Meadow_ID
 biome:id=biome_ids/Meadow_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
 # biome_ids/Moor_ID
@@ -368,6 +384,8 @@ biome:id=biome_ids/Moor_ID,grassColorMult=1619365,foliageColorMult=1619365,water
 biome:id=biome_ids/Mountain_ID,grassColorMult=19CB774,foliageColorMult=183A352,waterColorMult=FFFFFF
 # biome_ids/Mystic_Grove_ID
 biome:id=biome_ids/Mystic_Grove_ID,grassColorMult=169CFDB,foliageColorMult=170E099,waterColorMult=FF107A
+# biome_ids/Oasis_ID
+biome:id=biome_ids/Oasis_ID,grassColorMult=19ABE4B,foliageColorMult=182AC1E,waterColorMult=FFFFFF
 # biome_ids/Ominous_Woods_ID
 biome:id=biome_ids/Ominous_Woods_ID,grassColorMult=13F4151,foliageColorMult=13F4151,waterColorMult=1E1B26
 # biome_ids/Orchard_ID
@@ -376,22 +394,38 @@ biome:id=biome_ids/Orchard_ID,grassColorMult=1D5FF6D,foliageColorMult=1D5FF6D,wa
 biome:id=biome_ids/Origin_Valley_ID,grassColorMult=1A2FF5F,foliageColorMult=13AFF00,waterColorMult=FFFFFF
 # biome_ids/Outback_ID
 biome:id=biome_ids/Outback_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Polar_Chasm_ID
+biome:id=biome_ids/Polar_Chasm_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Prairie_ID
 biome:id=biome_ids/Prairie_ID,grassColorMult=1C8E580,foliageColorMult=1ADE07B,waterColorMult=FFFFFF
+# biome_ids/Quagmire_ID
+biome:id=biome_ids/Quagmire_ID,grassColorMult=19E8B69,foliageColorMult=19E8B69,waterColorMult=CC5100
 # biome_ids/Rainforest_ID
 biome:id=biome_ids/Rainforest_ID,grassColorMult=11AD86C,foliageColorMult=114E26F,waterColorMult=FFFFFF
 # biome_ids/Redwood_Forest_ID
 biome:id=biome_ids/Redwood_Forest_ID,grassColorMult=17FBF5C,foliageColorMult=160AE33,waterColorMult=FFFFFF
 # biome_ids/Sacred_Springs_ID
 biome:id=biome_ids/Sacred_Springs_ID,grassColorMult=100995B,foliageColorMult=100995B,waterColorMult=FFFFFF
+# biome_ids/Scrubland_ID
+biome:id=biome_ids/Scrubland_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Seasonal_Forest_Clearing_ID
+biome:id=biome_ids/Seasonal_Forest_Clearing_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
 # biome_ids/Seasonal_Forest_ID
 biome:id=biome_ids/Seasonal_Forest_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
 # biome_ids/Shield_ID
 biome:id=biome_ids/Shield_ID,grassColorMult=1647F38,foliageColorMult=1789643,waterColorMult=FFFFFF
 # biome_ids/Shrubland_ID
 biome:id=biome_ids/Shrubland_ID,grassColorMult=1A4B76E,foliageColorMult=18CA44A,waterColorMult=FFFFFF
+# biome_ids/Silkglades_ID
+biome:id=biome_ids/Silkglades_ID,grassColorMult=1CCC9AD,foliageColorMult=1D7DBB6,waterColorMult=FFFF77
 # biome_ids/Sludgepit_ID
 biome:id=biome_ids/Sludgepit_ID,grassColorMult=1746429,foliageColorMult=1919134,waterColorMult=AF9200
+# biome_ids/Snowy_Coniferous_Forest_ID
+biome:id=biome_ids/Snowy_Coniferous_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Spectral_Garden_ID
+biome:id=biome_ids/Spectral_Garden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Spruce_Woods_ID
+biome:id=biome_ids/Spruce_Woods_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
 # biome_ids/Steppe_ID
 biome:id=biome_ids/Steppe_ID,grassColorMult=1C49E7D,foliageColorMult=1C49E7D,waterColorMult=FFFFFF
 # biome_ids/Temperate_Rainforest_ID
@@ -400,8 +434,14 @@ biome:id=biome_ids/Temperate_Rainforest_ID,grassColorMult=1B6D367,foliageColorMu
 biome:id=biome_ids/Thicket_ID,grassColorMult=1A89A77,foliageColorMult=1A5A16D,waterColorMult=FFFFFF
 # biome_ids/Tropical_Rainforest_ID
 biome:id=biome_ids/Tropical_Rainforest_ID,grassColorMult=1C3E041,foliageColorMult=1A5E041,waterColorMult=5DFF00
+# biome_ids/Tropics_ID
+biome:id=biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
 # biome_ids/Tundra_ID
 biome:id=biome_ids/Tundra_ID,grassColorMult=1AD8456,foliageColorMult=1BF664E,waterColorMult=FFFFFF
+# biome_ids/Visceral_Heap_ID
+biome:id=biome_ids/Visceral_Heap_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Volcano_ID
+biome:id=biome_ids/Volcano_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
 # biome_ids/Wasteland_ID
 biome:id=biome_ids/Wasteland_ID,grassColorMult=19DA078,foliageColorMult=1999E55,waterColorMult=E5FF00
 # biome_ids/Wetland_ID
@@ -410,67 +450,27 @@ biome:id=biome_ids/Wetland_ID,grassColorMult=15A935F,foliageColorMult=14F9657,wa
 biome:id=biome_ids/Woodland_ID,grassColorMult=1A3B74C,foliageColorMult=18EA621,waterColorMult=FFFFFF
 # biome_ids/Xeric_Shrubland_ID
 biome:id=biome_ids/Xeric_Shrubland_ID,grassColorMult=1E2CDA5,foliageColorMult=1E2CDA5,waterColorMult=FFFFFF
-# biome_ids/Coral_Reef_ID
-biome:id=biome_ids/Coral_Reef_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
-# biome_ids/Kelp_Forest_ID
-biome:id=biome_ids/Kelp_Forest_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
-# biome_ids/Tropics_ID
-biome:id=biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
-# biome_ids/Volcano_ID
-biome:id=biome_ids/Volcano_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
-# biome_ids/Mangrove_ID
-biome:id=biome_ids/Mangrove_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
-# biome_ids/Alps_Forest_ID
-biome:id=biome_ids/Alps_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
-# biome_ids/Canyon_Ravine_ID
-biome:id=biome_ids/Canyon_Ravine_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
-# biome_ids/Glacier_ID
-biome:id=biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
-# biome_ids/Land_of_Lakes_Marsh_ID
-biome:id=biome_ids/Land_of_Lakes_Marsh_ID,grassColorMult=1CCC46C,foliageColorMult=1A3BC62,waterColorMult=FFFFFF
-# biome_ids/Meadow_Forest_ID
-biome:id=biome_ids/Meadow_Forest_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
-# biome_ids/Oasis_ID
-biome:id=biome_ids/Oasis_ID,grassColorMult=19ABE4B,foliageColorMult=182AC1E,waterColorMult=FFFFFF
-# biome_ids/Quagmire_ID
-biome:id=biome_ids/Quagmire_ID,grassColorMult=19E8B69,foliageColorMult=19E8B69,waterColorMult=CC5100
-# biome_ids/Scrubland_ID
-biome:id=biome_ids/Scrubland_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Seasonal_Forest_Clearing_ID
-biome:id=biome_ids/Seasonal_Forest_Clearing_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
-# biome_ids/Silkglades_ID
-biome:id=biome_ids/Silkglades_ID,grassColorMult=1CCC9AD,foliageColorMult=1D7DBB6,waterColorMult=FFFF77
-# biome_ids/Spruce_Woods_ID
-biome:id=biome_ids/Spruce_Woods_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
+# biome_ids/Dense_Forest_ID
+biome:id=biome_ids/Dense_Forest_ID,grassColorMult=17DD671,foliageColorMult=198EF56,waterColorMult=FFFFFF
+# biome_ids/Boneyard_ID
+biome:id=biome_ids/Boneyard_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Corrupted_Sands_ID
 biome:id=biome_ids/Corrupted_Sands_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Phantasmagoric_Inferno_ID
 biome:id=biome_ids/Phantasmagoric_Inferno_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Boneyard_ID
-biome:id=biome_ids/Boneyard_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Visceral_Heap_ID
-biome:id=biome_ids/Visceral_Heap_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Undergarden_ID
 biome:id=biome_ids/Undergarden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Polar_Chasm_ID
-biome:id=biome_ids/Polar_Chasm_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Spectral_Garden_ID
-biome:id=biome_ids/Spectral_Garden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Lush_River_ID
-biome:id=biome_ids/Lush_River_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
-# biome_ids/Dry_River_ID
-biome:id=biome_ids/Dry_River_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 
 
-# %mud:* (mud), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockMud
+# %mud:* (mud), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockMud
 block:id=%mud,data=0,stdrot=true,face0-5=0:biomesoplenty/mud
 block:id=%mud,data=1,stdrot=true,face0-5=0:biomesoplenty/quicksand
 block:id=%mud,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/mud
 
-# %driedDirt:* (driedDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %driedDirt:* (driedDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%driedDirt,data=*,stdrot=true,face0-5=0:biomesoplenty/drieddirt
 
-# %rocks:* (rocks), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPRocks
+# %rocks:* (rocks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPRocks
 block:id=%rocks,data=0,stdrot=true,face0-5=0:biomesoplenty/limestone
 block:id=%rocks,data=1,stdrot=true,face0-5=0:biomesoplenty/limestonesmooth
 block:id=%rocks,data=2,stdrot=true,face0-5=0:biomesoplenty/siltstone
@@ -479,10 +479,10 @@ block:id=%rocks,data=4,stdrot=true,face0-5=0:biomesoplenty/shale
 block:id=%rocks,data=5,stdrot=true,face0-5=0:biomesoplenty/shalesmooth
 block:id=%rocks,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/limestone
 
-# %ash:* (ash), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockAsh
+# %ash:* (ash), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockAsh
 block:id=%ash,data=*,stdrot=true,face0-5=0:biomesoplenty/ashblock
 
-# %flesh:* (flesh), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockFlesh
+# %flesh:* (flesh), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockFlesh
 block:id=%flesh,data=*,stdrot=true,face0-5=0:biomesoplenty/flesh
 
 # %plants:* (plants), render=biomesoplenty.client.render.blocks.PlantsRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPlant
@@ -613,13 +613,13 @@ block:id=%coral1,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesopl
 # %coral2:* (coral2), render=(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPCoral
 block:id=%coral2,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/algae
 
-# %ashStone:* (ashStone), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %ashStone:* (ashStone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%ashStone,data=*,stdrot=true,face0-5=0:biomesoplenty/ashstone
 
-# %hardIce:* (hardIce), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %hardIce:* (hardIce), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%hardIce,data=*,stdrot=true,face0-5=0:biomesoplenty/hardice
 
-# %appleLeaves:* (appleLeaves), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPAppleLeaves
+# %appleLeaves:* (appleLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPAppleLeaves
 block:id=%appleLeaves,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_apple0_fancy
 block:id=%appleLeaves,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_fancy
 block:id=%appleLeaves,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
@@ -637,7 +637,7 @@ block:id=%appleLeaves,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_
 block:id=%appleLeaves,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
 block:id=%appleLeaves,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_apple3_fancy
 
-# %persimmonLeaves:* (persimmonLeaves), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPersimmonLeaves
+# %persimmonLeaves:* (persimmonLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPersimmonLeaves
 block:id=%persimmonLeaves,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon0_fancy
 block:id=%persimmonLeaves,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon1_fancy
 block:id=%persimmonLeaves,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon2_fancy
@@ -661,19 +661,19 @@ block:id=%moss,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:biomesopl
 # %bamboo:* (bamboo), render=biomesoplenty.client.render.blocks.BambooRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBamboo
 block:id=%bamboo,data=*,stdrot=true,face0-1=0:biomesoplenty/bambootop,face2-5=0:biomesoplenty/bamboo
 
-# %mudBricks:* (mudBricks), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %mudBricks:* (mudBricks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%mudBricks,data=*,stdrot=true,face0-5=0:biomesoplenty/mudbrick
 
-# %originGrass:* (originGrass), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOriginGrass
+# %originGrass:* (originGrass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOriginGrass
 block:id=%originGrass,data=*,stdrot=true,face0=0:biomesoplenty/origingrass3,face1=0:biomesoplenty/origingrass1,face2-5=0:biomesoplenty/origingrass2
 
-# %longGrass:* (longGrass), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockLongGrass
+# %longGrass:* (longGrass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockLongGrass
 block:id=%longGrass,data=*,stdrot=true,face0=0:biomesoplenty/longgrass3,face1=0:biomesoplenty/longgrass1,face2-5=0:biomesoplenty/longgrass2
 
-# %overgrownNetherrack:* (overgrownNetherrack), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOvergrownNetherrack
+# %overgrownNetherrack:* (overgrownNetherrack), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOvergrownNetherrack
 block:id=%overgrownNetherrack,data=*,stdrot=true,face0=0:biomesoplenty/overgrownnetherrack3,face1=0:biomesoplenty/overgrownnetherrack1,face2-5=0:biomesoplenty/overgrownnetherrack2
 
-# %bopGrass:* (bopGrass), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGrass
+# %bopGrass:* (bopGrass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGrass
 block:id=%bopGrass,data=0,stdrot=true,face0=0:biomesoplenty/spectralmoss_bottom,face1=0:biomesoplenty/spectralmoss_top,face2-5=0:biomesoplenty/spectralmoss_side
 block:id=%bopGrass,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:biomesoplenty/smolderinggrass_bottom,face1=0:biomesoplenty/smolderinggrass_top,face2-5=0:biomesoplenty/smolderinggrass_side
 
@@ -683,7 +683,7 @@ block:id=%newBopGrass,data=1,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesop
 block:id=%newBopGrass,data=2,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_silty,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_silty_side
 block:id=%newBopGrass,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_loamy_side
 
-# %newBopDirt:* (newBopDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewDirt
+# %newBopDirt:* (newBopDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewDirt
 block:id=%newBopDirt,data=0,stdrot=true,face0-5=0:biomesoplenty/dirt_loamy
 block:id=%newBopDirt,data=1,stdrot=true,face0-5=0:biomesoplenty/coarse_dirt_loamy
 block:id=%newBopDirt,data=2,stdrot=true,face0-5=0:biomesoplenty/dirt_sandy
@@ -692,7 +692,7 @@ block:id=%newBopDirt,data=4,stdrot=true,face0-5=0:biomesoplenty/dirt_silty
 block:id=%newBopDirt,data=5,stdrot=true,face0-5=0:biomesoplenty/coarse_dirt_silty
 block:id=%newBopDirt,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/dirt_loamy
 
-# %newBopFarmland:* (newBopFarmland), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPNewFarmland
+# %newBopFarmland:* (newBopFarmland), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPNewFarmland
 block:id=%newBopFarmland,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_loamy,face1=0:biomesoplenty/farmland_dry_loamy,face2-5=0:biomesoplenty/dirt_loamy
 block:id=%newBopFarmland,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_loamy,face1=0:biomesoplenty/farmland_wet_loamy,face2-5=0:biomesoplenty/dirt_loamy
 block:id=%newBopFarmland,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_sandy,face1=0:biomesoplenty/farmland_dry_sandy,face2-5=0:biomesoplenty/dirt_sandy
@@ -770,7 +770,7 @@ block:id=%logs4,data=13,stdrot=true,face0-5=0:biomesoplenty/log_hellbark_side
 block:id=%logs4,data=14,stdrot=true,face0-5=0:biomesoplenty/log_jacaranda_side
 block:id=%logs4,data=15,stdrot=true,face0-5=0:biomesoplenty/log_mahogany_side
 
-# %leaves1:* (leaves1), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves1:* (leaves1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves1,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
 block:id=%leaves1,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_bamboo_fancy
 block:id=%leaves1,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_magic_fancy
@@ -788,7 +788,7 @@ block:id=%leaves1,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_bamboo_fanc
 block:id=%leaves1,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_magic_fancy
 block:id=%leaves1,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_dark_fancy
 
-# %leaves2:* (leaves2), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves2:* (leaves2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves2,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_dead_fancy
 block:id=%leaves2,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_fir_fancy
 block:id=%leaves2,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_ethereal_fancy
@@ -806,7 +806,7 @@ block:id=%leaves2,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_fir_fancy
 block:id=%leaves2,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_ethereal_fancy
 block:id=%leaves2,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_orangeautumn_fancy
 
-# %leaves3:* (leaves3), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves3:* (leaves3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves3,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_origin_fancy
 block:id=%leaves3,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_pinkcherry_fancy
 block:id=%leaves3,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_maple_fancy
@@ -824,7 +824,7 @@ block:id=%leaves3,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_pinkcherry_
 block:id=%leaves3,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_maple_fancy
 block:id=%leaves3,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_whitecherry_fancy
 
-# %leaves4:* (leaves4), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves4:* (leaves4), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves4,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_hellbark_fancy
 block:id=%leaves4,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
 block:id=%leaves4,data=2,data=3,stdrot=true,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
@@ -838,7 +838,7 @@ block:id=%leaves4,data=12,stdrot=true,face0-5=0:biomesoplenty/leaves_hellbark_fa
 block:id=%leaves4,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
 block:id=%leaves4,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
 
-# %petals:* (petals), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPetals
+# %petals:* (petals), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPetals
 block:id=%petals,data=0,stdrot=true,face0-5=0:biomesoplenty/bigflowerred
 block:id=%petals,data=1,stdrot=true,face0-5=0:biomesoplenty/bigfloweryellow
 block:id=%petals,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/bigflowerred
@@ -872,19 +872,19 @@ block:id=%colorizedSaplings,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0
 block:id=%colorizedSaplings,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_flowering
 block:id=%colorizedSaplings,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_sacredoak
 
-# %hardSand:* (hardSand), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %hardSand:* (hardSand), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%hardSand,data=*,stdrot=true,face0-5=0:biomesoplenty/hardsand
 
-# %hardDirt:* (hardDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %hardDirt:* (hardDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%hardDirt,data=*,stdrot=true,face0-5=0:biomesoplenty/harddirt
 
-# %biomeBlock:* (biomeBlock), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %biomeBlock:* (biomeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%biomeBlock,data=*,stdrot=true,face0-5=0:biomesoplenty/biomeblock
 
-# %crystal:* (crystal), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %crystal:* (crystal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%crystal,data=*,stdrot=true,face0-5=0:biomesoplenty/crystal
 
-# %gemOre:* (gemOre), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGems
+# %gemOre:* (gemOre), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGems
 block:id=%gemOre,data=0,stdrot=true,face0-5=0:biomesoplenty/amethystore
 block:id=%gemOre,data=1,stdrot=true,face0-5=0:biomesoplenty/amethystblock
 block:id=%gemOre,data=2,stdrot=true,face0-5=0:biomesoplenty/rubyore
@@ -902,17 +902,17 @@ block:id=%gemOre,data=13,stdrot=true,face0-5=0:biomesoplenty/sapphireblock
 block:id=%gemOre,data=14,stdrot=true,face0-5=0:biomesoplenty/amberore
 block:id=%gemOre,data=15,stdrot=true,face0-5=0:biomesoplenty/amberblock
 
-# %cragRock:* (cragRock), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %cragRock:* (cragRock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%cragRock,data=*,stdrot=true,face0-5=0:biomesoplenty/cragrock
 
-# %hive:* (hive), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockHive
+# %hive:* (hive), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockHive
 block:id=%hive,data=0,stdrot=true,face0-5=0:biomesoplenty/honeycomb
 block:id=%hive,data=1,stdrot=true,face0-5=0:biomesoplenty/hive
 block:id=%hive,data=2,stdrot=true,face0-5=0:biomesoplenty/honeycombempty
 block:id=%hive,data=3,stdrot=true,face0-5=0:biomesoplenty/honeycombfilled
 block:id=%hive,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/honeycomb
 
-# %honeyBlock:* (honeyBlock), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockHoney
+# %honeyBlock:* (honeyBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockHoney
 block:id=%honeyBlock,data=*,stdrot=true,face0-5=12000:biomesoplenty/honeyblock
 
 # %bones:* (bones), render=biomesoplenty.client.render.blocks.SmallBlockRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBones
@@ -926,7 +926,7 @@ block:id=%bones,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,dat
 # %grave:* (grave), render=biomesoplenty.client.render.blocks.GraveRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockGrave
 block:id=%grave,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/grave
 
-# %planks:* (planks), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPPlank
+# %planks:* (planks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPPlank
 block:id=%planks,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 block:id=%planks,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_cherry
 block:id=%planks,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_dark
@@ -944,7 +944,7 @@ block:id=%planks,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_jacaranda
 block:id=%planks,data=14,stdrot=true,face0-5=0:biomesoplenty/plank_mahogany
 block:id=%planks,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 
-# %woodenSingleSlab1:* (woodenSingleSlab1), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenSingleSlab1:* (woodenSingleSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenSingleSlab1,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_sacredoak
 block:id=%woodenSingleSlab1,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_cherry
 block:id=%woodenSingleSlab1,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_dark
@@ -962,7 +962,7 @@ block:id=%woodenSingleSlab1,data=13,stdrot=true,transparency=SEMITRANSPARENT,fac
 block:id=%woodenSingleSlab1,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_mangrove
 block:id=%woodenSingleSlab1,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_palm
 
-# %woodenDoubleSlab1:* (woodenDoubleSlab1), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenDoubleSlab1:* (woodenDoubleSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenDoubleSlab1,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 block:id=%woodenDoubleSlab1,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_cherry
 block:id=%woodenDoubleSlab1,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_dark
@@ -980,7 +980,7 @@ block:id=%woodenDoubleSlab1,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_ma
 block:id=%woodenDoubleSlab1,data=14,stdrot=true,face0-5=0:biomesoplenty/plank_mangrove
 block:id=%woodenDoubleSlab1,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_palm
 
-# %woodenSingleSlab2:* (woodenSingleSlab2), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenSingleSlab2:* (woodenSingleSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenSingleSlab2,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_redwood
 block:id=%woodenSingleSlab2,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_willow
 block:id=%woodenSingleSlab2,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_pine
@@ -996,7 +996,7 @@ block:id=%woodenSingleSlab2,data=12,stdrot=true,transparency=SEMITRANSPARENT,fac
 block:id=%woodenSingleSlab2,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_mahogany
 block:id=%woodenSingleSlab2,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_sacredoak
 
-# %woodenDoubleSlab2:* (woodenDoubleSlab2), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenDoubleSlab2:* (woodenDoubleSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenDoubleSlab2,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_redwood
 block:id=%woodenDoubleSlab2,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_willow
 block:id=%woodenDoubleSlab2,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_pine
@@ -1012,10 +1012,10 @@ block:id=%woodenDoubleSlab2,data=12,stdrot=true,face0-5=0:biomesoplenty/plank_ja
 block:id=%woodenDoubleSlab2,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_mahogany
 block:id=%woodenDoubleSlab2,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 
-# %stoneSingleSlab:* (stoneSingleSlab), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %stoneSingleSlab:* (stoneSingleSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%stoneSingleSlab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/mudbrick
 
-# %stoneDoubleSlab:* (stoneDoubleSlab), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %stoneDoubleSlab:* (stoneDoubleSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%stoneDoubleSlab,data=*,stdrot=true,face0-5=0:biomesoplenty/mudbrick
 
 # %sacredoakStairs:* (sacredoakStairs), render=(STAIRS), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPStairs

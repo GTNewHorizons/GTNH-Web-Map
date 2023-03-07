@@ -1,0 +1,16 @@
+# neenergistics 1.3.30
+version:1.7
+modname:neenergistics
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/neenergistics/textures/blocks/
+texture:id=neenergistics/pattern_interface,filename=assets/neenergistics/textures/blocks/pattern_interface.png
+
+
+
+# %tile.pattern_interface:* (tile.pattern_interface), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.github.vfyjxf.nee.block.BlockPatternInterface
+block:id=%tile.pattern_interface,data=*,stdrot=true,face0-5=0:neenergistics/pattern_interface

@@ -1,0 +1,75 @@
+# WitchingGadgets 1.2.27-GTNH
+version:1.7
+modname:WitchingGadgets
+
+
+cfgfile:config/WitchingGadgets.cfg
+
+
+texturepath:assets/witchinggadgets/textures/blocks/
+texture:id=thaumcraft/blank,filename=assets/thaumcraft/textures/blocks/blank.png
+texture:id=thaumcraft/metalbase,filename=assets/thaumcraft/textures/blocks/metalbase.png
+texture:id=thaumcraft/woodplain,filename=assets/thaumcraft/textures/blocks/woodplain.png
+texture:id=witchinggadgets/blastFurnace,filename=assets/witchinggadgets/textures/blocks/blastFurnace.png
+texture:id=witchinggadgets/essentiaPump,filename=assets/witchinggadgets/textures/blocks/essentiaPump.png
+texture:id=witchinggadgets/etherealWall,filename=assets/witchinggadgets/textures/blocks/etherealWall.png
+texture:id=witchinggadgets/nil,filename=assets/witchinggadgets/textures/blocks/nil.png
+texture:id=witchinggadgets/roseVineBlock,filename=assets/witchinggadgets/textures/blocks/roseVineBlock.png
+texture:id=witchinggadgets/saunaStove_side,filename=assets/witchinggadgets/textures/blocks/saunaStove_side.png
+texture:id=witchinggadgets/saunaStove_top,filename=assets/witchinggadgets/textures/blocks/saunaStove_top.png
+texture:id=witchinggadgets/terraformer,filename=assets/witchinggadgets/textures/blocks/terraformer.png
+texture:id=witchinggadgets/tfFocusColdTaiga,filename=assets/witchinggadgets/textures/blocks/tfFocusColdTaiga.png
+texture:id=witchinggadgets/tfFocusDesert,filename=assets/witchinggadgets/textures/blocks/tfFocusDesert.png
+texture:id=witchinggadgets/tfFocusEnd,filename=assets/witchinggadgets/textures/blocks/tfFocusEnd.png
+texture:id=witchinggadgets/tfFocusHell,filename=assets/witchinggadgets/textures/blocks/tfFocusHell.png
+texture:id=witchinggadgets/tfFocusJungle,filename=assets/witchinggadgets/textures/blocks/tfFocusJungle.png
+texture:id=witchinggadgets/tfFocusMagic,filename=assets/witchinggadgets/textures/blocks/tfFocusMagic.png
+texture:id=witchinggadgets/tfFocusMushroom,filename=assets/witchinggadgets/textures/blocks/tfFocusMushroom.png
+texture:id=witchinggadgets/tfFocusOcean,filename=assets/witchinggadgets/textures/blocks/tfFocusOcean.png
+texture:id=witchinggadgets/tfFocusPlains,filename=assets/witchinggadgets/textures/blocks/tfFocusPlains.png
+texture:id=witchinggadgets/tfFocusRiver,filename=assets/witchinggadgets/textures/blocks/tfFocusRiver.png
+texture:id=witchinggadgets/tfFocusTaint,filename=assets/witchinggadgets/textures/blocks/tfFocusTaint.png
+texture:id=witchinggadgets/timeStone,filename=assets/witchinggadgets/textures/blocks/timeStone.png
+texture:id=witchinggadgets/voidWalkway,filename=assets/witchinggadgets/textures/blocks/voidWalkway.png
+
+
+
+# %WG_WallMirror:* (WG_WallMirror), render=(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWallMirror
+block:id=%WG_WallMirror,data=*,stdrot=true,face0-5=0:witchinggadgets/nil
+
+# %WG_VoidWalkway:* (WG_VoidWalkway), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=witchinggadgets.common.blocks.BlockVoidWalkway
+block:id=%WG_VoidWalkway,data=*,stdrot=true,face0-5=12000:witchinggadgets/voidWalkway
+
+# %WG_StoneDevice:* (WG_StoneDevice), render=witchinggadgets.client.render.BlockRenderStoneDevice(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWGStoneDevice
+block:id=%WG_StoneDevice,data=0,stdrot=true,face0-5=0:witchinggadgets/etherealWall
+block:id=%WG_StoneDevice,data=1,stdrot=true,face0-5=0:witchinggadgets/timeStone
+block:id=%WG_StoneDevice,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:witchinggadgets/blastFurnace
+
+# %WG_WoodenDevice:* (WG_WoodenDevice), render=witchinggadgets.client.render.BlockRenderWoodenDevice(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWGWoodenDevice
+block:id=%WG_WoodenDevice,data=0,stdrot=true,face0-5=0:thaumcraft/woodplain
+block:id=%WG_WoodenDevice,data=2,stdrot=true,face0-5=0:thaumcraft/woodplain
+block:id=%WG_WoodenDevice,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/woodplain
+block:id=%WG_WoodenDevice,data=4,stdrot=true,face0=0:witchinggadgets/saunaStove_side,face1=0:witchinggadgets/saunaStove_top,face2-5=0:witchinggadgets/saunaStove_side
+block:id=%WG_WoodenDevice,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/woodplain
+
+# %WG_MetalDevice:* (WG_MetalDevice), render=witchinggadgets.client.render.BlockRenderMetalDevice(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWGMetalDevice
+block:id=%WG_MetalDevice,data=0,stdrot=true,face0-5=0:witchinggadgets/essentiaPump
+block:id=%WG_MetalDevice,data=1,stdrot=true,face0-5=0:thaumcraft/metalbase
+block:id=%WG_MetalDevice,data=2,stdrot=true,face0-5=0:witchinggadgets/terraformer
+block:id=%WG_MetalDevice,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusPlains
+block:id=%WG_MetalDevice,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusColdTaiga
+block:id=%WG_MetalDevice,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusDesert
+block:id=%WG_MetalDevice,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusJungle
+block:id=%WG_MetalDevice,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusHell
+block:id=%WG_MetalDevice,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusTaint
+block:id=%WG_MetalDevice,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusMushroom
+block:id=%WG_MetalDevice,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusRiver
+block:id=%WG_MetalDevice,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusOcean
+block:id=%WG_MetalDevice,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusEnd
+block:id=%WG_MetalDevice,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusMagic
+
+# %WG_RoseVine:* (WG_RoseVine), render=witchinggadgets.client.render.BlockRenderRoseVine(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockRoseVines
+block:id=%WG_RoseVine,data=*,stdrot=true,face0-5=0:witchinggadgets/roseVineBlock
+
+# %WG_CustomAir:* (WG_CustomAir), render=(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockModifiedAiry
+block:id=%WG_CustomAir,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/blank

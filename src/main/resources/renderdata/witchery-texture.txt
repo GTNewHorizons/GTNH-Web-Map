@@ -330,20 +330,19 @@ block:id=%witchlog,data=13,stdrot=true,face0-5=0:witchery/log_alder
 block:id=%witchlog,data=14,stdrot=true,face0-5=0:witchery/log_hawthorn
 block:id=%witchlog,data=15,stdrot=true,face0-5=0:witchery/log_rowan
 
-# %witchleaves:* (witchleaves), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchLeaves
+# %witchleaves:* (witchleaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchLeaves
 block:id=%witchleaves,data=0,stdrot=true,face0-5=2000:witchery/leaves_rowan
 block:id=%witchleaves,data=1,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
 block:id=%witchleaves,data=2,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=3,data=4,stdrot=true,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=4,stdrot=true,face0-5=2000:witchery/leaves_rowan
 block:id=%witchleaves,data=5,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
 block:id=%witchleaves,data=6,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=7,data=8,stdrot=true,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=8,stdrot=true,face0-5=2000:witchery/leaves_rowan
 block:id=%witchleaves,data=9,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
 block:id=%witchleaves,data=10,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=11,data=12,stdrot=true,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=12,stdrot=true,face0-5=2000:witchery/leaves_rowan
 block:id=%witchleaves,data=13,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
 block:id=%witchleaves,data=14,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=15,stdrot=true,face0-5=2000:witchery/leaves_rowan
 
 # %voidbramble:* (voidbramble), render=(CROPS), opaque=false,cls=com.emoniph.witchery.blocks.BlockVoidBramble
 block:id=%voidbramble,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/voidBramble
@@ -384,7 +383,7 @@ block:id=%crittersnare,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:wit
 block:id=%crittersnare,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/critterSnare_magmacube
 block:id=%crittersnare,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/critterSnare_empty
 
-# %grassper:* (grassper), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockGrassper
+# %grassper:* (grassper), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockGrassper
 block:id=%grassper,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/grassper
 
 # %bloodrose:* (bloodrose), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodRose
@@ -407,13 +406,13 @@ block:id=%cactus,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0-3=0:mine
 # %lilypad:* (lilypad), render=(LILYPAD), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchLilyPad
 block:id=%lilypad,data=*,stdrot=true,transparency=TRANSPARENT,patch0=15000:minecraft/waterlily
 
-# %demonheart:* (demonheart), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDemonHeart
+# %demonheart:* (demonheart), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDemonHeart
 block:id=%demonheart,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/demonHeart
 
 # %wolfhead:* (wolfhead), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockWolfHead
 block:id=%wolfhead,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
 
-# %witchwood:* (witchwood), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockWitchWood
+# %witchwood:* (witchwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockWitchWood
 block:id=%witchwood,data=0,stdrot=true,face0-5=0:witchery/planks_rowan
 block:id=%witchwood,data=1,stdrot=true,face0-5=0:witchery/planks_alder
 block:id=%witchwood,data=2,stdrot=true,face0-5=0:witchery/planks_hawthorn
@@ -428,7 +427,7 @@ block:id=%stairswoodalder,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-
 # %stairswoodhawthorn:* (stairswoodhawthorn), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchWoodStairs
 block:id=%stairswoodhawthorn,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:witchery/planks_hawthorn
 
-# %witchwoodslab:* (witchwoodslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchWoodSlab
+# %witchwoodslab:* (witchwoodslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchWoodSlab
 block:id=%witchwoodslab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:witchery/planks_rowan
 block:id=%witchwoodslab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:witchery/planks_alder
 block:id=%witchwoodslab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:witchery/planks_hawthorn
@@ -437,7 +436,7 @@ block:id=%witchwoodslab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=
 block:id=%witchwoodslab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:witchery/planks_hawthorn
 block:id=%witchwoodslab,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:witchery/planks_rowan
 
-# %witchwooddoubleslab:* (witchwooddoubleslab), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockWitchWoodSlab
+# %witchwooddoubleslab:* (witchwooddoubleslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockWitchWoodSlab
 block:id=%witchwooddoubleslab,data=0,stdrot=true,face0-5=0:witchery/planks_rowan
 block:id=%witchwooddoubleslab,data=1,stdrot=true,face0-5=0:witchery/planks_alder
 block:id=%witchwooddoubleslab,data=2,stdrot=true,face0-5=0:witchery/planks_hawthorn
@@ -452,13 +451,13 @@ block:id=%rowanwooddoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:wit
 # %alderwooddoor:* (alderwooddoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchDoor
 block:id=%alderwooddoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/door_wood_upper,patch1=0:minecraft/door_wood_lower
 
-# %chalice:* (chalice), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockChalice
+# %chalice:* (chalice), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockChalice
 block:id=%chalice,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/chalice
 
-# %candelabra:* (candelabra), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCandelabra
+# %candelabra:* (candelabra), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCandelabra
 block:id=%candelabra,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/candelabra
 
-# %placeditem:* (placeditem), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPlacedItem
+# %placeditem:* (placeditem), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPlacedItem
 block:id=%placeditem,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
 
 # %alluringskull:* (alluringskull), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockAlluringSkull
@@ -477,7 +476,7 @@ block:id=%wickerbundle,data=13,data=14,data=15,stdrot=true,face0-5=0:witchery/wi
 # %glowglobe:* (glowglobe), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockGlowGlobe
 block:id=%glowglobe,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/glowGlobe
 
-# %statuegoddess:* (statuegoddess), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueGoddess
+# %statuegoddess:* (statuegoddess), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueGoddess
 block:id=%statuegoddess,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
 # %stockade:* (stockade), render=com.emoniph.witchery.client.renderer.RenderStockade(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockStockade
@@ -495,7 +494,7 @@ block:id=%stockade,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot
 # %icestockade:* (icestockade), render=com.emoniph.witchery.client.renderer.RenderStockade(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockStockade
 block:id=%icestockade,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/ice
 
-# %perpetualice:* (perpetualice), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIce
+# %perpetualice:* (perpetualice), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIce
 block:id=%perpetualice,data=*,stdrot=true,face0-5=12000:minecraft/ice
 
 # %icedoor:* (icedoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceDoor
@@ -504,10 +503,10 @@ block:id=%icedoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/
 # %icestairs:* (icestairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpertualIceStairs
 block:id=%icestairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/ice
 
-# %iceslab:* (iceslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+# %iceslab:* (iceslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
 block:id=%iceslab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/ice
 
-# %icedoubleslab:* (icedoubleslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+# %icedoubleslab:* (icedoubleslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
 block:id=%icedoubleslab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/ice
 
 # %icefence:* (icefence), render=(FENCE), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceFence
@@ -516,19 +515,19 @@ block:id=%icefence,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecr
 # %icefencegate:* (icefencegate), render=(FENCEGATE), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceGate
 block:id=%icefencegate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/ice
 
-# %icepressureplate:* (icepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+# %icepressureplate:* (icepressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
 block:id=%icepressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/ice
 
-# %snowpressureplate:* (snowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+# %snowpressureplate:* (snowpressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
 block:id=%snowpressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/snow
 
 # %snowstairs:* (snowstairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowStairs
 block:id=%snowstairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/snow
 
-# %snowslab:* (snowslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowSlab
+# %snowslab:* (snowslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowSlab
 block:id=%snowslab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/snow
 
-# %snowdoubleslab:* (snowdoubleslab), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockSnowSlab
+# %snowdoubleslab:* (snowdoubleslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockSnowSlab
 block:id=%snowdoubleslab,data=*,stdrot=true,face0-5=0:minecraft/snow
 
 # %infinityegg:* (infinityegg), render=(DRAGONEGG), opaque=false,cls=com.emoniph.witchery.blocks.BlockInfinityEgg
@@ -537,7 +536,7 @@ block:id=%infinityegg,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witc
 # %slurp:* (slurp), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.brewing.BlockSlurp
 block:id=%slurp,data=*,stdrot=true,face0-5=0:witchery/barrier
 
-# %pitdirt:* (pitdirt), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPitDirt
+# %pitdirt:* (pitdirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPitDirt
 block:id=%pitdirt,data=0,data=1,stdrot=true,face0-5=0:minecraft/dirt
 block:id=%pitdirt,data=2,stdrot=true,face0=0:minecraft/dirt,face1=0:minecraft/dirt_podzol_top,face2-5=0:minecraft/dirt_podzol_side
 block:id=%pitdirt,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/dirt
@@ -550,10 +549,10 @@ block:id=%garlicgarland,data=0,data=1,stdrot=true,face0-5=0:witchery/garlicgarla
 block:id=%garlicgarland,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/garlicgarlanditem
 block:id=%garlicgarland,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:witchery/garlicgarlanditem
 
-# %bloodedwool:* (bloodedwool), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockBloodedWool
+# %bloodedwool:* (bloodedwool), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockBloodedWool
 block:id=%bloodedwool,data=*,stdrot=true,face0-5=0:witchery/bloodedwool
 
-# %shadedglass:* (shadedglass), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockShadedGlass
+# %shadedglass:* (shadedglass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockShadedGlass
 block:id=%shadedglass,data=0,stdrot=true,face0-5=12000:witchery/shadedglassoff_white
 block:id=%shadedglass,data=1,stdrot=true,face0-5=12000:witchery/shadedglassoff_orange
 block:id=%shadedglass,data=2,stdrot=true,face0-5=12000:witchery/shadedglassoff_magenta
@@ -571,7 +570,7 @@ block:id=%shadedglass,data=13,stdrot=true,face0-5=12000:witchery/shadedglassoff_
 block:id=%shadedglass,data=14,stdrot=true,face0-5=12000:witchery/shadedglassoff_red
 block:id=%shadedglass,data=15,stdrot=true,face0-5=12000:witchery/shadedglassoff_black
 
-# %shadedglass_active:* (shadedglass_active), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockShadedGlass
+# %shadedglass_active:* (shadedglass_active), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockShadedGlass
 block:id=%shadedglass_active,data=0,stdrot=true,face0-5=12000:witchery/shadedglass_white
 block:id=%shadedglass_active,data=1,stdrot=true,face0-5=12000:witchery/shadedglass_orange
 block:id=%shadedglass_active,data=2,stdrot=true,face0-5=12000:witchery/shadedglass_magenta
@@ -589,7 +588,7 @@ block:id=%shadedglass_active,data=13,stdrot=true,face0-5=12000:witchery/shadedgl
 block:id=%shadedglass_active,data=14,stdrot=true,face0-5=12000:witchery/shadedglass_red
 block:id=%shadedglass_active,data=15,stdrot=true,face0-5=12000:witchery/shadedglass_black
 
-# %mirrorwall:* (mirrorwall), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockMirrorWall
+# %mirrorwall:* (mirrorwall), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockMirrorWall
 block:id=%mirrorwall,data=*,stdrot=true,colorMult=CCDDFF,face0-1=17000:witchery/brew_still,face2-5=17000:witchery/brew_flow
 
 # %refillingchest:* (refillingchest), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
@@ -598,88 +597,88 @@ block:id=%refillingchest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:m
 # %force:* (force), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockForce
 block:id=%force,data=*,stdrot=true,face0-5=0:witchery/force
 
-# %tormentstone:* (tormentstone), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockForce
+# %tormentstone:* (tormentstone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockForce
 block:id=%tormentstone,data=*,stdrot=true,face0-5=0:minecraft/mycelium_top
 
-# %barrier:* (barrier), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBarrier
+# %barrier:* (barrier), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBarrier
 block:id=%barrier,data=*,stdrot=true,face0-5=0:witchery/barrier
 
-# %leechchest:* (leechchest), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockLeechChest
+# %leechchest:* (leechchest), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockLeechChest
 block:id=%leechchest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
-# %altar:* (altar), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockAltar
+# %altar:* (altar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockAltar
 block:id=%altar,data=0,stdrot=true,face0-1=0:witchery/altar_top,face2-5=0:witchery/altar
 block:id=%altar,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:witchery/altar_top,face1=0:witchery/altar_joined_top,face2-5=0:witchery/altar_joined
 
-# %kettle:* (kettle), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockKettle
+# %kettle:* (kettle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockKettle
 block:id=%kettle,data=*,stdrot=true,face0-5=0:witchery/kettle
 
-# %poppetshelf:* (poppetshelf), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPoppetShelf
+# %poppetshelf:* (poppetshelf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPoppetShelf
 block:id=%poppetshelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/poppetShelf
 
-# %dreamcatcher:* (dreamcatcher), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDreamCatcher
+# %dreamcatcher:* (dreamcatcher), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDreamCatcher
 block:id=%dreamcatcher,data=0,data=1,stdrot=true,face0-5=0:minecraft/planks_oak
 block:id=%dreamcatcher,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 block:id=%dreamcatcher,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
 
-# %crystalball:* (crystalball), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCrystalBall
+# %crystalball:* (crystalball), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCrystalBall
 block:id=%crystalball,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/crystalball
 
-# %spiritportal:* (spiritportal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSpiritPortal
+# %spiritportal:* (spiritportal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSpiritPortal
 block:id=%spiritportal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/portal
 
-# %tormentportal:* (tormentportal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockTormentPortal
+# %tormentportal:* (tormentportal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockTormentPortal
 block:id=%tormentportal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/portal
 
-# %spinningwheel:* (spinningwheel), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSpinningWheel
+# %spinningwheel:* (spinningwheel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSpinningWheel
 block:id=%spinningwheel,data=*,stdrot=true,face0-5=0:witchery/spinningwheel
 
-# %brazier:* (brazier), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBrazier
+# %brazier:* (brazier), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBrazier
 block:id=%brazier,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/brazier
 
-# %witchesovenidle:* (witchesovenidle), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchesOven
+# %witchesovenidle:* (witchesovenidle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchesOven
 block:id=%witchesovenidle,data=*,stdrot=true,face0-5=0:witchery/witchesOven
 
-# %witchesovenburning:* (witchesovenburning), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchesOven
+# %witchesovenburning:* (witchesovenburning), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchesOven
 block:id=%witchesovenburning,data=*,stdrot=true,face0-5=0:witchery/witchesOven
 
-# %fumefunnel:* (fumefunnel), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFumeFunnel
+# %fumefunnel:* (fumefunnel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFumeFunnel
 block:id=%fumefunnel,data=*,stdrot=true,face0-5=0:witchery/fumefunnel
 
-# %filteredfumefunnel:* (filteredfumefunnel), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFumeFunnel
+# %filteredfumefunnel:* (filteredfumefunnel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFumeFunnel
 block:id=%filteredfumefunnel,data=*,stdrot=true,face0-5=0:witchery/fumefunnel
 
-# %distilleryidle:* (distilleryidle), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDistillery
+# %distilleryidle:* (distilleryidle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDistillery
 block:id=%distilleryidle,data=*,stdrot=true,face0-5=0:witchery/distillery
 
-# %distilleryburning:* (distilleryburning), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDistillery
+# %distilleryburning:* (distilleryburning), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDistillery
 block:id=%distilleryburning,data=*,stdrot=true,face0-5=0:witchery/distillery
 
-# %scarecrow:* (scarecrow), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
+# %scarecrow:* (scarecrow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
 block:id=%scarecrow,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/scarecrow
 
-# %trent:* (trent), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
+# %trent:* (trent), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
 block:id=%trent,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/trent
 
 # %witchsladder:* (witchsladder), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
 block:id=%witchsladder,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/witchsladder
 
-# %decurseteleport:* (decurseteleport), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
+# %decurseteleport:* (decurseteleport), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
 block:id=%decurseteleport,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
-# %decursedirected:* (decursedirected), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
+# %decursedirected:* (decursedirected), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
 block:id=%decursedirected,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
-# %statueofworship:* (statueofworship), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueOfWorship
+# %statueofworship:* (statueofworship), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueOfWorship
 block:id=%statueofworship,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %cauldron:* (cauldron), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockCauldron
+# %cauldron:* (cauldron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockCauldron
 block:id=%cauldron,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/cauldron
 
-# %wolfaltar:* (wolfaltar), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueWerewolf
+# %wolfaltar:* (wolfaltar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueWerewolf
 block:id=%wolfaltar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
-# %silvervat:* (silvervat), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSilverVat
+# %silvervat:* (silvervat), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSilverVat
 block:id=%silvervat,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
 # %beartrap:* (beartrap), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockBeartrap
@@ -688,7 +687,7 @@ block:id=%beartrap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecra
 # %wolftrap:* (wolftrap), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockBeartrap
 block:id=%wolftrap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
 
-# %wallgen:* (wallgen), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.worldgen.WorldHandlerVillageDistrict$Wall$BlockVillageWallGen
+# %wallgen:* (wallgen), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.emoniph.witchery.worldgen.WorldHandlerVillageDistrict$Wall$BlockVillageWallGen
 block:id=%wallgen,data=*,stdrot=true,face0-5=0:minecraft/iron_block
 
 # %coffinblock:* (coffinblock), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockCoffin
@@ -699,7 +698,7 @@ block:id=%daylightcollector,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0
 block:id=%daylightcollector,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/daylightcollector1
 block:id=%daylightcollector,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/daylightcollector2
 
-# %bloodcrucible:* (bloodcrucible), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodCrucible
+# %bloodcrucible:* (bloodcrucible), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodCrucible
 block:id=%bloodcrucible,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
 # %mirrorblock:* (mirrorblock), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockMirror
@@ -708,10 +707,10 @@ block:id=%mirrorblock,data=*,stdrot=true,face0-5=0:minecraft/gold_block
 # %mirrorblock2:* (mirrorblock2), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockMirror
 block:id=%mirrorblock2,data=*,stdrot=true,face0-5=0:minecraft/gold_block
 
-# %circle:* (circle), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircle
+# %circle:* (circle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircle
 block:id=%circle,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/heartGlyph
 
-# %circleglyphritual:* (circleglyphritual), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
+# %circleglyphritual:* (circleglyphritual), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 block:id=%circleglyphritual,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.1
 block:id=%circleglyphritual,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.2
 block:id=%circleglyphritual,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.3
@@ -725,7 +724,7 @@ block:id=%circleglyphritual,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=
 block:id=%circleglyphritual,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.11
 block:id=%circleglyphritual,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.12
 
-# %circleglyphotherwhere:* (circleglyphotherwhere), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
+# %circleglyphotherwhere:* (circleglyphotherwhere), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 block:id=%circleglyphotherwhere,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.1
 block:id=%circleglyphotherwhere,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.2
 block:id=%circleglyphotherwhere,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.3
@@ -739,7 +738,7 @@ block:id=%circleglyphotherwhere,data=9,stdrot=true,transparency=TRANSPARENT,face
 block:id=%circleglyphotherwhere,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.11
 block:id=%circleglyphotherwhere,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.12
 
-# %circleglyphinfernal:* (circleglyphinfernal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
+# %circleglyphinfernal:* (circleglyphinfernal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 block:id=%circleglyphinfernal,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.1
 block:id=%circleglyphinfernal,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.2
 block:id=%circleglyphinfernal,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.3
@@ -777,19 +776,19 @@ block:id=%clever,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft
 # %cwoodendoor:* (cwoodendoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.brewing.BlockDoorBase
 block:id=%cwoodendoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/door_wood_upper,patch1=0:minecraft/door_wood_lower
 
-# %cwoodpressureplate:* (cwoodpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+# %cwoodpressureplate:* (cwoodpressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
 block:id=%cwoodpressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
-# %cstonepressureplate:* (cstonepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+# %cstonepressureplate:* (cstonepressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
 block:id=%cstonepressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
-# %csnowpressureplate:* (csnowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+# %csnowpressureplate:* (csnowpressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
 block:id=%csnowpressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/snow
 
-# %cbuttonwood:* (cbuttonwood), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$1
+# %cbuttonwood:* (cbuttonwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$1
 block:id=%cbuttonwood,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
 block:id=%cbuttonwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
-# %cbuttonstone:* (cbuttonstone), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$2
+# %cbuttonstone:* (cbuttonstone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$2
 block:id=%cbuttonstone,data=0,stdrot=true,face0-5=0:minecraft/stone
 block:id=%cbuttonstone,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone

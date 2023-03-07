@@ -1,0 +1,35 @@
+# supersolarpanel 1.7.10-1.1.1-GT-NH-Mod
+version:1.7
+modname:supersolarpanel
+
+
+cfgfile:config/supersolarpanel.cfg
+
+
+texturepath:assets/supersolarpanel/textures/blocks/
+texture:id=supersolarpanel/admsp_bottom,filename=assets/supersolarpanel/textures/blocks/admsp_bottom.png
+texture:id=supersolarpanel/admsp_side,filename=assets/supersolarpanel/textures/blocks/admsp_side.png
+texture:id=supersolarpanel/admsp_top,filename=assets/supersolarpanel/textures/blocks/admsp_top.png
+texture:id=supersolarpanel/phsp_bottom,filename=assets/supersolarpanel/textures/blocks/phsp_bottom.png
+texture:id=supersolarpanel/phsp_side,filename=assets/supersolarpanel/textures/blocks/phsp_side.png
+texture:id=supersolarpanel/phsp_top,filename=assets/supersolarpanel/textures/blocks/phsp_top.png
+texture:id=supersolarpanel/spsp_bottom,filename=assets/supersolarpanel/textures/blocks/spsp_bottom.png
+texture:id=supersolarpanel/spsp_side,filename=assets/supersolarpanel/textures/blocks/spsp_side.png
+texture:id=supersolarpanel/spsp_top,filename=assets/supersolarpanel/textures/blocks/spsp_top.png
+texture:id=supersolarpanel/ssp_bottom,filename=assets/supersolarpanel/textures/blocks/ssp_bottom.png
+texture:id=supersolarpanel/ssp_side,filename=assets/supersolarpanel/textures/blocks/ssp_side.png
+texture:id=supersolarpanel/ssp_top,filename=assets/supersolarpanel/textures/blocks/ssp_top.png
+
+
+
+# %SingularSolarPanel:* (SingularSolarPanel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.supsolpans.blocks.BlockSuperSP
+block:id=%SingularSolarPanel,data=*,stdrot=true,face0=0:supersolarpanel/ssp_bottom,face1=0:supersolarpanel/ssp_top,face2-5=0:supersolarpanel/ssp_side
+
+# %SpectralSolarPanel:* (SpectralSolarPanel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.supsolpans.blocks.BlockSpectralSP
+block:id=%SpectralSolarPanel,data=*,stdrot=true,face0=0:supersolarpanel/spsp_bottom,face1=0:supersolarpanel/spsp_top,face2-5=0:supersolarpanel/spsp_side
+
+# %AdminSolarPanel:* (AdminSolarPanel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.supsolpans.blocks.BlockAdminSP
+block:id=%AdminSolarPanel,data=*,stdrot=true,face0=0:supersolarpanel/admsp_bottom,face1=0:supersolarpanel/admsp_top,face2-5=0:supersolarpanel/admsp_side
+
+# %PhotonicSolarPanel:* (PhotonicSolarPanel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.supsolpans.blocks.BlockPhotonSP
+block:id=%PhotonicSolarPanel,data=*,stdrot=true,face0=0:supersolarpanel/phsp_bottom,face1=0:supersolarpanel/phsp_top,face2-5=0:supersolarpanel/phsp_side

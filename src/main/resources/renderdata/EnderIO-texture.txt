@@ -1,4 +1,4 @@
-# EnderIO 1.7.10-2.3.0.429_beta
+# EnderIO 2.3.1.68
 version:1.7
 modname:EnderIO
 
@@ -23,6 +23,7 @@ texture:id=enderio/blockDarkSteelLadder,filename=assets/enderio/textures/blocks/
 texture:id=enderio/blockDarkSteelPressurePlate,filename=assets/enderio/textures/blocks/blockDarkSteelPressurePlate.png
 texture:id=enderio/blockElectricLightFace,filename=assets/enderio/textures/blocks/blockElectricLightFace.png
 texture:id=enderio/blockEnchanter,filename=assets/enderio/textures/blocks/blockEnchanter.png
+texture:id=enderio/blockEndSteelBars,filename=assets/enderio/textures/blocks/blockEndSteelBars.png
 texture:id=enderio/blockEnderIo,filename=assets/enderio/textures/blocks/blockEnderIo.png
 texture:id=enderio/blockEnderRail,filename=assets/enderio/textures/blocks/blockEnderRail.png
 texture:id=enderio/blockEnderRailEastWest,filename=assets/enderio/textures/blocks/blockEnderRailEastWest.png
@@ -34,6 +35,7 @@ texture:id=enderio/blockSoulMachineBlank,filename=assets/enderio/textures/blocks
 texture:id=enderio/blockSoulMachineBottom,filename=assets/enderio/textures/blocks/blockSoulMachineBottom.png
 texture:id=enderio/blockSoulMachineSide,filename=assets/enderio/textures/blocks/blockSoulMachineSide.png
 texture:id=enderio/blockSoulMachineTop,filename=assets/enderio/textures/blocks/blockSoulMachineTop.png
+texture:id=enderio/blockSoulariumBars,filename=assets/enderio/textures/blocks/blockSoulariumBars.png
 texture:id=enderio/blockTank,filename=assets/enderio/textures/blocks/blockTank.png
 texture:id=enderio/blockTankAdvanced,filename=assets/enderio/textures/blocks/blockTankAdvanced.png
 texture:id=enderio/blockTankTopAdvanced,filename=assets/enderio/textures/blocks/blockTankTopAdvanced.png
@@ -51,14 +53,21 @@ texture:id=enderio/conduitFacade,filename=assets/enderio/textures/blocks/conduit
 texture:id=enderio/crafter,filename=assets/enderio/textures/blocks/crafter.png
 texture:id=enderio/crafterSide,filename=assets/enderio/textures/blocks/crafterSide.png
 texture:id=enderio/crafterTop,filename=assets/enderio/textures/blocks/crafterTop.png
+texture:id=enderio/crudeSteelBlock,filename=assets/enderio/textures/blocks/crudeSteelBlock.png
 texture:id=enderio/crusherFront,filename=assets/enderio/textures/blocks/crusherFront.png
+texture:id=enderio/crystallineAlloyBlock,filename=assets/enderio/textures/blocks/crystallineAlloyBlock.png
+texture:id=enderio/crystallinePinkSlimeBlock,filename=assets/enderio/textures/blocks/crystallinePinkSlimeBlock.png
 texture:id=enderio/darkSteelBlock,filename=assets/enderio/textures/blocks/darkSteelBlock.png
 texture:id=enderio/electricalSteelBlock,filename=assets/enderio/textures/blocks/electricalSteelBlock.png
+texture:id=enderio/endSteelBlock,filename=assets/enderio/textures/blocks/endSteelBlock.png
+texture:id=enderio/ender_distillation_flow,filename=assets/enderio/textures/blocks/ender_distillation_flow.png
+texture:id=enderio/ender_distillation_still,filename=assets/enderio/textures/blocks/ender_distillation_still.png
 texture:id=enderio/endermanSkullFront,filename=assets/enderio/textures/blocks/endermanSkullFront.png
 texture:id=enderio/endermanSkullFrontEyes,filename=assets/enderio/textures/blocks/endermanSkullFrontEyes.png
 texture:id=enderio/endermanSkullSide,filename=assets/enderio/textures/blocks/endermanSkullSide.png
 texture:id=enderio/endermanSkullTop,filename=assets/enderio/textures/blocks/endermanSkullTop.png
 texture:id=enderio/energeticAlloyBlock,filename=assets/enderio/textures/blocks/energeticAlloyBlock.png
+texture:id=enderio/energeticSilverBlock,filename=assets/enderio/textures/blocks/energeticSilverBlock.png
 texture:id=enderio/fire_water_flow,filename=assets/enderio/textures/blocks/fire_water_flow.png
 texture:id=enderio/fire_water_still,filename=assets/enderio/textures/blocks/fire_water_still.png
 texture:id=enderio/fusedGlass,filename=assets/enderio/textures/blocks/fusedGlass.png
@@ -72,6 +81,7 @@ texture:id=enderio/machineBack,filename=assets/enderio/textures/blocks/machineBa
 texture:id=enderio/machineBottom,filename=assets/enderio/textures/blocks/machineBottom.png
 texture:id=enderio/machineSide,filename=assets/enderio/textures/blocks/machineSide.png
 texture:id=enderio/machineTop,filename=assets/enderio/textures/blocks/machineTop.png
+texture:id=enderio/melodicAlloyBlock,filename=assets/enderio/textures/blocks/melodicAlloyBlock.png
 texture:id=enderio/nutrient_distillation_flow,filename=assets/enderio/textures/blocks/nutrient_distillation_flow.png
 texture:id=enderio/nutrient_distillation_still,filename=assets/enderio/textures/blocks/nutrient_distillation_still.png
 texture:id=enderio/obeliskBottom,filename=assets/enderio/textures/blocks/obeliskBottom.png
@@ -89,12 +99,18 @@ texture:id=enderio/solarPanelAdvancedSide,filename=assets/enderio/textures/block
 texture:id=enderio/solarPanelAdvancedTop,filename=assets/enderio/textures/blocks/solarPanelAdvancedTop.png
 texture:id=enderio/solarPanelSide,filename=assets/enderio/textures/blocks/solarPanelSide.png
 texture:id=enderio/solarPanelTop,filename=assets/enderio/textures/blocks/solarPanelTop.png
+texture:id=enderio/solarPanelVibrantSide,filename=assets/enderio/textures/blocks/solarPanelVibrantSide.png
+texture:id=enderio/solarPanelVibrantTop,filename=assets/enderio/textures/blocks/solarPanelVibrantTop.png
 texture:id=enderio/soulariumBlock,filename=assets/enderio/textures/blocks/soulariumBlock.png
+texture:id=enderio/stellarAlloyBlock,filename=assets/enderio/textures/blocks/stellarAlloyBlock.png
 texture:id=enderio/stirlingGenFrontOff,filename=assets/enderio/textures/blocks/stirlingGenFrontOff.png
 texture:id=enderio/telePadBottom,filename=assets/enderio/textures/blocks/telePadBottom.png
 texture:id=enderio/telePadSide,filename=assets/enderio/textures/blocks/telePadSide.png
 texture:id=enderio/telePadTop,filename=assets/enderio/textures/blocks/telePadTop.png
 texture:id=enderio/tesseractPortal,filename=assets/enderio/textures/blocks/tesseractPortal.png
+texture:id=enderio/vapor_of_levity_flow,filename=assets/enderio/textures/blocks/vapor_of_levity_flow.png
+texture:id=enderio/vapor_of_levity_still,filename=assets/enderio/textures/blocks/vapor_of_levity_still.png
+texture:id=enderio/vividAlloyBlock,filename=assets/enderio/textures/blocks/vividAlloyBlock.png
 texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
 texture:id=minecraft/cobblestone_mossy,filename=assets/minecraft/textures/blocks/cobblestone_mossy.png
 texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
@@ -127,9 +143,17 @@ block:id=%blockCombustionGenerator,data=*,stdrot=true,face0=0:enderio/machineBot
 # %blockZombieGenerator:* (blockZombieGenerator), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.generator.zombie.BlockZombieGenerator
 block:id=%blockZombieGenerator,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/stirlingGenFrontOff,face4-5=0:enderio/machineSide
 
+# %blockFrankenzombieGenerator:* (blockFrankenzombieGenerator), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.generator.zombie.BlockZombieGenerator$BlockFrankenZombieGenerator
+block:id=%blockFrankenzombieGenerator,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/stirlingGenFrontOff,face4-5=0:enderio/machineSide
+
+# %blockEnderGenerator:* (blockEnderGenerator), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.generator.zombie.BlockZombieGenerator$BlockEnderGenerator
+block:id=%blockEnderGenerator,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/stirlingGenFrontOff,face4-5=0:enderio/machineSide
+
 # %blockSolarPanel:* (blockSolarPanel), render=crazypants.enderio.machine.solar.SolarPanelRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.solar.BlockSolarPanel
 block:id=%blockSolarPanel,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/solarPanelSide,face1=0:enderio/solarPanelTop,face2-5=0:enderio/solarPanelSide
-block:id=%blockSolarPanel,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/solarPanelAdvancedSide,face1=0:enderio/solarPanelAdvancedTop,face2-5=0:enderio/solarPanelAdvancedSide
+block:id=%blockSolarPanel,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/solarPanelAdvancedSide,face1=0:enderio/solarPanelAdvancedTop,face2-5=0:enderio/solarPanelAdvancedSide
+block:id=%blockSolarPanel,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/solarPanelVibrantSide,face1=0:enderio/solarPanelVibrantTop,face2-5=0:enderio/solarPanelVibrantSide
+block:id=%blockSolarPanel,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/solarPanelSide,face1=0:enderio/solarPanelTop,face2-5=0:enderio/solarPanelSide
 
 # %blockSagMill:* (blockSagMill), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.crusher.BlockCrusher
 block:id=%blockSagMill,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/crusherFront,face4-5=0:enderio/machineSide
@@ -160,10 +184,10 @@ block:id=%blockPaintedWall,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data
 # %blockPaintedStair:* (blockPaintedStair), render=(STAIRS), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedStair
 block:id=%blockPaintedStair,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/stone
 
-# %blockPaintedSlab:* (blockPaintedSlab), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
+# %blockPaintedSlab:* (blockPaintedSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
 block:id=%blockPaintedSlab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:enderio/conduitConnector
 
-# %blockPaintedDoubleSlab:* (blockPaintedDoubleSlab), render=(STANDARD), opaque=true,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
+# %blockPaintedDoubleSlab:* (blockPaintedDoubleSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
 block:id=%blockPaintedDoubleSlab,data=*,stdrot=true,face0-5=0:enderio/conduitConnector
 
 # %blockCrafter:* (blockCrafter), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.crafter.BlockCrafter
@@ -172,7 +196,7 @@ block:id=%blockCrafter,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:
 # %blockPaintedGlowstone:* (blockPaintedGlowstone), render=crazypants.enderio.machine.painter.PaintedBlockRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.painter.BlockPaintedGlowstone
 block:id=%blockPaintedGlowstone,data=*,stdrot=true,face0-5=0:enderio/conduitConnector
 
-# %blockPaintedCarpet:* (blockPaintedCarpet), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedCarpet
+# %blockPaintedCarpet:* (blockPaintedCarpet), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedCarpet
 block:id=%blockPaintedCarpet,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white
 block:id=%blockPaintedCarpet,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_orange
 block:id=%blockPaintedCarpet,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_magenta
@@ -199,7 +223,7 @@ block:id=%blockPowerMonitor,data=*,stdrot=true,face0=0:enderio/machineBottom,fac
 # %blockFarmStation:* (blockFarmStation), render=crazypants.enderio.machine.farm.FarmingStationRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.farm.BlockFarmStation
 block:id=%blockFarmStation,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/machineBack
 
-# %blockWirelessCharger:* (blockWirelessCharger), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.wireless.BlockWirelessCharger
+# %blockWirelessCharger:* (blockWirelessCharger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.wireless.BlockWirelessCharger
 block:id=%blockWirelessCharger,data=*,stdrot=true,face0-5=0:enderio/blockWirelessChargerOff
 
 # %blockHyperCube:* (blockHyperCube), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.hypercube.BlockHyperCube
@@ -209,7 +233,7 @@ block:id=%blockHyperCube,data=*,stdrot=true,face0-5=0:enderio/tesseractPortal
 block:id=%blockTank,data=0,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/blockTank
 block:id=%blockTank,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/blockTankTopAdvanced,face2-5=0:enderio/blockTankAdvanced
 
-# %blockReservoir:* (blockReservoir), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.reservoir.BlockReservoir
+# %blockReservoir:* (blockReservoir), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.reservoir.BlockReservoir
 block:id=%blockReservoir,data=*,stdrot=true,face0-5=0:enderio/reservoir
 
 # %blockVacuumChest:* (blockVacuumChest), render=crazypants.enderio.machine.vacuum.VacuumChestRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.vacuum.BlockVacuumChest
@@ -225,7 +249,7 @@ block:id=%blockBuffer,data=2,stdrot=true,face0=0:enderio/machineBottom,face1=0:e
 block:id=%blockBuffer,data=3,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2-5=0:enderio/blockBufferCreative
 block:id=%blockBuffer,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop
 
-# %blockInventoryPanel:* (blockInventoryPanel), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.invpanel.BlockInventoryPanel
+# %blockInventoryPanel:* (blockInventoryPanel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.invpanel.BlockInventoryPanel
 block:id=%blockInventoryPanel,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/invPanelFrontOn,face4-5=0:enderio/machineSide
 
 # %blockEnderIo:* (blockEnderIo), render=(CUSTOM), opaque=false,cls=crazypants.enderio.enderface.BlockEnderIO
@@ -267,7 +291,7 @@ block:id=%blockInhibitorObelisk,data=*,stdrot=true,transparency=TRANSPARENT,face
 # %blockEnchanter:* (blockEnchanter), render=(CUSTOM), opaque=false,cls=crazypants.enderio.machine.enchanter.BlockEnchanter
 block:id=%blockEnchanter,data=*,stdrot=true,face0-5=0:enderio/blockEnchanter
 
-# %blockDarkSteelPressurePlate:* (blockDarkSteelPressurePlate), render=(STANDARD), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelPressurePlate
+# %blockDarkSteelPressurePlate:* (blockDarkSteelPressurePlate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelPressurePlate
 block:id=%blockDarkSteelPressurePlate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:enderio/blockDarkSteelPressurePlate
 
 # %blockDarkSteelAnvil:* (blockDarkSteelAnvil), render=(ANVIL), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelAnvil
@@ -279,7 +303,7 @@ block:id=%blockDarkSteelLadder,data=*,stdrot=true,transparency=TRANSPARENT,patch
 # %blockElectricLight:* (blockElectricLight), render=crazypants.enderio.machine.light.ElectricLightRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.light.BlockElectricLight
 block:id=%blockElectricLight,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:enderio/conduitConnector,face1=0:enderio/blockElectricLightFace,face2-5=0:enderio/conduitConnector
 
-# %blockReinforcedObsidian:* (blockReinforcedObsidian), render=(STANDARD), opaque=true,cls=crazypants.enderio.block.BlockReinforcedObsidian
+# %blockReinforcedObsidian:* (blockReinforcedObsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=crazypants.enderio.block.BlockReinforcedObsidian
 block:id=%blockReinforcedObsidian,data=*,stdrot=true,face0-5=0:enderio/blockReinforcedObsidian
 
 # %blockFusedQuartz:* (blockFusedQuartz), render=crazypants.enderio.material.FusedQuartzRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.material.BlockFusedQuartz
@@ -311,7 +335,7 @@ block:id=%blockEnderRail,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:e
 # %blockConduitBundle:* (blockConduitBundle), render=crazypants.enderio.conduit.render.ConduitBundleRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.conduit.BlockConduitBundle
 block:id=%blockConduitBundle,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:enderIO/conduitConnector
 
-# %blockConduitFacade:* (blockConduitFacade), render=(STANDARD), opaque=true,cls=crazypants.enderio.conduit.facade.BlockConduitFacade
+# %blockConduitFacade:* (blockConduitFacade), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=crazypants.enderio.conduit.facade.BlockConduitFacade
 block:id=%blockConduitFacade,data=*,stdrot=true,face0-5=0:enderio/conduitFacade
 
 # %blockEndermanSkull:* (blockEndermanSkull), render=crazypants.enderio.item.skull.EndermanSkullRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.item.skull.BlockEndermanSkull
@@ -341,7 +365,13 @@ block:id=%blockCloud_seed,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-
 # %blockCloud_seed_concentrated:* (blockCloud_seed_concentrated), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
 block:id=%blockCloud_seed_concentrated,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/cloud_seed_concentrated_still,face2-5=12000:enderio/cloud_seed_concentrated_flow
 
-# %blockIngotStorage:* (blockIngotStorage), render=(STANDARD), opaque=true,cls=crazypants.enderio.material.BlockIngotStorage
+# %blockEnder_distillation:* (blockEnder_distillation), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockEnder_distillation,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/ender_distillation_still,face2-5=12000:enderio/ender_distillation_flow
+
+# %blockVapor_of_levity:* (blockVapor_of_levity), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+block:id=%blockVapor_of_levity,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:enderio/vapor_of_levity_still,face2-5=12000:enderio/vapor_of_levity_flow
+
+# %blockIngotStorage:* (blockIngotStorage), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=crazypants.enderio.material.BlockIngotStorage
 block:id=%blockIngotStorage,data=0,stdrot=true,face0-5=0:enderio/electricalSteelBlock
 block:id=%blockIngotStorage,data=1,stdrot=true,face0-5=0:enderio/energeticAlloyBlock
 block:id=%blockIngotStorage,data=2,stdrot=true,face0-5=0:enderio/phasedGoldBlock
@@ -349,7 +379,23 @@ block:id=%blockIngotStorage,data=3,stdrot=true,face0-5=0:enderio/redstoneAlloyBl
 block:id=%blockIngotStorage,data=4,stdrot=true,face0-5=0:enderio/conductiveIronBlock
 block:id=%blockIngotStorage,data=5,stdrot=true,face0-5=0:enderio/phasedIronBlock
 block:id=%blockIngotStorage,data=6,stdrot=true,face0-5=0:enderio/darkSteelBlock
-block:id=%blockIngotStorage,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:enderio/soulariumBlock
+block:id=%blockIngotStorage,data=7,stdrot=true,face0-5=0:enderio/soulariumBlock
+block:id=%blockIngotStorage,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:enderio/endSteelBlock
 
-# %blockDarkIronBars:* (blockDarkIronBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkIronBars
+# %blockIngotStorageEndergy:* (blockIngotStorageEndergy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=crazypants.enderio.material.endergy.BlockIngotStorageEndergy
+block:id=%blockIngotStorageEndergy,data=0,stdrot=true,face0-5=0:enderio/crudeSteelBlock
+block:id=%blockIngotStorageEndergy,data=1,stdrot=true,face0-5=0:enderio/crystallineAlloyBlock
+block:id=%blockIngotStorageEndergy,data=2,stdrot=true,face0-5=0:enderio/melodicAlloyBlock
+block:id=%blockIngotStorageEndergy,data=3,stdrot=true,face0-5=0:enderio/stellarAlloyBlock
+block:id=%blockIngotStorageEndergy,data=4,stdrot=true,face0-5=0:enderio/crystallinePinkSlimeBlock
+block:id=%blockIngotStorageEndergy,data=5,stdrot=true,face0-5=0:enderio/energeticSilverBlock
+block:id=%blockIngotStorageEndergy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:enderio/vividAlloyBlock
+
+# %blockDarkIronBars:* (blockDarkIronBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkSteelBars
 block:id=%blockDarkIronBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:enderio/blockDarkIronBars
+
+# %blockSoulariumBars:* (blockSoulariumBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkSteelBars$BlockSoulariumBars
+block:id=%blockSoulariumBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:enderio/blockSoulariumBars
+
+# %blockEndSteelBars:* (blockEndSteelBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkSteelBars$BlockEndSteelBars
+block:id=%blockEndSteelBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:enderio/blockEndSteelBars

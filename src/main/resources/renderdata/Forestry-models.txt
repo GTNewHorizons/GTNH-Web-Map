@@ -1,4 +1,4 @@
-# Forestry 4.2.16.64
+# Forestry 4.5.8
 version:1.7
 modname:Forestry
 
@@ -119,22 +119,6 @@ boxblock:id=%fluid.juice,ymax=0.375,data=13
 boxblock:id=%fluid.juice,ymax=0.25,data=14
 boxblock:id=%fluid.juice,ymax=0.125,data=15
 
-# %fluid.milk:* (fluid.milk), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=forestry.core.fluids.BlockForestryFluid
-boxblock:id=%fluid.milk,ymax=0.875,data=1
-boxblock:id=%fluid.milk,ymax=0.75,data=2
-boxblock:id=%fluid.milk,ymax=0.625,data=3
-boxblock:id=%fluid.milk,ymax=0.5,data=4
-boxblock:id=%fluid.milk,ymax=0.375,data=5
-boxblock:id=%fluid.milk,ymax=0.25,data=6
-boxblock:id=%fluid.milk,ymax=0.125,data=7
-boxblock:id=%fluid.milk,ymax=0.875,data=9
-boxblock:id=%fluid.milk,ymax=0.75,data=10
-boxblock:id=%fluid.milk,ymax=0.625,data=11
-boxblock:id=%fluid.milk,ymax=0.5,data=12
-boxblock:id=%fluid.milk,ymax=0.375,data=13
-boxblock:id=%fluid.milk,ymax=0.25,data=14
-boxblock:id=%fluid.milk,ymax=0.125,data=15
-
 # %fluid.seedoil:* (fluid.seedoil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=forestry.core.fluids.BlockForestryFluid
 boxblock:id=%fluid.seedoil,ymax=0.875,data=1
 boxblock:id=%fluid.seedoil,ymax=0.75,data=2
@@ -191,7 +175,7 @@ patchblock:id=%stump,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchS
 patchblock:id=%stump,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
 patchblock:id=%stump,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %slabs:* (slabs), render=(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
+# %slabs:* (slabs), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
 boxblock:id=%slabs,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%slabs,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -201,7 +185,7 @@ customblock:id=%fences,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,ty
 # %stairs:* (stairs), render=(STAIRS), opaque=false,cls=forestry.arboriculture.blocks.BlockArbStairs
 customblock:id=%stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %slabsFireproof:* (slabsFireproof), render=(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
+# %slabsFireproof:* (slabsFireproof), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
 boxblock:id=%slabsFireproof,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%slabsFireproof,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -213,6 +197,8 @@ customblock:id=%stairsFireproof,class=org.dynmap.hdmap.renderer.StairBlockRender
 
 # %saplingGE:* (saplingGE), render=forestry.arboriculture.render.RenderSaplingBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockSapling
 boxblock:id=%saplingGE,xmin=0.09999999403953552,xmax=0.8999999761581421,ymin=0.0,ymax=0.800000011920929,zmin=0.09999999403953552,zmax=0.8999999761581421,data=*
+
+# %leaves:* (leaves), render=forestry.arboriculture.render.RenderLeavesBlock(CUSTOM), opaque=true,cls=forestry.arboriculture.blocks.BlockForestryLeaves
 
 # %pods:* (pods), render=forestry.arboriculture.render.RenderFruitPodBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockFruitPod
 boxblock:id=%pods,xmin=0.375,xmax=0.625,ymin=0.4375,ymax=0.75,zmin=0.6875,zmax=0.9375,data=0

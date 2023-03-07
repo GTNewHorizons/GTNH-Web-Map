@@ -1,0 +1,154 @@
+# openmodularturrets 2.2.11-247
+version:1.7
+modname:openmodularturrets
+
+
+cfgfile:config/openmodularturrets.cfg
+
+
+texturepath:assets/openmodularturrets/textures/blocks/
+texture:id=openmodularturrets/disposeItemTurret,filename=assets/openmodularturrets/textures/blocks/disposeItemTurret.png
+texture:id=openmodularturrets/expanderInvTierFive,filename=assets/openmodularturrets/textures/blocks/expanderInvTierFive.png
+texture:id=openmodularturrets/expanderInvTierFour,filename=assets/openmodularturrets/textures/blocks/expanderInvTierFour.png
+texture:id=openmodularturrets/expanderInvTierOne,filename=assets/openmodularturrets/textures/blocks/expanderInvTierOne.png
+texture:id=openmodularturrets/expanderInvTierThree,filename=assets/openmodularturrets/textures/blocks/expanderInvTierThree.png
+texture:id=openmodularturrets/expanderInvTierTwo,filename=assets/openmodularturrets/textures/blocks/expanderInvTierTwo.png
+texture:id=openmodularturrets/expanderPowerTierFive,filename=assets/openmodularturrets/textures/blocks/expanderPowerTierFive.png
+texture:id=openmodularturrets/expanderPowerTierFour,filename=assets/openmodularturrets/textures/blocks/expanderPowerTierFour.png
+texture:id=openmodularturrets/expanderPowerTierOne,filename=assets/openmodularturrets/textures/blocks/expanderPowerTierOne.png
+texture:id=openmodularturrets/expanderPowerTierThree,filename=assets/openmodularturrets/textures/blocks/expanderPowerTierThree.png
+texture:id=openmodularturrets/expanderPowerTierTwo,filename=assets/openmodularturrets/textures/blocks/expanderPowerTierTwo.png
+texture:id=openmodularturrets/fenceTierFive,filename=assets/openmodularturrets/textures/blocks/fenceTierFive.png
+texture:id=openmodularturrets/fenceTierFour,filename=assets/openmodularturrets/textures/blocks/fenceTierFour.png
+texture:id=openmodularturrets/fenceTierOne,filename=assets/openmodularturrets/textures/blocks/fenceTierOne.png
+texture:id=openmodularturrets/fenceTierThree,filename=assets/openmodularturrets/textures/blocks/fenceTierThree.png
+texture:id=openmodularturrets/fenceTierTwo,filename=assets/openmodularturrets/textures/blocks/fenceTierTwo.png
+texture:id=openmodularturrets/grenadeTurret,filename=assets/openmodularturrets/textures/blocks/grenadeTurret.png
+texture:id=openmodularturrets/hardWallTierFive,filename=assets/openmodularturrets/textures/blocks/hardWallTierFive.png
+texture:id=openmodularturrets/hardWallTierFour,filename=assets/openmodularturrets/textures/blocks/hardWallTierFour.png
+texture:id=openmodularturrets/hardWallTierOne,filename=assets/openmodularturrets/textures/blocks/hardWallTierOne.png
+texture:id=openmodularturrets/hardWallTierThree,filename=assets/openmodularturrets/textures/blocks/hardWallTierThree.png
+texture:id=openmodularturrets/hardWallTierTwo,filename=assets/openmodularturrets/textures/blocks/hardWallTierTwo.png
+texture:id=openmodularturrets/incendiaryTurret,filename=assets/openmodularturrets/textures/blocks/incendiaryTurret.png
+texture:id=openmodularturrets/laserTurret,filename=assets/openmodularturrets/textures/blocks/laserTurret.png
+texture:id=openmodularturrets/machineGunTurret,filename=assets/openmodularturrets/textures/blocks/machineGunTurret.png
+texture:id=openmodularturrets/potatoCannonTurret,filename=assets/openmodularturrets/textures/blocks/potatoCannonTurret.png
+texture:id=openmodularturrets/railGunTurret,filename=assets/openmodularturrets/textures/blocks/railGunTurret.png
+texture:id=openmodularturrets/relativisticTurret,filename=assets/openmodularturrets/textures/blocks/relativisticTurret.png
+texture:id=openmodularturrets/rocketTurret,filename=assets/openmodularturrets/textures/blocks/rocketTurret.png
+texture:id=openmodularturrets/teleporterTurret,filename=assets/openmodularturrets/textures/blocks/teleporterTurret.png
+texture:id=openmodularturrets/turretBaseTierFive,filename=assets/openmodularturrets/textures/blocks/turretBaseTierFive.png
+texture:id=openmodularturrets/turretBaseTierFour,filename=assets/openmodularturrets/textures/blocks/turretBaseTierFour.png
+texture:id=openmodularturrets/turretBaseTierOne,filename=assets/openmodularturrets/textures/blocks/turretBaseTierOne.png
+texture:id=openmodularturrets/turretBaseTierThree,filename=assets/openmodularturrets/textures/blocks/turretBaseTierThree.png
+texture:id=openmodularturrets/turretBaseTierTwo,filename=assets/openmodularturrets/textures/blocks/turretBaseTierTwo.png
+
+
+
+# %baseTierWood:* (baseTierWood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierOne
+block:id=%baseTierWood,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierOne
+
+# %baseTierOneBlock:* (baseTierOneBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierTwo
+block:id=%baseTierOneBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierTwo
+
+# %baseTierTwoBlock:* (baseTierTwoBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierThree
+block:id=%baseTierTwoBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierThree
+
+# %baseTierThreeBlock:* (baseTierThreeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierFour
+block:id=%baseTierThreeBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierFour
+
+# %baseTierFourBlock:* (baseTierFourBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierFive
+block:id=%baseTierFourBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierFive
+
+# %expanderPowerTierOne:* (expanderPowerTierOne), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderPowerTierOne
+block:id=%expanderPowerTierOne,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderPowerTierOne
+
+# %expanderPowerTierTwo:* (expanderPowerTierTwo), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderPowerTierTwo
+block:id=%expanderPowerTierTwo,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderPowerTierTwo
+
+# %expanderPowerTierThree:* (expanderPowerTierThree), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderPowerTierThree
+block:id=%expanderPowerTierThree,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderPowerTierThree
+
+# %expanderPowerTierFour:* (expanderPowerTierFour), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderPowerTierFour
+block:id=%expanderPowerTierFour,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderPowerTierFour
+
+# %expanderPowerTierFive:* (expanderPowerTierFive), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderPowerTierFive
+block:id=%expanderPowerTierFive,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderPowerTierFive
+
+# %expanderInvTierOne:* (expanderInvTierOne), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderInvTierOne
+block:id=%expanderInvTierOne,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderInvTierOne
+
+# %expanderInvTierTwo:* (expanderInvTierTwo), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderInvTierTwo
+block:id=%expanderInvTierTwo,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderInvTierTwo
+
+# %expanderInvTierThree:* (expanderInvTierThree), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderInvTierThree
+block:id=%expanderInvTierThree,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderInvTierThree
+
+# %expanderInvTierFour:* (expanderInvTierFour), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderInvTierFour
+block:id=%expanderInvTierFour,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderInvTierFour
+
+# %expanderInvTierFive:* (expanderInvTierFive), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderInvTierFive
+block:id=%expanderInvTierFive,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderInvTierFive
+
+# %hardWallTierOne:* (hardWallTierOne), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierOne
+block:id=%hardWallTierOne,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierOne
+
+# %hardWallTierTwo:* (hardWallTierTwo), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierTwo
+block:id=%hardWallTierTwo,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierTwo
+
+# %hardWallTierThree:* (hardWallTierThree), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierThree
+block:id=%hardWallTierThree,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierThree
+
+# %hardWallTierFour:* (hardWallTierFour), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierFour
+block:id=%hardWallTierFour,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierFour
+
+# %hardWallTierFive:* (hardWallTierFive), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierFive
+block:id=%hardWallTierFive,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierFive
+
+# %fenceTierOne:* (fenceTierOne), render=(PANE), opaque=false,cls=openmodularturrets.blocks.misc.BlockFenceTierOne
+block:id=%fenceTierOne,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:openmodularturrets/fenceTierOne
+
+# %fenceTierTwo:* (fenceTierTwo), render=(PANE), opaque=false,cls=openmodularturrets.blocks.misc.BlockFenceTierTwo
+block:id=%fenceTierTwo,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:openmodularturrets/fenceTierTwo
+
+# %fenceTierThree:* (fenceTierThree), render=(PANE), opaque=false,cls=openmodularturrets.blocks.misc.BlockFenceTierThree
+block:id=%fenceTierThree,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:openmodularturrets/fenceTierThree
+
+# %fenceTierFour:* (fenceTierFour), render=(PANE), opaque=false,cls=openmodularturrets.blocks.misc.BlockFenceTierFour
+block:id=%fenceTierFour,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:openmodularturrets/fenceTierFour
+
+# %fenceTierFive:* (fenceTierFive), render=(PANE), opaque=false,cls=openmodularturrets.blocks.misc.BlockFenceTierFive
+block:id=%fenceTierFive,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:openmodularturrets/fenceTierFive
+
+# %disposeItemTurret:* (disposeItemTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockDisposableTurret
+block:id=%disposeItemTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/disposeItemTurret
+
+# %potatoCannonTurret:* (potatoCannonTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockPotatoCannonTurret
+block:id=%potatoCannonTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/potatoCannonTurret
+
+# %machineGunTurret:* (machineGunTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockGunTurret
+block:id=%machineGunTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/machineGunTurret
+
+# %incendiaryTurret:* (incendiaryTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockIncendiaryTurret
+block:id=%incendiaryTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/incendiaryTurret
+
+# %grenadeTurret:* (grenadeTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockGrenadeTurret
+block:id=%grenadeTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/grenadeTurret
+
+# %relativisticTurret:* (relativisticTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockRelativisticTurret
+block:id=%relativisticTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/relativisticTurret
+
+# %rocketTurret:* (rocketTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockRocketTurret
+block:id=%rocketTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/rocketTurret
+
+# %teleporterTurret:* (teleporterTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockTeleporterTurret
+block:id=%teleporterTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/teleporterTurret
+
+# %laserTurret:* (laserTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockLaserTurret
+block:id=%laserTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/laserTurret
+
+# %railGunTurret:* (railGunTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockRailGunTurret
+block:id=%railGunTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/railGunTurret
+
+# %leverBlock:* (leverBlock), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.misc.LeverBlock
+block:id=%leverBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierTwo

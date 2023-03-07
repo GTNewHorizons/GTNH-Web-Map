@@ -1,4 +1,4 @@
-# ThaumicExploration 0.6.0
+# ThaumicExploration 1.1.94-GTNH
 version:1.7
 modname:ThaumicExploration
 
@@ -21,9 +21,6 @@ texture:id=thaumicExploration/soulBrazier,filename=assets/thaumicexploration/tex
 texture:id=thaumicexploration/replicatorBottom,filename=assets/thaumicexploration/textures/blocks/replicatorBottom.png
 
 
-
-# %autoSorter:* (autoSorter), render=(STANDARD), opaque=true,cls=flaxbeard.thaumicexploration.block.BlockAutoSorter
-block:id=%autoSorter,data=*,stdrot=true,face0-5=0:thaumicexploration/replicatorBottom
 
 # %trashJar:* (trashJar), render=flaxbeard.thaumicexploration.client.render.BlockTrashJarRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockTrashJar
 block:id=%trashJar,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top,face2-5=0:thaumcraft/jar_side
@@ -51,7 +48,7 @@ block:id=%floatCandle,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=3B5
 block:id=%floatCandle,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=B3312C,face0-5=17000:thaumcraft/candle
 block:id=%floatCandle,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=1E1B1B,face0-5=17000:thaumcraft/candle
 
-# %meltyIce:* (meltyIce), render=(STANDARD), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockBootsIce
+# %meltyIce:* (meltyIce), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockBootsIce
 block:id=%meltyIce,data=*,stdrot=true,face0-5=12000:minecraft/ice
 
 # %boundJar:* (boundJar), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=flaxbeard.thaumicexploration.block.BlockBoundJar

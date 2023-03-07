@@ -1,0 +1,1208 @@
+# miscutils 1.7.226
+version:1.7
+modname:miscutils
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/miscutils/textures/blocks/
+texture:id=gregtech/iconsets/MACHINE_BRONZEPLATEDBRICKS,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_BRONZEPLATEDBRICKS.png
+texture:id=gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL.png
+texture:id=gregtech/iconsets/MACHINE_CASING_FIREBOX_BRONZE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_FIREBOX_BRONZE.png
+texture:id=gregtech/iconsets/MACHINE_CASING_FIREBOX_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_FIREBOX_STEEL.png
+texture:id=gregtech/iconsets/MACHINE_CASING_FROST_PROOF,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_FROST_PROOF.png
+texture:id=gregtech/iconsets/MACHINE_CASING_RADIATIONPROOF,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_RADIATIONPROOF.png
+texture:id=gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL.png
+texture:id=gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_STABLE_TITANIUM.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE.png
+texture:id=gregtech/iconsets/MACHINE_HEATPROOFCASING,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_HEATPROOFCASING.png
+texture:id=gregtech/iconsets/RENDERING_ERROR,filename=assets/gregtech/textures/blocks/iconsets/RENDERING_ERROR.png
+texture:id=gregtech/materialicons/DULL/block1,filename=assets/gregtech/textures/blocks/materialicons/DULL/block1.png
+texture:id=gregtech/materialicons/DULL/block5,filename=assets/gregtech/textures/blocks/materialicons/DULL/block5.png
+texture:id=gregtech/materialicons/DULL/frameGt,filename=assets/gregtech/textures/blocks/materialicons/DULL/frameGt.png
+texture:id=gregtech/materialicons/ENRICHED/block1,filename=assets/gregtech/textures/blocks/materialicons/ENRICHED/block1.png
+texture:id=gregtech/materialicons/ENRICHED/block5,filename=assets/gregtech/textures/blocks/materialicons/ENRICHED/block5.png
+texture:id=gregtech/materialicons/ENRICHED/frameGt,filename=assets/gregtech/textures/blocks/materialicons/ENRICHED/frameGt.png
+texture:id=gregtech/materialicons/FINE/block5,filename=assets/gregtech/textures/blocks/materialicons/FINE/block5.png
+texture:id=gregtech/materialicons/FLINT/block1,filename=assets/gregtech/textures/blocks/materialicons/FLINT/block1.png
+texture:id=gregtech/materialicons/FLINT/frameGt,filename=assets/gregtech/textures/blocks/materialicons/FLINT/frameGt.png
+texture:id=gregtech/materialicons/GEM_A/block5,filename=assets/gregtech/textures/blocks/materialicons/GEM_A/block5.png
+texture:id=gregtech/materialicons/GEM_A/frameGt,filename=assets/gregtech/textures/blocks/materialicons/GEM_A/frameGt.png
+texture:id=gregtech/materialicons/GEM_HORIZONTAL/block1,filename=assets/gregtech/textures/blocks/materialicons/GEM_HORIZONTAL/block1.png
+texture:id=gregtech/materialicons/GEM_HORIZONTAL/block5,filename=assets/gregtech/textures/blocks/materialicons/GEM_HORIZONTAL/block5.png
+texture:id=gregtech/materialicons/GEM_HORIZONTAL/frameGt,filename=assets/gregtech/textures/blocks/materialicons/GEM_HORIZONTAL/frameGt.png
+texture:id=gregtech/materialicons/GEM_VERTICAL/block1,filename=assets/gregtech/textures/blocks/materialicons/GEM_VERTICAL/block1.png
+texture:id=gregtech/materialicons/GEM_VERTICAL/frameGt,filename=assets/gregtech/textures/blocks/materialicons/GEM_VERTICAL/frameGt.png
+texture:id=gregtech/materialicons/METALLIC/block1,filename=assets/gregtech/textures/blocks/materialicons/METALLIC/block1.png
+texture:id=gregtech/materialicons/METALLIC/block5,filename=assets/gregtech/textures/blocks/materialicons/METALLIC/block5.png
+texture:id=gregtech/materialicons/METALLIC/frameGt,filename=assets/gregtech/textures/blocks/materialicons/METALLIC/frameGt.png
+texture:id=gregtech/materialicons/NUCLEAR/block1,filename=assets/gregtech/textures/blocks/materialicons/NUCLEAR/block1.png
+texture:id=gregtech/materialicons/NUCLEAR/block5,filename=assets/gregtech/textures/blocks/materialicons/NUCLEAR/block5.png
+texture:id=gregtech/materialicons/NUCLEAR/frameGt,filename=assets/gregtech/textures/blocks/materialicons/NUCLEAR/frameGt.png
+texture:id=gregtech/materialicons/REFINED/block5,filename=assets/gregtech/textures/blocks/materialicons/REFINED/block5.png
+texture:id=gregtech/materialicons/REFINED/frameGt,filename=assets/gregtech/textures/blocks/materialicons/REFINED/frameGt.png
+texture:id=gregtech/materialicons/SAND/block1,filename=assets/gregtech/textures/blocks/materialicons/SAND/block1.png
+texture:id=gregtech/materialicons/SHINY/block1,filename=assets/gregtech/textures/blocks/materialicons/SHINY/block1.png
+texture:id=gregtech/materialicons/SHINY/block5,filename=assets/gregtech/textures/blocks/materialicons/SHINY/block5.png
+texture:id=gregtech/materialicons/SHINY/frameGt,filename=assets/gregtech/textures/blocks/materialicons/SHINY/frameGt.png
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=minecraft/dirt_podzol_side,filename=assets/minecraft/textures/blocks/dirt_podzol_side.png
+texture:id=minecraft/dirt_podzol_top,filename=assets/minecraft/textures/blocks/dirt_podzol_top.png
+texture:id=minecraft/door_iron_lower,filename=assets/minecraft/textures/blocks/door_iron_lower.png
+texture:id=minecraft/door_iron_upper,filename=assets/minecraft/textures/blocks/door_iron_upper.png
+texture:id=minecraft/door_wood_lower,filename=assets/minecraft/textures/blocks/door_wood_lower.png
+texture:id=minecraft/door_wood_upper,filename=assets/minecraft/textures/blocks/door_wood_upper.png
+texture:id=minecraft/grass_side,filename=assets/minecraft/textures/blocks/grass_side.png
+texture:id=minecraft/grass_top,filename=assets/minecraft/textures/blocks/grass_top.png
+texture:id=minecraft/jukebox_side,filename=assets/minecraft/textures/blocks/jukebox_side.png
+texture:id=minecraft/jukebox_top,filename=assets/minecraft/textures/blocks/jukebox_top.png
+texture:id=minecraft/mob_spawner,filename=assets/minecraft/textures/blocks/mob_spawner.png
+texture:id=minecraft/planks_acacia,filename=assets/minecraft/textures/blocks/planks_acacia.png
+texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
+texture:id=minecraft/redstone_block,filename=assets/minecraft/textures/blocks/redstone_block.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+texture:id=miscutils/Blank,filename=assets/miscutils/textures/blocks/Blank.png
+texture:id=miscutils/Chrono/CyberPanel,filename=assets/miscutils/textures/blocks/Chrono/CyberPanel.png
+texture:id=miscutils/CosmicFabricManipulator,filename=assets/miscutils/textures/blocks/CosmicFabricManipulator.png
+texture:id=miscutils/CosmicFabricShieldingCore,filename=assets/miscutils/textures/blocks/CosmicFabricShieldingCore.png
+texture:id=miscutils/ForceFieldGlass,filename=assets/miscutils/textures/blocks/ForceFieldGlass.png
+texture:id=miscutils/InfinityInfusedManipulator,filename=assets/miscutils/textures/blocks/InfinityInfusedManipulator.png
+texture:id=miscutils/InfinityInfusedShieldingCore,filename=assets/miscutils/textures/blocks/InfinityInfusedShieldingCore.png
+texture:id=miscutils/Manipulator_Top,filename=assets/miscutils/textures/blocks/Manipulator_Top.png
+texture:id=miscutils/NeutronPulseManipulator,filename=assets/miscutils/textures/blocks/NeutronPulseManipulator.png
+texture:id=miscutils/NeutronShieldingCore,filename=assets/miscutils/textures/blocks/NeutronShieldingCore.png
+texture:id=miscutils/SpaceTimeBendingCore,filename=assets/miscutils/textures/blocks/SpaceTimeBendingCore.png
+texture:id=miscutils/SpaceTimeContinuumRipper,filename=assets/miscutils/textures/blocks/SpaceTimeContinuumRipper.png
+texture:id=miscutils/SwirlGray,filename=assets/miscutils/textures/blocks/SwirlGray.png
+texture:id=miscutils/SwirlYellow,filename=assets/miscutils/textures/blocks/SwirlYellow.png
+texture:id=miscutils/TileEntities/CASING_AMAZON,filename=assets/miscutils/textures/blocks/TileEntities/CASING_AMAZON.png
+texture:id=miscutils/TileEntities/DecayablesChest_bottom,filename=assets/miscutils/textures/blocks/TileEntities/DecayablesChest_bottom.png
+texture:id=miscutils/TileEntities/DecayablesChest_side,filename=assets/miscutils/textures/blocks/TileEntities/DecayablesChest_side.png
+texture:id=miscutils/TileEntities/DecayablesChest_top,filename=assets/miscutils/textures/blocks/TileEntities/DecayablesChest_top.png
+texture:id=miscutils/TileEntities/EggBox_side,filename=assets/miscutils/textures/blocks/TileEntities/EggBox_side.png
+texture:id=miscutils/TileEntities/EggBox_top,filename=assets/miscutils/textures/blocks/TileEntities/EggBox_top.png
+texture:id=miscutils/TileEntities/Generic_Creative_Texture,filename=assets/miscutils/textures/blocks/TileEntities/Generic_Creative_Texture.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_ADVANCED_CRYOGENIC,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_ADVANCED_CRYOGENIC.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_ADVANCED_VOLCANUS,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_ADVANCED_VOLCANUS.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_CENTRIFUGE,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_CENTRIFUGE.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_FARM_MANAGER_STRUCTURAL,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_FARM_MANAGER_STRUCTURAL.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_FIREBOX_STABALLOY,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_FIREBOX_STABALLOY.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_FLOTATION,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_FLOTATION.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_FLUID_INCOLOY_DS,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_FLUID_INCOLOY_DS.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_GEARBOX_T1,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_GEARBOX_T1.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_GRINDING_FACTORY,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_GRINDING_FACTORY.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_LAURENIUM,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_LAURENIUM.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_PIPE_T1,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_PIPE_T1.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_QFT_COIL,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_QFT_COIL.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_ROCKETDYNE,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_ROCKETDYNE.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_GRISIUM,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_GRISIUM.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_HASTELLOY_N,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_HASTELLOY_N.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_HASTELLOY_X,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_HASTELLOY_X.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_MARAGINGSTEEL,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_MARAGINGSTEEL.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_POTIN,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_POTIN.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_RED_STEEL,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_RED_STEEL.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_STELLITE,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_STELLITE.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_TALONITE,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_TALONITE.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_TANTALLOY61,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_TANTALLOY61.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_TRINIUM_NAQUADAH_VENT,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_TRINIUM_NAQUADAH_VENT.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_TRINIUM_TITANIUM,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_TRINIUM_TITANIUM.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_TUMBAGA,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_TUMBAGA.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_ZERON100,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_ZERON100.png
+texture:id=miscutils/TileEntities/MACHINE_CASING_STABLE_ZIRCONIUM_CARBIDE,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_CASING_STABLE_ZIRCONIUM_CARBIDE.png
+texture:id=miscutils/TileEntities/MACHINE_PESTKILLER_TOP,filename=assets/miscutils/textures/blocks/TileEntities/MACHINE_PESTKILLER_TOP.png
+texture:id=miscutils/TileEntities/ModularTable_output,filename=assets/miscutils/textures/blocks/TileEntities/ModularTable_output.png
+texture:id=miscutils/TileEntities/ModularTable_side,filename=assets/miscutils/textures/blocks/TileEntities/ModularTable_side.png
+texture:id=miscutils/TileEntities/ModularTable_top,filename=assets/miscutils/textures/blocks/TileEntities/ModularTable_top.png
+texture:id=miscutils/TileEntities/RoundRobinator/Side_0,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Side_0.png
+texture:id=miscutils/TileEntities/RoundRobinator/Side_1,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Side_1.png
+texture:id=miscutils/TileEntities/RoundRobinator/Side_2,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Side_2.png
+texture:id=miscutils/TileEntities/RoundRobinator/Side_3,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Side_3.png
+texture:id=miscutils/TileEntities/RoundRobinator/Side_4,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Side_4.png
+texture:id=miscutils/TileEntities/RoundRobinator/Top_0,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_0.png
+texture:id=miscutils/TileEntities/RoundRobinator/Top_1,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_1.png
+texture:id=miscutils/TileEntities/RoundRobinator/Top_2,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_2.png
+texture:id=miscutils/TileEntities/RoundRobinator/Top_3,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_3.png
+texture:id=miscutils/TileEntities/RoundRobinator/Top_4,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_4.png
+texture:id=miscutils/TileEntities/cover_crafting,filename=assets/miscutils/textures/blocks/TileEntities/cover_crafting.png
+texture:id=miscutils/TileEntities/fishtrap,filename=assets/miscutils/textures/blocks/TileEntities/fishtrap.png
+texture:id=miscutils/TileEntities/log_acacia_top,filename=assets/miscutils/textures/blocks/TileEntities/log_acacia_top.png
+texture:id=miscutils/TileEntities/machine_top,filename=assets/miscutils/textures/blocks/TileEntities/machine_top.png
+texture:id=miscutils/TileEntities/sewer_adv_sides,filename=assets/miscutils/textures/blocks/TileEntities/sewer_adv_sides.png
+texture:id=miscutils/TileEntities/sewer_adv_top,filename=assets/miscutils/textures/blocks/TileEntities/sewer_adv_top.png
+texture:id=miscutils/TileEntities/sewer_sides,filename=assets/miscutils/textures/blocks/TileEntities/sewer_sides.png
+texture:id=miscutils/TileEntities/sewer_top,filename=assets/miscutils/textures/blocks/TileEntities/sewer_top.png
+texture:id=miscutils/blockFirePit_layer_0,filename=assets/miscutils/textures/blocks/blockFirePit_layer_0.png
+texture:id=miscutils/blockFrameGt,filename=assets/miscutils/textures/blocks/blockFrameGt.png
+texture:id=miscutils/chrono/CyberPanel,filename=assets/miscutils/textures/blocks/chrono/CyberPanel.png
+texture:id=miscutils/chrono/MetalFunnel,filename=assets/miscutils/textures/blocks/chrono/MetalFunnel.png
+texture:id=miscutils/chrono/MetalGrate,filename=assets/miscutils/textures/blocks/chrono/MetalGrate.png
+texture:id=miscutils/chrono/MetalPanel,filename=assets/miscutils/textures/blocks/chrono/MetalPanel.png
+texture:id=miscutils/chrono/MetalSheet,filename=assets/miscutils/textures/blocks/chrono/MetalSheet.png
+texture:id=miscutils/chrono/MetalSheet2,filename=assets/miscutils/textures/blocks/chrono/MetalSheet2.png
+texture:id=miscutils/chrono/MetalSheet8,filename=assets/miscutils/textures/blocks/chrono/MetalSheet8.png
+texture:id=miscutils/chrono/MetalSheet9,filename=assets/miscutils/textures/blocks/chrono/MetalSheet9.png
+texture:id=miscutils/compressed/glowstone1,filename=assets/miscutils/textures/blocks/compressed/glowstone1.png
+texture:id=miscutils/compressed/glowstone2,filename=assets/miscutils/textures/blocks/compressed/glowstone2.png
+texture:id=miscutils/compressed/glowstone3,filename=assets/miscutils/textures/blocks/compressed/glowstone3.png
+texture:id=miscutils/compressed/glowstone4,filename=assets/miscutils/textures/blocks/compressed/glowstone4.png
+texture:id=miscutils/compressed/glowstone5,filename=assets/miscutils/textures/blocks/compressed/glowstone5.png
+texture:id=miscutils/compressed/obsidian1,filename=assets/miscutils/textures/blocks/compressed/obsidian1.png
+texture:id=miscutils/compressed/obsidian2,filename=assets/miscutils/textures/blocks/compressed/obsidian2.png
+texture:id=miscutils/compressed/obsidian3,filename=assets/miscutils/textures/blocks/compressed/obsidian3.png
+texture:id=miscutils/compressed/obsidian4,filename=assets/miscutils/textures/blocks/compressed/obsidian4.png
+texture:id=miscutils/compressed/obsidian5,filename=assets/miscutils/textures/blocks/compressed/obsidian5.png
+texture:id=miscutils/compressed/obsidian_invert,filename=assets/miscutils/textures/blocks/compressed/obsidian_invert.png
+texture:id=miscutils/door_cactus_lower,filename=assets/miscutils/textures/blocks/door_cactus_lower.png
+texture:id=miscutils/door_cactus_upper,filename=assets/miscutils/textures/blocks/door_cactus_upper.png
+texture:id=miscutils/door_glass_lower,filename=assets/miscutils/textures/blocks/door_glass_lower.png
+texture:id=miscutils/door_glass_upper,filename=assets/miscutils/textures/blocks/door_glass_upper.png
+texture:id=miscutils/door_ice_lower,filename=assets/miscutils/textures/blocks/door_ice_lower.png
+texture:id=miscutils/door_ice_upper,filename=assets/miscutils/textures/blocks/door_ice_upper.png
+texture:id=miscutils/fluid/Fluid_Cryotheum_Flow,filename=assets/miscutils/textures/blocks/fluid/Fluid_Cryotheum_Flow.png
+texture:id=miscutils/fluid/Fluid_Cryotheum_Still,filename=assets/miscutils/textures/blocks/fluid/Fluid_Cryotheum_Still.png
+texture:id=miscutils/fluid/Fluid_Ender_Flow,filename=assets/miscutils/textures/blocks/fluid/Fluid_Ender_Flow.png
+texture:id=miscutils/fluid/Fluid_Ender_Still,filename=assets/miscutils/textures/blocks/fluid/Fluid_Ender_Still.png
+texture:id=miscutils/fluid/Fluid_Pyrotheum_Flow,filename=assets/miscutils/textures/blocks/fluid/Fluid_Pyrotheum_Flow.png
+texture:id=miscutils/fluid/Fluid_Pyrotheum_Still,filename=assets/miscutils/textures/blocks/fluid/Fluid_Pyrotheum_Still.png
+texture:id=miscutils/fluid/Fluid_Sludge_Flow,filename=assets/miscutils/textures/blocks/fluid/Fluid_Sludge_Flow.png
+texture:id=miscutils/fluid/Fluid_Sludge_Still,filename=assets/miscutils/textures/blocks/fluid/Fluid_Sludge_Still.png
+texture:id=miscutils/fluids/fluid.jackdaniels,filename=assets/miscutils/textures/blocks/fluids/fluid.jackdaniels.png
+texture:id=miscutils/hellfire/blockHellFire_layer_0,filename=assets/miscutils/textures/blocks/hellfire/blockHellFire_layer_0.png
+texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_3,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_3.png
+texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_COIL_II,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_COIL_II.png
+texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_GLASS_ULTRA,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_GLASS_ULTRA.png
+texture:id=miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_GEARBOX_GENERIC.png
+texture:id=miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_PIPE_GENERIC.png
+texture:id=miscutils/iconsets/SC_TURBINE,filename=assets/miscutils/textures/blocks/iconsets/SC_TURBINE.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_EV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_EV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_HV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_HV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_IV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_IV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_LV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_LV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_LuV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_LuV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_MAX,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_MAX.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_MV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_MV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_ULV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_ULV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_UV,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_UV.png
+texture:id=miscutils/iconsets/TieredHulls/CASING_ZPM,filename=assets/miscutils/textures/blocks/iconsets/TieredHulls/CASING_ZPM.png
+texture:id=miscutils/metro/TEXTURE_MAGIC_A,filename=assets/miscutils/textures/blocks/metro/TEXTURE_MAGIC_A.png
+texture:id=miscutils/metro/TEXTURE_MAGIC_B,filename=assets/miscutils/textures/blocks/metro/TEXTURE_MAGIC_B.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_A,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_A.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_B,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_B.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_C,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_C.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_D,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_D.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_F,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_F.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_G,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_G.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_H,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_H.png
+texture:id=miscutils/metro/TEXTURE_METAL_PANEL_I,filename=assets/miscutils/textures/blocks/metro/TEXTURE_METAL_PANEL_I.png
+texture:id=miscutils/metro/TEXTURE_ORGANIC_PANEL_A_GLOWING,filename=assets/miscutils/textures/blocks/metro/TEXTURE_ORGANIC_PANEL_A_GLOWING.png
+texture:id=miscutils/metro/TEXTURE_STONE_RED_A,filename=assets/miscutils/textures/blocks/metro/TEXTURE_STONE_RED_A.png
+texture:id=miscutils/metro/TEXTURE_STONE_RED_B,filename=assets/miscutils/textures/blocks/metro/TEXTURE_STONE_RED_B.png
+texture:id=miscutils/metro/TEXTURE_TECH_A,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_A.png
+texture:id=miscutils/metro/TEXTURE_TECH_B,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_B.png
+texture:id=miscutils/metro/TEXTURE_TECH_C,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_C.png
+texture:id=miscutils/metro/TEXTURE_TECH_PANEL_A,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_A.png
+texture:id=miscutils/metro/TEXTURE_TECH_PANEL_B,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_B.png
+texture:id=miscutils/metro/TEXTURE_TECH_PANEL_C,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_C.png
+texture:id=miscutils/metro/TEXTURE_TECH_PANEL_D,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_D.png
+texture:id=miscutils/metro/TEXTURE_TECH_PANEL_H,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_H.png
+texture:id=miscutils/net,filename=assets/miscutils/textures/blocks/net.png
+texture:id=miscutils/redox/redox1,filename=assets/miscutils/textures/blocks/redox/redox1.png
+texture:id=miscutils/redox/redox2,filename=assets/miscutils/textures/blocks/redox/redox2.png
+texture:id=miscutils/redox/redox3,filename=assets/miscutils/textures/blocks/redox/redox3.png
+texture:id=miscutils/redox/redox4,filename=assets/miscutils/textures/blocks/redox/redox4.png
+texture:id=miscutils/redox/redox5,filename=assets/miscutils/textures/blocks/redox/redox5.png
+texture:id=miscutils/redox/redox6,filename=assets/miscutils/textures/blocks/redox/redox6.png
+texture:id=miscutils/special/block_1,filename=assets/miscutils/textures/blocks/special/block_1.png
+texture:id=miscutils/special/block_2,filename=assets/miscutils/textures/blocks/special/block_2.png
+texture:id=miscutils/special/block_3,filename=assets/miscutils/textures/blocks/special/block_3.png
+texture:id=miscutils/special/block_4,filename=assets/miscutils/textures/blocks/special/block_4.png
+texture:id=miscutils/special/block_5,filename=assets/miscutils/textures/blocks/special/block_5.png
+texture:id=miscutils/special/block_6,filename=assets/miscutils/textures/blocks/special/block_6.png
+texture:id=miscutils/special/block_7,filename=assets/miscutils/textures/blocks/special/block_7.png
+texture:id=miscutils/special/block_8,filename=assets/miscutils/textures/blocks/special/block_8.png
+texture:id=miscutils/trees/leaves/leaves_pine,filename=assets/miscutils/textures/blocks/trees/leaves/leaves_pine.png
+texture:id=miscutils/trees/leaves/leaves_rainforest,filename=assets/miscutils/textures/blocks/trees/leaves/leaves_rainforest.png
+texture:id=miscutils/trees/logs/log_pine,filename=assets/miscutils/textures/blocks/trees/logs/log_pine.png
+texture:id=miscutils/trees/logs/log_pine_top,filename=assets/miscutils/textures/blocks/trees/logs/log_pine_top.png
+texture:id=miscutils/trees/logs/log_rainforest,filename=assets/miscutils/textures/blocks/trees/logs/log_rainforest.png
+texture:id=miscutils/trees/logs/log_rainforest_top,filename=assets/miscutils/textures/blocks/trees/logs/log_rainforest_top.png
+texture:id=miscutils/trees/saplings/sapling_pine,filename=assets/miscutils/textures/blocks/trees/saplings/sapling_pine.png
+texture:id=miscutils/trees/saplings/sapling_rainforest,filename=assets/miscutils/textures/blocks/trees/saplings/sapling_rainforest.png
+
+
+
+# %blockBlockSelenium:* (blockBlockSelenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockSelenium,data=*,stdrot=true,colorMult=BEBEBE,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtSelenium:* (blockFrameGtSelenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtSelenium,data=*,stdrot=true,colorMult=BEBEBE,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockStrontium:* (blockBlockStrontium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockStrontium,data=*,stdrot=true,colorMult=E6D26E,face0-5=17000:gregtech/materialicons/FLINT/block1
+
+# %blockFrameGtStrontium:* (blockFrameGtStrontium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtStrontium,data=*,stdrot=true,colorMult=E6D26E,face0-5=17000:gregtech/materialicons/FLINT/frameGt
+
+# %blockBlockZirconium:* (blockBlockZirconium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockZirconium,data=*,stdrot=true,colorMult=FFFACD,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtZirconium:* (blockFrameGtZirconium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtZirconium,data=*,stdrot=true,colorMult=FFFACD,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockRuthenium:* (blockBlockRuthenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockRuthenium,data=*,stdrot=true,colorMult=DCDCDC,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtRuthenium:* (blockFrameGtRuthenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtRuthenium,data=*,stdrot=true,colorMult=DCDCDC,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockIodine:* (blockBlockIodine), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockIodine,data=*,stdrot=true,colorMult=606060,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtIodine:* (blockFrameGtIodine), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtIodine,data=*,stdrot=true,colorMult=606060,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockHafnium:* (blockBlockHafnium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHafnium,data=*,stdrot=true,colorMult=808080,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtHafnium:* (blockFrameGtHafnium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHafnium,data=*,stdrot=true,colorMult=808080,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockDysprosium:* (blockBlockDysprosium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockDysprosium,data=*,stdrot=true,colorMult=B4B4B4,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtDysprosium:* (blockFrameGtDysprosium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtDysprosium,data=*,stdrot=true,colorMult=B4B4B4,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockErbium:* (blockBlockErbium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockErbium,data=*,stdrot=true,colorMult=B09851,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtErbium:* (blockFrameGtErbium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtErbium,data=*,stdrot=true,colorMult=B09851,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockPraseodymium:* (blockBlockPraseodymium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPraseodymium,data=*,stdrot=true,colorMult=75D681,face0-5=17000:gregtech/materialicons/DULL/block1
+
+# %blockFrameGtPraseodymium:* (blockFrameGtPraseodymium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtPraseodymium,data=*,stdrot=true,colorMult=75D681,face0-5=17000:gregtech/materialicons/DULL/frameGt
+
+# %blockBlockTellurium:* (blockBlockTellurium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTellurium,data=*,stdrot=true,colorMult=D2D2D2,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtTellurium:* (blockFrameGtTellurium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTellurium,data=*,stdrot=true,colorMult=D2D2D2,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockRhodium:* (blockBlockRhodium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockRhodium,data=*,stdrot=true,colorMult=DCDCDC,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtRhodium:* (blockFrameGtRhodium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtRhodium,data=*,stdrot=true,colorMult=DCDCDC,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockRhenium:* (blockBlockRhenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockRhenium,data=*,stdrot=true,colorMult=969696,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtRhenium:* (blockFrameGtRhenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtRhenium,data=*,stdrot=true,colorMult=969696,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockThallium:* (blockBlockThallium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockThallium,data=*,stdrot=true,colorMult=AFAFAF,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtThallium:* (blockFrameGtThallium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtThallium,data=*,stdrot=true,colorMult=AFAFAF,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockTechnetium:* (blockBlockTechnetium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTechnetium,data=*,stdrot=true,colorMult=DCDCDC,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockPolonium:* (blockBlockPolonium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPolonium,data=*,stdrot=true,colorMult=B4AAB4,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockAstatine:* (blockBlockAstatine), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockAstatine,data=*,stdrot=true,colorMult=AAB4AA,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockFrancium:* (blockBlockFrancium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockFrancium,data=*,stdrot=true,colorMult=AAA0AA,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockRadium:* (blockBlockRadium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockRadium,data=*,stdrot=true,colorMult=A5A5A5,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockPromethium:* (blockBlockPromethium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPromethium,data=*,stdrot=true,colorMult=24B535,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockBlockActinium:* (blockBlockActinium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockActinium,data=*,stdrot=true,colorMult=96A5A5,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockProtactinium:* (blockBlockProtactinium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockProtactinium,data=*,stdrot=true,colorMult=BE96AA,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockNeptunium:* (blockBlockNeptunium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockNeptunium,data=*,stdrot=true,colorMult=C8DCCD,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockCurium:* (blockBlockCurium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockCurium,data=*,stdrot=true,colorMult=AF556E,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockBerkelium:* (blockBlockBerkelium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockBerkelium,data=*,stdrot=true,colorMult=6EFA55,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockCalifornium:* (blockBlockCalifornium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockCalifornium,data=*,stdrot=true,colorMult=556ECD,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockEinsteinium:* (blockBlockEinsteinium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockEinsteinium,data=*,stdrot=true,colorMult=FF556E,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockFermium:* (blockBlockFermium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockFermium,data=*,stdrot=true,colorMult=4B5A19,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockLithium7:* (blockBlockLithium7), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockLithium7,data=*,stdrot=true,colorMult=E1DCFF,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockBlockThorium232:* (blockBlockThorium232), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockThorium232,data=*,stdrot=true,colorMult=0F3C0F,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockUranium232:* (blockBlockUranium232), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockUranium232,data=*,stdrot=true,colorMult=58DC67,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockUranium233:* (blockBlockUranium233), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockUranium233,data=*,stdrot=true,colorMult=49DC53,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockPlutonium238:* (blockBlockPlutonium238), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPlutonium238,data=*,stdrot=true,colorMult=FA4646,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockPlutonium239:* (blockBlockPlutonium239), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPlutonium239,data=*,stdrot=true,colorMult=F03232,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockStrontium90:* (blockBlockStrontium90), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockStrontium90,data=*,stdrot=true,colorMult=C8C8C8,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockPolonium210:* (blockBlockPolonium210), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPolonium210,data=*,stdrot=true,colorMult=B4AAB4,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockAmericium241:* (blockBlockAmericium241), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockAmericium241,data=*,stdrot=true,colorMult=C8C8C8,face0-5=17000:gregtech/materialicons/NUCLEAR/block1
+
+# %blockBlockAdvancedNitinol:* (blockBlockAdvancedNitinol), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockAdvancedNitinol,data=*,stdrot=true,colorMult=D2B4F5,face0-5=17000:gregtech/materialicons/ENRICHED/block5
+
+# %blockBlockAstralTitanium:* (blockBlockAstralTitanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockAstralTitanium,data=*,stdrot=true,colorMult=DCA0F0,face0-5=17000:gregtech/materialicons/REFINED/block5
+
+# %blockFrameGtAstralTitanium:* (blockFrameGtAstralTitanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtAstralTitanium,data=*,stdrot=true,colorMult=DCA0F0,face0-5=17000:gregtech/materialicons/REFINED/frameGt
+
+# %blockBlockCelestialTungsten:* (blockBlockCelestialTungsten), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockCelestialTungsten,data=*,stdrot=true,colorMult=323232,face0-5=17000:gregtech/materialicons/REFINED/block5
+
+# %blockFrameGtCelestialTungsten:* (blockFrameGtCelestialTungsten), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtCelestialTungsten,data=*,stdrot=true,colorMult=323232,face0-5=17000:gregtech/materialicons/REFINED/frameGt
+
+# %blockBlockHypogen:* (blockBlockHypogen), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHypogen,data=*,stdrot=true,colorMult=DC784B,face0-5=17000:gregtech/materialicons/NUCLEAR/block5
+
+# %blockFrameGtHypogen:* (blockFrameGtHypogen), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHypogen,data=*,stdrot=true,colorMult=DC784B,face0-5=17000:gregtech/materialicons/NUCLEAR/frameGt
+
+# %blockBlockChromaticGlass:* (blockBlockChromaticGlass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockChromaticGlass,data=*,stdrot=true,face0-5=0:gregtech/materialicons/GEM_HORIZONTAL/block5
+
+# %blockFrameGtChromaticGlass:* (blockFrameGtChromaticGlass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtChromaticGlass,data=*,stdrot=true,face0-5=12000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockForce:* (blockBlockForce), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockForce,data=*,stdrot=true,colorMult=FAFA14,face0-5=17000:gregtech/materialicons/ENRICHED/block1
+
+# %blockFrameGtForce:* (blockFrameGtForce), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtForce,data=*,stdrot=true,colorMult=FAFA14,face0-5=17000:gregtech/materialicons/ENRICHED/frameGt
+
+# %blockBlockBlackMetal:* (blockBlockBlackMetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockBlackMetal,data=*,stdrot=true,colorMult=050505,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtBlackMetal:* (blockFrameGtBlackMetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtBlackMetal,data=*,stdrot=true,colorMult=050505,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockWhiteMetal:* (blockBlockWhiteMetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockWhiteMetal,data=*,stdrot=true,face0-5=0:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtWhiteMetal:* (blockFrameGtWhiteMetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtWhiteMetal,data=*,stdrot=true,face0-5=12000:gregtech/materialicons/METALLIC/frameGt
+
+# %oreAncientGranite:* (oreAncientGranite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreAncientGranite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %blockBlockAncientGranite:* (blockBlockAncientGranite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockAncientGranite,data=*,stdrot=true,colorMult=6B6B6B,face0-5=17000:gregtech/materialicons/SAND/block1
+
+# %oreRunite:* (oreRunite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreRunite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %blockBlockRunite:* (blockBlockRunite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockRunite,data=*,stdrot=true,colorMult=3CC8BE,face0-5=17000:gregtech/materialicons/FINE/block5
+
+# %blockBlockDragonblood:* (blockBlockDragonblood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockDragonblood,data=*,stdrot=true,colorMult=DC2814,face0-5=17000:gregtech/materialicons/SHINY/block5
+
+# %blockBlockSiliconCarbide:* (blockBlockSiliconCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockSiliconCarbide,data=*,stdrot=true,colorMult=283024,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtSiliconCarbide:* (blockFrameGtSiliconCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtSiliconCarbide,data=*,stdrot=true,colorMult=283024,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockZirconiumCarbide:* (blockBlockZirconiumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockZirconiumCarbide,data=*,stdrot=true,colorMult=DECAB4,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtZirconiumCarbide:* (blockFrameGtZirconiumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtZirconiumCarbide,data=*,stdrot=true,colorMult=DECAB4,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockTantalumCarbide:* (blockBlockTantalumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTantalumCarbide,data=*,stdrot=true,colorMult=8B8878,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtTantalumCarbide:* (blockFrameGtTantalumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTantalumCarbide,data=*,stdrot=true,colorMult=8B8878,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockNiobiumCarbide:* (blockBlockNiobiumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockNiobiumCarbide,data=*,stdrot=true,colorMult=CDC5BF,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtNiobiumCarbide:* (blockFrameGtNiobiumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtNiobiumCarbide,data=*,stdrot=true,colorMult=CDC5BF,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockTungstenTitaniumCarbide:* (blockBlockTungstenTitaniumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTungstenTitaniumCarbide,data=*,stdrot=true,colorMult=604C67,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtTungstenTitaniumCarbide:* (blockFrameGtTungstenTitaniumCarbide), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTungstenTitaniumCarbide,data=*,stdrot=true,colorMult=604C67,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockEnergyCrystal:* (blockBlockEnergyCrystal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockEnergyCrystal,data=*,stdrot=true,colorMult=E4FF00,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtEnergyCrystal:* (blockFrameGtEnergyCrystal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtEnergyCrystal,data=*,stdrot=true,colorMult=E4FF00,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockBloodSteel:* (blockBlockBloodSteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockBloodSteel,data=*,stdrot=true,colorMult=8E1C00,face0-5=17000:gregtech/materialicons/GEM_VERTICAL/block1
+
+# %blockFrameGtBloodSteel:* (blockFrameGtBloodSteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtBloodSteel,data=*,stdrot=true,colorMult=8E1C00,face0-5=17000:gregtech/materialicons/GEM_VERTICAL/frameGt
+
+# %blockBlockZeron100:* (blockBlockZeron100), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockZeron100,data=*,stdrot=true,colorMult=B4B414,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockFrameGtZeron100:* (blockFrameGtZeron100), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtZeron100,data=*,stdrot=true,colorMult=B4B414,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockTumbaga:* (blockBlockTumbaga), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTumbaga,data=*,stdrot=true,colorMult=FFB20F,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtTumbaga:* (blockFrameGtTumbaga), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTumbaga,data=*,stdrot=true,colorMult=FFB20F,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockPotin:* (blockBlockPotin), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPotin,data=*,stdrot=true,colorMult=C99781,face0-5=17000:gregtech/materialicons/DULL/block1
+
+# %blockFrameGtPotin:* (blockFrameGtPotin), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtPotin,data=*,stdrot=true,colorMult=C99781,face0-5=17000:gregtech/materialicons/DULL/frameGt
+
+# %blockBlockStaballoy:* (blockBlockStaballoy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockStaballoy,data=*,stdrot=true,colorMult=444B42,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtStaballoy:* (blockFrameGtStaballoy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtStaballoy,data=*,stdrot=true,colorMult=444B42,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockTantalloy60:* (blockBlockTantalloy60), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTantalloy60,data=*,stdrot=true,colorMult=D5E7ED,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtTantalloy60:* (blockFrameGtTantalloy60), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTantalloy60,data=*,stdrot=true,colorMult=D5E7ED,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockTantalloy61:* (blockBlockTantalloy61), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTantalloy61,data=*,stdrot=true,colorMult=C1D3D9,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtTantalloy61:* (blockFrameGtTantalloy61), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTantalloy61,data=*,stdrot=true,colorMult=C1D3D9,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockInconel625:* (blockBlockInconel625), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockInconel625,data=*,stdrot=true,colorMult=80C880,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtInconel625:* (blockFrameGtInconel625), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtInconel625,data=*,stdrot=true,colorMult=80C880,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockInconel690:* (blockBlockInconel690), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockInconel690,data=*,stdrot=true,colorMult=76DC8A,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtInconel690:* (blockFrameGtInconel690), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtInconel690,data=*,stdrot=true,colorMult=76DC8A,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockInconel792:* (blockBlockInconel792), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockInconel792,data=*,stdrot=true,colorMult=6CF076,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtInconel792:* (blockFrameGtInconel792), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtInconel792,data=*,stdrot=true,colorMult=6CF076,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockEglinSteel:* (blockBlockEglinSteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockEglinSteel,data=*,stdrot=true,colorMult=8B4513,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtEglinSteel:* (blockFrameGtEglinSteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtEglinSteel,data=*,stdrot=true,colorMult=8B4513,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockMaragingSteel250:* (blockBlockMaragingSteel250), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockMaragingSteel250,data=*,stdrot=true,colorMult=A195D9,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtMaragingSteel250:* (blockFrameGtMaragingSteel250), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtMaragingSteel250,data=*,stdrot=true,colorMult=A195D9,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockMaragingSteel300:* (blockBlockMaragingSteel300), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockMaragingSteel300,data=*,stdrot=true,colorMult=9799DD,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtMaragingSteel300:* (blockFrameGtMaragingSteel300), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtMaragingSteel300,data=*,stdrot=true,colorMult=9799DD,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockMaragingSteel350:* (blockBlockMaragingSteel350), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockMaragingSteel350,data=*,stdrot=true,colorMult=8F9DD9,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtMaragingSteel350:* (blockFrameGtMaragingSteel350), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtMaragingSteel350,data=*,stdrot=true,colorMult=8F9DD9,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockWatertightSteel:* (blockBlockWatertightSteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockWatertightSteel,data=*,stdrot=true,colorMult=7878B4,face0-5=17000:gregtech/materialicons/DULL/block1
+
+# %blockFrameGtWatertightSteel:* (blockFrameGtWatertightSteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtWatertightSteel,data=*,stdrot=true,colorMult=7878B4,face0-5=17000:gregtech/materialicons/DULL/frameGt
+
+# %blockBlockNitinol60:* (blockBlockNitinol60), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockNitinol60,data=*,stdrot=true,colorMult=D2B4F5,face0-5=17000:gregtech/materialicons/SHINY/block5
+
+# %blockFrameGtNitinol60:* (blockFrameGtNitinol60), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtNitinol60,data=*,stdrot=true,colorMult=D2B4F5,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockStellite:* (blockBlockStellite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockStellite,data=*,stdrot=true,colorMult=C9B4F2,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtStellite:* (blockFrameGtStellite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtStellite,data=*,stdrot=true,colorMult=C9B4F2,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockTalonite:* (blockBlockTalonite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTalonite,data=*,stdrot=true,colorMult=C0BAEE,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtTalonite:* (blockFrameGtTalonite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTalonite,data=*,stdrot=true,colorMult=C0BAEE,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockHastelloyW:* (blockBlockHastelloyW), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHastelloyW,data=*,stdrot=true,colorMult=B7B2E6,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtHastelloyW:* (blockFrameGtHastelloyW), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHastelloyW,data=*,stdrot=true,colorMult=B7B2E6,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockHastelloyX:* (blockBlockHastelloyX), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHastelloyX,data=*,stdrot=true,colorMult=BEBACD,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtHastelloyX:* (blockFrameGtHastelloyX), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHastelloyX,data=*,stdrot=true,colorMult=BEBACD,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockHastelloyC276:* (blockBlockHastelloyC276), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHastelloyC276,data=*,stdrot=true,colorMult=AA8CA6,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtHastelloyC276:* (blockFrameGtHastelloyC276), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHastelloyC276,data=*,stdrot=true,colorMult=AA8CA6,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockHastelloyN:* (blockBlockHastelloyN), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHastelloyN,data=*,stdrot=true,colorMult=D7CCE8,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtHastelloyN:* (blockFrameGtHastelloyN), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHastelloyN,data=*,stdrot=true,colorMult=D7CCE8,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockIncoloy020:* (blockBlockIncoloy020), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockIncoloy020,data=*,stdrot=true,colorMult=E3B6AA,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtIncoloy020:* (blockFrameGtIncoloy020), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtIncoloy020,data=*,stdrot=true,colorMult=E3B6AA,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockIncoloyDS:* (blockBlockIncoloyDS), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockIncoloyDS,data=*,stdrot=true,colorMult=B7B1E8,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtIncoloyDS:* (blockFrameGtIncoloyDS), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtIncoloyDS,data=*,stdrot=true,colorMult=B7B1E8,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockIncoloyMA956:* (blockBlockIncoloyMA956), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockIncoloyMA956,data=*,stdrot=true,colorMult=C8DCDE,face0-5=17000:gregtech/materialicons/METALLIC/block1
+
+# %blockFrameGtIncoloyMA956:* (blockFrameGtIncoloyMA956), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtIncoloyMA956,data=*,stdrot=true,colorMult=C8DCDE,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockGrisium:* (blockBlockGrisium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockGrisium,data=*,stdrot=true,colorMult=355D6A,face0-5=17000:gregtech/materialicons/DULL/block1
+
+# %blockFrameGtGrisium:* (blockFrameGtGrisium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtGrisium,data=*,stdrot=true,colorMult=355D6A,face0-5=17000:gregtech/materialicons/DULL/frameGt
+
+# %blockBlockTriniumTitaniumAlloy:* (blockBlockTriniumTitaniumAlloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTriniumTitaniumAlloy,data=*,stdrot=true,colorMult=D2B4E1,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockFrameGtTriniumTitaniumAlloy:* (blockFrameGtTriniumTitaniumAlloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTriniumTitaniumAlloy,data=*,stdrot=true,colorMult=D2B4E1,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockTriniumNaquadahAlloy:* (blockBlockTriniumNaquadahAlloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTriniumNaquadahAlloy,data=*,stdrot=true,colorMult=7D7D82,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %blockBlockTriniumNaquadahCarbonite:* (blockBlockTriniumNaquadahCarbonite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTriniumNaquadahCarbonite,data=*,stdrot=true,colorMult=5A5A5D,face0-5=17000:gregtech/materialicons/SHINY/block5
+
+# %blockFrameGtTriniumNaquadahCarbonite:* (blockFrameGtTriniumNaquadahCarbonite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTriniumNaquadahCarbonite,data=*,stdrot=true,colorMult=5A5A5D,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockArceusAlloy2B:* (blockBlockArceusAlloy2B), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockArceusAlloy2B,data=*,stdrot=true,colorMult=CDC517,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockFrameGtArceusAlloy2B:* (blockFrameGtArceusAlloy2B), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtArceusAlloy2B,data=*,stdrot=true,colorMult=CDC517,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockHeLiCoPtEr:* (blockBlockHeLiCoPtEr), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHeLiCoPtEr,data=*,stdrot=true,colorMult=C6C09D,face0-5=17000:gregtech/materialicons/SHINY/block5
+
+# %blockFrameGtHeLiCoPtEr:* (blockFrameGtHeLiCoPtEr), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHeLiCoPtEr,data=*,stdrot=true,colorMult=C6C09D,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockLafiumCompound:* (blockBlockLafiumCompound), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockLafiumCompound,data=*,stdrot=true,colorMult=8FA89C,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockFrameGtLafiumCompound:* (blockFrameGtLafiumCompound), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtLafiumCompound,data=*,stdrot=true,colorMult=8FA89C,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockCinobiteA243:* (blockBlockCinobiteA243), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockCinobiteA243,data=*,stdrot=true,colorMult=A09AA2,face0-5=17000:gregtech/materialicons/SHINY/block5
+
+# %blockFrameGtCinobiteA243:* (blockFrameGtCinobiteA243), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtCinobiteA243,data=*,stdrot=true,colorMult=A09AA2,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %blockBlockPikyonium64B:* (blockBlockPikyonium64B), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockPikyonium64B,data=*,stdrot=true,colorMult=3467BA,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockFrameGtPikyonium64B:* (blockFrameGtPikyonium64B), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtPikyonium64B,data=*,stdrot=true,colorMult=3467BA,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockAbyssalAlloy:* (blockBlockAbyssalAlloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockAbyssalAlloy,data=*,stdrot=true,colorMult=AD94A4,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockFrameGtAbyssalAlloy:* (blockFrameGtAbyssalAlloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtAbyssalAlloy,data=*,stdrot=true,colorMult=AD94A4,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockLaurenium:* (blockBlockLaurenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockLaurenium,data=*,stdrot=true,colorMult=F4A8FF,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockFrameGtLaurenium:* (blockFrameGtLaurenium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtLaurenium,data=*,stdrot=true,colorMult=F4A8FF,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockBotmium:* (blockBlockBotmium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockBotmium,data=*,stdrot=true,colorMult=50A050,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block5
+
+# %blockFrameGtBotmium:* (blockFrameGtBotmium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtBotmium,data=*,stdrot=true,colorMult=50A050,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockHS188A:* (blockBlockHS188A), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockHS188A,data=*,stdrot=true,colorMult=A5A3B9,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockFrameGtHS188A:* (blockFrameGtHS188A), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtHS188A,data=*,stdrot=true,colorMult=A5A3B9,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+
+# %blockBlockTitansteel:* (blockBlockTitansteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTitansteel,data=*,stdrot=true,colorMult=655B3E,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block5
+
+# %blockFrameGtTitansteel:* (blockFrameGtTitansteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtTitansteel,data=*,stdrot=true,colorMult=655B3E,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockArcanite:* (blockBlockArcanite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockArcanite,data=*,stdrot=true,colorMult=777E53,face0-5=17000:gregtech/materialicons/GEM_A/block5
+
+# %blockFrameGtArcanite:* (blockFrameGtArcanite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtArcanite,data=*,stdrot=true,colorMult=777E53,face0-5=17000:gregtech/materialicons/GEM_A/frameGt
+
+# %blockBlockOctiron:* (blockBlockOctiron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockOctiron,data=*,stdrot=true,colorMult=726D63,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block5
+
+# %blockFrameGtOctiron:* (blockFrameGtOctiron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtOctiron,data=*,stdrot=true,colorMult=726D63,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+
+# %blockBlockBabbitAlloy:* (blockBlockBabbitAlloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockBabbitAlloy,data=*,stdrot=true,colorMult=D0C6D5,face0-5=17000:gregtech/materialicons/DULL/block1
+
+# %blockBlockBlackTitanium:* (blockBlockBlackTitanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockBlackTitanium,data=*,stdrot=true,colorMult=91A6A7,face0-5=17000:gregtech/materialicons/METALLIC/block5
+
+# %blockBlockIndalloy140:* (blockBlockIndalloy140), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockIndalloy140,data=*,stdrot=true,colorMult=726A8D,face0-5=17000:gregtech/materialicons/DULL/block5
+
+# %blockBlockRhugnor:* (blockBlockRhugnor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockRhugnor,data=*,stdrot=true,colorMult=BE00FF,face0-5=17000:gregtech/materialicons/ENRICHED/block5
+
+# %blockBlockQuantum:* (blockBlockQuantum), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockQuantum,data=*,stdrot=true,colorMult=959397,face0-5=17000:gregtech/materialicons/SHINY/block5
+
+# %blockFrameGtQuantum:* (blockFrameGtQuantum), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtQuantum,data=*,stdrot=true,colorMult=959397,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+
+# %oreFluoriteF:* (oreFluoriteF), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreFluoriteF,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreKoboldite:* (oreKoboldite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreKoboldite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreCrocoite:* (oreCrocoite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreCrocoite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreGeikielite:* (oreGeikielite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreGeikielite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreNichromite:* (oreNichromite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreNichromite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreTitanite:* (oreTitanite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreTitanite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreZimbabweite:* (oreZimbabweite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreZimbabweite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreZirconolite:* (oreZirconolite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreZirconolite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreGadoliniteCe:* (oreGadoliniteCe), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreGadoliniteCe,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreGadoliniteY:* (oreGadoliniteY), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreGadoliniteY,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreLepersonnite:* (oreLepersonnite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreLepersonnite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreSamarskiteY:* (oreSamarskiteY), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreSamarskiteY,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreSamarskiteYb:* (oreSamarskiteYb), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreSamarskiteYb,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreXenotime:* (oreXenotime), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreXenotime,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreYttriaite:* (oreYttriaite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreYttriaite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreYttrialite:* (oreYttrialite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreYttrialite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreYttrocerite:* (oreYttrocerite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreYttrocerite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreZircon:* (oreZircon), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreZircon,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %orePolycrase:* (orePolycrase), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%orePolycrase,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreZircophyllite:* (oreZircophyllite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreZircophyllite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreZirkelite:* (oreZirkelite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreZirkelite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreLanthaniteLa:* (oreLanthaniteLa), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreLanthaniteLa,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreLanthaniteCe:* (oreLanthaniteCe), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreLanthaniteCe,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreLanthaniteNd:* (oreLanthaniteNd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreLanthaniteNd,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreAgarditeY:* (oreAgarditeY), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreAgarditeY,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreAgarditeCd:* (oreAgarditeCd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreAgarditeCd,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreAgarditeLa:* (oreAgarditeLa), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreAgarditeLa,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreAgarditeNd:* (oreAgarditeNd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreAgarditeNd,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreHibonite:* (oreHibonite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreHibonite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreCerite:* (oreCerite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreCerite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreFluorcaphite:* (oreFluorcaphite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreFluorcaphite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreFlorencite:* (oreFlorencite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreFlorencite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreCryoliteF:* (oreCryoliteF), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreCryoliteF,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreLautarite:* (oreLautarite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreLautarite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreLafossaite:* (oreLafossaite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreLafossaite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreDemicheleiteBr:* (oreDemicheleiteBr), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreDemicheleiteBr,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreComancheite:* (oreComancheite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreComancheite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %orePerroudite:* (orePerroudite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%orePerroudite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreHoneaite:* (oreHoneaite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreHoneaite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreAlburnite:* (oreAlburnite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreAlburnite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreMiessiite:* (oreMiessiite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreMiessiite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreKashinite:* (oreKashinite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreKashinite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreIrarsite:* (oreIrarsite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreIrarsite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreGreenockite:* (oreGreenockite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreGreenockite,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreBariteRd:* (oreBariteRd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreBariteRd,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreRadioactiveMineralMix:* (oreRadioactiveMineralMix), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreRadioactiveMineralMix,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %blockBlockTeflon:* (blockBlockTeflon), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockTeflon,data=*,stdrot=true,colorMult=4B2D4B,face0-5=17000:gregtech/materialicons/SHINY/block1
+
+# %miscutils_fluidBlockSludge:* (miscutils_fluidBlockSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.core.block.general.fluids.BlockFluidSludge
+block:id=%miscutils_fluidBlockSludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:miscutils/fluids/fluid.jackdaniels
+
+# %blockHeliumGenerator:* (blockHeliumGenerator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.HeliumGenerator
+block:id=%blockHeliumGenerator,data=*,stdrot=true,face0-5=12000:miscutils/Chrono/CyberPanel
+
+# %blockFirePit:* (blockFirePit), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.general.FirePit
+block:id=%blockFirePit,data=*,stdrot=true,face0-5=12000:miscutils/blockFirePit_layer_0
+
+# %blockFishTrap:* (blockFishTrap), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.FishTrap
+block:id=%blockFishTrap,data=*,stdrot=true,face0-5=12000:miscutils/TileEntities/fishtrap
+
+# %blockInfiniteFluidTank:* (blockInfiniteFluidTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.general.FluidTankInfinite
+block:id=%blockInfiniteFluidTank,data=*,stdrot=true,face0-5=12000:miscutils/TileEntities/Generic_Creative_Texture
+
+# %blockMiningExplosives:* (blockMiningExplosives), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.general.MiningExplosives
+block:id=%blockMiningExplosives,data=*,stdrot=true,face0=0:miscutils/chrono/MetalPanel,face1=0:miscutils/chrono/MetalFunnel,face2-5=0:miscutils/chrono/MetalSheet2
+
+# %blockHellFire:* (blockHellFire), render=(FIRE), opaque=false,cls=gtPlusPlus.core.block.general.HellFire
+block:id=%blockHellFire,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:miscutils/hellfire/blockHellFire_layer_0
+
+# %blockProjectBench:* (blockProjectBench), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.Machine_ProjectTable
+block:id=%blockProjectBench,data=*,stdrot=true,face0=0:miscutils/TileEntities/machine_top,face1=0:miscutils/TileEntities/cover_crafting,face2-5=0:miscutils/TileEntities/machine_top
+
+# %blockTradeBench:* (blockTradeBench), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.Machine_TradeTable
+block:id=%blockTradeBench,data=*,stdrot=true,face3=0:miscutils/SwirlYellow,face5=0:miscutils/SwirlYellow
+
+# %blockModularity:* (blockModularity), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.Machine_ModularityTable
+block:id=%blockModularity,data=*,stdrot=true,face0=0:miscutils/TileEntities/ModularTable_output,face1=0:miscutils/TileEntities/ModularTable_top,face2-5=0:miscutils/TileEntities/ModularTable_side
+
+# %blockBlackGate:* (blockBlackGate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.general.antigrief.BlockWitherProof
+block:id=%blockBlackGate,data=*,stdrot=true,colorMult=202020,face0-5=17000:miscutils/blockFrameGt
+
+# %blockTankXpConverter:* (blockTankXpConverter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.general.BlockTankXpConverter
+block:id=%blockTankXpConverter,data=*,stdrot=true,face0-5=12000:miscutils/SwirlGray
+
+# %blockCompressedObsidian:* (blockCompressedObsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.general.BlockCompressedObsidian
+block:id=%blockCompressedObsidian,data=0,stdrot=true,face0-5=0:miscutils/compressed/obsidian1
+block:id=%blockCompressedObsidian,data=1,stdrot=true,face0-5=0:miscutils/compressed/obsidian2
+block:id=%blockCompressedObsidian,data=2,stdrot=true,face0-5=0:miscutils/compressed/obsidian3
+block:id=%blockCompressedObsidian,data=3,stdrot=true,face0-5=0:miscutils/compressed/obsidian4
+block:id=%blockCompressedObsidian,data=4,stdrot=true,face0-5=0:miscutils/compressed/obsidian5
+block:id=%blockCompressedObsidian,data=5,stdrot=true,face0-5=0:miscutils/compressed/obsidian_invert
+block:id=%blockCompressedObsidian,data=6,stdrot=true,face0-5=0:miscutils/compressed/glowstone1
+block:id=%blockCompressedObsidian,data=7,stdrot=true,face0-5=0:miscutils/compressed/glowstone2
+block:id=%blockCompressedObsidian,data=8,stdrot=true,face0-5=0:miscutils/compressed/glowstone3
+block:id=%blockCompressedObsidian,data=9,stdrot=true,face0-5=0:miscutils/compressed/glowstone4
+block:id=%blockCompressedObsidian,data=10,stdrot=true,face0-5=0:miscutils/compressed/glowstone5
+
+# %blockNet:* (blockNet), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.core.block.general.BlockNet
+block:id=%blockNet,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/net
+
+# %blockMiningPipeFake:* (blockMiningPipeFake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.bedrock.Mining_Pipe_Fake
+block:id=%blockMiningPipeFake,data=*,stdrot=true,colorMult=202020,face0-5=17000:miscutils/blockFrameGt
+
+# %blockMiningHeadFake:* (blockMiningHeadFake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.bedrock.Mining_Head_Fake
+block:id=%blockMiningHeadFake,data=*,stdrot=true,colorMult=AF4020,face0-5=17000:miscutils/blockFrameGt
+
+# %blockCircuitProgrammer:* (blockCircuitProgrammer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.CircuitProgrammer
+block:id=%blockCircuitProgrammer,data=0,stdrot=true,face0=12000:miscutils/metro/TEXTURE_METAL_PANEL_G,face1=12000:miscutils/metro/TEXTURE_TECH_PANEL_B,face2-5=12000:miscutils/metro/TEXTURE_METAL_PANEL_I
+
+# %blockDecayablesChest:* (blockDecayablesChest), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.machine.DecayablesChest
+block:id=%blockDecayablesChest,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:miscutils/TileEntities/DecayablesChest_side,face1=0:miscutils/TileEntities/DecayablesChest_top,face2-5=0:miscutils/TileEntities/DecayablesChest_bottom
+
+# %blockEggBox:* (blockEggBox), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.EggBox
+block:id=%blockEggBox,data=*,stdrot=true,face0=0:miscutils/TileEntities/EggBox_side,face1=0:miscutils/TileEntities/EggBox_top,face2-5=0:miscutils/TileEntities/EggBox_side
+
+# %tile.playerDoorWood:* (tile.playerDoorWood), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+block:id=%tile.playerDoorWood,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/door_wood_upper,patch1=0:minecraft/door_wood_lower
+
+# %tile.playerDoorIron:* (tile.playerDoorIron), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+block:id=%tile.playerDoorIron,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/door_iron_upper,patch1=0:minecraft/door_iron_lower
+
+# %tile.playerDoorGlass:* (tile.playerDoorGlass), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+block:id=%tile.playerDoorGlass,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/door_glass_upper,patch1=0:miscutils/door_glass_lower
+
+# %tile.playerDoorIce:* (tile.playerDoorIce), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+block:id=%tile.playerDoorIce,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/door_ice_upper,patch1=0:miscutils/door_ice_lower
+
+# %tile.playerDoorCactus:* (tile.playerDoorCactus), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+block:id=%tile.playerDoorCactus,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/door_cactus_upper,patch1=0:miscutils/door_cactus_lower
+
+# %blockSuperJukebox:* (blockSuperJukebox), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.Machine_SuperJukebox
+block:id=%blockSuperJukebox,data=*,stdrot=true,face0=0:minecraft/jukebox_side,face1=0:minecraft/jukebox_top,face2-5=0:minecraft/jukebox_side
+
+# %blockPooCollector:* (blockPooCollector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.Machine_PooCollector
+block:id=%blockPooCollector,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:miscutils/TileEntities/sewer_top,face2-5=0:miscutils/TileEntities/sewer_sides
+block:id=%blockPooCollector,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:miscutils/TileEntities/sewer_adv_top,face2-5=0:miscutils/TileEntities/sewer_adv_sides
+
+# %blockPestKiller:* (blockPestKiller), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.Machine_PestKiller
+block:id=%blockPestKiller,data=*,stdrot=true,face0=0:minecraft/planks_acacia,face1=0:miscutils/TileEntities/MACHINE_PESTKILLER_TOP,face2-5=0:miscutils/TileEntities/MACHINE_CASING_FARM_MANAGER_STRUCTURAL
+
+# %blockRoundRobinator:* (blockRoundRobinator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.Machine_RoundRobinator
+block:id=%blockRoundRobinator,data=0,stdrot=true,face0-1=0:miscutils/TileEntities/RoundRobinator/Top_0,face2-5=0:miscutils/TileEntities/RoundRobinator/Side_0
+block:id=%blockRoundRobinator,data=1,stdrot=true,face0-1=0:miscutils/TileEntities/RoundRobinator/Top_1,face2-5=0:miscutils/TileEntities/RoundRobinator/Side_1
+block:id=%blockRoundRobinator,data=2,stdrot=true,face0-1=0:miscutils/TileEntities/RoundRobinator/Top_2,face2-5=0:miscutils/TileEntities/RoundRobinator/Side_2
+block:id=%blockRoundRobinator,data=3,stdrot=true,face0-1=0:miscutils/TileEntities/RoundRobinator/Top_3,face2-5=0:miscutils/TileEntities/RoundRobinator/Side_3
+block:id=%blockRoundRobinator,data=4,stdrot=true,face0-1=0:miscutils/TileEntities/RoundRobinator/Top_4,face2-5=0:miscutils/TileEntities/RoundRobinator/Side_4
+
+# %blockVolumetricFlaskSetter:* (blockVolumetricFlaskSetter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.VolumetricFlaskSetter
+block:id=%blockVolumetricFlaskSetter,data=0,stdrot=true,face0=0:miscutils/metro/TEXTURE_METAL_PANEL_A,face1=0:miscutils/metro/TEXTURE_TECH_PANEL_C,face2-5=0:miscutils/metro/TEXTURE_METAL_PANEL_H
+
+# %blockGenericRedstone.detector:* (blockGenericRedstone.detector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.general.redstone.BlockGenericRedstoneDetector
+block:id=%blockGenericRedstone.detector,data=*,stdrot=true,face0-5=0:minecraft/redstone_block
+
+# %blockGenericRedstone.test:* (blockGenericRedstone.test), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.core.block.general.redstone.BlockGenericRedstoneTest
+block:id=%blockGenericRedstone.test,data=*,stdrot=true,face0-5=0:minecraft/redstone_block
+
+# %FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Pyrotheum
+block:id=%FluidPyrotheum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:miscutils/fluid/Fluid_Pyrotheum_Still,face2-5=12000:miscutils/fluid/Fluid_Pyrotheum_Flow
+
+# %FluidCryotheum:* (FluidCryotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Cryotheum
+block:id=%FluidCryotheum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:miscutils/fluid/Fluid_Cryotheum_Still,face2-5=12000:miscutils/fluid/Fluid_Cryotheum_Flow
+
+# %FluidEnder:* (FluidEnder), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Ender
+block:id=%FluidEnder,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:miscutils/fluid/Fluid_Ender_Still,face2-5=12000:miscutils/fluid/Fluid_Ender_Flow
+
+# %blockRainforestOakLog:* (blockRainforestOakLog), render=(LOG), opaque=true,cls=gtPlusPlus.xmod.bop.blocks.rainforest.LogRainforestTree
+block:id=%blockRainforestOakLog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:miscutils/trees/logs/log_rainforest_top,face2-5=0:miscutils/trees/logs/log_rainforest
+block:id=%blockRainforestOakLog,data=4,data=5,data=6,data=7,face0-1=0:miscutils/trees/logs/log_rainforest,face2-3=4000:miscutils/trees/logs/log_rainforest,face4-5=0:miscutils/trees/logs/log_rainforest_top
+block:id=%blockRainforestOakLog,data=8,data=9,data=10,data=11,face0-1=4000:miscutils/trees/logs/log_rainforest,face2-3=0:miscutils/trees/logs/log_rainforest_top,face4-5=4000:miscutils/trees/logs/log_rainforest
+block:id=%blockRainforestOakLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:miscutils/trees/logs/log_rainforest
+
+# %blockRainforestOakLeaves:* (blockRainforestOakLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.rainforest.LeavesRainforestTree
+block:id=%blockRainforestOakLeaves,data=0,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=2,data=3,data=4,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=6,data=7,data=8,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=10,data=11,data=12,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=14,data=15,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+
+# %blockRainforestOakSapling:* (blockRainforestOakSapling), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.rainforest.SaplingRainforestTree
+block:id=%blockRainforestOakSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/trees/saplings/sapling_rainforest
+
+# %blockPineLogLog:* (blockPineLogLog), render=(LOG), opaque=true,cls=gtPlusPlus.xmod.bop.blocks.pine.LogPineTree
+block:id=%blockPineLogLog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:miscutils/trees/logs/log_pine_top,face2-5=0:miscutils/trees/logs/log_pine
+block:id=%blockPineLogLog,data=4,data=5,data=6,data=7,face0-1=0:miscutils/trees/logs/log_pine,face2-3=4000:miscutils/trees/logs/log_pine,face4-5=0:miscutils/trees/logs/log_pine_top
+block:id=%blockPineLogLog,data=8,data=9,data=10,data=11,face0-1=4000:miscutils/trees/logs/log_pine,face2-3=0:miscutils/trees/logs/log_pine_top,face4-5=4000:miscutils/trees/logs/log_pine
+block:id=%blockPineLogLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:miscutils/trees/logs/log_pine
+
+# %blockPineLeaves:* (blockPineLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.pine.LeavesPineTree
+block:id=%blockPineLeaves,data=0,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=2,data=3,data=4,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=6,data=7,data=8,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=10,data=11,data=12,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=14,data=15,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
+
+# %blockPineSapling:* (blockPineSapling), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.pine.SaplingPineTree
+block:id=%blockPineSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/trees/saplings/sapling_pine
+
+# %fluidSludge:* (fluidSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseFluid
+block:id=%fluidSludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:miscutils/fluid/Fluid_Sludge_Still,face2-5=12000:miscutils/fluid/Fluid_Sludge_Flow
+
+# %dimensionDarkWorld_portal:* (dimensionDarkWorld_portal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.everglades.block.BlockEvergladesPortal
+block:id=%dimensionDarkWorld_portal,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=00FF00,face0-5=17000:minecraft/portal
+
+# %blockDarkWorldGround:* (blockDarkWorldGround), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.everglades.block.BlockDarkWorldGround
+block:id=%blockDarkWorldGround,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+
+# %blockDarkWorldGround2:* (blockDarkWorldGround2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.everglades.block.BlockDarkWorldPollutedDirt
+block:id=%blockDarkWorldGround2,data=0,data=1,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:minecraft/dirt
+block:id=%blockDarkWorldGround2,data=2,stdrot=true,colorMult=FF7CBD6B,face0=17000:minecraft/dirt,face1=17000:minecraft/dirt_podzol_top,face2-5=17000:minecraft/dirt_podzol_side
+block:id=%blockDarkWorldGround2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:minecraft/dirt
+
+# %blockDarkWorldPortalFrame:* (blockDarkWorldPortalFrame), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gtPlusPlus.everglades.block.BlockDarkWorldPortalFrame
+block:id=%blockDarkWorldPortalFrame,data=*,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_TECH_PANEL_A
+
+# %blockMobSpawnerEx:* (blockMobSpawnerEx), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.plugin.villagers.block.BlockGenericSpawner
+block:id=%blockMobSpawnerEx,data=*,stdrot=true,face0-5=0:minecraft/mob_spawner
+
+# %miscutils.blockcasings:* (miscutils.blockcasings), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks
+block:id=%miscutils.blockcasings,data=0,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_CENTRIFUGE
+block:id=%miscutils.blockcasings,data=1,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_TANTALLOY61
+block:id=%miscutils.blockcasings,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FIREBOX_BRONZE
+block:id=%miscutils.blockcasings,data=3,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FIREBOX_STEEL
+block:id=%miscutils.blockcasings,data=4,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
+block:id=%miscutils.blockcasings,data=5,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_POTIN
+block:id=%miscutils.blockcasings,data=6,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_MARAGINGSTEEL
+block:id=%miscutils.blockcasings,data=7,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_TUMBAGA
+block:id=%miscutils.blockcasings,data=8,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_ORGANIC_PANEL_A_GLOWING
+block:id=%miscutils.blockcasings,data=9,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_METAL_PANEL_F
+block:id=%miscutils.blockcasings,data=10,stdrot=true,face0-5=0:miscutils/TileEntities/machine_top
+block:id=%miscutils.blockcasings,data=11,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_GRISIUM
+block:id=%miscutils.blockcasings,data=12,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_STELLITE
+block:id=%miscutils.blockcasings,data=13,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_ZERON100
+block:id=%miscutils.blockcasings,data=14,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_FIREBOX_STABALLOY
+block:id=%miscutils.blockcasings,data=15,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_ZIRCONIUM_CARBIDE
+
+# %gtplusplus.blockcasings.2:* (gtplusplus.blockcasings.2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks2
+block:id=%gtplusplus.blockcasings.2,data=0,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_RED_STEEL
+block:id=%gtplusplus.blockcasings.2,data=1,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_HASTELLOY_X
+block:id=%gtplusplus.blockcasings.2,data=2,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_HASTELLOY_N
+block:id=%gtplusplus.blockcasings.2,data=3,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_FLUID_INCOLOY_DS
+block:id=%gtplusplus.blockcasings.2,data=4,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_GRISIUM
+block:id=%gtplusplus.blockcasings.2,data=5,stdrot=true,face0-5=0:miscutils/chrono/MetalPanel
+block:id=%gtplusplus.blockcasings.2,data=6,stdrot=true,face0-5=0:miscutils/chrono/MetalGrate
+block:id=%gtplusplus.blockcasings.2,data=7,stdrot=true,face0-5=0:miscutils/redox/redox1
+block:id=%gtplusplus.blockcasings.2,data=8,stdrot=true,face0-5=0:miscutils/chrono/MetalSheet
+block:id=%gtplusplus.blockcasings.2,data=9,stdrot=true,face0-5=0:miscutils/chrono/CyberPanel
+block:id=%gtplusplus.blockcasings.2,data=10,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_RADIATIONPROOF
+block:id=%gtplusplus.blockcasings.2,data=11,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_TANTALLOY61
+block:id=%gtplusplus.blockcasings.2,data=12,stdrot=true,face0-5=0:miscutils/TileEntities/machine_top
+block:id=%gtplusplus.blockcasings.2,data=13,stdrot=true,face0-1=0:miscutils/metro/TEXTURE_TECH_A,face2-5=0:miscutils/metro/TEXTURE_TECH_B
+block:id=%gtplusplus.blockcasings.2,data=14,stdrot=true,face0-5=0:gregtech/iconsets/RENDERING_ERROR
+block:id=%gtplusplus.blockcasings.2,data=15,stdrot=true,face0-5=0:miscutils/TileEntities/log_acacia_top
+
+# %gtplusplus.blockcasings.3:* (gtplusplus.blockcasings.3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks3
+block:id=%gtplusplus.blockcasings.3,data=0,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_METAL_PANEL_B
+block:id=%gtplusplus.blockcasings.3,data=1,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_METAL_PANEL_D
+block:id=%gtplusplus.blockcasings.3,data=2,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_METAL_PANEL_C
+block:id=%gtplusplus.blockcasings.3,data=3,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_TRINIUM_NAQUADAH_VENT
+block:id=%gtplusplus.blockcasings.3,data=4,stdrot=true,face0-5=0:miscutils/redox/redox2
+block:id=%gtplusplus.blockcasings.3,data=5,stdrot=true,face0-5=0:miscutils/redox/redox3
+block:id=%gtplusplus.blockcasings.3,data=6,stdrot=true,face0-5=0:miscutils/redox/redox4
+block:id=%gtplusplus.blockcasings.3,data=7,stdrot=true,face0-5=0:miscutils/redox/redox5
+block:id=%gtplusplus.blockcasings.3,data=8,stdrot=true,face0-5=0:miscutils/redox/redox6
+block:id=%gtplusplus.blockcasings.3,data=9,stdrot=true,face0-5=0:miscutils/TileEntities/CASING_AMAZON
+block:id=%gtplusplus.blockcasings.3,data=10,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_ADVANCED_CRYOGENIC
+block:id=%gtplusplus.blockcasings.3,data=11,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_ADVANCED_VOLCANUS
+block:id=%gtplusplus.blockcasings.3,data=12,stdrot=true,face0-5=0:miscutils/iconsets/MACHINE_CASING_FUSION_3
+block:id=%gtplusplus.blockcasings.3,data=13,stdrot=true,face0-5=0:miscutils/iconsets/MACHINE_CASING_FUSION_COIL_II
+block:id=%gtplusplus.blockcasings.3,data=14,stdrot=true,face0-5=0:miscutils/iconsets/MACHINE_CASING_FUSION_GLASS_ULTRA
+block:id=%gtplusplus.blockcasings.3,data=15,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_MAGIC_A
+
+# %gtplusplus.blockcasings.4:* (gtplusplus.blockcasings.4), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks4
+block:id=%gtplusplus.blockcasings.4,data=0,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_TRINIUM_TITANIUM
+block:id=%gtplusplus.blockcasings.4,data=1,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_TECH_C
+block:id=%gtplusplus.blockcasings.4,data=2,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_ORGANIC_PANEL_A_GLOWING
+block:id=%gtplusplus.blockcasings.4,data=3,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_METAL_PANEL_A
+block:id=%gtplusplus.blockcasings.4,data=4,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_QFT_COIL
+block:id=%gtplusplus.blockcasings.4,data=5,data=6,data=7,data=8,stdrot=true,face0-5=0:gregtech/iconsets/RENDERING_ERROR
+block:id=%gtplusplus.blockcasings.4,data=9,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_MARAGINGSTEEL
+block:id=%gtplusplus.blockcasings.4,data=10,stdrot=true,face0-1=0:miscutils/metro/TEXTURE_STONE_RED_B,face2-5=0:miscutils/metro/TEXTURE_STONE_RED_A
+block:id=%gtplusplus.blockcasings.4,data=11,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_ROCKETDYNE
+block:id=%gtplusplus.blockcasings.4,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/RENDERING_ERROR
+
+# %gtplusplus.blockcasings.5:* (gtplusplus.blockcasings.5), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks5
+block:id=%gtplusplus.blockcasings.5,data=0,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_PIPE_T1
+block:id=%gtplusplus.blockcasings.5,data=1,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_GRINDING_FACTORY
+block:id=%gtplusplus.blockcasings.5,data=2,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_GEARBOX_T1
+block:id=%gtplusplus.blockcasings.5,data=3,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_TECH_PANEL_D
+block:id=%gtplusplus.blockcasings.5,data=4,stdrot=true,face0-5=0:miscutils/chrono/MetalSheet8
+block:id=%gtplusplus.blockcasings.5,data=5,stdrot=true,face0-5=0:miscutils/chrono/MetalSheet9
+block:id=%gtplusplus.blockcasings.5,data=6,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_TECH_PANEL_H
+block:id=%gtplusplus.blockcasings.5,data=7,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/NeutronPulseManipulator
+block:id=%gtplusplus.blockcasings.5,data=8,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/CosmicFabricManipulator
+block:id=%gtplusplus.blockcasings.5,data=9,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/InfinityInfusedManipulator
+block:id=%gtplusplus.blockcasings.5,data=10,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/SpaceTimeContinuumRipper
+block:id=%gtplusplus.blockcasings.5,data=11,stdrot=true,face0-5=0:miscutils/NeutronShieldingCore
+block:id=%gtplusplus.blockcasings.5,data=12,stdrot=true,face0-5=0:miscutils/CosmicFabricShieldingCore
+block:id=%gtplusplus.blockcasings.5,data=13,stdrot=true,face0-5=0:miscutils/InfinityInfusedShieldingCore
+block:id=%gtplusplus.blockcasings.5,data=14,stdrot=true,face0-5=0:miscutils/SpaceTimeBendingCore
+block:id=%gtplusplus.blockcasings.5,data=15,stdrot=true,face0-1=0:miscutils/Blank,face2-5=0:miscutils/ForceFieldGlass
+
+# %gtplusplus.blocktieredcasings.1:* (gtplusplus.blocktieredcasings.1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaTieredCasingBlocks1
+block:id=%gtplusplus.blocktieredcasings.1,data=0,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_ULV
+block:id=%gtplusplus.blocktieredcasings.1,data=1,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_LV
+block:id=%gtplusplus.blocktieredcasings.1,data=2,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_MV
+block:id=%gtplusplus.blocktieredcasings.1,data=3,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_HV
+block:id=%gtplusplus.blocktieredcasings.1,data=4,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_EV
+block:id=%gtplusplus.blocktieredcasings.1,data=5,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_IV
+block:id=%gtplusplus.blocktieredcasings.1,data=6,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_LuV
+block:id=%gtplusplus.blocktieredcasings.1,data=7,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_ZPM
+block:id=%gtplusplus.blocktieredcasings.1,data=8,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_UV
+block:id=%gtplusplus.blocktieredcasings.1,data=9,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_MAX
+block:id=%gtplusplus.blocktieredcasings.1,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/RENDERING_ERROR
+
+# %gtplusplus.blockspecialcasings.1:* (gtplusplus.blockspecialcasings.1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaSpecialMultiCasings
+block:id=%gtplusplus.blockspecialcasings.1,data=0,stdrot=true,face0-5=0:miscutils/redox/redox1
+block:id=%gtplusplus.blockspecialcasings.1,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+block:id=%gtplusplus.blockspecialcasings.1,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
+block:id=%gtplusplus.blockspecialcasings.1,data=3,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL
+block:id=%gtplusplus.blockspecialcasings.1,data=4,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
+block:id=%gtplusplus.blockspecialcasings.1,data=5,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_RED_STEEL
+block:id=%gtplusplus.blockspecialcasings.1,data=6,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_MARAGINGSTEEL
+block:id=%gtplusplus.blockspecialcasings.1,data=7,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_STELLITE
+block:id=%gtplusplus.blockspecialcasings.1,data=8,stdrot=true,face0-5=0:miscutils/TileEntities/machine_top
+block:id=%gtplusplus.blockspecialcasings.1,data=9,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_FLOTATION
+block:id=%gtplusplus.blockspecialcasings.1,data=10,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_TALONITE
+block:id=%gtplusplus.blockspecialcasings.1,data=11,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_RADIATIONPROOF
+block:id=%gtplusplus.blockspecialcasings.1,data=12,stdrot=true,face0-5=0:miscutils/redox/redox5
+block:id=%gtplusplus.blockspecialcasings.1,data=13,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_MAGIC_B
+block:id=%gtplusplus.blockspecialcasings.1,data=14,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_TALONITE
+block:id=%gtplusplus.blockspecialcasings.1,data=15,stdrot=true,face0-5=0:miscutils/iconsets/SC_TURBINE
+
+# %gtplusplus.blockspecialcasings.3:* (gtplusplus.blockspecialcasings.3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaSpecialMultiCasings2
+block:id=%gtplusplus.blockspecialcasings.3,data=0,stdrot=true,face0-5=0:miscutils/special/block_1
+block:id=%gtplusplus.blockspecialcasings.3,data=1,stdrot=true,face0-5=0:miscutils/special/block_2
+block:id=%gtplusplus.blockspecialcasings.3,data=2,stdrot=true,face0-5=0:miscutils/special/block_3
+block:id=%gtplusplus.blockspecialcasings.3,data=3,stdrot=true,face0-5=0:miscutils/special/block_4
+block:id=%gtplusplus.blockspecialcasings.3,data=4,stdrot=true,face0-5=0:miscutils/special/block_5
+block:id=%gtplusplus.blockspecialcasings.3,data=5,stdrot=true,face0-5=0:miscutils/special/block_6
+block:id=%gtplusplus.blockspecialcasings.3,data=6,stdrot=true,face0-5=0:miscutils/special/block_7
+block:id=%gtplusplus.blockspecialcasings.3,data=7,stdrot=true,face0-5=0:miscutils/special/block_8
+block:id=%gtplusplus.blockspecialcasings.3,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/RENDERING_ERROR
+
+# %gtplusplus.blockspecialcasings.2:* (gtplusplus.blockspecialcasings.2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaSpecialMachineCasings
+block:id=%gtplusplus.blockspecialcasings.2,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_BRONZEPLATEDBRICKS
+block:id=%gtplusplus.blockspecialcasings.2,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FROST_PROOF
+block:id=%gtplusplus.blockspecialcasings.2,data=2,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_LAURENIUM
+block:id=%gtplusplus.blockspecialcasings.2,data=3,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_HEATPROOFCASING
+block:id=%gtplusplus.blockspecialcasings.2,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/RENDERING_ERROR
+
+# %gtplusplus.blockcasings.pipesgears:* (gtplusplus.blockcasings.pipesgears), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocksPipeGearbox
+block:id=%gtplusplus.blockcasings.pipesgears,data=0,stdrot=true,colorMult=8B4513,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=1,stdrot=true,colorMult=6CF076,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=2,stdrot=true,colorMult=C8DCDE,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=3,stdrot=true,colorMult=D2B4F5,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=4,stdrot=true,colorMult=B4B414,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=5,stdrot=true,colorMult=3467BA,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=6,stdrot=true,colorMult=655B3E,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=7,stdrot=true,colorMult=AD94A4,face0-5=17000:miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=8,stdrot=true,colorMult=D0C6D5,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=9,stdrot=true,colorMult=76DC8A,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=10,stdrot=true,colorMult=C9B4F2,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=11,stdrot=true,colorMult=D2B4F5,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=12,stdrot=true,colorMult=8FA89C,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=13,stdrot=true,colorMult=A09AA2,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=14,stdrot=true,colorMult=655B3E,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+block:id=%gtplusplus.blockcasings.pipesgears,data=15,stdrot=true,colorMult=AD94A4,face0-5=17000:miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC
+
+# %oreRareEarthI:* (oreRareEarthI), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreRareEarthI,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreRareEarthII:* (oreRareEarthII), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreRareEarthII,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %oreRareEarthIII:* (oreRareEarthIII), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+block:id=%oreRareEarthIII,data=*,stdrot=true,face0-5=0:minecraft/stone

@@ -1,0 +1,106 @@
+# opensecurity 1.0.120-GTNH
+version:1.7
+modname:opensecurity
+
+
+cfgfile:config/opensecurity.cfg
+
+
+texturepath:assets/opensecurity/textures/blocks/
+texture:id=opensecurity/alarm,filename=assets/opensecurity/textures/blocks/alarm.png
+texture:id=opensecurity/biometricreader_top,filename=assets/opensecurity/textures/blocks/biometricreader_top.png
+texture:id=opensecurity/cardwriter_top,filename=assets/opensecurity/textures/blocks/cardwriter_top.png
+texture:id=opensecurity/dataprocblock_front,filename=assets/opensecurity/textures/blocks/dataprocblock_front.png
+texture:id=opensecurity/dataprocblock_side,filename=assets/opensecurity/textures/blocks/dataprocblock_side.png
+texture:id=opensecurity/door_controller,filename=assets/opensecurity/textures/blocks/door_controller.png
+texture:id=opensecurity/door_secure_lower,filename=assets/opensecurity/textures/blocks/door_secure_lower.png
+texture:id=opensecurity/door_secure_upper,filename=assets/opensecurity/textures/blocks/door_secure_upper.png
+texture:id=opensecurity/door_secure_upper_nowindow,filename=assets/opensecurity/textures/blocks/door_secure_upper_nowindow.png
+texture:id=opensecurity/entitydetector,filename=assets/opensecurity/textures/blocks/entitydetector.png
+texture:id=opensecurity/hub_input_connected,filename=assets/opensecurity/textures/blocks/hub_input_connected.png
+texture:id=opensecurity/hub_input_noconnected,filename=assets/opensecurity/textures/blocks/hub_input_noconnected.png
+texture:id=opensecurity/hub_output_connected,filename=assets/opensecurity/textures/blocks/hub_output_connected.png
+texture:id=opensecurity/hub_output_noconnected,filename=assets/opensecurity/textures/blocks/hub_output_noconnected.png
+texture:id=opensecurity/machine_side,filename=assets/opensecurity/textures/blocks/machine_side.png
+texture:id=opensecurity/magreader,filename=assets/opensecurity/textures/blocks/magreader.png
+texture:id=opensecurity/magreader_active,filename=assets/opensecurity/textures/blocks/magreader_active.png
+texture:id=opensecurity/magreader_error,filename=assets/opensecurity/textures/blocks/magreader_error.png
+texture:id=opensecurity/magreader_success,filename=assets/opensecurity/textures/blocks/magreader_success.png
+texture:id=opensecurity/rfidreader,filename=assets/opensecurity/textures/blocks/rfidreader.png
+texture:id=opensecurity/rfidreader_active,filename=assets/opensecurity/textures/blocks/rfidreader_active.png
+texture:id=opensecurity/rfidreader_found,filename=assets/opensecurity/textures/blocks/rfidreader_found.png
+texture:id=opensecurity/rfidreader_nofound,filename=assets/opensecurity/textures/blocks/rfidreader_nofound.png
+
+
+
+# %magreader:* (magreader), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockMagReader
+block:id=%magreader,data=0,stdrot=true,face0-1=0:opensecurity/machine_side,face2-5=0:opensecurity/magreader
+block:id=%magreader,data=1,stdrot=true,face0-1=0:opensecurity/machine_side,face2-5=0:opensecurity/magreader_active
+block:id=%magreader,data=2,stdrot=true,face0-1=0:opensecurity/machine_side,face2-5=0:opensecurity/magreader_error
+block:id=%magreader,data=3,stdrot=true,face0-1=0:opensecurity/machine_side,face2-5=0:opensecurity/magreader_success
+block:id=%magreader,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:opensecurity/machine_side,face2-5=0:opensecurity/magreader
+
+# %rfidreader:* (rfidreader), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockRFIDReader
+block:id=%rfidreader,data=0,stdrot=true,face0-5=0:opensecurity/rfidreader
+block:id=%rfidreader,data=1,stdrot=true,face0-5=0:opensecurity/rfidreader_active
+block:id=%rfidreader,data=2,stdrot=true,face0-5=0:opensecurity/rfidreader_found
+block:id=%rfidreader,data=3,stdrot=true,face0-5=0:opensecurity/rfidreader_nofound
+block:id=%rfidreader,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:opensecurity/rfidreader
+
+# %rfidwriter:* (rfidwriter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockCardWriter
+block:id=%rfidwriter,data=0,stdrot=true,face0=0:opensecurity/cardwriter_top,face1-3=0:opensecurity/machine_side,face4=0:opensecurity/cardwriter_top,face5=0:opensecurity/machine_side
+block:id=%rfidwriter,data=1,stdrot=true,face0=0:opensecurity/machine_side,face1=0:opensecurity/cardwriter_top,face2-5=0:opensecurity/machine_side
+block:id=%rfidwriter,data=2,stdrot=true,face0-1=0:opensecurity/machine_side,face2=0:opensecurity/cardwriter_top,face3-5=0:opensecurity/machine_side
+block:id=%rfidwriter,data=3,stdrot=true,face0-2=0:opensecurity/machine_side,face3=0:opensecurity/cardwriter_top,face4-5=0:opensecurity/machine_side
+block:id=%rfidwriter,data=4,stdrot=true,face0-3=0:opensecurity/machine_side,face4=0:opensecurity/cardwriter_top,face5=0:opensecurity/machine_side
+block:id=%rfidwriter,data=5,stdrot=true,face0-4=0:opensecurity/machine_side,face5=0:opensecurity/cardwriter_top
+block:id=%rfidwriter,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:opensecurity/machine_side
+
+# %alarm:* (alarm), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockAlarm
+block:id=%alarm,data=*,stdrot=true,face0-5=0:opensecurity/alarm
+
+# %entitydetector:* (entitydetector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockEntityDetector
+block:id=%entitydetector,data=*,stdrot=true,face0-5=0:opensecurity/entitydetector
+
+# %doorcontroller:* (doorcontroller), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=pcl.opensecurity.blocks.BlockDoorController
+block:id=%doorcontroller,data=*,stdrot=true,face0-1=0:opensecurity/machine_side,face2-5=0:opensecurity/door_controller
+
+# %SecurityDoor:* (SecurityDoor), render=(DOOR), opaque=false,cls=pcl.opensecurity.blocks.BlockSecurityDoor
+block:id=%SecurityDoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:opensecurity/door_secure_upper,patch1=0:opensecurity/door_secure_lower
+
+# %SecurityDoorPrivate:* (SecurityDoorPrivate), render=(DOOR), opaque=false,cls=pcl.opensecurity.blocks.BlockSecurityDoorPrivate
+block:id=%SecurityDoorPrivate,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:opensecurity/door_secure_upper_nowindow,patch1=0:opensecurity/door_secure_lower
+
+# %opensecurity.DataBlock:* (opensecurity.DataBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockData
+block:id=%opensecurity.DataBlock,data=0,stdrot=true,face0=0:opensecurity/dataprocblock_front,face1-3=0:opensecurity/dataprocblock_side,face4=0:opensecurity/dataprocblock_front,face5=0:opensecurity/dataprocblock_side
+block:id=%opensecurity.DataBlock,data=1,stdrot=true,face0=0:opensecurity/dataprocblock_side,face1=0:opensecurity/dataprocblock_front,face2-5=0:opensecurity/dataprocblock_side
+block:id=%opensecurity.DataBlock,data=2,stdrot=true,face0-1=0:opensecurity/dataprocblock_side,face2=0:opensecurity/dataprocblock_front,face3-5=0:opensecurity/dataprocblock_side
+block:id=%opensecurity.DataBlock,data=3,stdrot=true,face0-2=0:opensecurity/dataprocblock_side,face3=0:opensecurity/dataprocblock_front,face4-5=0:opensecurity/dataprocblock_side
+block:id=%opensecurity.DataBlock,data=4,stdrot=true,face0-3=0:opensecurity/dataprocblock_side,face4=0:opensecurity/dataprocblock_front,face5=0:opensecurity/dataprocblock_side
+block:id=%opensecurity.DataBlock,data=5,stdrot=true,face0-4=0:opensecurity/dataprocblock_side,face5=0:opensecurity/dataprocblock_front
+block:id=%opensecurity.DataBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:opensecurity/dataprocblock_side
+
+# %opensecurity.SwitchableHub:* (opensecurity.SwitchableHub), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockSwitchableHub
+block:id=%opensecurity.SwitchableHub,data=0,data=1,data=2,data=3,stdrot=true,face0-5=0:opensecurity/hub_output_noconnected
+block:id=%opensecurity.SwitchableHub,data=4,stdrot=true,face0=0:opensecurity/hub_input_connected,face1-5=0:opensecurity/hub_output_noconnected
+block:id=%opensecurity.SwitchableHub,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:opensecurity/hub_output_noconnected
+
+# %opensecurity.BlockKVM:* (opensecurity.BlockKVM), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockKVM
+block:id=%opensecurity.BlockKVM,data=0,data=1,data=2,data=3,stdrot=true,face0-5=0:opensecurity/hub_input_noconnected
+block:id=%opensecurity.BlockKVM,data=4,stdrot=true,face0=0:opensecurity/hub_output_connected,face1-5=0:opensecurity/hub_input_noconnected
+block:id=%opensecurity.BlockKVM,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:opensecurity/hub_input_noconnected
+
+# %energyTurretBlock:* (energyTurretBlock), render=(CUSTOM), opaque=false,cls=pcl.opensecurity.blocks.BlockEnergyTurret
+block:id=%energyTurretBlock,data=*,stdrot=true,face0-5=0:opensecurity/machine_side
+
+# %keypadLock:* (keypadLock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=pcl.opensecurity.blocks.BlockKeypadLock
+block:id=%keypadLock,data=*,stdrot=true,face0-5=0:opensecurity/machine_side
+
+# %biometricScanner:* (biometricScanner), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pcl.opensecurity.blocks.BlockBiometricReader
+block:id=%biometricScanner,data=0,stdrot=true,face0=0:opensecurity/biometricreader_top,face1-3=0:opensecurity/machine_side,face4=0:opensecurity/biometricreader_top,face5=0:opensecurity/machine_side
+block:id=%biometricScanner,data=1,stdrot=true,face0=0:opensecurity/machine_side,face1=0:opensecurity/biometricreader_top,face2-5=0:opensecurity/machine_side
+block:id=%biometricScanner,data=2,stdrot=true,face0-1=0:opensecurity/machine_side,face2=0:opensecurity/biometricreader_top,face3-5=0:opensecurity/machine_side
+block:id=%biometricScanner,data=3,stdrot=true,face0-2=0:opensecurity/machine_side,face3=0:opensecurity/biometricreader_top,face4-5=0:opensecurity/machine_side
+block:id=%biometricScanner,data=4,stdrot=true,face0-3=0:opensecurity/machine_side,face4=0:opensecurity/biometricreader_top,face5=0:opensecurity/machine_side
+block:id=%biometricScanner,data=5,stdrot=true,face0-4=0:opensecurity/machine_side,face5=0:opensecurity/biometricreader_top
+block:id=%biometricScanner,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:opensecurity/machine_side

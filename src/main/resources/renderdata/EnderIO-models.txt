@@ -1,4 +1,4 @@
-# EnderIO 1.7.10-2.3.0.429_beta
+# EnderIO 2.3.1.68
 version:1.7
 modname:EnderIO
 
@@ -61,7 +61,7 @@ customblock:id=%blockPaintedWall,class=org.dynmap.hdmap.renderer.FenceWallBlockR
 # %blockPaintedStair:* (blockPaintedStair), render=(STAIRS), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedStair
 customblock:id=%blockPaintedStair,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %blockPaintedSlab:* (blockPaintedSlab), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
+# %blockPaintedSlab:* (blockPaintedSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedSlab
 boxblock:id=%blockPaintedSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%blockPaintedSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -69,14 +69,14 @@ boxblock:id=%blockPaintedSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,dat
 
 # %blockPaintedGlowstone:* (blockPaintedGlowstone), render=crazypants.enderio.machine.painter.PaintedBlockRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.painter.BlockPaintedGlowstone
 
-# %blockPaintedCarpet:* (blockPaintedCarpet), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedCarpet
+# %blockPaintedCarpet:* (blockPaintedCarpet), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedCarpet
 boxblock:id=%blockPaintedCarpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
 
 # %blockPowerMonitor:* (blockPowerMonitor), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.monitor.BlockPowerMonitor
 
 # %blockBuffer:* (blockBuffer), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.buffer.BlockBuffer
 
-# %blockInventoryPanel:* (blockInventoryPanel), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.invpanel.BlockInventoryPanel
+# %blockInventoryPanel:* (blockInventoryPanel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.machine.invpanel.BlockInventoryPanel
 boxblock:id=%blockInventoryPanel,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
 # %blockSliceAndSplice:* (blockSliceAndSplice), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.slicensplice.BlockSliceAndSplice
@@ -96,7 +96,7 @@ boxblock:id=%blockWeatherObelisk,xmin=0.10999999940395355,xmax=0.910000026226043
 # %blockInhibitorObelisk:* (blockInhibitorObelisk), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.inhibitor.BlockInhibitorObelisk
 boxblock:id=%blockInhibitorObelisk,xmin=0.10999999940395355,xmax=0.9100000262260437,ymin=0.0,ymax=0.47999998927116394,zmin=0.10999999940395355,zmax=0.9100000262260437,data=*
 
-# %blockDarkSteelPressurePlate:* (blockDarkSteelPressurePlate), render=(STANDARD), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelPressurePlate
+# %blockDarkSteelPressurePlate:* (blockDarkSteelPressurePlate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelPressurePlate
 boxblock:id=%blockDarkSteelPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%blockDarkSteelPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%blockDarkSteelPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
@@ -245,5 +245,43 @@ boxblock:id=%blockCloud_seed_concentrated,ymax=0.375,data=13
 boxblock:id=%blockCloud_seed_concentrated,ymax=0.25,data=14
 boxblock:id=%blockCloud_seed_concentrated,ymax=0.125,data=15
 
-# %blockDarkIronBars:* (blockDarkIronBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkIronBars
+# %blockEnder_distillation:* (blockEnder_distillation), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+boxblock:id=%blockEnder_distillation,ymax=0.875,data=1
+boxblock:id=%blockEnder_distillation,ymax=0.75,data=2
+boxblock:id=%blockEnder_distillation,ymax=0.625,data=3
+boxblock:id=%blockEnder_distillation,ymax=0.5,data=4
+boxblock:id=%blockEnder_distillation,ymax=0.375,data=5
+boxblock:id=%blockEnder_distillation,ymax=0.25,data=6
+boxblock:id=%blockEnder_distillation,ymax=0.125,data=7
+boxblock:id=%blockEnder_distillation,ymax=0.875,data=9
+boxblock:id=%blockEnder_distillation,ymax=0.75,data=10
+boxblock:id=%blockEnder_distillation,ymax=0.625,data=11
+boxblock:id=%blockEnder_distillation,ymax=0.5,data=12
+boxblock:id=%blockEnder_distillation,ymax=0.375,data=13
+boxblock:id=%blockEnder_distillation,ymax=0.25,data=14
+boxblock:id=%blockEnder_distillation,ymax=0.125,data=15
+
+# %blockVapor_of_levity:* (blockVapor_of_levity), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+boxblock:id=%blockVapor_of_levity,ymax=0.875,data=1
+boxblock:id=%blockVapor_of_levity,ymax=0.75,data=2
+boxblock:id=%blockVapor_of_levity,ymax=0.625,data=3
+boxblock:id=%blockVapor_of_levity,ymax=0.5,data=4
+boxblock:id=%blockVapor_of_levity,ymax=0.375,data=5
+boxblock:id=%blockVapor_of_levity,ymax=0.25,data=6
+boxblock:id=%blockVapor_of_levity,ymax=0.125,data=7
+boxblock:id=%blockVapor_of_levity,ymax=0.875,data=9
+boxblock:id=%blockVapor_of_levity,ymax=0.75,data=10
+boxblock:id=%blockVapor_of_levity,ymax=0.625,data=11
+boxblock:id=%blockVapor_of_levity,ymax=0.5,data=12
+boxblock:id=%blockVapor_of_levity,ymax=0.375,data=13
+boxblock:id=%blockVapor_of_levity,ymax=0.25,data=14
+boxblock:id=%blockVapor_of_levity,ymax=0.125,data=15
+
+# %blockDarkIronBars:* (blockDarkIronBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkSteelBars
 customblock:id=%blockDarkIronBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %blockSoulariumBars:* (blockSoulariumBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkSteelBars$BlockSoulariumBars
+customblock:id=%blockSoulariumBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %blockEndSteelBars:* (blockEndSteelBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkSteelBars$BlockEndSteelBars
+customblock:id=%blockEndSteelBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*

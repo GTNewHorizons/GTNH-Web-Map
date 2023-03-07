@@ -1,4 +1,4 @@
-# AWWayofTime v1.2.0a
+# AWWayofTime 1.3.25
 version:1.7
 modname:AWWayofTime
 
@@ -38,6 +38,18 @@ boxblock:id=%lifeEssence,ymax=0.375,data=13
 boxblock:id=%lifeEssence,ymax=0.25,data=14
 boxblock:id=%lifeEssence,ymax=0.125,data=15
 
-# %spectralContainer:* (spectralContainer), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpectralContainer
+# %blockPedestal:* (blockPedestal), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockPedestal
+boxblock:id=%blockPedestal,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.6000000238418579,zmin=0.1875,zmax=0.8125,data=*
+
+# %blockPlinth:* (blockPlinth), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockPlinth
+boxblock:id=%blockPlinth,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %spectralContainer:* (spectralContainer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpectralContainer
 # FIXME: Box constraints truncated to 0.0<=val<=1.0
 boxblock:id=%spectralContainer,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=*
+
+# %blockDemonChest:* (blockDemonChest), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.demonVillage.tileEntity.BlockDemonChest
+boxblock:id=%blockDemonChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %blockCrucible:* (blockCrucible), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockCrucible
+boxblock:id=%blockCrucible,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.625,zmin=0.3125,zmax=0.6875,data=*

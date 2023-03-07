@@ -133,10 +133,10 @@ texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.p
 
 
 
-# %eternalSpring:* (eternalSpring), render=(STANDARD), opaque=true,cls=buildcraft.core.BlockSpring
+# %eternalSpring:* (eternalSpring), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.core.BlockSpring
 block:id=%eternalSpring,data=*,stdrot=true,face0-5=0:minecraft/bedrock
 
-# %buildToolBlock:* (buildToolBlock), render=(STANDARD), opaque=true,cls=buildcraft.core.BlockBuildTool
+# %buildToolBlock:* (buildToolBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.core.BlockBuildTool
 block:id=%buildToolBlock,data=*,stdrot=true,face0-5=0:buildcraftcore/laserBox/blockRedLaser
 
 # %engineBlock:* (engineBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.core.BlockEngine
@@ -152,41 +152,6 @@ block:id=%markerBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Build
 # %pathMarkerBlock:* (pathMarkerBlock), render=buildcraft.core.render.RenderingMarkers(TORCH), opaque=false,cls=buildcraft.core.BlockPathMarker
 block:id=%pathMarkerBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:BuildCraftCore/pathMarkerBlock/default
 
-# %miningWellBlock:* (miningWellBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockMiningWellCompat
-block:id=%miningWellBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
-block:id=%miningWellBlock,data=2,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/front,face3=0:BuildCraftFactory/miningWellBlock/back,face4-5=0:BuildCraftFactory/miningWellBlock/side
-block:id=%miningWellBlock,data=3,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
-block:id=%miningWellBlock,data=4,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2-3=0:BuildCraftFactory/miningWellBlock/side,face4=0:BuildCraftFactory/miningWellBlock/front,face5=0:BuildCraftFactory/miningWellBlock/back
-block:id=%miningWellBlock,data=5,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2-3=0:BuildCraftFactory/miningWellBlock/side,face4=0:BuildCraftFactory/miningWellBlock/back,face5=0:BuildCraftFactory/miningWellBlock/front
-block:id=%miningWellBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
-
-# %plainPipeBlock:* (plainPipeBlock), render=(STANDARD), opaque=false,cls=buildcraft.factory.BlockPlainPipe
-block:id=%plainPipeBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraftfactory/plainPipeBlock/default
-
-# %autoWorkbenchBlock:* (autoWorkbenchBlock), render=(STANDARD), opaque=true,cls=buildcraft.factory.BlockAutoWorkbench
-block:id=%autoWorkbenchBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/autoWorkbenchBlock/bottom,face1=0:BuildCraftFactory/autoWorkbenchBlock/top,face2-5=0:BuildCraftFactory/autoWorkbenchBlock/side
-
-# %tankBlock:* (tankBlock), render=(STANDARD), opaque=false,cls=buildcraft.factory.BlockTank
-block:id=%tankBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:BuildCraftFactory/tankBlock/topbottom,face2-5=0:BuildCraftFactory/tankBlock/side
-
-# %pumpBlock:* (pumpBlock), render=(STANDARD), opaque=true,cls=buildcraft.factory.BlockPump
-block:id=%pumpBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/pumpBlock/bottom,face1=0:BuildCraftFactory/pumpBlock/top,face2-5=0:BuildCraftFactory/pumpBlock/side
-
-# %floodGateBlock:* (floodGateBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockFloodGate
-block:id=%floodGateBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/floodGateBlock/bottom,face1=0:BuildCraftFactory/floodGateBlock/top,face2-5=0:BuildCraftFactory/floodGateBlock/side
-
-# %refineryBlock:* (refineryBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.factory.BlockRefinery
-block:id=%refineryBlock,data=*,stdrot=true,face0-5=0:BuildCraftFactory/refineryBlock/default
-
-# %blockHopper:* (blockHopper), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.factory.BlockHopper
-block:id=%blockHopper,data=*,stdrot=true,face0-5=0:buildcraftfactory/hopperBlock/bottom
-
-# %filteredBufferBlock:* (filteredBufferBlock), render=(STANDARD), opaque=true,cls=buildcraft.transport.BlockFilteredBuffer
-block:id=%filteredBufferBlock,data=*,stdrot=true,face0-5=0:BuildCraftTransport/filteredBufferBlock/default
-
-# %pipeBlock:* (pipeBlock), render=buildcraft.transport.render.PipeRendererWorld(CUSTOM), opaque=false,cls=buildcraft.transport.BlockGenericPipeCompat
-block:id=%pipeBlock,data=*,stdrot=true,face0-5=12000:buildcrafttransport/pipes/pipeItemsStone
-
 # %blockOil:* (blockOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=buildcraft.core.lib.block.BlockBuildCraftFluid
 block:id=%blockOil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:BuildCraftEnergy/fluids/oil_still,face2-5=12000:BuildCraftEnergy/fluids/oil_flow
 
@@ -195,27 +160,6 @@ block:id=%blockFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=1200
 
 # %blockRedPlasma:* (blockRedPlasma), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=buildcraft.core.lib.block.BlockBuildCraftFluid
 block:id=%blockRedPlasma,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:BuildCraftEnergy/fluids/redplasma_still,face2-5=12000:BuildCraftEnergy/fluids/redplasma_flow
-
-# %laserBlock:* (laserBlock), render=buildcraft.silicon.render.RenderLaserBlock(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaser
-block:id=%laserBlock,data=0,stdrot=true,face0=0:BuildCraftSilicon/laserBlock/top,face1=0:BuildCraftSilicon/laserBlock/bottom,face2-5=0:BuildCraftSilicon/laserBlock/side
-block:id=%laserBlock,data=1,stdrot=true,face0=0:BuildCraftSilicon/laserBlock/bottom,face1=0:BuildCraftSilicon/laserBlock/top,face2-5=0:BuildCraftSilicon/laserBlock/side
-block:id=%laserBlock,data=2,stdrot=true,face0-1=0:BuildCraftSilicon/laserBlock/side,face2=0:BuildCraftSilicon/laserBlock/top,face3=0:BuildCraftSilicon/laserBlock/bottom,face4-5=0:BuildCraftSilicon/laserBlock/side
-block:id=%laserBlock,data=3,stdrot=true,face0-1=0:BuildCraftSilicon/laserBlock/side,face2=0:BuildCraftSilicon/laserBlock/bottom,face3=0:BuildCraftSilicon/laserBlock/top,face4-5=0:BuildCraftSilicon/laserBlock/side
-block:id=%laserBlock,data=4,stdrot=true,face0-3=0:BuildCraftSilicon/laserBlock/side,face4=0:BuildCraftSilicon/laserBlock/top,face5=0:BuildCraftSilicon/laserBlock/bottom
-block:id=%laserBlock,data=5,stdrot=true,face0-3=0:BuildCraftSilicon/laserBlock/side,face4=0:BuildCraftSilicon/laserBlock/bottom,face5=0:BuildCraftSilicon/laserBlock/top
-block:id=%laserBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:BuildCraftSilicon/laserBlock/side
-
-# %laserTableBlock:* (laserTableBlock), render=buildcraft.silicon.render.RenderLaserTable(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaserTable
-block:id=%laserTableBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/assemblyTable/default
-block:id=%laserTableBlock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/advancedCraftingTable/default
-block:id=%laserTableBlock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/integrationTable/default
-block:id=%laserTableBlock,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/chargingTable/default
-block:id=%laserTableBlock,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/programmingTable/default
-block:id=%laserTableBlock,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/stampingTable/default
-block:id=%laserTableBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/assemblyTable/default
-
-# %packagerBlock:* (packagerBlock), render=(STANDARD), opaque=true,cls=buildcraft.silicon.BlockPackager
-block:id=%packagerBlock,data=*,stdrot=true,face0=0:BuildCraftSilicon/packagerBlock/bottom,face1=0:BuildCraftSilicon/packagerBlock/top,face2-5=0:BuildCraftSilicon/packagerBlock/side
 
 # %machineBlock:* (machineBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.builders.BlockQuarryCompat
 block:id=%machineBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftBuilders/machineBlock/bottom,face1=0:BuildCraftBuilders/machineBlock/top,face2=0:BuildCraftBuilders/machineBlock/back,face3=0:BuildCraftBuilders/machineBlock/front,face4-5=0:BuildCraftBuilders/machineBlock/side
@@ -262,6 +206,62 @@ block:id=%libraryBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=
 
 # %constructionMarkerBlock:* (constructionMarkerBlock), render=buildcraft.core.render.RenderingMarkers(TORCH), opaque=false,cls=buildcraft.builders.BlockConstructionMarker
 block:id=%constructionMarkerBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:BuildCraftBuilders/constructionMarkerBlock/default
+
+# %filteredBufferBlock:* (filteredBufferBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.transport.BlockFilteredBuffer
+block:id=%filteredBufferBlock,data=*,stdrot=true,face0-5=0:BuildCraftTransport/filteredBufferBlock/default
+
+# %pipeBlock:* (pipeBlock), render=buildcraft.transport.render.PipeRendererWorld(CUSTOM), opaque=false,cls=buildcraft.transport.BlockGenericPipeCompat
+block:id=%pipeBlock,data=*,stdrot=true,face0-5=12000:buildcrafttransport/pipes/pipeItemsStone
+
+# %laserBlock:* (laserBlock), render=buildcraft.silicon.render.RenderLaserBlock(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaser
+block:id=%laserBlock,data=0,stdrot=true,face0=0:BuildCraftSilicon/laserBlock/top,face1=0:BuildCraftSilicon/laserBlock/bottom,face2-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=1,stdrot=true,face0=0:BuildCraftSilicon/laserBlock/bottom,face1=0:BuildCraftSilicon/laserBlock/top,face2-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=2,stdrot=true,face0-1=0:BuildCraftSilicon/laserBlock/side,face2=0:BuildCraftSilicon/laserBlock/top,face3=0:BuildCraftSilicon/laserBlock/bottom,face4-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=3,stdrot=true,face0-1=0:BuildCraftSilicon/laserBlock/side,face2=0:BuildCraftSilicon/laserBlock/bottom,face3=0:BuildCraftSilicon/laserBlock/top,face4-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=4,stdrot=true,face0-3=0:BuildCraftSilicon/laserBlock/side,face4=0:BuildCraftSilicon/laserBlock/top,face5=0:BuildCraftSilicon/laserBlock/bottom
+block:id=%laserBlock,data=5,stdrot=true,face0-3=0:BuildCraftSilicon/laserBlock/side,face4=0:BuildCraftSilicon/laserBlock/bottom,face5=0:BuildCraftSilicon/laserBlock/top
+block:id=%laserBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:BuildCraftSilicon/laserBlock/side
+
+# %laserTableBlock:* (laserTableBlock), render=buildcraft.silicon.render.RenderLaserTable(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaserTable
+block:id=%laserTableBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/assemblyTable/default
+block:id=%laserTableBlock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/advancedCraftingTable/default
+block:id=%laserTableBlock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/integrationTable/default
+block:id=%laserTableBlock,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/chargingTable/default
+block:id=%laserTableBlock,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/programmingTable/default
+block:id=%laserTableBlock,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/stampingTable/default
+block:id=%laserTableBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/assemblyTable/default
+
+# %packagerBlock:* (packagerBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.silicon.BlockPackager
+block:id=%packagerBlock,data=*,stdrot=true,face0=0:BuildCraftSilicon/packagerBlock/bottom,face1=0:BuildCraftSilicon/packagerBlock/top,face2-5=0:BuildCraftSilicon/packagerBlock/side
+
+# %miningWellBlock:* (miningWellBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockMiningWellCompat
+block:id=%miningWellBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
+block:id=%miningWellBlock,data=2,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/front,face3=0:BuildCraftFactory/miningWellBlock/back,face4-5=0:BuildCraftFactory/miningWellBlock/side
+block:id=%miningWellBlock,data=3,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
+block:id=%miningWellBlock,data=4,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2-3=0:BuildCraftFactory/miningWellBlock/side,face4=0:BuildCraftFactory/miningWellBlock/front,face5=0:BuildCraftFactory/miningWellBlock/back
+block:id=%miningWellBlock,data=5,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2-3=0:BuildCraftFactory/miningWellBlock/side,face4=0:BuildCraftFactory/miningWellBlock/back,face5=0:BuildCraftFactory/miningWellBlock/front
+block:id=%miningWellBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
+
+# %plainPipeBlock:* (plainPipeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=buildcraft.factory.BlockPlainPipe
+block:id=%plainPipeBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraftfactory/plainPipeBlock/default
+
+# %autoWorkbenchBlock:* (autoWorkbenchBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.factory.BlockAutoWorkbench
+block:id=%autoWorkbenchBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/autoWorkbenchBlock/bottom,face1=0:BuildCraftFactory/autoWorkbenchBlock/top,face2-5=0:BuildCraftFactory/autoWorkbenchBlock/side
+
+# %tankBlock:* (tankBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=buildcraft.factory.BlockTank
+block:id=%tankBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:BuildCraftFactory/tankBlock/topbottom,face2-5=0:BuildCraftFactory/tankBlock/side
+
+# %pumpBlock:* (pumpBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.factory.BlockPump
+block:id=%pumpBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/pumpBlock/bottom,face1=0:BuildCraftFactory/pumpBlock/top,face2-5=0:BuildCraftFactory/pumpBlock/side
+
+# %floodGateBlock:* (floodGateBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockFloodGate
+block:id=%floodGateBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/floodGateBlock/bottom,face1=0:BuildCraftFactory/floodGateBlock/top,face2-5=0:BuildCraftFactory/floodGateBlock/side
+
+# %refineryBlock:* (refineryBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.factory.BlockRefinery
+block:id=%refineryBlock,data=*,stdrot=true,face0-5=0:BuildCraftFactory/refineryBlock/default
+
+# %blockHopper:* (blockHopper), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.factory.BlockHopper
+block:id=%blockHopper,data=*,stdrot=true,face0-5=0:buildcraftfactory/hopperBlock/bottom
 
 # %zonePlan:* (zonePlan), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.robotics.BlockZonePlan
 block:id=%zonePlan,data=0,data=1,stdrot=true,face0=0:BuildCraftRobotics/zonePlan/default,face1=0:BuildCraftRobotics/zonePlan/top,face2=0:BuildCraftRobotics/zonePlan/back,face3=0:BuildCraftRobotics/zonePlan/front,face4=0:BuildCraftRobotics/zonePlan/left,face5=0:BuildCraftRobotics/zonePlan/right

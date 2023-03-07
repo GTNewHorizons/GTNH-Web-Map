@@ -1,4 +1,4 @@
-# RandomThings 2.1.2
+# RandomThings 2.4.3
 version:1.7
 modname:RandomThings
 
@@ -22,7 +22,7 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %fertilizedDirt_tilled:* (fertilizedDirt_tilled), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockFertilizedDirt
+# %fertilizedDirt_tilled:* (fertilizedDirt_tilled), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockFertilizedDirt
 boxblock:id=%fertilizedDirt_tilled,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
 # %itemCollector:* (itemCollector), render=(CUSTOM), opaque=false,cls=lumien.randomthings.Blocks.BlockItemCollector
@@ -41,8 +41,11 @@ boxblock:id=%advancedItemCollector,xmin=0.3499999940395355,xmax=0.64999997615814
 boxblock:id=%advancedItemCollector,xmin=0.699999988079071,xmax=1.0,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=4
 boxblock:id=%advancedItemCollector,xmin=0.0,xmax=0.30000001192092896,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %moonSensor:* (moonSensor), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockMoonSensor
+# %moonSensor:* (moonSensor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockMoonSensor
 boxblock:id=%moonSensor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=*
+
+# %bloodMoonSensor:* (bloodMoonSensor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockBloodmoonSensor
+boxblock:id=%bloodMoonSensor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=*
 
 # %wirelessLever:* (wirelessLever), render=lumien.randomthings.Client.Renderer.RenderWirelessLever(CUSTOM), opaque=false,cls=lumien.randomthings.Blocks.BlockWirelessLever
 boxblock:id=%wirelessLever,xmin=0.25,xmax=0.75,ymin=0.4000000059604645,ymax=1.0,zmin=0.25,zmax=0.75,data=0

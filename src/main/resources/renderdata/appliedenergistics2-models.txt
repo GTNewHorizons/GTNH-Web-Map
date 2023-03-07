@@ -1,4 +1,4 @@
-# appliedenergistics2 rv3-beta-6
+# appliedenergistics2 rv3-beta-173-GTNH
 version:1.7
 modname:appliedenergistics2
 
@@ -30,8 +30,6 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 # %tile.BlockQuartzPillar:* (tile.BlockQuartzPillar), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.BlockQuartzPillar
 
 # %tile.BlockSkyStone:* (tile.BlockSkyStone), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.BlockSkyStone
-
-# %tile.BlockGrinder:* (tile.BlockGrinder), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.grindstone.BlockGrinder
 
 # %tile.BlockTinyTNT:* (tile.BlockTinyTNT), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.misc.BlockTinyTNT
 boxblock:id=%tile.BlockTinyTNT,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=*
@@ -76,7 +74,11 @@ boxblock:id=%tile.BlockQuantumLinkChamber,xmin=0.125,xmax=0.875,ymin=0.125,ymax=
 
 # %tile.BlockCraftingUnit:* (tile.BlockCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingUnit
 
+# %tile.BlockAdvancedCraftingUnit:* (tile.BlockAdvancedCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingUnit
+
 # %tile.BlockCraftingStorage:* (tile.BlockCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingStorage
+
+# %tile.BlockAdvancedCraftingStorage:* (tile.BlockAdvancedCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingStorage
 
 # %tile.BlockCraftingMonitor:* (tile.BlockCraftingMonitor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingMonitor
 
@@ -104,34 +106,34 @@ customblock:id=%tile.ChiseledQuartzStairBlock,class=org.dynmap.hdmap.renderer.St
 # %tile.QuartzPillarStairBlock:* (tile.QuartzPillarStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.QuartzPillarStairBlock
 customblock:id=%tile.QuartzPillarStairBlock,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %tile.SkyStoneSlabBlock:* (tile.SkyStoneSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneSlabBlock:* (tile.SkyStoneSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.SkyStoneSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.SkyStoneSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.SkyStoneBlockSlabBlock:* (tile.SkyStoneBlockSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneBlockSlabBlock:* (tile.SkyStoneBlockSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.SkyStoneBlockSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.SkyStoneBlockSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.SkyStoneBrickSlabBlock:* (tile.SkyStoneBrickSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneBrickSlabBlock:* (tile.SkyStoneBrickSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.SkyStoneBrickSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.SkyStoneBrickSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.SkyStoneSmallBrickSlabBlock:* (tile.SkyStoneSmallBrickSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneSmallBrickSlabBlock:* (tile.SkyStoneSmallBrickSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.SkyStoneSmallBrickSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.SkyStoneSmallBrickSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.FluixSlabBlock:* (tile.FluixSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.FluixSlabBlock:* (tile.FluixSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.FluixSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.FluixSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.QuartzSlabBlock:* (tile.QuartzSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.QuartzSlabBlock:* (tile.QuartzSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.QuartzSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.QuartzSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.ChiseledQuartzSlabBlock:* (tile.ChiseledQuartzSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.ChiseledQuartzSlabBlock:* (tile.ChiseledQuartzSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.ChiseledQuartzSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.ChiseledQuartzSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.QuartzPillarSlabBlock:* (tile.QuartzPillarSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.QuartzPillarSlabBlock:* (tile.QuartzPillarSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.QuartzPillarSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.QuartzPillarSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

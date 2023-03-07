@@ -1,4 +1,4 @@
-# OpenComputers 1.6.1.11
+# OpenComputers 1.8.0.13-GTNH
 version:1.7
 modname:OpenComputers
 
@@ -16,6 +16,7 @@ texture:id=opencomputers/AssemblerTop,filename=assets/opencomputers/textures/blo
 texture:id=opencomputers/CablePart,filename=assets/opencomputers/textures/blocks/CablePart.png
 texture:id=opencomputers/CapacitorSide,filename=assets/opencomputers/textures/blocks/CapacitorSide.png
 texture:id=opencomputers/CapacitorTop,filename=assets/opencomputers/textures/blocks/CapacitorTop.png
+texture:id=opencomputers/CarpetCapacitorTop,filename=assets/opencomputers/textures/blocks/CarpetCapacitorTop.png
 texture:id=opencomputers/CaseBack,filename=assets/opencomputers/textures/blocks/CaseBack.png
 texture:id=opencomputers/CaseFront,filename=assets/opencomputers/textures/blocks/CaseFront.png
 texture:id=opencomputers/CaseSide,filename=assets/opencomputers/textures/blocks/CaseSide.png
@@ -50,8 +51,12 @@ texture:id=opencomputers/RackFront,filename=assets/opencomputers/textures/blocks
 texture:id=opencomputers/RackSide,filename=assets/opencomputers/textures/blocks/RackSide.png
 texture:id=opencomputers/RaidFront,filename=assets/opencomputers/textures/blocks/RaidFront.png
 texture:id=opencomputers/RaidSide,filename=assets/opencomputers/textures/blocks/RaidSide.png
-texture:id=opencomputers/RedstoneSide,filename=assets/opencomputers/textures/blocks/RedstoneSide.png
+texture:id=opencomputers/RedstoneBottom,filename=assets/opencomputers/textures/blocks/RedstoneBottom.png
+texture:id=opencomputers/RedstoneEast,filename=assets/opencomputers/textures/blocks/RedstoneEast.png
+texture:id=opencomputers/RedstoneNorth,filename=assets/opencomputers/textures/blocks/RedstoneNorth.png
+texture:id=opencomputers/RedstoneSouth,filename=assets/opencomputers/textures/blocks/RedstoneSouth.png
 texture:id=opencomputers/RedstoneTop,filename=assets/opencomputers/textures/blocks/RedstoneTop.png
+texture:id=opencomputers/RedstoneWest,filename=assets/opencomputers/textures/blocks/RedstoneWest.png
 texture:id=opencomputers/SwitchSide,filename=assets/opencomputers/textures/blocks/SwitchSide.png
 texture:id=opencomputers/SwitchTop,filename=assets/opencomputers/textures/blocks/SwitchTop.png
 texture:id=opencomputers/TransposerSide,filename=assets/opencomputers/textures/blocks/TransposerSide.png
@@ -77,22 +82,7 @@ block:id=%adapter,data=*,stdrot=true,face0-1=0:opencomputers/AdapterTop,face2-5=
 block:id=%assembler,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/AssemblerTop,face2-5=0:opencomputers/AssemblerSide
 
 # %cable:* (cable), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Cable
-block:id=%cable,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=000001,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=000002,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=000003,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=000004,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=000005,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=000006,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=000007,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=000008,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=000009,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=00000A,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=00000B,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=00000C,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=00000D,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=00000E,face0-5=17000:opencomputers/CablePart
-block:id=%cable,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=00000F,face0-5=17000:opencomputers/CablePart
+block:id=%cable,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:opencomputers/CablePart
 
 # %capacitor:* (capacitor), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Capacitor
 block:id=%capacitor,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/CapacitorTop,face2-5=0:opencomputers/CapacitorSide
@@ -140,7 +130,7 @@ block:id=%powerDistributor,data=*,stdrot=true,face0=0:opencomputers/GenericTop,f
 block:id=%raid,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2=0:opencomputers/RaidSide,face3=0:opencomputers/RaidFront,face4-5=0:opencomputers/RaidSide
 
 # %redstone:* (redstone), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Redstone
-block:id=%redstone,data=*,stdrot=true,face0-1=0:opencomputers/RedstoneTop,face2-5=0:opencomputers/RedstoneSide
+block:id=%redstone,data=*,stdrot=true,face0=0:opencomputers/RedstoneBottom,face1=0:opencomputers/RedstoneTop,face2=0:opencomputers/RedstoneNorth,face3=0:opencomputers/RedstoneSouth,face4=0:opencomputers/RedstoneWest,face5=0:opencomputers/RedstoneEast
 
 # %relay:* (relay), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Relay
 block:id=%relay,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/SwitchTop,face2-5=0:opencomputers/SwitchSide
@@ -207,3 +197,6 @@ block:id=%netSplitter,data=*,stdrot=true,face0-1=0:opencomputers/NetSplitterTop,
 
 # %transposer:* (transposer), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Transposer
 block:id=%transposer,data=*,stdrot=true,face0-1=0:opencomputers/TransposerTop,face2-5=0:opencomputers/TransposerSide
+
+# %carpetedCapacitor:* (carpetedCapacitor), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.CarpetedCapacitor
+block:id=%carpetedCapacitor,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/CarpetCapacitorTop,face2-5=0:opencomputers/CapacitorSide

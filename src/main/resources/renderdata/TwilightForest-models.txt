@@ -1,8 +1,8 @@
-# TwilightForest 2.3.7
+# TwilightForest 2.3.8.18
 version:1.7
 modname:TwilightForest
 
-var:biome/biome.id.DarkForest=0,biome/biome.id.EnchantedForest=0,biome/biome.id.Glacier=0,biome/biome.id.Highlands=0,biome/biome.id.Thornlands=0,biome/biome.id.OakSavanna=0,biome/biome.id.Swamp=0,biome/biome.id.DarkForestCenter=0,biome/biome.id.TwilightForestVariant=0,biome/biome.id.Stream=0
+var:biome/biome.id.DarkForest=0,biome/biome.id.EnchantedForest=0,biome/biome.id.Glacier=0,biome/biome.id.Highlands=0,biome/biome.id.Thornlands=0,biome/biome.id.OakSavanna=0,biome/biome.id.Swamp=0,biome/biome.id.DarkForestCenter=0,biome/biome.id.Stream=0,biome/biome.id.TwilightForestVariant=0
 var:biome/biome.id.DeepMushrooms=0,biome/biome.id.LightedForest=0,biome/biome.id.TwilightForest=0,biome/biome.id.Clearing=0,biome/biome.id.Lake=0,biome/biome.id.Mushrooms=0,biome/biome.id.HighlandsCenter=0,biome/biome.id.Snowfield=0,biome/biome.id.FireSwamp=0
 
 cfgfile:config/TwilightForest.cfg
@@ -58,7 +58,7 @@ boxblock:id=%tile.TFCicada,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=
 boxblock:id=%tile.TFCicada,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.699999988079071,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=14
 boxblock:id=%tile.TFCicada,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.6000000238418579,zmin=0.4000000059604645,zmax=0.6000000238418579,data=15
 
-# %tile.TFPortal:* (tile.TFPortal), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFPortal
+# %tile.TFPortal:* (tile.TFPortal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFPortal
 boxblock:id=%tile.TFPortal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
 # %tile.TFFireflyJar:* (tile.TFFireflyJar), render=twilightforest.client.renderer.blocks.RenderBlockTFFireflyJar(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFireflyJar
@@ -91,8 +91,8 @@ boxblock:id=%tile.TFMoonworm,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.25,zmin=0.25,zm
 boxblock:id=%tile.TFMoonworm,xmin=0.25,xmax=0.75,ymin=0.75,ymax=1.0,zmin=0.25,zmax=0.75,data=14
 boxblock:id=%tile.TFMoonworm,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.6000000238418579,zmin=0.4000000059604645,zmax=0.6000000238418579,data=15
 
-# %tile.TFTowerTranslucent:* (tile.TFTowerTranslucent), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
-boxblock:id=%tile.TFTowerTranslucent,xmin=0.228352352976799,xmax=0.7819790840148926,ymin=0.24948719143867493,ymax=0.8651280999183655,zmin=0.0185136329382658,zmax=0.9618670344352722,data=5
+# %tile.TFTowerTranslucent:* (tile.TFTowerTranslucent), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
+boxblock:id=%tile.TFTowerTranslucent,xmin=0.24674998223781586,xmax=0.9022580981254578,ymin=0.3814430236816406,ymax=0.6298224329948425,zmin=0.3370623290538788,zmax=0.8008804321289062,data=5
 
 # %tile.TFTrophy:* (tile.TFTrophy), render=(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophy
 boxblock:id=%tile.TFTrophy,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=0,data=1
@@ -113,11 +113,11 @@ boxblock:id=%tile.TFTrophyPedestal,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=1.0,zmi
 # %tile.TFThornRose:* (tile.TFThornRose), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFThornRose
 patchblock:id=%tile.TFThornRose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %tile.AuroraSlab:* (tile.AuroraSlab), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFAuroraSlab
+# %tile.AuroraSlab:* (tile.AuroraSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFAuroraSlab
 boxblock:id=%tile.AuroraSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.AuroraSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.UberousSoil:* (tile.UberousSoil), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFUberousSoil
+# %tile.UberousSoil:* (tile.UberousSoil), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFUberousSoil
 boxblock:id=%tile.UberousSoil,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
 # %tile.TrollVidr:* (tile.TrollVidr), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFTrollRoot
@@ -135,7 +135,7 @@ boxblock:id=%tile.HugeLilyPad,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,
 # %tile.HugeWaterLily:* (tile.HugeWaterLily), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFHugeWaterLily
 patchblock:id=%tile.HugeWaterLily,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %tile.Slider:* (tile.Slider), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFSlider
+# %tile.Slider:* (tile.Slider), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFSlider
 boxblock:id=%tile.Slider,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=1.0,zmin=0.3125,zmax=0.6875,data=0,data=1,data=2,data=3
 boxblock:id=%tile.Slider,xmin=0.0,xmax=1.0,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=4,data=5,data=6,data=7
 boxblock:id=%tile.Slider,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
@@ -145,3 +145,5 @@ boxblock:id=%tile.Slider,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=1.0,zmin=0.3125,z
 
 # %tile.ForceField:* (tile.ForceField), render=(PANE), opaque=false,cls=twilightforest.block.BlockTFForceField
 customblock:id=%tile.ForceField,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %tile.CastleDoor:* (tile.CastleDoor), render=twilightforest.client.renderer.blocks.RenderBlockTFCastleMagic(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFCastleDoor

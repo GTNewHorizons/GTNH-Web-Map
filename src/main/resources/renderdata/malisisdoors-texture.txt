@@ -1,4 +1,4 @@
-# malisisdoors 1.7.10-1.13.2
+# malisisdoors 1.13.7-GTNH
 version:1.7
 modname:malisisdoors
 
@@ -271,7 +271,7 @@ block:id=%trapdoor_jungle,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_jun
 # %trapdoor_spruce:* (trapdoor_spruce), render=net.malisis.doors.trapdoor.renderer.TrapDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.trapdoor.block.TrapDoor
 block:id=%trapdoor_spruce,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_spruce
 
-# %player_sensor:* (player_sensor), render=(STANDARD), opaque=false,cls=net.malisis.doors.block.PlayerSensor
+# %player_sensor:* (player_sensor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=net.malisis.doors.block.PlayerSensor
 block:id=%player_sensor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/player_sensor
 
 # %vanishing_block:* (vanishing_block), render=net.malisis.doors.renderer.VanishingBlockRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.VanishingBlock
@@ -310,7 +310,7 @@ block:id=%vanishing_block_diamond,data=13,stdrot=true,transparency=TRANSPARENT,f
 block:id=%vanishing_block_diamond,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
 block:id=%vanishing_block_diamond,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
 
-# %block_mixer:* (block_mixer), render=(STANDARD), opaque=true,cls=net.malisis.doors.block.BlockMixer
+# %block_mixer:* (block_mixer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.malisis.doors.block.BlockMixer
 block:id=%block_mixer,data=0,stdrot=true,face0-2=0:malisisdoors/block_mixer_side,face3=0:malisisdoors/block_mixer,face4-5=0:malisisdoors/block_mixer_side
 block:id=%block_mixer,data=1,stdrot=true,face0=0:malisisdoors/block_mixer_side,face1=0:malisisdoors/block_mixer,face2-5=0:malisisdoors/block_mixer_side
 block:id=%block_mixer,data=2,stdrot=true,face0-1=0:malisisdoors/block_mixer_side,face2=0:malisisdoors/block_mixer,face3-5=0:malisisdoors/block_mixer_side
@@ -323,7 +323,7 @@ block:id=%block_mixer,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=1
 block:id=%garage_door,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:malisisdoors/garage_door
 block:id=%garage_door,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-3=0:malisisdoors/garage_door,face4-5=0:malisisdoors/garage_door_top
 
-# %door_factory:* (door_factory), render=(STANDARD), opaque=true,cls=net.malisis.doors.block.DoorFactory
+# %door_factory:* (door_factory), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.malisis.doors.block.DoorFactory
 block:id=%door_factory,data=0,stdrot=true,face0-2=0:malisisdoors/door_factory_side,face3=0:malisisdoors/door_factory,face4-5=0:malisisdoors/door_factory_side
 block:id=%door_factory,data=1,stdrot=true,face0=0:malisisdoors/door_factory_side,face1=0:malisisdoors/door_factory,face2-5=0:malisisdoors/door_factory_side
 block:id=%door_factory,data=2,stdrot=true,face0-1=0:malisisdoors/door_factory_side,face2=0:malisisdoors/door_factory,face3-5=0:malisisdoors/door_factory_side

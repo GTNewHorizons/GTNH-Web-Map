@@ -1,0 +1,16 @@
+# ForgeMultipart 1.3.2
+version:1.7
+modname:ForgeMultipart
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/forgemultipart/textures/blocks/
+texture:id=minecraft/blank_16,filename=assets/minecraft/textures/blocks/blank_16.png
+
+
+
+# %block:* (block), render=codechicken.multipart.MultipartRenderer$(CUSTOM), opaque=false,cls=codechicken.multipart.BlockMultipart
+block:id=%block,data=*,stdrot=true,face0-5=12000:minecraft/blank_16

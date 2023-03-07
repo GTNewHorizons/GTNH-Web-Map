@@ -22,10 +22,10 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %booster:* (booster), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockBooster
+# %booster:* (booster), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockBooster
 boxblock:id=%booster,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
 
-# %lampf:* (lampf), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampFlat
+# %lampf:* (lampf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampFlat
 boxblock:id=%lampf,xmin=0.0,xmax=0.10000000149011612,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=1
 boxblock:id=%lampf,xmin=0.8999999761581421,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
 boxblock:id=%lampf,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.10000000149011612,data=3
@@ -39,7 +39,7 @@ boxblock:id=%lampf,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8999999761581421,z
 boxblock:id=%lampf,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.10000000149011612,zmin=0.0,zmax=1.0,data=13
 boxblock:id=%lampf,xmin=0.0,xmax=1.0,ymin=0.8999999761581421,ymax=1.0,zmin=0.0,zmax=1.0,data=14,data=15
 
-# %lampt:* (lampt), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampTransparent
+# %lampt:* (lampt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampTransparent
 boxblock:id=%lampt,xmin=0.0,xmax=0.10000000149011612,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=1
 boxblock:id=%lampt,xmin=0.8999999761581421,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
 boxblock:id=%lampt,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.10000000149011612,data=3
@@ -53,7 +53,7 @@ boxblock:id=%lampt,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8999999761581421,z
 boxblock:id=%lampt,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.10000000149011612,zmin=0.0,zmax=1.0,data=13
 boxblock:id=%lampt,xmin=0.0,xmax=1.0,ymin=0.8999999761581421,ymax=1.0,zmin=0.0,zmax=1.0,data=14,data=15
 
-# %lampb:* (lampb), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampBlack
+# %lampb:* (lampb), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampBlack
 boxblock:id=%lampb,xmin=0.0,xmax=0.10000000149011612,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=1
 boxblock:id=%lampb,xmin=0.8999999761581421,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
 boxblock:id=%lampb,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.10000000149011612,data=3

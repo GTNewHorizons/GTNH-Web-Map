@@ -1,0 +1,16 @@
+# kubatech 0.7.18
+version:1.7
+modname:kubatech
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/kubatech/textures/blocks/
+texture:id=kubatech/tea_acceptor,filename=assets/kubatech/textures/blocks/tea_acceptor.png
+
+
+
+# %kubablocks:* (kubablocks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=kubatech.loaders.block.KubaBlock
+block:id=%kubablocks,data=0,stdrot=true,face0-5=0:kubatech/tea_acceptor
