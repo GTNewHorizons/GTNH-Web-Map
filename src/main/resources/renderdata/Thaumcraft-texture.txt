@@ -116,6 +116,7 @@ texture:id=thaumcraft/wandpedestal_side,filename=assets/thaumcraft/textures/bloc
 texture:id=thaumcraft/wandpedestal_top,filename=assets/thaumcraft/textures/blocks/wandpedestal_top.png
 texture:id=thaumcraft/warded_glass_1,filename=assets/thaumcraft/textures/blocks/warded_glass_1.png
 texture:id=thaumcraft/woodplain,filename=assets/thaumcraft/textures/blocks/woodplain.png
+texture:id=gwmcustom/tc4pipe,filename=assets/gwmcustom/tc4pipe.png,xcount=2
 
 
 
@@ -221,12 +222,12 @@ block:id=%blockCosmeticSolid,data=15,stdrot=true,face0-1=0:thaumcraft/es_1,face2
 block:id=%blockCrystal,data=*,stdrot=true,face0-5=0:thaumcraft/crystal
 
 # %blockTube:* (blockTube), render=thaumcraft.client.renderers.block.BlockTubeRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTube
-block:id=%blockTube,data=0,data=1,stdrot=true,face0-5=0:thaumcraft/pipe_1
-block:id=%blockTube,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/pipe_1
+block:id=%blockTube,data=0,data=1,stdrot=true,face0-5=0:gwmcustom/tc4pipe
+block:id=%blockTube,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:gwmcustom/tc4pipe
 block:id=%blockTube,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/pipe_buffer
 block:id=%blockTube,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/pipe_restrict
-block:id=%blockTube,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/pipe_1
-block:id=%blockTube,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/pipe_1
+block:id=%blockTube,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:gwmcustom/tc4pipe
+block:id=%blockTube,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gwmcustom/tc4pipe
 
 # %blockMetalDevice:* (blockMetalDevice), render=thaumcraft.client.renderers.block.BlockMetalDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
 block:id=%blockMetalDevice,data=0,data=1,stdrot=true,face0-5=0:thaumcraft/metalbase

@@ -26,3 +26,5 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 # %gt.blockores:* (gt.blockores), render=gregtech.common.render.GT_Renderer_Block(CUSTOM), opaque=true,cls=gregtech.common.blocks.GT_Block_Ores
 
 # %gt.block.multiblock.machine.stone.wrench.0.0.15.true.true:* (gt.block.multiblock.machine.stone.wrench.0.0.15.true.true), render=gregtech.common.render.GT_Renderer_Block(CUSTOM), opaque=true,cls=gregtech.api.multitileentity.MultiTileEntityBlock
+
+customblock:id=%gt.blockmachines,class=org.dynmap.hdmap.renderer.GregTechMachineRenderer,data=*

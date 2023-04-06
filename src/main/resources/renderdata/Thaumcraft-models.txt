@@ -80,7 +80,7 @@ boxblock:id=%blockTaintFibres,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zm
 boxblock:id=%blockTaintFibres,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=1,data=2,data=3,data=4
 
 # %blockTube:* (blockTube), render=thaumcraft.client.renderers.block.BlockTubeRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTube
-boxblock:id=%blockTube,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=2,data=3,data=4,data=5,data=6
+customblock:id=%blockTube,class=org.dynmap.hdmap.renderer.ThaumcraftPipeRenderer,data=*
 
 # %blockMetalDevice:* (blockMetalDevice), render=thaumcraft.client.renderers.block.BlockMetalDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
 boxblock:id=%blockMetalDevice,xmin=0.3125,xmax=0.6875,ymin=0.5,ymax=1.0,zmin=0.3125,zmax=0.6875,data=2
