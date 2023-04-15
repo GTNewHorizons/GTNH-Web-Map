@@ -22,6 +22,7 @@ import org.dynmap.MapType;
 import org.dynmap.MapType.ImageFormat;
 import org.dynmap.MapTypeState;
 import org.dynmap.markers.impl.MarkerAPIImpl;
+import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 import org.dynmap.storage.MapStorage;
@@ -144,6 +145,7 @@ public class IsoHDPerspective implements HDPerspective {
         
         /* Cache for custom model patch lists */
         private final DynLongHashMap custom_meshes;
+        private final DynLongHashMap custom_renderdata;
 
         public OurPerspectiveState(MapIterator mi, boolean isnether, int scaled) {
             mapiter = mi;
@@ -156,6 +158,7 @@ public class IsoHDPerspective implements HDPerspective {
             for(int i = 0; i < llcache.length; i++)
                 llcache[i] = new LightLevels();
             custom_meshes = new DynLongHashMap();
+            custom_renderdata = new DynLongHashMap();
             modscale = basemodscale << scaled;
             scalemodels = HDBlockModels.getModelsForScale(basemodscale << scaled);
         }
@@ -533,8 +536,10 @@ public class IsoHDPerspective implements HDPerspective {
                     if(cbm != null) {   /* If found, see if cached already */
                         patches = this.getCustomMesh();
                         if(patches == null) {
-                            patches = cbm.getMeshForBlock(mapiter);
+                            CustomRendererData crd = cbm.getMeshForBlock(mapiter);
+                            patches = crd.getCustomMesh();
                             this.setCustomMesh(patches);
+                            this.setCustomRenderData(crd);
                         }
                     }
                 }
@@ -824,7 +829,7 @@ public class IsoHDPerspective implements HDPerspective {
         }
         /**
          * Light level cache
-         * @param index of light level (0-3)
+         * @param idx of light level (0-3)
          */
         public final LightLevels getCachedLightLevels(int idx) {
             return llcache[idx];
@@ -842,6 +847,16 @@ public class IsoHDPerspective implements HDPerspective {
         public final void setCustomMesh(RenderPatch[] mesh) {
             long key = this.mapiter.getBlockKey();  /* Get key for current block */
             custom_meshes.put(key,  mesh);
+        }
+
+        public final void setCustomRenderData(CustomRendererData crd)
+        {
+            long key = this.mapiter.getBlockKey();
+            custom_renderdata.put(key, crd);
+        }
+        public final CustomRendererData getCustomRenderData() {
+            long key = this.mapiter.getBlockKey();  /* Get key for current block */
+            return (CustomRendererData) custom_renderdata.get(key);
         }
     }
     

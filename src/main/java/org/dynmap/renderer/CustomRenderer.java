@@ -76,8 +76,12 @@ public abstract class CustomRenderer {
      * @param mapDataCtx - Map data context: can be used to read any data available for map.
      * @return patch list for given block
      */
+
     public abstract RenderPatch[] getRenderPatchList(MapDataContext mapDataCtx);
 
+    public CustomRendererData getRenderData(MapDataContext mapDataCtx){
+        return new CustomRendererData(getRenderPatchList(mapDataCtx), null, null);
+    };
     private static final int[] default_patches = { 0, 0, 0, 0, 0, 0 };
     
     private static void addIfNonNull(List<RenderPatch> list, RenderPatch p) {

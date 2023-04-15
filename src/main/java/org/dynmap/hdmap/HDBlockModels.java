@@ -25,6 +25,7 @@ import org.dynmap.debug.Debug;
 import org.dynmap.hdmap.TexturePack.BlockTransparency;
 import org.dynmap.hdmap.TexturePack.HDTextureMap;
 import org.dynmap.renderer.CustomRenderer;
+import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.MapDataContext;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
@@ -236,11 +237,11 @@ public class HDBlockModels {
 
         private static final RenderPatch[] empty_list = new RenderPatch[0];
         
-        public RenderPatch[] getMeshForBlock(MapDataContext ctx) {
+        public CustomRendererData getMeshForBlock(MapDataContext ctx) {
             if(render != null)
-                return render.getRenderPatchList(ctx);
+                return render.getRenderData(ctx);
             else
-                return empty_list;
+                return new CustomRendererData(empty_list, null, null);
         }
         @Override
         public void removed(int blkid, int blkdat) {

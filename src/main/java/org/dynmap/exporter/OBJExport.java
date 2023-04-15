@@ -26,6 +26,7 @@ import org.dynmap.hdmap.HDBlockModels.CustomBlockModel;
 import org.dynmap.hdmap.HDBlockModels.HDScaledBlockModels;
 import org.dynmap.hdmap.TexturePack.BlockTransparency;
 import org.dynmap.renderer.CustomRenderer;
+import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 import org.dynmap.utils.BlockStep;
@@ -368,7 +369,10 @@ public class OBJExport {
         if(patches == null) {
             CustomBlockModel cbm = models.getCustomBlockModel(blkid,  data);
             if(cbm != null) {   /* If so, get our meshes */
-                patches = cbm.getMeshForBlock(map);
+                CustomRendererData crd = cbm.getMeshForBlock(map);
+                if(crd != null) {
+                    patches = crd.getCustomMesh();
+                }
             }
         }
         if (patches != null) {

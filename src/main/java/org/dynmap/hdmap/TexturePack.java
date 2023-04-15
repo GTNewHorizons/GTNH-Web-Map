@@ -34,7 +34,7 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.common.BiomeMap;
 import org.dynmap.exporter.OBJExport;
-import org.dynmap.renderer.CustomColorMultiplier;
+import org.dynmap.renderer.*;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.BufferOutputStream;
 import org.dynmap.utils.DynIntHashMap;
@@ -1942,6 +1942,16 @@ public class TexturePack {
                 // If we're skipping due to version restriction
                 if (skip) {
                 }
+                else if(line.startsWith("specialModSupportLoader:")){
+                    line = line.substring(24);
+
+                    if(line != null){
+                        Class<?> cls = Class.forName(line);   /* Get class */
+                        CustomModSupportLoader cmsl = (CustomModSupportLoader) cls.newInstance();
+
+                        cmsl.initializeModSupport(core);
+                    }
+                }
                 else if(line.startsWith("block:")) {
                     ArrayList<Integer> blkids = new ArrayList<Integer>();
                     int databits = -1;
@@ -2580,6 +2590,12 @@ public class TexturePack {
             Log.severe("Error reading " + txtname + " - " + iox.toString());
         } catch (NumberFormatException nfx) {
             Log.severe("Format error - line " + rdr.getLineNumber() + " of " + txtname + ": " + nfx.getMessage());
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
         } finally {
             if(rdr != null) {
                 try {
@@ -2619,6 +2635,7 @@ public class TexturePack {
         HDTextureMap map = HDTextureMap.getMap(blkid, blkdata, ps.getBlockRenderData());
         BlockStep laststep = ps.getLastBlockStep();
         int patchid = ps.getTextureIndex();   /* See if patch index */
+        CustomRendererData crd = ps.getCustomRenderData();
         int textid;
         int faceindex;
         if(patchid >= 0) {
@@ -2636,13 +2653,32 @@ public class TexturePack {
             }
             textid = mod + ctm.mapTexture(mapiter, blkid, blkdata, laststep, textid, ss);
         }
-        readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate);
-        if(map.layers != null) {    /* If layered */
-            /* While transparent and more layers */
-            while(rslt.isTransparent() && (map.layers[faceindex] >= 0)) {
-                faceindex = map.layers[faceindex];
-                textid = map.faces[faceindex];
-                readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate);
+
+        boolean handledByCustomRendering = false;
+        CustomColorMultiplier ccm = null;
+        if (crd != null){
+            CustomTextureMapper ctm = crd.getCustomTextureMapper();
+            ccm = crd.getCustomColorMultiplier();
+            if(ctm != null) {
+                int[] layers = ctm.getTextureLayersForPatchId(patchid);
+                if(layers.length > 0){
+                    for(int layer = 0; layer < layers.length; layer++){
+                        int customTextureId = layers[layer];
+                        readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, customTextureId, map.stdrotate, ccm);
+                    }
+                    handledByCustomRendering = true;
+                }
+            }
+        }
+        if (!handledByCustomRendering) {
+            readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate, ccm);
+            if (map.layers != null) {    /* If layered */
+                /* While transparent and more layers */
+                while (rslt.isTransparent() && (map.layers[faceindex] >= 0)) {
+                    faceindex = map.layers[faceindex];
+                    textid = map.faces[faceindex];
+                    readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate, ccm);
+                }
             }
         }
     }
@@ -2650,7 +2686,7 @@ public class TexturePack {
      * Read color for given subblock coordinate, with given block id and data and face
      */
     private final void readColor(final HDPerspectiveState ps, final MapIterator mapiter, final Color rslt, final int blkid, final int lastblocktype,
-                final TexturePackHDShader.ShaderState ss, int blkdata, HDTextureMap map, BlockStep laststep, int patchid, int textid, boolean stdrot) {
+                final TexturePackHDShader.ShaderState ss, int blkdata, HDTextureMap map, BlockStep laststep, int patchid, int textid, boolean stdrot, CustomColorMultiplier custColorMult) {
         if(textid < 0) {
             rslt.setTransparent();
             return;
@@ -2937,7 +2973,10 @@ public class TexturePack {
                     else {
                         clrmult = imgs[IMG_FOLIAGECOLOR].trivial_color;
                     }
-                    if(map.custColorMult != null) {
+                    if(custColorMult != null) {
+                        clrmult = ((clrmult & 0xFEFEFE) + custColorMult.getColorMultiplier(mapiter)) / 2;
+                    }
+                    else if(map.custColorMult != null) {
                         clrmult = ((clrmult & 0xFEFEFE) + map.custColorMult.getColorMultiplier(mapiter)) / 2;
                     }
                     else {
@@ -2990,7 +3029,10 @@ public class TexturePack {
                     clrmult = colorMultLily;
                     break;
                 case COLORMOD_MULTTONED:    /* Use color multiplier */
-                    if(map.custColorMult != null) {
+                    if(custColorMult != null) {
+                        clrmult = custColorMult.getColorMultiplier(mapiter);
+                    }
+                    else if(map.custColorMult != null) {
                         clrmult = map.custColorMult.getColorMultiplier(mapiter);
                     }
                     else {

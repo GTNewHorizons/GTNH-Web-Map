@@ -1,5 +1,6 @@
 package org.dynmap.hdmap;
 
+import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.Vector3D;
@@ -98,4 +99,6 @@ public interface HDPerspectiveState {
      * @return light level
      */
     LightLevels getCachedLightLevels(int idx);
+
+    CustomRendererData getCustomRenderData();
 }
