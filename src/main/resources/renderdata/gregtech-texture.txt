@@ -404,11 +404,11 @@ texture:id=gregtech/iconsets/ZPM_SIDE_CYCLOTRON_SOLENOID,filename=assets/gregtec
 texture:id=gregtech/iconsets/ZPM_TOP_CYCLOTRON_SOLENOID,filename=assets/gregtech/textures/blocks/iconsets/ZPM_TOP_CYCLOTRON_SOLENOID.png
 texture:id=minecraft/coal_block,filename=assets/minecraft/textures/blocks/coal_block.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
-
+texture:id=gwmcustom/gt5cablepipe,filename=assets/gwmcustom/gt5cablepipe.png,xcount=2
 
 
 # %gt.blockmachines:* (gt.blockmachines), render=gregtech.common.render.GT_Renderer_Block(CUSTOM), opaque=false,cls=gregtech.common.blocks.GT_Block_Machines
-block:id=%gt.blockmachines,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
+block:id=%gt.blockmachines,data=*,stdrot=true,face0-5=17000:gregtech/iconsets/MACHINE_LV_SIDE,patch20=17000:gwmcustom/gt5cablepipe,patch21=17001:gwmcustom/gt5cablepipe
 
 # %gt.blockcasings:* (gt.blockcasings), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings1
 block:id=%gt.blockcasings,data=0,stdrot=true,face0=0:gregtech/iconsets/MACHINE_8V_BOTTOM,face1=0:gregtech/iconsets/MACHINE_8V_TOP,face2-5=0:gregtech/iconsets/MACHINE_8V_SIDE
@@ -845,3 +845,5 @@ block:id=%gt.blockcasings.cyclotron_coils,data=11,data=12,data=13,data=14,data=1
 
 # %gt.block.multiblock.machine.stone.wrench.0.0.15.true.true:* (gt.block.multiblock.machine.stone.wrench.0.0.15.true.true), render=gregtech.common.render.GT_Renderer_Block(CUSTOM), opaque=true,cls=gregtech.api.multitileentity.MultiTileEntityBlock
 block:id=%gt.block.multiblock.machine.stone.wrench.0.0.15.true.true,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader
