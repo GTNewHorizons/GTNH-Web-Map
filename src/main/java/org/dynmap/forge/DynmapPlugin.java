@@ -1462,6 +1462,7 @@ public class DynmapPlugin
             scm.registerCommand(new DmapCommand(this));
             scm.registerCommand(new DmarkerCommand(this));
             scm.registerCommand(new DynmapExpCommand(this));
+            scm.registerCommand(new GwmCommand(this));
             Log.info("Register commands");
         }
         /* Submit metrics to mcstats.org */
