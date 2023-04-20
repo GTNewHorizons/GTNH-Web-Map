@@ -115,12 +115,17 @@ texture:id=appliedenergistics2/BlockVibrationChamberFront,filename=assets/applie
 texture:id=appliedenergistics2/BlockWireless,filename=assets/appliedenergistics2/textures/blocks/BlockWireless.png
 texture:id=appliedenergistics2/OreQuartz,filename=assets/appliedenergistics2/textures/blocks/OreQuartz.png
 texture:id=appliedenergistics2/OreQuartzCharged,filename=assets/appliedenergistics2/textures/blocks/OreQuartzCharged.png
+texture:id=appliedenergistics2/PartMonitorBack,filename=assets/appliedenergistics2/textures/blocks/PartMonitorBack.png
+texture:id=appliedenergistics2/PartMonitorSides,filename=assets/appliedenergistics2/textures/blocks/PartMonitorSides.png
+texture:id=appliedenergistics2/PartTerminal_Bright,filename=assets/appliedenergistics2/textures/blocks/PartTerminal_Bright.png
 texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
 texture:id=minecraft/tnt_bottom,filename=assets/minecraft/textures/blocks/tnt_bottom.png
 texture:id=minecraft/tnt_side,filename=assets/minecraft/textures/blocks/tnt_side.png
 texture:id=minecraft/tnt_top,filename=assets/minecraft/textures/blocks/tnt_top.png
+texture:id=gwmcustom/ae2cable,filename=assets/gwmcustom/ae2cable.png,xcount=2
 
-
+# %tile.BlockCableBus:* (tile.BlockCableBus), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockCableBus
+block:id=%tile.BlockCableBus,data=*,stdrot=true,colorMult=ff33cc,patch0=0:gwmcustom/ae2cable,patch1=1:gwmcustom/ae2cable,patch2=0:appliedenergistics2/PartMonitorBack,patch3-6=0:appliedenergistics2/PartMonitorSides
 
 # %tile.OreQuartz:* (tile.OreQuartz), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartz
 block:id=%tile.OreQuartz,data=*,stdrot=true,face0-5=0:appliedenergistics2/OreQuartz
@@ -192,9 +197,6 @@ block:id=%tile.BlockSpatialPylon,data=*,stdrot=true,face0-5=0:appliedenergistics
 
 # %tile.BlockSpatialIOPort:* (tile.BlockSpatialIOPort), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialIOPort
 block:id=%tile.BlockSpatialIOPort,data=*,stdrot=true,face0=0:appliedenergistics2/BlockSpatialIOPortBottom,face1=0:appliedenergistics2/BlockSpatialIOPort,face2-5=0:appliedenergistics2/BlockSpatialIOPortSide
-
-# %tile.BlockCableBus:* (tile.BlockCableBus), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockCableBus
-block:id=%tile.BlockCableBus,data=*,stdrot=true,face0-5=12000:appliedenergistics2/BlockQuartzGlassB
 
 # %tile.BlockController:* (tile.BlockController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockController
 block:id=%tile.BlockController,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockController

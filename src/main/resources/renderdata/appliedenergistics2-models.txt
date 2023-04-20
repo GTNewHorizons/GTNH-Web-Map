@@ -22,7 +22,7 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-
+customblock:id=%tile.BlockCableBus,class=org.dynmap.hdmap.renderer.MECableRenderer,data=*
 # %tile.OreQuartz:* (tile.OreQuartz), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartz
 
 # %tile.OreQuartzCharged:* (tile.OreQuartzCharged), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartzCharged
