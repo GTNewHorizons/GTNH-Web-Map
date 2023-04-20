@@ -12,6 +12,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
     RenderPatch[] basicBox;
     RenderPatch[][] renderPatchesPerShape;
     private static final int patchlist[] = { 1, 4, 2, 5, 0, 3 };
+    private static final int patchlistZero[] = {0, 0, 0, 0, 0, 0};
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
@@ -194,9 +195,9 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                 case BanisterPlainInnerCorner:
                     return makePatchesFromModel(rpf, "balustrade_stair_plain_inner_corner");
                 case Slab:
-                    break;
+                    return makeSlab(rpf);
                 case Stairs:
-                    break;
+                    return makeStairs(rpf);
                 case StairsOuterCorner:
                     return makePatchesFromModel(rpf, "stairs_outer_corner");
                 case StairsInnerCorner:
@@ -229,6 +230,17 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         return null;
     }
 
+    private RenderPatch[] makeSlab(RenderPatchFactory rpf) {
+        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+        addBox(rpf, list, 0,1,0,0.5,0,1, patchlist);
+        return list.toArray(new RenderPatch[list.size()]);
+    }
+    private RenderPatch[] makeStairs(RenderPatchFactory rpf) {
+        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+        addBox(rpf, list, 0,1,0,0.5,0,1, patchlist);
+        addBox(rpf, list, 0,1,0.5,1,0.5,1, patchlist);
+        return list.toArray(new RenderPatch[list.size()]);
+    }
     private RenderPatch[] makeRoofInnerCornerPatches(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
