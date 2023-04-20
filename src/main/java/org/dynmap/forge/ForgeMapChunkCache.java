@@ -766,6 +766,20 @@ public class ForgeMapChunkCache extends MapChunkCache
         @Override
         public Object getBlockTileEntityFieldAt(String fieldId, int xoff,
                 int yoff, int zoff) {
+            try {
+                if (bx + xoff >= 0 && bx + xoff < 16 && y + yoff >= 0 && y + yoff < 256 && bz + zoff >= 0 && bz + zoff < 16) {
+                    int idx = getIndexInChunk(bx+xoff, y+yoff, bz+zoff);
+                    Object[] vals = (Object[]) snaptile[chunkindex].get(idx);
+                    if(vals == null)
+                        return null;
+                    for (int i = 0; i < vals.length; i += 2) {
+                        if (vals[i].equals(fieldId)) {
+                            return vals[i + 1];
+                        }
+                    }
+                }
+            } catch (Exception x) {
+            }
             return null;
         }
         @Override
