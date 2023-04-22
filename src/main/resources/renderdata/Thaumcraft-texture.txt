@@ -116,7 +116,11 @@ texture:id=thaumcraft/wandpedestal_side,filename=assets/thaumcraft/textures/bloc
 texture:id=thaumcraft/wandpedestal_top,filename=assets/thaumcraft/textures/blocks/wandpedestal_top.png
 texture:id=thaumcraft/warded_glass_1,filename=assets/thaumcraft/textures/blocks/warded_glass_1.png
 texture:id=thaumcraft/woodplain,filename=assets/thaumcraft/textures/blocks/woodplain.png
+texture:id=thaumcraft/worktable,filename=assets/thaumcraft/textures/models/worktable.png,xcount=8,ycount=4
+texture:id=thaumcraft/table,filename=assets/thaumcraft/textures/models/table.png,xcount=4,ycount=2
+texture:id=thaumcraft/bellows,filename=assets/thaumcraft/textures/models/bellows.png,xcount=8,ycount=4
 texture:id=gwmcustom/tc4pipe,filename=assets/gwmcustom/tc4pipe.png,xcount=2
+texture:id=gwmcustom/tc4bellows,filename=assets/gwmcustom/tc4bellows.png,xcount=2
 
 
 
@@ -245,7 +249,7 @@ block:id=%blockMetalDevice,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=
 block:id=%blockMetalDevice,data=15,stdrot=true,face0-5=0:thaumcraft/goldbase
 
 # %blockWoodenDevice:* (blockWoodenDevice), render=thaumcraft.client.renderers.block.BlockWoodenDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWoodenDevice
-block:id=%blockWoodenDevice,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/woodplain
+block:id=%blockWoodenDevice,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:gwmcustom/tc4bellows,patch1=1:gwmcustom/tc4bellows
 block:id=%blockWoodenDevice,data=1,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon
 block:id=%blockWoodenDevice,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/applate1
 block:id=%blockWoodenDevice,data=4,data=5,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon
@@ -255,22 +259,23 @@ block:id=%blockWoodenDevice,data=8,data=9,data=10,data=11,data=12,data=13,data=1
 
 # %blockStoneDevice:* (blockStoneDevice), render=thaumcraft.client.renderers.block.BlockStoneDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockStoneDevice
 block:id=%blockStoneDevice,data=0,stdrot=true,face0=0:thaumcraft/pedestal_top,face1=0:thaumcraft/al_furnace_top,face2-5=0:thaumcraft/al_furnace_front_off
-block:id=%blockStoneDevice,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:thaumcraft/pedestal_top,face2-5=0:thaumcraft/pedestal_side
-block:id=%blockStoneDevice,data=2,stdrot=true,face0-5=0:thaumcraft/pedestal_top
-block:id=%blockStoneDevice,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/pedestal_top
+block:id=%blockStoneDevice,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumcraft/pedestal_top,patch1=0:thaumcraft/pedestal_side
+block:id=%blockStoneDevice,data=2,stdrot=true,face0-5=0:thaumcraft/arcane_stone
+block:id=%blockStoneDevice,data=3,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumcraft/arcane_stone
 block:id=%blockStoneDevice,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/pedestal_top,face1=0:thaumcraft/wandpedestal_top,face2-5=0:thaumcraft/wandpedestal_side
-block:id=%blockStoneDevice,data=6,data=7,stdrot=true,face0-5=0:thaumcraft/pedestal_top
+block:id=%blockStoneDevice,data=6,data=7,stdrot=true,patch0=0:thaumcraft/arcane_stone
 block:id=%blockStoneDevice,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/wandpedestal_focus_bot,face1=0:thaumcraft/wandpedestal_focus_top,face2-5=0:thaumcraft/wandpedestal_focus_side
-block:id=%blockStoneDevice,data=9,data=10,data=11,stdrot=true,face0-5=0:thaumcraft/pedestal_top
-block:id=%blockStoneDevice,data=12,stdrot=true,face0=0:thaumcraft/pedestal_top,face1=0:thaumcraft/spa_top,face2-5=0:thaumcraft/spa_side
-block:id=%blockStoneDevice,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/pedestal_top
+block:id=%blockStoneDevice,data=9,data=10,data=11,stdrot=true,face0-5=0:thaumcraft/arcane_stone
+block:id=%blockStoneDevice,data=12,stdrot=true,face0=0:thaumcraft/arcane_stone,face1=0:thaumcraft/spa_top,face2-5=0:thaumcraft/spa_side
+block:id=%blockStoneDevice,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/arcane_stone
 
 # %blockMirror:* (blockMirror), render=(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMirror
 block:id=%blockMirror,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/mirrorframe
 block:id=%blockMirror,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/mirrorframe2
 
 # %blockTable:* (blockTable), render=thaumcraft.client.renderers.block.BlockTableRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTable
-block:id=%blockTable,data=*,stdrot=true,face0-5=0:thaumcraft/woodplain
+block:id=%blockTable,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,face0-5=1:thaumcraft/table
+block:id=%blockTable,data=15,stdrot=true,patch0=2:thaumcraft/worktable,patch1=1:thaumcraft/worktable,patch2=8:thaumcraft/worktable
 
 # %blockChestHungry:* (blockChestHungry), render=thaumcraft.client.renderers.block.BlockChestHungryRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockChestHungry
 block:id=%blockChestHungry,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/woodplain

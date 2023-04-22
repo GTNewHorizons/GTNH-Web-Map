@@ -83,6 +83,7 @@ boxblock:id=%blockTaintFibres,xmin=0.20000000298023224,xmax=0.800000011920929,ym
 customblock:id=%blockTube,class=org.dynmap.hdmap.renderer.ThaumcraftPipeRenderer,data=*
 
 # %blockMetalDevice:* (blockMetalDevice), render=thaumcraft.client.renderers.block.BlockMetalDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
+customblock:id=%blockMetalDevice,class=org.dynmap.hdmap.renderer.ThaumcraftMetalDeviceRenderer,data=1
 boxblock:id=%blockMetalDevice,xmin=0.3125,xmax=0.6875,ymin=0.5,ymax=1.0,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%blockMetalDevice,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6
 boxblock:id=%blockMetalDevice,xmin=0.25,xmax=0.75,ymin=0.125,ymax=0.875,zmin=0.25,zmax=0.75,data=7,data=8
@@ -91,16 +92,19 @@ boxblock:id=%blockMetalDevice,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zm
 boxblock:id=%blockMetalDevice,xmin=0.25,xmax=0.75,ymin=0.125,ymax=0.875,zmin=0.25,zmax=0.75,data=13,data=14
 
 # %blockWoodenDevice:* (blockWoodenDevice), render=thaumcraft.client.renderers.block.BlockWoodenDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWoodenDevice
-boxblock:id=%blockWoodenDevice,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=0
+customblock:id=%blockWoodenDevice,class=org.dynmap.hdmap.renderer.ThaumcraftWoodenDeviceRenderer,data=0
+#boxblock:id=%blockWoodenDevice,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=0
 boxblock:id=%blockWoodenDevice,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2
 boxblock:id=%blockWoodenDevice,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=3
 
 # %blockStoneDevice:* (blockStoneDevice), render=thaumcraft.client.renderers.block.BlockStoneDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockStoneDevice
-boxblock:id=%blockStoneDevice,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.9900000095367432,zmin=0.25,zmax=0.75,data=1
-boxblock:id=%blockStoneDevice,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=3
-boxblock:id=%blockStoneDevice,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=4
-boxblock:id=%blockStoneDevice,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=5
-boxblock:id=%blockStoneDevice,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.4375,zmin=0.0625,zmax=0.9375,data=8
+# boxblock:id=%blockStoneDevice,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.9900000095367432,zmin=0.25,zmax=0.75,data=1
+# boxblock:id=%blockStoneDevice,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=3
+# boxblock:id=%blockStoneDevice,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=4
+# boxblock:id=%blockStoneDevice,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=5
+# boxblock:id=%blockStoneDevice,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.4375,zmin=0.0625,zmax=0.9375,data=8
+customblock:id=%blockStoneDevice,class=org.dynmap.hdmap.renderer.ThaumcraftStoneDeviceRenderer,data=*
+customblock:id=%blockTable,class=org.dynmap.hdmap.renderer.ThaumcraftTableRenderer,data=*
 
 # %blockMirror:* (blockMirror), render=(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMirror
 boxblock:id=%blockMirror,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=0

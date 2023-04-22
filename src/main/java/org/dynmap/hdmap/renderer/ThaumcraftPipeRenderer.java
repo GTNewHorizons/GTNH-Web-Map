@@ -1,5 +1,6 @@
 package org.dynmap.hdmap.renderer;
 
+import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.renderer.MapDataContext;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory;
@@ -11,9 +12,6 @@ public class ThaumcraftPipeRenderer extends PipeRendererBase {
     RenderPatch[][] pipesWithoutGoldBox;
     RenderPatch[][] pipesWithGoldBox;
 
-    int[] xOff = {0,0,-1,1,0,0};
-    int[] yOff = {-1,1,0,0,0,0};
-    int[] zOff = {0,0,0,0,-1,1};
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if(!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
@@ -31,18 +29,18 @@ public class ThaumcraftPipeRenderer extends PipeRendererBase {
         if(open instanceof byte[])
         {
             byte[] barr = (byte[])open;
-            for (int i = 0; i < 6; i++) {
-                if(barr[i] != 0)
+            for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
+                if(barr[dir.ordinal()] != 0)
                 {
-                    int id = mapDataCtx.getBlockTypeIDAt(xOff[i], yOff[i], zOff[i]);
+                    int id = mapDataCtx.getBlockTypeIDAt(dir.offsetX, dir.offsetY, dir.offsetZ);
 
                     if(id == mapDataCtx.getBlockTypeID())
-                        version |= 1 << i;
+                        version |= dir.flag;
                 }
             }
         }
 
-        version = (version & 3) | ((version & 12) << 2) | ((version &48) >> 2);
+        //version = (version & 3) | ((version & 12) << 2) | ((version &48) >> 2);
 
         return pipesWithoutGoldBox[version];
     }

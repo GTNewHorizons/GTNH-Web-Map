@@ -1,5 +1,6 @@
 package org.dynmap.renderer;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -186,5 +187,17 @@ public abstract class CustomRenderer {
      */
     public RenderPatch getSidePatch(RenderPatchFactory rpf, int side, int rot, int textureidx) {
         return getSidePatch(rpf, side, 0.0, 0.0, 1.0, 0.0, 1.0, rot, textureidx);
+    }
+
+    public RenderPatch[] getFullBlock(RenderPatchFactory rpf, int fixedTexture){
+        int patchTextureIds[] = { 0, 1, 4, 5, 2, 3 };
+
+        if(fixedTexture != -1)
+            for(int i = 0; i< patchTextureIds.length;i++)
+                patchTextureIds[i] = fixedTexture;
+
+        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+        CustomRenderer.addBox(rpf, list, 0, 1, 0, 1,0, 1, patchTextureIds);
+        return list.toArray(new RenderPatch[patchTextureIds.length]);
     }
 }
