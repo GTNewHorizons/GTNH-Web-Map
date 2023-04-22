@@ -110,6 +110,9 @@ boxblock:id=%paintcan,xmin=0.25,xmax=0.699999988079071,ymin=0.0,ymax=0.6875,zmin
 # %projector:* (projector), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockProjector
 boxblock:id=%projector,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
 
+# %sprinkler:* (sprinkler), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockSprinkler
+boxblock:id=%sprinkler,xmin=0.3,xmax=0.7,ymin=0.0,ymax=0.2,zmin=0.0,zmax=1.0,data=*
+
 # %drawingtable:* (drawingtable), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockDrawingTable
 
 # %sky:* (sky), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockSky
