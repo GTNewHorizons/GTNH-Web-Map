@@ -257,9 +257,16 @@ public class GregTechSupport {
                 if(mat != null) {
                     writer.write(",material=" + mat.mName);
                     writer.write(",matCol="+String.format("%02X%02X%02X",  mat.mRGBa[0]&0xFF,  mat.mRGBa[1]&0xFF,  mat.mRGBa[2]&0xFF) );
+                    writer.write(",matIcons=" );
+                    if(mat.mIconSet != null){
+                        writer.write(mat.mIconSet.mSetName);
+                    }
+                    else{
+                        writer.write("NULL");
+                    }
                 }
                 else{
-                    writer.write(",material=NULL,matCol=000000");
+                    writer.write(",material=NULL,matCol=000000,matIcons=NULL");
                 }
             }
             writer.write(",class=" + imte.getClass().toString().replace("class ",""));
