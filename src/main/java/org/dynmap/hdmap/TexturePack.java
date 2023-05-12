@@ -2703,7 +2703,7 @@ public class TexturePack {
             ccm = crd.getCustomColorMultiplier();
             if(ctm != null) {
                 int[] layers = ctm.getTextureLayersForPatchId(patchid);
-                if(layers.length > 0){
+                if(layers != null && layers.length > 0){
                     for(int layer = layers.length - 1; layer >= 0; layer--){
                         int customTextureId = layers[layer];
                         if(layer == layers.length -1 || rslt.isTransparent())
