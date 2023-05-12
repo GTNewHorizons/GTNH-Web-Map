@@ -3,6 +3,7 @@ package org.dynmap.hdmap.renderer;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.metatileentity.MetaPipeEntity;
 import gregtech.api.metatileentity.implementations.*;
+import gregtech.common.tileentities.machines.multi.GT_MetaTileEntity_PrimitiveBlastFurnace;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.gregtech.GregTechSupport;
@@ -98,7 +99,7 @@ public class GregTechMachineRenderer extends PipeRendererBase {
                     }
 
                     return new CustomRendererData(patchSetToUse[version], pipeTexturesAndColorsThing, pipeTexturesAndColorsThing);
-                } else if (tmp instanceof GT_MetaTileEntity_TieredMachineBlock || tmp instanceof GT_MetaPipeEntity_Frame || tmp instanceof GT_MetaTileEntity_MultiBlockBase) {
+                } else if (tmp instanceof GT_MetaTileEntity_TieredMachineBlock || tmp instanceof GT_MetaPipeEntity_Frame || tmp instanceof GT_MetaTileEntity_MultiBlockBase || tmp instanceof GT_MetaTileEntity_PrimitiveBlastFurnace) {
                     Object tmpActive = mapDataCtx.getBlockTileEntityField("mActive");
                     Object tmpFacing = mapDataCtx.getBlockTileEntityField("mFacing");
                     Object tmpMainFacing = mapDataCtx.getBlockTileEntityField("mMainFacing");
