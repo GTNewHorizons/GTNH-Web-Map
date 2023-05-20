@@ -18,9 +18,11 @@ public class AppliedEnergisticsModSupportLoader  extends CustomModSupportLoader 
     public void processData(String line, HashMap<String, String> data) {
         String strDamage = data.get("damage");
         String texture = data.get("tex");
+        String texture2 = data.get("tex2");
+        String texture3 = data.get("tex3");
         String size = data.get("size");
 
-        AE2Support.addCableType(filetoidx, Integer.parseInt(strDamage), texture, Integer.parseInt(size));
+        AE2Support.addCableType(filetoidx, Integer.parseInt(strDamage), texture, texture2, texture3, Integer.parseInt(size));
     }
 
 

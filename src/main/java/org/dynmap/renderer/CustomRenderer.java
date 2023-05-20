@@ -8,7 +8,7 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 /**
  * Abstract base class for custom renderers - used to allow creation of customized patch sets for blocks
- * 
+ *
  * Custom renderer classes are loaded by classname, and must have a default constructor
  */
 public abstract class CustomRenderer {
@@ -16,11 +16,24 @@ public abstract class CustomRenderer {
      * Constructor - subclass must have public default constructor
      */
     protected CustomRenderer() {
-        
+
     }
+
+    protected static RenderPatch[] getBoxSingleTexture(RenderPatchFactory rpf, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int tex, boolean rotateTopAndBottom) {
+        int[] patchTextureIds = new int[]{tex, tex, tex, tex, tex, tex};
+        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+
+        if(rotateTopAndBottom)
+            CustomRenderer.addBoxRotatedTopAndBottom(rpf, list, xmin, xmax, ymin, ymax, zmin, zmax, patchTextureIds);
+        else
+            CustomRenderer.addBox(rpf, list, xmin, xmax, ymin, ymax, zmin, zmax, patchTextureIds);
+
+        return list.toArray(new RenderPatch[patchTextureIds.length]);
+    }
+
     /**
      * Initialize custom renderer
-     * 
+     *
      * If overridden, super.initializeRenderer() should be called and cause exit if false is returned
      *
      * @param rpf - render patch factory (used for allocating patches)
@@ -34,15 +47,15 @@ public abstract class CustomRenderer {
     }
     /**
      * Cleanup custom renderer
-     * 
+     *
      * If overridden, super.cleanupRenderer() should be called
      */
     public void cleanupRenderer() {
-        
+
     }
     /**
      * Return list of fields from the TileEntity associated with the blocks initialized for the renderer, if any.
-     * 
+     *
      * @return array of field ID strings, or null if none (the default)
      */
     public String[] getTileEntityFieldsNeeded() {
@@ -73,7 +86,7 @@ public abstract class CustomRenderer {
      * context will always allow reading of data for the requested block, any data within its chunk, and any block
      * within one block in any direction of the requested block, at a minimum.  Also will include any requested tile
      * entity data for those blocks.
-     * 
+     *
      * @param mapDataCtx - Map data context: can be used to read any data available for map.
      * @return patch list for given block
      */
@@ -84,7 +97,7 @@ public abstract class CustomRenderer {
         return new CustomRendererData(getRenderPatchList(mapDataCtx), null, null);
     };
     private static final int[] default_patches = { 0, 0, 0, 0, 0, 0 };
-    
+
     private static void addIfNonNull(List<RenderPatch> list, RenderPatch p) {
         if (p != null)
             list.add(p);
@@ -111,6 +124,29 @@ public abstract class CustomRenderer {
         /* Add top */
         if(patchids[1] >= 0)
             addIfNonNull(list, rpf.getPatch(0, ymax, 1, 1, ymax, 1, 0, ymax, 0, xmin, xmax, 1-zmax, 1-zmin, SideVisible.TOP, patchids[1]));
+        /* Add minX side */
+        if(patchids[2] >= 0)
+            addIfNonNull(list, rpf.getPatch(xmin, 0, 0, xmin, 0, 1, xmin, 1, 0, zmin, zmax, ymin, ymax, SideVisible.TOP, patchids[2]));
+        /* Add maxX side */
+        if(patchids[3] >= 0)
+            addIfNonNull(list, rpf.getPatch(xmax, 0, 1, xmax, 0, 0, xmax, 1, 1, 1-zmax, 1-zmin, ymin, ymax, SideVisible.TOP, patchids[3]));
+        /* Add minZ side */
+        if(patchids[4] >= 0)
+            addIfNonNull(list, rpf.getPatch(1, 0, zmin, 0, 0, zmin, 1, 1, zmin, 1-xmax, 1-xmin, ymin, ymax, SideVisible.TOP, patchids[4]));
+        /* Add maxZ side */
+        if(patchids[5] >= 0)
+            addIfNonNull(list, rpf.getPatch(0, 0, zmax, 1, 0, zmax, 0, 1, zmax, xmin, xmax, ymin, ymax, SideVisible.TOP, patchids[5]));
+    }
+    public static void addBoxRotatedTopAndBottom(RenderPatchFactory rpf, List<RenderPatch> list, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int[] patchids)  {
+        if(patchids == null) {
+            patchids = default_patches;
+        }
+        /* Add bottom */
+        if(patchids[0] >= 0)
+            addIfNonNull(list, rpf.getPatch(0, ymin, 1, 1, ymin, 1, 0, ymin, 0, xmin, xmax, zmin, zmax, SideVisible.TOP, patchids[0]));
+        /* Add top */
+        if(patchids[1] >= 0)
+            addIfNonNull(list, rpf.getPatch(0, ymax, 0, 0, ymax, 1, 1, ymax, 0, 1-zmax, 1-zmin, xmin, xmax, SideVisible.TOP, patchids[1]));
         /* Add minX side */
         if(patchids[2] >= 0)
             addIfNonNull(list, rpf.getPatch(xmin, 0, 0, xmin, 0, 1, xmin, 1, 0, zmin, zmax, ymin, ymax, SideVisible.TOP, patchids[2]));

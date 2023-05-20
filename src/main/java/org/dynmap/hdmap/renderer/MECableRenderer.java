@@ -14,14 +14,24 @@ public class MECableRenderer extends PipeRendererBase {
     double mediumPipeRadius = 3.0 / 16;
     double largePipeRadius = 5.0 / 16;
 
+
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
             return false;
 
         smallPipes = generateSingleSize(rpf, smallPipeRadius, smallPipeRadius, 0, 0);
-        mediumPipes = generateSingleSize(rpf, mediumPipeRadius, mediumPipeRadius, 0, 0);
-        largePipes = generateSingleSize(rpf, largePipeRadius, largePipeRadius, 0, 0);
+        mediumPipes = generateSingleSize(rpf, mediumPipeRadius-1.0/16, mediumPipeRadius, 0, 0);
+        largePipes = generateSingleSize(rpf, largePipeRadius-1.0/16, largePipeRadius, 0, 0);
+
+
+        mediumPipes[ForgeDirection.UP.flag|ForgeDirection.DOWN.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+        mediumPipes[ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0, true);
+        mediumPipes[ForgeDirection.EAST.flag|ForgeDirection.WEST.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+
+        largePipes[ForgeDirection.UP.flag|ForgeDirection.DOWN.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
+        largePipes[ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0, true);
+        largePipes[ForgeDirection.EAST.flag|ForgeDirection.WEST.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
 
         return true;
     }
@@ -115,7 +125,17 @@ public class MECableRenderer extends PipeRendererBase {
 
             }
         }
-        TextureSelector texSel = new TextureSelector(thisDamage);
+        int textureVersion = 0;
+
+        if(version == (ForgeDirection.UP.flag|ForgeDirection.DOWN.flag)) {
+            textureVersion = 2;
+        } else if(version == (ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag) ) {
+            textureVersion = 3;
+        } else if(version == (ForgeDirection.EAST.flag|ForgeDirection.WEST.flag)) {
+            textureVersion = 3;
+        }
+
+        TextureSelector texSel = new TextureSelector(thisDamage, textureVersion);
 
         if (!list.isEmpty()) {
             for (RenderPatch rp : smallPipes[version]) {
@@ -151,10 +171,12 @@ public class MECableRenderer extends PipeRendererBase {
     class TextureSelector implements CustomTextureMapper {
 
         private final short thisDamage;
+        int textureId =0;
 
-        public TextureSelector(short thisDamage) {
+        public TextureSelector(short thisDamage, int textureId) {
 
             this.thisDamage = thisDamage;
+            this.textureId = textureId;
         }
 
         @Override
@@ -163,6 +185,12 @@ public class MECableRenderer extends PipeRendererBase {
                 return null;
 
             if (thisDamage >= 0 && AE2Support.cableTypes[thisDamage] != null) {
+                switch (textureId){
+                    case 2:
+                        return new int[]{AE2Support.cableTypes[thisDamage].textureId2};
+                    case 3:
+                        return new int[]{AE2Support.cableTypes[thisDamage].textureId3};
+                }
                 return new int[]{AE2Support.cableTypes[thisDamage].textureId};
             }
 
