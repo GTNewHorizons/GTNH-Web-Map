@@ -128,7 +128,8 @@ patchblock:id=%blockEnderRail,patch0=SlopeXUpZTop@270,data=12
 patchblock:id=%blockEnderRail,patch0=SlopeXUpZTop@90,data=13
 
 # %blockConduitBundle:* (blockConduitBundle), render=crazypants.enderio.conduit.render.ConduitBundleRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.conduit.BlockConduitBundle
-boxblock:id=%blockConduitBundle,xmin=0.33399999141693115,xmax=0.6669999957084656,ymin=0.33399999141693115,ymax=0.6669999957084656,zmin=0.33399999141693115,zmax=0.6669999957084656,data=*
+# boxblock:id=%blockConduitBundle,xmin=0.33399999141693115,xmax=0.6669999957084656,ymin=0.33399999141693115,ymax=0.6669999957084656,zmin=0.33399999141693115,zmax=0.6669999957084656,data=*
+customblock:id=%blockConduitBundle,class=org.dynmap.hdmap.renderer.EnderIOConduitRenderer,data=*
 
 # %blockEndermanSkull:* (blockEndermanSkull), render=crazypants.enderio.item.skull.EndermanSkullRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.item.skull.BlockEndermanSkull
 boxblock:id=%blockEndermanSkull,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=*
