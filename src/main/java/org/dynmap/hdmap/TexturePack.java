@@ -34,6 +34,7 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.common.BiomeMap;
 import org.dynmap.exporter.OBJExport;
+import org.dynmap.hdmap.textureprocessor.CustomTextureProcessor;
 import org.dynmap.renderer.*;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.BufferOutputStream;
@@ -198,7 +199,8 @@ public class TexturePack {
         SHULKER,
         CUSTOM,
         TILESET,
-        BIOME
+        BIOME,
+        CUSTOMPROC
     };
 
     // Material type: used for setting advanced rendering/export characteristics for image in given file
@@ -312,6 +314,8 @@ public class TexturePack {
         String[] tilenames;         /* For TILESET, array of tilenames, indexed by tile index */
         boolean used;               // Set to true if any active references to the file
         MaterialType material;      // Material type, if specified
+
+        CustomTextureProcessor customProcessor;
     }
     private static ArrayList<DynamicTileFile> addonfiles = new ArrayList<DynamicTileFile>();
     private static Map<String, DynamicTileFile> addonfilesbyname = new HashMap<String, DynamicTileFile>();
@@ -349,7 +353,7 @@ public class TexturePack {
         for(int i = 0; i < terrain_rp_map.length; i++) {
             String fn = getRPFileName(i);
             if (fn != null) {
-                int idx = findOrAddDynamicTileFile(fn, null, 1, 1, TileFileFormat.GRID, new String[0]);
+                int idx = findOrAddDynamicTileFile(fn, null, 1, 1, TileFileFormat.GRID, new String[0], null);
                 DynamicTileFile dtf = addonfiles.get(idx);
                 if (dtf != null) {  // Fix mapping of tile ID to global table index
                     dtf.tile_to_dyntile[0] = i;
@@ -361,7 +365,7 @@ public class TexturePack {
         for(int i = 0; i < terrain_map.length; i++) {
             String fn = getBlockFileName(i);
             if (fn != null) {
-                int idx = findOrAddDynamicTileFile(fn, null, 1, 1, TileFileFormat.GRID, new String[0]);
+                int idx = findOrAddDynamicTileFile(fn, null, 1, 1, TileFileFormat.GRID, new String[0], null);
                 DynamicTileFile dtf = addonfiles.get(idx);
                 if (dtf != null) {  // Fix mapping of tile ID to global table index
                     dtf.used = true;
@@ -1348,6 +1352,9 @@ public class TexturePack {
                 break;
             case TILESET:
                 break;
+            case CUSTOMPROC:
+                dtf.customProcessor.patchTextures(this, dtf.tile_to_dyntile, li.argb, li.width, li.height, native_scale);
+                break;
             default:
                 break;
         }
@@ -1852,7 +1859,7 @@ public class TexturePack {
                     }
                     if ((fname != null) && (setdir != null)) {
                         /* Register tile file */
-                        int fid = findOrAddDynamicTileFile(fname, null, xdim, ydim, TileFileFormat.TILESET, new String[0]);
+                        int fid = findOrAddDynamicTileFile(fname, null, xdim, ydim, TileFileFormat.TILESET, new String[0], null);
                         tfile = addonfiles.get(fid);
                         if (tfile == null) {
                             Log.severe("Error registering tile set " + fname + " at " + rdr.getLineNumber() + " of " + txtname);
@@ -2414,6 +2421,7 @@ public class TexturePack {
                     String id = null;
                     TileFileFormat fmt = TileFileFormat.GRID;
                     MaterialType mt = null;
+                    CustomTextureProcessor customProcessor = null;
                     if(istxt) {
                         xdim = ydim = 1;
                         fmt = TileFileFormat.GRID;
@@ -2452,10 +2460,15 @@ public class TexturePack {
                                 Log.warning("Bad custom material type: " + aval[1]);
                             }
                         }
+                        else if(aval[0].equals("processor")) {
+                            Class<?> cls = Class.forName(aval[1]);   /* Get class */
+                            customProcessor = (CustomTextureProcessor) cls.newInstance();
+                            fmt = TileFileFormat.CUSTOMPROC;
+                        }
                     }
                     if((fname != null) && (id != null)) {
                         /* Register the file */
-                        int fid = findOrAddDynamicTileFile(fname, modname, xdim, ydim, fmt, args);
+                        int fid = findOrAddDynamicTileFile(fname, modname, xdim, ydim, fmt, args, customProcessor);
                         filetoidx.put(id, fid); /* Save lookup */
                         if (mt != null) {
                             addonfiles.get(fid).material = mt;
@@ -3136,7 +3149,7 @@ public class TexturePack {
      * @param args - args for file format
      * @return dynamic file index
      */
-    public static int findOrAddDynamicTileFile(String fname, String modname, int xdim, int ydim, TileFileFormat fmt, String[] args) {
+    public static int findOrAddDynamicTileFile(String fname, String modname, int xdim, int ydim, TileFileFormat fmt, String[] args, CustomTextureProcessor customProcessor) {
         DynamicTileFile f;
         /* Find existing, if already there */
         f = addonfilesbyname.get(fname);
@@ -3151,6 +3164,7 @@ public class TexturePack {
         f.tilecnt_y = ydim;
         f.format = fmt;
         f.used = false;
+        f.customProcessor = customProcessor;
         // Assume all biome files are used (not referred to by index)
         if (fmt == TileFileFormat.BIOME) {
             f.used = true;
@@ -3221,6 +3235,9 @@ public class TexturePack {
             case BIOME:
                 f.tile_to_dyntile = new int[1];
                 break;
+            case CUSTOMPROC:
+                f.tile_to_dyntile = new int[f.customProcessor.getTextureCount()];
+                break;
             default:
                 f.tile_to_dyntile = new int[xdim*ydim];
                 break;
@@ -3276,7 +3293,7 @@ public class TexturePack {
 
     private void processCustomColorMap(String fname, String ids) {
         // Register file name
-        int idx = findOrAddDynamicTileFile(fname, null, 1, 1, TileFileFormat.BIOME, new String[0]);
+        int idx = findOrAddDynamicTileFile(fname, null, 1, 1, TileFileFormat.BIOME, new String[0], null);
         if(idx < 0) {
             Log.info("Error registering custom color file: " + fname);
             return;

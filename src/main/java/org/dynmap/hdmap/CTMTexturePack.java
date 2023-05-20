@@ -818,7 +818,7 @@ public class CTMTexturePack {
                 }
                 //Log.info(tn + ":registerTiles(" + modname + ":" + ftn + ")");
                 // Find file ID, add if needed
-                int fid = TexturePack.findOrAddDynamicTileFile(ftn, modname, 1, 1, TileFileFormat.GRID, new String[0]);
+                int fid = TexturePack.findOrAddDynamicTileFile(ftn, modname, 1, 1, TileFileFormat.GRID, new String[0], null);
                 rslt[i] = TexturePack.findOrAddDynamicTile(fid, 0); 
             }
             return rslt;
