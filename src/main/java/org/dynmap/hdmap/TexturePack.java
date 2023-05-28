@@ -2699,15 +2699,6 @@ public class TexturePack {
         else {
             faceindex = laststep.ordinal();
         }
-        textid = map.faces[faceindex];
-        if (ctm != null) {
-            int mod = 0;
-            if(textid >= COLORMOD_MULT_INTERNAL) {
-                mod = (textid / COLORMOD_MULT_INTERNAL) * COLORMOD_MULT_INTERNAL;
-                textid -= mod;
-            }
-            textid = mod + ctm.mapTexture(mapiter, blkid, blkdata, laststep, textid, ss);
-        }
 
         boolean handledByCustomRendering = false;
         CustomColorMultiplier ccm = null;
@@ -2727,6 +2718,15 @@ public class TexturePack {
             }
         }
         if (!handledByCustomRendering) {
+            textid = map.faces[faceindex];
+            if (ctm != null) {
+                int mod = 0;
+                if(textid >= COLORMOD_MULT_INTERNAL) {
+                    mod = (textid / COLORMOD_MULT_INTERNAL) * COLORMOD_MULT_INTERNAL;
+                    textid -= mod;
+                }
+                textid = mod + ctm.mapTexture(mapiter, blkid, blkdata, laststep, textid, ss);
+            }
             readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate, ccm);
             if (map.layers != null) {    /* If layered */
                 /* While transparent and more layers */
