@@ -30,36 +30,36 @@
  */
 dependencies {
     shadowImplementation("org.eclipse.jetty:jetty-server:8.2.0.v20160908") {
-    }    
-	shadowImplementation("org.eclipse.jetty:jetty-servlet:8.2.0.v20160908") {
     }
-	shadowImplementation("org.eclipse.jetty:jetty-util:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-servlet:8.2.0.v20160908") {
+    }
+    shadowImplementation("org.eclipse.jetty:jetty-util:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty:jetty-io:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-io:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty:jetty-http:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-http:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty:jetty-security:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-security:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty:jetty-client:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-client:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty:jetty-webapp:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-webapp:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty:jetty-continuation:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-continuation:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty:jetty-annotations:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-annotations:8.2.0.v20160908") {
         transitive = false
     }
-	shadowImplementation("org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016"){
-		transitive = false
-	}
+    shadowImplementation("org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016"){
+        transitive = false
+    }
     shadowImplementation("com.googlecode.json-simple:json-simple:1.1.1") {
         transitive = false
     }
@@ -80,5 +80,9 @@ dependencies {
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.3.40-GTNH:dev")
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:Railcraft:9.14.0:dev")
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:ArchitectureCraft:1.8.3:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Chisel:2.10.17-GTNH:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:EnderIO:2.3.1.68:dev")
     runtimeOnlyNonPublishable("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-192-GTNH:dev")
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ForgeMultipart:1.2.8:dev')
 }
