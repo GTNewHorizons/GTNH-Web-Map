@@ -8,9 +8,9 @@ modname:ForgeMultipart
 
 
 texturepath:assets/forgemultipart/textures/blocks/
-texture:id=minecraft/blank_16,filename=assets/minecraft/textures/blocks/blank_16.png
+texture:id=minecraft/blank_16,filename=assets/minecraft/textures/blocks/stone.png
 
 
 
 # %block:* (block), render=codechicken.multipart.MultipartRenderer$(CUSTOM), opaque=false,cls=codechicken.multipart.BlockMultipart
-block:id=%block,data=*,stdrot=true,face0-5=12000:minecraft/blank_16
+block:id=%block,data=*,stdrot=true,patch0=12000:minecraft/blank_16
