@@ -4,7 +4,6 @@ import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.renderer.*;
-import scala.Int;
 
 import java.util.ArrayList;
 import java.util.HashMap;
