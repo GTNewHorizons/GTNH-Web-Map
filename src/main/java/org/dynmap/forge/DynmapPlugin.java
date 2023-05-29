@@ -279,16 +279,21 @@ public class DynmapPlugin
         }
         wbr.last_ts = System.nanoTime();
     }
-    
+
     private void doIdleOutOfWorlds() {
         if (!DynmapMod.useforcedchunks) return;
         long ts = System.nanoTime() - worldIdleTimeoutNS;
-        for(Iterator<WorldBusyRecord> itr = busy_worlds.values().iterator(); itr.hasNext();) {
+        for (Iterator<WorldBusyRecord> itr = busy_worlds.values().iterator(); itr.hasNext(); ) {
             WorldBusyRecord wbr = itr.next();
-            if(wbr.last_ts < ts) {
-                World w = wbr.ticket.world;
-                Debug.debug("World " + w.getWorldInfo().getWorldName() + "/" + wbr.ticket.world.provider.getDimensionName() + " is idle");
-                ForgeChunkManager.releaseTicket(wbr.ticket);    // Release hold on world 
+            try {
+                if (wbr.last_ts < ts) {
+                    World w = wbr.ticket.world;
+                    Debug.debug("World " + w.getWorldInfo().getWorldName() + "/" + wbr.ticket.world.provider.getDimensionName() + " is idle");
+                    ForgeChunkManager.releaseTicket(wbr.ticket);    // Release hold on world
+                    itr.remove();
+                }
+            } catch (NullPointerException npe) {
+                Debug.error("Failed to release idle chunk in " + wbr.ticket.world.getWorldInfo().getWorldName(), npe);
                 itr.remove();
             }
         }
