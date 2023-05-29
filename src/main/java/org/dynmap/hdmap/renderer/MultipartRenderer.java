@@ -11,13 +11,18 @@ import java.util.List;
 import java.util.Map;
 
 public class MultipartRenderer extends CustomRenderer {
+    public static MultipartRenderer INSTANCE = null;
+
     private static final int fullBlockPatchList[] = { 0, 1, 4, 5, 2, 3 };
     private RenderPatch[] fullBlock;
-
     private RenderPatch[][] facePatches;
     private RenderPatch[][] postPatches;
     private RenderPatch[][] cornerPatches;
     private RenderPatch[][] edgePatches;
+    private RenderPatch[][] hollowPatches;
+
+    public int blockId = -1000;
+
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
@@ -33,8 +38,66 @@ public class MultipartRenderer extends CustomRenderer {
         initializePostPatches(rpf);
         initializeCornerPatches(rpf);
         initializeEdgePatches(rpf);
+        initializeHollowPatches(rpf);
+
+        blockId = blkid;
+        INSTANCE = this;
+
+        if(MECableRenderer.INSTANCE != null){
+            MECableRenderer.INSTANCE.multipartBlockId = blkid;
+        }
 
         return true;
+    }
+
+    private void initializeHollowPatches(RenderPatchFactory rpf) {
+        hollowPatches = new RenderPatch[128][];
+        for(ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS){
+            for(int i = 0; i < 7; i++){
+                int id = dir.ordinal() + 16 * (i+1);
+                double w = (i+1) / 8.0;
+                switch (dir){
+                    case DOWN:
+                        hollowPatches[id] = combineMultiple(makeBox(rpf, 0, 0.25, 0, w, 0, 1),
+                                makeBox(rpf, 0.75, 1, 0, w, 0, 1),
+                                makeBox(rpf, 0.25, 0.75, 0, w, 0, 0.25),
+                                makeBox(rpf, 0.25, 0.75, 0, w, 0.75, 1));
+                        break;
+                    case UP:
+                        hollowPatches[id] = combineMultiple(makeBox(rpf, 0, 0.25, 1 - w, 1, 0, 1),
+                                makeBox(rpf, 0.75, 1, 1 - w, 1, 0, 1),
+                                makeBox(rpf, 0.25, 0.75, 1 - w, 1, 0, 0.25),
+                                makeBox(rpf, 0.25, 0.75, 1 - w, 1, 0.75, 1));
+                        break;
+                    case NORTH:
+                        hollowPatches[id] = combineMultiple(makeBox(rpf, 0, 0.25, 0, 1, 0, w),
+                                makeBox(rpf, 0.75, 1, 0, 1, 0, w),
+                                makeBox(rpf, 0.25, 0.75, 0, 0.25, 0, w),
+                                makeBox(rpf, 0.25, 0.75, 0.75, 1, 0, w));
+                        break;
+                    case SOUTH:
+                        hollowPatches[id] = combineMultiple(makeBox(rpf, 0, 0.25, 0, 1, 1 - w, 1),
+                                makeBox(rpf, 0.75, 1, 0, 1, 1 - w, 1),
+                                makeBox(rpf, 0.25, 0.75, 0, 0.25, 1 - w, 1),
+                                makeBox(rpf, 0.25, 0.75, 0.75, 1, 1 - w, 1));
+                        break;
+                    case WEST:
+                        hollowPatches[id] = combineMultiple(makeBox(rpf, 0, w, 0, 0.25, 0, 1),
+                                makeBox(rpf, 0, w, 0.75, 1, 0, 1),
+                                makeBox(rpf, 0, w, 0.25, 0.75, 0, 0.25),
+                                makeBox(rpf, 0, w, 0.25, 0.75, 0.75, 1));
+                        break;
+                    case EAST:
+                        hollowPatches[id] = combineMultiple(makeBox(rpf, 1 - w, 1, 0, 0.25, 0, 1),
+                                makeBox(rpf, 1 - w, 1, 0.75, 1, 0, 1),
+                                makeBox(rpf, 1 - w, 1, 0.25, 0.75, 0, 0.25),
+                                makeBox(rpf, 1 - w, 1, 0.25, 0.75, 0.75, 1));
+                        break;
+                    case UNKNOWN:
+                        break;
+                }
+            }
+        }
     }
 
     private void initializeEdgePatches(RenderPatchFactory rpf) {
@@ -178,6 +241,21 @@ public class MultipartRenderer extends CustomRenderer {
         return list.toArray(new RenderPatch[fullBlockPatchList.length]);
     }
 
+    RenderPatch[] combineMultiple(RenderPatch[]... list){
+        int count = 0;
+        for(RenderPatch[] rp : list){
+            count += rp.length;
+        }
+        RenderPatch[] ret = new RenderPatch[count];
+
+        int j = 0;
+        for(RenderPatch[] rp : list){
+            for(int i = 0; i < rp.length; i++)
+                ret[j++] = rp[i];
+        }
+        return ret;
+    }
+
     @Override
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
         Object rawParts = mapDataCtx.getBlockTileEntityField("parts");
@@ -223,8 +301,13 @@ public class MultipartRenderer extends CustomRenderer {
                         } else if(strId.equals("mcr_cnr")){
                             if(cornerPatches[shape] != null)
                                 mrd.addSimpleShape(rpf, cornerPatches[shape], mat);
+                        } else if(strId.equals("mcr_hllw")){
+                            if(hollowPatches[shape] != null)
+                                mrd.addSimpleShape(rpf, hollowPatches[shape], mat);
+                        } else if(strId.equals("ae2_cablebus") && MECableRenderer.INSTANCE != null){
+                            CustomRendererData crd = MECableRenderer.INSTANCE.getRenderData(mapDataCtx);
+                            mrd.addComplexShape(rpf, crd, MECableRenderer.INSTANCE.meCableBusBlockId, 0);
                         }
-
                     }
 
                 }
@@ -260,8 +343,16 @@ public class MultipartRenderer extends CustomRenderer {
             int data = 0;
             int lastIndexOfUnderscore = block.lastIndexOf('_');
             if(lastIndexOfUnderscore > 0){
-                blockName = block.substring(0, lastIndexOfUnderscore);
-                data = Integer.parseInt(block.substring(lastIndexOfUnderscore+1));
+                try {
+                    data = Integer.parseInt(block.substring(lastIndexOfUnderscore + 1));
+                    if(data >= 0 && data <= 15) {
+                        blockName = block.substring(0, lastIndexOfUnderscore);
+                    } else {
+                        data = 0;
+                    }
+                } catch(NumberFormatException nfe){
+                    data = 0;
+                }
             }
 
             int blockId = GWM_Util.blockNameToId(blockName);
@@ -286,6 +377,32 @@ public class MultipartRenderer extends CustomRenderer {
         @Override
         public CustomTextureMapper getCustomTextureMapper() {
             return this;
+        }
+
+        public void addComplexShape(RenderPatchFactory rpf, CustomRendererData crd, int blockId, int blockMeta) {
+            CustomTextureMapper ctm = crd.getCustomTextureMapper();
+
+            TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, blockMeta, 0);
+
+            if(ctm != null) {
+                for (RenderPatch rp : crd.getCustomMesh()) {
+                    int[] textureLayersForPatchId = ctm.getTextureLayersForPatchId(rp.getTextureIndex());
+                    if (textureLayersForPatchId != null) {
+                        if(textureLayersForPatchId.length > 0) {
+                            patchToTex.put(patchNum, textureLayersForPatchId[0]);
+                            this.patches.add(rpf.getRotatedPatch(rp, 0, 0, 0, patchNum++));
+                        }
+                    } else {
+                        patchToTex.put(patchNum, map.getIndexForFace(rp.getTextureIndex()));
+                        this.patches.add(rpf.getRotatedPatch(rp, 0, 0, 0, patchNum++));
+                    }
+                }
+            } else {
+                for (RenderPatch rp : crd.getCustomMesh()) {
+                    patchToTex.put(patchNum, map.getIndexForFace(rp.getTextureIndex()));
+                    this.patches.add(rpf.getRotatedPatch(rp, 0, 0, 0, patchNum++));
+                }
+            }
         }
     }
 }
