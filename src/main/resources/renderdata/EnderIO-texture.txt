@@ -333,7 +333,7 @@ block:id=%blockEnderRail,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:e
 block:id=%blockEnderRail,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:enderio/blockEnderRailEastWest_turned
 
 # %blockConduitBundle:* (blockConduitBundle), render=crazypants.enderio.conduit.render.ConduitBundleRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.conduit.BlockConduitBundle
-block:id=%blockConduitBundle,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:enderIO/conduitConnector
+block:id=%blockConduitBundle,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:enderIO/conduitConnector
 
 # %blockConduitFacade:* (blockConduitFacade), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=crazypants.enderio.conduit.facade.BlockConduitFacade
 block:id=%blockConduitFacade,data=*,stdrot=true,face0-5=0:enderio/conduitFacade

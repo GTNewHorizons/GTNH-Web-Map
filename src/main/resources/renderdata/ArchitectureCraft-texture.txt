@@ -15,7 +15,7 @@ texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 block:id=%sawbench,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
 # %shape:* (shape), render=gcewing.architecture.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=false,cls=gcewing.architecture.ShapeBlock
-block:id=%shape,data=*,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%shape,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:minecraft/stone
 
 
 specialModSupportLoader:org.dynmap.modsupport.loaders.ArchitectureCraftModSupportLoader
