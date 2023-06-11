@@ -1,4 +1,4 @@
-# thaumicinsurgence 0.1.3
+# thaumicinsurgence 0.2.4
 version:1.7
 modname:thaumicinsurgence
 
@@ -21,6 +21,9 @@ block:id=%tile.arcaneMarble,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcan
 
 # %tile.arcaneMarbleBrick:* (tile.arcaneMarbleBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarbleBrick
 block:id=%tile.arcaneMarbleBrick,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcane_marble_brick
+
+# %tile.dimensionalTeleporter:* (tile.dimensionalTeleporter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockDimensionalTeleporterBase
+block:id=%tile.dimensionalTeleporter,data=*,stdrot=true,face0=0:thaumicinsurgence/arcane_stone_bricks_alt4,face1=0:thaumicinsurgence/arcane_stone_bricks_alt5,face2-5=0:thaumicinsurgence/arcane_stone_bricks_alt6
 
 # %infusionIntercepter:* (infusionIntercepter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockInfusionFucker
 block:id=%infusionIntercepter,data=*,stdrot=true,face0=0:thaumicinsurgence/arcane_stone_bricks_alt4,face1=0:thaumicinsurgence/arcane_stone_bricks_alt5,face2-5=0:thaumicinsurgence/arcane_stone_bricks_alt6

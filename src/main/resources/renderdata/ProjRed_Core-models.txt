@@ -26,6 +26,9 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 # %projectred.exploration.stonewalls:* (projectred.exploration.stonewalls), render=(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockDecorativeWalls
 customblock:id=%projectred.exploration.stonewalls,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
 
+# %projectred.exploration.lily:* (projectred.exploration.lily), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=false,cls=mrtjp.projectred.exploration.BlockLily
+boxblock:id=%projectred.exploration.lily,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.875,zmin=0.30000001192092896,zmax=0.699999988079071,data=0
+
 # %projectred.compatibility.liqredstone:* (projectred.compatibility.liqredstone), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=mrtjp.projectred.compatibility.tconstruct.LiquidFiniteSubstance
 boxblock:id=%projectred.compatibility.liqredstone,ymax=0.875,data=1
 boxblock:id=%projectred.compatibility.liqredstone,ymax=0.75,data=2

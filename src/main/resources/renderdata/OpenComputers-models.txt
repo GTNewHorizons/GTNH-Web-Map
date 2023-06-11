@@ -1,4 +1,4 @@
-# OpenComputers 1.8.0.13-GTNH
+# OpenComputers 1.9.8-GTNH
 version:1.7
 modname:OpenComputers
 
@@ -74,6 +74,9 @@ boxblock:id=%hologram2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,dat
 # %caseCreative:* (caseCreative), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Case
 
 # %microcontroller:* (microcontroller), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.Microcontroller
+
+# %robot:* (robot), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.RobotProxy
+boxblock:id=%robot,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.10000000149011612,ymax=0.8999999761581421,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
 
 # %chameliumBlock:* (chameliumBlock), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=true,cls=li.cil.oc.common.block.ChameliumBlock
 

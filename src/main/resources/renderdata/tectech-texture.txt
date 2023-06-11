@@ -1,4 +1,4 @@
-# tectech 5.0.113
+# tectech 5.2.22
 version:1.7
 modname:tectech
 
@@ -86,7 +86,7 @@ texture:id=gregtech/iconsets/TM_TESLA_WINDING_SECONDARY_TOP_BOTTOM,filename=asse
 texture:id=gregtech/iconsets/TRANSPARENT,filename=assets/gregtech/textures/blocks/iconsets/TRANSPARENT.png
 texture:id=gregtech/materialicons/GEM_HORIZONTAL/block1,filename=assets/gregtech/textures/blocks/materialicons/GEM_HORIZONTAL/block1.png
 texture:id=gregtech/materialicons/GEM_HORIZONTAL/frameGt,filename=assets/gregtech/textures/blocks/materialicons/GEM_HORIZONTAL/frameGt.png
-texture:id=minecraft/MISSING_ICON_BLOCK_3567_turretHeadEM,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3567_turretHeadEM.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3604_turretHeadEM,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3604_turretHeadEM.png
 texture:id=tectech/blockQuantumGlass,filename=assets/tectech/textures/blocks/blockQuantumGlass.png
 texture:id=tectech/blockReactorSimulator,filename=assets/tectech/textures/blocks/blockReactorSimulator.png
 texture:id=tectech/turretBaseEM,filename=assets/tectech/textures/blocks/turretBaseEM.png
@@ -170,7 +170,7 @@ block:id=%gt.stabilisation_field_generator,data=9,data=10,data=11,data=12,data=1
 block:id=%tile.quantumGlass,data=*,stdrot=true,face0-5=12000:tectech/blockQuantumGlass
 
 # %tile.turretHeadEM:* (tile.turretHeadEM), render=(CUSTOM), opaque=false,cls=com.github.technus.tectech.compatibility.openmodularturrets.blocks.turretheads.TurretHeadEM
-block:id=%tile.turretHeadEM,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3567_turretHeadEM
+block:id=%tile.turretHeadEM,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3604_turretHeadEM
 
 # %tile.turretBaseEM:* (tile.turretBaseEM), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.compatibility.openmodularturrets.blocks.turretbases.TurretBaseEM
 block:id=%tile.turretBaseEM,data=*,stdrot=true,face0-5=0:tectech/turretBaseEM
