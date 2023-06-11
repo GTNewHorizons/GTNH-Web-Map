@@ -1,4 +1,4 @@
-# DraconicEvolution 1.1.15-GTNH
+# DraconicEvolution 1.1.16-GTNH
 version:1.7
 modname:DraconicEvolution
 
@@ -113,6 +113,9 @@ block:id=%generator,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,da
 # %energyStorageCore:* (energyStorageCore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.EnergyStorageCore
 block:id=%energyStorageCore,data=*,stdrot=true,face0-5=0:draconicevolution/energy_storage_core
 
+# %earth:* (earth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.Earth
+block:id=%earth,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
+
 # %draconium:* (draconium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumBlock
 block:id=%draconium,data=0,stdrot=true,face0-5=0:draconicevolution/draconium_block_0
 block:id=%draconium,data=1,stdrot=true,face0-5=0:draconicevolution/draconium_block_1
@@ -193,6 +196,3 @@ block:id=%chaosCrystal,data=*,stdrot=true,face0-5=0:draconicevolution/transparen
 
 # %longRangeDislocator:* (longRangeDislocator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.LongRangeDislocator
 block:id=%longRangeDislocator,data=*,stdrot=true,face0-1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/teleporter_front
-
-# %earth:* (earth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.Earth
-block:id=%earth,data=*,stdrot=true,face0-5=0:draconicevolution/transparency

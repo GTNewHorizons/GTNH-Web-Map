@@ -1,4 +1,4 @@
-# kekztech 0.6.32
+# kekztech 0.8.5
 version:1.7
 modname:kekztech
 
@@ -9,6 +9,8 @@ modname:kekztech
 
 texturepath:assets/kekztech/textures/blocks/
 texture:id=kekztech/GDCCeramicElectrolyteUnit,filename=assets/kekztech/textures/blocks/GDCCeramicElectrolyteUnit.png
+texture:id=kekztech/InsanelyUltimateEnergyUnit_side,filename=assets/kekztech/textures/blocks/InsanelyUltimateEnergyUnit_side.png
+texture:id=kekztech/InsanelyUltimateEnergyUnit_top,filename=assets/kekztech/textures/blocks/InsanelyUltimateEnergyUnit_top.png
 texture:id=kekztech/LSCBase_side,filename=assets/kekztech/textures/blocks/LSCBase_side.png
 texture:id=kekztech/LSCBase_top,filename=assets/kekztech/textures/blocks/LSCBase_top.png
 texture:id=kekztech/LapotronicEnergyUnit1_side,filename=assets/kekztech/textures/blocks/LapotronicEnergyUnit1_side.png
@@ -24,6 +26,8 @@ texture:id=kekztech/LapotronicEnergyUnit6_top,filename=assets/kekztech/textures/
 texture:id=kekztech/LapotronicEnergyUnit7_side,filename=assets/kekztech/textures/blocks/LapotronicEnergyUnit7_side.png
 texture:id=kekztech/LapotronicEnergyUnit7_top,filename=assets/kekztech/textures/blocks/LapotronicEnergyUnit7_top.png
 texture:id=kekztech/LargeHexTile_2_2,filename=assets/kekztech/textures/blocks/LargeHexTile_2_2.png
+texture:id=kekztech/MegaUltimateEnergyUnit_side,filename=assets/kekztech/textures/blocks/MegaUltimateEnergyUnit_side.png
+texture:id=kekztech/MegaUltimateEnergyUnit_top,filename=assets/kekztech/textures/blocks/MegaUltimateEnergyUnit_top.png
 texture:id=kekztech/ReallyUltimateEnergyUnit_side,filename=assets/kekztech/textures/blocks/ReallyUltimateEnergyUnit_side.png
 texture:id=kekztech/ReallyUltimateEnergyUnit_top,filename=assets/kekztech/textures/blocks/ReallyUltimateEnergyUnit_top.png
 texture:id=kekztech/TFFTCasing,filename=assets/kekztech/textures/blocks/TFFTCasing.png
@@ -59,6 +63,19 @@ block:id=%kekztech_yszceramicelectrolyteunit_block,data=*,stdrot=true,face0-5=0:
 # %kekztech_gdcceramicelectrolyteunit_block:* (kekztech_gdcceramicelectrolyteunit_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_GDCUnit
 block:id=%kekztech_gdcceramicelectrolyteunit_block,data=*,stdrot=true,face0-5=0:kekztech/GDCCeramicElectrolyteUnit
 
+# %kekztech_tfftstoragefield_block:* (kekztech_tfftstoragefield_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_TFFTStorageField
+block:id=%kekztech_tfftstoragefield_block,data=0,stdrot=true,face0-5=0:kekztech/TFFTCasing
+block:id=%kekztech_tfftstoragefield_block,data=1,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock1
+block:id=%kekztech_tfftstoragefield_block,data=2,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock2
+block:id=%kekztech_tfftstoragefield_block,data=3,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock3
+block:id=%kekztech_tfftstoragefield_block,data=4,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock4
+block:id=%kekztech_tfftstoragefield_block,data=5,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock5
+block:id=%kekztech_tfftstoragefield_block,data=6,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock6
+block:id=%kekztech_tfftstoragefield_block,data=7,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock7
+block:id=%kekztech_tfftstoragefield_block,data=8,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock8
+block:id=%kekztech_tfftstoragefield_block,data=9,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock9
+block:id=%kekztech_tfftstoragefield_block,data=10,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock10
+
 # %kekztech_thaumiumreinforcedjar_block:* (kekztech_thaumiumreinforcedjar_block), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=common.blocks.Block_ThaumiumReinforcedJar
 block:id=%kekztech_thaumiumreinforcedjar_block,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:kekztech/thaumreinforced_jar_bottom,face1=0:kekztech/thaumreinforced_jar_top,face2-5=0:kekztech/thaumreinforced_jar_side
 block:id=%kekztech_thaumiumreinforcedjar_block,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:kekztech/thaumreinforced_jar_bottom,face1=0:kekztech/thaumreinforced_jar_top_void,face2-5=0:kekztech/thaumreinforced_jar_side_void
@@ -79,20 +96,9 @@ block:id=%kekztech_lapotronicenergyunit_block,data=5,stdrot=true,face0-1=0:kekzt
 block:id=%kekztech_lapotronicenergyunit_block,data=6,stdrot=true,face0-1=0:kekztech/LapotronicEnergyUnit6_top,face2-5=0:kekztech/LapotronicEnergyUnit6_side
 block:id=%kekztech_lapotronicenergyunit_block,data=7,stdrot=true,face0-1=0:kekztech/LapotronicEnergyUnit7_top,face2-5=0:kekztech/LapotronicEnergyUnit7_side
 block:id=%kekztech_lapotronicenergyunit_block,data=8,stdrot=true,face0-1=0:kekztech/ReallyUltimateEnergyUnit_top,face2-5=0:kekztech/ReallyUltimateEnergyUnit_side
-block:id=%kekztech_lapotronicenergyunit_block,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:kekztech/UltimateEnergyUnit_top
+block:id=%kekztech_lapotronicenergyunit_block,data=9,stdrot=true,face0-1=0:kekztech/InsanelyUltimateEnergyUnit_top,face2-5=0:kekztech/InsanelyUltimateEnergyUnit_side
+block:id=%kekztech_lapotronicenergyunit_block,data=10,stdrot=true,face0-1=0:kekztech/MegaUltimateEnergyUnit_top,face2-5=0:kekztech/MegaUltimateEnergyUnit_side
+block:id=%kekztech_lapotronicenergyunit_block,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:kekztech/UltimateEnergyUnit_top
 
 # %kekztech_largehextile_block:* (kekztech_largehextile_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_LargeHexPlate
 block:id=%kekztech_largehextile_block,data=*,stdrot=true,face0-5=0:kekztech/LargeHexTile_2_2
-
-# %kekztech_tfftstoragefield_block:* (kekztech_tfftstoragefield_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_TFFTStorageField
-block:id=%kekztech_tfftstoragefield_block,data=0,stdrot=true,face0-5=0:kekztech/TFFTCasing
-block:id=%kekztech_tfftstoragefield_block,data=1,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock1
-block:id=%kekztech_tfftstoragefield_block,data=2,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock2
-block:id=%kekztech_tfftstoragefield_block,data=3,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock3
-block:id=%kekztech_tfftstoragefield_block,data=4,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock4
-block:id=%kekztech_tfftstoragefield_block,data=5,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock5
-block:id=%kekztech_tfftstoragefield_block,data=6,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock6
-block:id=%kekztech_tfftstoragefield_block,data=7,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock7
-block:id=%kekztech_tfftstoragefield_block,data=8,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock8
-block:id=%kekztech_tfftstoragefield_block,data=9,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock9
-block:id=%kekztech_tfftstoragefield_block,data=10,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock10

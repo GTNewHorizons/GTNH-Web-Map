@@ -1,4 +1,4 @@
-# Natura 2.5.5
+# Natura 2.5.7
 version:1.7
 modname:Natura
 
@@ -489,9 +489,12 @@ block:id=%redwood,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=1
 
 # %willow:* (willow), render=(LOG), opaque=true,cls=mods.natura.blocks.trees.WillowBlock
 block:id=%willow,data=0,stdrot=true,face0-1=0:natura/willow_heart,face2-5=0:natura/willow_bark
+block:id=%willow,data=1,data=2,data=3,stdrot=true,face0-5=0:natura/willow_bark
 block:id=%willow,data=4,face0-1=0:natura/willow_bark,face2-3=4000:natura/willow_bark,face4-5=0:natura/willow_heart
+block:id=%willow,data=5,data=6,data=7,face0-1=0:natura/willow_bark,face2-3=4000:natura/willow_bark,face4-5=0:natura/willow_bark
 block:id=%willow,data=8,face0-1=4000:natura/willow_bark,face2-3=0:natura/willow_heart,face4-5=4000:natura/willow_bark
-block:id=%willow,data=12,stdrot=true,face0-5=0:natura/willow_bark
+block:id=%willow,data=9,data=10,data=11,face0-1=4000:natura/willow_bark,face2-3=0:natura/willow_bark,face4-5=4000:natura/willow_bark
+block:id=%willow,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:natura/willow_bark
 
 # %bloodwood:* (bloodwood), render=(LOG), opaque=true,cls=mods.natura.blocks.trees.LogTwoxTwo
 block:id=%bloodwood,data=0,stdrot=true,face0-1=0:natura/bloodwood_upper_left,face2=0:natura/bloodwood_bark,face3=0:natura/bloodwood_side_left,face4=0:natura/bloodwood_bark,face5=0:natura/bloodwood_side_right
@@ -529,12 +532,15 @@ block:id=%Rare Tree,data=15,stdrot=true,face0-5=0:natura/tiger_bark
 # %Dark Tree:* (Dark Tree), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.trees.DarkTreeBlock
 block:id=%Dark Tree,data=0,stdrot=true,face0-1=0:natura/darkwood_heart,face2-5=0:natura/darkwood_bark
 block:id=%Dark Tree,data=1,stdrot=true,face0-1=0:natura/fusewood_heart,face2-5=0:natura/fusewood_bark
+block:id=%Dark Tree,data=2,data=3,stdrot=true,face0-5=0:natura/darkwood_bark
 block:id=%Dark Tree,data=4,stdrot=true,face0-3=0:natura/darkwood_bark,face4-5=0:natura/darkwood_heart
 block:id=%Dark Tree,data=5,stdrot=true,face0-3=0:natura/fusewood_bark,face4-5=0:natura/fusewood_heart
+block:id=%Dark Tree,data=6,data=7,stdrot=true,face0-5=0:natura/darkwood_bark
 block:id=%Dark Tree,data=8,stdrot=true,face0-1=0:natura/darkwood_bark,face2-3=0:natura/darkwood_heart,face4-5=0:natura/darkwood_bark
 block:id=%Dark Tree,data=9,stdrot=true,face0-1=0:natura/fusewood_bark,face2-3=0:natura/fusewood_heart,face4-5=0:natura/fusewood_bark
-block:id=%Dark Tree,data=12,stdrot=true,face0-5=0:natura/darkwood_bark
+block:id=%Dark Tree,data=10,data=11,data=12,stdrot=true,face0-5=0:natura/darkwood_bark
 block:id=%Dark Tree,data=13,stdrot=true,face0-5=0:natura/fusewood_bark
+block:id=%Dark Tree,data=14,data=15,stdrot=true,face0-5=0:natura/darkwood_bark
 
 # %floraleaves:* (floraleaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeaves
 block:id=%floraleaves,data=0,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy

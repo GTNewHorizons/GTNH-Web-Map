@@ -1,4 +1,4 @@
-# appliedenergistics2 rv3-beta-175-GTNH
+# appliedenergistics2 rv3-beta-225-GTNH
 version:1.7
 modname:appliedenergistics2
 
@@ -74,7 +74,11 @@ boxblock:id=%tile.BlockQuantumLinkChamber,xmin=0.125,xmax=0.875,ymin=0.125,ymax=
 
 # %tile.BlockCraftingUnit:* (tile.BlockCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingUnit
 
+# %tile.BlockAdvancedCraftingUnit:* (tile.BlockAdvancedCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingUnit
+
 # %tile.BlockCraftingStorage:* (tile.BlockCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingStorage
+
+# %tile.BlockAdvancedCraftingStorage:* (tile.BlockAdvancedCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingStorage
 
 # %tile.BlockCraftingMonitor:* (tile.BlockCraftingMonitor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingMonitor
 
@@ -133,7 +137,3 @@ boxblock:id=%tile.ChiseledQuartzSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11
 # %tile.QuartzPillarSlabBlock:* (tile.QuartzPillarSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.QuartzPillarSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.QuartzPillarSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
-
-# %tile.BlockAdvancedCraftingUnit:* (tile.BlockAdvancedCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingUnit
-
-# %tile.BlockAdvancedCraftingStorage:* (tile.BlockAdvancedCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingStorage

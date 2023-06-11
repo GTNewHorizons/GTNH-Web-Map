@@ -1,4 +1,4 @@
-# thaumicinsurgence 0.1.4
+# thaumicinsurgence 0.2.4
 version:1.7
 modname:thaumicinsurgence
 
@@ -16,6 +16,15 @@ texture:id=thaumicinsurgence/marble_pedestal_side,filename=assets/thaumicinsurge
 
 
 
+# %tile.arcaneMarble:* (tile.arcaneMarble), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarble
+block:id=%tile.arcaneMarble,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcane_marble
+
+# %tile.arcaneMarbleBrick:* (tile.arcaneMarbleBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarbleBrick
+block:id=%tile.arcaneMarbleBrick,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcane_marble_brick
+
+# %tile.dimensionalTeleporter:* (tile.dimensionalTeleporter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockDimensionalTeleporterBase
+block:id=%tile.dimensionalTeleporter,data=*,stdrot=true,face0=0:thaumicinsurgence/arcane_stone_bricks_alt4,face1=0:thaumicinsurgence/arcane_stone_bricks_alt5,face2-5=0:thaumicinsurgence/arcane_stone_bricks_alt6
+
 # %infusionIntercepter:* (infusionIntercepter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockInfusionFucker
 block:id=%infusionIntercepter,data=*,stdrot=true,face0=0:thaumicinsurgence/arcane_stone_bricks_alt4,face1=0:thaumicinsurgence/arcane_stone_bricks_alt5,face2-5=0:thaumicinsurgence/arcane_stone_bricks_alt6
 
@@ -27,9 +36,3 @@ block:id=%marblePedestal,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARE
 block:id=%marblePedestal,data=6,data=7,stdrot=true,face0-1=0:thaumicinsurgence/arcane_marble,face2-5=0:thaumicinsurgence/marble_pedestal_side
 block:id=%marblePedestal,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:thaumicinsurgence/arcane_marble,face2-5=0:thaumicinsurgence/marble_pedestal_side
 block:id=%marblePedestal,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:thaumicinsurgence/arcane_marble,face2-5=0:thaumicinsurgence/marble_pedestal_side
-
-# %tile.arcaneMarble:* (tile.arcaneMarble), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarble
-block:id=%tile.arcaneMarble,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcane_marble
-
-# %tile.arcaneMarbleBrick:* (tile.arcaneMarbleBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarbleBrick
-block:id=%tile.arcaneMarbleBrick,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcane_marble_brick

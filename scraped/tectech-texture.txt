@@ -1,4 +1,4 @@
-# tectech 5.0.114
+# tectech 5.2.22
 version:1.7
 modname:tectech
 
@@ -86,7 +86,7 @@ texture:id=gregtech/iconsets/TM_TESLA_WINDING_SECONDARY_TOP_BOTTOM,filename=asse
 texture:id=gregtech/iconsets/TRANSPARENT,filename=assets/gregtech/textures/blocks/iconsets/TRANSPARENT.png
 texture:id=gregtech/materialicons/GEM_HORIZONTAL/block1,filename=assets/gregtech/textures/blocks/materialicons/GEM_HORIZONTAL/block1.png
 texture:id=gregtech/materialicons/GEM_HORIZONTAL/frameGt,filename=assets/gregtech/textures/blocks/materialicons/GEM_HORIZONTAL/frameGt.png
-texture:id=minecraft/MISSING_ICON_BLOCK_3567_turretHeadEM,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3567_turretHeadEM.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3604_turretHeadEM,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3604_turretHeadEM.png
 texture:id=tectech/blockQuantumGlass,filename=assets/tectech/textures/blocks/blockQuantumGlass.png
 texture:id=tectech/blockReactorSimulator,filename=assets/tectech/textures/blocks/blockReactorSimulator.png
 texture:id=tectech/turretBaseEM,filename=assets/tectech/textures/blocks/turretBaseEM.png
@@ -111,6 +111,9 @@ block:id=%gt.blockcasingsTT,data=13,stdrot=true,face0-5=0:gregtech/iconsets/EM_U
 block:id=%gt.blockcasingsTT,data=14,stdrot=true,face0-5=0:gregtech/iconsets/EM_ULTIMATE_FIELD
 block:id=%gt.blockcasingsTT,data=15,stdrot=true,face0=0:gregtech/iconsets/DEBUG_0,face1=0:gregtech/iconsets/DEBUG_1,face2=0:gregtech/iconsets/DEBUG_2,face3=0:gregtech/iconsets/DEBUG_3,face4=0:gregtech/iconsets/DEBUG_4,face5=0:gregtech/iconsets/DEBUG_5
 
+# %Eye of Harmony Renderer:* (Eye of Harmony Renderer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.github.technus.tectech.thing.block.EyeOfHarmonyBlock
+block:id=%Eye of Harmony Renderer,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
+
 # %gt.blockcasingsBA0:* (gt.blockcasingsBA0), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.casing.GT_Block_CasingsBA0
 block:id=%gt.blockcasingsBA0,data=0,stdrot=true,face0-1=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_TOP_BOTTOM_0,face2-5=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_SIDES_0
 block:id=%gt.blockcasingsBA0,data=1,stdrot=true,face0-1=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_TOP_BOTTOM_1,face2-5=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_SIDES_1
@@ -127,27 +130,6 @@ block:id=%gt.blockcasingsBA0,data=11,stdrot=true,face0-5=0:gregtech/iconsets/EM_
 block:id=%gt.blockcasingsBA0,data=12,stdrot=true,face0-5=0:gregtech/iconsets/EM_POWER_INFINITE
 block:id=%gt.blockcasingsBA0,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %tile.quantumGlass:* (tile.quantumGlass), render=com.github.technus.tectech.thing.block.QuantumGlassRender(CUSTOM), opaque=false,cls=com.github.technus.tectech.thing.block.QuantumGlassBlock
-block:id=%tile.quantumGlass,data=*,stdrot=true,face0-5=12000:tectech/blockQuantumGlass
-
-# %tile.turretHeadEM:* (tile.turretHeadEM), render=(CUSTOM), opaque=false,cls=com.github.technus.tectech.compatibility.openmodularturrets.blocks.turretheads.TurretHeadEM
-block:id=%tile.turretHeadEM,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3567_turretHeadEM
-
-# %tile.turretBaseEM:* (tile.turretBaseEM), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.compatibility.openmodularturrets.blocks.turretbases.TurretBaseEM
-block:id=%tile.turretBaseEM,data=*,stdrot=true,face0-5=0:tectech/turretBaseEM
-
-# %tile.reactorSim:* (tile.reactorSim), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.block.ReactorSimBlock
-block:id=%tile.reactorSim,data=*,stdrot=true,face0-5=0:tectech/blockReactorSimulator
-
-# %blockBlockGermanium:* (blockBlockGermanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockGermanium,data=*,stdrot=true,colorMult=C8C8C8,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
-
-# %blockFrameGtGermanium:* (blockFrameGtGermanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockFrameGtGermanium,data=*,stdrot=true,colorMult=C8C8C8,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
-
-# %Eye of Harmony Renderer:* (Eye of Harmony Renderer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.github.technus.tectech.thing.block.EyeOfHarmonyBlock
-block:id=%Eye of Harmony Renderer,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
-
 # %gt.spacetime_compression_field_generator:* (gt.spacetime_compression_field_generator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.casing.SpacetimeCompressionFieldCasing
 block:id=%gt.spacetime_compression_field_generator,data=0,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_0
 block:id=%gt.spacetime_compression_field_generator,data=1,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_1
@@ -159,6 +141,18 @@ block:id=%gt.spacetime_compression_field_generator,data=6,stdrot=true,face0-5=0:
 block:id=%gt.spacetime_compression_field_generator,data=7,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_7
 block:id=%gt.spacetime_compression_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_8
 block:id=%gt.spacetime_compression_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
+
+# %gt.time_acceleration_field_generator:* (gt.time_acceleration_field_generator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.casing.TimeAccelerationFieldCasing
+block:id=%gt.time_acceleration_field_generator,data=0,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_0
+block:id=%gt.time_acceleration_field_generator,data=1,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_1
+block:id=%gt.time_acceleration_field_generator,data=2,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_2
+block:id=%gt.time_acceleration_field_generator,data=3,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_3
+block:id=%gt.time_acceleration_field_generator,data=4,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_4
+block:id=%gt.time_acceleration_field_generator,data=5,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_5
+block:id=%gt.time_acceleration_field_generator,data=6,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_6
+block:id=%gt.time_acceleration_field_generator,data=7,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_7
+block:id=%gt.time_acceleration_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_8
+block:id=%gt.time_acceleration_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
 # %gt.stabilisation_field_generator:* (gt.stabilisation_field_generator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.casing.StabilisationFieldCasing
 block:id=%gt.stabilisation_field_generator,data=0,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_0
@@ -172,14 +166,20 @@ block:id=%gt.stabilisation_field_generator,data=7,stdrot=true,face0-5=0:gregtech
 block:id=%gt.stabilisation_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_8
 block:id=%gt.stabilisation_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %gt.time_acceleration_field_generator:* (gt.time_acceleration_field_generator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.casing.TimeAccelerationFieldCasing
-block:id=%gt.time_acceleration_field_generator,data=0,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_0
-block:id=%gt.time_acceleration_field_generator,data=1,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_1
-block:id=%gt.time_acceleration_field_generator,data=2,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_2
-block:id=%gt.time_acceleration_field_generator,data=3,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_3
-block:id=%gt.time_acceleration_field_generator,data=4,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_4
-block:id=%gt.time_acceleration_field_generator,data=5,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_5
-block:id=%gt.time_acceleration_field_generator,data=6,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_6
-block:id=%gt.time_acceleration_field_generator,data=7,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_7
-block:id=%gt.time_acceleration_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_8
-block:id=%gt.time_acceleration_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
+# %tile.quantumGlass:* (tile.quantumGlass), render=com.github.technus.tectech.thing.block.QuantumGlassRender(CUSTOM), opaque=false,cls=com.github.technus.tectech.thing.block.QuantumGlassBlock
+block:id=%tile.quantumGlass,data=*,stdrot=true,face0-5=12000:tectech/blockQuantumGlass
+
+# %tile.turretHeadEM:* (tile.turretHeadEM), render=(CUSTOM), opaque=false,cls=com.github.technus.tectech.compatibility.openmodularturrets.blocks.turretheads.TurretHeadEM
+block:id=%tile.turretHeadEM,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3604_turretHeadEM
+
+# %tile.turretBaseEM:* (tile.turretBaseEM), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.compatibility.openmodularturrets.blocks.turretbases.TurretBaseEM
+block:id=%tile.turretBaseEM,data=*,stdrot=true,face0-5=0:tectech/turretBaseEM
+
+# %tile.reactorSim:* (tile.reactorSim), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.block.ReactorSimBlock
+block:id=%tile.reactorSim,data=*,stdrot=true,face0-5=0:tectech/blockReactorSimulator
+
+# %blockBlockGermanium:* (blockBlockGermanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockBlockGermanium,data=*,stdrot=true,colorMult=C8C8C8,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block1
+
+# %blockFrameGtGermanium:* (blockFrameGtGermanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
+block:id=%blockFrameGtGermanium,data=*,stdrot=true,colorMult=C8C8C8,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt

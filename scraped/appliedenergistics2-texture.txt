@@ -1,4 +1,4 @@
-# appliedenergistics2 rv3-beta-175-GTNH
+# appliedenergistics2 rv3-beta-225-GTNH
 version:1.7
 modname:appliedenergistics2
 
@@ -92,7 +92,6 @@ texture:id=appliedenergistics2/BlockQuartz,filename=assets/appliedenergistics2/t
 texture:id=appliedenergistics2/BlockQuartzChiseled,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzChiseled.png
 texture:id=appliedenergistics2/BlockQuartzChiseledSide,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzChiseledSide.png
 texture:id=appliedenergistics2/BlockQuartzGlass,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGlass.png
-texture:id=appliedenergistics2/BlockQuartzGlassB,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGlassB.png
 texture:id=appliedenergistics2/BlockQuartzGrowthAccelerator,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGrowthAccelerator.png
 texture:id=appliedenergistics2/BlockQuartzGrowthAcceleratorSide,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGrowthAcceleratorSide.png
 texture:id=appliedenergistics2/BlockQuartzLamp,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzLamp.png
@@ -115,6 +114,7 @@ texture:id=appliedenergistics2/BlockVibrationChamberFront,filename=assets/applie
 texture:id=appliedenergistics2/BlockWireless,filename=assets/appliedenergistics2/textures/blocks/BlockWireless.png
 texture:id=appliedenergistics2/OreQuartz,filename=assets/appliedenergistics2/textures/blocks/OreQuartz.png
 texture:id=appliedenergistics2/OreQuartzCharged,filename=assets/appliedenergistics2/textures/blocks/OreQuartzCharged.png
+texture:id=appliedenergistics2/PartTerminal_Colored,filename=assets/appliedenergistics2/textures/blocks/PartTerminal_Colored.png
 texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
 texture:id=minecraft/tnt_bottom,filename=assets/minecraft/textures/blocks/tnt_bottom.png
 texture:id=minecraft/tnt_side,filename=assets/minecraft/textures/blocks/tnt_side.png
@@ -194,7 +194,7 @@ block:id=%tile.BlockSpatialPylon,data=*,stdrot=true,face0-5=0:appliedenergistics
 block:id=%tile.BlockSpatialIOPort,data=*,stdrot=true,face0=0:appliedenergistics2/BlockSpatialIOPortBottom,face1=0:appliedenergistics2/BlockSpatialIOPort,face2-5=0:appliedenergistics2/BlockSpatialIOPortSide
 
 # %tile.BlockCableBus:* (tile.BlockCableBus), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockCableBus
-block:id=%tile.BlockCableBus,data=*,stdrot=true,face0-5=12000:appliedenergistics2/BlockQuartzGlassB
+block:id=%tile.BlockCableBus,data=*,stdrot=true,face0-5=12000:appliedenergistics2/PartTerminal_Colored
 
 # %tile.BlockController:* (tile.BlockController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockController
 block:id=%tile.BlockController,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockController
@@ -263,6 +263,18 @@ block:id=%tile.BlockCraftingUnit,data=10,stdrot=true,face0-5=0:appliedenergistic
 block:id=%tile.BlockCraftingUnit,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator16xFit
 block:id=%tile.BlockCraftingUnit,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingUnit
 
+# %tile.BlockAdvancedCraftingUnit:* (tile.BlockAdvancedCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingUnit
+block:id=%tile.BlockAdvancedCraftingUnit,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
+block:id=%tile.BlockAdvancedCraftingUnit,data=1,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator256x
+block:id=%tile.BlockAdvancedCraftingUnit,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator1024x
+block:id=%tile.BlockAdvancedCraftingUnit,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4096x
+block:id=%tile.BlockAdvancedCraftingUnit,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
+block:id=%tile.BlockAdvancedCraftingUnit,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64xFit
+block:id=%tile.BlockAdvancedCraftingUnit,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator256xFit
+block:id=%tile.BlockAdvancedCraftingUnit,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator1024xFit
+block:id=%tile.BlockAdvancedCraftingUnit,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4096xFit
+block:id=%tile.BlockAdvancedCraftingUnit,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
+
 # %tile.BlockCraftingStorage:* (tile.BlockCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingStorage
 block:id=%tile.BlockCraftingStorage,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage
 block:id=%tile.BlockCraftingStorage,data=1,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4k
@@ -280,6 +292,24 @@ block:id=%tile.BlockCraftingStorage,data=12,stdrot=true,face0-5=0:appliedenergis
 block:id=%tile.BlockCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4kFit
 block:id=%tile.BlockCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16kFit
 block:id=%tile.BlockCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage64kFit
+
+# %tile.BlockAdvancedCraftingStorage:* (tile.BlockAdvancedCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingStorage
+block:id=%tile.BlockAdvancedCraftingStorage,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256k
+block:id=%tile.BlockAdvancedCraftingStorage,data=1,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024k
+block:id=%tile.BlockAdvancedCraftingStorage,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096k
+block:id=%tile.BlockAdvancedCraftingStorage,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384k
+block:id=%tile.BlockAdvancedCraftingStorage,data=4,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256k
+block:id=%tile.BlockAdvancedCraftingStorage,data=5,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024k
+block:id=%tile.BlockAdvancedCraftingStorage,data=6,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096k
+block:id=%tile.BlockAdvancedCraftingStorage,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384k
+block:id=%tile.BlockAdvancedCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=12,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit
 
 # %tile.BlockCraftingMonitor:* (tile.BlockCraftingMonitor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingMonitor
 block:id=%tile.BlockCraftingMonitor,data=0,stdrot=true,face0-2=0:appliedenergistics2/BlockCraftingUnit,face3=0:appliedenergistics2/BlockCraftingMonitor,face4-5=0:appliedenergistics2/BlockCraftingUnit
@@ -373,33 +403,3 @@ block:id=%tile.QuartzPillarSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPA
 
 # %tile.QuartzPillarSlabBlock.double:* (tile.QuartzPillarSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.QuartzPillarSlabBlock.double,data=*,stdrot=true,face0-1=0:appliedenergistics2/BlockQuartzPillar,face2-5=0:appliedenergistics2/BlockQuartzPillarSide
-
-# %tile.BlockAdvancedCraftingUnit:* (tile.BlockAdvancedCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingUnit
-block:id=%tile.BlockAdvancedCraftingUnit,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
-block:id=%tile.BlockAdvancedCraftingUnit,data=1,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator256x
-block:id=%tile.BlockAdvancedCraftingUnit,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator1024x
-block:id=%tile.BlockAdvancedCraftingUnit,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4096x
-block:id=%tile.BlockAdvancedCraftingUnit,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
-block:id=%tile.BlockAdvancedCraftingUnit,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator256xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator1024xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4096xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
-
-# %tile.BlockAdvancedCraftingStorage:* (tile.BlockAdvancedCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingStorage
-block:id=%tile.BlockAdvancedCraftingStorage,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256k
-block:id=%tile.BlockAdvancedCraftingStorage,data=1,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024k
-block:id=%tile.BlockAdvancedCraftingStorage,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096k
-block:id=%tile.BlockAdvancedCraftingStorage,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384k
-block:id=%tile.BlockAdvancedCraftingStorage,data=4,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256k
-block:id=%tile.BlockAdvancedCraftingStorage,data=5,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024k
-block:id=%tile.BlockAdvancedCraftingStorage,data=6,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096k
-block:id=%tile.BlockAdvancedCraftingStorage,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384k
-block:id=%tile.BlockAdvancedCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=12,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit

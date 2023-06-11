@@ -1,4 +1,4 @@
-# miscutils 1.7.227
+# miscutils 1.9.39
 version:1.7
 modname:miscutils
 
@@ -125,6 +125,7 @@ texture:id=miscutils/TileEntities/RoundRobinator/Top_1,filename=assets/miscutils
 texture:id=miscutils/TileEntities/RoundRobinator/Top_2,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_2.png
 texture:id=miscutils/TileEntities/RoundRobinator/Top_3,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_3.png
 texture:id=miscutils/TileEntities/RoundRobinator/Top_4,filename=assets/miscutils/textures/blocks/TileEntities/RoundRobinator/Top_4.png
+texture:id=miscutils/TileEntities/_PlaceHolder,filename=assets/miscutils/textures/blocks/TileEntities/_PlaceHolder.png
 texture:id=miscutils/TileEntities/cover_crafting,filename=assets/miscutils/textures/blocks/TileEntities/cover_crafting.png
 texture:id=miscutils/TileEntities/fishtrap,filename=assets/miscutils/textures/blocks/TileEntities/fishtrap.png
 texture:id=miscutils/TileEntities/log_acacia_top,filename=assets/miscutils/textures/blocks/TileEntities/log_acacia_top.png
@@ -171,7 +172,10 @@ texture:id=miscutils/fluid/Fluid_Sludge_Still,filename=assets/miscutils/textures
 texture:id=miscutils/fluids/fluid.jackdaniels,filename=assets/miscutils/textures/blocks/fluids/fluid.jackdaniels.png
 texture:id=miscutils/hellfire/blockHellFire_layer_0,filename=assets/miscutils/textures/blocks/hellfire/blockHellFire_layer_0.png
 texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_3,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_3.png
+texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_4,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_4.png
 texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_COIL_II,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_COIL_II.png
+texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_COIL_III,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_COIL_III.png
+texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_GLASS_HYPER,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_GLASS_HYPER.png
 texture:id=miscutils/iconsets/MACHINE_CASING_FUSION_GLASS_ULTRA,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_FUSION_GLASS_ULTRA.png
 texture:id=miscutils/iconsets/MACHINE_CASING_GEARBOX_GENERIC,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_GEARBOX_GENERIC.png
 texture:id=miscutils/iconsets/MACHINE_CASING_PIPE_GENERIC,filename=assets/miscutils/textures/blocks/iconsets/MACHINE_CASING_PIPE_GENERIC.png
@@ -579,10 +583,10 @@ block:id=%blockBlockStellite,data=*,stdrot=true,colorMult=C9B4F2,face0-5=17000:g
 block:id=%blockFrameGtStellite,data=*,stdrot=true,colorMult=C9B4F2,face0-5=17000:gregtech/materialicons/SHINY/frameGt
 
 # %blockBlockTalonite:* (blockBlockTalonite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockTalonite,data=*,stdrot=true,colorMult=C0BAEE,face0-5=17000:gregtech/materialicons/SHINY/block1
+block:id=%blockBlockTalonite,data=*,stdrot=true,colorMult=C0BAAF,face0-5=17000:gregtech/materialicons/SHINY/block1
 
 # %blockFrameGtTalonite:* (blockFrameGtTalonite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockFrameGtTalonite,data=*,stdrot=true,colorMult=C0BAEE,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+block:id=%blockFrameGtTalonite,data=*,stdrot=true,colorMult=C0BAAF,face0-5=17000:gregtech/materialicons/SHINY/frameGt
 
 # %blockBlockHastelloyW:* (blockBlockHastelloyW), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
 block:id=%blockBlockHastelloyW,data=*,stdrot=true,colorMult=B7B2E6,face0-5=17000:gregtech/materialicons/METALLIC/block1
@@ -696,10 +700,10 @@ block:id=%blockBlockBotmium,data=*,stdrot=true,colorMult=50A050,face0-5=17000:gr
 block:id=%blockFrameGtBotmium,data=*,stdrot=true,colorMult=50A050,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
 
 # %blockBlockHS188A:* (blockBlockHS188A), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockHS188A,data=*,stdrot=true,colorMult=A5A3B9,face0-5=17000:gregtech/materialicons/METALLIC/block5
+block:id=%blockBlockHS188A,data=*,stdrot=true,colorMult=A5A3A7,face0-5=17000:gregtech/materialicons/METALLIC/block5
 
 # %blockFrameGtHS188A:* (blockFrameGtHS188A), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockFrameGtHS188A,data=*,stdrot=true,colorMult=A5A3B9,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
+block:id=%blockFrameGtHS188A,data=*,stdrot=true,colorMult=A5A3A7,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
 
 # %blockBlockTitansteel:* (blockBlockTitansteel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
 block:id=%blockBlockTitansteel,data=*,stdrot=true,colorMult=655B3E,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block5
@@ -723,7 +727,7 @@ block:id=%blockFrameGtOctiron,data=*,stdrot=true,colorMult=726D63,face0-5=17000:
 block:id=%blockBlockBabbitAlloy,data=*,stdrot=true,colorMult=D0C6D5,face0-5=17000:gregtech/materialicons/DULL/block1
 
 # %blockBlockBlackTitanium:* (blockBlockBlackTitanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockBlackTitanium,data=*,stdrot=true,colorMult=91A6A7,face0-5=17000:gregtech/materialicons/METALLIC/block5
+block:id=%blockBlockBlackTitanium,data=*,stdrot=true,colorMult=91A68B,face0-5=17000:gregtech/materialicons/METALLIC/block5
 
 # %blockBlockIndalloy140:* (blockBlockIndalloy140), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
 block:id=%blockBlockIndalloy140,data=*,stdrot=true,colorMult=726A8D,face0-5=17000:gregtech/materialicons/DULL/block5
@@ -1130,6 +1134,12 @@ block:id=%gtplusplus.blockcasings.5,data=12,stdrot=true,face0-5=0:miscutils/Cosm
 block:id=%gtplusplus.blockcasings.5,data=13,stdrot=true,face0-5=0:miscutils/InfinityInfusedShieldingCore
 block:id=%gtplusplus.blockcasings.5,data=14,stdrot=true,face0-5=0:miscutils/SpaceTimeBendingCore
 block:id=%gtplusplus.blockcasings.5,data=15,stdrot=true,face0-1=0:miscutils/Blank,face2-5=0:miscutils/ForceFieldGlass
+
+# %gtplusplus.blockcasings.6:* (gtplusplus.blockcasings.6), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks6
+block:id=%gtplusplus.blockcasings.6,data=0,stdrot=true,face0-5=0:miscutils/iconsets/MACHINE_CASING_FUSION_4
+block:id=%gtplusplus.blockcasings.6,data=1,stdrot=true,face0-5=0:miscutils/iconsets/MACHINE_CASING_FUSION_COIL_III
+block:id=%gtplusplus.blockcasings.6,data=2,stdrot=true,face0-5=0:miscutils/iconsets/MACHINE_CASING_FUSION_GLASS_HYPER
+block:id=%gtplusplus.blockcasings.6,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:miscutils/TileEntities/_PlaceHolder
 
 # %gtplusplus.blocktieredcasings.1:* (gtplusplus.blocktieredcasings.1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaTieredCasingBlocks1
 block:id=%gtplusplus.blocktieredcasings.1,data=0,stdrot=true,face0-5=0:miscutils/iconsets/TieredHulls/CASING_ULV

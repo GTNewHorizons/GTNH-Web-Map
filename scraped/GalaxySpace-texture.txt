@@ -1,4 +1,4 @@
-# GalaxySpace 1.1.61-GTNH
+# GalaxySpace 1.2.3-GTNH
 version:1.7
 modname:GalaxySpace
 
@@ -198,19 +198,6 @@ texture:id=galaxyspace/proteus/proteusplatinumore,filename=assets/galaxyspace/te
 texture:id=galaxyspace/proteus/proteusstone,filename=assets/galaxyspace/textures/blocks/proteus/proteusstone.png
 texture:id=galaxyspace/proteus/proteussubgrunt,filename=assets/galaxyspace/textures/blocks/proteus/proteussubgrunt.png
 texture:id=galaxyspace/proteus/proteuswolframiumore,filename=assets/galaxyspace/textures/blocks/proteus/proteuswolframiumore.png
-texture:id=galaxyspace/spaceElevator/BaseCasing,filename=assets/galaxyspace/textures/blocks/spaceElevator/BaseCasing.png
-texture:id=galaxyspace/spaceElevator/BaseCasing_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/BaseCasing_Side.png
-texture:id=galaxyspace/spaceElevator/CablePart,filename=assets/galaxyspace/textures/blocks/spaceElevator/CablePart.png
-texture:id=galaxyspace/spaceElevator/InternalStructure,filename=assets/galaxyspace/textures/blocks/spaceElevator/InternalStructure.png
-texture:id=galaxyspace/spaceElevator/InternalStructure_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/InternalStructure_Side.png
-texture:id=galaxyspace/spaceElevator/Motor,filename=assets/galaxyspace/textures/blocks/spaceElevator/Motor.png
-texture:id=galaxyspace/spaceElevator/MotorT1_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/MotorT1_Side.png
-texture:id=galaxyspace/spaceElevator/MotorT2_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/MotorT2_Side.png
-texture:id=galaxyspace/spaceElevator/MotorT3_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/MotorT3_Side.png
-texture:id=galaxyspace/spaceElevator/MotorT4_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/MotorT4_Side.png
-texture:id=galaxyspace/spaceElevator/MotorT5_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/MotorT5_Side.png
-texture:id=galaxyspace/spaceElevator/SupportStructure,filename=assets/galaxyspace/textures/blocks/spaceElevator/SupportStructure.png
-texture:id=galaxyspace/spaceElevator/SupportStructure_Side,filename=assets/galaxyspace/textures/blocks/spaceElevator/SupportStructure_Side.png
 texture:id=galaxyspace/tcetie/tcetiedandelion0,filename=assets/galaxyspace/textures/blocks/tcetie/tcetiedandelion0.png
 texture:id=galaxyspace/tcetie/tcetiedandelion1,filename=assets/galaxyspace/textures/blocks/tcetie/tcetiedandelion1.png
 texture:id=galaxyspace/tcetie/tcetiedandelion2,filename=assets/galaxyspace/textures/blocks/tcetie/tcetiedandelion2.png
@@ -628,42 +615,3 @@ block:id=%tcetiedandelions,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:
 block:id=%tcetiedandelions,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/tcetie/tcetiedandelion4
 block:id=%tcetiedandelions,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/tcetie/tcetiedandelion5
 block:id=%tcetiedandelions,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/tcetie/tcetiedandelion0
-
-# %spaceelevatormotors:* (spaceelevatormotors), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockSpaceElevatorMotor
-block:id=%spaceelevatormotors,data=0,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT1_Side
-block:id=%spaceelevatormotors,data=1,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT2_Side
-block:id=%spaceelevatormotors,data=2,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT3_Side
-block:id=%spaceelevatormotors,data=3,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT4_Side
-block:id=%spaceelevatormotors,data=4,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT5_Side
-block:id=%spaceelevatormotors,data=5,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT1_Side
-block:id=%spaceelevatormotors,data=6,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT2_Side
-block:id=%spaceelevatormotors,data=7,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT3_Side
-block:id=%spaceelevatormotors,data=8,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT4_Side
-block:id=%spaceelevatormotors,data=9,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT5_Side
-block:id=%spaceelevatormotors,data=10,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT1_Side
-block:id=%spaceelevatormotors,data=11,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT2_Side
-block:id=%spaceelevatormotors,data=12,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT3_Side
-block:id=%spaceelevatormotors,data=13,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT4_Side
-block:id=%spaceelevatormotors,data=14,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT5_Side
-block:id=%spaceelevatormotors,data=15,stdrot=true,face0-1=0:galaxyspace/spaceElevator/Motor,face2-5=0:galaxyspace/spaceElevator/MotorT1_Side
-
-# %spaceelevatorparts:* (spaceelevatorparts), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockSpaceElevatorPart
-block:id=%spaceelevatorparts,data=0,stdrot=true,face0-1=0:galaxyspace/spaceElevator/BaseCasing,face2-5=0:galaxyspace/spaceElevator/BaseCasing_Side
-block:id=%spaceelevatorparts,data=1,stdrot=true,face0-1=0:galaxyspace/spaceElevator/SupportStructure,face2-5=0:galaxyspace/spaceElevator/SupportStructure_Side
-block:id=%spaceelevatorparts,data=2,stdrot=true,face0-1=0:galaxyspace/spaceElevator/InternalStructure,face2-5=0:galaxyspace/spaceElevator/InternalStructure_Side
-block:id=%spaceelevatorparts,data=3,stdrot=true,face0-1=0:galaxyspace/spaceElevator/BaseCasing,face2-5=0:galaxyspace/spaceElevator/BaseCasing_Side
-block:id=%spaceelevatorparts,data=4,stdrot=true,face0-1=0:galaxyspace/spaceElevator/SupportStructure,face2-5=0:galaxyspace/spaceElevator/SupportStructure_Side
-block:id=%spaceelevatorparts,data=5,stdrot=true,face0-1=0:galaxyspace/spaceElevator/InternalStructure,face2-5=0:galaxyspace/spaceElevator/InternalStructure_Side
-block:id=%spaceelevatorparts,data=6,stdrot=true,face0-1=0:galaxyspace/spaceElevator/BaseCasing,face2-5=0:galaxyspace/spaceElevator/BaseCasing_Side
-block:id=%spaceelevatorparts,data=7,stdrot=true,face0-1=0:galaxyspace/spaceElevator/SupportStructure,face2-5=0:galaxyspace/spaceElevator/SupportStructure_Side
-block:id=%spaceelevatorparts,data=8,stdrot=true,face0-1=0:galaxyspace/spaceElevator/InternalStructure,face2-5=0:galaxyspace/spaceElevator/InternalStructure_Side
-block:id=%spaceelevatorparts,data=9,stdrot=true,face0-1=0:galaxyspace/spaceElevator/BaseCasing,face2-5=0:galaxyspace/spaceElevator/BaseCasing_Side
-block:id=%spaceelevatorparts,data=10,stdrot=true,face0-1=0:galaxyspace/spaceElevator/SupportStructure,face2-5=0:galaxyspace/spaceElevator/SupportStructure_Side
-block:id=%spaceelevatorparts,data=11,stdrot=true,face0-1=0:galaxyspace/spaceElevator/InternalStructure,face2-5=0:galaxyspace/spaceElevator/InternalStructure_Side
-block:id=%spaceelevatorparts,data=12,stdrot=true,face0-1=0:galaxyspace/spaceElevator/BaseCasing,face2-5=0:galaxyspace/spaceElevator/BaseCasing_Side
-block:id=%spaceelevatorparts,data=13,stdrot=true,face0-1=0:galaxyspace/spaceElevator/SupportStructure,face2-5=0:galaxyspace/spaceElevator/SupportStructure_Side
-block:id=%spaceelevatorparts,data=14,stdrot=true,face0-1=0:galaxyspace/spaceElevator/InternalStructure,face2-5=0:galaxyspace/spaceElevator/InternalStructure_Side
-block:id=%spaceelevatorparts,data=15,stdrot=true,face0-1=0:galaxyspace/spaceElevator/BaseCasing,face2-5=0:galaxyspace/spaceElevator/BaseCasing_Side
-
-# %spaceelevatorcable:* (spaceelevatorcable), render=galaxyspace.core.render.entity.RenderSpaceElevatorCable(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockSpaceElevatorCable
-block:id=%spaceelevatorcable,data=*,stdrot=true,face0-5=0:galaxyspace/spaceElevator/CablePart

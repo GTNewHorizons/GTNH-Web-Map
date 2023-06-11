@@ -23,12 +23,11 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %projectred.expansion.machine1:* (projectred.expansion.machine1), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=true,cls=mrtjp.projectred.expansion.BlockMachine
-
-# %projectred.expansion.machine2:* (projectred.expansion.machine2), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=true,cls=mrtjp.projectred.expansion.BlockMachine
-
 # %projectred.exploration.stonewalls:* (projectred.exploration.stonewalls), render=(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockDecorativeWalls
 customblock:id=%projectred.exploration.stonewalls,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %projectred.exploration.lily:* (projectred.exploration.lily), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=false,cls=mrtjp.projectred.exploration.BlockLily
+boxblock:id=%projectred.exploration.lily,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.875,zmin=0.30000001192092896,zmax=0.699999988079071,data=0
 
 # %projectred.compatibility.liqredstone:* (projectred.compatibility.liqredstone), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=mrtjp.projectred.compatibility.tconstruct.LiquidFiniteSubstance
 boxblock:id=%projectred.compatibility.liqredstone,ymax=0.875,data=1
@@ -61,3 +60,7 @@ boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.5,data=12
 boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.375,data=13
 boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.25,data=14
 boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.125,data=15
+
+# %projectred.expansion.machine1:* (projectred.expansion.machine1), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=true,cls=mrtjp.projectred.expansion.BlockMachine
+
+# %projectred.expansion.machine2:* (projectred.expansion.machine2), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=true,cls=mrtjp.projectred.expansion.BlockMachine

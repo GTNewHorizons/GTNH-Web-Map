@@ -66,6 +66,7 @@ texture:id=gregtech/iconsets/BLOCK_ENDEREYE,filename=assets/gregtech/textures/bl
 texture:id=gregtech/iconsets/BLOCK_ENDERIUM,filename=assets/gregtech/textures/blocks/iconsets/BLOCK_ENDERIUM.png
 texture:id=gregtech/iconsets/BLOCK_ENDERPEARL,filename=assets/gregtech/textures/blocks/iconsets/BLOCK_ENDERPEARL.png
 texture:id=gregtech/iconsets/BLOCK_ERBIUM,filename=assets/gregtech/textures/blocks/iconsets/BLOCK_ERBIUM.png
+texture:id=gregtech/iconsets/BLOCK_ETERNITY,filename=assets/gregtech/textures/blocks/iconsets/BLOCK_ETERNITY.png
 texture:id=gregtech/iconsets/BLOCK_EUROPIUM,filename=assets/gregtech/textures/blocks/iconsets/BLOCK_EUROPIUM.png
 texture:id=gregtech/iconsets/BLOCK_FIERYSTEEL,filename=assets/gregtech/textures/blocks/iconsets/BLOCK_FIERYSTEEL.png
 texture:id=gregtech/iconsets/BLOCK_FIRESTONE,filename=assets/gregtech/textures/blocks/iconsets/BLOCK_FIRESTONE.png
@@ -535,6 +536,11 @@ block:id=%gt.blockcasings8,data=13,stdrot=true,face0-5=0:gregtech/iconsets/MACHI
 block:id=%gt.blockcasings8,data=14,stdrot=true,face0-5=0:gregtech/iconsets/INFINITY_COOLED_CASING
 block:id=%gt.blockcasings8,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
 
+# %gt.blockcasings9:* (gt.blockcasings9), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings9
+block:id=%gt.blockcasings9,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PIPE_POLYBENZIMIDAZOLE
+block:id=%gt.blockcasings9,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_VENT_T2
+block:id=%gt.blockcasings9,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
+
 # %gt.blockgranites:* (gt.blockgranites), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Granites
 block:id=%gt.blockgranites,data=0,stdrot=true,face0-5=0:gregtech/iconsets/GRANITE_BLACK_STONE
 block:id=%gt.blockgranites,data=1,stdrot=true,face0-5=0:gregtech/iconsets/GRANITE_BLACK_COBBLE
@@ -808,6 +814,7 @@ block:id=%gt.blockmetal9,data=5,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_OR
 block:id=%gt.blockmetal9,data=6,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_WHITEDWARFMATTER
 block:id=%gt.blockmetal9,data=7,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BLACKDWARFMATTER
 block:id=%gt.blockmetal9,data=8,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_UNIVERSIUM
+block:id=%gt.blockmetal9,data=9,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ETERNITY
 
 # %gt.blockreinforced:* (gt.blockreinforced), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Reinforced
 block:id=%gt.blockreinforced,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BRONZEPREIN
@@ -824,14 +831,6 @@ block:id=%gt.blockreinforced,data=11,stdrot=true,face0-5=0:gregtech/iconsets/BLO
 block:id=%gt.blockreinforced,data=12,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_DEEP_DARK_RAW
 block:id=%gt.blockreinforced,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %gt.block.multiblock.machine.stone.wrench.0.0.15.true.true:* (gt.block.multiblock.machine.stone.wrench.0.0.15.true.true), render=gregtech.common.render.GT_Renderer_Block(CUSTOM), opaque=true,cls=gregtech.api.multitileentity.MultiTileEntityBlock
-block:id=%gt.block.multiblock.machine.stone.wrench.0.0.15.true.true,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
-
-# %gt.blockcasings9:* (gt.blockcasings9), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings9
-block:id=%gt.blockcasings9,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PIPE_POLYBENZIMIDAZOLE
-block:id=%gt.blockcasings9,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_VENT_T2
-block:id=%gt.blockcasings9,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
-
 # %gt.blockcasings.cyclotron_coils:* (gt.blockcasings.cyclotron_coils), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Cyclotron_Coils
 block:id=%gt.blockcasings.cyclotron_coils,data=0,stdrot=true,face0-1=0:gregtech/iconsets/MV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/MV_SIDE_CYCLOTRON_SOLENOID
 block:id=%gt.blockcasings.cyclotron_coils,data=1,stdrot=true,face0-1=0:gregtech/iconsets/HV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/HV_SIDE_CYCLOTRON_SOLENOID
@@ -845,3 +844,12 @@ block:id=%gt.blockcasings.cyclotron_coils,data=8,stdrot=true,face0-1=0:gregtech/
 block:id=%gt.blockcasings.cyclotron_coils,data=9,stdrot=true,face0-1=0:gregtech/iconsets/UIV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/UIV_SIDE_CYCLOTRON_SOLENOID
 block:id=%gt.blockcasings.cyclotron_coils,data=10,stdrot=true,face0-1=0:gregtech/iconsets/UMV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/UMV_SIDE_CYCLOTRON_SOLENOID
 block:id=%gt.blockcasings.cyclotron_coils,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
+
+# %gt.block.multiblock.machine.stone.wrench.0.0.15.true.true:* (gt.block.multiblock.machine.stone.wrench.0.0.15.true.true), render=gregtech.common.render.GT_MultiTile_Renderer(CUSTOM), opaque=true,cls=gregtech.api.multitileentity.MultiTileEntityBlock
+block:id=%gt.block.multiblock.machine.stone.wrench.0.0.15.true.true,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
+
+# %gt.block.multiblock.casing.stone.wrench.0.0.15.true.true:* (gt.block.multiblock.casing.stone.wrench.0.0.15.true.true), render=gregtech.common.render.GT_MultiTile_Renderer(CUSTOM), opaque=true,cls=gregtech.api.multitileentity.MultiTileEntityBlock
+block:id=%gt.block.multiblock.casing.stone.wrench.0.0.15.true.true,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
+
+# %gt.block.multiblock.componentCasing.stone.wrench.0.0.15.true.true:* (gt.block.multiblock.componentCasing.stone.wrench.0.0.15.true.true), render=gregtech.common.render.GT_MultiTile_Renderer(CUSTOM), opaque=true,cls=gregtech.api.multitileentity.MultiTileEntityBlock
+block:id=%gt.block.multiblock.componentCasing.stone.wrench.0.0.15.true.true,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE

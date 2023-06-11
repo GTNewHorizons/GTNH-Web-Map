@@ -1,4 +1,4 @@
-# ae2fc 1.0.92-gtnh
+# ae2fc 1.1.21-gtnh
 version:1.7
 modname:ae2fc
 
@@ -26,12 +26,25 @@ texture:id=ae2fc/large_ingredient_buffer,filename=assets/ae2fc/textures/blocks/l
 texture:id=ae2fc/level_maintainer,filename=assets/ae2fc/textures/blocks/level_maintainer.png
 texture:id=ae2fc/level_maintainerFront,filename=assets/ae2fc/textures/blocks/level_maintainerFront.png
 texture:id=ae2fc/oc_pattern_editor,filename=assets/ae2fc/textures/blocks/oc_pattern_editor.png
-texture:id=minecraft/MISSING_ICON_BLOCK_3515_walrus,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3515_walrus.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3552_walrus,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3552_walrus.png
 
 
+
+# %certus_quartz_tank:* (certus_quartz_tank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.glodblock.github.common.block.BlockCertusQuartzTank
+block:id=%certus_quartz_tank,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:ae2fc/certus_quartz_tank/bottom,face1=0:ae2fc/certus_quartz_tank/top,face2-5=0:ae2fc/certus_quartz_tank/side
+block:id=%certus_quartz_tank,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ae2fc/certus_quartz_tank/side_top
+block:id=%certus_quartz_tank,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ae2fc/certus_quartz_tank/side_bottom
+block:id=%certus_quartz_tank,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ae2fc/certus_quartz_tank/side_mid
+block:id=%certus_quartz_tank,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:ae2fc/certus_quartz_tank/bottom,face1=0:ae2fc/certus_quartz_tank/top,face2-5=0:ae2fc/certus_quartz_tank/side
+
+# %fluid_auto_filler:* (fluid_auto_filler), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockFluidAutoFiller
+block:id=%fluid_auto_filler,data=*,stdrot=true,face0-5=0:ae2fc/fluid_auto_filler
 
 # %fluid_discretizer:* (fluid_discretizer), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockFluidDiscretizer
 block:id=%fluid_discretizer,data=*,stdrot=true,face0-5=0:ae2fc/fluid_discretizer
+
+# %level_maintainer:* (level_maintainer), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockLevelMaintainer
+block:id=%level_maintainer,data=*,stdrot=true,face0-2=0:ae2fc/level_maintainer,face3=0:ae2fc/level_maintainerFront,face4-5=0:ae2fc/level_maintainer
 
 # %fluid_pattern_encoder:* (fluid_pattern_encoder), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockFluidPatternEncoder
 block:id=%fluid_pattern_encoder,data=*,stdrot=true,face0=0:ae2fc/fluid_pattern_encoderBottom,face1=0:ae2fc/fluid_pattern_encoder,face2-5=0:ae2fc/fluid_pattern_encoderSide
@@ -45,6 +58,9 @@ block:id=%fluid_interface,data=*,stdrot=true,face0-5=0:ae2fc/fluid_interface
 # %ingredient_buffer:* (ingredient_buffer), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockIngredientBuffer
 block:id=%ingredient_buffer,data=*,stdrot=true,face0-5=0:ae2fc/ingredient_buffer
 
+# %fluid_buffer:* (fluid_buffer), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockFluidBuffer
+block:id=%fluid_buffer,data=*,stdrot=true,face0-5=0:ae2fc/fluid_buffer
+
 # %large_ingredient_buffer:* (large_ingredient_buffer), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockLargeIngredientBuffer
 block:id=%large_ingredient_buffer,data=*,stdrot=true,face0-5=0:ae2fc/large_ingredient_buffer
 
@@ -52,22 +68,6 @@ block:id=%large_ingredient_buffer,data=*,stdrot=true,face0-5=0:ae2fc/large_ingre
 block:id=%oc_pattern_editor,data=*,stdrot=true,face0-5=0:ae2fc/oc_pattern_editor
 
 # %walrus:* (walrus), render=(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockWalrus
-block:id=%walrus,data=0,data=1,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3515_walrus
-block:id=%walrus,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3515_walrus
-block:id=%walrus,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3515_walrus
-
-# %level_maintainer:* (level_maintainer), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockLevelMaintainer
-block:id=%level_maintainer,data=*,stdrot=true,face0-2=0:ae2fc/level_maintainer,face3=0:ae2fc/level_maintainerFront,face4-5=0:ae2fc/level_maintainer
-
-# %fluid_auto_filler:* (fluid_auto_filler), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockFluidAutoFiller
-block:id=%fluid_auto_filler,data=*,stdrot=true,face0-5=0:ae2fc/fluid_auto_filler
-
-# %certus_quartz_tank:* (certus_quartz_tank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.glodblock.github.common.block.BlockCertusQuartzTank
-block:id=%certus_quartz_tank,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:ae2fc/certus_quartz_tank/bottom,face1=0:ae2fc/certus_quartz_tank/top,face2-5=0:ae2fc/certus_quartz_tank/side
-block:id=%certus_quartz_tank,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ae2fc/certus_quartz_tank/side_top
-block:id=%certus_quartz_tank,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ae2fc/certus_quartz_tank/side_bottom
-block:id=%certus_quartz_tank,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ae2fc/certus_quartz_tank/side_mid
-block:id=%certus_quartz_tank,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:ae2fc/certus_quartz_tank/bottom,face1=0:ae2fc/certus_quartz_tank/top,face2-5=0:ae2fc/certus_quartz_tank/side
-
-# %fluid_buffer:* (fluid_buffer), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockFluidBuffer
-block:id=%fluid_buffer,data=*,stdrot=true,face0-5=0:ae2fc/fluid_buffer
+block:id=%walrus,data=0,data=1,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3552_walrus
+block:id=%walrus,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3552_walrus
+block:id=%walrus,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3552_walrus

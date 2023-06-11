@@ -1,4 +1,4 @@
-# GoodGenerator 0.4.88
+# GoodGenerator 0.6.9
 version:1.7
 modname:GoodGenerator
 
@@ -145,6 +145,23 @@ block:id=%yottaFluidTankCasing,data=*,stdrot=true,face0-1=0:GoodGenerator/yottaF
 # %supercriticalFluidTurbineCasing:* (supercriticalFluidTurbineCasing), render=goodgenerator.client.render.BlockRenderHandler(CUSTOM), opaque=true,cls=goodgenerator.blocks.regularBlock.TurbineCasing
 block:id=%supercriticalFluidTurbineCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/supercriticalFluidTurbineCasing
 
+# %componentAssemblylineCasing:* (componentAssemblylineCasing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%componentAssemblylineCasing,data=0,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0
+block:id=%componentAssemblylineCasing,data=1,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/1
+block:id=%componentAssemblylineCasing,data=2,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/2
+block:id=%componentAssemblylineCasing,data=3,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/3
+block:id=%componentAssemblylineCasing,data=4,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/4
+block:id=%componentAssemblylineCasing,data=5,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/5
+block:id=%componentAssemblylineCasing,data=6,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/6
+block:id=%componentAssemblylineCasing,data=7,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/7
+block:id=%componentAssemblylineCasing,data=8,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/8
+block:id=%componentAssemblylineCasing,data=9,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/9
+block:id=%componentAssemblylineCasing,data=10,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/10
+block:id=%componentAssemblylineCasing,data=11,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/11
+block:id=%componentAssemblylineCasing,data=12,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/12
+block:id=%componentAssemblylineCasing,data=13,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/13
+block:id=%componentAssemblylineCasing,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0
+
 # %pressureResistantWalls:* (pressureResistantWalls), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
 block:id=%pressureResistantWalls,data=*,stdrot=true,face0-5=0:GoodGenerator/pressureResistantWalls
 
@@ -228,20 +245,3 @@ block:id=%coalTar,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:
 
 # %supercriticalSteam:* (supercriticalSteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
 block:id=%supercriticalSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/supercriticalSteam.still,face2-5=12000:GoodGenerator/fluids/supercriticalSteam.flowing
-
-# %componentAssemblylineCasing:* (componentAssemblylineCasing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
-block:id=%componentAssemblylineCasing,data=0,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0
-block:id=%componentAssemblylineCasing,data=1,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/1
-block:id=%componentAssemblylineCasing,data=2,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/2
-block:id=%componentAssemblylineCasing,data=3,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/3
-block:id=%componentAssemblylineCasing,data=4,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/4
-block:id=%componentAssemblylineCasing,data=5,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/5
-block:id=%componentAssemblylineCasing,data=6,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/6
-block:id=%componentAssemblylineCasing,data=7,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/7
-block:id=%componentAssemblylineCasing,data=8,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/8
-block:id=%componentAssemblylineCasing,data=9,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/9
-block:id=%componentAssemblylineCasing,data=10,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/10
-block:id=%componentAssemblylineCasing,data=11,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/11
-block:id=%componentAssemblylineCasing,data=12,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/12
-block:id=%componentAssemblylineCasing,data=13,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/13
-block:id=%componentAssemblylineCasing,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0

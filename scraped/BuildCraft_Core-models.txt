@@ -87,9 +87,6 @@ boxblock:id=%blockRedPlasma,ymax=0.375,data=13
 boxblock:id=%blockRedPlasma,ymax=0.25,data=14
 boxblock:id=%blockRedPlasma,ymax=0.125,data=15
 
-# %laserTableBlock:* (laserTableBlock), render=buildcraft.silicon.render.RenderLaserTable(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaserTable
-boxblock:id=%laserTableBlock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
-
 # %miningWellBlock:* (miningWellBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockMiningWellCompat
 
 # %plainPipeBlock:* (plainPipeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=buildcraft.factory.BlockPlainPipe
@@ -117,6 +114,9 @@ patchblock:id=%constructionMarkerBlock,patch0=TorchSide1@180#0,patch1=TorchSide2
 patchblock:id=%constructionMarkerBlock,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
 patchblock:id=%constructionMarkerBlock,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
 patchblock:id=%constructionMarkerBlock,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %laserTableBlock:* (laserTableBlock), render=buildcraft.silicon.render.RenderLaserTable(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaserTable
+boxblock:id=%laserTableBlock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
 
 # %zonePlan:* (zonePlan), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.robotics.BlockZonePlan
 
