@@ -1,0 +1,270 @@
+# GalacticraftAmunRa 0.4.30
+version:1.7
+modname:GalacticraftAmunRa
+
+
+cfgfile:config/GalacticraftAmunRa.cfg
+
+
+texturepath:assets/galacticraftamunra/textures/blocks/
+texture:id=amunra/alucrate,filename=assets/amunra/textures/blocks/alucrate.png
+texture:id=amunra/basalt,filename=assets/amunra/textures/blocks/basalt.png
+texture:id=amunra/basaltbrick,filename=assets/amunra/textures/blocks/basaltbrick.png
+texture:id=amunra/basaltcobble,filename=assets/amunra/textures/blocks/basaltcobble.png
+texture:id=amunra/black_stone,filename=assets/amunra/textures/blocks/black_stone.png
+texture:id=amunra/claygrassside,filename=assets/amunra/textures/blocks/claygrassside.png
+texture:id=amunra/claygrasstop,filename=assets/amunra/textures/blocks/claygrasstop.png
+texture:id=amunra/concrete2,filename=assets/amunra/textures/blocks/concrete2.png
+texture:id=amunra/controller,filename=assets/amunra/textures/blocks/controller.png
+texture:id=amunra/coral,filename=assets/amunra/textures/blocks/coral.png
+texture:id=amunra/crafter,filename=assets/amunra/textures/blocks/crafter.png
+texture:id=amunra/darkmatter,filename=assets/amunra/textures/blocks/darkmatter.png
+texture:id=amunra/deco_uranium_block,filename=assets/amunra/textures/blocks/deco_uranium_block.png
+texture:id=amunra/dust,filename=assets/amunra/textures/blocks/dust.png
+texture:id=amunra/gravity,filename=assets/amunra/textures/blocks/gravity.png
+texture:id=amunra/leaves_methane_opaque,filename=assets/amunra/textures/blocks/leaves_methane_opaque.png
+texture:id=amunra/log_methane,filename=assets/amunra/textures/blocks/log_methane.png
+texture:id=amunra/log_methane_top,filename=assets/amunra/textures/blocks/log_methane_top.png
+texture:id=amunra/lumipod_sapling,filename=assets/amunra/textures/blocks/lumipod_sapling.png
+texture:id=amunra/machine_nuclear,filename=assets/amunra/textures/blocks/machine_nuclear.png
+texture:id=amunra/machine_nuclear_advanced,filename=assets/amunra/textures/blocks/machine_nuclear_advanced.png
+texture:id=amunra/methane_tree_sapling,filename=assets/amunra/textures/blocks/methane_tree_sapling.png
+texture:id=amunra/methanedirt,filename=assets/amunra/textures/blocks/methanedirt.png
+texture:id=amunra/methanegrass,filename=assets/amunra/textures/blocks/methanegrass.png
+texture:id=amunra/methanegrass-2,filename=assets/amunra/textures/blocks/methanegrass-2.png
+texture:id=amunra/methanegrassside,filename=assets/amunra/textures/blocks/methanegrassside.png
+texture:id=amunra/methanegrassside-2,filename=assets/amunra/textures/blocks/methanegrassside-2.png
+texture:id=amunra/methanetallgrass,filename=assets/amunra/textures/blocks/methanetallgrass.png
+texture:id=amunra/obsidianbrick,filename=assets/amunra/textures/blocks/obsidianbrick.png
+texture:id=amunra/obsidiangravel,filename=assets/amunra/textures/blocks/obsidiangravel.png
+texture:id=amunra/obsidiansand,filename=assets/amunra/textures/blocks/obsidiansand.png
+texture:id=amunra/olivinebasalt,filename=assets/amunra/textures/blocks/olivinebasalt.png
+texture:id=amunra/olivinebasaltcobble,filename=assets/amunra/textures/blocks/olivinebasaltcobble.png
+texture:id=amunra/planks_methane,filename=assets/amunra/textures/blocks/planks_methane.png
+texture:id=amunra/planks_pod,filename=assets/amunra/textures/blocks/planks_pod.png
+texture:id=amunra/pod_bark,filename=assets/amunra/textures/blocks/pod_bark.png
+texture:id=amunra/podleaves,filename=assets/amunra/textures/blocks/podleaves.png
+texture:id=amunra/redrock,filename=assets/amunra/textures/blocks/redrock.png
+texture:id=amunra/redrockcobble,filename=assets/amunra/textures/blocks/redrockcobble.png
+texture:id=amunra/scale,filename=assets/amunra/textures/blocks/scale.png
+texture:id=amunra/scale_side,filename=assets/amunra/textures/blocks/scale_side.png
+texture:id=amunra/scale_top,filename=assets/amunra/textures/blocks/scale_top.png
+texture:id=amunra/settings-terminal,filename=assets/amunra/textures/blocks/settings-terminal.png
+texture:id=amunra/smoothbasalt,filename=assets/amunra/textures/blocks/smoothbasalt.png
+texture:id=galacticraftasteroids/asteroid0,filename=assets/galacticraftasteroids/textures/blocks/asteroid0.png
+texture:id=galacticraftasteroids/machine,filename=assets/galacticraftasteroids/textures/blocks/machine.png
+texture:id=galacticraftasteroids/machine_input,filename=assets/galacticraftasteroids/textures/blocks/machine_input.png
+texture:id=galacticraftasteroids/machine_output,filename=assets/galacticraftasteroids/textures/blocks/machine_output.png
+texture:id=galacticraftasteroids/machine_side,filename=assets/galacticraftasteroids/textures/blocks/machine_side.png
+texture:id=galacticraftasteroids/machine_side_warning,filename=assets/galacticraftasteroids/textures/blocks/machine_side_warning.png
+texture:id=galacticraftcore/deco_aluminium_4,filename=assets/galacticraftcore/textures/blocks/deco_aluminium_4.png
+texture:id=galacticraftcore/machine,filename=assets/galacticraftcore/textures/blocks/machine.png
+texture:id=galacticraftcore/machine_blank,filename=assets/galacticraftcore/textures/blocks/machine_blank.png
+texture:id=galacticraftcore/machine_input,filename=assets/galacticraftcore/textures/blocks/machine_input.png
+texture:id=galacticraftcore/machine_output,filename=assets/galacticraftcore/textures/blocks/machine_output.png
+texture:id=galacticraftcore/machine_side,filename=assets/galacticraftcore/textures/blocks/machine_side.png
+texture:id=minecraft/clay,filename=assets/minecraft/textures/blocks/clay.png
+texture:id=minecraft/hardened_clay,filename=assets/minecraft/textures/blocks/hardened_clay.png
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+
+
+
+# %tile.basaltMultiOre:* (tile.basaltMultiOre), render=de.katzenpapst.amunra.client.renderer.BlockRendererMultiOre(CUSTOM), opaque=true,cls=de.katzenpapst.amunra.block.ore.BlockOreMulti
+block:id=%tile.basaltMultiOre,data=*,stdrot=true,face0-5=0:amunra/basalt
+
+# %tile.obsidianMultiOre:* (tile.obsidianMultiOre), render=de.katzenpapst.amunra.client.renderer.BlockRendererMultiOre(CUSTOM), opaque=true,cls=de.katzenpapst.amunra.block.ore.BlockOreMulti
+block:id=%tile.obsidianMultiOre,data=*,stdrot=true,face0-5=0:minecraft/obsidian
+
+# %tile.hardClayMultiOre:* (tile.hardClayMultiOre), render=de.katzenpapst.amunra.client.renderer.BlockRendererMultiOre(CUSTOM), opaque=true,cls=de.katzenpapst.amunra.block.ore.BlockOreMulti
+block:id=%tile.hardClayMultiOre,data=*,stdrot=true,face0-5=0:minecraft/hardened_clay
+
+# %tile.oldConcreteOre:* (tile.oldConcreteOre), render=de.katzenpapst.amunra.client.renderer.BlockRendererMultiOre(CUSTOM), opaque=true,cls=de.katzenpapst.amunra.block.ore.BlockOreMulti
+block:id=%tile.oldConcreteOre,data=*,stdrot=true,face0-5=0:amunra/concrete2
+
+# %tile.asteroidMultiOre1:* (tile.asteroidMultiOre1), render=de.katzenpapst.amunra.client.renderer.BlockRendererMultiOre(CUSTOM), opaque=true,cls=de.katzenpapst.amunra.block.ore.BlockOreMulti
+block:id=%tile.asteroidMultiOre1,data=*,stdrot=true,face0-5=0:galacticraftasteroids/asteroid0
+
+# %tile.baseBlockRock:* (tile.baseBlockRock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockBasicMeta
+block:id=%tile.baseBlockRock,data=0,stdrot=true,face0-5=0:amunra/basaltcobble
+block:id=%tile.baseBlockRock,data=1,stdrot=true,face0-5=0:amunra/basalt
+block:id=%tile.baseBlockRock,data=2,stdrot=true,face0-5=0:amunra/redrockcobble
+block:id=%tile.baseBlockRock,data=3,stdrot=true,face0-5=0:amunra/redrock
+block:id=%tile.baseBlockRock,data=4,stdrot=true,face0-5=0:amunra/olivinebasaltcobble
+block:id=%tile.baseBlockRock,data=5,stdrot=true,face0-5=0:amunra/olivinebasalt
+block:id=%tile.baseBlockRock,data=6,stdrot=true,face0-5=0:amunra/alucrate
+block:id=%tile.baseBlockRock,data=7,stdrot=true,face0-5=0:amunra/basaltbrick
+block:id=%tile.baseBlockRock,data=8,stdrot=true,face0-5=0:amunra/smoothbasalt
+block:id=%tile.baseBlockRock,data=9,stdrot=true,face0-5=0:amunra/obsidianbrick
+block:id=%tile.baseBlockRock,data=10,stdrot=true,face0-5=0:amunra/concrete2
+block:id=%tile.baseBlockRock,data=11,stdrot=true,face0-5=0:amunra/deco_uranium_block
+block:id=%tile.baseBlockRock,data=12,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_4
+block:id=%tile.baseBlockRock,data=13,stdrot=true,face0=0:galacticraftcore/machine,face1=0:amunra/crafter,face2-5=0:galacticraftcore/machine_side
+block:id=%tile.baseBlockRock,data=14,stdrot=true,face0-5=0:amunra/darkmatter
+
+# %tile.baseBlockCrystal:* (tile.baseBlockCrystal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockBasicMeta
+block:id=%tile.baseBlockCrystal,data=0,stdrot=true,face0-5=0:amunra/coral
+
+# %tile.baseBlockGround:* (tile.baseBlockGround), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockBasicMeta
+block:id=%tile.baseBlockGround,data=0,stdrot=true,face0-5=0:amunra/methanedirt
+block:id=%tile.baseBlockGround,data=1,stdrot=true,face0-5=0:amunra/dust
+
+# %tile.baseGrass:* (tile.baseGrass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockGrassMeta
+block:id=%tile.baseGrass,data=0,stdrot=true,face0=0:amunra/methanedirt,face1=0:amunra/methanegrass,face2-5=0:amunra/methanegrassside
+block:id=%tile.baseGrass,data=1,stdrot=true,face0=0:minecraft/clay,face1=0:amunra/claygrasstop,face2-5=0:amunra/claygrassside
+block:id=%tile.baseGrass,data=2,stdrot=true,face0=0:amunra/methanedirt,face1=0:amunra/methanegrass-2,face2-5=0:amunra/methanegrassside-2
+
+# %tile.baseFalling:* (tile.baseFalling), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockFallingMeta
+block:id=%tile.baseFalling,data=0,stdrot=true,face0-5=0:amunra/obsidiansand
+block:id=%tile.baseFalling,data=1,stdrot=true,face0-5=0:amunra/obsidiangravel
+block:id=%tile.baseFalling,data=2,stdrot=true,face0-5=0:amunra/black_stone
+
+# %tile.basePlant:* (tile.basePlant), render=(CROSSEDSQUARES), opaque=false,cls=de.katzenpapst.amunra.block.bush.BlockBushMulti
+block:id=%tile.basePlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methanetallgrass
+
+# %tile.log1:* (tile.log1), render=(LOG), opaque=true,cls=de.katzenpapst.amunra.block.BlockLogMeta
+block:id=%tile.log1,data=0,stdrot=true,face0-1=0:amunra/log_methane_top,face2-5=0:amunra/log_methane
+block:id=%tile.log1,data=4,face0-1=0:amunra/log_methane,face2-3=4000:amunra/log_methane,face4-5=0:amunra/log_methane_top
+block:id=%tile.log1,data=8,face0-1=4000:amunra/log_methane,face2-3=0:amunra/log_methane_top,face4-5=4000:amunra/log_methane
+block:id=%tile.log1,data=12,stdrot=true,face0-5=0:amunra/log_methane
+
+# %tile.wood1:* (tile.wood1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockBasicMeta
+block:id=%tile.wood1,data=0,stdrot=true,face0-5=0:amunra/pod_bark
+block:id=%tile.wood1,data=1,stdrot=true,face0-5=0:amunra/podleaves
+block:id=%tile.wood1,data=2,stdrot=true,face0-5=0:amunra/planks_methane
+block:id=%tile.wood1,data=3,stdrot=true,face0-5=0:amunra/planks_pod
+
+# %tile.null:* (tile.null), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockLeafMeta
+block:id=%tile.null,data=0,stdrot=true,face0-5=0:amunra/leaves_methane_opaque
+block:id=%tile.null,data=4,stdrot=true,face0-5=0:amunra/leaves_methane_opaque
+block:id=%tile.null,data=8,stdrot=true,face0-5=0:amunra/leaves_methane_opaque
+block:id=%tile.null,data=12,stdrot=true,face0-5=0:amunra/leaves_methane_opaque
+
+# %tile.saplings:* (tile.saplings), render=(CROSSEDSQUARES), opaque=false,cls=de.katzenpapst.amunra.block.bush.BlockBushMulti
+block:id=%tile.saplings,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling
+block:id=%tile.saplings,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
+block:id=%tile.saplings,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling
+block:id=%tile.saplings,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
+block:id=%tile.saplings,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling
+block:id=%tile.saplings,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
+block:id=%tile.saplings,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling
+block:id=%tile.saplings,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
+
+# %tile.machines1:* (tile.machines1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockMachineMeta
+block:id=%tile.machines1,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_output,face3=0:amunra/machine_nuclear,face4-5=0:galacticraftcore/machine_output
+block:id=%tile.machines1,data=1,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_output,face3=0:amunra/machine_nuclear_advanced,face4-5=0:galacticraftasteroids/machine_output
+block:id=%tile.machines1,data=2,stdrot=true,face0-2=0:galacticraftasteroids/machine,face3=0:amunra/controller,face4-5=0:galacticraftasteroids/machine
+block:id=%tile.machines1,data=3,stdrot=true,face0-2=0:galacticraftasteroids/machine,face3=0:amunra/settings-terminal,face4-5=0:galacticraftasteroids/machine
+block:id=%tile.machines1,data=4,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:amunra/machine_nuclear,face3-5=0:galacticraftcore/machine_output
+block:id=%tile.machines1,data=5,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2=0:amunra/machine_nuclear_advanced,face3-5=0:galacticraftasteroids/machine_output
+block:id=%tile.machines1,data=6,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2=0:amunra/controller,face3-5=0:galacticraftasteroids/machine
+block:id=%tile.machines1,data=7,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2=0:amunra/settings-terminal,face3-5=0:galacticraftasteroids/machine
+block:id=%tile.machines1,data=8,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftcore/machine_output,face5=0:amunra/machine_nuclear
+block:id=%tile.machines1,data=9,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-4=0:galacticraftasteroids/machine_output,face5=0:amunra/machine_nuclear_advanced
+block:id=%tile.machines1,data=10,stdrot=true,face0-4=0:galacticraftasteroids/machine,face5=0:amunra/controller
+block:id=%tile.machines1,data=11,stdrot=true,face0-4=0:galacticraftasteroids/machine,face5=0:amunra/settings-terminal
+block:id=%tile.machines1,data=12,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_output,face4=0:amunra/machine_nuclear,face5=0:galacticraftcore/machine_output
+block:id=%tile.machines1,data=13,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-3=0:galacticraftasteroids/machine_output,face4=0:amunra/machine_nuclear_advanced,face5=0:galacticraftasteroids/machine_output
+block:id=%tile.machines1,data=14,stdrot=true,face0-3=0:galacticraftasteroids/machine,face4=0:amunra/controller,face5=0:galacticraftasteroids/machine
+block:id=%tile.machines1,data=15,stdrot=true,face0-3=0:galacticraftasteroids/machine,face4=0:amunra/settings-terminal,face5=0:galacticraftasteroids/machine
+
+# %tile.machines2:* (tile.machines2), render=de.katzenpapst.amunra.client.renderer.BlockRendererDummy(CUSTOM), opaque=false,cls=de.katzenpapst.amunra.block.machine.mothershipEngine.BlockMothershipJetMeta
+block:id=%tile.machines2,data=0,data=1,stdrot=true,face0-5=0:galacticraftasteroids/machine
+block:id=%tile.machines2,data=4,data=5,stdrot=true,face0-5=0:galacticraftasteroids/machine
+block:id=%tile.machines2,data=8,data=9,stdrot=true,face0-5=0:galacticraftasteroids/machine
+block:id=%tile.machines2,data=12,data=13,stdrot=true,face0-5=0:galacticraftasteroids/machine
+
+# %tile.machines3:* (tile.machines3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockMachineMeta
+block:id=%tile.machines3,data=0,stdrot=true,face0=0:galacticraftcore/machine,face1=0:amunra/scale_top,face2=0:amunra/scale_side,face3=0:amunra/scale,face4-5=0:amunra/scale_side
+block:id=%tile.machines3,data=1,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2=0:galacticraftasteroids/machine_input,face3=0:amunra/gravity,face4-5=0:galacticraftasteroids/machine
+block:id=%tile.machines3,data=4,stdrot=true,face0=0:galacticraftcore/machine,face1=0:amunra/scale_top,face2=0:amunra/scale,face3-5=0:amunra/scale_side
+block:id=%tile.machines3,data=5,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2=0:amunra/gravity,face3=0:galacticraftasteroids/machine_input,face4-5=0:galacticraftasteroids/machine
+block:id=%tile.machines3,data=8,stdrot=true,face0=0:galacticraftcore/machine,face1=0:amunra/scale_top,face2-4=0:amunra/scale_side,face5=0:amunra/scale
+block:id=%tile.machines3,data=9,stdrot=true,face0-3=0:galacticraftasteroids/machine,face4=0:galacticraftasteroids/machine_input,face5=0:amunra/gravity
+block:id=%tile.machines3,data=12,stdrot=true,face0=0:galacticraftcore/machine,face1=0:amunra/scale_top,face2-3=0:amunra/scale_side,face4=0:amunra/scale,face5=0:amunra/scale_side
+block:id=%tile.machines3,data=13,stdrot=true,face0-3=0:galacticraftasteroids/machine,face4=0:amunra/gravity,face5=0:galacticraftasteroids/machine_input
+
+# %tile.machines4:* (tile.machines4), render=de.katzenpapst.amunra.client.renderer.BlockRendererDummy(CUSTOM), opaque=false,cls=de.katzenpapst.amunra.block.BlockMachineMetaDummyRender
+block:id=%tile.machines4,data=0,stdrot=true,face0-5=0:galacticraftasteroids/machine
+block:id=%tile.machines4,data=1,stdrot=true,face0-5=0:galacticraftcore/machine_input
+block:id=%tile.machines4,data=4,stdrot=true,face0-5=0:galacticraftasteroids/machine
+block:id=%tile.machines4,data=5,stdrot=true,face0-5=0:galacticraftcore/machine_input
+block:id=%tile.machines4,data=8,stdrot=true,face0-5=0:galacticraftasteroids/machine
+block:id=%tile.machines4,data=9,stdrot=true,face0-5=0:galacticraftcore/machine_input
+block:id=%tile.machines4,data=12,stdrot=true,face0-5=0:galacticraftasteroids/machine
+block:id=%tile.machines4,data=13,stdrot=true,face0-5=0:galacticraftcore/machine_input
+
+# %tile.blockFake:* (tile.blockFake), render=(CUSTOM), opaque=true,cls=de.katzenpapst.amunra.block.BlockMetaFake
+block:id=%tile.blockFake,data=0,stdrot=true,face0-5=0:galacticraftasteroids/machine
+
+# %tile.aluChest:* (tile.aluChest), render=de.katzenpapst.amunra.client.renderer.BlockRendererARChest(CUSTOM), opaque=false,cls=de.katzenpapst.amunra.block.BlockARChest
+block:id=%tile.aluChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:amunra/alucrate
+
+# %tile.steelChest:* (tile.steelChest), render=de.katzenpapst.amunra.client.renderer.BlockRendererARChest(CUSTOM), opaque=false,cls=de.katzenpapst.amunra.block.BlockARChestLarge
+block:id=%tile.steelChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/machine_blank
+
+# %tile.msBoosters1:* (tile.msBoosters1), render=de.katzenpapst.amunra.client.renderer.BlockRendererMothershipBooster(CUSTOM), opaque=false,cls=de.katzenpapst.amunra.block.machine.mothershipEngine.BlockMothershipBoosterMeta
+block:id=%tile.msBoosters1,data=0,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side
+block:id=%tile.msBoosters1,data=1,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side_warning
+block:id=%tile.msBoosters1,data=4,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side
+block:id=%tile.msBoosters1,data=5,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side_warning
+block:id=%tile.msBoosters1,data=8,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side
+block:id=%tile.msBoosters1,data=9,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side_warning
+block:id=%tile.msBoosters1,data=12,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side
+block:id=%tile.msBoosters1,data=13,stdrot=true,face0-1=0:galacticraftasteroids/machine,face2-5=0:galacticraftasteroids/machine_side_warning
+
+# %tile.obsidianbrick.stairs:* (tile.obsidianbrick.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
+block:id=%tile.obsidianbrick.stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/obsidianbrick
+
+# %tile.smoothbasalt.stairs:* (tile.smoothbasalt.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
+block:id=%tile.smoothbasalt.stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/smoothbasalt
+
+# %tile.basaltbrick.stairs:* (tile.basaltbrick.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
+block:id=%tile.basaltbrick.stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/basaltbrick
+
+# %tile.basalt.stairs:* (tile.basalt.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
+block:id=%tile.basalt.stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/basalt
+
+# %tile.alucrate.stairs:* (tile.alucrate.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
+block:id=%tile.alucrate.stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/alucrate
+
+# %tile.methanePlanks.stairs:* (tile.methanePlanks.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
+block:id=%tile.methanePlanks.stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/planks_methane
+
+# %tile.podPlanks.stairs:* (tile.podPlanks.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
+block:id=%tile.podPlanks.stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/planks_pod
+
+# %tile.rockDoubleslab:* (tile.rockDoubleslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockDoubleslabMeta
+block:id=%tile.rockDoubleslab,data=0,stdrot=true,face0-5=0:amunra/basalt
+block:id=%tile.rockDoubleslab,data=1,stdrot=true,face0-5=0:amunra/basaltbrick
+block:id=%tile.rockDoubleslab,data=2,stdrot=true,face0-5=0:amunra/smoothbasalt
+block:id=%tile.rockDoubleslab,data=3,stdrot=true,face0-5=0:amunra/obsidianbrick
+block:id=%tile.rockDoubleslab,data=4,stdrot=true,face0-5=0:amunra/alucrate
+block:id=%tile.rockDoubleslab,data=8,stdrot=true,face0-5=0:amunra/basalt
+block:id=%tile.rockDoubleslab,data=9,stdrot=true,face0-5=0:amunra/basaltbrick
+block:id=%tile.rockDoubleslab,data=10,stdrot=true,face0-5=0:amunra/smoothbasalt
+block:id=%tile.rockDoubleslab,data=11,stdrot=true,face0-5=0:amunra/obsidianbrick
+block:id=%tile.rockDoubleslab,data=12,stdrot=true,face0-5=0:amunra/alucrate
+
+# %tile.rockSlab:* (tile.rockSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
+block:id=%tile.rockSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/basalt
+block:id=%tile.rockSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/basaltbrick
+block:id=%tile.rockSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/smoothbasalt
+block:id=%tile.rockSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/obsidianbrick
+block:id=%tile.rockSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/alucrate
+block:id=%tile.rockSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/basalt
+block:id=%tile.rockSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/basaltbrick
+block:id=%tile.rockSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/smoothbasalt
+block:id=%tile.rockSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/obsidianbrick
+block:id=%tile.rockSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/alucrate
+
+# %tile.woodDoubleslab:* (tile.woodDoubleslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockDoubleslabMeta
+block:id=%tile.woodDoubleslab,data=0,stdrot=true,face0-5=0:amunra/planks_pod
+block:id=%tile.woodDoubleslab,data=1,stdrot=true,face0-5=0:amunra/planks_methane
+block:id=%tile.woodDoubleslab,data=8,stdrot=true,face0-5=0:amunra/planks_pod
+block:id=%tile.woodDoubleslab,data=9,stdrot=true,face0-5=0:amunra/planks_methane
+
+# %tile.woodSlab:* (tile.woodSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
+block:id=%tile.woodSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/planks_pod
+block:id=%tile.woodSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/planks_methane
+block:id=%tile.woodSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/planks_pod
+block:id=%tile.woodSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/planks_methane

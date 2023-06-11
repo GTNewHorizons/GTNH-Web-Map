@@ -1,0 +1,41 @@
+# gtnhintergalactic 1.1.17
+version:1.7
+modname:gtnhintergalactic
+
+
+cfgfile:config/gtnhintergalactic.cfg
+
+
+texturepath:assets/gtnhintergalactic/textures/blocks/
+texture:id=gregtech/iconsets/MACHINE_CASING_SOLID_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_SOLID_STEEL.png
+texture:id=gtnhintergalactic/spaceElevator/BaseCasing,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/BaseCasing.png
+texture:id=gtnhintergalactic/spaceElevator/CablePart,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/CablePart.png
+texture:id=gtnhintergalactic/spaceElevator/InternalStructure,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/InternalStructure.png
+texture:id=gtnhintergalactic/spaceElevator/InternalStructure_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/InternalStructure_Side.png
+texture:id=gtnhintergalactic/spaceElevator/Motor,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/Motor.png
+texture:id=gtnhintergalactic/spaceElevator/MotorT1_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/MotorT1_Side.png
+texture:id=gtnhintergalactic/spaceElevator/MotorT2_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/MotorT2_Side.png
+texture:id=gtnhintergalactic/spaceElevator/MotorT3_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/MotorT3_Side.png
+texture:id=gtnhintergalactic/spaceElevator/MotorT4_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/MotorT4_Side.png
+texture:id=gtnhintergalactic/spaceElevator/MotorT5_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/MotorT5_Side.png
+texture:id=gtnhintergalactic/spaceElevator/SupportStructure,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/SupportStructure.png
+texture:id=gtnhintergalactic/spaceElevator/SupportStructure_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/SupportStructure_Side.png
+
+
+
+# %spaceelevatorcable:* (spaceelevatorcable), render=com.gtnewhorizons.gtnhintergalactic.render.RenderSpaceElevatorCable(CUSTOM), opaque=false,cls=com.gtnewhorizons.gtnhintergalactic.block.BlockSpaceElevatorCable
+block:id=%spaceelevatorcable,data=*,stdrot=true,face0-5=0:gtnhintergalactic/spaceElevator/CablePart
+
+# %gt.blockcasingsSE:* (gt.blockcasingsSE), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.gtnewhorizons.gtnhintergalactic.block.BlockCasingSpaceElevator
+block:id=%gt.blockcasingsSE,data=0,stdrot=true,face0-5=0:gtnhintergalactic/spaceElevator/BaseCasing
+block:id=%gt.blockcasingsSE,data=1,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/SupportStructure,face2-5=0:gtnhintergalactic/spaceElevator/SupportStructure_Side
+block:id=%gt.blockcasingsSE,data=2,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/InternalStructure,face2-5=0:gtnhintergalactic/spaceElevator/InternalStructure_Side
+block:id=%gt.blockcasingsSE,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
+
+# %gt.blockcasingsSEMotor:* (gt.blockcasingsSEMotor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.gtnewhorizons.gtnhintergalactic.block.BlockCasingSpaceElevatorMotor
+block:id=%gt.blockcasingsSEMotor,data=0,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gtnhintergalactic/spaceElevator/MotorT1_Side
+block:id=%gt.blockcasingsSEMotor,data=1,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gtnhintergalactic/spaceElevator/MotorT2_Side
+block:id=%gt.blockcasingsSEMotor,data=2,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gtnhintergalactic/spaceElevator/MotorT3_Side
+block:id=%gt.blockcasingsSEMotor,data=3,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gtnhintergalactic/spaceElevator/MotorT4_Side
+block:id=%gt.blockcasingsSEMotor,data=4,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gtnhintergalactic/spaceElevator/MotorT5_Side
+block:id=%gt.blockcasingsSEMotor,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
