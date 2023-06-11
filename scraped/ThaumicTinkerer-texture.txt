@@ -1,0 +1,149 @@
+# ThaumicTinkerer 2.6.12
+version:1.7
+modname:ThaumicTinkerer
+
+
+cfgfile:config/ThaumicTinkerer.cfg
+
+
+texturepath:assets/thaumictinkerer/textures/blocks/
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=minecraft/log_spruce,filename=assets/minecraft/textures/blocks/log_spruce.png
+texture:id=minecraft/log_spruce_top,filename=assets/minecraft/textures/blocks/log_spruce_top.png
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+texture:id=thaumcraft/paving_stone_travel,filename=assets/thaumcraft/textures/blocks/paving_stone_travel.png
+texture:id=thaumcraft/paving_stone_warding,filename=assets/thaumcraft/textures/blocks/paving_stone_warding.png
+texture:id=thaumcraft/thaumiumblock,filename=assets/thaumcraft/textures/blocks/thaumiumblock.png
+texture:id=ttinkerer/Levitational Locomotive Relay0,filename=assets/ttinkerer/textures/blocks/Levitational Locomotive Relay0.png
+texture:id=ttinkerer/Levitational Locomotive Relay1,filename=assets/ttinkerer/textures/blocks/Levitational Locomotive Relay1.png
+texture:id=ttinkerer/Levitational Locomotive Relay2,filename=assets/ttinkerer/textures/blocks/Levitational Locomotive Relay2.png
+texture:id=ttinkerer/Levitational Locomotive0,filename=assets/ttinkerer/textures/blocks/Levitational Locomotive0.png
+texture:id=ttinkerer/Levitational Locomotive1,filename=assets/ttinkerer/textures/blocks/Levitational Locomotive1.png
+texture:id=ttinkerer/Levitational Locomotive2,filename=assets/ttinkerer/textures/blocks/Levitational Locomotive2.png
+texture:id=ttinkerer/aerFire,filename=assets/ttinkerer/textures/blocks/aerFire.png
+texture:id=ttinkerer/animationTablet0,filename=assets/ttinkerer/textures/blocks/animationTablet0.png
+texture:id=ttinkerer/animationTablet1,filename=assets/ttinkerer/textures/blocks/animationTablet1.png
+texture:id=ttinkerer/animationTablet2,filename=assets/ttinkerer/textures/blocks/animationTablet2.png
+texture:id=ttinkerer/aquaFire,filename=assets/ttinkerer/textures/blocks/aquaFire.png
+texture:id=ttinkerer/chiseledDarkQuartz0,filename=assets/ttinkerer/textures/blocks/chiseledDarkQuartz0.png
+texture:id=ttinkerer/chiseledDarkQuartz1,filename=assets/ttinkerer/textures/blocks/chiseledDarkQuartz1.png
+texture:id=ttinkerer/crop_ignis_0,filename=assets/ttinkerer/textures/blocks/crop_ignis_0.png
+texture:id=ttinkerer/darkQuartz0,filename=assets/ttinkerer/textures/blocks/darkQuartz0.png
+texture:id=ttinkerer/darkQuartz1,filename=assets/ttinkerer/textures/blocks/darkQuartz1.png
+texture:id=ttinkerer/dislocator0,filename=assets/ttinkerer/textures/blocks/dislocator0.png
+texture:id=ttinkerer/enchanter0,filename=assets/ttinkerer/textures/blocks/enchanter0.png
+texture:id=ttinkerer/enchanter1,filename=assets/ttinkerer/textures/blocks/enchanter1.png
+texture:id=ttinkerer/enchanter2,filename=assets/ttinkerer/textures/blocks/enchanter2.png
+texture:id=ttinkerer/funnel0,filename=assets/ttinkerer/textures/blocks/funnel0.png
+texture:id=ttinkerer/funnel1,filename=assets/ttinkerer/textures/blocks/funnel1.png
+texture:id=ttinkerer/ignisFire,filename=assets/ttinkerer/textures/blocks/ignisFire.png
+texture:id=ttinkerer/infusedFarmland,filename=assets/ttinkerer/textures/blocks/infusedFarmland.png
+texture:id=ttinkerer/interface,filename=assets/ttinkerer/textures/blocks/interface.png
+texture:id=ttinkerer/ordoFire,filename=assets/ttinkerer/textures/blocks/ordoFire.png
+texture:id=ttinkerer/perditioFire,filename=assets/ttinkerer/textures/blocks/perditioFire.png
+texture:id=ttinkerer/pillarDarkQuartz0,filename=assets/ttinkerer/textures/blocks/pillarDarkQuartz0.png
+texture:id=ttinkerer/pillarDarkQuartz1,filename=assets/ttinkerer/textures/blocks/pillarDarkQuartz1.png
+texture:id=ttinkerer/platform,filename=assets/ttinkerer/textures/blocks/platform.png
+texture:id=ttinkerer/portal,filename=assets/ttinkerer/textures/blocks/portal.png
+texture:id=ttinkerer/spawner1,filename=assets/ttinkerer/textures/blocks/spawner1.png
+texture:id=ttinkerer/spawner2,filename=assets/ttinkerer/textures/blocks/spawner2.png
+texture:id=ttinkerer/terraFire,filename=assets/ttinkerer/textures/blocks/terraFire.png
+texture:id=ttinkerer/warpGate0,filename=assets/ttinkerer/textures/blocks/warpGate0.png
+texture:id=ttinkerer/warpGate1,filename=assets/ttinkerer/textures/blocks/warpGate1.png
+
+
+
+# %Levitational Locomotive:* (Levitational Locomotive), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumic.tinkerer.common.block.mobilizer.BlockMobilizer
+block:id=%Levitational Locomotive,data=*,stdrot=true,face0=0:ttinkerer/Levitational Locomotive0,face1=0:ttinkerer/Levitational Locomotive1,face2-5=0:ttinkerer/Levitational Locomotive2
+
+# %Levitational Locomotive Relay:* (Levitational Locomotive Relay), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumic.tinkerer.common.block.mobilizer.BlockMobilizerRelay
+block:id=%Levitational Locomotive Relay,data=*,stdrot=true,face0=0:ttinkerer/Levitational Locomotive Relay0,face1=0:ttinkerer/Levitational Locomotive Relay1,face2-5=0:ttinkerer/Levitational Locomotive Relay2
+
+# %enchanter:* (enchanter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockEnchanter
+block:id=%enchanter,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:ttinkerer/enchanter0,face1=0:ttinkerer/enchanter1,face2-5=0:ttinkerer/enchanter2
+
+# %fireWater:* (fireWater), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireWater
+block:id=%fireWater,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ttinkerer/aquaFire
+
+# %infusedGrainBlock:* (infusedGrainBlock), render=thaumic.tinkerer.client.render.block.RenderInfusedCrops(CUSTOM), opaque=false,cls=thaumic.tinkerer.common.block.BlockInfusedGrain
+block:id=%infusedGrainBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ttinkerer/crop_ignis_0
+
+# %darkQuartz:* (darkQuartz), render=(QUARTZ), opaque=true,cls=thaumic.tinkerer.common.block.quartz.BlockDarkQuartz
+block:id=%darkQuartz,data=0,stdrot=true,face0-1=0:ttinkerer/darkQuartz1,face2-5=0:ttinkerer/darkQuartz0
+block:id=%darkQuartz,data=1,stdrot=true,face0-1=0:ttinkerer/chiseledDarkQuartz1,face2-5=0:ttinkerer/chiseledDarkQuartz0
+block:id=%darkQuartz,data=2,stdrot=true,face0-1=0:ttinkerer/pillarDarkQuartz1,face2-5=0:ttinkerer/pillarDarkQuartz0
+block:id=%darkQuartz,data=3,stdrot=true,face0-1=4000:ttinkerer/pillarDarkQuartz0,face2-3=0:ttinkerer/pillarDarkQuartz0,face4-5=6000:ttinkerer/pillarDarkQuartz1
+block:id=%darkQuartz,data=4,stdrot=true,face0-1=0:ttinkerer/pillarDarkQuartz0,face2-3=6000:ttinkerer/pillarDarkQuartz1,face4-5=0:ttinkerer/pillarDarkQuartz0
+block:id=%darkQuartz,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ttinkerer/darkQuartz1,face2-5=0:ttinkerer/darkQuartz0
+
+# %travelStairs:* (travelStairs), render=(STAIRS), opaque=false,cls=thaumic.tinkerer.common.block.BlockTravelStairs
+block:id=%travelStairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/paving_stone_travel
+
+# %fireOrder:* (fireOrder), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireOrder
+block:id=%fireOrder,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ttinkerer/ordoFire
+
+# %darkQuartzSlab:* (darkQuartzSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.quartz.BlockDarkQuartzSlab
+block:id=%darkQuartzSlab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:ttinkerer/darkQuartz1,face2-5=0:ttinkerer/darkQuartz0
+
+# %darkQuartzSlabFull:* (darkQuartzSlabFull), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumic.tinkerer.common.block.quartz.BlockDarkQuartzSlab
+block:id=%darkQuartzSlabFull,data=*,stdrot=true,face0-1=0:ttinkerer/darkQuartz1,face2-5=0:ttinkerer/darkQuartz0
+
+# %dislocator:* (dislocator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.transvector.BlockTransvectorDislocator
+block:id=%dislocator,data=*,stdrot=true,face0-5=0:ttinkerer/dislocator0
+
+# %funnel:* (funnel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockFunnel
+block:id=%funnel,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:ttinkerer/funnel0,face2-5=0:ttinkerer/funnel1
+
+# %infusedFarmland:* (infusedFarmland), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockInfusedFarmland
+block:id=%infusedFarmland,data=*,stdrot=true,face0=0:minecraft/dirt,face1=0:ttinkerer/infusedFarmland,face2-5=0:minecraft/dirt
+
+# %interface:* (interface), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.transvector.BlockTransvectorInterface
+block:id=%interface,data=*,stdrot=true,face0-5=0:ttinkerer/interface
+
+# %magnet:* (magnet), render=thaumic.tinkerer.client.render.block.RenderMagnet(CUSTOM), opaque=false,cls=thaumic.tinkerer.common.block.BlockMagnet
+block:id=%magnet,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_spruce_top,face2-5=0:minecraft/log_spruce
+
+# %fireFire:* (fireFire), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireIgnis
+block:id=%fireFire,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ttinkerer/ignisFire
+
+# %fireEarth:* (fireEarth), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireEarth
+block:id=%fireEarth,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ttinkerer/terraFire
+
+# %darkQuartzStairs:* (darkQuartzStairs), render=(STAIRS), opaque=false,cls=thaumic.tinkerer.common.block.quartz.BlockDarkQuartzStairs
+block:id=%darkQuartzStairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:ttinkerer/darkQuartz1,face2-5=0:ttinkerer/darkQuartz0
+
+# %fireAir:* (fireAir), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireAir
+block:id=%fireAir,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ttinkerer/aerFire
+
+# %fireChaos:* (fireChaos), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireChaos
+block:id=%fireChaos,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ttinkerer/perditioFire
+
+# %bedrockPortal:* (bedrockPortal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.kami.BlockBedrockPortal
+block:id=%bedrockPortal,data=*,stdrot=true,face0-5=0:ttinkerer/portal
+
+# %platform:* (platform), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockPlatform
+block:id=%platform,data=*,stdrot=true,face0-5=0:ttinkerer/platform
+
+# %animationTablet:* (animationTablet), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockAnimationTablet
+block:id=%animationTablet,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:ttinkerer/animationTablet0,face1=0:ttinkerer/animationTablet1,face2-5=0:ttinkerer/animationTablet2
+
+# %wardSlab:* (wardSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockWardSlab
+block:id=%wardSlab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/paving_stone_warding
+
+# %wardSlabFull:* (wardSlabFull), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumic.tinkerer.common.block.BlockWardSlab
+block:id=%wardSlabFull,data=*,stdrot=true,face0-5=0:thaumcraft/paving_stone_warding
+
+# %travelSlab:* (travelSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockTravelSlab
+block:id=%travelSlab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/paving_stone_travel
+
+# %travelSlabFull:* (travelSlabFull), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumic.tinkerer.common.block.BlockTravelSlab
+block:id=%travelSlabFull,data=*,stdrot=true,face0-5=0:thaumcraft/paving_stone_travel
+
+# %spawner:* (spawner), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockSummon
+block:id=%spawner,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/obsidian,face1=0:ttinkerer/spawner1,face2-5=0:ttinkerer/spawner2
+
+# %repairer:* (repairer), render=thaumic.tinkerer.client.render.block.RenderRepairer(CUSTOM), opaque=false,cls=thaumic.tinkerer.common.block.BlockRepairer
+block:id=%repairer,data=*,stdrot=true,face0-5=0:thaumcraft/thaumiumblock
+
+# %warpGate:* (warpGate), render=thaumic.tinkerer.client.render.block.kami.RenderWarpGate(CUSTOM), opaque=false,cls=thaumic.tinkerer.common.block.kami.BlockWarpGate
+block:id=%warpGate,data=*,stdrot=true,face0=0:ttinkerer/warpGate1,face1=0:ttinkerer/warpGate0,face2-5=0:ttinkerer/warpGate1

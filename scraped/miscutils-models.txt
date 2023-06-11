@@ -1,0 +1,238 @@
+# miscutils 1.7.227
+version:1.7
+modname:miscutils
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %oreAncientGranite:* (oreAncientGranite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreRunite:* (oreRunite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreFluoriteF:* (oreFluoriteF), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreKoboldite:* (oreKoboldite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreCrocoite:* (oreCrocoite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreGeikielite:* (oreGeikielite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreNichromite:* (oreNichromite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreTitanite:* (oreTitanite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreZimbabweite:* (oreZimbabweite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreZirconolite:* (oreZirconolite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreGadoliniteCe:* (oreGadoliniteCe), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreGadoliniteY:* (oreGadoliniteY), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreLepersonnite:* (oreLepersonnite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreSamarskiteY:* (oreSamarskiteY), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreSamarskiteYb:* (oreSamarskiteYb), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreXenotime:* (oreXenotime), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreYttriaite:* (oreYttriaite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreYttrialite:* (oreYttrialite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreYttrocerite:* (oreYttrocerite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreZircon:* (oreZircon), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %orePolycrase:* (orePolycrase), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreZircophyllite:* (oreZircophyllite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreZirkelite:* (oreZirkelite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreLanthaniteLa:* (oreLanthaniteLa), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreLanthaniteCe:* (oreLanthaniteCe), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreLanthaniteNd:* (oreLanthaniteNd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreAgarditeY:* (oreAgarditeY), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreAgarditeCd:* (oreAgarditeCd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreAgarditeLa:* (oreAgarditeLa), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreAgarditeNd:* (oreAgarditeNd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreHibonite:* (oreHibonite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreCerite:* (oreCerite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreFluorcaphite:* (oreFluorcaphite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreFlorencite:* (oreFlorencite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreCryoliteF:* (oreCryoliteF), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreLautarite:* (oreLautarite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreLafossaite:* (oreLafossaite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreDemicheleiteBr:* (oreDemicheleiteBr), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreComancheite:* (oreComancheite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %orePerroudite:* (orePerroudite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreHoneaite:* (oreHoneaite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreAlburnite:* (oreAlburnite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreMiessiite:* (oreMiessiite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreKashinite:* (oreKashinite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreIrarsite:* (oreIrarsite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreGreenockite:* (oreGreenockite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreBariteRd:* (oreBariteRd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreRadioactiveMineralMix:* (oreRadioactiveMineralMix), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %miscutils_fluidBlockSludge:* (miscutils_fluidBlockSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.core.block.general.fluids.BlockFluidSludge
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.875,data=1
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.75,data=2
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.625,data=3
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.5,data=4
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.375,data=5
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.25,data=6
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.125,data=7
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.875,data=9
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.75,data=10
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.625,data=11
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.5,data=12
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.375,data=13
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.25,data=14
+boxblock:id=%miscutils_fluidBlockSludge,ymax=0.125,data=15
+
+# %blockHellFire:* (blockHellFire), render=(FIRE), opaque=false,cls=gtPlusPlus.core.block.general.HellFire
+
+# %blockNet:* (blockNet), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.core.block.general.BlockNet
+patchblock:id=%blockNet,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %blockDecayablesChest:* (blockDecayablesChest), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.machine.DecayablesChest
+boxblock:id=%blockDecayablesChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %tile.playerDoorWood:* (tile.playerDoorWood), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+customblock:id=%tile.playerDoorWood,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.playerDoorIron:* (tile.playerDoorIron), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+customblock:id=%tile.playerDoorIron,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.playerDoorGlass:* (tile.playerDoorGlass), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+customblock:id=%tile.playerDoorGlass,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.playerDoorIce:* (tile.playerDoorIce), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+customblock:id=%tile.playerDoorIce,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.playerDoorCactus:* (tile.playerDoorCactus), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
+customblock:id=%tile.playerDoorCactus,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Pyrotheum
+boxblock:id=%FluidPyrotheum,ymax=0.875,data=1
+boxblock:id=%FluidPyrotheum,ymax=0.75,data=2
+boxblock:id=%FluidPyrotheum,ymax=0.625,data=3
+boxblock:id=%FluidPyrotheum,ymax=0.5,data=4
+boxblock:id=%FluidPyrotheum,ymax=0.375,data=5
+boxblock:id=%FluidPyrotheum,ymax=0.25,data=6
+boxblock:id=%FluidPyrotheum,ymax=0.125,data=7
+boxblock:id=%FluidPyrotheum,ymax=0.875,data=9
+boxblock:id=%FluidPyrotheum,ymax=0.75,data=10
+boxblock:id=%FluidPyrotheum,ymax=0.625,data=11
+boxblock:id=%FluidPyrotheum,ymax=0.5,data=12
+boxblock:id=%FluidPyrotheum,ymax=0.375,data=13
+boxblock:id=%FluidPyrotheum,ymax=0.25,data=14
+boxblock:id=%FluidPyrotheum,ymax=0.125,data=15
+
+# %FluidCryotheum:* (FluidCryotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Cryotheum
+boxblock:id=%FluidCryotheum,ymax=0.875,data=1
+boxblock:id=%FluidCryotheum,ymax=0.75,data=2
+boxblock:id=%FluidCryotheum,ymax=0.625,data=3
+boxblock:id=%FluidCryotheum,ymax=0.5,data=4
+boxblock:id=%FluidCryotheum,ymax=0.375,data=5
+boxblock:id=%FluidCryotheum,ymax=0.25,data=6
+boxblock:id=%FluidCryotheum,ymax=0.125,data=7
+boxblock:id=%FluidCryotheum,ymax=0.875,data=9
+boxblock:id=%FluidCryotheum,ymax=0.75,data=10
+boxblock:id=%FluidCryotheum,ymax=0.625,data=11
+boxblock:id=%FluidCryotheum,ymax=0.5,data=12
+boxblock:id=%FluidCryotheum,ymax=0.375,data=13
+boxblock:id=%FluidCryotheum,ymax=0.25,data=14
+boxblock:id=%FluidCryotheum,ymax=0.125,data=15
+
+# %FluidEnder:* (FluidEnder), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Ender
+boxblock:id=%FluidEnder,ymax=0.875,data=1
+boxblock:id=%FluidEnder,ymax=0.75,data=2
+boxblock:id=%FluidEnder,ymax=0.625,data=3
+boxblock:id=%FluidEnder,ymax=0.5,data=4
+boxblock:id=%FluidEnder,ymax=0.375,data=5
+boxblock:id=%FluidEnder,ymax=0.25,data=6
+boxblock:id=%FluidEnder,ymax=0.125,data=7
+boxblock:id=%FluidEnder,ymax=0.875,data=9
+boxblock:id=%FluidEnder,ymax=0.75,data=10
+boxblock:id=%FluidEnder,ymax=0.625,data=11
+boxblock:id=%FluidEnder,ymax=0.5,data=12
+boxblock:id=%FluidEnder,ymax=0.375,data=13
+boxblock:id=%FluidEnder,ymax=0.25,data=14
+boxblock:id=%FluidEnder,ymax=0.125,data=15
+
+# %blockRainforestOakSapling:* (blockRainforestOakSapling), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.rainforest.SaplingRainforestTree
+patchblock:id=%blockRainforestOakSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %blockPineSapling:* (blockPineSapling), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.pine.SaplingPineTree
+patchblock:id=%blockPineSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %fluidSludge:* (fluidSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseFluid
+boxblock:id=%fluidSludge,ymax=0.875,data=1
+boxblock:id=%fluidSludge,ymax=0.75,data=2
+boxblock:id=%fluidSludge,ymax=0.625,data=3
+boxblock:id=%fluidSludge,ymax=0.5,data=4
+boxblock:id=%fluidSludge,ymax=0.375,data=5
+boxblock:id=%fluidSludge,ymax=0.25,data=6
+boxblock:id=%fluidSludge,ymax=0.125,data=7
+boxblock:id=%fluidSludge,ymax=0.875,data=9
+boxblock:id=%fluidSludge,ymax=0.75,data=10
+boxblock:id=%fluidSludge,ymax=0.625,data=11
+boxblock:id=%fluidSludge,ymax=0.5,data=12
+boxblock:id=%fluidSludge,ymax=0.375,data=13
+boxblock:id=%fluidSludge,ymax=0.25,data=14
+boxblock:id=%fluidSludge,ymax=0.125,data=15
+
+# %dimensionDarkWorld_portal:* (dimensionDarkWorld_portal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.everglades.block.BlockEvergladesPortal
+boxblock:id=%dimensionDarkWorld_portal,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %oreRareEarthI:* (oreRareEarthI), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreRareEarthII:* (oreRareEarthII), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+
+# %oreRareEarthIII:* (oreRareEarthIII), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre

@@ -1,0 +1,85 @@
+# extracells 2.5.32
+version:1.7
+modname:extracells
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/extracells/textures/blocks/
+texture:id=extracells/CTankBottom,filename=assets/extracells/textures/blocks/CTankBottom.png
+texture:id=extracells/CTankSide,filename=assets/extracells/textures/blocks/CTankSide.png
+texture:id=extracells/CTankSideBottom,filename=assets/extracells/textures/blocks/CTankSideBottom.png
+texture:id=extracells/CTankSideMiddle,filename=assets/extracells/textures/blocks/CTankSideMiddle.png
+texture:id=extracells/CTankSideTop,filename=assets/extracells/textures/blocks/CTankSideTop.png
+texture:id=extracells/CTankTop,filename=assets/extracells/textures/blocks/CTankTop.png
+texture:id=extracells/VibrationChamberFluid,filename=assets/extracells/textures/blocks/VibrationChamberFluid.png
+texture:id=extracells/VibrationChamberFluidFront,filename=assets/extracells/textures/blocks/VibrationChamberFluidFront.png
+texture:id=extracells/crafting.storage.1024k,filename=assets/extracells/textures/blocks/crafting.storage.1024k.png
+texture:id=extracells/crafting.storage.1024k.fit,filename=assets/extracells/textures/blocks/crafting.storage.1024k.fit.png
+texture:id=extracells/crafting.storage.16384k,filename=assets/extracells/textures/blocks/crafting.storage.16384k.png
+texture:id=extracells/crafting.storage.16384k.fit,filename=assets/extracells/textures/blocks/crafting.storage.16384k.fit.png
+texture:id=extracells/crafting.storage.256k,filename=assets/extracells/textures/blocks/crafting.storage.256k.png
+texture:id=extracells/crafting.storage.256k.fit,filename=assets/extracells/textures/blocks/crafting.storage.256k.fit.png
+texture:id=extracells/crafting.storage.4096k,filename=assets/extracells/textures/blocks/crafting.storage.4096k.png
+texture:id=extracells/crafting.storage.4096k.fit,filename=assets/extracells/textures/blocks/crafting.storage.4096k.fit.png
+texture:id=extracells/fluid.crafter,filename=assets/extracells/textures/blocks/fluid.crafter.png
+texture:id=extracells/fluid.filler,filename=assets/extracells/textures/blocks/fluid.filler.png
+texture:id=extracells/fluid.interface,filename=assets/extracells/textures/blocks/fluid.interface.png
+texture:id=extracells/hardmedrive.face,filename=assets/extracells/textures/blocks/hardmedrive.face.png
+texture:id=extracells/hardmedrive.side,filename=assets/extracells/textures/blocks/hardmedrive.side.png
+texture:id=extracells/machine.bottom,filename=assets/extracells/textures/blocks/machine.bottom.png
+texture:id=extracells/machine.top,filename=assets/extracells/textures/blocks/machine.top.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3053_extracells.block.walrus,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3053_extracells.block.walrus.png
+
+
+
+# %certustank:* (certustank), render=extracells.render.RenderHandler(CUSTOM), opaque=false,cls=extracells.block.BlockCertusTank
+block:id=%certustank,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:extracells/CTankBottom,face1=0:extracells/CTankTop,face2-5=0:extracells/CTankSide
+block:id=%certustank,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:extracells/CTankSideTop
+block:id=%certustank,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:extracells/CTankSideBottom
+block:id=%certustank,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:extracells/CTankSideMiddle
+block:id=%certustank,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:extracells/CTankBottom,face1=0:extracells/CTankTop,face2-5=0:extracells/CTankSide
+
+# %walrus:* (walrus), render=(CUSTOM), opaque=false,cls=extracells.block.BlockWalrus
+block:id=%walrus,data=0,data=1,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3053_extracells.block.walrus
+block:id=%walrus,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3053_extracells.block.walrus
+block:id=%walrus,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3053_extracells.block.walrus
+
+# %fluidcrafter:* (fluidcrafter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=extracells.block.BlockFluidCrafter
+block:id=%fluidcrafter,data=*,stdrot=true,face0-5=0:extracells/fluid.crafter
+
+# %ecbaseblock:* (ecbaseblock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=extracells.block.ECBaseBlock
+block:id=%ecbaseblock,data=0,stdrot=true,face0-5=0:extracells/fluid.interface
+block:id=%ecbaseblock,data=1,stdrot=true,face0-5=0:extracells/fluid.filler
+
+# %hardmedrive:* (hardmedrive), render=extracells.render.block.RendererHardMEDrive$(CUSTOM), opaque=true,cls=extracells.block.BlockHardMEDrive$
+block:id=%hardmedrive,data=0,stdrot=true,face0=0:extracells/hardmedrive.face,face1=0:extracells/machine.top,face2-5=0:extracells/hardmedrive.side
+block:id=%hardmedrive,data=1,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/hardmedrive.face,face2-5=0:extracells/hardmedrive.side
+block:id=%hardmedrive,data=2,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/machine.top,face2=0:extracells/hardmedrive.face,face3-5=0:extracells/hardmedrive.side
+block:id=%hardmedrive,data=3,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/machine.top,face2=0:extracells/hardmedrive.side,face3=0:extracells/hardmedrive.face,face4-5=0:extracells/hardmedrive.side
+block:id=%hardmedrive,data=4,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/machine.top,face2-3=0:extracells/hardmedrive.side,face4=0:extracells/hardmedrive.face,face5=0:extracells/hardmedrive.side
+block:id=%hardmedrive,data=5,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/machine.top,face2-4=0:extracells/hardmedrive.side,face5=0:extracells/hardmedrive.face
+block:id=%hardmedrive,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/machine.top,face2-5=0:extracells/hardmedrive.side
+
+# %vibrantchamberfluid:* (vibrantchamberfluid), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=extracells.block.BlockVibrationChamberFluid
+block:id=%vibrantchamberfluid,data=*,stdrot=true,face0-3=0:extracells/VibrationChamberFluid,face4=0:extracells/VibrationChamberFluidFront,face5=0:extracells/VibrationChamberFluid
+
+# %craftingstorage:* (craftingstorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=extracells.block.BlockCraftingStorage
+block:id=%craftingstorage,data=0,stdrot=true,face0-5=0:extracells/crafting.storage.256k
+block:id=%craftingstorage,data=1,stdrot=true,face0-5=0:extracells/crafting.storage.1024k
+block:id=%craftingstorage,data=2,stdrot=true,face0-5=0:extracells/crafting.storage.4096k
+block:id=%craftingstorage,data=3,stdrot=true,face0-5=0:extracells/crafting.storage.16384k
+block:id=%craftingstorage,data=4,stdrot=true,face0-5=0:extracells/crafting.storage.256k
+block:id=%craftingstorage,data=5,stdrot=true,face0-5=0:extracells/crafting.storage.1024k
+block:id=%craftingstorage,data=6,stdrot=true,face0-5=0:extracells/crafting.storage.4096k
+block:id=%craftingstorage,data=7,stdrot=true,face0-5=0:extracells/crafting.storage.16384k
+block:id=%craftingstorage,data=8,stdrot=true,face0-5=0:extracells/crafting.storage.256k.fit
+block:id=%craftingstorage,data=9,stdrot=true,face0-5=0:extracells/crafting.storage.1024k.fit
+block:id=%craftingstorage,data=10,stdrot=true,face0-5=0:extracells/crafting.storage.4096k.fit
+block:id=%craftingstorage,data=11,stdrot=true,face0-5=0:extracells/crafting.storage.16384k.fit
+block:id=%craftingstorage,data=12,stdrot=true,face0-5=0:extracells/crafting.storage.256k.fit
+block:id=%craftingstorage,data=13,stdrot=true,face0-5=0:extracells/crafting.storage.1024k.fit
+block:id=%craftingstorage,data=14,stdrot=true,face0-5=0:extracells/crafting.storage.4096k.fit
+block:id=%craftingstorage,data=15,stdrot=true,face0-5=0:extracells/crafting.storage.16384k.fit

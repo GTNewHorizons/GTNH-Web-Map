@@ -1,0 +1,287 @@
+# OpenBlocks 1.6.10-GTNH
+version:1.7
+modname:OpenBlocks
+
+
+cfgfile:config/OpenBlocks.cfg
+
+
+texturepath:assets/openblocks/textures/blocks/
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/stone_slab_side,filename=assets/minecraft/textures/blocks/stone_slab_side.png
+texture:id=minecraft/stone_slab_top,filename=assets/minecraft/textures/blocks/stone_slab_top.png
+texture:id=openblocks/autoanvil,filename=assets/openblocks/textures/blocks/autoanvil.png
+texture:id=openblocks/autoenchantmenttable,filename=assets/openblocks/textures/blocks/autoenchantmenttable.png
+texture:id=openblocks/autoenchantmenttable_bottom,filename=assets/openblocks/textures/blocks/autoenchantmenttable_bottom.png
+texture:id=openblocks/autoenchantmenttable_top,filename=assets/openblocks/textures/blocks/autoenchantmenttable_top.png
+texture:id=openblocks/beartrap,filename=assets/openblocks/textures/blocks/beartrap.png
+texture:id=openblocks/bigbutton,filename=assets/openblocks/textures/blocks/bigbutton.png
+texture:id=openblocks/blockBreaker,filename=assets/openblocks/textures/blocks/blockBreaker.png
+texture:id=openblocks/blockBreaker_bottom,filename=assets/openblocks/textures/blocks/blockBreaker_bottom.png
+texture:id=openblocks/blockBreaker_side,filename=assets/openblocks/textures/blocks/blockBreaker_side.png
+texture:id=openblocks/blockPlacer,filename=assets/openblocks/textures/blocks/blockPlacer.png
+texture:id=openblocks/blockPlacer_bottom,filename=assets/openblocks/textures/blocks/blockPlacer_bottom.png
+texture:id=openblocks/blockPlacer_side,filename=assets/openblocks/textures/blocks/blockPlacer_side.png
+texture:id=openblocks/cannon,filename=assets/openblocks/textures/blocks/cannon.png
+texture:id=openblocks/canvas,filename=assets/openblocks/textures/blocks/canvas.png
+texture:id=openblocks/canvasglass,filename=assets/openblocks/textures/blocks/canvasglass.png
+texture:id=openblocks/donationstation,filename=assets/openblocks/textures/blocks/donationstation.png
+texture:id=openblocks/drawingtable,filename=assets/openblocks/textures/blocks/drawingtable.png
+texture:id=openblocks/drawingtable_front,filename=assets/openblocks/textures/blocks/drawingtable_front.png
+texture:id=openblocks/drawingtable_top,filename=assets/openblocks/textures/blocks/drawingtable_top.png
+texture:id=openblocks/egg,filename=assets/openblocks/textures/blocks/egg.png
+texture:id=openblocks/elevator,filename=assets/openblocks/textures/blocks/elevator.png
+texture:id=openblocks/elevator_rot,filename=assets/openblocks/textures/blocks/elevator_rot.png
+texture:id=openblocks/fan,filename=assets/openblocks/textures/blocks/fan.png
+texture:id=openblocks/grave,filename=assets/openblocks/textures/blocks/grave.png
+texture:id=openblocks/guide_side_new,filename=assets/openblocks/textures/blocks/guide_side_new.png
+texture:id=openblocks/guide_top_new,filename=assets/openblocks/textures/blocks/guide_top_new.png
+texture:id=openblocks/itemDropper,filename=assets/openblocks/textures/blocks/itemDropper.png
+texture:id=openblocks/itemDropper_down,filename=assets/openblocks/textures/blocks/itemDropper_down.png
+texture:id=openblocks/ladder,filename=assets/openblocks/textures/blocks/ladder.png
+texture:id=openblocks/paintcan_bottom,filename=assets/openblocks/textures/blocks/paintcan_bottom.png
+texture:id=openblocks/paintcan_front,filename=assets/openblocks/textures/blocks/paintcan_front.png
+texture:id=openblocks/paintcan_left,filename=assets/openblocks/textures/blocks/paintcan_left.png
+texture:id=openblocks/paintcan_right,filename=assets/openblocks/textures/blocks/paintcan_right.png
+texture:id=openblocks/paintcan_side,filename=assets/openblocks/textures/blocks/paintcan_side.png
+texture:id=openblocks/paintcan_top,filename=assets/openblocks/textures/blocks/paintcan_top.png
+texture:id=openblocks/paintmixer,filename=assets/openblocks/textures/blocks/paintmixer.png
+texture:id=openblocks/path,filename=assets/openblocks/textures/blocks/path.png
+texture:id=openblocks/pencilBlock,filename=assets/openblocks/textures/blocks/pencilBlock.png
+texture:id=openblocks/ropeladder,filename=assets/openblocks/textures/blocks/ropeladder.png
+texture:id=openblocks/scaffolding,filename=assets/openblocks/textures/blocks/scaffolding.png
+texture:id=openblocks/sky_inactive,filename=assets/openblocks/textures/blocks/sky_inactive.png
+texture:id=openblocks/sponge,filename=assets/openblocks/textures/blocks/sponge.png
+texture:id=openblocks/sprinkler,filename=assets/openblocks/textures/blocks/sprinkler.png
+texture:id=openblocks/target,filename=assets/openblocks/textures/blocks/target.png
+texture:id=openblocks/trophy,filename=assets/openblocks/textures/blocks/trophy.png
+texture:id=openblocks/vacuumhopper,filename=assets/openblocks/textures/blocks/vacuumhopper.png
+texture:id=openblocks/village_highlighter,filename=assets/openblocks/textures/blocks/village_highlighter.png
+texture:id=openblocks/xpbottler_back,filename=assets/openblocks/textures/blocks/xpbottler_back.png
+texture:id=openblocks/xpbottler_bottom,filename=assets/openblocks/textures/blocks/xpbottler_bottom.png
+texture:id=openblocks/xpbottler_front,filename=assets/openblocks/textures/blocks/xpbottler_front.png
+texture:id=openblocks/xpbottler_sides,filename=assets/openblocks/textures/blocks/xpbottler_sides.png
+texture:id=openblocks/xpbottler_top,filename=assets/openblocks/textures/blocks/xpbottler_top.png
+texture:id=openblocks/xpdrain,filename=assets/openblocks/textures/blocks/xpdrain.png
+texture:id=openblocks/xpshower,filename=assets/openblocks/textures/blocks/xpshower.png
+
+
+
+# %ladder:* (ladder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=openblocks.common.block.BlockLadder
+block:id=%ladder,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/ladder
+
+# %guide:* (guide), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockGuide
+block:id=%guide,data=0,data=1,data=2,data=3,stdrot=true,face0-1=12000:openblocks/guide_top_new,face2-5=12000:openblocks/guide_side_new
+block:id=%guide,data=4,data=5,data=6,data=7,stdrot=true,face0-3=12000:openblocks/guide_side_new,face4-5=12000:openblocks/guide_top_new
+block:id=%guide,data=8,data=9,data=10,data=11,stdrot=true,face0-1=12000:openblocks/guide_side_new,face2-3=12000:openblocks/guide_top_new,face4-5=12000:openblocks/guide_side_new
+block:id=%guide,data=12,data=13,data=14,data=15,stdrot=true,face0-1=12000:openblocks/guide_top_new,face2-5=12000:openblocks/guide_side_new
+
+# %builder_guide:* (builder_guide), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockBuilderGuide
+block:id=%builder_guide,data=0,data=1,data=2,data=3,stdrot=true,face0-1=12000:openblocks/guide_top_new,face2-5=12000:openblocks/guide_side_new
+block:id=%builder_guide,data=4,data=5,data=6,data=7,stdrot=true,face0-3=12000:openblocks/guide_side_new,face4-5=12000:openblocks/guide_top_new
+block:id=%builder_guide,data=8,data=9,data=10,data=11,stdrot=true,face0-1=12000:openblocks/guide_side_new,face2-3=12000:openblocks/guide_top_new,face4-5=12000:openblocks/guide_side_new
+block:id=%builder_guide,data=12,data=13,data=14,data=15,stdrot=true,face0-1=12000:openblocks/guide_top_new,face2-5=12000:openblocks/guide_side_new
+
+# %elevator:* (elevator), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockElevator
+block:id=%elevator,data=0,stdrot=true,colorMult=F0F0F0,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=1,stdrot=true,colorMult=EB8844,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=2,stdrot=true,colorMult=C354CD,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=3,stdrot=true,colorMult=6689D3,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=4,stdrot=true,colorMult=DECF2A,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=5,stdrot=true,colorMult=41CD34,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=6,stdrot=true,colorMult=D88198,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=7,stdrot=true,colorMult=434343,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=8,stdrot=true,colorMult=ABABAB,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=9,stdrot=true,colorMult=287697,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=10,stdrot=true,colorMult=7B2FBE,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=11,stdrot=true,colorMult=253192,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=12,stdrot=true,colorMult=51301A,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=13,stdrot=true,colorMult=3B511A,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=14,stdrot=true,colorMult=B3312C,face0-5=17000:openblocks/elevator
+block:id=%elevator,data=15,stdrot=true,colorMult=1E1B1B,face0-5=17000:openblocks/elevator
+
+# %elevator_rotating:* (elevator_rotating), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockElevatorRotating
+block:id=%elevator_rotating,data=0,stdrot=true,colorMult=F0F0F0,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=1,stdrot=true,colorMult=EB8844,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=2,stdrot=true,colorMult=C354CD,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=3,stdrot=true,colorMult=6689D3,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=4,stdrot=true,colorMult=DECF2A,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=5,stdrot=true,colorMult=41CD34,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=6,stdrot=true,colorMult=D88198,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=7,stdrot=true,colorMult=434343,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=8,stdrot=true,colorMult=ABABAB,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=9,stdrot=true,colorMult=287697,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=10,stdrot=true,colorMult=7B2FBE,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=11,stdrot=true,colorMult=253192,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=12,stdrot=true,colorMult=51301A,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=13,stdrot=true,colorMult=3B511A,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=14,stdrot=true,colorMult=B3312C,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+block:id=%elevator_rotating,data=15,stdrot=true,colorMult=1E1B1B,face0=17000:openblocks/elevator,face1=17000:openblocks/elevator_rot,face2-5=17000:openblocks/elevator
+
+# %target:* (target), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTarget
+block:id=%target,data=*,stdrot=true,face0-5=0:openblocks/target
+
+# %grave:* (grave), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockGrave
+block:id=%grave,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/grave
+
+# %flag:* (flag), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockFlag
+block:id=%flag,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %trophy:* (trophy), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTrophy
+block:id=%trophy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/trophy
+
+# %beartrap:* (beartrap), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockBearTrap
+block:id=%beartrap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/beartrap
+
+# %sprinkler:* (sprinkler), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockSprinkler
+block:id=%sprinkler,data=*,stdrot=true,face0-5=0:openblocks/sprinkler
+
+# %cannon:* (cannon), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockCannon
+block:id=%cannon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/cannon
+
+# %vacuumhopper:* (vacuumhopper), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockVacuumHopper
+block:id=%vacuumhopper,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/vacuumhopper
+
+# %sponge:* (sponge), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockSponge
+block:id=%sponge,data=*,stdrot=true,face0-5=0:openblocks/sponge
+
+# %bigbutton:* (bigbutton), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockBigButton
+block:id=%bigbutton,data=*,stdrot=true,face0-5=0:openblocks/bigbutton
+
+# %imaginary:* (imaginary), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockImaginary
+block:id=%imaginary,data=*,stdrot=true,face0-5=0:openblocks/pencilBlock
+
+# %fan:* (fan), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockFan
+block:id=%fan,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/fan
+
+# %xpbottler:* (xpbottler), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockXPBottler
+block:id=%xpbottler,data=0,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_back,face3=0:openblocks/xpbottler_front,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=1,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_back,face5=0:openblocks/xpbottler_front
+block:id=%xpbottler,data=2,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_front,face3=0:openblocks/xpbottler_back,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=3,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_front,face5=0:openblocks/xpbottler_back
+block:id=%xpbottler,data=4,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_back,face3=0:openblocks/xpbottler_front,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=5,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_back,face5=0:openblocks/xpbottler_front
+block:id=%xpbottler,data=6,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_front,face3=0:openblocks/xpbottler_back,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=7,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_front,face5=0:openblocks/xpbottler_back
+block:id=%xpbottler,data=8,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_back,face3=0:openblocks/xpbottler_front,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=9,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_back,face5=0:openblocks/xpbottler_front
+block:id=%xpbottler,data=10,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_front,face3=0:openblocks/xpbottler_back,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=11,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_front,face5=0:openblocks/xpbottler_back
+block:id=%xpbottler,data=12,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_back,face3=0:openblocks/xpbottler_front,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=13,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_back,face5=0:openblocks/xpbottler_front
+block:id=%xpbottler,data=14,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_front,face3=0:openblocks/xpbottler_back,face4-5=0:openblocks/xpbottler_sides
+block:id=%xpbottler,data=15,stdrot=true,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_front,face5=0:openblocks/xpbottler_back
+
+# %village_highlighter:* (village_highlighter), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockVillageHighlighter
+block:id=%village_highlighter,data=*,stdrot=true,face0-5=0:openblocks/village_highlighter
+
+# %path:* (path), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockPath
+block:id=%path,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/path
+
+# %autoanvil:* (autoanvil), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockAutoAnvil
+block:id=%autoanvil,data=*,stdrot=true,face0-5=0:openblocks/autoanvil
+
+# %autoenchantmenttable:* (autoenchantmenttable), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockAutoEnchantmentTable
+block:id=%autoenchantmenttable,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/autoenchantmenttable_bottom,face1=0:openblocks/autoenchantmenttable_top,face2-5=0:openblocks/autoenchantmenttable
+
+# %xpdrain:* (xpdrain), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockXPDrain
+block:id=%xpdrain,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/xpdrain
+
+# %blockbreaker:* (blockbreaker), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockBlockBreaker
+block:id=%blockbreaker,data=0,stdrot=true,face0=0:openblocks/blockBreaker,face1=0:openblocks/blockBreaker_bottom,face2-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=1,stdrot=true,face0=0:openblocks/blockBreaker_bottom,face1=0:openblocks/blockBreaker,face2-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=2,stdrot=true,face0-1=0:openblocks/blockBreaker_side,face2=0:openblocks/blockBreaker,face3=0:openblocks/blockBreaker_bottom,face4-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=3,stdrot=true,face0-1=0:openblocks/blockBreaker_side,face2=0:openblocks/blockBreaker_bottom,face3=0:openblocks/blockBreaker,face4-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=4,stdrot=true,face0-3=0:openblocks/blockBreaker_side,face4=0:openblocks/blockBreaker,face5=0:openblocks/blockBreaker_bottom
+block:id=%blockbreaker,data=5,stdrot=true,face0-3=0:openblocks/blockBreaker_side,face4=0:openblocks/blockBreaker_bottom,face5=0:openblocks/blockBreaker
+block:id=%blockbreaker,data=6,data=7,data=8,stdrot=true,face0=0:openblocks/blockBreaker,face1=0:openblocks/blockBreaker_bottom,face2-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=9,stdrot=true,face0=0:openblocks/blockBreaker_bottom,face1=0:openblocks/blockBreaker,face2-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=10,stdrot=true,face0-1=0:openblocks/blockBreaker_side,face2=0:openblocks/blockBreaker,face3=0:openblocks/blockBreaker_bottom,face4-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=11,stdrot=true,face0-1=0:openblocks/blockBreaker_side,face2=0:openblocks/blockBreaker_bottom,face3=0:openblocks/blockBreaker,face4-5=0:openblocks/blockBreaker_side
+block:id=%blockbreaker,data=12,stdrot=true,face0-3=0:openblocks/blockBreaker_side,face4=0:openblocks/blockBreaker,face5=0:openblocks/blockBreaker_bottom
+block:id=%blockbreaker,data=13,stdrot=true,face0-3=0:openblocks/blockBreaker_side,face4=0:openblocks/blockBreaker_bottom,face5=0:openblocks/blockBreaker
+block:id=%blockbreaker,data=14,data=15,stdrot=true,face0=0:openblocks/blockBreaker,face1=0:openblocks/blockBreaker_bottom,face2-5=0:openblocks/blockBreaker_side
+
+# %blockPlacer:* (blockPlacer), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockBlockPlacer
+block:id=%blockPlacer,data=0,stdrot=true,face0=0:openblocks/blockPlacer,face1=0:openblocks/blockPlacer_bottom,face2-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=1,stdrot=true,face0=0:openblocks/blockPlacer_bottom,face1=0:openblocks/blockPlacer,face2-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=2,stdrot=true,face0-1=0:openblocks/blockPlacer_side,face2=0:openblocks/blockPlacer,face3=0:openblocks/blockPlacer_bottom,face4-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=3,stdrot=true,face0-1=0:openblocks/blockPlacer_side,face2=0:openblocks/blockPlacer_bottom,face3=0:openblocks/blockPlacer,face4-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=4,stdrot=true,face0-3=0:openblocks/blockPlacer_side,face4=0:openblocks/blockPlacer,face5=0:openblocks/blockPlacer_bottom
+block:id=%blockPlacer,data=5,stdrot=true,face0-3=0:openblocks/blockPlacer_side,face4=0:openblocks/blockPlacer_bottom,face5=0:openblocks/blockPlacer
+block:id=%blockPlacer,data=6,data=7,data=8,stdrot=true,face0=0:openblocks/blockPlacer,face1=0:openblocks/blockPlacer_bottom,face2-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=9,stdrot=true,face0=0:openblocks/blockPlacer_bottom,face1=0:openblocks/blockPlacer,face2-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=10,stdrot=true,face0-1=0:openblocks/blockPlacer_side,face2=0:openblocks/blockPlacer,face3=0:openblocks/blockPlacer_bottom,face4-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=11,stdrot=true,face0-1=0:openblocks/blockPlacer_side,face2=0:openblocks/blockPlacer_bottom,face3=0:openblocks/blockPlacer,face4-5=0:openblocks/blockPlacer_side
+block:id=%blockPlacer,data=12,stdrot=true,face0-3=0:openblocks/blockPlacer_side,face4=0:openblocks/blockPlacer,face5=0:openblocks/blockPlacer_bottom
+block:id=%blockPlacer,data=13,stdrot=true,face0-3=0:openblocks/blockPlacer_side,face4=0:openblocks/blockPlacer_bottom,face5=0:openblocks/blockPlacer
+block:id=%blockPlacer,data=14,data=15,stdrot=true,face0=0:openblocks/blockPlacer,face1=0:openblocks/blockPlacer_bottom,face2-5=0:openblocks/blockPlacer_side
+
+# %itemDropper:* (itemDropper), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockItemDropper
+block:id=%itemDropper,data=*,stdrot=true,face0=0:openblocks/itemDropper_down,face1-5=0:openblocks/itemDropper
+
+# %ropeladder:* (ropeladder), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockRopeLadder
+block:id=%ropeladder,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/ropeladder
+
+# %donationStation:* (donationStation), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockDonationStation
+block:id=%donationStation,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/donationstation
+
+# %paintmixer:* (paintmixer), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockPaintMixer
+block:id=%paintmixer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/paintmixer
+
+# %canvas:* (canvas), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockCanvas
+block:id=%canvas,data=*,stdrot=true,face0-5=0:openblocks/canvas
+
+# %paintcan:* (paintcan), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockPaintCan
+block:id=%paintcan,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_side,face3=0:openblocks/paintcan_front,face4=0:openblocks/paintcan_left,face5=0:openblocks/paintcan_right
+block:id=%paintcan,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_right,face3=0:openblocks/paintcan_left,face4=0:openblocks/paintcan_side,face5=0:openblocks/paintcan_front
+block:id=%paintcan,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_front,face3=0:openblocks/paintcan_side,face4=0:openblocks/paintcan_right,face5=0:openblocks/paintcan_left
+block:id=%paintcan,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_left,face3=0:openblocks/paintcan_right,face4=0:openblocks/paintcan_front,face5=0:openblocks/paintcan_side
+block:id=%paintcan,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_side,face3=0:openblocks/paintcan_front,face4=0:openblocks/paintcan_left,face5=0:openblocks/paintcan_right
+block:id=%paintcan,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_right,face3=0:openblocks/paintcan_left,face4=0:openblocks/paintcan_side,face5=0:openblocks/paintcan_front
+block:id=%paintcan,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_front,face3=0:openblocks/paintcan_side,face4=0:openblocks/paintcan_right,face5=0:openblocks/paintcan_left
+block:id=%paintcan,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_left,face3=0:openblocks/paintcan_right,face4=0:openblocks/paintcan_front,face5=0:openblocks/paintcan_side
+block:id=%paintcan,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_side,face3=0:openblocks/paintcan_front,face4=0:openblocks/paintcan_left,face5=0:openblocks/paintcan_right
+block:id=%paintcan,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_right,face3=0:openblocks/paintcan_left,face4=0:openblocks/paintcan_side,face5=0:openblocks/paintcan_front
+block:id=%paintcan,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_front,face3=0:openblocks/paintcan_side,face4=0:openblocks/paintcan_right,face5=0:openblocks/paintcan_left
+block:id=%paintcan,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_left,face3=0:openblocks/paintcan_right,face4=0:openblocks/paintcan_front,face5=0:openblocks/paintcan_side
+block:id=%paintcan,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_side,face3=0:openblocks/paintcan_front,face4=0:openblocks/paintcan_left,face5=0:openblocks/paintcan_right
+block:id=%paintcan,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_right,face3=0:openblocks/paintcan_left,face4=0:openblocks/paintcan_side,face5=0:openblocks/paintcan_front
+block:id=%paintcan,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_front,face3=0:openblocks/paintcan_side,face4=0:openblocks/paintcan_right,face5=0:openblocks/paintcan_left
+block:id=%paintcan,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_left,face3=0:openblocks/paintcan_right,face4=0:openblocks/paintcan_front,face5=0:openblocks/paintcan_side
+
+# %canvasglass:* (canvasglass), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockCanvasGlass
+block:id=%canvasglass,data=*,stdrot=true,face0-5=0:openblocks/canvasglass
+
+# %projector:* (projector), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockProjector
+block:id=%projector,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/stone_slab_top,face2-5=0:minecraft/stone_slab_side
+
+# %drawingtable:* (drawingtable), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockDrawingTable
+block:id=%drawingtable,data=0,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable,face3=0:openblocks/drawingtable_front,face4-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=1,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-4=0:openblocks/drawingtable,face5=0:openblocks/drawingtable_front
+block:id=%drawingtable,data=2,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable_front,face3-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=3,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-3=0:openblocks/drawingtable,face4=0:openblocks/drawingtable_front,face5=0:openblocks/drawingtable
+block:id=%drawingtable,data=4,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable,face3=0:openblocks/drawingtable_front,face4-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=5,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-4=0:openblocks/drawingtable,face5=0:openblocks/drawingtable_front
+block:id=%drawingtable,data=6,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable_front,face3-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=7,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-3=0:openblocks/drawingtable,face4=0:openblocks/drawingtable_front,face5=0:openblocks/drawingtable
+block:id=%drawingtable,data=8,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable,face3=0:openblocks/drawingtable_front,face4-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=9,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-4=0:openblocks/drawingtable,face5=0:openblocks/drawingtable_front
+block:id=%drawingtable,data=10,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable_front,face3-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=11,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-3=0:openblocks/drawingtable,face4=0:openblocks/drawingtable_front,face5=0:openblocks/drawingtable
+block:id=%drawingtable,data=12,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable,face3=0:openblocks/drawingtable_front,face4-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=13,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-4=0:openblocks/drawingtable,face5=0:openblocks/drawingtable_front
+block:id=%drawingtable,data=14,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable_front,face3-5=0:openblocks/drawingtable
+block:id=%drawingtable,data=15,stdrot=true,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-3=0:openblocks/drawingtable,face4=0:openblocks/drawingtable_front,face5=0:openblocks/drawingtable
+
+# %sky:* (sky), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openblocks.common.block.BlockSky
+block:id=%sky,data=*,stdrot=true,face0-5=0:openblocks/sky_inactive
+
+# %xpshower:* (xpshower), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockXPShower
+block:id=%xpshower,data=*,stdrot=true,face0-5=0:openblocks/xpshower
+
+# %goldenegg:* (goldenegg), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockGoldenEgg
+block:id=%goldenegg,data=*,stdrot=true,face0-5=0:openblocks/egg
+
+# %scaffolding:* (scaffolding), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockScaffolding
+block:id=%scaffolding,data=*,stdrot=true,face0-5=0:openblocks/scaffolding

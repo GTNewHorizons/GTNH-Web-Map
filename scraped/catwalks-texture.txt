@@ -1,0 +1,193 @@
+# catwalks 2.0.4
+version:1.7
+modname:catwalks
+
+
+cfgfile:config/catwalks.cfg
+
+
+texturepath:assets/catwalks/textures/blocks/
+texture:id=catwalks/catwalk/bottom/plain/no_lights,filename=assets/catwalks/textures/blocks/catwalk/bottom/plain/no_lights.png
+texture:id=catwalks/catwalk/bottom/plain/w_lights,filename=assets/catwalks/textures/blocks/catwalk/bottom/plain/w_lights.png
+texture:id=catwalks/catwalk/bottom/tape/no_lights,filename=assets/catwalks/textures/blocks/catwalk/bottom/tape/no_lights.png
+texture:id=catwalks/catwalk/bottom/tape/w_lights,filename=assets/catwalks/textures/blocks/catwalk/bottom/tape/w_lights.png
+texture:id=catwalks/catwalk/side/plain/no_lights,filename=assets/catwalks/textures/blocks/catwalk/side/plain/no_lights.png
+texture:id=catwalks/catwalk/side/plain/w_lights,filename=assets/catwalks/textures/blocks/catwalk/side/plain/w_lights.png
+texture:id=catwalks/catwalk/side/tape/no_lights,filename=assets/catwalks/textures/blocks/catwalk/side/tape/no_lights.png
+texture:id=catwalks/catwalk/side/tape/w_lights,filename=assets/catwalks/textures/blocks/catwalk/side/tape/w_lights.png
+texture:id=catwalks/ladder/bottom/plain/no_lights,filename=assets/catwalks/textures/blocks/ladder/bottom/plain/no_lights.png
+texture:id=catwalks/ladder/bottom/plain/w_lights,filename=assets/catwalks/textures/blocks/ladder/bottom/plain/w_lights.png
+texture:id=catwalks/ladder/bottom/tape/no_lights,filename=assets/catwalks/textures/blocks/ladder/bottom/tape/no_lights.png
+texture:id=catwalks/ladder/bottom/tape/w_lights,filename=assets/catwalks/textures/blocks/ladder/bottom/tape/w_lights.png
+texture:id=catwalks/ladder/front/plain/no_lights,filename=assets/catwalks/textures/blocks/ladder/front/plain/no_lights.png
+texture:id=catwalks/ladder/front/plain/w_lights,filename=assets/catwalks/textures/blocks/ladder/front/plain/w_lights.png
+texture:id=catwalks/ladder/front/tape/no_lights,filename=assets/catwalks/textures/blocks/ladder/front/tape/no_lights.png
+texture:id=catwalks/ladder/front/tape/w_lights,filename=assets/catwalks/textures/blocks/ladder/front/tape/w_lights.png
+texture:id=catwalks/ladder/ladder/plain/no_lights,filename=assets/catwalks/textures/blocks/ladder/ladder/plain/no_lights.png
+texture:id=catwalks/ladder/ladder/plain/w_lights,filename=assets/catwalks/textures/blocks/ladder/ladder/plain/w_lights.png
+texture:id=catwalks/ladder/ladder/tape/no_lights,filename=assets/catwalks/textures/blocks/ladder/ladder/tape/no_lights.png
+texture:id=catwalks/ladder/ladder/tape/w_lights,filename=assets/catwalks/textures/blocks/ladder/ladder/tape/w_lights.png
+texture:id=catwalks/ladder/side/plain/no_lights,filename=assets/catwalks/textures/blocks/ladder/side/plain/no_lights.png
+texture:id=catwalks/ladder/side/plain/w_lights,filename=assets/catwalks/textures/blocks/ladder/side/plain/w_lights.png
+texture:id=catwalks/ladder/side/tape/no_lights,filename=assets/catwalks/textures/blocks/ladder/side/tape/no_lights.png
+texture:id=catwalks/ladder/side/tape/w_lights,filename=assets/catwalks/textures/blocks/ladder/side/tape/w_lights.png
+texture:id=catwalks/scaffold_builders_side,filename=assets/catwalks/textures/blocks/scaffold_builders_side.png
+texture:id=catwalks/scaffold_builders_top,filename=assets/catwalks/textures/blocks/scaffold_builders_top.png
+texture:id=catwalks/scaffold_side,filename=assets/catwalks/textures/blocks/scaffold_side.png
+texture:id=catwalks/scaffold_top,filename=assets/catwalks/textures/blocks/scaffold_top.png
+texture:id=catwalks/sturdy_rail/activator_off,filename=assets/catwalks/textures/blocks/sturdy_rail/activator_off.png
+texture:id=catwalks/sturdy_rail/activator_on,filename=assets/catwalks/textures/blocks/sturdy_rail/activator_on.png
+texture:id=catwalks/sturdy_rail/booster_off,filename=assets/catwalks/textures/blocks/sturdy_rail/booster_off.png
+texture:id=catwalks/sturdy_rail/booster_on,filename=assets/catwalks/textures/blocks/sturdy_rail/booster_on.png
+texture:id=catwalks/sturdy_rail/detector_off,filename=assets/catwalks/textures/blocks/sturdy_rail/detector_off.png
+texture:id=catwalks/sturdy_rail/detector_on,filename=assets/catwalks/textures/blocks/sturdy_rail/detector_on.png
+texture:id=catwalks/sturdy_rail/normal,filename=assets/catwalks/textures/blocks/sturdy_rail/normal.png
+texture:id=catwalks/sturdy_rail/turned,filename=assets/catwalks/textures/blocks/sturdy_rail/turned.png
+texture:id=catwalks/support,filename=assets/catwalks/textures/blocks/support.png
+texture:id=catwalks/transparent,filename=assets/catwalks/textures/blocks/transparent.png
+
+
+
+# %sturdy_rail:* (sturdy_rail), render=(MINECARTTRACK), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockSturdyRail
+block:id=%sturdy_rail,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/normal
+block:id=%sturdy_rail,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/turned
+
+# %sturdy_rail_powered:* (sturdy_rail_powered), render=(MINECARTTRACK), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockSturdyRailBooster
+block:id=%sturdy_rail_powered,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/booster_off
+block:id=%sturdy_rail_powered,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/booster_on
+
+# %sturdy_rail_detector:* (sturdy_rail_detector), render=(MINECARTTRACK), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockSturdyRailDetector
+block:id=%sturdy_rail_detector,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/detector_off
+block:id=%sturdy_rail_detector,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/detector_on
+
+# %sturdy_rail_activator:* (sturdy_rail_activator), render=(MINECARTTRACK), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockSturdyRailActivator
+block:id=%sturdy_rail_activator,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/activator_off
+block:id=%sturdy_rail_activator,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:catwalks/sturdy_rail/activator_on
+
+# %support_column:* (support_column), render=com.thecodewarrior.catwalks.render.SupportRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockSupportColumn
+block:id=%support_column,data=0,data=1,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:catwalks/support
+block:id=%support_column,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:catwalks/support
+
+# %scaffold:* (scaffold), render=com.thecodewarrior.catwalks.render.InAndOutRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockScaffold
+block:id=%scaffold,data=0,stdrot=true,face0-1=0:catwalks/scaffold_top,face2-5=0:catwalks/scaffold_side
+block:id=%scaffold,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:catwalks/scaffold_builders_top,face2-5=0:catwalks/scaffold_builders_side
+
+# %catwalk_lit_tape:* (catwalk_lit_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_lit_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/w_lights
+
+# %catwalk_lit:* (catwalk_lit), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_lit,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/w_lights
+
+# %catwalk_lit_nobottom_tape:* (catwalk_lit_nobottom_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_lit_nobottom_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/w_lights
+
+# %catwalk_lit_nobottom:* (catwalk_lit_nobottom), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_lit_nobottom,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/w_lights
+
+# %catwalk_unlit_tape:* (catwalk_unlit_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_unlit_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/no_lights
+
+# %catwalk_unlit:* (catwalk_unlit), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_unlit,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/no_lights
+
+# %catwalk_unlit_nobottom_tape:* (catwalk_unlit_nobottom_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_unlit_nobottom_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/no_lights
+
+# %catwalk_unlit_nobottom:* (catwalk_unlit_nobottom), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
+block:id=%catwalk_unlit_nobottom,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/no_lights
+
+# %cagedLadder_north_lit_nobottom_tape:* (cagedLadder_north_lit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_lit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/tape/w_lights,face3=0:catwalks/ladder/front/tape/w_lights,face4-5=0:catwalks/ladder/side/tape/w_lights
+
+# %cagedLadder_north_lit_nobottom:* (cagedLadder_north_lit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_lit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/plain/w_lights,face3=0:catwalks/ladder/front/plain/w_lights,face4-5=0:catwalks/ladder/side/plain/w_lights
+
+# %cagedLadder_north_lit_tape:* (cagedLadder_north_lit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_lit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/tape/w_lights,face3=0:catwalks/ladder/front/tape/w_lights,face4-5=0:catwalks/ladder/side/tape/w_lights
+
+# %cagedLadder_north_lit:* (cagedLadder_north_lit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_lit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/plain/w_lights,face3=0:catwalks/ladder/front/plain/w_lights,face4-5=0:catwalks/ladder/side/plain/w_lights
+
+# %cagedLadder_north_unlit_nobottom_tape:* (cagedLadder_north_unlit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_unlit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/tape/no_lights,face3=0:catwalks/ladder/front/tape/no_lights,face4-5=0:catwalks/ladder/side/tape/no_lights
+
+# %cagedLadder_north_unlit_nobottom:* (cagedLadder_north_unlit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_unlit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/plain/no_lights,face3=0:catwalks/ladder/front/plain/no_lights,face4-5=0:catwalks/ladder/side/plain/no_lights
+
+# %cagedLadder_north_unlit_tape:* (cagedLadder_north_unlit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_unlit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/tape/no_lights,face3=0:catwalks/ladder/front/tape/no_lights,face4-5=0:catwalks/ladder/side/tape/no_lights
+
+# %cagedLadder_north_unlit:* (cagedLadder_north_unlit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_north_unlit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/plain/no_lights,face3=0:catwalks/ladder/front/plain/no_lights,face4-5=0:catwalks/ladder/side/plain/no_lights
+
+# %cagedLadder_south_lit_nobottom_tape:* (cagedLadder_south_lit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_lit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/tape/w_lights,face3=0:catwalks/ladder/ladder/tape/w_lights,face4-5=0:catwalks/ladder/side/tape/w_lights
+
+# %cagedLadder_south_lit_nobottom:* (cagedLadder_south_lit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_lit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/plain/w_lights,face3=0:catwalks/ladder/ladder/plain/w_lights,face4-5=0:catwalks/ladder/side/plain/w_lights
+
+# %cagedLadder_south_lit_tape:* (cagedLadder_south_lit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_lit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/tape/w_lights,face3=0:catwalks/ladder/ladder/tape/w_lights,face4-5=0:catwalks/ladder/side/tape/w_lights
+
+# %cagedLadder_south_lit:* (cagedLadder_south_lit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_lit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/plain/w_lights,face3=0:catwalks/ladder/ladder/plain/w_lights,face4-5=0:catwalks/ladder/side/plain/w_lights
+
+# %cagedLadder_south_unlit_nobottom_tape:* (cagedLadder_south_unlit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_unlit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/tape/no_lights,face3=0:catwalks/ladder/ladder/tape/no_lights,face4-5=0:catwalks/ladder/side/tape/no_lights
+
+# %cagedLadder_south_unlit_nobottom:* (cagedLadder_south_unlit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_unlit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/plain/no_lights,face3=0:catwalks/ladder/ladder/plain/no_lights,face4-5=0:catwalks/ladder/side/plain/no_lights
+
+# %cagedLadder_south_unlit_tape:* (cagedLadder_south_unlit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_unlit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/tape/no_lights,face3=0:catwalks/ladder/ladder/tape/no_lights,face4-5=0:catwalks/ladder/side/tape/no_lights
+
+# %cagedLadder_south_unlit:* (cagedLadder_south_unlit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_south_unlit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/front/plain/no_lights,face3=0:catwalks/ladder/ladder/plain/no_lights,face4-5=0:catwalks/ladder/side/plain/no_lights
+
+# %cagedLadder_west_lit_nobottom_tape:* (cagedLadder_west_lit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_lit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/w_lights,face4=0:catwalks/ladder/front/tape/w_lights,face5=0:catwalks/ladder/ladder/tape/w_lights
+
+# %cagedLadder_west_lit_nobottom:* (cagedLadder_west_lit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_lit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/w_lights,face4=0:catwalks/ladder/front/plain/w_lights,face5=0:catwalks/ladder/ladder/plain/w_lights
+
+# %cagedLadder_west_lit_tape:* (cagedLadder_west_lit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_lit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/w_lights,face4=0:catwalks/ladder/front/tape/w_lights,face5=0:catwalks/ladder/ladder/tape/w_lights
+
+# %cagedLadder_west_lit:* (cagedLadder_west_lit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_lit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/w_lights,face4=0:catwalks/ladder/front/plain/w_lights,face5=0:catwalks/ladder/ladder/plain/w_lights
+
+# %cagedLadder_west_unlit_nobottom_tape:* (cagedLadder_west_unlit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_unlit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/no_lights,face4=0:catwalks/ladder/front/tape/no_lights,face5=0:catwalks/ladder/ladder/tape/no_lights
+
+# %cagedLadder_west_unlit_nobottom:* (cagedLadder_west_unlit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_unlit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/no_lights,face4=0:catwalks/ladder/front/plain/no_lights,face5=0:catwalks/ladder/ladder/plain/no_lights
+
+# %cagedLadder_west_unlit_tape:* (cagedLadder_west_unlit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_unlit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/no_lights,face4=0:catwalks/ladder/front/tape/no_lights,face5=0:catwalks/ladder/ladder/tape/no_lights
+
+# %cagedLadder_west_unlit:* (cagedLadder_west_unlit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_west_unlit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/no_lights,face4=0:catwalks/ladder/front/plain/no_lights,face5=0:catwalks/ladder/ladder/plain/no_lights
+
+# %cagedLadder_east_lit_nobottom_tape:* (cagedLadder_east_lit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_lit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/w_lights,face4=0:catwalks/ladder/ladder/tape/w_lights,face5=0:catwalks/ladder/front/tape/w_lights
+
+# %cagedLadder_east_lit_nobottom:* (cagedLadder_east_lit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_lit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/w_lights,face4=0:catwalks/ladder/ladder/plain/w_lights,face5=0:catwalks/ladder/front/plain/w_lights
+
+# %cagedLadder_east_lit_tape:* (cagedLadder_east_lit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_lit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/w_lights,face4=0:catwalks/ladder/ladder/tape/w_lights,face5=0:catwalks/ladder/front/tape/w_lights
+
+# %cagedLadder_east_lit:* (cagedLadder_east_lit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_lit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/w_lights,face4=0:catwalks/ladder/ladder/plain/w_lights,face5=0:catwalks/ladder/front/plain/w_lights
+
+# %cagedLadder_east_unlit_nobottom_tape:* (cagedLadder_east_unlit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_unlit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/no_lights,face4=0:catwalks/ladder/ladder/tape/no_lights,face5=0:catwalks/ladder/front/tape/no_lights
+
+# %cagedLadder_east_unlit_nobottom:* (cagedLadder_east_unlit_nobottom), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_unlit_nobottom,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/no_lights,face4=0:catwalks/ladder/ladder/plain/no_lights,face5=0:catwalks/ladder/front/plain/no_lights
+
+# %cagedLadder_east_unlit_tape:* (cagedLadder_east_unlit_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_unlit_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/tape/no_lights,face4=0:catwalks/ladder/ladder/tape/no_lights,face5=0:catwalks/ladder/front/tape/no_lights
+
+# %cagedLadder_east_unlit:* (cagedLadder_east_unlit), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
+block:id=%cagedLadder_east_unlit,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-3=0:catwalks/ladder/side/plain/no_lights,face4=0:catwalks/ladder/ladder/plain/no_lights,face5=0:catwalks/ladder/front/plain/no_lights

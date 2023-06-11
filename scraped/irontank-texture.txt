@@ -1,0 +1,62 @@
+# irontank 1.2.6
+version:1.7
+modname:irontank
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/irontank/textures/blocks/
+texture:id=irontank/copperTank/side,filename=assets/irontank/textures/blocks/copperTank/side.png
+texture:id=irontank/copperTank/topbottom,filename=assets/irontank/textures/blocks/copperTank/topbottom.png
+texture:id=irontank/diamondTank/side,filename=assets/irontank/textures/blocks/diamondTank/side.png
+texture:id=irontank/diamondTank/topbottom,filename=assets/irontank/textures/blocks/diamondTank/topbottom.png
+texture:id=irontank/emeraldTank/side,filename=assets/irontank/textures/blocks/emeraldTank/side.png
+texture:id=irontank/emeraldTank/topbottom,filename=assets/irontank/textures/blocks/emeraldTank/topbottom.png
+texture:id=irontank/goldTank/side,filename=assets/irontank/textures/blocks/goldTank/side.png
+texture:id=irontank/goldTank/topbottom,filename=assets/irontank/textures/blocks/goldTank/topbottom.png
+texture:id=irontank/ironTank/side,filename=assets/irontank/textures/blocks/ironTank/side.png
+texture:id=irontank/ironTank/topbottom,filename=assets/irontank/textures/blocks/ironTank/topbottom.png
+texture:id=irontank/obsidianTank/side,filename=assets/irontank/textures/blocks/obsidianTank/side.png
+texture:id=irontank/obsidianTank/topbottom,filename=assets/irontank/textures/blocks/obsidianTank/topbottom.png
+texture:id=irontank/silverTank/side,filename=assets/irontank/textures/blocks/silverTank/side.png
+texture:id=irontank/silverTank/topbottom,filename=assets/irontank/textures/blocks/silverTank/topbottom.png
+texture:id=irontank/stainlesssteelTank/side,filename=assets/irontank/textures/blocks/stainlesssteelTank/side.png
+texture:id=irontank/stainlesssteelTank/topbottom,filename=assets/irontank/textures/blocks/stainlesssteelTank/topbottom.png
+texture:id=irontank/titaniumTank/side,filename=assets/irontank/textures/blocks/titaniumTank/side.png
+texture:id=irontank/titaniumTank/topbottom,filename=assets/irontank/textures/blocks/titaniumTank/topbottom.png
+texture:id=irontank/tungstensteelTank/side,filename=assets/irontank/textures/blocks/tungstensteelTank/side.png
+texture:id=irontank/tungstensteelTank/topbottom,filename=assets/irontank/textures/blocks/tungstensteelTank/topbottom.png
+
+
+
+# %ironTank:* (ironTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%ironTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/ironTank/topbottom,face2-5=0:irontank/ironTank/side
+
+# %goldTank:* (goldTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%goldTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/goldTank/topbottom,face2-5=0:irontank/goldTank/side
+
+# %diamondTank:* (diamondTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%diamondTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/diamondTank/topbottom,face2-5=0:irontank/diamondTank/side
+
+# %obsidianTank:* (obsidianTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%obsidianTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/obsidianTank/topbottom,face2-5=0:irontank/obsidianTank/side
+
+# %emeraldTank:* (emeraldTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%emeraldTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/emeraldTank/topbottom,face2-5=0:irontank/emeraldTank/side
+
+# %copperTank:* (copperTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%copperTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/copperTank/topbottom,face2-5=0:irontank/copperTank/side
+
+# %silverTank:* (silverTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%silverTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/silverTank/topbottom,face2-5=0:irontank/silverTank/side
+
+# %stainlesssteelTank:* (stainlesssteelTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%stainlesssteelTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/stainlesssteelTank/topbottom,face2-5=0:irontank/stainlesssteelTank/side
+
+# %titaniumTank:* (titaniumTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%titaniumTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/titaniumTank/topbottom,face2-5=0:irontank/titaniumTank/side
+
+# %tungstensteelTank:* (tungstensteelTank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.indemnity83.irontank.block.BlockExtendedTank
+block:id=%tungstensteelTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:irontank/tungstensteelTank/topbottom,face2-5=0:irontank/tungstensteelTank/side

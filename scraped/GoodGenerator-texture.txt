@@ -1,0 +1,247 @@
+# GoodGenerator 0.4.88
+version:1.7
+modname:GoodGenerator
+
+
+cfgfile:config/GoodGenerator.cfg
+
+
+texturepath:assets/goodgenerator/textures/blocks/
+texture:id=GoodGenerator/FRF_Coils/1,filename=assets/goodgenerator/textures/blocks/FRF_Coils/1.png
+texture:id=GoodGenerator/FRF_Coils/2,filename=assets/goodgenerator/textures/blocks/FRF_Coils/2.png
+texture:id=GoodGenerator/FRF_Coils/3,filename=assets/goodgenerator/textures/blocks/FRF_Coils/3.png
+texture:id=GoodGenerator/MAR_Casing,filename=assets/goodgenerator/textures/blocks/MAR_Casing.png
+texture:id=GoodGenerator/MagicCasing,filename=assets/goodgenerator/textures/blocks/MagicCasing.png
+texture:id=GoodGenerator/compAsslineCasing/0,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/0.png
+texture:id=GoodGenerator/compAsslineCasing/1,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/1.png
+texture:id=GoodGenerator/compAsslineCasing/10,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/10.png
+texture:id=GoodGenerator/compAsslineCasing/11,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/11.png
+texture:id=GoodGenerator/compAsslineCasing/12,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/12.png
+texture:id=GoodGenerator/compAsslineCasing/13,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/13.png
+texture:id=GoodGenerator/compAsslineCasing/2,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/2.png
+texture:id=GoodGenerator/compAsslineCasing/3,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/3.png
+texture:id=GoodGenerator/compAsslineCasing/4,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/4.png
+texture:id=GoodGenerator/compAsslineCasing/5,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/5.png
+texture:id=GoodGenerator/compAsslineCasing/6,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/6.png
+texture:id=GoodGenerator/compAsslineCasing/7,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/7.png
+texture:id=GoodGenerator/compAsslineCasing/8,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/8.png
+texture:id=GoodGenerator/compAsslineCasing/9,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/9.png
+texture:id=GoodGenerator/essentiaCell/1,filename=assets/goodgenerator/textures/blocks/essentiaCell/1.png
+texture:id=GoodGenerator/essentiaCell/2,filename=assets/goodgenerator/textures/blocks/essentiaCell/2.png
+texture:id=GoodGenerator/essentiaCell/3,filename=assets/goodgenerator/textures/blocks/essentiaCell/3.png
+texture:id=GoodGenerator/essentiaCell/4,filename=assets/goodgenerator/textures/blocks/essentiaCell/4.png
+texture:id=GoodGenerator/essentiaFilterCasing,filename=assets/goodgenerator/textures/blocks/essentiaFilterCasing.png
+texture:id=GoodGenerator/essentiaHatch,filename=assets/goodgenerator/textures/blocks/essentiaHatch.png
+texture:id=GoodGenerator/essentiaOutputHatch,filename=assets/goodgenerator/textures/blocks/essentiaOutputHatch.png
+texture:id=GoodGenerator/essentiaOutputHatch_ME,filename=assets/goodgenerator/textures/blocks/essentiaOutputHatch_ME.png
+texture:id=GoodGenerator/fieldRestrictingGlass,filename=assets/goodgenerator/textures/blocks/fieldRestrictingGlass.png
+texture:id=GoodGenerator/fluids/coalTar.flowing,filename=assets/goodgenerator/textures/blocks/fluids/coalTar.flowing.png
+texture:id=GoodGenerator/fluids/coalTar.still,filename=assets/goodgenerator/textures/blocks/fluids/coalTar.still.png
+texture:id=GoodGenerator/fluids/combustionPromotor.flowing,filename=assets/goodgenerator/textures/blocks/fluids/combustionPromotor.flowing.png
+texture:id=GoodGenerator/fluids/combustionPromotor.still,filename=assets/goodgenerator/textures/blocks/fluids/combustionPromotor.still.png
+texture:id=GoodGenerator/fluids/heavilyCrackedHeavyNaquadahFuel.flowing,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedHeavyNaquadahFuel.flowing.png
+texture:id=GoodGenerator/fluids/heavilyCrackedHeavyNaquadahFuel.still,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedHeavyNaquadahFuel.still.png
+texture:id=GoodGenerator/fluids/heavilyCrackedLightNaquadahFuel.flowing,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedLightNaquadahFuel.flowing.png
+texture:id=GoodGenerator/fluids/heavilyCrackedLightNaquadahFuel.still,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedLightNaquadahFuel.still.png
+texture:id=GoodGenerator/fluids/heavilyCrackedNaquadahAsphalt.flowing,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedNaquadahAsphalt.flowing.png
+texture:id=GoodGenerator/fluids/heavilyCrackedNaquadahAsphalt.still,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedNaquadahAsphalt.still.png
+texture:id=GoodGenerator/fluids/heavilyCrackedNaquadahGas.flowing,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedNaquadahGas.flowing.png
+texture:id=GoodGenerator/fluids/heavilyCrackedNaquadahGas.still,filename=assets/goodgenerator/textures/blocks/fluids/heavilyCrackedNaquadahGas.still.png
+texture:id=GoodGenerator/fluids/lightlyCrackedHeavyNaquadahFuel.flowing,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedHeavyNaquadahFuel.flowing.png
+texture:id=GoodGenerator/fluids/lightlyCrackedHeavyNaquadahFuel.still,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedHeavyNaquadahFuel.still.png
+texture:id=GoodGenerator/fluids/lightlyCrackedLightNaquadahFuel.flowing,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedLightNaquadahFuel.flowing.png
+texture:id=GoodGenerator/fluids/lightlyCrackedLightNaquadahFuel.still,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedLightNaquadahFuel.still.png
+texture:id=GoodGenerator/fluids/lightlyCrackedNaquadahAsphalt.flowing,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedNaquadahAsphalt.flowing.png
+texture:id=GoodGenerator/fluids/lightlyCrackedNaquadahAsphalt.still,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedNaquadahAsphalt.still.png
+texture:id=GoodGenerator/fluids/lightlyCrackedNaquadahGas.flowing,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedNaquadahGas.flowing.png
+texture:id=GoodGenerator/fluids/lightlyCrackedNaquadahGas.still,filename=assets/goodgenerator/textures/blocks/fluids/lightlyCrackedNaquadahGas.still.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedHeavyNaquadahFuel.flowing,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedHeavyNaquadahFuel.flowing.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedHeavyNaquadahFuel.still,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedHeavyNaquadahFuel.still.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedLightNaquadahFuel.flowing,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedLightNaquadahFuel.flowing.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedLightNaquadahFuel.still,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedLightNaquadahFuel.still.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedNaquadahAsphalt.flowing,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedNaquadahAsphalt.flowing.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedNaquadahAsphalt.still,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedNaquadahAsphalt.still.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedNaquadahGas.flowing,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedNaquadahGas.flowing.png
+texture:id=GoodGenerator/fluids/moderatelyCrackedNaquadahGas.still,filename=assets/goodgenerator/textures/blocks/fluids/moderatelyCrackedNaquadahGas.still.png
+texture:id=GoodGenerator/fluids/supercriticalSteam.flowing,filename=assets/goodgenerator/textures/blocks/fluids/supercriticalSteam.flowing.png
+texture:id=GoodGenerator/fluids/supercriticalSteam.still,filename=assets/goodgenerator/textures/blocks/fluids/supercriticalSteam.still.png
+texture:id=GoodGenerator/fuison/1,filename=assets/goodgenerator/textures/blocks/fuison/1.png
+texture:id=GoodGenerator/fuison/2,filename=assets/goodgenerator/textures/blocks/fuison/2.png
+texture:id=GoodGenerator/fuison/3,filename=assets/goodgenerator/textures/blocks/fuison/3.png
+texture:id=GoodGenerator/fuison/4,filename=assets/goodgenerator/textures/blocks/fuison/4.png
+texture:id=GoodGenerator/fuison/5,filename=assets/goodgenerator/textures/blocks/fuison/5.png
+texture:id=GoodGenerator/preciseUnitCasing/1,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/1.png
+texture:id=GoodGenerator/preciseUnitCasing/2,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/2.png
+texture:id=GoodGenerator/preciseUnitCasing/3,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/3.png
+texture:id=GoodGenerator/pressureResistantWalls,filename=assets/goodgenerator/textures/blocks/pressureResistantWalls.png
+texture:id=GoodGenerator/radiationProtectionSteelFrame,filename=assets/goodgenerator/textures/blocks/radiationProtectionSteelFrame.png
+texture:id=GoodGenerator/rawCylinder,filename=assets/goodgenerator/textures/blocks/rawCylinder.png
+texture:id=GoodGenerator/speedingPipe_SIDE,filename=assets/goodgenerator/textures/blocks/speedingPipe_SIDE.png
+texture:id=GoodGenerator/speedingPipe_TOP,filename=assets/goodgenerator/textures/blocks/speedingPipe_TOP.png
+texture:id=GoodGenerator/supercriticalFluidTurbineCasing,filename=assets/goodgenerator/textures/blocks/supercriticalFluidTurbineCasing.png
+texture:id=GoodGenerator/titaniumPlatedCylinder,filename=assets/goodgenerator/textures/blocks/titaniumPlatedCylinder.png
+texture:id=GoodGenerator/yottaFluidTankCasing_SIDE,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCasing_SIDE.png
+texture:id=GoodGenerator/yottaFluidTankCasing_TOP,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCasing_TOP.png
+texture:id=GoodGenerator/yottaFluidTankCell/1,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/1.png
+texture:id=GoodGenerator/yottaFluidTankCell/10,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/10.png
+texture:id=GoodGenerator/yottaFluidTankCell/2,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/2.png
+texture:id=GoodGenerator/yottaFluidTankCell/3,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/3.png
+texture:id=GoodGenerator/yottaFluidTankCell/4,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/4.png
+texture:id=GoodGenerator/yottaFluidTankCell/5,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/5.png
+texture:id=GoodGenerator/yottaFluidTankCell/6,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/6.png
+texture:id=GoodGenerator/yottaFluidTankCell/7,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/7.png
+texture:id=GoodGenerator/yottaFluidTankCell/8,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/8.png
+texture:id=GoodGenerator/yottaFluidTankCell/9,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/9.png
+texture:id=gregtech/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM.png
+
+
+
+# %MAR_Casing:* (MAR_Casing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%MAR_Casing,data=*,stdrot=true,face0-5=0:GoodGenerator/MAR_Casing
+
+# %radiationProtectionSteelFrame:* (radiationProtectionSteelFrame), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.Frame
+block:id=%radiationProtectionSteelFrame,data=*,stdrot=true,face0-5=12000:GoodGenerator/radiationProtectionSteelFrame
+
+# %fieldRestrictingGlass:* (fieldRestrictingGlass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.Frame
+block:id=%fieldRestrictingGlass,data=*,stdrot=true,face0-5=12000:GoodGenerator/fieldRestrictingGlass
+
+# %FRF_Casings:* (FRF_Casings), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%FRF_Casings,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM
+
+# %FRF_Coil_1:* (FRF_Coil_1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%FRF_Coil_1,data=*,stdrot=true,face0-5=0:GoodGenerator/FRF_Coils/1
+
+# %FRF_Coil_2:* (FRF_Coil_2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%FRF_Coil_2,data=*,stdrot=true,face0-5=0:GoodGenerator/FRF_Coils/2
+
+# %FRF_Coil_3:* (FRF_Coil_3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%FRF_Coil_3,data=*,stdrot=true,face0-5=0:GoodGenerator/FRF_Coils/3
+
+# %rawCylinder:* (rawCylinder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%rawCylinder,data=*,stdrot=true,face0-5=0:GoodGenerator/rawCylinder
+
+# %titaniumPlatedCylinder:* (titaniumPlatedCylinder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%titaniumPlatedCylinder,data=*,stdrot=true,face0-5=0:GoodGenerator/titaniumPlatedCylinder
+
+# %speedingPipe:* (speedingPipe), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.ComplexTextureCasing
+block:id=%speedingPipe,data=*,stdrot=true,face0-1=0:GoodGenerator/speedingPipe_TOP,face2-5=0:GoodGenerator/speedingPipe_SIDE
+
+# %yottaFluidTankCells:* (yottaFluidTankCells), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%yottaFluidTankCells,data=0,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/1
+block:id=%yottaFluidTankCells,data=1,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/2
+block:id=%yottaFluidTankCells,data=2,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/3
+block:id=%yottaFluidTankCells,data=3,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/4
+block:id=%yottaFluidTankCells,data=4,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/5
+block:id=%yottaFluidTankCells,data=5,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/6
+block:id=%yottaFluidTankCells,data=6,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/7
+block:id=%yottaFluidTankCells,data=7,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/8
+block:id=%yottaFluidTankCells,data=8,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/9
+block:id=%yottaFluidTankCells,data=9,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/10
+block:id=%yottaFluidTankCells,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/1
+
+# %yottaFluidTankCasing:* (yottaFluidTankCasing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.ComplexTextureCasing
+block:id=%yottaFluidTankCasing,data=*,stdrot=true,face0-1=0:GoodGenerator/yottaFluidTankCasing_TOP,face2-5=0:GoodGenerator/yottaFluidTankCasing_SIDE
+
+# %supercriticalFluidTurbineCasing:* (supercriticalFluidTurbineCasing), render=goodgenerator.client.render.BlockRenderHandler(CUSTOM), opaque=true,cls=goodgenerator.blocks.regularBlock.TurbineCasing
+block:id=%supercriticalFluidTurbineCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/supercriticalFluidTurbineCasing
+
+# %pressureResistantWalls:* (pressureResistantWalls), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%pressureResistantWalls,data=*,stdrot=true,face0-5=0:GoodGenerator/pressureResistantWalls
+
+# %preciseUnitCasing:* (preciseUnitCasing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%preciseUnitCasing,data=0,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/1
+block:id=%preciseUnitCasing,data=1,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/2
+block:id=%preciseUnitCasing,data=2,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/3
+block:id=%preciseUnitCasing,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/1
+
+# %compactFusionCoil:* (compactFusionCoil), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%compactFusionCoil,data=0,stdrot=true,face0-5=0:GoodGenerator/fuison/1
+block:id=%compactFusionCoil,data=1,stdrot=true,face0-5=0:GoodGenerator/fuison/2
+block:id=%compactFusionCoil,data=2,stdrot=true,face0-5=0:GoodGenerator/fuison/3
+block:id=%compactFusionCoil,data=3,stdrot=true,face0-5=0:GoodGenerator/fuison/4
+block:id=%compactFusionCoil,data=4,stdrot=true,face0-5=0:GoodGenerator/fuison/5
+block:id=%compactFusionCoil,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/fuison/1
+
+# %magicCasing:* (magicCasing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%magicCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/MagicCasing
+
+# %essentiaCell:* (essentiaCell), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%essentiaCell,data=0,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/1
+block:id=%essentiaCell,data=1,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/2
+block:id=%essentiaCell,data=2,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/3
+block:id=%essentiaCell,data=3,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/4
+block:id=%essentiaCell,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/1
+
+# %essentiaHatch:* (essentiaHatch), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.TEBlock
+block:id=%essentiaHatch,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaHatch
+
+# %essentiaOutputHatch:* (essentiaOutputHatch), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.TEBlock
+block:id=%essentiaOutputHatch,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaOutputHatch
+
+# %essentiaFilterCasing:* (essentiaFilterCasing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%essentiaFilterCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaFilterCasing
+
+# %essentiaOutputHatch_ME:* (essentiaOutputHatch_ME), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.TEBlock
+block:id=%essentiaOutputHatch_ME,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaOutputHatch_ME
+
+# %lightlyCrackedNaquadahGas:* (lightlyCrackedNaquadahGas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%lightlyCrackedNaquadahGas,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/lightlyCrackedNaquadahGas.still,face2-5=12000:GoodGenerator/fluids/lightlyCrackedNaquadahGas.flowing
+
+# %moderatelyCrackedNaquadahGas:* (moderatelyCrackedNaquadahGas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%moderatelyCrackedNaquadahGas,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/moderatelyCrackedNaquadahGas.still,face2-5=12000:GoodGenerator/fluids/moderatelyCrackedNaquadahGas.flowing
+
+# %heavilyCrackedNaquadahGas:* (heavilyCrackedNaquadahGas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%heavilyCrackedNaquadahGas,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/heavilyCrackedNaquadahGas.still,face2-5=12000:GoodGenerator/fluids/heavilyCrackedNaquadahGas.flowing
+
+# %lightlyCrackedLightNaquadahFuel:* (lightlyCrackedLightNaquadahFuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%lightlyCrackedLightNaquadahFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/lightlyCrackedLightNaquadahFuel.still,face2-5=12000:GoodGenerator/fluids/lightlyCrackedLightNaquadahFuel.flowing
+
+# %moderatelyCrackedLightNaquadahFuel:* (moderatelyCrackedLightNaquadahFuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%moderatelyCrackedLightNaquadahFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/moderatelyCrackedLightNaquadahFuel.still,face2-5=12000:GoodGenerator/fluids/moderatelyCrackedLightNaquadahFuel.flowing
+
+# %heavilyCrackedLightNaquadahFuel:* (heavilyCrackedLightNaquadahFuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%heavilyCrackedLightNaquadahFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/heavilyCrackedLightNaquadahFuel.still,face2-5=12000:GoodGenerator/fluids/heavilyCrackedLightNaquadahFuel.flowing
+
+# %lightlyCrackedHeavyNaquadahFuel:* (lightlyCrackedHeavyNaquadahFuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%lightlyCrackedHeavyNaquadahFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/lightlyCrackedHeavyNaquadahFuel.still,face2-5=12000:GoodGenerator/fluids/lightlyCrackedHeavyNaquadahFuel.flowing
+
+# %moderatelyCrackedHeavyNaquadahFuel:* (moderatelyCrackedHeavyNaquadahFuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%moderatelyCrackedHeavyNaquadahFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/moderatelyCrackedHeavyNaquadahFuel.still,face2-5=12000:GoodGenerator/fluids/moderatelyCrackedHeavyNaquadahFuel.flowing
+
+# %heavilyCrackedHeavyNaquadahFuel:* (heavilyCrackedHeavyNaquadahFuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%heavilyCrackedHeavyNaquadahFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/heavilyCrackedHeavyNaquadahFuel.still,face2-5=12000:GoodGenerator/fluids/heavilyCrackedHeavyNaquadahFuel.flowing
+
+# %lightlyCrackedNaquadahAsphalt:* (lightlyCrackedNaquadahAsphalt), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%lightlyCrackedNaquadahAsphalt,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/lightlyCrackedNaquadahAsphalt.still,face2-5=12000:GoodGenerator/fluids/lightlyCrackedNaquadahAsphalt.flowing
+
+# %moderatelyCrackedNaquadahAsphalt:* (moderatelyCrackedNaquadahAsphalt), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%moderatelyCrackedNaquadahAsphalt,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/moderatelyCrackedNaquadahAsphalt.still,face2-5=12000:GoodGenerator/fluids/moderatelyCrackedNaquadahAsphalt.flowing
+
+# %heavilyCrackedNaquadahAsphalt:* (heavilyCrackedNaquadahAsphalt), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%heavilyCrackedNaquadahAsphalt,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/heavilyCrackedNaquadahAsphalt.still,face2-5=12000:GoodGenerator/fluids/heavilyCrackedNaquadahAsphalt.flowing
+
+# %combustionPromotor:* (combustionPromotor), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%combustionPromotor,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/combustionPromotor.still,face2-5=12000:GoodGenerator/fluids/combustionPromotor.flowing
+
+# %coalTar:* (coalTar), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%coalTar,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/coalTar.still,face2-5=12000:GoodGenerator/fluids/coalTar.flowing
+
+# %supercriticalSteam:* (supercriticalSteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
+block:id=%supercriticalSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/supercriticalSteam.still,face2-5=12000:GoodGenerator/fluids/supercriticalSteam.flowing
+
+# %componentAssemblylineCasing:* (componentAssemblylineCasing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+block:id=%componentAssemblylineCasing,data=0,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0
+block:id=%componentAssemblylineCasing,data=1,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/1
+block:id=%componentAssemblylineCasing,data=2,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/2
+block:id=%componentAssemblylineCasing,data=3,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/3
+block:id=%componentAssemblylineCasing,data=4,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/4
+block:id=%componentAssemblylineCasing,data=5,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/5
+block:id=%componentAssemblylineCasing,data=6,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/6
+block:id=%componentAssemblylineCasing,data=7,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/7
+block:id=%componentAssemblylineCasing,data=8,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/8
+block:id=%componentAssemblylineCasing,data=9,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/9
+block:id=%componentAssemblylineCasing,data=10,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/10
+block:id=%componentAssemblylineCasing,data=11,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/11
+block:id=%componentAssemblylineCasing,data=12,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/12
+block:id=%componentAssemblylineCasing,data=13,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/13
+block:id=%componentAssemblylineCasing,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0

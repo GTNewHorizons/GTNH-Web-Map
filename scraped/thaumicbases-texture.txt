@@ -1,0 +1,505 @@
+# thaumicbases 1.4.33
+version:1.7
+modname:thaumicbases
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/thaumicbases/textures/blocks/
+texture:id=minecraft/MISSING_ICON_BLOCK_2168_nodeManipulator,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_2168_nodeManipulator.png
+texture:id=minecraft/MISSING_ICON_BLOCK_2169_nodeLinker,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_2169_nodeLinker.png
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=thaumcraft/arcaneearbottom,filename=assets/thaumcraft/textures/blocks/arcaneearbottom.png
+texture:id=thaumcraft/lifterside,filename=assets/thaumcraft/textures/blocks/lifterside.png
+texture:id=thaumcraft/liftertop,filename=assets/thaumcraft/textures/blocks/liftertop.png
+texture:id=thaumicbases/aspectshroom/stage_0,filename=assets/thaumicbases/textures/blocks/aspectshroom/stage_0.png
+texture:id=thaumicbases/aspectshroom/stage_1,filename=assets/thaumicbases/textures/blocks/aspectshroom/stage_1.png
+texture:id=thaumicbases/aspectshroom/stage_2,filename=assets/thaumicbases/textures/blocks/aspectshroom/stage_2.png
+texture:id=thaumicbases/aspectshroom/stage_3,filename=assets/thaumicbases/textures/blocks/aspectshroom/stage_3.png
+texture:id=thaumicbases/aurelia/closed,filename=assets/thaumicbases/textures/blocks/aurelia/closed.png
+texture:id=thaumicbases/aurelia/open,filename=assets/thaumicbases/textures/blocks/aurelia/open.png
+texture:id=thaumicbases/aurelia/petal,filename=assets/thaumicbases/textures/blocks/aurelia/petal.png
+texture:id=thaumicbases/blazingFluid/block,filename=assets/thaumicbases/textures/blocks/blazingFluid/block.png
+texture:id=thaumicbases/blazingFluid/leftovers,filename=assets/thaumicbases/textures/blocks/blazingFluid/leftovers.png
+texture:id=thaumicbases/briar/stage_0_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_0_bot.png
+texture:id=thaumicbases/briar/stage_0_top,filename=assets/thaumicbases/textures/blocks/briar/stage_0_top.png
+texture:id=thaumicbases/briar/stage_1_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_1_bot.png
+texture:id=thaumicbases/briar/stage_1_top,filename=assets/thaumicbases/textures/blocks/briar/stage_1_top.png
+texture:id=thaumicbases/briar/stage_2_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_2_bot.png
+texture:id=thaumicbases/briar/stage_2_top,filename=assets/thaumicbases/textures/blocks/briar/stage_2_top.png
+texture:id=thaumicbases/briar/stage_3_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_3_bot.png
+texture:id=thaumicbases/briar/stage_3_top,filename=assets/thaumicbases/textures/blocks/briar/stage_3_top.png
+texture:id=thaumicbases/briar/stage_4_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_4_bot.png
+texture:id=thaumicbases/briar/stage_4_top,filename=assets/thaumicbases/textures/blocks/briar/stage_4_top.png
+texture:id=thaumicbases/briar/stage_5_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_5_bot.png
+texture:id=thaumicbases/briar/stage_5_top,filename=assets/thaumicbases/textures/blocks/briar/stage_5_top.png
+texture:id=thaumicbases/briar/stage_6_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_6_bot.png
+texture:id=thaumicbases/briar/stage_6_top,filename=assets/thaumicbases/textures/blocks/briar/stage_6_top.png
+texture:id=thaumicbases/briar/stage_7_bot,filename=assets/thaumicbases/textures/blocks/briar/stage_7_bot.png
+texture:id=thaumicbases/briar/stage_7_top,filename=assets/thaumicbases/textures/blocks/briar/stage_7_top.png
+texture:id=thaumicbases/brick,filename=assets/thaumicbases/textures/blocks/brick.png
+texture:id=thaumicbases/campfire,filename=assets/thaumicbases/textures/blocks/campfire.png
+texture:id=thaumicbases/cobblestone,filename=assets/thaumicbases/textures/blocks/cobblestone.png
+texture:id=thaumicbases/cobblestone_mossy,filename=assets/thaumicbases/textures/blocks/cobblestone_mossy.png
+texture:id=thaumicbases/cryingObelisk/cryingObsidian,filename=assets/thaumicbases/textures/blocks/cryingObelisk/cryingObsidian.png
+texture:id=thaumicbases/crystal/air,filename=assets/thaumicbases/textures/blocks/crystal/air.png
+texture:id=thaumicbases/crystal/earth,filename=assets/thaumicbases/textures/blocks/crystal/earth.png
+texture:id=thaumicbases/crystal/entropy,filename=assets/thaumicbases/textures/blocks/crystal/entropy.png
+texture:id=thaumicbases/crystal/fire,filename=assets/thaumicbases/textures/blocks/crystal/fire.png
+texture:id=thaumicbases/crystal/mixed,filename=assets/thaumicbases/textures/blocks/crystal/mixed.png
+texture:id=thaumicbases/crystal/order,filename=assets/thaumicbases/textures/blocks/crystal/order.png
+texture:id=thaumicbases/crystal/tainted,filename=assets/thaumicbases/textures/blocks/crystal/tainted.png
+texture:id=thaumicbases/crystal/water,filename=assets/thaumicbases/textures/blocks/crystal/water.png
+texture:id=thaumicbases/diamond_block,filename=assets/thaumicbases/textures/blocks/diamond_block.png
+texture:id=thaumicbases/diamond_block_side,filename=assets/thaumicbases/textures/blocks/diamond_block_side.png
+texture:id=thaumicbases/dust_block,filename=assets/thaumicbases/textures/blocks/dust_block.png
+texture:id=thaumicbases/eldritchArk,filename=assets/thaumicbases/textures/blocks/eldritchArk.png
+texture:id=thaumicbases/enderTree/leaves,filename=assets/thaumicbases/textures/blocks/enderTree/leaves.png
+texture:id=thaumicbases/enderTree/log,filename=assets/thaumicbases/textures/blocks/enderTree/log.png
+texture:id=thaumicbases/enderTree/log_top,filename=assets/thaumicbases/textures/blocks/enderTree/log_top.png
+texture:id=thaumicbases/enderTree/planks,filename=assets/thaumicbases/textures/blocks/enderTree/planks.png
+texture:id=thaumicbases/enderTree/sapling,filename=assets/thaumicbases/textures/blocks/enderTree/sapling.png
+texture:id=thaumicbases/entityDeconstructor/block,filename=assets/thaumicbases/textures/blocks/entityDeconstructor/block.png
+texture:id=thaumicbases/flaxium,filename=assets/thaumicbases/textures/blocks/flaxium.png
+texture:id=thaumicbases/glieonia/stage_0,filename=assets/thaumicbases/textures/blocks/glieonia/stage_0.png
+texture:id=thaumicbases/glieonia/stage_1,filename=assets/thaumicbases/textures/blocks/glieonia/stage_1.png
+texture:id=thaumicbases/glieonia/stage_2,filename=assets/thaumicbases/textures/blocks/glieonia/stage_2.png
+texture:id=thaumicbases/glieonia/stage_3,filename=assets/thaumicbases/textures/blocks/glieonia/stage_3.png
+texture:id=thaumicbases/gold_block,filename=assets/thaumicbases/textures/blocks/gold_block.png
+texture:id=thaumicbases/gold_block_side,filename=assets/thaumicbases/textures/blocks/gold_block_side.png
+texture:id=thaumicbases/goldenOak/leaves,filename=assets/thaumicbases/textures/blocks/goldenOak/leaves.png
+texture:id=thaumicbases/goldenOak/sapling,filename=assets/thaumicbases/textures/blocks/goldenOak/sapling.png
+texture:id=thaumicbases/gravel,filename=assets/thaumicbases/textures/blocks/gravel.png
+texture:id=thaumicbases/ironGreatwood,filename=assets/thaumicbases/textures/blocks/ironGreatwood.png
+texture:id=thaumicbases/iron_block,filename=assets/thaumicbases/textures/blocks/iron_block.png
+texture:id=thaumicbases/iron_block_side,filename=assets/thaumicbases/textures/blocks/iron_block_side.png
+texture:id=thaumicbases/knoze/stage_0,filename=assets/thaumicbases/textures/blocks/knoze/stage_0.png
+texture:id=thaumicbases/knoze/stage_1,filename=assets/thaumicbases/textures/blocks/knoze/stage_1.png
+texture:id=thaumicbases/knoze/stage_2,filename=assets/thaumicbases/textures/blocks/knoze/stage_2.png
+texture:id=thaumicbases/knoze/stage_3,filename=assets/thaumicbases/textures/blocks/knoze/stage_3.png
+texture:id=thaumicbases/lapis_block,filename=assets/thaumicbases/textures/blocks/lapis_block.png
+texture:id=thaumicbases/lazullia/stage_0,filename=assets/thaumicbases/textures/blocks/lazullia/stage_0.png
+texture:id=thaumicbases/lazullia/stage_1,filename=assets/thaumicbases/textures/blocks/lazullia/stage_1.png
+texture:id=thaumicbases/lazullia/stage_2,filename=assets/thaumicbases/textures/blocks/lazullia/stage_2.png
+texture:id=thaumicbases/lazullia/stage_3,filename=assets/thaumicbases/textures/blocks/lazullia/stage_3.png
+texture:id=thaumicbases/lazullia/stage_4,filename=assets/thaumicbases/textures/blocks/lazullia/stage_4.png
+texture:id=thaumicbases/lazullia/stage_5,filename=assets/thaumicbases/textures/blocks/lazullia/stage_5.png
+texture:id=thaumicbases/lazullia/stage_6,filename=assets/thaumicbases/textures/blocks/lazullia/stage_6.png
+texture:id=thaumicbases/lazullia/stage_7,filename=assets/thaumicbases/textures/blocks/lazullia/stage_7.png
+texture:id=thaumicbases/lucrite/stage_0,filename=assets/thaumicbases/textures/blocks/lucrite/stage_0.png
+texture:id=thaumicbases/lucrite/stage_1,filename=assets/thaumicbases/textures/blocks/lucrite/stage_1.png
+texture:id=thaumicbases/lucrite/stage_2,filename=assets/thaumicbases/textures/blocks/lucrite/stage_2.png
+texture:id=thaumicbases/lucrite/stage_3,filename=assets/thaumicbases/textures/blocks/lucrite/stage_3.png
+texture:id=thaumicbases/lucrite/stage_4,filename=assets/thaumicbases/textures/blocks/lucrite/stage_4.png
+texture:id=thaumicbases/lucrite/stage_5,filename=assets/thaumicbases/textures/blocks/lucrite/stage_5.png
+texture:id=thaumicbases/lucrite/stage_6,filename=assets/thaumicbases/textures/blocks/lucrite/stage_6.png
+texture:id=thaumicbases/lucrite/stage_7,filename=assets/thaumicbases/textures/blocks/lucrite/stage_7.png
+texture:id=thaumicbases/metalleat/stage_0,filename=assets/thaumicbases/textures/blocks/metalleat/stage_0.png
+texture:id=thaumicbases/metalleat/stage_1,filename=assets/thaumicbases/textures/blocks/metalleat/stage_1.png
+texture:id=thaumicbases/metalleat/stage_2,filename=assets/thaumicbases/textures/blocks/metalleat/stage_2.png
+texture:id=thaumicbases/metalleat/stage_3,filename=assets/thaumicbases/textures/blocks/metalleat/stage_3.png
+texture:id=thaumicbases/metalleat/stage_4,filename=assets/thaumicbases/textures/blocks/metalleat/stage_4.png
+texture:id=thaumicbases/metalleat/stage_5,filename=assets/thaumicbases/textures/blocks/metalleat/stage_5.png
+texture:id=thaumicbases/metalleat/stage_6,filename=assets/thaumicbases/textures/blocks/metalleat/stage_6.png
+texture:id=thaumicbases/metalleat/stage_7,filename=assets/thaumicbases/textures/blocks/metalleat/stage_7.png
+texture:id=thaumicbases/netherTree/leaves,filename=assets/thaumicbases/textures/blocks/netherTree/leaves.png
+texture:id=thaumicbases/netherTree/log,filename=assets/thaumicbases/textures/blocks/netherTree/log.png
+texture:id=thaumicbases/netherTree/log_top,filename=assets/thaumicbases/textures/blocks/netherTree/log_top.png
+texture:id=thaumicbases/netherTree/sapling,filename=assets/thaumicbases/textures/blocks/netherTree/sapling.png
+texture:id=thaumicbases/overchanter/bottom,filename=assets/thaumicbases/textures/blocks/overchanter/bottom.png
+texture:id=thaumicbases/overchanter/side,filename=assets/thaumicbases/textures/blocks/overchanter/side.png
+texture:id=thaumicbases/overchanter/top,filename=assets/thaumicbases/textures/blocks/overchanter/top.png
+texture:id=thaumicbases/peacefullTree/leaves,filename=assets/thaumicbases/textures/blocks/peacefullTree/leaves.png
+texture:id=thaumicbases/peacefullTree/log,filename=assets/thaumicbases/textures/blocks/peacefullTree/log.png
+texture:id=thaumicbases/peacefullTree/log_top,filename=assets/thaumicbases/textures/blocks/peacefullTree/log_top.png
+texture:id=thaumicbases/peacefullTree/sapling,filename=assets/thaumicbases/textures/blocks/peacefullTree/sapling.png
+texture:id=thaumicbases/plax/stage_0,filename=assets/thaumicbases/textures/blocks/plax/stage_0.png
+texture:id=thaumicbases/plax/stage_1,filename=assets/thaumicbases/textures/blocks/plax/stage_1.png
+texture:id=thaumicbases/plax/stage_2,filename=assets/thaumicbases/textures/blocks/plax/stage_2.png
+texture:id=thaumicbases/plax/stage_3,filename=assets/thaumicbases/textures/blocks/plax/stage_3.png
+texture:id=thaumicbases/plax/stage_4,filename=assets/thaumicbases/textures/blocks/plax/stage_4.png
+texture:id=thaumicbases/plax/stage_5,filename=assets/thaumicbases/textures/blocks/plax/stage_5.png
+texture:id=thaumicbases/plax/stage_6,filename=assets/thaumicbases/textures/blocks/plax/stage_6.png
+texture:id=thaumicbases/plax/stage_7,filename=assets/thaumicbases/textures/blocks/plax/stage_7.png
+texture:id=thaumicbases/quicksilverBlock,filename=assets/thaumicbases/textures/blocks/quicksilverBlock.png
+texture:id=thaumicbases/quicksilverBrick,filename=assets/thaumicbases/textures/blocks/quicksilverBrick.png
+texture:id=thaumicbases/rainbowCacti/bottom,filename=assets/thaumicbases/textures/blocks/rainbowCacti/bottom.png
+texture:id=thaumicbases/rainbowCacti/side,filename=assets/thaumicbases/textures/blocks/rainbowCacti/side.png
+texture:id=thaumicbases/rainbowCacti/top,filename=assets/thaumicbases/textures/blocks/rainbowCacti/top.png
+texture:id=thaumicbases/redlon/redlon_disconnected,filename=assets/thaumicbases/textures/blocks/redlon/redlon_disconnected.png
+texture:id=thaumicbases/relocator/rotatedside,filename=assets/thaumicbases/textures/blocks/relocator/rotatedside.png
+texture:id=thaumicbases/spike/iron,filename=assets/thaumicbases/textures/blocks/spike/iron.png
+texture:id=thaumicbases/spike/iron_bloody,filename=assets/thaumicbases/textures/blocks/spike/iron_bloody.png
+texture:id=thaumicbases/spike/thaumic,filename=assets/thaumicbases/textures/blocks/spike/thaumic.png
+texture:id=thaumicbases/spike/thaumic_bloody,filename=assets/thaumicbases/textures/blocks/spike/thaumic_bloody.png
+texture:id=thaumicbases/spike/void,filename=assets/thaumicbases/textures/blocks/spike/void.png
+texture:id=thaumicbases/spike/void_bloody,filename=assets/thaumicbases/textures/blocks/spike/void_bloody.png
+texture:id=thaumicbases/sweed/stage_0,filename=assets/thaumicbases/textures/blocks/sweed/stage_0.png
+texture:id=thaumicbases/sweed/stage_1,filename=assets/thaumicbases/textures/blocks/sweed/stage_1.png
+texture:id=thaumicbases/sweed/stage_2,filename=assets/thaumicbases/textures/blocks/sweed/stage_2.png
+texture:id=thaumicbases/sweed/stage_3,filename=assets/thaumicbases/textures/blocks/sweed/stage_3.png
+texture:id=thaumicbases/tFurnace/front_off,filename=assets/thaumicbases/textures/blocks/tFurnace/front_off.png
+texture:id=thaumicbases/tFurnace/side,filename=assets/thaumicbases/textures/blocks/tFurnace/side.png
+texture:id=thaumicbases/tFurnace/top,filename=assets/thaumicbases/textures/blocks/tFurnace/top.png
+texture:id=thaumicbases/thauminiteblock,filename=assets/thaumicbases/textures/blocks/thauminiteblock.png
+texture:id=thaumicbases/thaumiumAnvil/base,filename=assets/thaumicbases/textures/blocks/thaumiumAnvil/base.png
+texture:id=thaumicbases/tobacco/stage_0,filename=assets/thaumicbases/textures/blocks/tobacco/stage_0.png
+texture:id=thaumicbases/tobacco/stage_1,filename=assets/thaumicbases/textures/blocks/tobacco/stage_1.png
+texture:id=thaumicbases/tobacco/stage_2,filename=assets/thaumicbases/textures/blocks/tobacco/stage_2.png
+texture:id=thaumicbases/tobacco/stage_3,filename=assets/thaumicbases/textures/blocks/tobacco/stage_3.png
+texture:id=thaumicbases/tobacco/stage_4,filename=assets/thaumicbases/textures/blocks/tobacco/stage_4.png
+texture:id=thaumicbases/tobacco/stage_5,filename=assets/thaumicbases/textures/blocks/tobacco/stage_5.png
+texture:id=thaumicbases/tobacco/stage_6,filename=assets/thaumicbases/textures/blocks/tobacco/stage_6.png
+texture:id=thaumicbases/tobacco/stage_7,filename=assets/thaumicbases/textures/blocks/tobacco/stage_7.png
+texture:id=thaumicbases/voidAnvil/base,filename=assets/thaumicbases/textures/blocks/voidAnvil/base.png
+texture:id=thaumicbases/voidPlant/stage_0,filename=assets/thaumicbases/textures/blocks/voidPlant/stage_0.png
+texture:id=thaumicbases/voidPlant/stage_1,filename=assets/thaumicbases/textures/blocks/voidPlant/stage_1.png
+texture:id=thaumicbases/voidPlant/stage_2,filename=assets/thaumicbases/textures/blocks/voidPlant/stage_2.png
+texture:id=thaumicbases/voidPlant/stage_3,filename=assets/thaumicbases/textures/blocks/voidPlant/stage_3.png
+texture:id=thaumicbases/voidblock,filename=assets/thaumicbases/textures/blocks/voidblock.png
+
+
+
+# %quicksilverBlock:* (quicksilverBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+block:id=%quicksilverBlock,data=*,stdrot=true,face0-5=0:thaumicbases/quicksilverBlock
+
+# %quicksilverBrick:* (quicksilverBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.TBBlock
+block:id=%quicksilverBrick,data=*,stdrot=true,face0-5=12000:thaumicbases/quicksilverBrick
+
+# %crystalBlock:* (crystalBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalBlock
+block:id=%crystalBlock,data=0,stdrot=true,face0-5=0:thaumicbases/crystal/air
+block:id=%crystalBlock,data=1,stdrot=true,face0-5=0:thaumicbases/crystal/fire
+block:id=%crystalBlock,data=2,stdrot=true,face0-5=0:thaumicbases/crystal/water
+block:id=%crystalBlock,data=3,stdrot=true,face0-5=0:thaumicbases/crystal/earth
+block:id=%crystalBlock,data=4,stdrot=true,face0-5=0:thaumicbases/crystal/order
+block:id=%crystalBlock,data=5,stdrot=true,face0-5=0:thaumicbases/crystal/entropy
+block:id=%crystalBlock,data=6,stdrot=true,face0-5=0:thaumicbases/crystal/mixed
+block:id=%crystalBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumicbases/crystal/tainted
+
+# %blockSalisMundus:* (blockSalisMundus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+block:id=%blockSalisMundus,data=*,stdrot=true,face0-5=0:thaumicbases/dust_block
+
+# %thauminiteBlock:* (thauminiteBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+block:id=%thauminiteBlock,data=*,stdrot=true,face0-5=0:thaumicbases/thauminiteblock
+
+# %voidBlock:* (voidBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockVoid
+block:id=%voidBlock,data=*,stdrot=true,face0-5=0:thaumicbases/voidblock
+
+# %pyrofluid:* (pyrofluid), render=(FLUIDS), opaque=false,cls=tb.common.block.BlockPyrofluid
+block:id=%pyrofluid,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:thaumicbases/blazingFluid/block
+block:id=%pyrofluid,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:thaumicbases/blazingFluid/leftovers
+
+# %overchanter:* (overchanter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockOverchanter
+block:id=%overchanter,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:thaumicbases/overchanter/bottom,face1=0:thaumicbases/overchanter/top,face2-5=0:thaumicbases/overchanter/side
+
+# %cryingObsidian:* (cryingObsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockCryingObelisk
+block:id=%cryingObsidian,data=*,stdrot=true,face0-5=0:thaumicbases/cryingObelisk/cryingObsidian
+
+# %advAlchFurnace:* (advAlchFurnace), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockAdvAlchemicalFurnace
+block:id=%advAlchFurnace,data=*,stdrot=true,face0-1=0:thaumicbases/tFurnace/top,face2=0:thaumicbases/tFurnace/side,face3=0:thaumicbases/tFurnace/front_off,face4-5=0:thaumicbases/tFurnace/side
+
+# %relocator:* (relocator), render=tb.client.render.block.ThaumicRelocatorRenderer(CUSTOM), opaque=true,cls=tb.common.block.BlockRelocator
+block:id=%relocator,data=0,stdrot=true,face0=0:thaumcraft/liftertop,face1=0:thaumcraft/arcaneearbottom,face2-5=0:thaumcraft/lifterside
+block:id=%relocator,data=1,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/liftertop,face2-5=0:thaumcraft/lifterside
+block:id=%relocator,data=2,stdrot=true,face0-1=0:thaumcraft/lifterside,face2=0:thaumcraft/liftertop,face3=0:thaumcraft/arcaneearbottom,face4-5=0:thaumicbases/relocator/rotatedside
+block:id=%relocator,data=3,stdrot=true,face0-1=0:thaumcraft/lifterside,face2=0:thaumcraft/arcaneearbottom,face3=0:thaumcraft/liftertop,face4-5=0:thaumicbases/relocator/rotatedside
+block:id=%relocator,data=4,stdrot=true,face0-3=0:thaumicbases/relocator/rotatedside,face4=0:thaumcraft/liftertop,face5=0:thaumcraft/arcaneearbottom
+block:id=%relocator,data=5,stdrot=true,face0-3=0:thaumicbases/relocator/rotatedside,face4=0:thaumcraft/arcaneearbottom,face5=0:thaumcraft/liftertop
+block:id=%relocator,data=6,stdrot=true,face0=0:thaumcraft/liftertop,face1=0:thaumcraft/arcaneearbottom,face2-5=0:thaumcraft/lifterside
+block:id=%relocator,data=7,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/liftertop,face2-5=0:thaumcraft/lifterside
+block:id=%relocator,data=8,stdrot=true,face0-1=0:thaumcraft/lifterside,face2=0:thaumcraft/liftertop,face3=0:thaumcraft/arcaneearbottom,face4-5=0:thaumicbases/relocator/rotatedside
+block:id=%relocator,data=9,stdrot=true,face0-1=0:thaumcraft/lifterside,face2=0:thaumcraft/arcaneearbottom,face3=0:thaumcraft/liftertop,face4-5=0:thaumicbases/relocator/rotatedside
+block:id=%relocator,data=10,stdrot=true,face0-3=0:thaumicbases/relocator/rotatedside,face4=0:thaumcraft/liftertop,face5=0:thaumcraft/arcaneearbottom
+block:id=%relocator,data=11,stdrot=true,face0-3=0:thaumicbases/relocator/rotatedside,face4=0:thaumcraft/arcaneearbottom,face5=0:thaumcraft/liftertop
+block:id=%relocator,data=12,stdrot=true,face0=0:thaumcraft/liftertop,face1=0:thaumcraft/arcaneearbottom,face2-5=0:thaumcraft/lifterside
+block:id=%relocator,data=13,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/liftertop,face2-5=0:thaumcraft/lifterside
+block:id=%relocator,data=14,stdrot=true,face0-1=0:thaumcraft/lifterside,face2=0:thaumcraft/liftertop,face3=0:thaumcraft/arcaneearbottom,face4-5=0:thaumicbases/relocator/rotatedside
+block:id=%relocator,data=15,stdrot=true,face0-1=0:thaumcraft/lifterside,face2=0:thaumcraft/arcaneearbottom,face3=0:thaumcraft/liftertop,face4-5=0:thaumicbases/relocator/rotatedside
+
+# %thaumicAnvil:* (thaumicAnvil), render=(ANVIL), opaque=false,cls=tb.common.block.BlockThaumicAnvil
+block:id=%thaumicAnvil,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicbases/thaumiumAnvil/base
+
+# %voidAnvil:* (voidAnvil), render=(ANVIL), opaque=false,cls=tb.common.block.BlockVoidAnvil
+block:id=%voidAnvil,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicbases/voidAnvil/base
+
+# %campfire:* (campfire), render=tb.client.render.block.CampfireRenderer(CUSTOM), opaque=false,cls=tb.common.block.BlockCampfire
+block:id=%campfire,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicbases/campfire
+
+# %brazier:* (brazier), render=tb.client.render.block.BrazierRenderer(CUSTOM), opaque=false,cls=tb.common.block.BlockBrazier
+block:id=%brazier,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone
+
+# %eldritchArk:* (eldritchArk), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%eldritchArk,data=*,stdrot=true,face0-5=0:thaumicbases/eldritchArk
+
+# %ironGreatwood:* (ironGreatwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%ironGreatwood,data=*,stdrot=true,face0-5=0:thaumicbases/ironGreatwood
+
+# %oldBrick:* (oldBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%oldBrick,data=*,stdrot=true,face0-5=0:thaumicbases/brick
+
+# %oldLapis:* (oldLapis), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%oldLapis,data=*,stdrot=true,face0-5=0:thaumicbases/lapis_block
+
+# %oldIron:* (oldIron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
+block:id=%oldIron,data=*,stdrot=true,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
+
+# %oldGold:* (oldGold), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
+block:id=%oldGold,data=*,stdrot=true,face0-1=0:thaumicbases/gold_block,face2-5=0:thaumicbases/gold_block_side
+
+# %oldDiamond:* (oldDiamond), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
+block:id=%oldDiamond,data=*,stdrot=true,face0-1=0:thaumicbases/diamond_block,face2-5=0:thaumicbases/diamond_block_side
+
+# %oldCobble:* (oldCobble), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%oldCobble,data=*,stdrot=true,face0-5=0:thaumicbases/cobblestone
+
+# %oldCobbleMossy:* (oldCobbleMossy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%oldCobbleMossy,data=*,stdrot=true,face0-5=0:thaumicbases/cobblestone_mossy
+
+# %oldGravel:* (oldGravel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+block:id=%oldGravel,data=*,stdrot=true,face0-5=0:thaumicbases/gravel
+
+# %genericSlab:* (genericSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockHalfSlab
+block:id=%genericSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/eldritchArk
+block:id=%genericSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/brick
+block:id=%genericSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/cobblestone
+block:id=%genericSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/cobblestone_mossy
+block:id=%genericSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:thaumicbases/diamond_block,face2-5=0:thaumicbases/diamond_block_side
+block:id=%genericSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:thaumicbases/gold_block,face2-5=0:thaumicbases/gold_block_side
+block:id=%genericSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
+block:id=%genericSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/lapis_block
+block:id=%genericSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/eldritchArk
+block:id=%genericSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/brick
+block:id=%genericSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/cobblestone
+block:id=%genericSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/cobblestone_mossy
+block:id=%genericSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:thaumicbases/diamond_block,face2-5=0:thaumicbases/diamond_block_side
+block:id=%genericSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:thaumicbases/gold_block,face2-5=0:thaumicbases/gold_block_side
+block:id=%genericSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
+block:id=%genericSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/lapis_block
+
+# %genericSlab_full:* (genericSlab_full), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockHalfSlab
+block:id=%genericSlab_full,data=0,stdrot=true,face0-5=0:thaumicbases/eldritchArk
+block:id=%genericSlab_full,data=1,stdrot=true,face0-5=0:thaumicbases/brick
+block:id=%genericSlab_full,data=2,stdrot=true,face0-5=0:thaumicbases/cobblestone
+block:id=%genericSlab_full,data=3,stdrot=true,face0-5=0:thaumicbases/cobblestone_mossy
+block:id=%genericSlab_full,data=4,stdrot=true,face0-1=0:thaumicbases/diamond_block,face2-5=0:thaumicbases/diamond_block_side
+block:id=%genericSlab_full,data=5,stdrot=true,face0-1=0:thaumicbases/gold_block,face2-5=0:thaumicbases/gold_block_side
+block:id=%genericSlab_full,data=6,stdrot=true,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
+block:id=%genericSlab_full,data=7,stdrot=true,face0-5=0:thaumicbases/lapis_block
+block:id=%genericSlab_full,data=8,stdrot=true,face0-5=0:thaumicbases/eldritchArk
+block:id=%genericSlab_full,data=9,stdrot=true,face0-5=0:thaumicbases/brick
+block:id=%genericSlab_full,data=10,stdrot=true,face0-5=0:thaumicbases/cobblestone
+block:id=%genericSlab_full,data=11,stdrot=true,face0-5=0:thaumicbases/cobblestone_mossy
+block:id=%genericSlab_full,data=12,stdrot=true,face0-1=0:thaumicbases/diamond_block,face2-5=0:thaumicbases/diamond_block_side
+block:id=%genericSlab_full,data=13,stdrot=true,face0-1=0:thaumicbases/gold_block,face2-5=0:thaumicbases/gold_block_side
+block:id=%genericSlab_full,data=14,stdrot=true,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
+block:id=%genericSlab_full,data=15,stdrot=true,face0-5=0:thaumicbases/lapis_block
+
+# %crystalSlab:* (crystalSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockCrystalSlab
+block:id=%crystalSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/air
+block:id=%crystalSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/fire
+block:id=%crystalSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/water
+block:id=%crystalSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/earth
+block:id=%crystalSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/order
+block:id=%crystalSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/entropy
+block:id=%crystalSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/mixed
+block:id=%crystalSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/tainted
+block:id=%crystalSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/air
+block:id=%crystalSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/fire
+block:id=%crystalSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/water
+block:id=%crystalSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/earth
+block:id=%crystalSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/order
+block:id=%crystalSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/entropy
+block:id=%crystalSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/mixed
+block:id=%crystalSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/tainted
+
+# %crystalSlab_full:* (crystalSlab_full), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalSlab
+block:id=%crystalSlab_full,data=0,stdrot=true,face0-5=0:thaumicbases/crystal/air
+block:id=%crystalSlab_full,data=1,stdrot=true,face0-5=0:thaumicbases/crystal/fire
+block:id=%crystalSlab_full,data=2,stdrot=true,face0-5=0:thaumicbases/crystal/water
+block:id=%crystalSlab_full,data=3,stdrot=true,face0-5=0:thaumicbases/crystal/earth
+block:id=%crystalSlab_full,data=4,stdrot=true,face0-5=0:thaumicbases/crystal/order
+block:id=%crystalSlab_full,data=5,stdrot=true,face0-5=0:thaumicbases/crystal/entropy
+block:id=%crystalSlab_full,data=6,stdrot=true,face0-5=0:thaumicbases/crystal/mixed
+block:id=%crystalSlab_full,data=7,stdrot=true,face0-5=0:thaumicbases/crystal/tainted
+block:id=%crystalSlab_full,data=8,stdrot=true,face0-5=0:thaumicbases/crystal/air
+block:id=%crystalSlab_full,data=9,stdrot=true,face0-5=0:thaumicbases/crystal/fire
+block:id=%crystalSlab_full,data=10,stdrot=true,face0-5=0:thaumicbases/crystal/water
+block:id=%crystalSlab_full,data=11,stdrot=true,face0-5=0:thaumicbases/crystal/earth
+block:id=%crystalSlab_full,data=12,stdrot=true,face0-5=0:thaumicbases/crystal/order
+block:id=%crystalSlab_full,data=13,stdrot=true,face0-5=0:thaumicbases/crystal/entropy
+block:id=%crystalSlab_full,data=14,stdrot=true,face0-5=0:thaumicbases/crystal/mixed
+block:id=%crystalSlab_full,data=15,stdrot=true,face0-5=0:thaumicbases/crystal/tainted
+
+# %tobacco:* (tobacco), render=(CROPS), opaque=false,cls=tb.common.block.BlockTBPlant
+block:id=%tobacco,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_0
+block:id=%tobacco,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_1
+block:id=%tobacco,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_2
+block:id=%tobacco,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_3
+block:id=%tobacco,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_4
+block:id=%tobacco,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_5
+block:id=%tobacco,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_6
+block:id=%tobacco,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/tobacco/stage_7
+
+# %spike:* (spike), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockSpike
+block:id=%spike,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/spike/iron
+block:id=%spike,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/spike/iron_bloody
+block:id=%spike,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/spike/thaumic
+block:id=%spike,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/spike/thaumic_bloody
+block:id=%spike,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/spike/void
+block:id=%spike,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/spike/void_bloody
+
+# %plax:* (plax), render=(CROPS), opaque=false,cls=tb.common.block.BlockTBPlant
+block:id=%plax,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_0
+block:id=%plax,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_1
+block:id=%plax,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_2
+block:id=%plax,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_3
+block:id=%plax,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_4
+block:id=%plax,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_5
+block:id=%plax,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_6
+block:id=%plax,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/plax/stage_7
+
+# %aureliaPetal:* (aureliaPetal), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockAureliaLeaf
+block:id=%aureliaPetal,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/aurelia/petal
+
+# %aurelia:* (aurelia), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockAureliaPlant
+block:id=%aurelia,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/aurelia/closed
+block:id=%aurelia,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/aurelia/open
+
+# %metalleat:* (metalleat), render=(CROPS), opaque=false,cls=tb.common.block.BlockTBPlant
+block:id=%metalleat,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_0
+block:id=%metalleat,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_1
+block:id=%metalleat,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_2
+block:id=%metalleat,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_3
+block:id=%metalleat,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_4
+block:id=%metalleat,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_5
+block:id=%metalleat,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_6
+block:id=%metalleat,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/metalleat/stage_7
+
+# %lucrite:* (lucrite), render=(CROPS), opaque=false,cls=tb.common.block.BlockLucritePlant
+block:id=%lucrite,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_0
+block:id=%lucrite,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_1
+block:id=%lucrite,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_2
+block:id=%lucrite,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_3
+block:id=%lucrite,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_4
+block:id=%lucrite,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_5
+block:id=%lucrite,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_6
+block:id=%lucrite,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lucrite/stage_7
+
+# %knose:* (knose), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockKnose
+block:id=%knose,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/knoze/stage_0
+block:id=%knose,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/knoze/stage_1
+block:id=%knose,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/knoze/stage_2
+block:id=%knose,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/knoze/stage_3
+
+# %sweed:* (sweed), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockSweed
+block:id=%sweed,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/sweed/stage_0
+block:id=%sweed,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/sweed/stage_1
+block:id=%sweed,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/sweed/stage_2
+block:id=%sweed,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/sweed/stage_3
+
+# %lazullia:* (lazullia), render=(CROPS), opaque=false,cls=tb.common.block.BlockTBPlant
+block:id=%lazullia,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_0
+block:id=%lazullia,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_1
+block:id=%lazullia,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_2
+block:id=%lazullia,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_3
+block:id=%lazullia,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_4
+block:id=%lazullia,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_5
+block:id=%lazullia,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_6
+block:id=%lazullia,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/lazullia/stage_7
+
+# %rainbowCactus:* (rainbowCactus), render=(CACTUS), opaque=false,cls=tb.common.block.BlockRainbowCactus
+block:id=%rainbowCactus,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0-3=0:thaumicbases/rainbowCacti/side,patch4=0:thaumicbases/rainbowCacti/top,patch5=0:thaumicbases/rainbowCacti/bottom
+
+# %redlonStem:* (redlonStem), render=(STEM), opaque=false,cls=tb.common.block.BlockRedlonStem
+block:id=%redlonStem,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicbases/redlon/redlon_disconnected
+
+# %ashroom:* (ashroom), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockAshroom
+block:id=%ashroom,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/aspectshroom/stage_0
+block:id=%ashroom,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/aspectshroom/stage_1
+block:id=%ashroom,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/aspectshroom/stage_2
+block:id=%ashroom,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/aspectshroom/stage_3
+
+# %flaxium:* (flaxium), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockFlaxium
+block:id=%flaxium,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/flaxium
+
+# %glieonia:* (glieonia), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockTBPlant
+block:id=%glieonia,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/glieonia/stage_0
+block:id=%glieonia,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/glieonia/stage_1
+block:id=%glieonia,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/glieonia/stage_2
+block:id=%glieonia,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/glieonia/stage_3
+
+# %briar:* (briar), render=(CROPS), opaque=false,cls=tb.common.block.BlockBriar
+block:id=%briar,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_0_bot
+block:id=%briar,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_1_bot
+block:id=%briar,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_2_bot
+block:id=%briar,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_3_bot
+block:id=%briar,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_4_bot
+block:id=%briar,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_5_bot
+block:id=%briar,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_6_bot
+block:id=%briar,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_7_bot
+block:id=%briar,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_0_top
+block:id=%briar,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_1_top
+block:id=%briar,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_2_top
+block:id=%briar,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_3_top
+block:id=%briar,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_4_top
+block:id=%briar,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_5_top
+block:id=%briar,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_6_top
+block:id=%briar,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/briar/stage_7_top
+
+# %voidPlant:* (voidPlant), render=(CROPS), opaque=false,cls=tb.common.block.BlockTBPlant
+block:id=%voidPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/voidPlant/stage_0
+block:id=%voidPlant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/voidPlant/stage_1
+block:id=%voidPlant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/voidPlant/stage_2
+block:id=%voidPlant,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/voidPlant/stage_3
+
+# %goldenOakSapling:* (goldenOakSapling), render=(CROSSEDSQUARES), opaque=false,cls=tb.common.block.BlockTBSapling
+block:id=%goldenOakSapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/goldenOak/sapling
+block:id=%goldenOakSapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/peacefullTree/sapling
+block:id=%goldenOakSapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/netherTree/sapling
+block:id=%goldenOakSapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/enderTree/sapling
+block:id=%goldenOakSapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/goldenOak/sapling
+block:id=%goldenOakSapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/peacefullTree/sapling
+block:id=%goldenOakSapling,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/netherTree/sapling
+block:id=%goldenOakSapling,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/enderTree/sapling
+
+# %genLeaves:* (genLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockTBLeaves
+block:id=%genLeaves,data=0,stdrot=true,face0-5=0:thaumicbases/goldenOak/leaves
+block:id=%genLeaves,data=1,stdrot=true,face0-5=0:thaumicbases/peacefullTree/leaves
+block:id=%genLeaves,data=2,stdrot=true,face0-5=0:thaumicbases/netherTree/leaves
+block:id=%genLeaves,data=3,stdrot=true,face0-5=0:thaumicbases/enderTree/leaves
+block:id=%genLeaves,data=8,stdrot=true,face0-5=0:thaumicbases/goldenOak/leaves
+block:id=%genLeaves,data=9,stdrot=true,face0-5=0:thaumicbases/peacefullTree/leaves
+block:id=%genLeaves,data=10,stdrot=true,face0-5=0:thaumicbases/netherTree/leaves
+block:id=%genLeaves,data=11,stdrot=true,face0-5=0:thaumicbases/enderTree/leaves
+
+# %genLogs:* (genLogs), render=(LOG), opaque=true,cls=tb.common.block.BlockTBLog
+block:id=%genLogs,data=0,stdrot=true,face0-1=0:thaumicbases/peacefullTree/log_top,face2-5=0:thaumicbases/peacefullTree/log
+block:id=%genLogs,data=1,stdrot=true,face0-1=0:thaumicbases/netherTree/log_top,face2-5=0:thaumicbases/netherTree/log
+block:id=%genLogs,data=2,stdrot=true,face0-1=0:thaumicbases/enderTree/log_top,face2-5=0:thaumicbases/enderTree/log
+block:id=%genLogs,data=3,stdrot=true,face0-1=0:thaumicbases/peacefullTree/log_top,face2-5=0:thaumicbases/peacefullTree/log
+block:id=%genLogs,data=4,face0-1=0:thaumicbases/peacefullTree/log,face2-3=4000:thaumicbases/peacefullTree/log,face4-5=0:thaumicbases/peacefullTree/log_top
+block:id=%genLogs,data=5,face0-1=0:thaumicbases/netherTree/log,face2-3=4000:thaumicbases/netherTree/log,face4-5=0:thaumicbases/netherTree/log_top
+block:id=%genLogs,data=6,face0-1=0:thaumicbases/enderTree/log,face2-3=4000:thaumicbases/enderTree/log,face4-5=0:thaumicbases/enderTree/log_top
+block:id=%genLogs,data=7,face0-1=0:thaumicbases/peacefullTree/log,face2-3=4000:thaumicbases/peacefullTree/log,face4-5=0:thaumicbases/peacefullTree/log_top
+block:id=%genLogs,data=8,face0-1=4000:thaumicbases/peacefullTree/log,face2-3=0:thaumicbases/peacefullTree/log_top,face4-5=4000:thaumicbases/peacefullTree/log
+block:id=%genLogs,data=9,face0-1=4000:thaumicbases/netherTree/log,face2-3=0:thaumicbases/netherTree/log_top,face4-5=4000:thaumicbases/netherTree/log
+block:id=%genLogs,data=10,face0-1=4000:thaumicbases/enderTree/log,face2-3=0:thaumicbases/enderTree/log_top,face4-5=4000:thaumicbases/enderTree/log
+block:id=%genLogs,data=11,face0-1=4000:thaumicbases/peacefullTree/log,face2-3=0:thaumicbases/peacefullTree/log_top,face4-5=4000:thaumicbases/peacefullTree/log
+block:id=%genLogs,data=12,stdrot=true,face0-5=0:thaumicbases/peacefullTree/log
+block:id=%genLogs,data=13,stdrot=true,face0-5=0:thaumicbases/netherTree/log
+block:id=%genLogs,data=14,stdrot=true,face0-5=0:thaumicbases/enderTree/log
+block:id=%genLogs,data=15,stdrot=true,face0-5=0:thaumicbases/peacefullTree/log
+
+# %enderPlanks:* (enderPlanks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%enderPlanks,data=*,stdrot=true,face0-5=0:thaumicbases/enderTree/planks
+
+# %nodeManipulator:* (nodeManipulator), render=(CUSTOM), opaque=false,cls=tb.common.block.BlockNodeManipulator
+block:id=%nodeManipulator,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_2168_nodeManipulator
+
+# %nodeLinker:* (nodeLinker), render=(CUSTOM), opaque=false,cls=tb.common.block.BlockNodeLinker
+block:id=%nodeLinker,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_2169_nodeLinker
+
+# %entityDeconstructor:* (entityDeconstructor), render=(CUSTOM), opaque=false,cls=tb.common.block.BlockEntityDeconstructor
+block:id=%entityDeconstructor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicbases/entityDeconstructor/block

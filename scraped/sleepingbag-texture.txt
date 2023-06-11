@@ -1,0 +1,36 @@
+# sleepingbag 0.1.4
+version:1.7
+modname:sleepingbag
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/sleepingbag/textures/blocks/
+texture:id=sleepingbag/sleeping_bag_feet_end,filename=assets/sleepingbag/textures/blocks/sleeping_bag_feet_end.png
+texture:id=sleepingbag/sleeping_bag_feet_side,filename=assets/sleepingbag/textures/blocks/sleeping_bag_feet_side.png
+texture:id=sleepingbag/sleeping_bag_feet_top,filename=assets/sleepingbag/textures/blocks/sleeping_bag_feet_top.png
+texture:id=sleepingbag/sleeping_bag_head_end,filename=assets/sleepingbag/textures/blocks/sleeping_bag_head_end.png
+texture:id=sleepingbag/sleeping_bag_head_side,filename=assets/sleepingbag/textures/blocks/sleeping_bag_head_side.png
+texture:id=sleepingbag/sleeping_bag_head_top,filename=assets/sleepingbag/textures/blocks/sleeping_bag_head_top.png
+
+
+
+# %sleepingBagBlock:* (sleepingBagBlock), render=ru.npo6ka.sleepingbag.BlockRenderer(CUSTOM), opaque=false,cls=ru.npo6ka.sleepingbag.blocks.BlockSleepingBag
+block:id=%sleepingBagBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_feet_top,face2=0:sleepingbag/sleeping_bag_feet_end,face3=0:sleepingbag/sleeping_bag_feet_top,face4-5=0:sleepingbag/sleeping_bag_feet_side
+block:id=%sleepingBagBlock,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_feet_top,face2-3=0:sleepingbag/sleeping_bag_feet_side,face4=0:sleepingbag/sleeping_bag_feet_top,face5=0:sleepingbag/sleeping_bag_feet_end
+block:id=%sleepingBagBlock,data=2,stdrot=true,transparency=TRANSPARENT,face0-2=0:sleepingbag/sleeping_bag_feet_top,face3=0:sleepingbag/sleeping_bag_feet_end,face4-5=0:sleepingbag/sleeping_bag_feet_side
+block:id=%sleepingBagBlock,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_feet_top,face2-3=0:sleepingbag/sleeping_bag_feet_side,face4=0:sleepingbag/sleeping_bag_feet_end,face5=0:sleepingbag/sleeping_bag_feet_top
+block:id=%sleepingBagBlock,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_feet_top,face2=0:sleepingbag/sleeping_bag_feet_end,face3=0:sleepingbag/sleeping_bag_feet_top,face4-5=0:sleepingbag/sleeping_bag_feet_side
+block:id=%sleepingBagBlock,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_feet_top,face2-3=0:sleepingbag/sleeping_bag_feet_side,face4=0:sleepingbag/sleeping_bag_feet_top,face5=0:sleepingbag/sleeping_bag_feet_end
+block:id=%sleepingBagBlock,data=6,stdrot=true,transparency=TRANSPARENT,face0-2=0:sleepingbag/sleeping_bag_feet_top,face3=0:sleepingbag/sleeping_bag_feet_end,face4-5=0:sleepingbag/sleeping_bag_feet_side
+block:id=%sleepingBagBlock,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_feet_top,face2-3=0:sleepingbag/sleeping_bag_feet_side,face4=0:sleepingbag/sleeping_bag_feet_end,face5=0:sleepingbag/sleeping_bag_feet_top
+block:id=%sleepingBagBlock,data=8,stdrot=true,transparency=TRANSPARENT,face0-2=0:sleepingbag/sleeping_bag_head_top,face3=0:sleepingbag/sleeping_bag_head_end,face4-5=0:sleepingbag/sleeping_bag_head_side
+block:id=%sleepingBagBlock,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_head_top,face2-3=0:sleepingbag/sleeping_bag_head_side,face4=0:sleepingbag/sleeping_bag_head_end,face5=0:sleepingbag/sleeping_bag_head_top
+block:id=%sleepingBagBlock,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_head_top,face2=0:sleepingbag/sleeping_bag_head_end,face3=0:sleepingbag/sleeping_bag_head_top,face4-5=0:sleepingbag/sleeping_bag_head_side
+block:id=%sleepingBagBlock,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_head_top,face2-3=0:sleepingbag/sleeping_bag_head_side,face4=0:sleepingbag/sleeping_bag_head_top,face5=0:sleepingbag/sleeping_bag_head_end
+block:id=%sleepingBagBlock,data=12,stdrot=true,transparency=TRANSPARENT,face0-2=0:sleepingbag/sleeping_bag_head_top,face3=0:sleepingbag/sleeping_bag_head_end,face4-5=0:sleepingbag/sleeping_bag_head_side
+block:id=%sleepingBagBlock,data=13,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_head_top,face2-3=0:sleepingbag/sleeping_bag_head_side,face4=0:sleepingbag/sleeping_bag_head_end,face5=0:sleepingbag/sleeping_bag_head_top
+block:id=%sleepingBagBlock,data=14,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_head_top,face2=0:sleepingbag/sleeping_bag_head_end,face3=0:sleepingbag/sleeping_bag_head_top,face4-5=0:sleepingbag/sleeping_bag_head_side
+block:id=%sleepingBagBlock,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:sleepingbag/sleeping_bag_head_top,face2-3=0:sleepingbag/sleeping_bag_head_side,face4=0:sleepingbag/sleeping_bag_head_top,face5=0:sleepingbag/sleeping_bag_head_end

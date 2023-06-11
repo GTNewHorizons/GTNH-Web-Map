@@ -1,0 +1,41 @@
+# littletiles 1.2.7-GTNH
+version:1.7
+modname:littletiles
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/littletiles/textures/blocks/
+texture:id=littletiles/LTColored0,filename=assets/littletiles/textures/blocks/LTColored0.png
+texture:id=littletiles/LTColored1,filename=assets/littletiles/textures/blocks/LTColored1.png
+texture:id=littletiles/LTColored10,filename=assets/littletiles/textures/blocks/LTColored10.png
+texture:id=littletiles/LTColored2,filename=assets/littletiles/textures/blocks/LTColored2.png
+texture:id=littletiles/LTColored3,filename=assets/littletiles/textures/blocks/LTColored3.png
+texture:id=littletiles/LTColored4,filename=assets/littletiles/textures/blocks/LTColored4.png
+texture:id=littletiles/LTColored5,filename=assets/littletiles/textures/blocks/LTColored5.png
+texture:id=littletiles/LTColored6,filename=assets/littletiles/textures/blocks/LTColored6.png
+texture:id=littletiles/LTColored7,filename=assets/littletiles/textures/blocks/LTColored7.png
+texture:id=littletiles/LTColored8,filename=assets/littletiles/textures/blocks/LTColored8.png
+texture:id=littletiles/LTColored9,filename=assets/littletiles/textures/blocks/LTColored9.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %LTColoredBlock:* (LTColoredBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.creativemd.littletiles.common.blocks.BlockLTColored
+block:id=%LTColoredBlock,data=0,stdrot=true,face0-5=0:littletiles/LTColored0
+block:id=%LTColoredBlock,data=1,stdrot=true,face0-5=0:littletiles/LTColored1
+block:id=%LTColoredBlock,data=2,stdrot=true,face0-5=0:littletiles/LTColored2
+block:id=%LTColoredBlock,data=3,stdrot=true,face0-5=0:littletiles/LTColored3
+block:id=%LTColoredBlock,data=4,stdrot=true,face0-5=0:littletiles/LTColored4
+block:id=%LTColoredBlock,data=5,stdrot=true,face0-5=0:littletiles/LTColored5
+block:id=%LTColoredBlock,data=6,stdrot=true,face0-5=0:littletiles/LTColored6
+block:id=%LTColoredBlock,data=7,stdrot=true,face0-5=0:littletiles/LTColored7
+block:id=%LTColoredBlock,data=8,stdrot=true,face0-5=0:littletiles/LTColored8
+block:id=%LTColoredBlock,data=9,stdrot=true,face0-5=0:littletiles/LTColored9
+block:id=%LTColoredBlock,data=10,stdrot=true,face0-5=0:littletiles/LTColored10
+block:id=%LTColoredBlock,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:littletiles/LTColored0
+
+# %BlockLittleTiles:* (BlockLittleTiles), render=com.creativemd.littletiles.client.render.SpecialBlockTilesRenderer(CUSTOM), opaque=false,cls=com.creativemd.littletiles.common.blocks.BlockTile
+block:id=%BlockLittleTiles,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone

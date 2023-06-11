@@ -1,0 +1,92 @@
+# gadomancy 1.0.8.9
+version:1.7
+modname:gadomancy
+
+
+cfgfile:config/gadomancy.cfg
+
+
+texturepath:assets/gadomancy/textures/blocks/
+texture:id=gadomancy/ancient_pedestal_side,filename=assets/gadomancy/textures/blocks/ancient_pedestal_side.png
+texture:id=gadomancy/block_packed_compressor,filename=assets/gadomancy/textures/blocks/block_packed_compressor.png
+texture:id=gadomancy/jar_remote_side,filename=assets/gadomancy/textures/blocks/jar_remote_side.png
+texture:id=gadomancy/jar_remote_top,filename=assets/gadomancy/textures/blocks/jar_remote_top.png
+texture:id=gadomancy/manipulator_bot,filename=assets/gadomancy/textures/blocks/manipulator_bot.png
+texture:id=gadomancy/manipulator_focus_bot,filename=assets/gadomancy/textures/blocks/manipulator_focus_bot.png
+texture:id=gadomancy/manipulator_focus_side,filename=assets/gadomancy/textures/blocks/manipulator_focus_side.png
+texture:id=gadomancy/manipulator_focus_top,filename=assets/gadomancy/textures/blocks/manipulator_focus_top.png
+texture:id=gadomancy/manipulator_side,filename=assets/gadomancy/textures/blocks/manipulator_side.png
+texture:id=gadomancy/manipulator_top,filename=assets/gadomancy/textures/blocks/manipulator_top.png
+texture:id=gadomancy/transparent,filename=assets/gadomancy/textures/blocks/transparent.png
+texture:id=minecraft/quartz_block_top,filename=assets/minecraft/textures/blocks/quartz_block_top.png
+texture:id=minecraft/wool_colored_white,filename=assets/minecraft/textures/blocks/wool_colored_white.png
+texture:id=thaumcraft/al_furnace_front_off,filename=assets/thaumcraft/textures/blocks/al_furnace_front_off.png
+texture:id=thaumcraft/al_furnace_top,filename=assets/thaumcraft/textures/blocks/al_furnace_top.png
+texture:id=thaumcraft/blank,filename=assets/thaumcraft/textures/blocks/blank.png
+texture:id=thaumcraft/es_1,filename=assets/thaumcraft/textures/blocks/es_1.png
+texture:id=thaumcraft/jar_bottom,filename=assets/thaumcraft/textures/blocks/jar_bottom.png
+texture:id=thaumcraft/jar_side,filename=assets/thaumcraft/textures/blocks/jar_side.png
+texture:id=thaumcraft/jar_side_void,filename=assets/thaumcraft/textures/blocks/jar_side_void.png
+texture:id=thaumcraft/jar_top,filename=assets/thaumcraft/textures/blocks/jar_top.png
+texture:id=thaumcraft/jar_top_void,filename=assets/thaumcraft/textures/blocks/jar_top_void.png
+texture:id=thaumcraft/pedestal_side,filename=assets/thaumcraft/textures/blocks/pedestal_side.png
+texture:id=thaumcraft/pedestal_top,filename=assets/thaumcraft/textures/blocks/pedestal_top.png
+texture:id=thaumcraft/pipe_1,filename=assets/thaumcraft/textures/blocks/pipe_1.png
+texture:id=thaumcraft/planks_greatwood,filename=assets/thaumcraft/textures/blocks/planks_greatwood.png
+texture:id=thaumcraft/spa_side,filename=assets/thaumcraft/textures/blocks/spa_side.png
+texture:id=thaumcraft/spa_top,filename=assets/thaumcraft/textures/blocks/spa_top.png
+texture:id=thaumcraft/thaumiumblock,filename=assets/thaumcraft/textures/blocks/thaumiumblock.png
+
+
+
+# %BlockStickyJar:* (BlockStickyJar), render=makeo.gadomancy.client.renderers.block.RenderBlockTransparent(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockStickyJar
+block:id=%BlockStickyJar,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top,face2-5=0:thaumcraft/jar_side
+block:id=%BlockStickyJar,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top_void,face2-5=0:thaumcraft/jar_side_void
+block:id=%BlockStickyJar,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/jar_bottom
+
+# %BlockArcaneDropper:* (BlockArcaneDropper), render=makeo.gadomancy.client.renderers.block.RenderBlockTransparent(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockArcaneDropper
+block:id=%BlockArcaneDropper,data=*,stdrot=true,face0-5=0:thaumcraft/pedestal_top
+
+# %BlockInfusionClaw:* (BlockInfusionClaw), render=makeo.gadomancy.client.renderers.block.RenderBlockTransparent(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockInfusionClaw
+block:id=%BlockInfusionClaw,data=*,stdrot=true,face0-5=0:thaumcraft/pedestal_top
+
+# %BlockRemoteJar:* (BlockRemoteJar), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockRemoteJar
+block:id=%BlockRemoteJar,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:gadomancy/transparent,face1=0:gadomancy/jar_remote_top,face2-5=0:gadomancy/jar_remote_side
+block:id=%BlockRemoteJar,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:gadomancy/transparent,face1=0:thaumcraft/jar_top_void,face2-5=0:thaumcraft/jar_side_void
+block:id=%BlockRemoteJar,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:gadomancy/transparent
+
+# %BlockExtendedNodeJar:* (BlockExtendedNodeJar), render=makeo.gadomancy.client.renderers.block.BlockExtendedNodeJarRenderer(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockExtendedNodeJar
+block:id=%BlockExtendedNodeJar,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top,face2-5=0:thaumcraft/jar_side
+
+# %BlockNodeManipulator:* (BlockNodeManipulator), render=thaumcraft.client.renderers.block.BlockStoneDeviceRenderer(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockNodeManipulator
+block:id=%BlockNodeManipulator,data=0,stdrot=true,face0=0:gadomancy/manipulator_bot,face1=0:thaumcraft/al_furnace_top,face2-5=0:thaumcraft/al_furnace_front_off
+block:id=%BlockNodeManipulator,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:gadomancy/manipulator_bot,face2-5=0:thaumcraft/pedestal_side
+block:id=%BlockNodeManipulator,data=2,stdrot=true,face0-5=0:gadomancy/manipulator_bot
+block:id=%BlockNodeManipulator,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:gadomancy/manipulator_bot
+block:id=%BlockNodeManipulator,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:gadomancy/manipulator_bot,face1=0:gadomancy/manipulator_top,face2-5=0:gadomancy/manipulator_side
+block:id=%BlockNodeManipulator,data=6,data=7,stdrot=true,face0-5=0:gadomancy/manipulator_bot
+block:id=%BlockNodeManipulator,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:gadomancy/manipulator_focus_bot,face1=0:gadomancy/manipulator_focus_top,face2-5=0:gadomancy/manipulator_focus_side
+block:id=%BlockNodeManipulator,data=9,data=10,data=11,stdrot=true,face0-5=0:gadomancy/manipulator_bot
+block:id=%BlockNodeManipulator,data=12,stdrot=true,face0=0:gadomancy/manipulator_bot,face1=0:thaumcraft/spa_top,face2-5=0:thaumcraft/spa_side
+block:id=%BlockNodeManipulator,data=13,data=14,data=15,stdrot=true,face0-5=0:gadomancy/manipulator_bot
+
+# %BlockStoneMachine:* (BlockStoneMachine), render=makeo.gadomancy.client.renderers.block.RenderBlockStoneMachine(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockStoneMachine
+block:id=%BlockStoneMachine,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/thaumiumblock
+block:id=%BlockStoneMachine,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:gadomancy/manipulator_bot,face2-5=0:gadomancy/ancient_pedestal_side
+block:id=%BlockStoneMachine,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/pipe_1
+block:id=%BlockStoneMachine,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/thaumiumblock
+block:id=%BlockStoneMachine,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/planks_greatwood
+block:id=%BlockStoneMachine,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/es_1
+block:id=%BlockStoneMachine,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/es_1
+
+# %BlockAdditionalEldritchPortal:* (BlockAdditionalEldritchPortal), render=(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockAdditionalEldritchPortal
+block:id=%BlockAdditionalEldritchPortal,data=*,stdrot=true,face0-5=0:thaumcraft/blank
+
+# %BlockAuraPylon:* (BlockAuraPylon), render=makeo.gadomancy.client.renderers.block.RenderBlockTransparent(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockAuraPylon
+block:id=%BlockAuraPylon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_top
+
+# %BlockKnowledgeBook:* (BlockKnowledgeBook), render=makeo.gadomancy.client.renderers.block.RenderBlockTransparent(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockKnowledgeBook
+block:id=%BlockKnowledgeBook,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white
+
+# %BlockEssentiaCompressor:* (BlockEssentiaCompressor), render=makeo.gadomancy.client.renderers.block.RenderBlockTransparent(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockEssentiaCompressor
+block:id=%BlockEssentiaCompressor,data=*,stdrot=true,face0-5=0:gadomancy/block_packed_compressor

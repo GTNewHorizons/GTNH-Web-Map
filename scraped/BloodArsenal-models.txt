@@ -1,0 +1,50 @@
+# BloodArsenal 1.2.9
+version:1.7
+modname:BloodArsenal
+
+
+cfgfile:config/BloodArsenal.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %blood_cake:* (blood_cake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodCake
+boxblock:id=%blood_cake,xmin=0.0833333358168602,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%blood_cake,xmin=0.1666666716337204,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%blood_cake,xmin=0.25,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%blood_cake,xmin=0.3333333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%blood_cake,xmin=0.4166666567325592,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%blood_cake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%blood_cake,xmin=0.5833333134651184,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%blood_cake,xmin=0.6666666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7
+boxblock:id=%blood_cake,xmin=0.75,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=8
+boxblock:id=%blood_cake,xmin=0.8333333134651184,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=9
+boxblock:id=%blood_cake,xmin=0.9166666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=10
+boxblock:id=%blood_cake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=11,data=12,data=13,data=14,data=15
+
+# %blood_torch:* (blood_torch), render=(TORCH), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodTorch
+patchblock:id=%blood_torch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%blood_torch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%blood_torch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%blood_torch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%blood_torch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%blood_torch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %life_infuser:* (life_infuser), render=(CUSTOM), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockLifeInfuser
+boxblock:id=%life_infuser,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=*
+
+# %block_burned_string:* (block_burned_string), render=(TRIPWIRE), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBurnedString

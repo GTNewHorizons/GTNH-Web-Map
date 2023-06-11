@@ -1,0 +1,15 @@
+# EnderStorage 1.4.12
+version:1.7
+modname:EnderStorage
+
+
+cfgfile:config/EnderStorage.cfg
+
+
+texturepath:assets/enderstorage/textures/blocks/
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+
+
+
+# %enderChest:* (enderChest), render=(CUSTOM), opaque=false,cls=codechicken.enderstorage.common.BlockEnderStorage
+block:id=%enderChest,data=*,stdrot=true,face0-5=0:minecraft/obsidian

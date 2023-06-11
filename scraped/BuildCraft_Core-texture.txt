@@ -1,0 +1,319 @@
+# BuildCraft_Core 
+version:1.7
+modname:BuildCraft|Core
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/buildcraft_core/textures/blocks/
+texture:id=BuildCraftBuilders/architectBlock/back,filename=assets/buildcraftbuilders/textures/blocks/architectBlock/back.png
+texture:id=BuildCraftBuilders/architectBlock/bottom,filename=assets/buildcraftbuilders/textures/blocks/architectBlock/bottom.png
+texture:id=BuildCraftBuilders/architectBlock/front,filename=assets/buildcraftbuilders/textures/blocks/architectBlock/front.png
+texture:id=BuildCraftBuilders/architectBlock/left,filename=assets/buildcraftbuilders/textures/blocks/architectBlock/left.png
+texture:id=BuildCraftBuilders/architectBlock/right,filename=assets/buildcraftbuilders/textures/blocks/architectBlock/right.png
+texture:id=BuildCraftBuilders/architectBlock/top,filename=assets/buildcraftbuilders/textures/blocks/architectBlock/top.png
+texture:id=BuildCraftBuilders/builderBlock/back,filename=assets/buildcraftbuilders/textures/blocks/builderBlock/back.png
+texture:id=BuildCraftBuilders/builderBlock/bottom,filename=assets/buildcraftbuilders/textures/blocks/builderBlock/bottom.png
+texture:id=BuildCraftBuilders/builderBlock/front,filename=assets/buildcraftbuilders/textures/blocks/builderBlock/front.png
+texture:id=BuildCraftBuilders/builderBlock/side,filename=assets/buildcraftbuilders/textures/blocks/builderBlock/side.png
+texture:id=BuildCraftBuilders/builderBlock/top,filename=assets/buildcraftbuilders/textures/blocks/builderBlock/top.png
+texture:id=BuildCraftBuilders/constructionMarkerBlock/default,filename=assets/buildcraftbuilders/textures/blocks/constructionMarkerBlock/default.png
+texture:id=BuildCraftBuilders/fillerBlock/bottom,filename=assets/buildcraftbuilders/textures/blocks/fillerBlock/bottom.png
+texture:id=BuildCraftBuilders/fillerBlock/front,filename=assets/buildcraftbuilders/textures/blocks/fillerBlock/front.png
+texture:id=BuildCraftBuilders/fillerBlock/side,filename=assets/buildcraftbuilders/textures/blocks/fillerBlock/side.png
+texture:id=BuildCraftBuilders/fillerBlock/top,filename=assets/buildcraftbuilders/textures/blocks/fillerBlock/top.png
+texture:id=BuildCraftBuilders/libraryBlock/back,filename=assets/buildcraftbuilders/textures/blocks/libraryBlock/back.png
+texture:id=BuildCraftBuilders/libraryBlock/bottom,filename=assets/buildcraftbuilders/textures/blocks/libraryBlock/bottom.png
+texture:id=BuildCraftBuilders/libraryBlock/front,filename=assets/buildcraftbuilders/textures/blocks/libraryBlock/front.png
+texture:id=BuildCraftBuilders/libraryBlock/left,filename=assets/buildcraftbuilders/textures/blocks/libraryBlock/left.png
+texture:id=BuildCraftBuilders/libraryBlock/right,filename=assets/buildcraftbuilders/textures/blocks/libraryBlock/right.png
+texture:id=BuildCraftBuilders/libraryBlock/top,filename=assets/buildcraftbuilders/textures/blocks/libraryBlock/top.png
+texture:id=BuildCraftBuilders/machineBlock/back,filename=assets/buildcraftbuilders/textures/blocks/machineBlock/back.png
+texture:id=BuildCraftBuilders/machineBlock/bottom,filename=assets/buildcraftbuilders/textures/blocks/machineBlock/bottom.png
+texture:id=BuildCraftBuilders/machineBlock/front,filename=assets/buildcraftbuilders/textures/blocks/machineBlock/front.png
+texture:id=BuildCraftBuilders/machineBlock/side,filename=assets/buildcraftbuilders/textures/blocks/machineBlock/side.png
+texture:id=BuildCraftBuilders/machineBlock/top,filename=assets/buildcraftbuilders/textures/blocks/machineBlock/top.png
+texture:id=BuildCraftCore/markerBlock/default,filename=assets/buildcraftcore/textures/blocks/markerBlock/default.png
+texture:id=BuildCraftCore/pathMarkerBlock/default,filename=assets/buildcraftcore/textures/blocks/pathMarkerBlock/default.png
+texture:id=BuildCraftEnergy/fluids/fuel_flow,filename=assets/buildcraftenergy/textures/blocks/fluids/fuel_flow.png
+texture:id=BuildCraftEnergy/fluids/fuel_still,filename=assets/buildcraftenergy/textures/blocks/fluids/fuel_still.png
+texture:id=BuildCraftEnergy/fluids/oil_flow,filename=assets/buildcraftenergy/textures/blocks/fluids/oil_flow.png
+texture:id=BuildCraftEnergy/fluids/oil_still,filename=assets/buildcraftenergy/textures/blocks/fluids/oil_still.png
+texture:id=BuildCraftEnergy/fluids/redplasma_flow,filename=assets/buildcraftenergy/textures/blocks/fluids/redplasma_flow.png
+texture:id=BuildCraftEnergy/fluids/redplasma_still,filename=assets/buildcraftenergy/textures/blocks/fluids/redplasma_still.png
+texture:id=BuildCraftFactory/autoWorkbenchBlock/bottom,filename=assets/buildcraftfactory/textures/blocks/autoWorkbenchBlock/bottom.png
+texture:id=BuildCraftFactory/autoWorkbenchBlock/side,filename=assets/buildcraftfactory/textures/blocks/autoWorkbenchBlock/side.png
+texture:id=BuildCraftFactory/autoWorkbenchBlock/top,filename=assets/buildcraftfactory/textures/blocks/autoWorkbenchBlock/top.png
+texture:id=BuildCraftFactory/floodGateBlock/bottom,filename=assets/buildcraftfactory/textures/blocks/floodGateBlock/bottom.png
+texture:id=BuildCraftFactory/floodGateBlock/side,filename=assets/buildcraftfactory/textures/blocks/floodGateBlock/side.png
+texture:id=BuildCraftFactory/floodGateBlock/top,filename=assets/buildcraftfactory/textures/blocks/floodGateBlock/top.png
+texture:id=BuildCraftFactory/miningWellBlock/back,filename=assets/buildcraftfactory/textures/blocks/miningWellBlock/back.png
+texture:id=BuildCraftFactory/miningWellBlock/bottom,filename=assets/buildcraftfactory/textures/blocks/miningWellBlock/bottom.png
+texture:id=BuildCraftFactory/miningWellBlock/front,filename=assets/buildcraftfactory/textures/blocks/miningWellBlock/front.png
+texture:id=BuildCraftFactory/miningWellBlock/side,filename=assets/buildcraftfactory/textures/blocks/miningWellBlock/side.png
+texture:id=BuildCraftFactory/miningWellBlock/top,filename=assets/buildcraftfactory/textures/blocks/miningWellBlock/top.png
+texture:id=BuildCraftFactory/pumpBlock/bottom,filename=assets/buildcraftfactory/textures/blocks/pumpBlock/bottom.png
+texture:id=BuildCraftFactory/pumpBlock/side,filename=assets/buildcraftfactory/textures/blocks/pumpBlock/side.png
+texture:id=BuildCraftFactory/pumpBlock/top,filename=assets/buildcraftfactory/textures/blocks/pumpBlock/top.png
+texture:id=BuildCraftFactory/refineryBlock/default,filename=assets/buildcraftfactory/textures/blocks/refineryBlock/default.png
+texture:id=BuildCraftFactory/tankBlock/side,filename=assets/buildcraftfactory/textures/blocks/tankBlock/side.png
+texture:id=BuildCraftFactory/tankBlock/topbottom,filename=assets/buildcraftfactory/textures/blocks/tankBlock/topbottom.png
+texture:id=BuildCraftRobotics/requester/back,filename=assets/buildcraftrobotics/textures/blocks/requester/back.png
+texture:id=BuildCraftRobotics/requester/bottom,filename=assets/buildcraftrobotics/textures/blocks/requester/bottom.png
+texture:id=BuildCraftRobotics/requester/front,filename=assets/buildcraftrobotics/textures/blocks/requester/front.png
+texture:id=BuildCraftRobotics/requester/side,filename=assets/buildcraftrobotics/textures/blocks/requester/side.png
+texture:id=BuildCraftRobotics/requester/top,filename=assets/buildcraftrobotics/textures/blocks/requester/top.png
+texture:id=BuildCraftRobotics/zonePlan/back,filename=assets/buildcraftrobotics/textures/blocks/zonePlan/back.png
+texture:id=BuildCraftRobotics/zonePlan/default,filename=assets/buildcraftrobotics/textures/blocks/zonePlan/default.png
+texture:id=BuildCraftRobotics/zonePlan/front,filename=assets/buildcraftrobotics/textures/blocks/zonePlan/front.png
+texture:id=BuildCraftRobotics/zonePlan/left,filename=assets/buildcraftrobotics/textures/blocks/zonePlan/left.png
+texture:id=BuildCraftRobotics/zonePlan/right,filename=assets/buildcraftrobotics/textures/blocks/zonePlan/right.png
+texture:id=BuildCraftRobotics/zonePlan/top,filename=assets/buildcraftrobotics/textures/blocks/zonePlan/top.png
+texture:id=BuildCraftSilicon/advancedCraftingTable/default,filename=assets/buildcraftsilicon/textures/blocks/advancedCraftingTable/default.png
+texture:id=BuildCraftSilicon/assemblyTable/default,filename=assets/buildcraftsilicon/textures/blocks/assemblyTable/default.png
+texture:id=BuildCraftSilicon/chargingTable/default,filename=assets/buildcraftsilicon/textures/blocks/chargingTable/default.png
+texture:id=BuildCraftSilicon/integrationTable/default,filename=assets/buildcraftsilicon/textures/blocks/integrationTable/default.png
+texture:id=BuildCraftSilicon/laserBlock/bottom,filename=assets/buildcraftsilicon/textures/blocks/laserBlock/bottom.png
+texture:id=BuildCraftSilicon/laserBlock/side,filename=assets/buildcraftsilicon/textures/blocks/laserBlock/side.png
+texture:id=BuildCraftSilicon/laserBlock/top,filename=assets/buildcraftsilicon/textures/blocks/laserBlock/top.png
+texture:id=BuildCraftSilicon/packagerBlock/bottom,filename=assets/buildcraftsilicon/textures/blocks/packagerBlock/bottom.png
+texture:id=BuildCraftSilicon/packagerBlock/side,filename=assets/buildcraftsilicon/textures/blocks/packagerBlock/side.png
+texture:id=BuildCraftSilicon/packagerBlock/top,filename=assets/buildcraftsilicon/textures/blocks/packagerBlock/top.png
+texture:id=BuildCraftSilicon/programmingTable/default,filename=assets/buildcraftsilicon/textures/blocks/programmingTable/default.png
+texture:id=BuildCraftSilicon/stampingTable/default,filename=assets/buildcraftsilicon/textures/blocks/stampingTable/default.png
+texture:id=BuildCraftTransport/filteredBufferBlock/default,filename=assets/buildcrafttransport/textures/blocks/filteredBufferBlock/default.png
+texture:id=buildcraftbuilders/frameBlock/default,filename=assets/buildcraftbuilders/textures/blocks/frameBlock/default.png
+texture:id=buildcraftcore/engineWood/icon,filename=assets/buildcraftcore/textures/blocks/engineWood/icon.png
+texture:id=buildcraftcore/laserBox/blockRedLaser,filename=assets/buildcraftcore/textures/blocks/laserBox/blockRedLaser.png
+texture:id=buildcraftenergy/engineCreative/icon,filename=assets/buildcraftenergy/textures/blocks/engineCreative/icon.png
+texture:id=buildcraftenergy/engineIron/icon,filename=assets/buildcraftenergy/textures/blocks/engineIron/icon.png
+texture:id=buildcraftenergy/engineStone/icon,filename=assets/buildcraftenergy/textures/blocks/engineStone/icon.png
+texture:id=buildcraftfactory/hopperBlock/bottom,filename=assets/buildcraftfactory/textures/blocks/hopperBlock/bottom.png
+texture:id=buildcraftfactory/plainPipeBlock/default,filename=assets/buildcraftfactory/textures/blocks/plainPipeBlock/default.png
+texture:id=buildcrafttransport/pipes/pipeFluidsClay,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsClay.png
+texture:id=buildcrafttransport/pipes/pipeFluidsCobblestone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsCobblestone.png
+texture:id=buildcrafttransport/pipes/pipeFluidsDiamond_item,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsDiamond_item.png
+texture:id=buildcrafttransport/pipes/pipeFluidsEmerald_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsEmerald_standard.png
+texture:id=buildcrafttransport/pipes/pipeFluidsGold,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsGold.png
+texture:id=buildcrafttransport/pipes/pipeFluidsIron_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsIron_standard.png
+texture:id=buildcrafttransport/pipes/pipeFluidsQuartz,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsQuartz.png
+texture:id=buildcrafttransport/pipes/pipeFluidsSandstone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsSandstone.png
+texture:id=buildcrafttransport/pipes/pipeFluidsStone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsStone.png
+texture:id=buildcrafttransport/pipes/pipeFluidsVoid,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsVoid.png
+texture:id=buildcrafttransport/pipes/pipeFluidsWood_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeFluidsWood_standard.png
+texture:id=buildcrafttransport/pipes/pipeItemsClay,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsClay.png
+texture:id=buildcrafttransport/pipes/pipeItemsCobblestone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsCobblestone.png
+texture:id=buildcrafttransport/pipes/pipeItemsDaizuli_black,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsDaizuli_black.png
+texture:id=buildcrafttransport/pipes/pipeItemsDiamond_item,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsDiamond_item.png
+texture:id=buildcrafttransport/pipes/pipeItemsEmerald_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsEmerald_standard.png
+texture:id=buildcrafttransport/pipes/pipeItemsEmzuli_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsEmzuli_standard.png
+texture:id=buildcrafttransport/pipes/pipeItemsGold,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsGold.png
+texture:id=buildcrafttransport/pipes/pipeItemsIron_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsIron_standard.png
+texture:id=buildcrafttransport/pipes/pipeItemsLapis_black,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsLapis_black.png
+texture:id=buildcrafttransport/pipes/pipeItemsObsidian,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsObsidian.png
+texture:id=buildcrafttransport/pipes/pipeItemsQuartz,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsQuartz.png
+texture:id=buildcrafttransport/pipes/pipeItemsSandstone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsSandstone.png
+texture:id=buildcrafttransport/pipes/pipeItemsStone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsStone.png
+texture:id=buildcrafttransport/pipes/pipeItemsVoid,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsVoid.png
+texture:id=buildcrafttransport/pipes/pipeItemsWood_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeItemsWood_standard.png
+texture:id=buildcrafttransport/pipes/pipePowerCobblestone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerCobblestone.png
+texture:id=buildcrafttransport/pipes/pipePowerDiamond,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerDiamond.png
+texture:id=buildcrafttransport/pipes/pipePowerEmerald_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerEmerald_standard.png
+texture:id=buildcrafttransport/pipes/pipePowerGold,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerGold.png
+texture:id=buildcrafttransport/pipes/pipePowerIronM128,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerIronM128.png
+texture:id=buildcrafttransport/pipes/pipePowerQuartz,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerQuartz.png
+texture:id=buildcrafttransport/pipes/pipePowerSandstone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerSandstone.png
+texture:id=buildcrafttransport/pipes/pipePowerStone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerStone.png
+texture:id=buildcrafttransport/pipes/pipePowerWood_standard,filename=assets/buildcrafttransport/textures/blocks/pipes/pipePowerWood_standard.png
+texture:id=buildcrafttransport/pipes/pipeStripes,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeStripes.png
+texture:id=buildcrafttransport/pipes/pipeStructureCobblestone,filename=assets/buildcrafttransport/textures/blocks/pipes/pipeStructureCobblestone.png
+texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.png
+
+
+
+# %eternalSpring:* (eternalSpring), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.core.BlockSpring
+block:id=%eternalSpring,data=*,stdrot=true,face0-5=0:minecraft/bedrock
+
+# %buildToolBlock:* (buildToolBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.core.BlockBuildTool
+block:id=%buildToolBlock,data=*,stdrot=true,face0-5=0:buildcraftcore/laserBox/blockRedLaser
+
+# %engineBlock:* (engineBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.core.BlockEngine
+block:id=%engineBlock,data=0,stdrot=true,face0-5=0:buildcraftcore/engineWood/icon
+block:id=%engineBlock,data=1,stdrot=true,face0-5=0:buildcraftenergy/engineStone/icon
+block:id=%engineBlock,data=2,stdrot=true,face0-5=0:buildcraftenergy/engineIron/icon
+block:id=%engineBlock,data=3,stdrot=true,face0-5=0:buildcraftenergy/engineCreative/icon
+block:id=%engineBlock,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:buildcraftcore/engineWood/icon
+
+# %markerBlock:* (markerBlock), render=buildcraft.core.render.RenderingMarkers(TORCH), opaque=false,cls=buildcraft.core.BlockMarker
+block:id=%markerBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:BuildCraftCore/markerBlock/default
+
+# %pathMarkerBlock:* (pathMarkerBlock), render=buildcraft.core.render.RenderingMarkers(TORCH), opaque=false,cls=buildcraft.core.BlockPathMarker
+block:id=%pathMarkerBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:BuildCraftCore/pathMarkerBlock/default
+
+# %blockOil:* (blockOil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=buildcraft.core.lib.block.BlockBuildCraftFluid
+block:id=%blockOil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:BuildCraftEnergy/fluids/oil_still,face2-5=12000:BuildCraftEnergy/fluids/oil_flow
+
+# %blockFuel:* (blockFuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=buildcraft.core.lib.block.BlockBuildCraftFluid
+block:id=%blockFuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:BuildCraftEnergy/fluids/fuel_still,face2-5=12000:BuildCraftEnergy/fluids/fuel_flow
+
+# %blockRedPlasma:* (blockRedPlasma), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=buildcraft.core.lib.block.BlockBuildCraftFluid
+block:id=%blockRedPlasma,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:BuildCraftEnergy/fluids/redplasma_still,face2-5=12000:BuildCraftEnergy/fluids/redplasma_flow
+
+# %laserBlock:* (laserBlock), render=buildcraft.silicon.render.RenderLaserBlock(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaser
+block:id=%laserBlock,data=0,stdrot=true,face0=0:BuildCraftSilicon/laserBlock/top,face1=0:BuildCraftSilicon/laserBlock/bottom,face2-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=1,stdrot=true,face0=0:BuildCraftSilicon/laserBlock/bottom,face1=0:BuildCraftSilicon/laserBlock/top,face2-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=2,stdrot=true,face0-1=0:BuildCraftSilicon/laserBlock/side,face2=0:BuildCraftSilicon/laserBlock/top,face3=0:BuildCraftSilicon/laserBlock/bottom,face4-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=3,stdrot=true,face0-1=0:BuildCraftSilicon/laserBlock/side,face2=0:BuildCraftSilicon/laserBlock/bottom,face3=0:BuildCraftSilicon/laserBlock/top,face4-5=0:BuildCraftSilicon/laserBlock/side
+block:id=%laserBlock,data=4,stdrot=true,face0-3=0:BuildCraftSilicon/laserBlock/side,face4=0:BuildCraftSilicon/laserBlock/top,face5=0:BuildCraftSilicon/laserBlock/bottom
+block:id=%laserBlock,data=5,stdrot=true,face0-3=0:BuildCraftSilicon/laserBlock/side,face4=0:BuildCraftSilicon/laserBlock/bottom,face5=0:BuildCraftSilicon/laserBlock/top
+block:id=%laserBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:BuildCraftSilicon/laserBlock/side
+
+# %laserTableBlock:* (laserTableBlock), render=buildcraft.silicon.render.RenderLaserTable(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaserTable
+block:id=%laserTableBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/assemblyTable/default
+block:id=%laserTableBlock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/advancedCraftingTable/default
+block:id=%laserTableBlock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/integrationTable/default
+block:id=%laserTableBlock,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/chargingTable/default
+block:id=%laserTableBlock,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/programmingTable/default
+block:id=%laserTableBlock,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/stampingTable/default
+block:id=%laserTableBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/assemblyTable/default
+
+# %packagerBlock:* (packagerBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.silicon.BlockPackager
+block:id=%packagerBlock,data=*,stdrot=true,face0=0:BuildCraftSilicon/packagerBlock/bottom,face1=0:BuildCraftSilicon/packagerBlock/top,face2-5=0:BuildCraftSilicon/packagerBlock/side
+
+# %miningWellBlock:* (miningWellBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockMiningWellCompat
+block:id=%miningWellBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
+block:id=%miningWellBlock,data=2,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/front,face3=0:BuildCraftFactory/miningWellBlock/back,face4-5=0:BuildCraftFactory/miningWellBlock/side
+block:id=%miningWellBlock,data=3,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
+block:id=%miningWellBlock,data=4,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2-3=0:BuildCraftFactory/miningWellBlock/side,face4=0:BuildCraftFactory/miningWellBlock/front,face5=0:BuildCraftFactory/miningWellBlock/back
+block:id=%miningWellBlock,data=5,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2-3=0:BuildCraftFactory/miningWellBlock/side,face4=0:BuildCraftFactory/miningWellBlock/back,face5=0:BuildCraftFactory/miningWellBlock/front
+block:id=%miningWellBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
+
+# %plainPipeBlock:* (plainPipeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=buildcraft.factory.BlockPlainPipe
+block:id=%plainPipeBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraftfactory/plainPipeBlock/default
+
+# %autoWorkbenchBlock:* (autoWorkbenchBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.factory.BlockAutoWorkbench
+block:id=%autoWorkbenchBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/autoWorkbenchBlock/bottom,face1=0:BuildCraftFactory/autoWorkbenchBlock/top,face2-5=0:BuildCraftFactory/autoWorkbenchBlock/side
+
+# %tankBlock:* (tankBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=buildcraft.factory.BlockTank
+block:id=%tankBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:BuildCraftFactory/tankBlock/topbottom,face2-5=0:BuildCraftFactory/tankBlock/side
+
+# %pumpBlock:* (pumpBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.factory.BlockPump
+block:id=%pumpBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/pumpBlock/bottom,face1=0:BuildCraftFactory/pumpBlock/top,face2-5=0:BuildCraftFactory/pumpBlock/side
+
+# %floodGateBlock:* (floodGateBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockFloodGate
+block:id=%floodGateBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/floodGateBlock/bottom,face1=0:BuildCraftFactory/floodGateBlock/top,face2-5=0:BuildCraftFactory/floodGateBlock/side
+
+# %refineryBlock:* (refineryBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.factory.BlockRefinery
+block:id=%refineryBlock,data=*,stdrot=true,face0-5=0:BuildCraftFactory/refineryBlock/default
+
+# %blockHopper:* (blockHopper), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.factory.BlockHopper
+block:id=%blockHopper,data=*,stdrot=true,face0-5=0:buildcraftfactory/hopperBlock/bottom
+
+# %machineBlock:* (machineBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.builders.BlockQuarryCompat
+block:id=%machineBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftBuilders/machineBlock/bottom,face1=0:BuildCraftBuilders/machineBlock/top,face2=0:BuildCraftBuilders/machineBlock/back,face3=0:BuildCraftBuilders/machineBlock/front,face4-5=0:BuildCraftBuilders/machineBlock/side
+block:id=%machineBlock,data=2,stdrot=true,face0=0:BuildCraftBuilders/machineBlock/bottom,face1=0:BuildCraftBuilders/machineBlock/top,face2=0:BuildCraftBuilders/machineBlock/front,face3=0:BuildCraftBuilders/machineBlock/back,face4-5=0:BuildCraftBuilders/machineBlock/side
+block:id=%machineBlock,data=3,stdrot=true,face0=0:BuildCraftBuilders/machineBlock/bottom,face1=0:BuildCraftBuilders/machineBlock/top,face2=0:BuildCraftBuilders/machineBlock/back,face3=0:BuildCraftBuilders/machineBlock/front,face4-5=0:BuildCraftBuilders/machineBlock/side
+block:id=%machineBlock,data=4,stdrot=true,face0=0:BuildCraftBuilders/machineBlock/bottom,face1=0:BuildCraftBuilders/machineBlock/top,face2-3=0:BuildCraftBuilders/machineBlock/side,face4=0:BuildCraftBuilders/machineBlock/front,face5=0:BuildCraftBuilders/machineBlock/back
+block:id=%machineBlock,data=5,stdrot=true,face0=0:BuildCraftBuilders/machineBlock/bottom,face1=0:BuildCraftBuilders/machineBlock/top,face2-3=0:BuildCraftBuilders/machineBlock/side,face4=0:BuildCraftBuilders/machineBlock/back,face5=0:BuildCraftBuilders/machineBlock/front
+block:id=%machineBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftBuilders/machineBlock/bottom,face1=0:BuildCraftBuilders/machineBlock/top,face2=0:BuildCraftBuilders/machineBlock/back,face3=0:BuildCraftBuilders/machineBlock/front,face4-5=0:BuildCraftBuilders/machineBlock/side
+
+# %fillerBlock:* (fillerBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.builders.BlockFiller
+block:id=%fillerBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftBuilders/fillerBlock/bottom,face1=0:BuildCraftBuilders/fillerBlock/top,face2=0:BuildCraftBuilders/fillerBlock/side,face3=0:BuildCraftBuilders/fillerBlock/front,face4-5=0:BuildCraftBuilders/fillerBlock/side
+block:id=%fillerBlock,data=2,stdrot=true,face0=0:BuildCraftBuilders/fillerBlock/bottom,face1=0:BuildCraftBuilders/fillerBlock/top,face2=0:BuildCraftBuilders/fillerBlock/front,face3-5=0:BuildCraftBuilders/fillerBlock/side
+block:id=%fillerBlock,data=3,stdrot=true,face0=0:BuildCraftBuilders/fillerBlock/bottom,face1=0:BuildCraftBuilders/fillerBlock/top,face2=0:BuildCraftBuilders/fillerBlock/side,face3=0:BuildCraftBuilders/fillerBlock/front,face4-5=0:BuildCraftBuilders/fillerBlock/side
+block:id=%fillerBlock,data=4,stdrot=true,face0=0:BuildCraftBuilders/fillerBlock/bottom,face1=0:BuildCraftBuilders/fillerBlock/top,face2-3=0:BuildCraftBuilders/fillerBlock/side,face4=0:BuildCraftBuilders/fillerBlock/front,face5=0:BuildCraftBuilders/fillerBlock/side
+block:id=%fillerBlock,data=5,stdrot=true,face0=0:BuildCraftBuilders/fillerBlock/bottom,face1=0:BuildCraftBuilders/fillerBlock/top,face2-4=0:BuildCraftBuilders/fillerBlock/side,face5=0:BuildCraftBuilders/fillerBlock/front
+block:id=%fillerBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftBuilders/fillerBlock/bottom,face1=0:BuildCraftBuilders/fillerBlock/top,face2=0:BuildCraftBuilders/fillerBlock/side,face3=0:BuildCraftBuilders/fillerBlock/front,face4-5=0:BuildCraftBuilders/fillerBlock/side
+
+# %frameBlock:* (frameBlock), render=buildcraft.builders.render.RenderFrame(CUSTOM), opaque=false,cls=buildcraft.builders.BlockFrame
+block:id=%frameBlock,data=*,stdrot=true,face0-5=0:buildcraftbuilders/frameBlock/default
+
+# %builderBlock:* (builderBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.builders.BlockBuilder
+block:id=%builderBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftBuilders/builderBlock/bottom,face1=0:BuildCraftBuilders/builderBlock/top,face2=0:BuildCraftBuilders/builderBlock/back,face3=0:BuildCraftBuilders/builderBlock/front,face4-5=0:BuildCraftBuilders/builderBlock/side
+block:id=%builderBlock,data=2,stdrot=true,face0=0:BuildCraftBuilders/builderBlock/bottom,face1=0:BuildCraftBuilders/builderBlock/top,face2=0:BuildCraftBuilders/builderBlock/front,face3=0:BuildCraftBuilders/builderBlock/back,face4-5=0:BuildCraftBuilders/builderBlock/side
+block:id=%builderBlock,data=3,stdrot=true,face0=0:BuildCraftBuilders/builderBlock/bottom,face1=0:BuildCraftBuilders/builderBlock/top,face2=0:BuildCraftBuilders/builderBlock/back,face3=0:BuildCraftBuilders/builderBlock/front,face4-5=0:BuildCraftBuilders/builderBlock/side
+block:id=%builderBlock,data=4,stdrot=true,face0=0:BuildCraftBuilders/builderBlock/bottom,face1=0:BuildCraftBuilders/builderBlock/top,face2-3=0:BuildCraftBuilders/builderBlock/side,face4=0:BuildCraftBuilders/builderBlock/front,face5=0:BuildCraftBuilders/builderBlock/back
+block:id=%builderBlock,data=5,stdrot=true,face0=0:BuildCraftBuilders/builderBlock/bottom,face1=0:BuildCraftBuilders/builderBlock/top,face2-3=0:BuildCraftBuilders/builderBlock/side,face4=0:BuildCraftBuilders/builderBlock/back,face5=0:BuildCraftBuilders/builderBlock/front
+block:id=%builderBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftBuilders/builderBlock/bottom,face1=0:BuildCraftBuilders/builderBlock/top,face2=0:BuildCraftBuilders/builderBlock/back,face3=0:BuildCraftBuilders/builderBlock/front,face4-5=0:BuildCraftBuilders/builderBlock/side
+
+# %architectBlock:* (architectBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.builders.BlockArchitect
+block:id=%architectBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftBuilders/architectBlock/bottom,face1=0:BuildCraftBuilders/architectBlock/top,face2=0:BuildCraftBuilders/architectBlock/back,face3=0:BuildCraftBuilders/architectBlock/front,face4=0:BuildCraftBuilders/architectBlock/left,face5=0:BuildCraftBuilders/architectBlock/right
+block:id=%architectBlock,data=2,stdrot=true,face0=0:BuildCraftBuilders/architectBlock/bottom,face1=0:BuildCraftBuilders/architectBlock/top,face2=0:BuildCraftBuilders/architectBlock/front,face3=0:BuildCraftBuilders/architectBlock/back,face4=0:BuildCraftBuilders/architectBlock/right,face5=0:BuildCraftBuilders/architectBlock/left
+block:id=%architectBlock,data=3,stdrot=true,face0=0:BuildCraftBuilders/architectBlock/bottom,face1=0:BuildCraftBuilders/architectBlock/top,face2=0:BuildCraftBuilders/architectBlock/back,face3=0:BuildCraftBuilders/architectBlock/front,face4=0:BuildCraftBuilders/architectBlock/left,face5=0:BuildCraftBuilders/architectBlock/right
+block:id=%architectBlock,data=4,stdrot=true,face0=0:BuildCraftBuilders/architectBlock/bottom,face1=0:BuildCraftBuilders/architectBlock/top,face2=0:BuildCraftBuilders/architectBlock/left,face3=0:BuildCraftBuilders/architectBlock/right,face4=0:BuildCraftBuilders/architectBlock/front,face5=0:BuildCraftBuilders/architectBlock/back
+block:id=%architectBlock,data=5,stdrot=true,face0=0:BuildCraftBuilders/architectBlock/bottom,face1=0:BuildCraftBuilders/architectBlock/top,face2=0:BuildCraftBuilders/architectBlock/right,face3=0:BuildCraftBuilders/architectBlock/left,face4=0:BuildCraftBuilders/architectBlock/back,face5=0:BuildCraftBuilders/architectBlock/front
+block:id=%architectBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftBuilders/architectBlock/bottom,face1=0:BuildCraftBuilders/architectBlock/top,face2=0:BuildCraftBuilders/architectBlock/back,face3=0:BuildCraftBuilders/architectBlock/front,face4=0:BuildCraftBuilders/architectBlock/left,face5=0:BuildCraftBuilders/architectBlock/right
+
+# %libraryBlock:* (libraryBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.builders.BlockBlueprintLibrary
+block:id=%libraryBlock,data=0,data=1,stdrot=true,face0=0:BuildCraftBuilders/libraryBlock/bottom,face1=0:BuildCraftBuilders/libraryBlock/top,face2=0:BuildCraftBuilders/libraryBlock/back,face3=0:BuildCraftBuilders/libraryBlock/front,face4=0:BuildCraftBuilders/libraryBlock/left,face5=0:BuildCraftBuilders/libraryBlock/right
+block:id=%libraryBlock,data=2,stdrot=true,face0=0:BuildCraftBuilders/libraryBlock/bottom,face1=0:BuildCraftBuilders/libraryBlock/top,face2=0:BuildCraftBuilders/libraryBlock/front,face3=0:BuildCraftBuilders/libraryBlock/back,face4=0:BuildCraftBuilders/libraryBlock/right,face5=0:BuildCraftBuilders/libraryBlock/left
+block:id=%libraryBlock,data=3,stdrot=true,face0=0:BuildCraftBuilders/libraryBlock/bottom,face1=0:BuildCraftBuilders/libraryBlock/top,face2=0:BuildCraftBuilders/libraryBlock/back,face3=0:BuildCraftBuilders/libraryBlock/front,face4=0:BuildCraftBuilders/libraryBlock/left,face5=0:BuildCraftBuilders/libraryBlock/right
+block:id=%libraryBlock,data=4,stdrot=true,face0=0:BuildCraftBuilders/libraryBlock/bottom,face1=0:BuildCraftBuilders/libraryBlock/top,face2=0:BuildCraftBuilders/libraryBlock/left,face3=0:BuildCraftBuilders/libraryBlock/right,face4=0:BuildCraftBuilders/libraryBlock/front,face5=0:BuildCraftBuilders/libraryBlock/back
+block:id=%libraryBlock,data=5,stdrot=true,face0=0:BuildCraftBuilders/libraryBlock/bottom,face1=0:BuildCraftBuilders/libraryBlock/top,face2=0:BuildCraftBuilders/libraryBlock/right,face3=0:BuildCraftBuilders/libraryBlock/left,face4=0:BuildCraftBuilders/libraryBlock/back,face5=0:BuildCraftBuilders/libraryBlock/front
+block:id=%libraryBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftBuilders/libraryBlock/bottom,face1=0:BuildCraftBuilders/libraryBlock/top,face2=0:BuildCraftBuilders/libraryBlock/back,face3=0:BuildCraftBuilders/libraryBlock/front,face4=0:BuildCraftBuilders/libraryBlock/left,face5=0:BuildCraftBuilders/libraryBlock/right
+
+# %constructionMarkerBlock:* (constructionMarkerBlock), render=buildcraft.core.render.RenderingMarkers(TORCH), opaque=false,cls=buildcraft.builders.BlockConstructionMarker
+block:id=%constructionMarkerBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:BuildCraftBuilders/constructionMarkerBlock/default
+
+# %filteredBufferBlock:* (filteredBufferBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.transport.BlockFilteredBuffer
+block:id=%filteredBufferBlock,data=*,stdrot=true,face0-5=0:BuildCraftTransport/filteredBufferBlock/default
+
+# %pipeBlock:* (pipeBlock), render=buildcraft.transport.render.PipeRendererWorld(CUSTOM), opaque=false,cls=buildcraft.transport.BlockGenericPipeCompat
+block:id=%pipeBlock,data=*,stdrot=true,face0-5=12000:buildcrafttransport/pipes/pipeItemsStone
+
+# %zonePlan:* (zonePlan), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.robotics.BlockZonePlan
+block:id=%zonePlan,data=0,data=1,stdrot=true,face0=0:BuildCraftRobotics/zonePlan/default,face1=0:BuildCraftRobotics/zonePlan/top,face2=0:BuildCraftRobotics/zonePlan/back,face3=0:BuildCraftRobotics/zonePlan/front,face4=0:BuildCraftRobotics/zonePlan/left,face5=0:BuildCraftRobotics/zonePlan/right
+block:id=%zonePlan,data=2,stdrot=true,face0=0:BuildCraftRobotics/zonePlan/default,face1=0:BuildCraftRobotics/zonePlan/top,face2=0:BuildCraftRobotics/zonePlan/front,face3=0:BuildCraftRobotics/zonePlan/back,face4=0:BuildCraftRobotics/zonePlan/right,face5=0:BuildCraftRobotics/zonePlan/left
+block:id=%zonePlan,data=3,stdrot=true,face0=0:BuildCraftRobotics/zonePlan/default,face1=0:BuildCraftRobotics/zonePlan/top,face2=0:BuildCraftRobotics/zonePlan/back,face3=0:BuildCraftRobotics/zonePlan/front,face4=0:BuildCraftRobotics/zonePlan/left,face5=0:BuildCraftRobotics/zonePlan/right
+block:id=%zonePlan,data=4,stdrot=true,face0=0:BuildCraftRobotics/zonePlan/default,face1=0:BuildCraftRobotics/zonePlan/top,face2=0:BuildCraftRobotics/zonePlan/left,face3=0:BuildCraftRobotics/zonePlan/right,face4=0:BuildCraftRobotics/zonePlan/front,face5=0:BuildCraftRobotics/zonePlan/back
+block:id=%zonePlan,data=5,stdrot=true,face0=0:BuildCraftRobotics/zonePlan/default,face1=0:BuildCraftRobotics/zonePlan/top,face2=0:BuildCraftRobotics/zonePlan/right,face3=0:BuildCraftRobotics/zonePlan/left,face4=0:BuildCraftRobotics/zonePlan/back,face5=0:BuildCraftRobotics/zonePlan/front
+block:id=%zonePlan,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftRobotics/zonePlan/default,face1=0:BuildCraftRobotics/zonePlan/top,face2=0:BuildCraftRobotics/zonePlan/back,face3=0:BuildCraftRobotics/zonePlan/front,face4=0:BuildCraftRobotics/zonePlan/left,face5=0:BuildCraftRobotics/zonePlan/right
+
+# %requester:* (requester), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.robotics.BlockRequester
+block:id=%requester,data=0,data=1,stdrot=true,face0=0:BuildCraftRobotics/requester/bottom,face1=0:BuildCraftRobotics/requester/top,face2=0:BuildCraftRobotics/requester/back,face3=0:BuildCraftRobotics/requester/front,face4-5=0:BuildCraftRobotics/requester/side
+block:id=%requester,data=2,stdrot=true,face0=0:BuildCraftRobotics/requester/bottom,face1=0:BuildCraftRobotics/requester/top,face2=0:BuildCraftRobotics/requester/front,face3=0:BuildCraftRobotics/requester/back,face4-5=0:BuildCraftRobotics/requester/side
+block:id=%requester,data=3,stdrot=true,face0=0:BuildCraftRobotics/requester/bottom,face1=0:BuildCraftRobotics/requester/top,face2=0:BuildCraftRobotics/requester/back,face3=0:BuildCraftRobotics/requester/front,face4-5=0:BuildCraftRobotics/requester/side
+block:id=%requester,data=4,stdrot=true,face0=0:BuildCraftRobotics/requester/bottom,face1=0:BuildCraftRobotics/requester/top,face2-3=0:BuildCraftRobotics/requester/side,face4=0:BuildCraftRobotics/requester/front,face5=0:BuildCraftRobotics/requester/back
+block:id=%requester,data=5,stdrot=true,face0=0:BuildCraftRobotics/requester/bottom,face1=0:BuildCraftRobotics/requester/top,face2-3=0:BuildCraftRobotics/requester/side,face4=0:BuildCraftRobotics/requester/back,face5=0:BuildCraftRobotics/requester/front
+block:id=%requester,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftRobotics/requester/bottom,face1=0:BuildCraftRobotics/requester/top,face2=0:BuildCraftRobotics/requester/back,face3=0:BuildCraftRobotics/requester/front,face4-5=0:BuildCraftRobotics/requester/side
+# BuildCraft pipes
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemswood=0:buildcrafttransport/pipes/pipeItemsWood_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsemerald=0:buildcrafttransport/pipes/pipeItemsEmerald_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemscobblestone=0:buildcrafttransport/pipes/pipeItemsCobblestone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsstone=0:buildcrafttransport/pipes/pipeItemsStone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsquartz=0:buildcrafttransport/pipes/pipeItemsQuartz
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsiron=0:buildcrafttransport/pipes/pipeItemsIron_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsgold=0:buildcrafttransport/pipes/pipeItemsGold
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsdiamond=0:buildcrafttransport/pipes/pipeItemsDiamond_item
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsobsidian=0:buildcrafttransport/pipes/pipeItemsObsidian
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemslapis=0:buildcrafttransport/pipes/pipeItemsLapis_black
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsdaizuli=0:buildcrafttransport/pipes/pipeItemsDaizuli_black
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemssandstone=0:buildcrafttransport/pipes/pipeItemsSandstone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsvoid=0:buildcrafttransport/pipes/pipeItemsVoid
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsemzuli=0:buildcrafttransport/pipes/pipeItemsEmzuli_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsstripes=0:buildcrafttransport/pipes/pipeStripes
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipeitemsclay=0:buildcrafttransport/pipes/pipeItemsClay
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidswood=0:buildcrafttransport/pipes/pipeFluidsWood_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidscobblestone=0:buildcrafttransport/pipes/pipeFluidsCobblestone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsstone=0:buildcrafttransport/pipes/pipeFluidsStone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsquartz=0:buildcrafttransport/pipes/pipeFluidsQuartz
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsiron=0:buildcrafttransport/pipes/pipeFluidsIron_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsgold=0:buildcrafttransport/pipes/pipeFluidsGold
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsemerald=0:buildcrafttransport/pipes/pipeFluidsEmerald_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsdiamond=0:buildcrafttransport/pipes/pipeFluidsDiamond_item
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidssandstone=0:buildcrafttransport/pipes/pipeFluidsSandstone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsvoid=0:buildcrafttransport/pipes/pipeFluidsVoid
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipefluidsclay=0:buildcrafttransport/pipes/pipeFluidsClay
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowerwood=0:buildcrafttransport/pipes/pipePowerWood_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowercobblestone=0:buildcrafttransport/pipes/pipePowerCobblestone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowerstone=0:buildcrafttransport/pipes/pipePowerStone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowerquartz=0:buildcrafttransport/pipes/pipePowerQuartz
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepoweriron=0:buildcrafttransport/pipes/pipePowerIronM128
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowergold=0:buildcrafttransport/pipes/pipePowerGold
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowerdiamond=0:buildcrafttransport/pipes/pipePowerDiamond
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepoweremerald=0:buildcrafttransport/pipes/pipePowerEmerald_standard
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipepowersandstone=0:buildcrafttransport/pipes/pipePowerSandstone
+addtotexturemap:mapid=PIPES,key:&item.buildcraftPipe.pipestructurecobblestone=0:buildcrafttransport/pipes/pipeStructureCobblestone
+

@@ -1,0 +1,64 @@
+# ForbiddenMagic 0.6.6-GTNH
+version:1.7
+modname:ForbiddenMagic
+
+
+cfgfile:config/ForbiddenMagic.cfg
+
+
+texturepath:assets/forbiddenmagic/textures/blocks/
+texture:id=forbidden/cake_bottom,filename=assets/forbidden/textures/blocks/cake_bottom.png
+texture:id=forbidden/cake_inner,filename=assets/forbidden/textures/blocks/cake_inner.png
+texture:id=forbidden/cake_side,filename=assets/forbidden/textures/blocks/cake_side.png
+texture:id=forbidden/cake_top,filename=assets/forbidden/textures/blocks/cake_top.png
+texture:id=forbidden/flower_black,filename=assets/forbidden/textures/blocks/flower_black.png
+texture:id=forbidden/sapling_taint,filename=assets/forbidden/textures/blocks/sapling_taint.png
+texture:id=forbidden/spirit_box,filename=assets/forbidden/textures/blocks/spirit_box.png
+texture:id=forbidden/starblock,filename=assets/forbidden/textures/blocks/starblock.png
+texture:id=forbidden/taint_leaves,filename=assets/forbidden/textures/blocks/taint_leaves.png
+texture:id=forbidden/taint_log_bottom,filename=assets/forbidden/textures/blocks/taint_log_bottom.png
+texture:id=forbidden/taint_log_side,filename=assets/forbidden/textures/blocks/taint_log_side.png
+texture:id=forbidden/taint_planks,filename=assets/forbidden/textures/blocks/taint_planks.png
+texture:id=forbidden/taint_stone_brick,filename=assets/forbidden/textures/blocks/taint_stone_brick.png
+texture:id=forbidden/taint_stone_smooth,filename=assets/forbidden/textures/blocks/taint_stone_smooth.png
+texture:id=forbidden/umbral_rose_bottom,filename=assets/forbidden/textures/blocks/umbral_rose_bottom.png
+texture:id=forbidden/umbral_rose_top,filename=assets/forbidden/textures/blocks/umbral_rose_top.png
+
+
+
+# %ArcaneCake:* (ArcaneCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockArcaneCake
+block:id=%ArcaneCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:forbidden/cake_bottom,face1=0:forbidden/cake_top,face2-5=0:forbidden/cake_side
+block:id=%ArcaneCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:forbidden/cake_bottom,face1=0:forbidden/cake_top,face2-3=0:forbidden/cake_side,face4=0:forbidden/cake_inner,face5=0:forbidden/cake_side
+
+# %WrathCage:* (WrathCage), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockWrathCage
+block:id=%WrathCage,data=*,stdrot=true,face0-5=0:forbidden/spirit_box
+
+# %InkFlower:* (InkFlower), render=(CROSSEDSQUARES), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockBlackFlower
+block:id=%InkFlower,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:forbidden/flower_black
+
+# %StarBlock:* (StarBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.forbidden.blocks.BlockResource
+block:id=%StarBlock,data=*,stdrot=true,face0-5=0:forbidden/starblock
+
+# %UmbralBush:* (UmbralBush), render=(CROSSEDSQUARES), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockRoseBush
+block:id=%UmbralBush,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:forbidden/umbral_rose_top
+block:id=%UmbralBush,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:forbidden/umbral_rose_bottom
+block:id=%UmbralBush,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:forbidden/umbral_rose_top
+
+# %TaintLog:* (TaintLog), render=(LOG), opaque=true,cls=fox.spiteful.forbidden.blocks.BlockLogTainted
+block:id=%TaintLog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:forbidden/taint_log_bottom,face2-5=0:forbidden/taint_log_side
+block:id=%TaintLog,data=4,data=5,data=6,data=7,face0-1=0:forbidden/taint_log_side,face2-3=4000:forbidden/taint_log_side,face4-5=0:forbidden/taint_log_bottom
+block:id=%TaintLog,data=8,data=9,data=10,data=11,face0-1=4000:forbidden/taint_log_side,face2-3=0:forbidden/taint_log_bottom,face4-5=4000:forbidden/taint_log_side
+block:id=%TaintLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:forbidden/taint_log_side
+
+# %TaintPlank:* (TaintPlank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.forbidden.blocks.BlockPlanksTainted
+block:id=%TaintPlank,data=*,stdrot=true,face0-5=0:forbidden/taint_planks
+
+# %TaintLeaves:* (TaintLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockLeavesTainted
+block:id=%TaintLeaves,data=*,stdrot=true,face0-5=0:forbidden/taint_leaves
+
+# %TaintSapling:* (TaintSapling), render=(CROSSEDSQUARES), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockSaplingTainted
+block:id=%TaintSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:forbidden/sapling_taint
+
+# %TaintBlock:* (TaintBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.forbidden.blocks.BlockStoneTainted
+block:id=%TaintBlock,data=0,stdrot=true,face0-5=0:forbidden/taint_stone_smooth
+block:id=%TaintBlock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:forbidden/taint_stone_brick

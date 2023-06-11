@@ -1,0 +1,15 @@
+# WarpTheory 1.2.12-GTNH
+version:1.7
+modname:WarpTheory
+
+
+cfgfile:config/WarpTheory.cfg
+
+
+texturepath:assets/warptheory/textures/blocks/
+texture:id=warptheory/blank,filename=assets/warptheory/textures/blocks/blank.png
+
+
+
+# %blockVanish:* (blockVanish), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=shukaro.warptheory.block.BlockVanish
+block:id=%blockVanish,data=*,stdrot=true,face0-5=0:warptheory/blank

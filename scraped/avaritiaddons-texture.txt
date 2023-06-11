@@ -1,0 +1,25 @@
+# avaritiaddons 1.5.4-GTNH
+version:1.7
+modname:avaritiaddons
+
+
+cfgfile:config/avaritiaddons.cfg
+
+
+texturepath:assets/avaritiaddons/textures/blocks/
+texture:id=avaritia/block_infinity,filename=assets/avaritia/textures/blocks/block_infinity.png
+texture:id=avaritiaddons/extremeAutoCrafterBottom,filename=assets/avaritiaddons/textures/blocks/extremeAutoCrafterBottom.png
+texture:id=avaritiaddons/extremeAutoCrafterSide,filename=assets/avaritiaddons/textures/blocks/extremeAutoCrafterSide.png
+texture:id=avaritiaddons/extremeAutoCrafterTop,filename=assets/avaritiaddons/textures/blocks/extremeAutoCrafterTop.png
+texture:id=minecraft/planks_big_oak,filename=assets/minecraft/textures/blocks/planks_big_oak.png
+
+
+
+# %CompressedChest:* (CompressedChest), render=(CUSTOM), opaque=false,cls=wanion.avaritiaddons.block.chest.compressed.BlockCompressedChest
+block:id=%CompressedChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+
+# %InfinityChest:* (InfinityChest), render=(CUSTOM), opaque=false,cls=wanion.avaritiaddons.block.chest.infinity.BlockInfinityChest
+block:id=%InfinityChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:avaritia/block_infinity
+
+# %ExtremeAutoCrafter:* (ExtremeAutoCrafter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=wanion.avaritiaddons.block.extremeautocrafter.BlockExtremeAutoCrafter
+block:id=%ExtremeAutoCrafter,data=*,stdrot=true,face0=0:avaritiaddons/extremeAutoCrafterBottom,face1=0:avaritiaddons/extremeAutoCrafterTop,face2-5=0:avaritiaddons/extremeAutoCrafterSide

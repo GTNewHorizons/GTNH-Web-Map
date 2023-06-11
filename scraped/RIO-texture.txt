@@ -1,0 +1,35 @@
+# RIO 2.4.8
+version:1.7
+modname:RIO
+
+
+cfgfile:config/RIO.cfg
+
+
+texturepath:assets/rio/textures/blocks/
+texture:id=remoteio/blank,filename=assets/remoteio/textures/blocks/blank.png
+texture:id=remoteio/heater,filename=assets/remoteio/textures/blocks/heater.png
+texture:id=remoteio/inactive,filename=assets/remoteio/textures/blocks/inactive.png
+texture:id=remoteio/machine_inactive,filename=assets/remoteio/textures/blocks/machine_inactive.png
+texture:id=remoteio/reservoir,filename=assets/remoteio/textures/blocks/reservoir.png
+texture:id=remoteio/skylight/glass,filename=assets/remoteio/textures/blocks/skylight/glass.png
+texture:id=remoteio/workbench,filename=assets/remoteio/textures/blocks/workbench.png
+
+
+
+# %tile.remote_interface:* (tile.remote_interface), render=remoteio.client.render.RenderBlockRemoteInterface(CUSTOM), opaque=false,cls=remoteio.common.block.BlockRemoteInterface
+block:id=%tile.remote_interface,data=*,stdrot=true,face0-5=0:remoteio/inactive
+
+# %tile.remote_inventory:* (tile.remote_inventory), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=remoteio.common.block.BlockRemoteInventory
+block:id=%tile.remote_inventory,data=*,stdrot=true,face0-5=0:remoteio/inactive
+
+# %tile.machine:* (tile.machine), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=remoteio.common.block.BlockMachine
+block:id=%tile.machine,data=0,stdrot=true,face0-5=0:remoteio/reservoir
+block:id=%tile.machine,data=1,stdrot=true,face0-5=0:remoteio/heater
+block:id=%tile.machine,data=2,stdrot=true,face0-5=0:remoteio/machine_inactive
+
+# %skylight:* (skylight), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=remoteio.common.block.BlockSkylight
+block:id=%skylight,data=*,stdrot=true,face0-5=0:remoteio/skylight/glass
+
+# %intelligentWorkbench:* (intelligentWorkbench), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=remoteio.common.block.BlockIntelligentWorkbench
+block:id=%intelligentWorkbench,data=*,stdrot=true,face0=0:remoteio/blank,face1=0:remoteio/workbench,face2-5=0:remoteio/blank

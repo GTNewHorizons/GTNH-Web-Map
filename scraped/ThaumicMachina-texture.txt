@@ -1,0 +1,23 @@
+# ThaumicMachina 0.2.1
+version:1.7
+modname:ThaumicMachina
+
+
+cfgfile:config/ThaumicMachina.cfg
+
+
+texturepath:assets/thaumicmachina/textures/blocks/
+texture:id=thaumicmachina/metaphysicalBrick,filename=assets/thaumicmachina/textures/blocks/metaphysicalBrick.png
+texture:id=thaumicmachina/metaphysicalRose,filename=assets/thaumicmachina/textures/blocks/metaphysicalRose.png
+texture:id=thaumicmachina/nodeTransmodifier,filename=assets/thaumicmachina/textures/blocks/nodeTransmodifier.png
+
+
+
+# %nodeTransmodifier:* (nodeTransmodifier), render=(CUSTOM), opaque=false,cls=jcm2606.thaumicmachina.block.BlockNodeTransmodifier
+block:id=%nodeTransmodifier,data=*,stdrot=true,face0-5=0:thaumicmachina/nodeTransmodifier
+
+# %metaphysicalBrick:* (metaphysicalBrick), render=(CUSTOM), opaque=false,cls=jcm2606.thaumicmachina.block.metaphysical.BlockMetaphysicalBrick
+block:id=%metaphysicalBrick,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicmachina/metaphysicalBrick
+
+# %metaphysicalRose:* (metaphysicalRose), render=(CUSTOM), opaque=false,cls=jcm2606.thaumicmachina.block.metaphysical.BlockMetaphysicalRose
+block:id=%metaphysicalRose,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicmachina/metaphysicalRose

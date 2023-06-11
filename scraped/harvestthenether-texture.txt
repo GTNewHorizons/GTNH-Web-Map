@@ -1,0 +1,124 @@
+# harvestthenether 1.7.10
+version:1.7
+modname:harvestthenether
+
+
+cfgfile:config/harvestthenether.cfg
+
+
+texturepath:assets/harvestthenether/textures/blocks/
+texture:id=harvestthenether/bloodleafcrop_0,filename=assets/harvestthenether/textures/blocks/bloodleafcrop_0.png
+texture:id=harvestthenether/bloodleafcrop_1,filename=assets/harvestthenether/textures/blocks/bloodleafcrop_1.png
+texture:id=harvestthenether/bloodleafcrop_2,filename=assets/harvestthenether/textures/blocks/bloodleafcrop_2.png
+texture:id=harvestthenether/bloodleafcrop_3,filename=assets/harvestthenether/textures/blocks/bloodleafcrop_3.png
+texture:id=harvestthenether/fleshrootcrop_0,filename=assets/harvestthenether/textures/blocks/fleshrootcrop_0.png
+texture:id=harvestthenether/fleshrootcrop_1,filename=assets/harvestthenether/textures/blocks/fleshrootcrop_1.png
+texture:id=harvestthenether/fleshrootcrop_2,filename=assets/harvestthenether/textures/blocks/fleshrootcrop_2.png
+texture:id=harvestthenether/fleshrootcrop_3,filename=assets/harvestthenether/textures/blocks/fleshrootcrop_3.png
+texture:id=harvestthenether/glowFlower,filename=assets/harvestthenether/textures/blocks/glowFlower.png
+texture:id=harvestthenether/glowflowercrop_0,filename=assets/harvestthenether/textures/blocks/glowflowercrop_0.png
+texture:id=harvestthenether/glowflowercrop_1,filename=assets/harvestthenether/textures/blocks/glowflowercrop_1.png
+texture:id=harvestthenether/glowflowercrop_2,filename=assets/harvestthenether/textures/blocks/glowflowercrop_2.png
+texture:id=harvestthenether/glowflowercrop_3,filename=assets/harvestthenether/textures/blocks/glowflowercrop_3.png
+texture:id=harvestthenether/ignisFruit_0,filename=assets/harvestthenether/textures/blocks/ignisFruit_0.png
+texture:id=harvestthenether/ignisFruit_1,filename=assets/harvestthenether/textures/blocks/ignisFruit_1.png
+texture:id=harvestthenether/ignisFruit_2,filename=assets/harvestthenether/textures/blocks/ignisFruit_2.png
+texture:id=harvestthenether/marrowberrycrop_0,filename=assets/harvestthenether/textures/blocks/marrowberrycrop_0.png
+texture:id=harvestthenether/marrowberrycrop_1,filename=assets/harvestthenether/textures/blocks/marrowberrycrop_1.png
+texture:id=harvestthenether/marrowberrycrop_2,filename=assets/harvestthenether/textures/blocks/marrowberrycrop_2.png
+texture:id=harvestthenether/marrowberrycrop_3,filename=assets/harvestthenether/textures/blocks/marrowberrycrop_3.png
+texture:id=harvestthenether/netherBed_feet_end,filename=assets/harvestthenether/textures/blocks/netherBed_feet_end.png
+texture:id=harvestthenether/netherBed_feet_side,filename=assets/harvestthenether/textures/blocks/netherBed_feet_side.png
+texture:id=harvestthenether/netherBed_feet_top,filename=assets/harvestthenether/textures/blocks/netherBed_feet_top.png
+texture:id=harvestthenether/netherBed_head_end,filename=assets/harvestthenether/textures/blocks/netherBed_head_end.png
+texture:id=harvestthenether/netherBed_head_side,filename=assets/harvestthenether/textures/blocks/netherBed_head_side.png
+texture:id=harvestthenether/netherBed_head_top,filename=assets/harvestthenether/textures/blocks/netherBed_head_top.png
+texture:id=harvestthenether/netherGarden,filename=assets/harvestthenether/textures/blocks/netherGarden.png
+texture:id=harvestthenether/netherLeaves,filename=assets/harvestthenether/textures/blocks/netherLeaves.png
+texture:id=harvestthenether/netherLog_side,filename=assets/harvestthenether/textures/blocks/netherLog_side.png
+texture:id=harvestthenether/netherLog_top,filename=assets/harvestthenether/textures/blocks/netherLog_top.png
+texture:id=harvestthenether/netherPlanks,filename=assets/harvestthenether/textures/blocks/netherPlanks.png
+texture:id=harvestthenether/netherSapling,filename=assets/harvestthenether/textures/blocks/netherSapling.png
+
+
+
+# %netherLog:* (netherLog), render=(LOG), opaque=true,cls=com.pam.harvestthenether.BlockNetherLog
+block:id=%netherLog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:harvestthenether/netherLog_top,face2-5=0:harvestthenether/netherLog_side
+block:id=%netherLog,data=4,data=5,data=6,data=7,face0-1=0:harvestthenether/netherLog_side,face2-3=4000:harvestthenether/netherLog_side,face4-5=0:harvestthenether/netherLog_top
+block:id=%netherLog,data=8,data=9,data=10,data=11,face0-1=4000:harvestthenether/netherLog_side,face2-3=0:harvestthenether/netherLog_top,face4-5=4000:harvestthenether/netherLog_side
+block:id=%netherLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestthenether/netherLog_side
+
+# %netherLeaves:* (netherLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestthenether.BlockNetherLeaves
+block:id=%netherLeaves,data=*,stdrot=true,face0-5=0:harvestthenether/netherLeaves
+
+# %netherPlanks:* (netherPlanks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestthenether.BlockNetherPlanks
+block:id=%netherPlanks,data=*,stdrot=true,face0-5=0:harvestthenether/netherPlanks
+
+# %netherSapling:* (netherSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestthenether.BlockNetherSapling
+block:id=%netherSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/netherSapling
+
+# %ignisFruit:* (ignisFruit), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestthenether.BlockPamFruit
+block:id=%ignisFruit,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_0
+block:id=%ignisFruit,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_1
+block:id=%ignisFruit,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_2
+block:id=%ignisFruit,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_0
+block:id=%ignisFruit,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_1
+block:id=%ignisFruit,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_2
+block:id=%ignisFruit,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_0
+block:id=%ignisFruit,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_1
+block:id=%ignisFruit,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_2
+block:id=%ignisFruit,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_0
+block:id=%ignisFruit,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_1
+block:id=%ignisFruit,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_2
+block:id=%ignisFruit,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_0
+block:id=%ignisFruit,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_1
+block:id=%ignisFruit,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_2
+block:id=%ignisFruit,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/ignisFruit_0
+
+# %netherBed:* (netherBed), render=(BED), opaque=false,cls=com.pam.harvestthenether.BlockNetherBed
+block:id=%netherBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_feet_top,face2=0:harvestthenether/netherBed_feet_end,face3=0:harvestthenether/netherBed_feet_top,face4-5=0:harvestthenether/netherBed_feet_side
+block:id=%netherBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_feet_top,face2-3=0:harvestthenether/netherBed_feet_side,face4=0:harvestthenether/netherBed_feet_top,face5=0:harvestthenether/netherBed_feet_end
+block:id=%netherBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1-2=0:harvestthenether/netherBed_feet_top,face3=0:harvestthenether/netherBed_feet_end,face4-5=0:harvestthenether/netherBed_feet_side
+block:id=%netherBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_feet_top,face2-3=0:harvestthenether/netherBed_feet_side,face4=0:harvestthenether/netherBed_feet_end,face5=0:harvestthenether/netherBed_feet_top
+block:id=%netherBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_feet_top,face2=0:harvestthenether/netherBed_feet_end,face3=0:harvestthenether/netherBed_feet_top,face4-5=0:harvestthenether/netherBed_feet_side
+block:id=%netherBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_feet_top,face2-3=0:harvestthenether/netherBed_feet_side,face4=0:harvestthenether/netherBed_feet_top,face5=0:harvestthenether/netherBed_feet_end
+block:id=%netherBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1-2=0:harvestthenether/netherBed_feet_top,face3=0:harvestthenether/netherBed_feet_end,face4-5=0:harvestthenether/netherBed_feet_side
+block:id=%netherBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_feet_top,face2-3=0:harvestthenether/netherBed_feet_side,face4=0:harvestthenether/netherBed_feet_end,face5=0:harvestthenether/netherBed_feet_top
+block:id=%netherBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1-2=0:harvestthenether/netherBed_head_top,face3=0:harvestthenether/netherBed_head_end,face4-5=0:harvestthenether/netherBed_head_side
+block:id=%netherBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_head_top,face2-3=0:harvestthenether/netherBed_head_side,face4=0:harvestthenether/netherBed_head_end,face5=0:harvestthenether/netherBed_head_top
+block:id=%netherBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_head_top,face2=0:harvestthenether/netherBed_head_end,face3=0:harvestthenether/netherBed_head_top,face4-5=0:harvestthenether/netherBed_head_side
+block:id=%netherBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_head_top,face2-3=0:harvestthenether/netherBed_head_side,face4=0:harvestthenether/netherBed_head_top,face5=0:harvestthenether/netherBed_head_end
+block:id=%netherBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1-2=0:harvestthenether/netherBed_head_top,face3=0:harvestthenether/netherBed_head_end,face4-5=0:harvestthenether/netherBed_head_side
+block:id=%netherBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_head_top,face2-3=0:harvestthenether/netherBed_head_side,face4=0:harvestthenether/netherBed_head_end,face5=0:harvestthenether/netherBed_head_top
+block:id=%netherBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_head_top,face2=0:harvestthenether/netherBed_head_end,face3=0:harvestthenether/netherBed_head_top,face4-5=0:harvestthenether/netherBed_head_side
+block:id=%netherBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestthenether/netherPlanks,face1=0:harvestthenether/netherBed_head_top,face2-3=0:harvestthenether/netherBed_head_side,face4=0:harvestthenether/netherBed_head_top,face5=0:harvestthenether/netherBed_head_end
+
+# %netherGarden:* (netherGarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestthenether.BlockNetherGarden
+block:id=%netherGarden,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/netherGarden
+
+# %bloodleafCrop:* (bloodleafCrop), render=(CROPS), opaque=false,cls=com.pam.harvestthenether.BlockPamCrop
+block:id=%bloodleafCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/bloodleafcrop_0
+block:id=%bloodleafCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/bloodleafcrop_1
+block:id=%bloodleafCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/bloodleafcrop_2
+block:id=%bloodleafCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/bloodleafcrop_3
+
+# %fleshrootCrop:* (fleshrootCrop), render=(CROPS), opaque=false,cls=com.pam.harvestthenether.BlockPamCrop
+block:id=%fleshrootCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/fleshrootcrop_0
+block:id=%fleshrootCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/fleshrootcrop_1
+block:id=%fleshrootCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/fleshrootcrop_2
+block:id=%fleshrootCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/fleshrootcrop_3
+
+# %marrowberryCrop:* (marrowberryCrop), render=(CROPS), opaque=false,cls=com.pam.harvestthenether.BlockPamCrop
+block:id=%marrowberryCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/marrowberrycrop_0
+block:id=%marrowberryCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/marrowberrycrop_1
+block:id=%marrowberryCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/marrowberrycrop_2
+block:id=%marrowberryCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/marrowberrycrop_3
+
+# %glowFlower:* (glowFlower), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestthenether.BlockNetherGarden
+block:id=%glowFlower,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/glowFlower
+
+# %glowflowerCrop:* (glowflowerCrop), render=(CROPS), opaque=false,cls=com.pam.harvestthenether.BlockPamCrop
+block:id=%glowflowerCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/glowflowercrop_0
+block:id=%glowflowerCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/glowflowercrop_1
+block:id=%glowflowerCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/glowflowercrop_2
+block:id=%glowflowerCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestthenether/glowflowercrop_3

@@ -1,0 +1,111 @@
+# cookingforblockheads 1.2.14-GTNH
+version:1.7
+modname:cookingforblockheads
+
+
+cfgfile:config/cookingforblockheads.cfg
+
+
+texturepath:assets/cookingforblockheads/textures/blocks/
+texture:id=cookingforblockheads/black_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/black_kitchen_floor.png
+texture:id=cookingforblockheads/blue_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/blue_kitchen_floor.png
+texture:id=cookingforblockheads/brown_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/brown_kitchen_floor.png
+texture:id=cookingforblockheads/cyan_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/cyan_kitchen_floor.png
+texture:id=cookingforblockheads/gray_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/gray_kitchen_floor.png
+texture:id=cookingforblockheads/green_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/green_kitchen_floor.png
+texture:id=cookingforblockheads/light_blue_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/light_blue_kitchen_floor.png
+texture:id=cookingforblockheads/light_gray_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/light_gray_kitchen_floor.png
+texture:id=cookingforblockheads/lime_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/lime_kitchen_floor.png
+texture:id=cookingforblockheads/magenta_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/magenta_kitchen_floor.png
+texture:id=cookingforblockheads/orange_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/orange_kitchen_floor.png
+texture:id=cookingforblockheads/pink_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/pink_kitchen_floor.png
+texture:id=cookingforblockheads/purple_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/purple_kitchen_floor.png
+texture:id=cookingforblockheads/red_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/red_kitchen_floor.png
+texture:id=cookingforblockheads/white_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/white_kitchen_floor.png
+texture:id=cookingforblockheads/yellow_kitchen_floor,filename=assets/cookingforblockheads/textures/blocks/yellow_kitchen_floor.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/log_spruce,filename=assets/minecraft/textures/blocks/log_spruce.png
+texture:id=minecraft/log_spruce_top,filename=assets/minecraft/textures/blocks/log_spruce_top.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %cookingtable:* (cookingtable), render=net.blay09.mods.cookingforblockheads.client.render.block.CookingTableBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockCookingTable
+block:id=%cookingtable,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_spruce_top,face2-5=0:minecraft/log_spruce
+
+# %cookingoven:* (cookingoven), render=net.blay09.mods.cookingforblockheads.client.render.block.OvenBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockOven
+block:id=%cookingoven,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %counter:* (counter), render=net.blay09.mods.cookingforblockheads.client.render.block.CounterBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockCounter
+block:id=%counter,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %countercorner:* (countercorner), render=net.blay09.mods.cookingforblockheads.client.render.block.CounterCornerBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockCounterCorner
+block:id=%countercorner,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %cabinet:* (cabinet), render=net.blay09.mods.cookingforblockheads.client.render.block.CabinetBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockCabinet
+block:id=%cabinet,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %cabinetcorner:* (cabinetcorner), render=net.blay09.mods.cookingforblockheads.client.render.block.CabinetCornerBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockCabinetCorner
+block:id=%cabinetcorner,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %fridge:* (fridge), render=net.blay09.mods.cookingforblockheads.client.render.block.FridgeBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockFridge
+block:id=%fridge,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %white_kitchen_floor:* (white_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%white_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/white_kitchen_floor
+
+# %orange_kitchen_floor:* (orange_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%orange_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/orange_kitchen_floor
+
+# %magenta_kitchen_floor:* (magenta_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%magenta_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/magenta_kitchen_floor
+
+# %light_blue_kitchen_floor:* (light_blue_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%light_blue_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/light_blue_kitchen_floor
+
+# %yellow_kitchen_floor:* (yellow_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%yellow_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/yellow_kitchen_floor
+
+# %lime_kitchen_floor:* (lime_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%lime_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/lime_kitchen_floor
+
+# %pink_kitchen_floor:* (pink_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%pink_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/pink_kitchen_floor
+
+# %gray_kitchen_floor:* (gray_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%gray_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/gray_kitchen_floor
+
+# %light_gray_kitchen_floor:* (light_gray_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%light_gray_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/light_gray_kitchen_floor
+
+# %cyan_kitchen_floor:* (cyan_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%cyan_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/cyan_kitchen_floor
+
+# %purple_kitchen_floor:* (purple_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%purple_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/purple_kitchen_floor
+
+# %blue_kitchen_floor:* (blue_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%blue_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/blue_kitchen_floor
+
+# %brown_kitchen_floor:* (brown_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%brown_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/brown_kitchen_floor
+
+# %green_kitchen_floor:* (green_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%green_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/green_kitchen_floor
+
+# %red_kitchen_floor:* (red_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%red_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/red_kitchen_floor
+
+# %black_kitchen_floor:* (black_kitchen_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.blay09.mods.cookingforblockheads.block.BlockKitchenFloor
+block:id=%black_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/black_kitchen_floor
+
+# %sink:* (sink), render=net.blay09.mods.cookingforblockheads.client.render.block.SinkBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockSink
+block:id=%sink,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_spruce_top,face2-5=0:minecraft/log_spruce
+
+# %toolrack:* (toolrack), render=net.blay09.mods.cookingforblockheads.client.render.block.ToolRackBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockToolRack
+block:id=%toolrack,data=0,data=1,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%toolrack,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %toaster:* (toaster), render=net.blay09.mods.cookingforblockheads.client.render.block.ToasterBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockToaster
+block:id=%toaster,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
