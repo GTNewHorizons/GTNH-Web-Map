@@ -1,4 +1,4 @@
-# chisel 2.10.17-GTNH
+# chisel 2.11.1-GTNH
 version:1.7
 modname:chisel
 
@@ -58,6 +58,8 @@ boxblock:id=%carpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,dat
 
 # %copperblock:* (copperblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
 
+# %cubit:* (cubit), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
 # %diamond_block:* (diamond_block), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
 
 # %diorite:* (diorite), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
@@ -80,6 +82,8 @@ boxblock:id=%carpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,dat
 
 # %futuraCircuit:* (futuraCircuit), render=team.chisel.client.render.RendererLayeredGlow(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlow
 
+# %glotek:* (glotek), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowie
+
 # %glowstone:* (glowstone), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowstone
 
 # %gold2:* (gold2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
@@ -95,6 +99,10 @@ boxblock:id=%carpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,dat
 # %hexLargePlating:* (hexLargePlating), render=team.chisel.client.render.RendererLayeredGlow(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlow
 
 # %holystone:* (holystone), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockHolystone
+
+# %hempcrete:* (hempcrete), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hempcretesand:* (hempcretesand), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableSand
 
 # %iron2:* (iron2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
 
@@ -136,9 +144,13 @@ boxblock:id=%marble_pillar_slab_top,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0
 
 # %rebel:* (rebel), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
+# %neonite:* (neonite), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowie
+
 # %nether_brick:* (nether_brick), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
-# %netherrack:* (netherrack), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.Features$59$1
+# %netherrack:* (netherrack), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.Features$64$1
+
+# %nucrete:* (nucrete), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 # %obsidian:* (obsidian), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
@@ -175,6 +187,8 @@ boxblock:id=%road_line,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.00390625,zmin=0.0,zmax=
 # %steelblock:* (steelblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
 
 # %stonebricksmooth:* (stonebricksmooth), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %sveltstone:* (sveltstone), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 # %tallow:* (tallow), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
