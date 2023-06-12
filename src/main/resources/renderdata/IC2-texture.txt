@@ -19,8 +19,8 @@ texture:id=ic2/blockDynamiteRemote,filename=assets/ic2/textures/blocks/blockDyna
 texture:id=ic2/blockFenceIron,filename=assets/ic2/textures/blocks/blockFenceIron.png
 texture:id=ic2/blockHarz,filename=assets/ic2/textures/blocks/blockHarz.png
 texture:id=ic2/blockITNT,filename=assets/ic2/textures/blocks/blockITNT.png
-texture:id=ic2/blockIronScaffold,filename=assets/ic2/textures/blocks/blockIronScaffold.png
-texture:id=ic2/blockIronScaffold.reinforced,filename=assets/ic2/textures/blocks/blockIronScaffold.reinforced.png
+texture:id=ic2/blockIronScaffold,filename=assets/ic2/textures/blocks/blockIronScaffold.png,xcount=6
+texture:id=ic2/blockIronScaffold.reinforced,filename=assets/ic2/textures/blocks/blockIronScaffold.reinforced.png,xcount=6
 texture:id=ic2/blockMetalAdvIron,filename=assets/ic2/textures/blocks/blockMetalAdvIron.png
 texture:id=ic2/blockMetalBronze,filename=assets/ic2/textures/blocks/blockMetalBronze.png
 texture:id=ic2/blockMetalCopper,filename=assets/ic2/textures/blocks/blockMetalCopper.png
@@ -38,8 +38,8 @@ texture:id=ic2/blockRubWood,filename=assets/ic2/textures/blocks/blockRubWood.png
 texture:id=ic2/blockRubWood.dry,filename=assets/ic2/textures/blocks/blockRubWood.dry.png
 texture:id=ic2/blockRubWood.wet,filename=assets/ic2/textures/blocks/blockRubWood.wet.png
 texture:id=ic2/blockRubber,filename=assets/ic2/textures/blocks/blockRubber.png
-texture:id=ic2/blockScaffold,filename=assets/ic2/textures/blocks/blockScaffold.png
-texture:id=ic2/blockScaffold.reinforced,filename=assets/ic2/textures/blocks/blockScaffold.reinforced.png
+texture:id=ic2/blockScaffold,filename=assets/ic2/textures/blocks/blockScaffold.png,xcount=6
+texture:id=ic2/blockScaffold.reinforced,filename=assets/ic2/textures/blocks/blockScaffold.reinforced.png,xcount=6
 texture:id=ic2/cf/blockFoam,filename=assets/ic2/textures/blocks/cf/blockFoam.png
 texture:id=ic2/cf/blockReinforcedFoam,filename=assets/ic2/textures/blocks/cf/blockReinforcedFoam.png
 texture:id=ic2/cf/blockWall.black,filename=assets/ic2/textures/blocks/cf/blockWall.black.png
@@ -262,14 +262,14 @@ block:id=%blockWall,data=14,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/
 block:id=%blockWall,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.white
 
 # %blockScaffold:* (blockScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
-block:id=%blockScaffold,data=0,data=1,data=2,data=3,data=4,stdrot=true,face0-5=0:ic2/blockScaffold
-block:id=%blockScaffold,data=5,stdrot=true,face0-5=0:ic2/blockScaffold.reinforced
-block:id=%blockScaffold,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockScaffold
+block:id=%blockScaffold,data=0,data=1,data=2,data=3,data=4,stdrot=true,face0-1=0:ic2/blockScaffold,face2-5=2:ic2/blockScaffold
+block:id=%blockScaffold,data=5,stdrot=true,face0-1=0:ic2/blockScaffold.reinforced,face2-5=2:ic2/blockScaffold.reinforced
+block:id=%blockScaffold,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ic2/blockScaffold,face2-5=2:ic2/blockScaffold
 
-# %blockIronScaffold:* (blockIronScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
-block:id=%blockIronScaffold,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:ic2/blockIronScaffold
-block:id=%blockIronScaffold,data=12,stdrot=true,face0-5=0:ic2/blockIronScaffold.reinforced
-block:id=%blockIronScaffold,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockIronScaffold
+# %blockIronScaffold:* (blockIronScaffold), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
+block:id=%blockIronScaffold,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,stdrot=true,face0-1=0:ic2/blockIronScaffold,face2-5=2:ic2/blockIronScaffold
+block:id=%blockIronScaffold,data=12,stdrot=true,face0-1=0:ic2/blockIronScaffold.reinforced,face2-5=2:ic2/blockIronScaffold.reinforced
+block:id=%blockIronScaffold,data=13,data=14,data=15,stdrot=true,face0-1=0:ic2/blockIronScaffold,face2-5=2:ic2/blockIronScaffold
 
 # %blockMetal:* (blockMetal), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetal
 block:id=%blockMetal,data=0,stdrot=true,face0-5=0:ic2/blockMetalCopper
