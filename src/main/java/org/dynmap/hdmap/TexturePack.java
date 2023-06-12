@@ -2473,6 +2473,13 @@ public class TexturePack {
                         if (mt != null) {
                             addonfiles.get(fid).material = mt;
                         }
+
+                        if(customProcessor != null){
+                            int num = customProcessor.getTextureCount();
+                            for(int i = 0; i < num; i++)
+                                TexturePack.parseTextureIndex(filetoidx, fid, String.format("%d:%s", i, id));
+                        }
+
                     }
                     else {
                         Log.severe("Format error - line " + rdr.getLineNumber() + " of " + txtname);
