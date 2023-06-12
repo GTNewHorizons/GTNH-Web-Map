@@ -24,3 +24,7 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 
 # %blockCarpentersBed:* (blockCarpentersBed), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBed(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBed
 boxblock:id=%blockCarpentersBed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=*
+
+customblock:id=%blockCarpentersBlock,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*
+customblock:id=%blockCarpentersSlope,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*
+customblock:id=%blockCarpentersStairs,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*
