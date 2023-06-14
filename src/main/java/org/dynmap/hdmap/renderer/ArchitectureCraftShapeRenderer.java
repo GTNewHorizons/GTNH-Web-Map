@@ -235,7 +235,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         addBox(rpf, list, 0,1,0,0.5,0,1, patchlist);
         return list.toArray(new RenderPatch[list.size()]);
     }
-    private RenderPatch[] makeStairs(RenderPatchFactory rpf) {
+    public static RenderPatch[] makeStairs(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         addBox(rpf, list, 0,1,0,0.5,0,1, patchlist);
         addBox(rpf, list, 0,1,0.5,1,0.5,1, patchlist);
@@ -343,7 +343,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         return basicBox;
     }
 
-    private static RenderPatch[] makeRoofPatches(RenderPatchFactory rpf) {
+    public static RenderPatch[] makeRoofPatches(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         // slope
         list.add(rpf.getPatch(0,1,1,1,1, 1, 0,0,0,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
