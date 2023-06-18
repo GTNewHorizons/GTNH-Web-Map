@@ -84,22 +84,88 @@ public class PatchDefinition implements RenderPatch {
     }
     
     private void rotate(Vector3D vec, int xcnt, int ycnt, int zcnt) {
-        vec.subtract(offsetCenter); /* Shoft to center of block */
+        vec.subtract(offsetCenter); /* Shift to center of block */
+        double rot;
+        double nval;
+
         /* Do X rotation */
-        double rot = Math.toRadians(xcnt);
-        double nval = vec.z * Math.sin(rot) + vec.y * Math.cos(rot);
-        vec.z = vec.z * Math.cos(rot) - vec.y * Math.sin(rot);
-        vec.y = nval;
+        switch(xcnt){
+            case 0:
+                break;
+            case 90:
+                nval = vec.z;
+                vec.z = -vec.y;
+                vec.y = nval;
+                break;
+            case 180:
+                vec.y = -vec.y;
+                vec.z = -vec.z;
+                break;
+            case 270:
+                nval = vec.z;
+                vec.z = vec.y;
+                vec.y = -nval;
+                break;
+            default:
+                rot = Math.toRadians(xcnt);
+                nval = vec.z * Math.sin(rot) + vec.y * Math.cos(rot);
+                vec.z = vec.z * Math.cos(rot) - vec.y * Math.sin(rot);
+                vec.y = nval;
+                break;
+        }
+
         /* Do Y rotation */
-        rot = Math.toRadians(ycnt);
-        nval = vec.x * Math.cos(rot) - vec.z * Math.sin(rot);
-        vec.z = vec.x * Math.sin(rot) + vec.z * Math.cos(rot);
-        vec.x = nval;
+        switch(ycnt){
+            case 0:
+                break;
+            case 90:
+                nval = -vec.z;
+                vec.z = vec.x;
+                vec.x = nval;
+                break;
+            case 180:
+                vec.x = -vec.x;
+                vec.z = -vec.z;
+                break;
+            case 270:
+                nval = vec.z;
+                vec.z = -vec.x;
+                vec.x = nval;
+                break;
+            default:
+                rot = Math.toRadians(ycnt);
+                nval = vec.x * Math.cos(rot) - vec.z * Math.sin(rot);
+                vec.z = vec.x * Math.sin(rot) + vec.z * Math.cos(rot);
+                vec.x = nval;
+                break;
+        }
+
         /* Do Z rotation */
-        rot = Math.toRadians(zcnt);
-        nval = vec.y * Math.sin(rot) + vec.x * Math.cos(rot);
-        vec.y = vec.y * Math.cos(rot) - vec.x * Math.sin(rot);
-        vec.x = nval;
+        switch(zcnt){
+            case 0:
+                break;
+            case 90:
+                nval = vec.y;
+                vec.y = -vec.x;
+                vec.x = nval;
+                break;
+            case 180:
+                vec.x = -vec.x;
+                vec.y = -vec.y;
+                break;
+            case 270:
+                nval = -vec.y;
+                vec.y = vec.x;
+                vec.x = nval;
+                break;
+            default:
+                rot = Math.toRadians(zcnt);
+                nval = vec.y * Math.sin(rot) + vec.x * Math.cos(rot);
+                vec.y = vec.y * Math.cos(rot) - vec.x * Math.sin(rot);
+                vec.x = nval;
+                break;
+        }
+
         vec.add(offsetCenter); /* Shoft back to corner */
     }
     public void update(double x0, double y0, double z0, double xu,
