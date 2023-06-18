@@ -261,7 +261,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         list.add(rpf.getPatch(1,1,1,0,1, 1, 1,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
 
         // bottom
-        list.add(rpf.getPatch(0,0,0,1,0, 0, 1,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0,0,0,1,0, 0, 0,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
 
         RenderPatch[] renderPatches = list.toArray(new RenderPatch[list.size()]);
         for(int i= 0;i < renderPatches.length; i++)
@@ -283,7 +283,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         list.add(rpf.getPatch(1,0,1,0,0, 1, 1,1,1,1,  RenderPatchFactory.SideVisible.BOTTOM,0 ));
 
         // bottom
-        list.add(rpf.getPatch(0,0,0,1,0, 0, 1,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0,0,0,1,0, 0, 0,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
 
         RenderPatch[] renderPatches = list.toArray(new RenderPatch[list.size()]);
         for(int i= 0;i < renderPatches.length; i++)
@@ -332,6 +332,10 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                             arr[i] = rpf.getRotatedPatch(arr[i], 270, 0, 0, 0);
                         } else if(side == 4) {
                             arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 0, 0);
+                        } else if(side == 5){
+                            arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 0, 0);
+                        } else if(side != 0){
+                            arr[i].toString();
                         }
                     }
                 }
@@ -358,7 +362,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         list.add(rpf.getPatch(1,1,1,0,1, 1, 1,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
 
         // bottom
-        list.add(rpf.getPatch(0,0,0,1,0, 0, 1,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0,0,0,1,0, 0, 0,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
         return list.toArray(new RenderPatch[list.size()]);
     }
     private static RenderPatch[] makeSimpleSlopePatches(RenderPatchFactory rpf, double minY, double maxY) {
@@ -388,8 +392,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         list.add(rpf.getPatch(1, maxY,1,0, maxY, 1, 1,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
 
         // bottom
-        list.add(rpf.getPatch(0,0,0,1,0, 0, 1,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
-
+        list.add(rpf.getPatch(0,0,0,1,0, 0, 0,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
         return list.toArray(new RenderPatch[list.size()]);
     }
     private static RenderPatch[] makePatchesFromModel(RenderPatchFactory rpf, String modelName){
