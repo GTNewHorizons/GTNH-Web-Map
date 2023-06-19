@@ -196,7 +196,8 @@ customblock:id=%fencesFireproof,class=org.dynmap.hdmap.renderer.FenceWallBlockRe
 customblock:id=%stairsFireproof,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
 # %saplingGE:* (saplingGE), render=forestry.arboriculture.render.RenderSaplingBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockSapling
-boxblock:id=%saplingGE,xmin=0.09999999403953552,xmax=0.8999999761581421,ymin=0.0,ymax=0.800000011920929,zmin=0.09999999403953552,zmax=0.8999999761581421,data=*
+#boxblock:id=%saplingGE,xmin=0.09999999403953552,xmax=0.8999999761581421,ymin=0.0,ymax=0.800000011920929,zmin=0.09999999403953552,zmax=0.8999999761581421,data=*
+patchblock:id=%saplingGE,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %leaves:* (leaves), render=forestry.arboriculture.render.RenderLeavesBlock(CUSTOM), opaque=true,cls=forestry.arboriculture.blocks.BlockForestryLeaves
 

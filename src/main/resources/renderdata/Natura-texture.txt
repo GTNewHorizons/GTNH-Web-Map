@@ -405,7 +405,7 @@ block:id=%N Crops,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/co
 # %Saguaro:* (Saguaro), render=mods.natura.client.SaguaroRenderer(CUSTOM), opaque=false,cls=mods.natura.blocks.trees.SaguaroBlock
 block:id=%Saguaro,data=0,stdrot=true,face0=0:natura/saguaro_bottom,face1=0:natura/saguaro_top,face2-5=0:natura/saguaro_side
 block:id=%Saguaro,data=1,data=2,stdrot=true,face0-5=0:natura/saguaro_top
-block:id=%Saguaro,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:natura/saguaro_fruit
+block:id=%Saguaro,data=3,stdrot=true,face0-5=0:natura/saguaro_fruit
 
 # %Bluebells:* (Bluebells), render=(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.FlowerBlock
 block:id=%Bluebells,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/flower_bluebells
