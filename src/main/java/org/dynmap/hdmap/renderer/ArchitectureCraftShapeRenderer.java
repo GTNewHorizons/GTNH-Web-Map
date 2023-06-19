@@ -1,6 +1,7 @@
 package org.dynmap.hdmap.renderer;
 
 import gcewing.architecture.*;
+import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.renderer.*;
@@ -320,23 +321,39 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
             if(arr != null && arr.length > 0) {
                 if(turn != 0 || side != 0) {
                     arr = arr.clone();
+
+                    int xrot = 0, yrot = 0, zrot = 0;
+
                     for(int i = 0; i < arr.length; i++) {
-                        int xrot = 0;
-                        int yrot = (360 - 90 * turn) % 360;
-
-                        arr[i] = rpf.getRotatedPatch(arr[i], 0, yrot, 0, 0);
-
-                        if(side == 1) {
-                            arr[i] = rpf.getRotatedPatch(arr[i], 180, 0, 0, 0);
-                        } else if(side == 2) {
-                            arr[i] = rpf.getRotatedPatch(arr[i], 270, 0, 0, 0);
-                        } else if(side == 4) {
-                            arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 0, 0);
-                        } else if(side == 5){
-                            arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 0, 0);
-                        } else if(side != 0){
-                            arr[i].toString();
+                        switch (ForgeDirection.getOrientation(side)){
+                            case DOWN:
+                                yrot = 360 - 90 * turn;
+                                break;
+                            case UP:
+                                yrot = 90 * turn;
+                                arr[i] = rpf.getRotatedPatch(arr[i], 180, 0, 0, 0);
+                                break;
+                            case NORTH:
+                                zrot = 360 - 90 * turn;
+                                arr[i] = rpf.getRotatedPatch(arr[i], 270, 0, 0, 0);
+                                break;
+                            case SOUTH:
+                                zrot = 90 * turn;
+                                arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 180, 0);
+                                break;
+                            case WEST:
+                                xrot = 360 - 90 * turn;
+                                arr[i] = rpf.getRotatedPatch(arr[i], 0, 270, 90, 0);
+                                break;
+                            case EAST:
+                                xrot = 90 * turn;
+                                arr[i] = rpf.getRotatedPatch(arr[i], 0, 90, 270, 0);
+                                break;
+                            case UNKNOWN:
+                                break;
                         }
+
+                        arr[i] = rpf.getRotatedPatch(arr[i], xrot, yrot, zrot, 0);
                     }
                 }
 
