@@ -26,4 +26,20 @@ public class GWM_Util {
 
         return 0;
     }
+
+    public static int objectToInt(Object obj, int def){
+        if(obj == null)
+            return def;
+
+        if(obj instanceof Integer)
+            return (Integer)obj;
+
+        if(obj instanceof Short)
+            return (Short)obj;
+
+        if(obj instanceof Byte)
+            return (Byte)obj;
+
+        return def;
+    }
 }
