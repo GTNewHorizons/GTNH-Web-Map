@@ -169,3 +169,5 @@ boxblock:id=%blockCosmeticSlabWood,ymin=0.5,data=8,data=9,data=10,data=11,data=1
 # %blockCosmeticSlabStone:* (blockCosmeticSlabStone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStoneSlab
 boxblock:id=%blockCosmeticSlabStone,ymax=0.5,data=0,data=1
 boxblock:id=%blockCosmeticSlabStone,ymin=0.5,data=8,data=9
+
+customblock:id=%blockWarded,class=org.dynmap.hdmap.renderer.WardedBlockRenderer,data=*
