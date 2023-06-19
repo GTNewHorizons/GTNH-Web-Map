@@ -2710,14 +2710,24 @@ public class TexturePack {
         boolean handledByCustomRendering = false;
         CustomColorMultiplier ccm = null;
         if (crd != null){
-            CustomTextureMapper ctm = crd.getCustomTextureMapper();
+            CustomTextureMapper customTextureMapper = crd.getCustomTextureMapper();
             ccm = crd.getCustomColorMultiplier();
-            if(ctm != null) {
-                int[] layers = ctm.getTextureLayersForPatchId(patchid);
+            if(customTextureMapper != null) {
+                int[] layers = customTextureMapper.getTextureLayersForPatchId(patchid);
                 if(layers != null && layers.length > 0){
                     for(int layer = layers.length - 1; layer >= 0; layer--){
                         int customTextureId = layers[layer];
-                        if(layer == layers.length -1 || rslt.isTransparent())
+
+                        if (ctm != null) {
+                            int mod = 0;
+                            if(customTextureId >= COLORMOD_MULT_INTERNAL) {
+                                mod = (customTextureId / COLORMOD_MULT_INTERNAL) * COLORMOD_MULT_INTERNAL;
+                                customTextureId -= mod;
+                            }
+                            customTextureId = mod + ctm.mapTexture(mapiter, blkid, blkdata, laststep, customTextureId, ss);
+                        }
+
+                        if(layer == layers.length -1 || rslt.getAlpha() < 0xFE)
                             readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, customTextureId, map.stdrotate, ccm);
                     }
                     handledByCustomRendering = true;
