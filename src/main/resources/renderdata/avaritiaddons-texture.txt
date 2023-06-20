@@ -11,15 +11,16 @@ texture:id=avaritia/block_infinity,filename=assets/avaritia/textures/blocks/bloc
 texture:id=avaritiaddons/extremeAutoCrafterBottom,filename=assets/avaritiaddons/textures/blocks/extremeAutoCrafterBottom.png
 texture:id=avaritiaddons/extremeAutoCrafterSide,filename=assets/avaritiaddons/textures/blocks/extremeAutoCrafterSide.png
 texture:id=avaritiaddons/extremeAutoCrafterTop,filename=assets/avaritiaddons/textures/blocks/extremeAutoCrafterTop.png
-texture:id=minecraft/planks_big_oak,filename=assets/minecraft/textures/blocks/planks_big_oak.png
+texture:id=avaritiaddons/compressedChest,filename=assets/avaritiaddons/textures/entity/compressedChest.png,format=CHEST
+texture:id=avaritiaddons/InfinityChest,filename=assets/avaritiaddons/textures/entity/InfinityChest0.png,format=CHEST
 
 
 
 # %CompressedChest:* (CompressedChest), render=(CUSTOM), opaque=false,cls=wanion.avaritiaddons.block.chest.compressed.BlockCompressedChest
-block:id=%CompressedChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+block:id=%CompressedChest,data=*,stdrot=true,transparency=TRANSPARENT,top=0,south=3,north=4,east=2,west=2,bottom=5,txtid=avaritiaddons/compressedChest
 
 # %InfinityChest:* (InfinityChest), render=(CUSTOM), opaque=false,cls=wanion.avaritiaddons.block.chest.infinity.BlockInfinityChest
-block:id=%InfinityChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:avaritia/block_infinity
+block:id=%InfinityChest,data=*,stdrot=true,transparency=TRANSPARENT,top=0,south=3,north=4,east=2,west=1,bottom=5,txtid=avaritiaddons/InfinityChest
 
 # %ExtremeAutoCrafter:* (ExtremeAutoCrafter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=wanion.avaritiaddons.block.extremeautocrafter.BlockExtremeAutoCrafter
 block:id=%ExtremeAutoCrafter,data=*,stdrot=true,face0=0:avaritiaddons/extremeAutoCrafterBottom,face1=0:avaritiaddons/extremeAutoCrafterTop,face2-5=0:avaritiaddons/extremeAutoCrafterSide
