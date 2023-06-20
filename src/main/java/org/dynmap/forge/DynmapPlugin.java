@@ -434,6 +434,11 @@ public class DynmapPlugin
         }
 
         @Override
+        public int isSignAt(String wname, int x, int y, int z) {
+            return 0;
+        }
+
+        @Override
         public void scheduleServerTask(Runnable run, long delay)
         {
             TaskRecord tr = new TaskRecord();

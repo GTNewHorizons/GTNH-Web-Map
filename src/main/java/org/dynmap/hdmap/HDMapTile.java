@@ -12,15 +12,18 @@ public class HDMapTile extends MapTile {
     public final HDPerspective perspective;
     public final int tx, ty;  /* Tile X and Tile Y are in tile coordinates (pixels/tile-size) */
     public final int boostzoom;
+    public final int tilescale;
     
-    public HDMapTile(DynmapWorld world, HDPerspective perspective, int tx, int ty, int boostzoom) {
+    public HDMapTile(DynmapWorld world, HDPerspective perspective, int tx, int ty, int boostzoom, int tilescale) {
         super(world);
         this.perspective = perspective;
         this.tx = tx;
         this.ty = ty;
         this.boostzoom = boostzoom;
+        this.tilescale = tilescale;
     }
 
+    // Used for restore of saved pending renders
     public HDMapTile(DynmapWorld world, String parm) throws Exception {
         super(world);
         
@@ -34,16 +37,22 @@ public class HDMapTile extends MapTile {
             this.boostzoom = Integer.parseInt(parms[3]);
         else
             this.boostzoom = 0;
+        if (parms.length > 4) {
+        	this.tilescale = Integer.parseInt(parms[4]);
+        }
+        else {
+        	this.tilescale = 0;
+        }
     }
     
     @Override
     protected String saveTileData() {
-        return String.format("%d,%d,%s,%d", tx, ty, perspective.getName(), boostzoom);
+        return String.format("%d,%d,%s,%d,%d", tx, ty, perspective.getName(), boostzoom, tilescale);
     }
 
     @Override
     public int hashCode() {
-        return tx ^ ty ^ perspective.hashCode() ^ world.hashCode() ^ boostzoom;
+        return tx ^ ty ^ perspective.hashCode() ^ world.hashCode() ^ boostzoom ^ tilescale;
     }
 
     @Override
@@ -55,14 +64,14 @@ public class HDMapTile extends MapTile {
     }
 
     public boolean equals(HDMapTile o) {
-        return o.tx == tx && o.ty == ty && (perspective == o.perspective) && (o.world == world) && (o.boostzoom == boostzoom);
+        return o.tx == tx && o.ty == ty && (perspective == o.perspective) && (o.world == world) && (o.boostzoom == boostzoom) && (o.tilescale == tilescale);
     }
 
     @Override
     public String toString() {
-        return world.getName() + ":" + perspective.getName() + "," + tx + "," + ty + ":" + boostzoom;
+        return world.getName() + ":" + perspective.getName() + "," + tx + "," + ty + ":" + boostzoom + ":" + tilescale;
     }
-    
+    public int getTileSize() { return 128 << tilescale; }
     @Override
     public boolean isBiomeDataNeeded() { return MapManager.mapman.hdmapman.isBiomeDataNeeded(this); }
     

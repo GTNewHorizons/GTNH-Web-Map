@@ -23,14 +23,18 @@ import org.dynmap.PlayerFaces.FaceType;
 import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
 import org.dynmap.storage.MapStorageTileEnumCB;
+import org.dynmap.storage.MapStorageBaseTileEnumCB;
+import org.dynmap.storage.MapStorageTileSearchEndCB;
 import org.dynmap.utils.BufferInputStream;
 import org.dynmap.utils.BufferOutputStream;
 
 public class SQLiteMapStorage extends MapStorage {
     private String connectionString;
     private String databaseFile;
-    private static final int POOLSIZE = 5;
+    private static final int POOLSIZE = 1;	// SQLite is really not thread safe... 1 at a time works best
     private Connection[] cpool = new Connection[POOLSIZE];
+    private long[] cpoolLastUseTS = new long[POOLSIZE];	// Time when last returned to pool
+    private static final long IDLE_TIMEOUT = 60000;	// Use 60 second timeout
     private int cpoolCount = 0;
     private static final Charset UTF8 = Charset.forName("UTF-8");
         
@@ -44,7 +48,7 @@ public class SQLiteMapStorage extends MapStorage {
             mapkey = getMapKey(world, map, var);
 
             if (zoom > 0) {
-                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + "zzzzzzzzzzzzzzzz".substring(0, zoom) + "_" + x + "_" + y + "." + map.getImageFormat().getFileExt();
+                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz".substring(0, zoom) + "_" + x + "_" + y + "." + map.getImageFormat().getFileExt();
             }
             else {
                 uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + x + "_" + y + "." + map.getImageFormat().getFileExt();
@@ -66,8 +70,10 @@ public class SQLiteMapStorage extends MapStorage {
                 rs.close();
                 stmt.close();
             } catch (SQLException x) {
-                Log.severe("Tile exists error - " + x.getMessage());
+            	logSQLException("Tile exists error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -92,8 +98,10 @@ public class SQLiteMapStorage extends MapStorage {
                 rs.close();
                 stmt.close();
             } catch (SQLException x) {
-                Log.severe("Tile matches hash error - " + x.getMessage());
+            	logSQLException("Tile matches hash error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -110,20 +118,32 @@ public class SQLiteMapStorage extends MapStorage {
                 c = getConnection();
                 Statement stmt = c.createStatement();
                 //ResultSet rs = stmt.executeQuery("SELECT HashCode,LastUpdate,Format,Image FROM Tiles WHERE MapID=" + mapkey + " AND x=" + x + " AND y=" + y + " AND zoom=" + zoom + ";");
-                ResultSet rs = doExecuteQuery(stmt, "SELECT HashCode,LastUpdate,Format,Image FROM Tiles WHERE MapID=" + mapkey + " AND x=" + x + " AND y=" + y + " AND zoom=" + zoom + ";");
+                ResultSet rs = doExecuteQuery(stmt, "SELECT HashCode,LastUpdate,Format,Image,ImageLen FROM Tiles WHERE MapID=" + mapkey + " AND x=" + x + " AND y=" + y + " AND zoom=" + zoom + ";");
                 if (rs.next()) {
                     rslt = new TileRead();
                     rslt.hashCode = rs.getLong("HashCode");
                     rslt.lastModified = rs.getLong("LastUpdate");
                     rslt.format = MapType.ImageEncoding.fromOrd(rs.getInt("Format"));
                     byte[] img = rs.getBytes("Image");
-                    rslt.image = new BufferInputStream(img);
+                    int len = rs.getInt("ImageLen");
+                    if (len <= 0) {
+                    	len = img.length;
+                    	// Trim trailing zeros from padding by BLOB field
+                    	while((len > 0) && (img[len-1] == '\0')) len--;
+                    }
+                    if (img == null) {
+                    	rslt = null;
+                    } else {
+                    	rslt.image = new BufferInputStream(img, len);
+                    }
                 }
                 rs.close();
                 stmt.close();
             } catch (SQLException x) {
-                Log.severe("Tile read error - " + x.getMessage());
+            	logSQLException("Tile read error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -131,7 +151,7 @@ public class SQLiteMapStorage extends MapStorage {
         }
 
         @Override
-        public boolean write(long hash, BufferOutputStream encImage) {
+        public boolean write(long hash, BufferOutputStream encImage, long timestamp) {
             if (mapkey == null) return false;
             Connection c = null;
             boolean err = false;
@@ -150,26 +170,28 @@ public class SQLiteMapStorage extends MapStorage {
                     stmt.setInt(4, zoom);
                 }
                 else if (exists) {
-                    stmt = c.prepareStatement("UPDATE Tiles SET HashCode=?, LastUpdate=?, Format=?, Image=? WHERE MapID=? AND x=? and y=? AND zoom=?;");
+                    stmt = c.prepareStatement("UPDATE Tiles SET HashCode=?, LastUpdate=?, Format=?, Image=?, ImageLen=? WHERE MapID=? AND x=? and y=? AND zoom=?;");
                     stmt.setLong(1, hash);
-                    stmt.setLong(2, System.currentTimeMillis());
+                    stmt.setLong(2, timestamp);
                     stmt.setInt(3, map.getImageFormat().getEncoding().ordinal());
                     stmt.setBytes(4, encImage.buf);
-                    stmt.setInt(5, mapkey);
-                    stmt.setInt(6, x);
-                    stmt.setInt(7, y);
-                    stmt.setInt(8, zoom);
+                    stmt.setInt(5, encImage.len);
+                    stmt.setInt(6, mapkey);
+                    stmt.setInt(7, x);
+                    stmt.setInt(8, y);
+                    stmt.setInt(9, zoom);
                 }
                 else {
-                    stmt = c.prepareStatement("INSERT INTO Tiles (MapID,x,y,zoom,HashCode,LastUpdate,Format,Image) VALUES (?,?,?,?,?,?,?,?);");
+                    stmt = c.prepareStatement("INSERT INTO Tiles (MapID,x,y,zoom,HashCode,LastUpdate,Format,Image,ImageLen) VALUES (?,?,?,?,?,?,?,?,?);");
                     stmt.setInt(1, mapkey);
                     stmt.setInt(2, x);
                     stmt.setInt(3, y);
                     stmt.setInt(4, zoom);
                     stmt.setLong(5, hash);
-                    stmt.setLong(6, System.currentTimeMillis());
+                    stmt.setLong(6, timestamp);
                     stmt.setInt(7, map.getImageFormat().getEncoding().ordinal());
                     stmt.setBytes(8, encImage.buf);
+                    stmt.setInt(9, encImage.len);
                 }
                 //stmt.executeUpdate();
                 doExecuteUpdate(stmt);
@@ -179,8 +201,10 @@ public class SQLiteMapStorage extends MapStorage {
                     world.enqueueZoomOutUpdate(this);
                 }
             } catch (SQLException x) {
-                Log.severe("Tile write error - " + x.getMessage());
+            	logSQLException("Tile write error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -259,6 +283,7 @@ public class SQLiteMapStorage extends MapStorage {
     @Override
     public boolean init(DynmapCore core) {
         if (!super.init(core)) {
+        	isShutdown = true;
             return false;
         }
         File dbfile = core.getFile(core.configuration.getString("storage/dbfile", "dynmap.db"));
@@ -271,6 +296,7 @@ public class SQLiteMapStorage extends MapStorage {
             return initializeTables();
         } catch (ClassNotFoundException cnfx) {
             Log.severe("SQLite-JDBC classes not found - sqlite data source not usable");
+        	isShutdown = true;
             return false; 
         }
     }
@@ -291,6 +317,8 @@ public class SQLiteMapStorage extends MapStorage {
             stmt.close();
         } catch (SQLException x) {
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             if (c != null) { releaseConnection(c, err); }
         }
@@ -327,8 +355,10 @@ public class SQLiteMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Error loading map table - " + x.getMessage());
+        	logSQLException("Error loading map table", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
             c = null;
@@ -366,8 +396,10 @@ public class SQLiteMapStorage extends MapStorage {
                     rs.close();
                     stmt.close();
                 } catch (SQLException x) {
-                    Log.severe("Error updating Maps table - " + x.getMessage());
+                	logSQLException("Error updating Maps table", x);
                     err = true;
+                } catch (StorageShutdownException x) {
+                	err = true;
                 } finally {
                     releaseConnection(c, err);
                 }
@@ -384,37 +416,100 @@ public class SQLiteMapStorage extends MapStorage {
         // If new, add our tables
         if (version == 0) {
             try {
+            	Log.info("Initializing database schema");
                 c = getConnection();
                 doUpdate(c, "CREATE TABLE Maps (ID INTEGER PRIMARY KEY AUTOINCREMENT, WorldID STRING NOT NULL, MapID STRING NOT NULL, Variant STRING NOT NULL)");
-                doUpdate(c, "CREATE TABLE Tiles (MapID INT NOT NULL, x INT NOT NULL, y INT NOT NULL, zoom INT NOT NULL, HashCode INT NOT NULL, LastUpdate INT NOT NULL, Format INT NOT NULL, Image BLOB, PRIMARY KEY(MapID, x, y, zoom))");
-                doUpdate(c, "CREATE TABLE Faces (PlayerName STRING NOT NULL, TypeID INT NOT NULL, Image BLOB, PRIMARY KEY(PlayerName, TypeID))");
-                doUpdate(c, "CREATE TABLE MarkerIcons (IconName STRING PRIMARY KEY NOT NULL, Image BLOB)");
+                doUpdate(c, "CREATE TABLE Tiles (MapID INT NOT NULL, x INT NOT NULL, y INT NOT NULL, zoom INT NOT NULL, HashCode INT NOT NULL, LastUpdate INT NOT NULL, Format INT NOT NULL, Image BLOB, ImageLen INT, PRIMARY KEY(MapID, x, y, zoom))");
+                doUpdate(c, "CREATE TABLE Faces (PlayerName STRING NOT NULL, TypeID INT NOT NULL, Image BLOB, ImageLen INT, PRIMARY KEY(PlayerName, TypeID))");
+                doUpdate(c, "CREATE TABLE MarkerIcons (IconName STRING PRIMARY KEY NOT NULL, Image BLOB, ImageLen INT)");
                 doUpdate(c, "CREATE TABLE MarkerFiles (FileName STRING PRIMARY KEY NOT NULL, Content CLOB)");
+                // Add index, since SQLite execution planner is stupid and scans Tiles table instead of using short Maps table...
+                doUpdate(c, "CREATE INDEX MapIndex ON Maps(WorldID, MapID, Variant)");
                 doUpdate(c, "CREATE TABLE SchemaVersion (level INT PRIMARY KEY NOT NULL)");
-                doUpdate(c, "INSERT INTO SchemaVersion (level) VALUES (1)");
+                doUpdate(c, "INSERT INTO SchemaVersion (level) VALUES (3)");
+                version = 3;	// Initializes to current schema
             } catch (SQLException x) {
-                Log.severe("Error creating tables - " + x.getMessage());
+            	logSQLException("Error creating tables", x);
                 err = true;
+                return false;
+            } catch (StorageShutdownException x) {
+            	err = true;
                 return false;
             } finally {
                 releaseConnection(c, err);
                 c = null;
             }
         }
+        if (version == 1) {	// Add ImageLen columns
+            try {
+            	Log.info("Updating database schema from version = " + version);
+                c = getConnection();
+                doUpdate(c, "ALTER TABLE Tiles ADD ImageLen INT");
+                doUpdate(c, "ALTER TABLE Faces ADD ImageLen INT");
+                doUpdate(c, "ALTER TABLE MarkerIcons ADD ImageLen INT");
+                doUpdate(c, "UPDATE SchemaVersion SET level=2");
+                version = 2;
+            } catch (SQLException x) {
+            	logSQLException("Error updating tables to version=2", x);
+                err = true;
+                return false;
+            } catch (StorageShutdownException x) {
+            	err = true;
+                return false;
+            } finally {
+                releaseConnection(c, err);
+                c = null;
+            }
+        }
+        if (version == 2) {
+            try {
+            	Log.info("Updating database schema from version = " + version);
+                c = getConnection();
+                // Add index, since SQLite execution planner is stupid and scans Tiles table instead of using short Maps table...
+                doUpdate(c, "CREATE INDEX MapIndex ON Maps(WorldID, MapID, Variant)");
+                doUpdate(c, "UPDATE SchemaVersion SET level=3");
+                version = 2;
+            } catch (SQLException x) {
+            	logSQLException("Error updating tables to version=3", x);
+                err = true;
+                return false;
+            } catch (StorageShutdownException x) {
+            	err = true;
+            	return false;
+            } finally {
+                releaseConnection(c, err);
+                c = null;
+            }
+        }
+    	Log.info("Schema version = " + version);
         // Load maps table - cache results
         doLoadMaps();
         
         return true;
     }
     
-    private Connection getConnection() throws SQLException {
+    private Connection getConnection() throws SQLException, StorageShutdownException {
         Connection c = null;
+        if (isShutdown) {
+        	throw new StorageShutdownException();
+        }
         synchronized (cpool) {
+        	long now = System.currentTimeMillis();
             while (c == null) {
                 for (int i = 0; i < cpool.length; i++) {    // See if available connection
                     if (cpool[i] != null) { // Found one
-                        c = cpool[i];
-                        cpool[i] = null;
+                    	// If in pool too long, close it and move on
+                    	if ((now - cpoolLastUseTS[i]) > IDLE_TIMEOUT) {
+                            try { cpool[i].close(); } catch (SQLException x) {}
+                            cpool[i] = null;
+                            cpoolCount--;
+                    	}
+                    	else {	// Else, use the connection
+                    		c = cpool[i];
+                    		cpool[i] = null;
+                    		cpoolLastUseTS[i] = now;
+                    		break;
+                    	}
                     }
                 }
                 if (c == null) {
@@ -450,6 +545,7 @@ public class SQLiteMapStorage extends MapStorage {
                 for (int i = 0; i < POOLSIZE; i++) {
                     if (cpool[i] == null) {
                         cpool[i] = c;
+                        cpoolLastUseTS[i] = System.currentTimeMillis();	// Record last use time
                         c = null; // Mark it recovered (no close needed
                         cpool.notifyAll();
                         break;
@@ -517,7 +613,7 @@ public class SQLiteMapStorage extends MapStorage {
 
     @Override
     public void enumMapTiles(DynmapWorld world, MapType map,
-            MapStorageTileEnumCB cb) {
+                             MapStorageTileEnumCB cb) {
         List<MapType> mtlist;
 
         if (map != null) {
@@ -529,31 +625,72 @@ public class SQLiteMapStorage extends MapStorage {
         for (MapType mt : mtlist) {
             ImageVariant[] vars = mt.getVariants();
             for (ImageVariant var : vars) {
-                processEnumMapTiles(world, mt, var, cb);
+                processEnumMapTiles(world, mt, var, cb, null, null);
             }
         }
     }
-    private void processEnumMapTiles(DynmapWorld world, MapType map, ImageVariant var, MapStorageTileEnumCB cb) {
+
+    @Override
+    public void enumMapBaseTiles(DynmapWorld world, MapType map, MapStorageBaseTileEnumCB cbBase, MapStorageTileSearchEndCB cbEnd) {
+        List<MapType> mtlist;
+
+        if (map != null) {
+            mtlist = Collections.singletonList(map);
+        }
+        else {  // Else, add all directories under world directory (for maps)
+            mtlist = new ArrayList<MapType>(world.maps);
+        }
+        for (MapType mt : mtlist) {
+            ImageVariant[] vars = mt.getVariants();
+            for (ImageVariant var : vars) {
+                processEnumMapTiles(world, mt, var, null, cbBase, cbEnd);
+            }
+        }
+    }
+
+    private void processEnumMapTiles(DynmapWorld world, MapType map, ImageVariant var, MapStorageTileEnumCB cb, MapStorageBaseTileEnumCB cbBase, MapStorageTileSearchEndCB cbEnd) {
         Connection c = null;
         boolean err = false;
         Integer mapkey = getMapKey(world, map, var);
-        if (mapkey == null) return;
+        if (mapkey == null) {
+            if(cbEnd != null)
+                cbEnd.searchEnded();
+            return;
+        }
         try {
-            c = getConnection();
-            // Query tiles for given mapkey
-            Statement stmt = c.createStatement();
-            //ResultSet rs = stmt.executeQuery("SELECT x,y,zoom,Format FROM Tiles WHERE MapID=" + mapkey + ";");
-            ResultSet rs = doExecuteQuery(stmt, "SELECT x,y,zoom,Format FROM Tiles WHERE MapID=" + mapkey + ";");
-            while (rs.next()) {
-                StorageTile st = new StorageTile(world, map, rs.getInt("x"), rs.getInt("y"), rs.getInt("zoom"), var);
-                cb.tileFound(st, MapType.ImageEncoding.fromOrd(rs.getInt("Format")));
-                st.cleanup();
+            boolean done = false;
+            int offset = 0;
+            int limit = 100;
+            while (!done) {
+                c = getConnection();	// Do inside loop - single threaded sqlite will have issues otherwise....
+	            // Query tiles for given mapkey
+	            Statement stmt = c.createStatement();
+	            ResultSet rs = doExecuteQuery(stmt, String.format("SELECT x,y,zoom,Format FROM Tiles WHERE MapID=%d LIMIT %d OFFSET %d;", mapkey, limit, offset));
+	            int cnt = 0;
+	            while (rs.next()) {
+	                StorageTile st = new StorageTile(world, map, rs.getInt("x"), rs.getInt("y"), rs.getInt("zoom"), var);
+	                final MapType.ImageEncoding encoding = MapType.ImageEncoding.fromOrd(rs.getInt("Format"));
+	                if(cb != null)
+	                    cb.tileFound(st, encoding);
+	                if(cbBase != null && st.zoom == 0)
+	                    cbBase.tileFound(st, encoding);
+	                st.cleanup();
+	                cnt++;
+	            }
+	            rs.close();
+	            stmt.close();
+	            if (cnt < limit) done = true;
+	            offset += cnt;
+	            releaseConnection(c, err);
+	            c = null;
             }
-            rs.close();
-            stmt.close();
+            if(cbEnd != null)
+                cbEnd.searchEnded();
         } catch (SQLException x) {
-            Log.severe("Tile enum error - " + x.getMessage());
+        	logSQLException("Tile enum error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -589,8 +726,10 @@ public class SQLiteMapStorage extends MapStorage {
             doExecuteUpdate(stmt, "DELETE FROM Tiles WHERE MapID=" + mapkey + ";");
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Tile purge error - " + x.getMessage());
+        	logSQLException("Tile purge error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -614,23 +753,27 @@ public class SQLiteMapStorage extends MapStorage {
                 stmt.setInt(2, facetype.typeID);
             }
             else if (exists) {
-                stmt = c.prepareStatement("UPDATE Faces SET Image=? WHERE PlayerName=? AND TypeID=?;");
+                stmt = c.prepareStatement("UPDATE Faces SET Image=?,ImageLen=? WHERE PlayerName=? AND TypeID=?;");
                 stmt.setBytes(1, encImage.buf);
-                stmt.setString(2, playername);
-                stmt.setInt(3, facetype.typeID);
+                stmt.setInt(2, encImage.len);
+                stmt.setString(3, playername);
+                stmt.setInt(4, facetype.typeID);
             }
             else {
-                stmt = c.prepareStatement("INSERT INTO Faces (PlayerName,TypeID,Image) VALUES (?,?,?);");
+                stmt = c.prepareStatement("INSERT INTO Faces (PlayerName,TypeID,Image,ImageLen) VALUES (?,?,?,?);");
                 stmt.setString(1, playername);
                 stmt.setInt(2, facetype.typeID);
                 stmt.setBytes(3, encImage.buf);
+                stmt.setInt(4, encImage.len);
             }
             //stmt.executeUpdate();
             doExecuteUpdate(stmt);
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Face write error - " + x.getMessage());
+        	logSQLException("Face write error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -645,20 +788,28 @@ public class SQLiteMapStorage extends MapStorage {
         BufferInputStream image = null;
         try {
             c = getConnection();
-            PreparedStatement stmt = c.prepareStatement("SELECT Image FROM Faces WHERE PlayerName=? AND TypeID=?;");
+            PreparedStatement stmt = c.prepareStatement("SELECT Image,ImageLen FROM Faces WHERE PlayerName=? AND TypeID=?;");
             stmt.setString(1, playername);
             stmt.setInt(2, facetype.typeID);
             //ResultSet rs = stmt.executeQuery();
             ResultSet rs = doExecuteQuery(stmt);
             if (rs.next()) {
                 byte[] img = rs.getBytes("Image");
-                image = new BufferInputStream(img);
+                int len = rs.getInt("imageLen");
+                if (len <= 0) {
+                	len = img.length;
+                	// Trim trailing zeros from padding by BLOB field
+                	while((len > 0) && (img[len-1] == '\0')) len--;
+                }
+                image = new BufferInputStream(img, len);
             }
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Face read error - " + x.getMessage());
+        	logSQLException("Face read error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -683,8 +834,10 @@ public class SQLiteMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Face exists error - " + x.getMessage());
+        	logSQLException("Face exists error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -695,20 +848,21 @@ public class SQLiteMapStorage extends MapStorage {
     public boolean setMarkerImage(String markerid, BufferOutputStream encImage) {
         Connection c = null;
         boolean err = false;
-        
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         try {
             c = getConnection();
             boolean exists = false;
-            PreparedStatement stmt;
             stmt = c.prepareStatement("SELECT IconName FROM MarkerIcons WHERE IconName=?;");
             stmt.setString(1, markerid);
-            //ResultSet rs = stmt.executeQuery();
-            ResultSet rs = doExecuteQuery(stmt);
+            rs = doExecuteQuery(stmt);
             if (rs.next()) {
                 exists = true;
             }
             rs.close();
+            rs = null;
             stmt.close();
+            stmt = null;
             if (encImage == null) { // If delete
                 // If delete, and doesn't exist, quit
                 if (!exists) return false;
@@ -718,22 +872,28 @@ public class SQLiteMapStorage extends MapStorage {
                 doExecuteUpdate(stmt);
             }
             else if (exists) {
-                stmt = c.prepareStatement("UPDATE MarkerIcons SET Image=? WHERE IconName=?;");
+                stmt = c.prepareStatement("UPDATE MarkerIcons SET Image=?,ImageLen=? WHERE IconName=?;");
                 stmt.setBytes(1, encImage.buf);
-                stmt.setString(2, markerid);
+                stmt.setInt(2, encImage.len);
+                stmt.setString(3, markerid);
             }
             else {
-                stmt = c.prepareStatement("INSERT INTO MarkerIcons (IconName,Image) VALUES (?,?);");
+                stmt = c.prepareStatement("INSERT INTO MarkerIcons (IconName,Image,ImageLen) VALUES (?,?,?);");
                 stmt.setString(1, markerid);
                 stmt.setBytes(2, encImage.buf);
+                stmt.setInt(3, encImage.len);
             }
-            //stmt.executeUpdate();
             doExecuteUpdate(stmt);
             stmt.close();
+            stmt = null;
         } catch (SQLException x) {
-            Log.severe("Marker write error - " + x.getMessage());
+        	logSQLException("Marker write error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
+            if (rs != null) { try { rs.close(); } catch (SQLException sx) {} }
+            if (stmt != null) { try { stmt.close(); } catch (SQLException sx) {} }
             releaseConnection(c, err);
         }
         return !err;
@@ -746,19 +906,27 @@ public class SQLiteMapStorage extends MapStorage {
         BufferInputStream image = null;
         try {
             c = getConnection();
-            PreparedStatement stmt = c.prepareStatement("SELECT Image FROM MarkerIcons WHERE IconName=?;");
+            PreparedStatement stmt = c.prepareStatement("SELECT Image,ImageLen FROM MarkerIcons WHERE IconName=?;");
             stmt.setString(1, markerid);
             //ResultSet rs = stmt.executeQuery();
             ResultSet rs = doExecuteQuery(stmt);
             if (rs.next()) {
                 byte[] img = rs.getBytes("Image");
+                int len = rs.getInt("ImageLen");
+                if (len <= 0) {
+                	len = img.length;
+                	// Trim trailing zeros from padding by BLOB field
+                	while((len > 0) && (img[len-1] == '\0')) len--;
+                }
                 image = new BufferInputStream(img);
             }
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Marker read error - " + x.getMessage());
+        	logSQLException("Marker read error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -769,26 +937,26 @@ public class SQLiteMapStorage extends MapStorage {
     public boolean setMarkerFile(String world, String content) {
         Connection c = null;
         boolean err = false;
-        
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         try {
             c = getConnection();
             boolean exists = false;
-            PreparedStatement stmt;
             stmt = c.prepareStatement("SELECT FileName FROM MarkerFiles WHERE FileName=?;");
             stmt.setString(1, world);
-            //ResultSet rs = stmt.executeQuery();
-            ResultSet rs = doExecuteQuery(stmt);
+            rs = doExecuteQuery(stmt);
             if (rs.next()) {
                 exists = true;
             }
             rs.close();
+            rs = null;
             stmt.close();
+            stmt = null;
             if (content == null) { // If delete
                 // If delete, and doesn't exist, quit
                 if (!exists) return false;
                 stmt = c.prepareStatement("DELETE FROM MarkerFiles WHERE FileName=?;");
                 stmt.setString(1, world);
-                //stmt.executeUpdate();
                 doExecuteUpdate(stmt);
             }
             else if (exists) {
@@ -803,11 +971,14 @@ public class SQLiteMapStorage extends MapStorage {
             }
             //stmt.executeUpdate();
             doExecuteUpdate(stmt);
-            stmt.close();
         } catch (SQLException x) {
-            Log.severe("Marker file write error - " + x.getMessage());
+        	logSQLException("Marker file write error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
+            if (rs != null) { try { rs.close(); } catch (SQLException sx) {} }
+            if (stmt != null) { try { stmt.close(); } catch (SQLException sx) {} }
             releaseConnection(c, err);
         }
         return !err;
@@ -831,8 +1002,10 @@ public class SQLiteMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Marker file read error - " + x.getMessage());
+        	logSQLException("Marker file read error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -840,11 +1013,13 @@ public class SQLiteMapStorage extends MapStorage {
     }
 
     @Override
+    // External web server only
     public String getMarkersURI(boolean login_enabled) {
         return "standalone/SQLite_markers.php?marker=";
    }
 
     @Override
+    // External web server only
     public String getTilesURI(boolean login_enabled) {
         return "standalone/SQLite_tiles.php?tile=";
     }
@@ -902,5 +1077,12 @@ public class SQLiteMapStorage extends MapStorage {
                 }
             }
         }
+    }
+    
+    public void logSQLException(String opmsg, SQLException x) {
+    	// Ignore interrupted
+    	if (x.getMessage().equals("Interrupted")) return;
+    	
+		super.logSQLException(opmsg,  x);
     }
 }

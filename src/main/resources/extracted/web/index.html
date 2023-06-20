@@ -10,31 +10,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<!-- These 2 lines make us fullscreen on apple mobile products - remove if you don't like that -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />	
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<link rel="icon" href="images/dynmap.ico" type="image/ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="images/icons/site.webmanifest">
+	<link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="images/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-config" content="images/icons/browserconfig.xml">
+	<meta name="theme-color" content="#000000">
 
-	<script type="text/javascript" src="js/jquery-1.11.0.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<link rel="stylesheet" type="text/css" href="css/leaflet.css?_=${project.version}-${BUILD_NUMBER}" />
-	<script type="text/javascript" src="js/leaflet.js?_=${project.version}-${BUILD_NUMBER}"></script>
+	<script type="text/javascript" src="js/jquery-3.5.1.js?_=GRADLETOKEN_VERSION"></script>
+	<link rel="stylesheet" type="text/css" href="css/leaflet.css?_=GRADLETOKEN_VERSION" />
+	<script type="text/javascript" src="js/leaflet.js?_=GRADLETOKEN_VERSION"></script>
+    <!-- FOr source debug on leaflet 	<script type="text/javascript" src="js/leaflet-src.js?_=GRADLETOKEN_VERSION"></script> -->
+	<script type="text/javascript" src="js/custommarker.js?_=GRADLETOKEN_VERSION"></script>
 
-	<script type="text/javascript" src="js/custommarker.js?_=${project.version}-${BUILD_NUMBER}"></script>
-
-	<script type="text/javascript" src="js/dynmaputils.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<script type="text/javascript" src="js/sidebarutils.js?_=${project.version}-${BUILD_NUMBER}"></script>
+	<script type="text/javascript" src="js/dynmaputils.js?_=GRADLETOKEN_VERSION"></script>
+	<script type="text/javascript" src="js/sidebarutils.js?_=GRADLETOKEN_VERSION"></script>
 
 	<!--<link rel="stylesheet" type="text/css" href="css/embedded.css" media="screen" />-->
-	<link rel="stylesheet" type="text/css" href="css/standalone.css?_=${project.version}-${BUILD_NUMBER}" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/dynmap_style.css?_=${project.version}-${BUILD_NUMBER}" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/standalone.css?_=GRADLETOKEN_VERSION" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/dynmap_style.css?_=GRADLETOKEN_VERSION" media="screen" />
 	<!-- <link rel="stylesheet" type="text/css" href="css/override.css" media="screen" /> -->
 
-	<script type="text/javascript" src="version.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<script type="text/javascript" src="js/jquery.json.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<script type="text/javascript" src="js/jquery.mousewheel.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<script type="text/javascript" src="js/minecraft.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<script type="text/javascript" src="js/map.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<script type="text/javascript" src="js/hdmap.js?_=${project.version}-${BUILD_NUMBER}"></script>
-	<script type="text/javascript" src="standalone/config.js?_=${project.version}-${BUILD_NUMBER}"></script>
+	<script type="text/javascript" src="version.js?_=GRADLETOKEN_VERSION"></script>
+	<script type="text/javascript" src="js/jquery.json.js?_=GRADLETOKEN_VERSION"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js?_=GRADLETOKEN_VERSION"></script>
+	<script type="text/javascript" src="js/minecraft.js?_=GRADLETOKEN_VERSION"></script>
+	<script type="text/javascript" src="js/map.js?_=GRADLETOKEN_VERSION"></script>
+	<script type="text/javascript" src="js/hdmap.js?_=GRADLETOKEN_VERSION"></script>
+	<script type="text/javascript" src="standalone/config.js?_=GRADLETOKEN_VERSION"></script>
 
 	<script type="text/javascript">
 			$(document).ready(function() {

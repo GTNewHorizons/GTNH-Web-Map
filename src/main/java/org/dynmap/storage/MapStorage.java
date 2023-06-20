@@ -1,8 +1,10 @@
 package org.dynmap.storage;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.zip.CRC32;
 
@@ -19,17 +21,23 @@ import org.dynmap.utils.BufferOutputStream;
  * Generic interface for map data storage (image tiles, and associated hash codes)
  */
 public abstract class MapStorage {
+    protected String connectionString;
     private static Object lock = new Object();
     private static HashMap<String, Integer> filelocks = new HashMap<String, Integer>();
-    private static final Integer WRITELOCK = new Integer(-1);
+    private static final Integer WRITELOCK = (-1);
     protected File baseStandaloneDir;
+    protected boolean isShutdown;
 
     protected long serverID;
     
     protected MapStorage() {
         this.serverID = 0;
+        this.isShutdown = false;
     }
     
+    public void shutdownStorage() {
+    	this.isShutdown = true;
+    }
     // Proper modulo - versus the bogus Java behavior of negative modulo for negative numerators
     protected static final int modulo(int x, int y) {
         return ((x % y) + y) % y;
@@ -85,6 +93,15 @@ public abstract class MapStorage {
      * @param cb - callback to receive matching tiles
      */
     public abstract void enumMapTiles(DynmapWorld world, MapType map, MapStorageTileEnumCB cb);
+
+    /**
+     * Enumerate existing map tiles, matching given constraints, with zoom at 0
+     * @param world - specific world
+     * @param map - specific map (if non-null)
+     * @param cbBase - callback to receive matching tiles
+     * @param cbEnd - callback to receive end-of-search event
+     */
+    public abstract void enumMapBaseTiles(DynmapWorld world, MapType map, MapStorageBaseTileEnumCB cbBase, MapStorageTileSearchEndCB cbEnd);
 
     /**
      * Purge existing map tiles, matching given constraints
@@ -186,7 +203,7 @@ public abstract class MapStorage {
      */
     public abstract String getMarkersURI(boolean login_enabled);
     /**
-     * URI to use for loading tiles (for external web server)
+     * URI to use for loading tiles (for external web server only)
      * 
      * @param login_enabled - selects based on login security enabled
      * @return URI
@@ -201,14 +218,14 @@ public abstract class MapStorage {
         return login_enabled;
     }
     /**
-     * Get sendmessage URI
+     * Get sendmessage URI (for external web server only)
      * @return URI
      */
     public String getSendMessageURI() {
         return "standalone/sendmessage.php";
     }
     /**
-     * URI to use for loading configuration JSON files (for external web server)
+     * URI to use for loading configuration JSON files (for external web server only)
      * @param login_enabled - selects based on login security enabled
      * @return URI
      */
@@ -216,7 +233,7 @@ public abstract class MapStorage {
         return login_enabled?"standalone/configuration.php":"standalone/dynmap_config.json?_={timestamp}";
     }
     /**
-     * URI to use for loading update JSON files (for external web server)
+     * URI to use for loading update JSON files (for external web server only)
      * @param login_enabled - selects based on login security enabled
      * @return URI
      */
@@ -436,13 +453,49 @@ public abstract class MapStorage {
     public boolean wrapStandalonePHP() {
         return true;
     }
+    // For external web server only
     public String getStandaloneLoginURI() {
         return "standalone/login.php";
     }
+    // For external web server only
     public String getStandaloneRegisterURI() {
         return "standalone/register.php";
     }
     public void setLoginEnabled(DynmapCore core) {
         
     }
+    
+    // Test if storage needs static web files
+    public boolean needsStaticWebFiles() {
+    	return false;
+    }
+    /**
+     * Set static web file content
+     * @param fileid - file path
+     * @param buffer - content for file
+     * @return true if successful
+     */
+    public boolean setStaticWebFile(String fileid, BufferOutputStream buffer) {
+    	return false;
+    }
+    
+    public void logSQLException(String opmsg, SQLException x) {
+    	if (isShutdown) return;
+    	Log.severe("SQLException: " + opmsg);
+    	Log.severe("  ErrorCode: " + x.getErrorCode() + ", SQLState=" + x.getSQLState());
+    	Log.severe("  Message: " + x.getMessage());
+    	if (connectionString != null) Log.severe("  ConnectionString: " + connectionString);
+    	Throwable cause = x.getCause();
+    	while (cause != null) {
+    		Log.severe("  CausedBy: " + cause.getMessage());
+    		cause = cause.getCause();
+    	}
+    }
+    
+    public static class StorageShutdownException extends Exception {
+		private static final long serialVersionUID = 8961471920726795043L;
+
+		public StorageShutdownException() {}
+    }
+
 }

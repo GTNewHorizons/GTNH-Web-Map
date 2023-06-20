@@ -139,9 +139,9 @@ public class DefaultHDShader implements HDShader {
         }
         
         protected Color[] getBlockColors(int blocktype, int blockdata) {
-            if((blockdata != 0) && (colorScheme.datacolors[blocktype] != null))
-                return colorScheme.datacolors[blocktype][blockdata];
-            else
+//            if((blockdata != 0) && (colorScheme.datacolors[blocktype] != null))
+//                return colorScheme.datacolors[blocktype][blockdata];
+//            else
                 return colorScheme.colors[blocktype];
         }
         

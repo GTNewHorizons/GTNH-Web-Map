@@ -27,7 +27,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 			
 	function loadmarkers(world) {
 		removeAllMarkers();
-		var url = concatURL(dynmap.options.url.markers, '_markers_/marker_'+world+'.json');
+		var url = concatURL(dynmap.options.url.markers, '_markers_/marker_' + world + '.json');
 		
 		$.getJSON(url, function(data) {
 			var ts = data.timestamp;
@@ -105,19 +105,12 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 				.addClass('Marker')
 				.addClass('mapMarker')
 				.append($('<img/>').addClass('markerIcon'+marker.dim).attr({ src: url }));
-			if(marker.markup) {
+			if (marker.label != "")
 				$(div).append($('<span/>')
 					.addClass(set.showlabels?'markerName-show':'markerName')
 					.addClass('markerName_' + set.id)
 					.addClass('markerName' + marker.dim)
 					.append(marker.label));
-			}
-			else if(marker.label != "")
-				$(div).append($('<span/>')
-					.addClass(set.showlabels?'markerName-show':'markerName')
-					.addClass('markerName_' + set.id)
-					.addClass('markerName' + marker.dim)
-					.text(marker.label));
 			return div;
 		}});
 		marker.timestamp = ts;
@@ -191,11 +184,8 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 			if(area.desc) {
 				$(popup).addClass('AreaPopup').append(area.desc);
 			}
-			else if(area.markup) {
-				$(popup).addClass('AreaPopup').append(area.label);
-			}
 			else {
-				$(popup).text(area.label);
+				$(popup).addClass('AreaPopup').append(area.label);
 			}
 			area.our_layer.bindPopup($(popup).html(), {});
 		}
@@ -224,11 +214,8 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 			if(line.desc) {
 				$(popup).addClass('LinePopup').append(line.desc);
 			}
-			else if(line.markup) {
-				$(popup).addClass('LinePopup').append(line.label);
-			}
 			else {
-				$(popup).text(line.label);
+				$(popup).addClass('LinePopup').append(line.label);
 			}
 			line.our_layer.bindPopup($(popup).html(), {});
 		}
@@ -259,11 +246,8 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 			if(circle.desc) {
 				$(popup).addClass('CirclePopup').append(circle.desc);
 			}
-			else if(circle.markup) {
-				$(popup).addClass('CirclePopup').append(circle.label);
-			}
 			else {
-				$(popup).text(circle.label);
+				$(popup).addClass('CirclePopup').append(circle.label);
 			}
 			circle.our_layer.bindPopup($(popup).html(), {});
 		}
@@ -277,7 +261,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 	}
 	
 	function create3DBoxLayer(maxx, minx, maxy, miny, maxz, minz, style) {
-		return new L.MultiPolygon([
+		return new L.Polygon([
 			[
 				latlng(minx,miny,minz),
 				latlng(maxx,miny,minz),
@@ -349,7 +333,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 		polylist[xarray.length] = botlist;
 		polylist[xarray.length+1] = toplist;
 		
-		return new L.MultiPolygon(polylist, style);
+		return new L.Polygon(polylist, style);
 	}
 
 	function create2DOutlineLayer(xarray, maxy, miny, zarray, style) {
@@ -369,6 +353,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 	$(dynmap).bind('component.markers', function(event, msg) {
 		if(msg.msg == 'markerupdated') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.markers[msg.id]);
 			
 			var marker = { x: msg.x, y: msg.y, z: msg.z, icon: msg.icon, label: msg.label, markup: msg.markup, desc: msg.desc, dim: msg.dim || '16x16', minzoom: msg.minzoom || -1, maxzoom: msg.maxzoom };
@@ -377,6 +362,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 		}
 		else if(msg.msg == 'markerdeleted') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.markers[msg.id]);
 			delete set.markers[msg.id];
 		}
@@ -415,6 +401,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 		}		
 		else if(msg.msg == 'areaupdated') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.areas[msg.id]);
 
 			var area = { x: msg.x, ytop: msg.ytop, ybottom: msg.ybottom, z: msg.z, label: msg.label, markup: msg.markup, desc: msg.desc,
@@ -424,11 +411,13 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 		}
 		else if(msg.msg == 'areadeleted') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.areas[msg.id]);
 			delete set.areas[msg.id];
 		}
 		else if(msg.msg == 'lineupdated') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.lines[msg.id]);
 			
 			var line = { x: msg.x, y: msg.y, z: msg.z, label: msg.label, markup: msg.markup, desc: msg.desc,
@@ -438,11 +427,13 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 		}
 		else if(msg.msg == 'linedeleted') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.lines[msg.id]);
 			delete set.lines[msg.id];
 		}
 		else if(msg.msg == 'circleupdated') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.circles[msg.id]);
 
 			var circle = { x: msg.x, y: msg.y, z: msg.z, xr: msg.xr, zr: msg.zr, label: msg.label, markup: msg.markup, desc: msg.desc,
@@ -452,6 +443,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 		}
 		else if(msg.msg == 'circledeleted') {
 			var set = dynmapmarkersets[msg.set];
+			if (!set) return;
 			deleteMarker(set, set.circles[msg.id]);
 			delete set.circles[msg.id];
 		}

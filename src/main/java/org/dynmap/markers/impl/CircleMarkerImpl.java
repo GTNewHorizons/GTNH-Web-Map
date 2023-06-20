@@ -4,15 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.dynmap.Client;
 import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapWorld;
 import org.dynmap.hdmap.HDPerspective;
 import org.dynmap.markers.CircleMarker;
+import org.dynmap.markers.EnterExitMarker;
 import org.dynmap.markers.MarkerSet;
 import org.dynmap.markers.impl.MarkerAPIImpl.MarkerUpdate;
 import org.dynmap.utils.Vector3D;
 
-class CircleMarkerImpl implements CircleMarker {
+class CircleMarkerImpl implements CircleMarker, EnterExitMarker {
     private String markerid;
     private String label;
     private boolean markup;
@@ -34,6 +36,8 @@ class CircleMarkerImpl implements CircleMarker {
     private boolean boostflag = false;
     private int minzoom = -1;
     private int maxzoom = -1;
+    private EnterExitText greeting;
+    private EnterExitText farewell;
 
     private static class BoundingBox {
         double xmin, xmax;
@@ -60,9 +64,10 @@ class CircleMarkerImpl implements CircleMarker {
     CircleMarkerImpl(String id, String lbl, boolean markup, String world, double x, double y, double z, double xr, double zr, boolean persistent, MarkerSetImpl set) {
         markerid = id;
         if(lbl != null)
-            label = lbl;
+            label = markup ? lbl : Client.encodeColorInHTML(lbl);
         else
-            label = id;
+            label = markup ? id : Client.encodeColorInHTML(id);
+        label = Client.sanitizeHTML(label);
         this.markup = markup;
         this.x = x; this.y = y; this.z = z;
         this.xr = xr; this.zr = zr;
@@ -82,7 +87,7 @@ class CircleMarkerImpl implements CircleMarker {
     CircleMarkerImpl(String id, MarkerSetImpl set) {
         markerid = id;
         markerset = set;
-        label = id;
+        label = Client.sanitizeHTML(Client.encodeForHTML(id));
         markup = false;
         desc = null;
         world = normalized_world = "world";
@@ -96,9 +101,10 @@ class CircleMarkerImpl implements CircleMarker {
      *  Load marker from configuration node
      *  @param node - configuration node
      */
-    boolean loadPersistentData(ConfigurationNode node) {
-        label = node.getString("label", markerid);
+    boolean loadPersistentData(ConfigurationNode node, boolean isSafe) {
         markup = node.getBoolean("markup", false);
+        label = MarkerAPIImpl.escapeForHTMLIfNeeded(node.getString("label", markerid), markup);
+        if (!isSafe) label = Client.sanitizeHTML(label);
         world = node.getString("world", "world");
         normalized_world = DynmapWorld.normalizeWorldName(world);
         x = node.getDouble("x", 0);
@@ -107,6 +113,7 @@ class CircleMarkerImpl implements CircleMarker {
         xr = node.getDouble("xr", 0);
         zr = node.getDouble("zr", 0);
         desc = node.getString("desc", null);
+        if (!isSafe) desc = Client.sanitizeHTML(desc);
         lineweight = node.getInteger("strokeWeight", -1);
         if(lineweight == -1) {	/* Handle typo-saved value */
         	 lineweight = node.getInteger("stokeWeight", 3);
@@ -118,6 +125,20 @@ class CircleMarkerImpl implements CircleMarker {
         boostflag = node.getBoolean("boostFlag", false);
         minzoom = node.getInteger("minzoom", -1);
         maxzoom = node.getInteger("maxzoom", -1);
+        String gt = node.getString("greeting", null);
+        String gst = node.getString("greetingsub", null);
+        if ((gt != null) || (gst != null)) {
+        	greeting = new EnterExitText();
+        	greeting.title = gt;
+        	greeting.subtitle = gst;
+        }
+        String ft = node.getString("farewell", null);
+        String fst = node.getString("farewellsub", null);
+        if ((ft != null) || (fst != null)) {
+        	farewell = new EnterExitText();
+        	farewell.title = ft;
+        	farewell.subtitle = fst;
+        }
 
         ispersistent = true;    /* Loaded from config, so must be */
         
@@ -129,6 +150,16 @@ class CircleMarkerImpl implements CircleMarker {
         bb_cache = null;
     }
     
+    @Override
+	public String getUniqueMarkerID() {
+    	if (markerset != null) {
+    		return markerset + ":circle:" + markerid;
+    	}
+    	else {
+    		return null;
+    	}
+    }
+
     @Override
     public String getMarkerID() {
         return markerid;
@@ -163,7 +194,8 @@ class CircleMarkerImpl implements CircleMarker {
     
     @Override
     public void setLabel(String lbl, boolean markup) {
-        label = lbl;
+        label = markup ? lbl : Client.encodeForHTML(lbl);
+        label = Client.sanitizeHTML(label);
         this.markup = markup;
         MarkerAPIImpl.circleMarkerUpdated(this, MarkerUpdate.UPDATED);
         if(ispersistent)
@@ -202,6 +234,22 @@ class CircleMarkerImpl implements CircleMarker {
         if (maxzoom >= 0) {
             node.put("maxzoom", maxzoom);
         }
+        if (greeting != null) {
+        	if (greeting.title != null) {
+        		node.put("greeting", greeting.title);
+        	}
+        	if (greeting.subtitle != null) {
+        		node.put("greetingsub", greeting.subtitle);
+        	}        	
+        }
+        if (farewell != null) {
+        	if (farewell.title != null) {
+        		node.put("farewell", farewell.title);        		
+        	}
+        	if (farewell.subtitle != null) {
+        		node.put("farewellsub", farewell.subtitle);        		
+        	}
+        }        
         return node;
     }
     @Override
@@ -218,6 +266,7 @@ class CircleMarkerImpl implements CircleMarker {
     }
     @Override
     public void setDescription(String desc) {
+    	desc = Client.sanitizeHTML(desc);
         if((this.desc == null) || (this.desc.equals(desc) == false)) {
             this.desc = desc;
             MarkerAPIImpl.circleMarkerUpdated(this, MarkerUpdate.UPDATED);
@@ -384,14 +433,14 @@ class CircleMarkerImpl implements CircleMarker {
                 bb.xp[i] = v2.x;
                 bb.yp[i] = v2.y;
             }
-            //System.out.println("x=" + bb.xmin + " - " + bb.xmax + ",  y=" + bb.ymin + " - " + bb.ymax);
+            //Log.info("x=" + bb.xmin + " - " + bb.xmax + ",  y=" + bb.ymin + " - " + bb.ymax);
             bbc.put(perspective.getName(), bb);
             bb_cache = bbc;
         }
         final double tile_x2 = tile_x + tile_dim;
         final double tile_y2 = tile_y + tile_dim;
         if ((bb.xmin > tile_x2) || (bb.xmax < tile_x) || (bb.ymin > tile_y2) || (bb.ymax < tile_y)) {
-            //System.out.println("tile: " + tile_x + " / " + tile_y + " - miss");
+            //Log.info("tile: " + tile_x + " / " + tile_y + " - miss");
             return false;
         }
         final int cnt = bb.xp.length;
@@ -421,7 +470,7 @@ class CircleMarkerImpl implements CircleMarker {
         //    // Test for X=tile_x side
         //    if ((px[i] < tile_x) && (px[j] >= tile_x) && ()
         // }
-        //System.out.println("tile: " + tile_x + " / " + tile_y + " - hit");
+        //Log.info("tile: " + tile_x + " / " + tile_y + " - hit");
         return false;
     }
     @Override
@@ -450,4 +499,55 @@ class CircleMarkerImpl implements CircleMarker {
         if(ispersistent)
             MarkerAPIImpl.saveMarkers();
     }
+	@Override
+	public EnterExitText getGreetingText() {
+		return greeting;
+	}
+	@Override
+	public EnterExitText getFarewellText() {
+		return farewell;
+	}
+	@Override
+	public void setGreetingText(String title, String subtitle) {
+		if ((title != null) || (subtitle != null)) {
+			greeting = new EnterExitText();
+			greeting.title = title;
+			greeting.subtitle = subtitle;
+		}
+		else {
+			greeting = null;
+		}
+        if (markerset != null) {
+            setMarkerSet(markerset);
+        }
+        if(ispersistent)
+            MarkerAPIImpl.saveMarkers();
+	}
+	@Override
+	public void setFarewellText(String title, String subtitle) {
+		if ((title != null) || (subtitle != null)) {
+			farewell = new EnterExitText();
+			farewell.title = title;
+			farewell.subtitle = subtitle;
+		}
+		else {
+			farewell = null;
+		}
+        if (markerset != null) {
+            setMarkerSet(markerset);
+        }
+        if(ispersistent)
+            MarkerAPIImpl.saveMarkers();
+	}
+	@Override
+	public boolean testIfPointWithinMarker(String worldid, double x, double y, double z) {
+		// Wrong world
+		if (!worldid.equals(this.world)) {
+			return false;
+		}
+		// Test if inside ellipse
+		double dx = ((x - this.x) * (x - this.x)) / (xr * xr);
+		double dz = ((z - this.z) * (z - this.z)) / (zr * zr);
+		return (dx + dz) <= 1.0;
+	}
 }

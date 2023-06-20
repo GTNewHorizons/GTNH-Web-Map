@@ -25,7 +25,7 @@ function DynMap(options) {
 	if(me.checkForSavedURL())
 		return;
 	me.options = options;
-	$.getJSON(me.options.url.configuration, function(configuration) {
+	$.getJSON(me.formatUrl("configuration", { timestamp: me.lasttimestamp }), function(configuration) {
 		if(configuration.error == 'login-required') {
 			me.saveURL();
 			window.location = 'login.html';
@@ -47,7 +47,7 @@ DynMap.prototype = {
 	registeredTiles: [],
 	players: {},
 	
-	lasttimestamp: new Date().getUTCMilliseconds(), /* Pseudorandom - prevent cached '?0' */
+	lasttimestamp: new Date().getTime(), /* Pseudorandom - prevent cached '?0' */
 	reqid: 0,
     servertime: 0,
     serverday: false,
@@ -74,7 +74,7 @@ DynMap.prototype = {
 	formatUrl: function(name, options) {
 		var url = this.options.url[name];
 		$.each(options, function(n,v) {
-			url = url.replace("{" + n + "}", v);
+			url = url.replace("{" + n + "}", encodeURIComponent(v));
 		});
 		return url;
 	},
@@ -177,34 +177,12 @@ DynMap.prototype = {
 			zoomAnimation: true,
 			zoomControl: !me.nogui,
 			attributionControl: false,
-			crs: L.extend({}, L.CRS, {
-				code: 'simple',
-				projection: {
-						project: function(latlng) {
-							// Direct translation of lat -> x, lng -> y.
-							return new L.Point(latlng.lat, latlng.lng);
-						},
-						unproject: function(point) {
-							// Direct translation of x -> lat, y -> lng.
-							return new L.LatLng(point.x, point.y);
-						}
-					},
-				// a = 1; b = 2; c = 1; d = 0
-				// x = a * x + b; y = c * y + d
-				// End result is 1:1 values during transformation.
-				transformation: new L.Transformation(1, 0, 1, 0),
-				scale: function(zoom) {
-					// Equivalent to 2 raised to the power of zoom, but faster.
-					return (1 << zoom);
-				}
-			}),
-			continuousWorld: true,
+			crs: L.CRS.Simple,
 			worldCopyJump: false
 		});
 		window.map = map; // Placate Leaflet need for top-level 'map'....
 
 		map.on('zoomend', function() {
-			me.maptype.updateTileSize(me.map.getZoom());
 			$(me).trigger('zoomchanged');
 		});
 
@@ -278,12 +256,26 @@ DynMap.prototype = {
 					worldsadded[wname] = true;
 				}
 
+				var worldName = wname;
+				var mapName = mapindex;
+				if (worldName.endsWith('_nether') || (worldName == 'DIM-1')) {
+				   worldName = 'nether';
+				   mapName = (mapindex == 'nether') ? 'surface' : 'flat';
+				}
+				else if (worldName.endsWith('the_end') || (worldName == 'DIM1')) {
+				   worldName = 'the_end';
+				   mapName = (mapindex == 'the_end') ? 'surface' : 'flat';
+				}
+				else {
+				    worldName = 'world';
+				    mapName = [ 'surface', 'flat', 'biome', 'cave' ].includes(mapindex) ? mapindex : 'flat';
+				}
 				map.element = $('<li/>')
 					.addClass('map item')
 					.append($('<a/>')
 							.attr({ title: map.options.title, href: '#' })
 							.addClass('maptype')
-							.css({ backgroundImage: 'url(' + (map.options.icon || ('images/block_' + mapindex + '.png')) + ')' })
+							.css({ backgroundImage: 'url(' + (map.options.icon || ('images/block_' + worldName + '_' + mapName + '.png')) + ')' })
 							.text(map.options.title)
 					)
 					.click(function() {
@@ -375,6 +367,7 @@ DynMap.prototype = {
 				componentstoload--;
 				if (componentstoload == 0) {
 					// Actually start updating once all components are loaded.
+					me.update();
 					setTimeout(function() { me.update(); }, me.options.updaterate);
 				}
 			});
@@ -576,7 +569,7 @@ DynMap.prototype = {
 	},
 	selectWorldAndPan: function(world, location, completed) {
 		var me = this;
-		if (typeof(world) === 'String') { world = me.worlds[world]; }
+		if (typeof(world) === 'string') { world = me.worlds[world]; }
 		if (me.world === world) {
 			if(location) {
 				var latlng = me.maptype.getProjection().fromLocationToLatLng(location);
@@ -620,6 +613,11 @@ DynMap.prototype = {
 	},
 	update: function() {
 		var me = this;
+
+		if (document.visibilityState === "hidden") {
+		    setTimeout(function() { me.update(); }, me.options.updaterate);
+			return;
+		}
 
 		$(me).trigger('worldupdating');
 		$.getJSON(me.formatUrl('update', { world: me.world.name, timestamp: me.lasttimestamp, reqid: me.reqid }), function(update) {
@@ -697,7 +695,7 @@ DynMap.prototype = {
 
 						swtch(update.type, {
 							tile: function() {
-								me.onTileUpdated(update.name,update.timestamp);
+								me.maptype.updateNamedTile(update.name, update.timestamp);
 							},
 							playerjoin: function() {
 								$(me).trigger('playerjoin', [ update.playerName ]);
@@ -734,27 +732,15 @@ DynMap.prototype = {
 			}
 		);
 	},
-	getTileUrl: function(tileName, always) {
+	getTileUrl: function(tileName) {
 		var me = this;
 		var tile = me.registeredTiles[tileName];
 
 		if(tile == null) {
 			var url = me.options.url.tiles;
-			if(url.indexOf('?') > 0)
-				tile = this.registeredTiles[tileName] = url + escape(me.world.name + '/' + tileName) + '&ts=' + me.inittime;
-			else
-				tile = this.registeredTiles[tileName] = url + me.world.name + '/' + tileName + '?' + me.inittime;
+			tile = this.registeredTiles[tileName] = url + escape(me.world.name + '/' + tileName);
 		}
 		return tile;
-	},
-	onTileUpdated: function(tileName,timestamp) {
-		var me = this;
-		var url = me.options.url.tiles;
-		if(url.indexOf('?') > 0)
-			this.registeredTiles[tileName] = url + escape(me.world.name + '/' + tileName) + '&ts=' + timestamp;
-		else
-			this.registeredTiles[tileName] = url + me.world.name + '/' + tileName + '?' + timestamp;
-		me.maptype.updateNamedTile(tileName);
 	},
 	addPlayer: function(update) {
 		var me = this;

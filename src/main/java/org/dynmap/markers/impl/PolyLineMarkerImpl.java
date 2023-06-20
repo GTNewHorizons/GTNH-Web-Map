@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.dynmap.Client;
 import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapWorld;
 import org.dynmap.markers.PolyLineMarker;
@@ -49,9 +50,10 @@ class PolyLineMarkerImpl implements PolyLineMarker {
     PolyLineMarkerImpl(String id, String lbl, boolean markup, String world, double x[], double[] y, double z[], boolean persistent, MarkerSetImpl set) {
         markerid = id;
         if(lbl != null)
-            label = lbl;
+            label = markup ? lbl : Client.encodeForHTML(lbl);
         else
-            label = id;
+            label = markup ? id : Client.encodeForHTML(id);
+        label = Client.sanitizeHTML(label);
         this.markup = markup;
         this.corners = new ArrayList<Coord>();
         for(int i = 0; i < x.length; i++) {
@@ -73,7 +75,7 @@ class PolyLineMarkerImpl implements PolyLineMarker {
     PolyLineMarkerImpl(String id, MarkerSetImpl set) {
         markerid = id;
         markerset = set;
-        label = id;
+        label = Client.sanitizeHTML(Client.encodeForHTML(id));
         markup = false;
         desc = null;
         corners = new ArrayList<Coord>();
@@ -85,9 +87,10 @@ class PolyLineMarkerImpl implements PolyLineMarker {
      *  Load marker from configuration node
      *  @param node - configuration node
      */
-    boolean loadPersistentData(ConfigurationNode node) {
-        label = node.getString("label", markerid);
+    boolean loadPersistentData(ConfigurationNode node, boolean isSafe) {
         markup = node.getBoolean("markup", false);
+        label = MarkerAPIImpl.escapeForHTMLIfNeeded(node.getString("label", markerid), markup);
+        if (!isSafe) label = Client.sanitizeHTML(label);
         List<Double> xx = node.getList("x");
         List<Double> yy = node.getList("y");
         List<Double> zz = node.getList("z");
@@ -100,6 +103,7 @@ class PolyLineMarkerImpl implements PolyLineMarker {
         world = node.getString("world", "world");
         normalized_world = DynmapWorld.normalizeWorldName(world);
         desc = node.getString("desc", null);
+        if (!isSafe) desc = Client.sanitizeHTML(desc);
         lineweight = node.getInteger("strokeWeight", -1);
         if(lineweight == -1) {	/* Handle typo-saved value */
         	 lineweight = node.getInteger("stokeWeight", 3);
@@ -118,6 +122,16 @@ class PolyLineMarkerImpl implements PolyLineMarker {
         markerset = null;
     }
     
+    @Override
+	public String getUniqueMarkerID() {
+    	if (markerset != null) {
+    		return markerset + ":poly:" + markerid;
+    	}
+    	else {
+    		return null;
+    	}
+    }
+
     @Override
     public String getMarkerID() {
         return markerid;
@@ -153,7 +167,7 @@ class PolyLineMarkerImpl implements PolyLineMarker {
     @Override
     public void setLabel(String lbl, boolean markup) {
         if(markerset == null) return;
-        label = lbl;
+        label = markup ? Client.sanitizeHTML(lbl) : Client.encodeForHTML(lbl);
         this.markup = markup;
         MarkerAPIImpl.polyLineMarkerUpdated(this, MarkerUpdate.UPDATED);
         if(ispersistent)
@@ -212,6 +226,7 @@ class PolyLineMarkerImpl implements PolyLineMarker {
     @Override
     public void setDescription(String desc) {
         if(markerset == null) return;
+        desc = Client.sanitizeHTML(desc);
         if((this.desc == null) || (this.desc.equals(desc) == false)) {
             this.desc = desc;
             MarkerAPIImpl.polyLineMarkerUpdated(this, MarkerUpdate.UPDATED);

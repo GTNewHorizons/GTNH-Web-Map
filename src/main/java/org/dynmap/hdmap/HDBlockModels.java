@@ -94,12 +94,12 @@ public class HDBlockModels {
 
     /* Process any block aliases */
     public static void handleBlockAlias() {
-        for(int i = 0; i < BLOCKTABLELEN; i++) {
-            int id = MapManager.mapman.getBlockIDAlias(i);
-            if(id != i) {   /* New mapping? */
-                remapModel(i, id);
-            }
-        }
+//        for(int i = 0; i < BLOCKTABLELEN; i++) {
+//            int id = MapManager.mapman.getBlockIDAlias(i);
+//            if(id != i) {   /* New mapping? */
+//                remapModel(i, id);
+//            }
+//        }
     }
     
     private static void remapModel(int id, int newid) {

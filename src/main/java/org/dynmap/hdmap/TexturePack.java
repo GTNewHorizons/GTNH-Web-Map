@@ -2672,12 +2672,12 @@ public class TexturePack {
 
     /* Process any block aliases */
     public static void handleBlockAlias() {
-        for(int i = 0; i < BLOCKTABLELEN; i++) {
-            int id = MapManager.mapman.getBlockIDAlias(i);
-            if(id != i) {   /* New mapping? */
-                HDTextureMap.remapTexture(i, id);
-            }
-        }
+//        for(int i = 0; i < BLOCKTABLELEN; i++) {
+//            int id = MapManager.mapman.getBlockIDAlias(i);
+//            if(id != i) {   /* New mapping? */
+//                HDTextureMap.remapTexture(i, id);
+//            }
+//        }
     }
 
     private static final int BLOCKID_GRASS = 2;

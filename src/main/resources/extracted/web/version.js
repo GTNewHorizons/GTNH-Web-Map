@@ -1,2 +1,2 @@
-var dynmapversion = "${project.version}-${BUILD_NUMBER}";
+var dynmapversion = "GRADLETOKEN_VERSION";
 

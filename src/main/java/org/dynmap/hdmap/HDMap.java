@@ -28,12 +28,13 @@ public class HDMap extends MapType {
     private HDPerspective perspective;
     private HDShader shader;
     private HDLighting lighting;
-//    private ConfigurationNode configuration;
+    //    private ConfigurationNode configuration;
     private int mapzoomout;
     private String imgfmtstring;
     private MapType.ImageFormat imgformat;
     private int bgcolornight;
     private int bgcolorday;
+    private int tilescale;
     private String title;
     private String icon;
     private String bg_cfg;
@@ -46,8 +47,8 @@ public class HDMap extends MapType {
 
     public static final String IMGFORMAT_PNG = "png";
     public static final String IMGFORMAT_JPG = "jpg";
-    
-    
+
+
     public HDMap(DynmapCore core, ConfigurationNode configuration) {
         this.core = core;
         name = configuration.getString("name", null);
@@ -96,7 +97,7 @@ public class HDMap extends MapType {
             }
         }
         prefix = configuration.getString("prefix", name);
-        
+
         /* Compute extra zoom outs needed for this map */
         double scale = perspective.getScale();
         mapzoomout = 0;
@@ -140,6 +141,9 @@ public class HDMap extends MapType {
         this.mapzoomin = configuration.getInteger("mapzoomin", 2);
         this.mapzoomout = configuration.getInteger("mapzoomout", this.mapzoomout);
         this.boostzoom = configuration.getInteger("boostzoom", 0);
+        this.tilescale = configuration.getInteger("tilescale", core.getMapManager().getDefaultTileScale());	// 0 = 128, 1 = 256, ...
+        if (this.tilescale <= 0) this.tilescale = 0;
+        if (this.tilescale >= 4) this.tilescale = 4;	// Limit to 2k x 2k
         if(this.boostzoom < 0) this.boostzoom = 0;
         if(this.boostzoom > 3) this.boostzoom = 3;
         // Map zoom in must be at least as big as boost zoom
@@ -167,6 +171,7 @@ public class HDMap extends MapType {
         cn.put("mapzoomin", mapzoomin);
         cn.put("mapzoomout", mapzoomout);
         cn.put("boostzoom", boostzoom);
+        cn.put("tilescale", tilescale);
         if(bg_cfg != null)
             cn.put("background", bg_cfg);
         if(bg_day_cfg != null)
@@ -180,27 +185,30 @@ public class HDMap extends MapType {
         }
         return cn;
     }
-    
+
     public final HDShader getShader() { return shader; }
     public final HDPerspective getPerspective() { return perspective; }
     public final HDLighting getLighting() { return lighting; }
     public final int getBoostZoom() { return boostzoom; }
-    
+    @Override
+    public final int getTileSize() { return 128 << tilescale; }
+    public final int getTileScale() { return tilescale; }
+
     @Override
     public List<TileFlags.TileCoord> getTileCoords(DynmapWorld w, int x, int y, int z) {
-        return perspective.getTileCoords(w, x, y, z);
+        return perspective.getTileCoords(w, x, y, z, tilescale);
     }
 
     @Override
     public List<TileFlags.TileCoord> getTileCoords(DynmapWorld w, int minx, int miny, int minz, int maxx, int maxy, int maxz) {
-        return perspective.getTileCoords(w, minx, miny, minz, maxx, maxy, maxz);
+        return perspective.getTileCoords(w, minx, miny, minz, maxx, maxy, maxz, tilescale);
     }
 
     @Override
     public MapTile[] getAdjecentTiles(MapTile tile) {
         return perspective.getAdjecentTiles(tile);
     }
-    
+
     @Override
     public List<DynmapChunk> getRequiredChunks(MapTile tile) {
         return perspective.getRequiredChunks(tile);
@@ -215,7 +223,7 @@ public class HDMap extends MapType {
     public String getName() {
         return name;
     }
-    
+
     @Override
     public String getPrefix() {
         return prefix;
@@ -234,7 +242,7 @@ public class HDMap extends MapType {
         }
         return maps;
     }
-    
+
     /* Get names of maps rendered concurrently with this map type in this world */
     public List<String> getMapNamesSharingRender(DynmapWorld w) {
         ArrayList<String> lst = new ArrayList<String>();
@@ -254,7 +262,7 @@ public class HDMap extends MapType {
 
     @Override
     public ImageFormat getImageFormat() { return imgformat; }
-    
+
     @Override
     public void buildClientConfiguration(JSONObject worldObject, DynmapWorld world) {
         JSONObject o = new JSONObject();
@@ -270,6 +278,7 @@ public class HDMap extends MapType {
         s(o, "mapzoomout", (world.getExtraZoomOutLevels()+mapzoomout));
         s(o, "mapzoomin", mapzoomin);
         s(o, "boostzoom", boostzoom);
+        s(o, "tilescale", tilescale);
         s(o, "protected", isProtected());
         s(o, "image-format", imgformat.getFileExt());
         if(append_to_world.length() > 0)
@@ -277,11 +286,11 @@ public class HDMap extends MapType {
         perspective.addClientConfiguration(o);
         shader.addClientConfiguration(o);
         lighting.addClientConfiguration(o);
-        
+
         a(worldObject, "maps", o);
 
     }
-    
+
     private static int parseColor(String c) {
         int v = 0;
         if(c.startsWith("#")) {
@@ -306,15 +315,15 @@ public class HDMap extends MapType {
 
         return v;
     }
-    
+
     public int getBackgroundARGBDay() {
         return bgcolorday;
     }
-    
+
     public int getBackgroundARGBNight() {
         return bgcolornight;
     }
-    
+
     public void purgeOldTiles(final DynmapWorld world, final TileFlags rendered) {
         final MapStorage ms = world.getMapStorage();
         ms.enumMapTiles(world, this, new MapStorageTileEnumCB() {
@@ -327,7 +336,7 @@ public class HDMap extends MapType {
                 else if (tile.zoom == 1) {   // First tier zoom?  sensitive to newly rendered tiles
                     // If any were rendered, already triggered (and still needed
                     if (rendered.getFlag(tile.x, tile.y) || rendered.getFlag(tile.x+1, tile.y) ||
-                        rendered.getFlag(tile.x, tile.y-1) || rendered.getFlag(tile.x+1, tile.y-1)) {
+                            rendered.getFlag(tile.x, tile.y-1) || rendered.getFlag(tile.x+1, tile.y-1)) {
                         return;
                     }
                     tile.enqueueZoomOutUpdate();
@@ -345,7 +354,7 @@ public class HDMap extends MapType {
             }
         });
     }
-    
+
     public String getTitle() {
         return title;
     }
@@ -355,7 +364,7 @@ public class HDMap extends MapType {
     public String getIcon() {
         return (icon == null)?"":icon;
     }
-    
+
     public boolean setPrefix(String s) {
         if(!s.equals(prefix)) {
             prefix = s;
@@ -363,7 +372,7 @@ public class HDMap extends MapType {
         }
         return false;
     }
-    
+
     public boolean setTitle(String s) {
         if(!s.equals(title)) {
             title = s;
@@ -399,6 +408,13 @@ public class HDMap extends MapType {
     public boolean setBoostZoom(int mzi) {
         if(mzi != this.boostzoom) {
             this.boostzoom = mzi;
+            return true;
+        }
+        return false;
+    }
+    public boolean setTileScale(int mzi) {
+        if(mzi != this.tilescale) {
+            this.tilescale = mzi;
             return true;
         }
         return false;
@@ -450,11 +466,11 @@ public class HDMap extends MapType {
 
     @Override
     public void addMapTiles(List<MapTile> list, DynmapWorld w, int tx, int ty) {
-        list.add(new HDMapTile(w, this.perspective, tx, ty, boostzoom));
+        list.add(new HDMapTile(w, this.perspective, tx, ty, boostzoom, tilescale));
     }
-    
+
     private static final ImageVariant[] dayVariant = { ImageVariant.STANDARD, ImageVariant.DAY };
-    
+
     @Override
     public ImageVariant[] getVariants() {
         if (lighting.isNightAndDayEnabled())

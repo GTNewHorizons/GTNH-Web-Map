@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -119,7 +120,11 @@ public class PlayerList {
             }
         }
     }
-    
+
+    public DynmapPlayer[] getOnlinePlayers() {
+        return Arrays.copyOf(online, online.length);
+    }
+
     public List<DynmapPlayer> getVisiblePlayers(String worldName) {
         ArrayList<DynmapPlayer> visiblePlayers = new ArrayList<DynmapPlayer>();
         DynmapPlayer[] onlinePlayers = online;    /* Use copied list - we don't call from server thread */
@@ -144,7 +149,7 @@ public class PlayerList {
     public List<DynmapPlayer> getVisiblePlayers() {
         return getVisiblePlayers(null);
     }
-    
+
     public List<DynmapPlayer> getHiddenPlayers() {
         ArrayList<DynmapPlayer> hidden = new ArrayList<DynmapPlayer>();
         DynmapPlayer[] onlinePlayers = online;    /* Use copied list - we don't call from server thread */
@@ -174,7 +179,7 @@ public class PlayerList {
     /**
      * Call this from server thread to update player list safely
      */
-    void updateOnlinePlayers(String skipone) {    
+    void updateOnlinePlayers(String skipone) {
         DynmapPlayer[] players = server.getOnlinePlayers();
         DynmapPlayer[] pl = new DynmapPlayer[players.length];
         System.arraycopy(players, 0, pl, 0, pl.length);
