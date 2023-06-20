@@ -93,15 +93,18 @@ public class PatchDefinition implements RenderPatch {
             case 0:
                 break;
             case 90:
+            case -270:
                 nval = vec.z;
                 vec.z = -vec.y;
                 vec.y = nval;
                 break;
             case 180:
+            case -180:
                 vec.y = -vec.y;
                 vec.z = -vec.z;
                 break;
             case 270:
+            case -90:
                 nval = vec.z;
                 vec.z = vec.y;
                 vec.y = -nval;
@@ -119,15 +122,18 @@ public class PatchDefinition implements RenderPatch {
             case 0:
                 break;
             case 90:
+            case -270:
                 nval = -vec.z;
                 vec.z = vec.x;
                 vec.x = nval;
                 break;
             case 180:
+            case -180:
                 vec.x = -vec.x;
                 vec.z = -vec.z;
                 break;
             case 270:
+            case -90:
                 nval = vec.z;
                 vec.z = -vec.x;
                 vec.x = nval;
@@ -145,15 +151,18 @@ public class PatchDefinition implements RenderPatch {
             case 0:
                 break;
             case 90:
+            case -270:
                 nval = vec.y;
                 vec.y = -vec.x;
                 vec.x = nval;
                 break;
             case 180:
+            case -180:
                 vec.x = -vec.x;
                 vec.y = -vec.y;
                 break;
             case 270:
+            case -90:
                 nval = -vec.y;
                 vec.y = vec.x;
                 vec.x = nval;

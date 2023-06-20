@@ -1,12 +1,10 @@
 package org.dynmap.hdmap.renderer;
 
-import net.minecraft.client.renderer.entity.Render;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.renderer.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class CarpentersBlocksRenderer extends CustomRenderer {
@@ -61,25 +59,6 @@ public class CarpentersBlocksRenderer extends CustomRenderer {
         ret[3] = rpf.getPatch(1,0,1, 0.5,0.5,0.5,0,0,1, 1, RenderPatchFactory.SideVisible.TOP, 0);
         ret[4] = rpf.getPatch(0,0,1, 0.5,0.5,0.5,0,0,0, 1, RenderPatchFactory.SideVisible.TOP, 0);
 
-        return ret;
-    }
-
-    RenderPatch[] getRotatedSet(RenderPatchFactory rpf, RenderPatch[] input, int rotX, int rotY, int rotZ){
-        RenderPatch[] ret = new RenderPatch[input.length];
-
-        for (int i = 0; i < input.length; i++){
-            ret[i] = rpf.getRotatedPatch(input[i], 0, rotY, 0, input[i].getTextureIndex());
-        }
-        if(rotX != 0) {
-            for (int i = 0; i < input.length; i++){
-                ret[i] = rpf.getRotatedPatch(ret[i], rotX, 0, 0, ret[i].getTextureIndex());
-            }
-        }
-        if(rotZ != 0) {
-            for (int i = 0; i < input.length; i++){
-                ret[i] = rpf.getRotatedPatch(ret[i], 0, 0, rotZ, ret[i].getTextureIndex());
-            }
-        }
         return ret;
     }
 
