@@ -29,32 +29,32 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    shadowImplementation("org.eclipse.jetty:jetty-server:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-server:9.4.51.v20230217") {
     }
-    shadowImplementation("org.eclipse.jetty:jetty-servlet:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-servlet:9.4.51.v20230217") {
     }
-    shadowImplementation("org.eclipse.jetty:jetty-util:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-util:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-io:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-io:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-http:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-http:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-security:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-security:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-client:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-client:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-webapp:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-webapp:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-continuation:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-continuation:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-annotations:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-annotations:9.4.51.v20230217") {
         transitive = false
     }
     shadowImplementation("org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016"){
@@ -63,7 +63,7 @@ dependencies {
     shadowImplementation("com.googlecode.json-simple:json-simple:1.1.1") {
         transitive = false
     }
-    shadowImplementation("org.yaml:snakeyaml:1.9") {
+    shadowImplementation("org.yaml:snakeyaml:1.23") {
         transitive = false
     }
     shadowImplementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20180219.1") {
@@ -85,4 +85,6 @@ dependencies {
     runtimeOnlyNonPublishable("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-213-GTNH:dev")
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:ForgeMultipart:1.2.8:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:CarpentersBlocks:3.4.0-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:EnderStorage:1.4.12:dev')
 }
