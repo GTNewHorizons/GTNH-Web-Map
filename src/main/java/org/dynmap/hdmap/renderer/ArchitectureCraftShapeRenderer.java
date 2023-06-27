@@ -396,13 +396,13 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         // left side
         list.add(rpf.getPatch(0,minY, 1, 0,minY,0,0,maxY,1,1, RenderPatchFactory.SideVisible.BOTTOM, 0));
         if(minY > 0) {
-            list.add(rpf.getPatch(0, minY, 1, 0, minY, 0, 0, 0, 1, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0));
+            list.add(rpf.getPatch(0, 0, 1, 0, 0, 0, 0, minY, 1, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0));
         }
 
         // right side
         list.add(rpf.getPatch(1,minY, 1,1,minY,0, 1,maxY,1,1, RenderPatchFactory.SideVisible.TOP, 0));
         if(minY > 0) {
-            list.add(rpf.getPatch(1, minY, 0, 1, minY, 1, 1, 0, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, 0));
+            list.add(rpf.getPatch(1, 0, 0, 1, 0, 1, 1, minY, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0));
         }
 
         // back
