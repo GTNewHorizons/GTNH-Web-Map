@@ -255,4 +255,10 @@ public abstract class CustomRenderer {
         CustomRenderer.addBox(rpf, list, 0, 1, 0, 1,0, 1, patchTextureIds);
         return list.toArray(new RenderPatch[patchTextureIds.length]);
     }
+
+    public RenderPatch[] getFullBlock(RenderPatchFactory rpf, int patchTextureIds[]){
+        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+        CustomRenderer.addBox(rpf, list, 0, 1, 0, 1,0, 1, patchTextureIds);
+        return list.toArray(new RenderPatch[patchTextureIds.length]);
+    }
 }
