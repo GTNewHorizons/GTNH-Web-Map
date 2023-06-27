@@ -7,9 +7,14 @@ cfgfile:config/JABBA.cfg
 
 
 texturepath:assets/jabba/textures/blocks/
-texture:id=JABBA/overlay_linked,filename=assets/jabba/textures/blocks/overlay_linked.png
+texture:id=JABBA/barrel_label_0,filename=assets/jabba/textures/blocks/barrel_label_0.png
+texture:id=JABBA/barrel_labeltop_0,filename=assets/jabba/textures/blocks/barrel_labeltop_0.png
+texture:id=JABBA/barrel_side_0,filename=assets/jabba/textures/blocks/barrel_side_0.png
+texture:id=JABBA/barrel_top_0,filename=assets/jabba/textures/blocks/barrel_top_0.png
+texture:id=JABBA/barrel_top_0,filename=assets/jabba/textures/blocks/barrel_top_0.png
+texture:id=blocks32,filename=assets/jabba/textures/sheets/blocks.png,xcount=8,ycount=8
 
 
 
 # %barrel:* (barrel), render=mcp.mobius.betterbarrels.client.render.BlockBarrelRenderer(CUSTOM), opaque=true,cls=mcp.mobius.betterbarrels.common.blocks.BlockBarrel
-block:id=%barrel,data=*,stdrot=true,face0-5=0:JABBA/overlay_linked
+block:id=%barrel,data=*,stdrot=true,patch0=0:JABBA/barrel_labeltop_0,patch1=0:JABBA/barrel_label_0,patch2=0:JABBA/barrel_top_0,patch3=0:JABBA/barrel_side_0,patch4=13:blocks32,patch5=14:blocks32,patch6=8:blocks32,patch7=10:blocks32,patch8=21:blocks32,patch9=22:blocks32,patch10=16:blocks32,patch11=18:blocks32,patch12=29:blocks32,patch13=30:blocks32,patch14=24:blocks32,patch15=26:blocks32,patch16=37:blocks32,patch17=38:blocks32,patch18=32:blocks32,patch19=34:blocks32,patch20=45:blocks32,patch21=46:blocks32,patch22=40:blocks32,patch23=42:blocks32,patch24=53:blocks32,patch25=54:blocks32,patch26=48:blocks32,patch27=50:blocks32,patch28=61:blocks32,patch29=62:blocks32,patch30=56:blocks32,patch31=58:blocks32
