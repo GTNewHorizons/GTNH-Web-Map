@@ -107,6 +107,7 @@ public class TexturePack {
     public static final int COLORMOD_WATERTONED270 = 20; // WATERTONED + ROT270 
     public static final int COLORMOD_MULTTONED_CLEARINSIDE = 21; // MULTTONED + CLEARINSIDE
     public static final int COLORMOD_FOLIAGEMULTTONED = 22; // FOLIAGETONED + colorMult or custColorMult
+    public static final int COLORMOD_IGNORE_LIGHT = 23; // NEON / GLOW
 
     private static final int COLORMOD_MULT_FILE = 1000;
     private static final int COLORMOD_MULT_INTERNAL = 1000000;
@@ -2986,6 +2987,9 @@ public class TexturePack {
                     case 3:
                         break;
                 }
+                break;
+            case COLORMOD_IGNORE_LIGHT:
+                ss.setIgnoreLight(true);
                 break;
         }
         /* Read color from texture */

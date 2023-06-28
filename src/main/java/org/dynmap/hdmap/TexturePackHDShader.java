@@ -111,6 +111,7 @@ public class TexturePackHDShader implements HDShader {
         final boolean do_better_grass;
         DynLongHashMap ctm_cache;
         final int[] lightingTable;
+        boolean ignoreLight;
         
         protected ShaderState(MapIterator mapiter, HDMap map, MapChunkCache cache, int scale) {
             this.mapiter = mapiter;
@@ -139,6 +140,7 @@ public class TexturePackHDShader implements HDShader {
             else {
                 lightingTable = null;
             }
+            ignoreLight = false;
         }
         /**
          * Get our shader
@@ -168,6 +170,7 @@ public class TexturePackHDShader implements HDShader {
             for(int i = 0; i < color.length; i++)
                 color[i].setTransparent();
             lastblkid = 0;
+            ignoreLight = false;
         }
         
         /**
@@ -191,7 +194,7 @@ public class TexturePackHDShader implements HDShader {
                 scaledtp.readColor(ps, mapiter, c, blocktype, lastblocktype, ShaderState.this);
             }
 
-            if (c.getAlpha() > 0) {
+            if (c.getAlpha() > 0 && !ignoreLight) {
                 /* Scale brightness depending upon face */
                 if (this.lightingTable != null) {
                     switch(ps.getLastBlockStep()) {
@@ -237,8 +240,11 @@ public class TexturePackHDShader implements HDShader {
                             break;
                     }
                 }
+
+
                 /* Handle light level, if needed */
                 lighting.applyLighting(ps, this, c, tmpcolor);
+
                 /* If grid scale, add it */
                 if(gridscale > 0) {
                     int xx = mapiter.getX() % gridscale;
@@ -274,7 +280,12 @@ public class TexturePackHDShader implements HDShader {
                 }
             }
 
-            return false;
+            if(ignoreLight){
+                for(int i = 0; i < color.length; i++)
+                    color[i].setColor(c);
+            }
+
+            return ignoreLight;
         }        
         /**
          * Ray ended - used to report that ray has exited map (called if renderer has not reported complete)
@@ -309,6 +320,11 @@ public class TexturePackHDShader implements HDShader {
         public int[] getLightingTable() {
             return lightingTable;
         }
+
+        public void setIgnoreLight(boolean ignore){
+            ignoreLight = ignore;
+        }
+
     }
 
     /**
