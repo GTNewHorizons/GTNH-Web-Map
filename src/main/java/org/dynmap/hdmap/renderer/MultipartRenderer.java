@@ -355,7 +355,8 @@ public class MultipartRenderer extends CustomRenderer {
                 }
             }
 
-            int blockId = GWM_Util.blockNameToId(blockName);
+            int blockId = GWM_Util.blockNameToId(blockName, true);
+
             TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
 
             for(RenderPatch rp : patches){
