@@ -73,28 +73,28 @@ block:id=%scaffold,data=0,stdrot=true,face0-1=0:catwalks/scaffold_top,face2-5=0:
 block:id=%scaffold,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:catwalks/scaffold_builders_top,face2-5=0:catwalks/scaffold_builders_side
 
 # %catwalk_lit_tape:* (catwalk_lit_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_lit_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/w_lights
+block:id=%catwalk_lit_tape,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/tape/w_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/tape/w_lights
 
 # %catwalk_lit:* (catwalk_lit), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_lit,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/w_lights
+block:id=%catwalk_lit,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/plain/w_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/plain/w_lights
 
 # %catwalk_lit_nobottom_tape:* (catwalk_lit_nobottom_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_lit_nobottom_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/w_lights
+block:id=%catwalk_lit_nobottom_tape,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/tape/w_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/tape/w_lights
 
 # %catwalk_lit_nobottom:* (catwalk_lit_nobottom), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_lit_nobottom,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/w_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/w_lights
+block:id=%catwalk_lit_nobottom,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/plain/w_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/plain/w_lights
 
 # %catwalk_unlit_tape:* (catwalk_unlit_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_unlit_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/no_lights
+block:id=%catwalk_unlit_tape,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/tape/no_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/tape/no_lights
 
 # %catwalk_unlit:* (catwalk_unlit), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_unlit,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/no_lights
+block:id=%catwalk_unlit,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/plain/no_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/plain/no_lights
 
 # %catwalk_unlit_nobottom_tape:* (catwalk_unlit_nobottom_tape), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_unlit_nobottom_tape,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/tape/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/tape/no_lights
+block:id=%catwalk_unlit_nobottom_tape,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/tape/no_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/tape/no_lights
 
 # %catwalk_unlit_nobottom:* (catwalk_unlit_nobottom), render=com.thecodewarrior.catwalks.render.CatwalkRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCatwalk
-block:id=%catwalk_unlit_nobottom,data=*,stdrot=true,face0=0:catwalks/catwalk/bottom/plain/no_lights,face1=0:catwalks/transparent,face2-5=0:catwalks/catwalk/side/plain/no_lights
+block:id=%catwalk_unlit_nobottom,data=*,stdrot=true,patch0=0:catwalks/catwalk/bottom/plain/no_lights,patch1=0:catwalks/transparent,patch2-5=0:catwalks/catwalk/side/plain/no_lights
 
 # %cagedLadder_north_lit_nobottom_tape:* (cagedLadder_north_lit_nobottom_tape), render=com.thecodewarrior.catwalks.render.LadderRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockCagedLadder
 block:id=%cagedLadder_north_lit_nobottom_tape,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:catwalks/ladder/bottom/tape/w_lights,face1=0:catwalks/transparent,face2=0:catwalks/ladder/ladder/tape/w_lights,face3=0:catwalks/ladder/front/tape/w_lights,face4-5=0:catwalks/ladder/side/tape/w_lights
