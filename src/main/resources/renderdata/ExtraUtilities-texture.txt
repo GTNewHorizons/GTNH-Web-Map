@@ -131,7 +131,7 @@ texture:id=extrautils/generator_tnt,filename=assets/extrautils/textures/blocks/g
 texture:id=extrautils/glassQuadrants,filename=assets/extrautils/textures/blocks/glassQuadrants.png
 texture:id=extrautils/gravel_compressed_1,filename=assets/extrautils/textures/blocks/gravel_compressed_1.png
 texture:id=extrautils/gravel_compressed_2,filename=assets/extrautils/textures/blocks/gravel_compressed_2.png
-texture:id=extrautils/greenscreen,filename=assets/extrautils/textures/blocks/greenscreen.png
+texture:id=extrautils/greenscreen,filename=assets/extrautils/textures/blocks/greenscreen.png,processor=org.dynmap.hdmap.textureprocessor.ExtraUtilitiesGreenScreenProcessor
 texture:id=extrautils/heart,filename=assets/extrautils/textures/blocks/heart.png
 texture:id=extrautils/light_portal,filename=assets/extrautils/textures/blocks/light_portal.png
 texture:id=extrautils/magnumTorch,filename=assets/extrautils/textures/blocks/magnumTorch.png
@@ -555,21 +555,21 @@ block:id=%filing,data=11,stdrot=true,face0-3=0:extrautils/filingcabinet_side_dia
 
 # %greenscreen:* (greenscreen), render=com.rwtema.extrautils.block.render.RenderBlockFullBright(CUSTOM), opaque=true,cls=com.rwtema.extrautils.block.BlockGreenScreen
 block:id=%greenscreen,data=0,stdrot=true,face0-5=0:extrautils/greenscreen
-block:id=%greenscreen,data=1,stdrot=true,colorMult=FF7F00,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=2,stdrot=true,colorMult=FF00FF,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=3,stdrot=true,colorMult=007FD8,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=4,stdrot=true,colorMult=FFFF00,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=5,stdrot=true,colorMult=00FF00,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=6,stdrot=true,colorMult=FF99A5,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=7,stdrot=true,colorMult=7F7F7F,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=8,stdrot=true,colorMult=CCCCCC,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=9,stdrot=true,colorMult=00FFFF,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=10,stdrot=true,colorMult=B233FF,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=11,stdrot=true,colorMult=0000FF,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=12,stdrot=true,colorMult=7F3300,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=13,stdrot=true,colorMult=009900,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=14,stdrot=true,colorMult=FF0000,face0-5=17000:extrautils/greenscreen
-block:id=%greenscreen,data=15,stdrot=true,face0-5=17000:extrautils/greenscreen
+block:id=%greenscreen,data=1,stdrot=true,face0-5=1:extrautils/greenscreen
+block:id=%greenscreen,data=2,stdrot=true,face0-5=2:extrautils/greenscreen
+block:id=%greenscreen,data=3,stdrot=true,face0-5=3:extrautils/greenscreen
+block:id=%greenscreen,data=4,stdrot=true,face0-5=4:extrautils/greenscreen
+block:id=%greenscreen,data=5,stdrot=true,face0-5=5:extrautils/greenscreen
+block:id=%greenscreen,data=6,stdrot=true,face0-5=6:extrautils/greenscreen
+block:id=%greenscreen,data=7,stdrot=true,face0-5=7:extrautils/greenscreen
+block:id=%greenscreen,data=8,stdrot=true,face0-5=8:extrautils/greenscreen
+block:id=%greenscreen,data=9,stdrot=true,face0-5=9:extrautils/greenscreen
+block:id=%greenscreen,data=10,stdrot=true,face0-5=10:extrautils/greenscreen
+block:id=%greenscreen,data=11,stdrot=true,face0-5=11:extrautils/greenscreen
+block:id=%greenscreen,data=12,stdrot=true,face0-5=12:extrautils/greenscreen
+block:id=%greenscreen,data=13,stdrot=true,face0-5=13:extrautils/greenscreen
+block:id=%greenscreen,data=14,stdrot=true,face0-5=14:extrautils/greenscreen
+block:id=%greenscreen,data=15,stdrot=true,face0-5=15:extrautils/greenscreen
 
 # %trading_post:* (trading_post), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockTradingPost
 block:id=%trading_post,data=*,stdrot=true,face0=0:minecraft/planks,face1=0:extrautils/trading_post_top,face2-5=0:extrautils/trading_post_side
