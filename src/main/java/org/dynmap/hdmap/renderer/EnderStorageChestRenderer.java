@@ -23,7 +23,7 @@ public class EnderStorageChestRenderer  extends CustomRenderer {
 
         CustomRenderer.addBox(rpf, list, 4.0/16, 6.0/16, 0.875, 0.9, 6.0/16, 10.0/16, patchlist2);
         CustomRenderer.addBox(rpf, list, 7.0/16, 9.0/16, 0.875, 0.9, 6.0/16, 10.0/16, patchlist3);
-        CustomRenderer.addBox(rpf, list, 11.0/16, 13.0/16, 0.875, 0.9, 6.0/16, 10.0/16, patchlist4);
+        CustomRenderer.addBox(rpf, list, 10.0/16, 12.0/16, 0.875, 0.9, 6.0/16, 10.0/16, patchlist4);
 
         fullBlock = list.toArray(new RenderPatch[list.size()]);
         return true;
