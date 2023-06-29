@@ -29,6 +29,8 @@ patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,V
 patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+patch:id=Bamboo,Ox=0.0,Oy=0.0,Oz=0.3125,Ux=1.0,Uy=0.0,Uz=0.3125,Vx=0.0,Vy=1.0,Vz=0.3125,visibility=bottom
+patch:id=BambooTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=1.0,Vy=1.0,Vz=0.0,Umin=0.3125,Umax=0.6875,Vmin=0.3125,Vmax=0.6875,visibility=both
 
 
 # %plants:* (plants), render=biomesoplenty.client.render.blocks.PlantsRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPlant
@@ -316,3 +318,5 @@ boxblock:id=%honey,ymax=0.5,data=12
 boxblock:id=%honey,ymax=0.375,data=13
 boxblock:id=%honey,ymax=0.25,data=14
 boxblock:id=%honey,ymax=0.125,data=15
+
+patchblock:id=%bamboo,patch0=BambooTop#0,patch1=Bamboo#1,patch2=Bamboo@90#1,patch3=Bamboo@180#1,patch4=Bamboo@270#1,data=*
