@@ -623,22 +623,22 @@ block:id=%cursedearthside,data=2,data=3,stdrot=true,face0=0:minecraft/dirt,face1
 block:id=%cursedearthside,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/dirt
 
 # %trashcan:* (trashcan), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.block.BlockTrashCan
-block:id=%trashcan,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan_bottom,face1=0:extrautils/trashcan_top,face2-5=0:extrautils/trashcan
-block:id=%trashcan,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan1_bottom,face1=0:extrautils/trashcan1_top,face2-5=0:extrautils/trashcan1
-block:id=%trashcan,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan2_bottom,face1=0:extrautils/trashcan2_top,face2-5=0:extrautils/trashcan2
-block:id=%trashcan,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan_bottom,face1=0:extrautils/trashcan_top,face2-5=0:extrautils/trashcan
-block:id=%trashcan,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan1_bottom,face1=0:extrautils/trashcan1_top,face2-5=0:extrautils/trashcan1
-block:id=%trashcan,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan2_bottom,face1=0:extrautils/trashcan2_top,face2-5=0:extrautils/trashcan2
-block:id=%trashcan,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan_bottom,face1=0:extrautils/trashcan_top,face2-5=0:extrautils/trashcan
-block:id=%trashcan,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan1_bottom,face1=0:extrautils/trashcan1_top,face2-5=0:extrautils/trashcan1
-block:id=%trashcan,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan2_bottom,face1=0:extrautils/trashcan2_top,face2-5=0:extrautils/trashcan2
-block:id=%trashcan,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan_bottom,face1=0:extrautils/trashcan_top,face2-5=0:extrautils/trashcan
-block:id=%trashcan,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan1_bottom,face1=0:extrautils/trashcan1_top,face2-5=0:extrautils/trashcan1
-block:id=%trashcan,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan2_bottom,face1=0:extrautils/trashcan2_top,face2-5=0:extrautils/trashcan2
-block:id=%trashcan,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan_bottom,face1=0:extrautils/trashcan_top,face2-5=0:extrautils/trashcan
-block:id=%trashcan,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan1_bottom,face1=0:extrautils/trashcan1_top,face2-5=0:extrautils/trashcan1
-block:id=%trashcan,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan2_bottom,face1=0:extrautils/trashcan2_top,face2-5=0:extrautils/trashcan2
-block:id=%trashcan,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan_bottom,face1=0:extrautils/trashcan_top,face2-5=0:extrautils/trashcan
+block:id=%trashcan,data=0,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan_bottom,patch1=0:extrautils/trashcan_top,patch2-5=0:extrautils/trashcan
+block:id=%trashcan,data=1,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan1_bottom,patch1=0:extrautils/trashcan1_top,patch2-5=0:extrautils/trashcan1
+block:id=%trashcan,data=2,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan2_bottom,patch1=0:extrautils/trashcan2_top,patch2-5=0:extrautils/trashcan2
+block:id=%trashcan,data=3,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan_bottom,patch1=0:extrautils/trashcan_top,patch2-5=0:extrautils/trashcan
+block:id=%trashcan,data=4,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan1_bottom,patch1=0:extrautils/trashcan1_top,patch2-5=0:extrautils/trashcan1
+block:id=%trashcan,data=5,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan2_bottom,patch1=0:extrautils/trashcan2_top,patch2-5=0:extrautils/trashcan2
+block:id=%trashcan,data=6,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan_bottom,patch1=0:extrautils/trashcan_top,patch2-5=0:extrautils/trashcan
+block:id=%trashcan,data=7,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan1_bottom,patch1=0:extrautils/trashcan1_top,patch2-5=0:extrautils/trashcan1
+block:id=%trashcan,data=8,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan2_bottom,patch1=0:extrautils/trashcan2_top,patch2-5=0:extrautils/trashcan2
+block:id=%trashcan,data=9,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan_bottom,patch1=0:extrautils/trashcan_top,patch2-5=0:extrautils/trashcan
+block:id=%trashcan,data=10,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan1_bottom,patch1=0:extrautils/trashcan1_top,patch2-5=0:extrautils/trashcan1
+block:id=%trashcan,data=11,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan2_bottom,patch1=0:extrautils/trashcan2_top,patch2-5=0:extrautils/trashcan2
+block:id=%trashcan,data=12,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan_bottom,patch1=0:extrautils/trashcan_top,patch2-5=0:extrautils/trashcan
+block:id=%trashcan,data=13,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan1_bottom,patch1=0:extrautils/trashcan1_top,patch2-5=0:extrautils/trashcan1
+block:id=%trashcan,data=14,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan2_bottom,patch1=0:extrautils/trashcan2_top,patch2-5=0:extrautils/trashcan2
+block:id=%trashcan,data=15,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:extrautils/trashcan_bottom,patch1=0:extrautils/trashcan_top,patch2-5=0:extrautils/trashcan
 
 # %spike_base:* (spike_base), render=com.rwtema.extrautils.block.render.RenderBlockSpike(CUSTOM), opaque=false,cls=com.rwtema.extrautils.block.BlockSpike
 block:id=%spike_base,data=0,stdrot=true,face0=0:extrautils/spike_side,face1=0:extrautils/spike_base,face2-5=0:extrautils/spike_side

@@ -85,7 +85,8 @@ boxblock:id=%pipes,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.375,zmax=0
 boxblock:id=%pipes.1,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.375,zmax=0.625,data=*
 
 # %trashcan:* (trashcan), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.block.BlockTrashCan
-boxblock:id=%trashcan,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=*
+#boxblock:id=%trashcan,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=*
+customblock:id=%trashcan,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=*,box0=i:5-11:14-15:5-11:b0,box1=i:1-15:10-14:1-15:b0,box2=i:2-14:0-10:2-14:b0
 
 # %enderQuarryUpgrade:* (enderQuarryUpgrade), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.enderquarry.BlockQuarryUpgrades
 boxblock:id=%enderQuarryUpgrade,xmin=0.0625,xmax=0.9375,ymin=0.0625,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=*
