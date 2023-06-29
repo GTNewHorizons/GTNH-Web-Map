@@ -194,88 +194,93 @@ public class TexturePackHDShader implements HDShader {
                 scaledtp.readColor(ps, mapiter, c, blocktype, lastblocktype, ShaderState.this);
             }
 
-            if (c.getAlpha() > 0 && !ignoreLight) {
-                /* Scale brightness depending upon face */
-                if (this.lightingTable != null) {
-                    switch(ps.getLastBlockStep()) {
-                        case X_MINUS:
-                        case X_PLUS:
-                            /* 60% brightness */
-                            c.blendColor(0xFF999999);
-                            break;
-                        case Y_MINUS:
-                            // 95% for even
-                            if((mapiter.getY() & 0x01) == 0) {
-                                c.blendColor(0xFFF3F3F3);
-                            }
-                            break;
-                        case Y_PLUS:
-                            /* 50%*/
-                            c.blendColor(0xFF808080);
-                            break;
-                        case Z_MINUS:
-                        case Z_PLUS:
-                        default:
-                            /* 80%*/
-                            c.blendColor(0xFFCDCDCD);
-                            break;
+            if (c.getAlpha() > 0) {
+                if (!ignoreLight) {
+                    /* Scale brightness depending upon face */
+                    if (this.lightingTable != null) {
+                        switch (ps.getLastBlockStep()) {
+                            case X_MINUS:
+                            case X_PLUS:
+                                /* 60% brightness */
+                                c.blendColor(0xFF999999);
+                                break;
+                            case Y_MINUS:
+                                // 95% for even
+                                if ((mapiter.getY() & 0x01) == 0) {
+                                    c.blendColor(0xFFF3F3F3);
+                                }
+                                break;
+                            case Y_PLUS:
+                                /* 50%*/
+                                c.blendColor(0xFF808080);
+                                break;
+                            case Z_MINUS:
+                            case Z_PLUS:
+                            default:
+                                /* 80%*/
+                                c.blendColor(0xFFCDCDCD);
+                                break;
+                        }
+                    } else {
+                        switch (ps.getLastBlockStep()) {
+                            case X_MINUS:
+                            case X_PLUS:
+                                /* 60% brightness */
+                                c.blendColor(0xFFA0A0A0);
+                                break;
+                            case Y_MINUS:
+                            case Y_PLUS:
+                                /* 85% brightness for even, 90% for even*/
+                                if ((mapiter.getY() & 0x01) == 0)
+                                    c.blendColor(0xFFD9D9D9);
+                                else
+                                    c.blendColor(0xFFE6E6E6);
+                                break;
+                            default:
+                                break;
+                        }
                     }
+
+
+                    /* Handle light level, if needed */
+                    lighting.applyLighting(ps, this, c, tmpcolor);
                 }
                 else {
-                    switch(ps.getLastBlockStep()) {
-                        case X_MINUS:
-                        case X_PLUS:
-                            /* 60% brightness */
-                            c.blendColor(0xFFA0A0A0);
-                            break;
-                        case Y_MINUS:
-                        case Y_PLUS:
-                            /* 85% brightness for even, 90% for even*/
-                            if((mapiter.getY() & 0x01) == 0) 
-                                c.blendColor(0xFFD9D9D9);
-                            else
-                                c.blendColor(0xFFE6E6E6);
-                            break;
-                        default:
-                            break;
-                    }
+                    for(int i = 0; i < tmpcolor.length;i++)
+                        tmpcolor[i].setColor(c);
                 }
 
-
-                /* Handle light level, if needed */
-                lighting.applyLighting(ps, this, c, tmpcolor);
-
                 /* If grid scale, add it */
-                if(gridscale > 0) {
+                if (gridscale > 0) {
                     int xx = mapiter.getX() % gridscale;
                     int zz = mapiter.getZ() % gridscale;
-                    if(((xx == 0) && ((zz & 2) == 0)) || ((zz == 0) && ((xx & 2) == 0))) {
-                        for(int i = 0; i < tmpcolor.length; i++) {
+                    if (((xx == 0) && ((zz & 2) == 0)) || ((zz == 0) && ((xx & 2) == 0))) {
+                        for (int i = 0; i < tmpcolor.length; i++) {
                             int v = tmpcolor[i].getARGB();
                             tmpcolor[i].setARGB((v & 0xFF000000) | ((v & 0xFEFEFE) >> 1) | 0x808080);
                         }
                     }
                 }
                 /* If no previous color contribution, use new color */
-                if(color[0].isTransparent()) {
-                    for(int i = 0; i < color.length; i++)
+                if (color[0].isTransparent()) {
+                    for (int i = 0; i < color.length; i++)
                         color[i].setColor(tmpcolor[i]);
                     return (color[0].getAlpha() == 255);
                 }
                 /* Else, blend and generate new alpha */
                 else {
                     int alpha = color[0].getAlpha();
-                    int alpha2 = tmpcolor[0].getAlpha() * (255-alpha) / 255;
+                    int alpha2 = tmpcolor[0].getAlpha() * (255 - alpha) / 255;
                     int talpha = alpha + alpha2;
-                    if(talpha > 0)
-                    	for(int i = 0; i < color.length; i++)
-                    		color[i].setRGBA((tmpcolor[i].getRed()*alpha2 + color[i].getRed()*alpha) / talpha,
-                                  (tmpcolor[i].getGreen()*alpha2 + color[i].getGreen()*alpha) / talpha,
-                                  (tmpcolor[i].getBlue()*alpha2 + color[i].getBlue()*alpha) / talpha, talpha);
+                    if (talpha > 0)
+                        for (int i = 0; i < color.length; i++)
+                            color[i].setRGBA((tmpcolor[i].getRed() * alpha2 + color[i].getRed() * alpha) / talpha,
+                                    (tmpcolor[i].getGreen() * alpha2 + color[i].getGreen() * alpha) / talpha,
+                                    (tmpcolor[i].getBlue() * alpha2 + color[i].getBlue() * alpha) / talpha, talpha);
                     else
-                    	for(int i = 0; i < color.length; i++)
-                    		color[i].setTransparent();
-                    	
+                        for (int i = 0; i < color.length; i++)
+                            color[i].setTransparent();
+
                     return (talpha >= 254);   /* If only one short, no meaningful contribution left */
                 }
             }
@@ -283,9 +288,11 @@ public class TexturePackHDShader implements HDShader {
             if(ignoreLight){
                 for(int i = 0; i < color.length; i++)
                     color[i].setColor(c);
+
+                return c.getAlpha() >= 254;
             }
 
-            return ignoreLight;
+            return false;
         }        
         /**
          * Ray ended - used to report that ray has exited map (called if renderer has not reported complete)
