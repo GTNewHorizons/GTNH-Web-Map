@@ -4,7 +4,7 @@ import org.dynmap.hdmap.TexturePack;
 
 public class ExtraUtilitiesGreenScreenProcessor extends CustomTextureProcessor {
 
-    int[] colorMul = new int[]{0xFFFFFF, 0xFF7F00, 0xFF00FF, 0x007FD8, 0xFFFF00, 0x00FF00, 0xFF99A5, 0x7F7F7F, 0xCCCCCC, 0x00FFFF, 0xB233FF, 0x0000FF, 0x7F3300, 0x009900, 0xFF0000, 0xFFFFFF};
+    int[] colorMul = new int[]{0xFFFFFF, 0xFF7F00, 0xFF00FF, 0x007FD8, 0xFFFF00, 0x00FF00, 0xFF99A5, 0x7F7F7F, 0xCCCCCC, 0x00FFFF, 0xB233FF, 0x0000FF, 0x7F3300, 0x009900, 0xFF0000, 0x000000};
     @Override
     public void patchTextures(TexturePack texturePack, int[] tileToDyntile, int[] argb, int w, int h, int native_scale) {
         for(int i = 0; i < 16; i++) {
