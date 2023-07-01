@@ -2,6 +2,7 @@ package org.dynmap.hdmap.renderer;
 
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
+import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.modsupport.appliedenergistics2.AE2Support;
 import org.dynmap.renderer.*;
 
@@ -19,6 +20,11 @@ public class MECableRenderer extends PipeRendererBase {
 
     int meCableBusBlockId, multipartBlockId = -1000;
 
+    HashMap<Integer, ConnectableBlockData> connectableBlocks;
+
+    class ConnectableBlockData{
+
+    }
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
@@ -44,12 +50,18 @@ public class MECableRenderer extends PipeRendererBase {
             multipartBlockId = MultipartRenderer.INSTANCE.blockId;;
         }
 
+
+
         return true;
     }
 
 
     @Override
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
+
+        if(connectableBlocks == null) {
+            initConnectableBlocks();
+        }
 
         RenderPatchFactory rpf = mapDataCtx.getPatchFactory();
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
@@ -139,6 +151,8 @@ public class MECableRenderer extends PipeRendererBase {
                     if (otherExtra == null && ((thisDamage % 20) == 16 || (otherDamage % 20) == 16 || (otherDamage % 20) == (thisDamage % 20))) {
                         version |= dir.flag;
                     }
+                } else if(connectableBlocks.get(id) != null){
+                    version |= dir.flag;
                 }
             } else {
                 double max = 0.85;
@@ -271,6 +285,27 @@ public class MECableRenderer extends PipeRendererBase {
         }
 
         return new CustomRendererData(smallPipes[version], null, texSel);
+    }
+
+    private void initConnectableBlocks() {
+        connectableBlocks = new HashMap<>();
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockController"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockDrive"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockChest"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockInterface"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCellWorkbench"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCondenser"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockVibrationChamber"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockQuartzGrowthAccelerator"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockEnergyCell"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockDenseEnergyCell"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCreativeEnergyCell"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockQuartzGrowthAccelerator"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCraftingUnit"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCraftingStorage"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockAdvancedCraftingStorage"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockMolecularAssembler"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockIOPort"), new ConnectableBlockData());
     }
 
 
