@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class ArchitectureCraftShapeRenderer extends CustomRenderer {
     RenderPatch[] basicBox;
-    RenderPatch[][] renderPatchesPerShape;
+    RenderPatch[][][][] renderPatchesPerShape;
     private static final int patchlist[] = { 1, 4, 2, 5, 0, 3 };
     private static final int patchlistZero[] = {0, 0, 0, 0, 0, 0};
     @Override
@@ -23,10 +23,10 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         CustomRenderer.addBox(rpf, list, 0, 1, 0, 1, 0, 1, patchlist);
         basicBox = list.toArray(new RenderPatch[patchlist.length]);
 
-        renderPatchesPerShape = new RenderPatch[256][];
+        renderPatchesPerShape = new RenderPatch[256][6][4][];
 
         for(Shape s : Shape.values()){
-            renderPatchesPerShape[s.id] = getRenderPatchForShape(rpf, s.id);
+            renderPatchesPerShape[s.id][0][0] = getRenderPatchForShape(rpf, s.id);
         }
 
         return true;
@@ -297,70 +297,74 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
 
         Object shape = mapDataCtx.getBlockTileEntityField("Shape");
         RenderPatchFactory rpf = mapDataCtx.getPatchFactory();
-        if(shape instanceof Integer)
-        {
-            int actualShape = ((Integer)shape).intValue();
+        if(shape instanceof Integer) {
+            int actualShape = ((Integer) shape).intValue();
 
             Object turnObj = mapDataCtx.getBlockTileEntityField("turn");
             Object sideObj = mapDataCtx.getBlockTileEntityField("side");
             int turn = 0;
-            if(turnObj instanceof Byte) {
-                turn = ((Byte)turnObj).byteValue();
+            if (turnObj instanceof Byte) {
+                turn = ((Byte) turnObj).byteValue();
             }
             int side = 0;
-            if(sideObj instanceof Byte) {
-                side = ((Byte)sideObj).byteValue();
+            if (sideObj instanceof Byte) {
+                side = ((Byte) sideObj).byteValue();
             }
 
-            if(renderPatchesPerShape[actualShape] == null) {
-                renderPatchesPerShape[actualShape] = getRenderPatchForShape(rpf, actualShape);
+            if (renderPatchesPerShape[actualShape][0][0] == null) {
+                renderPatchesPerShape[actualShape][0][0] = getRenderPatchForShape(rpf, actualShape);
             }
 
-            RenderPatch[] arr = renderPatchesPerShape[actualShape];
+            if (renderPatchesPerShape[actualShape][side][turn] == null) {
+                RenderPatch[] arr = renderPatchesPerShape[actualShape][0][0];
+                if (arr != null && arr.length > 0) {
+                    if (turn != 0 || side != 0) {
+                        arr = arr.clone();
 
-            if(arr != null && arr.length > 0) {
-                if(turn != 0 || side != 0) {
-                    arr = arr.clone();
+                        int xrot = 0, yrot = 0, zrot = 0;
 
-                    int xrot = 0, yrot = 0, zrot = 0;
+                        for (int i = 0; i < arr.length; i++) {
+                            switch (ForgeDirection.getOrientation(side)) {
+                                case DOWN:
+                                    yrot = 360 - 90 * turn;
+                                    break;
+                                case UP:
+                                    yrot = 90 * turn;
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 180, 0, 0, 0);
+                                    break;
+                                case NORTH:
+                                    zrot = 360 - 90 * turn;
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 270, 0, 0, 0);
+                                    break;
+                                case SOUTH:
+                                    zrot = 90 * turn;
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 180, 0);
+                                    break;
+                                case WEST:
+                                    xrot = 360 - 90 * turn;
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 0, 270, 90, 0);
+                                    break;
+                                case EAST:
+                                    xrot = 90 * turn;
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 0, 90, 270, 0);
+                                    break;
+                                case UNKNOWN:
+                                    break;
+                            }
 
-                    for(int i = 0; i < arr.length; i++) {
-                        switch (ForgeDirection.getOrientation(side)){
-                            case DOWN:
-                                yrot = 360 - 90 * turn;
-                                break;
-                            case UP:
-                                yrot = 90 * turn;
-                                arr[i] = rpf.getRotatedPatch(arr[i], 180, 0, 0, 0);
-                                break;
-                            case NORTH:
-                                zrot = 360 - 90 * turn;
-                                arr[i] = rpf.getRotatedPatch(arr[i], 270, 0, 0, 0);
-                                break;
-                            case SOUTH:
-                                zrot = 90 * turn;
-                                arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 180, 0);
-                                break;
-                            case WEST:
-                                xrot = 360 - 90 * turn;
-                                arr[i] = rpf.getRotatedPatch(arr[i], 0, 270, 90, 0);
-                                break;
-                            case EAST:
-                                xrot = 90 * turn;
-                                arr[i] = rpf.getRotatedPatch(arr[i], 0, 90, 270, 0);
-                                break;
-                            case UNKNOWN:
-                                break;
+                            arr[i] = rpf.getRotatedPatch(arr[i], xrot, yrot, zrot, 0);
                         }
-
-                        arr[i] = rpf.getRotatedPatch(arr[i], xrot, yrot, zrot, 0);
                     }
+
+                    renderPatchesPerShape[actualShape][side][turn] = arr;
+
+                    return arr;
                 }
 
-                return arr;
+            } else {
+                return renderPatchesPerShape[actualShape][side][turn];
             }
         }
-
         return basicBox;
     }
 
@@ -447,7 +451,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
     class ArchitectureCraftTextureLookupThing implements CustomTextureMapper {
 
         private MapDataContext mapDataCtx;
-        int[] textures = new int[0];
+        int[][] textures = new int[6][0];
 
         public ArchitectureCraftTextureLookupThing(MapDataContext mapDataCtx) {
 
@@ -467,13 +471,13 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
 
                 TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
 
-                textures = new int[]{ map.getIndexForFace(0), map.getIndexForFace(1), map.getIndexForFace(2), map.getIndexForFace(3), map.getIndexForFace(4), map.getIndexForFace(5) };
+                textures = new int[][]{ {map.getIndexForFace(0)}, {map.getIndexForFace(1)}, {map.getIndexForFace(2)}, {map.getIndexForFace(3)}, {map.getIndexForFace(4)}, {map.getIndexForFace(5)} };
             }
         }
 
         @Override
         public int[] getTextureLayersForPatchId(int patchId) {
-            return new int[]{ textures[patchId] };
+            return textures[patchId];
         }
     }
 }
