@@ -764,18 +764,30 @@ public class ForgeMapChunkCache extends MapChunkCache
             }
         }
         @Override
-        public Object getBlockTileEntityFieldAt(String fieldId, int xoff,
-                int yoff, int zoff) {
+        public Object getBlockTileEntityFieldAt(String fieldId, int xoff, int yoff, int zoff) {
             try {
+                Object[] vals = null;
                 if (bx + xoff >= 0 && bx + xoff < 16 && y + yoff >= 0 && y + yoff < 256 && bz + zoff >= 0 && bz + zoff < 16) {
                     int idx = getIndexInChunk(bx+xoff, y+yoff, bz+zoff);
-                    Object[] vals = (Object[]) snaptile[chunkindex].get(idx);
-                    if(vals == null)
-                        return null;
-                    for (int i = 0; i < vals.length; i += 2) {
-                        if (vals[i].equals(fieldId)) {
-                            return vals[i + 1];
-                        }
+                    vals = (Object[]) snaptile[chunkindex].get(idx);
+                } else {
+                    int xx = this.x + xoff;
+                    int zz = this.z + zoff;
+                    int chunkidx = ((xx >> 4) - x_min) + (((zz >> 4) - z_min) * x_dim);
+
+                    int chunkLocalX = bx+xoff;
+                    if(chunkLocalX < 0) chunkLocalX += 16;
+                    int chunkLocalZ = bz+zoff;
+                    if(chunkLocalZ < 0) chunkLocalZ += 16;
+
+                    int idx = getIndexInChunk(chunkLocalX & 0xF, y+yoff, chunkLocalZ & 0xF);
+                    vals = (Object[])snaptile[chunkidx].get(idx);
+                }
+                if(vals == null)
+                    return null;
+                for (int i = 0; i < vals.length; i += 2) {
+                    if (vals[i].equals(fieldId)) {
+                        return vals[i + 1];
                     }
                 }
             } catch (Exception x) {
