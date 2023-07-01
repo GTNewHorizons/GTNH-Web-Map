@@ -262,8 +262,8 @@ public class MECableRenderer extends PipeRendererBase {
             case 0:
                 return new CustomRendererData(smallPipes[version], null, texSel);
             case 1:
-                return new CustomRendererData(mediumPipes[version], null, texSel);
             case 2:
+                return new CustomRendererData(mediumPipes[version], null, texSel);
             case 3:
             case 27:
             case 28:
