@@ -69,9 +69,13 @@ public class MECableRenderer extends PipeRendererBase {
         Object thisDef = null;
 
         HashMap<String, Object> multipartRoot = null;
+        HashMap<String, Object> thisExtra = null;
 
         if (mapDataCtx.getBlockTypeID() == meCableBusBlockId) {
             thisDef = mapDataCtx.getBlockTileEntityField("def:6");
+            Object tmpExtra = mapDataCtx.getBlockTileEntityField("extra:6");
+            if(tmpExtra != null)
+                thisExtra = (HashMap<String, Object>)tmpExtra;
         } else {
             Object parts = mapDataCtx.getBlockTileEntityField("parts");
             if(parts instanceof ArrayList){
@@ -83,6 +87,9 @@ public class MECableRenderer extends PipeRendererBase {
                         if(objId != null && "ae2_cablebus".equals((String)objId)){
                             multipartRoot = tmp;
                             thisDef = tmp.get("def:6");
+                            Object tmpExtra = tmp.get("extra:6");
+                            if(tmpExtra != null)
+                                thisExtra = (HashMap<String, Object>)tmpExtra;
                             break;
                         }
                     }
@@ -101,15 +108,24 @@ public class MECableRenderer extends PipeRendererBase {
 
         for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
 
-            Object def;
-            Object extra;
+            HashMap<String, Object> def = null;
+            HashMap<String, Object> extra = null;
 
             if(multipartRoot == null) {
-                def = mapDataCtx.getBlockTileEntityField("def:" + dir.ordinal());
-                extra = mapDataCtx.getBlockTileEntityField("extra:" + dir.ordinal());
+                Object tmpDef = mapDataCtx.getBlockTileEntityField("def:" + dir.ordinal());
+                Object tmpExtra = mapDataCtx.getBlockTileEntityField("extra:" + dir.ordinal());
+
+                if(tmpDef != null && tmpExtra != null) {
+                    def = (HashMap<String, Object>)tmpDef;
+                    extra = (HashMap<String, Object>)tmpExtra;
+                }
             } else {
-                def = multipartRoot.get("def:" + dir.ordinal());
-                extra = multipartRoot.get("extra:" + dir.ordinal());
+                Object tmpDef = multipartRoot.get("def:" + dir.ordinal());
+                Object tmpExtra = multipartRoot.get("extra:" + dir.ordinal());
+                if(tmpDef != null && tmpExtra != null) {
+                    def = (HashMap<String, Object>)tmpDef;
+                    extra = (HashMap<String, Object>)tmpExtra;
+                }
             }
 
             if (extra == null && def == null) {
@@ -155,44 +171,7 @@ public class MECableRenderer extends PipeRendererBase {
                     version |= dir.flag;
                 }
             } else {
-                double max = 0.85;
-                double min = 0.15;
-
-                double pipePositive = 0.5 + smallPipeRadius;
-                double pipeNegative = 0.5 - smallPipeRadius;
-
-
-                switch (dir) {
-                    case DOWN:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, min, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-
-                        CustomRenderer.addBox(rpf, list, min, max, 0, min, min, max, new int[]{1, 2, 3, 4, 5, 6});
-                        break;
-                    case UP:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipePositive, max, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-
-                        CustomRenderer.addBox(rpf, list, min, max, max, 1, min, max, new int[]{2, 1, 3, 4, 5, 6});
-                        break;
-                    case NORTH:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, min, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-
-                        CustomRenderer.addBox(rpf, list, min, max, min, max, 0, min, new int[]{3, 4, 5, 6, 1, 2});
-                        break;
-                    case SOUTH:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, pipePositive, max, new int[]{0, 0, 0, 0, 0, 0});
-                        CustomRenderer.addBox(rpf, list, min, max, min, max, max, 1, new int[]{3, 4, 5, 6, 2, 1});
-                        break;
-                    case WEST:
-                        CustomRenderer.addBox(rpf, list, min, pipePositive, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-                        CustomRenderer.addBox(rpf, list, 0, min, min, max, min, max, new int[]{3, 4, 1, 2, 5, 6});
-                        break;
-                    case EAST:
-                        CustomRenderer.addBox(rpf, list, pipePositive, max, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-                        CustomRenderer.addBox(rpf, list, max, 1, min, max, min, max, new int[]{3, 4, 2, 1, 5, 6});
-                        break;
-                    case UNKNOWN:
-                        break;
-                }
+                addTerminalOrBusOrWhatever(rpf, list, dir, def, extra);
 
             }
         }
@@ -206,7 +185,15 @@ public class MECableRenderer extends PipeRendererBase {
             textureVersion = 3;
         }
 
-        TextureSelector texSel = new TextureSelector(thisDamage, textureVersion);
+        if(map == null){
+             map = TexturePack.HDTextureMap.getMap(mapDataCtx.getBlockTypeID(), 0, 0);
+        }
+
+        boolean powered = false;
+        if(thisExtra != null && GWM_Util.objectToInt(thisExtra.get("usedChannels"),0) > 0)
+            powered = true;
+
+        TextureSelector texSel = new TextureSelector(thisDamage, textureVersion, powered);
 
         for(ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS){
             Object facade;
@@ -287,6 +274,49 @@ public class MECableRenderer extends PipeRendererBase {
         return new CustomRendererData(smallPipes[version], null, texSel);
     }
 
+    private void addTerminalOrBusOrWhatever(RenderPatchFactory rpf, ArrayList<RenderPatch> list, ForgeDirection dir, HashMap<String, Object> def, HashMap<String, Object> extra) {
+        double max = 14.0/16.0;
+        double min = 2.0/16.0;
+
+        double pipePositive = 0.5 + smallPipeRadius;
+        double pipeNegative = 0.5 - smallPipeRadius;
+
+        // Usage "id" and "Damage" of def to select model and/or terminal type
+
+        switch (dir) {
+            case DOWN:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, min, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+
+                CustomRenderer.addBox(rpf, list, min, max, 0, min, min, max, new int[]{1, 2, 3, 4, 5, 6});
+                break;
+            case UP:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipePositive, max, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+
+                CustomRenderer.addBox(rpf, list, min, max, max, 1, min, max, new int[]{2, 1, 3, 4, 5, 6});
+                break;
+            case NORTH:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, min, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+
+                CustomRenderer.addBox(rpf, list, min, max, min, max, 0, min, new int[]{3, 4, 5, 6, 1, 2});
+                break;
+            case SOUTH:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, pipePositive, max, new int[]{0, 0, 0, 0, 0, 0});
+                CustomRenderer.addBox(rpf, list, min, max, min, max, max, 1, new int[]{3, 4, 5, 6, 2, 1});
+                break;
+            case WEST:
+                CustomRenderer.addBox(rpf, list, min, pipePositive, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+                CustomRenderer.addBox(rpf, list, 0, min, min, max, min, max, new int[]{3, 4, 1, 2, 5, 6});
+                break;
+            case EAST:
+                CustomRenderer.addBox(rpf, list, pipePositive, max, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+                CustomRenderer.addBox(rpf, list, max, 1, min, max, min, max, new int[]{3, 4, 2, 1, 5, 6});
+                break;
+            case UNKNOWN:
+                break;
+
+        }
+    }
+
     private void initConnectableBlocks() {
         connectableBlocks = new HashMap<>();
         connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockController"), new ConnectableBlockData());
@@ -317,15 +347,19 @@ public class MECableRenderer extends PipeRendererBase {
         return nbtFieldsNeeded;
     }
 
+    static TexturePack.HDTextureMap map;
     class TextureSelector implements CustomTextureMapper {
 
         private final short thisDamage;
         int textureId =0;
+        private final boolean powered;
 
-        public TextureSelector(short thisDamage, int textureId) {
+
+        public TextureSelector(short thisDamage, int textureId, boolean powered) {
 
             this.thisDamage = thisDamage;
             this.textureId = textureId;
+            this.powered = powered;
         }
 
         int[] facadeTextures;
@@ -340,7 +374,14 @@ public class MECableRenderer extends PipeRendererBase {
         public int[] getTextureLayersForPatchId(int patchId) {
             if(patchId >= 10000 && patchId <= 10005){
                 return new int[]{facadeTextures[patchId-10000]};
-            }else  if (patchId > 0)
+            } else if (patchId == 1){
+                if(powered)
+                    return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + thisDamage + TexturePack.COLORMOD_MULT_INTERNAL * TexturePack.COLORMOD_IGNORE_LIGHT};
+
+                return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + thisDamage};
+
+            }
+            else  if (patchId > 0)
                 return null;
 
             if (thisDamage >= 0 && AE2Support.cableTypes[thisDamage] != null) {
