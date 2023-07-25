@@ -20,6 +20,8 @@ public class MECableRenderer extends PipeRendererBase {
 
     int meCableBusBlockId, multipartBlockId = -1000;
 
+    public static final int ME_P2P_ID = 460;
+
     HashMap<Integer, ConnectableBlockData> connectableBlocks;
 
     class ConnectableBlockData{
@@ -30,17 +32,32 @@ public class MECableRenderer extends PipeRendererBase {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
             return false;
 
-        smallPipes = generateSingleSize(rpf, smallPipeRadius, smallPipeRadius, 0, 0);
-        mediumPipes = generateSingleSize(rpf, mediumPipeRadius-1.0/16, mediumPipeRadius, 0, 0);
-        largePipes = generateSingleSize(rpf, largePipeRadius-1.0/16, largePipeRadius, 0, 0);
+        RenderPatch[][] tmpSmallPipes, tmpMediumPipes, tmpLargePipes;
 
-        mediumPipes[ForgeDirection.UP.flag|ForgeDirection.DOWN.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
-        mediumPipes[ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0, true);
-        mediumPipes[ForgeDirection.EAST.flag|ForgeDirection.WEST.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+        tmpSmallPipes = generateSingleSize(rpf, smallPipeRadius, smallPipeRadius, 0, 0);
+        tmpMediumPipes = generateSingleSize(rpf, mediumPipeRadius-1.0/16, mediumPipeRadius, 0, 0);
+        tmpLargePipes = generateSingleSize(rpf, largePipeRadius-1.0/16, largePipeRadius, 0, 0);
 
-        largePipes[ForgeDirection.UP.flag|ForgeDirection.DOWN.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
-        largePipes[ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0, true);
-        largePipes[ForgeDirection.EAST.flag|ForgeDirection.WEST.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
+        smallPipes = new RenderPatch[67][];
+        smallPipes[64] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, 1, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, false);
+        smallPipes[65] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, 1, 0, true);
+        smallPipes[66] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, false);
+
+        mediumPipes = new RenderPatch[67][];
+        mediumPipes[64] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+        mediumPipes[65] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0, true);
+        mediumPipes[66] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+
+        largePipes = new RenderPatch[67][];
+        largePipes[64] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
+        largePipes[65] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0, true);
+        largePipes[66] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
+
+        for(int i = 0; i < 64; i++){
+            smallPipes[i] = tmpSmallPipes[i];
+            mediumPipes[i] = tmpMediumPipes[i];
+            largePipes[i] = tmpLargePipes[i];
+        }
 
         meCableBusBlockId = blkid;
 
@@ -49,8 +66,6 @@ public class MECableRenderer extends PipeRendererBase {
         if(MultipartRenderer.INSTANCE != null){
             multipartBlockId = MultipartRenderer.INSTANCE.blockId;;
         }
-
-
 
         return true;
     }
@@ -97,7 +112,7 @@ public class MECableRenderer extends PipeRendererBase {
             }
         }
 
-        short thisDamage = 0;
+        short thisDamage = 16;
 
         if (thisDef instanceof HashMap) {
             HashMap<String, Object> map = (HashMap<String, Object>) thisDef;
@@ -105,7 +120,7 @@ public class MECableRenderer extends PipeRendererBase {
             if (dmgObj instanceof Short)
                 thisDamage = ((Short) dmgObj).shortValue();
         }
-
+        boolean forceDefault = false;
         for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
 
             HashMap<String, Object> def = null;
@@ -133,10 +148,12 @@ public class MECableRenderer extends PipeRendererBase {
                 ForgeDirection opposite = dir.getOpposite();
                 Object otherExtra = null;
                 Object otherDef = null;
+                Object otherDirDef = null;
 
                 if (id == meCableBusBlockId) {
                     otherExtra = mapDataCtx.getBlockTileEntityFieldAt("extra:" + opposite.ordinal(), dir.offsetX, dir.offsetY, dir.offsetZ);
                     otherDef = mapDataCtx.getBlockTileEntityFieldAt("def:6", dir.offsetX, dir.offsetY, dir.offsetZ);
+                    otherDirDef = mapDataCtx.getBlockTileEntityFieldAt("def:" +opposite.ordinal(), dir.offsetX, dir.offsetY, dir.offsetZ);
                 } else if(id == multipartBlockId){
                     Object parts = mapDataCtx.getBlockTileEntityFieldAt("parts", dir.offsetX, dir.offsetY, dir.offsetZ);
                     if(parts instanceof ArrayList){
@@ -148,6 +165,7 @@ public class MECableRenderer extends PipeRendererBase {
                                 if(objId != null && "ae2_cablebus".equals((String)objId)){
                                     otherDef = tmp.get("def:6");
                                     otherExtra = tmp.get("extra:"+opposite.ordinal());
+                                    otherDirDef = tmp.get("def:"+opposite.ordinal());
                                     break;
                                 }
                             }
@@ -164,27 +182,43 @@ public class MECableRenderer extends PipeRendererBase {
                             otherDamage = ((Short) dmgObj).shortValue();
                     }
 
-                    if (otherExtra == null && ((thisDamage % 20) == 16 || (otherDamage % 20) == 16 || (otherDamage % 20) == (thisDamage % 20))) {
+                    if (otherExtra == null && ((otherDamage % 20) == (thisDamage % 20) || (thisDamage % 20) == 16 || (otherDamage % 20) == 16)){
                         version |= dir.flag;
+
+                        if(thisDamage % 20 != otherDamage % 20 && thisDamage / 20 != otherDamage / 20)
+                            forceDefault = true;
+                    } else if(otherExtra != null && otherDirDef != null){
+                        if (otherDirDef instanceof HashMap) {
+                            HashMap hm = (HashMap) otherDirDef;
+                            if(GWM_Util.objectToInt(hm.get("Damage"),0) == ME_P2P_ID)
+                                version |= dir.flag;
+                        }
+
                     }
+
                 } else if(connectableBlocks.get(id) != null){
                     version |= dir.flag;
                 }
             } else {
                 addTerminalOrBusOrWhatever(rpf, list, dir, def, extra);
-
+                forceDefault = true;
             }
         }
         int textureVersion = 0;
 
-        if(version == (ForgeDirection.UP.flag|ForgeDirection.DOWN.flag)) {
-            textureVersion = 2;
-        } else if(version == (ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag) ) {
-            textureVersion = 3;
-        } else if(version == (ForgeDirection.EAST.flag|ForgeDirection.WEST.flag)) {
-            textureVersion = 3;
-        }
 
+        if(thisDamage / 20 != 0 && !forceDefault) {
+            if (version == (ForgeDirection.UP.flag | ForgeDirection.DOWN.flag)) {
+                textureVersion = 2;
+                version = 64;
+            } else if (version == (ForgeDirection.NORTH.flag | ForgeDirection.SOUTH.flag)) {
+                textureVersion = 3;
+                version = 65;
+            } else if (version == (ForgeDirection.EAST.flag | ForgeDirection.WEST.flag)) {
+                textureVersion = 3;
+                version = 66;
+            }
+        }
         if(map == null){
              map = TexturePack.HDTextureMap.getMap(mapDataCtx.getBlockTypeID(), 0, 0);
         }
@@ -252,26 +286,29 @@ public class MECableRenderer extends PipeRendererBase {
             }
         }
 
+        RenderPatch[] setToUse = smallPipes[version];
+        switch (thisDamage / 20) {
+            case 0:
+                setToUse = smallPipes[version];
+                break;
+            case 1:
+            case 2:
+                setToUse = mediumPipes[version];
+                break;
+            case 3:
+            case 27:
+            case 28:
+                setToUse = largePipes[version];
+                break;
+        }
         if (!list.isEmpty()) {
-            for (RenderPatch rp : smallPipes[version]) {
+            for (RenderPatch rp : setToUse) {
                 list.add(rp);
             }
             return new CustomRendererData(list.toArray(new RenderPatch[list.size()]), null, texSel);
         }
 
-        switch (thisDamage / 20) {
-            case 0:
-                return new CustomRendererData(smallPipes[version], null, texSel);
-            case 1:
-            case 2:
-                return new CustomRendererData(mediumPipes[version], null, texSel);
-            case 3:
-            case 27:
-            case 28:
-                return new CustomRendererData(largePipes[version], null, texSel);
-        }
-
-        return new CustomRendererData(smallPipes[version], null, texSel);
+        return new CustomRendererData(setToUse, null, texSel);
     }
 
     private void addTerminalOrBusOrWhatever(RenderPatchFactory rpf, ArrayList<RenderPatch> list, ForgeDirection dir, HashMap<String, Object> def, HashMap<String, Object> extra) {
