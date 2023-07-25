@@ -77,12 +77,12 @@ patchblock:id=%chandelier,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,dat
 # %greenscreen:* (greenscreen), render=com.rwtema.extrautils.block.render.RenderBlockFullBright(CUSTOM), opaque=true,cls=com.rwtema.extrautils.block.BlockGreenScreen
 
 # %pipes:* (pipes), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockTransferPipe
-boxblock:id=%pipes,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.375,zmax=0.625,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
-boxblock:id=%pipes,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=12
-boxblock:id=%pipes,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+customblock:id=%pipes,class=org.dynmap.hdmap.renderer.ExtraUtilitiesPipeRenderer,data=*
 
 # %pipes.1:* (pipes.1), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockTransferPipe
-boxblock:id=%pipes.1,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.375,zmax=0.625,data=*
+customblock:id=%pipes.1,class=org.dynmap.hdmap.renderer.ExtraUtilitiesPipeRenderer,data=*
+
+customblock:id=%extractor_base,id=%extractor_base_remote,class=org.dynmap.hdmap.renderer.ExtraUtilitiesPipeRenderer,data=*,isnode=true
 
 # %trashcan:* (trashcan), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.block.BlockTrashCan
 #boxblock:id=%trashcan,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=*

@@ -580,36 +580,36 @@ block:id=%sound_muffler,data=1,stdrot=true,face0-5=0:extrautils/rain_muffler
 block:id=%sound_muffler,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/sound_muffler
 
 # %extractor_base:* (extractor_base), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockTransferNode
-block:id=%extractor_base,data=0,stdrot=true,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_extract
-block:id=%extractor_base,data=1,stdrot=true,face0=0:extrautils/extractor_extract,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_extract
-block:id=%extractor_base,data=2,stdrot=true,face0-1=0:extrautils/extractor_extract,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_extract
-block:id=%extractor_base,data=3,stdrot=true,face0-2=0:extrautils/extractor_extract,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_extract
-block:id=%extractor_base,data=4,stdrot=true,face0-3=0:extrautils/extractor_extract,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_extract
-block:id=%extractor_base,data=5,stdrot=true,face0-4=0:extrautils/extractor_extract,face5=0:extrautils/extractor_base
-block:id=%extractor_base,data=6,stdrot=true,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=7,stdrot=true,face0=0:extrautils/extractor_liquid,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=8,stdrot=true,face0-1=0:extrautils/extractor_liquid,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=9,stdrot=true,face0-2=0:extrautils/extractor_liquid,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=10,stdrot=true,face0-3=0:extrautils/extractor_liquid,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=11,stdrot=true,face0-4=0:extrautils/extractor_liquid,face5=0:extrautils/extractor_base
-block:id=%extractor_base,data=12,stdrot=true,face0-5=0:extrautils/extractor_energy
-block:id=%extractor_base,data=13,stdrot=true,face0-5=0:extrautils/extractor_energy_hyper
-block:id=%extractor_base,data=14,data=15,stdrot=true,face0-5=0:extrautils/extractor_energy
+block:id=%extractor_base,data=0,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
+block:id=%extractor_base,data=1,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
+block:id=%extractor_base,data=2,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
+block:id=%extractor_base,data=3,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
+block:id=%extractor_base,data=4,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
+block:id=%extractor_base,data=5,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
+block:id=%extractor_base,data=6,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
+block:id=%extractor_base,data=7,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
+block:id=%extractor_base,data=8,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
+block:id=%extractor_base,data=9,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
+block:id=%extractor_base,data=10,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
+block:id=%extractor_base,data=11,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
+block:id=%extractor_base,data=12,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy
+block:id=%extractor_base,data=13,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy_hyper
+block:id=%extractor_base,data=14,data=15,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy
 
 # %extractor_base_remote:* (extractor_base_remote), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockRetrievalNode
-block:id=%extractor_base_remote,data=0,stdrot=true,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_extract_remote
-block:id=%extractor_base_remote,data=1,stdrot=true,face0=0:extrautils/extractor_extract_remote,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_extract_remote
-block:id=%extractor_base_remote,data=2,stdrot=true,face0-1=0:extrautils/extractor_extract_remote,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_extract_remote
-block:id=%extractor_base_remote,data=3,stdrot=true,face0-2=0:extrautils/extractor_extract_remote,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_extract_remote
-block:id=%extractor_base_remote,data=4,stdrot=true,face0-3=0:extrautils/extractor_extract_remote,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_extract_remote
-block:id=%extractor_base_remote,data=5,stdrot=true,face0-4=0:extrautils/extractor_extract_remote,face5=0:extrautils/extractor_base
-block:id=%extractor_base_remote,data=6,stdrot=true,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_liquid_remote
-block:id=%extractor_base_remote,data=7,stdrot=true,face0=0:extrautils/extractor_liquid_remote,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_liquid_remote
-block:id=%extractor_base_remote,data=8,stdrot=true,face0-1=0:extrautils/extractor_liquid_remote,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_liquid_remote
-block:id=%extractor_base_remote,data=9,stdrot=true,face0-2=0:extrautils/extractor_liquid_remote,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_liquid_remote
-block:id=%extractor_base_remote,data=10,stdrot=true,face0-3=0:extrautils/extractor_liquid_remote,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_liquid_remote
-block:id=%extractor_base_remote,data=11,stdrot=true,face0-4=0:extrautils/extractor_liquid_remote,face5=0:extrautils/extractor_base
-block:id=%extractor_base_remote,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/extractor_energy
+block:id=%extractor_base_remote,data=0,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract_remote
+block:id=%extractor_base_remote,data=1,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract_remote
+block:id=%extractor_base_remote,data=2,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract_remote
+block:id=%extractor_base_remote,data=3,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract_remote
+block:id=%extractor_base_remote,data=4,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract_remote
+block:id=%extractor_base_remote,data=5,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract_remote
+block:id=%extractor_base_remote,data=6,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid_remote
+block:id=%extractor_base_remote,data=7,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid_remote
+block:id=%extractor_base_remote,data=8,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid_remote
+block:id=%extractor_base_remote,data=9,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid_remote
+block:id=%extractor_base_remote,data=10,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid_remote
+block:id=%extractor_base_remote,data=11,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid_remote
+block:id=%extractor_base_remote,data=12,data=13,data=14,data=15,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy
 
 # %pipes:* (pipes), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockTransferPipe
 block:id=%pipes,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/pipes
