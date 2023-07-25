@@ -112,6 +112,21 @@ public abstract class CustomRenderer {
 
     public abstract RenderPatch[] getRenderPatchList(MapDataContext mapDataCtx);
 
+    protected RenderPatch[] combineMultiple(RenderPatch[]... list){
+        int count = 0;
+        for(RenderPatch[] rp : list){
+            count += rp.length;
+        }
+        RenderPatch[] ret = new RenderPatch[count];
+
+        int j = 0;
+        for(RenderPatch[] rp : list){
+            for(int i = 0; i < rp.length; i++)
+                ret[j++] = rp[i];
+        }
+        return ret;
+    }
+
     public CustomRendererData getRenderData(MapDataContext mapDataCtx){
         return new CustomRendererData(getRenderPatchList(mapDataCtx), null, null);
     };

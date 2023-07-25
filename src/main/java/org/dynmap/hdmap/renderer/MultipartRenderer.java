@@ -241,21 +241,6 @@ public class MultipartRenderer extends CustomRenderer {
         return list.toArray(new RenderPatch[fullBlockPatchList.length]);
     }
 
-    RenderPatch[] combineMultiple(RenderPatch[]... list){
-        int count = 0;
-        for(RenderPatch[] rp : list){
-            count += rp.length;
-        }
-        RenderPatch[] ret = new RenderPatch[count];
-
-        int j = 0;
-        for(RenderPatch[] rp : list){
-            for(int i = 0; i < rp.length; i++)
-                ret[j++] = rp[i];
-        }
-        return ret;
-    }
-
     @Override
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
         Object rawParts = mapDataCtx.getBlockTileEntityField("parts");
