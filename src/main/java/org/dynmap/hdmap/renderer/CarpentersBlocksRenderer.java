@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CarpentersBlocksRenderer extends CustomRenderer {
-    private RenderPatch[] fullBlock;
+    protected RenderPatch[] fullBlock;
     // Patch index ordering, corresponding to BlockStep ordinal order
     private static final int patchlist[] = { 0, 1, 4, 5, 2, 3 };
 
@@ -26,7 +26,6 @@ public class CarpentersBlocksRenderer extends CustomRenderer {
 
         if(type.equals("slope")){
             initSlopeShapes(rpf);
-
         } else if(type.equals("stairs")){
             initStairsShapes(rpf);
         } else if(type.equals("block")){
