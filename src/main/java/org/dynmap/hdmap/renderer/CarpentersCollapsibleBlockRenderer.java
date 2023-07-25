@@ -39,6 +39,19 @@ public class CarpentersCollapsibleBlockRenderer extends CarpentersBlocksRenderer
             list.add(rpf.getPatch(1, se / 16.0, 1, 0, nw/16.0, 0, 1, ne / 16.0, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0));
 
             return list.toArray(new RenderPatch[list.size()]);
+        } else if(base == 0){
+            // Top plate
+            list.add(rpf.getPatch(0,1,0,1,1,0,0,1,1,0,1,0,1, RenderPatchFactory.SideVisible.BOTTOM, 0));
+
+            addSideDown(list, rpf, 180, sw, se);
+            addSideDown(list, rpf, 90, se, ne);
+            addSideDown(list, rpf, 0, ne, nw);
+            addSideDown(list, rpf, 270, nw, sw);
+
+            list.add(rpf.getPatch(0, 1-sw / 16.0, 1, 1, 1-se/16.0, 1, 0, 1-nw / 16.0, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0));
+            list.add(rpf.getPatch(1, 1-se / 16.0, 1, 0, 1-nw/16.0, 0, 1, 1-ne / 16.0, 0, 1, RenderPatchFactory.SideVisible.TOP, 0));
+
+            return list.toArray(new RenderPatch[list.size()]);
         }
 
         return fullBlock;
@@ -63,5 +76,24 @@ public class CarpentersCollapsibleBlockRenderer extends CarpentersBlocksRenderer
                 list.add(rpf.getRotatedPatch(rpf.getPatch(0, min, 0, 1, max, 0, 1, min, 0, 1, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
         }
     }
+    void addSideDown(ArrayList<RenderPatch> list, RenderPatchFactory rpf, int rot, int a, int b){
 
+        if(a == 0 && b == 0)
+            return;
+
+        if(a == b && a > 0) {
+            list.add(rpf.getRotatedPatch(rpf.getPatch(0, 1, 0, 1, 1, 0, 0, 1 - a / 16.0, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
+        } else {
+            double min = (a < b ? a : b) / 16.0;
+            double max = (a < b ? b : a) / 16.0;
+
+            if(min > 0)
+                list.add(rpf.getRotatedPatch(rpf.getPatch(0, 1, 0, 1, 1, 0, 0, 1-min, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
+
+            if(a < b)
+                list.add(rpf.getRotatedPatch(rpf.getPatch(0, 1-min, 0, 1, 1-min, 0, 0, 1-max, 0, 1, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
+            else
+                list.add(rpf.getRotatedPatch(rpf.getPatch(0, 1-min, 0, 1, 1-max, 0, 1, 1-min, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0), 0, rot, 0, 0));
+        }
+    }
 }
