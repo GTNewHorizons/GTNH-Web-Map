@@ -110,25 +110,6 @@ texture:id=projectred/world/tin_block,filename=assets/projectred/textures/blocks
 texture:id=projectred/world/tin_ore,filename=assets/projectred/textures/blocks/world/tin_ore.png
 
 
-
-# %projectred.illumination.lamp:* (projectred.illumination.lamp), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mrtjp.projectred.illumination.BlockLamp
-block:id=%projectred.illumination.lamp,data=0,stdrot=true,face0-5=0:projectred/lighting/lampoff/0
-block:id=%projectred.illumination.lamp,data=1,stdrot=true,face0-5=0:projectred/lighting/lampoff/1
-block:id=%projectred.illumination.lamp,data=2,stdrot=true,face0-5=0:projectred/lighting/lampoff/2
-block:id=%projectred.illumination.lamp,data=3,stdrot=true,face0-5=0:projectred/lighting/lampoff/3
-block:id=%projectred.illumination.lamp,data=4,stdrot=true,face0-5=0:projectred/lighting/lampoff/4
-block:id=%projectred.illumination.lamp,data=5,stdrot=true,face0-5=0:projectred/lighting/lampoff/5
-block:id=%projectred.illumination.lamp,data=6,stdrot=true,face0-5=0:projectred/lighting/lampoff/6
-block:id=%projectred.illumination.lamp,data=7,stdrot=true,face0-5=0:projectred/lighting/lampoff/7
-block:id=%projectred.illumination.lamp,data=8,stdrot=true,face0-5=0:projectred/lighting/lampoff/8
-block:id=%projectred.illumination.lamp,data=9,stdrot=true,face0-5=0:projectred/lighting/lampoff/9
-block:id=%projectred.illumination.lamp,data=10,stdrot=true,face0-5=0:projectred/lighting/lampoff/10
-block:id=%projectred.illumination.lamp,data=11,stdrot=true,face0-5=0:projectred/lighting/lampoff/11
-block:id=%projectred.illumination.lamp,data=12,stdrot=true,face0-5=0:projectred/lighting/lampoff/12
-block:id=%projectred.illumination.lamp,data=13,stdrot=true,face0-5=0:projectred/lighting/lampoff/13
-block:id=%projectred.illumination.lamp,data=14,stdrot=true,face0-5=0:projectred/lighting/lampoff/14
-block:id=%projectred.illumination.lamp,data=15,stdrot=true,face0-5=0:projectred/lighting/lampoff/15
-
 # %projectred.exploration.ore:* (projectred.exploration.ore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mrtjp.projectred.exploration.BlockOre
 block:id=%projectred.exploration.ore,data=0,stdrot=true,face0-5=0:projectred/world/ruby_ore
 block:id=%projectred.exploration.ore,data=1,stdrot=true,face0-5=0:projectred/world/sapphire_ore

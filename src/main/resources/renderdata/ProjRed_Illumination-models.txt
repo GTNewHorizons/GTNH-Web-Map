@@ -1,0 +1,11 @@
+# ProjRed_Illumination 
+version:1.7
+modname:ProjRed|Illumination
+
+var:block_lampID=0
+
+cfgfile:config/ProjectRed.cfg
+
+# %projectred.illumination.lamp:* (projectred.illumination.lamp), render=(STANDARD), opaque=true,cls=mrtjp.projectred.illumination.BlockLamp
+customblock:id=%projectred.illumination.lamp,data=*,class=org.dynmap.hdmap.renderer.ProjectRedLampRenderer
+
