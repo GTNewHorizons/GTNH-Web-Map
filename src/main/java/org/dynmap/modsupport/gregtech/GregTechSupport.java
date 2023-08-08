@@ -11,10 +11,13 @@ import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Frame;
 import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Item;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
+import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.forge.GwmCommand;
 import org.dynmap.forge.GwmSubCommand;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
+import org.dynmap.modsupport.appliedenergistics2.AE2Support;
+import org.dynmap.renderer.MapDataContext;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -28,6 +31,7 @@ public class GregTechSupport {
     MetaTileEntityEntry[] metaTileEntries = new MetaTileEntityEntry[65536];
 
     public int[][] validHatchBaseBlocks = new int[65536][];
+    public boolean[] meConnectables;
     private GregTechSupport(){
         GwmCommand.registerSubCommand(new GTDumpCommand());
     }
@@ -143,6 +147,19 @@ public class GregTechSupport {
                 }
             }
         }
+
+    }
+
+    public void processMeHatch(HashMap<String, String> data) {
+        if(meConnectables == null){
+            meConnectables = new boolean[65536];
+            AE2Support.addConnectableBlock(GWM_Util.blockNameToId("gregtech:gt.blockmachines"), new GregTechMTEConnectableBlockData(meConnectables));
+        }
+
+        int id = GWM_Util.objectToInt(data.get("id"),-1);
+
+        if(id >= 0 && id < 65535)
+            meConnectables[id] = true;
 
     }
 
@@ -273,6 +290,27 @@ public class GregTechSupport {
             }
             writer.write(",class=" + imte.getClass().toString().replace("class ",""));
             writer.write("\r\n");
+        }
+    }
+
+    private class GregTechMTEConnectableBlockData extends AE2Support.ConnectableBlockData {
+        private final boolean[] meConnectables1;
+
+        public GregTechMTEConnectableBlockData(boolean[] meConnectables) {
+            meConnectables1 = meConnectables;
+        }
+
+        @Override
+        public boolean canConnectFrom(MapDataContext ctx, ForgeDirection dir) {
+            ForgeDirection from = dir.getOpposite();
+            int id = GWM_Util.objectToInt(ctx.getBlockTileEntityFieldAt("mID",from.offsetX, from.offsetY, from.offsetZ ), -1);
+            if(id >= 0 && id < 65535 && meConnectables[id]) {
+
+                int facing = GWM_Util.objectToInt(ctx.getBlockTileEntityFieldAt("mFacing", from.offsetX, from.offsetY, from.offsetZ), -1);
+
+                return facing == dir.ordinal();
+            }
+            return false;
         }
     }
 }

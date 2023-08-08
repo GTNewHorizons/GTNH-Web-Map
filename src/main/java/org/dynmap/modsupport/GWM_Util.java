@@ -60,6 +60,12 @@ public class GWM_Util {
         if(obj instanceof Byte)
             return (Byte)obj;
 
+        try {
+            if (obj instanceof String)
+                return Integer.parseInt((String) obj);
+        } catch(NumberFormatException nfe){
+            // Do nothing
+        }
         return def;
     }
 }

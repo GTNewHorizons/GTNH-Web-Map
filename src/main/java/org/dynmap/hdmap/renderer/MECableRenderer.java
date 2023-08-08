@@ -22,11 +22,7 @@ public class MECableRenderer extends PipeRendererBase {
 
     public static final int ME_P2P_ID = 460;
 
-    HashMap<Integer, ConnectableBlockData> connectableBlocks;
 
-    class ConnectableBlockData{
-
-    }
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
@@ -73,11 +69,6 @@ public class MECableRenderer extends PipeRendererBase {
 
     @Override
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
-
-        if(connectableBlocks == null) {
-            initConnectableBlocks();
-        }
-
         RenderPatchFactory rpf = mapDataCtx.getPatchFactory();
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         int version = 0;
@@ -196,8 +187,11 @@ public class MECableRenderer extends PipeRendererBase {
 
                     }
 
-                } else if(connectableBlocks.get(id) != null){
-                    version |= dir.flag;
+                } else {
+                    AE2Support.ConnectableBlockData connectableBlockData = AE2Support.getConnectableData(id);
+                    if(connectableBlockData != null && connectableBlockData.canConnectFrom(mapDataCtx, dir.getOpposite())){
+                        version |= dir.flag;
+                    }
                 }
             } else {
                 addTerminalOrBusOrWhatever(rpf, list, dir, def, extra);
@@ -354,26 +348,7 @@ public class MECableRenderer extends PipeRendererBase {
         }
     }
 
-    private void initConnectableBlocks() {
-        connectableBlocks = new HashMap<>();
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockController"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockDrive"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockChest"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockInterface"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCellWorkbench"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCondenser"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockVibrationChamber"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockQuartzGrowthAccelerator"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockEnergyCell"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockDenseEnergyCell"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCreativeEnergyCell"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockQuartzGrowthAccelerator"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCraftingUnit"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockCraftingStorage"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockAdvancedCraftingStorage"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockMolecularAssembler"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockIOPort"), new ConnectableBlockData());
-    }
+
 
 
     static String[] nbtFieldsNeeded = {"def:0", "def:1", "def:2", "def:3", "def:4", "def:5", "def:6",
