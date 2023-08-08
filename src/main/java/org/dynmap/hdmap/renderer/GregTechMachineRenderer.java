@@ -1,11 +1,13 @@
 package org.dynmap.hdmap.renderer;
 
+import gregtech.api.enums.Dyes;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.metatileentity.MetaPipeEntity;
 import gregtech.api.metatileentity.implementations.*;
 import gregtech.common.tileentities.machines.multi.GT_MetaTileEntity_PrimitiveBlastFurnace;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
+import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.modsupport.gregtech.GregTechSupport;
 import org.dynmap.renderer.*;
 
@@ -26,6 +28,8 @@ public class GregTechMachineRenderer extends PipeRendererBase {
     RenderPatch[][] pipes750;
     RenderPatch[][] pipes875;
 
+    static int[] dyeColors = new int[16];
+
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
@@ -43,6 +47,11 @@ public class GregTechMachineRenderer extends PipeRendererBase {
         CustomRenderer.addBox(rpf, list, 0, 1, 0, 1,0, 1, fullBlockPatchList);
         fullBlock = list.toArray(new RenderPatch[fullBlockPatchList.length]);
 
+        for(Dyes d : Dyes.VALUES){
+            short[] rgba = d.getRGBA();
+            dyeColors[d.ordinal()] = (rgba[0] << 16) | (rgba[1] << 8) | rgba[2];
+        }
+
         return true;
     }
 
@@ -56,13 +65,14 @@ public class GregTechMachineRenderer extends PipeRendererBase {
             int typeId = ((Integer) typeIdObj).intValue();
             IMetaTileEntity tmp = GregTech_API.METATILEENTITIES[typeId];
             GregTechSupport.MetaTileEntityEntry entry = GregTechSupport.INSTANCE.getMTEEntre(typeId);
+            int mColor = GWM_Util.objectToInt(mapDataCtx.getBlockTileEntityField("mColor"),0);
 
             if (entry != null) {
                 if (tmp instanceof MetaPipeEntity && !(tmp instanceof GT_MetaPipeEntity_Frame)) {
                     Object connections = mapDataCtx.getBlockTileEntityField("mConnections");
                     RenderPatch[][] patchSetToUse = pipes375;
 
-                    BasicMachineTextureAndColor pipeTexturesAndColorsThing = new BasicMachineTextureAndColor(typeId, mapDataCtx, false, -1, -1);
+                    BasicMachineTextureAndColor pipeTexturesAndColorsThing = new BasicMachineTextureAndColor(typeId, mapDataCtx, false, -1, -1, mColor);
                     int thickness = entry.thickness;
 
                     switch (thickness) {
@@ -107,7 +117,7 @@ public class GregTechMachineRenderer extends PipeRendererBase {
                     int facing = tmpFacing instanceof Short ? ((Short) tmpFacing).shortValue() : ForgeDirection.NORTH.ordinal();
                     int mainFacing = tmpMainFacing instanceof Integer ? ((Integer) tmpMainFacing).intValue() : ForgeDirection.EAST.ordinal();
 
-                    BasicMachineTextureAndColor bmtac = new BasicMachineTextureAndColor(typeId, mapDataCtx, active, facing, mainFacing);
+                    BasicMachineTextureAndColor bmtac = new BasicMachineTextureAndColor(typeId, mapDataCtx, active, facing, mainFacing, mColor);
                     return new CustomRendererData(fullBlock, bmtac, bmtac);
                 }
             }
@@ -124,8 +134,8 @@ public class GregTechMachineRenderer extends PipeRendererBase {
         int[][] texturesToUse = new int[6][1];
         int colorMul = 0xFFFFFF;
         GregTechSupport.IconSet baseSet;
-        int baseTex;
-        public BasicMachineTextureAndColor(int typeId, MapDataContext mapDataCtx, boolean active, int outputFacing, int mainFacing){
+        int baseTex, baseTex2;
+        public BasicMachineTextureAndColor(int typeId, MapDataContext mapDataCtx, boolean active, int outputFacing, int mainFacing, int mColor){
             GregTechSupport.MetaTileEntityEntry entry = GregTechSupport.INSTANCE.getMTEEntre(typeId);
 
             if(entry != null){
@@ -133,13 +143,18 @@ public class GregTechMachineRenderer extends PipeRendererBase {
                 int front = mainFacing;
                 baseSet = entry.baseTextureSet;
                 GregTechSupport.IconSet iconSet = entry.icons;
-                baseTex = entry.baseTexture;;
+                baseTex = entry.baseTexture;
+                baseTex2 = entry.baseTexture2;
                 if(active){
                     iconSet = entry.activeIcons == null ? entry.icons : entry.activeIcons;
                 }
 
                 if(entry.isHatch){
                     tryStealBaseTexFromNeighbor(mapDataCtx, outputFacing);
+                }
+
+                if(mColor > 0 && mColor <= 16){
+                    colorMul = dyeColors[mColor -1];
                 }
 
                 for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
@@ -238,9 +253,11 @@ public class GregTechMachineRenderer extends PipeRendererBase {
                                 case UNKNOWN:
                                     break;
                             }
-                        }
-                        else {
-                            texturesToUse[dir.ordinal()] = new int[]{baseTex};
+                        } else {
+                            if(baseTex2 != -1)
+                                texturesToUse[dir.ordinal()] = new int[]{baseTex, baseTex2};
+                            else
+                                texturesToUse[dir.ordinal()] = new int[]{baseTex};
                         }
                     }
                 }

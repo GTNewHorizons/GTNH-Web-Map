@@ -74,6 +74,7 @@ public class GregTechSupport {
             ent.baseTextureSet = iconSets.get(baseSet);
 
         ent.baseTexture = getTexture(data, "basetex", filetoidx);
+        ent.baseTexture2 = getTexture(data, "basetex2", filetoidx);
 
         String isHatch = data.get("ishatch");
 
@@ -151,6 +152,7 @@ public class GregTechSupport {
     }
     public class MetaTileEntityEntry{
         public int baseTexture = -1;
+        public int baseTexture2 = -1;
         public IconSet baseTextureSet;
         public IconSet icons;
         public IconSet activeIcons;
