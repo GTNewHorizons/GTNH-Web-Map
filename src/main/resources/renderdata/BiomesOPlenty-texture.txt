@@ -659,7 +659,7 @@ block:id=%persimmonLeaves,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_per
 block:id=%moss,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:biomesoplenty/moss
 
 # %bamboo:* (bamboo), render=biomesoplenty.client.render.blocks.BambooRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBamboo
-block:id=%bamboo,data=*,stdrot=true,face0-1=0:biomesoplenty/bambootop,face2-5=0:biomesoplenty/bamboo
+block:id=%bamboo,data=*,stdrot=true,patch0=0:biomesoplenty/bambootop,patch1=0:biomesoplenty/bamboo
 
 # %mudBricks:* (mudBricks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%mudBricks,data=*,stdrot=true,face0-5=0:biomesoplenty/mudbrick

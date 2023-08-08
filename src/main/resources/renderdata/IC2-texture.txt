@@ -244,22 +244,22 @@ block:id=%blockReinforcedFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockReinforce
 block:id=%blockFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockFoam
 
 # %blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
-block:id=%blockWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.black
-block:id=%blockWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.red
-block:id=%blockWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.green
-block:id=%blockWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.brown
-block:id=%blockWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.blue
-block:id=%blockWall,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.purple
-block:id=%blockWall,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.cyan
-block:id=%blockWall,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.lightGray
-block:id=%blockWall,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.gray
-block:id=%blockWall,data=9,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.pink
-block:id=%blockWall,data=10,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.lime
-block:id=%blockWall,data=11,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.yellow
-block:id=%blockWall,data=12,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.lightBlue
-block:id=%blockWall,data=13,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.magenta
-block:id=%blockWall,data=14,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.orange
-block:id=%blockWall,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.white
+block:id=%blockWall,data=0,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.black
+block:id=%blockWall,data=1,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.red
+block:id=%blockWall,data=2,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.green
+block:id=%blockWall,data=3,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.brown
+block:id=%blockWall,data=4,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.blue
+block:id=%blockWall,data=5,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.purple
+block:id=%blockWall,data=6,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.cyan
+block:id=%blockWall,data=7,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.lightGray
+block:id=%blockWall,data=8,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.gray
+block:id=%blockWall,data=9,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.pink
+block:id=%blockWall,data=10,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.lime
+block:id=%blockWall,data=11,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.yellow
+block:id=%blockWall,data=12,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.lightBlue
+block:id=%blockWall,data=13,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.magenta
+block:id=%blockWall,data=14,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.orange
+block:id=%blockWall,data=15,stdrot=true,transparency=SEMITRANSPARENT,patch0-5=0:ic2/cf/blockWall.white
 
 # %blockScaffold:* (blockScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
 block:id=%blockScaffold,data=0,data=1,data=2,data=3,data=4,stdrot=true,face0-1=0:ic2/blockScaffold,face2-5=2:ic2/blockScaffold

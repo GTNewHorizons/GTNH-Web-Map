@@ -91,3 +91,6 @@ customblock:id=%wall.beta,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer
 
 # %firestone.recharge:* (firestone.recharge), render=(CUSTOM), opaque=false,cls=mods.railcraft.common.items.firestone.BlockFirestoneRecharge
 boxblock:id=%firestone.recharge,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.4000000059604645,ymax=0.8999999761581421,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
+
+customblock:id=%lantern.stone,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=*,box0=i:5-11:14-15:5-11:0,box1=i:3-13:12-14:3-13:0,box2=i:4-6:6-12:4-6:0,box3=i:4-6:6-12:10-12:0,box4=i:10-12:6-12:4-6:0,box5=i:10-12:6-12:10-12:0,box6=i:4-12:4-6:4-12:0,box7=i:6-10:0-4:6-10:0
+customblock:id=%lantern.metal,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=*,box0=i:5-11:14-15:5-11:0,box1=i:3-13:12-14:3-13:0,box2=i:4-6:6-12:4-6:0,box3=i:4-6:6-12:10-12:0,box4=i:10-12:6-12:4-6:0,box5=i:10-12:6-12:10-12:0,box6=i:4-12:4-6:4-12:0,box7=i:6-10:0-4:6-10:0

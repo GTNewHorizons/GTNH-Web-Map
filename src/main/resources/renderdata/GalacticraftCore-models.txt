@@ -63,6 +63,17 @@ boxblock:id=%tile.parachest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0
 # %tile.aluminumWire:* (tile.aluminumWire), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockAluminumWire
 boxblock:id=%tile.aluminumWire,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
 
+# GS Torch - up
+patchblock:id=%tile.glowstoneTorch,data=5,data=0,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0
+# GS Torch - pointing south
+patchblock:id=%tile.glowstoneTorch,data=1,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0
+# GS Torch - pointing north
+patchblock:id=%tile.glowstoneTorch,data=2,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0
+# GS Torch - pointing west
+patchblock:id=%tile.glowstoneTorch,data=3,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0
+# GS Torch - pointing east
+patchblock:id=%tile.glowstoneTorch,data=4,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0
+
 # %tile.fallenMeteor:* (tile.fallenMeteor), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMeteor(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockFallenMeteor
 boxblock:id=%tile.fallenMeteor,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 

@@ -659,3 +659,8 @@ boxblock:id=%Armor.DryingRack,xmin=0.0,xmax=1.0,ymin=0.75,ymax=1.0,zmin=0.75,zma
 boxblock:id=%Armor.DryingRack,xmin=0.0,xmax=1.0,ymin=0.75,ymax=1.0,zmin=0.0,zmax=0.25,data=3
 boxblock:id=%Armor.DryingRack,xmin=0.75,xmax=1.0,ymin=0.75,ymax=1.0,zmin=0.0,zmax=1.0,data=4
 boxblock:id=%Armor.DryingRack,xmin=0.0,xmax=0.25,ymin=0.75,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+customblock:id=%GlassBlock,class=org.dynmap.hdmap.renderer.TinkersClearGlassBlockRenderer,data=*
+
+# This is wrong, but it was already wrong, so this is better
+customblock:id=%GlassPane,class=org.dynmap.hdmap.renderer.TinkersClearGlassBlockRenderer,data=*

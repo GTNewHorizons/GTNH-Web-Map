@@ -121,6 +121,21 @@ texture:id=tinker/faucet,filename=assets/tinker/textures/blocks/faucet.png
 texture:id=tinker/furnaceslab_front,filename=assets/tinker/textures/blocks/furnaceslab_front.png
 texture:id=tinker/furnaceslab_side,filename=assets/tinker/textures/blocks/furnaceslab_side.png
 texture:id=tinker/glass/clear/glass,filename=assets/tinker/textures/blocks/glass/clear/glass.png
+texture:id=tinker/glass/clear/glass_1_d,filename=assets/tinker/textures/blocks/glass/clear/glass_1_d.png
+texture:id=tinker/glass/clear/glass_1_u,filename=assets/tinker/textures/blocks/glass/clear/glass_1_u.png
+texture:id=tinker/glass/clear/glass_1_l,filename=assets/tinker/textures/blocks/glass/clear/glass_1_l.png
+texture:id=tinker/glass/clear/glass_1_r,filename=assets/tinker/textures/blocks/glass/clear/glass_1_r.png
+texture:id=tinker/glass/clear/glass_2_dl,filename=assets/tinker/textures/blocks/glass/clear/glass_2_dl.png
+texture:id=tinker/glass/clear/glass_2_dr,filename=assets/tinker/textures/blocks/glass/clear/glass_2_dr.png
+texture:id=tinker/glass/clear/glass_2_v,filename=assets/tinker/textures/blocks/glass/clear/glass_2_v.png
+texture:id=tinker/glass/clear/glass_2_h,filename=assets/tinker/textures/blocks/glass/clear/glass_2_h.png
+texture:id=tinker/glass/clear/glass_3_l,filename=assets/tinker/textures/blocks/glass/clear/glass_3_l.png
+texture:id=tinker/glass/clear/glass_3_r,filename=assets/tinker/textures/blocks/glass/clear/glass_3_r.png
+texture:id=tinker/glass/clear/glass_3_u,filename=assets/tinker/textures/blocks/glass/clear/glass_3_u.png
+texture:id=tinker/glass/clear/glass_3_d,filename=assets/tinker/textures/blocks/glass/clear/glass_3_d.png
+texture:id=tinker/glass/clear/glass_4,filename=assets/tinker/textures/blocks/glass/clear/glass_4.png
+texture:id=tinker/glass/clear/glass_2_ul,filename=assets/tinker/textures/blocks/glass/clear/glass_2_ul.png
+texture:id=tinker/glass/clear/glass_2_ur,filename=assets/tinker/textures/blocks/glass/clear/glass_2_ur.png
 texture:id=tinker/glass/stained/black/glass,filename=assets/tinker/textures/blocks/glass/stained/black/glass.png
 texture:id=tinker/glass/stained/blue/glass,filename=assets/tinker/textures/blocks/glass/stained/blue/glass.png
 texture:id=tinker/glass/stained/brown/glass,filename=assets/tinker/textures/blocks/glass/stained/brown/glass.png
@@ -837,10 +852,10 @@ block:id=%SpeedBlock,data=6,stdrot=true,face0-5=0:tinker/brownstone_smooth_chise
 block:id=%SpeedBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/brownstone_rough
 
 # %GlassBlock:* (GlassBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnected
-block:id=%GlassBlock,data=*,stdrot=true,face0-5=0:tinker/glass/clear/glass
+block:id=%GlassBlock,data=*,stdrot=true,patch0=12000:tinker/glass/clear/glass,patch1=12000:tinker/glass/clear/glass_1_d,patch2=12000:tinker/glass/clear/glass_1_u,patch3=12000:tinker/glass/clear/glass_2_v,patch4=12000:tinker/glass/clear/glass_1_l,patch5=12000:tinker/glass/clear/glass_2_ur,patch6=12000:tinker/glass/clear/glass_2_dr,patch7=12000:tinker/glass/clear/glass_3_r,patch8=12000:tinker/glass/clear/glass_1_r,patch9=12000:tinker/glass/clear/glass_2_ul,patch10=12000:tinker/glass/clear/glass_2_dl,patch11=12000:tinker/glass/clear/glass_3_l,patch12=12000:tinker/glass/clear/glass_2_h,patch13=12000:tinker/glass/clear/glass_3_u,patch14=12000:tinker/glass/clear/glass_3_d,patch15=12000:tinker/glass/clear/glass_4
 
 # %GlassPane:* (GlassPane), render=tconstruct.smeltery.model.PaneConnectedRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneConnected
-block:id=%GlassPane,data=*,stdrot=true,face0-5=0:tinker/glass/clear/glass
+block:id=%GlassPane,data=*,stdrot=true,patch0=12000:tinker/glass/clear/glass,patch1=12000:tinker/glass/clear/glass_1_d,patch2=12000:tinker/glass/clear/glass_1_u,patch3=12000:tinker/glass/clear/glass_2_v,patch4=12000:tinker/glass/clear/glass_1_l,patch5=12000:tinker/glass/clear/glass_2_ur,patch6=12000:tinker/glass/clear/glass_2_dr,patch7=12000:tinker/glass/clear/glass_3_r,patch8=12000:tinker/glass/clear/glass_1_r,patch9=12000:tinker/glass/clear/glass_2_ul,patch10=12000:tinker/glass/clear/glass_2_dl,patch11=12000:tinker/glass/clear/glass_3_l,patch12=12000:tinker/glass/clear/glass_2_h,patch13=12000:tinker/glass/clear/glass_3_u,patch14=12000:tinker/glass/clear/glass_3_d,patch15=12000:tinker/glass/clear/glass_4
 
 # %GlassBlock.StainedClear:* (GlassBlock.StainedClear), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnectedMeta
 block:id=%GlassBlock.StainedClear,data=0,stdrot=true,face0-5=12000:tinker/glass/stained/white/glass

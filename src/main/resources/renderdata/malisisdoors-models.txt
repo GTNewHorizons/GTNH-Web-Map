@@ -433,7 +433,8 @@ boxblock:id=%vanishing_block,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,
 boxblock:id=%vanishing_block_diamond,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %rustyLadder:* (rustyLadder), render=net.malisis.doors.renderer.RustyLadderRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.RustyLadder
-boxblock:id=%rustyLadder,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.875,zmax=1.0,data=2
-boxblock:id=%rustyLadder,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%rustyLadder,xmin=0.875,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
-boxblock:id=%rustyLadder,xmin=0.0,xmax=0.125,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+boxblock:id=%rustyLadder,xmin=0.0,xmax=0.125,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0,data=1,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+customblock:id=%rustyLadder,data=2,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,box0=i:3-5:6-7:14-16:0,box1=i:11-13:6-7:14-16:0,box2=i:4-12:6-7:12-14:0,box3=i:3-5:12-13:14-16:0,box4=i:11-13:12-13:14-16:0,box5=i:4-12:12-13:12-14:0
+customblock:id=%rustyLadder,data=3,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,box0=i:3-5:6-7:0-2:0,box1=i:11-13:6-7:0-2:0,box2=i:4-12:6-7:2-4:0,box3=i:3-5:12-13:0-2:0,box4=i:11-13:12-13:0-2:0,box5=i:4-12:12-13:2-4:0
+customblock:id=%rustyLadder,data=4,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,box0=i:14-16:6-7:3-5:0,box1=i:14-16:6-7:11-13:0,box2=i:12-14:6-7:4-12:0,box3=i:14-16:12-13:3-5:0,box4=i:14-16:12-13:11-13:0,box5=i:12-14:12-13:4-12:0
+customblock:id=%rustyLadder,data=5,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,box0=i:0-2:6-7:3-5:0,box1=i:0-2:6-7:11-13:0,box2=i:2-4:6-7:4-12:0,box3=i:0-2:12-13:3-5:0,box4=i:0-2:12-13:11-13:0,box5=i:2-4:12-13:4-12:0

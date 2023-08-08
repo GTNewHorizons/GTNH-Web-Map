@@ -63,35 +63,37 @@ public class ChiselCTMBlockRenderer extends CustomRenderer {
             return version;
         }
 
+        int[][] cachedTextures = new int[6][];
         @Override
         public int[] getTextureLayersForPatchId(int patchId) {
-            ForgeDirection dir = ForgeDirection.getOrientation(patchId);
-
-            int version = 0;
-            switch (dir){
-                case DOWN:
-                    version = getVersion(ForgeDirection.NORTH, ForgeDirection.SOUTH, ForgeDirection.EAST, ForgeDirection.WEST);
-                    break;
-                case UP:
-                    version = getVersion(ForgeDirection.SOUTH, ForgeDirection.NORTH, ForgeDirection.WEST, ForgeDirection.EAST);
-                    break;
-                case NORTH:
-                    version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.EAST, ForgeDirection.WEST);
-                    break;
-                case SOUTH:
-                    version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.WEST, ForgeDirection.EAST);
-                    break;
-                case WEST:
-                    version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.NORTH, ForgeDirection.SOUTH);
-                    break;
-                case EAST:
-                    version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.SOUTH, ForgeDirection.NORTH);
-                    break;
-                case UNKNOWN:
-                    break;
+            if(cachedTextures[patchId] == null) {
+                ForgeDirection dir = ForgeDirection.getOrientation(patchId);
+                int version = 0;
+                switch (dir) {
+                    case DOWN:
+                        version = getVersion(ForgeDirection.NORTH, ForgeDirection.SOUTH, ForgeDirection.EAST, ForgeDirection.WEST);
+                        break;
+                    case UP:
+                        version = getVersion(ForgeDirection.SOUTH, ForgeDirection.NORTH, ForgeDirection.WEST, ForgeDirection.EAST);
+                        break;
+                    case NORTH:
+                        version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.EAST, ForgeDirection.WEST);
+                        break;
+                    case SOUTH:
+                        version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.WEST, ForgeDirection.EAST);
+                        break;
+                    case WEST:
+                        version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.NORTH, ForgeDirection.SOUTH);
+                        break;
+                    case EAST:
+                        version = getVersion(ForgeDirection.DOWN, ForgeDirection.UP, ForgeDirection.SOUTH, ForgeDirection.NORTH);
+                        break;
+                    case UNKNOWN:
+                        break;
+                }
+                cachedTextures[patchId] = new int[]{ baseTex + version };
             }
-
-            return new int[]{baseTex + version};
+            return cachedTextures[patchId];
         }
     }
 }

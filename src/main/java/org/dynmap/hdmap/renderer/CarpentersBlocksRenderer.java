@@ -1,6 +1,7 @@
 package org.dynmap.hdmap.renderer;
 
 import org.dynmap.hdmap.TexturePack;
+import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.renderer.*;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CarpentersBlocksRenderer extends CustomRenderer {
-    private RenderPatch[] fullBlock;
+    protected RenderPatch[] fullBlock;
     // Patch index ordering, corresponding to BlockStep ordinal order
     private static final int patchlist[] = { 0, 1, 4, 5, 2, 3 };
 
@@ -25,12 +26,23 @@ public class CarpentersBlocksRenderer extends CustomRenderer {
 
         if(type.equals("slope")){
             initSlopeShapes(rpf);
-
         } else if(type.equals("stairs")){
             initStairsShapes(rpf);
+        } else if(type.equals("block")){
+            initBlockShapes(rpf);
         }
 
         return true;
+    }
+
+    private void initBlockShapes(RenderPatchFactory rpf) {
+        shapes[0] = fullBlock;
+        shapes[1] = CustomRenderer.getBoxSingleTexture(rpf, 0.0, 0.5, 0.0, 1.0, 0.0, 1.0,0, false);
+        shapes[2] = CustomRenderer.getBoxSingleTexture(rpf, 0.5, 1.0, 0.0, 1.0, 0.0, 1.0,0, false);
+        shapes[3] = CustomRenderer.getBoxSingleTexture(rpf, 0.0, 1.0, 0.0, 0.5, 0.0, 1.0,0, false);
+        shapes[4] = CustomRenderer.getBoxSingleTexture(rpf, 0.0, 1.0, 0.5, 1.0, 0.0, 1.0,0, false);
+        shapes[5] = CustomRenderer.getBoxSingleTexture(rpf, 0.0, 1.0, 0.0, 1.0, 0.0, 0.5,0, false);
+        shapes[6] = CustomRenderer.getBoxSingleTexture(rpf, 0.0, 1.0, 0.0, 1.0, 0.5, 1.0,0, false);
     }
 
     private void initStairsShapes(RenderPatchFactory rpf) {
@@ -94,27 +106,25 @@ public class CarpentersBlocksRenderer extends CustomRenderer {
             if(objAttrList instanceof ArrayList){
                 ArrayList attrList = (ArrayList) objAttrList;
 
-                if(attrList.size() > 0){
-                    Object first = attrList.get(0);
-                    if(first instanceof HashMap){
-                        HashMap<String, Object> attrs = (HashMap<String, Object>) first;
+                for (Object attrSet : attrList) {
+                    if (attrSet instanceof HashMap) {
+                        HashMap<String, Object> attrs = (HashMap<String, Object>) attrSet;
 
-                        Object blockId = attrs.get("id");
-                        Object blockData = attrs.get("Damage");
-
-                        if(blockId instanceof Integer && blockData instanceof Integer){
-                            int id = ((Integer)blockId).intValue();
-                            int data = ((Integer)blockData).intValue();
-
-                            map = TexturePack.HDTextureMap.getMap(id, data, 0);
-                        } else if(blockId instanceof Short && blockData instanceof Short){
-                            int id = ((Short)blockId).intValue();
-                            int data = ((Short)blockData).intValue();
-
-                            map = TexturePack.HDTextureMap.getMap(id, data, 0);
-                        } else {
-                            blockId.toString();
+                        Object strId = attrs.get("cbUniqueId");
+                        int id;
+                        if(strId instanceof String){
+                            id = GWM_Util.blockNameToId((String)strId);
                         }
+                        else {
+                            id = GWM_Util.objectToInt(attrs.get("id"), 0);
+                        }
+
+                        int data = GWM_Util.objectToInt(attrs.get("Damage"), 0);
+
+                        map = TexturePack.HDTextureMap.getMap(id, data, 0);
+
+                        if (map != null)
+                            break;
                     }
                 }
             }

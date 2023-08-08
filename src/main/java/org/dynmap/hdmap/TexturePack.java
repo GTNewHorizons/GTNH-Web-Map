@@ -107,9 +107,10 @@ public class TexturePack {
     public static final int COLORMOD_WATERTONED270 = 20; // WATERTONED + ROT270 
     public static final int COLORMOD_MULTTONED_CLEARINSIDE = 21; // MULTTONED + CLEARINSIDE
     public static final int COLORMOD_FOLIAGEMULTTONED = 22; // FOLIAGETONED + colorMult or custColorMult
+    public static final int COLORMOD_IGNORE_LIGHT = 23; // NEON / GLOW
 
     private static final int COLORMOD_MULT_FILE = 1000;
-    private static final int COLORMOD_MULT_INTERNAL = 1000000;
+    public static final int COLORMOD_MULT_INTERNAL = 1000000;
     /* Special tile index values */
     private static final int TILEINDEX_BLANK = -1;
     private static final int TILEINDEX_GRASS = 0;
@@ -441,6 +442,10 @@ public class TexturePack {
             if ((faces != null) && (faces.length > face))
                 return faces[face];
             return TILEINDEX_BLANK;
+        }
+
+        public int getColorMult(){
+            return colorMult;
         }
 
         private static void initializeTable() {
@@ -2711,9 +2716,10 @@ public class TexturePack {
         CustomColorMultiplier ccm = null;
         if (crd != null){
             CustomTextureMapper customTextureMapper = crd.getCustomTextureMapper();
-            ccm = crd.getCustomColorMultiplier();
+
             if(customTextureMapper != null) {
                 int[] layers = customTextureMapper.getTextureLayersForPatchId(patchid);
+                ccm = crd.getCustomColorMultiplier(patchid);
                 if(layers != null && layers.length > 0){
                     for(int layer = layers.length - 1; layer >= 0; layer--){
                         int customTextureId = layers[layer];
@@ -3124,6 +3130,13 @@ public class TexturePack {
         if (hasblockcoloring && (custclrmult != -1)) {
             rslt.blendColor(custclrmult | clralpha);
         }
+
+        switch(textop){
+            case COLORMOD_IGNORE_LIGHT:
+                if(rslt.getAlpha() > 128)
+                    ss.setIgnoreLight(true);
+                break;
+        }
     }
 
     private static final void makeAlphaPure(int[] argb) {
@@ -3170,7 +3183,7 @@ public class TexturePack {
         DynamicTileFile f;
         /* Find existing, if already there */
         f = addonfilesbyname.get(fname);
-        if (f != null) {
+        if (f != null && customProcessor == f.customProcessor) {
             return f.idx;
         }
         /* Add new tile file entry */
@@ -3262,7 +3275,10 @@ public class TexturePack {
         Arrays.fill(f.tile_to_dyntile,  -1);
         f.idx = addonfiles.size();
         addonfiles.add(f);
-        addonfilesbyname.put(f.filename, f);
+
+        if(customProcessor == null)
+            addonfilesbyname.put(f.filename, f);
+
         return f.idx;
     }
     /**

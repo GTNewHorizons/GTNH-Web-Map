@@ -2,6 +2,7 @@ package org.dynmap.hdmap.renderer;
 
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
+import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.modsupport.appliedenergistics2.AE2Support;
 import org.dynmap.renderer.*;
 
@@ -19,22 +20,40 @@ public class MECableRenderer extends PipeRendererBase {
 
     int meCableBusBlockId, multipartBlockId = -1000;
 
+    public static final int ME_P2P_ID = 460;
+
+
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
             return false;
 
-        smallPipes = generateSingleSize(rpf, smallPipeRadius, smallPipeRadius, 0, 0);
-        mediumPipes = generateSingleSize(rpf, mediumPipeRadius-1.0/16, mediumPipeRadius, 0, 0);
-        largePipes = generateSingleSize(rpf, largePipeRadius-1.0/16, largePipeRadius, 0, 0);
+        RenderPatch[][] tmpSmallPipes, tmpMediumPipes, tmpLargePipes;
 
-        mediumPipes[ForgeDirection.UP.flag|ForgeDirection.DOWN.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
-        mediumPipes[ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0, true);
-        mediumPipes[ForgeDirection.EAST.flag|ForgeDirection.WEST.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+        tmpSmallPipes = generateSingleSize(rpf, smallPipeRadius, smallPipeRadius, 0, 0);
+        tmpMediumPipes = generateSingleSize(rpf, mediumPipeRadius-1.0/16, mediumPipeRadius, 0, 0);
+        tmpLargePipes = generateSingleSize(rpf, largePipeRadius-1.0/16, largePipeRadius, 0, 0);
 
-        largePipes[ForgeDirection.UP.flag|ForgeDirection.DOWN.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
-        largePipes[ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0, true);
-        largePipes[ForgeDirection.EAST.flag|ForgeDirection.WEST.flag] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
+        smallPipes = new RenderPatch[67][];
+        smallPipes[64] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, 1, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, false);
+        smallPipes[65] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, 1, 0, true);
+        smallPipes[66] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0.5-smallPipeRadius, 0.5+smallPipeRadius, 0, false);
+
+        mediumPipes = new RenderPatch[67][];
+        mediumPipes[64] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+        mediumPipes[65] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, 1, 0, true);
+        mediumPipes[66] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0.5-mediumPipeRadius, 0.5+mediumPipeRadius, 0, false);
+
+        largePipes = new RenderPatch[67][];
+        largePipes[64] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
+        largePipes[65] = CustomRenderer.getBoxSingleTexture(rpf, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, 1, 0, true);
+        largePipes[66] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5-largePipeRadius, 0.5+largePipeRadius, 0.5-largePipeRadius, 0.5+largePipeRadius, 0, false);
+
+        for(int i = 0; i < 64; i++){
+            smallPipes[i] = tmpSmallPipes[i];
+            mediumPipes[i] = tmpMediumPipes[i];
+            largePipes[i] = tmpLargePipes[i];
+        }
 
         meCableBusBlockId = blkid;
 
@@ -50,16 +69,19 @@ public class MECableRenderer extends PipeRendererBase {
 
     @Override
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
-
         RenderPatchFactory rpf = mapDataCtx.getPatchFactory();
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         int version = 0;
         Object thisDef = null;
 
         HashMap<String, Object> multipartRoot = null;
+        HashMap<String, Object> thisExtra = null;
 
         if (mapDataCtx.getBlockTypeID() == meCableBusBlockId) {
             thisDef = mapDataCtx.getBlockTileEntityField("def:6");
+            Object tmpExtra = mapDataCtx.getBlockTileEntityField("extra:6");
+            if(tmpExtra != null)
+                thisExtra = (HashMap<String, Object>)tmpExtra;
         } else {
             Object parts = mapDataCtx.getBlockTileEntityField("parts");
             if(parts instanceof ArrayList){
@@ -71,6 +93,9 @@ public class MECableRenderer extends PipeRendererBase {
                         if(objId != null && "ae2_cablebus".equals((String)objId)){
                             multipartRoot = tmp;
                             thisDef = tmp.get("def:6");
+                            Object tmpExtra = tmp.get("extra:6");
+                            if(tmpExtra != null)
+                                thisExtra = (HashMap<String, Object>)tmpExtra;
                             break;
                         }
                     }
@@ -78,7 +103,7 @@ public class MECableRenderer extends PipeRendererBase {
             }
         }
 
-        short thisDamage = 0;
+        short thisDamage = 16;
 
         if (thisDef instanceof HashMap) {
             HashMap<String, Object> map = (HashMap<String, Object>) thisDef;
@@ -86,18 +111,27 @@ public class MECableRenderer extends PipeRendererBase {
             if (dmgObj instanceof Short)
                 thisDamage = ((Short) dmgObj).shortValue();
         }
-
+        boolean forceDefault = false;
         for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
 
-            Object def;
-            Object extra;
+            HashMap<String, Object> def = null;
+            HashMap<String, Object> extra = null;
 
             if(multipartRoot == null) {
-                def = mapDataCtx.getBlockTileEntityField("def:" + dir.ordinal());
-                extra = mapDataCtx.getBlockTileEntityField("extra:" + dir.ordinal());
+                Object tmpDef = mapDataCtx.getBlockTileEntityField("def:" + dir.ordinal());
+                Object tmpExtra = mapDataCtx.getBlockTileEntityField("extra:" + dir.ordinal());
+
+                if(tmpDef != null && tmpExtra != null) {
+                    def = (HashMap<String, Object>)tmpDef;
+                    extra = (HashMap<String, Object>)tmpExtra;
+                }
             } else {
-                def = multipartRoot.get("def:" + dir.ordinal());
-                extra = multipartRoot.get("extra:" + dir.ordinal());
+                Object tmpDef = multipartRoot.get("def:" + dir.ordinal());
+                Object tmpExtra = multipartRoot.get("extra:" + dir.ordinal());
+                if(tmpDef != null && tmpExtra != null) {
+                    def = (HashMap<String, Object>)tmpDef;
+                    extra = (HashMap<String, Object>)tmpExtra;
+                }
             }
 
             if (extra == null && def == null) {
@@ -105,10 +139,12 @@ public class MECableRenderer extends PipeRendererBase {
                 ForgeDirection opposite = dir.getOpposite();
                 Object otherExtra = null;
                 Object otherDef = null;
+                Object otherDirDef = null;
 
                 if (id == meCableBusBlockId) {
                     otherExtra = mapDataCtx.getBlockTileEntityFieldAt("extra:" + opposite.ordinal(), dir.offsetX, dir.offsetY, dir.offsetZ);
                     otherDef = mapDataCtx.getBlockTileEntityFieldAt("def:6", dir.offsetX, dir.offsetY, dir.offsetZ);
+                    otherDirDef = mapDataCtx.getBlockTileEntityFieldAt("def:" +opposite.ordinal(), dir.offsetX, dir.offsetY, dir.offsetZ);
                 } else if(id == multipartBlockId){
                     Object parts = mapDataCtx.getBlockTileEntityFieldAt("parts", dir.offsetX, dir.offsetY, dir.offsetZ);
                     if(parts instanceof ArrayList){
@@ -120,6 +156,7 @@ public class MECableRenderer extends PipeRendererBase {
                                 if(objId != null && "ae2_cablebus".equals((String)objId)){
                                     otherDef = tmp.get("def:6");
                                     otherExtra = tmp.get("extra:"+opposite.ordinal());
+                                    otherDirDef = tmp.get("def:"+opposite.ordinal());
                                     break;
                                 }
                             }
@@ -136,63 +173,55 @@ public class MECableRenderer extends PipeRendererBase {
                             otherDamage = ((Short) dmgObj).shortValue();
                     }
 
-                    if (otherExtra == null && ((thisDamage % 20) == 16 || (otherDamage % 20) == 16 || (otherDamage % 20) == (thisDamage % 20))) {
+                    if (otherExtra == null && ((otherDamage % 20) == (thisDamage % 20) || (thisDamage % 20) == 16 || (otherDamage % 20) == 16)){
+                        version |= dir.flag;
+
+                        if(thisDamage % 20 != otherDamage % 20 && thisDamage / 20 != otherDamage / 20)
+                            forceDefault = true;
+                    } else if(otherExtra != null && otherDirDef != null){
+                        if (otherDirDef instanceof HashMap) {
+                            HashMap hm = (HashMap) otherDirDef;
+                            if(GWM_Util.objectToInt(hm.get("Damage"),0) == ME_P2P_ID)
+                                version |= dir.flag;
+                        }
+
+                    }
+
+                } else {
+                    AE2Support.ConnectableBlockData connectableBlockData = AE2Support.getConnectableData(id);
+                    if(connectableBlockData != null && connectableBlockData.canConnectFrom(mapDataCtx, dir.getOpposite())){
                         version |= dir.flag;
                     }
                 }
             } else {
-                double max = 0.85;
-                double min = 0.15;
-
-                double pipePositive = 0.5 + smallPipeRadius;
-                double pipeNegative = 0.5 - smallPipeRadius;
-
-
-                switch (dir) {
-                    case DOWN:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, min, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-
-                        CustomRenderer.addBox(rpf, list, min, max, 0, min, min, max, new int[]{1, 2, 3, 4, 5, 6});
-                        break;
-                    case UP:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipePositive, max, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-
-                        CustomRenderer.addBox(rpf, list, min, max, max, 1, min, max, new int[]{2, 1, 3, 4, 5, 6});
-                        break;
-                    case NORTH:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, min, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-
-                        CustomRenderer.addBox(rpf, list, min, max, min, max, 0, min, new int[]{3, 4, 5, 6, 1, 2});
-                        break;
-                    case SOUTH:
-                        CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, pipePositive, max, new int[]{0, 0, 0, 0, 0, 0});
-                        CustomRenderer.addBox(rpf, list, min, max, min, max, max, 1, new int[]{3, 4, 5, 6, 2, 1});
-                        break;
-                    case WEST:
-                        CustomRenderer.addBox(rpf, list, min, pipePositive, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-                        CustomRenderer.addBox(rpf, list, 0, min, min, max, min, max, new int[]{3, 4, 1, 2, 5, 6});
-                        break;
-                    case EAST:
-                        CustomRenderer.addBox(rpf, list, pipePositive, max, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
-                        CustomRenderer.addBox(rpf, list, max, 1, min, max, min, max, new int[]{3, 4, 2, 1, 5, 6});
-                        break;
-                    case UNKNOWN:
-                        break;
-                }
-
+                addTerminalOrBusOrWhatever(rpf, list, dir, def, extra);
+                forceDefault = true;
             }
         }
         int textureVersion = 0;
 
-        if(version == (ForgeDirection.UP.flag|ForgeDirection.DOWN.flag)) {
-            textureVersion = 2;
-        } else if(version == (ForgeDirection.NORTH.flag|ForgeDirection.SOUTH.flag) ) {
-            textureVersion = 3;
-        } else if(version == (ForgeDirection.EAST.flag|ForgeDirection.WEST.flag)) {
-            textureVersion = 3;
+
+        if(thisDamage / 20 != 0 && !forceDefault) {
+            if (version == (ForgeDirection.UP.flag | ForgeDirection.DOWN.flag)) {
+                textureVersion = 2;
+                version = 64;
+            } else if (version == (ForgeDirection.NORTH.flag | ForgeDirection.SOUTH.flag)) {
+                textureVersion = 3;
+                version = 65;
+            } else if (version == (ForgeDirection.EAST.flag | ForgeDirection.WEST.flag)) {
+                textureVersion = 3;
+                version = 66;
+            }
+        }
+        if(map == null){
+             map = TexturePack.HDTextureMap.getMap(mapDataCtx.getBlockTypeID(), 0, 0);
         }
 
-        TextureSelector texSel = new TextureSelector(thisDamage, textureVersion);
+        boolean powered = false;
+        if(thisExtra != null && GWM_Util.objectToInt(thisExtra.get("usedChannels"),0) > 0)
+            powered = true;
+
+        TextureSelector texSel = new TextureSelector(thisDamage, textureVersion, powered);
 
         for(ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS){
             Object facade;
@@ -251,27 +280,75 @@ public class MECableRenderer extends PipeRendererBase {
             }
         }
 
+        RenderPatch[] setToUse = smallPipes[version];
+        switch (thisDamage / 20) {
+            case 0:
+                setToUse = smallPipes[version];
+                break;
+            case 1:
+            case 2:
+                setToUse = mediumPipes[version];
+                break;
+            case 3:
+            case 27:
+            case 28:
+                setToUse = largePipes[version];
+                break;
+        }
         if (!list.isEmpty()) {
-            for (RenderPatch rp : smallPipes[version]) {
+            for (RenderPatch rp : setToUse) {
                 list.add(rp);
             }
             return new CustomRendererData(list.toArray(new RenderPatch[list.size()]), null, texSel);
         }
 
-        switch (thisDamage / 20) {
-            case 0:
-                return new CustomRendererData(smallPipes[version], null, texSel);
-            case 1:
-                return new CustomRendererData(mediumPipes[version], null, texSel);
-            case 2:
-            case 3:
-            case 27:
-            case 28:
-                return new CustomRendererData(largePipes[version], null, texSel);
-        }
-
-        return new CustomRendererData(smallPipes[version], null, texSel);
+        return new CustomRendererData(setToUse, null, texSel);
     }
+
+    private void addTerminalOrBusOrWhatever(RenderPatchFactory rpf, ArrayList<RenderPatch> list, ForgeDirection dir, HashMap<String, Object> def, HashMap<String, Object> extra) {
+        double max = 14.0/16.0;
+        double min = 2.0/16.0;
+
+        double pipePositive = 0.5 + smallPipeRadius;
+        double pipeNegative = 0.5 - smallPipeRadius;
+
+        // Usage "id" and "Damage" of def to select model and/or terminal type
+
+        switch (dir) {
+            case DOWN:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, min, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+
+                CustomRenderer.addBox(rpf, list, min, max, 0, min, min, max, new int[]{1, 2, 3, 4, 5, 6});
+                break;
+            case UP:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipePositive, max, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+
+                CustomRenderer.addBox(rpf, list, min, max, max, 1, min, max, new int[]{2, 1, 3, 4, 5, 6});
+                break;
+            case NORTH:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, min, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+
+                CustomRenderer.addBox(rpf, list, min, max, min, max, 0, min, new int[]{3, 4, 5, 6, 1, 2});
+                break;
+            case SOUTH:
+                CustomRenderer.addBox(rpf, list, pipeNegative, pipePositive, pipeNegative, pipePositive, pipePositive, max, new int[]{0, 0, 0, 0, 0, 0});
+                CustomRenderer.addBox(rpf, list, min, max, min, max, max, 1, new int[]{3, 4, 5, 6, 2, 1});
+                break;
+            case WEST:
+                CustomRenderer.addBox(rpf, list, min, pipePositive, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+                CustomRenderer.addBox(rpf, list, 0, min, min, max, min, max, new int[]{3, 4, 1, 2, 5, 6});
+                break;
+            case EAST:
+                CustomRenderer.addBox(rpf, list, pipePositive, max, pipeNegative, pipePositive, pipeNegative, pipePositive, new int[]{0, 0, 0, 0, 0, 0});
+                CustomRenderer.addBox(rpf, list, max, 1, min, max, min, max, new int[]{3, 4, 2, 1, 5, 6});
+                break;
+            case UNKNOWN:
+                break;
+
+        }
+    }
+
+
 
 
     static String[] nbtFieldsNeeded = {"def:0", "def:1", "def:2", "def:3", "def:4", "def:5", "def:6",
@@ -282,15 +359,19 @@ public class MECableRenderer extends PipeRendererBase {
         return nbtFieldsNeeded;
     }
 
+    static TexturePack.HDTextureMap map;
     class TextureSelector implements CustomTextureMapper {
 
         private final short thisDamage;
         int textureId =0;
+        private final boolean powered;
 
-        public TextureSelector(short thisDamage, int textureId) {
+
+        public TextureSelector(short thisDamage, int textureId, boolean powered) {
 
             this.thisDamage = thisDamage;
             this.textureId = textureId;
+            this.powered = powered;
         }
 
         int[] facadeTextures;
@@ -305,7 +386,14 @@ public class MECableRenderer extends PipeRendererBase {
         public int[] getTextureLayersForPatchId(int patchId) {
             if(patchId >= 10000 && patchId <= 10005){
                 return new int[]{facadeTextures[patchId-10000]};
-            }else  if (patchId > 0)
+            } else if (patchId == 1){
+                if(powered)
+                    return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + thisDamage + TexturePack.COLORMOD_MULT_INTERNAL * TexturePack.COLORMOD_IGNORE_LIGHT};
+
+                return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + thisDamage};
+
+            }
+            else  if (patchId > 0)
                 return null;
 
             if (thisDamage >= 0 && AE2Support.cableTypes[thisDamage] != null) {

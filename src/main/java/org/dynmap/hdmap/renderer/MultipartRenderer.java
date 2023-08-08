@@ -241,21 +241,6 @@ public class MultipartRenderer extends CustomRenderer {
         return list.toArray(new RenderPatch[fullBlockPatchList.length]);
     }
 
-    RenderPatch[] combineMultiple(RenderPatch[]... list){
-        int count = 0;
-        for(RenderPatch[] rp : list){
-            count += rp.length;
-        }
-        RenderPatch[] ret = new RenderPatch[count];
-
-        int j = 0;
-        for(RenderPatch[] rp : list){
-            for(int i = 0; i < rp.length; i++)
-                ret[j++] = rp[i];
-        }
-        return ret;
-    }
-
     @Override
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
         Object rawParts = mapDataCtx.getBlockTileEntityField("parts");
@@ -337,6 +322,7 @@ public class MultipartRenderer extends CustomRenderer {
         List<RenderPatch> patches = new ArrayList<>();
         int patchNum = 0;
         HashMap<Integer, Integer> patchToTex = new HashMap<>();
+        HashMap<Integer, CustomColorMultiplier> patchToColorMult = new HashMap<>();
 
         public void addSimpleShape(RenderPatchFactory rpf, RenderPatch[] patches, String block){
             String blockName = block;
@@ -355,11 +341,19 @@ public class MultipartRenderer extends CustomRenderer {
                 }
             }
 
-            int blockId = GWM_Util.blockNameToId(blockName);
+            int blockId = GWM_Util.blockNameToId(blockName, true);
+
             TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
 
             for(RenderPatch rp : patches){
-                patchToTex.put(patchNum, map.getIndexForFace(rp.getTextureIndex()));
+                int textureId = map.getIndexForFace(rp.getTextureIndex());
+                patchToTex.put(patchNum, textureId);
+
+                if(textureId / TexturePack.COLORMOD_MULT_INTERNAL == TexturePack.COLORMOD_MULTTONED){
+                    int color = map.getColorMult();
+                    patchToColorMult.put(patchNum, new MyColorMult(color));
+                }
+
                 this.patches.add(rpf.getRotatedPatch(rp, 0,0,0, patchNum++));
             }
         }
@@ -377,6 +371,11 @@ public class MultipartRenderer extends CustomRenderer {
         @Override
         public CustomTextureMapper getCustomTextureMapper() {
             return this;
+        }
+
+        @Override
+        public CustomColorMultiplier getCustomColorMultiplier(int patchId) {
+            return patchToColorMult.get(patchId);
         }
 
         public void addComplexShape(RenderPatchFactory rpf, CustomRendererData crd, int blockId, int blockMeta) {
@@ -405,4 +404,15 @@ public class MultipartRenderer extends CustomRenderer {
             }
         }
     }
+    class MyColorMult extends CustomColorMultiplier {
+        public MyColorMult(int c){
+            color = c;
+        }
+        int color;
+        @Override
+        public int getColorMultiplier(MapDataContext mapDataCtx) {
+            return color;
+        }
+    }
+
 }

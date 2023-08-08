@@ -15,10 +15,12 @@ texture:id=appliedenergistics2/BlockCharger,filename=assets/appliedenergistics2/
 texture:id=appliedenergistics2/BlockChargerSide,filename=assets/appliedenergistics2/textures/blocks/BlockChargerSide.png
 texture:id=appliedenergistics2/BlockChest,filename=assets/appliedenergistics2/textures/blocks/BlockChest.png
 texture:id=appliedenergistics2/BlockChestBottom,filename=assets/appliedenergistics2/textures/blocks/BlockChestBottom.png
-texture:id=appliedenergistics2/BlockChestFront,filename=assets/appliedenergistics2/textures/blocks/BlockChestFront.png
+texture:id=appliedenergistics2/BlockChestFront,filename=assets/appliedenergistics2/textures/blocks/BlockChestFront.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
 texture:id=appliedenergistics2/BlockChestSide,filename=assets/appliedenergistics2/textures/blocks/BlockChestSide.png
 texture:id=appliedenergistics2/BlockCondenser,filename=assets/appliedenergistics2/textures/blocks/BlockCondenser.png
 texture:id=appliedenergistics2/BlockController,filename=assets/appliedenergistics2/textures/blocks/BlockController.png
+texture:id=appliedenergistics2/BlockControllerLights,filename=assets/appliedenergistics2/textures/blocks/BlockControllerLights.png,ycount=12
+texture:id=appliedenergistics2/BlockControllerConflict,filename=assets/appliedenergistics2/textures/blocks/BlockControllerConflict.png
 texture:id=appliedenergistics2/BlockCraftingAccelerator,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingAccelerator.png
 texture:id=appliedenergistics2/BlockCraftingAccelerator1024x,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingAccelerator1024x.png
 texture:id=appliedenergistics2/BlockCraftingAccelerator1024xFit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingAccelerator1024xFit.png
@@ -65,7 +67,7 @@ texture:id=appliedenergistics2/BlockDenseEnergyCell6,filename=assets/appliedener
 texture:id=appliedenergistics2/BlockDenseEnergyCell7,filename=assets/appliedenergistics2/textures/blocks/BlockDenseEnergyCell7.png
 texture:id=appliedenergistics2/BlockDrive,filename=assets/appliedenergistics2/textures/blocks/BlockDrive.png
 texture:id=appliedenergistics2/BlockDriveBottom,filename=assets/appliedenergistics2/textures/blocks/BlockDriveBottom.png
-texture:id=appliedenergistics2/BlockDriveFront,filename=assets/appliedenergistics2/textures/blocks/BlockDriveFront.png
+texture:id=appliedenergistics2/BlockDriveFront,filename=assets/appliedenergistics2/textures/blocks/BlockDriveFront.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
 texture:id=appliedenergistics2/BlockDriveSide,filename=assets/appliedenergistics2/textures/blocks/BlockDriveSide.png
 texture:id=appliedenergistics2/BlockEnergyAcceptor,filename=assets/appliedenergistics2/textures/blocks/BlockEnergyAcceptor.png
 texture:id=appliedenergistics2/BlockEnergyCell,filename=assets/appliedenergistics2/textures/blocks/BlockEnergyCell.png
@@ -117,7 +119,9 @@ texture:id=appliedenergistics2/OreQuartz,filename=assets/appliedenergistics2/tex
 texture:id=appliedenergistics2/OreQuartzCharged,filename=assets/appliedenergistics2/textures/blocks/OreQuartzCharged.png
 texture:id=appliedenergistics2/PartMonitorBack,filename=assets/appliedenergistics2/textures/blocks/PartMonitorBack.png
 texture:id=appliedenergistics2/PartMonitorSides,filename=assets/appliedenergistics2/textures/blocks/PartMonitorSides.png
+texture:id=appliedenergistics2/PartMonitor_Bright,filename=assets/appliedenergistics2/textures/blocks/PartMonitor_Bright.png,processor=org.dynmap.hdmap.textureprocessor.AE2MonitorProcessor
 texture:id=appliedenergistics2/PartTerminal_Bright,filename=assets/appliedenergistics2/textures/blocks/PartTerminal_Bright.png
+texture:id=appliedenergistics2/White,filename=assets/appliedenergistics2/textures/blocks/White.png
 
 
 texture:id=cable00,filename=assets/appliedenergistics2/textures/blocks/MECable_White.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
@@ -156,23 +160,23 @@ texture:id=cable34,filename=assets/appliedenergistics2/textures/blocks/MECovered
 texture:id=cable35,filename=assets/appliedenergistics2/textures/blocks/MECovered_Black.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
 texture:id=cable36,filename=assets/appliedenergistics2/textures/blocks/ItemPart.CableCovered.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
 
-texture:id=cable40,filename=assets/appliedenergistics2/textures/blocks/MESmart_White.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable41,filename=assets/appliedenergistics2/textures/blocks/MESmart_Orange.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable42,filename=assets/appliedenergistics2/textures/blocks/MESmart_Magenta.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable43,filename=assets/appliedenergistics2/textures/blocks/MESmart_LightBlue.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable44,filename=assets/appliedenergistics2/textures/blocks/MESmart_Yellow.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable45,filename=assets/appliedenergistics2/textures/blocks/MESmart_Lime.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable46,filename=assets/appliedenergistics2/textures/blocks/MESmart_Pink.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable47,filename=assets/appliedenergistics2/textures/blocks/MESmart_Gray.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable48,filename=assets/appliedenergistics2/textures/blocks/MESmart_LightGrey.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable49,filename=assets/appliedenergistics2/textures/blocks/MESmart_Cyan.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable50,filename=assets/appliedenergistics2/textures/blocks/MESmart_Purple.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable51,filename=assets/appliedenergistics2/textures/blocks/MESmart_Blue.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable52,filename=assets/appliedenergistics2/textures/blocks/MESmart_Brown.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable53,filename=assets/appliedenergistics2/textures/blocks/MESmart_Green.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable54,filename=assets/appliedenergistics2/textures/blocks/MESmart_Red.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable55,filename=assets/appliedenergistics2/textures/blocks/MESmart_Black.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
-texture:id=cable56,filename=assets/appliedenergistics2/textures/blocks/ItemPart.CableSmart.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
+texture:id=cable40,filename=assets/appliedenergistics2/textures/blocks/MESmart_White.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable41,filename=assets/appliedenergistics2/textures/blocks/MESmart_Orange.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable42,filename=assets/appliedenergistics2/textures/blocks/MESmart_Magenta.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable43,filename=assets/appliedenergistics2/textures/blocks/MESmart_LightBlue.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable44,filename=assets/appliedenergistics2/textures/blocks/MESmart_Yellow.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable45,filename=assets/appliedenergistics2/textures/blocks/MESmart_Lime.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable46,filename=assets/appliedenergistics2/textures/blocks/MESmart_Pink.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable47,filename=assets/appliedenergistics2/textures/blocks/MESmart_Gray.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable48,filename=assets/appliedenergistics2/textures/blocks/MESmart_LightGrey.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable49,filename=assets/appliedenergistics2/textures/blocks/MESmart_Cyan.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable50,filename=assets/appliedenergistics2/textures/blocks/MESmart_Purple.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable51,filename=assets/appliedenergistics2/textures/blocks/MESmart_Blue.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable52,filename=assets/appliedenergistics2/textures/blocks/MESmart_Brown.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable53,filename=assets/appliedenergistics2/textures/blocks/MESmart_Green.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable54,filename=assets/appliedenergistics2/textures/blocks/MESmart_Red.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable55,filename=assets/appliedenergistics2/textures/blocks/MESmart_Black.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
+texture:id=cable56,filename=assets/appliedenergistics2/textures/blocks/ItemPart.CableSmart.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor2
 
 texture:id=cable60,filename=assets/appliedenergistics2/textures/blocks/MEDenseCovered_White.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
 texture:id=cable61,filename=assets/appliedenergistics2/textures/blocks/MEDenseCovered_Orange.png,processor=org.dynmap.hdmap.textureprocessor.AE2CableTextureProcessor
@@ -237,7 +241,7 @@ texture:id=gwmcustom/ae2cable,filename=assets/gwmcustom/ae2cable.png,xcount=2
 specialModSupportLoader:org.dynmap.modsupport.loaders.AppliedEnergisticsModSupportLoader,name=ae2
 
 # %tile.BlockCableBus:* (tile.BlockCableBus), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockCableBus
-block:id=%tile.BlockCableBus,data=*,stdrot=true,colorMult=ff33cc,transparency=SEMITRANSPARENT,patch0=0:cable16,patch1=1:gwmcustom/ae2cable,patch2=0:appliedenergistics2/PartMonitorBack,patch3-6=0:appliedenergistics2/PartMonitorSides
+block:id=%tile.BlockCableBus,data=*,stdrot=true,colorMult=ff33cc,transparency=SEMITRANSPARENT,patch0=0:cable16,patch1=0:appliedenergistics2/PartMonitor_Bright,patch2=0:appliedenergistics2/PartMonitorBack,patch3-6=0:appliedenergistics2/PartMonitorSides
 
 # %tile.OreQuartz:* (tile.OreQuartz), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartz
 block:id=%tile.OreQuartz,data=*,stdrot=true,face0-5=0:appliedenergistics2/OreQuartz
@@ -311,13 +315,15 @@ block:id=%tile.BlockSpatialPylon,data=*,stdrot=true,face0-5=0:appliedenergistics
 block:id=%tile.BlockSpatialIOPort,data=*,stdrot=true,face0=0:appliedenergistics2/BlockSpatialIOPortBottom,face1=0:appliedenergistics2/BlockSpatialIOPort,face2-5=0:appliedenergistics2/BlockSpatialIOPortSide
 
 # %tile.BlockController:* (tile.BlockController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockController
-block:id=%tile.BlockController,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockController
+block:id=%tile.BlockController,data=0,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockController
+block:id=%tile.BlockController,data=1,stdrot=true,face0-5=23003:appliedenergistics2/BlockControllerLights,patch6=0:appliedenergistics2/BlockController,layer0-5=6
+block:id=%tile.BlockController,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockControllerConflict,patch6=0:appliedenergistics2/BlockController,layer0-5=6
 
 # %tile.BlockDrive:* (tile.BlockDrive), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.storage.BlockDrive
 block:id=%tile.BlockDrive,data=*,stdrot=true,face0=0:appliedenergistics2/BlockDriveBottom,face1=0:appliedenergistics2/BlockDrive,face2=0:appliedenergistics2/BlockDriveSide,face3=0:appliedenergistics2/BlockDriveFront,face4-5=0:appliedenergistics2/BlockDriveSide
 
 # %tile.BlockChest:* (tile.BlockChest), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.storage.BlockChest
-block:id=%tile.BlockChest,data=*,stdrot=true,face0=0:appliedenergistics2/BlockChestBottom,face1=0:appliedenergistics2/BlockChest,face2=0:appliedenergistics2/BlockChestSide,face3=0:appliedenergistics2/BlockChestFront,face4-5=0:appliedenergistics2/BlockChestSide
+block:id=%tile.BlockChest,data=*,stdrot=true,colorMult=D4B9E9,face0=0:appliedenergistics2/BlockChestBottom,face1=0:appliedenergistics2/BlockChest,face2=0:appliedenergistics2/BlockChestSide,face3=0:appliedenergistics2/BlockChestFront,face4-5=0:appliedenergistics2/BlockChestSide,patch6=17000:appliedenergistics2/White,layer0-5=6
 
 # %tile.BlockInterface:* (tile.BlockInterface), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockInterface
 block:id=%tile.BlockInterface,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockInterface
@@ -372,10 +378,13 @@ block:id=%tile.BlockCraftingUnit,data=2,stdrot=true,face0-5=0:appliedenergistics
 block:id=%tile.BlockCraftingUnit,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator16x
 block:id=%tile.BlockCraftingUnit,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingUnit
 block:id=%tile.BlockCraftingUnit,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingUnitFit
-block:id=%tile.BlockCraftingUnit,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAcceleratorFit
-block:id=%tile.BlockCraftingUnit,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4xFit
-block:id=%tile.BlockCraftingUnit,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator16xFit
-block:id=%tile.BlockCraftingUnit,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingUnit
+block:id=%tile.BlockCraftingUnit,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAcceleratorFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingUnit,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingUnit,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator16xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingUnit,data=12,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingUnitFit
+block:id=%tile.BlockCraftingUnit,data=13,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingAcceleratorFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingUnit,data=14,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingAccelerator4xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingUnit,data=15,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingAccelerator16xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
 
 # %tile.BlockAdvancedCraftingUnit:* (tile.BlockAdvancedCraftingUnit), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingUnit
 block:id=%tile.BlockAdvancedCraftingUnit,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
@@ -383,11 +392,11 @@ block:id=%tile.BlockAdvancedCraftingUnit,data=1,stdrot=true,face0-5=0:appliedene
 block:id=%tile.BlockAdvancedCraftingUnit,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator1024x
 block:id=%tile.BlockAdvancedCraftingUnit,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4096x
 block:id=%tile.BlockAdvancedCraftingUnit,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
-block:id=%tile.BlockAdvancedCraftingUnit,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator256xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator1024xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4096xFit
-block:id=%tile.BlockAdvancedCraftingUnit,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64x
+block:id=%tile.BlockAdvancedCraftingUnit,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator64xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingUnit,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator256xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingUnit,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator1024xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingUnit,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingAccelerator4096xFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingUnit,data=12,data=13,data=14,data=15,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingAccelerator64x,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
 
 # %tile.BlockCraftingStorage:* (tile.BlockCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingStorage
 block:id=%tile.BlockCraftingStorage,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage
@@ -398,14 +407,14 @@ block:id=%tile.BlockCraftingStorage,data=4,stdrot=true,face0-5=0:appliedenergist
 block:id=%tile.BlockCraftingStorage,data=5,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4k
 block:id=%tile.BlockCraftingStorage,data=6,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16k
 block:id=%tile.BlockCraftingStorage,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage64k
-block:id=%tile.BlockCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageFit
-block:id=%tile.BlockCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4kFit
-block:id=%tile.BlockCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16kFit
-block:id=%tile.BlockCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage64kFit
-block:id=%tile.BlockCraftingStorage,data=12,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageFit
-block:id=%tile.BlockCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4kFit
-block:id=%tile.BlockCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16kFit
-block:id=%tile.BlockCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage64kFit
+block:id=%tile.BlockCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage64kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingStorage,data=12,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorageFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingStorage,data=13,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorage4kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingStorage,data=14,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorage16kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockCraftingStorage,data=15,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorage64kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
 
 # %tile.BlockAdvancedCraftingStorage:* (tile.BlockAdvancedCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockAdvancedCraftingStorage
 block:id=%tile.BlockAdvancedCraftingStorage,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256k
@@ -416,14 +425,14 @@ block:id=%tile.BlockAdvancedCraftingStorage,data=4,stdrot=true,face0-5=0:applied
 block:id=%tile.BlockAdvancedCraftingStorage,data=5,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024k
 block:id=%tile.BlockAdvancedCraftingStorage,data=6,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096k
 block:id=%tile.BlockAdvancedCraftingStorage,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384k
-block:id=%tile.BlockAdvancedCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=12,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit
-block:id=%tile.BlockAdvancedCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit
+block:id=%tile.BlockAdvancedCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage256kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage1024kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingStorage,data=12,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorage256kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingStorage,data=13,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorage1024kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingStorage,data=14,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorage4096kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
+block:id=%tile.BlockAdvancedCraftingStorage,data=15,stdrot=true,face0-5=23000:appliedenergistics2/BlockCraftingStorage16384kFit,patch6=0:appliedenergistics2/BlockCraftingUnitFit,layer0-5=6
 
 # %tile.BlockCraftingMonitor:* (tile.BlockCraftingMonitor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingMonitor
 block:id=%tile.BlockCraftingMonitor,data=0,stdrot=true,face0-2=0:appliedenergistics2/BlockCraftingUnit,face3=0:appliedenergistics2/BlockCraftingMonitor,face4-5=0:appliedenergistics2/BlockCraftingUnit
