@@ -153,7 +153,7 @@ public class GregTechSupport {
     public void processMeHatch(HashMap<String, String> data) {
         if(meConnectables == null){
             meConnectables = new boolean[65536];
-            AE2Support.addConnectableBlock(GWM_Util.blockNameToId("gregtech:gt.blockmachines"), new GregTechMTEConnectableBlockData(meConnectables));
+            AE2Support.addConnectableBlock(GWM_Util.blockNameToId("gregtech:gt.blockmachines"), new GregTechMTEConnectableBlockData());
         }
 
         int id = GWM_Util.objectToInt(data.get("id"),-1);
@@ -294,10 +294,10 @@ public class GregTechSupport {
     }
 
     private class GregTechMTEConnectableBlockData extends AE2Support.ConnectableBlockData {
-        private final boolean[] meConnectables1;
 
-        public GregTechMTEConnectableBlockData(boolean[] meConnectables) {
-            meConnectables1 = meConnectables;
+
+        public GregTechMTEConnectableBlockData() {
+
         }
 
         @Override
