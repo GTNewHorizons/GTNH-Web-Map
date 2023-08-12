@@ -4,7 +4,7 @@ import org.eclipse.jetty.util.log.Logger;
 
 public class JettyNullLogger implements Logger {
     public String getName() {
-        return "Dynmap";
+        return "GTNH-Web-Map";
     }
 
     public void warn(String s, Object... objects) {
