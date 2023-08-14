@@ -280,22 +280,7 @@ block:id=%stair,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=1:railc
 block:id=%stair,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=1:railcraft/brick.infernal
 
 # %slab:* (slab), render=mods.railcraft.client.render.RenderSlab(STANDARD), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.slab.BlockRailcraftSlab
-block:id=%slab,data=0,stdrot=true,face0-5=12000:railcraft/brick.sandy
-block:id=%slab,data=1,stdrot=true,face0-5=12000:railcraft/brick.infernal
-block:id=%slab,data=2,stdrot=true,face0-5=12000:railcraft/concrete
-block:id=%slab,data=3,stdrot=true,face0-5=12000:minecraft/snow
-block:id=%slab,data=4,stdrot=true,face0-5=12000:minecraft/ice
-block:id=%slab,data=5,stdrot=true,face0-5=12000:minecraft/ice_packed
-block:id=%slab,data=6,stdrot=true,face0-5=12000:minecraft/iron_block
-block:id=%slab,data=7,stdrot=true,face0-5=12000:minecraft/gold_block
-block:id=%slab,data=8,stdrot=true,face0-5=12000:minecraft/diamond_block
-block:id=%slab,data=9,stdrot=true,face0-5=12000:railcraft/brick.frostbound
-block:id=%slab,data=10,stdrot=true,face0-5=12000:railcraft/brick.quarried
-block:id=%slab,data=11,stdrot=true,face0-5=12000:railcraft/brick.bleachedbone
-block:id=%slab,data=12,stdrot=true,face0-5=12000:railcraft/brick.bloodstained
-block:id=%slab,data=13,stdrot=true,face0-5=12000:railcraft/brick.abyssal
-block:id=%slab,data=14,stdrot=true,face0-5=12001:railcraft/brick.sandy
-block:id=%slab,data=15,stdrot=true,face0-5=12001:railcraft/brick.infernal
+block:id=%slab,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:minecraft/snow,patch1=0:minecraft/ice,patch2=0:minecraft/ice_packed,patch3=0:minecraft/iron_block,patch4=0:railcraft/cube.steel,patch5=0:railcraft/cube.copper,patch6=0:railcraft/cube.tin,patch7=0:railcraft/cube.lead,patch8=0:minecraft/gold_block,patch9=0:minecraft/diamond_block,patch10=0:minecraft/obsidian,patch11=0:railcraft/concrete,patch12=0:railcraft/post.wood,patch13=0:railcraft/brick.abyssal,patch14=1:railcraft/brick.abyssal,patch15=2:railcraft/brick.abyssal,patch16=5:railcraft/brick.abyssal,patch17=0:railcraft/brick.infernal,patch18=1:railcraft/brick.infernal,patch19=2:railcraft/brick.infernal,patch20=5:railcraft/brick.infernal,patch21=0:railcraft/brick.bloodstained,patch22=1:railcraft/brick.bloodstained,patch23=2:railcraft/brick.bloodstained,patch24=5:railcraft/brick.bloodstained,patch25=0:railcraft/brick.sandy,patch26=1:railcraft/brick.sandy,patch27=2:railcraft/brick.sandy,patch28=5:railcraft/brick.sandy,patch29=0:railcraft/brick.bleachedbone,patch30=1:railcraft/brick.bleachedbone,patch31=2:railcraft/brick.bleachedbone,patch32=5:railcraft/brick.bleachedbone,patch33=0:railcraft/brick.quarried,patch34=1:railcraft/brick.quarried,patch35=2:railcraft/brick.quarried,patch36=5:railcraft/brick.quarried,patch37=0:railcraft/brick.frostbound,patch38=1:railcraft/brick.frostbound,patch39=2:railcraft/brick.frostbound,patch40=5:railcraft/brick.frostbound,patch41=1:railcraft/brick.nether,patch42=2:railcraft/brick.nether,patch43=5:railcraft/brick.nether
 
 # %lantern.stone:* (lantern.stone), render=mods.railcraft.client.render.RenderBlockLamp(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.lantern.BlockLantern
 block:id=%lantern.stone,data=0,stdrot=true,face0-5=2:railcraft/brick.abyssal
