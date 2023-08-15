@@ -58,12 +58,12 @@ public class SimpleMultiBoxRenderer extends CustomRenderer {
             }
             int[] patchIds = new int[6];
             if(parts[4].startsWith("b")){
-                int off = Integer.valueOf(parts[4].substring(1));
+                int off = Integer.parseInt(parts[4].substring(1));
                 for(int j =0; j < 6; j++) {
                     patchIds[j] = patchlist[j] + off;
                 }
             } else {
-                int fixed = Integer.valueOf(parts[4]);
+                int fixed = Integer.parseInt(parts[4]);
                 for(int j =0; j < 6; j++) {
                     patchIds[j] = fixed;
                 }

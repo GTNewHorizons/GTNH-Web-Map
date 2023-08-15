@@ -664,3 +664,7 @@ customblock:id=%GlassBlock,class=org.dynmap.hdmap.renderer.TinkersClearGlassBloc
 
 # This is wrong, but it was already wrong, so this is better
 customblock:id=%GlassPane,class=org.dynmap.hdmap.renderer.TinkersClearGlassBlockRenderer,data=*
+
+customblock:id=%ToolForgeBlock,id=%CraftingStation,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=*,box0=i:0-16:12-16:0-16:b0,box1=i:0-4:0-12:0-4:b0,box2=i:0-4:0-12:12-16:b0,box3=i:12-16:0-12:0-4:b0,box4=i:12-16:0-12:12-16:b0
+customblock:id=%ToolStationBlock,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=0,data=1,data=2,data=3,data=4,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,box0=i:0-16:12-16:0-16:b0,box1=i:0-4:0-12:0-4:b0,box2=i:0-4:0-12:12-16:b0,box3=i:12-16:0-12:0-4:b0,box4=i:12-16:0-12:12-16:b0
+boxblock:id=%ToolStationBlock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=5
