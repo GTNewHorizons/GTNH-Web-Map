@@ -30,7 +30,9 @@ public abstract class CustomRenderer {
 
         return list.toArray(new RenderPatch[patchTextureIds.length]);
     }
-
+    protected static RenderPatch[] getBoxSingleTextureInt(RenderPatchFactory rpf, int xmin, int xmax, int ymin, int ymax, int zmin, int zmax, int tex, boolean rotateTopAndBottom) {
+        return getBoxSingleTexture(rpf, xmin/16.0, xmax/16.0, ymin/16.0,ymax/16.0,zmin/16.0,zmax/16.0,tex, rotateTopAndBottom);
+    }
     /**
      * Initialize custom renderer
      *
@@ -193,6 +195,9 @@ public abstract class CustomRenderer {
         /* Add maxZ side */
         if(patchids[5] >= 0)
             addIfNonNull(list, rpf.getPatch(0, 0, zmax, 1, 0, zmax, 0, 1, zmax, xmin, xmax, ymin, ymax, SideVisible.TOP, patchids[5]));
+    }
+    public static void addBoxInt(RenderPatchFactory rpf, List<RenderPatch> list, int xmin, int xmax, int ymin, int ymax, int zmin, int zmax, int[] patchids){
+        addBox(rpf, list, xmin/16.0, xmax/16.0, ymin/16.0,ymax/16.0, zmin/16.0,zmax/16.0, patchids);
     }
     /**
      * Get patch corresponding to side N (per MC side index: 0=bottom (y-), 1=top (y+), 2=z-, 3=z+, 4=x-, 5=x+)
