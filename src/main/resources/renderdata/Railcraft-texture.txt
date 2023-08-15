@@ -37,15 +37,15 @@ texture:id=minecraft/stonebrick_carved,filename=assets/minecraft/textures/blocks
 texture:id=minecraft/stonebrick_cracked,filename=assets/minecraft/textures/blocks/stonebrick_cracked.png
 texture:id=minecraft/stonebrick_mossy,filename=assets/minecraft/textures/blocks/stonebrick_mossy.png
 texture:id=railcraft/admin.steam.producer,filename=assets/railcraft/textures/blocks/admin.steam.producer.png
-texture:id=railcraft/anchor.admin,filename=assets/railcraft/textures/blocks/anchor.admin.png,xcount=2,ycount=1
-texture:id=railcraft/anchor.passive,filename=assets/railcraft/textures/blocks/anchor.passive.png,xcount=2,ycount=1
-texture:id=railcraft/anchor.personal,filename=assets/railcraft/textures/blocks/anchor.personal.png,xcount=2,ycount=1
+texture:id=railcraft/anchor.admin,filename=assets/railcraft/textures/blocks/anchor.admin.png,xcount=3,ycount=1
+texture:id=railcraft/anchor.passive,filename=assets/railcraft/textures/blocks/anchor.passive.png,xcount=3,ycount=1
+texture:id=railcraft/anchor.personal,filename=assets/railcraft/textures/blocks/anchor.personal.png,xcount=3,ycount=1
 texture:id=railcraft/anchor.sentinel,filename=assets/railcraft/textures/blocks/anchor.sentinel.png,xcount=2,ycount=1
-texture:id=railcraft/anchor.world,filename=assets/railcraft/textures/blocks/anchor.world.png,xcount=2,ycount=1
+texture:id=railcraft/anchor.world,filename=assets/railcraft/textures/blocks/anchor.world.png,xcount=3,ycount=1
 texture:id=railcraft/anvil_base,filename=assets/railcraft/textures/blocks/anvil_base.png
-texture:id=railcraft/blast.furnace,filename=assets/railcraft/textures/blocks/blast.furnace.png,xcount=2,ycount=1
-texture:id=railcraft/boiler.firebox.liquid,filename=assets/railcraft/textures/blocks/boiler.firebox.liquid.png,xcount=2,ycount=1
-texture:id=railcraft/boiler.firebox.solid,filename=assets/railcraft/textures/blocks/boiler.firebox.solid.png,xcount=2,ycount=1
+texture:id=railcraft/blast.furnace,filename=assets/railcraft/textures/blocks/blast.furnace.png,xcount=3,ycount=1
+texture:id=railcraft/boiler.firebox.liquid,filename=assets/railcraft/textures/blocks/boiler.firebox.liquid.png,xcount=3,ycount=1
+texture:id=railcraft/boiler.firebox.solid,filename=assets/railcraft/textures/blocks/boiler.firebox.solid.png,xcount=3,ycount=1
 texture:id=railcraft/boiler.tank.pressure.high,filename=assets/railcraft/textures/blocks/boiler.tank.pressure.high.png,xcount=2,ycount=1
 texture:id=railcraft/boiler.tank.pressure.low,filename=assets/railcraft/textures/blocks/boiler.tank.pressure.low.png,xcount=2,ycount=1
 texture:id=railcraft/brick.abyssal,filename=assets/railcraft/textures/blocks/brick.abyssal.png,xcount=6,ycount=1
@@ -59,7 +59,7 @@ texture:id=railcraft/brick.sandy,filename=assets/railcraft/textures/blocks/brick
 texture:id=railcraft/cage,filename=assets/railcraft/textures/blocks/cage.png,xcount=3,ycount=1
 texture:id=railcraft/chest.metals,filename=assets/railcraft/textures/blocks/chest.metals.png
 texture:id=railcraft/chest.void,filename=assets/railcraft/textures/blocks/chest.void.png
-texture:id=railcraft/coke.oven,filename=assets/railcraft/textures/blocks/coke.oven.png,xcount=2,ycount=1
+texture:id=railcraft/coke.oven,filename=assets/railcraft/textures/blocks/coke.oven.png,xcount=3,ycount=1
 texture:id=railcraft/concrete,filename=assets/railcraft/textures/blocks/concrete.png
 texture:id=railcraft/cube.brick.infernal,filename=assets/railcraft/textures/blocks/cube.brick.infernal.png
 texture:id=railcraft/cube.brick.sandy,filename=assets/railcraft/textures/blocks/cube.brick.sandy.png
@@ -172,7 +172,7 @@ texture:id=railcraft/unloader.liquid,filename=assets/railcraft/textures/blocks/u
 texture:id=railcraft/unloader.rf.facing,filename=assets/railcraft/textures/blocks/unloader.rf.facing.png
 texture:id=railcraft/unloader.rf.side,filename=assets/railcraft/textures/blocks/unloader.rf.side.png
 texture:id=railcraft/wire,filename=assets/railcraft/textures/blocks/wire.png
-
+texture:id=railcraft/air,filename=assets/railcraft/textures/blocks/air.png
 
 
 # %fluid.creosote:* (fluid.creosote), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=mods.railcraft.common.fluids.BlockRailcraftFluid
@@ -207,12 +207,12 @@ block:id=%machine.alpha,data=3,stdrot=true,face0-1=2:railcraft/steam.oven,face2-
 block:id=%machine.alpha,data=4,stdrot=true,face0-1=0:railcraft/anchor.admin,face2-5=1:railcraft/anchor.admin
 block:id=%machine.alpha,data=5,stdrot=true,face0=0:railcraft/smoker,face1=1:railcraft/smoker,face2-5=2:railcraft/smoker
 block:id=%machine.alpha,data=6,stdrot=true,face0-1=0:railcraft/trade.station,face2-3=1:railcraft/trade.station,face4=2:railcraft/trade.station,face5=1:railcraft/trade.station
-block:id=%machine.alpha,data=7,stdrot=true,face0-3=0:railcraft/coke.oven,face4=1:railcraft/coke.oven,face5=0:railcraft/coke.oven
+block:id=%machine.alpha,data=7,stdrot=true,patch0=0:railcraft/coke.oven,patch1=1:railcraft/coke.oven,patch2=2:railcraft/coke.oven
 block:id=%machine.alpha,data=8,stdrot=true,face0=0:railcraft/rolling.machine,face1=1:railcraft/rolling.machine,face2-5=2:railcraft/rolling.machine
 block:id=%machine.alpha,data=9,stdrot=true,face0=0:railcraft/steam.trap,face1=2:railcraft/steam.trap,face2-5=1:railcraft/steam.trap
 block:id=%machine.alpha,data=10,stdrot=true,face0=0:railcraft/steam.trap.auto,face1=2:railcraft/steam.trap.auto,face2-5=1:railcraft/steam.trap.auto
 block:id=%machine.alpha,data=11,stdrot=true,face0-1=0:railcraft/feed.station,face2-5=1:railcraft/feed.station
-block:id=%machine.alpha,data=12,stdrot=true,face0-3=0:railcraft/blast.furnace,face4=1:railcraft/blast.furnace,face5=0:railcraft/blast.furnace
+block:id=%machine.alpha,data=12,stdrot=true,patch0=0:railcraft/blast.furnace,patch1=1:railcraft/blast.furnace,patch2=2:railcraft/blast.furnace
 block:id=%machine.alpha,data=13,stdrot=true,face0-1=0:railcraft/anchor.passive,face2-5=1:railcraft/anchor.passive
 block:id=%machine.alpha,data=14,stdrot=true,face0-1=0:railcraft/tank.water,face2-5=1:railcraft/tank.water
 block:id=%machine.alpha,data=15,stdrot=true,face0=3:railcraft/rock.crusher,face1=11:railcraft/rock.crusher,face2-3=3:railcraft/rock.crusher,face4=7:railcraft/rock.crusher,face5=3:railcraft/rock.crusher
@@ -452,7 +452,9 @@ block:id=%wall.beta,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:railc
 block:id=%wall.beta,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/quartz_block_bottom,patch1=0:minecraft/quartz_block_top,patch2=0:minecraft/quartz_block_side
 
 # %glass:* (glass), render=mods.railcraft.client.render.RenderBlockStrengthGlass(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.glass.BlockStrengthGlass
-block:id=%glass,data=*,stdrot=true,face0-5=0:railcraft/glass
+block:id=%glass,data=*,transparency=TRANSPARENT,stdrot=true,face0-5=0:railcraft/glass
+
+block:id=%residual.heat,transparency=TRANSPARENT,data=*,stdrot=true,face0-5=0:railcraft/air
 
 # %detector:* (detector), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.detector.BlockDetector
 block:id=%detector,data=0,stdrot=true,face0-2=0:railcraft/detector.item,face3=2:railcraft/detector.item,face4-5=0:railcraft/detector.item
