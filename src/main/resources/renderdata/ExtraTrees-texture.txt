@@ -45,18 +45,41 @@ texture:id=extratrees/logs/yewTrunk,filename=assets/extratrees/textures/blocks/l
 texture:id=extratrees/patterns/blank.0,filename=assets/extratrees/textures/blocks/patterns/blank.0.png
 texture:id=extratrees/planks/Alder,filename=assets/extratrees/textures/blocks/planks/Alder.png
 texture:id=extratrees/planks/Apple,filename=assets/extratrees/textures/blocks/planks/Apple.png
+texture:id=extratrees/planks/Ash,filename=assets/extratrees/textures/blocks/planks/Ash.png
 texture:id=extratrees/planks/Beech,filename=assets/extratrees/textures/blocks/planks/Beech.png
 texture:id=extratrees/planks/Box,filename=assets/extratrees/textures/blocks/planks/Box.png
+texture:id=extratrees/planks/Brazilwood,filename=assets/extratrees/textures/blocks/planks/Brazilwood.png
 texture:id=extratrees/planks/Butternut,filename=assets/extratrees/textures/blocks/planks/Butternut.png
 texture:id=extratrees/planks/Cedar,filename=assets/extratrees/textures/blocks/planks/Cedar.png
+texture:id=extratrees/planks/Citrus,filename=assets/extratrees/textures/blocks/planks/Citrus.png
 texture:id=extratrees/planks/Cypress,filename=assets/extratrees/textures/blocks/planks/Cypress.png
+texture:id=extratrees/planks/Elder,filename=assets/extratrees/textures/blocks/planks/Elder.png
 texture:id=extratrees/planks/Elm,filename=assets/extratrees/textures/blocks/planks/Elm.png
+texture:id=extratrees/planks/Eucalyptus,filename=assets/extratrees/textures/blocks/planks/Eucalyptus.png
 texture:id=extratrees/planks/Fig,filename=assets/extratrees/textures/blocks/planks/Fig.png
 texture:id=extratrees/planks/Fir,filename=assets/extratrees/textures/blocks/planks/Fir.png
+texture:id=extratrees/planks/Gingko,filename=assets/extratrees/textures/blocks/planks/Gingko.png
+texture:id=extratrees/planks/Hawthorn,filename=assets/extratrees/textures/blocks/planks/Hawthorn.png
 texture:id=extratrees/planks/Hazel,filename=assets/extratrees/textures/blocks/planks/Hazel.png
 texture:id=extratrees/planks/Hemlock,filename=assets/extratrees/textures/blocks/planks/Hemlock.png
 texture:id=extratrees/planks/Hickory,filename=assets/extratrees/textures/blocks/planks/Hickory.png
+texture:id=extratrees/planks/Holly,filename=assets/extratrees/textures/blocks/planks/Holly.png
 texture:id=extratrees/planks/Hornbeam,filename=assets/extratrees/textures/blocks/planks/Hornbeam.png
+texture:id=extratrees/planks/Iroko,filename=assets/extratrees/textures/blocks/planks/Iroko.png
+texture:id=extratrees/planks/Locust,filename=assets/extratrees/textures/blocks/planks/Locust.png
+texture:id=extratrees/planks/Logwood,filename=assets/extratrees/textures/blocks/planks/Logwood.png
+texture:id=extratrees/planks/Maclura,filename=assets/extratrees/textures/blocks/planks/Maclura.png
+texture:id=extratrees/planks/Maple,filename=assets/extratrees/textures/blocks/planks/Maple.png
+texture:id=extratrees/planks/Olive,filename=assets/extratrees/textures/blocks/planks/Olive.png
+texture:id=extratrees/planks/Pear,filename=assets/extratrees/textures/blocks/planks/Pear.png
+texture:id=extratrees/planks/Pine,filename=assets/extratrees/textures/blocks/planks/Pine.png
+texture:id=extratrees/planks/PinkIvory,filename=assets/extratrees/textures/blocks/planks/PinkIvory.png
+texture:id=extratrees/planks/Plum,filename=assets/extratrees/textures/blocks/planks/Plum.png
+texture:id=extratrees/planks/Purpleheart,filename=assets/extratrees/textures/blocks/planks/Purpleheart.png
+texture:id=extratrees/planks/Rosewood,filename=assets/extratrees/textures/blocks/planks/Rosewood.png
+texture:id=extratrees/planks/Rowan,filename=assets/extratrees/textures/blocks/planks/Rowan.png
+texture:id=extratrees/planks/Sweetgum,filename=assets/extratrees/textures/blocks/planks/Sweetgum.png
+texture:id=extratrees/planks/Syzgium,filename=assets/extratrees/textures/blocks/planks/Syzgium.png
 texture:id=extratrees/planks/Whitebeam,filename=assets/extratrees/textures/blocks/planks/Whitebeam.png
 texture:id=extratrees/planks/Yew,filename=assets/extratrees/textures/blocks/planks/Yew.png
 texture:id=forestry/leaves/conifers.fancy,filename=assets/forestry/textures/blocks/leaves/conifers.fancy.png
@@ -93,13 +116,8 @@ block:id=%planks,data=14,stdrot=true,face0-5=0:extratrees/planks/Apple
 block:id=%planks,data=15,stdrot=true,face0-5=0:extratrees/planks/Yew
 
 # %fence:* (fence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockFence
-block:id=%fence,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
-block:id=%fence,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
-block:id=%fence,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
-block:id=%fence,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
-block:id=%fence,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
-block:id=%fence,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
-block:id=%fence,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/planks/Fir
+block:id=%fence,id=%gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/planks_oak,patch1=0:minecraft/planks_spruce,patch2=0:minecraft/planks_birch,patch3=0:minecraft/planks_jungle,patch4=0:minecraft/planks_acacia,patch5=0:minecraft/planks_big_oak,patch6=0:extratrees/planks/Fir,patch7=0:extratrees/planks/Cedar,patch8=0:extratrees/planks/Hemlock,patch9=0:extratrees/planks/Cypress,patch10=0:extratrees/planks/Fig,patch11=0:extratrees/planks/Beech,patch12=0:extratrees/planks/Alder,patch13=0:extratrees/planks/Hazel,patch14=0:extratrees/planks/Hornbeam,patch15=0:extratrees/planks/Box,patch16=0:extratrees/planks/Butternut,patch17=0:extratrees/planks/Hickory,patch18=0:extratrees/planks/Whitebeam,patch19=0:extratrees/planks/Elm,patch20=0:extratrees/planks/Apple,patch21=0:extratrees/planks/Yew,patch22=0:extratrees/planks/Pear,patch23=0:extratrees/planks/Hawthorn,patch24=0:extratrees/planks/Rowan,patch25=0:extratrees/planks/Elder,patch26=0:extratrees/planks/Maclura,patch27=0:extratrees/planks/Syzgium,patch28=0:extratrees/planks/Brazilwood,patch29=0:extratrees/planks/Logwood,patch30=0:extratrees/planks/Iroko,patch31=0:extratrees/planks/Locust,patch32=0:extratrees/planks/Eucalyptus,patch33=0:extratrees/planks/Purpleheart,patch34=0:extratrees/planks/Ash,patch35=0:extratrees/planks/Holly,patch36=0:extratrees/planks/Olive,patch37=0:extratrees/planks/Sweetgum,patch38=0:extratrees/planks/Rosewood,patch39=0:extratrees/planks/Gingko,patch40=0:extratrees/planks/PinkIvory
+block:id=%stairs,id=%slab,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:minecraft/planks_oak,patch1=0:minecraft/planks_spruce,patch2=0:minecraft/planks_birch,patch3=0:minecraft/planks_jungle,patch4=0:minecraft/planks_acacia,patch5=0:minecraft/planks_big_oak,patch6=0:extratrees/planks/Fir,patch7=0:extratrees/planks/Cedar,patch8=0:extratrees/planks/Hemlock,patch9=0:extratrees/planks/Cypress,patch10=0:extratrees/planks/Fig,patch11=0:extratrees/planks/Beech,patch12=0:extratrees/planks/Alder,patch13=0:extratrees/planks/Hazel,patch14=0:extratrees/planks/Hornbeam,patch15=0:extratrees/planks/Box,patch16=0:extratrees/planks/Butternut,patch17=0:extratrees/planks/Hickory,patch18=0:extratrees/planks/Whitebeam,patch19=0:extratrees/planks/Elm,patch20=0:extratrees/planks/Apple,patch21=0:extratrees/planks/Yew,patch22=0:extratrees/planks/Pear,patch23=0:extratrees/planks/Hawthorn,patch24=0:extratrees/planks/Rowan,patch25=0:extratrees/planks/Elder,patch26=0:extratrees/planks/Maclura,patch27=0:extratrees/planks/Syzgium,patch28=0:extratrees/planks/Brazilwood,patch29=0:extratrees/planks/Logwood,patch30=0:extratrees/planks/Iroko,patch31=0:extratrees/planks/Locust,patch32=0:extratrees/planks/Eucalyptus,patch33=0:extratrees/planks/Purpleheart,patch34=0:extratrees/planks/Ash,patch35=0:extratrees/planks/Holly,patch36=0:extratrees/planks/Olive,patch37=0:extratrees/planks/Sweetgum,patch38=0:extratrees/planks/Rosewood,patch39=0:extratrees/planks/Gingko,patch40=0:extratrees/planks/PinkIvory
 
 # %multifence:* (multifence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockMultiFence
 block:id=%multifence,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
@@ -128,33 +146,6 @@ block:id=%log,data=13,stdrot=true,face0-1=0:extratrees/logs/cypressTrunk,face2-5
 block:id=%log,data=14,stdrot=true,face0-1=0:extratrees/logs/firTrunk,face2-5=0:extratrees/logs/firBark
 block:id=%log,data=15,stdrot=true,face0-1=0:extratrees/logs/hazelTrunk,face2-5=0:extratrees/logs/hazelBark
 
-# %gate:* (gate), render=(FENCEGATE), opaque=false,cls=binnie.extratrees.block.decor.BlockGate
-block:id=%gate,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_oak
-block:id=%gate,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_spruce
-block:id=%gate,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_birch
-block:id=%gate,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_jungle
-block:id=%gate,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_acacia
-block:id=%gate,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_big_oak
-block:id=%gate,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:extratrees/planks/Fir
-
-# %slab:* (slab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
-block:id=%slab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fir
-block:id=%slab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cedar
-block:id=%slab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hemlock
-block:id=%slab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cypress
-block:id=%slab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fig
-block:id=%slab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Beech
-block:id=%slab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Alder
-block:id=%slab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hazel
-block:id=%slab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hornbeam
-block:id=%slab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Box
-block:id=%slab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Butternut
-block:id=%slab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hickory
-block:id=%slab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Whitebeam
-block:id=%slab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Elm
-block:id=%slab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Apple
-block:id=%slab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Yew
-
 # %doubleSlab:* (doubleSlab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
 block:id=%doubleSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fir
 block:id=%doubleSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cedar
@@ -175,24 +166,6 @@ block:id=%doubleSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:
 
 # %door:* (door), render=binnie.extratrees.block.DoorBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.BlockETDoor
 block:id=%door,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/door.standard.lower
-
-# %stairs:* (stairs), render=binnie.extratrees.block.StairsRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.BlockETStairs
-block:id=%stairs,data=0,stdrot=true,face0-5=0:extratrees/planks/Fir
-block:id=%stairs,data=1,stdrot=true,face0-5=0:extratrees/planks/Cedar
-block:id=%stairs,data=2,stdrot=true,face0-5=0:extratrees/planks/Hemlock
-block:id=%stairs,data=3,stdrot=true,face0-5=0:extratrees/planks/Cypress
-block:id=%stairs,data=4,stdrot=true,face0-5=0:extratrees/planks/Fig
-block:id=%stairs,data=5,stdrot=true,face0-5=0:extratrees/planks/Beech
-block:id=%stairs,data=6,stdrot=true,face0-5=0:extratrees/planks/Alder
-block:id=%stairs,data=7,stdrot=true,face0-5=0:extratrees/planks/Hazel
-block:id=%stairs,data=8,stdrot=true,face0-5=0:extratrees/planks/Hornbeam
-block:id=%stairs,data=9,stdrot=true,face0-5=0:extratrees/planks/Box
-block:id=%stairs,data=10,stdrot=true,face0-5=0:extratrees/planks/Butternut
-block:id=%stairs,data=11,stdrot=true,face0-5=0:extratrees/planks/Hickory
-block:id=%stairs,data=12,stdrot=true,face0-5=0:extratrees/planks/Whitebeam
-block:id=%stairs,data=13,stdrot=true,face0-5=0:extratrees/planks/Elm
-block:id=%stairs,data=14,stdrot=true,face0-5=0:extratrees/planks/Apple
-block:id=%stairs,data=15,stdrot=true,face0-5=0:extratrees/planks/Yew
 
 # %hedge:* (hedge), render=binnie.extratrees.block.decor.HedgeRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockHedge
 block:id=%hedge,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/leaves/deciduous.fancy
