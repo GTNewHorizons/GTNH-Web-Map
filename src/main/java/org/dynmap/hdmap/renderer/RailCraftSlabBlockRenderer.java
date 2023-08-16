@@ -12,7 +12,7 @@ import org.dynmap.renderer.RenderPatchFactory;
 
 public class RailCraftSlabBlockRenderer extends CustomRenderer {
 
-    enum RailCraftBlocks {
+    public enum RailCraftBlocks {
         SNOW,
         ICE,
         PACKED_ICE,
