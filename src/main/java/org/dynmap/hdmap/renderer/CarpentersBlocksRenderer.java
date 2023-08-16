@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CarpentersBlocksRenderer extends CustomRenderer {
+public class CarpentersBlocksRenderer extends FenceGateBase {
     protected RenderPatch[] fullBlock;
     // Patch index ordering, corresponding to BlockStep ordinal order
     private static final int patchlist[] = { 0, 1, 4, 5, 2, 3 };
@@ -32,6 +32,7 @@ public class CarpentersBlocksRenderer extends CustomRenderer {
             initBlockShapes(rpf);
         } else if(type.equals("gate")){
             initGateShapes(rpf);
+            link_ids.set(blkid);
         }
 
         return true;

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Map;
 
-public class CarpentersFenceRenderer extends CustomRenderer {
+public class CarpentersFenceRenderer extends FenceGateBase {
 
     RenderPatch[][][] postVersions, wallVersions;
     private static final int SIDE_XP = 0x1;
@@ -24,7 +24,6 @@ public class CarpentersFenceRenderer extends CustomRenderer {
             { 0, 0, 1, SIDE_ZP },
             { 0, 0, -1, SIDE_ZN }
     };
-    private BitSet link_ids = new BitSet();
 
     int thisBlockId;
     @Override

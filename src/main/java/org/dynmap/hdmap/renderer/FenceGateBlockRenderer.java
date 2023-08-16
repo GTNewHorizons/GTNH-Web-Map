@@ -9,7 +9,7 @@ import org.dynmap.renderer.MapDataContext;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory;
 
-public class FenceGateBlockRenderer extends CustomRenderer {
+public class FenceGateBlockRenderer extends FenceGateBase {
     private static final int TEXTURE_SIDES = 0;
     private static final int TEXTURE_TOP = 1;
     private static final int TEXTURE_BOTTOM = 2;
@@ -21,6 +21,7 @@ public class FenceGateBlockRenderer extends CustomRenderer {
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String,String> custparm) {
         if(!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
             return false;
+        link_ids.set(blkid);
         buildMeshes(rpf);
         return true;
     }
