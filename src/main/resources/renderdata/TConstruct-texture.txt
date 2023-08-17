@@ -588,37 +588,37 @@ block:id=%MetalBlock,data=10,stdrot=true,face0-5=0:tinker/compressed_ender
 block:id=%MetalBlock,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/compressed_cobalt
 
 # %ToolStationBlock:* (ToolStationBlock), render=tconstruct.tools.model.TableRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.ToolStationBlock
-block:id=%ToolStationBlock,data=0,stdrot=true,face0=0:tinker/toolstation_bottom,face1=0:tinker/toolstation_top,face2-5=0:tinker/toolstation_side
-block:id=%ToolStationBlock,data=1,stdrot=true,face0=0:tinker/partbuilder_oak_bottom,face1=0:tinker/partbuilder_oak_top,face2-5=0:tinker/partbuilder_oak_side
-block:id=%ToolStationBlock,data=2,stdrot=true,face0=0:tinker/partbuilder_spruce_bottom,face1=0:tinker/partbuilder_spruce_top,face2-5=0:tinker/partbuilder_spruce_side
-block:id=%ToolStationBlock,data=3,stdrot=true,face0=0:tinker/partbuilder_birch_bottom,face1=0:tinker/partbuilder_birch_top,face2-5=0:tinker/partbuilder_birch_side
-block:id=%ToolStationBlock,data=4,stdrot=true,face0=0:tinker/partbuilder_jungle_bottom,face1=0:tinker/partbuilder_jungle_top,face2-5=0:tinker/partbuilder_jungle_side
-block:id=%ToolStationBlock,data=5,data=6,data=7,data=8,data=9,stdrot=true,face0=0:tinker/patternchest_bottom,face1=0:tinker/patternchest_top,face2-5=0:tinker/patternchest_side
-block:id=%ToolStationBlock,data=10,stdrot=true,face0=0:tinker/stenciltable_oak_bottom,face1=0:tinker/stenciltable_oak_top,face2-5=0:tinker/stenciltable_oak_side
-block:id=%ToolStationBlock,data=11,stdrot=true,face0=0:tinker/stenciltable_spruce_bottom,face1=0:tinker/stenciltable_spruce_top,face2-5=0:tinker/stenciltable_spruce_side
-block:id=%ToolStationBlock,data=12,stdrot=true,face0=0:tinker/stenciltable_birch_bottom,face1=0:tinker/stenciltable_birch_top,face2-5=0:tinker/stenciltable_birch_side
-block:id=%ToolStationBlock,data=13,stdrot=true,face0=0:tinker/stenciltable_jungle_bottom,face1=0:tinker/stenciltable_jungle_top,face2-5=0:tinker/stenciltable_jungle_side
+block:id=%ToolStationBlock,data=0,stdrot=true,patch0=0:tinker/toolstation_bottom,patch1=0:tinker/toolstation_top,patch2-5=0:tinker/toolstation_side
+block:id=%ToolStationBlock,data=1,stdrot=true,patch0=0:tinker/partbuilder_oak_bottom,patch1=0:tinker/partbuilder_oak_top,patch2-5=0:tinker/partbuilder_oak_side
+block:id=%ToolStationBlock,data=2,stdrot=true,patch0=0:tinker/partbuilder_spruce_bottom,patch1=0:tinker/partbuilder_spruce_top,patch2-5=0:tinker/partbuilder_spruce_side
+block:id=%ToolStationBlock,data=3,stdrot=true,patch0=0:tinker/partbuilder_birch_bottom,patch1=0:tinker/partbuilder_birch_top,patch2-5=0:tinker/partbuilder_birch_side
+block:id=%ToolStationBlock,data=4,stdrot=true,patch0=0:tinker/partbuilder_jungle_bottom,patch1=0:tinker/partbuilder_jungle_top,patch2-5=0:tinker/partbuilder_jungle_side
+block:id=%ToolStationBlock,data=5,data=6,data=7,data=8,data=9,stdrot=true,patch0=0:tinker/patternchest_bottom,patch1=0:tinker/patternchest_top,patch2-5=0:tinker/patternchest_side
+block:id=%ToolStationBlock,data=10,stdrot=true,patch0=0:tinker/stenciltable_oak_bottom,patch1=0:tinker/stenciltable_oak_top,patch2-5=0:tinker/stenciltable_oak_side
+block:id=%ToolStationBlock,data=11,stdrot=true,patch0=0:tinker/stenciltable_spruce_bottom,patch1=0:tinker/stenciltable_spruce_top,patch2-5=0:tinker/stenciltable_spruce_side
+block:id=%ToolStationBlock,data=12,stdrot=true,patch0=0:tinker/stenciltable_birch_bottom,patch1=0:tinker/stenciltable_birch_top,patch2-5=0:tinker/stenciltable_birch_side
+block:id=%ToolStationBlock,data=13,stdrot=true,patch0=0:tinker/stenciltable_jungle_bottom,patch1=0:tinker/stenciltable_jungle_top,patch2-5=0:tinker/stenciltable_jungle_side
 
 # %ToolForgeBlock:* (ToolForgeBlock), render=tconstruct.tools.model.TableRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.ToolForgeBlock
-block:id=%ToolForgeBlock,data=0,stdrot=true,face0=0:minecraft/iron_block,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_iron
-block:id=%ToolForgeBlock,data=1,stdrot=true,face0=0:minecraft/gold_block,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_gold
-block:id=%ToolForgeBlock,data=2,stdrot=true,face0=0:minecraft/diamond_block,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_diamond
-block:id=%ToolForgeBlock,data=3,stdrot=true,face0=0:minecraft/emerald_block,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_emerald
-block:id=%ToolForgeBlock,data=4,stdrot=true,face0=0:tinker/compressed_cobalt,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_cobalt
-block:id=%ToolForgeBlock,data=5,stdrot=true,face0=0:tinker/compressed_ardite,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_ardite
-block:id=%ToolForgeBlock,data=6,stdrot=true,face0=0:tinker/compressed_manyullyn,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_manyullyn
-block:id=%ToolForgeBlock,data=7,stdrot=true,face0=0:tinker/compressed_copper,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_copper
-block:id=%ToolForgeBlock,data=8,stdrot=true,face0=0:tinker/compressed_bronze,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_bronze
-block:id=%ToolForgeBlock,data=9,stdrot=true,face0=0:tinker/compressed_tin,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_tin
-block:id=%ToolForgeBlock,data=10,stdrot=true,face0=0:tinker/compressed_aluminum,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_aluminum
-block:id=%ToolForgeBlock,data=11,stdrot=true,face0=0:tinker/compressed_alubrass,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_alubrass
-block:id=%ToolForgeBlock,data=12,stdrot=true,face0=0:tinker/compressed_alumite,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_alumite
-block:id=%ToolForgeBlock,data=13,stdrot=true,face0=0:tinker/compressed_steel,face1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_steel
-block:id=%ToolForgeBlock,data=14,stdrot=true,face0=0:tinker/compressed_ender,face1=0:tinker/toolforge_top
-block:id=%ToolForgeBlock,data=15,stdrot=true,face0=0:tinker/compressed_cobalt,face1=0:tinker/toolforge_top
+block:id=%ToolForgeBlock,data=0,stdrot=true,patch0=0:minecraft/iron_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_iron
+block:id=%ToolForgeBlock,data=1,stdrot=true,patch0=0:minecraft/gold_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_gold
+block:id=%ToolForgeBlock,data=2,stdrot=true,patch0=0:minecraft/diamond_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_diamond
+block:id=%ToolForgeBlock,data=3,stdrot=true,patch0=0:minecraft/emerald_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_emerald
+block:id=%ToolForgeBlock,data=4,stdrot=true,patch0=0:tinker/compressed_cobalt,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_cobalt
+block:id=%ToolForgeBlock,data=5,stdrot=true,patch0=0:tinker/compressed_ardite,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_ardite
+block:id=%ToolForgeBlock,data=6,stdrot=true,patch0=0:tinker/compressed_manyullyn,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_manyullyn
+block:id=%ToolForgeBlock,data=7,stdrot=true,patch0=0:tinker/compressed_copper,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_copper
+block:id=%ToolForgeBlock,data=8,stdrot=true,patch0=0:tinker/compressed_bronze,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_bronze
+block:id=%ToolForgeBlock,data=9,stdrot=true,patch0=0:tinker/compressed_tin,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_tin
+block:id=%ToolForgeBlock,data=10,stdrot=true,patch0=0:tinker/compressed_aluminum,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_aluminum
+block:id=%ToolForgeBlock,data=11,stdrot=true,patch0=0:tinker/compressed_alubrass,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_alubrass
+block:id=%ToolForgeBlock,data=12,stdrot=true,patch0=0:tinker/compressed_alumite,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_alumite
+block:id=%ToolForgeBlock,data=13,stdrot=true,patch0=0:tinker/compressed_steel,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_steel
+block:id=%ToolForgeBlock,data=14,stdrot=true,patch0=0:tinker/compressed_ender,patch1=0:tinker/toolforge_top
+block:id=%ToolForgeBlock,data=15,stdrot=true,patch0=0:tinker/compressed_cobalt,patch1=0:tinker/toolforge_top
 
 # %CraftingStation:* (CraftingStation), render=tconstruct.tools.model.TableRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.CraftingStationBlock
-block:id=%CraftingStation,data=*,stdrot=true,face0=0:tinker/craftingstation_bottom,face1=0:tinker/craftingstation_top,face2-5=0:tinker/craftingstation_side
+block:id=%CraftingStation,data=*,stdrot=true,patch0=0:tinker/craftingstation_bottom,patch1=0:tinker/craftingstation_top,patch2-5=0:tinker/craftingstation_side
 
 # %CraftingSlab:* (CraftingSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
 block:id=%CraftingSlab,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/craftingstation_bottom,face1=0:tinker/craftingstation_top,face2-5=0:tinker/craftingstation_slab_side

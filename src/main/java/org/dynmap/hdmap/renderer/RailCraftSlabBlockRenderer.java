@@ -11,110 +11,119 @@ import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory;
 
 public class RailCraftSlabBlockRenderer extends CustomRenderer {
-    private static final int TEXTURE_SIDES = 0;
-    private static final int TEXTURE_TOP = 1;
-    private static final int TEXTURE_BOTTOM = 2;
-    private static BitSet stair_ids = new BitSet();
-        
-    // Array of meshes for normal steps - index = (0=bottom, 1=top, 2=double)
-    private RenderPatch[][] stepmeshes = new RenderPatch[3][];
-    
-    private int textsetcnt = 0;
-    private String[] tilefields = null;
-    private String[] texturemap;
-    
-    @Override
-    public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String,String> custparm) {
-        if(!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
-            return false;
-        stair_ids.set(blkid);   /* Mark block as a stair */
-        /* Build step meshes */
-        for(int i = 0; i < 3; i++) {
-            stepmeshes[i] = buildStepMeshes(rpf, i);   
-        }
-        String cnt = custparm.get("texturecnt");
-        if(cnt != null) 
-            textsetcnt = Integer.parseInt(cnt);
-        else
-            textsetcnt = 16;
-        tilefields = new String[] { "bottom", "top" };
-        texturemap = new String[textsetcnt];
-        for (int i = 0; i < textsetcnt; i++) {
-            texturemap[i] = custparm.get("textmap" + i);
-            if (texturemap[i] == null) {
-                texturemap[i] = Integer.toString(i);
-            }
-        }
-        return true;
+
+    public enum RailCraftBlocks {
+        SNOW,
+        ICE,
+        PACKED_ICE,
+        IRON,
+        STEEL,
+        COPPER,
+        TIN,
+        LEAD,
+        GOLD,
+        DIAMOND,
+        OBSIDIAN,
+        CONCRETE,
+        CREOSOTE,
+
+        ABYSSAL_BRICK,
+        ABYSSAL_FITTED,
+        ABYSSAL_BLOCK,
+        ABYSSAL_COBBLE,
+
+        INFERNAL_BRICK,
+        INFERNAL_FITTED,
+        INFERNAL_BLOCK,
+        INFERNAL_COBBLE,
+
+        BLOODSTAINED_BRICK,
+        BLOODSTAINED_FITTED,
+        BLOODSTAINED_BLOCK,
+        BLOODSTAINED_COBBLE,
+
+        SANDY_BRICK,
+        SANDY_FITTED,
+        SANDY_BLOCK,
+        SANDY_COBBLE,
+
+        BLEACHEDBONE_BRICK,
+        BLEACHEDBONE_FITTED,
+        BLEACHEDBONE_BLOCK,
+        BLEACHEDBONE_COBBLE,
+
+        QUARRIED_BRICK,
+        QUARRIED_FITTED,
+        QUARRIED_BLOCK,
+        QUARRIED_COBBLE,
+
+        FROSTBOUND_BRICK,
+        FROSTBOUND_FITTED,
+        FROSTBOUND_BLOCK,
+        FROSTBOUND_COBBLE,
+
+        NETHER_FITTED,
+        NETHER_BLOCK,
+        NETHER_COBBLE,
+
+        NOTHING
     }
 
+    RenderPatch[][] topOnly, bottomOnly, fullBlocks;
     @Override
-    public int getMaximumTextureCount() {
-        return textsetcnt;
+    public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
+
+        topOnly = new RenderPatch[RailCraftBlocks.values().length][];
+        bottomOnly = new RenderPatch[RailCraftBlocks.values().length][];
+        fullBlocks = new RenderPatch[RailCraftBlocks.values().length][];
+        for(RailCraftBlocks b : RailCraftBlocks.values()){
+
+
+            int ord = b.ordinal();
+            int tex = ord;
+
+            if(b.equals(RailCraftBlocks.NOTHING))
+                tex = 0;
+
+            topOnly[ord] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0.5, 1, 0, 1, tex, false);
+            bottomOnly[ord] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0, 0.5, 0, 1, tex, false);
+            fullBlocks[ord] = CustomRenderer.getBoxSingleTexture(rpf, 0, 1, 0, 1, 0, 1, tex, false);
+        }
+
+        return super.initializeRenderer(rpf, blkid, blockdatamask, custparm);
     }
-    
+
+
+    @Override
+    public RenderPatch[] getRenderPatchList(MapDataContext mapDataCtx) {
+
+        Object objTop = mapDataCtx.getBlockTileEntityField("top");
+        Object objBottom = mapDataCtx.getBlockTileEntityField("bottom");
+
+        RailCraftBlocks top = RailCraftBlocks.NOTHING;
+        RailCraftBlocks bottom = RailCraftBlocks.NOTHING;
+
+        if(objTop != null)
+            top = RailCraftBlocks.valueOf((String)objTop);
+
+        if(objBottom != null)
+            bottom = RailCraftBlocks.valueOf((String)objBottom);
+
+        if(top.equals(bottom))
+            return fullBlocks[top.ordinal()];
+
+        if(top.equals(RailCraftBlocks.NOTHING))
+            return bottomOnly[bottom.ordinal()];
+        else if(bottom.equals(RailCraftBlocks.NOTHING))
+            return topOnly[top.ordinal()];
+
+        return combineMultiple(topOnly[top.ordinal()], bottomOnly[bottom.ordinal()]);
+    }
+
+    static String[] nbtFieldsNeeded = {"top", "bottom"};
+
     @Override
     public String[] getTileEntityFieldsNeeded() {
-        return tilefields;
+        return nbtFieldsNeeded;
     }
-
-    private static final int[] patchlist = { TEXTURE_BOTTOM, TEXTURE_TOP, TEXTURE_SIDES, TEXTURE_SIDES, TEXTURE_SIDES, TEXTURE_SIDES };
-    
-    private void addBox(RenderPatchFactory rpf, List<RenderPatch> list, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax)  {
-        addBox(rpf, list, xmin, xmax, ymin, ymax, zmin, zmax, patchlist);
-    }
-    
-    private RenderPatch[] buildStepMeshes(RenderPatchFactory rpf, int dat) {
-        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
-        switch (dat) {
-            case 0:
-                addBox(rpf, list, 0, 1, 0.0, 0.5, 0, 1);
-                break;
-            case 1:
-                addBox(rpf, list, 0, 1, 0.5, 1, 0, 1);
-                break;
-            case 2:
-                addBox(rpf, list, 0, 1, 0, 1, 0, 1);
-                break;
-        }
-        return list.toArray(new RenderPatch[list.size()]);
-    }
-    
-    @Override
-    public RenderPatch[] getRenderPatchList(MapDataContext ctx) {
-        int idx = 0;
-        Object o = ctx.getBlockTileEntityField("bottom");
-        Object o2 = ctx.getBlockTileEntityField("top");
-        Object txtid = o;
-        if (o == null) {
-            txtid = o2;
-        }
-        if (txtid instanceof String) {
-            String os = (String) txtid;
-            for (int i = 0; i < texturemap.length; i++) {
-                if (os.equals(texturemap[i])) {
-                    idx = i;
-                    break;
-                }
-            }
-        }
-        if((idx < 0) || (idx >= textsetcnt)) {
-            idx = 0;
-        }
-        RenderPatch[] rp = this.stepmeshes[0];
-        if (o2 != null) {
-            if (o != null) {
-                rp = this.stepmeshes[2];
-            }
-            else {
-                rp = this.stepmeshes[1];
-            }
-        }
-
-        RenderPatch[] rp2 = new RenderPatch[rp.length];
-        for(int i = 0; i < rp.length; i++) {
-            rp2[i] = ctx.getPatchFactory().getRotatedPatch(rp[i], 0, 0, 0, idx);
-        }
-        return rp2;
-    }
-    }
+}

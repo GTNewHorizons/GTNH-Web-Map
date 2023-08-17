@@ -2741,7 +2741,11 @@ public class TexturePack {
             }
         }
         if (!handledByCustomRendering) {
-            textid = map.faces[faceindex];
+            if(faceindex >= map.faces.length)
+                textid = 2;
+            else
+                textid = map.faces[faceindex];
+
             if (ctm != null) {
                 int mod = 0;
                 if(textid >= COLORMOD_MULT_INTERNAL) {

@@ -72,20 +72,24 @@ boxblock:id=%track.elevator,xmin=0.875,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=
 boxblock:id=%track.elevator,xmin=0.0,xmax=0.125,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13,data=14,data=15
 
 # %stair:* (stair), render=mods.railcraft.client.render.RenderStair(STAIRS), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.stairs.BlockRailcraftStairs
-customblock:id=%stair,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+customblock:id=%stair,class=org.dynmap.hdmap.renderer.RailCraftStairBlockRenderer,data=*
+
+customblock:id=%slab,class=org.dynmap.hdmap.renderer.RailCraftSlabBlockRenderer,data=*
+
+customblock:id=%machine.alpha,class=org.dynmap.hdmap.renderer.RailCraftCokeOvenRenderer,data=7,data=12
+boxblock:id=%machine.alpha,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=8,data=9,data=10,data=11,data=13,data=14,data=15
 
 # %post:* (post), render=mods.railcraft.client.render.RenderBlockPost(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.post.BlockPost
-boxblock:id=%post,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=0,data=1,data=2,data=3
-boxblock:id=%post,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+customblock:id=%post,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
 
 # %post.metal:* (post.metal), render=mods.railcraft.client.render.RenderBlockPostMetal(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.post.BlockPostMetal
-boxblock:id=%post.metal,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+customblock:id=%post.metal,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
 
 # %wall.alpha:* (wall.alpha), render=mods.railcraft.client.render.RenderWall(WALL), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.wall.BlockRailcraftWall
-customblock:id=%wall.alpha,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+customblock:id=%wall.alpha,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,link0=107,type=wall,data=*
 
 # %wall.beta:* (wall.beta), render=mods.railcraft.client.render.RenderWall(WALL), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.wall.BlockRailcraftWall
-customblock:id=%wall.beta,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+customblock:id=%wall.beta,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,link0=107,type=wall,data=*
 
 # %ore:* (ore), render=mods.railcraft.client.render.RenderBlockOre(CUSTOM), opaque=true,cls=mods.railcraft.common.blocks.ore.BlockOre
 

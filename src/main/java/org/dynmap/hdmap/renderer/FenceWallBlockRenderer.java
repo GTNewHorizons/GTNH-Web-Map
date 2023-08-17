@@ -12,13 +12,11 @@ import org.dynmap.renderer.MapDataContext;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory;
 
-public class FenceWallBlockRenderer extends CustomRenderer {
+public class FenceWallBlockRenderer extends FenceGateBase {
     private static final int TEXTURE_SIDES = 0;
     private static final int TEXTURE_TOP = 1;
     private static final int TEXTURE_BOTTOM = 2;
     private boolean check_yplus;
-    private BitSet link_ids = new BitSet();
-
     private static final int SIDE_XP = 0x1;
     private static final int SIDE_XN = 0x2;
     private static final int SIDE_X = SIDE_XN | SIDE_XP;

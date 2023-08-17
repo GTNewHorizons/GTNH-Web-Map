@@ -11,6 +11,7 @@ texture:id=CarpentersBlocks/flowerpot/flower_pot,filename=assets/carpentersblock
 texture:id=CarpentersBlocks/lever/lever,filename=assets/carpentersblocks/textures/blocks/lever/lever.png
 texture:id=CarpentersBlocks/torch/torch,filename=assets/carpentersblocks/textures/blocks/torch/torch.png
 texture:id=CarpentersBlocks/slope/oblique_pos,filename=assets/carpentersblocks/textures/blocks/slope/oblique_pos.png
+texture:id=CarpentersBlocks/solid,filename=assets/carpentersblocks/textures/blocks/general/solid.png
 texture:id=minecraft/redstone_dust_cross_overlay,filename=assets/minecraft/textures/blocks/redstone_dust_cross_overlay.png
 
 
@@ -19,7 +20,7 @@ texture:id=minecraft/redstone_dust_cross_overlay,filename=assets/minecraft/textu
 block:id=%blockCarpentersBlock,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
 
 # %blockCarpentersBarrier:* (blockCarpentersBarrier), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBarrier(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBarrier
-block:id=%blockCarpentersBarrier,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersBarrier,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersBed:* (blockCarpentersBed), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBed(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBed
 block:id=%blockCarpentersBed,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:CarpentersBlocks/slope/oblique_pos
@@ -44,7 +45,7 @@ block:id=%blockCarpentersFlowerPot,data=1,data=2,data=3,data=4,data=5,data=6,dat
 block:id=%blockCarpentersGarageDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
 
 # %blockCarpentersGate:* (blockCarpentersGate), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGate(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGate
-block:id=%blockCarpentersGate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersGate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersHatch:* (blockCarpentersHatch), render=com.carpentersblocks.renderer.BlockHandlerCarpentersHatch(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersHatch
 block:id=%blockCarpentersHatch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos

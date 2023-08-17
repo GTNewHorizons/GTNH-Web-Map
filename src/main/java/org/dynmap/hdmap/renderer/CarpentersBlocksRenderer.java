@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CarpentersBlocksRenderer extends CustomRenderer {
+public class CarpentersBlocksRenderer extends FenceGateBase {
     protected RenderPatch[] fullBlock;
     // Patch index ordering, corresponding to BlockStep ordinal order
     private static final int patchlist[] = { 0, 1, 4, 5, 2, 3 };
@@ -30,9 +30,58 @@ public class CarpentersBlocksRenderer extends CustomRenderer {
             initStairsShapes(rpf);
         } else if(type.equals("block")){
             initBlockShapes(rpf);
+        } else if(type.equals("gate")){
+            initGateShapes(rpf);
+            link_ids.set(blkid);
         }
 
         return true;
+    }
+
+    private void initGateShapes(RenderPatchFactory rpf) {
+        shapes[0] = combineMultiple(
+                CustomRenderer.getBoxSingleTextureInt(rpf, 0,2,5, 16, 7,9, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 14,16,5, 16, 7,9, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 2,14,12, 15, 7,9, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 2,14,6, 9, 7,9, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 6,10,9, 12, 7,9, 0, false)
+                );
+        shapes[32] = getRotatedSet(rpf, shapes[0],0,90, 0);
+
+        shapes[64] = combineMultiple(
+                CustomRenderer.getBoxSingleTextureInt(rpf, 0,2,5, 16, 7,9, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 14,16,5, 16, 7,9, 0, false),
+
+                CustomRenderer.getBoxSingleTextureInt(rpf, 0,2,12, 15, 9,15, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 0,2,6, 9, 9,15, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 0,2,9, 12, 13,15, 0, false),
+
+                CustomRenderer.getBoxSingleTextureInt(rpf, 14,16,12, 15, 9,15, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 14,16,6, 9, 9,15, 0, false),
+                CustomRenderer.getBoxSingleTextureInt(rpf, 14,16,9, 12, 13,15, 0, false)
+        );
+
+        shapes[80] = getRotatedSet(rpf, shapes[64],0,180,0);
+        shapes[96] = getRotatedSet(rpf, shapes[64],0,270,0);
+        shapes[112] = getRotatedSet(rpf, shapes[64],0,90,0);
+
+        shapes[6] = getBoxSingleTextureInt(rpf,0,16,0,13,7,9,0,false);
+        shapes[38] = getBoxSingleTextureInt(rpf,7,9,0,13,0,16,0,false);
+
+        shapes[70] = combineMultiple(
+                getBoxSingleTextureInt(rpf,0,2,0,13,8,16,0,false),
+                getBoxSingleTextureInt(rpf,14,16,0,13,8,16,0,false)
+        );
+        shapes[86] = getRotatedSet(rpf, shapes[70],0,180,0);
+        shapes[102] = getRotatedSet(rpf, shapes[70],0,270,0);
+        shapes[118] = getRotatedSet(rpf, shapes[70],0,90,0);
+
+        for(int i = 1; i < 6; i++){
+            for(int j = 0; j < 128; j += 16)
+                if(shapes[j + i] == null)
+                    shapes[j + i] = shapes[j];
+        }
+
     }
 
     private void initBlockShapes(RenderPatchFactory rpf) {
@@ -97,7 +146,7 @@ public class CarpentersBlocksRenderer extends CustomRenderer {
         return new CustomRendererData(getRenderPatchList(mapDataCtx), null, new TextureSelector(mapDataCtx));
     }
 
-    class TextureSelector implements CustomTextureMapper {
+    public static class TextureSelector implements CustomTextureMapper {
 
         TexturePack.HDTextureMap map;
         public TextureSelector(MapDataContext mapDataCtx) {

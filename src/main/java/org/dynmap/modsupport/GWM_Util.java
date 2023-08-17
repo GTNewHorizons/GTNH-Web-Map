@@ -44,7 +44,7 @@ public class GWM_Util {
                 return intId.intValue();
         }
 
-        return 0;
+        return objectToInt(stringId, 0);
     }
 
     public static int objectToInt(Object obj, int def){
