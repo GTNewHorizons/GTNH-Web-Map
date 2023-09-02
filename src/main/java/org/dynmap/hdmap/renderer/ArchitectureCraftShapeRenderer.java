@@ -96,11 +96,11 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                 case ArchitraveCorner:
                     return makePatchesFromModel(rpf, "architrave_corner");
                 case WindowFrame:
-                    break;
+                    return getBoxSingleTextureInt(rpf,0,16,0,16,7,9,6, false);
                 case WindowCorner:
-                    break;
+                    return combineMultiple(getBoxSingleTextureInt(rpf,6,10,0,16,6,10,0, false),getBoxSingleTextureInt(rpf,0,9,0,16,7,9,6, false), getBoxSingleTextureInt(rpf,7,9,0,16,9,16,6, false) );
                 case WindowMullion:
-                    break;
+                    return combineMultiple(getBoxSingleTextureInt(rpf,6,10,0,16,6,10,0, false),getBoxSingleTextureInt(rpf,0,16,0,16,7,9,6, false));
                 case SphereFull:
                     return makePatchesFromModel(rpf, "sphere_full_r8");
                 case SphereHalf:
@@ -242,7 +242,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         addBox(rpf, list, 0,1,0.5,1,0.5,1, patchlist);
         return list.toArray(new RenderPatch[list.size()]);
     }
-    private RenderPatch[] makeRoofInnerCornerPatches(RenderPatchFactory rpf) {
+    public static RenderPatch[] makeRoofInnerCornerPatches(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
         // slopes
@@ -270,7 +270,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         return renderPatches;
     }
 
-    private RenderPatch[] makeRoofOuterCornerPatches(RenderPatchFactory rpf) {
+    public static RenderPatch[] makeRoofOuterCornerPatches(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
         // slopes
@@ -330,29 +330,29 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                                     break;
                                 case UP:
                                     yrot = 90 * turn;
-                                    arr[i] = rpf.getRotatedPatch(arr[i], 180, 0, 0, 0);
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 180, 0, 0, arr[i].getTextureIndex());
                                     break;
                                 case NORTH:
                                     zrot = 360 - 90 * turn;
-                                    arr[i] = rpf.getRotatedPatch(arr[i], 270, 0, 0, 0);
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 270, 0, 0, arr[i].getTextureIndex());
                                     break;
                                 case SOUTH:
                                     zrot = 90 * turn;
-                                    arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 180, 0);
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 90, 0, 180, arr[i].getTextureIndex());
                                     break;
                                 case WEST:
                                     xrot = 360 - 90 * turn;
-                                    arr[i] = rpf.getRotatedPatch(arr[i], 0, 270, 90, 0);
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 0, 270, 90, arr[i].getTextureIndex());
                                     break;
                                 case EAST:
                                     xrot = 90 * turn;
-                                    arr[i] = rpf.getRotatedPatch(arr[i], 0, 90, 270, 0);
+                                    arr[i] = rpf.getRotatedPatch(arr[i], 0, 90, 270, arr[i].getTextureIndex());
                                     break;
                                 case UNKNOWN:
                                     break;
                             }
 
-                            arr[i] = rpf.getRotatedPatch(arr[i], xrot, yrot, zrot, 0);
+                            arr[i] = rpf.getRotatedPatch(arr[i], xrot, yrot, zrot, arr[i].getTextureIndex());
                         }
                     }
 
@@ -441,7 +441,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         return new CustomRendererData(getRenderPatchList(mapDataCtx), null, new ArchitectureCraftTextureLookupThing(mapDataCtx));
     }
 
-    static String[] nbtFieldsNeeded = {"turn", "Shape", "side", "BaseName", "BaseData"};
+    static String[] nbtFieldsNeeded = {"turn", "Shape", "side", "BaseName", "BaseData", "Name2", "Data2"};
 
     @Override
     public String[] getTileEntityFieldsNeeded() {
@@ -452,6 +452,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
 
         private MapDataContext mapDataCtx;
         int[][] textures = new int[6][0];
+        int[][] textures2 = {{-1}, {-1}, {-1}, {-1}, {-1}, {-1}};
 
         public ArchitectureCraftTextureLookupThing(MapDataContext mapDataCtx) {
 
@@ -460,6 +461,20 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
             Object blockNameObj = mapDataCtx.getBlockTileEntityField("BaseName");
             Object blockDataObj = mapDataCtx.getBlockTileEntityField("BaseData");
 
+            Object blockName2Obj = mapDataCtx.getBlockTileEntityField("Name2");
+            Object blockData2Obj = mapDataCtx.getBlockTileEntityField("Data2");
+
+            if(blockName2Obj instanceof String){
+                String blockName = (String)blockName2Obj;
+                int data = 0;
+                if(blockDataObj instanceof Integer) {
+                    data = ((Integer) blockData2Obj).intValue();
+                }
+
+                int blockId = GWM_Util.blockNameToId(blockName);
+                TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
+                textures2 = new int[][]{ {map.getIndexForFace(0)}, {map.getIndexForFace(1)}, {map.getIndexForFace(2)}, {map.getIndexForFace(3)}, {map.getIndexForFace(4)}, {map.getIndexForFace(5)} };
+            }
             if(blockNameObj instanceof String){
                 String blockName = (String)blockNameObj;
                 int data = 0;
@@ -477,6 +492,8 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
 
         @Override
         public int[] getTextureLayersForPatchId(int patchId) {
+            if(patchId >= 6 && patchId < 12)
+                return textures2[patchId-6];
             return textures[patchId];
         }
     }
