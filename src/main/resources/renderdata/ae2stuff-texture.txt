@@ -18,6 +18,7 @@ texture:id=ae2stuff/inscriber/side_on,filename=assets/ae2stuff/textures/blocks/i
 texture:id=ae2stuff/inscriber/top,filename=assets/ae2stuff/textures/blocks/inscriber/top.png
 texture:id=ae2stuff/wireless/side_off,filename=assets/ae2stuff/textures/blocks/wireless/side_off.png
 texture:id=ae2stuff/wireless/side_on,filename=assets/ae2stuff/textures/blocks/wireless/side_on.png
+texture:id=ae2stuff/wireless/side_on17,filename=assets/ae2stuff/textures/blocks/wireless/side_on17.png
 texture:id=ae2stuff/wireless/top_off,filename=assets/ae2stuff/textures/blocks/wireless/top_off.png
 texture:id=ae2stuff/wireless/top_on,filename=assets/ae2stuff/textures/blocks/wireless/top_on.png
 
@@ -39,5 +40,5 @@ block:id=%Inscriber,data=1,stdrot=true,face0-1=0:ae2stuff/inscriber/top,face2-5=
 block:id=%Inscriber,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ae2stuff/inscriber/top,face2-5=0:ae2stuff/inscriber/side_off
 
 # %Wireless:* (Wireless), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.bdew.ae2stuff.machines.wireless.BlockWireless$
-block:id=%Wireless,data=0,stdrot=true,face0-1=0:ae2stuff/wireless/top_off,face2-5=0:ae2stuff/wireless/side_off
-block:id=%Wireless,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ae2stuff/wireless/top_on,face2-5=0:ae2stuff/wireless/side_on
+block:id=%Wireless,data=0,stdrot=true,face0-1=0:ae2stuff/wireless/top_off,face2-5=0:ae2stuff/wireless/side_off,patch6=0:ae2stuff/wireless/side_off,layer0-5=6
+block:id=%Wireless,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ae2stuff/wireless/top_on,face2-5=0:ae2stuff/wireless/side_on,patch6=0:ae2stuff/wireless/side_on17,layer0-5=6

@@ -99,6 +99,16 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
         shapes[9] = getRotatedSet(rpf, shapes[8], 0, 180, 0);
         shapes[10] = getRotatedSet(rpf, shapes[8], 0, 270, 0);
         shapes[11] = getRotatedSet(rpf, shapes[8], 0, 90, 0);
+
+        shapes[16] = combineMultiple(getBoxSingleTextureInt(rpf,0,16,0,8,0,16,0,false), getBoxSingleTextureInt(rpf,0,8,8,16,0,16,0,false), getBoxSingleTextureInt(rpf,8,16,8,16,0,8,0,false));
+        shapes[17] = getRotatedSet(rpf, shapes[16], 0, 180, 0);
+        shapes[18] = getRotatedSet(rpf, shapes[16], 0, 270, 0);
+        shapes[19] = getRotatedSet(rpf, shapes[16], 0, 90, 0);
+
+        shapes[24] = combineMultiple(getBoxSingleTextureInt(rpf,0,16,0,8,0,16,0,false), getBoxSingleTextureInt(rpf,0,8,8,16,0,8,0,false));
+        shapes[25] = getRotatedSet(rpf, shapes[24], 0, 180, 0);
+        shapes[26] = getRotatedSet(rpf, shapes[24], 0, 270, 0);
+        shapes[27] = getRotatedSet(rpf, shapes[24], 0, 90, 0);
     }
 
     private void initSlopeShapes(RenderPatchFactory rpf) {
@@ -106,6 +116,41 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
         shapes[9] = getRotatedSet(rpf, shapes[8], 0, 180, 0);
         shapes[10] = getRotatedSet(rpf, shapes[8], 0, 270, 0);
         shapes[11] = getRotatedSet(rpf, shapes[8], 0, 90, 0);
+
+        shapes[16] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofInnerCornerPatches(rpf), 0, 90, 0);
+        shapes[17] = getRotatedSet(rpf, shapes[16], 0, 180, 0);
+        shapes[18] = getRotatedSet(rpf, shapes[16], 0, 270, 0);
+        shapes[19] = getRotatedSet(rpf, shapes[16], 0, 90, 0);
+
+        shapes[24] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofOuterCornerPatches(rpf), 0, 90, 0);
+        shapes[25] = getRotatedSet(rpf, shapes[24], 0, 180, 0);
+        shapes[26] = getRotatedSet(rpf, shapes[24], 0, 270, 0);
+        shapes[27] = getRotatedSet(rpf, shapes[24], 0, 90, 0);
+
+        shapes[32] = combineMultiple(
+                rpf.getPatch(0,0,1,0,0,0,1,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(0,0,0,0,0,1,0,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(1,0,0,0,0,0,1,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+
+                rpf.getPatch(0,0,1,1,0,1,0,1,1,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(1,0,1,1,0,0,1,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(0,1,0,0,1,1,1,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(1,0,1,1,1,0,0,1,1,1, RenderPatchFactory.SideVisible.TOP, 0)
+
+        );
+        shapes[33] = getRotatedSet(rpf, shapes[32], 0, 180, 0);
+        shapes[34] = getRotatedSet(rpf, shapes[32], 0, 270, 0);
+        shapes[35] = getRotatedSet(rpf, shapes[32], 0, 90, 0);
+
+        shapes[40] = combineMultiple(
+                rpf.getPatch(0,0,1,0,0,0,1,0,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(0,0,0,0,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(1,0,0,0,0,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getPatch(0,0,1,1,0,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0)
+        );
+        shapes[41] = getRotatedSet(rpf, shapes[40], 0, 180, 0);
+        shapes[42] = getRotatedSet(rpf, shapes[40], 0, 270, 0);
+        shapes[43] = getRotatedSet(rpf, shapes[40], 0, 90, 0);
 
         shapes[45] = getSpikeTop(rpf);
     }
