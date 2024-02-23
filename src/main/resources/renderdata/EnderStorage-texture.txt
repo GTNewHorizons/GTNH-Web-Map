@@ -12,3 +12,5 @@ texture:id=EnderStorage/enderchest,filename=assets/enderstorage/textures/enderch
 
 # %enderChest:* (enderChest), render=(CUSTOM), opaque=false,cls=codechicken.enderstorage.common.BlockEnderStorage
 block:id=%enderChest,data=*,stdrot=true,top=0,south=3,north=4,east=2,west=1,bottom=5,txtid=EnderStorage/enderchest
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.DummyModSupportLoader
