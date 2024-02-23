@@ -6,9 +6,9 @@ import org.dynmap.renderer.CustomModSupportLoader;
 
 import java.util.HashMap;
 
-public class ArchitectureCraftModSupportLoader extends DummyModSupportLoader {
+public class DummyModSupportLoader extends CustomModSupportLoader {
     @Override
     public void initializeModSupport(DynmapCore core, HashMap<String, Integer> filetoidx) {
-        super.initializeModSupport(core, filetoidx);
+        GWM_Util.initialize(core);
     }
 }

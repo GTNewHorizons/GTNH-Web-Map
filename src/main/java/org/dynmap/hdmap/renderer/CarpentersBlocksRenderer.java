@@ -30,6 +30,14 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
             initStairsShapes(rpf);
         } else if(type.equals("block")){
             initBlockShapes(rpf);
+        } else if(type.equals("plate")){
+            initPlateShapes(rpf);
+        } else if(type.equals("hatch")){
+            initHatchShapes(rpf);
+        } else if(type.equals("garage")){
+            initGarageShapes(rpf);
+        } else if(type.equals("door")){
+            initDoorShapes(rpf);
         } else if(type.equals("gate")){
             initGateShapes(rpf);
             link_ids.set(blkid);
@@ -93,10 +101,100 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
         shapes[5] = CustomRenderer.getBoxSingleTexture(rpf, 0.0, 1.0, 0.0, 1.0, 0.0, 0.5,0, false);
         shapes[6] = CustomRenderer.getBoxSingleTexture(rpf, 0.0, 1.0, 0.0, 1.0, 0.5, 1.0,0, false);
     }
+    private void initPlateShapes(RenderPatchFactory rpf) {
+        shapes[0] = fullBlock;
+        shapes[1] = CustomRenderer.getBoxSingleTextureInt(rpf, 1, 15, 0, 1, 1, 15,0, false);
+        shapes[33] = CustomRenderer.getBoxSingleTextureInt(rpf, 1, 15, 0, 1, 1, 15,0, false);
+        shapes[65] = CustomRenderer.getBoxSingleTextureInt(rpf, 1, 15, 0, 1, 1, 15,0, false);
+        shapes[97] = CustomRenderer.getBoxSingleTextureInt(rpf, 1, 15, 0, 1, 1, 15,0, false);
+    }
+    private void initHatchShapes(RenderPatchFactory rpf) {
+        shapes[0] = getBoxSingleTextureInt(rpf, 0,16,0,2,0,16,0,false);
+        shapes[32] = getRotatedSet(rpf, shapes[0], 0, 180, 0);
+        shapes[64] = getRotatedSet(rpf, shapes[0], 0, 270, 0);
+        shapes[96] = getRotatedSet(rpf, shapes[0], 0, 90, 0);
+
+        shapes[16] = getBoxSingleTextureInt(rpf, 0,16,0,16,14,16,0,false);
+        shapes[48] = getRotatedSet(rpf, shapes[16], 0, 180, 0);
+        shapes[80] = getRotatedSet(rpf, shapes[16], 0, 270, 0);
+        shapes[112] = getRotatedSet(rpf, shapes[16], 0, 90, 0);
+
+        shapes[8] = getBoxSingleTextureInt(rpf, 0,16,14,16,0,16,0,false);
+        shapes[40] = getRotatedSet(rpf, shapes[8], 0, 180, 0);
+        shapes[72] = getRotatedSet(rpf, shapes[8], 0, 270, 0);
+        shapes[104] = getRotatedSet(rpf, shapes[8], 0, 90, 0);
+
+        shapes[24] = getBoxSingleTextureInt(rpf, 0,16,0,16,14,16,0,false);
+        shapes[56] = getRotatedSet(rpf, shapes[24], 0, 180, 0);
+        shapes[88] = getRotatedSet(rpf, shapes[24], 0, 270, 0);
+        shapes[120] = getRotatedSet(rpf, shapes[24], 0, 90, 0);
+
+        for(int i = 1; i < 128; i++){
+            if(shapes[i] == null && shapes[i-1] != null){
+                shapes[i] = shapes[i-1];
+            }
+        }
+    }
+    private void initGarageShapes(RenderPatchFactory rpf) {
+        shapes[0] = fullBlock;
+        shapes[32] = getBoxSingleTextureInt(rpf, 0,16,0,16,12,14,0,false);
+        shapes[48] = getRotatedSet(rpf, shapes[32], 0, 180, 0);
+        shapes[64] = getRotatedSet(rpf, shapes[32], 0, 270, 0);
+        shapes[80] = getRotatedSet(rpf, shapes[32], 0, 90, 0);
+
+        shapes[160] = getBoxSingleTextureInt(rpf, 0,16,8,16,14,16,0,false);
+        shapes[176] = getRotatedSet(rpf, shapes[160], 0, 180, 0);
+        shapes[192] = getRotatedSet(rpf, shapes[160], 0, 270, 0);
+        shapes[208] = getRotatedSet(rpf, shapes[160], 0, 90, 0);
+
+        for(int i = 1; i < 128; i++){
+            if(shapes[i] == null && shapes[i-1] != null){
+                shapes[i] = shapes[i-1];
+            }
+        }
+    }
+
+    private void initDoorShapes(RenderPatchFactory rpf) {
+        shapes[0] = getBoxSingleTextureInt(rpf, 0,3,0,16,0,16,0,false);
+        shapes[16] = getRotatedSet(rpf, shapes[0], 0, 90, 0);
+        shapes[32] = getRotatedSet(rpf, shapes[0], 0, 180, 0);
+        shapes[48] = getRotatedSet(rpf, shapes[0], 0, 270, 0);
+
+        shapes[128] = getBoxSingleTextureInt(rpf, 0,3,0,16,0,16,0,false);
+        shapes[144] = getRotatedSet(rpf, shapes[128], 0, 90, 0);
+        shapes[160] = getRotatedSet(rpf, shapes[128], 0, 180, 0);
+        shapes[176] = getRotatedSet(rpf, shapes[128], 0, 270, 0);
+
+        shapes[8] = getBoxSingleTextureInt(rpf, 0,3,0,16,0,16,0,false);
+        shapes[24] = getRotatedSet(rpf, shapes[8], 0, 90, 0);
+        shapes[40] = getRotatedSet(rpf, shapes[8], 0, 180, 0);
+        shapes[56] = getRotatedSet(rpf, shapes[8], 0, 270, 0);
+
+        shapes[136] = getBoxSingleTextureInt(rpf, 0,3,0,16,0,16,0,false);
+        shapes[152] = getRotatedSet(rpf, shapes[136], 0, 90, 0);
+        shapes[168] = getRotatedSet(rpf, shapes[136], 0, 180, 0);
+        shapes[184] = getRotatedSet(rpf, shapes[136], 0, 270, 0);
+
+        for(int i = 255 - 64; i>=0; i--){
+            if(shapes[i] != null && shapes[i + 64] == null){
+                if((i & 8) != 0){
+                    shapes[i + 64] = getRotatedSet(rpf, shapes[i], 0, 270, 0);
+                } else {
+                    shapes[i + 64] = getRotatedSet(rpf, shapes[i], 0, 90, 0);
+                }
+            }
+        }
+
+        for(int i = 1; i < 256; i++){
+            if(shapes[i] == null && shapes[i-1] != null){
+                shapes[i] = shapes[i-1];
+            }
+        }
+    }
 
     private void initStairsShapes(RenderPatchFactory rpf) {
         shapes[8] = ArchitectureCraftShapeRenderer.makeStairs(rpf);
-        shapes[9] = getRotatedSet(rpf, shapes[8], 0, 180, 0);
+        shapes[9] =  getRotatedSet(rpf, shapes[8], 0, 180, 0);
         shapes[10] = getRotatedSet(rpf, shapes[8], 0, 270, 0);
         shapes[11] = getRotatedSet(rpf, shapes[8], 0, 90, 0);
 
@@ -179,6 +277,9 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
             metaData = ((Short)objMetaData).intValue();
         else
             return fullBlock;
+
+        if(metaData >= 256)
+            metaData %= 256;
 
         if(metaData >= 0 && metaData < shapes.length && shapes[metaData] != null)
             return shapes[metaData];
