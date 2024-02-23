@@ -163,7 +163,7 @@ block:id=%robotAfterimage,data=*,stdrot=true,face0-5=0:opencomputers/GenericTop
 block:id=%robot,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:opencomputers/GenericTop
 
 # %print:* (print), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Print
-block:id=%print,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2-5=0:opencomputers/GenericSide
+block:id=%print,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:opencomputers/GenericTop,face2-5=0:opencomputers/GenericSide,patch6=17000:opencomputers/White
 
 # %printer:* (printer), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Printer
 block:id=%printer,data=*,stdrot=true,face0=0:opencomputers/GenericTop,face1=0:opencomputers/PrinterTop,face2-5=0:opencomputers/PrinterSide
