@@ -2687,6 +2687,15 @@ public class TexturePack {
 
     private static final int BLOCKID_GRASS = 2;
     private static final int BLOCKID_SNOW = 78;
+    private void blendColors(Color color1AndOut, Color color2){
+        int alpha = color1AndOut.getAlpha();
+        int alpha2 = color2.getAlpha() * (255-alpha) / 255;
+        int talpha = alpha + alpha2;
+
+        color1AndOut.setRGBA((color2.getRed()*alpha2 + color1AndOut.getRed()*alpha) / talpha,
+                (color2.getGreen()*alpha2 + color1AndOut.getGreen()*alpha) / talpha,
+                (color2.getBlue()*alpha2 + color1AndOut.getBlue()*alpha) / talpha, talpha);
+    }
     /**
      * Read color for given subblock coordinate, with given block id and data and face
      * @param ps - perspective state
@@ -2733,8 +2742,15 @@ public class TexturePack {
                             customTextureId = mod + ctm.mapTexture(mapiter, blkid, blkdata, laststep, customTextureId, ss);
                         }
 
-                        if(layer == layers.length -1 || rslt.getAlpha() < 0xFE)
-                            readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, customTextureId, map.stdrotate, ccm);
+                        if(layer == layers.length -1 || rslt.getAlpha() < 0xFE) {
+                            if(rslt.isTransparent()) {
+                                readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, customTextureId, map.stdrotate, ccm);
+                            } else {
+                                Color tmpColor = new Color();
+                                readColor(ps, mapiter, tmpColor, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, customTextureId, map.stdrotate, ccm);
+                                blendColors(rslt, tmpColor);
+                            }
+                        }
                     }
                     handledByCustomRendering = true;
                 }
@@ -2757,10 +2773,16 @@ public class TexturePack {
             readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate, ccm);
             if (map.layers != null) {    /* If layered */
                 /* While transparent and more layers */
-                while (rslt.isTransparent() && (map.layers[faceindex] >= 0)) {
+                while (rslt.getAlpha() < 0xFE && (map.layers[faceindex] >= 0)) {
                     faceindex = map.layers[faceindex];
                     textid = map.faces[faceindex];
-                    readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate, ccm);
+                    if(rslt.isTransparent()) {
+                        readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate, ccm);
+                    } else {
+                        Color tmpColor = new Color();
+                        readColor(ps, mapiter, tmpColor, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, textid, map.stdrotate, ccm);
+                        blendColors(rslt, tmpColor);
+                    }
                 }
             }
         }
