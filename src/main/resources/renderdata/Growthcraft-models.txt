@@ -1,0 +1,178 @@
+# Growthcraft 1.7.10-2.7.2
+version:1.7
+modname:Growthcraft
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %grc.fenceRope:* (grc.fenceRope), render=growthcraft.core.client.renderer.RenderFenceRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockFenceRope
+boxblock:id=%grc.fenceRope,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
+
+# %grc.ropeBlock:* (grc.ropeBlock), render=growthcraft.core.client.renderer.RenderRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockRope
+boxblock:id=%grc.ropeBlock,xmin=0.4375,xmax=0.5625,ymin=0.4375,ymax=0.5625,zmin=0.4375,zmax=0.5625,data=*
+
+# %grc.netherBrickFenceRope:* (grc.netherBrickFenceRope), render=growthcraft.core.client.renderer.RenderFenceRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockFenceRope
+boxblock:id=%grc.netherBrickFenceRope,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
+
+# %grccore.BlockFluidSaltWater:* (grccore.BlockFluidSaltWater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.core.common.block.GrcBlockFluid
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.875,data=1
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.75,data=2
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.625,data=3
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.5,data=4
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.375,data=5
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.25,data=6
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.125,data=7
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.875,data=9
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.75,data=10
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.625,data=11
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.5,data=12
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.375,data=13
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.25,data=14
+boxblock:id=%grccore.BlockFluidSaltWater,ymax=0.125,data=15
+
+# %grc.fruitPresser:* (grc.fruitPresser), render=growthcraft.cellar.client.render.RenderFruitPresser(CUSTOM), opaque=false,cls=growthcraft.cellar.common.block.BlockFruitPresser
+boxblock:id=%grc.fruitPresser,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.9375,zmin=0.1875,zmax=0.8125,data=*
+
+# %grc.fermentJar:* (grc.fermentJar), render=growthcraft.cellar.client.render.RenderCultureJar(CUSTOM), opaque=false,cls=growthcraft.cellar.common.block.BlockCultureJar
+boxblock:id=%grc.fermentJar,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.375,zmin=0.375,zmax=0.625,data=*
+
+# %grc.appleSapling:* (grc.appleSapling), render=(CROSSEDSQUARES), opaque=false,cls=growthcraft.apples.common.block.BlockAppleSapling
+patchblock:id=%grc.appleSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %grc.appleBlock:* (grc.appleBlock), render=growthcraft.core.client.renderer.RenderBlockFruit(CUSTOM), opaque=false,cls=growthcraft.apples.common.block.BlockApple
+boxblock:id=%grc.appleBlock,xmin=0.375,xmax=0.625,ymin=0.6875,ymax=0.9375,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%grc.appleBlock,xmin=0.34375,xmax=0.65625,ymin=0.625,ymax=0.9375,zmin=0.34375,zmax=0.65625,data=1
+boxblock:id=%grc.appleBlock,xmin=0.3125,xmax=0.6875,ymin=0.5625,ymax=0.9375,zmin=0.3125,zmax=0.6875,data=2
+
+# %grc.appleCiderFluid.0:* (grc.appleCiderFluid.0), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.875,data=1
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.75,data=2
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.625,data=3
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.5,data=4
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.375,data=5
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.25,data=6
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.125,data=7
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.875,data=9
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.75,data=10
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.625,data=11
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.5,data=12
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.375,data=13
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.25,data=14
+boxblock:id=%grc.appleCiderFluid.0,ymax=0.125,data=15
+
+# %grc.appleCiderFluid.1:* (grc.appleCiderFluid.1), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.875,data=1
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.75,data=2
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.625,data=3
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.5,data=4
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.375,data=5
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.25,data=6
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.125,data=7
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.875,data=9
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.75,data=10
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.625,data=11
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.5,data=12
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.375,data=13
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.25,data=14
+boxblock:id=%grc.appleCiderFluid.1,ymax=0.125,data=15
+
+# %grc.appleCiderFluid.2:* (grc.appleCiderFluid.2), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.875,data=1
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.75,data=2
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.625,data=3
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.5,data=4
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.375,data=5
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.25,data=6
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.125,data=7
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.875,data=9
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.75,data=10
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.625,data=11
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.5,data=12
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.375,data=13
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.25,data=14
+boxblock:id=%grc.appleCiderFluid.2,ymax=0.125,data=15
+
+# %grc.appleCiderFluid.3:* (grc.appleCiderFluid.3), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.875,data=1
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.75,data=2
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.625,data=3
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.5,data=4
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.375,data=5
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.25,data=6
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.125,data=7
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.875,data=9
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.75,data=10
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.625,data=11
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.5,data=12
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.375,data=13
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.25,data=14
+boxblock:id=%grc.appleCiderFluid.3,ymax=0.125,data=15
+
+# %grc.appleCiderFluid.4:* (grc.appleCiderFluid.4), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.875,data=1
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.75,data=2
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.625,data=3
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.5,data=4
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.375,data=5
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.25,data=6
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.125,data=7
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.875,data=9
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.75,data=10
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.625,data=11
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.5,data=12
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.375,data=13
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.25,data=14
+boxblock:id=%grc.appleCiderFluid.4,ymax=0.125,data=15
+
+# %grc.appleCiderFluid.5:* (grc.appleCiderFluid.5), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.875,data=1
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.75,data=2
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.625,data=3
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.5,data=4
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.375,data=5
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.25,data=6
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.125,data=7
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.875,data=9
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.75,data=10
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.625,data=11
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.5,data=12
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.375,data=13
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.25,data=14
+boxblock:id=%grc.appleCiderFluid.5,ymax=0.125,data=15
+
+# %grc.appleCiderFluid.6:* (grc.appleCiderFluid.6), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.875,data=1
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.75,data=2
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.625,data=3
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.5,data=4
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.375,data=5
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.25,data=6
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.125,data=7
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.875,data=9
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.75,data=10
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.625,data=11
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.5,data=12
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.375,data=13
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.25,data=14
+boxblock:id=%grc.appleCiderFluid.6,ymax=0.125,data=15
+
+# %grc.naturaFenceRope:* (grc.naturaFenceRope), render=growthcraft.core.client.renderer.RenderFenceRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockFenceRope
+boxblock:id=%grc.naturaFenceRope,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*

@@ -1,0 +1,16 @@
+# Waypoints 1.1.1a
+version:1.7
+modname:Waypoints
+
+
+cfgfile:config/Waypoints.cfg
+
+
+texturepath:assets/waypoints/textures/blocks/
+texture:id=waypoints/waypoint-side,filename=assets/waypoints/textures/blocks/waypoint-side.png
+texture:id=waypoints/waypoint-top,filename=assets/waypoints/textures/blocks/waypoint-top.png
+
+
+
+# %waypoint:* (waypoint), render=(STANDARD), opaque=false,cls=info.jbcs.minecraft.waypoints.block.BlockWaypoint
+block:id=%waypoint,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:waypoints/waypoint-top,face2-5=0:waypoints/waypoint-side

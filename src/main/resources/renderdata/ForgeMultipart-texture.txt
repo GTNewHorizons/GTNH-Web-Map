@@ -14,3 +14,5 @@ texture:id=minecraft/blank_16,filename=assets/minecraft/textures/blocks/stone.pn
 
 # %block:* (block), render=codechicken.multipart.MultipartRenderer$(CUSTOM), opaque=false,cls=codechicken.multipart.BlockMultipart
 block:id=%block,data=*,stdrot=true,patch0=12000:minecraft/blank_16
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.DummyModSupportLoader

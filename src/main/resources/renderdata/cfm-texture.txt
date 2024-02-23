@@ -1,0 +1,245 @@
+# cfm 3.4.7
+version:1.7
+modname:cfm
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/cfm/textures/blocks/
+texture:id=cfm/hey,filename=assets/cfm/textures/blocks/hey.png
+texture:id=cfm/nyan,filename=assets/cfm/textures/blocks/nyan.png
+texture:id=cfm/pattern,filename=assets/cfm/textures/blocks/pattern.png
+texture:id=cfm/whiteglass,filename=assets/cfm/textures/blocks/whiteglass.png
+texture:id=cfm/yellowglow,filename=assets/cfm/textures/blocks/yellowglow.png
+texture:id=minecraft/anvil_base,filename=assets/minecraft/textures/blocks/anvil_base.png
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=minecraft/glass,filename=assets/minecraft/textures/blocks/glass.png
+texture:id=minecraft/glass_white,filename=assets/minecraft/textures/blocks/glass_white.png
+texture:id=minecraft/gold_block,filename=assets/minecraft/textures/blocks/gold_block.png
+texture:id=minecraft/hardened_clay,filename=assets/minecraft/textures/blocks/hardened_clay.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/leaves_birch,filename=assets/minecraft/textures/blocks/leaves_birch.png
+texture:id=minecraft/leaves_jungle,filename=assets/minecraft/textures/blocks/leaves_jungle.png
+texture:id=minecraft/leaves_oak,filename=assets/minecraft/textures/blocks/leaves_oak.png
+texture:id=minecraft/leaves_spruce,filename=assets/minecraft/textures/blocks/leaves_spruce.png
+texture:id=minecraft/log_oak,filename=assets/minecraft/textures/blocks/log_oak.png
+texture:id=minecraft/planks_birch,filename=assets/minecraft/textures/blocks/planks_birch.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/quartz_block_bottom,filename=assets/minecraft/textures/blocks/quartz_block_bottom.png
+texture:id=minecraft/quartz_block_top,filename=assets/minecraft/textures/blocks/quartz_block_top.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+texture:id=minecraft/wool_colored_white,filename=assets/minecraft/textures/blocks/wool_colored_white.png
+
+
+
+# %lampon:* (lampon), render=com.mrcrayfish.furniture.client.render.RenderLamp(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockLampOn
+block:id=%lampon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white
+
+# %lampoff:* (lampoff), render=com.mrcrayfish.furniture.client.render.RenderLamp(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockLampOff
+block:id=%lampoff,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white
+
+# %coffetablewood:* (coffetablewood), render=com.mrcrayfish.furniture.client.render.RenderCoffeeTable(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCoffeeTable
+block:id=%coffetablewood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %coffetablestone:* (coffetablestone), render=com.mrcrayfish.furniture.client.render.RenderCoffeeTable(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCoffeeTable
+block:id=%coffetablestone,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone
+
+# %tablewood:* (tablewood), render=com.mrcrayfish.furniture.client.render.RenderTable(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockTable
+block:id=%tablewood,data=*,stdrot=true,face0-5=12000:minecraft/planks_oak
+
+# %tablestone:* (tablestone), render=com.mrcrayfish.furniture.client.render.RenderTable(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockTable
+block:id=%tablestone,data=*,stdrot=true,face0-5=12000:minecraft/cobblestone
+
+# %chairwood:* (chairwood), render=com.mrcrayfish.furniture.client.render.RenderChair(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockChair
+block:id=%chairwood,data=*,stdrot=true,face0-5=12000:minecraft/planks_oak
+
+# %chairstone:* (chairstone), render=com.mrcrayfish.furniture.client.render.RenderChair(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockChair
+block:id=%chairstone,data=*,stdrot=true,face0-5=12000:minecraft/cobblestone
+
+# %freezer:* (freezer), render=com.mrcrayfish.furniture.client.render.RenderFridge(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockFreezer
+block:id=%freezer,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %fridge:* (fridge), render=com.mrcrayfish.furniture.client.render.RenderFridge(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockFridge
+block:id=%fridge,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %cabinet:* (cabinet), render=com.mrcrayfish.furniture.client.render.RenderCabinet(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCabinet
+block:id=%cabinet,data=*,stdrot=true,face0-5=12000:minecraft/planks_birch
+
+# %couch:* (couch), render=com.mrcrayfish.furniture.client.render.RenderCouch(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCouch
+block:id=%couch,data=*,stdrot=true,face0-5=12000:minecraft/wool_colored_white
+
+# %blindon:* (blindon), render=com.mrcrayfish.furniture.client.render.RenderWindowDecoration(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockWindowDecoration
+block:id=%blindon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %blindoff:* (blindoff), render=com.mrcrayfish.furniture.client.render.RenderWindowDecoration(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockWindowDecorationClosed
+block:id=%blindoff,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %curtainon:* (curtainon), render=com.mrcrayfish.furniture.client.render.RenderWindowDecoration(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockWindowDecoration
+block:id=%curtainon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %curtainoff:* (curtainoff), render=com.mrcrayfish.furniture.client.render.RenderWindowDecoration(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockWindowDecorationClosed
+block:id=%curtainoff,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %bedsidecabinet:* (bedsidecabinet), render=com.mrcrayfish.furniture.client.render.RenderBedsideCabinet(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBedsideCabinet
+block:id=%bedsidecabinet,data=*,stdrot=true,face0-5=12000:minecraft/planks_oak
+
+# %oven:* (oven), render=com.mrcrayfish.furniture.client.render.RenderOven(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockOven
+block:id=%oven,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %ovenoverhead:* (ovenoverhead), render=com.mrcrayfish.furniture.client.render.RenderOvenOverhead(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockOvenOverhead
+block:id=%ovenoverhead,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %hedge:* (hedge), render=com.mrcrayfish.furniture.client.render.RenderHedge(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockHedge
+block:id=%hedge,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%hedge,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_spruce
+block:id=%hedge,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%hedge,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_jungle
+block:id=%hedge,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%hedge,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_spruce
+block:id=%hedge,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%hedge,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_jungle
+block:id=%hedge,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%hedge,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_spruce
+block:id=%hedge,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%hedge,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_jungle
+block:id=%hedge,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%hedge,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_spruce
+block:id=%hedge,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%hedge,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_jungle
+
+# %birdbath:* (birdbath), render=com.mrcrayfish.furniture.client.render.RenderBirdBath(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBirdBath
+block:id=%birdbath,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %stonepath:* (stonepath), render=com.mrcrayfish.furniture.client.render.RenderStonePath(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockStonePath
+block:id=%stonepath,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %whitefence:* (whitefence), render=com.mrcrayfish.furniture.client.render.RenderWhiteFence(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockWhiteFence
+block:id=%whitefence,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white
+
+# %tap:* (tap), render=com.mrcrayfish.furniture.client.render.RenderTap(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockTap
+block:id=%tap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %mailbox:* (mailbox), render=com.mrcrayfish.furniture.client.render.RenderMailBox(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockMailBox
+block:id=%mailbox,data=*,stdrot=true,face0-5=12000:minecraft/log_oak
+
+# %tv:* (tv), render=com.mrcrayfish.furniture.client.render.RenderTV(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockTV
+block:id=%tv,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %computer:* (computer), render=com.mrcrayfish.furniture.client.render.RenderComputer(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockComputer
+block:id=%computer,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %printer:* (printer), render=com.mrcrayfish.furniture.client.render.RenderPrinter(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockPrinter
+block:id=%printer,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %electricfence:* (electricfence), render=com.mrcrayfish.furniture.client.render.RenderElectricFence(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockElectricFence
+block:id=%electricfence,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/anvil_base
+
+# %doorbell:* (doorbell), render=com.mrcrayfish.furniture.client.render.RenderDoorBell(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockDoorBell
+block:id=%doorbell,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/log_oak
+
+# %firealarmoff:* (firealarmoff), render=com.mrcrayfish.furniture.client.render.RenderFireAlarm(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockFireAlarm
+block:id=%firealarmoff,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_top
+
+# %firealarmon:* (firealarmon), render=com.mrcrayfish.furniture.client.render.RenderFireAlarm(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockFireAlarm
+block:id=%firealarmon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_top
+
+# %ceilinglightoff:* (ceilinglightoff), render=com.mrcrayfish.furniture.client.render.RenderCeilingLight(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCeilingLight
+block:id=%ceilinglightoff,data=*,stdrot=true,face0-5=12000:minecraft/glass
+
+# %ceilinglighton:* (ceilinglighton), render=com.mrcrayfish.furniture.client.render.RenderCeilingLight(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCeilingLight
+block:id=%ceilinglighton,data=*,stdrot=true,face0-5=12000:minecraft/glass
+
+# %stereo:* (stereo), render=com.mrcrayfish.furniture.client.render.RenderStereo(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockStereo
+block:id=%stereo,data=*,stdrot=true,face0-5=12000:minecraft/planks_oak
+
+# %toilet:* (toilet), render=com.mrcrayfish.furniture.client.render.RenderToilet(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockToilet
+block:id=%toilet,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_top
+
+# %basin:* (basin), render=com.mrcrayfish.furniture.client.render.RenderBasin(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBasin
+block:id=%basin,data=*,stdrot=true,face0-5=12000:minecraft/quartz_block_bottom
+
+# %wallcabinet:* (wallcabinet), render=com.mrcrayfish.furniture.client.render.RenderWallCabinet(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockWallCabinet
+block:id=%wallcabinet,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_bottom
+
+# %bath1:* (bath1), render=com.mrcrayfish.furniture.client.render.RenderBath(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBath
+block:id=%bath1,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_bottom
+
+# %bath2:* (bath2), render=com.mrcrayfish.furniture.client.render.RenderBath(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBath
+block:id=%bath2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_bottom
+
+# %showerbottom:* (showerbottom), render=com.mrcrayfish.furniture.client.render.RenderShower(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockShower
+block:id=%showerbottom,data=*,stdrot=true,face0-5=12000:minecraft/quartz_block_bottom
+
+# %showertop:* (showertop), render=com.mrcrayfish.furniture.client.render.RenderShower(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockShower
+block:id=%showertop,data=*,stdrot=true,face0-5=12000:minecraft/quartz_block_bottom
+
+# %showerheadoff:* (showerheadoff), render=com.mrcrayfish.furniture.client.render.RenderShowerHead(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockShowerHead
+block:id=%showerheadoff,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %showerheadon:* (showerheadon), render=com.mrcrayfish.furniture.client.render.RenderShowerHead(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockShowerHead
+block:id=%showerheadon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %bin:* (bin), render=com.mrcrayfish.furniture.client.render.RenderBin(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBin
+block:id=%bin,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %present:* (present), render=com.mrcrayfish.furniture.client.render.RenderPresent(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockPresent
+block:id=%present,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/gold_block
+
+# %tree:* (tree), render=com.mrcrayfish.furniture.client.render.RenderTree(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockTree
+block:id=%tree,data=*,stdrot=true,face0-5=12000:minecraft/hardened_clay
+
+# %toaster:* (toaster), render=com.mrcrayfish.furniture.client.render.RenderToaster(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockToaster
+block:id=%toaster,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %microwave:* (microwave), render=com.mrcrayfish.furniture.client.render.RenderMicrowave(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockMicrowave
+block:id=%microwave,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %washingmachine:* (washingmachine), render=com.mrcrayfish.furniture.client.render.RenderWashingMachine(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockWashingMachine
+block:id=%washingmachine,data=*,stdrot=true,face0-5=12000:minecraft/quartz_block_bottom
+
+# %cookiejar:* (cookiejar), render=com.mrcrayfish.furniture.client.render.RenderCookieJar(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCookieJar
+block:id=%cookiejar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/glass_white
+
+# %blender:* (blender), render=com.mrcrayfish.furniture.client.render.RenderBlender(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBlender
+block:id=%blender,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/glass_white
+
+# %plate:* (plate), render=com.mrcrayfish.furniture.client.render.RenderPlate(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockPlate
+block:id=%plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_bottom
+
+# %cup:* (cup), render=com.mrcrayfish.furniture.client.render.RenderCup(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCup
+block:id=%cup,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/glass_white
+
+# %counterdoored:* (counterdoored), render=com.mrcrayfish.furniture.client.render.RenderCounter(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCounter
+block:id=%counterdoored,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %countersink:* (countersink), render=com.mrcrayfish.furniture.client.render.RenderCounterSink(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCounterSink
+block:id=%countersink,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %dishwasher:* (dishwasher), render=com.mrcrayfish.furniture.client.render.RenderDishWasher(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockDishwasher
+block:id=%dishwasher,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %kitchencabinet:* (kitchencabinet), render=com.mrcrayfish.furniture.client.render.RenderCabinetKitchen(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockCabinetKitchen
+block:id=%kitchencabinet,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
+
+# %choppingboard:* (choppingboard), render=com.mrcrayfish.furniture.client.render.RenderChoppingBoard(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockChoppingBoard
+block:id=%choppingboard,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %barstool:* (barstool), render=com.mrcrayfish.furniture.client.render.RenderBarStool(CUSTOM), opaque=false,cls=com.mrcrayfish.furniture.blocks.BlockBarStool
+block:id=%barstool,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/quartz_block_bottom
+
+# %hey:* (hey), render=(STANDARD), opaque=true,cls=com.mrcrayfish.furniture.blocks.BlockTVAnimation
+block:id=%hey,data=*,stdrot=true,face0-5=0:cfm/hey
+
+# %nyan:* (nyan), render=(STANDARD), opaque=true,cls=com.mrcrayfish.furniture.blocks.BlockTVAnimation
+block:id=%nyan,data=*,stdrot=true,face0-5=0:cfm/nyan
+
+# %pattern:* (pattern), render=(STANDARD), opaque=true,cls=com.mrcrayfish.furniture.blocks.BlockTVAnimation
+block:id=%pattern,data=*,stdrot=true,face0-5=0:cfm/pattern
+
+# %yellowGlow:* (yellowGlow), render=(STANDARD), opaque=true,cls=com.mrcrayfish.furniture.blocks.BlockTVAnimation
+block:id=%yellowGlow,data=*,stdrot=true,face0-5=0:cfm/yellowglow
+
+# %whiteGlass:* (whiteGlass), render=(STANDARD), opaque=true,cls=com.mrcrayfish.furniture.blocks.BlockTVAnimation
+block:id=%whiteGlass,data=*,stdrot=true,face0-5=0:cfm/whiteglass

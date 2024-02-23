@@ -1,0 +1,94 @@
+# ElectriCraft v33a
+version:1.7
+modname:ElectriCraft
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/electricraft/textures/blocks/
+texture:id=ElectriCraft/oreAluminum,filename=assets/electricraft/textures/blocks/oreAluminum.png
+texture:id=ElectriCraft/oreCopper,filename=assets/electricraft/textures/blocks/oreCopper.png
+texture:id=ElectriCraft/oreNickel,filename=assets/electricraft/textures/blocks/oreNickel.png
+texture:id=ElectriCraft/orePlatinum,filename=assets/electricraft/textures/blocks/orePlatinum.png
+texture:id=ElectriCraft/oreSilver,filename=assets/electricraft/textures/blocks/oreSilver.png
+texture:id=ElectriCraft/oreTin,filename=assets/electricraft/textures/blocks/oreTin.png
+texture:id=ElectriCraft/wire/aluminum,filename=assets/electricraft/textures/blocks/wire/aluminum.png
+texture:id=ElectriCraft/wire/copper,filename=assets/electricraft/textures/blocks/wire/copper.png
+texture:id=ElectriCraft/wire/gold,filename=assets/electricraft/textures/blocks/wire/gold.png
+texture:id=ElectriCraft/wire/nickel,filename=assets/electricraft/textures/blocks/wire/nickel.png
+texture:id=ElectriCraft/wire/platinum,filename=assets/electricraft/textures/blocks/wire/platinum.png
+texture:id=ElectriCraft/wire/silver,filename=assets/electricraft/textures/blocks/wire/silver.png
+texture:id=ElectriCraft/wire/steel,filename=assets/electricraft/textures/blocks/wire/steel.png
+texture:id=ElectriCraft/wire/superconductor,filename=assets/electricraft/textures/blocks/wire/superconductor.png
+texture:id=ElectriCraft/wire/tin,filename=assets/electricraft/textures/blocks/wire/tin.png
+texture:id=electricraft/battery/_bottom,filename=assets/electricraft/textures/blocks/battery/_bottom.png
+texture:id=electricraft/battery/_top,filename=assets/electricraft/textures/blocks/battery/_top.png
+texture:id=electricraft/battery/diamond,filename=assets/electricraft/textures/blocks/battery/diamond.png
+texture:id=electricraft/battery/ender,filename=assets/electricraft/textures/blocks/battery/ender.png
+texture:id=electricraft/battery/eu,filename=assets/electricraft/textures/blocks/battery/eu.png
+texture:id=electricraft/battery/glowstone,filename=assets/electricraft/textures/blocks/battery/glowstone.png
+texture:id=electricraft/battery/lapis,filename=assets/electricraft/textures/blocks/battery/lapis.png
+texture:id=electricraft/battery/redstone,filename=assets/electricraft/textures/blocks/battery/redstone.png
+texture:id=electricraft/battery/rf,filename=assets/electricraft/textures/blocks/battery/rf.png
+texture:id=electricraft/battery/star,filename=assets/electricraft/textures/blocks/battery/star.png
+texture:id=electricraft/eu,filename=assets/electricraft/textures/blocks/eu.png
+texture:id=electricraft/eusplit,filename=assets/electricraft/textures/blocks/eusplit.png
+texture:id=electricraft/eusplit_in,filename=assets/electricraft/textures/blocks/eusplit_in.png
+texture:id=electricraft/eusplit_out,filename=assets/electricraft/textures/blocks/eusplit_out.png
+texture:id=electricraft/rf,filename=assets/electricraft/textures/blocks/rf.png
+texture:id=electricraft/wireless/back,filename=assets/electricraft/textures/blocks/wireless/back.png
+texture:id=electricraft/wireless/front,filename=assets/electricraft/textures/blocks/wireless/front.png
+texture:id=electricraft/wireless/side_0,filename=assets/electricraft/textures/blocks/wireless/side_0.png
+texture:id=rotarycraft/steel,filename=assets/rotarycraft/textures/blocks/steel.png
+
+
+
+# %electricraft_block_wire:* (electricraft_block_wire), render=Reika.ElectriCraft.WireRenderer(CUSTOM), opaque=false,cls=Reika.ElectriCraft.Blocks.BlockWire
+block:id=%electricraft_block_wire,data=0,stdrot=true,face0-5=0:ElectriCraft/wire/steel
+block:id=%electricraft_block_wire,data=1,stdrot=true,face0-5=0:ElectriCraft/wire/tin
+block:id=%electricraft_block_wire,data=2,stdrot=true,face0-5=0:ElectriCraft/wire/nickel
+block:id=%electricraft_block_wire,data=3,stdrot=true,face0-5=0:ElectriCraft/wire/aluminum
+block:id=%electricraft_block_wire,data=4,stdrot=true,face0-5=0:ElectriCraft/wire/copper
+block:id=%electricraft_block_wire,data=5,stdrot=true,face0-5=0:ElectriCraft/wire/silver
+block:id=%electricraft_block_wire,data=6,stdrot=true,face0-5=0:ElectriCraft/wire/gold
+block:id=%electricraft_block_wire,data=7,stdrot=true,face0-5=0:ElectriCraft/wire/platinum
+block:id=%electricraft_block_wire,data=8,stdrot=true,face0-5=0:ElectriCraft/wire/superconductor
+
+# %electricraft_block_machine:* (electricraft_block_machine), render=(CUSTOM), opaque=false,cls=Reika.ElectriCraft.Blocks.BlockElectricMachine
+block:id=%electricraft_block_machine,data=*,stdrot=true,face0-5=0:rotarycraft/steel
+
+# %electricraft_block_ore:* (electricraft_block_ore), render=(STANDARD), opaque=true,cls=Reika.ElectriCraft.Blocks.BlockElectriOre
+block:id=%electricraft_block_ore,data=0,stdrot=true,face0-5=0:ElectriCraft/oreCopper
+block:id=%electricraft_block_ore,data=1,stdrot=true,face0-5=0:ElectriCraft/oreTin
+block:id=%electricraft_block_ore,data=2,stdrot=true,face0-5=0:ElectriCraft/oreSilver
+block:id=%electricraft_block_ore,data=3,stdrot=true,face0-5=0:ElectriCraft/oreNickel
+block:id=%electricraft_block_ore,data=4,stdrot=true,face0-5=0:ElectriCraft/oreAluminum
+block:id=%electricraft_block_ore,data=5,stdrot=true,face0-5=0:ElectriCraft/orePlatinum
+
+# %electricraft_block_battery:* (electricraft_block_battery), render=Reika.ElectriCraft.Renders.BatteryRenderer(CUSTOM), opaque=true,cls=Reika.ElectriCraft.Blocks.BlockElectricBattery
+block:id=%electricraft_block_battery,data=0,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/redstone
+block:id=%electricraft_block_battery,data=1,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/glowstone
+block:id=%electricraft_block_battery,data=2,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/lapis
+block:id=%electricraft_block_battery,data=3,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/ender
+block:id=%electricraft_block_battery,data=4,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/diamond
+block:id=%electricraft_block_battery,data=5,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/star
+
+# %electricraft_block_cable:* (electricraft_block_cable), render=Reika.ElectriCraft.CableRenderer(CUSTOM), opaque=false,cls=Reika.ElectriCraft.Blocks.BlockRFCable
+block:id=%electricraft_block_cable,data=*,stdrot=true,face0-5=0:electricraft/rf
+
+# %electricraft_block_rfbattery:* (electricraft_block_rfbattery), render=(STANDARD), opaque=true,cls=Reika.ElectriCraft.Blocks.BlockRFBattery
+block:id=%electricraft_block_rfbattery,data=0,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/rf
+
+# %electricraft_block_eusplit:* (electricraft_block_eusplit), render=(STANDARD), opaque=true,cls=Reika.ElectriCraft.Blocks.BlockEUSplitter
+block:id=%electricraft_block_eusplit,data=*,stdrot=true,face0=0:electricraft/eusplit,face1=0:electricraft/eusplit_out,face2-3=0:electricraft/eusplit,face4=0:electricraft/eusplit_in,face5=0:electricraft/eusplit
+
+# %electricraft_block_eucable:* (electricraft_block_eucable), render=Reika.ElectriCraft.CableRenderer(CUSTOM), opaque=false,cls=Reika.ElectriCraft.Blocks.BlockEUCable
+block:id=%electricraft_block_eucable,data=*,stdrot=true,face0-5=0:electricraft/eu
+
+# %electricraft_block_eubattery:* (electricraft_block_eubattery), render=(STANDARD), opaque=true,cls=Reika.ElectriCraft.Blocks.BlockEUBattery
+block:id=%electricraft_block_eubattery,data=0,stdrot=true,face0=0:electricraft/battery/_bottom,face1=0:electricraft/battery/_top,face2-5=0:electricraft/battery/eu
+
+# %electricraft_block_chargepad:* (electricraft_block_chargepad), render=(STANDARD), opaque=true,cls=Reika.ElectriCraft.Blocks.BlockChargePad
+block:id=%electricraft_block_chargepad,data=*,stdrot=true,face0=0:electricraft/wireless/back,face1=0:electricraft/wireless/front,face2-5=0:electricraft/wireless/side_0

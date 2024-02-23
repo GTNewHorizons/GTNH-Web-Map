@@ -35,20 +35,20 @@ block:id=%blockCarpentersCollapsibleBlock,data=*,stdrot=true,face0-5=0:Carpenter
 block:id=%blockCarpentersDaylightSensor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
 
 # %blockCarpentersDoor:* (blockCarpentersDoor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersDoor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersDoor
-block:id=%blockCarpentersDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersFlowerPot:* (blockCarpentersFlowerPot), render=com.carpentersblocks.renderer.BlockHandlerCarpentersFlowerPot(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersFlowerPot
 block:id=%blockCarpentersFlowerPot,data=0,stdrot=true,face0=0:minecraft/redstone_dust_cross_overlay,face1=0:CarpentersBlocks/flowerpot/flower_pot,face2-5=0:CarpentersBlocks/slope/oblique_pos
 block:id=%blockCarpentersFlowerPot,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
 
 # %blockCarpentersGarageDoor:* (blockCarpentersGarageDoor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGarageDoor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGarageDoor
-block:id=%blockCarpentersGarageDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersGarageDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersGate:* (blockCarpentersGate), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGate(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGate
 block:id=%blockCarpentersGate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersHatch:* (blockCarpentersHatch), render=com.carpentersblocks.renderer.BlockHandlerCarpentersHatch(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersHatch
-block:id=%blockCarpentersHatch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersHatch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersLadder:* (blockCarpentersLadder), render=com.carpentersblocks.renderer.BlockHandlerCarpentersLadder(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersLadder
 block:id=%blockCarpentersLadder,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
@@ -70,3 +70,5 @@ block:id=%blockCarpentersStairs,data=*,stdrot=true,face0-5=0:CarpentersBlocks/sl
 
 # %blockCarpentersTorch:* (blockCarpentersTorch), render=com.carpentersblocks.renderer.BlockHandlerCarpentersTorch(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersTorch
 block:id=%blockCarpentersTorch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/torch/torch
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.DummyModSupportLoader

@@ -1,0 +1,1091 @@
+# ChromatiCraft v33a
+version:1.7
+modname:ChromatiCraft
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/chromaticraft/textures/blocks/
+texture:id=ChromatiCraft/crystal/crystal_outline,filename=assets/chromaticraft/textures/blocks/crystal/crystal_outline.png
+texture:id=ChromatiCraft/dye/leaves,filename=assets/chromaticraft/textures/blocks/dye/leaves.png
+texture:id=ChromatiCraft/dye/rainbowsapling,filename=assets/chromaticraft/textures/blocks/dye/rainbowsapling.png
+texture:id=ChromatiCraft/dye/sapling,filename=assets/chromaticraft/textures/blocks/dye/sapling.png
+texture:id=ChromatiCraft/trans,filename=assets/chromaticraft/textures/blocks/trans.png
+texture:id=chromaticraft/basic/door_closed,filename=assets/chromaticraft/textures/blocks/basic/door_closed.png
+texture:id=chromaticraft/basic/door_open,filename=assets/chromaticraft/textures/blocks/basic/door_open.png
+texture:id=chromaticraft/basic/enderbomb_active,filename=assets/chromaticraft/textures/blocks/basic/enderbomb_active.png
+texture:id=chromaticraft/basic/enderbomb_bottom,filename=assets/chromaticraft/textures/blocks/basic/enderbomb_bottom.png
+texture:id=chromaticraft/basic/enderbomb_side,filename=assets/chromaticraft/textures/blocks/basic/enderbomb_side.png
+texture:id=chromaticraft/basic/enderbomb_top,filename=assets/chromaticraft/textures/blocks/basic/enderbomb_top.png
+texture:id=chromaticraft/basic/fence_basic,filename=assets/chromaticraft/textures/blocks/basic/fence_basic.png
+texture:id=chromaticraft/basic/glass,filename=assets/chromaticraft/textures/blocks/basic/glass.png
+texture:id=chromaticraft/basic/glow,filename=assets/chromaticraft/textures/blocks/basic/glow.png
+texture:id=chromaticraft/basic/hover,filename=assets/chromaticraft/textures/blocks/basic/hover.png
+texture:id=chromaticraft/basic/hoverpad,filename=assets/chromaticraft/textures/blocks/basic/hoverpad.png
+texture:id=chromaticraft/basic/powertree5,filename=assets/chromaticraft/textures/blocks/basic/powertree5.png
+texture:id=chromaticraft/basic/relay,filename=assets/chromaticraft/textures/blocks/basic/relay.png
+texture:id=chromaticraft/basic/relay_floating,filename=assets/chromaticraft/textures/blocks/basic/relay_floating.png
+texture:id=chromaticraft/basic/relayfilter,filename=assets/chromaticraft/textures/blocks/basic/relayfilter.png
+texture:id=chromaticraft/basic/routernode-0,filename=assets/chromaticraft/textures/blocks/basic/routernode-0.png
+texture:id=chromaticraft/basic/routernode-1,filename=assets/chromaticraft/textures/blocks/basic/routernode-1.png
+texture:id=chromaticraft/basic/shield_0,filename=assets/chromaticraft/textures/blocks/basic/shield_0.png
+texture:id=chromaticraft/basic/shield_1,filename=assets/chromaticraft/textures/blocks/basic/shield_1.png
+texture:id=chromaticraft/basic/shield_2,filename=assets/chromaticraft/textures/blocks/basic/shield_2.png
+texture:id=chromaticraft/basic/shield_3,filename=assets/chromaticraft/textures/blocks/basic/shield_3.png
+texture:id=chromaticraft/basic/shield_4,filename=assets/chromaticraft/textures/blocks/basic/shield_4.png
+texture:id=chromaticraft/basic/shield_5,filename=assets/chromaticraft/textures/blocks/basic/shield_5.png
+texture:id=chromaticraft/basic/shield_6,filename=assets/chromaticraft/textures/blocks/basic/shield_6.png
+texture:id=chromaticraft/basic/shield_7,filename=assets/chromaticraft/textures/blocks/basic/shield_7.png
+texture:id=chromaticraft/basic/specialshield_0,filename=assets/chromaticraft/textures/blocks/basic/specialshield_0.png
+texture:id=chromaticraft/basic/specialshield_1,filename=assets/chromaticraft/textures/blocks/basic/specialshield_1.png
+texture:id=chromaticraft/basic/specialshield_2,filename=assets/chromaticraft/textures/blocks/basic/specialshield_2.png
+texture:id=chromaticraft/basic/specialshield_3,filename=assets/chromaticraft/textures/blocks/basic/specialshield_3.png
+texture:id=chromaticraft/basic/specialshield_4,filename=assets/chromaticraft/textures/blocks/basic/specialshield_4.png
+texture:id=chromaticraft/basic/specialshield_5,filename=assets/chromaticraft/textures/blocks/basic/specialshield_5.png
+texture:id=chromaticraft/basic/specialshield_6,filename=assets/chromaticraft/textures/blocks/basic/specialshield_6.png
+texture:id=chromaticraft/basic/specialshield_7,filename=assets/chromaticraft/textures/blocks/basic/specialshield_7.png
+texture:id=chromaticraft/basic/trapfloor,filename=assets/chromaticraft/textures/blocks/basic/trapfloor.png
+texture:id=chromaticraft/blank,filename=assets/chromaticraft/textures/blocks/blank.png
+texture:id=chromaticraft/caveindicator_top,filename=assets/chromaticraft/textures/blocks/caveindicator_top.png
+texture:id=chromaticraft/cliffstone/dirt_base,filename=assets/chromaticraft/textures/blocks/cliffstone/dirt_base.png
+texture:id=chromaticraft/cliffstone/farmland_top,filename=assets/chromaticraft/textures/blocks/cliffstone/farmland_top.png
+texture:id=chromaticraft/cliffstone/grass_base,filename=assets/chromaticraft/textures/blocks/cliffstone/grass_base.png
+texture:id=chromaticraft/cliffstone/grass_top_base,filename=assets/chromaticraft/textures/blocks/cliffstone/grass_top_base.png
+texture:id=chromaticraft/cliffstone/stone_base,filename=assets/chromaticraft/textures/blocks/cliffstone/stone_base.png
+texture:id=chromaticraft/coldlamp,filename=assets/chromaticraft/textures/blocks/coldlamp.png
+texture:id=chromaticraft/console/screen,filename=assets/chromaticraft/textures/blocks/console/screen.png
+texture:id=chromaticraft/console/side,filename=assets/chromaticraft/textures/blocks/console/side.png
+texture:id=chromaticraft/crystal/chroma,filename=assets/chromaticraft/textures/blocks/crystal/chroma.png
+texture:id=chromaticraft/crystal/encrusted,filename=assets/chromaticraft/textures/blocks/crystal/encrusted.png
+texture:id=chromaticraft/dimgen/aqua/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/aqua/layer_0.png
+texture:id=chromaticraft/dimgen/chunkloader-a,filename=assets/chromaticraft/textures/blocks/dimgen/chunkloader-a.png
+texture:id=chromaticraft/dimgen/cliffglass/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/cliffglass/layer_0.png
+texture:id=chromaticraft/dimgen/crystalleaf/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/crystalleaf/layer_0.png
+texture:id=chromaticraft/dimgen/floatstone/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/floatstone/layer_0.png
+texture:id=chromaticraft/dimgen/gemstone/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/gemstone/layer_0.png
+texture:id=chromaticraft/dimgen/glowcave/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/glowcave/layer_0.png
+texture:id=chromaticraft/dimgen/lattice/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/lattice/layer_0.png
+texture:id=chromaticraft/dimgen/lifewater/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/lifewater/layer_0.png
+texture:id=chromaticraft/dimgen/miasma/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/miasma/layer_0.png
+texture:id=chromaticraft/dimgen/oceanstone/layer_0,filename=assets/chromaticraft/textures/blocks/dimgen/oceanstone/layer_0.png
+texture:id=chromaticraft/dimgen/sapling,filename=assets/chromaticraft/textures/blocks/dimgen/sapling.png
+texture:id=chromaticraft/dimgen/voidcave,filename=assets/chromaticraft/textures/blocks/dimgen/voidcave.png
+texture:id=chromaticraft/dimgen/voidrift,filename=assets/chromaticraft/textures/blocks/dimgen/voidrift.png
+texture:id=chromaticraft/dimgen2/underlay_0,filename=assets/chromaticraft/textures/blocks/dimgen2/underlay_0.png
+texture:id=chromaticraft/dimgen2/underlay_1,filename=assets/chromaticraft/textures/blocks/dimgen2/underlay_1.png
+texture:id=chromaticraft/dimstruct/bit_one,filename=assets/chromaticraft/textures/blocks/dimstruct/bit_one.png
+texture:id=chromaticraft/dimstruct/bit_zero,filename=assets/chromaticraft/textures/blocks/dimstruct/bit_zero.png
+texture:id=chromaticraft/dimstruct/bridge_off,filename=assets/chromaticraft/textures/blocks/dimstruct/bridge_off.png
+texture:id=chromaticraft/dimstruct/bridge_on,filename=assets/chromaticraft/textures/blocks/dimstruct/bridge_on.png
+texture:id=chromaticraft/dimstruct/bridgekey_off,filename=assets/chromaticraft/textures/blocks/dimstruct/bridgekey_off.png
+texture:id=chromaticraft/dimstruct/bridgekey_off_top,filename=assets/chromaticraft/textures/blocks/dimstruct/bridgekey_off_top.png
+texture:id=chromaticraft/dimstruct/bridgekey_on,filename=assets/chromaticraft/textures/blocks/dimstruct/bridgekey_on.png
+texture:id=chromaticraft/dimstruct/bridgekey_on_top,filename=assets/chromaticraft/textures/blocks/dimstruct/bridgekey_on_top.png
+texture:id=chromaticraft/dimstruct/colorlock_0,filename=assets/chromaticraft/textures/blocks/dimstruct/colorlock_0.png
+texture:id=chromaticraft/dimstruct/dimdata_side,filename=assets/chromaticraft/textures/blocks/dimstruct/dimdata_side.png
+texture:id=chromaticraft/dimstruct/dimpassword_side,filename=assets/chromaticraft/textures/blocks/dimstruct/dimpassword_side.png
+texture:id=chromaticraft/dimstruct/gol_control_end,filename=assets/chromaticraft/textures/blocks/dimstruct/gol_control_end.png
+texture:id=chromaticraft/dimstruct/gol_control_play,filename=assets/chromaticraft/textures/blocks/dimstruct/gol_control_play.png
+texture:id=chromaticraft/dimstruct/gol_mem_off,filename=assets/chromaticraft/textures/blocks/dimstruct/gol_mem_off.png
+texture:id=chromaticraft/dimstruct/gol_mem_on,filename=assets/chromaticraft/textures/blocks/dimstruct/gol_mem_on.png
+texture:id=chromaticraft/dimstruct/gol_off,filename=assets/chromaticraft/textures/blocks/dimstruct/gol_off.png
+texture:id=chromaticraft/dimstruct/gravity_sum,filename=assets/chromaticraft/textures/blocks/dimstruct/gravity_sum.png
+texture:id=chromaticraft/dimstruct/key,filename=assets/chromaticraft/textures/blocks/dimstruct/key.png
+texture:id=chromaticraft/dimstruct/lightpanel,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel.png
+texture:id=chromaticraft/dimstruct/lightpanel_blue_0,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_blue_0.png
+texture:id=chromaticraft/dimstruct/lightpanel_blue_1,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_blue_1.png
+texture:id=chromaticraft/dimstruct/lightpanel_green_0,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_green_0.png
+texture:id=chromaticraft/dimstruct/lightpanel_green_1,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_green_1.png
+texture:id=chromaticraft/dimstruct/lightpanel_red_0,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_red_0.png
+texture:id=chromaticraft/dimstruct/lightpanel_red_1,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_red_1.png
+texture:id=chromaticraft/dimstruct/lightpanel_switch_off,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_switch_off.png
+texture:id=chromaticraft/dimstruct/lightpanel_switch_on,filename=assets/chromaticraft/textures/blocks/dimstruct/lightpanel_switch_on.png
+texture:id=chromaticraft/dimstruct/lockfence,filename=assets/chromaticraft/textures/blocks/dimstruct/lockfence.png
+texture:id=chromaticraft/dimstruct/lockfreeze,filename=assets/chromaticraft/textures/blocks/dimstruct/lockfreeze.png
+texture:id=chromaticraft/dimstruct/lockfreeze_button_inactive,filename=assets/chromaticraft/textures/blocks/dimstruct/lockfreeze_button_inactive.png
+texture:id=chromaticraft/dimstruct/musicmemory,filename=assets/chromaticraft/textures/blocks/dimstruct/musicmemory.png
+texture:id=chromaticraft/dimstruct/musicmemory_front,filename=assets/chromaticraft/textures/blocks/dimstruct/musicmemory_front.png
+texture:id=chromaticraft/dimstruct/musictrigger,filename=assets/chromaticraft/textures/blocks/dimstruct/musictrigger.png
+texture:id=chromaticraft/dimstruct/musictrigger_side,filename=assets/chromaticraft/textures/blocks/dimstruct/musictrigger_side.png
+texture:id=chromaticraft/dimstruct/piston_control,filename=assets/chromaticraft/textures/blocks/dimstruct/piston_control.png
+texture:id=chromaticraft/dimstruct/piston_target,filename=assets/chromaticraft/textures/blocks/dimstruct/piston_target.png
+texture:id=chromaticraft/dimstruct/rayblendfloor,filename=assets/chromaticraft/textures/blocks/dimstruct/rayblendfloor.png
+texture:id=chromaticraft/dimstruct/shiftkey,filename=assets/chromaticraft/textures/blocks/dimstruct/shiftkey.png
+texture:id=chromaticraft/dimstruct/shiftlock-closed,filename=assets/chromaticraft/textures/blocks/dimstruct/shiftlock-closed.png
+texture:id=chromaticraft/dimstruct/shiftlock-open,filename=assets/chromaticraft/textures/blocks/dimstruct/shiftlock-open.png
+texture:id=chromaticraft/dimstruct/waterlock,filename=assets/chromaticraft/textures/blocks/dimstruct/waterlock.png
+texture:id=chromaticraft/dye/block,filename=assets/chromaticraft/textures/blocks/dye/block.png
+texture:id=chromaticraft/dye/flower,filename=assets/chromaticraft/textures/blocks/dye/flower.png
+texture:id=chromaticraft/dye/vine/0,filename=assets/chromaticraft/textures/blocks/dye/vine/0.png
+texture:id=chromaticraft/dye/vine/1,filename=assets/chromaticraft/textures/blocks/dye/vine/1.png
+texture:id=chromaticraft/dye/vine/2,filename=assets/chromaticraft/textures/blocks/dye/vine/2.png
+texture:id=chromaticraft/dye/vine/3,filename=assets/chromaticraft/textures/blocks/dye/vine/3.png
+texture:id=chromaticraft/fluid/activechroma,filename=assets/chromaticraft/textures/blocks/fluid/activechroma.png
+texture:id=chromaticraft/fluid/activechroma_flowing,filename=assets/chromaticraft/textures/blocks/fluid/activechroma_flowing.png
+texture:id=chromaticraft/fluid/aether/aether_full,filename=assets/chromaticraft/textures/blocks/fluid/aether/aether_full.png
+texture:id=chromaticraft/fluid/ender,filename=assets/chromaticraft/textures/blocks/fluid/ender.png
+texture:id=chromaticraft/fluid/flowingender,filename=assets/chromaticraft/textures/blocks/fluid/flowingender.png
+texture:id=chromaticraft/fluid/flowinglumen,filename=assets/chromaticraft/textures/blocks/fluid/flowinglumen.png
+texture:id=chromaticraft/fluid/lumen,filename=assets/chromaticraft/textures/blocks/fluid/lumen.png
+texture:id=chromaticraft/hives/crystal_side,filename=assets/chromaticraft/textures/blocks/hives/crystal_side.png
+texture:id=chromaticraft/hives/crystal_top,filename=assets/chromaticraft/textures/blocks/hives/crystal_top.png
+texture:id=chromaticraft/hives/pure_side,filename=assets/chromaticraft/textures/blocks/hives/pure_side.png
+texture:id=chromaticraft/hives/pure_top,filename=assets/chromaticraft/textures/blocks/hives/pure_top.png
+texture:id=chromaticraft/icons/broadcaster,filename=assets/chromaticraft/textures/blocks/icons/broadcaster.png
+texture:id=chromaticraft/icons/chroma_particle,filename=assets/chromaticraft/textures/blocks/icons/chroma_particle.png
+texture:id=chromaticraft/icons/glowframe2,filename=assets/chromaticraft/textures/blocks/icons/glowframe2.png
+texture:id=chromaticraft/icons/guardian_outer,filename=assets/chromaticraft/textures/blocks/icons/guardian_outer.png
+texture:id=chromaticraft/icons/multirepeater,filename=assets/chromaticraft/textures/blocks/icons/multirepeater.png
+texture:id=chromaticraft/icons/repeater,filename=assets/chromaticraft/textures/blocks/icons/repeater.png
+texture:id=chromaticraft/icons/transparent,filename=assets/chromaticraft/textures/blocks/icons/transparent.png
+texture:id=chromaticraft/icons/weakrepeater,filename=assets/chromaticraft/textures/blocks/icons/weakrepeater.png
+texture:id=chromaticraft/lamp,filename=assets/chromaticraft/textures/blocks/lamp.png
+texture:id=chromaticraft/mud,filename=assets/chromaticraft/textures/blocks/mud.png
+texture:id=chromaticraft/ore/tier_0_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_0_underlay.png
+texture:id=chromaticraft/ore/tier_10_geode,filename=assets/chromaticraft/textures/blocks/ore/tier_10_geode.png
+texture:id=chromaticraft/ore/tier_11_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_11_underlay.png
+texture:id=chromaticraft/ore/tier_12_geode,filename=assets/chromaticraft/textures/blocks/ore/tier_12_geode.png
+texture:id=chromaticraft/ore/tier_13_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_13_underlay.png
+texture:id=chromaticraft/ore/tier_14_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_14_underlay.png
+texture:id=chromaticraft/ore/tier_1_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_1_underlay.png
+texture:id=chromaticraft/ore/tier_2_geode,filename=assets/chromaticraft/textures/blocks/ore/tier_2_geode.png
+texture:id=chromaticraft/ore/tier_3_geode,filename=assets/chromaticraft/textures/blocks/ore/tier_3_geode.png
+texture:id=chromaticraft/ore/tier_4_geode,filename=assets/chromaticraft/textures/blocks/ore/tier_4_geode.png
+texture:id=chromaticraft/ore/tier_5_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_5_underlay.png
+texture:id=chromaticraft/ore/tier_6_geode,filename=assets/chromaticraft/textures/blocks/ore/tier_6_geode.png
+texture:id=chromaticraft/ore/tier_7_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_7_underlay.png
+texture:id=chromaticraft/ore/tier_8_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_8_underlay.png
+texture:id=chromaticraft/ore/tier_9_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_9_underlay.png
+texture:id=chromaticraft/path/path_0,filename=assets/chromaticraft/textures/blocks/path/path_0.png
+texture:id=chromaticraft/path/path_1,filename=assets/chromaticraft/textures/blocks/path/path_1.png
+texture:id=chromaticraft/path/path_2,filename=assets/chromaticraft/textures/blocks/path/path_2.png
+texture:id=chromaticraft/path/path_3,filename=assets/chromaticraft/textures/blocks/path/path_3.png
+texture:id=chromaticraft/path/path_4,filename=assets/chromaticraft/textures/blocks/path/path_4.png
+texture:id=chromaticraft/path/path_5,filename=assets/chromaticraft/textures/blocks/path/path_5.png
+texture:id=chromaticraft/path/path_6,filename=assets/chromaticraft/textures/blocks/path/path_6.png
+texture:id=chromaticraft/plant,filename=assets/chromaticraft/textures/blocks/plant.png
+texture:id=chromaticraft/plant/0_0,filename=assets/chromaticraft/textures/blocks/plant/0_0.png
+texture:id=chromaticraft/plant/decoplant_0_back,filename=assets/chromaticraft/textures/blocks/plant/decoplant_0_back.png
+texture:id=chromaticraft/plant/decoplant_1_back,filename=assets/chromaticraft/textures/blocks/plant/decoplant_1_back.png
+texture:id=chromaticraft/plant/decoplant_2_back,filename=assets/chromaticraft/textures/blocks/plant/decoplant_2_back.png
+texture:id=chromaticraft/plant/decoplant_3_back,filename=assets/chromaticraft/textures/blocks/plant/decoplant_3_back.png
+texture:id=chromaticraft/plant/decoplant_4_back,filename=assets/chromaticraft/textures/blocks/plant/decoplant_4_back.png
+texture:id=chromaticraft/plant/decoplant_5_back,filename=assets/chromaticraft/textures/blocks/plant/decoplant_5_back.png
+texture:id=chromaticraft/plant/flower_0,filename=assets/chromaticraft/textures/blocks/plant/flower_0.png
+texture:id=chromaticraft/plant/flower_1,filename=assets/chromaticraft/textures/blocks/plant/flower_1.png
+texture:id=chromaticraft/plant/flower_2,filename=assets/chromaticraft/textures/blocks/plant/flower_2.png
+texture:id=chromaticraft/plant/flower_3,filename=assets/chromaticraft/textures/blocks/plant/flower_3.png
+texture:id=chromaticraft/plant/flower_4,filename=assets/chromaticraft/textures/blocks/plant/flower_4.png
+texture:id=chromaticraft/plant/flower_5,filename=assets/chromaticraft/textures/blocks/plant/flower_5.png
+texture:id=chromaticraft/plant/flower_6,filename=assets/chromaticraft/textures/blocks/plant/flower_6.png
+texture:id=chromaticraft/plant/flower_7,filename=assets/chromaticraft/textures/blocks/plant/flower_7.png
+texture:id=chromaticraft/plant/tierplant_0_back,filename=assets/chromaticraft/textures/blocks/plant/tierplant_0_back.png
+texture:id=chromaticraft/plant/tierplant_1_back,filename=assets/chromaticraft/textures/blocks/plant/tierplant_1_back.png
+texture:id=chromaticraft/plant/tierplant_2_back,filename=assets/chromaticraft/textures/blocks/plant/tierplant_2_back.png
+texture:id=chromaticraft/plant/tierplant_3_back,filename=assets/chromaticraft/textures/blocks/plant/tierplant_3_back.png
+texture:id=chromaticraft/plant/tierplant_4_back,filename=assets/chromaticraft/textures/blocks/plant/tierplant_4_back.png
+texture:id=chromaticraft/plant/tierplant_5_back,filename=assets/chromaticraft/textures/blocks/plant/tierplant_5_back.png
+texture:id=chromaticraft/plant/tierplant_6_back,filename=assets/chromaticraft/textures/blocks/plant/tierplant_6_back.png
+texture:id=chromaticraft/pylon/block_0,filename=assets/chromaticraft/textures/blocks/pylon/block_0.png
+texture:id=chromaticraft/pylon/block_1,filename=assets/chromaticraft/textures/blocks/pylon/block_1.png
+texture:id=chromaticraft/pylon/block_2,filename=assets/chromaticraft/textures/blocks/pylon/block_2.png
+texture:id=chromaticraft/pylon/block_3,filename=assets/chromaticraft/textures/blocks/pylon/block_3.png
+texture:id=chromaticraft/pylon/block_3-2,filename=assets/chromaticraft/textures/blocks/pylon/block_3-2.png,ycount=8
+texture:id=chromaticraft/pylon/block_3-2_xm,filename=assets/chromaticraft/textures/blocks/pylon/block_3-2_xm.png,ycount=8
+texture:id=chromaticraft/pylon/block_4,filename=assets/chromaticraft/textures/blocks/pylon/block_4.png
+texture:id=chromaticraft/pylon/block_4-4,filename=assets/chromaticraft/textures/blocks/pylon/block_4-4.png,ycount=32
+texture:id=chromaticraft/pylon/block_5,filename=assets/chromaticraft/textures/blocks/pylon/block_5.png
+texture:id=chromaticraft/pylon/block_5-2,filename=assets/chromaticraft/textures/blocks/pylon/block_5-2.png,ycount=16
+texture:id=chromaticraft/pylon/block_6,filename=assets/chromaticraft/textures/blocks/pylon/block_6.png
+texture:id=chromaticraft/pylon/block_7,filename=assets/chromaticraft/textures/blocks/pylon/block_7.png
+texture:id=chromaticraft/pylon/block_8,filename=assets/chromaticraft/textures/blocks/pylon/block_8.png
+texture:id=chromaticraft/pylon/block_9,filename=assets/chromaticraft/textures/blocks/pylon/block_9.png
+texture:id=chromaticraft/pylon/block_10,filename=assets/chromaticraft/textures/blocks/pylon/block_10.png
+texture:id=chromaticraft/pylon/block_11,filename=assets/chromaticraft/textures/blocks/pylon/block_11.png
+texture:id=chromaticraft/pylon/block_12,filename=assets/chromaticraft/textures/blocks/pylon/block_12.png
+texture:id=chromaticraft/pylon/block_13,filename=assets/chromaticraft/textures/blocks/pylon/block_13.png
+texture:id=chromaticraft/pylon/block_13-2,filename=assets/chromaticraft/textures/blocks/pylon/block_13-2.png,ycount=128
+texture:id=chromaticraft/pylon/block_14,filename=assets/chromaticraft/textures/blocks/pylon/block_14.png
+texture:id=chromaticraft/pylon/block_14-2,filename=assets/chromaticraft/textures/blocks/pylon/block_14-2.png,ycount=32
+texture:id=chromaticraft/pylon/block_15,filename=assets/chromaticraft/textures/blocks/pylon/block_15.png
+texture:id=chromaticraft/pylon/block_15-3,filename=assets/chromaticraft/textures/blocks/pylon/block_15-3.png,ycount=16
+texture:id=chromaticraft/pylon/block_15-4,filename=assets/chromaticraft/textures/blocks/pylon/block_15-4.png,ycount=16
+texture:id=chromaticraft/runes/backpng/tile0_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile0_0.png
+texture:id=chromaticraft/runes/backpng/tile1_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile1_0.png
+texture:id=chromaticraft/runes/backpng/tile2_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile2_0.png
+texture:id=chromaticraft/runes/backpng/tile3_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile3_0.png
+texture:id=chromaticraft/runes/backpng/tile4_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile4_0.png
+texture:id=chromaticraft/runes/backpng/tile5_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile5_0.png
+texture:id=chromaticraft/runes/backpng/tile6_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile6_0.png
+texture:id=chromaticraft/runes/backpng/tile7_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile7_0.png
+texture:id=chromaticraft/runes/backpng/tile8_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile8_0.png
+texture:id=chromaticraft/runes/backpng/tile9_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile9_0.png
+texture:id=chromaticraft/runes/backpng/tile10_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile10_0.png
+texture:id=chromaticraft/runes/backpng/tile11_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile11_0.png
+texture:id=chromaticraft/runes/backpng/tile12_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile12_0.png
+texture:id=chromaticraft/runes/backpng/tile13_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile13_0.png
+texture:id=chromaticraft/runes/backpng/tile14_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile14_0.png
+texture:id=chromaticraft/runes/backpng/tile15_0,filename=assets/chromaticraft/textures/blocks/runes/backpng/tile15_0.png
+texture:id=chromaticraft/runes/frontpng/tile0_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile0_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile1_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile1_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile2_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile2_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile3_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile3_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile4_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile4_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile5_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile5_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile6_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile6_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile7_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile7_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile8_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile8_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile9_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile9_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile10_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile10_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile11_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile11_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile12_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile12_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile13_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile13_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile14_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile14_0.png,ycount=64
+texture:id=chromaticraft/runes/frontpng/tile15_0,filename=assets/chromaticraft/textures/blocks/runes/frontpng/tile15_0.png,ycount=64
+texture:id=chromaticraft/tank/tank_0,filename=assets/chromaticraft/textures/blocks/tank/tank_0.png
+texture:id=chromaticraft/tile/alveary_bottom,filename=assets/chromaticraft/textures/blocks/tile/alveary_bottom.png
+texture:id=chromaticraft/tile/alveary_side,filename=assets/chromaticraft/textures/blocks/tile/alveary_side.png
+texture:id=chromaticraft/tile/alveary_top,filename=assets/chromaticraft/textures/blocks/tile/alveary_top.png
+texture:id=chromaticraft/tile/brewer_bottom,filename=assets/chromaticraft/textures/blocks/tile/brewer_bottom.png
+texture:id=chromaticraft/tile/brewer_side,filename=assets/chromaticraft/textures/blocks/tile/brewer_side.png
+texture:id=chromaticraft/tile/brewer_top,filename=assets/chromaticraft/textures/blocks/tile/brewer_top.png
+texture:id=chromaticraft/tile/bridge_bottom,filename=assets/chromaticraft/textures/blocks/tile/bridge_bottom.png
+texture:id=chromaticraft/tile/bridge_side,filename=assets/chromaticraft/textures/blocks/tile/bridge_side.png
+texture:id=chromaticraft/tile/bridge_top,filename=assets/chromaticraft/textures/blocks/tile/bridge_top.png
+texture:id=chromaticraft/tile/collector_bottom,filename=assets/chromaticraft/textures/blocks/tile/collector_bottom.png
+texture:id=chromaticraft/tile/collector_side,filename=assets/chromaticraft/textures/blocks/tile/collector_side.png
+texture:id=chromaticraft/tile/collector_top,filename=assets/chromaticraft/textures/blocks/tile/collector_top.png
+texture:id=chromaticraft/tile/deathfog_bottom,filename=assets/chromaticraft/textures/blocks/tile/deathfog_bottom.png
+texture:id=chromaticraft/tile/deathfog_side,filename=assets/chromaticraft/textures/blocks/tile/deathfog_side.png
+texture:id=chromaticraft/tile/deathfog_top,filename=assets/chromaticraft/textures/blocks/tile/deathfog_top.png
+texture:id=chromaticraft/tile/enchanter_bottom,filename=assets/chromaticraft/textures/blocks/tile/enchanter_bottom.png
+texture:id=chromaticraft/tile/enchanter_side,filename=assets/chromaticraft/textures/blocks/tile/enchanter_side.png
+texture:id=chromaticraft/tile/enchanter_top,filename=assets/chromaticraft/textures/blocks/tile/enchanter_top.png
+texture:id=chromaticraft/tile/explosionshield_bottom,filename=assets/chromaticraft/textures/blocks/tile/explosionshield_bottom.png
+texture:id=chromaticraft/tile/explosionshield_side,filename=assets/chromaticraft/textures/blocks/tile/explosionshield_side.png
+texture:id=chromaticraft/tile/explosionshield_top,filename=assets/chromaticraft/textures/blocks/tile/explosionshield_top.png
+texture:id=chromaticraft/tile/furnace_bottom,filename=assets/chromaticraft/textures/blocks/tile/furnace_bottom.png
+texture:id=chromaticraft/tile/furnace_side,filename=assets/chromaticraft/textures/blocks/tile/furnace_side.png
+texture:id=chromaticraft/tile/furnace_top,filename=assets/chromaticraft/textures/blocks/tile/furnace_top.png
+texture:id=chromaticraft/tile/hoverpad_bottom,filename=assets/chromaticraft/textures/blocks/tile/hoverpad_bottom.png
+texture:id=chromaticraft/tile/hoverpad_side,filename=assets/chromaticraft/textures/blocks/tile/hoverpad_side.png
+texture:id=chromaticraft/tile/hoverpad_top,filename=assets/chromaticraft/textures/blocks/tile/hoverpad_top.png
+texture:id=chromaticraft/tile/injector_bottom,filename=assets/chromaticraft/textures/blocks/tile/injector_bottom.png
+texture:id=chromaticraft/tile/injector_side,filename=assets/chromaticraft/textures/blocks/tile/injector_side.png
+texture:id=chromaticraft/tile/injector_top,filename=assets/chromaticraft/textures/blocks/tile/injector_top.png
+texture:id=chromaticraft/tile/inserter_bottom,filename=assets/chromaticraft/textures/blocks/tile/inserter_bottom.png
+texture:id=chromaticraft/tile/inserter_side,filename=assets/chromaticraft/textures/blocks/tile/inserter_side.png
+texture:id=chromaticraft/tile/inserter_top,filename=assets/chromaticraft/textures/blocks/tile/inserter_top.png
+texture:id=chromaticraft/tile/itemcollector_bottom,filename=assets/chromaticraft/textures/blocks/tile/itemcollector_bottom.png
+texture:id=chromaticraft/tile/itemcollector_side,filename=assets/chromaticraft/textures/blocks/tile/itemcollector_side.png
+texture:id=chromaticraft/tile/itemcollector_top,filename=assets/chromaticraft/textures/blocks/tile/itemcollector_top.png
+texture:id=chromaticraft/tile/launchpad_bottom,filename=assets/chromaticraft/textures/blocks/tile/launchpad_bottom.png
+texture:id=chromaticraft/tile/launchpad_side,filename=assets/chromaticraft/textures/blocks/tile/launchpad_side.png
+texture:id=chromaticraft/tile/launchpad_top,filename=assets/chromaticraft/textures/blocks/tile/launchpad_top.png
+texture:id=chromaticraft/tile/patterns_bottom,filename=assets/chromaticraft/textures/blocks/tile/patterns_bottom.png
+texture:id=chromaticraft/tile/patterns_side,filename=assets/chromaticraft/textures/blocks/tile/patterns_side.png
+texture:id=chromaticraft/tile/patterns_top,filename=assets/chromaticraft/textures/blocks/tile/patterns_top.png
+texture:id=chromaticraft/tile/pylonlink_bottom,filename=assets/chromaticraft/textures/blocks/tile/pylonlink_bottom.png
+texture:id=chromaticraft/tile/pylonlink_side,filename=assets/chromaticraft/textures/blocks/tile/pylonlink_side.png
+texture:id=chromaticraft/tile/pylonlink_top,filename=assets/chromaticraft/textures/blocks/tile/pylonlink_top.png
+texture:id=chromaticraft/tile/ritual_bottom,filename=assets/chromaticraft/textures/blocks/tile/ritual_bottom.png
+texture:id=chromaticraft/tile/ritual_side,filename=assets/chromaticraft/textures/blocks/tile/ritual_side.png
+texture:id=chromaticraft/tile/ritual_top,filename=assets/chromaticraft/textures/blocks/tile/ritual_top.png
+texture:id=chromaticraft/tile/storage_bottom,filename=assets/chromaticraft/textures/blocks/tile/storage_bottom.png
+texture:id=chromaticraft/tile/storage_side,filename=assets/chromaticraft/textures/blocks/tile/storage_side.png
+texture:id=chromaticraft/tile/storage_top,filename=assets/chromaticraft/textures/blocks/tile/storage_top.png
+texture:id=chromaticraft/tile/table_bottom,filename=assets/chromaticraft/textures/blocks/tile/table_bottom.png
+texture:id=chromaticraft/tile/table_side,filename=assets/chromaticraft/textures/blocks/tile/table_side.png
+texture:id=chromaticraft/tile/table_top,filename=assets/chromaticraft/textures/blocks/tile/table_top.png
+texture:id=chromaticraft/tile/tank_bottom,filename=assets/chromaticraft/textures/blocks/tile/tank_bottom.png
+texture:id=chromaticraft/tile/tank_side,filename=assets/chromaticraft/textures/blocks/tile/tank_side.png
+texture:id=chromaticraft/tile/tank_top,filename=assets/chromaticraft/textures/blocks/tile/tank_top.png
+texture:id=chromaticraft/tile/telepump_bottom,filename=assets/chromaticraft/textures/blocks/tile/telepump_bottom.png
+texture:id=chromaticraft/tile/telepump_side,filename=assets/chromaticraft/textures/blocks/tile/telepump_side.png
+texture:id=chromaticraft/tile/telepump_top,filename=assets/chromaticraft/textures/blocks/tile/telepump_top.png
+texture:id=chromaticraft/tile/ticker_bottom,filename=assets/chromaticraft/textures/blocks/tile/ticker_bottom.png
+texture:id=chromaticraft/tile/ticker_side,filename=assets/chromaticraft/textures/blocks/tile/ticker_side.png
+texture:id=chromaticraft/tile/ticker_top,filename=assets/chromaticraft/textures/blocks/tile/ticker_top.png
+texture:id=chromaticraft/tile/toolstorage_bottom,filename=assets/chromaticraft/textures/blocks/tile/toolstorage_bottom.png
+texture:id=chromaticraft/tile/toolstorage_side,filename=assets/chromaticraft/textures/blocks/tile/toolstorage_side.png
+texture:id=chromaticraft/tile/toolstorage_top,filename=assets/chromaticraft/textures/blocks/tile/toolstorage_top.png
+texture:id=chromaticraft/tile/villagerepair_bottom,filename=assets/chromaticraft/textures/blocks/tile/villagerepair_bottom.png
+texture:id=chromaticraft/tile/villagerepair_side,filename=assets/chromaticraft/textures/blocks/tile/villagerepair_side.png
+texture:id=chromaticraft/tile/villagerepair_top,filename=assets/chromaticraft/textures/blocks/tile/villagerepair_top.png
+texture:id=chromaticraft/transparent,filename=assets/chromaticraft/textures/blocks/transparent.png
+texture:id=chromaticraft/ua,filename=assets/chromaticraft/textures/blocks/ua.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1822_chroma.portal,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1822_chroma.portal.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1844_chroma.teleportblock,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1844_chroma.teleportblock.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1846_chroma.coloraltar,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1846_chroma.coloraltar.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1851_chroma.storageblock,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1851_chroma.storageblock.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1857_chroma.antkey,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1857_chroma.antkey.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1859_chroma.pinball,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1859_chroma.pinball.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1867_chroma.avolamp,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1867_chroma.avolamp.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1874_chroma.dummyaux,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1874_chroma.dummyaux.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1882_chroma.polycrystal,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1882_chroma.polycrystal.png
+texture:id=minecraft/MISSING_ICON_BLOCK_1885_chroma.warpnode,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_1885_chroma.warpnode.png
+texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.png
+texture:id=minecraft/brick,filename=assets/minecraft/textures/blocks/brick.png
+texture:id=minecraft/clay,filename=assets/minecraft/textures/blocks/clay.png
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=minecraft/grass_side,filename=assets/minecraft/textures/blocks/grass_side.png
+texture:id=minecraft/grass_top,filename=assets/minecraft/textures/blocks/grass_top.png
+texture:id=minecraft/gravel,filename=assets/minecraft/textures/blocks/gravel.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/leaves_oak,filename=assets/minecraft/textures/blocks/leaves_oak.png
+texture:id=minecraft/log_oak,filename=assets/minecraft/textures/blocks/log_oak.png
+texture:id=minecraft/log_oak_top,filename=assets/minecraft/textures/blocks/log_oak_top.png
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/sand,filename=assets/minecraft/textures/blocks/sand.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+texture:id=minecraft/stonebrick,filename=assets/minecraft/textures/blocks/stonebrick.png
+texture:id=minecraft/water_still,filename=assets/minecraft/textures/blocks/water_still.png
+texture:id=thermalfoundation/fluid/Fluid_Redstone_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Redstone_Still.png
+
+
+
+# %chromaticraft_block_tileplant:* (chromaticraft_block_tileplant), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockChromaPlantTile
+block:id=%chromaticraft_block_tileplant,data=0,stdrot=true,face0-5=0:chromaticraft/plant/0_0
+
+# %chromaticraft_block_tileentity:* (chromaticraft_block_tileentity), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Base.BlockChromaTile
+block:id=%chromaticraft_block_tileentity,data=0,stdrot=true,face0=0:chromaticraft/tile/enchanter_bottom,face1=0:chromaticraft/tile/enchanter_top,face2-5=0:chromaticraft/tile/enchanter_side
+block:id=%chromaticraft_block_tileentity,data=1,stdrot=true,face0=0:chromaticraft/tile/villagerepair_bottom,face1=0:chromaticraft/tile/villagerepair_top,face2-5=0:chromaticraft/tile/villagerepair_side
+block:id=%chromaticraft_block_tileentity,data=4,stdrot=true,face0=0:chromaticraft/tile/collector_bottom,face1=0:chromaticraft/tile/collector_top,face2-5=0:chromaticraft/tile/collector_side
+block:id=%chromaticraft_block_tileentity,data=5,stdrot=true,face0=0:chromaticraft/tile/table_bottom,face1=0:chromaticraft/tile/table_top,face2-5=0:chromaticraft/tile/table_side
+block:id=%chromaticraft_block_tileentity,data=6,stdrot=true,face0=0:chromaticraft/tile/brewer_bottom,face1=0:chromaticraft/tile/brewer_top,face2-5=0:chromaticraft/tile/brewer_side
+block:id=%chromaticraft_block_tileentity,data=7,stdrot=true,face0=0:chromaticraft/tile/furnace_bottom,face1=0:chromaticraft/tile/furnace_top,face2-5=0:chromaticraft/tile/furnace_side
+block:id=%chromaticraft_block_tileentity,data=8,stdrot=true,face0=0:chromaticraft/tile/ritual_bottom,face1=0:chromaticraft/tile/ritual_top,face2-5=0:chromaticraft/tile/ritual_side
+block:id=%chromaticraft_block_tileentity,data=9,stdrot=true,face0=0:chromaticraft/tile/tank_bottom,face1=0:chromaticraft/tile/tank_top,face2-5=0:chromaticraft/tile/tank_side
+block:id=%chromaticraft_block_tileentity,data=10,stdrot=true,face0=0:chromaticraft/tile/itemcollector_bottom,face1=0:chromaticraft/tile/itemcollector_top,face2-5=0:chromaticraft/tile/itemcollector_side
+block:id=%chromaticraft_block_tileentity,data=11,stdrot=true,face0=0:chromaticraft/tile/ticker_bottom,face1=0:chromaticraft/tile/ticker_top,face2-5=0:chromaticraft/tile/ticker_side
+block:id=%chromaticraft_block_tileentity,data=12,stdrot=true,face0=0:chromaticraft/tile/telepump_bottom,face1=0:chromaticraft/tile/telepump_top,face2-5=0:chromaticraft/tile/telepump_side
+block:id=%chromaticraft_block_tileentity,data=13,stdrot=true,face0=0:chromaticraft/tile/patterns_bottom,face1=0:chromaticraft/tile/patterns_top,face2-5=0:chromaticraft/tile/patterns_side
+block:id=%chromaticraft_block_tileentity,data=14,stdrot=true,face0=0:chromaticraft/tile/storage_bottom,face1=0:chromaticraft/tile/storage_top,face2-5=0:chromaticraft/tile/storage_side
+block:id=%chromaticraft_block_tileentity,data=15,stdrot=true,face0=0:chromaticraft/tile/inserter_bottom,face1=0:chromaticraft/tile/inserter_top,face2-5=0:chromaticraft/tile/inserter_side
+
+# %chromaticraft_block_rune:* (chromaticraft_block_rune), render=Reika.ChromatiCraft.Render.ISBRH.RuneRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.BlockCrystalRune
+block:id=%chromaticraft_block_rune,data=0,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile0_0,patch6=23032:chromaticraft/runes/frontpng/tile0_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=1,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile1_0,patch6=23032:chromaticraft/runes/frontpng/tile1_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=2,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile2_0,patch6=23032:chromaticraft/runes/frontpng/tile2_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=3,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile3_0,patch6=23032:chromaticraft/runes/frontpng/tile3_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=4,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile4_0,patch6=23032:chromaticraft/runes/frontpng/tile4_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=5,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile5_0,patch6=23032:chromaticraft/runes/frontpng/tile5_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=6,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile6_0,patch6=23032:chromaticraft/runes/frontpng/tile6_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=7,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile7_0,patch6=23032:chromaticraft/runes/frontpng/tile7_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=8,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile8_0,patch6=23032:chromaticraft/runes/frontpng/tile8_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=9,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile9_0,patch6=23032:chromaticraft/runes/frontpng/tile9_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=10,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile10_0,patch6=23032:chromaticraft/runes/frontpng/tile10_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=11,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile11_0,patch6=23032:chromaticraft/runes/frontpng/tile11_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=12,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile12_0,patch6=23032:chromaticraft/runes/frontpng/tile12_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=13,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile13_0,patch6=23032:chromaticraft/runes/frontpng/tile13_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=14,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile14_0,patch6=23032:chromaticraft/runes/frontpng/tile14_0,layer0-5=6
+block:id=%chromaticraft_block_rune,data=15,stdrot=true,face0-5=0:chromaticraft/runes/backpng/tile15_0,patch6=23032:chromaticraft/runes/frontpng/tile15_0,layer0-5=6
+
+# %chromaticraft_block_chroma:* (chromaticraft_block_chroma), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=Reika.ChromatiCraft.Block.BlockActiveChroma
+block:id=%chromaticraft_block_chroma,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chromaticraft/fluid/activechroma,face2-5=12000:chromaticraft/fluid/activechroma_flowing
+
+# %chromaticraft_block_rift:* (chromaticraft_block_rift), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockRift
+block:id=%chromaticraft_block_rift,data=*,stdrot=true,face0-5=0:chromaticraft/transparent
+
+# %chromaticraft_block_crystal:* (chromaticraft_block_crystal), render=Reika.ChromatiCraft.Render.ISBRH.CrystalRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockCaveCrystal
+block:id=%chromaticraft_block_crystal,data=*,stdrot=true,face0-5=12000:ChromatiCraft/crystal/crystal_outline
+
+# %chromaticraft_block_rainbowcrystal:* (chromaticraft_block_rainbowcrystal), render=Reika.ChromatiCraft.Render.ISBRH.CrystalRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockRainbowCrystal
+block:id=%chromaticraft_block_rainbowcrystal,data=*,stdrot=true,face0-5=12000:chromaticraft/crystal/chroma
+
+# %chromaticraft_block_lamp:* (chromaticraft_block_lamp), render=Reika.ChromatiCraft.Render.ISBRH.CrystalRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockCrystalLamp
+block:id=%chromaticraft_block_lamp,data=*,stdrot=true,face0-5=12000:ChromatiCraft/crystal/crystal_outline
+
+# %chromaticraft_block_super:* (chromaticraft_block_super), render=Reika.ChromatiCraft.Render.ISBRH.CrystalRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockSuperCrystal
+block:id=%chromaticraft_block_super,data=*,stdrot=true,face0-5=12000:ChromatiCraft/crystal/crystal_outline
+
+# %chromaticraft_block_plant:* (chromaticraft_block_plant), render=(CROSSEDSQUARES), opaque=false,cls=Reika.ChromatiCraft.Block.BlockCrystalPlant
+block:id=%chromaticraft_block_plant,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:chromaticraft/plant
+
+# %chromaticraft_block_hive:* (chromaticraft_block_hive), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockCrystalHive
+block:id=%chromaticraft_block_hive,data=0,stdrot=true,face0-1=0:chromaticraft/hives/crystal_top,face2-5=0:chromaticraft/hives/crystal_side
+block:id=%chromaticraft_block_hive,data=1,stdrot=true,face0-1=0:chromaticraft/hives/pure_top,face2-5=0:chromaticraft/hives/pure_side
+
+# %chromaticraft_block_tilecrystal:* (chromaticraft_block_tilecrystal), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockCrystalTile
+block:id=%chromaticraft_block_tilecrystal,data=0,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_tilecrystal,data=1,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%chromaticraft_block_tilecrystal,data=2,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_tilecrystal,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/stone
+
+# %chromaticraft_block_tilecrystalnoncube:* (chromaticraft_block_tilecrystalnoncube), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockCrystalTileNonCube
+block:id=%chromaticraft_block_tilecrystalnoncube,data=0,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%chromaticraft_block_tilecrystalnoncube,data=1,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_tilecrystalnoncube,data=2,stdrot=true,face0-5=12000:chromaticraft/icons/glowframe2
+block:id=%chromaticraft_block_tilecrystalnoncube,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/stone
+
+# %chromaticraft_block_decay:* (chromaticraft_block_decay), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockDyeLeaf
+block:id=%chromaticraft_block_decay,data=0,stdrot=true,colorMult=191919,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=1,stdrot=true,colorMult=993333,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=2,stdrot=true,colorMult=667F33,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=3,stdrot=true,colorMult=664C33,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=4,stdrot=true,colorMult=334CB2,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=5,stdrot=true,colorMult=7F3FB2,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=6,stdrot=true,colorMult=4C7F99,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=7,stdrot=true,colorMult=999999,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=8,stdrot=true,colorMult=4C4C4C,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=9,stdrot=true,colorMult=F27FA5,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=10,stdrot=true,colorMult=7FCC19,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=11,stdrot=true,colorMult=E5E533,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=12,stdrot=true,colorMult=6699D8,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=13,stdrot=true,colorMult=B24CD8,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=14,stdrot=true,colorMult=D87F33,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_decay,data=15,stdrot=true,face0-5=0:ChromatiCraft/dye/leaves
+
+# %chromaticraft_block_dyeleaf:* (chromaticraft_block_dyeleaf), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockDyeLeaf
+block:id=%chromaticraft_block_dyeleaf,data=0,stdrot=true,colorMult=191919,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=1,stdrot=true,colorMult=993333,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=2,stdrot=true,colorMult=667F33,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=3,stdrot=true,colorMult=664C33,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=4,stdrot=true,colorMult=334CB2,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=5,stdrot=true,colorMult=7F3FB2,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=6,stdrot=true,colorMult=4C7F99,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=7,stdrot=true,colorMult=999999,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=8,stdrot=true,colorMult=4C4C4C,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=9,stdrot=true,colorMult=F27FA5,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=10,stdrot=true,colorMult=7FCC19,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=11,stdrot=true,colorMult=E5E533,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=12,stdrot=true,colorMult=6699D8,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=13,stdrot=true,colorMult=B24CD8,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=14,stdrot=true,colorMult=D87F33,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_dyeleaf,data=15,stdrot=true,face0-5=0:ChromatiCraft/dye/leaves
+
+# %chromaticraft_block_dyesapling:* (chromaticraft_block_dyesapling), render=(CROSSEDSQUARES), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockDyeSapling
+block:id=%chromaticraft_block_dyesapling,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=191919,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=993333,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=667F33,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=664C33,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=334CB2,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=7F3FB2,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=4C7F99,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=999999,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=4C4C4C,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=F27FA5,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=7FCC19,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=E5E533,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=6699D8,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=B24CD8,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=D87F33,patch0=17000:ChromatiCraft/dye/sapling
+block:id=%chromaticraft_block_dyesapling,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:ChromatiCraft/dye/sapling
+
+# %chromaticraft_block_dye:* (chromaticraft_block_dye), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dye.BlockDye
+block:id=%chromaticraft_block_dye,data=0,stdrot=true,colorMult=191919,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=1,stdrot=true,colorMult=993333,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=2,stdrot=true,colorMult=667F33,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=3,stdrot=true,colorMult=664C33,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=4,stdrot=true,colorMult=334CB2,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=5,stdrot=true,colorMult=7F3FB2,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=6,stdrot=true,colorMult=4C7F99,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=7,stdrot=true,colorMult=999999,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=8,stdrot=true,colorMult=4C4C4C,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=9,stdrot=true,colorMult=F27FA5,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=10,stdrot=true,colorMult=7FCC19,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=11,stdrot=true,colorMult=E5E533,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=12,stdrot=true,colorMult=6699D8,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=13,stdrot=true,colorMult=B24CD8,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=14,stdrot=true,colorMult=D87F33,face0-5=17000:chromaticraft/dye/block
+block:id=%chromaticraft_block_dye,data=15,stdrot=true,face0-5=0:chromaticraft/dye/block
+
+# %chromaticraft_block_rainbowleaf:* (chromaticraft_block_rainbowleaf), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockRainbowLeaf
+block:id=%chromaticraft_block_rainbowleaf,data=0,data=1,data=2,stdrot=true,face0-5=0:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_rainbowleaf,data=3,data=4,stdrot=true,colorMult=FF4DA3FF,face0-5=17000:ChromatiCraft/dye/leaves
+block:id=%chromaticraft_block_rainbowleaf,data=5,stdrot=true,face0-5=0:ChromatiCraft/dye/leaves
+
+# %chromaticraft_block_rainbowsapling:* (chromaticraft_block_rainbowsapling), render=(CROSSEDSQUARES), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockRainbowSapling
+block:id=%chromaticraft_block_rainbowsapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ChromatiCraft/dye/rainbowsapling
+
+# %chromaticraft_block_dyeflower:* (chromaticraft_block_dyeflower), render=(CROSSEDSQUARES), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockDyeFlower
+block:id=%chromaticraft_block_dyeflower,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=191919,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=993333,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=667F33,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=664C33,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=334CB2,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=7F3FB2,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=4C7F99,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=999999,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=4C4C4C,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=F27FA5,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=7FCC19,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=E5E533,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=6699D8,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=B24CD8,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=D87F33,patch0=17000:chromaticraft/dye/flower
+block:id=%chromaticraft_block_dyeflower,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:chromaticraft/dye/flower
+
+# %chromaticraft_block_ender:* (chromaticraft_block_ender), render=(FLUIDS), opaque=false,cls=Reika.ChromatiCraft.Block.BlockLiquidEnder
+block:id=%chromaticraft_block_ender,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chromaticraft/fluid/ender,face2-5=12000:chromaticraft/fluid/flowingender
+
+# %chromaticraft_block_dyegrass:* (chromaticraft_block_dyegrass), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dye.BlockDyeGrass
+block:id=%chromaticraft_block_dyegrass,data=0,stdrot=true,colorMult=FF191919,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=1,stdrot=true,colorMult=FF993333,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=2,stdrot=true,colorMult=FF667F33,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=3,stdrot=true,colorMult=FF664C33,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=4,stdrot=true,colorMult=FF334CB2,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=5,stdrot=true,colorMult=FF7F3FB2,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=6,stdrot=true,colorMult=FF4C7F99,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=7,stdrot=true,colorMult=FF999999,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=8,stdrot=true,colorMult=FF4C4C4C,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=9,stdrot=true,colorMult=FFF27FA5,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=10,stdrot=true,colorMult=FF7FCC19,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=11,stdrot=true,colorMult=FFE5E533,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=12,stdrot=true,colorMult=FF6699D8,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=13,stdrot=true,colorMult=FFB24CD8,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=14,stdrot=true,colorMult=FFD87F33,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+block:id=%chromaticraft_block_dyegrass,data=15,stdrot=true,face0=0:minecraft/dirt,face1=0:minecraft/grass_top,face2-5=0:minecraft/grass_side
+
+# %chromaticraft_block_pylonstruct:* (chromaticraft_block_pylonstruct), render=Reika.ChromatiCraft.Render.ISBRH.CrystallineStoneRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.BlockPylonStructure
+block:id=%chromaticraft_block_pylonstruct,data=0,stdrot=true,face0-5=0:chromaticraft/pylon/block_0
+block:id=%chromaticraft_block_pylonstruct,data=1,stdrot=true,face0-1=0:chromaticraft/pylon/block_0,face2-5=0:chromaticraft/pylon/block_1
+block:id=%chromaticraft_block_pylonstruct,data=2,stdrot=true,face0-1=0:chromaticraft/pylon/block_0,face2-5=0:chromaticraft/pylon/block_2
+block:id=%chromaticraft_block_pylonstruct,data=3,stdrot=true,face0-1=0:chromaticraft/pylon/block_0,face2-5=23003:chromaticraft/pylon/block_3-2,patch6=0:chromaticraft/pylon/block_3,layer2-5=6
+block:id=%chromaticraft_block_pylonstruct,data=4,stdrot=true,face0-1=0:chromaticraft/pylon/block_0,face2-5=23006:chromaticraft/pylon/block_4-4,patch6=0:chromaticraft/pylon/block_4,layer2-5=6
+block:id=%chromaticraft_block_pylonstruct,data=5,stdrot=true,face0-1=0:chromaticraft/pylon/block_0,face2-5=23008:chromaticraft/pylon/block_5-2,patch6=0:chromaticraft/pylon/block_5,layer2-5=6
+block:id=%chromaticraft_block_pylonstruct,data=6,stdrot=true,face0-5=0:chromaticraft/pylon/block_6
+block:id=%chromaticraft_block_pylonstruct,data=7,stdrot=true,face0-5=0:chromaticraft/pylon/block_7
+block:id=%chromaticraft_block_pylonstruct,data=8,stdrot=true,face0-5=0:chromaticraft/pylon/block_8
+block:id=%chromaticraft_block_pylonstruct,data=9,stdrot=true,face0-5=0:chromaticraft/pylon/block_9
+block:id=%chromaticraft_block_pylonstruct,data=10,stdrot=true,face0-5=0:chromaticraft/pylon/block_10
+block:id=%chromaticraft_block_pylonstruct,data=11,stdrot=true,face0-5=0:chromaticraft/pylon/block_11
+block:id=%chromaticraft_block_pylonstruct,data=12,stdrot=true,face0-5=0:chromaticraft/pylon/block_12
+block:id=%chromaticraft_block_pylonstruct,data=13,stdrot=true,face0-5=0:chromaticraft/pylon/block_13
+block:id=%chromaticraft_block_pylonstruct,data=14,stdrot=true,face0-5=0:chromaticraft/pylon/block_14
+block:id=%chromaticraft_block_pylonstruct,data=15,stdrot=true,face0-5=0:chromaticraft/pylon/block_15
+
+# %chromaticraft_block_pylon:* (chromaticraft_block_pylon), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockCrystalPylon
+block:id=%chromaticraft_block_pylon,data=0,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_pylon,data=1,stdrot=true,face0-5=12000:chromaticraft/icons/repeater
+block:id=%chromaticraft_block_pylon,data=2,stdrot=true,face0-5=12000:chromaticraft/icons/multirepeater
+block:id=%chromaticraft_block_pylon,data=3,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_pylon,data=4,stdrot=true,face0-5=12000:chromaticraft/icons/chroma_particle
+block:id=%chromaticraft_block_pylon,data=5,data=6,data=7,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_pylon,data=8,stdrot=true,face0-5=12000:chromaticraft/icons/broadcaster
+block:id=%chromaticraft_block_pylon,data=9,stdrot=true,face0-5=12000:chromaticraft/icons/weakrepeater
+block:id=%chromaticraft_block_pylon,data=10,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%chromaticraft_block_pylon,data=11,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_pylon,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/stoneblock:id=%chromaticraft_block_pylon,data=0,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+
+
+# %chromaticraft_block_tank:* (chromaticraft_block_tank), render=Reika.ChromatiCraft.Render.ISBRH.TankBlockRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockCrystalTank
+block:id=%chromaticraft_block_tank,data=*,stdrot=true,face0-5=12000:chromaticraft/tank/tank_0
+
+# %chromaticraft_block_fence:* (chromaticraft_block_fence), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockCrystalFence
+block:id=%chromaticraft_block_fence,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/fence_basic
+
+# %chromaticraft_block_tieredplant:* (chromaticraft_block_tieredplant), render=Reika.ChromatiCraft.Render.ISBRH.TieredPlantRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockTieredPlant
+block:id=%chromaticraft_block_tieredplant,data=0,stdrot=true,face0-5=12000:chromaticraft/plant/tierplant_0_back
+block:id=%chromaticraft_block_tieredplant,data=1,stdrot=true,face0-5=12000:chromaticraft/plant/tierplant_1_back
+block:id=%chromaticraft_block_tieredplant,data=2,stdrot=true,face0-5=12000:chromaticraft/plant/tierplant_2_back
+block:id=%chromaticraft_block_tieredplant,data=3,stdrot=true,face0-5=12000:chromaticraft/plant/tierplant_3_back
+block:id=%chromaticraft_block_tieredplant,data=4,stdrot=true,face0-5=12000:chromaticraft/plant/tierplant_4_back
+block:id=%chromaticraft_block_tieredplant,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/plant/tierplant_5_back
+block:id=%chromaticraft_block_tieredplant,data=6,stdrot=true,face0-5=12000:chromaticraft/plant/tierplant_6_back
+
+# %chromaticraft_block_tieredore:* (chromaticraft_block_tieredore), render=Reika.ChromatiCraft.Render.ISBRH.TieredOreRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.Worldgen.BlockTieredOre
+block:id=%chromaticraft_block_tieredore,data=0,stdrot=true,face0-5=0:chromaticraft/ore/tier_0_underlay
+block:id=%chromaticraft_block_tieredore,data=1,stdrot=true,face0-5=0:chromaticraft/ore/tier_1_underlay
+block:id=%chromaticraft_block_tieredore,data=2,stdrot=true,face0-5=0:chromaticraft/ore/tier_2_geode
+block:id=%chromaticraft_block_tieredore,data=3,stdrot=true,face0-5=0:chromaticraft/ore/tier_3_geode
+block:id=%chromaticraft_block_tieredore,data=4,stdrot=true,face0-5=0:chromaticraft/ore/tier_4_geode
+block:id=%chromaticraft_block_tieredore,data=5,stdrot=true,face0-5=0:chromaticraft/ore/tier_5_underlay
+block:id=%chromaticraft_block_tieredore,data=6,stdrot=true,face0-5=0:chromaticraft/ore/tier_6_geode
+block:id=%chromaticraft_block_tieredore,data=7,stdrot=true,face0-5=0:chromaticraft/ore/tier_7_underlay
+block:id=%chromaticraft_block_tieredore,data=8,stdrot=true,face0-5=0:chromaticraft/ore/tier_8_underlay
+block:id=%chromaticraft_block_tieredore,data=9,stdrot=true,face0-5=0:chromaticraft/ore/tier_9_underlay
+block:id=%chromaticraft_block_tieredore,data=10,stdrot=true,face0-5=0:chromaticraft/ore/tier_10_geode
+block:id=%chromaticraft_block_tieredore,data=11,stdrot=true,face0-5=0:chromaticraft/ore/tier_11_underlay
+block:id=%chromaticraft_block_tieredore,data=12,stdrot=true,face0-5=0:chromaticraft/ore/tier_12_geode
+block:id=%chromaticraft_block_tieredore,data=13,stdrot=true,face0-5=0:chromaticraft/ore/tier_13_underlay
+block:id=%chromaticraft_block_tieredore,data=14,stdrot=true,face0-5=0:chromaticraft/ore/tier_14_underlay
+
+# %chromaticraft_block_decoplant:* (chromaticraft_block_decoplant), render=Reika.ChromatiCraft.Render.ISBRH.DecoPlantRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockDecoPlant
+block:id=%chromaticraft_block_decoplant,data=0,stdrot=true,face0-5=0:chromaticraft/plant/decoplant_0_back
+block:id=%chromaticraft_block_decoplant,data=1,stdrot=true,face0-5=0:chromaticraft/plant/decoplant_1_back
+block:id=%chromaticraft_block_decoplant,data=2,stdrot=true,face0-5=0:chromaticraft/plant/decoplant_2_back
+block:id=%chromaticraft_block_decoplant,data=3,stdrot=true,face0-5=0:chromaticraft/plant/decoplant_3_back
+block:id=%chromaticraft_block_decoplant,data=4,stdrot=true,face0-5=0:chromaticraft/plant/decoplant_4_back
+block:id=%chromaticraft_block_decoplant,data=5,stdrot=true,face0-5=0:chromaticraft/plant/decoplant_5_back
+
+# %chromaticraft_block_powertree:* (chromaticraft_block_powertree), render=Reika.ChromatiCraft.Render.ISBRH.PowerTreeRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockPowerTree
+block:id=%chromaticraft_block_powertree,data=0,stdrot=true,colorMult=FF191919,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=1,stdrot=true,colorMult=FFFF0000,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=2,stdrot=true,colorMult=FF007F0E,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=3,stdrot=true,colorMult=FF724528,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=4,stdrot=true,colorMult=FF0026FF,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=5,stdrot=true,colorMult=FF8C00EA,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=6,stdrot=true,colorMult=FF009FBF,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=7,stdrot=true,colorMult=FF979797,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=8,stdrot=true,colorMult=FF404040,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=9,stdrot=true,colorMult=FFFFBAD9,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=10,stdrot=true,colorMult=FF00FF00,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=11,stdrot=true,colorMult=FFFFFF00,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=12,stdrot=true,colorMult=FF7FD4FF,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=13,stdrot=true,colorMult=FFFF00DC,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=14,stdrot=true,colorMult=FFFF6A00,face0-5=17000:chromaticraft/basic/powertree5
+block:id=%chromaticraft_block_powertree,data=15,stdrot=true,face0-5=0:chromaticraft/basic/powertree5
+
+# %chromaticraft_block_lampblock:* (chromaticraft_block_lampblock), render=Reika.ChromatiCraft.Render.ISBRH.LampRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Decoration.BlockRangedLamp
+block:id=%chromaticraft_block_lampblock,data=0,stdrot=true,colorMult=FF191919,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=1,stdrot=true,colorMult=FFFF4D4D,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=2,stdrot=true,colorMult=FF267F30,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=3,stdrot=true,colorMult=FF72523E,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=4,stdrot=true,colorMult=FF4D67FF,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=5,stdrot=true,colorMult=FFA846EA,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=6,stdrot=true,colorMult=FF39A9BF,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=7,stdrot=true,colorMult=FF979797,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=8,stdrot=true,colorMult=FF404040,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=9,stdrot=true,colorMult=FFFFCFE4,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=10,stdrot=true,colorMult=FF4DFF4D,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=11,stdrot=true,colorMult=FFFFFF4D,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=12,stdrot=true,colorMult=FFA5E1FF,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=13,stdrot=true,colorMult=FFFF4DE7,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=14,stdrot=true,colorMult=FFFF974D,face0-5=17000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=15,stdrot=true,face0-5=12000:chromaticraft/lamp
+
+# %chromaticraft_block_tnt:* (chromaticraft_block_tnt), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockEnderTNT
+block:id=%chromaticraft_block_tnt,data=0,stdrot=true,face0=0:chromaticraft/basic/enderbomb_bottom,face1=0:chromaticraft/basic/enderbomb_top,face2-5=0:chromaticraft/basic/enderbomb_side
+block:id=%chromaticraft_block_tnt,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:chromaticraft/basic/enderbomb_bottom,face1=0:chromaticraft/basic/enderbomb_top,face2-5=0:chromaticraft/basic/enderbomb_active
+
+# %chromaticraft_block_path:* (chromaticraft_block_path), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockPath
+block:id=%chromaticraft_block_path,data=0,stdrot=true,face0-5=0:chromaticraft/path/path_0
+block:id=%chromaticraft_block_path,data=1,stdrot=true,face0-5=0:chromaticraft/path/path_1
+block:id=%chromaticraft_block_path,data=2,stdrot=true,face0-5=0:chromaticraft/path/path_2
+block:id=%chromaticraft_block_path,data=3,stdrot=true,face0-5=0:chromaticraft/path/path_3
+block:id=%chromaticraft_block_path,data=4,stdrot=true,face0-5=0:chromaticraft/path/path_4
+block:id=%chromaticraft_block_path,data=5,stdrot=true,face0-5=0:chromaticraft/path/path_5
+block:id=%chromaticraft_block_path,data=6,stdrot=true,face0-5=0:chromaticraft/path/path_6
+
+# %chromaticraft_block_structshield:* (chromaticraft_block_structshield), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockStructureShield
+block:id=%chromaticraft_block_structshield,data=0,stdrot=true,face0-5=0:chromaticraft/basic/shield_0
+block:id=%chromaticraft_block_structshield,data=1,stdrot=true,face0-5=0:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_structshield,data=2,stdrot=true,face0-5=0:chromaticraft/basic/shield_2
+block:id=%chromaticraft_block_structshield,data=3,stdrot=true,face0-5=0:chromaticraft/basic/shield_3
+block:id=%chromaticraft_block_structshield,data=4,stdrot=true,face0-5=0:chromaticraft/basic/shield_4
+block:id=%chromaticraft_block_structshield,data=5,stdrot=true,face0-5=0:chromaticraft/basic/shield_5
+block:id=%chromaticraft_block_structshield,data=6,stdrot=true,face0-5=0:chromaticraft/basic/shield_6
+block:id=%chromaticraft_block_structshield,data=7,stdrot=true,face0-5=0:chromaticraft/basic/shield_7
+block:id=%chromaticraft_block_structshield,data=8,stdrot=true,face0-5=0:chromaticraft/basic/shield_0
+block:id=%chromaticraft_block_structshield,data=9,stdrot=true,face0-5=0:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_structshield,data=10,stdrot=true,face0-5=0:chromaticraft/basic/shield_2
+block:id=%chromaticraft_block_structshield,data=11,stdrot=true,face0-5=0:chromaticraft/basic/shield_3
+block:id=%chromaticraft_block_structshield,data=12,stdrot=true,face0-5=0:chromaticraft/basic/shield_4
+block:id=%chromaticraft_block_structshield,data=13,stdrot=true,face0-5=0:chromaticraft/basic/shield_5
+block:id=%chromaticraft_block_structshield,data=14,stdrot=true,face0-5=0:chromaticraft/basic/shield_6
+block:id=%chromaticraft_block_structshield,data=15,stdrot=true,face0-5=0:chromaticraft/basic/shield_7
+
+# %chromaticraft_block_lootchest:* (chromaticraft_block_lootchest), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockLootChest
+block:id=%chromaticraft_block_lootchest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/shield_1
+
+# %chromaticraft_block_portal:* (chromaticraft_block_portal), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockChromaPortal
+block:id=%chromaticraft_block_portal,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_1822_chroma.portal
+
+# %chromaticraft_block_relay:* (chromaticraft_block_relay), render=Reika.ChromatiCraft.Render.ISBRH.RelayRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Relay.BlockLumenRelay
+block:id=%chromaticraft_block_relay,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/relay
+
+# %chromaticraft_block_glow:* (chromaticraft_block_glow), render=Reika.ChromatiCraft.Render.ISBRH.CrystalGlowRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockCrystalGlow
+block:id=%chromaticraft_block_glow,data=*,stdrot=true,face0-5=12000:chromaticraft/basic/glow
+
+# %chromaticraft_block_heatlamp:* (chromaticraft_block_heatlamp), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockHeatLamp
+block:id=%chromaticraft_block_heatlamp,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/ore/tier_6_geode
+block:id=%chromaticraft_block_heatlamp,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/coldlamp
+
+# %chromaticraft_block_voidrift:* (chromaticraft_block_voidrift), render=Reika.ChromatiCraft.Render.ISBRH.VoidRiftRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.BlockVoidRift
+block:id=%chromaticraft_block_voidrift,data=*,stdrot=true,face0=0:chromaticraft/basic/shield_0,face1=0:chromaticraft/dimgen/voidrift,face2-5=0:chromaticraft/basic/shield_0
+
+# %chromaticraft_block_dimgen:* (chromaticraft_block_dimgen), render=Reika.ChromatiCraft.Render.ISBRH.DimensionDecoRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.BlockDimensionDeco
+block:id=%chromaticraft_block_dimgen,data=0,stdrot=true,face0-5=12000:chromaticraft/dimgen/miasma/layer_0
+block:id=%chromaticraft_block_dimgen,data=1,stdrot=true,face0-5=12000:chromaticraft/dimgen/floatstone/layer_0
+block:id=%chromaticraft_block_dimgen,data=2,stdrot=true,face0-5=12000:chromaticraft/dimgen/aqua/layer_0
+block:id=%chromaticraft_block_dimgen,data=3,stdrot=true,face0-5=12000:chromaticraft/dimgen/lifewater/layer_0
+block:id=%chromaticraft_block_dimgen,data=4,stdrot=true,face0-5=12000:chromaticraft/dimgen/lattice/layer_0
+block:id=%chromaticraft_block_dimgen,data=5,stdrot=true,face0-5=12000:chromaticraft/dimgen/gemstone/layer_0
+block:id=%chromaticraft_block_dimgen,data=6,stdrot=true,face0-5=12000:chromaticraft/dimgen/crystalleaf/layer_0
+block:id=%chromaticraft_block_dimgen,data=7,stdrot=true,face0-5=12000:chromaticraft/dimgen/oceanstone/layer_0
+block:id=%chromaticraft_block_dimgen,data=8,stdrot=true,face0-5=12000:chromaticraft/dimgen/cliffglass/layer_0
+block:id=%chromaticraft_block_dimgen,data=9,stdrot=true,face0-5=12000:chromaticraft/dimgen/glowcave/layer_0
+
+# %chromaticraft_block_dimgentile:* (chromaticraft_block_dimgentile), render=Reika.ChromatiCraft.Render.ISBRH.DimensionDecoRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.BlockDimensionDecoTile
+block:id=%chromaticraft_block_dimgentile,data=0,stdrot=true,face0-5=12000:chromaticraft/dimgen2/underlay_0
+block:id=%chromaticraft_block_dimgentile,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/dimgen2/underlay_1
+
+# %chromaticraft_block_colorlock:* (chromaticraft_block_colorlock), render=Reika.ChromatiCraft.Render.ISBRH.ColorLockRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Locks.BlockColoredLock
+block:id=%chromaticraft_block_colorlock,data=*,stdrot=true,face0-5=0:chromaticraft/dimstruct/colorlock_0
+
+# %chromaticraft_block_dimdata:* (chromaticraft_block_dimdata), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.BlockStructureDataStorage
+block:id=%chromaticraft_block_dimdata,data=0,stdrot=true,face0-5=0:chromaticraft/dimstruct/dimdata_side
+block:id=%chromaticraft_block_dimdata,data=1,stdrot=true,face0-5=0:chromaticraft/dimstruct/dimpassword_side
+
+# %chromaticraft_block_lockfence:* (chromaticraft_block_lockfence), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Locks.BlockLockFence
+block:id=%chromaticraft_block_lockfence,data=*,stdrot=true,face0-5=0:chromaticraft/dimstruct/lockfence
+
+# %chromaticraft_block_lockfreeze:* (chromaticraft_block_lockfreeze), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Locks.BlockLockFreeze
+block:id=%chromaticraft_block_lockfreeze,data=*,stdrot=true,face0-1=0:chromaticraft/dimstruct/lockfreeze,face2-5=0:chromaticraft/dimstruct/lockfreeze_button_inactive
+
+# %chromaticraft_block_lockkey:* (chromaticraft_block_lockkey), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Locks.BlockLockKey
+block:id=%chromaticraft_block_lockkey,data=*,stdrot=true,face0-5=0:chromaticraft/dimstruct/key
+
+# %chromaticraft_block_glowleaf:* (chromaticraft_block_glowleaf), render=Reika.ChromatiCraft.Render.ISBRH.GlowTreeRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.BlockLightedLeaf
+block:id=%chromaticraft_block_glowleaf,data=*,stdrot=true,face0-5=2000:minecraft/leaves_oak
+
+# %chromaticraft_block_glowlog:* (chromaticraft_block_glowlog), render=Reika.ChromatiCraft.Render.ISBRH.GlowTreeRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.BlockLightedLog
+block:id=%chromaticraft_block_glowlog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=12000:minecraft/log_oak_top,face2-5=12000:minecraft/log_oak
+block:id=%chromaticraft_block_glowlog,data=4,data=5,data=6,data=7,stdrot=true,face0-3=12000:minecraft/log_oak,face4-5=12000:minecraft/log_oak_top
+block:id=%chromaticraft_block_glowlog,data=8,data=9,data=10,data=11,stdrot=true,face0-1=12000:minecraft/log_oak,face2-3=12000:minecraft/log_oak_top,face4-5=12000:minecraft/log_oak
+block:id=%chromaticraft_block_glowlog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/log_oak
+
+# %chromaticraft_block_glowsapling:* (chromaticraft_block_glowsapling), render=(CROSSEDSQUARES), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.BlockLightedSapling
+block:id=%chromaticraft_block_glowsapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:chromaticraft/dimgen/sapling
+
+# %chromaticraft_block_hover:* (chromaticraft_block_hover), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockHoverBlock
+block:id=%chromaticraft_block_hover,data=0,stdrot=true,colorMult=FFFF00,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=1,stdrot=true,colorMult=FF00FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=2,stdrot=true,colorMult=2288FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=3,stdrot=true,colorMult=00FF00,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=4,stdrot=true,colorMult=FFFF00,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=5,stdrot=true,colorMult=FF00FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=6,stdrot=true,colorMult=2288FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=7,stdrot=true,colorMult=00FF00,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=8,stdrot=true,colorMult=FFFF00,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=9,stdrot=true,colorMult=FF00FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=10,stdrot=true,colorMult=2288FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=11,stdrot=true,colorMult=00FF00,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=12,stdrot=true,colorMult=FFFFFF40,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=13,stdrot=true,colorMult=FFFF40FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=14,stdrot=true,colorMult=FF59A6FF,face0-5=17000:chromaticraft/basic/hover
+block:id=%chromaticraft_block_hover,data=15,stdrot=true,colorMult=FF40FF40,face0-5=17000:chromaticraft/basic/hover
+
+# %chromaticraft_block_gol:* (chromaticraft_block_gol), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.GOL.BlockGOLTile
+block:id=%chromaticraft_block_gol,data=0,data=1,stdrot=true,face0-5=0:chromaticraft/dimstruct/gol_off
+block:id=%chromaticraft_block_gol,data=2,stdrot=true,face0-5=0:chromaticraft/dimstruct/gol_mem_off
+block:id=%chromaticraft_block_gol,data=3,stdrot=true,face0-5=0:chromaticraft/dimstruct/gol_mem_on
+
+# %chromaticraft_block_golcontrol:* (chromaticraft_block_golcontrol), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.GOL.BlockGOLController
+block:id=%chromaticraft_block_golcontrol,data=*,stdrot=true,face0-1=0:chromaticraft/dimstruct/gol_control_end,face2-5=0:chromaticraft/dimstruct/gol_control_play
+
+# %chromaticraft_block_musicmemory:* (chromaticraft_block_musicmemory), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Music.BlockMusicMemory
+block:id=%chromaticraft_block_musicmemory,data=*,stdrot=true,face0-1=0:chromaticraft/dimstruct/musicmemory,face2=0:chromaticraft/dimstruct/musicmemory_front,face3-5=0:chromaticraft/dimstruct/musicmemory
+
+# %chromaticraft_block_musictrigger:* (chromaticraft_block_musictrigger), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Decoration.BlockMusicTrigger
+block:id=%chromaticraft_block_musictrigger,data=*,stdrot=true,face0-1=0:chromaticraft/dimstruct/musictrigger,face2-5=0:chromaticraft/dimstruct/musictrigger_side
+
+# %chromaticraft_block_shiftkey:* (chromaticraft_block_shiftkey), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.ShiftMaze.BlockShiftKey
+block:id=%chromaticraft_block_shiftkey,data=*,stdrot=true,face0-5=0:chromaticraft/dimstruct/shiftkey
+
+# %chromaticraft_block_shiftlock:* (chromaticraft_block_shiftlock), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.ShiftMaze.BlockShiftLock
+block:id=%chromaticraft_block_shiftlock,data=0,stdrot=true,face0-5=12000:chromaticraft/dimstruct/shiftlock-closed
+block:id=%chromaticraft_block_shiftlock,data=1,stdrot=true,face0-5=12000:chromaticraft/dimstruct/shiftlock-open
+block:id=%chromaticraft_block_shiftlock,data=2,stdrot=true,face0-4=12000:chromaticraft/basic/shield_1,face5=12000:chromaticraft/dimstruct/shiftlock-closed
+block:id=%chromaticraft_block_shiftlock,data=3,stdrot=true,face0-4=12000:chromaticraft/basic/shield_1,face5=12000:chromaticraft/dimstruct/shiftlock-open
+block:id=%chromaticraft_block_shiftlock,data=4,stdrot=true,face0-3=12000:chromaticraft/basic/shield_1,face4=12000:chromaticraft/dimstruct/shiftlock-closed,face5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=5,stdrot=true,face0-3=12000:chromaticraft/basic/shield_1,face4=12000:chromaticraft/dimstruct/shiftlock-open,face5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=6,stdrot=true,face0-2=12000:chromaticraft/basic/shield_1,face3=12000:chromaticraft/dimstruct/shiftlock-closed,face4-5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=7,stdrot=true,face0-2=12000:chromaticraft/basic/shield_1,face3=12000:chromaticraft/dimstruct/shiftlock-open,face4-5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=8,stdrot=true,face0-1=12000:chromaticraft/basic/shield_1,face2=12000:chromaticraft/dimstruct/shiftlock-closed,face3-5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=9,stdrot=true,face0-1=12000:chromaticraft/basic/shield_1,face2=12000:chromaticraft/dimstruct/shiftlock-open,face3-5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=10,stdrot=true,face0-5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=11,stdrot=true,face0-3=12000:chromaticraft/basic/shield_1,face4=12000:chromaticraft/dimstruct/shiftlock-open,face5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=12,stdrot=true,face0-4=12000:chromaticraft/basic/shield_1,face5=12000:chromaticraft/dimstruct/shiftlock-open
+block:id=%chromaticraft_block_shiftlock,data=13,stdrot=true,face0-1=12000:chromaticraft/basic/shield_1,face2=12000:chromaticraft/dimstruct/shiftlock-open,face3-5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=14,stdrot=true,face0-2=12000:chromaticraft/basic/shield_1,face3=12000:chromaticraft/dimstruct/shiftlock-open,face4-5=12000:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_shiftlock,data=15,stdrot=true,face0-5=12000:chromaticraft/dimstruct/shiftlock-open
+
+# %chromaticraft_block_teleport:* (chromaticraft_block_teleport), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.NonEuclid.BlockTeleport
+block:id=%chromaticraft_block_teleport,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_1844_chroma.teleportblock
+
+# %chromaticraft_block_specialshield:* (chromaticraft_block_specialshield), render=Reika.ChromatiCraft.Render.ISBRH.SpecialShieldRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.BlockSpecialShield
+block:id=%chromaticraft_block_specialshield,data=0,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_0
+block:id=%chromaticraft_block_specialshield,data=1,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_1
+block:id=%chromaticraft_block_specialshield,data=2,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_2
+block:id=%chromaticraft_block_specialshield,data=3,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_3
+block:id=%chromaticraft_block_specialshield,data=4,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_4
+block:id=%chromaticraft_block_specialshield,data=5,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_5
+block:id=%chromaticraft_block_specialshield,data=6,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_6
+block:id=%chromaticraft_block_specialshield,data=7,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_7
+block:id=%chromaticraft_block_specialshield,data=8,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_0
+block:id=%chromaticraft_block_specialshield,data=9,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_1
+block:id=%chromaticraft_block_specialshield,data=10,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_2
+block:id=%chromaticraft_block_specialshield,data=11,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_3
+block:id=%chromaticraft_block_specialshield,data=12,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_4
+block:id=%chromaticraft_block_specialshield,data=13,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_5
+block:id=%chromaticraft_block_specialshield,data=14,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_6
+block:id=%chromaticraft_block_specialshield,data=15,stdrot=true,face0-5=0:chromaticraft/basic/specialshield_7
+
+# %chromaticraft_block_coloraltar:* (chromaticraft_block_coloraltar), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Decoration.BlockColoredAltar
+block:id=%chromaticraft_block_coloraltar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_1846_chroma.coloraltar
+
+# %chromaticraft_block_door:* (chromaticraft_block_door), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockChromaDoor
+block:id=%chromaticraft_block_door,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+block:id=%chromaticraft_block_door,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+block:id=%chromaticraft_block_door,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+block:id=%chromaticraft_block_door,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+block:id=%chromaticraft_block_door,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+block:id=%chromaticraft_block_door,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+block:id=%chromaticraft_block_door,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+block:id=%chromaticraft_block_door,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_closed
+block:id=%chromaticraft_block_door,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/door_open
+
+# %chromaticraft_block_glass:* (chromaticraft_block_glass), render=Reika.ChromatiCraft.Render.ISBRH.CrystalGlassRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockCrystalGlass
+block:id=%chromaticraft_block_glass,data=0,stdrot=true,colorMult=FF191919,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=1,stdrot=true,colorMult=FFFF0000,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=2,stdrot=true,colorMult=FF007F0E,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=3,stdrot=true,colorMult=FF724528,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=4,stdrot=true,colorMult=FF0026FF,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=5,stdrot=true,colorMult=FF8C00EA,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=6,stdrot=true,colorMult=FF009FBF,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=7,stdrot=true,colorMult=FF979797,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=8,stdrot=true,colorMult=FF404040,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=9,stdrot=true,colorMult=FFFFBAD9,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=10,stdrot=true,colorMult=FF00FF00,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=11,stdrot=true,colorMult=FFFFFF00,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=12,stdrot=true,colorMult=FF7FD4FF,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=13,stdrot=true,colorMult=FFFF00DC,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=14,stdrot=true,colorMult=FFFF6A00,face0-5=17000:chromaticraft/basic/glass
+block:id=%chromaticraft_block_glass,data=15,stdrot=true,face0-5=12000:chromaticraft/basic/glass
+
+# %chromaticraft_block_console:* (chromaticraft_block_console), render=Reika.ChromatiCraft.Render.ISBRH.ConsoleRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.BlockCrystalConsole
+block:id=%chromaticraft_block_console,data=*,stdrot=true,face0-1=12000:chromaticraft/console/side,face2-5=12000:chromaticraft/console/screen
+
+# %chromaticraft_block_light:* (chromaticraft_block_light), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Decoration.BlockEtherealLight
+block:id=%chromaticraft_block_light,data=*,stdrot=true,face0-5=0:ChromatiCraft/trans
+
+# %chromaticraft_block_storage:* (chromaticraft_block_storage), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockMultiStorage
+block:id=%chromaticraft_block_storage,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_1851_chroma.storageblock
+
+# %chromaticraft_block_decoflower:* (chromaticraft_block_decoflower), render=Reika.ChromatiCraft.Render.ISBRH.DecoFlowerRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockDecoFlower
+block:id=%chromaticraft_block_decoflower,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/plant/flower_0
+block:id=%chromaticraft_block_decoflower,data=1,stdrot=true,face0-5=0:chromaticraft/plant/flower_1
+block:id=%chromaticraft_block_decoflower,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/plant/flower_2
+block:id=%chromaticraft_block_decoflower,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/plant/flower_3
+block:id=%chromaticraft_block_decoflower,data=4,stdrot=true,face0-5=0:chromaticraft/plant/flower_4
+block:id=%chromaticraft_block_decoflower,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=FF67C450,face0-5=17000:chromaticraft/plant/flower_5
+block:id=%chromaticraft_block_decoflower,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/plant/flower_6
+block:id=%chromaticraft_block_decoflower,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/plant/flower_7
+
+# %chromaticraft_block_pad:* (chromaticraft_block_pad), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockHoverPad
+block:id=%chromaticraft_block_pad,data=*,stdrot=true,face0-5=0:chromaticraft/basic/hoverpad
+
+# %chromaticraft_block_adjacency:* (chromaticraft_block_adjacency), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockAdjacencyUpgrade
+block:id=%chromaticraft_block_adjacency,data=*,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+
+# %chromaticraft_block_antkey:* (chromaticraft_block_antkey), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.AntFarm.BlockAntKey
+block:id=%chromaticraft_block_antkey,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_1857_chroma.antkey
+
+# %chromaticraft_block_pinball:* (chromaticraft_block_pinball), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Pinball.BlockPinballTile
+block:id=%chromaticraft_block_pinball,data=*,stdrot=true,face0-5=12000:minecraft/MISSING_ICON_BLOCK_1859_chroma.pinball
+
+# %chromaticraft_block_gravity:* (chromaticraft_block_gravity), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Gravity.BlockGravityTile
+block:id=%chromaticraft_block_gravity,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/iron_block,face1=0:chromaticraft/dimstruct/gravity_sum,face2-5=0:minecraft/iron_block
+
+# %chromaticraft_block_trail:* (chromaticraft_block_trail), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockChromaTrail
+block:id=%chromaticraft_block_trail,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/icons/transparent
+
+# %chromaticraft_block_bridge:* (chromaticraft_block_bridge), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Bridge.BlockDynamicBridge
+block:id=%chromaticraft_block_bridge,data=0,stdrot=true,face0-5=0:chromaticraft/dimstruct/bridge_off
+block:id=%chromaticraft_block_bridge,data=1,stdrot=true,face0-5=0:chromaticraft/dimstruct/bridge_on
+
+# %chromaticraft_block_bridgecontrol:* (chromaticraft_block_bridgecontrol), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Bridge.BlockBridgeControl
+block:id=%chromaticraft_block_bridgecontrol,data=0,stdrot=true,face0=0:chromaticraft/dimstruct/bridgekey_off,face1=0:chromaticraft/dimstruct/bridgekey_off_top,face2-5=0:chromaticraft/dimstruct/bridgekey_off
+block:id=%chromaticraft_block_bridgecontrol,data=1,stdrot=true,face0=0:chromaticraft/dimstruct/bridgekey_on,face1=0:chromaticraft/dimstruct/bridgekey_on_top,face2-5=0:chromaticraft/dimstruct/bridgekey_on
+block:id=%chromaticraft_block_bridgecontrol,data=2,stdrot=true,face0=0:chromaticraft/dimstruct/bridgekey_off_top,face2-5=0:chromaticraft/dimstruct/bridgekey_off_top
+block:id=%chromaticraft_block_bridgecontrol,data=3,stdrot=true,face0=0:chromaticraft/dimstruct/bridgekey_on_top,face2-5=0:chromaticraft/dimstruct/bridgekey_on_top
+
+# %chromaticraft_block_sparkle:* (chromaticraft_block_sparkle), render=Reika.ChromatiCraft.Render.ISBRH.SparklingBlockRender(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.Worldgen.BlockSparkle
+block:id=%chromaticraft_block_sparkle,data=0,stdrot=true,face0-5=0:minecraft/dirt
+block:id=%chromaticraft_block_sparkle,data=1,stdrot=true,face0-5=0:minecraft/sand
+block:id=%chromaticraft_block_sparkle,data=2,stdrot=true,face0-5=0:minecraft/gravel
+block:id=%chromaticraft_block_sparkle,data=3,stdrot=true,face0-5=0:minecraft/cobblestone
+block:id=%chromaticraft_block_sparkle,data=4,stdrot=true,face0-5=0:minecraft/stone
+block:id=%chromaticraft_block_sparkle,data=5,stdrot=true,face0-5=0:minecraft/clay
+block:id=%chromaticraft_block_sparkle,data=6,stdrot=true,face0-5=0:minecraft/brick
+block:id=%chromaticraft_block_sparkle,data=7,stdrot=true,face0-5=0:minecraft/obsidian
+
+# %chromaticraft_block_luma:* (chromaticraft_block_luma), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockEtherealLuma
+block:id=%chromaticraft_block_luma,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:chromaticraft/fluid/aether/aether_full
+
+# %chromaticraft_block_tileentity2:* (chromaticraft_block_tileentity2), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Base.BlockChromaTile
+block:id=%chromaticraft_block_tileentity2,data=0,stdrot=true,face0=0:chromaticraft/tile/bridge_bottom,face1=0:chromaticraft/tile/bridge_top,face2-5=0:chromaticraft/tile/bridge_side
+block:id=%chromaticraft_block_tileentity2,data=1,stdrot=true,face0=0:chromaticraft/tile/alveary_bottom,face1=0:chromaticraft/tile/alveary_top,face2-5=0:chromaticraft/tile/alveary_side
+block:id=%chromaticraft_block_tileentity2,data=2,stdrot=true,face0=0:chromaticraft/tile/pylonlink_bottom,face1=0:chromaticraft/tile/pylonlink_top,face2-5=0:chromaticraft/tile/pylonlink_side
+block:id=%chromaticraft_block_tileentity2,data=3,stdrot=true,face0=0:chromaticraft/tile/explosionshield_bottom,face1=0:chromaticraft/tile/explosionshield_top,face2-5=0:chromaticraft/tile/explosionshield_side
+block:id=%chromaticraft_block_tileentity2,data=4,stdrot=true,face0=0:chromaticraft/tile/deathfog_bottom,face1=0:chromaticraft/tile/deathfog_top,face2-5=0:chromaticraft/tile/deathfog_side
+block:id=%chromaticraft_block_tileentity2,data=5,stdrot=true,face0=0:chromaticraft/tile/injector_bottom,face1=0:chromaticraft/tile/injector_top,face2-5=0:chromaticraft/tile/injector_side
+block:id=%chromaticraft_block_tileentity2,data=6,stdrot=true,face0=0:chromaticraft/tile/hoverpad_bottom,face1=0:chromaticraft/tile/hoverpad_top,face2-5=0:chromaticraft/tile/hoverpad_side
+block:id=%chromaticraft_block_tileentity2,data=7,stdrot=true,face0=0:chromaticraft/tile/launchpad_bottom,face1=0:chromaticraft/tile/launchpad_top,face2-5=0:chromaticraft/tile/launchpad_side
+block:id=%chromaticraft_block_tileentity2,data=8,stdrot=true,face0=0:chromaticraft/tile/toolstorage_bottom,face1=0:chromaticraft/tile/toolstorage_top,face2-5=0:chromaticraft/tile/toolstorage_side
+
+# %chromaticraft_block_avolamp:* (chromaticraft_block_avolamp), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Decoration.BlockAvoLamp
+block:id=%chromaticraft_block_avolamp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_1867_chroma.avolamp
+
+# %chromaticraft_block_relayfilter:* (chromaticraft_block_relayfilter), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Relay.BlockRelayFilter
+block:id=%chromaticraft_block_relayfilter,data=*,stdrot=true,face0-5=0:chromaticraft/basic/relayfilter
+
+# %chromaticraft_block_routernode:* (chromaticraft_block_routernode), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockRouterNode
+block:id=%chromaticraft_block_routernode,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/routernode-0
+block:id=%chromaticraft_block_routernode,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/routernode-1
+
+# %chromaticraft_block_everfluid:* (chromaticraft_block_everfluid), render=Reika.ChromatiCraft.Render.ISBRH.EverFluidRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Water.BlockEverFluid
+block:id=%chromaticraft_block_everfluid,data=*,stdrot=true,face0-5=12000:minecraft/water_still
+
+# %chromaticraft_block_lightpanel:* (chromaticraft_block_lightpanel), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.LightPanel.BlockLightPanel
+block:id=%chromaticraft_block_lightpanel,data=0,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_green_0
+block:id=%chromaticraft_block_lightpanel,data=1,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_green_1
+block:id=%chromaticraft_block_lightpanel,data=2,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_red_0
+block:id=%chromaticraft_block_lightpanel,data=3,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_red_1
+block:id=%chromaticraft_block_lightpanel,data=4,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_blue_0
+block:id=%chromaticraft_block_lightpanel,data=5,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_blue_1
+block:id=%chromaticraft_block_lightpanel,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel
+
+# %chromaticraft_block_panelswitch:* (chromaticraft_block_panelswitch), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.LightPanel.BlockLightSwitch
+block:id=%chromaticraft_block_panelswitch,data=0,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_switch_off
+block:id=%chromaticraft_block_panelswitch,data=1,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel,face2-5=0:chromaticraft/dimstruct/lightpanel_switch_on
+block:id=%chromaticraft_block_panelswitch,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chromaticraft/dimstruct/lightpanel
+
+# %chromaticraft_block_artefact:* (chromaticraft_block_artefact), render=Reika.ChromatiCraft.Render.ISBRH.ArtefactRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockUnknownArtefact
+block:id=%chromaticraft_block_artefact,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/ua
+
+# %chromaticraft_block_dummyaux:* (chromaticraft_block_dummyaux), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockDummyAux
+block:id=%chromaticraft_block_dummyaux,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_1874_chroma.dummyaux
+
+# %chromaticraft_block_cliffstone:* (chromaticraft_block_cliffstone), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Worldgen.BlockCliffStone
+block:id=%chromaticraft_block_cliffstone,data=0,stdrot=true,face0-5=0:chromaticraft/cliffstone/stone_base
+block:id=%chromaticraft_block_cliffstone,data=1,stdrot=true,face0-5=0:chromaticraft/cliffstone/dirt_base
+block:id=%chromaticraft_block_cliffstone,data=2,stdrot=true,face0=0:chromaticraft/cliffstone/dirt_base,face1=0:chromaticraft/cliffstone/grass_top_base,face2-5=0:chromaticraft/cliffstone/grass_base
+block:id=%chromaticraft_block_cliffstone,data=3,stdrot=true,face0=0:minecraft/dirt,face1=0:chromaticraft/cliffstone/farmland_top,face2-5=0:minecraft/dirt
+block:id=%chromaticraft_block_cliffstone,data=4,stdrot=true,face0-5=0:chromaticraft/cliffstone/stone_base
+block:id=%chromaticraft_block_cliffstone,data=5,stdrot=true,face0-5=0:chromaticraft/cliffstone/dirt_base
+block:id=%chromaticraft_block_cliffstone,data=6,stdrot=true,face0=0:chromaticraft/cliffstone/dirt_base,face1=0:chromaticraft/cliffstone/grass_top_base,face2-5=0:chromaticraft/cliffstone/grass_base
+block:id=%chromaticraft_block_cliffstone,data=7,stdrot=true,face0=0:minecraft/dirt,face1=0:chromaticraft/cliffstone/farmland_top,face2-5=0:minecraft/dirt
+block:id=%chromaticraft_block_cliffstone,data=8,stdrot=true,face0-5=0:chromaticraft/cliffstone/stone_base
+block:id=%chromaticraft_block_cliffstone,data=9,stdrot=true,face0-5=0:chromaticraft/cliffstone/dirt_base
+block:id=%chromaticraft_block_cliffstone,data=10,stdrot=true,face0=0:chromaticraft/cliffstone/dirt_base,face1=0:chromaticraft/cliffstone/grass_top_base,face2-5=0:chromaticraft/cliffstone/grass_base
+block:id=%chromaticraft_block_cliffstone,data=11,stdrot=true,face0=0:minecraft/dirt,face1=0:chromaticraft/cliffstone/farmland_top,face2-5=0:minecraft/dirt
+block:id=%chromaticraft_block_cliffstone,data=12,stdrot=true,face0-5=0:chromaticraft/cliffstone/stone_base
+block:id=%chromaticraft_block_cliffstone,data=13,stdrot=true,face0-5=0:chromaticraft/cliffstone/dirt_base
+block:id=%chromaticraft_block_cliffstone,data=14,stdrot=true,face0=0:chromaticraft/cliffstone/dirt_base,face1=0:chromaticraft/cliffstone/grass_top_base,face2-5=0:chromaticraft/cliffstone/grass_base
+block:id=%chromaticraft_block_cliffstone,data=15,stdrot=true,face0=0:minecraft/dirt,face1=0:chromaticraft/cliffstone/farmland_top,face2-5=0:minecraft/dirt
+
+# %chromaticraft_block_caveindicator:* (chromaticraft_block_caveindicator), render=Reika.ChromatiCraft.Render.ISBRH.CaveIndicatorRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.Worldgen.BlockCaveIndicator
+block:id=%chromaticraft_block_caveindicator,data=*,stdrot=true,face0=0:minecraft/stone,face1=0:chromaticraft/caveindicator_top,face2-5=0:minecraft/stone
+
+# %chromaticraft_block_floatingrelay:* (chromaticraft_block_floatingrelay), render=Reika.ChromatiCraft.Render.ISBRH.RelayRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Relay.BlockFloatingRelay
+block:id=%chromaticraft_block_floatingrelay,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/basic/relay_floating
+
+# %chromaticraft_block_repeaterlamp:* (chromaticraft_block_repeaterlamp), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Decoration.BlockRepeaterLight
+block:id=%chromaticraft_block_repeaterlamp,data=0,stdrot=true,face0-5=12000:chromaticraft/icons/repeater
+block:id=%chromaticraft_block_repeaterlamp,data=1,stdrot=true,face0-5=12000:chromaticraft/icons/multirepeater
+block:id=%chromaticraft_block_repeaterlamp,data=2,stdrot=true,face0-5=12000:chromaticraft/icons/broadcaster
+block:id=%chromaticraft_block_repeaterlamp,data=3,stdrot=true,face0-5=12000:chromaticraft/icons/weakrepeater
+
+# %chromaticraft_block_waterlock:* (chromaticraft_block_waterlock), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.Water.BlockRotatingLock
+block:id=%chromaticraft_block_waterlock,data=0,stdrot=true,face0-5=0:chromaticraft/dimstruct/waterlock
+block:id=%chromaticraft_block_waterlock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:chromaticraft/icons/transparent
+
+# %chromaticraft_block_redstonepod:* (chromaticraft_block_redstonepod), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockRedstonePod
+block:id=%chromaticraft_block_redstonepod,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/ore/tier_3_geode
+
+# %chromaticraft_block_polycrystal:* (chromaticraft_block_polycrystal), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockPolyCrystal
+block:id=%chromaticraft_block_polycrystal,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_1882_chroma.polycrystal
+
+# %chromaticraft_block_moltenlumen:* (chromaticraft_block_moltenlumen), render=(FLUIDS), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.BlockLiquidLumen
+block:id=%chromaticraft_block_moltenlumen,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:chromaticraft/fluid/lumen,face2-5=12000:chromaticraft/fluid/flowinglumen
+
+# %chromaticraft_block_warpnode:* (chromaticraft_block_warpnode), render=(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockWarpNode
+block:id=%chromaticraft_block_warpnode,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_1885_chroma.warpnode
+
+# %chromaticraft_block_fakesky:* (chromaticraft_block_fakesky), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockFakeSky
+block:id=%chromaticraft_block_fakesky,data=*,stdrot=true,colorMult=55D0FF,face0-5=17000:chromaticraft/blank
+
+# %chromaticraft_block_chunkloader:* (chromaticraft_block_chunkloader), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.BlockDimensionChunkloader
+block:id=%chromaticraft_block_chunkloader,data=*,stdrot=true,face0-5=0:chromaticraft/dimgen/chunkloader-a
+
+# %chromaticraft_block_trapfloor:* (chromaticraft_block_trapfloor), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockTrapFloor
+block:id=%chromaticraft_block_trapfloor,data=0,stdrot=true,face0-5=0:chromaticraft/basic/trapfloor
+block:id=%chromaticraft_block_trapfloor,data=1,stdrot=true,face0-5=0:minecraft/stonebrick
+block:id=%chromaticraft_block_trapfloor,data=2,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%chromaticraft_block_trapfloor,data=3,stdrot=true,face0-5=0:chromaticraft/basic/shield_1
+block:id=%chromaticraft_block_trapfloor,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:chromaticraft/basic/trapfloor
+
+# %chromaticraft_block_bedrockcrack:* (chromaticraft_block_bedrockcrack), render=Reika.ChromatiCraft.Render.ISBRH.BedrockCrackRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.BlockBedrockCrack
+block:id=%chromaticraft_block_bedrockcrack,data=*,stdrot=true,face0-5=12000:minecraft/bedrock
+
+# %chromaticraft_block_rfpod:* (chromaticraft_block_rfpod), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.BlockRFNode
+block:id=%chromaticraft_block_rfpod,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalfoundation/fluid/Fluid_Redstone_Still
+
+# %chromaticraft_block_pistonbit:* (chromaticraft_block_pistonbit), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.PistonTape.BlockPistonTapeBit
+block:id=%chromaticraft_block_pistonbit,data=0,stdrot=true,face0-5=12000:chromaticraft/dimstruct/bit_zero
+block:id=%chromaticraft_block_pistonbit,data=1,stdrot=true,face0-5=12000:chromaticraft/dimstruct/bit_one
+block:id=%chromaticraft_block_pistonbit,data=2,stdrot=true,face0-5=12000:chromaticraft/dimstruct/bit_zero
+block:id=%chromaticraft_block_pistonbit,data=3,stdrot=true,face0-5=12000:chromaticraft/dimstruct/bit_one
+block:id=%chromaticraft_block_pistonbit,data=4,stdrot=true,face0-5=12000:chromaticraft/dimstruct/bit_zero
+block:id=%chromaticraft_block_pistonbit,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:chromaticraft/dimstruct/bit_one
+
+# %chromaticraft_block_pistontarget:* (chromaticraft_block_pistontarget), render=Reika.ChromatiCraft.Render.ISBRH.PistonTargetRenderer(CUSTOM), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.PistonTape.BlockPistonTarget
+block:id=%chromaticraft_block_pistontarget,data=*,stdrot=true,face0-5=12000:chromaticraft/dimstruct/piston_target
+
+# %chromaticraft_block_pistoncontrol:* (chromaticraft_block_pistoncontrol), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.Structure.PistonTape.BlockPistonController
+block:id=%chromaticraft_block_pistoncontrol,data=*,stdrot=true,face0-5=0:chromaticraft/dimstruct/piston_control
+
+# %chromaticraft_block_rayblend:* (chromaticraft_block_rayblend), render=Reika.ChromatiCraft.Render.ISBRH.RayBlendFloorRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dimension.Structure.BlockRayblendFloor
+block:id=%chromaticraft_block_rayblend,data=*,stdrot=true,face0-5=12000:chromaticraft/dimstruct/rayblendfloor
+
+# %chromaticraft_block_encrusted:* (chromaticraft_block_encrusted), render=Reika.ChromatiCraft.Render.ISBRH.CrystalEncrustingRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockEncrustedCrystal
+block:id=%chromaticraft_block_encrusted,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:chromaticraft/transparent
+
+# %chromaticraft_block_injectoraux:* (chromaticraft_block_injectoraux), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockCastingInjectorFocus
+block:id=%chromaticraft_block_injectoraux,data=*,stdrot=true,face0=0:chromaticraft/tile/injector_bottom,face1=0:chromaticraft/tile/injector_top,face2-5=0:chromaticraft/tile/injector_side
+
+# %chromaticraft_block_dyevine:* (chromaticraft_block_dyevine), render=Reika.ChromatiCraft.Render.ISBRH.DyeVineRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockDyeVine
+block:id=%chromaticraft_block_dyevine,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=191919,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=993333,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=667F33,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=664C33,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=334CB2,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=7F3FB2,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=4C7F99,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=999999,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=4C4C4C,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=F27FA5,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=7FCC19,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=E5E533,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=6699D8,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=B24CD8,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=D87F33,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_dyevine,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:chromaticraft/dye/vine/0,face1=0:chromaticraft/dye/vine/1,face2=0:chromaticraft/dye/vine/2,face3=0:chromaticraft/dye/vine/3,face4=0:chromaticraft/dye/vine/0,face5=0:chromaticraft/dye/vine/1
+
+# %chromaticraft_block_fertiledyevine:* (chromaticraft_block_fertiledyevine), render=Reika.ChromatiCraft.Render.ISBRH.DyeVineRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Dye.BlockDyeVine
+block:id=%chromaticraft_block_fertiledyevine,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=191919,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=993333,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=667F33,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=664C33,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=334CB2,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=7F3FB2,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=4C7F99,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=999999,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=4C4C4C,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=F27FA5,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=7FCC19,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=E5E533,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=6699D8,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=B24CD8,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=D87F33,face0=17000:chromaticraft/dye/vine/0,face1=17000:chromaticraft/dye/vine/1,face2=17000:chromaticraft/dye/vine/2,face3=17000:chromaticraft/dye/vine/3,face4=17000:chromaticraft/dye/vine/0,face5=17000:chromaticraft/dye/vine/1
+block:id=%chromaticraft_block_fertiledyevine,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:chromaticraft/dye/vine/0,face1=0:chromaticraft/dye/vine/1,face2=0:chromaticraft/dye/vine/2,face3=0:chromaticraft/dye/vine/3,face4=0:chromaticraft/dye/vine/0,face5=0:chromaticraft/dye/vine/1
+
+# %chromaticraft_block_voidcave:* (chromaticraft_block_voidcave), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.Dimension.BlockVoidCave
+block:id=%chromaticraft_block_voidcave,data=*,stdrot=true,face0-5=0:chromaticraft/dimgen/voidcave
+
+# %chromaticraft_block_mud:* (chromaticraft_block_mud), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockChromaMud
+block:id=%chromaticraft_block_mud,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:chromaticraft/mud,face2-5=0:minecraft/dirt

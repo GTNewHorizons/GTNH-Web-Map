@@ -1,0 +1,16 @@
+# weightingscales 1.0
+version:1.7
+modname:weightingscales
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/weightingscales/textures/blocks/
+texture:id=weightingscales/ScaleFlat,filename=assets/weightingscales/textures/blocks/ScaleFlat.png
+
+
+
+# %tile.Scale:* (tile.Scale), render=(CUSTOM), opaque=false,cls=weightingscales.BlockScale
+block:id=%tile.Scale,data=*,stdrot=true,face0-5=0:weightingscales/ScaleFlat

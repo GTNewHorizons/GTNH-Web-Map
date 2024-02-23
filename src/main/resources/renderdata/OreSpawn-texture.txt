@@ -1,0 +1,924 @@
+# OreSpawn 1.7.10.20.3
+version:1.7
+modname:OreSpawn
+
+
+cfgfile:config/OreSpawn.cfg
+
+
+texturepath:assets/orespawn/textures/blocks/
+texture:id=OreSpawn/antnest_bottom,filename=assets/orespawn/textures/blocks/antnest_bottom.png
+texture:id=OreSpawn/antnest_side,filename=assets/orespawn/textures/blocks/antnest_side.png
+texture:id=OreSpawn/antnest_top,filename=assets/orespawn/textures/blocks/antnest_top.png
+texture:id=OreSpawn/blockamethyst,filename=assets/orespawn/textures/blocks/blockamethyst.png
+texture:id=OreSpawn/blockenderpearl,filename=assets/orespawn/textures/blocks/blockenderpearl.png
+texture:id=OreSpawn/blockeyeofender,filename=assets/orespawn/textures/blocks/blockeyeofender.png
+texture:id=OreSpawn/blockmobzillascale,filename=assets/orespawn/textures/blocks/blockmobzillascale.png
+texture:id=OreSpawn/blockruby,filename=assets/orespawn/textures/blocks/blockruby.png
+texture:id=OreSpawn/blockteleport,filename=assets/orespawn/textures/blocks/blockteleport.png
+texture:id=OreSpawn/blocktitanium,filename=assets/orespawn/textures/blocks/blocktitanium.png
+texture:id=OreSpawn/blockuranium,filename=assets/orespawn/textures/blocks/blockuranium.png
+texture:id=OreSpawn/butterfly_0,filename=assets/orespawn/textures/blocks/butterfly_0.png
+texture:id=OreSpawn/butterfly_1,filename=assets/orespawn/textures/blocks/butterfly_1.png
+texture:id=OreSpawn/butterfly_2,filename=assets/orespawn/textures/blocks/butterfly_2.png
+texture:id=OreSpawn/butterfly_3,filename=assets/orespawn/textures/blocks/butterfly_3.png
+texture:id=OreSpawn/corn_0,filename=assets/orespawn/textures/blocks/corn_0.png
+texture:id=OreSpawn/corn_1,filename=assets/orespawn/textures/blocks/corn_1.png
+texture:id=OreSpawn/corn_2,filename=assets/orespawn/textures/blocks/corn_2.png
+texture:id=OreSpawn/corn_3,filename=assets/orespawn/textures/blocks/corn_3.png
+texture:id=OreSpawn/creeperrepellent,filename=assets/orespawn/textures/blocks/creeperrepellent.png
+texture:id=OreSpawn/crystalcoal,filename=assets/orespawn/textures/blocks/crystalcoal.png
+texture:id=OreSpawn/crystalcrystal,filename=assets/orespawn/textures/blocks/crystalcrystal.png
+texture:id=OreSpawn/crystalfairy,filename=assets/orespawn/textures/blocks/crystalfairy.png
+texture:id=OreSpawn/crystalflower_blue,filename=assets/orespawn/textures/blocks/crystalflower_blue.png
+texture:id=OreSpawn/crystalflower_green,filename=assets/orespawn/textures/blocks/crystalflower_green.png
+texture:id=OreSpawn/crystalflower_red,filename=assets/orespawn/textures/blocks/crystalflower_red.png
+texture:id=OreSpawn/crystalflower_yellow,filename=assets/orespawn/textures/blocks/crystalflower_yellow.png
+texture:id=OreSpawn/crystalfurnace_front_off,filename=assets/orespawn/textures/blocks/crystalfurnace_front_off.png
+texture:id=OreSpawn/crystalfurnace_side,filename=assets/orespawn/textures/blocks/crystalfurnace_side.png
+texture:id=OreSpawn/crystalfurnace_top,filename=assets/orespawn/textures/blocks/crystalfurnace_top.png
+texture:id=OreSpawn/crystalgrass_bottom,filename=assets/orespawn/textures/blocks/crystalgrass_bottom.png
+texture:id=OreSpawn/crystalgrass_side,filename=assets/orespawn/textures/blocks/crystalgrass_side.png
+texture:id=OreSpawn/crystalgrass_top,filename=assets/orespawn/textures/blocks/crystalgrass_top.png
+texture:id=OreSpawn/crystalpink_block,filename=assets/orespawn/textures/blocks/crystalpink_block.png
+texture:id=OreSpawn/crystalplanks,filename=assets/orespawn/textures/blocks/crystalplanks.png
+texture:id=OreSpawn/crystalrat,filename=assets/orespawn/textures/blocks/crystalrat.png
+texture:id=OreSpawn/crystalsapling,filename=assets/orespawn/textures/blocks/crystalsapling.png
+texture:id=OreSpawn/crystalsapling2,filename=assets/orespawn/textures/blocks/crystalsapling2.png
+texture:id=OreSpawn/crystalsapling3,filename=assets/orespawn/textures/blocks/crystalsapling3.png
+texture:id=OreSpawn/crystalstone,filename=assets/orespawn/textures/blocks/crystalstone.png
+texture:id=OreSpawn/crystaltermite_bottom,filename=assets/orespawn/textures/blocks/crystaltermite_bottom.png
+texture:id=OreSpawn/crystaltermite_side,filename=assets/orespawn/textures/blocks/crystaltermite_side.png
+texture:id=OreSpawn/crystaltermite_top,filename=assets/orespawn/textures/blocks/crystaltermite_top.png
+texture:id=OreSpawn/crystaltorch,filename=assets/orespawn/textures/blocks/crystaltorch.png
+texture:id=OreSpawn/crystaltreeleaves,filename=assets/orespawn/textures/blocks/crystaltreeleaves.png
+texture:id=OreSpawn/crystaltreeleaves2,filename=assets/orespawn/textures/blocks/crystaltreeleaves2.png
+texture:id=OreSpawn/crystaltreeleaves3,filename=assets/orespawn/textures/blocks/crystaltreeleaves3.png
+texture:id=OreSpawn/crystaltreelog,filename=assets/orespawn/textures/blocks/crystaltreelog.png
+texture:id=OreSpawn/crystaltreelog_top,filename=assets/orespawn/textures/blocks/crystaltreelog_top.png
+texture:id=OreSpawn/crystalworkbench_bottom,filename=assets/orespawn/textures/blocks/crystalworkbench_bottom.png
+texture:id=OreSpawn/crystalworkbench_side,filename=assets/orespawn/textures/blocks/crystalworkbench_side.png
+texture:id=OreSpawn/crystalworkbench_top,filename=assets/orespawn/textures/blocks/crystalworkbench_top.png
+texture:id=OreSpawn/ducttape_bottom,filename=assets/orespawn/textures/blocks/ducttape_bottom.png
+texture:id=OreSpawn/ducttape_inner,filename=assets/orespawn/textures/blocks/ducttape_inner.png
+texture:id=OreSpawn/ducttape_side,filename=assets/orespawn/textures/blocks/ducttape_side.png
+texture:id=OreSpawn/ducttape_top,filename=assets/orespawn/textures/blocks/ducttape_top.png
+texture:id=OreSpawn/dungeonspawner,filename=assets/orespawn/textures/blocks/dungeonspawner.png
+texture:id=OreSpawn/duplicatortreelog,filename=assets/orespawn/textures/blocks/duplicatortreelog.png
+texture:id=OreSpawn/experiencesapling,filename=assets/orespawn/textures/blocks/experiencesapling.png
+texture:id=OreSpawn/extremetorch,filename=assets/orespawn/textures/blocks/extremetorch.png
+texture:id=OreSpawn/firefly_0,filename=assets/orespawn/textures/blocks/firefly_0.png
+texture:id=OreSpawn/firefly_1,filename=assets/orespawn/textures/blocks/firefly_1.png
+texture:id=OreSpawn/firefly_2,filename=assets/orespawn/textures/blocks/firefly_2.png
+texture:id=OreSpawn/firefly_3,filename=assets/orespawn/textures/blocks/firefly_3.png
+texture:id=OreSpawn/flower_black,filename=assets/orespawn/textures/blocks/flower_black.png
+texture:id=OreSpawn/flower_blue,filename=assets/orespawn/textures/blocks/flower_blue.png
+texture:id=OreSpawn/flower_pink,filename=assets/orespawn/textures/blocks/flower_pink.png
+texture:id=OreSpawn/flower_scary,filename=assets/orespawn/textures/blocks/flower_scary.png
+texture:id=OreSpawn/island,filename=assets/orespawn/textures/blocks/island.png
+texture:id=OreSpawn/kingspawner,filename=assets/orespawn/textures/blocks/kingspawner.png
+texture:id=OreSpawn/krakenrepellent,filename=assets/orespawn/textures/blocks/krakenrepellent.png
+texture:id=OreSpawn/lavafoam,filename=assets/orespawn/textures/blocks/lavafoam.png
+texture:id=OreSpawn/leaves_apple,filename=assets/orespawn/textures/blocks/leaves_apple.png
+texture:id=OreSpawn/leaves_cherry,filename=assets/orespawn/textures/blocks/leaves_cherry.png
+texture:id=OreSpawn/leaves_experience,filename=assets/orespawn/textures/blocks/leaves_experience.png
+texture:id=OreSpawn/leaves_peach,filename=assets/orespawn/textures/blocks/leaves_peach.png
+texture:id=OreSpawn/leaves_scary,filename=assets/orespawn/textures/blocks/leaves_scary.png
+texture:id=OreSpawn/lettuce_0,filename=assets/orespawn/textures/blocks/lettuce_0.png
+texture:id=OreSpawn/lettuce_1,filename=assets/orespawn/textures/blocks/lettuce_1.png
+texture:id=OreSpawn/lettuce_2,filename=assets/orespawn/textures/blocks/lettuce_2.png
+texture:id=OreSpawn/lettuce_3,filename=assets/orespawn/textures/blocks/lettuce_3.png
+texture:id=OreSpawn/moledirt,filename=assets/orespawn/textures/blocks/moledirt.png
+texture:id=OreSpawn/mosquito_0,filename=assets/orespawn/textures/blocks/mosquito_0.png
+texture:id=OreSpawn/mosquito_1,filename=assets/orespawn/textures/blocks/mosquito_1.png
+texture:id=OreSpawn/mosquito_2,filename=assets/orespawn/textures/blocks/mosquito_2.png
+texture:id=OreSpawn/mosquito_3,filename=assets/orespawn/textures/blocks/mosquito_3.png
+texture:id=OreSpawn/moth_0,filename=assets/orespawn/textures/blocks/moth_0.png
+texture:id=OreSpawn/moth_1,filename=assets/orespawn/textures/blocks/moth_1.png
+texture:id=OreSpawn/moth_2,filename=assets/orespawn/textures/blocks/moth_2.png
+texture:id=OreSpawn/moth_3,filename=assets/orespawn/textures/blocks/moth_3.png
+texture:id=OreSpawn/oreMOTHRA,filename=assets/orespawn/textures/blocks/oreMOTHRA.png
+texture:id=OreSpawn/orealien,filename=assets/orespawn/textures/blocks/orealien.png
+texture:id=OreSpawn/orealosaurus,filename=assets/orespawn/textures/blocks/orealosaurus.png
+texture:id=OreSpawn/oreamethyst,filename=assets/orespawn/textures/blocks/oreamethyst.png
+texture:id=OreSpawn/oreattacksquid,filename=assets/orespawn/textures/blocks/oreattacksquid.png
+texture:id=OreSpawn/orebaryonyx,filename=assets/orespawn/textures/blocks/orebaryonyx.png
+texture:id=OreSpawn/orebasilisc,filename=assets/orespawn/textures/blocks/orebasilisc.png
+texture:id=OreSpawn/orebat,filename=assets/orespawn/textures/blocks/orebat.png
+texture:id=OreSpawn/orebeaver,filename=assets/orespawn/textures/blocks/orebeaver.png
+texture:id=OreSpawn/orebee,filename=assets/orespawn/textures/blocks/orebee.png
+texture:id=OreSpawn/oreblaze,filename=assets/orespawn/textures/blocks/oreblaze.png
+texture:id=OreSpawn/oreboyfriend,filename=assets/orespawn/textures/blocks/oreboyfriend.png
+texture:id=OreSpawn/orebrutalfly,filename=assets/orespawn/textures/blocks/orebrutalfly.png
+texture:id=OreSpawn/orecamarasaurus,filename=assets/orespawn/textures/blocks/orecamarasaurus.png
+texture:id=OreSpawn/orecassowary,filename=assets/orespawn/textures/blocks/orecassowary.png
+texture:id=OreSpawn/orecaterkiller,filename=assets/orespawn/textures/blocks/orecaterkiller.png
+texture:id=OreSpawn/orecavefisher,filename=assets/orespawn/textures/blocks/orecavefisher.png
+texture:id=OreSpawn/orecavespider,filename=assets/orespawn/textures/blocks/orecavespider.png
+texture:id=OreSpawn/orecephadrome,filename=assets/orespawn/textures/blocks/orecephadrome.png
+texture:id=OreSpawn/orechicken,filename=assets/orespawn/textures/blocks/orechicken.png
+texture:id=OreSpawn/orechipmunk,filename=assets/orespawn/textures/blocks/orechipmunk.png
+texture:id=OreSpawn/orecliffracer,filename=assets/orespawn/textures/blocks/orecliffracer.png
+texture:id=OreSpawn/orecloudshark,filename=assets/orespawn/textures/blocks/orecloudshark.png
+texture:id=OreSpawn/orecockateil,filename=assets/orespawn/textures/blocks/orecockateil.png
+texture:id=OreSpawn/orecow,filename=assets/orespawn/textures/blocks/orecow.png
+texture:id=OreSpawn/orecrab,filename=assets/orespawn/textures/blocks/orecrab.png
+texture:id=OreSpawn/orecreeper,filename=assets/orespawn/textures/blocks/orecreeper.png
+texture:id=OreSpawn/orecreepinghorror,filename=assets/orespawn/textures/blocks/orecreepinghorror.png
+texture:id=OreSpawn/orecricket,filename=assets/orespawn/textures/blocks/orecricket.png
+texture:id=OreSpawn/orecriminal,filename=assets/orespawn/textures/blocks/orecriminal.png
+texture:id=OreSpawn/orecryolophosaurus,filename=assets/orespawn/textures/blocks/orecryolophosaurus.png
+texture:id=OreSpawn/orecrystalcow,filename=assets/orespawn/textures/blocks/orecrystalcow.png
+texture:id=OreSpawn/oredragon,filename=assets/orespawn/textures/blocks/oredragon.png
+texture:id=OreSpawn/oredragonfly,filename=assets/orespawn/textures/blocks/oredragonfly.png
+texture:id=OreSpawn/oredungeonbeast,filename=assets/orespawn/textures/blocks/oredungeonbeast.png
+texture:id=OreSpawn/oreeasterbunny,filename=assets/orespawn/textures/blocks/oreeasterbunny.png
+texture:id=OreSpawn/oreemperorscorpion,filename=assets/orespawn/textures/blocks/oreemperorscorpion.png
+texture:id=OreSpawn/oreenchantedcow,filename=assets/orespawn/textures/blocks/oreenchantedcow.png
+texture:id=OreSpawn/oreenderdragon,filename=assets/orespawn/textures/blocks/oreenderdragon.png
+texture:id=OreSpawn/oreenderknight,filename=assets/orespawn/textures/blocks/oreenderknight.png
+texture:id=OreSpawn/oreenderman,filename=assets/orespawn/textures/blocks/oreenderman.png
+texture:id=OreSpawn/oreenderreaper,filename=assets/orespawn/textures/blocks/oreenderreaper.png
+texture:id=OreSpawn/orefairy,filename=assets/orespawn/textures/blocks/orefairy.png
+texture:id=OreSpawn/oreflounder,filename=assets/orespawn/textures/blocks/oreflounder.png
+texture:id=OreSpawn/orefrog,filename=assets/orespawn/textures/blocks/orefrog.png
+texture:id=OreSpawn/oregammametroid,filename=assets/orespawn/textures/blocks/oregammametroid.png
+texture:id=OreSpawn/oregazelle,filename=assets/orespawn/textures/blocks/oregazelle.png
+texture:id=OreSpawn/oreghast,filename=assets/orespawn/textures/blocks/oreghast.png
+texture:id=OreSpawn/oregirlfriend,filename=assets/orespawn/textures/blocks/oregirlfriend.png
+texture:id=OreSpawn/oregodzilla,filename=assets/orespawn/textures/blocks/oregodzilla.png
+texture:id=OreSpawn/oregodzillapart,filename=assets/orespawn/textures/blocks/oregodzillapart.png
+texture:id=OreSpawn/oregoldcow,filename=assets/orespawn/textures/blocks/oregoldcow.png
+texture:id=OreSpawn/oregoldfish,filename=assets/orespawn/textures/blocks/oregoldfish.png
+texture:id=OreSpawn/orehammerhead,filename=assets/orespawn/textures/blocks/orehammerhead.png
+texture:id=OreSpawn/orehercules,filename=assets/orespawn/textures/blocks/orehercules.png
+texture:id=OreSpawn/orehorse,filename=assets/orespawn/textures/blocks/orehorse.png
+texture:id=OreSpawn/orehydrolisc,filename=assets/orespawn/textures/blocks/orehydrolisc.png
+texture:id=OreSpawn/oreirongolem,filename=assets/orespawn/textures/blocks/oreirongolem.png
+texture:id=OreSpawn/oreirukandji,filename=assets/orespawn/textures/blocks/oreirukandji.png
+texture:id=OreSpawn/orekraken,filename=assets/orespawn/textures/blocks/orekraken.png
+texture:id=OreSpawn/orekyuubi,filename=assets/orespawn/textures/blocks/orekyuubi.png
+texture:id=OreSpawn/orelargeworm,filename=assets/orespawn/textures/blocks/orelargeworm.png
+texture:id=OreSpawn/oreleafmonster,filename=assets/orespawn/textures/blocks/oreleafmonster.png
+texture:id=OreSpawn/oreleon,filename=assets/orespawn/textures/blocks/oreleon.png
+texture:id=OreSpawn/orelizard,filename=assets/orespawn/textures/blocks/orelizard.png
+texture:id=OreSpawn/orelurkingterror,filename=assets/orespawn/textures/blocks/orelurkingterror.png
+texture:id=OreSpawn/oremagmacube,filename=assets/orespawn/textures/blocks/oremagmacube.png
+texture:id=OreSpawn/oremantis,filename=assets/orespawn/textures/blocks/oremantis.png
+texture:id=OreSpawn/oremediumworm,filename=assets/orespawn/textures/blocks/oremediumworm.png
+texture:id=OreSpawn/oremolenoid,filename=assets/orespawn/textures/blocks/oremolenoid.png
+texture:id=OreSpawn/oremooshroom,filename=assets/orespawn/textures/blocks/oremooshroom.png
+texture:id=OreSpawn/orenastysaurus,filename=assets/orespawn/textures/blocks/orenastysaurus.png
+texture:id=OreSpawn/orenightmare,filename=assets/orespawn/textures/blocks/orenightmare.png
+texture:id=OreSpawn/oreocelot,filename=assets/orespawn/textures/blocks/oreocelot.png
+texture:id=OreSpawn/oreostrich,filename=assets/orespawn/textures/blocks/oreostrich.png
+texture:id=OreSpawn/orepeacock,filename=assets/orespawn/textures/blocks/orepeacock.png
+texture:id=OreSpawn/orepig,filename=assets/orespawn/textures/blocks/orepig.png
+texture:id=OreSpawn/orepointysaurus,filename=assets/orespawn/textures/blocks/orepointysaurus.png
+texture:id=OreSpawn/orerat,filename=assets/orespawn/textures/blocks/orerat.png
+texture:id=OreSpawn/oreredcow,filename=assets/orespawn/textures/blocks/oreredcow.png
+texture:id=OreSpawn/orerotator,filename=assets/orespawn/textures/blocks/orerotator.png
+texture:id=OreSpawn/orerubberducky,filename=assets/orespawn/textures/blocks/orerubberducky.png
+texture:id=OreSpawn/oreruby,filename=assets/orespawn/textures/blocks/oreruby.png
+texture:id=OreSpawn/oresalt,filename=assets/orespawn/textures/blocks/oresalt.png
+texture:id=OreSpawn/orescorpion,filename=assets/orespawn/textures/blocks/orescorpion.png
+texture:id=OreSpawn/oreseamonster,filename=assets/orespawn/textures/blocks/oreseamonster.png
+texture:id=OreSpawn/oreseaviper,filename=assets/orespawn/textures/blocks/oreseaviper.png
+texture:id=OreSpawn/oresheep,filename=assets/orespawn/textures/blocks/oresheep.png
+texture:id=OreSpawn/oresilverfish,filename=assets/orespawn/textures/blocks/oresilverfish.png
+texture:id=OreSpawn/oreskate,filename=assets/orespawn/textures/blocks/oreskate.png
+texture:id=OreSpawn/oreskeleton,filename=assets/orespawn/textures/blocks/oreskeleton.png
+texture:id=OreSpawn/oreslime,filename=assets/orespawn/textures/blocks/oreslime.png
+texture:id=OreSpawn/oresmallworm,filename=assets/orespawn/textures/blocks/oresmallworm.png
+texture:id=OreSpawn/oresnowgolem,filename=assets/orespawn/textures/blocks/oresnowgolem.png
+texture:id=OreSpawn/orespider,filename=assets/orespawn/textures/blocks/orespider.png
+texture:id=OreSpawn/orespiderdriver,filename=assets/orespawn/textures/blocks/orespiderdriver.png
+texture:id=OreSpawn/orespit,filename=assets/orespawn/textures/blocks/orespit.png
+texture:id=OreSpawn/orespyro,filename=assets/orespawn/textures/blocks/orespyro.png
+texture:id=OreSpawn/oresquid,filename=assets/orespawn/textures/blocks/oresquid.png
+texture:id=OreSpawn/orestink,filename=assets/orespawn/textures/blocks/orestink.png
+texture:id=OreSpawn/orestinky,filename=assets/orespawn/textures/blocks/orestinky.png
+texture:id=OreSpawn/oreterribleterror,filename=assets/orespawn/textures/blocks/oreterribleterror.png
+texture:id=OreSpawn/oretheking,filename=assets/orespawn/textures/blocks/oretheking.png
+texture:id=OreSpawn/orethekingpart,filename=assets/orespawn/textures/blocks/orethekingpart.png
+texture:id=OreSpawn/orethequeen,filename=assets/orespawn/textures/blocks/orethequeen.png
+texture:id=OreSpawn/orethequeenpart,filename=assets/orespawn/textures/blocks/orethequeenpart.png
+texture:id=OreSpawn/oretitanium,filename=assets/orespawn/textures/blocks/oretitanium.png
+texture:id=OreSpawn/oretrex,filename=assets/orespawn/textures/blocks/oretrex.png
+texture:id=OreSpawn/oretriffid,filename=assets/orespawn/textures/blocks/oretriffid.png
+texture:id=OreSpawn/oretrooper,filename=assets/orespawn/textures/blocks/oretrooper.png
+texture:id=OreSpawn/oretshirt,filename=assets/orespawn/textures/blocks/oretshirt.png
+texture:id=OreSpawn/oreuranium,filename=assets/orespawn/textures/blocks/oreuranium.png
+texture:id=OreSpawn/oreurchin,filename=assets/orespawn/textures/blocks/oreurchin.png
+texture:id=OreSpawn/orevelocityraptor,filename=assets/orespawn/textures/blocks/orevelocityraptor.png
+texture:id=OreSpawn/orevillager,filename=assets/orespawn/textures/blocks/orevillager.png
+texture:id=OreSpawn/orevortex,filename=assets/orespawn/textures/blocks/orevortex.png
+texture:id=OreSpawn/orewaterdragon,filename=assets/orespawn/textures/blocks/orewaterdragon.png
+texture:id=OreSpawn/orewhale,filename=assets/orespawn/textures/blocks/orewhale.png
+texture:id=OreSpawn/orewitch,filename=assets/orespawn/textures/blocks/orewitch.png
+texture:id=OreSpawn/orewitherboss,filename=assets/orespawn/textures/blocks/orewitherboss.png
+texture:id=OreSpawn/orewitherskeleton,filename=assets/orespawn/textures/blocks/orewitherskeleton.png
+texture:id=OreSpawn/orewolf,filename=assets/orespawn/textures/blocks/orewolf.png
+texture:id=OreSpawn/orezombie,filename=assets/orespawn/textures/blocks/orezombie.png
+texture:id=OreSpawn/orezombiepigman,filename=assets/orespawn/textures/blocks/orezombiepigman.png
+texture:id=OreSpawn/pizza_bottom,filename=assets/orespawn/textures/blocks/pizza_bottom.png
+texture:id=OreSpawn/pizza_inner,filename=assets/orespawn/textures/blocks/pizza_inner.png
+texture:id=OreSpawn/pizza_side,filename=assets/orespawn/textures/blocks/pizza_side.png
+texture:id=OreSpawn/pizza_top,filename=assets/orespawn/textures/blocks/pizza_top.png
+texture:id=OreSpawn/queenspawner,filename=assets/orespawn/textures/blocks/queenspawner.png
+texture:id=OreSpawn/quinoa_0,filename=assets/orespawn/textures/blocks/quinoa_0.png
+texture:id=OreSpawn/quinoa_1,filename=assets/orespawn/textures/blocks/quinoa_1.png
+texture:id=OreSpawn/quinoa_2,filename=assets/orespawn/textures/blocks/quinoa_2.png
+texture:id=OreSpawn/quinoa_3,filename=assets/orespawn/textures/blocks/quinoa_3.png
+texture:id=OreSpawn/radish_0,filename=assets/orespawn/textures/blocks/radish_0.png
+texture:id=OreSpawn/radish_1,filename=assets/orespawn/textures/blocks/radish_1.png
+texture:id=OreSpawn/radish_2,filename=assets/orespawn/textures/blocks/radish_2.png
+texture:id=OreSpawn/radish_3,filename=assets/orespawn/textures/blocks/radish_3.png
+texture:id=OreSpawn/redanttroll,filename=assets/orespawn/textures/blocks/redanttroll.png
+texture:id=OreSpawn/rice_0,filename=assets/orespawn/textures/blocks/rice_0.png
+texture:id=OreSpawn/rice_1,filename=assets/orespawn/textures/blocks/rice_1.png
+texture:id=OreSpawn/rice_2,filename=assets/orespawn/textures/blocks/rice_2.png
+texture:id=OreSpawn/rice_3,filename=assets/orespawn/textures/blocks/rice_3.png
+texture:id=OreSpawn/skytreelog,filename=assets/orespawn/textures/blocks/skytreelog.png
+texture:id=OreSpawn/strawberry_0,filename=assets/orespawn/textures/blocks/strawberry_0.png
+texture:id=OreSpawn/strawberry_1,filename=assets/orespawn/textures/blocks/strawberry_1.png
+texture:id=OreSpawn/strawberry_2,filename=assets/orespawn/textures/blocks/strawberry_2.png
+texture:id=OreSpawn/strawberry_3,filename=assets/orespawn/textures/blocks/strawberry_3.png
+texture:id=OreSpawn/termitetroll,filename=assets/orespawn/textures/blocks/termitetroll.png
+texture:id=OreSpawn/tigerseye,filename=assets/orespawn/textures/blocks/tigerseye.png
+texture:id=OreSpawn/tigerseye_block,filename=assets/orespawn/textures/blocks/tigerseye_block.png
+texture:id=OreSpawn/tomato_0,filename=assets/orespawn/textures/blocks/tomato_0.png
+texture:id=OreSpawn/tomato_1,filename=assets/orespawn/textures/blocks/tomato_1.png
+texture:id=OreSpawn/tomato_2,filename=assets/orespawn/textures/blocks/tomato_2.png
+texture:id=OreSpawn/tomato_3,filename=assets/orespawn/textures/blocks/tomato_3.png
+
+
+
+# %OreSpawn_SpiderSpawnBlock:* (OreSpawn_SpiderSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SpiderSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orespider
+
+# %OreSpawn_BatSpawnBlock:* (OreSpawn_BatSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BatSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orebat
+
+# %OreSpawn_CowSpawnBlock:* (OreSpawn_CowSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CowSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecow
+
+# %OreSpawn_PigSpawnBlock:* (OreSpawn_PigSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_PigSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orepig
+
+# %OreSpawn_SquidSpawnBlock:* (OreSpawn_SquidSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SquidSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oresquid
+
+# %OreSpawn_ChickenSpawnBlock:* (OreSpawn_ChickenSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_ChickenSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orechicken
+
+# %OreSpawn_CreeperSpawnBlock:* (OreSpawn_CreeperSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CreeperSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecreeper
+
+# %OreSpawn_SkeletonSpawnBlock:* (OreSpawn_SkeletonSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SkeletonSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreskeleton
+
+# %OreSpawn_ZombieSpawnBlock:* (OreSpawn_ZombieSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_ZombieSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orezombie
+
+# %OreSpawn_SlimeSpawnBlock:* (OreSpawn_SlimeSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SlimeSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreslime
+
+# %OreSpawn_GhastSpawnBlock:* (OreSpawn_GhastSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GhastSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreghast
+
+# %OreSpawn_ZombiePigmanSpawnBlock:* (OreSpawn_ZombiePigmanSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_ZombiePigmanSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orezombiepigman
+
+# %OreSpawn_EndermanSpawnBlock:* (OreSpawn_EndermanSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EndermanSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreenderman
+
+# %OreSpawn_CaveSpiderSpawnBlock:* (OreSpawn_CaveSpiderSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CaveSpiderSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecavespider
+
+# %OreSpawn_SilverfishSpawnBlock:* (OreSpawn_SilverfishSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SilverfishSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oresilverfish
+
+# %OreSpawn_MagmaCubeSpawnBlock:* (OreSpawn_MagmaCubeSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_MagmaCubeSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oremagmacube
+
+# %OreSpawn_WitchSpawnBlock:* (OreSpawn_WitchSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_WitchSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orewitch
+
+# %OreSpawn_SheepSpawnBlock:* (OreSpawn_SheepSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SheepSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oresheep
+
+# %OreSpawn_WolfSpawnBlock:* (OreSpawn_WolfSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_WolfSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orewolf
+
+# %OreSpawn_MooshroomSpawnBlock:* (OreSpawn_MooshroomSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_MooshroomSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oremooshroom
+
+# %OreSpawn_WitherBossSpawnBlock:* (OreSpawn_WitherBossSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_WitherBossSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orewitherboss
+
+# %OreSpawn_GirlfriendSpawnBlock:* (OreSpawn_GirlfriendSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GirlfriendSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oregirlfriend
+
+# %OreSpawn_BoyfriendSpawnBlock:* (OreSpawn_BoyfriendSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BoyfriendSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreboyfriend
+
+# %OreSpawn_RedCowSpawnBlock:* (OreSpawn_RedCowSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_RedCowSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreredcow
+
+# %OreSpawn_CrystalCowSpawnBlock:* (OreSpawn_CrystalCowSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CrystalCowSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecrystalcow
+
+# %OreSpawn_VillagerSpawnBlock:* (OreSpawn_VillagerSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_VillagerSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orevillager
+
+# %OreSpawn_GoldCowSpawnBlock:* (OreSpawn_GoldCowSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GoldCowSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oregoldcow
+
+# %OreSpawn_EnchantedCowSpawnBlock:* (OreSpawn_EnchantedCowSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EnchantedCowSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreenchantedcow
+
+# %OreSpawn_MOTHRASpawnBlock:* (OreSpawn_MOTHRASpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_MOTHRASpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreMOTHRA
+
+# %OreSpawn_AloSpawnBlock:* (OreSpawn_AloSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_AloSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orealosaurus
+
+# %OreSpawn_CryoSpawnBlock:* (OreSpawn_CryoSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CryoSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecryolophosaurus
+
+# %OreSpawn_CamaSpawnBlock:* (OreSpawn_CamaSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CamaSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecamarasaurus
+
+# %OreSpawn_VeloSpawnBlock:* (OreSpawn_VeloSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_VeloSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orevelocityraptor
+
+# %OreSpawn_HydroSpawnBlock:* (OreSpawn_HydroSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_HydroSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orehydrolisc
+
+# %OreSpawn_BasilSpawnBlock:* (OreSpawn_BasilSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BasilSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orebasilisc
+
+# %OreSpawn_DragonflySpawnBlock:* (OreSpawn_DragonflySpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_DragonflySpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oredragonfly
+
+# %OreSpawn_EmperorScorpionSpawnBlock:* (OreSpawn_EmperorScorpionSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EmperorScorpionSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreemperorscorpion
+
+# %OreSpawn_ScorpionSpawnBlock:* (OreSpawn_ScorpionSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_ScorpionSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orescorpion
+
+# %OreSpawn_CaveFisherSpawnBlock:* (OreSpawn_CaveFisherSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CaveFisherSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecavefisher
+
+# %OreSpawn_SpyroSpawnBlock:* (OreSpawn_SpyroSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SpyroSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orespyro
+
+# %OreSpawn_BaryonyxSpawnBlock:* (OreSpawn_BaryonyxSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BaryonyxSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orebaryonyx
+
+# %OreSpawn_GammaMetroidSpawnBlock:* (OreSpawn_GammaMetroidSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GammaMetroidSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oregammametroid
+
+# %OreSpawn_CockateilSpawnBlock:* (OreSpawn_CockateilSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CockateilSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecockateil
+
+# %OreSpawn_KyuubiSpawnBlock:* (OreSpawn_KyuubiSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_KyuubiSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orekyuubi
+
+# %OreSpawn_AlienSpawnBlock:* (OreSpawn_AlienSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_AlienSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orealien
+
+# %OreSpawn_IronGolemSpawnBlock:* (OreSpawn_IronGolemSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_IronGolemSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreirongolem
+
+# %OreSpawn_SnowGolemSpawnBlock:* (OreSpawn_SnowGolemSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SnowGolemSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oresnowgolem
+
+# %OreSpawn_EnderDragonSpawnBlock:* (OreSpawn_EnderDragonSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EnderDragonSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreenderdragon
+
+# %OreSpawn_OcelotSpawnBlock:* (OreSpawn_OcelotSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_OcelotSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreocelot
+
+# %OreSpawn_WitherSkeletonSpawnBlock:* (OreSpawn_WitherSkeletonSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_WitherSkeletonSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orewitherskeleton
+
+# %OreSpawn_BlazeSpawnBlock:* (OreSpawn_BlazeSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BlazeSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreblaze
+
+# %OreSpawn_AttackSquidSpawnBlock:* (OreSpawn_AttackSquidSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_AttackSquidSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreattacksquid
+
+# %OreSpawn_WaterDragonSpawnBlock:* (OreSpawn_WaterDragonSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_WaterDragonSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orewaterdragon
+
+# %OreSpawn_CephadromeSpawnBlock:* (OreSpawn_CephadromeSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CephadromeSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecephadrome
+
+# %OreSpawn_KrakenSpawnBlock:* (OreSpawn_KrakenSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_KrakenSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orekraken
+
+# %OreSpawn_LizardSpawnBlock:* (OreSpawn_LizardSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_LizardSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orelizard
+
+# %OreSpawn_DragonSpawnBlock:* (OreSpawn_DragonSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_DragonSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oredragon
+
+# %OreSpawn_BeeSpawnBlock:* (OreSpawn_BeeSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BeeSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orebee
+
+# %OreSpawn_HorseSpawnBlock:* (OreSpawn_HorseSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_HorseSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orehorse
+
+# %OreSpawn_TrooperBugSpawnBlock:* (OreSpawn_TrooperBugSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TrooperBugSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oretrooper
+
+# %OreSpawn_SpitBugSpawnBlock:* (OreSpawn_SpitBugSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SpitBugSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orespit
+
+# %OreSpawn_StinkBugSpawnBlock:* (OreSpawn_StinkBugSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_StinkBugSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orestink
+
+# %OreSpawn_OstrichSpawnBlock:* (OreSpawn_OstrichSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_OstrichSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreostrich
+
+# %OreSpawn_GazelleSpawnBlock:* (OreSpawn_GazelleSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GazelleSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oregazelle
+
+# %OreSpawn_ChipmunkSpawnBlock:* (OreSpawn_ChipmunkSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_ChipmunkSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orechipmunk
+
+# %OreSpawn_CreepingHorrorSpawnBlock:* (OreSpawn_CreepingHorrorSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CreepingHorrorSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecreepinghorror
+
+# %OreSpawn_TerribleTerrorSpawnBlock:* (OreSpawn_TerribleTerrorSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TerribleTerrorSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreterribleterror
+
+# %OreSpawn_CliffRacerSpawnBlock:* (OreSpawn_CliffRacerSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CliffRacerSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecliffracer
+
+# %OreSpawn_TriffidSpawnBlock:* (OreSpawn_TriffidSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TriffidSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oretriffid
+
+# %OreSpawn_PitchBlackSpawnBlock:* (OreSpawn_PitchBlackSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_PitchBlackSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orenightmare
+
+# %OreSpawn_LurkingTerrorSpawnBlock:* (OreSpawn_LurkingTerrorSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_LurkingTerrorSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orelurkingterror
+
+# %OreSpawn_GodzillaPartSpawnBlock:* (OreSpawn_GodzillaPartSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GodzillaPartSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oregodzillapart
+
+# %OreSpawn_GodzillaSpawnBlock:* (OreSpawn_GodzillaSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GodzillaSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oregodzilla
+
+# %OreSpawn_TheKingPartSpawnBlock:* (OreSpawn_TheKingPartSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TheKingPartSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orethekingpart
+
+# %OreSpawn_TheKingSpawnBlock:* (OreSpawn_TheKingSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TheKingSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oretheking
+
+# %OreSpawn_TheQueenPartSpawnBlock:* (OreSpawn_TheQueenPartSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TheQueenPartSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orethequeenpart
+
+# %OreSpawn_TheQueenSpawnBlock:* (OreSpawn_TheQueenSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TheQueenSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orethequeen
+
+# %OreSpawn_SmallWormSpawnBlock:* (OreSpawn_SmallWormSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SmallWormSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oresmallworm
+
+# %OreSpawn_MediumWormSpawnBlock:* (OreSpawn_MediumWormSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_MediumWormSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oremediumworm
+
+# %OreSpawn_LargeWormSpawnBlock:* (OreSpawn_LargeWormSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_LargeWormSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orelargeworm
+
+# %OreSpawn_CassowarySpawnBlock:* (OreSpawn_CassowarySpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CassowarySpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecassowary
+
+# %OreSpawn_CloudSharkSpawnBlock:* (OreSpawn_CloudSharkSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CloudSharkSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecloudshark
+
+# %OreSpawn_GoldFishSpawnBlock:* (OreSpawn_GoldFishSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_GoldFishSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oregoldfish
+
+# %OreSpawn_LeafMonsterSpawnBlock:* (OreSpawn_LeafMonsterSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_LeafMonsterSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreleafmonster
+
+# %OreSpawn_TshirtSpawnBlock:* (OreSpawn_TshirtSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TshirtSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oretshirt
+
+# %OreSpawn_EnderKnightSpawnBlock:* (OreSpawn_EnderKnightSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EnderKnightSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreenderknight
+
+# %OreSpawn_EnderReaperSpawnBlock:* (OreSpawn_EnderReaperSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EnderReaperSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreenderreaper
+
+# %OreSpawn_BeaverSpawnBlock:* (OreSpawn_BeaverSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BeaverSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orebeaver
+
+# %OreSpawn_UrchinSpawnBlock:* (OreSpawn_UrchinSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_UrchinSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreurchin
+
+# %OreSpawn_FlounderSpawnBlock:* (OreSpawn_FlounderSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_FlounderSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreflounder
+
+# %OreSpawn_SkateSpawnBlock:* (OreSpawn_SkateSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SkateSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreskate
+
+# %OreSpawn_RotatorSpawnBlock:* (OreSpawn_RotatorSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_RotatorSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orerotator
+
+# %OreSpawn_PeacockSpawnBlock:* (OreSpawn_PeacockSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_PeacockSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orepeacock
+
+# %OreSpawn_FairySpawnBlock:* (OreSpawn_FairySpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_FairySpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orefairy
+
+# %OreSpawn_DungeonBeastSpawnBlock:* (OreSpawn_DungeonBeastSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_DungeonBeastSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oredungeonbeast
+
+# %OreSpawn_VortexSpawnBlock:* (OreSpawn_VortexSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_VortexSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orevortex
+
+# %OreSpawn_RatSpawnBlock:* (OreSpawn_RatSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_RatSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orerat
+
+# %OreSpawn_WhaleSpawnBlock:* (OreSpawn_WhaleSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_WhaleSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orewhale
+
+# %OreSpawn_IrukandjiSpawnBlock:* (OreSpawn_IrukandjiSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_IrukandjiSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreirukandji
+
+# %OreSpawn_TRexSpawnBlock:* (OreSpawn_TRexSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_TRexSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oretrex
+
+# %OreSpawn_HerculesSpawnBlock:* (OreSpawn_HerculesSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_HerculesSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orehercules
+
+# %OreSpawn_MantisSpawnBlock:* (OreSpawn_MantisSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_MantisSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oremantis
+
+# %OreSpawn_StinkySpawnBlock:* (OreSpawn_StinkySpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_StinkySpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orestinky
+
+# %OreSpawn_EasterBunnySpawnBlock:* (OreSpawn_EasterBunnySpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EasterBunnySpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreeasterbunny
+
+# %OreSpawn_CaterKillerSpawnBlock:* (OreSpawn_CaterKillerSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CaterKillerSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecaterkiller
+
+# %OreSpawn_MolenoidSpawnBlock:* (OreSpawn_MolenoidSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_MolenoidSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oremolenoid
+
+# %OreSpawn_SeaMonsterSpawnBlock:* (OreSpawn_SeaMonsterSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SeaMonsterSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreseamonster
+
+# %OreSpawn_SeaViperSpawnBlock:* (OreSpawn_SeaViperSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SeaViperSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreseaviper
+
+# %OreSpawn_LeonSpawnBlock:* (OreSpawn_LeonSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_LeonSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreleon
+
+# %OreSpawn_HammerheadSpawnBlock:* (OreSpawn_HammerheadSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_HammerheadSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orehammerhead
+
+# %OreSpawn_RubberDuckySpawnBlock:* (OreSpawn_RubberDuckySpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_RubberDuckySpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orerubberducky
+
+# %OreSpawn_CriminalSpawnBlock:* (OreSpawn_CriminalSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CriminalSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecriminal
+
+# %OreSpawn_BrutalflySpawnBlock:* (OreSpawn_BrutalflySpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_BrutalflySpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orebrutalfly
+
+# %OreSpawn_NastysaurusSpawnBlock:* (OreSpawn_NastysaurusSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_NastysaurusSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orenastysaurus
+
+# %OreSpawn_PointysaurusSpawnBlock:* (OreSpawn_PointysaurusSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_PointysaurusSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orepointysaurus
+
+# %OreSpawn_CricketSpawnBlock:* (OreSpawn_CricketSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CricketSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecricket
+
+# %OreSpawn_FrogSpawnBlock:* (OreSpawn_FrogSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_FrogSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orefrog
+
+# %OreSpawn_SpiderDriverSpawnBlock:* (OreSpawn_SpiderDriverSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_SpiderDriverSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orespiderdriver
+
+# %OreSpawn_CrabSpawnBlock:* (OreSpawn_CrabSpawnBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_CrabSpawnBlock,data=*,stdrot=true,face0-5=0:OreSpawn/orecrab
+
+# %OreSpawn_OreSaltBlock:* (OreSpawn_OreSaltBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreSalt
+block:id=%OreSpawn_OreSaltBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oresalt
+
+# %OreSpawn_RTPBlock:* (OreSpawn_RTPBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.RTPBlock
+block:id=%OreSpawn_RTPBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blockteleport
+
+# %OreSpawn_MoleDirtBlock:* (OreSpawn_MoleDirtBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.MoleDirtBlock
+block:id=%OreSpawn_MoleDirtBlock,data=*,stdrot=true,face0-5=0:OreSpawn/moledirt
+
+# %OreSpawn_OreTitaniumBlock:* (OreSpawn_OreTitaniumBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreTitanium
+block:id=%OreSpawn_OreTitaniumBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oretitanium
+
+# %OreSpawn_OreUraniumBlock:* (OreSpawn_OreUraniumBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreUranium
+block:id=%OreSpawn_OreUraniumBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreuranium
+
+# %OreSpawn_BlockTitaniumBlock:* (OreSpawn_BlockTitaniumBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.BlockTitanium
+block:id=%OreSpawn_BlockTitaniumBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blocktitanium
+
+# %OreSpawn_BlockMobzillaScaleBlock:* (OreSpawn_BlockMobzillaScaleBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockRuby
+block:id=%OreSpawn_BlockMobzillaScaleBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blockmobzillascale
+
+# %OreSpawn_BlockUraniumBlock:* (OreSpawn_BlockUraniumBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.BlockUranium
+block:id=%OreSpawn_BlockUraniumBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blockuranium
+
+# %OreSpawn_LavafoamBlock:* (OreSpawn_LavafoamBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.Lavafoam
+block:id=%OreSpawn_LavafoamBlock,data=*,stdrot=true,face0-5=0:OreSpawn/lavafoam
+
+# %OreSpawn_OreRubyBlock:* (OreSpawn_OreRubyBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreRuby
+block:id=%OreSpawn_OreRubyBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreruby
+
+# %OreSpawn_BlockRubyBlock:* (OreSpawn_BlockRubyBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockRuby
+block:id=%OreSpawn_BlockRubyBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blockruby
+
+# %OreSpawn_OreAmethystBlock:* (OreSpawn_OreAmethystBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreAmethyst
+block:id=%OreSpawn_OreAmethystBlock,data=*,stdrot=true,face0-5=0:OreSpawn/oreamethyst
+
+# %OreSpawn_BlockAmethystBlock:* (OreSpawn_BlockAmethystBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockRuby
+block:id=%OreSpawn_BlockAmethystBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blockamethyst
+
+# %OreSpawn_CrystalPinkBlock:* (OreSpawn_CrystalPinkBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockCrystal
+block:id=%OreSpawn_CrystalPinkBlock,data=*,stdrot=true,face0-5=0:OreSpawn/crystalpink_block
+
+# %OreSpawn_TigersEyeBlock:* (OreSpawn_TigersEyeBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockCrystal
+block:id=%OreSpawn_TigersEyeBlock,data=*,stdrot=true,face0-5=0:OreSpawn/tigerseye_block
+
+# %OreSpawn_PizzaBlock:* (OreSpawn_PizzaBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockPizza
+block:id=%OreSpawn_PizzaBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:OreSpawn/pizza_bottom,face1=0:OreSpawn/pizza_top,face2-5=0:OreSpawn/pizza_side
+block:id=%OreSpawn_PizzaBlock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:OreSpawn/pizza_bottom,face1=0:OreSpawn/pizza_top,face2-3=0:OreSpawn/pizza_side,face4=0:OreSpawn/pizza_inner,face5=0:OreSpawn/pizza_side
+
+# %OreSpawn_DuctTapeBlock:* (OreSpawn_DuctTapeBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockDuctTape
+block:id=%OreSpawn_DuctTapeBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:OreSpawn/ducttape_bottom,face1=0:OreSpawn/ducttape_top,face2-5=0:OreSpawn/ducttape_side
+block:id=%OreSpawn_DuctTapeBlock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:OreSpawn/ducttape_bottom,face1=0:OreSpawn/ducttape_top,face2-3=0:OreSpawn/ducttape_side,face4=0:OreSpawn/ducttape_inner,face5=0:OreSpawn/ducttape_side
+
+# %OreSpawn_OreCrystalStoneBlock:* (OreSpawn_OreCrystalStoneBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.OreBasicStone
+block:id=%OreSpawn_OreCrystalStoneBlock,data=*,stdrot=true,face0-5=0:OreSpawn/crystalstone
+
+# %OreSpawn_OreCrystalRatBlock:* (OreSpawn_OreCrystalRatBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.OreBasicStone
+block:id=%OreSpawn_OreCrystalRatBlock,data=*,stdrot=true,face0-5=0:OreSpawn/crystalrat
+
+# %OreSpawn_OreRedAntTrollBlock:* (OreSpawn_OreRedAntTrollBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.OreBasicStone
+block:id=%OreSpawn_OreRedAntTrollBlock,data=*,stdrot=true,face0-5=0:OreSpawn/redanttroll
+
+# %OreSpawn_OreTermiteTrollBlock:* (OreSpawn_OreTermiteTrollBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.OreBasicStone
+block:id=%OreSpawn_OreTermiteTrollBlock,data=*,stdrot=true,face0-5=0:OreSpawn/termitetroll
+
+# %OreSpawn_OreCrystalFairyBlock:* (OreSpawn_OreCrystalFairyBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.OreBasicStone
+block:id=%OreSpawn_OreCrystalFairyBlock,data=*,stdrot=true,face0-5=0:OreSpawn/crystalfairy
+
+# %OreSpawn_OreCrystalCoalBlock:* (OreSpawn_OreCrystalCoalBlock), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.OreCrystal
+block:id=%OreSpawn_OreCrystalCoalBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalcoal
+
+# %OreSpawn_OreCrystalGrassBlock:* (OreSpawn_OreCrystalGrassBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.CrystalGrass
+block:id=%OreSpawn_OreCrystalGrassBlock,data=*,stdrot=true,face0=0:OreSpawn/crystalgrass_bottom,face1=0:OreSpawn/crystalgrass_top,face2-5=0:OreSpawn/crystalgrass_side
+
+# %OreSpawn_OreCrystalCrystalBlock:* (OreSpawn_OreCrystalCrystalBlock), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.OreCrystalCrystal
+block:id=%OreSpawn_OreCrystalCrystalBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalcrystal
+
+# %OreSpawn_OreTigersEyeBlock:* (OreSpawn_OreTigersEyeBlock), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.OreCrystalCrystal
+block:id=%OreSpawn_OreTigersEyeBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/tigerseye
+
+# %OreSpawn_CrystalPlanksBlock:* (OreSpawn_CrystalPlanksBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.CrystalWood
+block:id=%OreSpawn_CrystalPlanksBlock,data=*,stdrot=true,face0-5=0:OreSpawn/crystalplanks
+
+# %OreSpawn_CrystalWorkbenchBlock:* (OreSpawn_CrystalWorkbenchBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.CrystalWorkbench
+block:id=%OreSpawn_CrystalWorkbenchBlock,data=*,stdrot=true,face0=0:OreSpawn/crystalworkbench_side,face1=0:OreSpawn/crystalworkbench_top,face2=0:OreSpawn/crystalworkbench_bottom,face3=0:OreSpawn/crystalworkbench_side,face4=0:OreSpawn/crystalworkbench_bottom,face5=0:OreSpawn/crystalworkbench_side
+
+# %OreSpawn_CrystalFurnaceBlock:* (OreSpawn_CrystalFurnaceBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.CrystalFurnace
+block:id=%OreSpawn_CrystalFurnaceBlock,data=0,data=1,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceBlock,data=2,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2=0:OreSpawn/crystalfurnace_front_off,face3-5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceBlock,data=3,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2=0:OreSpawn/crystalfurnace_side,face3=0:OreSpawn/crystalfurnace_front_off,face4-5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceBlock,data=4,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-3=0:OreSpawn/crystalfurnace_side,face4=0:OreSpawn/crystalfurnace_front_off,face5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceBlock,data=5,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-4=0:OreSpawn/crystalfurnace_side,face5=0:OreSpawn/crystalfurnace_front_off
+block:id=%OreSpawn_CrystalFurnaceBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-5=0:OreSpawn/crystalfurnace_side
+
+# %OreSpawn_CrystalFurnaceOnBlock:* (OreSpawn_CrystalFurnaceOnBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.CrystalFurnace
+block:id=%OreSpawn_CrystalFurnaceOnBlock,data=0,data=1,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceOnBlock,data=2,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2=0:OreSpawn/crystalfurnace_front_off,face3-5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceOnBlock,data=3,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2=0:OreSpawn/crystalfurnace_side,face3=0:OreSpawn/crystalfurnace_front_off,face4-5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceOnBlock,data=4,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-3=0:OreSpawn/crystalfurnace_side,face4=0:OreSpawn/crystalfurnace_front_off,face5=0:OreSpawn/crystalfurnace_side
+block:id=%OreSpawn_CrystalFurnaceOnBlock,data=5,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-4=0:OreSpawn/crystalfurnace_side,face5=0:OreSpawn/crystalfurnace_front_off
+block:id=%OreSpawn_CrystalFurnaceOnBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:OreSpawn/crystalfurnace_top,face2-5=0:OreSpawn/crystalfurnace_side
+
+# %OreSpawn_StrawberryPlant:* (OreSpawn_StrawberryPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockStrawberry
+block:id=%OreSpawn_StrawberryPlant,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/strawberry_0
+block:id=%OreSpawn_StrawberryPlant,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/strawberry_1
+block:id=%OreSpawn_StrawberryPlant,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/strawberry_2
+block:id=%OreSpawn_StrawberryPlant,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/strawberry_3
+
+# %OreSpawn_RadishPlant:* (OreSpawn_RadishPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockRadish
+block:id=%OreSpawn_RadishPlant,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/radish_0
+block:id=%OreSpawn_RadishPlant,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/radish_1
+block:id=%OreSpawn_RadishPlant,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/radish_2
+block:id=%OreSpawn_RadishPlant,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/radish_3
+
+# %OreSpawn_RicePlant:* (OreSpawn_RicePlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockRice
+block:id=%OreSpawn_RicePlant,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/rice_0
+block:id=%OreSpawn_RicePlant,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/rice_1
+block:id=%OreSpawn_RicePlant,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/rice_2
+block:id=%OreSpawn_RicePlant,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/rice_3
+
+# %OreSpawn_ButterflyPlant:* (OreSpawn_ButterflyPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockButterflyPlant
+block:id=%OreSpawn_ButterflyPlant,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/butterfly_0
+block:id=%OreSpawn_ButterflyPlant,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/butterfly_1
+block:id=%OreSpawn_ButterflyPlant,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/butterfly_2
+block:id=%OreSpawn_ButterflyPlant,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/butterfly_3
+
+# %OreSpawn_MothPlant:* (OreSpawn_MothPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockMothPlant
+block:id=%OreSpawn_MothPlant,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/moth_0
+block:id=%OreSpawn_MothPlant,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/moth_1
+block:id=%OreSpawn_MothPlant,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/moth_2
+block:id=%OreSpawn_MothPlant,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/moth_3
+
+# %OreSpawn_MosquitoPlant:* (OreSpawn_MosquitoPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockMosquitoPlant
+block:id=%OreSpawn_MosquitoPlant,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/mosquito_0
+block:id=%OreSpawn_MosquitoPlant,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/mosquito_1
+block:id=%OreSpawn_MosquitoPlant,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/mosquito_2
+block:id=%OreSpawn_MosquitoPlant,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/mosquito_3
+
+# %OreSpawn_FireflyPlant:* (OreSpawn_FireflyPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockFireflyPlant
+block:id=%OreSpawn_FireflyPlant,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/firefly_0
+block:id=%OreSpawn_FireflyPlant,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/firefly_1
+block:id=%OreSpawn_FireflyPlant,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/firefly_2
+block:id=%OreSpawn_FireflyPlant,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/firefly_3
+
+# %OreSpawn_CornPlant1:* (OreSpawn_CornPlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+block:id=%OreSpawn_CornPlant1,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/corn_0
+
+# %OreSpawn_CornPlant2:* (OreSpawn_CornPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+block:id=%OreSpawn_CornPlant2,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/corn_1
+
+# %OreSpawn_CornPlant3:* (OreSpawn_CornPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+block:id=%OreSpawn_CornPlant3,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/corn_2
+
+# %OreSpawn_CornPlant4:* (OreSpawn_CornPlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+block:id=%OreSpawn_CornPlant4,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/corn_3
+
+# %OreSpawn_QuinoaPlant1:* (OreSpawn_QuinoaPlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+block:id=%OreSpawn_QuinoaPlant1,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/quinoa_0
+
+# %OreSpawn_QuinoaPlant2:* (OreSpawn_QuinoaPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+block:id=%OreSpawn_QuinoaPlant2,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/quinoa_1
+
+# %OreSpawn_QuinoaPlant3:* (OreSpawn_QuinoaPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+block:id=%OreSpawn_QuinoaPlant3,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/quinoa_2
+
+# %OreSpawn_QuinoaPlant4:* (OreSpawn_QuinoaPlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+block:id=%OreSpawn_QuinoaPlant4,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/quinoa_3
+
+# %OreSpawn_TomatoPlant1:* (OreSpawn_TomatoPlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+block:id=%OreSpawn_TomatoPlant1,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/tomato_0
+
+# %OreSpawn_TomatoPlant2:* (OreSpawn_TomatoPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+block:id=%OreSpawn_TomatoPlant2,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/tomato_1
+
+# %OreSpawn_TomatoPlant3:* (OreSpawn_TomatoPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+block:id=%OreSpawn_TomatoPlant3,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/tomato_2
+
+# %OreSpawn_TomatoPlant4:* (OreSpawn_TomatoPlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+block:id=%OreSpawn_TomatoPlant4,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/tomato_3
+
+# %OreSpawn_LettucePlant1:* (OreSpawn_LettucePlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+block:id=%OreSpawn_LettucePlant1,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/lettuce_0
+
+# %OreSpawn_LettucePlant2:* (OreSpawn_LettucePlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+block:id=%OreSpawn_LettucePlant2,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/lettuce_1
+
+# %OreSpawn_LettucePlant3:* (OreSpawn_LettucePlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+block:id=%OreSpawn_LettucePlant3,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/lettuce_2
+
+# %OreSpawn_LettucePlant4:* (OreSpawn_LettucePlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+block:id=%OreSpawn_LettucePlant4,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/lettuce_3
+
+# %OreSpawn_AppleLeaves:* (OreSpawn_AppleLeaves), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockAppleLeaves
+block:id=%OreSpawn_AppleLeaves,data=*,stdrot=true,face0-5=2000:OreSpawn/leaves_apple
+
+# %OreSpawn_ExperienceLeaves:* (OreSpawn_ExperienceLeaves), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockExperienceLeaves
+block:id=%OreSpawn_ExperienceLeaves,data=*,stdrot=true,face0-5=2000:OreSpawn/leaves_experience
+
+# %OreSpawn_ScaryLeaves:* (OreSpawn_ScaryLeaves), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockScaryLeaves
+block:id=%OreSpawn_ScaryLeaves,data=*,stdrot=true,face0-5=2000:OreSpawn/leaves_scary
+
+# %OreSpawn_CherryLeaves:* (OreSpawn_CherryLeaves), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockScaryLeaves
+block:id=%OreSpawn_CherryLeaves,data=*,stdrot=true,face0-5=2000:OreSpawn/leaves_cherry
+
+# %OreSpawn_PeachLeaves:* (OreSpawn_PeachLeaves), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockScaryLeaves
+block:id=%OreSpawn_PeachLeaves,data=*,stdrot=true,face0-5=2000:OreSpawn/leaves_peach
+
+# %OreSpawn_SkyTreeLog:* (OreSpawn_SkyTreeLog), render=(STANDARD), opaque=true,cls=danger.orespawn.BlockSkyTreeLog
+block:id=%OreSpawn_SkyTreeLog,data=*,stdrot=true,face0-5=0:OreSpawn/skytreelog
+
+# %OreSpawn_DuplicatorLog:* (OreSpawn_DuplicatorLog), render=(STANDARD), opaque=true,cls=danger.orespawn.BlockDuplicatorLog
+block:id=%OreSpawn_DuplicatorLog,data=*,stdrot=true,face0-5=0:OreSpawn/duplicatortreelog
+
+# %OreSpawn_ExperiencePlant:* (OreSpawn_ExperiencePlant), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockExperiencePlant
+block:id=%OreSpawn_ExperiencePlant,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/experiencesapling
+
+# %OreSpawn_CrystalPlant:* (OreSpawn_CrystalPlant), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalPlant
+block:id=%OreSpawn_CrystalPlant,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalsapling
+
+# %OreSpawn_CrystalPlant2:* (OreSpawn_CrystalPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalPlant
+block:id=%OreSpawn_CrystalPlant2,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalsapling2
+
+# %OreSpawn_CrystalPlant3:* (OreSpawn_CrystalPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalPlant
+block:id=%OreSpawn_CrystalPlant3,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalsapling3
+
+# %OreSpawn_FlowerPink:* (OreSpawn_FlowerPink), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_FlowerPink,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/flower_pink
+
+# %OreSpawn_FlowerBlue:* (OreSpawn_FlowerBlue), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_FlowerBlue,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/flower_blue
+
+# %OreSpawn_FlowerBlack:* (OreSpawn_FlowerBlack), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_FlowerBlack,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/flower_black
+
+# %OreSpawn_FlowerScary:* (OreSpawn_FlowerScary), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_FlowerScary,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/flower_scary
+
+# %OreSpawn_CrystalFlowerRed:* (OreSpawn_CrystalFlowerRed), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_CrystalFlowerRed,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalflower_red
+
+# %OreSpawn_CrystalFlowerGreen:* (OreSpawn_CrystalFlowerGreen), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_CrystalFlowerGreen,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalflower_green
+
+# %OreSpawn_CrystalFlowerBlue:* (OreSpawn_CrystalFlowerBlue), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_CrystalFlowerBlue,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalflower_blue
+
+# %OreSpawn_CrystalFlowerYellow:* (OreSpawn_CrystalFlowerYellow), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+block:id=%OreSpawn_CrystalFlowerYellow,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystalflower_yellow
+
+# %OreSpawn_CrystalLeaves:* (OreSpawn_CrystalLeaves), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalLeaves
+block:id=%OreSpawn_CrystalLeaves,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=DDDDDD,patch0=17000:OreSpawn/crystaltreeleaves
+
+# %OreSpawn_CrystalLeaves2:* (OreSpawn_CrystalLeaves2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalLeaves
+block:id=%OreSpawn_CrystalLeaves2,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=DDDDDD,patch0=17000:OreSpawn/crystaltreeleaves2
+
+# %OreSpawn_CrystalLeaves3:* (OreSpawn_CrystalLeaves3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalLeaves
+block:id=%OreSpawn_CrystalLeaves3,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=DDDDDD,patch0=17000:OreSpawn/crystaltreeleaves3
+
+# %OreSpawn_CrystalTreeLog:* (OreSpawn_CrystalTreeLog), render=(LOG), opaque=false,cls=danger.orespawn.BlockCrystalTreeLog
+block:id=%OreSpawn_CrystalTreeLog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:OreSpawn/crystaltreelog_top,face2-5=0:OreSpawn/crystaltreelog
+block:id=%OreSpawn_CrystalTreeLog,data=4,data=5,data=6,data=7,face0-1=0:OreSpawn/crystaltreelog,face2-3=4000:OreSpawn/crystaltreelog,face4-5=0:OreSpawn/crystaltreelog_top
+block:id=%OreSpawn_CrystalTreeLog,data=8,data=9,data=10,data=11,face0-1=4000:OreSpawn/crystaltreelog,face2-3=0:OreSpawn/crystaltreelog_top,face4-5=4000:OreSpawn/crystaltreelog
+block:id=%OreSpawn_CrystalTreeLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:OreSpawn/crystaltreelog
+
+# %OreSpawn_ExtremeTorch:* (OreSpawn_ExtremeTorch), render=(TORCH), opaque=false,cls=danger.orespawn.BlockExtremeTorch
+block:id=%OreSpawn_ExtremeTorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/extremetorch
+
+# %OreSpawn_CrystalTorch:* (OreSpawn_CrystalTorch), render=(TORCH), opaque=false,cls=danger.orespawn.BlockCrystalTorch
+block:id=%OreSpawn_CrystalTorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/crystaltorch
+
+# %OreSpawn_KrakenRepellent:* (OreSpawn_KrakenRepellent), render=(TORCH), opaque=false,cls=danger.orespawn.KrakenRepellent
+block:id=%OreSpawn_KrakenRepellent,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/krakenrepellent
+
+# %OreSpawn_CreeperRepellent:* (OreSpawn_CreeperRepellent), render=(TORCH), opaque=false,cls=danger.orespawn.CreeperRepellent
+block:id=%OreSpawn_CreeperRepellent,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/creeperrepellent
+
+# %OreSpawn_Island:* (OreSpawn_Island), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.IslandBlock
+block:id=%OreSpawn_Island,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/island
+
+# %OreSpawn_KingSpawner:* (OreSpawn_KingSpawner), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.KingSpawnerBlock
+block:id=%OreSpawn_KingSpawner,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/kingspawner
+
+# %OreSpawn_QueenSpawner:* (OreSpawn_QueenSpawner), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.QueenSpawnerBlock
+block:id=%OreSpawn_QueenSpawner,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/queenspawner
+
+# %OreSpawn_DungeonSpawner:* (OreSpawn_DungeonSpawner), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.DungeonSpawnerBlock
+block:id=%OreSpawn_DungeonSpawner,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:OreSpawn/dungeonspawner
+
+# %OreSpawn_EnderPearlBlock:* (OreSpawn_EnderPearlBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EnderPearlBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blockenderpearl
+
+# %OreSpawn_EyeOfEnderBlock:* (OreSpawn_EyeOfEnderBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.OreGenericEgg
+block:id=%OreSpawn_EyeOfEnderBlock,data=*,stdrot=true,face0-5=0:OreSpawn/blockeyeofender
+
+# %OreSpawn_AntBlock:* (OreSpawn_AntBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.AntBlock
+block:id=%OreSpawn_AntBlock,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:OreSpawn/antnest_bottom,face1=17000:OreSpawn/antnest_top,face2-5=17000:OreSpawn/antnest_side
+
+# %OreSpawn_RedAntBlock:* (OreSpawn_RedAntBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.AntBlock
+block:id=%OreSpawn_RedAntBlock,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:OreSpawn/antnest_bottom,face1=17000:OreSpawn/antnest_top,face2-5=17000:OreSpawn/antnest_side
+
+# %OreSpawn_TermiteBlock:* (OreSpawn_TermiteBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.AntBlock
+block:id=%OreSpawn_TermiteBlock,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:OreSpawn/antnest_bottom,face1=17000:OreSpawn/antnest_top,face2-5=17000:OreSpawn/antnest_side
+
+# %OreSpawn_CrystalTermiteBlock:* (OreSpawn_CrystalTermiteBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.CrystalAntBlock
+block:id=%OreSpawn_CrystalTermiteBlock,data=*,stdrot=true,face0=0:OreSpawn/crystaltermite_bottom,face1=0:OreSpawn/crystaltermite_top,face2-5=0:OreSpawn/crystaltermite_side
+
+# %OreSpawn_RainbowAntBlock:* (OreSpawn_RainbowAntBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.AntBlock
+block:id=%OreSpawn_RainbowAntBlock,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:OreSpawn/antnest_bottom,face1=17000:OreSpawn/antnest_top,face2-5=17000:OreSpawn/antnest_side
+
+# %OreSpawn_UnstableAntBlock:* (OreSpawn_UnstableAntBlock), render=(STANDARD), opaque=true,cls=danger.orespawn.AntBlock
+block:id=%OreSpawn_UnstableAntBlock,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:OreSpawn/antnest_bottom,face1=17000:OreSpawn/antnest_top,face2-5=17000:OreSpawn/antnest_side

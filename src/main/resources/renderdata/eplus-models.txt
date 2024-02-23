@@ -1,9 +1,9 @@
-# CarpentersBlocks 3.4.0-GTNH
+# eplus 3.0.2-d
 version:1.7
-modname:CarpentersBlocks
+modname:eplus
 
 
-cfgfile:config/CarpentersBlocks.cfg
+cfgfile:config/eplus.cfg
 
 patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
 patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
@@ -22,16 +22,5 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %blockCarpentersBed:* (blockCarpentersBed), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBed(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBed
-boxblock:id=%blockCarpentersBed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=*
-
-customblock:id=%blockCarpentersGate,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=gate
-customblock:id=%blockCarpentersBlock,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=block
-customblock:id=%blockCarpentersSlope,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=slope
-customblock:id=%blockCarpentersStairs,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=stairs
-customblock:id=%blockCarpentersPressurePlate,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=plate
-customblock:id=%blockCarpentersCollapsibleBlock,class=org.dynmap.hdmap.renderer.CarpentersCollapsibleBlockRenderer,data=*
-customblock:id=%blockCarpentersBarrier,class=org.dynmap.hdmap.renderer.CarpentersFenceRenderer,data=*
-customblock:id=%blockCarpentersHatch,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=hatch
-customblock:id=%blockCarpentersGarageDoor,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=garage
-customblock:id=%blockCarpentersDoor,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=door
+# %tile.advancedEnchantmentTable:* (tile.advancedEnchantmentTable), render=(STANDARD), opaque=false,cls=com.aesireanempire.eplus.blocks.BlockEnchantTable
+boxblock:id=%tile.advancedEnchantmentTable,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*

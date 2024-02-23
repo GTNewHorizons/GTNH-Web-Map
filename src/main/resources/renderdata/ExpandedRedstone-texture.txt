@@ -1,0 +1,107 @@
+# ExpandedRedstone v33a
+version:1.7
+modname:ExpandedRedstone
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/expandedredstone/textures/blocks/
+texture:id=ExpandedRedstone/basic,filename=assets/expandedredstone/textures/blocks/basic.png
+texture:id=ExpandedRedstone/basic_side,filename=assets/expandedredstone/textures/blocks/basic_side.png
+texture:id=ExpandedRedstone/block,filename=assets/expandedredstone/textures/blocks/block.png
+texture:id=ExpandedRedstone/breaker/front_4,filename=assets/expandedredstone/textures/blocks/breaker/front_4.png
+texture:id=ExpandedRedstone/bud_front,filename=assets/expandedredstone/textures/blocks/bud_front.png
+texture:id=ExpandedRedstone/camoflage,filename=assets/expandedredstone/textures/blocks/camoflage.png
+texture:id=ExpandedRedstone/chestreader/top_0,filename=assets/expandedredstone/textures/blocks/chestreader/top_0.png
+texture:id=ExpandedRedstone/clock/top_0,filename=assets/expandedredstone/textures/blocks/clock/top_0.png
+texture:id=ExpandedRedstone/driver/top_0,filename=assets/expandedredstone/textures/blocks/driver/top_0.png
+texture:id=ExpandedRedstone/effector/front_0,filename=assets/expandedredstone/textures/blocks/effector/front_0.png
+texture:id=ExpandedRedstone/emitter/front_0,filename=assets/expandedredstone/textures/blocks/emitter/front_0.png
+texture:id=ExpandedRedstone/hopper_top,filename=assets/expandedredstone/textures/blocks/hopper_top.png
+texture:id=ExpandedRedstone/placer/front_0,filename=assets/expandedredstone/textures/blocks/placer/front_0.png
+texture:id=ExpandedRedstone/proximity/top_0,filename=assets/expandedredstone/textures/blocks/proximity/top_0.png
+texture:id=ExpandedRedstone/pump_down,filename=assets/expandedredstone/textures/blocks/pump_down.png
+texture:id=ExpandedRedstone/receiver/front_0,filename=assets/expandedredstone/textures/blocks/receiver/front_0.png
+texture:id=ExpandedRedstone/shock/front_0,filename=assets/expandedredstone/textures/blocks/shock/front_0.png
+texture:id=ExpandedRedstone/toggle/top_0,filename=assets/expandedredstone/textures/blocks/toggle/top_0.png
+texture:id=ExpandedRedstone/weather_top,filename=assets/expandedredstone/textures/blocks/weather_top.png
+texture:id=ExpandedRedstone/wire_core,filename=assets/expandedredstone/textures/blocks/wire_core.png
+
+
+
+# %expanded redstone_block_thintile:* (expanded redstone_block_thintile), render=Reika.ExpandedRedstone.CircuitBlockRenderer(CUSTOM), opaque=false,cls=Reika.ExpandedRedstone.ItemBlocks.BlockRedstoneTile
+block:id=%expanded redstone_block_thintile,data=0,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/bud_front,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=1,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/breaker/front_4,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=2,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/placer/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=3,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/effector/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/proximity/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/toggle/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/weather_top,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/chestreader/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/driver/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/clock/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:ExpandedRedstone/camoflage
+block:id=%expanded redstone_block_thintile,data=11,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/emitter/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=12,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/receiver/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=13,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/shock/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/pump_down,face1-5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/hopper_top,face2-5=0:ExpandedRedstone/basic_side
+
+# %expanded redstone_block_wire:* (expanded redstone_block_wire), render=Reika.DragonAPI.Instantiable.Rendering.CustomWireRenderer(CUSTOM), opaque=false,cls=Reika.ExpandedRedstone.ItemBlocks.BlockExpandedWire
+block:id=%expanded redstone_block_wire,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ExpandedRedstone/wire_core
+
+# %expanded redstone_block_fullblock:* (expanded redstone_block_fullblock), render=Reika.ExpandedRedstone.CircuitBlockRenderer(CUSTOM), opaque=true,cls=Reika.ExpandedRedstone.ItemBlocks.BlockRedstoneMachine
+block:id=%expanded redstone_block_fullblock,data=0,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/bud_front,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=1,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/breaker/front_4,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=2,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/placer/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=3,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/effector/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=4,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/proximity/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_fullblock,data=5,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/toggle/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_fullblock,data=6,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/weather_top,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_fullblock,data=7,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/chestreader/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_fullblock,data=8,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/driver/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_fullblock,data=9,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/clock/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_fullblock,data=10,stdrot=true,face0-5=0:ExpandedRedstone/camoflage
+block:id=%expanded redstone_block_fullblock,data=11,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/emitter/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=12,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/receiver/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=13,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/shock/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=14,stdrot=true,face0=0:ExpandedRedstone/pump_down,face1-5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_fullblock,data=15,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/hopper_top,face2-5=0:ExpandedRedstone/basic_side
+
+# %expanded redstone_block_camo:* (expanded redstone_block_camo), render=Reika.ExpandedRedstone.CircuitBlockRenderer(CUSTOM), opaque=false,cls=Reika.ExpandedRedstone.ItemBlocks.BlockRedstoneCamo
+block:id=%expanded redstone_block_camo,data=0,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/bud_front,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=1,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/breaker/front_4,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=2,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/placer/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=3,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/effector/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=4,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/proximity/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_camo,data=5,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/toggle/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_camo,data=6,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/weather_top,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_camo,data=7,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/chestreader/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_camo,data=8,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/driver/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_camo,data=9,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/clock/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_camo,data=10,stdrot=true,face0-5=0:ExpandedRedstone/camoflage
+block:id=%expanded redstone_block_camo,data=11,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/emitter/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=12,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/receiver/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=13,stdrot=true,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/shock/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=14,stdrot=true,face0=0:ExpandedRedstone/pump_down,face1-5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_camo,data=15,stdrot=true,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/hopper_top,face2-5=0:ExpandedRedstone/basic_side
+
+# %expanded redstone_block_thintile2:* (expanded redstone_block_thintile2), render=Reika.ExpandedRedstone.CircuitBlockRenderer(CUSTOM), opaque=false,cls=Reika.ExpandedRedstone.ItemBlocks.BlockRedstoneTile
+block:id=%expanded redstone_block_thintile2,data=0,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/bud_front,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=1,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/breaker/front_4,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=2,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/placer/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=3,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/effector/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/proximity/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile2,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/toggle/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile2,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/weather_top,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile2,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/chestreader/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile2,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/driver/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile2,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/clock/top_0,face2-5=0:ExpandedRedstone/basic_side
+block:id=%expanded redstone_block_thintile2,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:ExpandedRedstone/camoflage
+block:id=%expanded redstone_block_thintile2,data=11,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/emitter/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=12,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/receiver/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=13,stdrot=true,transparency=TRANSPARENT,face0-3=0:ExpandedRedstone/block,face4=0:ExpandedRedstone/shock/front_0,face5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/pump_down,face1-5=0:ExpandedRedstone/block
+block:id=%expanded redstone_block_thintile2,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:ExpandedRedstone/basic,face1=0:ExpandedRedstone/hopper_top,face2-5=0:ExpandedRedstone/basic_side

@@ -1,0 +1,19 @@
+# fairylights 1.4.0
+version:1.7
+modname:fairylights
+
+
+cfgfile:config/fairylights.cfg
+
+
+texturepath:assets/fairylights/textures/blocks/
+texture:id=fairylights/fastener,filename=assets/fairylights/textures/blocks/fastener.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+
+
+# %fairy_lights_fastener:* (fairy_lights_fastener), render=(STANDARD), opaque=false,cls=com.pau101.fairylights.block.BlockConnectionFastener
+block:id=%fairy_lights_fastener,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:fairylights/fastener
+
+# %fairy_lights_fence:* (fairy_lights_fence), render=(STANDARD), opaque=false,cls=com.pau101.fairylights.block.BlockConnectionFastenerFence
+block:id=%fairy_lights_fence,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak

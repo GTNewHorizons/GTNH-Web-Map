@@ -1,0 +1,33 @@
+# tfccellars 1.1
+version:1.7
+modname:tfccellars
+
+
+cfgfile:config/tfccellars.cfg
+
+
+texturepath:assets/tfccellars/textures/blocks/
+texture:id=minecraft/ice,filename=assets/minecraft/textures/blocks/ice.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=terrafirmacraft/seaIce,filename=assets/terrafirmacraft/textures/blocks/seaIce.png
+texture:id=tfccellars/cellarDoorSide,filename=assets/tfccellars/textures/blocks/cellarDoorSide.png
+texture:id=tfccellars/cellarWall,filename=assets/tfccellars/textures/blocks/cellarWall.png
+texture:id=tfccellars/iceBunkerTop,filename=assets/tfccellars/textures/blocks/iceBunkerTop.png
+
+
+
+# %CellarWall:* (CellarWall), render=(STANDARD), opaque=true,cls=sladki.tfc.Blocks.BlockCellarWall
+block:id=%CellarWall,data=*,stdrot=true,face0-5=0:tfccellars/cellarWall
+
+# %IceBunker:* (IceBunker), render=(STANDARD), opaque=true,cls=sladki.tfc.Blocks.BlockIceBunker
+block:id=%IceBunker,data=*,stdrot=true,face0=0:minecraft/planks_oak,face1=0:tfccellars/iceBunkerTop,face2-5=0:minecraft/planks_oak
+
+# %CellarShelf:* (CellarShelf), render=sladki.tfc.Render.RenderCellarShelf(CUSTOM), opaque=false,cls=sladki.tfc.Blocks.BlockCellarShelf
+block:id=%CellarShelf,data=*,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %CellarDoor:* (CellarDoor), render=(DOOR), opaque=false,cls=sladki.tfc.Blocks.BlockCellarDoor
+block:id=%CellarDoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:tfccellars/cellarDoorSide
+
+# %Ice:* (Ice), render=(STANDARD), opaque=false,cls=sladki.tfc.Blocks.BlockIce
+block:id=%Ice,data=0,stdrot=true,face0-5=12000:terrafirmacraft/seaIce
+block:id=%Ice,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/ice

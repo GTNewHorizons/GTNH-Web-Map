@@ -1,0 +1,46 @@
+# Mimicry 1.7.x_1492_1.0.10
+version:1.7
+modname:Mimicry
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/mimicry/textures/blocks/
+texture:id=minecraft/Mimic Block,filename=assets/minecraft/textures/blocks/Mimic Block.png
+texture:id=minecraft/Mimichite End Ore Base,filename=assets/minecraft/textures/blocks/Mimichite End Ore Base.png
+texture:id=minecraft/Mimichite Nether Ore Base,filename=assets/minecraft/textures/blocks/Mimichite Nether Ore Base.png
+texture:id=minecraft/Mimichite Ore Base,filename=assets/minecraft/textures/blocks/Mimichite Ore Base.png
+texture:id=minecraft/Mimikinetic Upheaver,filename=assets/minecraft/textures/blocks/Mimikinetic Upheaver.png
+texture:id=minecraft/Volatile Fluid Block,filename=assets/minecraft/textures/blocks/Volatile Fluid Block.png
+texture:id=minecraft/Volatile Fluid Block Flowing,filename=assets/minecraft/textures/blocks/Volatile Fluid Block Flowing.png
+
+
+
+# %Sparr_Mimichite Ore:* (Sparr_Mimichite Ore), render=com.sparr.mimicry.render.RenderMimichiteOre(CUSTOM), opaque=true,cls=com.sparr.mimicry.block.MimicryBlockMimichiteOre
+block:id=%Sparr_Mimichite Ore,data=0,stdrot=true,face0-5=0:minecraft/Mimichite Ore Base
+block:id=%Sparr_Mimichite Ore,data=1,stdrot=true,face0-5=0:minecraft/Mimichite Nether Ore Base
+block:id=%Sparr_Mimichite Ore,data=2,stdrot=true,face0-5=0:minecraft/Mimichite End Ore Base
+block:id=%Sparr_Mimichite Ore,data=3,stdrot=true,face0-5=0:minecraft/Mimichite Ore Base
+block:id=%Sparr_Mimichite Ore,data=4,stdrot=true,face0-5=0:minecraft/Mimichite Nether Ore Base
+block:id=%Sparr_Mimichite Ore,data=5,stdrot=true,face0-5=0:minecraft/Mimichite End Ore Base
+block:id=%Sparr_Mimichite Ore,data=6,stdrot=true,face0-5=0:minecraft/Mimichite Ore Base
+block:id=%Sparr_Mimichite Ore,data=7,stdrot=true,face0-5=0:minecraft/Mimichite Nether Ore Base
+block:id=%Sparr_Mimichite Ore,data=8,stdrot=true,face0-5=0:minecraft/Mimichite End Ore Base
+block:id=%Sparr_Mimichite Ore,data=9,stdrot=true,face0-5=0:minecraft/Mimichite Ore Base
+block:id=%Sparr_Mimichite Ore,data=10,stdrot=true,face0-5=0:minecraft/Mimichite Nether Ore Base
+block:id=%Sparr_Mimichite Ore,data=11,stdrot=true,face0-5=0:minecraft/Mimichite End Ore Base
+block:id=%Sparr_Mimichite Ore,data=12,stdrot=true,face0-5=0:minecraft/Mimichite Ore Base
+block:id=%Sparr_Mimichite Ore,data=13,stdrot=true,face0-5=0:minecraft/Mimichite Nether Ore Base
+block:id=%Sparr_Mimichite Ore,data=14,stdrot=true,face0-5=0:minecraft/Mimichite End Ore Base
+block:id=%Sparr_Mimichite Ore,data=15,stdrot=true,face0-5=0:minecraft/Mimichite Ore Base
+
+# %Sparr_Mimic Block:* (Sparr_Mimic Block), render=(STANDARD), opaque=true,cls=com.sparr.mimicry.block.MimicryBlockMimichite
+block:id=%Sparr_Mimic Block,data=*,stdrot=true,face0-5=0:minecraft/Mimic Block
+
+# %Sparr_Mimikinetic Upheaver:* (Sparr_Mimikinetic Upheaver), render=(STANDARD), opaque=true,cls=com.sparr.mimicry.block.MimicryBlockUpheaver
+block:id=%Sparr_Mimikinetic Upheaver,data=*,stdrot=true,face0-5=0:minecraft/Mimikinetic Upheaver
+
+# %Sparr_Volatile Fluid:* (Sparr_Volatile Fluid), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.sparr.mimicry.block.MimicryBlockVolatileFluid
+block:id=%Sparr_Volatile Fluid,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/Volatile Fluid Block,face2-5=12000:minecraft/Volatile Fluid Block Flowing

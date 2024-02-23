@@ -1,0 +1,34 @@
+# MeteorCraft v33a
+version:1.7
+modname:MeteorCraft
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/meteorcraft/textures/blocks/
+texture:id=meteorcraft/machine_0_bottom_rc,filename=assets/meteorcraft/textures/blocks/machine_0_bottom_rc.png
+texture:id=meteorcraft/machine_0_side_rc,filename=assets/meteorcraft/textures/blocks/machine_0_side_rc.png
+texture:id=meteorcraft/machine_0_top_rc,filename=assets/meteorcraft/textures/blocks/machine_0_top_rc.png
+texture:id=meteorcraft/machine_1_bottom_rc,filename=assets/meteorcraft/textures/blocks/machine_1_bottom_rc.png
+texture:id=meteorcraft/machine_1_side_rc,filename=assets/meteorcraft/textures/blocks/machine_1_side_rc.png
+texture:id=meteorcraft/machine_1_top_rc,filename=assets/meteorcraft/textures/blocks/machine_1_top_rc.png
+texture:id=meteorcraft/machine_2_bottom_rc,filename=assets/meteorcraft/textures/blocks/machine_2_bottom_rc.png
+texture:id=meteorcraft/machine_2_side_rc,filename=assets/meteorcraft/textures/blocks/machine_2_side_rc.png
+texture:id=meteorcraft/machine_2_top_rc,filename=assets/meteorcraft/textures/blocks/machine_2_top_rc.png
+texture:id=meteorcraft/machine_3_bottom_rc,filename=assets/meteorcraft/textures/blocks/machine_3_bottom_rc.png
+texture:id=meteorcraft/machine_3_side_rc,filename=assets/meteorcraft/textures/blocks/machine_3_side_rc.png
+texture:id=meteorcraft/machine_3_top_rc,filename=assets/meteorcraft/textures/blocks/machine_3_top_rc.png
+texture:id=meteorcraft/machine_4_bottom_rc,filename=assets/meteorcraft/textures/blocks/machine_4_bottom_rc.png
+texture:id=meteorcraft/machine_4_side_rc,filename=assets/meteorcraft/textures/blocks/machine_4_side_rc.png
+texture:id=meteorcraft/machine_4_top_rc,filename=assets/meteorcraft/textures/blocks/machine_4_top_rc.png
+
+
+
+# %Meteor Machines:* (Meteor Machines), render=(STANDARD), opaque=true,cls=Reika.MeteorCraft.Blocks.BlockMeteorMachine
+block:id=%Meteor Machines,data=0,stdrot=true,face0=0:meteorcraft/machine_0_bottom_rc,face1=0:meteorcraft/machine_0_top_rc,face2-5=0:meteorcraft/machine_0_side_rc
+block:id=%Meteor Machines,data=1,stdrot=true,face0=0:meteorcraft/machine_1_bottom_rc,face1=0:meteorcraft/machine_1_top_rc,face2-5=0:meteorcraft/machine_1_side_rc
+block:id=%Meteor Machines,data=2,stdrot=true,face0=0:meteorcraft/machine_2_bottom_rc,face1=0:meteorcraft/machine_2_top_rc,face2-5=0:meteorcraft/machine_2_side_rc
+block:id=%Meteor Machines,data=3,stdrot=true,face0=0:meteorcraft/machine_3_bottom_rc,face1=0:meteorcraft/machine_3_top_rc,face2-5=0:meteorcraft/machine_3_side_rc
+block:id=%Meteor Machines,data=4,stdrot=true,face0=0:meteorcraft/machine_4_bottom_rc,face1=0:meteorcraft/machine_4_top_rc,face2-5=0:meteorcraft/machine_4_side_rc

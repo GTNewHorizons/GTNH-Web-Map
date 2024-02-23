@@ -1,0 +1,119 @@
+# libVulpes 0.2.8.-37
+version:1.7
+modname:libVulpes
+
+
+cfgfile:config/libVulpes.cfg
+
+
+texturepath:assets/libvulpes/textures/blocks/
+texture:id=libvulpes/IC2Plug,filename=assets/libvulpes/textures/blocks/IC2Plug.png
+texture:id=libvulpes/advStructureBlock,filename=assets/libvulpes/textures/blocks/advStructureBlock.png
+texture:id=libvulpes/batteryCreative,filename=assets/libvulpes/textures/blocks/batteryCreative.png
+texture:id=libvulpes/batteryRF,filename=assets/libvulpes/textures/blocks/batteryRF.png
+texture:id=libvulpes/coilPole,filename=assets/libvulpes/textures/blocks/coilPole.png
+texture:id=libvulpes/coilSide,filename=assets/libvulpes/textures/blocks/coilSide.png
+texture:id=libvulpes/fluidInput,filename=assets/libvulpes/textures/blocks/fluidInput.png
+texture:id=libvulpes/fluidOutput,filename=assets/libvulpes/textures/blocks/fluidOutput.png
+texture:id=libvulpes/inputHatch,filename=assets/libvulpes/textures/blocks/inputHatch.png
+texture:id=libvulpes/machineGeneric,filename=assets/libvulpes/textures/blocks/machineGeneric.png
+texture:id=libvulpes/oreAluminum,filename=assets/libvulpes/textures/blocks/oreAluminum.png
+texture:id=libvulpes/oreCopper,filename=assets/libvulpes/textures/blocks/oreCopper.png
+texture:id=libvulpes/oreDilithium,filename=assets/libvulpes/textures/blocks/oreDilithium.png
+texture:id=libvulpes/oreIridium,filename=assets/libvulpes/textures/blocks/oreIridium.png
+texture:id=libvulpes/oreRutile,filename=assets/libvulpes/textures/blocks/oreRutile.png
+texture:id=libvulpes/oreTin,filename=assets/libvulpes/textures/blocks/oreTin.png
+texture:id=libvulpes/outputHatch,filename=assets/libvulpes/textures/blocks/outputHatch.png
+texture:id=libvulpes/structureBlock,filename=assets/libvulpes/textures/blocks/structureBlock.png
+texture:id=minecraft/MISSING_ICON_BLOCK_726_blockPhantom,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_726_blockPhantom.png
+texture:id=minecraft/furnace_front_off,filename=assets/minecraft/textures/blocks/furnace_front_off.png
+texture:id=minecraft/furnace_front_on,filename=assets/minecraft/textures/blocks/furnace_front_on.png
+texture:id=minecraft/furnace_side,filename=assets/minecraft/textures/blocks/furnace_side.png
+texture:id=minecraft/furnace_top,filename=assets/minecraft/textures/blocks/furnace_top.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+
+
+
+# %tile.blockPhantom:* (tile.blockPhantom), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockPhantom
+block:id=%tile.blockPhantom,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_726_blockPhantom
+
+# %blockHatch:* (blockHatch), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockHatch
+block:id=%blockHatch,data=0,stdrot=true,face0-5=0:libvulpes/inputHatch
+block:id=%blockHatch,data=1,stdrot=true,face0-5=0:libvulpes/outputHatch
+block:id=%blockHatch,data=2,stdrot=true,face0-5=0:libvulpes/fluidInput
+block:id=%blockHatch,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:libvulpes/fluidOutput
+block:id=%blockHatch,data=8,stdrot=true,face0-5=0:libvulpes/inputHatch
+block:id=%blockHatch,data=9,stdrot=true,face0-5=0:libvulpes/outputHatch
+block:id=%blockHatch,data=10,stdrot=true,face0-5=0:libvulpes/fluidInput
+block:id=%blockHatch,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:libvulpes/fluidOutput
+
+# %blockPlaceholder:* (blockPlaceholder), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockPlaceHolder
+block:id=%blockPlaceholder,data=*,stdrot=true,face0-5=0:libvulpes/machineGeneric
+
+# %blockStructureBlock:* (blockStructureBlock), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockAlphaTexture
+block:id=%blockStructureBlock,data=*,stdrot=true,face0-5=0:libvulpes/structureBlock
+
+# %rfBattery:* (rfBattery), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiMachineBattery
+block:id=%rfBattery,data=*,stdrot=true,face0-5=0:libvulpes/batteryRF
+
+# %batteryOutputRF:* (batteryOutputRF), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiMachineBattery
+block:id=%batteryOutputRF,data=*,stdrot=true,face0-5=0:libvulpes/batteryRF
+
+# %tile.creativePowerBattery:* (tile.creativePowerBattery), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiMachineBattery
+block:id=%tile.creativePowerBattery,data=*,stdrot=true,face0-5=0:libvulpes/batteryCreative
+
+# %tile.advStructureMachine:* (tile.advStructureMachine), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockAlphaTexture
+block:id=%tile.advStructureMachine,data=*,stdrot=true,face0-5=0:libvulpes/advStructureBlock
+
+# %tile.coalGenerator:* (tile.coalGenerator), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.coalGenerator,data=0,data=1,stdrot=true,face0-1=0:minecraft/furnace_top,face2=0:minecraft/furnace_side,face3=0:minecraft/furnace_front_off,face4-5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=2,stdrot=true,face0-1=0:minecraft/furnace_top,face2=0:minecraft/furnace_front_off,face3-5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=3,stdrot=true,face0-1=0:minecraft/furnace_top,face2=0:minecraft/furnace_side,face3=0:minecraft/furnace_front_off,face4-5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=4,stdrot=true,face0-1=0:minecraft/furnace_top,face2-3=0:minecraft/furnace_side,face4=0:minecraft/furnace_front_off,face5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=5,stdrot=true,face0-1=0:minecraft/furnace_top,face2-4=0:minecraft/furnace_side,face5=0:minecraft/furnace_front_off
+block:id=%tile.coalGenerator,data=6,data=7,stdrot=true,face0-1=0:minecraft/furnace_top,face2=0:minecraft/furnace_side,face3=0:minecraft/furnace_front_off,face4-5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=8,data=9,stdrot=true,face0=0:minecraft/furnace_side,face1=0:minecraft/furnace_top,face2=0:minecraft/furnace_side,face3=0:minecraft/furnace_front_on,face4-5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=10,stdrot=true,face0=0:minecraft/furnace_side,face1=0:minecraft/furnace_top,face2=0:minecraft/furnace_front_on,face3-5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=11,stdrot=true,face0=0:minecraft/furnace_side,face1=0:minecraft/furnace_top,face2=0:minecraft/furnace_side,face3=0:minecraft/furnace_front_on,face4-5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=12,stdrot=true,face0=0:minecraft/furnace_side,face1=0:minecraft/furnace_top,face2-3=0:minecraft/furnace_side,face4=0:minecraft/furnace_front_on,face5=0:minecraft/furnace_side
+block:id=%tile.coalGenerator,data=13,stdrot=true,face0=0:minecraft/furnace_side,face1=0:minecraft/furnace_top,face2-4=0:minecraft/furnace_side,face5=0:minecraft/furnace_front_on
+block:id=%tile.coalGenerator,data=14,data=15,stdrot=true,face0=0:minecraft/furnace_side,face1=0:minecraft/furnace_top,face2=0:minecraft/furnace_side,face3=0:minecraft/furnace_front_on,face4-5=0:minecraft/furnace_side
+
+# %tile.IC2Plug:* (tile.IC2Plug), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiMachineBattery
+block:id=%tile.IC2Plug,data=*,stdrot=true,face0-5=0:libvulpes/IC2Plug
+
+# %libVulpesore0:* (libVulpesore0), render=(STANDARD), opaque=true,cls=zmaster587.libVulpes.block.BlockOre
+block:id=%libVulpesore0,data=0,stdrot=true,face0-5=0:libvulpes/oreDilithium
+block:id=%libVulpesore0,data=4,stdrot=true,face0-5=0:libvulpes/oreCopper
+block:id=%libVulpesore0,data=5,stdrot=true,face0-5=0:libvulpes/oreTin
+block:id=%libVulpesore0,data=8,stdrot=true,face0-5=0:libvulpes/oreRutile
+block:id=%libVulpesore0,data=9,stdrot=true,face0-5=0:libvulpes/oreAluminum
+block:id=%libVulpesore0,data=10,stdrot=true,face0-5=0:libvulpes/oreIridium
+
+# %libVulpesmetal0:* (libVulpesmetal0), render=(STANDARD), opaque=true,cls=zmaster587.libVulpes.block.BlockMetalBlock
+block:id=%libVulpesmetal0,data=0,stdrot=true,colorMult=DDCECB,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=1,stdrot=true,colorMult=AFAFAF,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=2,stdrot=true,colorMult=FFFF5D,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=3,stdrot=true,colorMult=2C2C2B,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=4,stdrot=true,colorMult=D55E28,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=5,stdrot=true,colorMult=CDD5D8,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=6,stdrot=true,colorMult=55555D,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=7,stdrot=true,colorMult=B2669E,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=8,stdrot=true,colorMult=BF936A,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=9,stdrot=true,colorMult=B3E4DC,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=10,stdrot=true,colorMult=DEDCCE,face0-5=17000:minecraft/iron_block
+block:id=%libVulpesmetal0,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=17000:minecraft/iron_block
+
+# %libVulpescoil0:* (libVulpescoil0), render=(STANDARD), opaque=true,cls=zmaster587.libVulpes.block.BlockCoil
+block:id=%libVulpescoil0,data=0,stdrot=true,colorMult=DDCECB,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=1,stdrot=true,colorMult=AFAFAF,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=2,stdrot=true,colorMult=FFFF5D,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=3,stdrot=true,colorMult=2C2C2B,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=4,stdrot=true,colorMult=D55E28,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=5,stdrot=true,colorMult=CDD5D8,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=6,stdrot=true,colorMult=55555D,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=7,stdrot=true,colorMult=B2669E,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=8,stdrot=true,colorMult=BF936A,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=9,stdrot=true,colorMult=B3E4DC,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=10,stdrot=true,colorMult=DEDCCE,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide
+block:id=%libVulpescoil0,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=17000:libvulpes/coilPole,face2-5=17000:libvulpes/coilSide

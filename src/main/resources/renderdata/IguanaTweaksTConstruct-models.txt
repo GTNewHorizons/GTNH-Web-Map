@@ -1,9 +1,10 @@
-# CarpentersBlocks 3.4.0-GTNH
+# IguanaTweaksTConstruct 1.7.10-2.1.6.163
 version:1.7
-modname:CarpentersBlocks
+modname:IguanaTweaksTConstruct
 
 
-cfgfile:config/CarpentersBlocks.cfg
+
+# Configuration file not found!
 
 patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
 patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
@@ -22,16 +23,15 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %blockCarpentersBed:* (blockCarpentersBed), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBed(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBed
-boxblock:id=%blockCarpentersBed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=*
-
-customblock:id=%blockCarpentersGate,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=gate
-customblock:id=%blockCarpentersBlock,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=block
-customblock:id=%blockCarpentersSlope,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=slope
-customblock:id=%blockCarpentersStairs,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=stairs
-customblock:id=%blockCarpentersPressurePlate,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=plate
-customblock:id=%blockCarpentersCollapsibleBlock,class=org.dynmap.hdmap.renderer.CarpentersCollapsibleBlockRenderer,data=*
-customblock:id=%blockCarpentersBarrier,class=org.dynmap.hdmap.renderer.CarpentersFenceRenderer,data=*
-customblock:id=%blockCarpentersHatch,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=hatch
-customblock:id=%blockCarpentersGarageDoor,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=garage
-customblock:id=%blockCarpentersDoor,class=org.dynmap.hdmap.renderer.CarpentersBlocksRenderer,data=*,type=door
+# %skullBlock:* (skullBlock), render=(CUSTOM), opaque=false,cls=iguanaman.iguanatweakstconstruct.mobheads.blocks.IguanaSkullBlock
+boxblock:id=%skullBlock,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=0,data=1
+boxblock:id=%skullBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.5,zmax=1.0,data=2
+boxblock:id=%skullBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.0,zmax=0.5,data=3
+boxblock:id=%skullBlock,xmin=0.5,xmax=1.0,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=4
+boxblock:id=%skullBlock,xmin=0.0,xmax=0.5,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=5
+boxblock:id=%skullBlock,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=6,data=7,data=8,data=9
+boxblock:id=%skullBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.5,zmax=1.0,data=10
+boxblock:id=%skullBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.0,zmax=0.5,data=11
+boxblock:id=%skullBlock,xmin=0.5,xmax=1.0,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=12
+boxblock:id=%skullBlock,xmin=0.0,xmax=0.5,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=13
+boxblock:id=%skullBlock,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=14,data=15

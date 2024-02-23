@@ -1,0 +1,79 @@
+# immersiveintegration 0.6.8
+version:1.7
+modname:immersiveintegration
+
+
+cfgfile:config/immersiveintegration.cfg
+
+
+texturepath:assets/immersiveintegration/textures/blocks/
+texture:id=immersiveintegration/aeDecorationDenseCoil,filename=assets/immersiveintegration/textures/blocks/aeDecorationDenseCoil.png
+texture:id=immersiveintegration/aeDecorationDenseCoilTop,filename=assets/immersiveintegration/textures/blocks/aeDecorationDenseCoilTop.png
+texture:id=immersiveintegration/aeDecorationFluixCoil,filename=assets/immersiveintegration/textures/blocks/aeDecorationFluixCoil.png
+texture:id=immersiveintegration/aeDecorationFluixCoilTop,filename=assets/immersiveintegration/textures/blocks/aeDecorationFluixCoilTop.png
+texture:id=immersiveintegration/extendablePost,filename=assets/immersiveintegration/textures/blocks/extendablePost.png
+texture:id=immersiveintegration/extendedPost,filename=assets/immersiveintegration/textures/blocks/extendedPost.png
+texture:id=immersiveintegration/inductionChargerHV,filename=assets/immersiveintegration/textures/blocks/inductionChargerHV.png
+texture:id=immersiveintegration/inductionChargerLV,filename=assets/immersiveintegration/textures/blocks/inductionChargerLV.png
+texture:id=immersiveintegration/inductionChargerMV,filename=assets/immersiveintegration/textures/blocks/inductionChargerMV.png
+texture:id=immersiveintegration/industrialCokeOven,filename=assets/immersiveintegration/textures/blocks/industrialCokeOven.png
+texture:id=immersiveintegration/itemRobin,filename=assets/immersiveintegration/textures/blocks/itemRobin.png
+texture:id=immersiveintegration/meDenseTransformer,filename=assets/immersiveintegration/textures/blocks/meDenseTransformer.png
+texture:id=immersiveintegration/meDenseWireConnector,filename=assets/immersiveintegration/textures/blocks/meDenseWireConnector.png
+texture:id=immersiveintegration/meTransformer,filename=assets/immersiveintegration/textures/blocks/meTransformer.png
+texture:id=immersiveintegration/meWireConnector,filename=assets/immersiveintegration/textures/blocks/meWireConnector.png
+texture:id=immersiveintegration/redstoneWireConnector,filename=assets/immersiveintegration/textures/blocks/redstoneWireConnector.png
+texture:id=immersiveintegration/steelDecorationOvenWall,filename=assets/immersiveintegration/textures/blocks/steelDecorationOvenWall.png
+texture:id=immersiveintegration/steelDecorationOvenWallHeated,filename=assets/immersiveintegration/textures/blocks/steelDecorationOvenWallHeated.png
+texture:id=immersiveintegration/steelDecorationOvenWallHeatedTop,filename=assets/immersiveintegration/textures/blocks/steelDecorationOvenWallHeatedTop.png
+texture:id=immersiveintegration/steelDecorationOvenWallPort,filename=assets/immersiveintegration/textures/blocks/steelDecorationOvenWallPort.png
+texture:id=immersiveintegration/steelDecorationOvenWallPortTop,filename=assets/immersiveintegration/textures/blocks/steelDecorationOvenWallPortTop.png
+texture:id=immersiveintegration/steelDecorationOvenWallTop,filename=assets/immersiveintegration/textures/blocks/steelDecorationOvenWallTop.png
+texture:id=immersiveintegration/steelTrapdoor,filename=assets/immersiveintegration/textures/blocks/steelTrapdoor.png
+
+
+
+# %extendablePost:* (extendablePost), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderExtendablePost(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockExtendablePost
+block:id=%extendablePost,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/extendablePost
+block:id=%extendablePost,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:immersiveintegration/extendablePost
+
+# %steelTrapdoor:* (steelTrapdoor), render=(STANDARD), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockSteelTrapdoor
+block:id=%steelTrapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/steelTrapdoor
+
+# %steelDecoration:* (steelDecoration), render=(STANDARD), opaque=true,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockSteelDecoration
+block:id=%steelDecoration,data=0,stdrot=true,face0-1=0:immersiveintegration/steelDecorationOvenWallTop,face2-5=0:immersiveintegration/steelDecorationOvenWall
+block:id=%steelDecoration,data=1,stdrot=true,face0-1=0:immersiveintegration/steelDecorationOvenWallHeatedTop,face2-5=0:immersiveintegration/steelDecorationOvenWallHeated
+block:id=%steelDecoration,data=2,stdrot=true,face0-1=0:immersiveintegration/steelDecorationOvenWallPortTop,face2-5=0:immersiveintegration/steelDecorationOvenWallPort
+
+# %extendedPost:* (extendedPost), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderExtendedPost(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockExtendedPost
+block:id=%extendedPost,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/extendedPost
+
+# %industrialCokeOven:* (industrialCokeOven), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderIndustrialCokeOven(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockIndustrialCokeOven
+block:id=%industrialCokeOven,data=*,stdrot=true,face0-5=0:immersiveintegration/industrialCokeOven
+
+# %itemRobin:* (itemRobin), render=(STANDARD), opaque=true,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockItemRobin
+block:id=%itemRobin,data=*,stdrot=true,face0-5=0:immersiveintegration/itemRobin
+
+# %inductionCharger:* (inductionCharger), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderIIBlocks(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockInductionCharger
+block:id=%inductionCharger,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/inductionChargerLV
+block:id=%inductionCharger,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/inductionChargerMV
+block:id=%inductionCharger,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/inductionChargerHV
+
+# %redstoneWireConnector:* (redstoneWireConnector), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderIIBlocks(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockRedstoneWireConnector
+block:id=%redstoneWireConnector,data=*,stdrot=true,face0-5=0:immersiveintegration/redstoneWireConnector
+
+# %meWireConnector:* (meWireConnector), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderIIBlocks(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockMEWireConnector
+block:id=%meWireConnector,data=*,stdrot=true,face0-5=0:immersiveintegration/meWireConnector
+
+# %meDenseWireConnector:* (meDenseWireConnector), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderIIBlocks(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockMEDenseWireConnector
+block:id=%meDenseWireConnector,data=*,stdrot=true,face0-5=0:immersiveintegration/meDenseWireConnector
+
+# %meTransformer:* (meTransformer), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderIIBlocks(CUSTOM), opaque=true,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockMETransformer
+block:id=%meTransformer,data=*,stdrot=true,face0-5=0:immersiveintegration/meTransformer
+
+# %meDenseTransformer:* (meDenseTransformer), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderIIBlocks(CUSTOM), opaque=true,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockMEDenseTransformer
+block:id=%meDenseTransformer,data=*,stdrot=true,face0-5=0:immersiveintegration/meDenseTransformer
+
+# %aeDecoration:* (aeDecoration), render=(STANDARD), opaque=true,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockAEDecoration
+block:id=%aeDecoration,data=0,stdrot=true,face0-1=0:immersiveintegration/aeDecorationFluixCoilTop,face2-5=0:immersiveintegration/aeDecorationFluixCoil
+block:id=%aeDecoration,data=1,stdrot=true,face0-1=0:immersiveintegration/aeDecorationDenseCoilTop,face2-5=0:immersiveintegration/aeDecorationDenseCoil

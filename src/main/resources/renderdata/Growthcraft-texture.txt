@@ -1,0 +1,136 @@
+# Growthcraft 1.7.10-2.7.2
+version:1.7
+modname:Growthcraft
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/growthcraft/textures/blocks/
+texture:id=grcapples/apple_sapling,filename=assets/grcapples/textures/blocks/apple_sapling.png
+texture:id=grcapples/apples_1,filename=assets/grcapples/textures/blocks/apples_1.png
+texture:id=grcapples/apples_2,filename=assets/grcapples/textures/blocks/apples_2.png
+texture:id=grcapples/apples_3,filename=assets/grcapples/textures/blocks/apples_3.png
+texture:id=grccellar/booze_flow,filename=assets/grccellar/textures/blocks/booze_flow.png
+texture:id=grccellar/booze_still,filename=assets/grccellar/textures/blocks/booze_still.png
+texture:id=grccellar/brewkettle_0,filename=assets/grccellar/textures/blocks/brewkettle_0.png
+texture:id=grccellar/brewkettle_2,filename=assets/grccellar/textures/blocks/brewkettle_2.png
+texture:id=grccellar/brewkettle_3,filename=assets/grccellar/textures/blocks/brewkettle_3.png
+texture:id=grccellar/ferment_barrel/minecraft/oak/side,filename=assets/grccellar/textures/blocks/ferment_barrel/minecraft/oak/side.png
+texture:id=grccellar/ferment_barrel/minecraft/oak/side_alt,filename=assets/grccellar/textures/blocks/ferment_barrel/minecraft/oak/side_alt.png
+texture:id=grccellar/ferment_jar_glass,filename=assets/grccellar/textures/blocks/ferment_jar_glass.png
+texture:id=grccellar/fruit_press_wood_bottom,filename=assets/grccellar/textures/blocks/fruit_press_wood_bottom.png
+texture:id=grccellar/fruit_press_wood_side,filename=assets/grccellar/textures/blocks/fruit_press_wood_side.png
+texture:id=grccellar/fruit_press_wood_top,filename=assets/grccellar/textures/blocks/fruit_press_wood_top.png
+texture:id=grccellar/fruitpresser_0,filename=assets/grccellar/textures/blocks/fruitpresser_0.png
+texture:id=grccellar/fruitpresser_1,filename=assets/grccellar/textures/blocks/fruitpresser_1.png
+texture:id=grccellar/fruitpresser_2,filename=assets/grccellar/textures/blocks/fruitpresser_2.png
+texture:id=grccore/rope,filename=assets/grccore/textures/blocks/rope.png
+texture:id=grccore/salt_block,filename=assets/grccore/textures/blocks/salt_block.png
+texture:id=grcfishtrap/fishtrap,filename=assets/grcfishtrap/textures/blocks/fishtrap.png
+texture:id=minecraft/lava_still,filename=assets/minecraft/textures/blocks/lava_still.png
+texture:id=minecraft/leaves_oak,filename=assets/minecraft/textures/blocks/leaves_oak.png
+texture:id=minecraft/nether_brick,filename=assets/minecraft/textures/blocks/nether_brick.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/water_flow,filename=assets/minecraft/textures/blocks/water_flow.png
+texture:id=minecraft/water_still,filename=assets/minecraft/textures/blocks/water_still.png
+texture:id=natura/bloodwood_planks,filename=assets/natura/textures/blocks/bloodwood_planks.png
+texture:id=natura/darkwood_planks,filename=assets/natura/textures/blocks/darkwood_planks.png
+texture:id=natura/eucalyptus_planks,filename=assets/natura/textures/blocks/eucalyptus_planks.png
+texture:id=natura/fusewood_planks,filename=assets/natura/textures/blocks/fusewood_planks.png
+texture:id=natura/ghostwood_planks,filename=assets/natura/textures/blocks/ghostwood_planks.png
+texture:id=natura/hopseed_planks,filename=assets/natura/textures/blocks/hopseed_planks.png
+texture:id=natura/maple_planks,filename=assets/natura/textures/blocks/maple_planks.png
+texture:id=natura/purpleheart_planks,filename=assets/natura/textures/blocks/purpleheart_planks.png
+texture:id=natura/redwood_planks,filename=assets/natura/textures/blocks/redwood_planks.png
+texture:id=natura/sakura_planks,filename=assets/natura/textures/blocks/sakura_planks.png
+texture:id=natura/silverbell_planks,filename=assets/natura/textures/blocks/silverbell_planks.png
+texture:id=natura/tiger_planks,filename=assets/natura/textures/blocks/tiger_planks.png
+texture:id=natura/willow_planks,filename=assets/natura/textures/blocks/willow_planks.png
+
+
+
+# %grc.fenceRope:* (grc.fenceRope), render=growthcraft.core.client.renderer.RenderFenceRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockFenceRope
+block:id=%grc.fenceRope,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %grc.ropeBlock:* (grc.ropeBlock), render=growthcraft.core.client.renderer.RenderRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockRope
+block:id=%grc.ropeBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:grccore/rope
+
+# %grccore.salt_block:* (grccore.salt_block), render=(STANDARD), opaque=true,cls=growthcraft.core.common.block.BlockSaltBlock
+block:id=%grccore.salt_block,data=*,stdrot=true,face0-5=0:grccore/salt_block
+
+# %grc.netherBrickFenceRope:* (grc.netherBrickFenceRope), render=growthcraft.core.client.renderer.RenderFenceRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockFenceRope
+block:id=%grc.netherBrickFenceRope,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/nether_brick
+
+# %grccore.BlockFluidSaltWater:* (grccore.BlockFluidSaltWater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.core.common.block.GrcBlockFluid
+block:id=%grccore.BlockFluidSaltWater,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %grc.fruitPress:* (grc.fruitPress), render=growthcraft.cellar.client.render.RenderFruitPress(CUSTOM), opaque=false,cls=growthcraft.cellar.common.block.BlockFruitPress
+block:id=%grc.fruitPress,data=*,stdrot=true,face0=0:grccellar/fruit_press_wood_bottom,face1=0:grccellar/fruit_press_wood_top,face2-5=0:grccellar/fruit_press_wood_side
+
+# %grc.fruitPresser:* (grc.fruitPresser), render=growthcraft.cellar.client.render.RenderFruitPresser(CUSTOM), opaque=false,cls=growthcraft.cellar.common.block.BlockFruitPresser
+block:id=%grc.fruitPresser,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:grccellar/fruitpresser_0,face1=0:grccellar/fruitpresser_1,face2-5=0:grccellar/fruitpresser_2
+
+# %grc.brewKettle:* (grc.brewKettle), render=growthcraft.cellar.client.render.RenderBrewKettle(CUSTOM), opaque=false,cls=growthcraft.cellar.common.block.BlockBrewKettle
+block:id=%grc.brewKettle,data=*,stdrot=true,face0=0:grccellar/brewkettle_0,face1=0:grccellar/brewkettle_3,face2-5=0:grccellar/brewkettle_2
+
+# %grc.fermentBarrel:* (grc.fermentBarrel), render=growthcraft.cellar.client.render.RenderFermentBarrel(CUSTOM), opaque=false,cls=growthcraft.cellar.common.block.BlockFermentBarrel
+block:id=%grc.fermentBarrel,data=0,data=1,stdrot=true,face0-1=0:grccellar/ferment_barrel/minecraft/oak/side_alt,face2-5=0:grccellar/ferment_barrel/minecraft/oak/side
+block:id=%grc.fermentBarrel,data=2,data=3,stdrot=true,face0-1=0:grccellar/ferment_barrel/minecraft/oak/side,face2-3=0:grccellar/ferment_barrel/minecraft/oak/side_alt,face4-5=0:grccellar/ferment_barrel/minecraft/oak/side
+block:id=%grc.fermentBarrel,data=4,data=5,stdrot=true,face0-3=0:grccellar/ferment_barrel/minecraft/oak/side,face4-5=0:grccellar/ferment_barrel/minecraft/oak/side_alt
+block:id=%grc.fermentBarrel,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:grccellar/ferment_barrel/minecraft/oak/side
+
+# %grc.fermentJar:* (grc.fermentJar), render=growthcraft.cellar.client.render.RenderCultureJar(CUSTOM), opaque=false,cls=growthcraft.cellar.common.block.BlockCultureJar
+block:id=%grc.fermentJar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:grccellar/ferment_jar_glass
+
+# %grc.appleSapling:* (grc.appleSapling), render=(CROSSEDSQUARES), opaque=false,cls=growthcraft.apples.common.block.BlockAppleSapling
+block:id=%grc.appleSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:grcapples/apple_sapling
+
+# %grc.appleLeaves:* (grc.appleLeaves), render=(STANDARD), opaque=false,cls=growthcraft.apples.common.block.BlockAppleLeaves
+block:id=%grc.appleLeaves,data=*,stdrot=true,face0-5=2000:minecraft/leaves_oak
+
+# %grc.appleBlock:* (grc.appleBlock), render=growthcraft.core.client.renderer.RenderBlockFruit(CUSTOM), opaque=false,cls=growthcraft.apples.common.block.BlockApple
+block:id=%grc.appleBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:grcapples/apples_1
+block:id=%grc.appleBlock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:grcapples/apples_2
+block:id=%grc.appleBlock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:grcapples/apples_3
+
+# %grc.appleCiderFluid.0:* (grc.appleCiderFluid.0), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+block:id=%grc.appleCiderFluid.0,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:grccellar/booze_still,face2-5=12000:grccellar/booze_flow
+
+# %grc.appleCiderFluid.1:* (grc.appleCiderFluid.1), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+block:id=%grc.appleCiderFluid.1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:grccellar/booze_still,face2-5=12000:grccellar/booze_flow
+
+# %grc.appleCiderFluid.2:* (grc.appleCiderFluid.2), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+block:id=%grc.appleCiderFluid.2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:grccellar/booze_still,face2-5=12000:grccellar/booze_flow
+
+# %grc.appleCiderFluid.3:* (grc.appleCiderFluid.3), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+block:id=%grc.appleCiderFluid.3,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:grccellar/booze_still,face2-5=12000:grccellar/booze_flow
+
+# %grc.appleCiderFluid.4:* (grc.appleCiderFluid.4), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+block:id=%grc.appleCiderFluid.4,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:grccellar/booze_still,face2-5=12000:grccellar/booze_flow
+
+# %grc.appleCiderFluid.5:* (grc.appleCiderFluid.5), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+block:id=%grc.appleCiderFluid.5,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:grccellar/booze_still,face2-5=12000:grccellar/booze_flow
+
+# %grc.appleCiderFluid.6:* (grc.appleCiderFluid.6), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=growthcraft.cellar.common.block.BlockFluidBooze
+block:id=%grc.appleCiderFluid.6,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:grccellar/booze_still,face2-5=12000:grccellar/booze_flow
+
+# %grc.fishTrap:* (grc.fishTrap), render=(STANDARD), opaque=false,cls=growthcraft.fishtrap.common.block.BlockFishTrap
+block:id=%grc.fishTrap,data=*,stdrot=true,face0-5=0:grcfishtrap/fishtrap
+
+# %grc.naturaFenceRope:* (grc.naturaFenceRope), render=growthcraft.core.client.renderer.RenderFenceRope(CUSTOM), opaque=false,cls=growthcraft.core.common.block.BlockFenceRope
+block:id=%grc.naturaFenceRope,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
+block:id=%grc.naturaFenceRope,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
+block:id=%grc.naturaFenceRope,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
+block:id=%grc.naturaFenceRope,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
+block:id=%grc.naturaFenceRope,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
+block:id=%grc.naturaFenceRope,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
+block:id=%grc.naturaFenceRope,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
+block:id=%grc.naturaFenceRope,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+block:id=%grc.naturaFenceRope,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
+block:id=%grc.naturaFenceRope,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
+block:id=%grc.naturaFenceRope,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
+block:id=%grc.naturaFenceRope,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
+block:id=%grc.naturaFenceRope,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
+block:id=%grc.naturaFenceRope,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lava_still

@@ -1,0 +1,85 @@
+# tfctech 0.2.10-A15
+version:1.7
+modname:tfctech
+
+
+cfgfile:config/tfctech.cfg
+
+
+texturepath:assets/tfctech/textures/blocks/
+texture:id=terrafirmacraft/devices/Crucible Side,filename=assets/terrafirmacraft/textures/blocks/devices/Crucible Side.png
+texture:id=terrafirmacraft/wood/Sycamore Plank,filename=assets/terrafirmacraft/textures/blocks/wood/Sycamore Plank.png
+texture:id=tfctech/devices/Latex Extractor,filename=assets/tfctech/textures/blocks/devices/Latex Extractor.png
+texture:id=tfctech/liquids/Latex_flow,filename=assets/tfctech/textures/blocks/liquids/Latex_flow.png
+texture:id=tfctech/liquids/Latex_still,filename=assets/tfctech/textures/blocks/liquids/Latex_still.png
+texture:id=tfctech/ores/Bauxite Ore,filename=assets/tfctech/textures/blocks/ores/Bauxite Ore.png
+texture:id=tfctech/wood/trees/Hevea Leaves Fancy,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Leaves Fancy.png
+texture:id=tfctech/wood/trees/Hevea Log 0,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log 0.png
+texture:id=tfctech/wood/trees/Hevea Log 1,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log 1.png
+texture:id=tfctech/wood/trees/Hevea Log 2,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log 2.png
+texture:id=tfctech/wood/trees/Hevea Log 3,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log 3.png
+texture:id=tfctech/wood/trees/Hevea Log 4,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log 4.png
+texture:id=tfctech/wood/trees/Hevea Log Side 0,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Side 0.png
+texture:id=tfctech/wood/trees/Hevea Log Side 1,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Side 1.png
+texture:id=tfctech/wood/trees/Hevea Log Side 2,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Side 2.png
+texture:id=tfctech/wood/trees/Hevea Log Side 3,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Side 3.png
+texture:id=tfctech/wood/trees/Hevea Log Side 4,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Side 4.png
+texture:id=tfctech/wood/trees/Hevea Log Top 0,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Top 0.png
+texture:id=tfctech/wood/trees/Hevea Log Top 1,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Top 1.png
+texture:id=tfctech/wood/trees/Hevea Log Top 2,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Top 2.png
+texture:id=tfctech/wood/trees/Hevea Log Top 3,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Top 3.png
+texture:id=tfctech/wood/trees/Hevea Log Top 4,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Log Top 4.png
+texture:id=tfctech/wood/trees/Hevea Sapling,filename=assets/tfctech/textures/blocks/wood/trees/Hevea Sapling.png
+
+
+
+# %Ore4:* (Ore4), render=com.bioxx.tfc.Render.Blocks.RenderOre(CUSTOM), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.terrain.BlockModOre
+block:id=%Ore4,data=*,stdrot=true,face0-5=0:tfctech/ores/Bauxite Ore
+
+# %Latex:* (Latex), render=gregapi.render.RendererBlockFluid(CUSTOM), opaque=false,cls=ua.pp.shurgent.tfctech.blocks.liquids.BlockLatex
+block:id=%Latex,data=*,stdrot=true,face0-1=12000:tfctech/liquids/Latex_still,face2-5=12000:tfctech/liquids/Latex_flow
+
+# %LatexExtractor:* (LatexExtractor), render=ua.pp.shurgent.tfctech.render.RenderLatexExtractor(CUSTOM), opaque=false,cls=ua.pp.shurgent.tfctech.blocks.devices.BlockLatexExtractor
+block:id=%LatexExtractor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:tfctech/devices/Latex Extractor
+
+# %WireDrawBench:* (WireDrawBench), render=ua.pp.shurgent.tfctech.render.RenderWireDrawBench(CUSTOM), opaque=false,cls=ua.pp.shurgent.tfctech.blocks.devices.BlockWireDrawBench
+block:id=%WireDrawBench,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/Sycamore Plank
+
+# %InductionSmelter:* (InductionSmelter), render=ua.pp.shurgent.tfctech.render.RenderInductionSmelter(CUSTOM), opaque=false,cls=ua.pp.shurgent.tfctech.blocks.devices.BlockInductionSmelter
+block:id=%InductionSmelter,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Crucible Side
+
+# %Hevea:* (Hevea), render=(STANDARD), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaNatural
+block:id=%Hevea,data=*,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log Top 0,face2-5=0:tfctech/wood/trees/Hevea Log 0
+
+# %Hevea1:* (Hevea1), render=(STANDARD), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaNatural
+block:id=%Hevea1,data=*,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log Top 1,face2-5=0:tfctech/wood/trees/Hevea Log 1
+
+# %Hevea2:* (Hevea2), render=(STANDARD), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaNatural
+block:id=%Hevea2,data=*,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log Top 2,face2-5=0:tfctech/wood/trees/Hevea Log 2
+
+# %Hevea3:* (Hevea3), render=(STANDARD), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaNatural
+block:id=%Hevea3,data=*,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log Top 3,face2-5=0:tfctech/wood/trees/Hevea Log 3
+
+# %HeveaDead:* (HeveaDead), render=(STANDARD), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaNatural
+block:id=%HeveaDead,data=*,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log Top 4,face2-5=0:tfctech/wood/trees/Hevea Log 4
+
+# %HeveaV:* (HeveaV), render=(STANDARD), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaVert
+block:id=%HeveaV,data=*,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log Top 0,face2-5=0:tfctech/wood/trees/Hevea Log 0
+
+# %HeveaH:* (HeveaH), render=(STANDARD), opaque=true,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaHoriz
+block:id=%HeveaH,data=0,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log 0,face2-3=0:tfctech/wood/trees/Hevea Log Top 0,face4-5=0:tfctech/wood/trees/Hevea Log Side 0
+block:id=%HeveaH,data=1,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log 1,face2-3=0:tfctech/wood/trees/Hevea Log Top 1,face4-5=0:tfctech/wood/trees/Hevea Log Side 1
+block:id=%HeveaH,data=2,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log 2,face2-3=0:tfctech/wood/trees/Hevea Log Top 2,face4-5=0:tfctech/wood/trees/Hevea Log Side 2
+block:id=%HeveaH,data=3,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log 3,face2-3=0:tfctech/wood/trees/Hevea Log Top 3,face4-5=0:tfctech/wood/trees/Hevea Log Side 3
+block:id=%HeveaH,data=4,stdrot=true,face0-1=0:tfctech/wood/trees/Hevea Log 4,face2-3=0:tfctech/wood/trees/Hevea Log Top 4,face4-5=0:tfctech/wood/trees/Hevea Log Side 4
+block:id=%HeveaH,data=8,stdrot=true,face0-3=0:tfctech/wood/trees/Hevea Log Side 0,face4-5=0:tfctech/wood/trees/Hevea Log Top 0
+block:id=%HeveaH,data=9,stdrot=true,face0-3=0:tfctech/wood/trees/Hevea Log Side 1,face4-5=0:tfctech/wood/trees/Hevea Log Top 1
+block:id=%HeveaH,data=10,stdrot=true,face0-3=0:tfctech/wood/trees/Hevea Log Side 2,face4-5=0:tfctech/wood/trees/Hevea Log Top 2
+block:id=%HeveaH,data=11,stdrot=true,face0-3=0:tfctech/wood/trees/Hevea Log Side 3,face4-5=0:tfctech/wood/trees/Hevea Log Top 3
+block:id=%HeveaH,data=12,stdrot=true,face0-3=0:tfctech/wood/trees/Hevea Log Side 4,face4-5=0:tfctech/wood/trees/Hevea Log Top 4
+
+# %HeveaL:* (HeveaL), render=(STANDARD), opaque=false,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaLeaves
+block:id=%HeveaL,data=*,stdrot=true,face0-5=2000:tfctech/wood/trees/Hevea Leaves Fancy
+
+# %HeveaS:* (HeveaS), render=(CROSSEDSQUARES), opaque=false,cls=ua.pp.shurgent.tfctech.blocks.flora.BlockModHeveaSapling
+block:id=%HeveaS,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:tfctech/wood/trees/Hevea Sapling

@@ -1,0 +1,44 @@
+# cookingbook 1.0.140
+version:1.7
+modname:cookingbook
+
+
+cfgfile:config/cookingbook.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %cookingtable:* (cookingtable), render=net.blay09.mods.cookingbook.client.render.CookingTableBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockCookingTable
+boxblock:id=%cookingtable,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9750000238418579,zmin=0.0625,zmax=0.9375,data=*
+
+# %cookingoven:* (cookingoven), render=net.blay09.mods.cookingbook.client.render.OvenBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockCookingOven
+boxblock:id=%cookingoven,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9750000238418579,zmin=0.0625,zmax=0.9375,data=*
+
+# %fridge:* (fridge), render=net.blay09.mods.cookingbook.client.render.FridgeBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockFridge
+boxblock:id=%fridge,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9750000238418579,zmin=0.0625,zmax=0.9375,data=*
+
+# %sink:* (sink), render=net.blay09.mods.cookingbook.client.render.SinkBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockSink
+boxblock:id=%sink,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9750000238418579,zmin=0.0625,zmax=0.9375,data=*
+
+# %toolrack:* (toolrack), render=net.blay09.mods.cookingbook.client.render.ToolRackBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockToolRack
+boxblock:id=%toolrack,xmin=0.0,xmax=1.0,ymin=0.25,ymax=1.0,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%toolrack,xmin=0.0,xmax=1.0,ymin=0.25,ymax=1.0,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%toolrack,xmin=0.875,xmax=1.0,ymin=0.25,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%toolrack,xmin=0.0,xmax=0.125,ymin=0.25,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %toaster:* (toaster), render=net.blay09.mods.cookingbook.client.render.ToasterBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockToaster
+boxblock:id=%toaster,xmin=0.2750000059604645,xmax=0.7250000238418579,ymin=0.0,ymax=0.4000000059604645,zmin=0.2750000059604645,zmax=0.7250000238418579,data=*

@@ -1,0 +1,1106 @@
+# hexcraft 0.13.2
+version:1.7
+modname:hexcraft
+
+
+cfgfile:config/hexcraft.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %blockHexoriumMonolithRed:* (blockHexoriumMonolithRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumMonolithWorldGen
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumMonolithRed,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumMonolithGreen:* (blockHexoriumMonolithGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumMonolithWorldGen
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumMonolithGreen,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumMonolithBlue:* (blockHexoriumMonolithBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumMonolithWorldGen
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumMonolithBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumMonolithWhite:* (blockHexoriumMonolithWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumMonolithWorldGen
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumMonolithWhite,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumMonolithBlack:* (blockHexoriumMonolithBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumMonolithWorldGen
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumMonolithBlack,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumNetherMonolithRed:* (blockHexoriumNetherMonolithRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumNetherMonolith
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumNetherMonolithRed,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumNetherMonolithGreen:* (blockHexoriumNetherMonolithGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumNetherMonolith
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumNetherMonolithGreen,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumNetherMonolithBlue:* (blockHexoriumNetherMonolithBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumNetherMonolith
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumNetherMonolithBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumNetherMonolithWhite:* (blockHexoriumNetherMonolithWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumNetherMonolith
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumNetherMonolithWhite,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumNetherMonolithBlack:* (blockHexoriumNetherMonolithBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumNetherMonolith
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockHexoriumNetherMonolithBlack,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithRed:* (blockEnergizedHexoriumMonolithRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithRed,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithOrange:* (blockEnergizedHexoriumMonolithOrange), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithOrange,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithYellow:* (blockEnergizedHexoriumMonolithYellow), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithYellow,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithLime:* (blockEnergizedHexoriumMonolithLime), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithLime,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithGreen:* (blockEnergizedHexoriumMonolithGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithGreen,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithTurquoise:* (blockEnergizedHexoriumMonolithTurquoise), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithTurquoise,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithCyan:* (blockEnergizedHexoriumMonolithCyan), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithCyan,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithSkyBlue:* (blockEnergizedHexoriumMonolithSkyBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithSkyBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithBlue:* (blockEnergizedHexoriumMonolithBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithBlue,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithPurple:* (blockEnergizedHexoriumMonolithPurple), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithPurple,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithMagenta:* (blockEnergizedHexoriumMonolithMagenta), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithMagenta,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithPink:* (blockEnergizedHexoriumMonolithPink), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithPink,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithWhite:* (blockEnergizedHexoriumMonolithWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithWhite,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithLightGray:* (blockEnergizedHexoriumMonolithLightGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithLightGray,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithGray:* (blockEnergizedHexoriumMonolithGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithGray,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithDarkGray:* (blockEnergizedHexoriumMonolithDarkGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithDarkGray,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithBlack:* (blockEnergizedHexoriumMonolithBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithBlack,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockEnergizedHexoriumMonolithRainbow:* (blockEnergizedHexoriumMonolithRainbow), render=com.celestek.hexcraft.client.renderer.HexModelRendererMonolith(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergizedHexoriumMonolith
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=0
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=1
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=2
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=3
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=4
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=5,data=6,data=7
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.25,ymax=1.0,zmin=0.22920000553131104,zmax=0.7706999778747559,data=8
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.1873999983072281,xmax=0.8126000165939331,ymin=0.0,ymax=0.75,zmin=0.22920000553131104,zmax=0.7706999778747559,data=9
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.25,zmax=1.0,data=10
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.22920000553131104,xmax=0.7706999778747559,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.0,zmax=0.75,data=11
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.25,xmax=1.0,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=12
+boxblock:id=%blockEnergizedHexoriumMonolithRainbow,xmin=0.0,xmax=0.75,ymin=0.1873999983072281,ymax=0.8126000165939331,zmin=0.22920000553131104,zmax=0.7706999778747559,data=13,data=14,data=15
+
+# %blockHexoriumDoorRed:* (blockHexoriumDoorRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorOrange:* (blockHexoriumDoorOrange), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorYellow:* (blockHexoriumDoorYellow), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorLime:* (blockHexoriumDoorLime), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorGreen:* (blockHexoriumDoorGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorTurquoise:* (blockHexoriumDoorTurquoise), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorCyan:* (blockHexoriumDoorCyan), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorSkyBlue:* (blockHexoriumDoorSkyBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorBlue:* (blockHexoriumDoorBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorPurple:* (blockHexoriumDoorPurple), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorPurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorMagenta:* (blockHexoriumDoorMagenta), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorPink:* (blockHexoriumDoorPink), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorPink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhite:* (blockHexoriumDoorWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorLightGray:* (blockHexoriumDoorLightGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorGray:* (blockHexoriumDoorGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorDarkGray:* (blockHexoriumDoorDarkGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorBlack:* (blockHexoriumDoorBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorRainbow:* (blockHexoriumDoorRainbow), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteRed:* (blockHexoriumDoorWhiteRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteOrange:* (blockHexoriumDoorWhiteOrange), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteYellow:* (blockHexoriumDoorWhiteYellow), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteLime:* (blockHexoriumDoorWhiteLime), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteGreen:* (blockHexoriumDoorWhiteGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteTurquoise:* (blockHexoriumDoorWhiteTurquoise), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteCyan:* (blockHexoriumDoorWhiteCyan), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteSkyBlue:* (blockHexoriumDoorWhiteSkyBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteBlue:* (blockHexoriumDoorWhiteBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhitePurple:* (blockHexoriumDoorWhitePurple), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhitePurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteMagenta:* (blockHexoriumDoorWhiteMagenta), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhitePink:* (blockHexoriumDoorWhitePink), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhitePink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteWhite:* (blockHexoriumDoorWhiteWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteLightGray:* (blockHexoriumDoorWhiteLightGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteGray:* (blockHexoriumDoorWhiteGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteDarkGray:* (blockHexoriumDoorWhiteDarkGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteBlack:* (blockHexoriumDoorWhiteBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumDoorWhiteRainbow:* (blockHexoriumDoorWhiteRainbow), render=com.celestek.hexcraft.client.renderer.HexModelRendererDoor(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumDoor
+boxblock:id=%blockHexoriumDoorWhiteRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=*
+
+# %blockHexoriumHatchRed:* (blockHexoriumHatchRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchRed,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchRed,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchOrange:* (blockHexoriumHatchOrange), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchOrange,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchYellow:* (blockHexoriumHatchYellow), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchYellow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchLime:* (blockHexoriumHatchLime), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchLime,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchLime,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchGreen:* (blockHexoriumHatchGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchGreen,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchTurquoise:* (blockHexoriumHatchTurquoise), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchTurquoise,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchCyan:* (blockHexoriumHatchCyan), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchCyan,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchSkyBlue:* (blockHexoriumHatchSkyBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchSkyBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchBlue:* (blockHexoriumHatchBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchPurple:* (blockHexoriumHatchPurple), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchPurple,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchMagenta:* (blockHexoriumHatchMagenta), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchMagenta,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchPink:* (blockHexoriumHatchPink), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchPink,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchPink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchPink,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhite:* (blockHexoriumHatchWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhite,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchLightGray:* (blockHexoriumHatchLightGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchLightGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchGray:* (blockHexoriumHatchGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchDarkGray:* (blockHexoriumHatchDarkGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchDarkGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchBlack:* (blockHexoriumHatchBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchBlack,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchRainbow:* (blockHexoriumHatchRainbow), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchRainbow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteRed:* (blockHexoriumHatchWhiteRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteRed,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteOrange:* (blockHexoriumHatchWhiteOrange), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteOrange,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteYellow:* (blockHexoriumHatchWhiteYellow), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteYellow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteLime:* (blockHexoriumHatchWhiteLime), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteLime,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteGreen:* (blockHexoriumHatchWhiteGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteGreen,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteTurquoise:* (blockHexoriumHatchWhiteTurquoise), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteTurquoise,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteCyan:* (blockHexoriumHatchWhiteCyan), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteCyan,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteSkyBlue:* (blockHexoriumHatchWhiteSkyBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteSkyBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteBlue:* (blockHexoriumHatchWhiteBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteBlue,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhitePurple:* (blockHexoriumHatchWhitePurple), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhitePurple,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteMagenta:* (blockHexoriumHatchWhiteMagenta), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteMagenta,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhitePink:* (blockHexoriumHatchWhitePink), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhitePink,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteWhite:* (blockHexoriumHatchWhiteWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteWhite,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteLightGray:* (blockHexoriumHatchWhiteLightGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteLightGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteGray:* (blockHexoriumHatchWhiteGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteDarkGray:* (blockHexoriumHatchWhiteDarkGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteDarkGray,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteBlack:* (blockHexoriumHatchWhiteBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteBlack,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockHexoriumHatchWhiteRainbow:* (blockHexoriumHatchWhiteRainbow), render=com.celestek.hexcraft.client.renderer.HexModelRendererHatch(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumHatch
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=6
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=14
+boxblock:id=%blockHexoriumHatchWhiteRainbow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %blockTankRender:* (blockTankRender), render=com.celestek.hexcraft.client.renderer.HexMultiRendererTank(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockTankRender
+boxblock:id=%blockTankRender,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=*
+
+# %blockHexoriumCableRed:* (blockHexoriumCableRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableRed,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableOrange:* (blockHexoriumCableOrange), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableOrange,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableYellow:* (blockHexoriumCableYellow), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableYellow,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableLime:* (blockHexoriumCableLime), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableLime,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableGreen:* (blockHexoriumCableGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableGreen,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableTurquoise:* (blockHexoriumCableTurquoise), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableTurquoise,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableCyan:* (blockHexoriumCableCyan), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableCyan,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableSkyBlue:* (blockHexoriumCableSkyBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableSkyBlue,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableBlue:* (blockHexoriumCableBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableBlue,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCablePurple:* (blockHexoriumCablePurple), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCablePurple,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableMagenta:* (blockHexoriumCableMagenta), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableMagenta,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCablePink:* (blockHexoriumCablePink), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCablePink,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableWhite:* (blockHexoriumCableWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableWhite,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableLightGray:* (blockHexoriumCableLightGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableLightGray,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableGray:* (blockHexoriumCableGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableGray,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableDarkGray:* (blockHexoriumCableDarkGray), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableDarkGray,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableBlack:* (blockHexoriumCableBlack), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableBlack,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockHexoriumCableRainbow:* (blockHexoriumCableRainbow), render=com.celestek.hexcraft.client.renderer.HexModelRendererCable(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumCable
+boxblock:id=%blockHexoriumCableRainbow,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.3499999940395355,ymax=0.6499999761581421,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
+
+# %blockEnergyPylon:* (blockEnergyPylon), render=com.celestek.hexcraft.client.renderer.HexModelRendererPylon(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockEnergyPylon
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.875,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%blockEnergyPylon,xmin=0.875,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=0.125,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.875,ymax=1.0,zmin=0.0,zmax=1.0,data=8
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=9
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.875,zmax=1.0,data=10
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.125,data=11
+boxblock:id=%blockEnergyPylon,xmin=0.875,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=12
+boxblock:id=%blockEnergyPylon,xmin=0.0,xmax=0.125,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=13,data=14,data=15
+
+# %blockHexoriumSwitchRedGreen:* (blockHexoriumSwitchRedGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumSwitchRedBlue:* (blockHexoriumSwitchRedBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumSwitchRedWhite:* (blockHexoriumSwitchRedWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumSwitchBlueGreen:* (blockHexoriumSwitchBlueGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumSwitchWhiteRedGreen:* (blockHexoriumSwitchWhiteRedGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumSwitchWhiteRedBlue:* (blockHexoriumSwitchWhiteRedBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumSwitchWhiteRedWhite:* (blockHexoriumSwitchWhiteRedWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumSwitchWhiteBlueGreen:* (blockHexoriumSwitchWhiteBlueGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumSwitch
+
+# %blockHexoriumButtonRed:* (blockHexoriumButtonRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumButtonGreen:* (blockHexoriumButtonGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumButtonBlue:* (blockHexoriumButtonBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumButtonWhite:* (blockHexoriumButtonWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumButtonWhiteRed:* (blockHexoriumButtonWhiteRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumButtonWhiteGreen:* (blockHexoriumButtonWhiteGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumButtonWhiteBlue:* (blockHexoriumButtonWhiteBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumButtonWhiteWhite:* (blockHexoriumButtonWhiteWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererSwitchButton(CUSTOM), opaque=true,cls=com.celestek.hexcraft.block.BlockHexoriumButton
+
+# %blockHexoriumPressurePlateRed:* (blockHexoriumPressurePlateRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15
+
+# %blockHexoriumPressurePlateGreen:* (blockHexoriumPressurePlateGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15
+
+# %blockHexoriumPressurePlateBlue:* (blockHexoriumPressurePlateBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15
+
+# %blockHexoriumPressurePlateWhite:* (blockHexoriumPressurePlateWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15
+
+# %blockHexoriumPressurePlateWhiteRed:* (blockHexoriumPressurePlateWhiteRed), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateWhiteRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateWhiteRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateWhiteRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateWhiteRed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15
+
+# %blockHexoriumPressurePlateWhiteGreen:* (blockHexoriumPressurePlateWhiteGreen), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateWhiteGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateWhiteGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateWhiteGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateWhiteGreen,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15
+
+# %blockHexoriumPressurePlateWhiteBlue:* (blockHexoriumPressurePlateWhiteBlue), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateWhiteBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateWhiteBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateWhiteBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateWhiteBlue,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15
+
+# %blockHexoriumPressurePlateWhiteWhite:* (blockHexoriumPressurePlateWhiteWhite), render=com.celestek.hexcraft.client.renderer.HexModelRendererPressurePlate(CUSTOM), opaque=false,cls=com.celestek.hexcraft.block.BlockHexoriumPressurePlate
+boxblock:id=%blockHexoriumPressurePlateWhiteWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3
+boxblock:id=%blockHexoriumPressurePlateWhiteWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7
+boxblock:id=%blockHexoriumPressurePlateWhiteWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11
+boxblock:id=%blockHexoriumPressurePlateWhiteWhite,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=12,data=13,data=14,data=15

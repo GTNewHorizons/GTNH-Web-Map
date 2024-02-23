@@ -1,0 +1,34 @@
+# cookingbook 1.0.140
+version:1.7
+modname:cookingbook
+
+
+cfgfile:config/cookingbook.cfg
+
+
+texturepath:assets/cookingbook/textures/blocks/
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/log_spruce,filename=assets/minecraft/textures/blocks/log_spruce.png
+texture:id=minecraft/log_spruce_top,filename=assets/minecraft/textures/blocks/log_spruce_top.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+
+
+# %cookingtable:* (cookingtable), render=net.blay09.mods.cookingbook.client.render.CookingTableBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockCookingTable
+block:id=%cookingtable,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_spruce_top,face2-5=0:minecraft/log_spruce
+
+# %cookingoven:* (cookingoven), render=net.blay09.mods.cookingbook.client.render.OvenBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockCookingOven
+block:id=%cookingoven,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %fridge:* (fridge), render=net.blay09.mods.cookingbook.client.render.FridgeBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockFridge
+block:id=%fridge,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %sink:* (sink), render=net.blay09.mods.cookingbook.client.render.SinkBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockSink
+block:id=%sink,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_spruce_top,face2-5=0:minecraft/log_spruce
+
+# %toolrack:* (toolrack), render=net.blay09.mods.cookingbook.client.render.ToolRackBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockToolRack
+block:id=%toolrack,data=0,data=1,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%toolrack,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %toaster:* (toaster), render=net.blay09.mods.cookingbook.client.render.ToasterBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingbook.block.BlockToaster
+block:id=%toaster,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block

@@ -1,0 +1,306 @@
+# customnpcs 1.7.10d
+version:1.7
+modname:customnpcs
+
+
+cfgfile:config/customnpcs.cfg
+
+
+texturepath:assets/customnpcs/textures/blocks/
+texture:id=customnpcs/npcBloodBlock,filename=assets/customnpcs/textures/blocks/npcBloodBlock.png
+texture:id=customnpcs/npcBloodBlock2,filename=assets/customnpcs/textures/blocks/npcBloodBlock2.png
+texture:id=customnpcs/npcBloodBlock3,filename=assets/customnpcs/textures/blocks/npcBloodBlock3.png
+texture:id=customnpcs/npcBorder,filename=assets/customnpcs/textures/blocks/npcBorder.png
+texture:id=customnpcs/npcCrystal,filename=assets/customnpcs/textures/blocks/npcCrystal.png
+texture:id=customnpcs/npcRedstoneBlock,filename=assets/customnpcs/textures/blocks/npcRedstoneBlock.png
+texture:id=customnpcs/npcWaypoint,filename=assets/customnpcs/textures/blocks/npcWaypoint.png
+texture:id=customnpcs/placeholder_0,filename=assets/customnpcs/textures/blocks/placeholder_0.png
+texture:id=customnpcs/placeholder_1,filename=assets/customnpcs/textures/blocks/placeholder_1.png
+texture:id=customnpcs/placeholder_10,filename=assets/customnpcs/textures/blocks/placeholder_10.png
+texture:id=customnpcs/placeholder_11,filename=assets/customnpcs/textures/blocks/placeholder_11.png
+texture:id=customnpcs/placeholder_12,filename=assets/customnpcs/textures/blocks/placeholder_12.png
+texture:id=customnpcs/placeholder_13,filename=assets/customnpcs/textures/blocks/placeholder_13.png
+texture:id=customnpcs/placeholder_14,filename=assets/customnpcs/textures/blocks/placeholder_14.png
+texture:id=customnpcs/placeholder_15,filename=assets/customnpcs/textures/blocks/placeholder_15.png
+texture:id=customnpcs/placeholder_2,filename=assets/customnpcs/textures/blocks/placeholder_2.png
+texture:id=customnpcs/placeholder_3,filename=assets/customnpcs/textures/blocks/placeholder_3.png
+texture:id=customnpcs/placeholder_4,filename=assets/customnpcs/textures/blocks/placeholder_4.png
+texture:id=customnpcs/placeholder_5,filename=assets/customnpcs/textures/blocks/placeholder_5.png
+texture:id=customnpcs/placeholder_6,filename=assets/customnpcs/textures/blocks/placeholder_6.png
+texture:id=customnpcs/placeholder_7,filename=assets/customnpcs/textures/blocks/placeholder_7.png
+texture:id=customnpcs/placeholder_8,filename=assets/customnpcs/textures/blocks/placeholder_8.png
+texture:id=customnpcs/placeholder_9,filename=assets/customnpcs/textures/blocks/placeholder_9.png
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=minecraft/diamond_block,filename=assets/minecraft/textures/blocks/diamond_block.png
+texture:id=minecraft/gold_block,filename=assets/minecraft/textures/blocks/gold_block.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/planks_acacia,filename=assets/minecraft/textures/blocks/planks_acacia.png
+texture:id=minecraft/planks_big_oak,filename=assets/minecraft/textures/blocks/planks_big_oak.png
+texture:id=minecraft/planks_birch,filename=assets/minecraft/textures/blocks/planks_birch.png
+texture:id=minecraft/planks_jungle,filename=assets/minecraft/textures/blocks/planks_jungle.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %npcRedstoneBlock:* (npcRedstoneBlock), render=(STANDARD), opaque=true,cls=noppes.npcs.blocks.BlockNpcRedstone
+block:id=%npcRedstoneBlock,data=*,stdrot=true,face0-5=0:customnpcs/npcRedstoneBlock
+
+# %npcMailbox:* (npcMailbox), render=noppes.npcs.client.renderer.blocks.BlockMailboxRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockMailbox
+block:id=%npcMailbox,data=*,stdrot=true,face0-5=0:minecraft/soul_sand
+
+# %npcWaypoint:* (npcWaypoint), render=(STANDARD), opaque=true,cls=noppes.npcs.blocks.BlockWaypoint
+block:id=%npcWaypoint,data=*,stdrot=true,face0-5=0:customnpcs/npcWaypoint
+
+# %npcBorder:* (npcBorder), render=noppes.npcs.client.renderer.blocks.BlockBorderRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockBorder
+block:id=%npcBorder,data=*,stdrot=true,face0=0:minecraft/iron_block,face1=0:customnpcs/npcBorder,face2-5=0:minecraft/iron_block
+
+# %npcBloodBlock:* (npcBloodBlock), render=noppes.npcs.client.renderer.blocks.BlockBloodRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockBlood
+block:id=%npcBloodBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock,face1=0:customnpcs/npcBloodBlock2,face2=0:customnpcs/npcBloodBlock3,face3=0:customnpcs/npcBloodBlock,face4=0:customnpcs/npcBloodBlock2,face5=0:customnpcs/npcBloodBlock3
+block:id=%npcBloodBlock,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock2,face1=0:customnpcs/npcBloodBlock3,face2=0:customnpcs/npcBloodBlock,face3=0:customnpcs/npcBloodBlock2,face4=0:customnpcs/npcBloodBlock3,face5=0:customnpcs/npcBloodBlock
+block:id=%npcBloodBlock,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock3,face1=0:customnpcs/npcBloodBlock,face2=0:customnpcs/npcBloodBlock2,face3=0:customnpcs/npcBloodBlock3,face4=0:customnpcs/npcBloodBlock,face5=0:customnpcs/npcBloodBlock2
+block:id=%npcBloodBlock,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock,face1=0:customnpcs/npcBloodBlock2,face2=0:customnpcs/npcBloodBlock3,face3=0:customnpcs/npcBloodBlock,face4=0:customnpcs/npcBloodBlock2,face5=0:customnpcs/npcBloodBlock3
+block:id=%npcBloodBlock,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock2,face1=0:customnpcs/npcBloodBlock3,face2=0:customnpcs/npcBloodBlock,face3=0:customnpcs/npcBloodBlock2,face4=0:customnpcs/npcBloodBlock3,face5=0:customnpcs/npcBloodBlock
+block:id=%npcBloodBlock,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock3,face1=0:customnpcs/npcBloodBlock,face2=0:customnpcs/npcBloodBlock2,face3=0:customnpcs/npcBloodBlock3,face4=0:customnpcs/npcBloodBlock,face5=0:customnpcs/npcBloodBlock2
+block:id=%npcBloodBlock,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock,face1=0:customnpcs/npcBloodBlock2,face2=0:customnpcs/npcBloodBlock3,face3=0:customnpcs/npcBloodBlock,face4=0:customnpcs/npcBloodBlock2,face5=0:customnpcs/npcBloodBlock3
+block:id=%npcBloodBlock,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock2,face1=0:customnpcs/npcBloodBlock3,face2=0:customnpcs/npcBloodBlock,face3=0:customnpcs/npcBloodBlock2,face4=0:customnpcs/npcBloodBlock3,face5=0:customnpcs/npcBloodBlock
+block:id=%npcBloodBlock,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock3,face1=0:customnpcs/npcBloodBlock,face2=0:customnpcs/npcBloodBlock2,face3=0:customnpcs/npcBloodBlock3,face4=0:customnpcs/npcBloodBlock,face5=0:customnpcs/npcBloodBlock2
+block:id=%npcBloodBlock,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock,face1=0:customnpcs/npcBloodBlock2,face2=0:customnpcs/npcBloodBlock3,face3=0:customnpcs/npcBloodBlock,face4=0:customnpcs/npcBloodBlock2,face5=0:customnpcs/npcBloodBlock3
+block:id=%npcBloodBlock,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock2,face1=0:customnpcs/npcBloodBlock3,face2=0:customnpcs/npcBloodBlock,face3=0:customnpcs/npcBloodBlock2,face4=0:customnpcs/npcBloodBlock3,face5=0:customnpcs/npcBloodBlock
+block:id=%npcBloodBlock,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock3,face1=0:customnpcs/npcBloodBlock,face2=0:customnpcs/npcBloodBlock2,face3=0:customnpcs/npcBloodBlock3,face4=0:customnpcs/npcBloodBlock,face5=0:customnpcs/npcBloodBlock2
+block:id=%npcBloodBlock,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock,face1=0:customnpcs/npcBloodBlock2,face2=0:customnpcs/npcBloodBlock3,face3=0:customnpcs/npcBloodBlock,face4=0:customnpcs/npcBloodBlock2,face5=0:customnpcs/npcBloodBlock3
+block:id=%npcBloodBlock,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock2,face1=0:customnpcs/npcBloodBlock3,face2=0:customnpcs/npcBloodBlock,face3=0:customnpcs/npcBloodBlock2,face4=0:customnpcs/npcBloodBlock3,face5=0:customnpcs/npcBloodBlock
+block:id=%npcBloodBlock,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock3,face1=0:customnpcs/npcBloodBlock,face2=0:customnpcs/npcBloodBlock2,face3=0:customnpcs/npcBloodBlock3,face4=0:customnpcs/npcBloodBlock,face5=0:customnpcs/npcBloodBlock2
+block:id=%npcBloodBlock,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:customnpcs/npcBloodBlock,face1=0:customnpcs/npcBloodBlock2,face2=0:customnpcs/npcBloodBlock3,face3=0:customnpcs/npcBloodBlock,face4=0:customnpcs/npcBloodBlock2,face5=0:customnpcs/npcBloodBlock3
+
+# %npcBanner:* (npcBanner), render=noppes.npcs.client.renderer.blocks.BlockBannerRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockBanner
+block:id=%npcBanner,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcBanner,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%npcBanner,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+block:id=%npcBanner,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/gold_block
+block:id=%npcBanner,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/diamond_block
+block:id=%npcBanner,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcBanner,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%npcBanner,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+block:id=%npcBanner,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/gold_block
+block:id=%npcBanner,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/diamond_block
+block:id=%npcBanner,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcBanner,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %npcWallBanner:* (npcWallBanner), render=noppes.npcs.client.renderer.blocks.BlockWallBannerRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockWallBanner
+block:id=%npcWallBanner,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcWallBanner,data=1,stdrot=true,face0-5=0:minecraft/stone
+block:id=%npcWallBanner,data=2,stdrot=true,face0-5=0:minecraft/iron_block
+block:id=%npcWallBanner,data=3,stdrot=true,face0-5=0:minecraft/gold_block
+block:id=%npcWallBanner,data=4,stdrot=true,face0-5=0:minecraft/diamond_block
+block:id=%npcWallBanner,data=5,data=6,data=7,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcWallBanner,data=8,stdrot=true,face0-5=0:minecraft/stone
+block:id=%npcWallBanner,data=9,stdrot=true,face0-5=0:minecraft/iron_block
+block:id=%npcWallBanner,data=10,stdrot=true,face0-5=0:minecraft/gold_block
+block:id=%npcWallBanner,data=11,stdrot=true,face0-5=0:minecraft/diamond_block
+block:id=%npcWallBanner,data=12,data=13,data=14,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcWallBanner,data=15,stdrot=true,face0-5=0:minecraft/stone
+
+# %npcTallLamp:* (npcTallLamp), render=noppes.npcs.client.renderer.blocks.BlockTallLampRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockTallLamp
+block:id=%npcTallLamp,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcTallLamp,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%npcTallLamp,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+block:id=%npcTallLamp,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/gold_block
+block:id=%npcTallLamp,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/diamond_block
+block:id=%npcTallLamp,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcTallLamp,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%npcTallLamp,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+block:id=%npcTallLamp,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/gold_block
+block:id=%npcTallLamp,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/diamond_block
+block:id=%npcTallLamp,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcTallLamp,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %npcChair:* (npcChair), render=noppes.npcs.client.renderer.blocks.BlockChairRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockChair
+block:id=%npcChair,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcChair,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+block:id=%npcChair,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
+block:id=%npcChair,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
+block:id=%npcChair,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
+block:id=%npcChair,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+block:id=%npcChair,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %npcCrate:* (npcCrate), render=noppes.npcs.client.renderer.blocks.BlockCrateRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockCrate
+block:id=%npcCrate,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcCrate,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcCrate,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcCrate,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcCrate,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcCrate,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcCrate,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcWeaponRack:* (npcWeaponRack), render=noppes.npcs.client.renderer.blocks.BlockWeaponRackRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockWeaponRack
+block:id=%npcWeaponRack,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcWeaponRack,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcWeaponRack,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcWeaponRack,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcWeaponRack,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcWeaponRack,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcWeaponRack,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcCouchWool:* (npcCouchWool), render=noppes.npcs.client.renderer.blocks.BlockCouchWoolRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockCouchWool
+block:id=%npcCouchWool,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcCouchWool,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcCouchWool,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcCouchWool,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcCouchWool,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcCouchWool,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcCouchWool,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcCouchWood:* (npcCouchWood), render=noppes.npcs.client.renderer.blocks.BlockCouchWoodRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockCouchWood
+block:id=%npcCouchWood,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcCouchWood,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcCouchWood,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcCouchWood,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcCouchWood,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcCouchWood,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcCouchWood,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcTable:* (npcTable), render=noppes.npcs.client.renderer.blocks.BlockTableRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockTable
+block:id=%npcTable,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcTable,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcTable,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcTable,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcTable,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcTable,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcTable,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcStool:* (npcStool), render=noppes.npcs.client.renderer.blocks.BlockStoolRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockStool
+block:id=%npcStool,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcStool,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+block:id=%npcStool,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
+block:id=%npcStool,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
+block:id=%npcStool,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
+block:id=%npcStool,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+block:id=%npcStool,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %npcPlaceholder:* (npcPlaceholder), render=(STANDARD), opaque=true,cls=noppes.npcs.blocks.BlockPlaceholder
+block:id=%npcPlaceholder,data=0,stdrot=true,face0-5=0:customnpcs/placeholder_0
+block:id=%npcPlaceholder,data=1,stdrot=true,face0-5=0:customnpcs/placeholder_1
+block:id=%npcPlaceholder,data=2,stdrot=true,face0-5=0:customnpcs/placeholder_2
+block:id=%npcPlaceholder,data=3,stdrot=true,face0-5=0:customnpcs/placeholder_3
+block:id=%npcPlaceholder,data=4,stdrot=true,face0-5=0:customnpcs/placeholder_4
+block:id=%npcPlaceholder,data=5,stdrot=true,face0-5=0:customnpcs/placeholder_5
+block:id=%npcPlaceholder,data=6,stdrot=true,face0-5=0:customnpcs/placeholder_6
+block:id=%npcPlaceholder,data=7,stdrot=true,face0-5=0:customnpcs/placeholder_7
+block:id=%npcPlaceholder,data=8,stdrot=true,face0-5=0:customnpcs/placeholder_8
+block:id=%npcPlaceholder,data=9,stdrot=true,face0-5=0:customnpcs/placeholder_9
+block:id=%npcPlaceholder,data=10,stdrot=true,face0-5=0:customnpcs/placeholder_10
+block:id=%npcPlaceholder,data=11,stdrot=true,face0-5=0:customnpcs/placeholder_11
+block:id=%npcPlaceholder,data=12,stdrot=true,face0-5=0:customnpcs/placeholder_12
+block:id=%npcPlaceholder,data=13,stdrot=true,face0-5=0:customnpcs/placeholder_13
+block:id=%npcPlaceholder,data=14,stdrot=true,face0-5=0:customnpcs/placeholder_14
+block:id=%npcPlaceholder,data=15,stdrot=true,face0-5=0:customnpcs/placeholder_15
+
+# %npcBigSign:* (npcBigSign), render=noppes.npcs.client.renderer.blocks.BlockBigSignRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockBigSign
+block:id=%npcBigSign,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcBigSign,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcBigSign,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcBigSign,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcBigSign,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcBigSign,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcBigSign,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcBarrel:* (npcBarrel), render=noppes.npcs.client.renderer.blocks.BlockBarrelRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockBarrel
+block:id=%npcBarrel,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcBarrel,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcBarrel,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcBarrel,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcBarrel,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcBarrel,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcBarrel,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcTombstone:* (npcTombstone), render=noppes.npcs.client.renderer.blocks.BlockTombstoneRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockTombstone
+block:id=%npcTombstone,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %npcShelf:* (npcShelf), render=noppes.npcs.client.renderer.blocks.BlockShelfRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockShelf
+block:id=%npcShelf,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcShelf,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcShelf,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcShelf,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcShelf,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcShelf,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcShelf,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcSign:* (npcSign), render=noppes.npcs.client.renderer.blocks.BlockSignRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockSign
+block:id=%npcSign,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcSign,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcSign,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcSign,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcSign,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcSign,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcSign,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcBeam:* (npcBeam), render=noppes.npcs.client.renderer.blocks.BlockBeamRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockBeam
+block:id=%npcBeam,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcBeam,data=1,stdrot=true,face0-5=0:minecraft/planks_spruce
+block:id=%npcBeam,data=2,stdrot=true,face0-5=0:minecraft/planks_birch
+block:id=%npcBeam,data=3,stdrot=true,face0-5=0:minecraft/planks_jungle
+block:id=%npcBeam,data=4,stdrot=true,face0-5=0:minecraft/planks_acacia
+block:id=%npcBeam,data=5,stdrot=true,face0-5=0:minecraft/planks_big_oak
+block:id=%npcBeam,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+
+# %npcBook:* (npcBook), render=noppes.npcs.client.renderer.blocks.BlockBookRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockBook
+block:id=%npcBook,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%npcBook,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+block:id=%npcBook,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
+block:id=%npcBook,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
+block:id=%npcBook,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
+block:id=%npcBook,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+block:id=%npcBook,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %npcPedestal:* (npcPedestal), render=noppes.npcs.client.renderer.blocks.BlockPedestalRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockPedestal
+block:id=%npcPedestal,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcPedestal,data=1,stdrot=true,face0-5=0:minecraft/stone
+block:id=%npcPedestal,data=2,stdrot=true,face0-5=0:minecraft/iron_block
+block:id=%npcPedestal,data=3,stdrot=true,face0-5=0:minecraft/gold_block
+block:id=%npcPedestal,data=4,stdrot=true,face0-5=0:minecraft/diamond_block
+block:id=%npcPedestal,data=5,data=6,data=7,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcPedestal,data=8,stdrot=true,face0-5=0:minecraft/stone
+block:id=%npcPedestal,data=9,stdrot=true,face0-5=0:minecraft/iron_block
+block:id=%npcPedestal,data=10,stdrot=true,face0-5=0:minecraft/gold_block
+block:id=%npcPedestal,data=11,stdrot=true,face0-5=0:minecraft/diamond_block
+block:id=%npcPedestal,data=12,data=13,data=14,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%npcPedestal,data=15,stdrot=true,face0-5=0:minecraft/stone
+
+# %npcCrystalBlock:* (npcCrystalBlock), render=(STANDARD), opaque=false,cls=noppes.npcs.blocks.BlockCrystal
+block:id=%npcCrystalBlock,data=0,stdrot=true,face0-5=12000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=1,stdrot=true,colorMult=D87F33,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=2,stdrot=true,colorMult=B24CD8,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=3,stdrot=true,colorMult=6699D8,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=4,stdrot=true,colorMult=E5E533,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=5,stdrot=true,colorMult=7FCC19,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=6,stdrot=true,colorMult=F27FA5,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=7,stdrot=true,colorMult=4C4C4C,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=8,stdrot=true,colorMult=999999,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=9,stdrot=true,colorMult=4C7F99,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=10,stdrot=true,colorMult=7F3FB2,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=11,stdrot=true,colorMult=334CB2,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=12,stdrot=true,colorMult=664C33,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=13,stdrot=true,colorMult=667F33,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=14,stdrot=true,colorMult=993333,face0-5=17000:customnpcs/npcCrystal
+block:id=%npcCrystalBlock,data=15,stdrot=true,colorMult=191919,face0-5=17000:customnpcs/npcCrystal
+
+# %npcCampfire:* (npcCampfire), render=noppes.npcs.client.renderer.blocks.BlockCampfireRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockCampfire
+block:id=%npcCampfire,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone
+
+# %npcLamp:* (npcLamp), render=noppes.npcs.client.renderer.blocks.BlockLampRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockLamp
+block:id=%npcLamp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
+
+# %npcCandle:* (npcCandle), render=noppes.npcs.client.renderer.blocks.BlockCandleRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockCandle
+block:id=%npcCandle,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
+
+# %npcCampfireUnlit:* (npcCampfireUnlit), render=noppes.npcs.client.renderer.blocks.BlockCampfireRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockCampfire
+block:id=%npcCampfireUnlit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone
+
+# %npcLampUnlit:* (npcLampUnlit), render=noppes.npcs.client.renderer.blocks.BlockCandleRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockCandle
+block:id=%npcLampUnlit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
+
+# %npcCandleUnlit:* (npcCandleUnlit), render=noppes.npcs.client.renderer.blocks.BlockLampRenderer(CUSTOM), opaque=false,cls=noppes.npcs.blocks.BlockLamp
+block:id=%npcCandleUnlit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand

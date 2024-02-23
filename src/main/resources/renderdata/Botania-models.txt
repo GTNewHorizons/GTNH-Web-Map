@@ -24,7 +24,7 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 
 # %flower:* (flower), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockModFlower
 #boxblock:id=%flower,xmin=0.30000001192092896,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.30000001192092896,zmax=0.800000011920929,data=*
-patchblock:id=%flower,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+patchblock:id=%flower,id=%doubleFlower1,id=%doubleFlower2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %altar:* (altar), render=vazkii.botania.client.render.block.RenderAltar(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockAltar
 # FIXME: Box constraints truncated to 0.0<=val<=1.0

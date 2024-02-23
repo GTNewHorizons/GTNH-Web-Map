@@ -1,0 +1,317 @@
+# legends 6.13
+version:1.7
+modname:legends
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %fenceSpruce:* (fenceSpruce), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+customblock:id=%fenceSpruce,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# %fenceBirch:* (fenceBirch), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+customblock:id=%fenceBirch,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# %fenceJungle:* (fenceJungle), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+customblock:id=%fenceJungle,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# %fenceAcacia:* (fenceAcacia), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+customblock:id=%fenceAcacia,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# %fenceDarkOak:* (fenceDarkOak), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+customblock:id=%fenceDarkOak,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# %concreteSlab:* (concreteSlab), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteSlab
+boxblock:id=%concreteSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%concreteSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %concreteSlab2:* (concreteSlab2), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteSlab2
+boxblock:id=%concreteSlab2,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%concreteSlab2,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %concreteStairsWhite:* (concreteStairsWhite), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsWhite,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsOrange:* (concreteStairsOrange), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsOrange,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsMagenta:* (concreteStairsMagenta), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsMagenta,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsLightBlue:* (concreteStairsLightBlue), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsLightBlue,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsYellow:* (concreteStairsYellow), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsYellow,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsLime:* (concreteStairsLime), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsLime,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsPink:* (concreteStairsPink), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsPink,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsGray:* (concreteStairsGray), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsGray,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsLightGray:* (concreteStairsLightGray), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsLightGray,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsCyan:* (concreteStairsCyan), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsCyan,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsPurple:* (concreteStairsPurple), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsPurple,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsBlue:* (concreteStairsBlue), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsBlue,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsBrown:* (concreteStairsBrown), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsBrown,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsGreen:* (concreteStairsGreen), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsGreen,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsRed:* (concreteStairsRed), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsRed,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %concreteStairsBlack:* (concreteStairsBlack), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+customblock:id=%concreteStairsBlack,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %doorOak:* (doorOak), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorOak
+customblock:id=%doorOak,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorSpruce:* (doorSpruce), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorSpruce
+customblock:id=%doorSpruce,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorBirch:* (doorBirch), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorBirch
+customblock:id=%doorBirch,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorJungle:* (doorJungle), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorJungle
+customblock:id=%doorJungle,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorAcacia:* (doorAcacia), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorAcacia
+customblock:id=%doorAcacia,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorDarkOak:* (doorDarkOak), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorDarkOak
+customblock:id=%doorDarkOak,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorMetal:* (doorMetal), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorMetal
+customblock:id=%doorMetal,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorStone:* (doorStone), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorStone
+customblock:id=%doorStone,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorCobblestone:* (doorCobblestone), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorCobbleStone
+customblock:id=%doorCobblestone,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorGlass:* (doorGlass), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorGlass
+customblock:id=%doorGlass,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorStainedGlass:* (doorStainedGlass), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorStainedGlass
+customblock:id=%doorStainedGlass,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %doorBookshelf:* (doorBookshelf), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorBookshelf
+customblock:id=%doorBookshelf,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %purpleCrystal:* (purpleCrystal), render=(CROSSEDSQUARES), opaque=false,cls=com.tihyo.legends.blocks.BlockCrystal
+patchblock:id=%purpleCrystal,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %batPole:* (batPole), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockBatPole
+boxblock:id=%batPole,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
+
+# %pole:* (pole), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockPole
+boxblock:id=%pole,xmin=0.2750000059604645,xmax=0.7250000238418579,ymin=0.0,ymax=1.0,zmin=0.2750000059604645,zmax=0.7250000238418579,data=*
+
+# %poleBlack:* (poleBlack), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockPoleBlack
+boxblock:id=%poleBlack,xmin=0.2750000059604645,xmax=0.7250000238418579,ymin=0.0,ymax=1.0,zmin=0.2750000059604645,zmax=0.7250000238418579,data=0
+
+# %monitor:* (monitor), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockMonitor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%monitor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %microscope:* (microscope), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockMicroscope
+boxblock:id=%microscope,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.800000011920929,zmin=0.0,zmax=1.0,data=*
+
+# %armorStandTile:* (armorStandTile), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockArmorStand
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%armorStandTile,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%armorStandTile,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0E-4,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %armorCaseTile:* (armorCaseTile), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockArmorCase
+boxblock:id=%armorCaseTile,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5625,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%armorCaseTile,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=0.5625,zmin=0.0,zmax=1.0E-4,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %armorSteveTile:* (armorSteveTile), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockArmorSteve
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%armorSteveTile,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%armorSteveTile,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0E-4,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %generator:* (generator), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockGenerator
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%generator,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %generatorOff:* (generatorOff), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockGenerator
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%generatorOff,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %cable:* (cable), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockCable
+boxblock:id=%cable,xmin=0.34375,xmax=0.65625,ymin=0.34375,ymax=0.65625,zmin=0.34375,zmax=0.65625,data=*
+
+# %suitRepairsUnit:* (suitRepairsUnit), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitRepairsUnit
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%suitRepairsUnit,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %suitRepairsUnitOff:* (suitRepairsUnitOff), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitRepairsUnit
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%suitRepairsUnitOff,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicLegendsBlock4:* (dynamicLegendsBlock4), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsStoneSlab
+boxblock:id=%dynamicLegendsBlock4,ymax=0.5,data=0,data=1
+boxblock:id=%dynamicLegendsBlock4,ymin=0.5,data=8,data=9
+
+# %dynamicLegendsBlock5:* (dynamicLegendsBlock5), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockRedSandstoneStairs
+customblock:id=%dynamicLegendsBlock5,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %dynamicLegendsBlock6:* (dynamicLegendsBlock6), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsStoneSlab
+boxblock:id=%dynamicLegendsBlock6,ymax=0.5,data=0,data=1
+boxblock:id=%dynamicLegendsBlock6,ymin=0.5,data=8,data=9
+
+# %dynamicLegendsBlock7:* (dynamicLegendsBlock7), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockRedSandstoneSmoothStairs
+customblock:id=%dynamicLegendsBlock7,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %dynamicLegendsBlock9:* (dynamicLegendsBlock9), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitAssemblyUnit
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicLegendsBlock9,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicLegendsBlock10:* (dynamicLegendsBlock10), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitAssemblyUnit
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicLegendsBlock10,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %altar:* (altar), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockAltar
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%altar,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock1:* (dynamicHorrorBlock1), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffin
+boxblock:id=%dynamicHorrorBlock1,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock2:* (dynamicHorrorBlock2), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffin
+boxblock:id=%dynamicHorrorBlock2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock3:* (dynamicHorrorBlock3), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlack
+boxblock:id=%dynamicHorrorBlock3,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock4:* (dynamicHorrorBlock4), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlack
+boxblock:id=%dynamicHorrorBlock4,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock5:* (dynamicHorrorBlock5), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinGray
+boxblock:id=%dynamicHorrorBlock5,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock6:* (dynamicHorrorBlock6), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinGray
+boxblock:id=%dynamicHorrorBlock6,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock7:* (dynamicHorrorBlock7), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinRed
+boxblock:id=%dynamicHorrorBlock7,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock8:* (dynamicHorrorBlock8), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinRed
+boxblock:id=%dynamicHorrorBlock8,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock9:* (dynamicHorrorBlock9), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlue
+boxblock:id=%dynamicHorrorBlock9,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock10:* (dynamicHorrorBlock10), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlue
+boxblock:id=%dynamicHorrorBlock10,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock11:* (dynamicHorrorBlock11), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinPink
+boxblock:id=%dynamicHorrorBlock11,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicHorrorBlock12:* (dynamicHorrorBlock12), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinPink
+boxblock:id=%dynamicHorrorBlock12,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5600000023841858,zmin=0.0,zmax=1.0,data=*
+
+# %godzillaSkull:* (godzillaSkull), render=(CUSTOM), opaque=false,cls=com.tihyo.kaiju.blocks.trophies.BlockGodzillaSkull
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%godzillaSkull,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %jediHolocron:* (jediHolocron), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockJediHolocron
+boxblock:id=%jediHolocron,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=0.18000000715255737,zmin=0.40625,zmax=0.59375,data=*
+
+# %sithHolocron:* (sithHolocron), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockSithHolocron
+boxblock:id=%sithHolocron,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=0.18000000715255737,zmin=0.40625,zmax=0.59375,data=*
+
+# %jediSpawner:* (jediSpawner), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockJediSpawner
+boxblock:id=%jediSpawner,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=0.18000000715255737,zmin=0.40625,zmax=0.59375,data=*
+
+# %dynamicStarWarsBlock1:* (dynamicStarWarsBlock1), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockSithSpawner
+boxblock:id=%dynamicStarWarsBlock1,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=0.18000000715255737,zmin=0.40625,zmax=0.59375,data=*
+
+# %dynamicStarWarsBlock3:* (dynamicStarWarsBlock3), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCJediArmourer
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicStarWarsBlock3,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicStarWarsBlock4:* (dynamicStarWarsBlock4), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCSithArmourer
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicStarWarsBlock4,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicStarWarsBlock5:* (dynamicStarWarsBlock5), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCJediRecruiter
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicStarWarsBlock5,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicStarWarsBlock6:* (dynamicStarWarsBlock6), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCSithRecruiter
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicStarWarsBlock6,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicStarWarsBlock7:* (dynamicStarWarsBlock7), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockHurikaneanSpawner
+boxblock:id=%dynamicStarWarsBlock7,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=0.18000000715255737,zmin=0.40625,zmax=0.59375,data=*
+
+# %dynamicStarWarsBlock8:* (dynamicStarWarsBlock8), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockSuitForge
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicStarWarsBlock8,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicStarWarsBlock9:* (dynamicStarWarsBlock9), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCWuher
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicStarWarsBlock9,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %dynamicStarWarsBlock10:* (dynamicStarWarsBlock10), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCSmuggler
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%dynamicStarWarsBlock10,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %starkBench:* (starkBench), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockStarkBench
+boxblock:id=%starkBench,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8999999761581421,zmin=0.0,zmax=1.0,data=*
+
+# %batcomputer:* (batcomputer), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputer
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%batcomputer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %batcomputerOn:* (batcomputerOn), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputerOn
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%batcomputerOn,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %batcomputer2:* (batcomputer2), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputer2
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%batcomputer2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %batcomputerOn2:* (batcomputerOn2), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputerOn2
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%batcomputerOn2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %syntheticWeb:* (syntheticWeb), render=(CROSSEDSQUARES), opaque=false,cls=com.tihyo.superheroes.blocks.BlockSyntheticWeb
+patchblock:id=%syntheticWeb,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %mark5Case:* (mark5Case), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockMark5Case
+boxblock:id=%mark5Case,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.20000000298023224,zmin=0.0,zmax=1.0,data=*

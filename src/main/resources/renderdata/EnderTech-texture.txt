@@ -1,0 +1,68 @@
+# EnderTech 1.7.10-0.3.2.405
+version:1.7
+modname:EnderTech
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/endertech/textures/blocks/
+texture:id=endertech/chargepad/ChargePad_Creative_Inactive,filename=assets/endertech/textures/blocks/chargepad/ChargePad_Creative_Inactive.png
+texture:id=endertech/chargepad/ChargePad_Redstone_Inactive,filename=assets/endertech/textures/blocks/chargepad/ChargePad_Redstone_Inactive.png
+texture:id=endertech/chargepad/ChargePad_Resonant_Inactive,filename=assets/endertech/textures/blocks/chargepad/ChargePad_Resonant_Inactive.png
+texture:id=endertech/enderTankController.controllerActive,filename=assets/endertech/textures/blocks/enderTankController.controllerActive.png
+texture:id=endertech/enderTankController.controllerBase,filename=assets/endertech/textures/blocks/enderTankController.controllerBase.png
+texture:id=endertech/enderTankController.controllerIdle,filename=assets/endertech/textures/blocks/enderTankController.controllerIdle.png
+texture:id=endertech/enderTankPart.energyInput,filename=assets/endertech/textures/blocks/enderTankPart.energyInput.png
+texture:id=endertech/enderTankPart.frameCenter,filename=assets/endertech/textures/blocks/enderTankPart.frameCenter.png
+texture:id=endertech/enderTankPart.frameCorner,filename=assets/endertech/textures/blocks/enderTankPart.frameCorner.png
+texture:id=endertech/enderTankPart.frameDefault,filename=assets/endertech/textures/blocks/enderTankPart.frameDefault.png
+texture:id=endertech/enderTankPart.frameEastWest,filename=assets/endertech/textures/blocks/enderTankPart.frameEastWest.png
+texture:id=endertech/enderTankPart.frameNorthSouth,filename=assets/endertech/textures/blocks/enderTankPart.frameNorthSouth.png
+texture:id=endertech/enderTankPart.frameVertical,filename=assets/endertech/textures/blocks/enderTankPart.frameVertical.png
+texture:id=endertech/enderTankPart.valve,filename=assets/endertech/textures/blocks/enderTankPart.valve.png
+texture:id=endertech/healthpad/HealthPad_Creative_Inactive,filename=assets/endertech/textures/blocks/healthpad/HealthPad_Creative_Inactive.png
+texture:id=endertech/healthpad/HealthPad_Redstone_Inactive,filename=assets/endertech/textures/blocks/healthpad/HealthPad_Redstone_Inactive.png
+texture:id=endertech/healthpad/HealthPad_Resonant_Inactive,filename=assets/endertech/textures/blocks/healthpad/HealthPad_Resonant_Inactive.png
+texture:id=endertech/machines/Machine_Creative_Bottom,filename=assets/endertech/textures/blocks/machines/Machine_Creative_Bottom.png
+texture:id=endertech/machines/Machine_Creative_Side,filename=assets/endertech/textures/blocks/machines/Machine_Creative_Side.png
+texture:id=endertech/machines/Machine_Creative_Top,filename=assets/endertech/textures/blocks/machines/Machine_Creative_Top.png
+texture:id=endertech/machines/Machine_Resonant_Bottom,filename=assets/endertech/textures/blocks/machines/Machine_Resonant_Bottom.png
+texture:id=endertech/machines/Machine_Resonant_Side,filename=assets/endertech/textures/blocks/machines/Machine_Resonant_Side.png
+texture:id=endertech/machines/Machine_Resonant_Top,filename=assets/endertech/textures/blocks/machines/Machine_Resonant_Top.png
+texture:id=endertech/multiblockGlass.tank.central,filename=assets/endertech/textures/blocks/multiblockGlass.tank.central.png
+texture:id=thermalexpansion/machine/Machine_Bottom,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Bottom.png
+texture:id=thermalexpansion/machine/Machine_Side,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Side.png
+texture:id=thermalexpansion/machine/Machine_Top,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Top.png
+
+
+
+# %endertech.enderTankPart:* (endertech.enderTankPart), render=(STANDARD), opaque=true,cls=io.endertech.multiblock.block.BlockTankPart
+block:id=%endertech.enderTankPart,data=0,stdrot=true,face0-5=0:endertech/enderTankPart.frameDefault
+block:id=%endertech.enderTankPart,data=1,stdrot=true,face0-5=0:endertech/enderTankPart.frameCorner
+block:id=%endertech.enderTankPart,data=2,stdrot=true,face0-5=0:endertech/enderTankPart.frameCenter
+block:id=%endertech.enderTankPart,data=3,stdrot=true,face0-1=0:endertech/enderTankPart.frameDefault,face2-5=0:endertech/enderTankPart.frameVertical
+block:id=%endertech.enderTankPart,data=4,stdrot=true,face0-3=0:endertech/enderTankPart.frameEastWest,face4-5=0:endertech/enderTankPart.frameDefault
+block:id=%endertech.enderTankPart,data=5,stdrot=true,face0-1=0:endertech/enderTankPart.frameNorthSouth,face2-3=0:endertech/enderTankPart.frameDefault,face4-5=0:endertech/enderTankPart.frameEastWest
+block:id=%endertech.enderTankPart,data=6,stdrot=true,face0-5=0:endertech/enderTankPart.valve
+block:id=%endertech.enderTankPart,data=7,stdrot=true,face0-5=0:endertech/enderTankPart.energyInput
+block:id=%endertech.enderTankPart,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:endertech/enderTankPart.frameDefault,face2-5=0:endertech/enderTankPart.valve
+
+# %endertech.multiblockGlass:* (endertech.multiblockGlass), render=io.endertech.multiblock.renderer.ConnectedTextureRenderer(CUSTOM), opaque=false,cls=io.endertech.multiblock.block.BlockMultiblockGlass
+block:id=%endertech.multiblockGlass,data=*,stdrot=true,face0-5=0:endertech/multiblockGlass.tank.central
+
+# %endertech.enderTankController:* (endertech.enderTankController), render=(CUSTOM), opaque=false,cls=io.endertech.multiblock.block.BlockTankController
+block:id=%endertech.enderTankController,data=0,stdrot=true,face0-5=0:endertech/enderTankController.controllerBase
+block:id=%endertech.enderTankController,data=1,stdrot=true,face0-5=0:endertech/enderTankController.controllerIdle
+block:id=%endertech.enderTankController,data=2,stdrot=true,face0-5=0:endertech/enderTankController.controllerActive
+
+# %chargePad:* (chargePad), render=(STANDARD), opaque=true,cls=io.endertech.block.BlockChargePad
+block:id=%chargePad,data=0,stdrot=true,face0=0:endertech/machines/Machine_Creative_Bottom,face1=0:endertech/machines/Machine_Creative_Top,face2=0:endertech/machines/Machine_Creative_Side,face3=0:endertech/chargepad/ChargePad_Creative_Inactive,face4-5=0:endertech/machines/Machine_Creative_Side
+block:id=%chargePad,data=1,stdrot=true,face0=0:thermalexpansion/machine/Machine_Bottom,face1=0:thermalexpansion/machine/Machine_Top,face2=0:thermalexpansion/machine/Machine_Side,face3=0:endertech/chargepad/ChargePad_Redstone_Inactive,face4-5=0:thermalexpansion/machine/Machine_Side
+block:id=%chargePad,data=2,stdrot=true,face0=0:endertech/machines/Machine_Resonant_Bottom,face1=0:endertech/machines/Machine_Resonant_Top,face2=0:endertech/machines/Machine_Resonant_Side,face3=0:endertech/chargepad/ChargePad_Resonant_Inactive,face4-5=0:endertech/machines/Machine_Resonant_Side
+
+# %healthPad:* (healthPad), render=(STANDARD), opaque=true,cls=io.endertech.block.BlockHealthPad
+block:id=%healthPad,data=0,stdrot=true,face0=0:endertech/machines/Machine_Creative_Bottom,face1=0:endertech/machines/Machine_Creative_Top,face2=0:endertech/machines/Machine_Creative_Side,face3=0:endertech/healthpad/HealthPad_Creative_Inactive,face4-5=0:endertech/machines/Machine_Creative_Side
+block:id=%healthPad,data=1,stdrot=true,face0=0:thermalexpansion/machine/Machine_Bottom,face1=0:thermalexpansion/machine/Machine_Top,face2=0:thermalexpansion/machine/Machine_Side,face3=0:endertech/healthpad/HealthPad_Redstone_Inactive,face4-5=0:thermalexpansion/machine/Machine_Side
+block:id=%healthPad,data=2,stdrot=true,face0=0:endertech/machines/Machine_Resonant_Bottom,face1=0:endertech/machines/Machine_Resonant_Top,face2=0:endertech/machines/Machine_Resonant_Side,face3=0:endertech/healthpad/HealthPad_Resonant_Inactive,face4-5=0:endertech/machines/Machine_Resonant_Side

@@ -1,0 +1,31 @@
+# HardcoreQuesting 4.4.4
+version:1.7
+modname:HardcoreQuesting
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/hardcorequesting/textures/blocks/
+texture:id=hqm/hqmItemBarrel,filename=assets/hqm/textures/blocks/hqmItemBarrel.png
+texture:id=hqm/hqmItemBarrelEmpty,filename=assets/hqm/textures/blocks/hqmItemBarrelEmpty.png
+texture:id=hqm/hqmQuestPortal,filename=assets/hqm/textures/blocks/hqmQuestPortal.png
+texture:id=hqm/hqmQuestPortalMagic,filename=assets/hqm/textures/blocks/hqmQuestPortalMagic.png
+texture:id=hqm/hqmQuestPortalTech,filename=assets/hqm/textures/blocks/hqmQuestPortalTech.png
+texture:id=hqm/hqmQuestPortalTechTop,filename=assets/hqm/textures/blocks/hqmQuestPortalTechTop.png
+texture:id=hqm/hqmQuestTracker,filename=assets/hqm/textures/blocks/hqmQuestTracker.png
+
+
+
+# %item_barrel:* (item_barrel), render=(STANDARD), opaque=true,cls=hardcorequesting.blocks.BlockDelivery
+block:id=%item_barrel,data=*,stdrot=true,face0-1=0:hqm/hqmItemBarrelEmpty,face2-5=0:hqm/hqmItemBarrel
+
+# %quest_tracker:* (quest_tracker), render=(STANDARD), opaque=true,cls=hardcorequesting.blocks.BlockTracker
+block:id=%quest_tracker,data=*,stdrot=true,face0-1=0:hqm/hqmItemBarrelEmpty,face2-5=0:hqm/hqmQuestTracker
+
+# %quest_portal:* (quest_portal), render=(STANDARD), opaque=false,cls=hardcorequesting.blocks.BlockPortal
+block:id=%quest_portal,data=0,stdrot=true,face0-1=0:hqm/hqmItemBarrelEmpty,face2-5=0:hqm/hqmQuestPortal
+block:id=%quest_portal,data=1,stdrot=true,face0-1=0:hqm/hqmQuestPortalTechTop,face2-5=0:hqm/hqmQuestPortalTech
+block:id=%quest_portal,data=2,stdrot=true,face0-5=0:hqm/hqmQuestPortalMagic
+block:id=%quest_portal,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:hqm/hqmItemBarrelEmpty,face2-5=0:hqm/hqmQuestPortal
