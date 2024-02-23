@@ -35,6 +35,7 @@ import org.dynmap.MapManager;
 import org.dynmap.common.BiomeMap;
 import org.dynmap.exporter.OBJExport;
 import org.dynmap.hdmap.textureprocessor.CustomTextureProcessor;
+import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.renderer.*;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.BufferOutputStream;
@@ -1801,8 +1802,9 @@ public class TexturePack {
     private static int parseTextureIndex(HashMap<String,Integer> filetoidx, int srctxtid, String val) throws NumberFormatException {
         int off = val.indexOf(':');
         int txtid = -1;
+        String txt = null;
         if(off > 0) {
-            String txt = val.substring(off+1);
+            txt = val.substring(off+1);
             if(filetoidx.containsKey(txt)) {
                 srctxtid = filetoidx.get(txt);
             }
@@ -1820,7 +1822,11 @@ public class TexturePack {
         /* If we have source texture, need to map values to dynamic ids */
         if((srctxtid >= 0) && (txtid >= 0)) {
             /* Map to assigned ID in global tile table: preserve modifier */
+            int preTxtId = txtid;
             txtid =findOrAddDynamicTile(srctxtid, txtid);
+
+            if(txt != null && preTxtId == 0)
+                GWM_Util.tryRegisterTextureByName(txt, txtid);
         }
         if(srctxtid == TXTID_INVALID) {
             throw new NumberFormatException("Invalid texture ID: no default terrain.png: " + val);

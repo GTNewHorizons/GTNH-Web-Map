@@ -42,6 +42,7 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
 
             ArrayList<RenderPatch[]> boxList = new ArrayList<>();
             ArrayList<Integer> tintList = new ArrayList<>();
+            ArrayList<Integer> textureList = new ArrayList<>();
 
             for(Object o : parts){
                 if(o instanceof HashMap) {
@@ -56,6 +57,13 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
                     int color = GWM_Util.objectToInt(map.get("tint"), 0xFFFFFF);
                     color |= 0xFF000000;
                     tintList.add(color);
+
+                    Object objTexture = map.get("texture");
+                    if(objTexture instanceof String){
+                        String texture = (String)objTexture;
+                        int attemptedLookup = GWM_Util.tryGetTextureIdByName(texture);
+                        textureList.add(attemptedLookup);
+                    }
                 }
             }
 
@@ -65,6 +73,7 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
             if(boxList.size() > 0){
                 RenderPatch[] patches = new RenderPatch[6*boxList.size()];
                 int[] tints = new int[tintList.size()];
+                int[] actualTextures = new int[textureList.size()];
                 for(int i = 0; i < boxList.size(); i++){
                     for(int j = 0; j < 6; j++){
                         RenderPatch[] renderPatches = boxList.get(i);
@@ -84,8 +93,9 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
                         patches[i*6+j] = renderPatches[j];
                     }
                     tints[i] = tintList.get(i);
+                    actualTextures[i] = textureList.get(i);
                 }
-                return new OpenComputers3DPrintedBlockRenderData(mapDataCtx, patches,  tints);
+                return new OpenComputers3DPrintedBlockRenderData(mapDataCtx, patches,  tints, actualTextures);
             }
 
         }
@@ -104,16 +114,25 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
         private final int[] tints;
 
         SimpleColorMultiplier[] multipliers;
+        private final int[] actualTextures;
         TexturePack.HDTextureMap map;
 
-        public OpenComputers3DPrintedBlockRenderData(MapDataContext ctx, RenderPatch[] mesh, int[] tints) {
+        public OpenComputers3DPrintedBlockRenderData(MapDataContext ctx, RenderPatch[] mesh, int[] tints, int[] actualTextures) {
             super(mesh, null, null);
             this.tints = tints;
             multipliers = new SimpleColorMultiplier[tints.length];
-            for(int i = 0; i < tints.length; i++)
-                multipliers[i] = new SimpleColorMultiplier(tints[i]);
-
+            this.actualTextures = actualTextures;
             map = TexturePack.HDTextureMap.getMap(ctx.getBlockTypeID(), ctx.getBlockData(), 0);
+
+            for(int i = 0; i < tints.length; i++) {
+                multipliers[i] = new SimpleColorMultiplier(tints[i]);
+                if(actualTextures[i] < 0){
+                    actualTextures[i] = map.getIndexForFace(6);
+                }
+                if(actualTextures[i] < TexturePack.COLORMOD_MULT_INTERNAL)
+                    actualTextures[i] += TexturePack.COLORMOD_MULT_INTERNAL * TexturePack.COLORMOD_MULTTONED;
+            }
+
         }
 
         @Override
@@ -123,8 +142,9 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
 
         @Override
         public int[] getTextureLayersForPatchId(int patchId) {
-            if(patchId > 6)
-                patchId = 6;
+            if(patchId >= 6) {
+                return new int[]{actualTextures[patchId - 6]};
+            }
             return new int[]{map.getIndexForFace(patchId)};
         }
 

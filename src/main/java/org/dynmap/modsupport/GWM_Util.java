@@ -13,6 +13,7 @@ public class GWM_Util {
     static boolean initialized;
     static Map<String, Integer> blockIdMap;
     static Map<String, Integer> unlocalizedNameToIdMap;
+    static Map<String, Integer> textureNameToIdMap = new HashMap<>();
     public static void initialize(DynmapCore core)
     {
         if(initialized)
@@ -67,5 +68,28 @@ public class GWM_Util {
             // Do nothing
         }
         return def;
+    }
+
+    public static void tryRegisterTextureByName(String name, int id) {
+        if(textureNameToIdMap.get(name) == null)
+            textureNameToIdMap.put(name, id);
+    }
+
+    public static int tryGetTextureIdByName(String name){
+        Integer exact = textureNameToIdMap.get(name);
+        if(exact != null)
+            return exact;
+
+        String noColon = name.replace(':', '/');
+        Integer noColonAttempt = textureNameToIdMap.get(noColon);
+        if(noColonAttempt != null)
+            return noColonAttempt;
+
+        String prependMinecraft = "minecraft/" + noColon;
+        Integer prependMinecraftAttempt = textureNameToIdMap.get(prependMinecraft);
+        if(prependMinecraftAttempt != null)
+            return prependMinecraftAttempt;
+
+        return -1;
     }
 }
