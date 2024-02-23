@@ -1,0 +1,20 @@
+# StevesWorkshop 0.5.1
+version:1.7
+modname:StevesWorkshop
+
+
+cfgfile:config/StevesWorkshop.cfg
+
+
+texturepath:assets/stevesworkshop/textures/blocks/
+texture:id=production/back,filename=assets/production/textures/blocks/back.png
+texture:id=production/bot,filename=assets/production/textures/blocks/bot.png
+texture:id=production/front,filename=assets/production/textures/blocks/front.png
+texture:id=production/left,filename=assets/production/textures/blocks/left.png
+texture:id=production/right,filename=assets/production/textures/blocks/right.png
+texture:id=production/top,filename=assets/production/textures/blocks/top.png
+
+
+
+# %production_table:* (production_table), render=(STANDARD), opaque=true,cls=vswe.production.block.BlockTable
+block:id=%production_table,data=*,stdrot=true,face0=0:production/bot,face1=0:production/top,face2=0:production/back,face3=0:production/front,face4=0:production/right,face5=0:production/left

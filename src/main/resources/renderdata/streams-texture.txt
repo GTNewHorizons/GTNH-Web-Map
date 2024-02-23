@@ -1,0 +1,170 @@
+# streams 0.1.6
+version:1.7
+modname:streams
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/streams/textures/blocks/
+texture:id=minecraft/ice,filename=assets/minecraft/textures/blocks/ice.png
+texture:id=minecraft/lava_flow,filename=assets/minecraft/textures/blocks/lava_flow.png
+texture:id=minecraft/lava_still,filename=assets/minecraft/textures/blocks/lava_still.png
+texture:id=minecraft/water_flow,filename=assets/minecraft/textures/blocks/water_flow.png
+texture:id=minecraft/water_still,filename=assets/minecraft/textures/blocks/water_still.png
+
+
+
+# %river/tile.water/-2/-2:* (river/tile.water/-2/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/-2/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/-2/-1:* (river/tile.water/-2/-1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/-2/-1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/-2/0:* (river/tile.water/-2/0), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/-2/0,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/-2/1:* (river/tile.water/-2/1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/-2/1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/-2/2:* (river/tile.water/-2/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/-2/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/-1/-2:* (river/tile.water/-1/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/-1/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/-1/2:* (river/tile.water/-1/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/-1/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/0/-2:* (river/tile.water/0/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/0/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/0/0:* (river/tile.water/0/0), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/0/0,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/0/2:* (river/tile.water/0/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/0/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/1/-2:* (river/tile.water/1/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/1/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/1/2:* (river/tile.water/1/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/1/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/2/-2:* (river/tile.water/2/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/2/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/2/-1:* (river/tile.water/2/-1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/2/-1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/2/0:* (river/tile.water/2/0), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/2/0,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/2/1:* (river/tile.water/2/1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/2/1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.water/2/2:* (river/tile.water/2/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.water/2/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %river/tile.lava/-2/-2:* (river/tile.lava/-2/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/-2/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/-2/-1:* (river/tile.lava/-2/-1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/-2/-1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/-2/0:* (river/tile.lava/-2/0), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/-2/0,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/-2/1:* (river/tile.lava/-2/1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/-2/1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/-2/2:* (river/tile.lava/-2/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/-2/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/-1/-2:* (river/tile.lava/-1/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/-1/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/-1/2:* (river/tile.lava/-1/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/-1/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/0/-2:* (river/tile.lava/0/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/0/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/0/0:* (river/tile.lava/0/0), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/0/0,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/0/2:* (river/tile.lava/0/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/0/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/1/-2:* (river/tile.lava/1/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/1/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/1/2:* (river/tile.lava/1/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/1/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/2/-2:* (river/tile.lava/2/-2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/2/-2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/2/-1:* (river/tile.lava/2/-1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/2/-1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/2/0:* (river/tile.lava/2/0), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/2/0,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/2/1:* (river/tile.lava/2/1), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/2/1,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/tile.lava/2/2:* (river/tile.lava/2/2), render=(FLUIDS), opaque=false,cls=streams.block.BlockRiver
+block:id=%river/tile.lava/2/2,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %river/ice/-2/-2:* (river/ice/-2/-2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/-2/-2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/-2/-1:* (river/ice/-2/-1), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/-2/-1,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/-2/0:* (river/ice/-2/0), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/-2/0,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/-2/1:* (river/ice/-2/1), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/-2/1,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/-2/2:* (river/ice/-2/2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/-2/2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/-1/-2:* (river/ice/-1/-2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/-1/-2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/-1/2:* (river/ice/-1/2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/-1/2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/0/-2:* (river/ice/0/-2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/0/-2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/0/0:* (river/ice/0/0), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/0/0,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/0/2:* (river/ice/0/2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/0/2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/1/-2:* (river/ice/1/-2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/1/-2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/1/2:* (river/ice/1/2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/1/2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/2/-2:* (river/ice/2/-2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/2/-2,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/2/-1:* (river/ice/2/-1), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/2/-1,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/2/0:* (river/ice/2/0), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/2/0,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/2/1:* (river/ice/2/1), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/2/1,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %river/ice/2/2:* (river/ice/2/2), render=(STANDARD), opaque=false,cls=streams.block.BlockRiverIce
+block:id=%river/ice/2/2,data=*,stdrot=true,face0-5=12000:minecraft/ice

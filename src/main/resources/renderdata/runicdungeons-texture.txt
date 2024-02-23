@@ -1,0 +1,143 @@
+# runicdungeons 1.1.6d
+version:1.7
+modname:runicdungeons
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/runicdungeons/textures/blocks/
+texture:id=runicdungeons/altar_side,filename=assets/runicdungeons/textures/blocks/altar_side.png
+texture:id=runicdungeons/altar_top,filename=assets/runicdungeons/textures/blocks/altar_top.png
+texture:id=runicdungeons/bookshelf_side,filename=assets/runicdungeons/textures/blocks/bookshelf_side.png
+texture:id=runicdungeons/bookshelf_top,filename=assets/runicdungeons/textures/blocks/bookshelf_top.png
+texture:id=runicdungeons/chaotic_sand,filename=assets/runicdungeons/textures/blocks/chaotic_sand.png
+texture:id=runicdungeons/circle,filename=assets/runicdungeons/textures/blocks/circle.png
+texture:id=runicdungeons/circle_3,filename=assets/runicdungeons/textures/blocks/circle_3.png
+texture:id=runicdungeons/circle_5,filename=assets/runicdungeons/textures/blocks/circle_5.png
+texture:id=runicdungeons/compressedObsidian,filename=assets/runicdungeons/textures/blocks/compressedObsidian.png
+texture:id=runicdungeons/cracked_brick,filename=assets/runicdungeons/textures/blocks/cracked_brick.png
+texture:id=runicdungeons/demonic_brick_plain,filename=assets/runicdungeons/textures/blocks/demonic_brick_plain.png
+texture:id=runicdungeons/demonic_brick_runes,filename=assets/runicdungeons/textures/blocks/demonic_brick_runes.png
+texture:id=runicdungeons/keyhole,filename=assets/runicdungeons/textures/blocks/keyhole.png
+texture:id=runicdungeons/mossy_brick,filename=assets/runicdungeons/textures/blocks/mossy_brick.png
+texture:id=runicdungeons/pillarNoneSide,filename=assets/runicdungeons/textures/blocks/pillarNoneSide.png
+texture:id=runicdungeons/pillarTop,filename=assets/runicdungeons/textures/blocks/pillarTop.png
+texture:id=runicdungeons/plain_brick,filename=assets/runicdungeons/textures/blocks/plain_brick.png
+texture:id=runicdungeons/portal,filename=assets/runicdungeons/textures/blocks/portal.png
+texture:id=runicdungeons/rotting_ladder,filename=assets/runicdungeons/textures/blocks/rotting_ladder.png
+texture:id=runicdungeons/rune_lamp,filename=assets/runicdungeons/textures/blocks/rune_lamp.png
+texture:id=runicdungeons/runecracked_brick,filename=assets/runicdungeons/textures/blocks/runecracked_brick.png
+texture:id=runicdungeons/runemossy_brick,filename=assets/runicdungeons/textures/blocks/runemossy_brick.png
+texture:id=runicdungeons/runeplain_brick,filename=assets/runicdungeons/textures/blocks/runeplain_brick.png
+texture:id=runicdungeons/runicSteelBlock,filename=assets/runicdungeons/textures/blocks/runicSteelBlock.png
+texture:id=runicdungeons/runic_glass_0,filename=assets/runicdungeons/textures/blocks/runic_glass_0.png
+texture:id=runicdungeons/spike_trap,filename=assets/runicdungeons/textures/blocks/spike_trap.png
+texture:id=runicdungeons/wither_cracked_brick,filename=assets/runicdungeons/textures/blocks/wither_cracked_brick.png
+texture:id=runicdungeons/wither_glass_0,filename=assets/runicdungeons/textures/blocks/wither_glass_0.png
+texture:id=runicdungeons/wither_mossy_brick,filename=assets/runicdungeons/textures/blocks/wither_mossy_brick.png
+texture:id=runicdungeons/wither_plain_brick,filename=assets/runicdungeons/textures/blocks/wither_plain_brick.png
+texture:id=runicdungeons/wither_runecracked_brick,filename=assets/runicdungeons/textures/blocks/wither_runecracked_brick.png
+texture:id=runicdungeons/wither_runemossy_brick,filename=assets/runicdungeons/textures/blocks/wither_runemossy_brick.png
+texture:id=runicdungeons/wither_runeplain_brick,filename=assets/runicdungeons/textures/blocks/wither_runeplain_brick.png
+
+
+
+# %tile.demonicBrick:* (tile.demonicBrick), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockDemonicBricks
+block:id=%tile.demonicBrick,data=0,stdrot=true,face0-5=0:runicdungeons/demonic_brick_plain
+block:id=%tile.demonicBrick,data=1,stdrot=true,face0-5=0:runicdungeons/demonic_brick_runes
+
+# %tile.survivalRunicBrick:* (tile.survivalRunicBrick), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockSurvivalBricks
+block:id=%tile.survivalRunicBrick,data=0,stdrot=true,face0-5=0:runicdungeons/plain_brick
+block:id=%tile.survivalRunicBrick,data=1,stdrot=true,face0-5=0:runicdungeons/mossy_brick
+block:id=%tile.survivalRunicBrick,data=2,stdrot=true,face0-5=0:runicdungeons/cracked_brick
+block:id=%tile.survivalRunicBrick,data=3,stdrot=true,face0-5=0:runicdungeons/runeplain_brick
+block:id=%tile.survivalRunicBrick,data=4,stdrot=true,face0-5=0:runicdungeons/runemossy_brick
+block:id=%tile.survivalRunicBrick,data=5,stdrot=true,face0-5=0:runicdungeons/runecracked_brick
+
+# %tile.survivalDemonicBrick:* (tile.survivalDemonicBrick), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockSurvivalDemonicBricks
+block:id=%tile.survivalDemonicBrick,data=0,stdrot=true,face0-5=0:runicdungeons/demonic_brick_plain
+block:id=%tile.survivalDemonicBrick,data=1,stdrot=true,face0-5=0:runicdungeons/demonic_brick_runes
+
+# %tile.obsidianRunicBrick:* (tile.obsidianRunicBrick), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockObsidianBricks
+block:id=%tile.obsidianRunicBrick,data=0,stdrot=true,face0-5=0:runicdungeons/plain_brick
+block:id=%tile.obsidianRunicBrick,data=1,stdrot=true,face0-5=0:runicdungeons/mossy_brick
+block:id=%tile.obsidianRunicBrick,data=2,stdrot=true,face0-5=0:runicdungeons/cracked_brick
+block:id=%tile.obsidianRunicBrick,data=3,stdrot=true,face0-5=0:runicdungeons/runeplain_brick
+block:id=%tile.obsidianRunicBrick,data=4,stdrot=true,face0-5=0:runicdungeons/runemossy_brick
+block:id=%tile.obsidianRunicBrick,data=5,stdrot=true,face0-5=0:runicdungeons/runecracked_brick
+
+# %tile.witherRunicBrick:* (tile.witherRunicBrick), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockWitherBricks
+block:id=%tile.witherRunicBrick,data=0,stdrot=true,face0-5=0:runicdungeons/wither_plain_brick
+block:id=%tile.witherRunicBrick,data=1,stdrot=true,face0-5=0:runicdungeons/wither_mossy_brick
+block:id=%tile.witherRunicBrick,data=2,stdrot=true,face0-5=0:runicdungeons/wither_cracked_brick
+block:id=%tile.witherRunicBrick,data=3,stdrot=true,face0-5=0:runicdungeons/wither_runeplain_brick
+block:id=%tile.witherRunicBrick,data=4,stdrot=true,face0-5=0:runicdungeons/wither_runemossy_brick
+block:id=%tile.witherRunicBrick,data=5,stdrot=true,face0-5=0:runicdungeons/wither_runecracked_brick
+
+# %tile.runicBrick:* (tile.runicBrick), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockBricks
+block:id=%tile.runicBrick,data=*,stdrot=true,face0-5=0:runicdungeons/plain_brick
+
+# %tile.runicLamp:* (tile.runicLamp), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockLamp
+block:id=%tile.runicLamp,data=*,stdrot=true,face0-5=0:runicdungeons/rune_lamp
+
+# %tile.runicPillar:* (tile.runicPillar), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockRunicPillar
+block:id=%tile.runicPillar,data=*,stdrot=true,face0-1=0:runicdungeons/pillarTop,face2-5=0:runicdungeons/pillarNoneSide
+
+# %tile.survivalRunicLamp:* (tile.survivalRunicLamp), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockSurvivalLamp
+block:id=%tile.survivalRunicLamp,data=*,stdrot=true,face0-5=0:runicdungeons/rune_lamp
+
+# %tile.survivalRunicPillar:* (tile.survivalRunicPillar), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockSurvivalRunicPillar
+block:id=%tile.survivalRunicPillar,data=*,stdrot=true,face0-1=0:runicdungeons/pillarTop,face2-5=0:runicdungeons/pillarNoneSide
+
+# %tile.runicGlass:* (tile.runicGlass), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockRunicGlass
+block:id=%tile.runicGlass,data=*,stdrot=true,face0-5=12000:runicdungeons/runic_glass_0
+
+# %tile.runicObsidianGlass:* (tile.runicObsidianGlass), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockObsidianGlass
+block:id=%tile.runicObsidianGlass,data=*,stdrot=true,face0-5=12000:runicdungeons/runic_glass_0
+
+# %tile.runicKeyhole:* (tile.runicKeyhole), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockKeystone
+block:id=%tile.runicKeyhole,data=*,stdrot=true,face0-5=0:runicdungeons/keyhole
+
+# %tile.runeSpawner:* (tile.runeSpawner), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockRunicSpawner
+block:id=%tile.runeSpawner,data=*,stdrot=true,face0-1=0:runicdungeons/altar_top,face2-5=0:runicdungeons/altar_side
+
+# %tile.runicCircle:* (tile.runicCircle), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockRunicCircle
+block:id=%tile.runicCircle,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:runicdungeons/circle
+
+# %tile.runicCircleSmall:* (tile.runicCircleSmall), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockSmallCircle
+block:id=%tile.runicCircleSmall,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:runicdungeons/circle_3
+
+# %tile.runicCircleLarge:* (tile.runicCircleLarge), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockLargeCircle
+block:id=%tile.runicCircleLarge,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:runicdungeons/circle_5
+
+# %tile.runicPortal:* (tile.runicPortal), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockRunicPortal
+block:id=%tile.runicPortal,data=*,stdrot=true,face0-5=0:runicdungeons/portal
+
+# %tile.spikeTrap:* (tile.spikeTrap), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockSpikeTrap
+block:id=%tile.spikeTrap,data=*,stdrot=true,face0-5=0:runicdungeons/spike_trap
+
+# %tile.witherRunicGlass:* (tile.witherRunicGlass), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockWitherGlass
+block:id=%tile.witherRunicGlass,data=*,stdrot=true,face0-5=12000:runicdungeons/wither_glass_0
+
+# %tile.chaoticSand:* (tile.chaoticSand), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockChaoticSand
+block:id=%tile.chaoticSand,data=*,stdrot=true,face0-5=0:runicdungeons/chaotic_sand
+
+# %tile.compressedObsidian:* (tile.compressedObsidian), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockCompressedObsidian
+block:id=%tile.compressedObsidian,data=*,stdrot=true,face0-5=0:runicdungeons/compressedObsidian
+
+# %tile.ancientBookshelf:* (tile.ancientBookshelf), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockAncientBookshelf
+block:id=%tile.ancientBookshelf,data=*,stdrot=true,face0-1=0:runicdungeons/bookshelf_top,face2-5=0:runicdungeons/bookshelf_side
+
+# %tile.rottingSlab:* (tile.rottingSlab), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockRottingSlab
+block:id=%tile.rottingSlab,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:runicdungeons/bookshelf_top
+
+# %tile.rottingLadder:* (tile.rottingLadder), render=(STANDARD), opaque=false,cls=mrcomputerghost.runicdungeons.blocks.BlockRottingLadder
+block:id=%tile.rottingLadder,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:runicdungeons/rotting_ladder
+
+# %tile.runicSteelBlock:* (tile.runicSteelBlock), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockCrafting
+block:id=%tile.runicSteelBlock,data=*,stdrot=true,face0-5=0:runicdungeons/runicSteelBlock
+
+# %tile.corridorKeyhole:* (tile.corridorKeyhole), render=(STANDARD), opaque=true,cls=mrcomputerghost.runicdungeons.blocks.BlockCorridorKeystone
+block:id=%tile.corridorKeyhole,data=*,stdrot=true,face0-5=0:runicdungeons/keyhole

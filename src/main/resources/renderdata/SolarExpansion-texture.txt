@@ -1,0 +1,35 @@
+# SolarExpansion 1.6a
+version:1.7
+modname:SolarExpansion
+
+
+cfgfile:config/SolarExpansion.cfg
+
+
+texturepath:assets/solarexpansion/textures/blocks/
+texture:id=solarexpansion/solarPanelAdvanced,filename=assets/solarexpansion/textures/blocks/solarPanelAdvanced.png
+texture:id=solarexpansion/solarPanelHardened,filename=assets/solarexpansion/textures/blocks/solarPanelHardened.png
+texture:id=solarexpansion/solarPanelLeadstone,filename=assets/solarexpansion/textures/blocks/solarPanelLeadstone.png
+texture:id=solarexpansion/solarPanelRedstone,filename=assets/solarexpansion/textures/blocks/solarPanelRedstone.png
+texture:id=solarexpansion/solarPanelResonant,filename=assets/solarexpansion/textures/blocks/solarPanelResonant.png
+texture:id=solarexpansion/solarPanelUltimate,filename=assets/solarexpansion/textures/blocks/solarPanelUltimate.png
+
+
+
+# %solarPanelLeadstone:* (solarPanelLeadstone), render=(CUSTOM), opaque=false,cls=solarexpansion.blocks.SolarPanel$Leadstone
+block:id=%solarPanelLeadstone,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:solarexpansion/solarPanelLeadstone
+
+# %solarPanelHardened:* (solarPanelHardened), render=(CUSTOM), opaque=false,cls=solarexpansion.blocks.SolarPanel$Hardened
+block:id=%solarPanelHardened,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:solarexpansion/solarPanelHardened
+
+# %solarPanelRedstone:* (solarPanelRedstone), render=(CUSTOM), opaque=false,cls=solarexpansion.blocks.SolarPanel$Redstone
+block:id=%solarPanelRedstone,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:solarexpansion/solarPanelRedstone
+
+# %solarPanelResonant:* (solarPanelResonant), render=(CUSTOM), opaque=false,cls=solarexpansion.blocks.SolarPanel$Resonant
+block:id=%solarPanelResonant,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:solarexpansion/solarPanelResonant
+
+# %solarPanelAdvanced:* (solarPanelAdvanced), render=(CUSTOM), opaque=false,cls=solarexpansion.blocks.SolarPanel$Advanced
+block:id=%solarPanelAdvanced,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:solarexpansion/solarPanelAdvanced
+
+# %solarPanelUltimate:* (solarPanelUltimate), render=(CUSTOM), opaque=false,cls=solarexpansion.blocks.SolarPanel$Ultimate
+block:id=%solarPanelUltimate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:solarexpansion/solarPanelUltimate

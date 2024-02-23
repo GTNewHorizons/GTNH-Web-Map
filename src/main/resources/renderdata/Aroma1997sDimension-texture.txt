@@ -1,0 +1,24 @@
+# Aroma1997sDimension 1.0
+version:1.7
+modname:Aroma1997sDimension
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/aroma1997sdimension/textures/blocks/
+texture:id=aroma1997sdimension/miningPortal,filename=assets/aroma1997sdimension/textures/blocks/miningPortal.png
+texture:id=aroma1997sdimension/portalFrame,filename=assets/aroma1997sdimension/textures/blocks/portalFrame.png
+texture:id=aroma1997sdimension/stickyOre,filename=assets/aroma1997sdimension/textures/blocks/stickyOre.png
+
+
+
+# %aromicPortal:* (aromicPortal), render=(STANDARD), opaque=false,cls=aroma1997.world.MiningPortal
+block:id=%aromicPortal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:aroma1997sdimension/miningPortal
+
+# %portalFrame:* (portalFrame), render=(STANDARD), opaque=true,cls=aroma1997.core.block.AromicBlock
+block:id=%portalFrame,data=*,stdrot=true,face0-5=0:aroma1997sdimension/portalFrame
+
+# %stickyOre:* (stickyOre), render=(STANDARD), opaque=true,cls=aroma1997.world.StickyOre
+block:id=%stickyOre,data=*,stdrot=true,face0-5=0:aroma1997sdimension/stickyOre

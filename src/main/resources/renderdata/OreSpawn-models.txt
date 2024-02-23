@@ -1,0 +1,212 @@
+# OreSpawn 1.7.10.20.3
+version:1.7
+modname:OreSpawn
+
+
+cfgfile:config/OreSpawn.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %OreSpawn_PizzaBlock:* (OreSpawn_PizzaBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockPizza
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.1875,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.3125,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.4375,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.5625,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.6875,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.8125,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%OreSpawn_PizzaBlock,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=7
+boxblock:id=%OreSpawn_PizzaBlock,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %OreSpawn_DuctTapeBlock:* (OreSpawn_DuctTapeBlock), render=(STANDARD), opaque=false,cls=danger.orespawn.BlockDuctTape
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.1875,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.3125,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.4375,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.5625,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.6875,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.8125,xmax=0.9375,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=7
+boxblock:id=%OreSpawn_DuctTapeBlock,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0625,zmax=0.9375,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %OreSpawn_OreCrystalCoalBlock:* (OreSpawn_OreCrystalCoalBlock), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.OreCrystal
+patchblock:id=%OreSpawn_OreCrystalCoalBlock,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_OreCrystalCrystalBlock:* (OreSpawn_OreCrystalCrystalBlock), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.OreCrystalCrystal
+patchblock:id=%OreSpawn_OreCrystalCrystalBlock,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_OreTigersEyeBlock:* (OreSpawn_OreTigersEyeBlock), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.OreCrystalCrystal
+patchblock:id=%OreSpawn_OreTigersEyeBlock,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_StrawberryPlant:* (OreSpawn_StrawberryPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockStrawberry
+patchblock:id=%OreSpawn_StrawberryPlant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %OreSpawn_RadishPlant:* (OreSpawn_RadishPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockRadish
+patchblock:id=%OreSpawn_RadishPlant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %OreSpawn_RicePlant:* (OreSpawn_RicePlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockRice
+patchblock:id=%OreSpawn_RicePlant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %OreSpawn_ButterflyPlant:* (OreSpawn_ButterflyPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockButterflyPlant
+patchblock:id=%OreSpawn_ButterflyPlant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %OreSpawn_MothPlant:* (OreSpawn_MothPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockMothPlant
+patchblock:id=%OreSpawn_MothPlant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %OreSpawn_MosquitoPlant:* (OreSpawn_MosquitoPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockMosquitoPlant
+patchblock:id=%OreSpawn_MosquitoPlant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %OreSpawn_FireflyPlant:* (OreSpawn_FireflyPlant), render=(CROPS), opaque=false,cls=danger.orespawn.BlockFireflyPlant
+patchblock:id=%OreSpawn_FireflyPlant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %OreSpawn_CornPlant1:* (OreSpawn_CornPlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+patchblock:id=%OreSpawn_CornPlant1,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CornPlant2:* (OreSpawn_CornPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+patchblock:id=%OreSpawn_CornPlant2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CornPlant3:* (OreSpawn_CornPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+patchblock:id=%OreSpawn_CornPlant3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CornPlant4:* (OreSpawn_CornPlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCorn
+patchblock:id=%OreSpawn_CornPlant4,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_QuinoaPlant1:* (OreSpawn_QuinoaPlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+patchblock:id=%OreSpawn_QuinoaPlant1,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_QuinoaPlant2:* (OreSpawn_QuinoaPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+patchblock:id=%OreSpawn_QuinoaPlant2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_QuinoaPlant3:* (OreSpawn_QuinoaPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+patchblock:id=%OreSpawn_QuinoaPlant3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_QuinoaPlant4:* (OreSpawn_QuinoaPlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockQuinoa
+patchblock:id=%OreSpawn_QuinoaPlant4,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_TomatoPlant1:* (OreSpawn_TomatoPlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+patchblock:id=%OreSpawn_TomatoPlant1,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_TomatoPlant2:* (OreSpawn_TomatoPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+patchblock:id=%OreSpawn_TomatoPlant2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_TomatoPlant3:* (OreSpawn_TomatoPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+patchblock:id=%OreSpawn_TomatoPlant3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_TomatoPlant4:* (OreSpawn_TomatoPlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockTomato
+patchblock:id=%OreSpawn_TomatoPlant4,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_LettucePlant1:* (OreSpawn_LettucePlant1), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+patchblock:id=%OreSpawn_LettucePlant1,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_LettucePlant2:* (OreSpawn_LettucePlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+patchblock:id=%OreSpawn_LettucePlant2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_LettucePlant3:* (OreSpawn_LettucePlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+patchblock:id=%OreSpawn_LettucePlant3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_LettucePlant4:* (OreSpawn_LettucePlant4), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockLettuce
+patchblock:id=%OreSpawn_LettucePlant4,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_ExperiencePlant:* (OreSpawn_ExperiencePlant), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockExperiencePlant
+patchblock:id=%OreSpawn_ExperiencePlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalPlant:* (OreSpawn_CrystalPlant), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalPlant
+patchblock:id=%OreSpawn_CrystalPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalPlant2:* (OreSpawn_CrystalPlant2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalPlant
+patchblock:id=%OreSpawn_CrystalPlant2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalPlant3:* (OreSpawn_CrystalPlant3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalPlant
+patchblock:id=%OreSpawn_CrystalPlant3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_FlowerPink:* (OreSpawn_FlowerPink), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_FlowerPink,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_FlowerBlue:* (OreSpawn_FlowerBlue), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_FlowerBlue,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_FlowerBlack:* (OreSpawn_FlowerBlack), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_FlowerBlack,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_FlowerScary:* (OreSpawn_FlowerScary), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_FlowerScary,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalFlowerRed:* (OreSpawn_CrystalFlowerRed), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_CrystalFlowerRed,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalFlowerGreen:* (OreSpawn_CrystalFlowerGreen), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_CrystalFlowerGreen,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalFlowerBlue:* (OreSpawn_CrystalFlowerBlue), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_CrystalFlowerBlue,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalFlowerYellow:* (OreSpawn_CrystalFlowerYellow), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.MyBlockFlower
+patchblock:id=%OreSpawn_CrystalFlowerYellow,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalLeaves:* (OreSpawn_CrystalLeaves), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalLeaves
+patchblock:id=%OreSpawn_CrystalLeaves,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalLeaves2:* (OreSpawn_CrystalLeaves2), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalLeaves
+patchblock:id=%OreSpawn_CrystalLeaves2,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_CrystalLeaves3:* (OreSpawn_CrystalLeaves3), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.BlockCrystalLeaves
+patchblock:id=%OreSpawn_CrystalLeaves3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_ExtremeTorch:* (OreSpawn_ExtremeTorch), render=(TORCH), opaque=false,cls=danger.orespawn.BlockExtremeTorch
+patchblock:id=%OreSpawn_ExtremeTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%OreSpawn_ExtremeTorch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%OreSpawn_ExtremeTorch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%OreSpawn_ExtremeTorch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%OreSpawn_ExtremeTorch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%OreSpawn_ExtremeTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %OreSpawn_CrystalTorch:* (OreSpawn_CrystalTorch), render=(TORCH), opaque=false,cls=danger.orespawn.BlockCrystalTorch
+patchblock:id=%OreSpawn_CrystalTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%OreSpawn_CrystalTorch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%OreSpawn_CrystalTorch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%OreSpawn_CrystalTorch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%OreSpawn_CrystalTorch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%OreSpawn_CrystalTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %OreSpawn_KrakenRepellent:* (OreSpawn_KrakenRepellent), render=(TORCH), opaque=false,cls=danger.orespawn.KrakenRepellent
+patchblock:id=%OreSpawn_KrakenRepellent,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%OreSpawn_KrakenRepellent,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%OreSpawn_KrakenRepellent,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%OreSpawn_KrakenRepellent,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%OreSpawn_KrakenRepellent,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%OreSpawn_KrakenRepellent,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %OreSpawn_CreeperRepellent:* (OreSpawn_CreeperRepellent), render=(TORCH), opaque=false,cls=danger.orespawn.CreeperRepellent
+patchblock:id=%OreSpawn_CreeperRepellent,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%OreSpawn_CreeperRepellent,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%OreSpawn_CreeperRepellent,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%OreSpawn_CreeperRepellent,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%OreSpawn_CreeperRepellent,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%OreSpawn_CreeperRepellent,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %OreSpawn_Island:* (OreSpawn_Island), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.IslandBlock
+patchblock:id=%OreSpawn_Island,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_KingSpawner:* (OreSpawn_KingSpawner), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.KingSpawnerBlock
+patchblock:id=%OreSpawn_KingSpawner,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_QueenSpawner:* (OreSpawn_QueenSpawner), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.QueenSpawnerBlock
+patchblock:id=%OreSpawn_QueenSpawner,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %OreSpawn_DungeonSpawner:* (OreSpawn_DungeonSpawner), render=(CROSSEDSQUARES), opaque=false,cls=danger.orespawn.DungeonSpawnerBlock
+patchblock:id=%OreSpawn_DungeonSpawner,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*

@@ -1,0 +1,30 @@
+# springboards 0.1
+version:1.7
+modname:springboards
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/springboards/textures/blocks/
+texture:id=springboards/mediumSpringBlock_bottom,filename=assets/springboards/textures/blocks/mediumSpringBlock_bottom.png
+texture:id=springboards/mediumSpringBlock_side,filename=assets/springboards/textures/blocks/mediumSpringBlock_side.png
+texture:id=springboards/mediumSpringBlock_top,filename=assets/springboards/textures/blocks/mediumSpringBlock_top.png
+texture:id=springboards/strongSpringBlock_bottom,filename=assets/springboards/textures/blocks/strongSpringBlock_bottom.png
+texture:id=springboards/strongSpringBlock_side,filename=assets/springboards/textures/blocks/strongSpringBlock_side.png
+texture:id=springboards/strongSpringBlock_top,filename=assets/springboards/textures/blocks/strongSpringBlock_top.png
+texture:id=springboards/weakSpringBlock_bottom,filename=assets/springboards/textures/blocks/weakSpringBlock_bottom.png
+texture:id=springboards/weakSpringBlock_side,filename=assets/springboards/textures/blocks/weakSpringBlock_side.png
+texture:id=springboards/weakSpringBlock_top,filename=assets/springboards/textures/blocks/weakSpringBlock_top.png
+
+
+
+# %weakSpringBlock:* (weakSpringBlock), render=(STANDARD), opaque=false,cls=com.nicklanam.forge.springboards.SpringBlock
+block:id=%weakSpringBlock,data=*,stdrot=true,face0=12000:springboards/weakSpringBlock_bottom,face1=12000:springboards/weakSpringBlock_top,face2-5=12000:springboards/weakSpringBlock_side
+
+# %mediumSpringBlock:* (mediumSpringBlock), render=(STANDARD), opaque=false,cls=com.nicklanam.forge.springboards.SpringBlock
+block:id=%mediumSpringBlock,data=*,stdrot=true,face0=12000:springboards/mediumSpringBlock_bottom,face1=12000:springboards/mediumSpringBlock_top,face2-5=12000:springboards/mediumSpringBlock_side
+
+# %strongSpringBlock:* (strongSpringBlock), render=(STANDARD), opaque=false,cls=com.nicklanam.forge.springboards.SpringBlock
+block:id=%strongSpringBlock,data=*,stdrot=true,face0=12000:springboards/strongSpringBlock_bottom,face1=12000:springboards/strongSpringBlock_top,face2-5=12000:springboards/strongSpringBlock_side

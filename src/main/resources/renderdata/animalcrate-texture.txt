@@ -1,0 +1,17 @@
+# animalcrate 0.01
+version:1.7
+modname:animalcrate
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/animalcrate/textures/blocks/
+texture:id=animalcrate/cratebottom,filename=assets/animalcrate/textures/blocks/cratebottom.png
+texture:id=animalcrate/crateside,filename=assets/animalcrate/textures/blocks/crateside.png
+
+
+
+# %blockcrate:* (blockcrate), render=(STANDARD), opaque=true,cls=taeog.animalcrate.block.BlockCrate
+block:id=%blockcrate,data=*,stdrot=true,face0-1=0:animalcrate/cratebottom,face2-5=0:animalcrate/crateside

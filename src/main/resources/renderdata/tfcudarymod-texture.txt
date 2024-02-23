@@ -1,0 +1,37 @@
+# tfcudarymod 0.2.33
+version:1.7
+modname:tfcudarymod
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/tfcudarymod/textures/blocks/
+texture:id=terrafirmacraft/Invisible,filename=assets/terrafirmacraft/textures/blocks/Invisible.png
+texture:id=tfcudarymod/devices/AnodisingVessel_back,filename=assets/tfcudarymod/textures/blocks/devices/AnodisingVessel_back.png
+texture:id=tfcudarymod/devices/AnodisingVessel_bottom,filename=assets/tfcudarymod/textures/blocks/devices/AnodisingVessel_bottom.png
+texture:id=tfcudarymod/devices/AnodisingVessel_side,filename=assets/tfcudarymod/textures/blocks/devices/AnodisingVessel_side.png
+texture:id=tfcudarymod/devices/AnodisingVessel_top,filename=assets/tfcudarymod/textures/blocks/devices/AnodisingVessel_top.png
+texture:id=tfcudarymod/devices/EvaporatorPan_bottom,filename=assets/tfcudarymod/textures/blocks/devices/EvaporatorPan_bottom.png
+texture:id=tfcudarymod/devices/OreCooker_bottom,filename=assets/tfcudarymod/textures/blocks/devices/OreCooker_bottom.png
+texture:id=tfcudarymod/devices/OreCooker_side,filename=assets/tfcudarymod/textures/blocks/devices/OreCooker_side.png
+texture:id=tfcudarymod/devices/OreCooker_top,filename=assets/tfcudarymod/textures/blocks/devices/OreCooker_top.png
+texture:id=tfcudarymod/materials/Thatch,filename=assets/tfcudarymod/textures/blocks/materials/Thatch.png
+
+
+
+# %tile.Alloy Calculator:* (tile.Alloy Calculator), render=udary.tfcudarymod.render.blocks.devices.RenderAlloyCalculator(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockAlloyCalculator
+block:id=%tile.Alloy Calculator,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/Invisible
+
+# %tile.Anodising Vessel:* (tile.Anodising Vessel), render=udary.tfcudarymod.render.blocks.devices.RenderAnodisingVessel(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockAnodisingVessel
+block:id=%tile.Anodising Vessel,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:tfcudarymod/devices/AnodisingVessel_bottom,face1=0:tfcudarymod/devices/AnodisingVessel_top,face2=0:tfcudarymod/devices/AnodisingVessel_side,face3=0:tfcudarymod/devices/AnodisingVessel_back,face4-5=0:tfcudarymod/devices/AnodisingVessel_side
+
+# %tile.Drying Mat:* (tile.Drying Mat), render=udary.tfcudarymod.render.blocks.materials.RenderDryingMat(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.materials.BlockDryingMat
+block:id=%tile.Drying Mat,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:tfcudarymod/materials/Thatch
+
+# %tile.Evaporator Pan:* (tile.Evaporator Pan), render=udary.tfcudarymod.render.blocks.devices.RenderEvaporatorPan(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockEvaporatorPan
+block:id=%tile.Evaporator Pan,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:tfcudarymod/devices/EvaporatorPan_bottom
+
+# %tile.Ore Cooker:* (tile.Ore Cooker), render=udary.tfcudarymod.render.blocks.devices.RenderOreCooker(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockOreCooker
+block:id=%tile.Ore Cooker,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:tfcudarymod/devices/OreCooker_bottom,face1=0:tfcudarymod/devices/OreCooker_top,face2-5=0:tfcudarymod/devices/OreCooker_side

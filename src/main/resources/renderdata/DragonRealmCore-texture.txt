@@ -1,0 +1,120 @@
+# DragonRealmCore v33a
+version:1.7
+modname:DragonRealmCore
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/dragonrealmcore/textures/blocks/
+texture:id=DragonRealmCore/pipes/3,filename=assets/dragonrealmcore/textures/blocks/pipes/3.png
+texture:id=DragonRealmCore/pipes/4,filename=assets/dragonrealmcore/textures/blocks/pipes/4.png
+texture:id=ReactorCraft/mat/lodestone,filename=assets/reactorcraft/textures/blocks/mat/lodestone.png
+texture:id=dragonrealmcore/enrichedcoal/base,filename=assets/dragonrealmcore/textures/blocks/enrichedcoal/base.png
+texture:id=dragonrealmcore/enrichedcoal/glow,filename=assets/dragonrealmcore/textures/blocks/enrichedcoal/glow.png
+texture:id=dragonrealmcore/geode0,filename=assets/dragonrealmcore/textures/blocks/geode0.png
+texture:id=dragonrealmcore/geode1,filename=assets/dragonrealmcore/textures/blocks/geode1.png
+texture:id=dragonrealmcore/geode2,filename=assets/dragonrealmcore/textures/blocks/geode2.png
+texture:id=dragonrealmcore/geode3,filename=assets/dragonrealmcore/textures/blocks/geode3.png
+texture:id=dragonrealmcore/lptlens,filename=assets/dragonrealmcore/textures/blocks/lptlens.png
+texture:id=dragonrealmcore/r_top,filename=assets/dragonrealmcore/textures/blocks/r_top.png
+texture:id=dragonrealmcore/skystone_base,filename=assets/dragonrealmcore/textures/blocks/skystone_base.png
+texture:id=dragonrealmcore/skystone_glow,filename=assets/dragonrealmcore/textures/blocks/skystone_glow.png
+texture:id=dragonrealmcore/t2laser/bottom,filename=assets/dragonrealmcore/textures/blocks/t2laser/bottom.png
+texture:id=dragonrealmcore/t2laser/side,filename=assets/dragonrealmcore/textures/blocks/t2laser/side.png
+texture:id=dragonrealmcore/t2laser/top,filename=assets/dragonrealmcore/textures/blocks/t2laser/top.png
+texture:id=dragonrealmcore/terrloc_bottom,filename=assets/dragonrealmcore/textures/blocks/terrloc_bottom.png
+texture:id=dragonrealmcore/terrloc_side,filename=assets/dragonrealmcore/textures/blocks/terrloc_side.png
+texture:id=dragonrealmcore/terrloc_top,filename=assets/dragonrealmcore/textures/blocks/terrloc_top.png
+texture:id=dragonrealmcore/tiling/basalt/paver,filename=assets/dragonrealmcore/textures/blocks/tiling/basalt/paver.png
+texture:id=dragonrealmcore/tiling/greatwood/paver,filename=assets/dragonrealmcore/textures/blocks/tiling/greatwood/paver.png
+texture:id=dragonrealmcore/tiling/marble/paver,filename=assets/dragonrealmcore/textures/blocks/tiling/marble/paver.png
+texture:id=dragonrealmcore/tiling/silverwood/paver,filename=assets/dragonrealmcore/textures/blocks/tiling/silverwood/paver.png
+texture:id=dragonrealmcore/woods/greatwood,filename=assets/dragonrealmcore/textures/blocks/woods/greatwood.png
+texture:id=dragonrealmcore/woods/oaks,filename=assets/dragonrealmcore/textures/blocks/woods/oaks.png
+texture:id=dragonrealmcore/woods/thaumwood,filename=assets/dragonrealmcore/textures/blocks/woods/thaumwood.png
+texture:id=geostrata/rfcrystal,filename=assets/geostrata/textures/blocks/rfcrystal.png
+texture:id=hexcraft/glowRainbow,filename=assets/hexcraft/textures/blocks/glowRainbow.png
+texture:id=ic2/fluids/uumatter_flow,filename=assets/ic2/textures/blocks/fluids/uumatter_flow.png
+texture:id=ic2/machine/blockAdvMachine,filename=assets/ic2/textures/blocks/machine/blockAdvMachine.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3058_lpt,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3058_lpt.png
+texture:id=minecraft/glass,filename=assets/minecraft/textures/blocks/glass.png
+texture:id=minecraft/lava_flow,filename=assets/minecraft/textures/blocks/lava_flow.png
+texture:id=minecraft/lava_still,filename=assets/minecraft/textures/blocks/lava_still.png
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# %tile.terrloc:* (tile.terrloc), render=(STANDARD), opaque=true,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockTerritoryLocator
+block:id=%tile.terrloc,data=*,stdrot=true,face0=0:dragonrealmcore/terrloc_bottom,face1=0:dragonrealmcore/terrloc_top,face2-5=0:dragonrealmcore/terrloc_side
+
+# %tile.rangefind:* (tile.rangefind), render=(CUSTOM), opaque=false,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockRangeFinder
+block:id=%tile.rangefind,data=*,stdrot=true,face0=0:dragonrealmcore/terrloc_bottom,face1=0:dragonrealmcore/r_top,face2-5=0:dragonrealmcore/terrloc_side
+
+# %drenrichedcoal:* (drenrichedcoal), render=Reika.DragonRealmCore.Render.GlowSpotRenderer(CUSTOM), opaque=true,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockEnrichedCoal
+block:id=%drenrichedcoal,data=0,stdrot=true,face0-5=12000:dragonrealmcore/enrichedcoal/base
+block:id=%drenrichedcoal,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:dragonrealmcore/enrichedcoal/glow
+
+# %drskystone:* (drskystone), render=Reika.DragonRealmCore.Render.GlowSpotRenderer(CUSTOM), opaque=true,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockSmoothSkystone
+block:id=%drskystone,data=0,stdrot=true,face0-5=12000:dragonrealmcore/skystone_base
+block:id=%drskystone,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:dragonrealmcore/skystone_glow
+
+# %drhexobsidian:* (drhexobsidian), render=Reika.DragonRealmCore.Render.HexObsidianRenderer(CUSTOM), opaque=true,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockHexObsidian
+block:id=%drhexobsidian,data=*,stdrot=true,face0-5=12000:minecraft/obsidian
+
+# %drhexlava:* (drhexlava), render=Reika.DragonRealmCore.Render.HexLavaRenderer(CUSTOM), opaque=false,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockHexLava
+block:id=%drhexlava,data=*,stdrot=true,face0-1=12000:minecraft/lava_still,face2-5=12000:minecraft/lava_flow
+
+# %tile.lensing:* (tile.lensing), render=(STANDARD), opaque=true,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockCrystalGeode
+block:id=%tile.lensing,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:minecraft/stone
+block:id=%tile.lensing,data=8,stdrot=true,face0-5=0:dragonrealmcore/geode0
+block:id=%tile.lensing,data=9,stdrot=true,face0-5=0:dragonrealmcore/geode1
+block:id=%tile.lensing,data=10,stdrot=true,face0-5=0:dragonrealmcore/geode2
+block:id=%tile.lensing,data=11,stdrot=true,face0-5=0:dragonrealmcore/geode3
+block:id=%tile.lensing,data=12,stdrot=true,face0-5=0:dragonrealmcore/geode0
+block:id=%tile.lensing,data=13,stdrot=true,face0-5=0:dragonrealmcore/geode1
+block:id=%tile.lensing,data=14,stdrot=true,face0-5=0:dragonrealmcore/geode2
+block:id=%tile.lensing,data=15,stdrot=true,face0-5=0:dragonrealmcore/geode3
+
+# %tile.lpt:* (tile.lpt), render=(CUSTOM), opaque=false,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockLPT
+block:id=%tile.lpt,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3058_lpt
+
+# %tile.lptrangelens:* (tile.lptrangelens), render=Reika.DragonRealmCore.Render.LPTLensBlockRenderer(CUSTOM), opaque=false,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockLPTRangeLens
+block:id=%tile.lptrangelens,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:dragonrealmcore/lptlens
+
+# %nikolite_laser:* (nikolite_laser), render=buildcraft.silicon.render.RenderLaserBlock(CUSTOM), opaque=false,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockT2Laser
+block:id=%nikolite_laser,data=0,stdrot=true,face0=0:dragonrealmcore/t2laser/top,face1=0:dragonrealmcore/t2laser/bottom,face2-5=0:dragonrealmcore/t2laser/side
+block:id=%nikolite_laser,data=1,stdrot=true,face0=0:dragonrealmcore/t2laser/bottom,face1=0:dragonrealmcore/t2laser/top,face2-5=0:dragonrealmcore/t2laser/side
+block:id=%nikolite_laser,data=2,stdrot=true,face0-1=0:dragonrealmcore/t2laser/side,face2=0:dragonrealmcore/t2laser/top,face3=0:dragonrealmcore/t2laser/bottom,face4-5=0:dragonrealmcore/t2laser/side
+block:id=%nikolite_laser,data=3,stdrot=true,face0-1=0:dragonrealmcore/t2laser/side,face2=0:dragonrealmcore/t2laser/bottom,face3=0:dragonrealmcore/t2laser/top,face4-5=0:dragonrealmcore/t2laser/side
+block:id=%nikolite_laser,data=4,stdrot=true,face0-3=0:dragonrealmcore/t2laser/side,face4=0:dragonrealmcore/t2laser/top,face5=0:dragonrealmcore/t2laser/bottom
+block:id=%nikolite_laser,data=5,stdrot=true,face0-3=0:dragonrealmcore/t2laser/side,face4=0:dragonrealmcore/t2laser/bottom,face5=0:dragonrealmcore/t2laser/top
+block:id=%nikolite_laser,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:dragonrealmcore/t2laser/side
+
+# %mysterious_hex_generator:* (mysterious_hex_generator), render=Reika.DragonRealmCore.Render.HexGeneratorRenderer(CUSTOM), opaque=false,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockT2HexGenerator
+block:id=%mysterious_hex_generator,data=0,stdrot=true,face0-5=12000:ReactorCraft/mat/lodestone
+block:id=%mysterious_hex_generator,data=1,stdrot=true,face0-5=12000:hexcraft/glowRainbow
+block:id=%mysterious_hex_generator,data=2,stdrot=true,face0-5=12000:geostrata/rfcrystal
+
+# %high-tech_hex_generator:* (high-tech_hex_generator), render=Reika.DragonRealmCore.Render.HexGeneratorRenderer(CUSTOM), opaque=false,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockT3HexGenerator
+block:id=%high-tech_hex_generator,data=0,stdrot=true,face0-5=12000:ic2/machine/blockAdvMachine
+block:id=%high-tech_hex_generator,data=1,stdrot=true,face0-5=12000:hexcraft/glowRainbow
+block:id=%high-tech_hex_generator,data=2,stdrot=true,face0-5=12000:ic2/fluids/uumatter_flow
+block:id=%high-tech_hex_generator,data=3,stdrot=true,face0-5=12000:minecraft/glass
+
+# %tile.basalt:* (tile.basalt), render=Reika.DragonRealmCore.ArtificeRock.Render.CTMRenderer(CUSTOM), opaque=true,cls=Reika.DragonRealmCore.ArtificeRock.BlockArtificeRock
+block:id=%tile.basalt,data=0,stdrot=true,face0-5=0:dragonrealmcore/tiling/basalt/paver
+block:id=%tile.basalt,data=1,stdrot=true,face0-5=0:dragonrealmcore/tiling/marble/paver
+block:id=%tile.basalt,data=2,stdrot=true,face0-5=0:dragonrealmcore/tiling/greatwood/paver
+block:id=%tile.basalt,data=3,stdrot=true,face0-5=0:dragonrealmcore/tiling/silverwood/paver
+
+# %tile.decowood:* (tile.decowood), render=(STANDARD), opaque=true,cls=Reika.DragonRealmCore.ItemsAndBlocks.BlockDecorativeWood
+block:id=%tile.decowood,data=0,stdrot=true,face0-5=0:dragonrealmcore/woods/greatwood
+block:id=%tile.decowood,data=1,stdrot=true,face0-5=0:dragonrealmcore/woods/thaumwood
+block:id=%tile.decowood,data=2,stdrot=true,face0-5=0:dragonrealmcore/woods/oaks
+# BuildCraft pipes
+addtotexturemap:mapid=PIPES,key:&item.PipePowerTeleport=0:DragonRealmCore/pipes/3
+addtotexturemap:mapid=PIPES,key:&item.PipePowerTeleportT2=0:DragonRealmCore/pipes/4
+

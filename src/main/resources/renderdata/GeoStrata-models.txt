@@ -1,0 +1,118 @@
+# GeoStrata v33a
+version:1.7
+modname:GeoStrata
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %geostrata_block_vent:* (geostrata_block_vent), render=Reika.GeoStrata.Rendering.VentRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockVent
+
+# %geostrata_block_stair:* (geostrata_block_stair), render=(STAIRS), opaque=false,cls=Reika.GeoStrata.Blocks.BlockGeoStairs
+customblock:id=%geostrata_block_stair,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %geostrata_block_slab:* (geostrata_block_slab), render=(STANDARD), opaque=false,cls=Reika.GeoStrata.Blocks.BlockGeoSlab
+boxblock:id=%geostrata_block_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%geostrata_block_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %geostrata_block_lavarock:* (geostrata_block_lavarock), render=Reika.GeoStrata.Rendering.LavaRockRenderer(CUSTOM), opaque=false,cls=Reika.GeoStrata.Blocks.BlockLavaRock
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8949999809265137,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.90625,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8949999809265137,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.90625,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8949999809265137,zmin=0.0,zmax=1.0,data=8
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.90625,zmin=0.0,zmax=1.0,data=9
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=10
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8949999809265137,zmin=0.0,zmax=1.0,data=12
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.90625,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%geostrata_block_lavarock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=14
+
+# %geostrata_block_creepvine:* (geostrata_block_creepvine), render=Reika.GeoStrata.Rendering.CreepvineRenderer(CUSTOM), opaque=false,cls=Reika.GeoStrata.Blocks.BlockCreepvine
+boxblock:id=%geostrata_block_creepvine,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %geostrata_rock_granite_connected:* (geostrata_rock_granite_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_granite_connected2:* (geostrata_rock_granite_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_basalt_connected:* (geostrata_rock_basalt_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_basalt_connected2:* (geostrata_rock_basalt_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_marble_connected:* (geostrata_rock_marble_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_marble_connected2:* (geostrata_rock_marble_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_limestone_connected:* (geostrata_rock_limestone_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_limestone_connected2:* (geostrata_rock_limestone_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_shale_connected:* (geostrata_rock_shale_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_shale_connected2:* (geostrata_rock_shale_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_sandstone_connected:* (geostrata_rock_sandstone_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_sandstone_connected2:* (geostrata_rock_sandstone_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_pumice_connected:* (geostrata_rock_pumice_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_pumice_connected2:* (geostrata_rock_pumice_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_slate_connected:* (geostrata_rock_slate_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_slate_connected2:* (geostrata_rock_slate_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_gneiss_connected:* (geostrata_rock_gneiss_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_gneiss_connected2:* (geostrata_rock_gneiss_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_peridotite_connected:* (geostrata_rock_peridotite_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_peridotite_connected2:* (geostrata_rock_peridotite_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_quartz_connected:* (geostrata_rock_quartz_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_quartz_connected2:* (geostrata_rock_quartz_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_granulite_connected:* (geostrata_rock_granulite_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_granulite_connected2:* (geostrata_rock_granulite_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_hornfel_connected:* (geostrata_rock_hornfel_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_hornfel_connected2:* (geostrata_rock_hornfel_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_migmatite_connected:* (geostrata_rock_migmatite_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_migmatite_connected2:* (geostrata_rock_migmatite_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_schist_connected:* (geostrata_rock_schist_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_schist_connected2:* (geostrata_rock_schist_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_onyx_connected:* (geostrata_rock_onyx_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_onyx_connected2:* (geostrata_rock_onyx_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_opal_connected:* (geostrata_rock_opal_connected), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock
+
+# %geostrata_rock_opal_connected2:* (geostrata_rock_opal_connected2), render=Reika.GeoStrata.Rendering.ConnectedStoneRenderer(CUSTOM), opaque=true,cls=Reika.GeoStrata.Blocks.BlockConnectedRock

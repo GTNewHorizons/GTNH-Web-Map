@@ -1,0 +1,56 @@
+# BigDoors 1.7.10-1.1.0
+version:1.7
+modname:BigDoors
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/bigdoors/textures/blocks/
+texture:id=BigDoors/doors_acacia_3x3,filename=assets/bigdoors/textures/blocks/doors_acacia_3x3.png
+texture:id=BigDoors/doors_big_oak_3x3,filename=assets/bigdoors/textures/blocks/doors_big_oak_3x3.png
+texture:id=BigDoors/doors_birch_3x3,filename=assets/bigdoors/textures/blocks/doors_birch_3x3.png
+texture:id=BigDoors/doors_iron_3x3,filename=assets/bigdoors/textures/blocks/doors_iron_3x3.png
+texture:id=BigDoors/doors_jungle_3x3,filename=assets/bigdoors/textures/blocks/doors_jungle_3x3.png
+texture:id=BigDoors/doors_oak_3x3,filename=assets/bigdoors/textures/blocks/doors_oak_3x3.png
+texture:id=BigDoors/doors_rusty_3x3,filename=assets/bigdoors/textures/blocks/doors_rusty_3x3.png
+texture:id=BigDoors/doors_spruce_3x3,filename=assets/bigdoors/textures/blocks/doors_spruce_3x3.png
+
+
+
+# %door3x3:* (door3x3), render=com.jaquadro.minecraft.bigdoors.block.render.Door3x3Renderer(CUSTOM), opaque=false,cls=com.jaquadro.minecraft.bigdoors.block.Door3x3
+block:id=%door3x3,data=0,stdrot=true,face0-5=0:BigDoors/doors_oak_3x3
+block:id=%door3x3,data=1,stdrot=true,face0-5=0:BigDoors/doors_spruce_3x3
+block:id=%door3x3,data=2,stdrot=true,face0-5=0:BigDoors/doors_birch_3x3
+block:id=%door3x3,data=3,stdrot=true,face0-5=0:BigDoors/doors_jungle_3x3
+block:id=%door3x3,data=4,stdrot=true,face0-5=0:BigDoors/doors_acacia_3x3
+block:id=%door3x3,data=5,stdrot=true,face0-5=0:BigDoors/doors_big_oak_3x3
+block:id=%door3x3,data=6,stdrot=true,face0-5=0:BigDoors/doors_oak_3x3
+block:id=%door3x3,data=7,stdrot=true,face0-5=0:BigDoors/doors_spruce_3x3
+block:id=%door3x3,data=8,stdrot=true,face0-5=0:BigDoors/doors_birch_3x3
+block:id=%door3x3,data=9,stdrot=true,face0-5=0:BigDoors/doors_jungle_3x3
+block:id=%door3x3,data=10,stdrot=true,face0-5=0:BigDoors/doors_acacia_3x3
+block:id=%door3x3,data=11,stdrot=true,face0-5=0:BigDoors/doors_big_oak_3x3
+block:id=%door3x3,data=12,stdrot=true,face0-5=0:BigDoors/doors_oak_3x3
+block:id=%door3x3,data=13,stdrot=true,face0-5=0:BigDoors/doors_spruce_3x3
+block:id=%door3x3,data=14,stdrot=true,face0-5=0:BigDoors/doors_birch_3x3
+block:id=%door3x3,data=15,stdrot=true,face0-5=0:BigDoors/doors_jungle_3x3
+
+# %metalDoors3x3:* (metalDoors3x3), render=com.jaquadro.minecraft.bigdoors.block.render.Door3x3Renderer(CUSTOM), opaque=false,cls=com.jaquadro.minecraft.bigdoors.block.BlockMetalDoor3x3
+block:id=%metalDoors3x3,data=0,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=1,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3
+block:id=%metalDoors3x3,data=2,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=3,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3
+block:id=%metalDoors3x3,data=4,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=5,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3
+block:id=%metalDoors3x3,data=6,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=7,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3
+block:id=%metalDoors3x3,data=8,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=9,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3
+block:id=%metalDoors3x3,data=10,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=11,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3
+block:id=%metalDoors3x3,data=12,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=13,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3
+block:id=%metalDoors3x3,data=14,stdrot=true,face0-5=0:BigDoors/doors_iron_3x3
+block:id=%metalDoors3x3,data=15,stdrot=true,face0-5=0:BigDoors/doors_rusty_3x3

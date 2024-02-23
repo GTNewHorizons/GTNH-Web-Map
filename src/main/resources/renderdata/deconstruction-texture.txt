@@ -1,0 +1,18 @@
+# deconstruction 3.0.2
+version:1.7
+modname:deconstruction
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/deconstruction/textures/blocks/
+texture:id=deconstruction/Decon_Side,filename=assets/deconstruction/textures/blocks/Decon_Side.png
+texture:id=deconstruction/Decon_Top,filename=assets/deconstruction/textures/blocks/Decon_Top.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+
+
+# %table:* (table), render=(STANDARD), opaque=true,cls=deconstruction.common.block.BlockDeconTable
+block:id=%table,data=*,stdrot=true,face0=0:minecraft/planks_oak,face1=0:deconstruction/Decon_Top,face2-5=0:deconstruction/Decon_Side

@@ -1,0 +1,2151 @@
+# legends 6.13
+version:1.7
+modname:legends
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/legends/textures/blocks/
+texture:id=horror/blank,filename=assets/horror/textures/blocks/blank.png
+texture:id=kaiju/blank,filename=assets/kaiju/textures/blocks/blank.png
+texture:id=kaiju/trophies/skull_tile,filename=assets/kaiju/textures/blocks/trophies/skull_tile.png
+texture:id=legends/batpole,filename=assets/legends/textures/blocks/batpole.png
+texture:id=legends/bauxiteore,filename=assets/legends/textures/blocks/bauxiteore.png
+texture:id=legends/blackironblock,filename=assets/legends/textures/blocks/blackironblock.png
+texture:id=legends/blackironore,filename=assets/legends/textures/blocks/blackironore.png
+texture:id=legends/blank,filename=assets/legends/textures/blocks/blank.png
+texture:id=legends/blue_lantern,filename=assets/legends/textures/blocks/blue_lantern.png
+texture:id=legends/bronzeblock,filename=assets/legends/textures/blocks/bronzeblock.png
+texture:id=legends/cable,filename=assets/legends/textures/blocks/cable.png
+texture:id=legends/cassiteriteore,filename=assets/legends/textures/blocks/cassiteriteore.png
+texture:id=legends/concrete_black,filename=assets/legends/textures/blocks/concrete_black.png
+texture:id=legends/concrete_blue,filename=assets/legends/textures/blocks/concrete_blue.png
+texture:id=legends/concrete_brown,filename=assets/legends/textures/blocks/concrete_brown.png
+texture:id=legends/concrete_cyan,filename=assets/legends/textures/blocks/concrete_cyan.png
+texture:id=legends/concrete_gray,filename=assets/legends/textures/blocks/concrete_gray.png
+texture:id=legends/concrete_green,filename=assets/legends/textures/blocks/concrete_green.png
+texture:id=legends/concrete_light_blue,filename=assets/legends/textures/blocks/concrete_light_blue.png
+texture:id=legends/concrete_light_gray,filename=assets/legends/textures/blocks/concrete_light_gray.png
+texture:id=legends/concrete_lime,filename=assets/legends/textures/blocks/concrete_lime.png
+texture:id=legends/concrete_magenta,filename=assets/legends/textures/blocks/concrete_magenta.png
+texture:id=legends/concrete_orange,filename=assets/legends/textures/blocks/concrete_orange.png
+texture:id=legends/concrete_pink,filename=assets/legends/textures/blocks/concrete_pink.png
+texture:id=legends/concrete_powder_black,filename=assets/legends/textures/blocks/concrete_powder_black.png
+texture:id=legends/concrete_powder_blue,filename=assets/legends/textures/blocks/concrete_powder_blue.png
+texture:id=legends/concrete_powder_brown,filename=assets/legends/textures/blocks/concrete_powder_brown.png
+texture:id=legends/concrete_powder_cyan,filename=assets/legends/textures/blocks/concrete_powder_cyan.png
+texture:id=legends/concrete_powder_gray,filename=assets/legends/textures/blocks/concrete_powder_gray.png
+texture:id=legends/concrete_powder_green,filename=assets/legends/textures/blocks/concrete_powder_green.png
+texture:id=legends/concrete_powder_light_blue,filename=assets/legends/textures/blocks/concrete_powder_light_blue.png
+texture:id=legends/concrete_powder_light_gray,filename=assets/legends/textures/blocks/concrete_powder_light_gray.png
+texture:id=legends/concrete_powder_lime,filename=assets/legends/textures/blocks/concrete_powder_lime.png
+texture:id=legends/concrete_powder_magenta,filename=assets/legends/textures/blocks/concrete_powder_magenta.png
+texture:id=legends/concrete_powder_orange,filename=assets/legends/textures/blocks/concrete_powder_orange.png
+texture:id=legends/concrete_powder_pink,filename=assets/legends/textures/blocks/concrete_powder_pink.png
+texture:id=legends/concrete_powder_purple,filename=assets/legends/textures/blocks/concrete_powder_purple.png
+texture:id=legends/concrete_powder_red,filename=assets/legends/textures/blocks/concrete_powder_red.png
+texture:id=legends/concrete_powder_white,filename=assets/legends/textures/blocks/concrete_powder_white.png
+texture:id=legends/concrete_powder_yellow,filename=assets/legends/textures/blocks/concrete_powder_yellow.png
+texture:id=legends/concrete_purple,filename=assets/legends/textures/blocks/concrete_purple.png
+texture:id=legends/concrete_red,filename=assets/legends/textures/blocks/concrete_red.png
+texture:id=legends/concrete_silver,filename=assets/legends/textures/blocks/concrete_silver.png
+texture:id=legends/concrete_white,filename=assets/legends/textures/blocks/concrete_white.png
+texture:id=legends/concrete_yellow,filename=assets/legends/textures/blocks/concrete_yellow.png
+texture:id=legends/copperore,filename=assets/legends/textures/blocks/copperore.png
+texture:id=legends/crystal,filename=assets/legends/textures/blocks/crystal.png
+texture:id=legends/diode_front,filename=assets/legends/textures/blocks/diode_front.png
+texture:id=legends/diode_front_off,filename=assets/legends/textures/blocks/diode_front_off.png
+texture:id=legends/diode_top,filename=assets/legends/textures/blocks/diode_top.png
+texture:id=legends/door_acacia_lower,filename=assets/legends/textures/blocks/door_acacia_lower.png
+texture:id=legends/door_acacia_upper,filename=assets/legends/textures/blocks/door_acacia_upper.png
+texture:id=legends/door_birch_lower,filename=assets/legends/textures/blocks/door_birch_lower.png
+texture:id=legends/door_birch_upper,filename=assets/legends/textures/blocks/door_birch_upper.png
+texture:id=legends/door_bookshelf_lower,filename=assets/legends/textures/blocks/door_bookshelf_lower.png
+texture:id=legends/door_bookshelf_upper,filename=assets/legends/textures/blocks/door_bookshelf_upper.png
+texture:id=legends/door_cobblestone_lower,filename=assets/legends/textures/blocks/door_cobblestone_lower.png
+texture:id=legends/door_cobblestone_upper,filename=assets/legends/textures/blocks/door_cobblestone_upper.png
+texture:id=legends/door_dark_oak_lower,filename=assets/legends/textures/blocks/door_dark_oak_lower.png
+texture:id=legends/door_dark_oak_upper,filename=assets/legends/textures/blocks/door_dark_oak_upper.png
+texture:id=legends/door_glass_lower,filename=assets/legends/textures/blocks/door_glass_lower.png
+texture:id=legends/door_glass_upper,filename=assets/legends/textures/blocks/door_glass_upper.png
+texture:id=legends/door_iron_lower,filename=assets/legends/textures/blocks/door_iron_lower.png
+texture:id=legends/door_iron_upper,filename=assets/legends/textures/blocks/door_iron_upper.png
+texture:id=legends/door_jungle_lower,filename=assets/legends/textures/blocks/door_jungle_lower.png
+texture:id=legends/door_jungle_upper,filename=assets/legends/textures/blocks/door_jungle_upper.png
+texture:id=legends/door_oak_lower,filename=assets/legends/textures/blocks/door_oak_lower.png
+texture:id=legends/door_oak_upper,filename=assets/legends/textures/blocks/door_oak_upper.png
+texture:id=legends/door_spruce_lower,filename=assets/legends/textures/blocks/door_spruce_lower.png
+texture:id=legends/door_spruce_upper,filename=assets/legends/textures/blocks/door_spruce_upper.png
+texture:id=legends/door_stained_glass_lower,filename=assets/legends/textures/blocks/door_stained_glass_lower.png
+texture:id=legends/door_stained_glass_upper,filename=assets/legends/textures/blocks/door_stained_glass_upper.png
+texture:id=legends/door_stone_lower,filename=assets/legends/textures/blocks/door_stone_lower.png
+texture:id=legends/door_stone_upper,filename=assets/legends/textures/blocks/door_stone_upper.png
+texture:id=legends/fence_acacia,filename=assets/legends/textures/blocks/fence_acacia.png
+texture:id=legends/fence_big_oak,filename=assets/legends/textures/blocks/fence_big_oak.png
+texture:id=legends/fence_birch,filename=assets/legends/textures/blocks/fence_birch.png
+texture:id=legends/fence_jungle,filename=assets/legends/textures/blocks/fence_jungle.png
+texture:id=legends/fence_spruce,filename=assets/legends/textures/blocks/fence_spruce.png
+texture:id=legends/galactic/frozen_stone,filename=assets/legends/textures/blocks/galactic/frozen_stone.png
+texture:id=legends/galactic/mars_rock,filename=assets/legends/textures/blocks/galactic/mars_rock.png
+texture:id=legends/galactic/martian_relic,filename=assets/legends/textures/blocks/galactic/martian_relic.png
+texture:id=legends/green_lantern,filename=assets/legends/textures/blocks/green_lantern.png
+texture:id=legends/heromaker_tile,filename=assets/legends/textures/blocks/heromaker_tile.png
+texture:id=legends/invisible,filename=assets/legends/textures/blocks/invisible.png
+texture:id=legends/lightningblock,filename=assets/legends/textures/blocks/lightningblock.png
+texture:id=legends/lightningblockblue,filename=assets/legends/textures/blocks/lightningblockblue.png
+texture:id=legends/lightningblockred,filename=assets/legends/textures/blocks/lightningblockred.png
+texture:id=legends/lightningore,filename=assets/legends/textures/blocks/lightningore.png
+texture:id=legends/limoniteore,filename=assets/legends/textures/blocks/limoniteore.png
+texture:id=legends/magma,filename=assets/legends/textures/blocks/magma.png
+texture:id=legends/magnesiteore,filename=assets/legends/textures/blocks/magnesiteore.png
+texture:id=legends/microscope_tile,filename=assets/legends/textures/blocks/microscope_tile.png
+texture:id=legends/mob_spawner,filename=assets/legends/textures/blocks/mob_spawner.png
+texture:id=legends/nether_wart_block,filename=assets/legends/textures/blocks/nether_wart_block.png
+texture:id=legends/orange_lantern,filename=assets/legends/textures/blocks/orange_lantern.png
+texture:id=legends/platinumore,filename=assets/legends/textures/blocks/platinumore.png
+texture:id=legends/prismarine_bricks,filename=assets/legends/textures/blocks/prismarine_bricks.png
+texture:id=legends/prismarine_dark,filename=assets/legends/textures/blocks/prismarine_dark.png
+texture:id=legends/prismarine_rough,filename=assets/legends/textures/blocks/prismarine_rough.png
+texture:id=legends/red_lantern,filename=assets/legends/textures/blocks/red_lantern.png
+texture:id=legends/red_nether_brick,filename=assets/legends/textures/blocks/red_nether_brick.png
+texture:id=legends/red_sandstone,filename=assets/legends/textures/blocks/red_sandstone.png
+texture:id=legends/red_sandstone_bottom,filename=assets/legends/textures/blocks/red_sandstone_bottom.png
+texture:id=legends/red_sandstone_carved,filename=assets/legends/textures/blocks/red_sandstone_carved.png
+texture:id=legends/red_sandstone_smooth,filename=assets/legends/textures/blocks/red_sandstone_smooth.png
+texture:id=legends/red_sandstone_top,filename=assets/legends/textures/blocks/red_sandstone_top.png
+texture:id=legends/reddiamondblock,filename=assets/legends/textures/blocks/reddiamondblock.png
+texture:id=legends/reddiamondore,filename=assets/legends/textures/blocks/reddiamondore.png
+texture:id=legends/redironblock,filename=assets/legends/textures/blocks/redironblock.png
+texture:id=legends/redironore,filename=assets/legends/textures/blocks/redironore.png
+texture:id=legends/rubyore,filename=assets/legends/textures/blocks/rubyore.png
+texture:id=legends/sapphireore,filename=assets/legends/textures/blocks/sapphireore.png
+texture:id=legends/sea_lantern,filename=assets/legends/textures/blocks/sea_lantern.png
+texture:id=legends/security_block,filename=assets/legends/textures/blocks/security_block.png
+texture:id=legends/siliconore,filename=assets/legends/textures/blocks/siliconore.png
+texture:id=legends/sphaleriteore,filename=assets/legends/textures/blocks/sphaleriteore.png
+texture:id=legends/stone_andesite,filename=assets/legends/textures/blocks/stone_andesite.png
+texture:id=legends/stone_andesite_smooth,filename=assets/legends/textures/blocks/stone_andesite_smooth.png
+texture:id=legends/stone_diorite,filename=assets/legends/textures/blocks/stone_diorite.png
+texture:id=legends/stone_diorite_smooth,filename=assets/legends/textures/blocks/stone_diorite_smooth.png
+texture:id=legends/stone_granite,filename=assets/legends/textures/blocks/stone_granite.png
+texture:id=legends/stone_granite_smooth,filename=assets/legends/textures/blocks/stone_granite_smooth.png
+texture:id=legends/stone_red_sand,filename=assets/legends/textures/blocks/stone_red_sand.png
+texture:id=legends/stone_red_sand_smooth,filename=assets/legends/textures/blocks/stone_red_sand_smooth.png
+texture:id=legends/titaniumore,filename=assets/legends/textures/blocks/titaniumore.png
+texture:id=legends/tungstenore,filename=assets/legends/textures/blocks/tungstenore.png
+texture:id=minecraft/ice,filename=assets/minecraft/textures/blocks/ice.png
+texture:id=minecraft/web,filename=assets/minecraft/textures/blocks/web.png
+texture:id=starwars/blank,filename=assets/starwars/textures/blocks/blank.png
+texture:id=starwars/blank_tile,filename=assets/starwars/textures/blocks/blank_tile.png
+texture:id=starwars/jediarchives,filename=assets/starwars/textures/blocks/jediarchives.png
+texture:id=starwars/saberbench_tile,filename=assets/starwars/textures/blocks/saberbench_tile.png
+texture:id=starwars/sitharchives,filename=assets/starwars/textures/blocks/sitharchives.png
+texture:id=sum/batcomputer_tile,filename=assets/sum/textures/blocks/batcomputer_tile.png
+texture:id=sum/blank,filename=assets/sum/textures/blocks/blank.png
+texture:id=sum/gammablock,filename=assets/sum/textures/blocks/gammablock.png
+texture:id=sum/heromaker_tile,filename=assets/sum/textures/blocks/heromaker_tile.png
+texture:id=sum/kryptoniteore,filename=assets/sum/textures/blocks/kryptoniteore.png
+texture:id=sum/palladiumore,filename=assets/sum/textures/blocks/palladiumore.png
+texture:id=sum/vibraniumore,filename=assets/sum/textures/blocks/vibraniumore.png
+
+
+
+# %granite:* (granite), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockGranite
+block:id=%granite,data=*,stdrot=true,face0-5=0:legends/stone_granite
+
+# %graniteSmooth:* (graniteSmooth), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockGranitePolished
+block:id=%graniteSmooth,data=*,stdrot=true,face0-5=0:legends/stone_granite_smooth
+
+# %diorite:* (diorite), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockDiorite
+block:id=%diorite,data=*,stdrot=true,face0-5=0:legends/stone_diorite
+
+# %dioriteSmooth:* (dioriteSmooth), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockDioritePolished
+block:id=%dioriteSmooth,data=*,stdrot=true,face0-5=0:legends/stone_diorite_smooth
+
+# %andesite:* (andesite), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockAndesite
+block:id=%andesite,data=*,stdrot=true,face0-5=0:legends/stone_andesite
+
+# %andesiteSmooth:* (andesiteSmooth), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockAndesitePolished
+block:id=%andesiteSmooth,data=*,stdrot=true,face0-5=0:legends/stone_andesite_smooth
+
+# %prismarine:* (prismarine), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockPrismarine
+block:id=%prismarine,data=*,stdrot=true,face0-5=0:legends/prismarine_rough
+
+# %prismarineBricks:* (prismarineBricks), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockPrismarineBricks
+block:id=%prismarineBricks,data=*,stdrot=true,face0-5=0:legends/prismarine_bricks
+
+# %prismarineDark:* (prismarineDark), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockPrismarineDark
+block:id=%prismarineDark,data=*,stdrot=true,face0-5=0:legends/prismarine_dark
+
+# %seaLantern:* (seaLantern), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockSeaLantern
+block:id=%seaLantern,data=*,stdrot=true,face0-5=0:legends/sea_lantern
+
+# %fenceSpruce:* (fenceSpruce), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+block:id=%fenceSpruce,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:legends/fence_spruce
+
+# %fenceBirch:* (fenceBirch), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+block:id=%fenceBirch,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:legends/fence_birch
+
+# %fenceJungle:* (fenceJungle), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+block:id=%fenceJungle,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:legends/fence_jungle
+
+# %fenceAcacia:* (fenceAcacia), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+block:id=%fenceAcacia,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:legends/fence_acacia
+
+# %fenceDarkOak:* (fenceDarkOak), render=(FENCE), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsFence
+block:id=%fenceDarkOak,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:legends/fence_big_oak
+
+# %concrete:* (concrete), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockConcrete
+block:id=%concrete,data=0,stdrot=true,face0-5=0:legends/concrete_white
+block:id=%concrete,data=1,stdrot=true,face0-5=0:legends/concrete_orange
+block:id=%concrete,data=2,stdrot=true,face0-5=0:legends/concrete_magenta
+block:id=%concrete,data=3,stdrot=true,face0-5=0:legends/concrete_light_blue
+block:id=%concrete,data=4,stdrot=true,face0-5=0:legends/concrete_yellow
+block:id=%concrete,data=5,stdrot=true,face0-5=0:legends/concrete_lime
+block:id=%concrete,data=6,stdrot=true,face0-5=0:legends/concrete_pink
+block:id=%concrete,data=7,stdrot=true,face0-5=0:legends/concrete_gray
+block:id=%concrete,data=8,stdrot=true,face0-5=0:legends/concrete_light_gray
+block:id=%concrete,data=9,stdrot=true,face0-5=0:legends/concrete_cyan
+block:id=%concrete,data=10,stdrot=true,face0-5=0:legends/concrete_purple
+block:id=%concrete,data=11,stdrot=true,face0-5=0:legends/concrete_blue
+block:id=%concrete,data=12,stdrot=true,face0-5=0:legends/concrete_brown
+block:id=%concrete,data=13,stdrot=true,face0-5=0:legends/concrete_green
+block:id=%concrete,data=14,stdrot=true,face0-5=0:legends/concrete_red
+block:id=%concrete,data=15,stdrot=true,face0-5=0:legends/concrete_black
+
+# %concretePowder:* (concretePowder), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockConcretePowder
+block:id=%concretePowder,data=0,stdrot=true,face0-5=0:legends/concrete_powder_white
+block:id=%concretePowder,data=1,stdrot=true,face0-5=0:legends/concrete_powder_orange
+block:id=%concretePowder,data=2,stdrot=true,face0-5=0:legends/concrete_powder_magenta
+block:id=%concretePowder,data=3,stdrot=true,face0-5=0:legends/concrete_powder_light_blue
+block:id=%concretePowder,data=4,stdrot=true,face0-5=0:legends/concrete_powder_yellow
+block:id=%concretePowder,data=5,stdrot=true,face0-5=0:legends/concrete_powder_lime
+block:id=%concretePowder,data=6,stdrot=true,face0-5=0:legends/concrete_powder_pink
+block:id=%concretePowder,data=7,stdrot=true,face0-5=0:legends/concrete_powder_gray
+block:id=%concretePowder,data=8,stdrot=true,face0-5=0:legends/concrete_powder_light_gray
+block:id=%concretePowder,data=9,stdrot=true,face0-5=0:legends/concrete_powder_cyan
+block:id=%concretePowder,data=10,stdrot=true,face0-5=0:legends/concrete_powder_purple
+block:id=%concretePowder,data=11,stdrot=true,face0-5=0:legends/concrete_powder_blue
+block:id=%concretePowder,data=12,stdrot=true,face0-5=0:legends/concrete_powder_brown
+block:id=%concretePowder,data=13,stdrot=true,face0-5=0:legends/concrete_powder_green
+block:id=%concretePowder,data=14,stdrot=true,face0-5=0:legends/concrete_powder_red
+block:id=%concretePowder,data=15,stdrot=true,face0-5=0:legends/concrete_powder_black
+
+# %concreteSlab:* (concreteSlab), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteSlab
+block:id=%concreteSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_white
+block:id=%concreteSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_orange
+block:id=%concreteSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_magenta
+block:id=%concreteSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_light_blue
+block:id=%concreteSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_yellow
+block:id=%concreteSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_lime
+block:id=%concreteSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_pink
+block:id=%concreteSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_gray
+block:id=%concreteSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_white
+block:id=%concreteSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_orange
+block:id=%concreteSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_magenta
+block:id=%concreteSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_light_blue
+block:id=%concreteSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_yellow
+block:id=%concreteSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_lime
+block:id=%concreteSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_pink
+block:id=%concreteSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_gray
+
+# %concreteSlabDouble:* (concreteSlabDouble), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockConcreteSlab
+block:id=%concreteSlabDouble,data=0,stdrot=true,face0-5=0:legends/concrete_white
+block:id=%concreteSlabDouble,data=1,stdrot=true,face0-5=0:legends/concrete_orange
+block:id=%concreteSlabDouble,data=2,stdrot=true,face0-5=0:legends/concrete_magenta
+block:id=%concreteSlabDouble,data=3,stdrot=true,face0-5=0:legends/concrete_light_blue
+block:id=%concreteSlabDouble,data=4,stdrot=true,face0-5=0:legends/concrete_yellow
+block:id=%concreteSlabDouble,data=5,stdrot=true,face0-5=0:legends/concrete_lime
+block:id=%concreteSlabDouble,data=6,stdrot=true,face0-5=0:legends/concrete_pink
+block:id=%concreteSlabDouble,data=7,stdrot=true,face0-5=0:legends/concrete_gray
+block:id=%concreteSlabDouble,data=8,stdrot=true,face0-5=0:legends/concrete_white
+block:id=%concreteSlabDouble,data=9,stdrot=true,face0-5=0:legends/concrete_orange
+block:id=%concreteSlabDouble,data=10,stdrot=true,face0-5=0:legends/concrete_magenta
+block:id=%concreteSlabDouble,data=11,stdrot=true,face0-5=0:legends/concrete_light_blue
+block:id=%concreteSlabDouble,data=12,stdrot=true,face0-5=0:legends/concrete_yellow
+block:id=%concreteSlabDouble,data=13,stdrot=true,face0-5=0:legends/concrete_lime
+block:id=%concreteSlabDouble,data=14,stdrot=true,face0-5=0:legends/concrete_pink
+block:id=%concreteSlabDouble,data=15,stdrot=true,face0-5=0:legends/concrete_gray
+
+# %concreteSlab2:* (concreteSlab2), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteSlab2
+block:id=%concreteSlab2,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_light_gray
+block:id=%concreteSlab2,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_cyan
+block:id=%concreteSlab2,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_purple
+block:id=%concreteSlab2,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_blue
+block:id=%concreteSlab2,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_brown
+block:id=%concreteSlab2,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_green
+block:id=%concreteSlab2,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_red
+block:id=%concreteSlab2,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_black
+block:id=%concreteSlab2,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_light_gray
+block:id=%concreteSlab2,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_cyan
+block:id=%concreteSlab2,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_purple
+block:id=%concreteSlab2,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_blue
+block:id=%concreteSlab2,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_brown
+block:id=%concreteSlab2,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_green
+block:id=%concreteSlab2,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_red
+block:id=%concreteSlab2,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_black
+
+# %concreteSlabDouble2:* (concreteSlabDouble2), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockConcreteSlab2
+block:id=%concreteSlabDouble2,data=0,stdrot=true,face0-5=0:legends/concrete_light_gray
+block:id=%concreteSlabDouble2,data=1,stdrot=true,face0-5=0:legends/concrete_cyan
+block:id=%concreteSlabDouble2,data=2,stdrot=true,face0-5=0:legends/concrete_purple
+block:id=%concreteSlabDouble2,data=3,stdrot=true,face0-5=0:legends/concrete_blue
+block:id=%concreteSlabDouble2,data=4,stdrot=true,face0-5=0:legends/concrete_brown
+block:id=%concreteSlabDouble2,data=5,stdrot=true,face0-5=0:legends/concrete_green
+block:id=%concreteSlabDouble2,data=6,stdrot=true,face0-5=0:legends/concrete_red
+block:id=%concreteSlabDouble2,data=7,stdrot=true,face0-5=0:legends/concrete_black
+block:id=%concreteSlabDouble2,data=8,stdrot=true,face0-5=0:legends/concrete_light_gray
+block:id=%concreteSlabDouble2,data=9,stdrot=true,face0-5=0:legends/concrete_cyan
+block:id=%concreteSlabDouble2,data=10,stdrot=true,face0-5=0:legends/concrete_purple
+block:id=%concreteSlabDouble2,data=11,stdrot=true,face0-5=0:legends/concrete_blue
+block:id=%concreteSlabDouble2,data=12,stdrot=true,face0-5=0:legends/concrete_brown
+block:id=%concreteSlabDouble2,data=13,stdrot=true,face0-5=0:legends/concrete_green
+block:id=%concreteSlabDouble2,data=14,stdrot=true,face0-5=0:legends/concrete_red
+block:id=%concreteSlabDouble2,data=15,stdrot=true,face0-5=0:legends/concrete_black
+
+# %concreteStairsWhite:* (concreteStairsWhite), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsWhite,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_white
+
+# %concreteStairsOrange:* (concreteStairsOrange), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsOrange,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_orange
+
+# %concreteStairsMagenta:* (concreteStairsMagenta), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsMagenta,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_magenta
+
+# %concreteStairsLightBlue:* (concreteStairsLightBlue), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsLightBlue,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_light_blue
+
+# %concreteStairsYellow:* (concreteStairsYellow), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsYellow,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_yellow
+
+# %concreteStairsLime:* (concreteStairsLime), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsLime,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_lime
+
+# %concreteStairsPink:* (concreteStairsPink), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsPink,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_pink
+
+# %concreteStairsGray:* (concreteStairsGray), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsGray,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_gray
+
+# %concreteStairsLightGray:* (concreteStairsLightGray), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsLightGray,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_light_gray
+
+# %concreteStairsCyan:* (concreteStairsCyan), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsCyan,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_cyan
+
+# %concreteStairsPurple:* (concreteStairsPurple), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsPurple,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_purple
+
+# %concreteStairsBlue:* (concreteStairsBlue), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsBlue,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_blue
+
+# %concreteStairsBrown:* (concreteStairsBrown), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsBrown,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_brown
+
+# %concreteStairsGreen:* (concreteStairsGreen), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsGreen,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_green
+
+# %concreteStairsRed:* (concreteStairsRed), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsRed,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_red
+
+# %concreteStairsBlack:* (concreteStairsBlack), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockConcreteStairs
+block:id=%concreteStairsBlack,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/concrete_black
+
+# %doorOak:* (doorOak), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorOak
+block:id=%doorOak,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_oak_upper,patch1=0:legends/door_oak_lower
+
+# %doorSpruce:* (doorSpruce), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorSpruce
+block:id=%doorSpruce,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_spruce_upper,patch1=0:legends/door_spruce_lower
+
+# %doorBirch:* (doorBirch), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorBirch
+block:id=%doorBirch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_birch_upper,patch1=0:legends/door_birch_lower
+
+# %doorJungle:* (doorJungle), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorJungle
+block:id=%doorJungle,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_jungle_upper,patch1=0:legends/door_jungle_lower
+
+# %doorAcacia:* (doorAcacia), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorAcacia
+block:id=%doorAcacia,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_acacia_upper,patch1=0:legends/door_acacia_lower
+
+# %doorDarkOak:* (doorDarkOak), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorDarkOak
+block:id=%doorDarkOak,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_dark_oak_upper,patch1=0:legends/door_dark_oak_lower
+
+# %doorMetal:* (doorMetal), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorMetal
+block:id=%doorMetal,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_iron_upper,patch1=0:legends/door_iron_lower
+
+# %doorStone:* (doorStone), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorStone
+block:id=%doorStone,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_stone_upper,patch1=0:legends/door_stone_lower
+
+# %doorCobblestone:* (doorCobblestone), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorCobbleStone
+block:id=%doorCobblestone,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_cobblestone_upper,patch1=0:legends/door_cobblestone_lower
+
+# %doorGlass:* (doorGlass), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorGlass
+block:id=%doorGlass,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_glass_upper,patch1=0:legends/door_glass_lower
+
+# %doorStainedGlass:* (doorStainedGlass), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorStainedGlass
+block:id=%doorStainedGlass,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_stained_glass_upper,patch1=0:legends/door_stained_glass_lower
+
+# %doorBookshelf:* (doorBookshelf), render=(DOOR), opaque=false,cls=com.tihyo.legends.blocks.BlockDoorBookshelf
+block:id=%doorBookshelf,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/door_bookshelf_upper,patch1=0:legends/door_bookshelf_lower
+
+# %magma:* (magma), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockMagma
+block:id=%magma,data=*,stdrot=true,face0-5=0:legends/magma
+
+# %wartBlock:* (wartBlock), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockNetherWartBlock
+block:id=%wartBlock,data=*,stdrot=true,face0-5=0:legends/nether_wart_block
+
+# %redNetherBrick:* (redNetherBrick), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedNetherBrick
+block:id=%redNetherBrick,data=*,stdrot=true,face0-5=0:legends/red_nether_brick
+
+# %blackIronOre:* (blackIronOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockBlackIronOre
+block:id=%blackIronOre,data=*,stdrot=true,face0-5=0:legends/blackironore
+
+# %blackIronBlock:* (blackIronBlock), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockBlackIron
+block:id=%blackIronBlock,data=*,stdrot=true,face0-5=0:legends/blackironblock
+
+# %redIronOre:* (redIronOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedIronOre
+block:id=%redIronOre,data=*,stdrot=true,face0-5=0:legends/redironore
+
+# %redIronBlock:* (redIronBlock), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedIron
+block:id=%redIronBlock,data=*,stdrot=true,face0-5=0:legends/redironblock
+
+# %titaniumOre:* (titaniumOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockTitaniumOre
+block:id=%titaniumOre,data=*,stdrot=true,face0-5=0:legends/titaniumore
+
+# %platinumOre:* (platinumOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockPlatinumOre
+block:id=%platinumOre,data=*,stdrot=true,face0-5=0:legends/platinumore
+
+# %bauxiteOre:* (bauxiteOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockBauxiteOre
+block:id=%bauxiteOre,data=*,stdrot=true,face0-5=0:legends/bauxiteore
+
+# %copperOre:* (copperOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockCopperOre
+block:id=%copperOre,data=*,stdrot=true,face0-5=0:legends/copperore
+
+# %sphaleriteOre:* (sphaleriteOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockSphaleriteOre
+block:id=%sphaleriteOre,data=*,stdrot=true,face0-5=0:legends/sphaleriteore
+
+# %cassiteriteOre:* (cassiteriteOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockCassiteriteOre
+block:id=%cassiteriteOre,data=*,stdrot=true,face0-5=0:legends/cassiteriteore
+
+# %tungstenOre:* (tungstenOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockTungstenOre
+block:id=%tungstenOre,data=*,stdrot=true,face0-5=0:legends/tungstenore
+
+# %magnesiteOre:* (magnesiteOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockMagnesiteOre
+block:id=%magnesiteOre,data=*,stdrot=true,face0-5=0:legends/magnesiteore
+
+# %siliconOre:* (siliconOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockSiliconOre
+block:id=%siliconOre,data=*,stdrot=true,face0-5=0:legends/siliconore
+
+# %limoniteOre:* (limoniteOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockLimoniteOre
+block:id=%limoniteOre,data=*,stdrot=true,face0-5=0:legends/limoniteore
+
+# %rubyOre:* (rubyOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRubyOre
+block:id=%rubyOre,data=*,stdrot=true,face0-5=0:legends/rubyore
+
+# %sapphireOre:* (sapphireOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockSapphireOre
+block:id=%sapphireOre,data=*,stdrot=true,face0-5=0:legends/sapphireore
+
+# %purpleCrystal:* (purpleCrystal), render=(CROSSEDSQUARES), opaque=false,cls=com.tihyo.legends.blocks.BlockCrystal
+block:id=%purpleCrystal,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:legends/crystal
+
+# %redDiamondOre:* (redDiamondOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedDiamondOre
+block:id=%redDiamondOre,data=*,stdrot=true,face0-5=0:legends/reddiamondore
+
+# %redDiamondBlock:* (redDiamondBlock), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedDiamondBlock
+block:id=%redDiamondBlock,data=*,stdrot=true,face0-5=0:legends/reddiamondblock
+
+# %lightningOre:* (lightningOre), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockLightningStoneOre
+block:id=%lightningOre,data=*,stdrot=true,face0-5=0:legends/lightningore
+
+# %lightningBlock:* (lightningBlock), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockLightningStone
+block:id=%lightningBlock,data=*,stdrot=true,face0-5=0:legends/lightningblock
+
+# %lightningBlockBlue:* (lightningBlockBlue), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockLightningStoneBlue
+block:id=%lightningBlockBlue,data=*,stdrot=true,face0-5=0:legends/lightningblockblue
+
+# %lightningBlockRed:* (lightningBlockRed), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockLightningStoneRed
+block:id=%lightningBlockRed,data=*,stdrot=true,face0-5=0:legends/lightningblockred
+
+# %bronzeBlock:* (bronzeBlock), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockBronzeBlock
+block:id=%bronzeBlock,data=*,stdrot=true,face0-5=0:legends/bronzeblock
+
+# %invisible:* (invisible), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockInvisible
+block:id=%invisible,data=*,stdrot=true,face0-5=0:legends/invisible
+
+# %galacticMap:* (galacticMap), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.galactic.BlockGalacticMap
+block:id=%galacticMap,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %marsRock:* (marsRock), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.galactic.BlockMarsRock
+block:id=%marsRock,data=*,stdrot=true,face0-5=0:legends/galactic/mars_rock
+
+# %martianRelic:* (martianRelic), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.galactic.BlockMartianRelic
+block:id=%martianRelic,data=*,stdrot=true,face0-5=0:legends/galactic/martian_relic
+
+# %frozenStone:* (frozenStone), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.galactic.BlockFrozenStone
+block:id=%frozenStone,data=*,stdrot=true,face0-5=0:legends/galactic/frozen_stone
+
+# %batPole:* (batPole), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockBatPole
+block:id=%batPole,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/batpole
+
+# %pole:* (pole), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockPole
+block:id=%pole,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_white
+block:id=%pole,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_orange
+block:id=%pole,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_magenta
+block:id=%pole,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_light_blue
+block:id=%pole,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_yellow
+block:id=%pole,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_lime
+block:id=%pole,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_pink
+block:id=%pole,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_gray
+block:id=%pole,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_light_gray
+block:id=%pole,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_silver
+block:id=%pole,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_cyan
+block:id=%pole,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_purple
+block:id=%pole,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_blue
+block:id=%pole,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_brown
+block:id=%pole,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_green
+block:id=%pole,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_red
+
+# %poleBlack:* (poleBlack), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockPoleBlack
+block:id=%poleBlack,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/concrete_black
+
+# %brittleIce:* (brittleIce), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockIce
+block:id=%brittleIce,data=*,stdrot=true,face0-5=12000:minecraft/ice
+
+# %redLantern:* (redLantern), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedLantern
+block:id=%redLantern,data=*,stdrot=true,face0-5=0:legends/red_lantern
+
+# %greenLantern:* (greenLantern), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockGreenLantern
+block:id=%greenLantern,data=*,stdrot=true,face0-5=0:legends/green_lantern
+
+# %blueLantern:* (blueLantern), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockBlueLantern
+block:id=%blueLantern,data=*,stdrot=true,face0-5=0:legends/blue_lantern
+
+# %orangeLantern:* (orangeLantern), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockOrangeLantern
+block:id=%orangeLantern,data=*,stdrot=true,face0-5=0:legends/orange_lantern
+
+# %monitor:* (monitor), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockMonitor
+block:id=%monitor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/heromaker_tile
+
+# %microscope:* (microscope), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockMicroscope
+block:id=%microscope,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/microscope_tile
+
+# %armorStandTile:* (armorStandTile), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockArmorStand
+block:id=%armorStandTile,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %armorCaseTile:* (armorCaseTile), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockArmorCase
+block:id=%armorCaseTile,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %armorSteveTile:* (armorSteveTile), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockArmorSteve
+block:id=%armorSteveTile,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %generator:* (generator), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockGenerator
+block:id=%generator,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/heromaker_tile
+
+# %generatorOff:* (generatorOff), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockGenerator
+block:id=%generatorOff,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/heromaker_tile
+
+# %cable:* (cable), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockCable
+block:id=%cable,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/cable
+
+# %diodeBoxUnpowered:* (diodeBoxUnpowered), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockDiodeBox
+block:id=%diodeBoxUnpowered,data=*,stdrot=true,face0-1=0:legends/diode_top,face2-5=0:legends/diode_front_off
+
+# %diodeBox:* (diodeBox), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockDiodeBox
+block:id=%diodeBox,data=*,stdrot=true,face0-1=0:legends/diode_top,face2-5=0:legends/diode_front
+
+# %suitRepairsUnit:* (suitRepairsUnit), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitRepairsUnit
+block:id=%suitRepairsUnit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/heromaker_tile
+
+# %suitRepairsUnitOff:* (suitRepairsUnitOff), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitRepairsUnit
+block:id=%suitRepairsUnitOff,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/heromaker_tile
+
+# %dynamicLegendsBlock1:* (dynamicLegendsBlock1), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedSandstone
+block:id=%dynamicLegendsBlock1,data=0,stdrot=true,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone
+block:id=%dynamicLegendsBlock1,data=1,data=2,stdrot=true,face0-1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone
+block:id=%dynamicLegendsBlock1,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone
+
+# %dynamicLegendsBlock2:* (dynamicLegendsBlock2), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedSandstoneChiseled
+block:id=%dynamicLegendsBlock2,data=0,stdrot=true,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone_carved
+block:id=%dynamicLegendsBlock2,data=1,data=2,stdrot=true,face0-1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone_carved
+block:id=%dynamicLegendsBlock2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone_carved
+
+# %dynamicLegendsBlock3:* (dynamicLegendsBlock3), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockRedSandstoneSmooth
+block:id=%dynamicLegendsBlock3,data=0,stdrot=true,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone_smooth
+block:id=%dynamicLegendsBlock3,data=1,data=2,stdrot=true,face0-1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone_smooth
+block:id=%dynamicLegendsBlock3,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone_smooth
+
+# %dynamicLegendsBlock4:* (dynamicLegendsBlock4), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsStoneSlab
+block:id=%dynamicLegendsBlock4,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand
+block:id=%dynamicLegendsBlock4,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand_smooth
+block:id=%dynamicLegendsBlock4,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand
+block:id=%dynamicLegendsBlock4,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand_smooth
+
+# %dynamicLegendsBlock5:* (dynamicLegendsBlock5), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockRedSandstoneStairs
+block:id=%dynamicLegendsBlock5,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone
+
+# %dynamicLegendsBlock6:* (dynamicLegendsBlock6), render=(STANDARD), opaque=false,cls=com.tihyo.legends.blocks.BlockLegendsStoneSlab
+block:id=%dynamicLegendsBlock6,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand
+block:id=%dynamicLegendsBlock6,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand_smooth
+block:id=%dynamicLegendsBlock6,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand
+block:id=%dynamicLegendsBlock6,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:legends/stone_red_sand_smooth
+
+# %dynamicLegendsBlock7:* (dynamicLegendsBlock7), render=(STAIRS), opaque=false,cls=com.tihyo.legends.blocks.BlockRedSandstoneSmoothStairs
+block:id=%dynamicLegendsBlock7,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0=0:legends/red_sandstone_bottom,face1=0:legends/red_sandstone_top,face2-5=0:legends/red_sandstone_smooth
+
+# %dynamicLegendsBlock8:* (dynamicLegendsBlock8), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.BlockSecurityBlock
+block:id=%dynamicLegendsBlock8,data=*,stdrot=true,face0-5=0:legends/security_block
+
+# %dynamicLegendsBlock9:* (dynamicLegendsBlock9), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitAssemblyUnit
+block:id=%dynamicLegendsBlock9,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/heromaker_tile
+
+# %dynamicLegendsBlock10:* (dynamicLegendsBlock10), render=(CUSTOM), opaque=false,cls=com.tihyo.legends.blocks.BlockSuitAssemblyUnit
+block:id=%dynamicLegendsBlock10,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/heromaker_tile
+
+# %dynamicLegendsBlock11:* (dynamicLegendsBlock11), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock11
+block:id=%dynamicLegendsBlock11,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock12:* (dynamicLegendsBlock12), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock12
+block:id=%dynamicLegendsBlock12,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock13:* (dynamicLegendsBlock13), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock13
+block:id=%dynamicLegendsBlock13,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock14:* (dynamicLegendsBlock14), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock14
+block:id=%dynamicLegendsBlock14,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock15:* (dynamicLegendsBlock15), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock15
+block:id=%dynamicLegendsBlock15,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock16:* (dynamicLegendsBlock16), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock16
+block:id=%dynamicLegendsBlock16,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock17:* (dynamicLegendsBlock17), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock17
+block:id=%dynamicLegendsBlock17,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock18:* (dynamicLegendsBlock18), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock18
+block:id=%dynamicLegendsBlock18,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock19:* (dynamicLegendsBlock19), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock19
+block:id=%dynamicLegendsBlock19,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock20:* (dynamicLegendsBlock20), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock20
+block:id=%dynamicLegendsBlock20,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock21:* (dynamicLegendsBlock21), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock21
+block:id=%dynamicLegendsBlock21,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock22:* (dynamicLegendsBlock22), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock22
+block:id=%dynamicLegendsBlock22,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock23:* (dynamicLegendsBlock23), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock23
+block:id=%dynamicLegendsBlock23,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock24:* (dynamicLegendsBlock24), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock24
+block:id=%dynamicLegendsBlock24,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock25:* (dynamicLegendsBlock25), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock25
+block:id=%dynamicLegendsBlock25,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock26:* (dynamicLegendsBlock26), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock26
+block:id=%dynamicLegendsBlock26,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock27:* (dynamicLegendsBlock27), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock27
+block:id=%dynamicLegendsBlock27,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock28:* (dynamicLegendsBlock28), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock28
+block:id=%dynamicLegendsBlock28,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock29:* (dynamicLegendsBlock29), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock29
+block:id=%dynamicLegendsBlock29,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock30:* (dynamicLegendsBlock30), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock30
+block:id=%dynamicLegendsBlock30,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock31:* (dynamicLegendsBlock31), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock31
+block:id=%dynamicLegendsBlock31,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock32:* (dynamicLegendsBlock32), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock32
+block:id=%dynamicLegendsBlock32,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock33:* (dynamicLegendsBlock33), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock33
+block:id=%dynamicLegendsBlock33,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock34:* (dynamicLegendsBlock34), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock34
+block:id=%dynamicLegendsBlock34,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock35:* (dynamicLegendsBlock35), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock35
+block:id=%dynamicLegendsBlock35,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock36:* (dynamicLegendsBlock36), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock36
+block:id=%dynamicLegendsBlock36,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock37:* (dynamicLegendsBlock37), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock37
+block:id=%dynamicLegendsBlock37,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock38:* (dynamicLegendsBlock38), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock38
+block:id=%dynamicLegendsBlock38,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock39:* (dynamicLegendsBlock39), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock39
+block:id=%dynamicLegendsBlock39,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock40:* (dynamicLegendsBlock40), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock40
+block:id=%dynamicLegendsBlock40,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock41:* (dynamicLegendsBlock41), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock41
+block:id=%dynamicLegendsBlock41,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock42:* (dynamicLegendsBlock42), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock42
+block:id=%dynamicLegendsBlock42,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock43:* (dynamicLegendsBlock43), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock43
+block:id=%dynamicLegendsBlock43,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock44:* (dynamicLegendsBlock44), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock44
+block:id=%dynamicLegendsBlock44,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock45:* (dynamicLegendsBlock45), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock45
+block:id=%dynamicLegendsBlock45,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock46:* (dynamicLegendsBlock46), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock46
+block:id=%dynamicLegendsBlock46,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock47:* (dynamicLegendsBlock47), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock47
+block:id=%dynamicLegendsBlock47,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock48:* (dynamicLegendsBlock48), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock48
+block:id=%dynamicLegendsBlock48,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock49:* (dynamicLegendsBlock49), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock49
+block:id=%dynamicLegendsBlock49,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock50:* (dynamicLegendsBlock50), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock50
+block:id=%dynamicLegendsBlock50,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock51:* (dynamicLegendsBlock51), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock51
+block:id=%dynamicLegendsBlock51,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock52:* (dynamicLegendsBlock52), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock52
+block:id=%dynamicLegendsBlock52,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock53:* (dynamicLegendsBlock53), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock53
+block:id=%dynamicLegendsBlock53,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock54:* (dynamicLegendsBlock54), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock54
+block:id=%dynamicLegendsBlock54,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock55:* (dynamicLegendsBlock55), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock55
+block:id=%dynamicLegendsBlock55,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock56:* (dynamicLegendsBlock56), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock56
+block:id=%dynamicLegendsBlock56,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock57:* (dynamicLegendsBlock57), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock57
+block:id=%dynamicLegendsBlock57,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock58:* (dynamicLegendsBlock58), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock58
+block:id=%dynamicLegendsBlock58,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock59:* (dynamicLegendsBlock59), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock59
+block:id=%dynamicLegendsBlock59,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock60:* (dynamicLegendsBlock60), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock60
+block:id=%dynamicLegendsBlock60,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock61:* (dynamicLegendsBlock61), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock61
+block:id=%dynamicLegendsBlock61,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock62:* (dynamicLegendsBlock62), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock62
+block:id=%dynamicLegendsBlock62,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock63:* (dynamicLegendsBlock63), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock63
+block:id=%dynamicLegendsBlock63,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock64:* (dynamicLegendsBlock64), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock64
+block:id=%dynamicLegendsBlock64,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock65:* (dynamicLegendsBlock65), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock65
+block:id=%dynamicLegendsBlock65,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock66:* (dynamicLegendsBlock66), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock66
+block:id=%dynamicLegendsBlock66,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock67:* (dynamicLegendsBlock67), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock67
+block:id=%dynamicLegendsBlock67,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock68:* (dynamicLegendsBlock68), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock68
+block:id=%dynamicLegendsBlock68,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock69:* (dynamicLegendsBlock69), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock69
+block:id=%dynamicLegendsBlock69,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock70:* (dynamicLegendsBlock70), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock70
+block:id=%dynamicLegendsBlock70,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock71:* (dynamicLegendsBlock71), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock71
+block:id=%dynamicLegendsBlock71,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock72:* (dynamicLegendsBlock72), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock72
+block:id=%dynamicLegendsBlock72,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock73:* (dynamicLegendsBlock73), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock73
+block:id=%dynamicLegendsBlock73,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock74:* (dynamicLegendsBlock74), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock74
+block:id=%dynamicLegendsBlock74,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock75:* (dynamicLegendsBlock75), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock75
+block:id=%dynamicLegendsBlock75,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock76:* (dynamicLegendsBlock76), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock76
+block:id=%dynamicLegendsBlock76,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock77:* (dynamicLegendsBlock77), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock77
+block:id=%dynamicLegendsBlock77,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock78:* (dynamicLegendsBlock78), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock78
+block:id=%dynamicLegendsBlock78,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock79:* (dynamicLegendsBlock79), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock79
+block:id=%dynamicLegendsBlock79,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock80:* (dynamicLegendsBlock80), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock80
+block:id=%dynamicLegendsBlock80,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock81:* (dynamicLegendsBlock81), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock81
+block:id=%dynamicLegendsBlock81,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock82:* (dynamicLegendsBlock82), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock82
+block:id=%dynamicLegendsBlock82,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock83:* (dynamicLegendsBlock83), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock83
+block:id=%dynamicLegendsBlock83,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock84:* (dynamicLegendsBlock84), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock84
+block:id=%dynamicLegendsBlock84,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock85:* (dynamicLegendsBlock85), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock85
+block:id=%dynamicLegendsBlock85,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock86:* (dynamicLegendsBlock86), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock86
+block:id=%dynamicLegendsBlock86,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock87:* (dynamicLegendsBlock87), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock87
+block:id=%dynamicLegendsBlock87,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock88:* (dynamicLegendsBlock88), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock88
+block:id=%dynamicLegendsBlock88,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock89:* (dynamicLegendsBlock89), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock89
+block:id=%dynamicLegendsBlock89,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock90:* (dynamicLegendsBlock90), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock90
+block:id=%dynamicLegendsBlock90,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock91:* (dynamicLegendsBlock91), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock91
+block:id=%dynamicLegendsBlock91,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock92:* (dynamicLegendsBlock92), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock92
+block:id=%dynamicLegendsBlock92,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock93:* (dynamicLegendsBlock93), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock93
+block:id=%dynamicLegendsBlock93,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock94:* (dynamicLegendsBlock94), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock94
+block:id=%dynamicLegendsBlock94,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock95:* (dynamicLegendsBlock95), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock95
+block:id=%dynamicLegendsBlock95,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock96:* (dynamicLegendsBlock96), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock96
+block:id=%dynamicLegendsBlock96,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock97:* (dynamicLegendsBlock97), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock97
+block:id=%dynamicLegendsBlock97,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock98:* (dynamicLegendsBlock98), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock98
+block:id=%dynamicLegendsBlock98,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock99:* (dynamicLegendsBlock99), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock99
+block:id=%dynamicLegendsBlock99,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %dynamicLegendsBlock100:* (dynamicLegendsBlock100), render=(STANDARD), opaque=true,cls=com.tihyo.legends.blocks.dynamic.BlockDynamicLegendsBlock100
+block:id=%dynamicLegendsBlock100,data=*,stdrot=true,face0-5=0:legends/blank
+
+# %altar:* (altar), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockAltar
+block:id=%altar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock1:* (dynamicHorrorBlock1), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffin
+block:id=%dynamicHorrorBlock1,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock2:* (dynamicHorrorBlock2), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffin
+block:id=%dynamicHorrorBlock2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock3:* (dynamicHorrorBlock3), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlack
+block:id=%dynamicHorrorBlock3,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock4:* (dynamicHorrorBlock4), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlack
+block:id=%dynamicHorrorBlock4,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock5:* (dynamicHorrorBlock5), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinGray
+block:id=%dynamicHorrorBlock5,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock6:* (dynamicHorrorBlock6), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinGray
+block:id=%dynamicHorrorBlock6,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock7:* (dynamicHorrorBlock7), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinRed
+block:id=%dynamicHorrorBlock7,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock8:* (dynamicHorrorBlock8), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinRed
+block:id=%dynamicHorrorBlock8,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock9:* (dynamicHorrorBlock9), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlue
+block:id=%dynamicHorrorBlock9,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock10:* (dynamicHorrorBlock10), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinBlue
+block:id=%dynamicHorrorBlock10,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock11:* (dynamicHorrorBlock11), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinPink
+block:id=%dynamicHorrorBlock11,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock12:* (dynamicHorrorBlock12), render=(CUSTOM), opaque=false,cls=com.tihyo.horror.blocks.BlockCoffinPink
+block:id=%dynamicHorrorBlock12,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/blank
+
+# %dynamicHorrorBlock13:* (dynamicHorrorBlock13), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock13
+block:id=%dynamicHorrorBlock13,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock14:* (dynamicHorrorBlock14), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock14
+block:id=%dynamicHorrorBlock14,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock15:* (dynamicHorrorBlock15), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock15
+block:id=%dynamicHorrorBlock15,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock16:* (dynamicHorrorBlock16), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock16
+block:id=%dynamicHorrorBlock16,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock17:* (dynamicHorrorBlock17), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock17
+block:id=%dynamicHorrorBlock17,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock18:* (dynamicHorrorBlock18), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock18
+block:id=%dynamicHorrorBlock18,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock19:* (dynamicHorrorBlock19), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock19
+block:id=%dynamicHorrorBlock19,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock20:* (dynamicHorrorBlock20), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock20
+block:id=%dynamicHorrorBlock20,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock21:* (dynamicHorrorBlock21), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock21
+block:id=%dynamicHorrorBlock21,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock22:* (dynamicHorrorBlock22), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock22
+block:id=%dynamicHorrorBlock22,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock23:* (dynamicHorrorBlock23), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock23
+block:id=%dynamicHorrorBlock23,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock24:* (dynamicHorrorBlock24), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock24
+block:id=%dynamicHorrorBlock24,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock25:* (dynamicHorrorBlock25), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock25
+block:id=%dynamicHorrorBlock25,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock26:* (dynamicHorrorBlock26), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock26
+block:id=%dynamicHorrorBlock26,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock27:* (dynamicHorrorBlock27), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock27
+block:id=%dynamicHorrorBlock27,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock28:* (dynamicHorrorBlock28), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock28
+block:id=%dynamicHorrorBlock28,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock29:* (dynamicHorrorBlock29), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock29
+block:id=%dynamicHorrorBlock29,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock30:* (dynamicHorrorBlock30), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock30
+block:id=%dynamicHorrorBlock30,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock31:* (dynamicHorrorBlock31), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock31
+block:id=%dynamicHorrorBlock31,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock32:* (dynamicHorrorBlock32), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock32
+block:id=%dynamicHorrorBlock32,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock33:* (dynamicHorrorBlock33), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock33
+block:id=%dynamicHorrorBlock33,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock34:* (dynamicHorrorBlock34), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock34
+block:id=%dynamicHorrorBlock34,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock35:* (dynamicHorrorBlock35), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock35
+block:id=%dynamicHorrorBlock35,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock36:* (dynamicHorrorBlock36), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock36
+block:id=%dynamicHorrorBlock36,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock37:* (dynamicHorrorBlock37), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock37
+block:id=%dynamicHorrorBlock37,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock38:* (dynamicHorrorBlock38), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock38
+block:id=%dynamicHorrorBlock38,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock39:* (dynamicHorrorBlock39), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock39
+block:id=%dynamicHorrorBlock39,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock40:* (dynamicHorrorBlock40), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock40
+block:id=%dynamicHorrorBlock40,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock41:* (dynamicHorrorBlock41), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock41
+block:id=%dynamicHorrorBlock41,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock42:* (dynamicHorrorBlock42), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock42
+block:id=%dynamicHorrorBlock42,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock43:* (dynamicHorrorBlock43), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock43
+block:id=%dynamicHorrorBlock43,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock44:* (dynamicHorrorBlock44), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock44
+block:id=%dynamicHorrorBlock44,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock45:* (dynamicHorrorBlock45), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock45
+block:id=%dynamicHorrorBlock45,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock46:* (dynamicHorrorBlock46), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock46
+block:id=%dynamicHorrorBlock46,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock47:* (dynamicHorrorBlock47), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock47
+block:id=%dynamicHorrorBlock47,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock48:* (dynamicHorrorBlock48), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock48
+block:id=%dynamicHorrorBlock48,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock49:* (dynamicHorrorBlock49), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock49
+block:id=%dynamicHorrorBlock49,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock50:* (dynamicHorrorBlock50), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock50
+block:id=%dynamicHorrorBlock50,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock51:* (dynamicHorrorBlock51), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock51
+block:id=%dynamicHorrorBlock51,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock52:* (dynamicHorrorBlock52), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock52
+block:id=%dynamicHorrorBlock52,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock53:* (dynamicHorrorBlock53), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock53
+block:id=%dynamicHorrorBlock53,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock54:* (dynamicHorrorBlock54), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock54
+block:id=%dynamicHorrorBlock54,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock55:* (dynamicHorrorBlock55), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock55
+block:id=%dynamicHorrorBlock55,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock56:* (dynamicHorrorBlock56), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock56
+block:id=%dynamicHorrorBlock56,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock57:* (dynamicHorrorBlock57), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock57
+block:id=%dynamicHorrorBlock57,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock58:* (dynamicHorrorBlock58), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock58
+block:id=%dynamicHorrorBlock58,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock59:* (dynamicHorrorBlock59), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock59
+block:id=%dynamicHorrorBlock59,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock60:* (dynamicHorrorBlock60), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock60
+block:id=%dynamicHorrorBlock60,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock61:* (dynamicHorrorBlock61), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock61
+block:id=%dynamicHorrorBlock61,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock62:* (dynamicHorrorBlock62), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock62
+block:id=%dynamicHorrorBlock62,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock63:* (dynamicHorrorBlock63), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock63
+block:id=%dynamicHorrorBlock63,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock64:* (dynamicHorrorBlock64), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock64
+block:id=%dynamicHorrorBlock64,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock65:* (dynamicHorrorBlock65), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock65
+block:id=%dynamicHorrorBlock65,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock66:* (dynamicHorrorBlock66), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock66
+block:id=%dynamicHorrorBlock66,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock67:* (dynamicHorrorBlock67), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock67
+block:id=%dynamicHorrorBlock67,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock68:* (dynamicHorrorBlock68), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock68
+block:id=%dynamicHorrorBlock68,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock69:* (dynamicHorrorBlock69), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock69
+block:id=%dynamicHorrorBlock69,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock70:* (dynamicHorrorBlock70), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock70
+block:id=%dynamicHorrorBlock70,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock71:* (dynamicHorrorBlock71), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock71
+block:id=%dynamicHorrorBlock71,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock72:* (dynamicHorrorBlock72), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock72
+block:id=%dynamicHorrorBlock72,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock73:* (dynamicHorrorBlock73), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock73
+block:id=%dynamicHorrorBlock73,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock74:* (dynamicHorrorBlock74), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock74
+block:id=%dynamicHorrorBlock74,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock75:* (dynamicHorrorBlock75), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock75
+block:id=%dynamicHorrorBlock75,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock76:* (dynamicHorrorBlock76), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock76
+block:id=%dynamicHorrorBlock76,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock77:* (dynamicHorrorBlock77), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock77
+block:id=%dynamicHorrorBlock77,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock78:* (dynamicHorrorBlock78), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock78
+block:id=%dynamicHorrorBlock78,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock79:* (dynamicHorrorBlock79), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock79
+block:id=%dynamicHorrorBlock79,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock80:* (dynamicHorrorBlock80), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock80
+block:id=%dynamicHorrorBlock80,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock81:* (dynamicHorrorBlock81), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock81
+block:id=%dynamicHorrorBlock81,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock82:* (dynamicHorrorBlock82), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock82
+block:id=%dynamicHorrorBlock82,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock83:* (dynamicHorrorBlock83), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock83
+block:id=%dynamicHorrorBlock83,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock84:* (dynamicHorrorBlock84), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock84
+block:id=%dynamicHorrorBlock84,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock85:* (dynamicHorrorBlock85), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock85
+block:id=%dynamicHorrorBlock85,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock86:* (dynamicHorrorBlock86), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock86
+block:id=%dynamicHorrorBlock86,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock87:* (dynamicHorrorBlock87), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock87
+block:id=%dynamicHorrorBlock87,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock88:* (dynamicHorrorBlock88), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock88
+block:id=%dynamicHorrorBlock88,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock89:* (dynamicHorrorBlock89), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock89
+block:id=%dynamicHorrorBlock89,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock90:* (dynamicHorrorBlock90), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock90
+block:id=%dynamicHorrorBlock90,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock91:* (dynamicHorrorBlock91), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock91
+block:id=%dynamicHorrorBlock91,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock92:* (dynamicHorrorBlock92), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock92
+block:id=%dynamicHorrorBlock92,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock93:* (dynamicHorrorBlock93), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock93
+block:id=%dynamicHorrorBlock93,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock94:* (dynamicHorrorBlock94), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock94
+block:id=%dynamicHorrorBlock94,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock95:* (dynamicHorrorBlock95), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock95
+block:id=%dynamicHorrorBlock95,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock96:* (dynamicHorrorBlock96), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock96
+block:id=%dynamicHorrorBlock96,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock97:* (dynamicHorrorBlock97), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock97
+block:id=%dynamicHorrorBlock97,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock98:* (dynamicHorrorBlock98), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock98
+block:id=%dynamicHorrorBlock98,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock99:* (dynamicHorrorBlock99), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock99
+block:id=%dynamicHorrorBlock99,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %dynamicHorrorBlock100:* (dynamicHorrorBlock100), render=(STANDARD), opaque=true,cls=com.tihyo.horror.blocks.dynamic.BlockDynamicHorrorBlock100
+block:id=%dynamicHorrorBlock100,data=*,stdrot=true,face0-5=0:horror/blank
+
+# %godzillaSkull:* (godzillaSkull), render=(CUSTOM), opaque=false,cls=com.tihyo.kaiju.blocks.trophies.BlockGodzillaSkull
+block:id=%godzillaSkull,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:kaiju/trophies/skull_tile
+
+# %godzillaSkullSmall:* (godzillaSkullSmall), render=(CUSTOM), opaque=false,cls=com.tihyo.kaiju.blocks.trophies.BlockGodzillaSkullSmall
+block:id=%godzillaSkullSmall,data=*,stdrot=true,face0-5=0:kaiju/trophies/skull_tile
+
+# %dynamicKaijuBlock1:* (dynamicKaijuBlock1), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock1
+block:id=%dynamicKaijuBlock1,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock2:* (dynamicKaijuBlock2), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock2
+block:id=%dynamicKaijuBlock2,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock3:* (dynamicKaijuBlock3), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock3
+block:id=%dynamicKaijuBlock3,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock4:* (dynamicKaijuBlock4), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock4
+block:id=%dynamicKaijuBlock4,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock5:* (dynamicKaijuBlock5), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock5
+block:id=%dynamicKaijuBlock5,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock6:* (dynamicKaijuBlock6), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock6
+block:id=%dynamicKaijuBlock6,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock7:* (dynamicKaijuBlock7), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock7
+block:id=%dynamicKaijuBlock7,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock8:* (dynamicKaijuBlock8), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock8
+block:id=%dynamicKaijuBlock8,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock9:* (dynamicKaijuBlock9), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock9
+block:id=%dynamicKaijuBlock9,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock10:* (dynamicKaijuBlock10), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock10
+block:id=%dynamicKaijuBlock10,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock11:* (dynamicKaijuBlock11), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock11
+block:id=%dynamicKaijuBlock11,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock12:* (dynamicKaijuBlock12), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock12
+block:id=%dynamicKaijuBlock12,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock13:* (dynamicKaijuBlock13), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock13
+block:id=%dynamicKaijuBlock13,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock14:* (dynamicKaijuBlock14), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock14
+block:id=%dynamicKaijuBlock14,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock15:* (dynamicKaijuBlock15), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock15
+block:id=%dynamicKaijuBlock15,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock16:* (dynamicKaijuBlock16), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock16
+block:id=%dynamicKaijuBlock16,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock17:* (dynamicKaijuBlock17), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock17
+block:id=%dynamicKaijuBlock17,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock18:* (dynamicKaijuBlock18), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock18
+block:id=%dynamicKaijuBlock18,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock19:* (dynamicKaijuBlock19), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock19
+block:id=%dynamicKaijuBlock19,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock20:* (dynamicKaijuBlock20), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock20
+block:id=%dynamicKaijuBlock20,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock21:* (dynamicKaijuBlock21), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock21
+block:id=%dynamicKaijuBlock21,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock22:* (dynamicKaijuBlock22), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock22
+block:id=%dynamicKaijuBlock22,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock23:* (dynamicKaijuBlock23), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock23
+block:id=%dynamicKaijuBlock23,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock24:* (dynamicKaijuBlock24), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock24
+block:id=%dynamicKaijuBlock24,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock25:* (dynamicKaijuBlock25), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock25
+block:id=%dynamicKaijuBlock25,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock26:* (dynamicKaijuBlock26), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock26
+block:id=%dynamicKaijuBlock26,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock27:* (dynamicKaijuBlock27), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock27
+block:id=%dynamicKaijuBlock27,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock28:* (dynamicKaijuBlock28), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock28
+block:id=%dynamicKaijuBlock28,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock29:* (dynamicKaijuBlock29), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock29
+block:id=%dynamicKaijuBlock29,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock30:* (dynamicKaijuBlock30), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock30
+block:id=%dynamicKaijuBlock30,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock31:* (dynamicKaijuBlock31), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock31
+block:id=%dynamicKaijuBlock31,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock32:* (dynamicKaijuBlock32), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock32
+block:id=%dynamicKaijuBlock32,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock33:* (dynamicKaijuBlock33), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock33
+block:id=%dynamicKaijuBlock33,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock34:* (dynamicKaijuBlock34), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock34
+block:id=%dynamicKaijuBlock34,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock35:* (dynamicKaijuBlock35), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock35
+block:id=%dynamicKaijuBlock35,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock36:* (dynamicKaijuBlock36), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock36
+block:id=%dynamicKaijuBlock36,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock37:* (dynamicKaijuBlock37), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock37
+block:id=%dynamicKaijuBlock37,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock38:* (dynamicKaijuBlock38), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock38
+block:id=%dynamicKaijuBlock38,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock39:* (dynamicKaijuBlock39), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock39
+block:id=%dynamicKaijuBlock39,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock40:* (dynamicKaijuBlock40), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock40
+block:id=%dynamicKaijuBlock40,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock41:* (dynamicKaijuBlock41), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock41
+block:id=%dynamicKaijuBlock41,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock42:* (dynamicKaijuBlock42), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock42
+block:id=%dynamicKaijuBlock42,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock43:* (dynamicKaijuBlock43), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock43
+block:id=%dynamicKaijuBlock43,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock44:* (dynamicKaijuBlock44), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock44
+block:id=%dynamicKaijuBlock44,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock45:* (dynamicKaijuBlock45), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock45
+block:id=%dynamicKaijuBlock45,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock46:* (dynamicKaijuBlock46), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock46
+block:id=%dynamicKaijuBlock46,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock47:* (dynamicKaijuBlock47), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock47
+block:id=%dynamicKaijuBlock47,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock48:* (dynamicKaijuBlock48), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock48
+block:id=%dynamicKaijuBlock48,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock49:* (dynamicKaijuBlock49), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock49
+block:id=%dynamicKaijuBlock49,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock50:* (dynamicKaijuBlock50), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock50
+block:id=%dynamicKaijuBlock50,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock51:* (dynamicKaijuBlock51), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock51
+block:id=%dynamicKaijuBlock51,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock52:* (dynamicKaijuBlock52), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock52
+block:id=%dynamicKaijuBlock52,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock53:* (dynamicKaijuBlock53), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock53
+block:id=%dynamicKaijuBlock53,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock54:* (dynamicKaijuBlock54), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock54
+block:id=%dynamicKaijuBlock54,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock55:* (dynamicKaijuBlock55), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock55
+block:id=%dynamicKaijuBlock55,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock56:* (dynamicKaijuBlock56), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock56
+block:id=%dynamicKaijuBlock56,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock57:* (dynamicKaijuBlock57), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock57
+block:id=%dynamicKaijuBlock57,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock58:* (dynamicKaijuBlock58), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock58
+block:id=%dynamicKaijuBlock58,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock59:* (dynamicKaijuBlock59), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock59
+block:id=%dynamicKaijuBlock59,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock60:* (dynamicKaijuBlock60), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock60
+block:id=%dynamicKaijuBlock60,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock61:* (dynamicKaijuBlock61), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock61
+block:id=%dynamicKaijuBlock61,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock62:* (dynamicKaijuBlock62), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock62
+block:id=%dynamicKaijuBlock62,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock63:* (dynamicKaijuBlock63), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock63
+block:id=%dynamicKaijuBlock63,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock64:* (dynamicKaijuBlock64), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock64
+block:id=%dynamicKaijuBlock64,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock65:* (dynamicKaijuBlock65), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock65
+block:id=%dynamicKaijuBlock65,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock66:* (dynamicKaijuBlock66), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock66
+block:id=%dynamicKaijuBlock66,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock67:* (dynamicKaijuBlock67), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock67
+block:id=%dynamicKaijuBlock67,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock68:* (dynamicKaijuBlock68), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock68
+block:id=%dynamicKaijuBlock68,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock69:* (dynamicKaijuBlock69), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock69
+block:id=%dynamicKaijuBlock69,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock70:* (dynamicKaijuBlock70), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock70
+block:id=%dynamicKaijuBlock70,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock71:* (dynamicKaijuBlock71), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock71
+block:id=%dynamicKaijuBlock71,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock72:* (dynamicKaijuBlock72), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock72
+block:id=%dynamicKaijuBlock72,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock73:* (dynamicKaijuBlock73), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock73
+block:id=%dynamicKaijuBlock73,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock74:* (dynamicKaijuBlock74), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock74
+block:id=%dynamicKaijuBlock74,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock75:* (dynamicKaijuBlock75), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock75
+block:id=%dynamicKaijuBlock75,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock76:* (dynamicKaijuBlock76), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock76
+block:id=%dynamicKaijuBlock76,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock77:* (dynamicKaijuBlock77), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock77
+block:id=%dynamicKaijuBlock77,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock78:* (dynamicKaijuBlock78), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock78
+block:id=%dynamicKaijuBlock78,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock79:* (dynamicKaijuBlock79), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock79
+block:id=%dynamicKaijuBlock79,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock80:* (dynamicKaijuBlock80), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock80
+block:id=%dynamicKaijuBlock80,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock81:* (dynamicKaijuBlock81), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock81
+block:id=%dynamicKaijuBlock81,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock82:* (dynamicKaijuBlock82), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock82
+block:id=%dynamicKaijuBlock82,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock83:* (dynamicKaijuBlock83), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock83
+block:id=%dynamicKaijuBlock83,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock84:* (dynamicKaijuBlock84), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock84
+block:id=%dynamicKaijuBlock84,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock85:* (dynamicKaijuBlock85), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock85
+block:id=%dynamicKaijuBlock85,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock86:* (dynamicKaijuBlock86), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock86
+block:id=%dynamicKaijuBlock86,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock87:* (dynamicKaijuBlock87), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock87
+block:id=%dynamicKaijuBlock87,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock88:* (dynamicKaijuBlock88), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock88
+block:id=%dynamicKaijuBlock88,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock89:* (dynamicKaijuBlock89), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock89
+block:id=%dynamicKaijuBlock89,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock90:* (dynamicKaijuBlock90), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock90
+block:id=%dynamicKaijuBlock90,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock91:* (dynamicKaijuBlock91), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock91
+block:id=%dynamicKaijuBlock91,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock92:* (dynamicKaijuBlock92), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock92
+block:id=%dynamicKaijuBlock92,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock93:* (dynamicKaijuBlock93), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock93
+block:id=%dynamicKaijuBlock93,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock94:* (dynamicKaijuBlock94), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock94
+block:id=%dynamicKaijuBlock94,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock95:* (dynamicKaijuBlock95), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock95
+block:id=%dynamicKaijuBlock95,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock96:* (dynamicKaijuBlock96), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock96
+block:id=%dynamicKaijuBlock96,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock97:* (dynamicKaijuBlock97), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock97
+block:id=%dynamicKaijuBlock97,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock98:* (dynamicKaijuBlock98), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock98
+block:id=%dynamicKaijuBlock98,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock99:* (dynamicKaijuBlock99), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock99
+block:id=%dynamicKaijuBlock99,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %dynamicKaijuBlock100:* (dynamicKaijuBlock100), render=(STANDARD), opaque=true,cls=com.tihyo.kaiju.blocks.dynamic.BlockDynamicKaijuBlock100
+block:id=%dynamicKaijuBlock100,data=*,stdrot=true,face0-5=0:kaiju/blank
+
+# %kyberCrystalBlock:* (kyberCrystalBlock), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockKyberCrystal
+block:id=%kyberCrystalBlock,data=*,stdrot=true,face0-5=0:starwars/blank_tile
+
+# %saberBench:* (saberBench), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockLightsaberBench
+block:id=%saberBench,data=*,stdrot=true,face0-5=0:starwars/saberbench_tile
+
+# %saberModifier:* (saberModifier), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockLightsaberModifier
+block:id=%saberModifier,data=*,stdrot=true,face0-5=0:starwars/saberbench_tile
+
+# %jediHolocron:* (jediHolocron), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockJediHolocron
+block:id=%jediHolocron,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:starwars/blank_tile
+
+# %sithHolocron:* (sithHolocron), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockSithHolocron
+block:id=%sithHolocron,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:starwars/blank_tile
+
+# %jediArchives:* (jediArchives), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockJediArchives
+block:id=%jediArchives,data=*,stdrot=true,face0-5=0:starwars/jediarchives
+
+# %sithArchives:* (sithArchives), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockSithArchives
+block:id=%sithArchives,data=*,stdrot=true,face0-5=0:starwars/sitharchives
+
+# %jediSpawner:* (jediSpawner), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockJediSpawner
+block:id=%jediSpawner,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock1:* (dynamicStarWarsBlock1), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockSithSpawner
+block:id=%dynamicStarWarsBlock1,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock2:* (dynamicStarWarsBlock2), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockLightsaberBenchSith
+block:id=%dynamicStarWarsBlock2,data=*,stdrot=true,face0-5=0:starwars/saberbench_tile
+
+# %dynamicStarWarsBlock3:* (dynamicStarWarsBlock3), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCJediArmourer
+block:id=%dynamicStarWarsBlock3,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock4:* (dynamicStarWarsBlock4), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCSithArmourer
+block:id=%dynamicStarWarsBlock4,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock5:* (dynamicStarWarsBlock5), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCJediRecruiter
+block:id=%dynamicStarWarsBlock5,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock6:* (dynamicStarWarsBlock6), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCSithRecruiter
+block:id=%dynamicStarWarsBlock6,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock7:* (dynamicStarWarsBlock7), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockHurikaneanSpawner
+block:id=%dynamicStarWarsBlock7,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock8:* (dynamicStarWarsBlock8), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.BlockSuitForge
+block:id=%dynamicStarWarsBlock8,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/heromaker_tile
+
+# %dynamicStarWarsBlock9:* (dynamicStarWarsBlock9), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCWuher
+block:id=%dynamicStarWarsBlock9,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock10:* (dynamicStarWarsBlock10), render=(CUSTOM), opaque=false,cls=com.tihyo.starwars.blocks.npcs.BlockNPCSmuggler
+block:id=%dynamicStarWarsBlock10,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:legends/mob_spawner
+
+# %dynamicStarWarsBlock11:* (dynamicStarWarsBlock11), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock11
+block:id=%dynamicStarWarsBlock11,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock12:* (dynamicStarWarsBlock12), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock12
+block:id=%dynamicStarWarsBlock12,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock13:* (dynamicStarWarsBlock13), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock13
+block:id=%dynamicStarWarsBlock13,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock14:* (dynamicStarWarsBlock14), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock14
+block:id=%dynamicStarWarsBlock14,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock15:* (dynamicStarWarsBlock15), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock15
+block:id=%dynamicStarWarsBlock15,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock16:* (dynamicStarWarsBlock16), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock16
+block:id=%dynamicStarWarsBlock16,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock17:* (dynamicStarWarsBlock17), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock17
+block:id=%dynamicStarWarsBlock17,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock18:* (dynamicStarWarsBlock18), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock18
+block:id=%dynamicStarWarsBlock18,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock19:* (dynamicStarWarsBlock19), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock19
+block:id=%dynamicStarWarsBlock19,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock20:* (dynamicStarWarsBlock20), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock20
+block:id=%dynamicStarWarsBlock20,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock21:* (dynamicStarWarsBlock21), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock21
+block:id=%dynamicStarWarsBlock21,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock22:* (dynamicStarWarsBlock22), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock22
+block:id=%dynamicStarWarsBlock22,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock23:* (dynamicStarWarsBlock23), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock23
+block:id=%dynamicStarWarsBlock23,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock24:* (dynamicStarWarsBlock24), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock24
+block:id=%dynamicStarWarsBlock24,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock25:* (dynamicStarWarsBlock25), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock25
+block:id=%dynamicStarWarsBlock25,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock26:* (dynamicStarWarsBlock26), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock26
+block:id=%dynamicStarWarsBlock26,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock27:* (dynamicStarWarsBlock27), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock27
+block:id=%dynamicStarWarsBlock27,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock28:* (dynamicStarWarsBlock28), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock28
+block:id=%dynamicStarWarsBlock28,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock29:* (dynamicStarWarsBlock29), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock29
+block:id=%dynamicStarWarsBlock29,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock30:* (dynamicStarWarsBlock30), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock30
+block:id=%dynamicStarWarsBlock30,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock31:* (dynamicStarWarsBlock31), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock31
+block:id=%dynamicStarWarsBlock31,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock32:* (dynamicStarWarsBlock32), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock32
+block:id=%dynamicStarWarsBlock32,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock33:* (dynamicStarWarsBlock33), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock33
+block:id=%dynamicStarWarsBlock33,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock34:* (dynamicStarWarsBlock34), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock34
+block:id=%dynamicStarWarsBlock34,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock35:* (dynamicStarWarsBlock35), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock35
+block:id=%dynamicStarWarsBlock35,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock36:* (dynamicStarWarsBlock36), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock36
+block:id=%dynamicStarWarsBlock36,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock37:* (dynamicStarWarsBlock37), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock37
+block:id=%dynamicStarWarsBlock37,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock38:* (dynamicStarWarsBlock38), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock38
+block:id=%dynamicStarWarsBlock38,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock39:* (dynamicStarWarsBlock39), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock39
+block:id=%dynamicStarWarsBlock39,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock40:* (dynamicStarWarsBlock40), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock40
+block:id=%dynamicStarWarsBlock40,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock41:* (dynamicStarWarsBlock41), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock41
+block:id=%dynamicStarWarsBlock41,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock42:* (dynamicStarWarsBlock42), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock42
+block:id=%dynamicStarWarsBlock42,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock43:* (dynamicStarWarsBlock43), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock43
+block:id=%dynamicStarWarsBlock43,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock44:* (dynamicStarWarsBlock44), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock44
+block:id=%dynamicStarWarsBlock44,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock45:* (dynamicStarWarsBlock45), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock45
+block:id=%dynamicStarWarsBlock45,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock46:* (dynamicStarWarsBlock46), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock46
+block:id=%dynamicStarWarsBlock46,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock47:* (dynamicStarWarsBlock47), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock47
+block:id=%dynamicStarWarsBlock47,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock48:* (dynamicStarWarsBlock48), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock48
+block:id=%dynamicStarWarsBlock48,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock49:* (dynamicStarWarsBlock49), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock49
+block:id=%dynamicStarWarsBlock49,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock50:* (dynamicStarWarsBlock50), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock50
+block:id=%dynamicStarWarsBlock50,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock51:* (dynamicStarWarsBlock51), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock51
+block:id=%dynamicStarWarsBlock51,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock52:* (dynamicStarWarsBlock52), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock52
+block:id=%dynamicStarWarsBlock52,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock53:* (dynamicStarWarsBlock53), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock53
+block:id=%dynamicStarWarsBlock53,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock54:* (dynamicStarWarsBlock54), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock54
+block:id=%dynamicStarWarsBlock54,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock55:* (dynamicStarWarsBlock55), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock55
+block:id=%dynamicStarWarsBlock55,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock56:* (dynamicStarWarsBlock56), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock56
+block:id=%dynamicStarWarsBlock56,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock57:* (dynamicStarWarsBlock57), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock57
+block:id=%dynamicStarWarsBlock57,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock58:* (dynamicStarWarsBlock58), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock58
+block:id=%dynamicStarWarsBlock58,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock59:* (dynamicStarWarsBlock59), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock59
+block:id=%dynamicStarWarsBlock59,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock60:* (dynamicStarWarsBlock60), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock60
+block:id=%dynamicStarWarsBlock60,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock61:* (dynamicStarWarsBlock61), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock61
+block:id=%dynamicStarWarsBlock61,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock62:* (dynamicStarWarsBlock62), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock62
+block:id=%dynamicStarWarsBlock62,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock63:* (dynamicStarWarsBlock63), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock63
+block:id=%dynamicStarWarsBlock63,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock64:* (dynamicStarWarsBlock64), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock64
+block:id=%dynamicStarWarsBlock64,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock65:* (dynamicStarWarsBlock65), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock65
+block:id=%dynamicStarWarsBlock65,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock66:* (dynamicStarWarsBlock66), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock66
+block:id=%dynamicStarWarsBlock66,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock67:* (dynamicStarWarsBlock67), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock67
+block:id=%dynamicStarWarsBlock67,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock68:* (dynamicStarWarsBlock68), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock68
+block:id=%dynamicStarWarsBlock68,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock69:* (dynamicStarWarsBlock69), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock69
+block:id=%dynamicStarWarsBlock69,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock70:* (dynamicStarWarsBlock70), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock70
+block:id=%dynamicStarWarsBlock70,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock71:* (dynamicStarWarsBlock71), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock71
+block:id=%dynamicStarWarsBlock71,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock72:* (dynamicStarWarsBlock72), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock72
+block:id=%dynamicStarWarsBlock72,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock73:* (dynamicStarWarsBlock73), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock73
+block:id=%dynamicStarWarsBlock73,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock74:* (dynamicStarWarsBlock74), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock74
+block:id=%dynamicStarWarsBlock74,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock75:* (dynamicStarWarsBlock75), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock75
+block:id=%dynamicStarWarsBlock75,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock76:* (dynamicStarWarsBlock76), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock76
+block:id=%dynamicStarWarsBlock76,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock77:* (dynamicStarWarsBlock77), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock77
+block:id=%dynamicStarWarsBlock77,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock78:* (dynamicStarWarsBlock78), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock78
+block:id=%dynamicStarWarsBlock78,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock79:* (dynamicStarWarsBlock79), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock79
+block:id=%dynamicStarWarsBlock79,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock80:* (dynamicStarWarsBlock80), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock80
+block:id=%dynamicStarWarsBlock80,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock81:* (dynamicStarWarsBlock81), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock81
+block:id=%dynamicStarWarsBlock81,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock82:* (dynamicStarWarsBlock82), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock82
+block:id=%dynamicStarWarsBlock82,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock83:* (dynamicStarWarsBlock83), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock83
+block:id=%dynamicStarWarsBlock83,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock84:* (dynamicStarWarsBlock84), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock84
+block:id=%dynamicStarWarsBlock84,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock85:* (dynamicStarWarsBlock85), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock85
+block:id=%dynamicStarWarsBlock85,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock86:* (dynamicStarWarsBlock86), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock86
+block:id=%dynamicStarWarsBlock86,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock87:* (dynamicStarWarsBlock87), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock87
+block:id=%dynamicStarWarsBlock87,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock88:* (dynamicStarWarsBlock88), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock88
+block:id=%dynamicStarWarsBlock88,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock89:* (dynamicStarWarsBlock89), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock89
+block:id=%dynamicStarWarsBlock89,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock90:* (dynamicStarWarsBlock90), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock90
+block:id=%dynamicStarWarsBlock90,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock91:* (dynamicStarWarsBlock91), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock91
+block:id=%dynamicStarWarsBlock91,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock92:* (dynamicStarWarsBlock92), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock92
+block:id=%dynamicStarWarsBlock92,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock93:* (dynamicStarWarsBlock93), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock93
+block:id=%dynamicStarWarsBlock93,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock94:* (dynamicStarWarsBlock94), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock94
+block:id=%dynamicStarWarsBlock94,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock95:* (dynamicStarWarsBlock95), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock95
+block:id=%dynamicStarWarsBlock95,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock96:* (dynamicStarWarsBlock96), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock96
+block:id=%dynamicStarWarsBlock96,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock97:* (dynamicStarWarsBlock97), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock97
+block:id=%dynamicStarWarsBlock97,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock98:* (dynamicStarWarsBlock98), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock98
+block:id=%dynamicStarWarsBlock98,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock99:* (dynamicStarWarsBlock99), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock99
+block:id=%dynamicStarWarsBlock99,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %dynamicStarWarsBlock100:* (dynamicStarWarsBlock100), render=(STANDARD), opaque=true,cls=com.tihyo.starwars.blocks.dynamic.BlockDynamicStarWarsBlock100
+block:id=%dynamicStarWarsBlock100,data=*,stdrot=true,face0-5=0:starwars/blank
+
+# %SAU:* (SAU), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock2
+block:id=%SAU,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %SAU_OFF:* (SAU_OFF), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock2
+block:id=%SAU_OFF,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %powerUnit:* (powerUnit), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockMPU
+block:id=%powerUnit,data=*,stdrot=true,face0-5=0:sum/heromaker_tile
+
+# %powerUnit_Off:* (powerUnit_Off), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockMPU
+block:id=%powerUnit_Off,data=*,stdrot=true,face0-5=0:sum/heromaker_tile
+
+# %starkBench:* (starkBench), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockStarkBench
+block:id=%starkBench,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/heromaker_tile
+
+# %batcomputer:* (batcomputer), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputer
+block:id=%batcomputer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/batcomputer_tile
+
+# %batcomputerOn:* (batcomputerOn), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputerOn
+block:id=%batcomputerOn,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/batcomputer_tile
+
+# %batcomputer2:* (batcomputer2), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputer2
+block:id=%batcomputer2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/batcomputer_tile
+
+# %batcomputerOn2:* (batcomputerOn2), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockBatcomputerOn2
+block:id=%batcomputerOn2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/batcomputer_tile
+
+# %kryptonite:* (kryptonite), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockKryptonite
+block:id=%kryptonite,data=*,stdrot=true,face0-5=0:sum/kryptoniteore
+
+# %gamma:* (gamma), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.BlockGamma
+block:id=%gamma,data=*,stdrot=true,face0-5=0:sum/gammablock
+
+# %syntheticWeb:* (syntheticWeb), render=(CROSSEDSQUARES), opaque=false,cls=com.tihyo.superheroes.blocks.BlockSyntheticWeb
+block:id=%syntheticWeb,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/web
+
+# %palladiumOre:* (palladiumOre), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.BlockPalladiumOre
+block:id=%palladiumOre,data=*,stdrot=true,face0-5=0:sum/palladiumore
+
+# %mark5Case:* (mark5Case), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockMark5Case
+block:id=%mark5Case,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:sum/heromaker_tile
+
+# %vibraniumOre:* (vibraniumOre), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.BlockVibraniumOre
+block:id=%vibraniumOre,data=*,stdrot=true,face0-5=0:sum/vibraniumore
+
+# %dynamicSuperHeroesBlock1:* (dynamicSuperHeroesBlock1), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockSymbioteChamber
+block:id=%dynamicSuperHeroesBlock1,data=*,stdrot=true,face0-5=0:sum/heromaker_tile
+
+# %dynamicSuperHeroesBlock2:* (dynamicSuperHeroesBlock2), render=(CUSTOM), opaque=false,cls=com.tihyo.superheroes.blocks.BlockSymbioteChamber
+block:id=%dynamicSuperHeroesBlock2,data=*,stdrot=true,face0-5=0:sum/heromaker_tile
+
+# %dynamicSuperHeroesBlock3:* (dynamicSuperHeroesBlock3), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock3
+block:id=%dynamicSuperHeroesBlock3,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock4:* (dynamicSuperHeroesBlock4), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock4
+block:id=%dynamicSuperHeroesBlock4,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock5:* (dynamicSuperHeroesBlock5), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock5
+block:id=%dynamicSuperHeroesBlock5,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock6:* (dynamicSuperHeroesBlock6), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock6
+block:id=%dynamicSuperHeroesBlock6,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock7:* (dynamicSuperHeroesBlock7), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock7
+block:id=%dynamicSuperHeroesBlock7,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock8:* (dynamicSuperHeroesBlock8), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock8
+block:id=%dynamicSuperHeroesBlock8,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock9:* (dynamicSuperHeroesBlock9), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock9
+block:id=%dynamicSuperHeroesBlock9,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock10:* (dynamicSuperHeroesBlock10), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock10
+block:id=%dynamicSuperHeroesBlock10,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock11:* (dynamicSuperHeroesBlock11), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock11
+block:id=%dynamicSuperHeroesBlock11,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock12:* (dynamicSuperHeroesBlock12), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock12
+block:id=%dynamicSuperHeroesBlock12,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock13:* (dynamicSuperHeroesBlock13), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock13
+block:id=%dynamicSuperHeroesBlock13,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock14:* (dynamicSuperHeroesBlock14), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock14
+block:id=%dynamicSuperHeroesBlock14,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock15:* (dynamicSuperHeroesBlock15), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock15
+block:id=%dynamicSuperHeroesBlock15,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock16:* (dynamicSuperHeroesBlock16), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock16
+block:id=%dynamicSuperHeroesBlock16,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock17:* (dynamicSuperHeroesBlock17), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock17
+block:id=%dynamicSuperHeroesBlock17,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock18:* (dynamicSuperHeroesBlock18), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock18
+block:id=%dynamicSuperHeroesBlock18,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock19:* (dynamicSuperHeroesBlock19), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock19
+block:id=%dynamicSuperHeroesBlock19,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock20:* (dynamicSuperHeroesBlock20), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock20
+block:id=%dynamicSuperHeroesBlock20,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock21:* (dynamicSuperHeroesBlock21), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock21
+block:id=%dynamicSuperHeroesBlock21,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock22:* (dynamicSuperHeroesBlock22), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock22
+block:id=%dynamicSuperHeroesBlock22,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock23:* (dynamicSuperHeroesBlock23), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock23
+block:id=%dynamicSuperHeroesBlock23,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock24:* (dynamicSuperHeroesBlock24), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock24
+block:id=%dynamicSuperHeroesBlock24,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock25:* (dynamicSuperHeroesBlock25), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock25
+block:id=%dynamicSuperHeroesBlock25,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock26:* (dynamicSuperHeroesBlock26), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock26
+block:id=%dynamicSuperHeroesBlock26,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock27:* (dynamicSuperHeroesBlock27), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock27
+block:id=%dynamicSuperHeroesBlock27,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock28:* (dynamicSuperHeroesBlock28), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock28
+block:id=%dynamicSuperHeroesBlock28,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock29:* (dynamicSuperHeroesBlock29), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock29
+block:id=%dynamicSuperHeroesBlock29,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock30:* (dynamicSuperHeroesBlock30), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock30
+block:id=%dynamicSuperHeroesBlock30,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock31:* (dynamicSuperHeroesBlock31), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock31
+block:id=%dynamicSuperHeroesBlock31,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock32:* (dynamicSuperHeroesBlock32), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock32
+block:id=%dynamicSuperHeroesBlock32,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock33:* (dynamicSuperHeroesBlock33), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock33
+block:id=%dynamicSuperHeroesBlock33,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock34:* (dynamicSuperHeroesBlock34), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock34
+block:id=%dynamicSuperHeroesBlock34,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock35:* (dynamicSuperHeroesBlock35), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock35
+block:id=%dynamicSuperHeroesBlock35,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock36:* (dynamicSuperHeroesBlock36), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock36
+block:id=%dynamicSuperHeroesBlock36,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock37:* (dynamicSuperHeroesBlock37), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock37
+block:id=%dynamicSuperHeroesBlock37,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock38:* (dynamicSuperHeroesBlock38), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock38
+block:id=%dynamicSuperHeroesBlock38,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock39:* (dynamicSuperHeroesBlock39), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock39
+block:id=%dynamicSuperHeroesBlock39,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock40:* (dynamicSuperHeroesBlock40), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock40
+block:id=%dynamicSuperHeroesBlock40,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock41:* (dynamicSuperHeroesBlock41), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock41
+block:id=%dynamicSuperHeroesBlock41,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock42:* (dynamicSuperHeroesBlock42), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock42
+block:id=%dynamicSuperHeroesBlock42,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock43:* (dynamicSuperHeroesBlock43), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock43
+block:id=%dynamicSuperHeroesBlock43,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock44:* (dynamicSuperHeroesBlock44), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock44
+block:id=%dynamicSuperHeroesBlock44,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock45:* (dynamicSuperHeroesBlock45), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock45
+block:id=%dynamicSuperHeroesBlock45,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock46:* (dynamicSuperHeroesBlock46), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock46
+block:id=%dynamicSuperHeroesBlock46,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock47:* (dynamicSuperHeroesBlock47), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock47
+block:id=%dynamicSuperHeroesBlock47,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock48:* (dynamicSuperHeroesBlock48), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock48
+block:id=%dynamicSuperHeroesBlock48,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock49:* (dynamicSuperHeroesBlock49), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock49
+block:id=%dynamicSuperHeroesBlock49,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock50:* (dynamicSuperHeroesBlock50), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock50
+block:id=%dynamicSuperHeroesBlock50,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock51:* (dynamicSuperHeroesBlock51), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock51
+block:id=%dynamicSuperHeroesBlock51,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock52:* (dynamicSuperHeroesBlock52), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock52
+block:id=%dynamicSuperHeroesBlock52,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock53:* (dynamicSuperHeroesBlock53), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock53
+block:id=%dynamicSuperHeroesBlock53,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock54:* (dynamicSuperHeroesBlock54), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock54
+block:id=%dynamicSuperHeroesBlock54,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock55:* (dynamicSuperHeroesBlock55), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock55
+block:id=%dynamicSuperHeroesBlock55,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock56:* (dynamicSuperHeroesBlock56), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock56
+block:id=%dynamicSuperHeroesBlock56,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock57:* (dynamicSuperHeroesBlock57), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock57
+block:id=%dynamicSuperHeroesBlock57,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock58:* (dynamicSuperHeroesBlock58), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock58
+block:id=%dynamicSuperHeroesBlock58,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock59:* (dynamicSuperHeroesBlock59), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock59
+block:id=%dynamicSuperHeroesBlock59,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock60:* (dynamicSuperHeroesBlock60), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock60
+block:id=%dynamicSuperHeroesBlock60,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock61:* (dynamicSuperHeroesBlock61), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock61
+block:id=%dynamicSuperHeroesBlock61,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock62:* (dynamicSuperHeroesBlock62), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock62
+block:id=%dynamicSuperHeroesBlock62,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock63:* (dynamicSuperHeroesBlock63), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock63
+block:id=%dynamicSuperHeroesBlock63,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock64:* (dynamicSuperHeroesBlock64), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock64
+block:id=%dynamicSuperHeroesBlock64,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock65:* (dynamicSuperHeroesBlock65), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock65
+block:id=%dynamicSuperHeroesBlock65,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock66:* (dynamicSuperHeroesBlock66), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock66
+block:id=%dynamicSuperHeroesBlock66,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock67:* (dynamicSuperHeroesBlock67), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock67
+block:id=%dynamicSuperHeroesBlock67,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock68:* (dynamicSuperHeroesBlock68), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock68
+block:id=%dynamicSuperHeroesBlock68,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock69:* (dynamicSuperHeroesBlock69), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock69
+block:id=%dynamicSuperHeroesBlock69,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock70:* (dynamicSuperHeroesBlock70), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock70
+block:id=%dynamicSuperHeroesBlock70,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock71:* (dynamicSuperHeroesBlock71), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock71
+block:id=%dynamicSuperHeroesBlock71,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock72:* (dynamicSuperHeroesBlock72), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock72
+block:id=%dynamicSuperHeroesBlock72,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock73:* (dynamicSuperHeroesBlock73), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock73
+block:id=%dynamicSuperHeroesBlock73,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock74:* (dynamicSuperHeroesBlock74), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock74
+block:id=%dynamicSuperHeroesBlock74,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock75:* (dynamicSuperHeroesBlock75), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock75
+block:id=%dynamicSuperHeroesBlock75,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock76:* (dynamicSuperHeroesBlock76), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock76
+block:id=%dynamicSuperHeroesBlock76,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock77:* (dynamicSuperHeroesBlock77), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock77
+block:id=%dynamicSuperHeroesBlock77,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock78:* (dynamicSuperHeroesBlock78), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock78
+block:id=%dynamicSuperHeroesBlock78,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock79:* (dynamicSuperHeroesBlock79), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock79
+block:id=%dynamicSuperHeroesBlock79,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock80:* (dynamicSuperHeroesBlock80), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock80
+block:id=%dynamicSuperHeroesBlock80,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock81:* (dynamicSuperHeroesBlock81), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock81
+block:id=%dynamicSuperHeroesBlock81,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock82:* (dynamicSuperHeroesBlock82), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock82
+block:id=%dynamicSuperHeroesBlock82,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock83:* (dynamicSuperHeroesBlock83), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock83
+block:id=%dynamicSuperHeroesBlock83,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock84:* (dynamicSuperHeroesBlock84), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock84
+block:id=%dynamicSuperHeroesBlock84,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock85:* (dynamicSuperHeroesBlock85), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock85
+block:id=%dynamicSuperHeroesBlock85,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock86:* (dynamicSuperHeroesBlock86), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock86
+block:id=%dynamicSuperHeroesBlock86,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock87:* (dynamicSuperHeroesBlock87), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock87
+block:id=%dynamicSuperHeroesBlock87,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock88:* (dynamicSuperHeroesBlock88), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock88
+block:id=%dynamicSuperHeroesBlock88,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock89:* (dynamicSuperHeroesBlock89), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock89
+block:id=%dynamicSuperHeroesBlock89,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock90:* (dynamicSuperHeroesBlock90), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock90
+block:id=%dynamicSuperHeroesBlock90,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock91:* (dynamicSuperHeroesBlock91), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock91
+block:id=%dynamicSuperHeroesBlock91,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock92:* (dynamicSuperHeroesBlock92), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock92
+block:id=%dynamicSuperHeroesBlock92,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock93:* (dynamicSuperHeroesBlock93), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock93
+block:id=%dynamicSuperHeroesBlock93,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock94:* (dynamicSuperHeroesBlock94), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock94
+block:id=%dynamicSuperHeroesBlock94,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock95:* (dynamicSuperHeroesBlock95), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock95
+block:id=%dynamicSuperHeroesBlock95,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock96:* (dynamicSuperHeroesBlock96), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock96
+block:id=%dynamicSuperHeroesBlock96,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock97:* (dynamicSuperHeroesBlock97), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock97
+block:id=%dynamicSuperHeroesBlock97,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock98:* (dynamicSuperHeroesBlock98), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock98
+block:id=%dynamicSuperHeroesBlock98,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock99:* (dynamicSuperHeroesBlock99), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock99
+block:id=%dynamicSuperHeroesBlock99,data=*,stdrot=true,face0-5=0:sum/blank
+
+# %dynamicSuperHeroesBlock100:* (dynamicSuperHeroesBlock100), render=(STANDARD), opaque=true,cls=com.tihyo.superheroes.blocks.dynamic.BlockDynamicSuperHeroesBlock100
+block:id=%dynamicSuperHeroesBlock100,data=*,stdrot=true,face0-5=0:sum/blank

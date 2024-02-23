@@ -1,0 +1,21 @@
+# HexWool 0.4.2.16
+version:1.7
+modname:HexWool
+
+
+cfgfile:config/HexWool.cfg
+
+
+texturepath:assets/hexwool/textures/blocks/
+texture:id=hexwool/wool_colorizer_bottom,filename=assets/hexwool/textures/blocks/wool_colorizer_bottom.png
+texture:id=hexwool/wool_colorizer_side,filename=assets/hexwool/textures/blocks/wool_colorizer_side.png
+texture:id=hexwool/wool_colorizer_top,filename=assets/hexwool/textures/blocks/wool_colorizer_top.png
+texture:id=minecraft/wool_colored_white,filename=assets/minecraft/textures/blocks/wool_colored_white.png
+
+
+
+# %wool_colorizer:* (wool_colorizer), render=com.techjar.hexwool.client.render.block.RenderBlockWoolColorizer(CUSTOM), opaque=true,cls=com.techjar.hexwool.block.BlockWoolColorizer
+block:id=%wool_colorizer,data=*,stdrot=true,face0=0:hexwool/wool_colorizer_bottom,face1=0:hexwool/wool_colorizer_top,face2-5=0:hexwool/wool_colorizer_side
+
+# %colored_wool:* (colored_wool), render=(STANDARD), opaque=true,cls=com.techjar.hexwool.block.BlockColoredWool
+block:id=%colored_wool,data=*,stdrot=true,face0-5=0:minecraft/wool_colored_white

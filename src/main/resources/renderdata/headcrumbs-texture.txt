@@ -1,0 +1,21 @@
+# headcrumbs 1.7.4
+version:1.7
+modname:headcrumbs
+
+
+cfgfile:config/headcrumbs.cfg
+
+
+texturepath:assets/headcrumbs/textures/blocks/
+texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
+
+
+
+# %betterSkull:* (betterSkull), render=(CUSTOM), opaque=false,cls=ganymedes01.headcrumbs.blocks.BlockSkull
+block:id=%betterSkull,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
+
+# %player:* (player), render=(CUSTOM), opaque=false,cls=ganymedes01.headcrumbs.blocks.BlockPlayer
+block:id=%player,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
+
+# %empty:* (empty), render=(CUSTOM), opaque=false,cls=ganymedes01.headcrumbs.blocks.BlockEmpty
+block:id=%empty,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand

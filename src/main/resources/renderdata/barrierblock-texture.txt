@@ -1,0 +1,16 @@
+# barrierblock 0.1
+version:1.7
+modname:barrierblock
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/barrierblock/textures/blocks/
+texture:id=barrierblock/barrier,filename=assets/barrierblock/textures/blocks/barrier.png
+
+
+
+# %barrier:* (barrier), render=(CUSTOM), opaque=false,cls=sscards55.barrierblock.BarrierBlock$BarrierBlockBlock
+block:id=%barrier,data=*,stdrot=true,face0-5=0:barrierblock/barrier

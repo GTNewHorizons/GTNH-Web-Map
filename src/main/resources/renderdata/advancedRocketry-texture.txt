@@ -1,0 +1,759 @@
+# advancedRocketry 2.0.0.02-TFR
+version:1.7
+modname:advancedRocketry
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/advancedrocketry/textures/blocks/
+texture:id=AdvancedRocketry/panelSide,filename=assets/advancedrocketry/textures/blocks/panelSide.png
+texture:id=AdvancedRocketry/pipeData,filename=assets/advancedrocketry/textures/blocks/pipeData.png
+texture:id=AdvancedRocketry/pipeEnergy,filename=assets/advancedrocketry/textures/blocks/pipeEnergy.png
+texture:id=AdvancedRocketry/pipeLiquid,filename=assets/advancedrocketry/textures/blocks/pipeLiquid.png
+texture:id=AdvancedRocketry/solar,filename=assets/advancedrocketry/textures/blocks/solar.png
+texture:id=Advancedrocketry/BlastBrick,filename=assets/advancedrocketry/textures/blocks/BlastBrick.png
+texture:id=Advancedrocketry/BlastBrickFront,filename=assets/advancedrocketry/textures/blocks/BlastBrickFront.png
+texture:id=Advancedrocketry/BlastBrickFrontActive,filename=assets/advancedrocketry/textures/blocks/BlastBrickFrontActive.png
+texture:id=Advancedrocketry/Crystallizer,filename=assets/advancedrocketry/textures/blocks/Crystallizer.png
+texture:id=Advancedrocketry/Crystallizer_active,filename=assets/advancedrocketry/textures/blocks/Crystallizer_active.png
+texture:id=Advancedrocketry/FuelingMachine,filename=assets/advancedrocketry/textures/blocks/FuelingMachine.png
+texture:id=Advancedrocketry/MonitorRocket,filename=assets/advancedrocketry/textures/blocks/MonitorRocket.png
+texture:id=Advancedrocketry/MonitorSatellite,filename=assets/advancedrocketry/textures/blocks/MonitorSatellite.png
+texture:id=Advancedrocketry/MonitorSide,filename=assets/advancedrocketry/textures/blocks/MonitorSide.png
+texture:id=Advancedrocketry/beacon,filename=assets/advancedrocketry/textures/blocks/beacon.png
+texture:id=Advancedrocketry/controlPanel,filename=assets/advancedrocketry/textures/blocks/controlPanel.png
+texture:id=Advancedrocketry/forcefieldProjector_off,filename=assets/advancedrocketry/textures/blocks/forcefieldProjector_off.png
+texture:id=Advancedrocketry/guidanceComputer,filename=assets/advancedrocketry/textures/blocks/guidanceComputer.png
+texture:id=Advancedrocketry/laserBottom,filename=assets/advancedrocketry/textures/blocks/laserBottom.png
+texture:id=Advancedrocketry/machineElectrolzyer,filename=assets/advancedrocketry/textures/blocks/machineElectrolzyer.png
+texture:id=Advancedrocketry/machineElectrolzyer_active,filename=assets/advancedrocketry/textures/blocks/machineElectrolzyer_active.png
+texture:id=Advancedrocketry/machineWarning,filename=assets/advancedrocketry/textures/blocks/machineWarning.png
+texture:id=Advancedrocketry/panelSide,filename=assets/advancedrocketry/textures/blocks/panelSide.png
+texture:id=Advancedrocketry/panelSideWorkStation,filename=assets/advancedrocketry/textures/blocks/panelSideWorkStation.png
+texture:id=Advancedrocketry/qcrucible_inner,filename=assets/advancedrocketry/textures/blocks/qcrucible_inner.png
+texture:id=Advancedrocketry/railgun,filename=assets/advancedrocketry/textures/blocks/railgun.png
+texture:id=Advancedrocketry/satelliteAssembler,filename=assets/advancedrocketry/textures/blocks/satelliteAssembler.png
+texture:id=Advancedrocketry/solar,filename=assets/advancedrocketry/textures/blocks/solar.png
+texture:id=Advancedrocketry/starshipcontrolPanel,filename=assets/advancedrocketry/textures/blocks/starshipcontrolPanel.png
+texture:id=Advancedrocketry/suitWorkStation,filename=assets/advancedrocketry/textures/blocks/suitWorkStation.png
+texture:id=Advancedrocketry/warpcore,filename=assets/advancedrocketry/textures/blocks/warpcore.png
+texture:id=advancedRocketry/BlastBrick,filename=assets/advancedrocketry/textures/blocks/BlastBrick.png
+texture:id=advancedRocketry/VenusRock,filename=assets/advancedrocketry/textures/blocks/VenusRock.png
+texture:id=advancedRocketry/atmosphereDetector,filename=assets/advancedrocketry/textures/blocks/atmosphereDetector.png
+texture:id=advancedRocketry/qcrucible_bottom,filename=assets/advancedrocketry/textures/blocks/qcrucible_bottom.png
+texture:id=advancedRocketry/qcrucible_side,filename=assets/advancedrocketry/textures/blocks/qcrucible_side.png
+texture:id=advancedRocketry/qcrucible_top,filename=assets/advancedrocketry/textures/blocks/qcrucible_top.png
+texture:id=advancedRocketry/rocketPad_,filename=assets/advancedrocketry/textures/blocks/rocketPad_.png
+texture:id=advancedRocketry/rocketPad_noEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_noEdge.png
+texture:id=advancedRocketry/smallAirlockDoor_lower,filename=assets/advancedrocketry/textures/blocks/smallAirlockDoor_lower.png
+texture:id=advancedRocketry/smallAirlockDoor_upper,filename=assets/advancedrocketry/textures/blocks/smallAirlockDoor_upper.png
+texture:id=advancedrocketry/CuttingMachine,filename=assets/advancedrocketry/textures/blocks/CuttingMachine.png
+texture:id=advancedrocketry/CuttingMachine_active,filename=assets/advancedrocketry/textures/blocks/CuttingMachine_active.png
+texture:id=advancedrocketry/MonitorFront,filename=assets/advancedrocketry/textures/blocks/MonitorFront.png
+texture:id=advancedrocketry/MonitorFrontMid,filename=assets/advancedrocketry/textures/blocks/MonitorFrontMid.png
+texture:id=advancedrocketry/MonitorPlanet,filename=assets/advancedrocketry/textures/blocks/MonitorPlanet.png
+texture:id=advancedrocketry/MonitorPlanet_active,filename=assets/advancedrocketry/textures/blocks/MonitorPlanet_active.png
+texture:id=advancedrocketry/PrecisionAssemblerFront,filename=assets/advancedrocketry/textures/blocks/PrecisionAssemblerFront.png
+texture:id=advancedrocketry/PrecisionAssemblerFront_Active,filename=assets/advancedrocketry/textures/blocks/PrecisionAssemblerFront_Active.png
+texture:id=advancedrocketry/atmosphereDetector_active,filename=assets/advancedrocketry/textures/blocks/atmosphereDetector_active.png
+texture:id=advancedrocketry/clear,filename=assets/advancedrocketry/textures/blocks/clear.png
+texture:id=advancedrocketry/crystal,filename=assets/advancedrocketry/textures/blocks/crystal.png
+texture:id=advancedrocketry/dataHatch,filename=assets/advancedrocketry/textures/blocks/dataHatch.png
+texture:id=advancedrocketry/fluid/oxygen_flow,filename=assets/advancedrocketry/textures/blocks/fluid/oxygen_flow.png
+texture:id=advancedrocketry/fluid/oxygen_still,filename=assets/advancedrocketry/textures/blocks/fluid/oxygen_still.png
+texture:id=advancedrocketry/forceField,filename=assets/advancedrocketry/textures/blocks/forceField.png
+texture:id=advancedrocketry/forceFieldProjectorFront,filename=assets/advancedrocketry/textures/blocks/forceFieldProjectorFront.png
+texture:id=advancedrocketry/forcefieldProjector,filename=assets/advancedrocketry/textures/blocks/forcefieldProjector.png
+texture:id=advancedrocketry/gasChargerTop,filename=assets/advancedrocketry/textures/blocks/gasChargerTop.png
+texture:id=advancedrocketry/geode,filename=assets/advancedrocketry/textures/blocks/geode.png
+texture:id=advancedrocketry/guidancecomputeraccesshatch,filename=assets/advancedrocketry/textures/blocks/guidancecomputeraccesshatch.png
+texture:id=advancedrocketry/holoLamp,filename=assets/advancedrocketry/textures/blocks/holoLamp.png
+texture:id=advancedrocketry/hotdry_turf,filename=assets/advancedrocketry/textures/blocks/hotdry_turf.png
+texture:id=advancedrocketry/intake,filename=assets/advancedrocketry/textures/blocks/intake.png
+texture:id=advancedrocketry/liquidTank,filename=assets/advancedrocketry/textures/blocks/liquidTank.png
+texture:id=advancedrocketry/log_blue,filename=assets/advancedrocketry/textures/blocks/log_blue.png
+texture:id=advancedrocketry/log_blue_top,filename=assets/advancedrocketry/textures/blocks/log_blue_top.png
+texture:id=advancedrocketry/log_charcoal,filename=assets/advancedrocketry/textures/blocks/log_charcoal.png
+texture:id=advancedrocketry/log_charcoal_top,filename=assets/advancedrocketry/textures/blocks/log_charcoal_top.png
+texture:id=advancedrocketry/machineGeneric,filename=assets/advancedrocketry/textures/blocks/machineGeneric.png
+texture:id=advancedrocketry/machineOrientationControl,filename=assets/advancedrocketry/textures/blocks/machineOrientationControl.png
+texture:id=advancedrocketry/machineScrubber,filename=assets/advancedrocketry/textures/blocks/machineScrubber.png
+texture:id=advancedrocketry/machineScrubberActive,filename=assets/advancedrocketry/textures/blocks/machineScrubberActive.png
+texture:id=advancedrocketry/machineVent,filename=assets/advancedrocketry/textures/blocks/machineVent.png
+texture:id=advancedrocketry/moon_turf,filename=assets/advancedrocketry/textures/blocks/moon_turf.png
+texture:id=advancedrocketry/moon_turf_dark,filename=assets/advancedrocketry/textures/blocks/moon_turf_dark.png
+texture:id=advancedrocketry/mushroom_electric,filename=assets/advancedrocketry/textures/blocks/mushroom_electric.png
+texture:id=advancedrocketry/panelSide,filename=assets/advancedrocketry/textures/blocks/panelSide.png
+texture:id=advancedrocketry/plank_blue,filename=assets/advancedrocketry/textures/blocks/plank_blue.png
+texture:id=advancedrocketry/rocketPad_,filename=assets/advancedrocketry/textures/blocks/rocketPad_.png
+texture:id=advancedrocketry/rocketPad_blCorner,filename=assets/advancedrocketry/textures/blocks/rocketPad_blCorner.png
+texture:id=advancedrocketry/rocketPad_bottomEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_bottomEdge.png
+texture:id=advancedrocketry/rocketPad_brCorner,filename=assets/advancedrocketry/textures/blocks/rocketPad_brCorner.png
+texture:id=advancedrocketry/rocketPad_leftEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_leftEdge.png
+texture:id=advancedrocketry/rocketPad_nbEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_nbEdge.png
+texture:id=advancedrocketry/rocketPad_nlEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_nlEdge.png
+texture:id=advancedrocketry/rocketPad_noEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_noEdge.png
+texture:id=advancedrocketry/rocketPad_nrEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_nrEdge.png
+texture:id=advancedrocketry/rocketPad_ntEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_ntEdge.png
+texture:id=advancedrocketry/rocketPad_rightEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_rightEdge.png
+texture:id=advancedrocketry/rocketPad_tlCorner,filename=assets/advancedrocketry/textures/blocks/rocketPad_tlCorner.png
+texture:id=advancedrocketry/rocketPad_topEdge,filename=assets/advancedrocketry/textures/blocks/rocketPad_topEdge.png
+texture:id=advancedrocketry/rocketPad_trCorner,filename=assets/advancedrocketry/textures/blocks/rocketPad_trCorner.png
+texture:id=advancedrocketry/rocketPad_xCross,filename=assets/advancedrocketry/textures/blocks/rocketPad_xCross.png
+texture:id=advancedrocketry/rocketPad_yCross,filename=assets/advancedrocketry/textures/blocks/rocketPad_yCross.png
+texture:id=advancedrocketry/sapling_blueTree,filename=assets/advancedrocketry/textures/blocks/sapling_blueTree.png
+texture:id=advancedrocketry/satelliteBay,filename=assets/advancedrocketry/textures/blocks/satelliteBay.png
+texture:id=advancedrocketry/seal,filename=assets/advancedrocketry/textures/blocks/seal.png
+texture:id=advancedrocketry/stationLight,filename=assets/advancedrocketry/textures/blocks/stationLight.png
+texture:id=advancedrocketry/structuretower,filename=assets/advancedrocketry/textures/blocks/structuretower.png
+texture:id=advancedrocketry/thermitetorch,filename=assets/advancedrocketry/textures/blocks/thermitetorch.png
+texture:id=advancedrocketry/vitrifiedSand,filename=assets/advancedrocketry/textures/blocks/vitrifiedSand.png
+texture:id=advancedrocketry/warpcore,filename=assets/advancedrocketry/textures/blocks/warpcore.png
+texture:id=advancedrocketry/wirelesstransciever_front,filename=assets/advancedrocketry/textures/blocks/wirelesstransciever_front.png
+texture:id=advancedrocketry/wirelesstransciever_rear,filename=assets/advancedrocketry/textures/blocks/wirelesstransciever_rear.png
+texture:id=libvulpes/fluidInput,filename=assets/libvulpes/textures/blocks/fluidInput.png
+texture:id=libvulpes/fluidOutput,filename=assets/libvulpes/textures/blocks/fluidOutput.png
+texture:id=libvulpes/inputHatch,filename=assets/libvulpes/textures/blocks/inputHatch.png
+texture:id=libvulpes/machineGeneric,filename=assets/libvulpes/textures/blocks/machineGeneric.png
+texture:id=libvulpes/outputHatch,filename=assets/libvulpes/textures/blocks/outputHatch.png
+texture:id=minecraft/bed_feet_end,filename=assets/minecraft/textures/blocks/bed_feet_end.png
+texture:id=minecraft/bed_feet_side,filename=assets/minecraft/textures/blocks/bed_feet_side.png
+texture:id=minecraft/bed_feet_top,filename=assets/minecraft/textures/blocks/bed_feet_top.png
+texture:id=minecraft/bed_head_end,filename=assets/minecraft/textures/blocks/bed_head_end.png
+texture:id=minecraft/bed_head_side,filename=assets/minecraft/textures/blocks/bed_head_side.png
+texture:id=minecraft/bed_head_top,filename=assets/minecraft/textures/blocks/bed_head_top.png
+texture:id=minecraft/glass,filename=assets/minecraft/textures/blocks/glass.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/leaves_oak,filename=assets/minecraft/textures/blocks/leaves_oak.png
+texture:id=minecraft/piston_bottom,filename=assets/minecraft/textures/blocks/piston_bottom.png
+texture:id=minecraft/piston_inner,filename=assets/minecraft/textures/blocks/piston_inner.png
+texture:id=minecraft/piston_side,filename=assets/minecraft/textures/blocks/piston_side.png
+texture:id=minecraft/piston_top_normal,filename=assets/minecraft/textures/blocks/piston_top_normal.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/torch_on,filename=assets/minecraft/textures/blocks/torch_on.png
+texture:id=minecraft/wool_colored_silver,filename=assets/minecraft/textures/blocks/wool_colored_silver.png
+
+
+
+# %VenusRock:* (VenusRock), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockMoegaddon
+block:id=%VenusRock,data=*,stdrot=true,face0-5=0:advancedRocketry/VenusRock
+
+# %tile.dataPipe:* (tile.dataPipe), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.cable.BlockDataCable
+block:id=%tile.dataPipe,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:AdvancedRocketry/pipeData
+
+# %tile.liquidPipe:* (tile.liquidPipe), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.cable.BlockLiquidPipe
+block:id=%tile.liquidPipe,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:AdvancedRocketry/pipeLiquid
+
+# %tile.energyPipe:* (tile.energyPipe), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.cable.BlockEnergyPipe
+block:id=%tile.energyPipe,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:AdvancedRocketry/pipeEnergy
+
+# %launchpad:* (launchpad), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockLinkedHorizontalTexture
+block:id=%launchpad,data=0,stdrot=true,face0-1=0:advancedrocketry/rocketPad_,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=1,stdrot=true,face0-1=0:advancedrocketry/rocketPad_nrEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=2,stdrot=true,face0-1=0:advancedrocketry/rocketPad_ntEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=3,stdrot=true,face0-1=0:advancedrocketry/rocketPad_trCorner,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=4,stdrot=true,face0-1=0:advancedrocketry/rocketPad_nlEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=5,stdrot=true,face0-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=6,stdrot=true,face0-1=0:advancedrocketry/rocketPad_tlCorner,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=7,stdrot=true,face0-1=0:advancedrocketry/rocketPad_bottomEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=8,stdrot=true,face0-1=0:advancedrocketry/rocketPad_nbEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=9,stdrot=true,face0-1=0:advancedrocketry/rocketPad_brCorner,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=10,stdrot=true,face0-1=0:advancedrocketry/rocketPad_yCross,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=11,stdrot=true,face0-1=0:advancedrocketry/rocketPad_leftEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=12,stdrot=true,face0-1=0:advancedrocketry/rocketPad_blCorner,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=13,stdrot=true,face0-1=0:advancedrocketry/rocketPad_topEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=14,stdrot=true,face0-1=0:advancedrocketry/rocketPad_rightEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+block:id=%launchpad,data=15,stdrot=true,face0-1=0:advancedrocketry/rocketPad_noEdge,face2-5=0:advancedrocketry/rocketPad_xCross
+
+# %rocketBuilder:* (rocketBuilder), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%rocketBuilder,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFront,face3-5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFront,face5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFront
+block:id=%rocketBuilder,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFront,face3-5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFront,face5=0:libvulpes/machineGeneric
+block:id=%rocketBuilder,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFront
+block:id=%rocketBuilder,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+
+# %structureTower:* (structureTower), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockAlphaTexture
+block:id=%structureTower,data=*,stdrot=true,face0-5=0:advancedrocketry/structuretower
+
+# %seat:* (seat), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockSeat
+block:id=%seat,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_silver
+
+# %rocketmotor:* (rocketmotor), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockRocketMotor
+block:id=%rocketmotor,data=*,stdrot=true,face0-5=0:minecraft/iron_block
+
+# %fuelTank:* (fuelTank), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockFuelTank
+block:id=%fuelTank,data=*,stdrot=true,face0-5=0:minecraft/iron_block
+
+# %fuelingStation:* (fuelingStation), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockTileRedstoneEmitter
+block:id=%fuelingStation,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-5=0:Advancedrocketry/FuelingMachine
+block:id=%fuelingStation,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/FuelingMachine,face1=0:libvulpes/machineGeneric,face2-5=0:Advancedrocketry/FuelingMachine
+
+# %blockMonitoringStation:* (blockMonitoringStation), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockTileNeighborUpdate
+block:id=%blockMonitoringStation,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorRocket,face4-5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorRocket,face3-5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorRocket,face4-5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/MonitorRocket,face5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/MonitorRocket
+block:id=%blockMonitoringStation,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorRocket,face4-5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorRocket,face3-5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorRocket,face4-5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/MonitorRocket,face5=0:libvulpes/machineGeneric
+block:id=%blockMonitoringStation,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/MonitorRocket
+block:id=%blockMonitoringStation,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorRocket,face4-5=0:libvulpes/machineGeneric
+
+# %blockSatelliteBuilder:* (blockSatelliteBuilder), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%blockSatelliteBuilder,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/satelliteAssembler,face4-5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/satelliteAssembler,face3-5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/satelliteAssembler,face4-5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/satelliteAssembler,face5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/satelliteAssembler
+block:id=%blockSatelliteBuilder,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/satelliteAssembler,face4-5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/satelliteAssembler,face3-5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/satelliteAssembler,face4-5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/satelliteAssembler,face5=0:libvulpes/machineGeneric
+block:id=%blockSatelliteBuilder,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/satelliteAssembler
+block:id=%blockSatelliteBuilder,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/satelliteAssembler,face4-5=0:libvulpes/machineGeneric
+
+# %moonTurf:* (moonTurf), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockPlanetSoil
+block:id=%moonTurf,data=*,stdrot=true,face0-5=0:advancedrocketry/moon_turf
+
+# %moonTurf_dark:* (moonTurf_dark), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockPlanetSoil
+block:id=%moonTurf_dark,data=*,stdrot=true,face0-5=0:advancedrocketry/moon_turf_dark
+
+# %blockHotTurf:* (blockHotTurf), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockPlanetSoil
+block:id=%blockHotTurf,data=*,stdrot=true,face0-5=0:advancedrocketry/hotdry_turf
+
+# %tile.loader:* (tile.loader), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.multiblock.BlockARHatch
+block:id=%tile.loader,data=0,stdrot=true,face0-5=0:advancedrocketry/dataHatch
+block:id=%tile.loader,data=1,stdrot=true,face0-5=0:advancedrocketry/satelliteBay
+block:id=%tile.loader,data=2,stdrot=true,face0-5=0:libvulpes/outputHatch
+block:id=%tile.loader,data=3,stdrot=true,face0-5=0:libvulpes/inputHatch
+block:id=%tile.loader,data=4,stdrot=true,face0-5=0:libvulpes/fluidOutput
+block:id=%tile.loader,data=5,stdrot=true,face0-5=0:libvulpes/fluidInput
+block:id=%tile.loader,data=6,stdrot=true,face0-5=0:advancedrocketry/guidancecomputeraccesshatch
+block:id=%tile.loader,data=7,stdrot=true,face0-5=0:libvulpes/inputHatch
+block:id=%tile.loader,data=8,stdrot=true,face0-5=0:advancedrocketry/dataHatch
+block:id=%tile.loader,data=9,stdrot=true,face0-5=0:advancedrocketry/satelliteBay
+block:id=%tile.loader,data=10,stdrot=true,face0-5=0:libvulpes/outputHatch
+block:id=%tile.loader,data=11,stdrot=true,face0-5=0:libvulpes/inputHatch
+block:id=%tile.loader,data=12,stdrot=true,face0-5=0:libvulpes/fluidOutput
+block:id=%tile.loader,data=13,stdrot=true,face0-5=0:libvulpes/fluidInput
+block:id=%tile.loader,data=14,stdrot=true,face0-5=0:advancedrocketry/guidancecomputeraccesshatch
+block:id=%tile.loader,data=15,stdrot=true,face0-5=0:libvulpes/inputHatch
+
+# %precisionassemblingmachine:* (precisionassemblingmachine), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%precisionassemblingmachine,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/PrecisionAssemblerFront,face4-5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/PrecisionAssemblerFront,face3-5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/PrecisionAssemblerFront,face4-5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/PrecisionAssemblerFront,face5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/PrecisionAssemblerFront
+block:id=%precisionassemblingmachine,data=6,data=7,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/PrecisionAssemblerFront,face4-5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/PrecisionAssemblerFront_Active,face4-5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/PrecisionAssemblerFront_Active,face3-5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/PrecisionAssemblerFront_Active,face4-5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/PrecisionAssemblerFront_Active,face5=0:libvulpes/machineGeneric
+block:id=%precisionassemblingmachine,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/PrecisionAssemblerFront_Active
+block:id=%precisionassemblingmachine,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/PrecisionAssemblerFront_Active,face4-5=0:libvulpes/machineGeneric
+
+# %utilBlock:* (utilBlock), render=(STANDARD), opaque=true,cls=zmaster587.libVulpes.block.multiblock.BlockMultiBlockComponentVisible
+block:id=%utilBlock,data=*,stdrot=true,face0-5=0:advancedRocketry/BlastBrick
+
+# %quartzcrucible:* (quartzcrucible), render=(CAULDRON), opaque=false,cls=zmaster587.advancedRocketry.block.BlockQuartzCrucible
+block:id=%quartzcrucible,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:advancedRocketry/qcrucible_bottom,face1=0:advancedRocketry/qcrucible_top,face2-5=0:advancedRocketry/qcrucible_side
+
+# %crystallizer:* (crystallizer), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%crystallizer,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-5=0:Advancedrocketry/Crystallizer
+block:id=%crystallizer,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/Crystallizer_active,face1=0:libvulpes/machineGeneric,face2-5=0:Advancedrocketry/Crystallizer_active
+
+# %cuttingMachine:* (cuttingMachine), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%cuttingMachine,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/CuttingMachine,face4-5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/CuttingMachine,face3-5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/CuttingMachine,face4-5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/CuttingMachine,face5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/CuttingMachine
+block:id=%cuttingMachine,data=6,data=7,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/CuttingMachine,face4-5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/CuttingMachine_active,face4-5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/CuttingMachine_active,face3-5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/CuttingMachine_active,face4-5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/CuttingMachine_active,face5=0:libvulpes/machineGeneric
+block:id=%cuttingMachine,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/CuttingMachine_active
+block:id=%cuttingMachine,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/CuttingMachine_active,face4-5=0:libvulpes/machineGeneric
+
+# %alienWood:* (alienWood), render=(LOG), opaque=true,cls=zmaster587.advancedRocketry.block.plant.BlockAlienWood
+block:id=%alienWood,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:advancedrocketry/log_blue_top,face2-5=0:advancedrocketry/log_blue
+block:id=%alienWood,data=4,data=5,data=6,data=7,face0-1=0:advancedrocketry/log_blue,face2-3=4000:advancedrocketry/log_blue,face4-5=0:advancedrocketry/log_blue_top
+block:id=%alienWood,data=8,data=9,data=10,data=11,face0-1=4000:advancedrocketry/log_blue,face2-3=0:advancedrocketry/log_blue_top,face4-5=4000:advancedrocketry/log_blue
+block:id=%alienWood,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:advancedrocketry/log_blue
+
+# %alienLeaves:* (alienLeaves), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.plant.BlockAlienLeaves
+block:id=%alienLeaves,data=0,stdrot=true,colorMult=55FFE1,face0-5=17000:minecraft/leaves_oak
+block:id=%alienLeaves,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=2000:minecraft/leaves_oak
+
+# %alienSapling:* (alienSapling), render=(CROSSEDSQUARES), opaque=false,cls=zmaster587.advancedRocketry.block.plant.BlockAlienSapling
+block:id=%alienSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:advancedrocketry/sapling_blueTree
+
+# %observatory:* (observatory), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%observatory,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFrontMid,face4-5=0:libvulpes/machineGeneric
+block:id=%observatory,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFrontMid,face3-5=0:libvulpes/machineGeneric
+block:id=%observatory,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFrontMid,face4-5=0:libvulpes/machineGeneric
+block:id=%observatory,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFrontMid,face5=0:libvulpes/machineGeneric
+block:id=%observatory,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFrontMid
+block:id=%observatory,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFrontMid,face4-5=0:libvulpes/machineGeneric
+block:id=%observatory,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFrontMid,face3-5=0:libvulpes/machineGeneric
+block:id=%observatory,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFrontMid,face4-5=0:libvulpes/machineGeneric
+block:id=%observatory,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFrontMid,face5=0:libvulpes/machineGeneric
+block:id=%observatory,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFrontMid
+block:id=%observatory,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFrontMid,face4-5=0:libvulpes/machineGeneric
+
+# %tile.concrete:* (tile.concrete), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockGeneric
+block:id=%tile.concrete,data=*,stdrot=true,face0-5=0:advancedRocketry/rocketPad_noEdge
+
+# %tile.planetSelector:* (tile.planetSelector), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.planetSelector,data=0,data=1,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/guidanceComputer,face3-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=3,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=4,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-3=0:Advancedrocketry/MonitorSide,face4=0:Advancedrocketry/guidanceComputer,face5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=5,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-4=0:Advancedrocketry/MonitorSide,face5=0:Advancedrocketry/guidanceComputer
+block:id=%tile.planetSelector,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=8,data=9,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=10,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/guidanceComputer,face3-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=11,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=12,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2-3=0:Advancedrocketry/MonitorSide,face4=0:Advancedrocketry/guidanceComputer,face5=0:Advancedrocketry/MonitorSide
+block:id=%tile.planetSelector,data=13,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2-4=0:Advancedrocketry/MonitorSide,face5=0:Advancedrocketry/guidanceComputer
+block:id=%tile.planetSelector,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+
+# %tile.satelliteMonitor:* (tile.satelliteMonitor), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.satelliteMonitor,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorSatellite,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSatellite,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorSatellite,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/MonitorSatellite,face5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/MonitorSatellite
+block:id=%tile.satelliteMonitor,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorSatellite,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSatellite,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorSatellite,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/MonitorSatellite,face5=0:libvulpes/machineGeneric
+block:id=%tile.satelliteMonitor,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/MonitorSatellite
+block:id=%tile.satelliteMonitor,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/MonitorSatellite,face4-5=0:libvulpes/machineGeneric
+
+# %tile.planetanalyser:* (tile.planetanalyser), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.planetanalyser,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorPlanet,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorPlanet,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorPlanet,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorPlanet,face5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorPlanet
+block:id=%tile.planetanalyser,data=6,data=7,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorPlanet,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorPlanet_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorPlanet_active,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorPlanet_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorPlanet_active,face5=0:libvulpes/machineGeneric
+block:id=%tile.planetanalyser,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorPlanet_active
+block:id=%tile.planetanalyser,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorPlanet_active,face4-5=0:libvulpes/machineGeneric
+
+# %tile.guidanceComputer:* (tile.guidanceComputer), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.guidanceComputer,data=0,data=1,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/guidanceComputer,face3-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=3,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=4,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-3=0:Advancedrocketry/MonitorSide,face4=0:Advancedrocketry/guidanceComputer,face5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=5,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-4=0:Advancedrocketry/MonitorSide,face5=0:Advancedrocketry/guidanceComputer
+block:id=%tile.guidanceComputer,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=8,data=9,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=10,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/guidanceComputer,face3-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=11,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=12,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2-3=0:Advancedrocketry/MonitorSide,face4=0:Advancedrocketry/guidanceComputer,face5=0:Advancedrocketry/MonitorSide
+block:id=%tile.guidanceComputer,data=13,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2-4=0:Advancedrocketry/MonitorSide,face5=0:Advancedrocketry/guidanceComputer
+block:id=%tile.guidanceComputer,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+
+# %tile.electricArcFurnace:* (tile.electricArcFurnace), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.electricArcFurnace,data=0,data=1,stdrot=true,face0-2=0:Advancedrocketry/BlastBrick,face3=0:Advancedrocketry/BlastBrickFront,face4-5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=2,stdrot=true,face0-1=0:Advancedrocketry/BlastBrick,face2=0:Advancedrocketry/BlastBrickFront,face3-5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=3,stdrot=true,face0-2=0:Advancedrocketry/BlastBrick,face3=0:Advancedrocketry/BlastBrickFront,face4-5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=4,stdrot=true,face0-3=0:Advancedrocketry/BlastBrick,face4=0:Advancedrocketry/BlastBrickFront,face5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=5,stdrot=true,face0-4=0:Advancedrocketry/BlastBrick,face5=0:Advancedrocketry/BlastBrickFront
+block:id=%tile.electricArcFurnace,data=6,data=7,stdrot=true,face0-2=0:Advancedrocketry/BlastBrick,face3=0:Advancedrocketry/BlastBrickFront,face4-5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=8,data=9,stdrot=true,face0-2=0:Advancedrocketry/BlastBrick,face3=0:Advancedrocketry/BlastBrickFrontActive,face4-5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=10,stdrot=true,face0-1=0:Advancedrocketry/BlastBrick,face2=0:Advancedrocketry/BlastBrickFrontActive,face3-5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=11,stdrot=true,face0-2=0:Advancedrocketry/BlastBrick,face3=0:Advancedrocketry/BlastBrickFrontActive,face4-5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=12,stdrot=true,face0-3=0:Advancedrocketry/BlastBrick,face4=0:Advancedrocketry/BlastBrickFrontActive,face5=0:Advancedrocketry/BlastBrick
+block:id=%tile.electricArcFurnace,data=13,stdrot=true,face0-4=0:Advancedrocketry/BlastBrick,face5=0:Advancedrocketry/BlastBrickFrontActive
+block:id=%tile.electricArcFurnace,data=14,data=15,stdrot=true,face0-2=0:Advancedrocketry/BlastBrick,face3=0:Advancedrocketry/BlastBrickFrontActive,face4-5=0:Advancedrocketry/BlastBrick
+
+# %tile.lathe:* (tile.lathe), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.lathe,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/controlPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/controlPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/controlPanel
+block:id=%tile.lathe,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/controlPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/controlPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.lathe,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/controlPanel
+block:id=%tile.lathe,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+
+# %tile.rollingMachine:* (tile.rollingMachine), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.rollingMachine,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/controlPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/controlPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/controlPanel
+block:id=%tile.rollingMachine,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/controlPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/controlPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.rollingMachine,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/controlPanel
+block:id=%tile.rollingMachine,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+
+# %tile.blockHandPress:* (tile.blockHandPress), render=(PISTONBASE), opaque=false,cls=zmaster587.advancedRocketry.block.BlockPress
+block:id=%tile.blockHandPress,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/piston_top_normal,face1=0:minecraft/piston_bottom,face2-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/piston_bottom,face1=0:minecraft/piston_top_normal,face2-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/piston_side,face2=0:minecraft/piston_top_normal,face3=0:minecraft/piston_bottom,face4-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/piston_side,face2=0:minecraft/piston_bottom,face3=0:minecraft/piston_top_normal,face4-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:minecraft/piston_side,face4=0:minecraft/piston_top_normal,face5=0:minecraft/piston_bottom
+block:id=%tile.blockHandPress,data=5,stdrot=true,transparency=TRANSPARENT,face0-3=0:minecraft/piston_side,face4=0:minecraft/piston_bottom,face5=0:minecraft/piston_top_normal
+block:id=%tile.blockHandPress,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/piston_top_normal
+block:id=%tile.blockHandPress,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/piston_inner,face1=0:minecraft/piston_bottom,face2-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/piston_bottom,face1=0:minecraft/piston_inner,face2-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/piston_side,face2=0:minecraft/piston_inner,face3=0:minecraft/piston_bottom,face4-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/piston_side,face2=0:minecraft/piston_bottom,face3=0:minecraft/piston_inner,face4-5=0:minecraft/piston_side
+block:id=%tile.blockHandPress,data=12,stdrot=true,transparency=TRANSPARENT,face0-3=0:minecraft/piston_side,face4=0:minecraft/piston_inner,face5=0:minecraft/piston_bottom
+block:id=%tile.blockHandPress,data=13,stdrot=true,transparency=TRANSPARENT,face0-3=0:minecraft/piston_side,face4=0:minecraft/piston_bottom,face5=0:minecraft/piston_inner
+block:id=%tile.blockHandPress,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/piston_top_normal
+
+# %tile.stationAssembler:* (tile.stationAssembler), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.stationAssembler,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFront,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFront,face5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFront
+block:id=%tile.stationAssembler,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFront,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFront,face5=0:libvulpes/machineGeneric
+block:id=%tile.stationAssembler,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFront
+block:id=%tile.stationAssembler,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+
+# %tile.electrolyser:* (tile.electrolyser), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.electrolyser,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/machineElectrolzyer,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/machineElectrolzyer,face5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/machineElectrolzyer
+block:id=%tile.electrolyser,data=6,data=7,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/machineElectrolzyer_active,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/machineElectrolzyer_active,face5=0:libvulpes/machineGeneric
+block:id=%tile.electrolyser,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/machineElectrolzyer_active
+block:id=%tile.electrolyser,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer_active,face4-5=0:libvulpes/machineGeneric
+
+# %tile.chemreactor:* (tile.chemreactor), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.chemreactor,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/Crystallizer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/Crystallizer,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/Crystallizer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/Crystallizer,face5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/Crystallizer
+block:id=%tile.chemreactor,data=6,data=7,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/Crystallizer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/Crystallizer_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/Crystallizer_active,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/Crystallizer_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/Crystallizer_active,face5=0:libvulpes/machineGeneric
+block:id=%tile.chemreactor,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/Crystallizer_active
+block:id=%tile.chemreactor,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/Crystallizer_active,face4-5=0:libvulpes/machineGeneric
+
+# %tile.scrubber:* (tile.scrubber), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.scrubber,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:advancedrocketry/machineScrubber
+block:id=%tile.scrubber,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:advancedrocketry/machineScrubberActive
+
+# %tile.oxygenVent:* (tile.oxygenVent), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.oxygenVent,data=*,stdrot=true,face0-5=0:advancedrocketry/machineVent
+
+# %tile.oxygenCharger:* (tile.oxygenCharger), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.oxygenCharger,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:advancedrocketry/gasChargerTop,face2-5=0:advancedrocketry/panelSide
+block:id=%tile.oxygenCharger,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:advancedrocketry/panelSide,face1=0:advancedrocketry/gasChargerTop,face2-5=0:advancedrocketry/panelSide
+
+# %tile.smallAirlockDoor:* (tile.smallAirlockDoor), render=(DOOR), opaque=false,cls=zmaster587.advancedRocketry.block.BlockDoor2
+block:id=%tile.smallAirlockDoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:advancedRocketry/smallAirlockDoor_upper,patch1=0:advancedRocketry/smallAirlockDoor_lower
+
+# %tile.dockingPad:* (tile.dockingPad), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockLandingPad
+block:id=%tile.dockingPad,data=*,stdrot=true,face0-5=0:advancedRocketry/rocketPad_
+
+# %tile.warpCore:* (tile.warpCore), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockWarpCore
+block:id=%tile.warpCore,data=*,stdrot=true,face0-5=0:Advancedrocketry/warpcore
+
+# %tile.stationmonitor:* (tile.stationmonitor), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockWarpShipMonitor
+block:id=%tile.stationmonitor,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/starshipcontrolPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/starshipcontrolPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/starshipcontrolPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/starshipcontrolPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/starshipcontrolPanel
+block:id=%tile.stationmonitor,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/starshipcontrolPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/starshipcontrolPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/starshipcontrolPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/starshipcontrolPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.stationmonitor,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/starshipcontrolPanel
+block:id=%tile.stationmonitor,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/starshipcontrolPanel,face4-5=0:libvulpes/machineGeneric
+
+# %tile.atmosphereDetector:* (tile.atmosphereDetector), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockRedstoneEmitter
+block:id=%tile.atmosphereDetector,data=0,stdrot=true,face0-5=0:advancedRocketry/atmosphereDetector
+block:id=%tile.atmosphereDetector,data=1,stdrot=true,face0-5=0:advancedrocketry/atmosphereDetector_active
+block:id=%tile.atmosphereDetector,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:advancedRocketry/atmosphereDetector
+
+# %tile.unlittorch:* (tile.unlittorch), render=(TORCH), opaque=false,cls=zmaster587.advancedRocketry.block.BlockTorchUnlit
+block:id=%tile.unlittorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/torch_on
+
+# %tile.geode:* (tile.geode), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockGeneric
+block:id=%tile.geode,data=*,stdrot=true,face0-5=0:advancedrocketry/geode
+
+# %tile.oxygenFluidBlock:* (tile.oxygenFluidBlock), render=gregapi.render.RendererBlockFluid(CUSTOM), opaque=false,cls=zmaster587.advancedRocketry.block.BlockFluid
+block:id=%tile.oxygenFluidBlock,data=*,stdrot=true,colorMult=8F94B9,face0-1=17000:advancedrocketry/fluid/oxygen_still,face2-5=17000:advancedrocketry/fluid/oxygen_flow
+
+# %tile.hydrogenFluidBlock:* (tile.hydrogenFluidBlock), render=gregapi.render.RendererBlockFluid(CUSTOM), opaque=false,cls=zmaster587.advancedRocketry.block.BlockFluid
+block:id=%tile.hydrogenFluidBlock,data=*,stdrot=true,colorMult=DBC1C1,face0-1=17000:advancedrocketry/fluid/oxygen_still,face2-5=17000:advancedrocketry/fluid/oxygen_flow
+
+# %tile.rocketFuelBlock:* (tile.rocketFuelBlock), render=gregapi.render.RendererBlockFluid(CUSTOM), opaque=false,cls=zmaster587.advancedRocketry.block.BlockFluid
+block:id=%tile.rocketFuelBlock,data=*,stdrot=true,colorMult=E5D884,face0-1=17000:advancedrocketry/fluid/oxygen_still,face2-5=17000:advancedrocketry/fluid/oxygen_flow
+
+# %tile.nitrogenFluidBlock:* (tile.nitrogenFluidBlock), render=gregapi.render.RendererBlockFluid(CUSTOM), opaque=false,cls=zmaster587.advancedRocketry.block.BlockFluid
+block:id=%tile.nitrogenFluidBlock,data=*,stdrot=true,colorMult=97A7E7,face0-1=17000:advancedrocketry/fluid/oxygen_still,face2-5=17000:advancedrocketry/fluid/oxygen_flow
+
+# %tile.vitrifiedSand:* (tile.vitrifiedSand), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockGeneric
+block:id=%tile.vitrifiedSand,data=*,stdrot=true,face0-5=0:advancedrocketry/vitrifiedSand
+
+# %tile.charcoallog:* (tile.charcoallog), render=(LOG), opaque=true,cls=zmaster587.advancedRocketry.block.BlockCharcoalLog
+block:id=%tile.charcoallog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:advancedrocketry/log_charcoal_top,face2-5=0:advancedrocketry/log_charcoal
+block:id=%tile.charcoallog,data=4,data=5,data=6,data=7,face0-1=0:advancedrocketry/log_charcoal,face2-3=4000:advancedrocketry/log_charcoal,face4-5=0:advancedrocketry/log_charcoal_top
+block:id=%tile.charcoallog,data=8,data=9,data=10,data=11,face0-1=4000:advancedrocketry/log_charcoal,face2-3=0:advancedrocketry/log_charcoal_top,face4-5=4000:advancedrocketry/log_charcoal
+block:id=%tile.charcoallog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:advancedrocketry/log_charcoal
+
+# %tile.electricMushroom:* (tile.electricMushroom), render=(CROSSEDSQUARES), opaque=false,cls=zmaster587.advancedRocketry.block.BlockElectricMushroom
+block:id=%tile.electricMushroom,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:advancedrocketry/mushroom_electric
+
+# %tile.crystal:* (tile.crystal), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockCrystal
+block:id=%tile.crystal,data=0,stdrot=true,colorMult=B23FFF,face0-5=17000:advancedrocketry/crystal
+block:id=%tile.crystal,data=1,stdrot=true,colorMult=3333FF,face0-5=17000:advancedrocketry/crystal
+block:id=%tile.crystal,data=2,stdrot=true,colorMult=00FF00,face0-5=17000:advancedrocketry/crystal
+block:id=%tile.crystal,data=3,stdrot=true,colorMult=FF3434,face0-5=17000:advancedrocketry/crystal
+block:id=%tile.crystal,data=4,stdrot=true,colorMult=FFFF34,face0-5=17000:advancedrocketry/crystal
+block:id=%tile.crystal,data=5,stdrot=true,colorMult=FF9400,face0-5=17000:advancedrocketry/crystal
+block:id=%tile.crystal,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=17000:advancedrocketry/crystal
+
+# %tile.orientationControl:* (tile.orientationControl), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.orientationControl,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-5=0:advancedrocketry/machineOrientationControl
+block:id=%tile.orientationControl,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:advancedrocketry/machineOrientationControl,face1=0:libvulpes/machineGeneric,face2-5=0:advancedrocketry/machineOrientationControl
+
+# %tile.gravityControl:* (tile.gravityControl), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.gravityControl,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-5=0:advancedrocketry/machineOrientationControl
+block:id=%tile.gravityControl,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:advancedrocketry/machineOrientationControl,face1=0:libvulpes/machineGeneric,face2-5=0:advancedrocketry/machineOrientationControl
+
+# %tile.drill:* (tile.drill), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockMiningDrill
+block:id=%tile.drill,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:Advancedrocketry/laserBottom,face2-5=0:Advancedrocketry/machineWarning
+block:id=%tile.drill,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/machineWarning,face1=0:Advancedrocketry/laserBottom,face2-5=0:Advancedrocketry/machineWarning
+
+# %tile.microwaveReciever:* (tile.microwaveReciever), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.microwaveReciever,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:Advancedrocketry/solar,face2-5=0:libvulpes/machineGeneric
+block:id=%tile.microwaveReciever,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:libvulpes/machineGeneric,face1=0:Advancedrocketry/solar,face2-5=0:libvulpes/machineGeneric
+
+# %tile.lightSource:* (tile.lightSource), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockLightSource
+block:id=%tile.lightSource,data=*,stdrot=true,face0-5=0:advancedrocketry/clear
+
+# %tile.solarPanel:* (tile.solarPanel), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockSolarPanel
+block:id=%tile.solarPanel,data=*,stdrot=true,face0=0:libvulpes/machineGeneric,face1=0:AdvancedRocketry/solar,face2-5=0:AdvancedRocketry/panelSide
+
+# %tile.suitWorkStation:* (tile.suitWorkStation), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockSuitWorkstation
+block:id=%tile.suitWorkStation,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:Advancedrocketry/suitWorkStation,face2-5=0:Advancedrocketry/panelSideWorkStation
+block:id=%tile.suitWorkStation,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/panelSideWorkStation,face1=0:Advancedrocketry/suitWorkStation,face2-5=0:Advancedrocketry/panelSideWorkStation
+
+# %tile.biomeScanner:* (tile.biomeScanner), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.biomeScanner,data=0,data=1,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/guidanceComputer,face3-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=3,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=4,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-3=0:Advancedrocketry/MonitorSide,face4=0:Advancedrocketry/guidanceComputer,face5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=5,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-4=0:Advancedrocketry/MonitorSide,face5=0:Advancedrocketry/guidanceComputer
+block:id=%tile.biomeScanner,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=8,data=9,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=10,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/guidanceComputer,face3-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=11,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=12,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2-3=0:Advancedrocketry/MonitorSide,face4=0:Advancedrocketry/guidanceComputer,face5=0:Advancedrocketry/MonitorSide
+block:id=%tile.biomeScanner,data=13,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2-4=0:Advancedrocketry/MonitorSide,face5=0:Advancedrocketry/guidanceComputer
+block:id=%tile.biomeScanner,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/MonitorSide,face1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/MonitorSide,face3=0:Advancedrocketry/guidanceComputer,face4-5=0:Advancedrocketry/MonitorSide
+
+# %tile.atmosphereTerraformer:* (tile.atmosphereTerraformer), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.atmosphereTerraformer,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/machineElectrolzyer,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/machineElectrolzyer,face5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/machineElectrolzyer
+block:id=%tile.atmosphereTerraformer,data=6,data=7,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/machineElectrolzyer_active,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer_active,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/machineElectrolzyer_active,face5=0:libvulpes/machineGeneric
+block:id=%tile.atmosphereTerraformer,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/machineElectrolzyer_active
+block:id=%tile.atmosphereTerraformer,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/machineElectrolzyer_active,face4-5=0:libvulpes/machineGeneric
+
+# %tile.deployableRocketAssembler:* (tile.deployableRocketAssembler), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.deployableRocketAssembler,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFront,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFront,face5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFront
+block:id=%tile.deployableRocketAssembler,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/MonitorFront,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/MonitorFront,face5=0:libvulpes/machineGeneric
+block:id=%tile.deployableRocketAssembler,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/MonitorFront
+block:id=%tile.deployableRocketAssembler,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/MonitorFront,face4-5=0:libvulpes/machineGeneric
+
+# %tile.pressurizedTank:* (tile.pressurizedTank), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockPressurizedFluidTank
+block:id=%tile.pressurizedTank,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:advancedrocketry/machineGeneric,face2-5=0:advancedrocketry/liquidTank
+
+# %tile.gasIntake:* (tile.gasIntake), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockIntake
+block:id=%tile.gasIntake,data=*,stdrot=true,face0-5=0:advancedrocketry/intake
+
+# %tile.circleLight:* (tile.circleLight), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockGeneric
+block:id=%tile.circleLight,data=*,stdrot=true,face0-5=0:advancedrocketry/stationLight
+
+# %tile.stationMarker:* (tile.stationMarker), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockStationModuleDockingPort
+block:id=%tile.stationMarker,data=0,stdrot=true,face0=0:advancedrocketry/satelliteBay,face1-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=1,stdrot=true,face0=0:libvulpes/machineGeneric,face1=0:advancedrocketry/satelliteBay,face2-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/satelliteBay,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/satelliteBay,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/satelliteBay,face5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/satelliteBay
+block:id=%tile.stationMarker,data=6,data=7,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/satelliteBay,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=8,stdrot=true,face0=0:advancedrocketry/satelliteBay,face1-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=9,stdrot=true,face0=0:libvulpes/machineGeneric,face1=0:advancedrocketry/satelliteBay,face2-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:advancedrocketry/satelliteBay,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/satelliteBay,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:advancedrocketry/satelliteBay,face5=0:libvulpes/machineGeneric
+block:id=%tile.stationMarker,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:advancedrocketry/satelliteBay
+block:id=%tile.stationMarker,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:advancedrocketry/satelliteBay,face4-5=0:libvulpes/machineGeneric
+
+# %tile.solarGenerator:* (tile.solarGenerator), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockSolarGenerator
+block:id=%tile.solarGenerator,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0=0:Advancedrocketry/qcrucible_inner,face1=0:Advancedrocketry/solar,face2-5=0:Advancedrocketry/panelSide
+block:id=%tile.solarGenerator,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/panelSide,face1=0:Advancedrocketry/solar,face2-5=0:Advancedrocketry/panelSide
+
+# %tile.altitudeController:* (tile.altitudeController), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.altitudeController,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2-5=0:advancedrocketry/machineOrientationControl
+block:id=%tile.altitudeController,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:advancedrocketry/machineOrientationControl,face1=0:libvulpes/machineGeneric,face2-5=0:advancedrocketry/machineOrientationControl
+
+# %tile.railgun:* (tile.railgun), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.railgun,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/railgun,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/railgun,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/railgun,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/railgun,face5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/railgun
+block:id=%tile.railgun,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/railgun,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/railgun,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/railgun,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/railgun,face5=0:libvulpes/machineGeneric
+block:id=%tile.railgun,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/railgun
+block:id=%tile.railgun,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/railgun,face4-5=0:libvulpes/machineGeneric
+
+# %tile.astroBed:* (tile.astroBed), render=(BED), opaque=false,cls=zmaster587.advancedRocketry.block.BlockAstroBed
+block:id=%tile.astroBed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_feet_top,face2=0:minecraft/bed_feet_end,face3=0:minecraft/bed_feet_top,face4-5=0:minecraft/bed_feet_side
+block:id=%tile.astroBed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_feet_top,face2-3=0:minecraft/bed_feet_side,face4=0:minecraft/bed_feet_top,face5=0:minecraft/bed_feet_end
+block:id=%tile.astroBed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:minecraft/bed_feet_top,face3=0:minecraft/bed_feet_end,face4-5=0:minecraft/bed_feet_side
+block:id=%tile.astroBed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_feet_top,face2-3=0:minecraft/bed_feet_side,face4=0:minecraft/bed_feet_end,face5=0:minecraft/bed_feet_top
+block:id=%tile.astroBed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_feet_top,face2=0:minecraft/bed_feet_end,face3=0:minecraft/bed_feet_top,face4-5=0:minecraft/bed_feet_side
+block:id=%tile.astroBed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_feet_top,face2-3=0:minecraft/bed_feet_side,face4=0:minecraft/bed_feet_top,face5=0:minecraft/bed_feet_end
+block:id=%tile.astroBed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:minecraft/bed_feet_top,face3=0:minecraft/bed_feet_end,face4-5=0:minecraft/bed_feet_side
+block:id=%tile.astroBed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_feet_top,face2-3=0:minecraft/bed_feet_side,face4=0:minecraft/bed_feet_end,face5=0:minecraft/bed_feet_top
+block:id=%tile.astroBed,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:minecraft/bed_head_top,face3=0:minecraft/bed_head_end,face4-5=0:minecraft/bed_head_side
+block:id=%tile.astroBed,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_head_top,face2-3=0:minecraft/bed_head_side,face4=0:minecraft/bed_head_end,face5=0:minecraft/bed_head_top
+block:id=%tile.astroBed,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_head_top,face2=0:minecraft/bed_head_end,face3=0:minecraft/bed_head_top,face4-5=0:minecraft/bed_head_side
+block:id=%tile.astroBed,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_head_top,face2-3=0:minecraft/bed_head_side,face4=0:minecraft/bed_head_top,face5=0:minecraft/bed_head_end
+block:id=%tile.astroBed,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:minecraft/bed_head_top,face3=0:minecraft/bed_head_end,face4-5=0:minecraft/bed_head_side
+block:id=%tile.astroBed,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_head_top,face2-3=0:minecraft/bed_head_side,face4=0:minecraft/bed_head_end,face5=0:minecraft/bed_head_top
+block:id=%tile.astroBed,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_head_top,face2=0:minecraft/bed_head_end,face3=0:minecraft/bed_head_top,face4-5=0:minecraft/bed_head_side
+block:id=%tile.astroBed,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/bed_head_top,face2-3=0:minecraft/bed_head_side,face4=0:minecraft/bed_head_top,face5=0:minecraft/bed_head_end
+
+# %tile.advRocket:* (tile.advRocket), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockAdvRocketMotor
+block:id=%tile.advRocket,data=*,stdrot=true,face0-5=0:minecraft/iron_block
+
+# %tile.planetHoloSelector:* (tile.planetHoloSelector), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.BlockTile
+block:id=%tile.planetHoloSelector,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:advancedrocketry/holoLamp,face2-5=0:advancedrocketry/panelSide
+block:id=%tile.planetHoloSelector,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:advancedrocketry/panelSide,face1=0:advancedrocketry/holoLamp,face2-5=0:advancedrocketry/panelSide
+
+# %tile.lens:* (tile.lens), render=(STANDARD), opaque=false,cls=net.minecraft.block.BlockGlass
+block:id=%tile.lens,data=*,stdrot=true,face0-5=0:minecraft/glass
+
+# %tile.forceField:* (tile.forceField), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockForceField
+block:id=%tile.forceField,data=*,stdrot=true,face0-5=12000:advancedrocketry/forceField
+
+# %tile.forceFieldProjector:* (tile.forceFieldProjector), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockForceFieldProjector
+block:id=%tile.forceFieldProjector,data=0,stdrot=true,face0=0:advancedrocketry/forceFieldProjectorFront,face1=0:advancedrocketry/machineGeneric,face2-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=1,stdrot=true,face0=0:advancedrocketry/machineGeneric,face1=0:advancedrocketry/forceFieldProjectorFront,face2-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=2,stdrot=true,face0-1=0:advancedrocketry/forcefieldProjector,face2=0:advancedrocketry/forceFieldProjectorFront,face3=0:advancedrocketry/machineGeneric,face4-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=3,stdrot=true,face0-1=0:advancedrocketry/forcefieldProjector,face2=0:advancedrocketry/machineGeneric,face3=0:advancedrocketry/forceFieldProjectorFront,face4-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=4,stdrot=true,face0-3=0:advancedrocketry/forcefieldProjector,face4=0:advancedrocketry/forceFieldProjectorFront,face5=0:advancedrocketry/machineGeneric
+block:id=%tile.forceFieldProjector,data=5,stdrot=true,face0-3=0:advancedrocketry/forcefieldProjector,face4=0:advancedrocketry/machineGeneric,face5=0:advancedrocketry/forceFieldProjectorFront
+block:id=%tile.forceFieldProjector,data=6,data=7,stdrot=true,face0-1=0:advancedrocketry/forcefieldProjector,face2=0:advancedrocketry/machineGeneric,face3=0:advancedrocketry/forceFieldProjectorFront,face4-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=8,stdrot=true,face0=0:advancedrocketry/forceFieldProjectorFront,face1=0:advancedrocketry/machineGeneric,face2-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=9,stdrot=true,face0=0:advancedrocketry/machineGeneric,face1=0:advancedrocketry/forceFieldProjectorFront,face2-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=10,stdrot=true,face0-1=0:advancedrocketry/forcefieldProjector,face2=0:advancedrocketry/forceFieldProjectorFront,face3=0:advancedrocketry/machineGeneric,face4-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=11,stdrot=true,face0-1=0:advancedrocketry/forcefieldProjector,face2=0:advancedrocketry/machineGeneric,face3=0:advancedrocketry/forceFieldProjectorFront,face4-5=0:advancedrocketry/forcefieldProjector
+block:id=%tile.forceFieldProjector,data=12,stdrot=true,face0-3=0:advancedrocketry/forcefieldProjector,face4=0:advancedrocketry/forceFieldProjectorFront,face5=0:advancedrocketry/machineGeneric
+block:id=%tile.forceFieldProjector,data=13,stdrot=true,face0-3=0:advancedrocketry/forcefieldProjector,face4=0:advancedrocketry/machineGeneric,face5=0:advancedrocketry/forceFieldProjectorFront
+block:id=%tile.forceFieldProjector,data=14,data=15,stdrot=true,face0-1=0:advancedrocketry/forcefieldProjector,face2=0:advancedrocketry/machineGeneric,face3=0:advancedrocketry/forceFieldProjectorFront,face4-5=0:advancedrocketry/forcefieldProjector
+
+# %tile.pipeSeal:* (tile.pipeSeal), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.BlockSeal
+block:id=%tile.pipeSeal,data=*,stdrot=true,face0-5=0:advancedrocketry/seal
+
+# %tile.spaceElevatorController:* (tile.spaceElevatorController), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.spaceElevatorController,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/controlPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/controlPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/controlPanel
+block:id=%tile.spaceElevatorController,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/controlPanel,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/controlPanel,face5=0:libvulpes/machineGeneric
+block:id=%tile.spaceElevatorController,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/controlPanel
+block:id=%tile.spaceElevatorController,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/controlPanel,face4-5=0:libvulpes/machineGeneric
+
+# %tile.beacon:* (tile.beacon), render=(STANDARD), opaque=false,cls=zmaster587.advancedRocketry.block.BlockBeacon
+block:id=%tile.beacon,data=0,data=1,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/beacon,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=2,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/beacon,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=3,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/beacon,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=4,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/beacon,face5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=5,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/beacon
+block:id=%tile.beacon,data=6,data=7,data=8,data=9,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/beacon,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=10,stdrot=true,face0-1=0:libvulpes/machineGeneric,face2=0:Advancedrocketry/beacon,face3-5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=11,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/beacon,face4-5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=12,stdrot=true,face0-3=0:libvulpes/machineGeneric,face4=0:Advancedrocketry/beacon,face5=0:libvulpes/machineGeneric
+block:id=%tile.beacon,data=13,stdrot=true,face0-4=0:libvulpes/machineGeneric,face5=0:Advancedrocketry/beacon
+block:id=%tile.beacon,data=14,data=15,stdrot=true,face0-2=0:libvulpes/machineGeneric,face3=0:Advancedrocketry/beacon,face4-5=0:libvulpes/machineGeneric
+
+# %tile.planks:* (tile.planks), render=(STANDARD), opaque=true,cls=zmaster587.advancedRocketry.block.plant.BlockAlienPlanks
+block:id=%tile.planks,data=*,stdrot=true,face0-5=0:advancedrocketry/plank_blue
+
+# %tile.thermiteTorch:* (tile.thermiteTorch), render=(TORCH), opaque=false,cls=zmaster587.advancedRocketry.block.BlockThermiteTorch
+block:id=%tile.thermiteTorch,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:advancedrocketry/thermitetorch
+
+# %tile.wirelessTransciever:* (tile.wirelessTransciever), render=zmaster587.advancedRocketry.block.BlockTransciever(CUSTOM), opaque=false,cls=zmaster587.advancedRocketry.block.BlockTransciever
+block:id=%tile.wirelessTransciever,data=0,data=1,stdrot=true,face0-1=0:advancedrocketry/wirelesstransciever_front,face2=0:advancedrocketry/wirelesstransciever_rear,face3-5=0:advancedrocketry/wirelesstransciever_front
+block:id=%tile.wirelessTransciever,data=2,stdrot=true,face0-2=0:advancedrocketry/wirelesstransciever_front,face3=0:advancedrocketry/wirelesstransciever_rear,face4-5=0:advancedrocketry/wirelesstransciever_front
+block:id=%tile.wirelessTransciever,data=3,stdrot=true,face0-1=0:advancedrocketry/wirelesstransciever_front,face2=0:advancedrocketry/wirelesstransciever_rear,face3-5=0:advancedrocketry/wirelesstransciever_front
+block:id=%tile.wirelessTransciever,data=4,stdrot=true,face0-4=0:advancedrocketry/wirelesstransciever_front,face5=0:advancedrocketry/wirelesstransciever_rear
+block:id=%tile.wirelessTransciever,data=5,stdrot=true,face0-3=0:advancedrocketry/wirelesstransciever_front,face4=0:advancedrocketry/wirelesstransciever_rear,face5=0:advancedrocketry/wirelesstransciever_front
+block:id=%tile.wirelessTransciever,data=6,data=7,stdrot=true,face0-1=0:advancedrocketry/wirelesstransciever_front,face2=0:advancedrocketry/wirelesstransciever_rear,face3-5=0:advancedrocketry/wirelesstransciever_front
+block:id=%tile.wirelessTransciever,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:advancedrocketry/wirelesstransciever_front
+
+# %tile.gravityMachine:* (tile.gravityMachine), render=(STANDARD), opaque=false,cls=zmaster587.libVulpes.block.multiblock.BlockMultiblockMachine
+block:id=%tile.gravityMachine,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:advancedrocketry/warpcore,face2-5=0:Advancedrocketry/forcefieldProjector_off
+block:id=%tile.gravityMachine,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:Advancedrocketry/forcefieldProjector_off,face1=0:advancedrocketry/warpcore,face2-5=0:Advancedrocketry/forcefieldProjector_off
+
+# %advancedRocketrymetal0:* (advancedRocketrymetal0), render=(STANDARD), opaque=true,cls=zmaster587.libVulpes.block.BlockMetalBlock
+block:id=%advancedRocketrymetal0,data=0,stdrot=true,colorMult=AEC2DE,face0-5=17000:minecraft/iron_block
+block:id=%advancedRocketrymetal0,data=1,stdrot=true,colorMult=D7DFE4,face0-5=17000:minecraft/iron_block
+block:id=%advancedRocketrymetal0,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=17000:minecraft/iron_block

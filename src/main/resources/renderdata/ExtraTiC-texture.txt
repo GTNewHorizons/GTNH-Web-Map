@@ -1,0 +1,134 @@
+# ExtraTiC 1.4.6
+version:1.7
+modname:ExtraTiC
+
+
+cfgfile:config/ExtraTiC.cfg
+
+
+texturepath:assets/extratic/textures/blocks/
+texture:id=extratic/fairy_block,filename=assets/extratic/textures/blocks/fairy_block.png
+texture:id=extratic/liquid_silicon_flow,filename=assets/extratic/textures/blocks/liquid_silicon_flow.png
+texture:id=extratic/liquid_silicon_still,filename=assets/extratic/textures/blocks/liquid_silicon_still.png
+texture:id=extratic/molten_adamantine_flow,filename=assets/extratic/textures/blocks/molten_adamantine_flow.png
+texture:id=extratic/molten_adamantine_still,filename=assets/extratic/textures/blocks/molten_adamantine_still.png
+texture:id=extratic/molten_bedrockium_flow,filename=assets/extratic/textures/blocks/molten_bedrockium_flow.png
+texture:id=extratic/molten_bedrockium_still,filename=assets/extratic/textures/blocks/molten_bedrockium_still.png
+texture:id=extratic/molten_blutonium_flow,filename=assets/extratic/textures/blocks/molten_blutonium_flow.png
+texture:id=extratic/molten_blutonium_still,filename=assets/extratic/textures/blocks/molten_blutonium_still.png
+texture:id=extratic/molten_brass_flow,filename=assets/extratic/textures/blocks/molten_brass_flow.png
+texture:id=extratic/molten_brass_still,filename=assets/extratic/textures/blocks/molten_brass_still.png
+texture:id=extratic/molten_conductive_iron_flow,filename=assets/extratic/textures/blocks/molten_conductive_iron_flow.png
+texture:id=extratic/molten_conductive_iron_still,filename=assets/extratic/textures/blocks/molten_conductive_iron_still.png
+texture:id=extratic/molten_constantan_flow,filename=assets/extratic/textures/blocks/molten_constantan_flow.png
+texture:id=extratic/molten_constantan_still,filename=assets/extratic/textures/blocks/molten_constantan_still.png
+texture:id=extratic/molten_darksteel_flow,filename=assets/extratic/textures/blocks/molten_darksteel_flow.png
+texture:id=extratic/molten_darksteel_still,filename=assets/extratic/textures/blocks/molten_darksteel_still.png
+texture:id=extratic/molten_electrical_steel_flow,filename=assets/extratic/textures/blocks/molten_electrical_steel_flow.png
+texture:id=extratic/molten_electrical_steel_still,filename=assets/extratic/textures/blocks/molten_electrical_steel_still.png
+texture:id=extratic/molten_elementium_flow,filename=assets/extratic/textures/blocks/molten_elementium_flow.png
+texture:id=extratic/molten_elementium_still,filename=assets/extratic/textures/blocks/molten_elementium_still.png
+texture:id=extratic/molten_energetic_alloy_flow,filename=assets/extratic/textures/blocks/molten_energetic_alloy_flow.png
+texture:id=extratic/molten_energetic_alloy_still,filename=assets/extratic/textures/blocks/molten_energetic_alloy_still.png
+texture:id=extratic/molten_fairy_flow,filename=assets/extratic/textures/blocks/molten_fairy_flow.png
+texture:id=extratic/molten_fairy_still,filename=assets/extratic/textures/blocks/molten_fairy_still.png
+texture:id=extratic/molten_ludicrite_flow,filename=assets/extratic/textures/blocks/molten_ludicrite_flow.png
+texture:id=extratic/molten_ludicrite_still,filename=assets/extratic/textures/blocks/molten_ludicrite_still.png
+texture:id=extratic/molten_manasteel_flow,filename=assets/extratic/textures/blocks/molten_manasteel_flow.png
+texture:id=extratic/molten_manasteel_still,filename=assets/extratic/textures/blocks/molten_manasteel_still.png
+texture:id=extratic/molten_phased_gold_flow,filename=assets/extratic/textures/blocks/molten_phased_gold_flow.png
+texture:id=extratic/molten_phased_gold_still,filename=assets/extratic/textures/blocks/molten_phased_gold_still.png
+texture:id=extratic/molten_phased_iron_flow,filename=assets/extratic/textures/blocks/molten_phased_iron_flow.png
+texture:id=extratic/molten_phased_iron_still,filename=assets/extratic/textures/blocks/molten_phased_iron_still.png
+texture:id=extratic/molten_pokefennium_flow,filename=assets/extratic/textures/blocks/molten_pokefennium_flow.png
+texture:id=extratic/molten_pokefennium_still,filename=assets/extratic/textures/blocks/molten_pokefennium_still.png
+texture:id=extratic/molten_red_aurum_flow,filename=assets/extratic/textures/blocks/molten_red_aurum_flow.png
+texture:id=extratic/molten_red_aurum_still,filename=assets/extratic/textures/blocks/molten_red_aurum_still.png
+texture:id=extratic/molten_redstone_alloy_flow,filename=assets/extratic/textures/blocks/molten_redstone_alloy_flow.png
+texture:id=extratic/molten_redstone_alloy_still,filename=assets/extratic/textures/blocks/molten_redstone_alloy_still.png
+texture:id=extratic/molten_soularium_flow,filename=assets/extratic/textures/blocks/molten_soularium_flow.png
+texture:id=extratic/molten_soularium_still,filename=assets/extratic/textures/blocks/molten_soularium_still.png
+texture:id=extratic/molten_terrasteel_flow,filename=assets/extratic/textures/blocks/molten_terrasteel_flow.png
+texture:id=extratic/molten_terrasteel_still,filename=assets/extratic/textures/blocks/molten_terrasteel_still.png
+texture:id=extratic/molten_voidmetal_flow,filename=assets/extratic/textures/blocks/molten_voidmetal_flow.png
+texture:id=extratic/molten_voidmetal_still,filename=assets/extratic/textures/blocks/molten_voidmetal_still.png
+texture:id=extratic/molten_zinc_flow,filename=assets/extratic/textures/blocks/molten_zinc_flow.png
+texture:id=extratic/molten_zinc_still,filename=assets/extratic/textures/blocks/molten_zinc_still.png
+texture:id=extratic/pokefennium_block,filename=assets/extratic/textures/blocks/pokefennium_block.png
+texture:id=extratic/red_aurum_block,filename=assets/extratic/textures/blocks/red_aurum_block.png
+
+
+
+# %moltenPokefennium:* (moltenPokefennium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenPokefennium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_pokefennium_still,face2-5=12000:extratic/molten_pokefennium_flow
+
+# %moltenFairy:* (moltenFairy), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenFairy,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_fairy_still,face2-5=12000:extratic/molten_fairy_flow
+
+# %moltenRedAurum:* (moltenRedAurum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenRedAurum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_red_aurum_still,face2-5=12000:extratic/molten_red_aurum_flow
+
+# %moltenDarkSteel:* (moltenDarkSteel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenDarkSteel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_darksteel_still,face2-5=12000:extratic/molten_darksteel_flow
+
+# %moltenZinc:* (moltenZinc), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenZinc,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_zinc_still,face2-5=12000:extratic/molten_zinc_flow
+
+# %moltenBrass:* (moltenBrass), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenBrass,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_brass_still,face2-5=12000:extratic/molten_brass_flow
+
+# %moltenAdamantine.:* (moltenAdamantine.), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenAdamantine.,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_adamantine_still,face2-5=12000:extratic/molten_adamantine_flow
+
+# %moltenConductiveIron:* (moltenConductiveIron), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenConductiveIron,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_conductive_iron_still,face2-5=12000:extratic/molten_conductive_iron_flow
+
+# %moltenElectricalSteel:* (moltenElectricalSteel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenElectricalSteel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_electrical_steel_still,face2-5=12000:extratic/molten_electrical_steel_flow
+
+# %moltenEnergeticAlloy:* (moltenEnergeticAlloy), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenEnergeticAlloy,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_energetic_alloy_still,face2-5=12000:extratic/molten_energetic_alloy_flow
+
+# %moltenPhasedGold:* (moltenPhasedGold), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenPhasedGold,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_phased_gold_still,face2-5=12000:extratic/molten_phased_gold_flow
+
+# %moltenPhasedIron:* (moltenPhasedIron), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenPhasedIron,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_phased_iron_still,face2-5=12000:extratic/molten_phased_iron_flow
+
+# %moltenRedstoneAlloy:* (moltenRedstoneAlloy), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenRedstoneAlloy,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_redstone_alloy_still,face2-5=12000:extratic/molten_redstone_alloy_flow
+
+# %liquidSilicon:* (liquidSilicon), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%liquidSilicon,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/liquid_silicon_still,face2-5=12000:extratic/liquid_silicon_flow
+
+# %moltenSoularium:* (moltenSoularium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenSoularium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_soularium_still,face2-5=12000:extratic/molten_soularium_flow
+
+# %moltenManasteel:* (moltenManasteel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenManasteel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_manasteel_still,face2-5=12000:extratic/molten_manasteel_flow
+
+# %moltenTerrasteel:* (moltenTerrasteel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenTerrasteel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_terrasteel_still,face2-5=12000:extratic/molten_terrasteel_flow
+
+# %moltenElementium:* (moltenElementium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenElementium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_elementium_still,face2-5=12000:extratic/molten_elementium_flow
+
+# %moltenVoidmetal:* (moltenVoidmetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenVoidmetal,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_voidmetal_still,face2-5=12000:extratic/molten_voidmetal_flow
+
+# %moltenblutonium:* (moltenblutonium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenblutonium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_blutonium_still,face2-5=12000:extratic/molten_blutonium_flow
+
+# %moltenLudicrite:* (moltenLudicrite), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenLudicrite,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_ludicrite_still,face2-5=12000:extratic/molten_ludicrite_flow
+
+# %moltenBedrockium:* (moltenBedrockium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenBedrockium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_bedrockium_still,face2-5=12000:extratic/molten_bedrockium_flow
+
+# %moltenConstantan:* (moltenConstantan), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=glassmaker.extratic.metals.MoltenMetalBlock
+block:id=%moltenConstantan,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:extratic/molten_constantan_still,face2-5=12000:extratic/molten_constantan_flow
+
+# %blockFunStuff:* (blockFunStuff), render=(STANDARD), opaque=true,cls=glassmaker.extratic.metals.SolidMetalBlock
+block:id=%blockFunStuff,data=0,stdrot=true,face0-5=0:extratic/fairy_block
+block:id=%blockFunStuff,data=1,stdrot=true,face0-5=0:extratic/pokefennium_block
+block:id=%blockFunStuff,data=2,stdrot=true,face0-5=0:extratic/red_aurum_block

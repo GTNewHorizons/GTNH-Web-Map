@@ -1,0 +1,69 @@
+# tfcautomatedbellows 1.1a
+version:1.7
+modname:tfcautomatedbellows
+
+
+cfgfile:config/tfcautomatedbellows.cfg
+
+
+texturepath:assets/tfcautomatedbellows/textures/blocks/
+texture:id=tfcautomatedbellows/bellowsDriverBack,filename=assets/tfcautomatedbellows/textures/blocks/bellowsDriverBack.png
+texture:id=tfcautomatedbellows/bellowsDriverFront,filename=assets/tfcautomatedbellows/textures/blocks/bellowsDriverFront.png
+texture:id=tfcautomatedbellows/bellowsDriverSide,filename=assets/tfcautomatedbellows/textures/blocks/bellowsDriverSide.png
+texture:id=tfcautomatedbellows/potteryKilnChamberTop,filename=assets/tfcautomatedbellows/textures/blocks/potteryKilnChamberTop.png
+texture:id=tfcautomatedbellows/potteryKilnFront,filename=assets/tfcautomatedbellows/textures/blocks/potteryKilnFront.png
+texture:id=tfcautomatedbellows/potteryKilnFrontLit,filename=assets/tfcautomatedbellows/textures/blocks/potteryKilnFrontLit.png
+texture:id=tfcautomatedbellows/potteryKilnLowerTop,filename=assets/tfcautomatedbellows/textures/blocks/potteryKilnLowerTop.png
+texture:id=tfcautomatedbellows/potteryKilnSide,filename=assets/tfcautomatedbellows/textures/blocks/potteryKilnSide.png
+texture:id=tfcautomatedbellows/steamBoilerBottom,filename=assets/tfcautomatedbellows/textures/blocks/steamBoilerBottom.png
+texture:id=tfcautomatedbellows/steamBoilerFront,filename=assets/tfcautomatedbellows/textures/blocks/steamBoilerFront.png
+texture:id=tfcautomatedbellows/steamBoilerSide,filename=assets/tfcautomatedbellows/textures/blocks/steamBoilerSide.png
+texture:id=tfcautomatedbellows/waterFilterFace,filename=assets/tfcautomatedbellows/textures/blocks/waterFilterFace.png
+texture:id=tfcautomatedbellows/waterFilterSide,filename=assets/tfcautomatedbellows/textures/blocks/waterFilterSide.png
+texture:id=tfcautomatedbellows/waterFilterTop,filename=assets/tfcautomatedbellows/textures/blocks/waterFilterTop.png
+
+
+
+# %BellowsDriver:* (BellowsDriver), render=(STANDARD), opaque=true,cls=sladki.tfc.ab.Blocks.BlockBellowsDriver
+block:id=%BellowsDriver,data=0,stdrot=true,face0=0:tfcautomatedbellows/bellowsDriverBack,face1-2=0:tfcautomatedbellows/bellowsDriverSide,face3=0:tfcautomatedbellows/bellowsDriverFront,face4-5=0:tfcautomatedbellows/bellowsDriverSide
+block:id=%BellowsDriver,data=1,stdrot=true,face0=0:tfcautomatedbellows/bellowsDriverSide,face1=0:tfcautomatedbellows/bellowsDriverBack,face2-5=0:tfcautomatedbellows/bellowsDriverSide
+block:id=%BellowsDriver,data=2,stdrot=true,face0-1=0:tfcautomatedbellows/bellowsDriverSide,face2=0:tfcautomatedbellows/bellowsDriverBack,face3=0:tfcautomatedbellows/bellowsDriverFront,face4-5=0:tfcautomatedbellows/bellowsDriverSide
+block:id=%BellowsDriver,data=3,stdrot=true,face0-1=0:tfcautomatedbellows/bellowsDriverSide,face2=0:tfcautomatedbellows/bellowsDriverFront,face3=0:tfcautomatedbellows/bellowsDriverBack,face4-5=0:tfcautomatedbellows/bellowsDriverSide
+block:id=%BellowsDriver,data=4,stdrot=true,face0-3=0:tfcautomatedbellows/bellowsDriverSide,face4=0:tfcautomatedbellows/bellowsDriverBack,face5=0:tfcautomatedbellows/bellowsDriverFront
+block:id=%BellowsDriver,data=5,stdrot=true,face0-3=0:tfcautomatedbellows/bellowsDriverSide,face4=0:tfcautomatedbellows/bellowsDriverFront,face5=0:tfcautomatedbellows/bellowsDriverBack
+block:id=%BellowsDriver,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tfcautomatedbellows/bellowsDriverSide
+
+# %SteamBoiler:* (SteamBoiler), render=(STANDARD), opaque=true,cls=sladki.tfc.ab.Blocks.BlockSteamBoiler
+block:id=%SteamBoiler,data=0,stdrot=true,face0=0:tfcautomatedbellows/steamBoilerBottom,face1=0:tfcautomatedbellows/bellowsDriverSide,face2=0:tfcautomatedbellows/steamBoilerSide,face3=0:tfcautomatedbellows/steamBoilerFront,face4-5=0:tfcautomatedbellows/steamBoilerSide
+block:id=%SteamBoiler,data=1,stdrot=true,face0=0:tfcautomatedbellows/steamBoilerBottom,face1=0:tfcautomatedbellows/bellowsDriverSide,face2-5=0:tfcautomatedbellows/steamBoilerSide
+block:id=%SteamBoiler,data=2,stdrot=true,face0=0:tfcautomatedbellows/steamBoilerBottom,face1=0:tfcautomatedbellows/bellowsDriverSide,face2=0:tfcautomatedbellows/steamBoilerFront,face3-5=0:tfcautomatedbellows/steamBoilerSide
+block:id=%SteamBoiler,data=3,stdrot=true,face0=0:tfcautomatedbellows/steamBoilerBottom,face1=0:tfcautomatedbellows/bellowsDriverSide,face2=0:tfcautomatedbellows/steamBoilerSide,face3=0:tfcautomatedbellows/steamBoilerFront,face4-5=0:tfcautomatedbellows/steamBoilerSide
+block:id=%SteamBoiler,data=4,stdrot=true,face0=0:tfcautomatedbellows/steamBoilerBottom,face1=0:tfcautomatedbellows/bellowsDriverSide,face2-3=0:tfcautomatedbellows/steamBoilerSide,face4=0:tfcautomatedbellows/steamBoilerFront,face5=0:tfcautomatedbellows/steamBoilerSide
+block:id=%SteamBoiler,data=5,stdrot=true,face0=0:tfcautomatedbellows/steamBoilerBottom,face1=0:tfcautomatedbellows/bellowsDriverSide,face2-4=0:tfcautomatedbellows/steamBoilerSide,face5=0:tfcautomatedbellows/steamBoilerFront
+block:id=%SteamBoiler,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:tfcautomatedbellows/steamBoilerBottom,face1=0:tfcautomatedbellows/bellowsDriverSide,face2-5=0:tfcautomatedbellows/steamBoilerSide
+
+# %PotteryKiln:* (PotteryKiln), render=(STANDARD), opaque=true,cls=sladki.tfc.ab.Blocks.BlockPotteryKiln
+block:id=%PotteryKiln,data=0,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnFront,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2=0:tfcautomatedbellows/potteryKilnSide,face3=0:tfcautomatedbellows/potteryKilnFront,face4-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=1,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=2,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2=0:tfcautomatedbellows/potteryKilnFront,face3-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=3,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2=0:tfcautomatedbellows/potteryKilnSide,face3=0:tfcautomatedbellows/potteryKilnFront,face4-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=4,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-3=0:tfcautomatedbellows/potteryKilnSide,face4=0:tfcautomatedbellows/potteryKilnFront,face5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=5,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-4=0:tfcautomatedbellows/potteryKilnSide,face5=0:tfcautomatedbellows/potteryKilnFront
+block:id=%PotteryKiln,data=6,data=7,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=8,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnFrontLit,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=9,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=10,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2=0:tfcautomatedbellows/potteryKilnFrontLit,face3-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=11,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2=0:tfcautomatedbellows/potteryKilnSide,face3=0:tfcautomatedbellows/potteryKilnFrontLit,face4-5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=12,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-3=0:tfcautomatedbellows/potteryKilnSide,face4=0:tfcautomatedbellows/potteryKilnFrontLit,face5=0:tfcautomatedbellows/potteryKilnSide
+block:id=%PotteryKiln,data=13,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-4=0:tfcautomatedbellows/potteryKilnSide,face5=0:tfcautomatedbellows/potteryKilnFrontLit
+block:id=%PotteryKiln,data=14,data=15,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnLowerTop,face2-5=0:tfcautomatedbellows/potteryKilnSide
+
+# %PotteryKilnChamber:* (PotteryKilnChamber), render=sladki.tfc.ab.Render.RenderPotteryKilnChamber(CUSTOM), opaque=false,cls=sladki.tfc.ab.Blocks.BlockPotteryKilnChamber
+block:id=%PotteryKilnChamber,data=*,stdrot=true,face0=0:tfcautomatedbellows/potteryKilnSide,face1=0:tfcautomatedbellows/potteryKilnChamberTop,face2-5=0:tfcautomatedbellows/potteryKilnSide
+
+# %WaterFilter:* (WaterFilter), render=(STANDARD), opaque=true,cls=sladki.tfc.ab.Blocks.BlockWaterFilter
+block:id=%WaterFilter,data=0,stdrot=true,face0=0:tfcautomatedbellows/waterFilterFace,face1=0:tfcautomatedbellows/waterFilterTop,face2=0:tfcautomatedbellows/waterFilterSide,face3=0:tfcautomatedbellows/waterFilterFace,face4-5=0:tfcautomatedbellows/waterFilterSide
+block:id=%WaterFilter,data=1,stdrot=true,face0=0:tfcautomatedbellows/waterFilterSide,face1=0:tfcautomatedbellows/waterFilterFace,face2-5=0:tfcautomatedbellows/waterFilterSide
+block:id=%WaterFilter,data=2,data=3,stdrot=true,face0=0:tfcautomatedbellows/waterFilterSide,face1=0:tfcautomatedbellows/waterFilterTop,face2-3=0:tfcautomatedbellows/waterFilterFace,face4-5=0:tfcautomatedbellows/waterFilterSide
+block:id=%WaterFilter,data=4,data=5,stdrot=true,face0=0:tfcautomatedbellows/waterFilterSide,face1=0:tfcautomatedbellows/waterFilterTop,face2-3=0:tfcautomatedbellows/waterFilterSide,face4-5=0:tfcautomatedbellows/waterFilterFace
+block:id=%WaterFilter,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:tfcautomatedbellows/waterFilterSide,face1=0:tfcautomatedbellows/waterFilterTop,face2-5=0:tfcautomatedbellows/waterFilterSide

@@ -1,0 +1,16 @@
+# IguanaTweaksTConstruct 1.7.10-2.1.6.163
+version:1.7
+modname:IguanaTweaksTConstruct
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/iguanatweakstconstruct/textures/blocks/
+texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
+
+
+
+# %skullBlock:* (skullBlock), render=(CUSTOM), opaque=false,cls=iguanaman.iguanatweakstconstruct.mobheads.blocks.IguanaSkullBlock
+block:id=%skullBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand

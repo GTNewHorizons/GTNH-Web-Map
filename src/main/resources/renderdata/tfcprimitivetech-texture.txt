@@ -1,0 +1,18 @@
+# tfcprimitivetech 1.0.1
+version:1.7
+modname:tfcprimitivetech
+
+
+cfgfile:config/tfcprimitivetech.cfg
+
+
+texturepath:assets/tfcprimitivetech/textures/blocks/
+texture:id=tfcprimitivetech/blockWoodenPressPaper,filename=assets/tfcprimitivetech/textures/blocks/blockWoodenPressPaper.png
+texture:id=tfcprimitivetech/blockWoodenPressSide1,filename=assets/tfcprimitivetech/textures/blocks/blockWoodenPressSide1.png
+texture:id=tfcprimitivetech/blockWoodenPressTop,filename=assets/tfcprimitivetech/textures/blocks/blockWoodenPressTop.png
+
+
+
+# %WoodenPressWet:* (WoodenPressWet), render=tfcprimitivetech.render.RenderWoodenPress(CUSTOM), opaque=false,cls=tfcprimitivetech.blocks.BlockWoodenPressWet
+block:id=%WoodenPressWet,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=ACADAF,face0-1=17000:tfcprimitivetech/blockWoodenPressTop,face2-5=17000:tfcprimitivetech/blockWoodenPressSide1
+block:id=%WoodenPressWet,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=AA9C88,face0-1=17000:tfcprimitivetech/blockWoodenPressTop,face2-5=17000:tfcprimitivetech/blockWoodenPressPaper

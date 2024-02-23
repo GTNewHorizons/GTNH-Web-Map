@@ -1,0 +1,17 @@
+# eplus 3.0.2-d
+version:1.7
+modname:eplus
+
+
+cfgfile:config/eplus.cfg
+
+
+texturepath:assets/eplus/textures/blocks/
+texture:id=eplus/enchanting_table_bottom,filename=assets/eplus/textures/blocks/enchanting_table_bottom.png
+texture:id=eplus/enchanting_table_side,filename=assets/eplus/textures/blocks/enchanting_table_side.png
+texture:id=eplus/enchanting_table_top,filename=assets/eplus/textures/blocks/enchanting_table_top.png
+
+
+
+# %tile.advancedEnchantmentTable:* (tile.advancedEnchantmentTable), render=(STANDARD), opaque=false,cls=com.aesireanempire.eplus.blocks.BlockEnchantTable
+block:id=%tile.advancedEnchantmentTable,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:eplus/enchanting_table_bottom,face1=0:eplus/enchanting_table_top,face2-5=0:eplus/enchanting_table_side

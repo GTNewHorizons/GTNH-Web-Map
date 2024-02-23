@@ -1,0 +1,39 @@
+# tfcudarymod 0.2.33
+version:1.7
+modname:tfcudarymod
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %tile.Alloy Calculator:* (tile.Alloy Calculator), render=udary.tfcudarymod.render.blocks.devices.RenderAlloyCalculator(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockAlloyCalculator
+boxblock:id=%tile.Alloy Calculator,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.20000000298023224,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %tile.Anodising Vessel:* (tile.Anodising Vessel), render=udary.tfcudarymod.render.blocks.devices.RenderAnodisingVessel(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockAnodisingVessel
+boxblock:id=%tile.Anodising Vessel,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.699999988079071,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+
+# %tile.Drying Mat:* (tile.Drying Mat), render=udary.tfcudarymod.render.blocks.materials.RenderDryingMat(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.materials.BlockDryingMat
+boxblock:id=%tile.Drying Mat,xmin=0.05000000074505806,xmax=0.949999988079071,ymin=0.0,ymax=0.05000000074505806,zmin=0.05000000074505806,zmax=0.949999988079071,data=*
+
+# %tile.Evaporator Pan:* (tile.Evaporator Pan), render=udary.tfcudarymod.render.blocks.devices.RenderEvaporatorPan(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockEvaporatorPan
+boxblock:id=%tile.Evaporator Pan,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=0.20000000298023224,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %tile.Ore Cooker:* (tile.Ore Cooker), render=udary.tfcudarymod.render.blocks.devices.RenderOreCooker(CUSTOM), opaque=false,cls=udary.tfcudarymod.blocks.devices.BlockOreCooker
+boxblock:id=%tile.Ore Cooker,xmin=0.0625,xmax=0.9375,ymin=0.25,ymax=0.8125,zmin=0.0625,zmax=0.9375,data=*

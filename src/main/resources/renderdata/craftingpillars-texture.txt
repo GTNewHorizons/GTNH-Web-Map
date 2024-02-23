@@ -1,0 +1,70 @@
+# craftingpillars 1.6.0
+version:1.7
+modname:craftingpillars
+
+
+cfgfile:config/craftingpillars.cfg
+
+
+texturepath:assets/craftingpillars/textures/blocks/
+texture:id=craftingpillars/ChristmasTreeLeaves,filename=assets/craftingpillars/textures/blocks/ChristmasTreeLeaves.png
+texture:id=craftingpillars/christmas_light,filename=assets/craftingpillars/textures/blocks/christmas_light.png
+texture:id=craftingpillars/craftingPillar_side,filename=assets/craftingpillars/textures/blocks/craftingPillar_side.png
+texture:id=craftingpillars/present,filename=assets/craftingpillars/textures/blocks/present.png
+texture:id=craftingpillars/sapling_christmas,filename=assets/craftingpillars/textures/blocks/sapling_christmas.png
+
+
+
+# %extendPillar:* (extendPillar), render=me.dawars.CraftingPillars.renderer.RenderExtendPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.ExtendPillarBlock
+block:id=%extendPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %showOffPillar:* (showOffPillar), render=me.dawars.CraftingPillars.renderer.RenderShowOffPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.ShowOffPillarBlock
+block:id=%showOffPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %craftingPillar:* (craftingPillar), render=me.dawars.CraftingPillars.renderer.RenderCraftingPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.CraftingPillarBlock
+block:id=%craftingPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %furnacePillar:* (furnacePillar), render=me.dawars.CraftingPillars.renderer.RenderFurnacePillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.FurnacePillarBlock
+block:id=%furnacePillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %anvilPillar:* (anvilPillar), render=me.dawars.CraftingPillars.renderer.RenderAnvilPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.AnvilPillarBlock
+block:id=%anvilPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %tankPillar:* (tankPillar), render=me.dawars.CraftingPillars.renderer.RenderTankPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.TankPillarBlock
+block:id=%tankPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %brewingPillar:* (brewingPillar), render=me.dawars.CraftingPillars.renderer.RenderBrewingPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.BrewingPillarBlock
+block:id=%brewingPillar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:craftingpillars/craftingPillar_side
+
+# %diskPillar:* (diskPillar), render=me.dawars.CraftingPillars.renderer.RenderDiskPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.DiskPlayerPillarBlock
+block:id=%diskPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %freezerPillar:* (freezerPillar), render=me.dawars.CraftingPillars.renderer.RenderFreezerPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.FreezerPillarBlock
+block:id=%freezerPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %potPillar:* (potPillar), render=me.dawars.CraftingPillars.renderer.RenderPotPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.PotPillarBlock
+block:id=%potPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %sentryPillar:* (sentryPillar), render=me.dawars.CraftingPillars.renderer.RenderSentryPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.SentryPillarBlock
+block:id=%sentryPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %trashPillar:* (trashPillar), render=me.dawars.CraftingPillars.renderer.RenderTrashPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.TrashPillarBlock
+block:id=%trashPillar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:craftingpillars/craftingPillar_side
+
+# %pumpPillar:* (pumpPillar), render=me.dawars.CraftingPillars.renderer.RenderPumpPillar(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.PumpPillarBlock
+block:id=%pumpPillar,data=*,stdrot=true,face0-5=0:craftingpillars/craftingPillar_side
+
+# %xmasLeaves:* (xmasLeaves), render=(STANDARD), opaque=false,cls=me.dawars.CraftingPillars.blocks.ChristmasLeavesBlock
+block:id=%xmasLeaves,data=*,stdrot=true,face0-5=0:craftingpillars/ChristmasTreeLeaves
+
+# %ChristmasTreeSapling:* (ChristmasTreeSapling), render=(CROSSEDSQUARES), opaque=false,cls=me.dawars.CraftingPillars.blocks.ChristmasTreeSapling
+block:id=%ChristmasTreeSapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:craftingpillars/sapling_christmas
+block:id=%ChristmasTreeSapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:craftingpillars/sapling_christmas
+
+# %present:* (present), render=me.dawars.CraftingPillars.renderer.RenderPresent(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.ChristmasPresentBlock
+block:id=%present,data=0,stdrot=true,face0-5=0:craftingpillars/present
+block:id=%present,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:craftingpillars/present
+block:id=%present,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:craftingpillars/present
+
+# %christmas_light:* (christmas_light), render=me.dawars.CraftingPillars.renderer.RenderLight(CUSTOM), opaque=false,cls=me.dawars.CraftingPillars.blocks.ChristmasLightBlock
+block:id=%christmas_light,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:craftingpillars/christmas_light

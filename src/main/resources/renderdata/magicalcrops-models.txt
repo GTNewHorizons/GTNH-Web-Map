@@ -1,0 +1,247 @@
+# magicalcrops 1.7.2 - 0.1 ALPHA
+version:1.7
+modname:magicalcrops
+
+
+cfgfile:config/magicalcrops.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %magicalcrops_EssenceTorch:* (magicalcrops_EssenceTorch), render=(TORCH), opaque=false,cls=com.mark719.magicalcrops.blocks.BlockEssenceTorch
+patchblock:id=%magicalcrops_EssenceTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%magicalcrops_EssenceTorch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%magicalcrops_EssenceTorch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%magicalcrops_EssenceTorch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%magicalcrops_EssenceTorch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%magicalcrops_EssenceTorch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %magicalcrops_MagicCropEssence:* (magicalcrops_MagicCropEssence), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropEssence
+patchblock:id=%magicalcrops_MagicCropEssence,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropCoal:* (magicalcrops_MagicCropCoal), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropCoal
+patchblock:id=%magicalcrops_MagicCropCoal,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropDye:* (magicalcrops_MagicCropDye), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropDye
+patchblock:id=%magicalcrops_MagicCropDye,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropRedstone:* (magicalcrops_MagicCropRedstone), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropRedstone
+patchblock:id=%magicalcrops_MagicCropRedstone,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropGlowstone:* (magicalcrops_MagicCropGlowstone), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropGlowstone
+patchblock:id=%magicalcrops_MagicCropGlowstone,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropObsidian:* (magicalcrops_MagicCropObsidian), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropObsidian
+patchblock:id=%magicalcrops_MagicCropObsidian,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropIron:* (magicalcrops_MagicCropIron), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropIron
+patchblock:id=%magicalcrops_MagicCropIron,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropGold:* (magicalcrops_MagicCropGold), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropGold
+patchblock:id=%magicalcrops_MagicCropGold,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropLapis:* (magicalcrops_MagicCropLapis), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropLapis
+patchblock:id=%magicalcrops_MagicCropLapis,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropEnder:* (magicalcrops_MagicCropEnder), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropEnder
+patchblock:id=%magicalcrops_MagicCropEnder,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropNether:* (magicalcrops_MagicCropNether), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropNether
+patchblock:id=%magicalcrops_MagicCropNether,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropExperience:* (magicalcrops_MagicCropExperience), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropExperience
+patchblock:id=%magicalcrops_MagicCropExperience,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropBlaze:* (magicalcrops_MagicCropBlaze), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropBlaze
+patchblock:id=%magicalcrops_MagicCropBlaze,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropDiamond:* (magicalcrops_MagicCropDiamond), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropDiamond
+patchblock:id=%magicalcrops_MagicCropDiamond,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_MagicCropEmerald:* (magicalcrops_MagicCropEmerald), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockMagicCropEmerald
+patchblock:id=%magicalcrops_MagicCropEmerald,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ElementCropAir:* (magicalcrops_ElementCropAir), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockElementCropAir
+patchblock:id=%magicalcrops_ElementCropAir,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ElementCropWater:* (magicalcrops_ElementCropWater), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockElementCropWater
+patchblock:id=%magicalcrops_ElementCropWater,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ElementCropEarth:* (magicalcrops_ElementCropEarth), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockElementCropEarth
+patchblock:id=%magicalcrops_ElementCropEarth,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ElementCropFire:* (magicalcrops_ElementCropFire), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockElementCropFire
+patchblock:id=%magicalcrops_ElementCropFire,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropCopper:* (magicalcrops_ModMagicCropCopper), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropCopper
+patchblock:id=%magicalcrops_ModMagicCropCopper,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropTin:* (magicalcrops_ModMagicCropTin), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropTin
+patchblock:id=%magicalcrops_ModMagicCropTin,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropSilver:* (magicalcrops_ModMagicCropSilver), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropSilver
+patchblock:id=%magicalcrops_ModMagicCropSilver,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropLead:* (magicalcrops_ModMagicCropLead), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropLead
+patchblock:id=%magicalcrops_ModMagicCropLead,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropQuartz:* (magicalcrops_ModMagicCropQuartz), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropQuartz
+patchblock:id=%magicalcrops_ModMagicCropQuartz,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropSapphire:* (magicalcrops_ModMagicCropSapphire), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropSapphire
+patchblock:id=%magicalcrops_ModMagicCropSapphire,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropRuby:* (magicalcrops_ModMagicCropRuby), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropRuby
+patchblock:id=%magicalcrops_ModMagicCropRuby,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropPeridot:* (magicalcrops_ModMagicCropPeridot), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropPeridot
+patchblock:id=%magicalcrops_ModMagicCropPeridot,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropAlumin:* (magicalcrops_ModMagicCropAlumin), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropAlumin
+patchblock:id=%magicalcrops_ModMagicCropAlumin,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropForce:* (magicalcrops_ModMagicCropForce), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropForce
+patchblock:id=%magicalcrops_ModMagicCropForce,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropCobalt:* (magicalcrops_ModMagicCropCobalt), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropCobalt
+patchblock:id=%magicalcrops_ModMagicCropCobalt,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropArdite:* (magicalcrops_ModMagicCropArdite), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropArdite
+patchblock:id=%magicalcrops_ModMagicCropArdite,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropNickel:* (magicalcrops_ModMagicCropNickel), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropNickel
+patchblock:id=%magicalcrops_ModMagicCropNickel,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropPlatinum:* (magicalcrops_ModMagicCropPlatinum), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropPlatinum
+patchblock:id=%magicalcrops_ModMagicCropPlatinum,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropThaumcraftShard:* (magicalcrops_ModMagicCropThaumcraftShard), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropThaumcraftShard
+patchblock:id=%magicalcrops_ModMagicCropThaumcraftShard,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropUranium:* (magicalcrops_ModMagicCropUranium), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropUranium
+patchblock:id=%magicalcrops_ModMagicCropUranium,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropOil:* (magicalcrops_ModMagicCropOil), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropOil
+patchblock:id=%magicalcrops_ModMagicCropOil,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropRubber:* (magicalcrops_ModMagicCropRubber), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropRubber
+patchblock:id=%magicalcrops_ModMagicCropRubber,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropVinteum:* (magicalcrops_ModMagicCropVinteum), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropVinteum
+patchblock:id=%magicalcrops_ModMagicCropVinteum,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropBlueTopaz:* (magicalcrops_ModMagicCropBlueTopaz), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropBlueTopaz
+patchblock:id=%magicalcrops_ModMagicCropBlueTopaz,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropChimerite:* (magicalcrops_ModMagicCropChimerite), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropChimerite
+patchblock:id=%magicalcrops_ModMagicCropChimerite,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropMoonstone:* (magicalcrops_ModMagicCropMoonstone), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropMoonstone
+patchblock:id=%magicalcrops_ModMagicCropMoonstone,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropSunstone:* (magicalcrops_ModMagicCropSunstone), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropSunstone
+patchblock:id=%magicalcrops_ModMagicCropSunstone,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropIridium:* (magicalcrops_ModMagicCropIridium), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropIridium
+patchblock:id=%magicalcrops_ModMagicCropIridium,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropYellorite:* (magicalcrops_ModMagicCropYellorite), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropYellorite
+patchblock:id=%magicalcrops_ModMagicCropYellorite,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropOsmium:* (magicalcrops_ModMagicCropOsmium), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropOsmium
+patchblock:id=%magicalcrops_ModMagicCropOsmium,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropManganese:* (magicalcrops_ModMagicCropManganese), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropManganese
+patchblock:id=%magicalcrops_ModMagicCropManganese,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropSulfur:* (magicalcrops_ModMagicCropSulfur), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropSulfur
+patchblock:id=%magicalcrops_ModMagicCropSulfur,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_ModMagicCropDarkiron:* (magicalcrops_ModMagicCropDarkiron), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockModMagicCropDarkiron
+patchblock:id=%magicalcrops_ModMagicCropDarkiron,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropCow:* (magicalcrops_SoulCropCow), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropCow
+patchblock:id=%magicalcrops_SoulCropCow,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropCreeper:* (magicalcrops_SoulCropCreeper), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropCreeper
+patchblock:id=%magicalcrops_SoulCropCreeper,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropMagma:* (magicalcrops_SoulCropMagma), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropMagma
+patchblock:id=%magicalcrops_SoulCropMagma,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropSkeleton:* (magicalcrops_SoulCropSkeleton), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropSkeleton
+patchblock:id=%magicalcrops_SoulCropSkeleton,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropSlime:* (magicalcrops_SoulCropSlime), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropSlime
+patchblock:id=%magicalcrops_SoulCropSlime,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropSpider:* (magicalcrops_SoulCropSpider), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropSpider
+patchblock:id=%magicalcrops_SoulCropSpider,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropGhast:* (magicalcrops_SoulCropGhast), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropGhast
+patchblock:id=%magicalcrops_SoulCropGhast,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_SoulCropWither:* (magicalcrops_SoulCropWither), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockSoulCropWither
+patchblock:id=%magicalcrops_SoulCropWither,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_PotionCropFire:* (magicalcrops_PotionCropFire), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockPotionCropFire
+patchblock:id=%magicalcrops_PotionCropFire,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_PotionCropWater:* (magicalcrops_PotionCropWater), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockPotionCropWater
+patchblock:id=%magicalcrops_PotionCropWater,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_PotionCropStrength:* (magicalcrops_PotionCropStrength), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockPotionCropStrength
+patchblock:id=%magicalcrops_PotionCropStrength,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_PotionCropRegen:* (magicalcrops_PotionCropRegen), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockPotionCropRegen
+patchblock:id=%magicalcrops_PotionCropRegen,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_PotionCropNight:* (magicalcrops_PotionCropNight), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockPotionCropNight
+patchblock:id=%magicalcrops_PotionCropNight,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_PotionCropSpeed:* (magicalcrops_PotionCropSpeed), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockPotionCropSpeed
+patchblock:id=%magicalcrops_PotionCropSpeed,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropBlackberry:* (magicalcrops_CropBlackberry), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropBlackberry
+patchblock:id=%magicalcrops_CropBlackberry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropBlueberry:* (magicalcrops_CropBlueberry), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropBlueberry
+patchblock:id=%magicalcrops_CropBlueberry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropChili:* (magicalcrops_CropChili), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropChili
+patchblock:id=%magicalcrops_CropChili,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropCucumber:* (magicalcrops_CropCucumber), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropCucumber
+patchblock:id=%magicalcrops_CropCucumber,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropGrape:* (magicalcrops_CropGrape), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropGrape
+patchblock:id=%magicalcrops_CropGrape,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropRaspberry:* (magicalcrops_CropRaspberry), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropRaspberry
+patchblock:id=%magicalcrops_CropRaspberry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropStrawberry:* (magicalcrops_CropStrawberry), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropStrawberry
+patchblock:id=%magicalcrops_CropStrawberry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropSweetcorn:* (magicalcrops_CropSweetcorn), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropSweetcorn
+patchblock:id=%magicalcrops_CropSweetcorn,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropTomato:* (magicalcrops_CropTomato), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropTomato
+patchblock:id=%magicalcrops_CropTomato,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %magicalcrops_CropSugarCane:* (magicalcrops_CropSugarCane), render=(CROSSEDSQUARES), opaque=false,cls=com.mark719.magicalcrops.crops.BlockCropSugarCane
+patchblock:id=%magicalcrops_CropSugarCane,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*

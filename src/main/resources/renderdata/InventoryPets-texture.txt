@@ -1,0 +1,33 @@
+# InventoryPets 1.5.2
+version:1.7
+modname:InventoryPets
+
+
+cfgfile:config/InventoryPets.cfg
+
+
+texturepath:assets/inventorypets/textures/blocks/
+texture:id=inventorypets/cloud,filename=assets/inventorypets/textures/blocks/cloud.png
+texture:id=minecraft/sand,filename=assets/minecraft/textures/blocks/sand.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+texture:id=minecraft/stonebrick_mossy,filename=assets/minecraft/textures/blocks/stonebrick_mossy.png
+
+
+
+# %cloudblock:* (cloudblock), render=(STANDARD), opaque=true,cls=com.inventorypets.cloudBlock
+block:id=%cloudblock,data=*,stdrot=true,face0-5=12000:inventorypets/cloud
+
+# %cloudspawn:* (cloudspawn), render=(STANDARD), opaque=true,cls=com.inventorypets.cloudSpawn
+block:id=%cloudspawn,data=*,stdrot=true,face0-5=12000:inventorypets/cloud
+
+# %sandblock:* (sandblock), render=(STANDARD), opaque=true,cls=com.inventorypets.sandBlock
+block:id=%sandblock,data=*,stdrot=true,face0-5=0:minecraft/sand
+
+# %sandspawn:* (sandspawn), render=(STANDARD), opaque=true,cls=com.inventorypets.sandSpawn
+block:id=%sandspawn,data=*,stdrot=true,face0-5=0:minecraft/sand
+
+# %stoneblock:* (stoneblock), render=(STANDARD), opaque=true,cls=com.inventorypets.stoneBlock
+block:id=%stoneblock,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# %stonespawn:* (stonespawn), render=(STANDARD), opaque=true,cls=com.inventorypets.stoneSpawn
+block:id=%stonespawn,data=*,stdrot=true,face0-5=0:minecraft/stonebrick_mossy

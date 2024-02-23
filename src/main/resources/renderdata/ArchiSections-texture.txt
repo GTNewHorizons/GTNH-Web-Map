@@ -1,0 +1,25 @@
+# ArchiSections v@MAJOR_VERSION@@MINOR_VERSION@
+version:1.7
+modname:ArchiSections
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/archisections/textures/blocks/
+texture:id=archisections/controller,filename=assets/archisections/textures/blocks/controller.png
+texture:id=archisections/controller_bottom,filename=assets/archisections/textures/blocks/controller_bottom.png
+texture:id=archisections/controller_top,filename=assets/archisections/textures/blocks/controller_top.png
+
+
+
+# %room:* (room), render=(STANDARD), opaque=false,cls=Reika.ArchiSections.RoomBlock
+block:id=%room,data=0,stdrot=true,face0=0:archisections/controller_bottom,face1=0:archisections/controller_top,face2-5=0:archisections/controller
+block:id=%room,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:archisections/controller_top,face1=0:archisections/controller_bottom,face2-5=0:archisections/controller
+block:id=%room,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:archisections/controller_bottom,face1=0:archisections/controller_top,face2-5=0:archisections/controller
+block:id=%room,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:archisections/controller_bottom,face2=0:archisections/controller_top,face3-5=0:archisections/controller_bottom
+block:id=%room,data=4,stdrot=true,transparency=TRANSPARENT,face0-2=0:archisections/controller_bottom,face3=0:archisections/controller_top,face4-5=0:archisections/controller_bottom
+block:id=%room,data=5,stdrot=true,transparency=TRANSPARENT,face0-3=0:archisections/controller_bottom,face4=0:archisections/controller_top,face5=0:archisections/controller_bottom
+block:id=%room,data=6,stdrot=true,transparency=TRANSPARENT,face0-4=0:archisections/controller_bottom,face5=0:archisections/controller_top
+block:id=%room,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:archisections/controller_bottom,face1=0:archisections/controller_top,face2-5=0:archisections/controller_bottom
