@@ -2743,7 +2743,7 @@ public class TexturePack {
                         }
 
                         if(layer == layers.length -1 || rslt.getAlpha() < 0xFE) {
-                            if(rslt.isTransparent()) {
+                            if(layer == layers.length -1 || rslt.isTransparent()) {
                                 readColor(ps, mapiter, rslt, blkid, lastblocktype, ss, blkdata, map, laststep, patchid, customTextureId, map.stdrotate, ccm);
                             } else {
                                 Color tmpColor = new Color();
