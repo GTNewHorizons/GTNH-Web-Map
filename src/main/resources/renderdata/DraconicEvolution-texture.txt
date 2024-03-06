@@ -58,7 +58,7 @@ texture:id=minecraft/furnace_top,filename=assets/minecraft/textures/blocks/furna
 texture:id=minecraft/glass,filename=assets/minecraft/textures/blocks/glass.png
 texture:id=minecraft/mob_spawner,filename=assets/minecraft/textures/blocks/mob_spawner.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
-
+texture:id=gwm/air,filename=assets/gwmcustom/air.png
 
 
 # %xRayBlock:* (xRayBlock), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.XRayBlock
@@ -132,7 +132,7 @@ block:id=%energyPylon,data=2,stdrot=true,face0=0:draconicevolution/energy_pylon_
 block:id=%energyPylon,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:draconicevolution/energy_pylon_input
 
 # %placedItem:* (placedItem), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.PlacedItem
-block:id=%placedItem,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/glass
+block:id=%placedItem,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:gwm/air
 
 # %safetyFlame:* (safetyFlame), render=(FIRE), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.SafetyFlame
 block:id=%safetyFlame,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/fire_layer_0

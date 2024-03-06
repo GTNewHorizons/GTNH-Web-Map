@@ -388,9 +388,9 @@ public class MECableRenderer extends PipeRendererBase {
                 return new int[]{facadeTextures[patchId-10000]};
             } else if (patchId == 1){
                 if(powered)
-                    return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + thisDamage + TexturePack.COLORMOD_MULT_INTERNAL * TexturePack.COLORMOD_IGNORE_LIGHT};
+                    return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + (thisDamage % 20) + TexturePack.COLORMOD_MULT_INTERNAL * TexturePack.COLORMOD_IGNORE_LIGHT};
 
-                return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + thisDamage};
+                return new int[]{map.getIndexForFace(2), map.getIndexForFace(1) + (thisDamage % 20)};
 
             }
             else  if (patchId > 0)
