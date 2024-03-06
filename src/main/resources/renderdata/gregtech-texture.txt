@@ -1006,6 +1006,7 @@ texture:id=mte/iconsets/OVERLAY_PIPELINE_ITEM_FRONT,filename=assets/gregtech/tex
 texture:id=mte/iconsets/OVERLAY_ENERGY_IN_MULTI,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_ENERGY_IN_MULTI.png
 texture:id=mte/iconsets/OVERLAY_PIPE_IN,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_PIPE_IN.png
 texture:id=mte/iconsets/OVERLAY_MAINTENANCE,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_MAINTENANCE.png
+texture:id=mte/iconsets/OVERLAY_AUTOMAINTENANCE,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_AUTOMAINTENANCE.png,ycount=6
 texture:id=mte/iconsets/OVERLAY_MUFFLER,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_MUFFLER.png
 texture:id=mte/iconsets/OVERLAY_DATA_ACCESS,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_DATA_ACCESS.png
 texture:id=mte/iconsets/OVERLAY_ENERGY_ON_WIRELESS,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_ENERGY_ON_WIRELESS.png,ycount=31
@@ -1528,7 +1529,8 @@ moddata:mod=gtmte,type=iconset,name=hatch.input,output=0:mte/iconsets/OVERLAY_PI
 moddata:mod=gtmte,type=iconset,name=hatch.output,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.input_bus,output=0:mte/iconsets/OVERLAY_PIPE_IN
 moddata:mod=gtmte,type=iconset,name=hatch.output_bus,output=0:mte/iconsets/OVERLAY_PIPE_OUT
-moddata:mod=gtmte,type=iconset,name=hatch.maintenance,front=0:mte/iconsets/OVERLAY_MAINTENANCE,output=0:mte/iconsets/OVERLAY_MAINTENANCE
+moddata:mod=gtmte,type=iconset,name=hatch.maintenance,output=0:mte/iconsets/OVERLAY_MAINTENANCE
+moddata:mod=gtmte,type=iconset,name=hatch.maintenance.auto,output=0:mte/iconsets/OVERLAY_AUTOMAINTENANCE
 moddata:mod=gtmte,type=iconset,name=hatch.muffler,output=0:mte/iconsets/OVERLAY_MUFFLER
 moddata:mod=gtmte,type=iconset,name=hatch.dataaccess,output=0:mte/iconsets/OVERLAY_DATA_ACCESS
 moddata:mod=gtmte,type=iconset,name=hatch.dataaccess.adv,output=0:mte/iconsets/OVERLAY_DATA_ACCESS
@@ -1814,7 +1816,7 @@ moddata:mod=gtmte,type=mte,id=107,iconset=hpmachine.macerator,baseset=hull.steel
 moddata:mod=gtmte,type=mte,id=108,iconset=bronzemachine.blastfurnace,baseset=hull.bronze
 moddata:mod=gtmte,type=mte,id=109,iconset=bronzemachine.extractor,baseset=hull.bronze
 moddata:mod=gtmte,type=mte,id=110,iconset=hpmachine.extractor,baseset=hull.steel
-moddata:mod=gtmte,type=mte,id=111,baseset=hull.tier.01,iconset=hatch.maintenance,ishatch=true
+moddata:mod=gtmte,type=mte,id=111,baseset=hull.tier.01,iconset=hatch.maintenance.auto,ishatch=true
 moddata:mod=gtmte,type=mte,id=112,iconset=bronzemachine.hammer,baseset=hull.bronze
 moddata:mod=gtmte,type=mte,id=113,iconset=hpmachine.hammer,baseset=hull.steel
 moddata:mod=gtmte,type=mte,id=114,iconset=boiler.steel.solar,baseset=hull.steel_bricked
@@ -1848,8 +1850,8 @@ moddata:mod=gtmte,type=mte,id=142,iconset=multimachine.oildrill3,mtetype=control
 moddata:mod=gtmte,type=mte,id=143,iconset=multimachine.concretebackfiller1,mtetype=controller,activeset=multimachine.concretebackfiller1_active,basetex=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 moddata:mod=gtmte,type=mte,id=144,iconset=multimachine.concretebackfiller3,mtetype=controller,activeset=multimachine.concretebackfiller3_active,basetex=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
 moddata:mod=gtmte,type=mte,id=145,baseset=hull.tier.01,iconset=hatch.dataaccess,ishatch=true
-moddata:mod=gtmte,type=mte,id=146,baseset=hull.tier.01,iconset=hatch.dataaccess,ishatch=true
-moddata:mod=gtmte,type=mte,id=147,baseset=hull.tier.01,iconset=hatch.dataaccess,ishatch=true
+moddata:mod=gtmte,type=mte,id=146,baseset=hull.tier.01,iconset=hatch.dataaccess.adv,ishatch=true
+moddata:mod=gtmte,type=mte,id=147,baseset=hull.tier.01,iconset=hatch.dataaccess.auto,ishatch=true
 moddata:mod=gtmte,type=mte,id=148,iconset=multimachine.oildrillinfinite,mtetype=controller,activeset=multimachine.oildrillinfinite_active,basetex=0:gregtech/iconsets/MACHINE_CASING_MINING_NEUTRONIUM
 moddata:mod=gtmte,type=mte,id=149,iconset=multimachine.oildrill4,mtetype=controller,activeset=multimachine.oildrill4_active,basetex=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
 moddata:mod=gtmte,type=mte,id=150,baseset=hull.tier.00,iconset=locker
