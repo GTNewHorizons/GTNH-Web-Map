@@ -1,6 +1,5 @@
 package org.dynmap.hdmap.renderer;
 
-import gcewing.architecture.*;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
@@ -25,190 +24,182 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
 
         renderPatchesPerShape = new RenderPatch[256][6][4][];
 
-        for(Shape s : Shape.values()){
-            renderPatchesPerShape[s.id][0][0] = getRenderPatchForShape(rpf, s.id);
+        for(int i = 0; i < 256; i++){
+            renderPatchesPerShape[i][0][0] = getRenderPatchForShape(rpf, i);
         }
 
         return true;
     }
 
     RenderPatch[] getRenderPatchForShape(RenderPatchFactory rpf, int id){
-        Shape s = Shape.forId(id);
-        if(s.id == id) {
 
-            switch (s) {
-                case RoofTile:
-                    return makeRoofPatches(rpf);
-                case RoofOuterCorner:
-                    return makeRoofOuterCornerPatches(rpf);
-                case RoofInnerCorner:
-                    return makeRoofInnerCornerPatches(rpf);
-                case RoofRidge:
-                    break;
-                case RoofSmartRidge:
-                    break;
-                case RoofValley:
-                    break;
-                case RoofSmartValley:
-                    break;
-                case RoofOverhang:
-                    return makePatchesFromModel(rpf, "roof_overhang");
-                case RoofOverhangOuterCorner:
-                    return makePatchesFromModel(rpf, "roof_overhang_outer_corner");
-                case RoofOverhangInnerCorner:
-                    return makePatchesFromModel(rpf, "roof_overhang_inner_corner");
-                case Cylinder:
-                    return makePatchesFromModel(rpf, "cylinder_full_r8h16");
-                case CylinderHalf:
-                    return makePatchesFromModel(rpf, "cylinder_half_r8h16");
-                case CylinderQuarter:
-                    return makePatchesFromModel(rpf, "cylinder_quarter_r8h16");
-                case CylinderLargeQuarter:
-                    return makePatchesFromModel(rpf, "cylinder_quarter_r16h16");
-                case AnticylinderLargeQuarter:
-                    return makePatchesFromModel(rpf, "round_inner_corner");
-                case Pillar:
-                    return makePatchesFromModel(rpf, "cylinder_r6h16");
-                case Post:
-                    return makePatchesFromModel(rpf, "cylinder_r4h16");
-                case Pole:
-                    return makePatchesFromModel(rpf, "cylinder_r2h16");
-                case BevelledOuterCorner:
-                    return makePatchesFromModel(rpf, "bevelled_outer_corner");
-                case BevelledInnerCorner:
-                    return makePatchesFromModel(rpf, "bevelled_inner_corner");
-                case PillarBase:
-                    return makePatchesFromModel(rpf, "pillar_base");
-                case DoricCapital:
-                    return makePatchesFromModel(rpf, "doric_capital");
-                case IonicCapital:
-                    return makePatchesFromModel(rpf, "ionic_capital");
-                case CorinthianCapital:
-                    return makePatchesFromModel(rpf, "corinthian_capital");
-                case DoricTriglyph:
-                    return makePatchesFromModel(rpf, "doric_triglyph");
-                case DoricTriglyphCorner:
-                    return makePatchesFromModel(rpf, "doric_triglyph_corner");
-                case DoricMetope:
-                    return makePatchesFromModel(rpf, "doric_metope");
-                case Architrave:
-                    return makePatchesFromModel(rpf, "architrave");
-                case ArchitraveCorner:
-                    return makePatchesFromModel(rpf, "architrave_corner");
-                case WindowFrame:
-                    return getBoxSingleTextureInt(rpf,0,16,0,16,7,9,6, false);
-                case WindowCorner:
-                    return combineMultiple(getBoxSingleTextureInt(rpf,6,10,0,16,6,10,0, false),getBoxSingleTextureInt(rpf,0,9,0,16,7,9,6, false), getBoxSingleTextureInt(rpf,7,9,0,16,9,16,6, false) );
-                case WindowMullion:
-                    return combineMultiple(getBoxSingleTextureInt(rpf,6,10,0,16,6,10,0, false),getBoxSingleTextureInt(rpf,0,16,0,16,7,9,6, false));
-                case SphereFull:
-                    return makePatchesFromModel(rpf, "sphere_full_r8");
-                case SphereHalf:
-                    return makePatchesFromModel(rpf, "sphere_half_r8");
-                case SphereQuarter:
-                    return makePatchesFromModel(rpf, "sphere_quarter_r8");
-                case SphereEighth:
-                    return makePatchesFromModel(rpf, "sphere_eighth_r8");
-                case SphereEighthLarge:
-                    return makePatchesFromModel(rpf, "sphere_eighth_r16");
-                case SphereEighthLargeRev:
-                    return makePatchesFromModel(rpf, "sphere_eighth_r16_rev");
-                case RoofOverhangGableLH:
-                    return makePatchesFromModel(rpf, "roof_overhang_gable_lh");
-                case RoofOverhangGableRH:
-                    return makePatchesFromModel(rpf, "roof_overhang_gable_rh");
-                case RoofOverhangGableEndLH:
-                    return makePatchesFromModel(rpf, "roof_overhang_gable_end_lh");
-                case RoofOverhangGableEndRH:
-                    return makePatchesFromModel(rpf, "roof_overhang_gable_end_rh");
-                case RoofOverhangRidge:
-                    return makePatchesFromModel(rpf, "roof_overhang_gable_ridge");
-                case RoofOverhangValley:
-                    return makePatchesFromModel(rpf, "roof_overhang_gable_valley");
-                case CorniceLH:
-                    return makePatchesFromModel(rpf, "cornice_lh");
-                case CorniceRH:
-                    return makePatchesFromModel(rpf, "cornice_rh");
-                case CorniceEndLH:
-                    return makePatchesFromModel(rpf, "cornice_end_lh");
-                case CorniceEndRH:
-                    return makePatchesFromModel(rpf, "cornice_end_rh");
-                case CorniceRidge:
-                    return makePatchesFromModel(rpf, "cornice_ridge");
-                case CorniceValley:
-                    return makePatchesFromModel(rpf, "cornice_valley");
-                case CorniceBottom:
-                    return makePatchesFromModel(rpf, "cornice_bottom");
-                case CladdingSheet:
-                    break;
-                case ArchD1:
-                    return makePatchesFromModel(rpf, "arch_d1");
-                case ArchD2:
-                    return makePatchesFromModel(rpf, "arch_d2");
-                case ArchD3A:
-                    return makePatchesFromModel(rpf, "arch_d3a");
-                case ArchD3B:
-                    return makePatchesFromModel(rpf, "arch_d3b");
-                case ArchD3C:
-                    return makePatchesFromModel(rpf, "arch_d3c");
-                case ArchD4A:
-                    return makePatchesFromModel(rpf, "arch_d4a");
-                case ArchD4B:
-                    return makePatchesFromModel(rpf, "arch_d4b");
-                case ArchD4C:
-                    return makePatchesFromModel(rpf, "arch_d4c");
-                case BanisterPlainBottom:
-                    return makePatchesFromModel(rpf, "balustrade_stair_plain_bottom");
-                case BanisterPlain:
-                    return makePatchesFromModel(rpf, "balustrade_stair_plain");
-                case BanisterPlainTop:
-                    return makePatchesFromModel(rpf, "balustrade_stair_plain_top");
-                case BalustradeFancy:
-                    return makePatchesFromModel(rpf, "balustrade_fancy");
-                case BalustradeFancyCorner:
-                    return makePatchesFromModel(rpf, "balustrade_fancy_corner");
-                case BalustradeFancyWithNewel:
-                    return makePatchesFromModel(rpf, "balustrade_fancy_with_newel");
-                case BalustradeFancyNewel:
-                    return makePatchesFromModel(rpf, "balustrade_fancy_newel");
-                case BalustradePlain:
-                    return makePatchesFromModel(rpf, "balustrade_plain");
-                case BalustradePlainOuterCorner:
-                    return makePatchesFromModel(rpf, "balustrade_plain_outer_corner");
-                case BalustradePlainWithNewel:
-                    return makePatchesFromModel(rpf, "balustrade_plain_with_newel");
-                case BanisterPlainEnd:
-                    return makePatchesFromModel(rpf, "balustrade_stair_plain_end");
-                case BanisterFancyNewelTall:
-                    return makePatchesFromModel(rpf, "balustrade_fancy_newel_tall");
-                case BalustradePlainInnerCorner:
-                    return makePatchesFromModel(rpf, "balustrade_plain_inner_corner");
-                case BalustradePlainEnd:
-                    return makePatchesFromModel(rpf, "balustrade_plain_end");
-                case BanisterFancyBottom:
-                    return makePatchesFromModel(rpf, "balustrade_stair_fancy_bottom");
-                case BanisterFancy:
-                    return makePatchesFromModel(rpf, "balustrade_stair_fancy");
-                case BanisterFancyTop:
-                    return makePatchesFromModel(rpf, "balustrade_stair_fancy_top");
-                case BanisterFancyEnd:
-                    return makePatchesFromModel(rpf, "balustrade_stair_fancy_end");
-                case BanisterPlainInnerCorner:
-                    return makePatchesFromModel(rpf, "balustrade_stair_plain_inner_corner");
-                case Slab:
-                    return makeSlab(rpf);
-                case Stairs:
-                    return makeStairs(rpf);
-                case StairsOuterCorner:
-                    return makePatchesFromModel(rpf, "stairs_outer_corner");
-                case StairsInnerCorner:
-                    return makePatchesFromModel(rpf, "stairs_inner_corner");
-
-            }
-        }
-
-        switch (id)
-        {
+        switch (id) {
+            case 0: //RoofTile:
+                return makeRoofPatches(rpf);
+            case 1: //RoofOuterCorner:
+                return makeRoofOuterCornerPatches(rpf);
+            case 2: //RoofInnerCorner:
+                return makeRoofInnerCornerPatches(rpf);
+            case 3: //RoofRidge:
+                break;
+            case 4: //RoofSmartRidge:
+                break;
+            case 5: //RoofValley:
+                break;
+            case 6: //RoofSmartValley:
+                break;
+            case 7: //RoofOverhang:
+                return makePatchesFromModel(rpf, "roof_overhang");
+            case 8: //RoofOverhangOuterCorner:
+                return makePatchesFromModel(rpf, "roof_overhang_outer_corner");
+            case 9: //RoofOverhangInnerCorner:
+                return makePatchesFromModel(rpf, "roof_overhang_inner_corner");
+            case 10: //Cylinder:
+                return makePatchesFromModel(rpf, "cylinder_full_r8h16");
+            case 11: //CylinderHalf:
+                return makePatchesFromModel(rpf, "cylinder_half_r8h16");
+            case 12: //CylinderQuarter:
+                return makePatchesFromModel(rpf, "cylinder_quarter_r8h16");
+            case 13: //CylinderLargeQuarter:
+                return makePatchesFromModel(rpf, "cylinder_quarter_r16h16");
+            case 14: //AnticylinderLargeQuarter:
+                return makePatchesFromModel(rpf, "round_inner_corner");
+            case 15: //Pillar:
+                return makePatchesFromModel(rpf, "cylinder_r6h16");
+            case 16: //Post:
+                return makePatchesFromModel(rpf, "cylinder_r4h16");
+            case 17: //Pole:
+                return makePatchesFromModel(rpf, "cylinder_r2h16");
+            case 18: //BevelledOuterCorner:
+                return makePatchesFromModel(rpf, "bevelled_outer_corner");
+            case 19: //BevelledInnerCorner:
+                return makePatchesFromModel(rpf, "bevelled_inner_corner");
+            case 20: //PillarBase:
+                return makePatchesFromModel(rpf, "pillar_base");
+            case 21: //DoricCapital:
+                return makePatchesFromModel(rpf, "doric_capital");
+            case 22: //IonicCapital:
+                return makePatchesFromModel(rpf, "ionic_capital");
+            case 23: //CorinthianCapital:
+                return makePatchesFromModel(rpf, "corinthian_capital");
+            case 24: //DoricTriglyph:
+                return makePatchesFromModel(rpf, "doric_triglyph");
+            case 25: //DoricTriglyphCorner:
+                return makePatchesFromModel(rpf, "doric_triglyph_corner");
+            case 26: //DoricMetope:
+                return makePatchesFromModel(rpf, "doric_metope");
+            case 27: //Architrave:
+                return makePatchesFromModel(rpf, "architrave");
+            case 28: //ArchitraveCorner:
+                return makePatchesFromModel(rpf, "architrave_corner");
+            case 30: //WindowFrame:
+                return getBoxSingleTextureInt(rpf,0,16,0,16,7,9,6, false);
+            case 31: //WindowCorner:
+                return combineMultiple(getBoxSingleTextureInt(rpf,6,10,0,16,6,10,0, false),getBoxSingleTextureInt(rpf,0,9,0,16,7,9,6, false), getBoxSingleTextureInt(rpf,7,9,0,16,9,16,6, false) );
+            case 32: //WindowMullion:
+                return combineMultiple(getBoxSingleTextureInt(rpf,6,10,0,16,6,10,0, false),getBoxSingleTextureInt(rpf,0,16,0,16,7,9,6, false));
+            case 33: //SphereFull:
+                return makePatchesFromModel(rpf, "sphere_full_r8");
+            case 34: //SphereHalf:
+                return makePatchesFromModel(rpf, "sphere_half_r8");
+            case 35: //SphereQuarter:
+                return makePatchesFromModel(rpf, "sphere_quarter_r8");
+            case 36: //SphereEighth:
+                return makePatchesFromModel(rpf, "sphere_eighth_r8");
+            case 37: //SphereEighthLarge:
+                return makePatchesFromModel(rpf, "sphere_eighth_r16");
+            case 38: //SphereEighthLargeRev:
+                return makePatchesFromModel(rpf, "sphere_eighth_r16_rev");
+            case 40: //RoofOverhangGableLH:
+                return makePatchesFromModel(rpf, "roof_overhang_gable_lh");
+            case 41: //RoofOverhangGableRH:
+                return makePatchesFromModel(rpf, "roof_overhang_gable_rh");
+            case 42: //RoofOverhangGableEndLH:
+                return makePatchesFromModel(rpf, "roof_overhang_gable_end_lh");
+            case 43: //RoofOverhangGableEndRH:
+                return makePatchesFromModel(rpf, "roof_overhang_gable_end_rh");
+            case 44: //RoofOverhangRidge:
+                return makePatchesFromModel(rpf, "roof_overhang_gable_ridge");
+            case 45: //RoofOverhangValley:
+                return makePatchesFromModel(rpf, "roof_overhang_gable_valley");
+            case 50: //CorniceLH:
+                return makePatchesFromModel(rpf, "cornice_lh");
+            case 51: //CorniceRH:
+                return makePatchesFromModel(rpf, "cornice_rh");
+            case 52: //CorniceEndLH:
+                return makePatchesFromModel(rpf, "cornice_end_lh");
+            case 53: //CorniceEndRH:
+                return makePatchesFromModel(rpf, "cornice_end_rh");
+            case 54: //CorniceRidge:
+                return makePatchesFromModel(rpf, "cornice_ridge");
+            case 55: //CorniceValley:
+                return makePatchesFromModel(rpf, "cornice_valley");
+            case 56: //CorniceBottom:
+                return makePatchesFromModel(rpf, "cornice_bottom");
+            case 60: //CladdingSheet:
+                break;
+            case 61: //ArchD1:
+                return makePatchesFromModel(rpf, "arch_d1");
+            case 62: //ArchD2:
+                return makePatchesFromModel(rpf, "arch_d2");
+            case 63: //ArchD3A:
+                return makePatchesFromModel(rpf, "arch_d3a");
+            case 64: //ArchD3B:
+                return makePatchesFromModel(rpf, "arch_d3b");
+            case 65: //ArchD3C:
+                return makePatchesFromModel(rpf, "arch_d3c");
+            case 66: //ArchD4A:
+                return makePatchesFromModel(rpf, "arch_d4a");
+            case 67: //ArchD4B:
+                return makePatchesFromModel(rpf, "arch_d4b");
+            case 68: //ArchD4C:
+                return makePatchesFromModel(rpf, "arch_d4c");
+            case 70: //BanisterPlainBottom:
+                return makePatchesFromModel(rpf, "balustrade_stair_plain_bottom");
+            case 71: //BanisterPlain:
+                return makePatchesFromModel(rpf, "balustrade_stair_plain");
+            case 72: //BanisterPlainTop:
+                return makePatchesFromModel(rpf, "balustrade_stair_plain_top");
+            case 73: //BalustradeFancy:
+                return makePatchesFromModel(rpf, "balustrade_fancy");
+            case 74: //BalustradeFancyCorner:
+                return makePatchesFromModel(rpf, "balustrade_fancy_corner");
+            case 75: //BalustradeFancyWithNewel:
+                return makePatchesFromModel(rpf, "balustrade_fancy_with_newel");
+            case 76: //BalustradeFancyNewel:
+                return makePatchesFromModel(rpf, "balustrade_fancy_newel");
+            case 77: //BalustradePlain:
+                return makePatchesFromModel(rpf, "balustrade_plain");
+            case 78: //BalustradePlainOuterCorner:
+                return makePatchesFromModel(rpf, "balustrade_plain_outer_corner");
+            case 79: //BalustradePlainWithNewel:
+                return makePatchesFromModel(rpf, "balustrade_plain_with_newel");
+            case 80: //BanisterPlainEnd:
+                return makePatchesFromModel(rpf, "balustrade_stair_plain_end");
+            case 81: //BanisterFancyNewelTall:
+                return makePatchesFromModel(rpf, "balustrade_fancy_newel_tall");
+            case 82: //BalustradePlainInnerCorner:
+                return makePatchesFromModel(rpf, "balustrade_plain_inner_corner");
+            case 83: //BalustradePlainEnd:
+                return makePatchesFromModel(rpf, "balustrade_plain_end");
+            case 84: //BanisterFancyBottom:
+                return makePatchesFromModel(rpf, "balustrade_stair_fancy_bottom");
+            case 85: //BanisterFancy:
+                return makePatchesFromModel(rpf, "balustrade_stair_fancy");
+            case 86: //BanisterFancyTop:
+                return makePatchesFromModel(rpf, "balustrade_stair_fancy_top");
+            case 87: //BanisterFancyEnd:
+                return makePatchesFromModel(rpf, "balustrade_stair_fancy_end");
+            case 88: //BanisterPlainInnerCorner:
+                return makePatchesFromModel(rpf, "balustrade_stair_plain_inner_corner");
+            case 90: //Slab:
+                return makeSlab(rpf);
+            case 91: //Stairs:
+                return makeStairs(rpf);
+            case 92: //StairsOuterCorner:
+                return makePatchesFromModel(rpf, "stairs_outer_corner");
+            case 93: //StairsInnerCorner:
+                return makePatchesFromModel(rpf, "stairs_inner_corner");
             case 94: // SlopeTileA1:
                 return makeSimpleSlopePatches(rpf, 0.5, 1);
             case 95: // SlopeTileA2:
@@ -228,6 +219,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
             case 102: // SlopeTileC4:
                 return makeSimpleSlopePatches(rpf, 0, 0.25);
         }
+
         return null;
     }
 
