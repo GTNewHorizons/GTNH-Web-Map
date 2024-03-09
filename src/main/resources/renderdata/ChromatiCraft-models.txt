@@ -225,3 +225,5 @@ boxblock:id=%chromaticraft_block_fertiledyevine,xmin=0.09999999403953552,xmax=0.
 
 # %chromaticraft_block_mud:* (chromaticraft_block_mud), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockChromaMud
 boxblock:id=%chromaticraft_block_mud,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+customblock:id=%chromaticraft_block_lamp,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=*,box0=i:0-16:0-2:0-16:b6,box1=i:6-10:0-14:6-10:b0,box2=i:7-9:14-15:7-9:b0,box3=i:1-5:0-8:6-10:b0,box4=i:6-10:0-8:1-5:b0,box5=i:11-15:0-8:6-10:b0,box6=i:6-10:0-8:11-15:b0

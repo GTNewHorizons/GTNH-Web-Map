@@ -142,7 +142,7 @@ texture:id=chromaticraft/icons/repeater,filename=assets/chromaticraft/textures/b
 texture:id=chromaticraft/icons/transparent,filename=assets/chromaticraft/textures/blocks/icons/transparent.png
 texture:id=chromaticraft/icons/weakrepeater,filename=assets/chromaticraft/textures/blocks/icons/weakrepeater.png
 texture:id=chromaticraft/lamp,filename=assets/chromaticraft/textures/blocks/lamp.png
-texture:id=chromaticraft/mud,filename=assets/chromaticraft/textures/blocks/mud.png
+texture:id=chromaticraft/mud,filename=assets/chromaticraft/textures/blocks/mud.png,ycount=128
 texture:id=chromaticraft/ore/tier_0_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_0_underlay.png
 texture:id=chromaticraft/ore/tier_10_geode,filename=assets/chromaticraft/textures/blocks/ore/tier_10_geode.png
 texture:id=chromaticraft/ore/tier_11_underlay,filename=assets/chromaticraft/textures/blocks/ore/tier_11_underlay.png
@@ -343,6 +343,8 @@ texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks
 texture:id=minecraft/sand,filename=assets/minecraft/textures/blocks/sand.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 texture:id=minecraft/stonebrick,filename=assets/minecraft/textures/blocks/stonebrick.png
+texture:id=minecraft/stone_slab_side,filename=assets/minecraft/textures/blocks/stone_slab_side.png
+texture:id=minecraft/stone_slab_top,filename=assets/minecraft/textures/blocks/stone_slab_top.png
 texture:id=minecraft/water_still,filename=assets/minecraft/textures/blocks/water_still.png
 texture:id=thermalfoundation/fluid/Fluid_Redstone_Still,filename=assets/thermalfoundation/textures/blocks/fluid/Fluid_Redstone_Still.png
 
@@ -398,7 +400,23 @@ block:id=%chromaticraft_block_crystal,data=*,stdrot=true,face0-5=12000:ChromatiC
 block:id=%chromaticraft_block_rainbowcrystal,data=*,stdrot=true,face0-5=12000:chromaticraft/crystal/chroma
 
 # %chromaticraft_block_lamp:* (chromaticraft_block_lamp), render=Reika.ChromatiCraft.Render.ISBRH.CrystalRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockCrystalLamp
-block:id=%chromaticraft_block_lamp,data=*,stdrot=true,face0-5=12000:ChromatiCraft/crystal/crystal_outline
+# block:id=%chromaticraft_block_lamp,data=*,stdrot=true,face0-5=12000:ChromatiCraft/crystal/crystal_outline
+block:id=%chromaticraft_block_lamp,data=0,stdrot=true,colorMult=FF191919,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=1,stdrot=true,colorMult=FFFF4D4D,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=2,stdrot=true,colorMult=FF267F30,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=3,stdrot=true,colorMult=FF72523E,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=4,stdrot=true,colorMult=FF4D67FF,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=5,stdrot=true,colorMult=FFA846EA,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=6,stdrot=true,colorMult=FF39A9BF,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=7,stdrot=true,colorMult=FF979797,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=8,stdrot=true,colorMult=FF404040,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=9,stdrot=true,colorMult=FFFFCFE4,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=10,stdrot=true,colorMult=FF4DFF4D,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=11,stdrot=true,colorMult=FFFFFF4D,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=12,stdrot=true,colorMult=FFA5E1FF,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=13,stdrot=true,colorMult=FFFF4DE7,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=14,stdrot=true,colorMult=FFFF974D,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
+block:id=%chromaticraft_block_lamp,data=15,stdrot=true,colorMult=FFFFFFFF,patch0-5=17000:ChromatiCraft/crystal/crystal_outline,patch6-11=0:minecraft/stone
 
 # %chromaticraft_block_super:* (chromaticraft_block_super), render=Reika.ChromatiCraft.Render.ISBRH.CrystalRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.Crystal.BlockSuperCrystal
 block:id=%chromaticraft_block_super,data=*,stdrot=true,face0-5=12000:ChromatiCraft/crystal/crystal_outline
@@ -570,7 +588,7 @@ block:id=%chromaticraft_block_pylon,data=8,stdrot=true,face0-5=12000:chromaticra
 block:id=%chromaticraft_block_pylon,data=9,stdrot=true,face0-5=12000:chromaticraft/icons/weakrepeater
 block:id=%chromaticraft_block_pylon,data=10,stdrot=true,face0-5=12000:minecraft/stone
 block:id=%chromaticraft_block_pylon,data=11,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
-block:id=%chromaticraft_block_pylon,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/stoneblock:id=%chromaticraft_block_pylon,data=0,stdrot=true,face0-5=12000:chromaticraft/icons/transparent
+block:id=%chromaticraft_block_pylon,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/stone
 
 
 # %chromaticraft_block_tank:* (chromaticraft_block_tank), render=Reika.ChromatiCraft.Render.ISBRH.TankBlockRenderer(CUSTOM), opaque=false,cls=Reika.ChromatiCraft.Block.BlockCrystalTank
@@ -647,7 +665,7 @@ block:id=%chromaticraft_block_lampblock,data=11,stdrot=true,colorMult=FFFFFF4D,f
 block:id=%chromaticraft_block_lampblock,data=12,stdrot=true,colorMult=FFA5E1FF,face0-5=17000:chromaticraft/lamp
 block:id=%chromaticraft_block_lampblock,data=13,stdrot=true,colorMult=FFFF4DE7,face0-5=17000:chromaticraft/lamp
 block:id=%chromaticraft_block_lampblock,data=14,stdrot=true,colorMult=FFFF974D,face0-5=17000:chromaticraft/lamp
-block:id=%chromaticraft_block_lampblock,data=15,stdrot=true,face0-5=12000:chromaticraft/lamp
+block:id=%chromaticraft_block_lampblock,data=15,stdrot=true,colorMult=FFFFFFFF,face0-5=17000:chromaticraft/lamp
 
 # %chromaticraft_block_tnt:* (chromaticraft_block_tnt), render=(STANDARD), opaque=true,cls=Reika.ChromatiCraft.Block.BlockEnderTNT
 block:id=%chromaticraft_block_tnt,data=0,stdrot=true,face0=0:chromaticraft/basic/enderbomb_bottom,face1=0:chromaticraft/basic/enderbomb_top,face2-5=0:chromaticraft/basic/enderbomb_side
@@ -1088,4 +1106,4 @@ block:id=%chromaticraft_block_fertiledyevine,data=15,stdrot=true,transparency=TR
 block:id=%chromaticraft_block_voidcave,data=*,stdrot=true,face0-5=0:chromaticraft/dimgen/voidcave
 
 # %chromaticraft_block_mud:* (chromaticraft_block_mud), render=(STANDARD), opaque=false,cls=Reika.ChromatiCraft.Block.Worldgen.BlockChromaMud
-block:id=%chromaticraft_block_mud,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:chromaticraft/mud,face2-5=0:minecraft/dirt
+block:id=%chromaticraft_block_mud,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0=0:minecraft/dirt,face1=0:chromaticraft/mud,face2-5=0:minecraft/dirt
