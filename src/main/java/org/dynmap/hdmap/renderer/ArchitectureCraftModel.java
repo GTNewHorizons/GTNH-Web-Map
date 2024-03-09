@@ -26,11 +26,7 @@
 package org.dynmap.hdmap.renderer;
 
 import com.google.gson.Gson;
-import gcewing.architecture.ArchitectureCraft;
-import gcewing.architecture.BaseModel;
-import gcewing.architecture.Vector3;
 import net.minecraft.util.ResourceLocation;
-
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -46,13 +42,26 @@ public class ArchitectureCraftModel {
 
         Vector3 normal;
     }
+    public class Vector3 {
+        double x;
+        double y;
+        double z;
 
+        public Vector3(double x, double y, double z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+        public String toString() {
+            return String.format("(%.3f,%.3f,%.3f)", this.x, this.y, this.z);
+        }
+    }
     static Gson gson = new Gson();
 
     public static ArchitectureCraftModel fromResource(ResourceLocation location) {
         // Can't use resource manager because this needs to work on the server
         String path = String.format("/assets/%s/%s", location.getResourceDomain(), location.getResourcePath());
-        InputStream in = BaseModel.class.getResourceAsStream(path);
+        InputStream in = ArchitectureCraftModel.class.getResourceAsStream(path);
         if (in == null) throw new RuntimeException(String.format("Cannot find resource %s", path));
         ArchitectureCraftModel model = gson.fromJson(new InputStreamReader(in), ArchitectureCraftModel.class);
 
@@ -61,7 +70,7 @@ public class ArchitectureCraftModel {
     public static ResourceLocation resourceLocation(String path) {
 
         if (path.contains(":")) return new ResourceLocation(path);
-        else return new ResourceLocation(ArchitectureCraft.mod.modID.toLowerCase(), path);
+        else return new ResourceLocation("architecturecraft", path);
     }
     public static ResourceLocation modelLocation(String path) {
         return resourceLocation("models/" + path);
