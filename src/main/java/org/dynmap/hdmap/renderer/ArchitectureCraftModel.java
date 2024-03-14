@@ -27,6 +27,8 @@ package org.dynmap.hdmap.renderer;
 
 import com.google.gson.Gson;
 import net.minecraft.util.ResourceLocation;
+import org.dynmap.Log;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -62,7 +64,15 @@ public class ArchitectureCraftModel {
         // Can't use resource manager because this needs to work on the server
         String path = String.format("/assets/%s/%s", location.getResourceDomain(), location.getResourcePath());
         InputStream in = ArchitectureCraftModel.class.getResourceAsStream(path);
-        if (in == null) throw new RuntimeException(String.format("Cannot find resource %s", path));
+        if (in == null) {
+            String objsonPath = path.replace(".smeg", ".objson");
+            in = ArchitectureCraftModel.class.getResourceAsStream(objsonPath);
+
+            if (in == null) {
+                Log.warning(String.format("Cannot find ArchitectureCraft model %s", path));
+                return null;
+            }
+        }
         ArchitectureCraftModel model = gson.fromJson(new InputStreamReader(in), ArchitectureCraftModel.class);
 
         return model;

@@ -13,6 +13,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
     RenderPatch[][][][] renderPatchesPerShape;
     private static final int patchlist[] = { 1, 4, 2, 5, 0, 3 };
     private static final int patchlistZero[] = {0, 0, 0, 0, 0, 0};
+    private static final int textureIdForOptionalSecondary = 12;
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if (!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
@@ -218,6 +219,34 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                 return makeSimpleSlopePatches(rpf, 0.25, 0.5);
             case 102: // SlopeTileC4:
                 return makeSimpleSlopePatches(rpf, 0, 0.25);
+            case 103: // SlopeTileA1SE:
+                return makeSimpleSlopePatches(rpf, 0.5, 1);
+            case 104: // SlopeTileA2SE:
+                return makeSimpleSlopePatches(rpf, 0, 0.5);
+            case 105: // SlopeTileB1SE:
+                return makeSimpleSlopePatches(rpf, 0.6666, 1);
+            case 106: // SlopeTileB2SE:
+                return makeSimpleSlopePatches(rpf, 0.3333, 0.6666);
+            case 107: // SlopeTileB3SE:
+                return makeSimpleSlopePatches(rpf, 0, 0.3333);
+            case 108: // SlopeTileC1SE:
+                return makeSimpleSlopePatches(rpf, 0.75, 1);
+            case 109: // SlopeTileC2SE:
+                return makeSimpleSlopePatches(rpf, 0.5, 0.75);
+            case 110: // SlopeTileC3SE:
+                return makeSimpleSlopePatches(rpf, 0.25, 0.5);
+            case 111: // SlopeTileC4SE:
+                return makeSimpleSlopePatches(rpf, 0, 0.25);
+            case 112: //RoofTileSE:
+                return makeRoofPatches(rpf);
+            case 113: // SquareSE:
+                return basicBox;
+            case 114: //SlabSE:
+                return makeSlab(rpf);
+            case 115: //AngledRoofRidge:
+                return makePatchesFromModel(rpf, "angled_roof_ridge");
+            case 116: //DoubleRoofTile:
+                return makePatchesFromModel(rpf, "double_roof_tile");
         }
 
         return null;
@@ -238,8 +267,8 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
         // slopes
-        list.add(rpf.getPatch(0,1,1,1,1, 1, 0,0,0,1,  RenderPatchFactory.SideVisible.TOP,0 ));
-        list.add(rpf.getPatch(1,1,1,1,1, 0, 0,0,0,1,  RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0,1,1,1,1, 1, 0,0,0,1,  RenderPatchFactory.SideVisible.TOP,textureIdForOptionalSecondary ));
+        list.add(rpf.getPatch(1,1,1,1,1, 0, 0,0,0,1,  RenderPatchFactory.SideVisible.TOP,textureIdForOptionalSecondary ));
 
         // left side
         list.add(rpf.getPatch(0,0, 1, 0,0,0,0,1,1,1, RenderPatchFactory.SideVisible.BOTTOM, 0));
@@ -266,8 +295,8 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
         // slopes
-        list.add(rpf.getPatch(0,0,1,0,0,0,1,1, 1, 1,  RenderPatchFactory.SideVisible.BOTTOM,0 ));
-        list.add(rpf.getPatch(1,0, 0, 0,0,0,1,1,1,1,  RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0,0,1,0,0,0,1,1, 1, 1,  RenderPatchFactory.SideVisible.BOTTOM,textureIdForOptionalSecondary ));
+        list.add(rpf.getPatch(1,0, 0, 0,0,0,1,1,1,1,  RenderPatchFactory.SideVisible.TOP,textureIdForOptionalSecondary ));
 
         // right
         list.add(rpf.getPatch(1,0,1,1,0, 0, 1,1,1,1,  RenderPatchFactory.SideVisible.TOP,0 ));
@@ -363,7 +392,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
     public static RenderPatch[] makeRoofPatches(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         // slope
-        list.add(rpf.getPatch(0,1,1,1,1, 1, 0,0,0,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0,1,1,1,1, 1, 0,0,0,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,textureIdForOptionalSecondary ));
 
         // left side
         list.add(rpf.getPatch(0,0, 1, 0,0,0,0,1,1,1, RenderPatchFactory.SideVisible.BOTTOM, 0));
@@ -382,7 +411,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
         // slope
-        list.add(rpf.getPatch(0, maxY,1,1, maxY, 1, 0, minY,0,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0, maxY,1,1, maxY, 1, 0, minY,0,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,textureIdForOptionalSecondary ));
 
         if(minY > 0) {
             // front
@@ -414,12 +443,17 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
             return new RenderPatch[0];
 
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+        int lowestTextureNum = 100;
+        for(ArchitectureCraftModel.Face f : mod.faces){
+            if(f.texture < lowestTextureNum)
+                lowestTextureNum = f.texture;
+        }
         for(ArchitectureCraftModel.Face f : mod.faces){
 
             for(int[] t : f.triangles){
                 double[] a = f.vertices[t[0]], b = f.vertices[t[1]], c = f.vertices[t[2]];
 
-                list.add(rpf.getPatch(a[0]+0.5, a[1]+0.5, a[2]+0.5, b[0]+0.5, b[1]+0.5, b[2]+0.5, c[0]+0.5, c[1]+0.5, c[2]+0.5, 1, RenderPatchFactory.SideVisible.TOP, 0));
+                list.add(rpf.getPatch(a[0]+0.5, a[1]+0.5, a[2]+0.5, b[0]+0.5, b[1]+0.5, b[2]+0.5, c[0]+0.5, c[1]+0.5, c[2]+0.5, 1, RenderPatchFactory.SideVisible.TOP, f.texture == lowestTextureNum ? 0 : textureIdForOptionalSecondary));
             }
         }
 
@@ -445,6 +479,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         private MapDataContext mapDataCtx;
         int[][] textures = new int[6][0];
         int[][] textures2 = {{-1}, {-1}, {-1}, {-1}, {-1}, {-1}};
+        boolean foundSecondaryTextures = false;
 
         public ArchitectureCraftTextureLookupThing(MapDataContext mapDataCtx) {
 
@@ -466,6 +501,8 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                 int blockId = GWM_Util.blockNameToId(blockName);
                 TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
                 textures2 = new int[][]{ {map.getIndexForFace(0)}, {map.getIndexForFace(1)}, {map.getIndexForFace(2)}, {map.getIndexForFace(3)}, {map.getIndexForFace(4)}, {map.getIndexForFace(5)} };
+
+                foundSecondaryTextures = true;
             }
             if(blockNameObj instanceof String){
                 String blockName = (String)blockNameObj;
@@ -486,6 +523,12 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         public int[] getTextureLayersForPatchId(int patchId) {
             if(patchId >= 6 && patchId < 12)
                 return textures2[patchId-6];
+            if(patchId >= 12 && patchId < 18){
+                if(foundSecondaryTextures){
+                    return textures2[patchId-12];
+                }
+                patchId -= 12;
+            }
             return textures[patchId];
         }
     }
