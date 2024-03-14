@@ -1,0 +1,466 @@
+# hbm 1.0.27 BETA (4895)
+version:1.7
+modname:hbm
+
+
+cfgfile:config/hbm.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %tile.pink_slab:* (tile.pink_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockPinkSlab
+boxblock:id=%tile.pink_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.pink_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.deco_lead:* (tile.deco_lead), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockDecoCT
+
+# %tile.brick_asbestos_stairs:* (tile.brick_asbestos_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_asbestos_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.rail_booster:* (tile.rail_booster), render=(MINECARTTRACK), opaque=false,cls=com.hbm.blocks.machine.RailBooster
+patchblock:id=%tile.rail_booster,patch0=HorizY001ZTop,data=0
+patchblock:id=%tile.rail_booster,patch0=HorizY001ZTop@90,data=1
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop,data=2
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=%tile.rail_booster,patch0=HorizY001ZTop@90,data=6
+patchblock:id=%tile.rail_booster,patch0=HorizY001ZTop@180,data=7
+patchblock:id=%tile.rail_booster,patch0=HorizY001ZTop@270,data=8,data=9
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop,data=10
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=%tile.rail_booster,patch0=SlopeXUpZTop@90,data=13
+
+# %tile.dummy_plate_launch_table:* (tile.dummy_plate_launch_table), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.DummyBlockMachine
+boxblock:id=%tile.dummy_plate_launch_table,xmin=0.0,xmax=1.0,ymin=1.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %tile.taint_barrel:* (tile.taint_barrel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.RedBarrel
+boxblock:id=%tile.taint_barrel,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.digamma_matter:* (tile.digamma_matter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.bomb.DigammaMatter
+boxblock:id=%tile.digamma_matter,xmin=0.0,xmax=0.75,ymin=0.0625,ymax=0.9375,zmin=0.0625,zmax=0.8125,data=0
+boxblock:id=%tile.digamma_matter,xmin=0.1875,xmax=0.875,ymin=0.0625,ymax=0.75,zmin=0.4375,zmax=0.8125,data=1
+boxblock:id=%tile.digamma_matter,xmin=0.0,xmax=0.625,ymin=0.4375,ymax=0.5625,zmin=0.4375,zmax=1.0,data=2
+boxblock:id=%tile.digamma_matter,xmin=0.25,xmax=0.625,ymin=0.25,ymax=0.5625,zmin=0.0625,zmax=0.5625,data=3
+boxblock:id=%tile.digamma_matter,xmin=0.0,xmax=0.9375,ymin=0.3125,ymax=0.625,zmin=0.4375,zmax=0.625,data=4
+boxblock:id=%tile.digamma_matter,xmin=0.4375,xmax=0.6875,ymin=0.5,ymax=0.5625,zmin=0.0625,zmax=0.5,data=5
+boxblock:id=%tile.digamma_matter,xmin=0.1875,xmax=0.75,ymin=0.5,ymax=0.5001,zmin=0.4375,zmax=0.875,data=6
+boxblock:id=%tile.digamma_matter,xmin=0.375,xmax=0.6875,ymin=0.5,ymax=0.6875,zmin=0.4375,zmax=0.75,data=7
+boxblock:id=%tile.digamma_matter,xmin=0.5,xmax=0.5001,ymin=0.0,ymax=0.5625,zmin=0.375,zmax=0.5,data=8
+boxblock:id=%tile.digamma_matter,xmin=0.375,xmax=0.625,ymin=0.4375,ymax=0.5625,zmin=0.3125,zmax=0.625,data=9
+boxblock:id=%tile.digamma_matter,xmin=0.4375,xmax=0.75,ymin=0.0,ymax=0.875,zmin=0.3125,zmax=0.5625,data=10
+boxblock:id=%tile.digamma_matter,xmin=0.0,xmax=0.75,ymin=0.3125,ymax=0.6875,zmin=0.4375,zmax=1.0,data=11
+boxblock:id=%tile.digamma_matter,xmin=0.125,xmax=0.5,ymin=0.0,ymax=0.9375,zmin=0.3125,zmax=0.875,data=12
+boxblock:id=%tile.digamma_matter,xmin=0.25,xmax=0.625,ymin=0.125,ymax=0.9375,zmin=0.4375,zmax=0.6875,data=13
+boxblock:id=%tile.digamma_matter,xmin=0.125,xmax=0.5,ymin=0.375,ymax=0.9375,zmin=0.25,zmax=0.875,data=14
+boxblock:id=%tile.digamma_matter,xmin=0.125,xmax=0.625,ymin=0.1875,ymax=0.875,zmin=0.3125,zmax=0.5625,data=15
+
+# %tile.ore_sellafield_diamond:* (tile.ore_sellafield_diamond), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockSellafieldOre
+
+# %tile.reinforced_brick_stairs:* (tile.reinforced_brick_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.reinforced_brick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.rail_large_ramp:* (tile.rail_large_ramp), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailStandardRamp
+boxblock:id=%tile.rail_large_ramp,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %tile.yellow_barrel:* (tile.yellow_barrel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.YellowBarrel
+boxblock:id=%tile.yellow_barrel,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.dummy_plate_cargo:* (tile.dummy_plate_cargo), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.DummyBlockMachine
+boxblock:id=%tile.dummy_plate_cargo,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.spotlight_incandescent_off:* (tile.spotlight_incandescent_off), render=com.hbm.render.block.RenderLight(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.Spotlight
+boxblock:id=%tile.spotlight_incandescent_off,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.7000000476837158,ymax=1.0,zmin=0.25,zmax=0.75,data=0,data=1
+boxblock:id=%tile.spotlight_incandescent_off,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.30000001192092896,zmin=0.25,zmax=0.75,data=2,data=3
+boxblock:id=%tile.spotlight_incandescent_off,xmin=0.25,xmax=0.75,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.7000000476837158,zmax=1.0,data=4,data=5
+boxblock:id=%tile.spotlight_incandescent_off,xmin=0.25,xmax=0.75,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.0,zmax=0.30000001192092896,data=6,data=7
+boxblock:id=%tile.spotlight_incandescent_off,xmin=0.7000000476837158,xmax=1.0,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.25,zmax=0.75,data=8,data=9
+boxblock:id=%tile.spotlight_incandescent_off,xmin=0.0,xmax=0.30000001192092896,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.25,zmax=0.75,data=10,data=11
+boxblock:id=%tile.spotlight_incandescent_off,xmin=0.25,xmax=0.75,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.3499999940395355,zmax=0.6499999761581421,data=12,data=13,data=14,data=15
+
+# %tile.fence_metal:* (tile.fence_metal), render=com.hbm.render.block.RenderFence(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockMetalFence
+boxblock:id=%tile.fence_metal,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
+
+# %tile.brick_concrete_stairs:* (tile.brick_concrete_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_concrete_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.ore_bedrock:* (tile.ore_bedrock), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockBedrockOreTE
+
+# %tile.brick_compound_stairs:* (tile.brick_compound_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_compound_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.concrete_asbestos_stairs:* (tile.concrete_asbestos_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.concrete_asbestos_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.rad_lava_block:* (tile.rad_lava_block), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.hbm.blocks.fluid.RadBlock
+boxblock:id=%tile.rad_lava_block,ymax=0.875,data=1
+boxblock:id=%tile.rad_lava_block,ymax=0.75,data=2
+boxblock:id=%tile.rad_lava_block,ymax=0.625,data=3
+boxblock:id=%tile.rad_lava_block,ymax=0.5,data=4
+boxblock:id=%tile.rad_lava_block,ymax=0.375,data=5
+boxblock:id=%tile.rad_lava_block,ymax=0.25,data=6
+boxblock:id=%tile.rad_lava_block,ymax=0.125,data=7
+boxblock:id=%tile.rad_lava_block,ymax=0.875,data=9
+boxblock:id=%tile.rad_lava_block,ymax=0.75,data=10
+boxblock:id=%tile.rad_lava_block,ymax=0.625,data=11
+boxblock:id=%tile.rad_lava_block,ymax=0.5,data=12
+boxblock:id=%tile.rad_lava_block,ymax=0.375,data=13
+boxblock:id=%tile.rad_lava_block,ymax=0.25,data=14
+boxblock:id=%tile.rad_lava_block,ymax=0.125,data=15
+
+# %tile.deco_computer:* (tile.deco_computer), render=com.hbm.render.block.RenderBlockDecoModel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockDecoModel
+boxblock:id=%tile.deco_computer,xmin=0.16074901819229126,xmax=0.8392509818077087,ymin=0.0,ymax=0.8678489923477173,zmin=0.37781602144241333,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.deco_computer,xmin=0.16074900329113007,xmax=0.8392509818077087,ymin=0.0,ymax=0.8678489923477173,zmin=0.0,zmax=0.6221839785575867,data=4,data=5,data=6,data=7
+boxblock:id=%tile.deco_computer,xmin=0.37781602144241333,xmax=1.0,ymin=0.0,ymax=0.8678489923477173,zmin=0.16074900329113007,zmax=0.8392509818077087,data=8,data=9,data=10,data=11
+boxblock:id=%tile.deco_computer,xmin=0.0,xmax=0.6221839785575867,ymin=0.0,ymax=0.8678489923477173,zmin=0.16074901819229126,zmax=0.8392509818077087,data=12,data=13,data=14,data=15
+
+# %tile.brick_fire_stairs:* (tile.brick_fire_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_fire_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.brick_concrete_broken_stairs:* (tile.brick_concrete_broken_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_concrete_broken_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.test_ct:* (tile.test_ct), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.test.TestCT
+
+# %tile.mine_ap:* (tile.mine_ap), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.Landmine
+boxblock:id=%tile.mine_ap,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=*
+
+# %tile.rail_large_switch_flipped:* (tile.rail_large_switch_flipped), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailStandardSwitchFlipped
+boxblock:id=%tile.rail_large_switch_flipped,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %tile.stalactite:* (tile.stalactite), render=(CROSSEDSQUARES), opaque=false,cls=com.hbm.blocks.generic.BlockStalagmite
+patchblock:id=%tile.stalactite,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.brick_light_stairs:* (tile.brick_light_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_light_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.anvil_bismuth:* (tile.anvil_bismuth), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
+boxblock:id=%tile.anvil_bismuth,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.25,zmax=0.75,data=2,data=3
+boxblock:id=%tile.anvil_bismuth,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.ore_sellafield_radgem:* (tile.ore_sellafield_radgem), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockSellafieldOre
+
+# %tile.turret_tauon:* (tile.turret_tauon), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretTauon
+boxblock:id=%tile.turret_tauon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.rail_narrow_curve:* (tile.rail_narrow_curve), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailNarrowCurve
+boxblock:id=%tile.rail_narrow_curve,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %tile.reinforced_stone_stairs:* (tile.reinforced_stone_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.reinforced_stone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.brick_slab:* (tile.brick_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockMultiSlab
+boxblock:id=%tile.brick_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.brick_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.turret_friendly:* (tile.turret_friendly), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretFriendly
+boxblock:id=%tile.turret_friendly,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.ore_random:* (tile.ore_random), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockMotherOfAllOres
+
+# %tile.charge_miner:* (tile.charge_miner), render=com.hbm.render.block.RenderBlockRotated(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.BlockChargeMiner
+boxblock:id=%tile.charge_miner,xmin=0.0,xmax=1.0,ymin=0.625,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%tile.charge_miner,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%tile.charge_miner,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.625,zmax=1.0,data=2
+boxblock:id=%tile.charge_miner,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.375,data=3
+boxblock:id=%tile.charge_miner,xmin=0.625,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.charge_miner,xmin=0.0,xmax=0.375,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.hadron_coil_alloy:* (tile.hadron_coil_alloy), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockHadronCoil
+
+# %tile.hadron_coil_gold:* (tile.hadron_coil_gold), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockHadronCoil
+
+# %tile.turret_fritz:* (tile.turret_fritz), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretFritz
+boxblock:id=%tile.turret_fritz,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.hadron_coil_schrabidate:* (tile.hadron_coil_schrabidate), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockHadronCoil
+
+# %tile.rail_large_straight_short:* (tile.rail_large_straight_short), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailStandardStraightShort
+boxblock:id=%tile.rail_large_straight_short,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %tile.lox_barrel:* (tile.lox_barrel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.RedBarrel
+boxblock:id=%tile.lox_barrel,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.rail_large_curve:* (tile.rail_large_curve), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailStandardCurveBase
+boxblock:id=%tile.rail_large_curve,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %tile.brick_ducrete_stairs:* (tile.brick_ducrete_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_ducrete_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.#ngtv:* (tile.#ngtv), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.DecoBlockAlt
+boxblock:id=%tile.#ngtv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.door_bunker:* (tile.door_bunker), render=(DOOR), opaque=false,cls=com.hbm.blocks.generic.BlockModDoor
+customblock:id=%tile.door_bunker,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.mine_he:* (tile.mine_he), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.Landmine
+boxblock:id=%tile.mine_he,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.125,zmin=0.25,zmax=0.75,data=*
+
+# %tile.rail_large_straight:* (tile.rail_large_straight), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailStandardStraight
+boxblock:id=%tile.rail_large_straight,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %tile.foundry_outlet:* (tile.foundry_outlet), render=com.hbm.render.block.RenderFoundryOutlet(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.FoundryOutlet
+boxblock:id=%tile.foundry_outlet,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.5,zmin=0.625,zmax=1.0,data=2
+boxblock:id=%tile.foundry_outlet,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.5,zmin=0.0,zmax=0.375,data=3
+boxblock:id=%tile.foundry_outlet,xmin=0.625,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.3125,zmax=0.6875,data=4
+boxblock:id=%tile.foundry_outlet,xmin=0.0,xmax=0.375,ymin=0.0,ymax=0.5,zmin=0.3125,zmax=0.6875,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.sand_boron_layer:* (tile.sand_boron_layer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockLayering
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=3
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=8
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=9
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=10
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=11
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=12
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=13
+boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.875,zmin=0.0,zmax=1.0,data=14
+
+# %tile.brick_concrete_mossy_stairs:* (tile.brick_concrete_mossy_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_concrete_mossy_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.red_cable_gauge:* (tile.red_cable_gauge), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.BlockCableGauge
+
+# %tile.anvil_murky:* (tile.anvil_murky), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
+boxblock:id=%tile.anvil_murky,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.25,zmax=0.75,data=2,data=3
+boxblock:id=%tile.anvil_murky,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.fluid_duct:* (tile.fluid_duct), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.network.BlockFluidDuct
+boxblock:id=%tile.fluid_duct,xmin=0.34375,xmax=0.65625,ymin=0.34375,ymax=0.65625,zmin=0.34375,zmax=0.65625,data=*
+
+# %tile.steel_grate_wide:* (tile.steel_grate_wide), render=com.hbm.render.block.RenderGrate(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockGrate
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.12399999797344208,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.125,ymax=0.24899999797344208,zmin=0.0,zmax=1.0,data=1
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.25,ymax=0.37400001287460327,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.375,ymax=0.49900001287460327,zmin=0.0,zmax=1.0,data=3
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.5,ymax=0.6240000128746033,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.625,ymax=0.7490000128746033,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.75,ymax=0.8740000128746033,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=0.875,ymax=0.9990000128746033,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.steel_grate_wide,xmin=0.0,xmax=1.0,ymin=1.0,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.fluid_duct_box:* (tile.fluid_duct_box), render=com.hbm.render.block.RenderBoxDuct(CUSTOM), opaque=false,cls=com.hbm.blocks.network.FluidDuctBox
+boxblock:id=%tile.fluid_duct_box,xmin=0.0625,xmax=0.9375,ymin=0.0625,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2
+boxblock:id=%tile.fluid_duct_box,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.875,zmin=0.125,zmax=0.875,data=3,data=4,data=5
+boxblock:id=%tile.fluid_duct_box,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=6,data=7,data=8
+boxblock:id=%tile.fluid_duct_box,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=9,data=10,data=11
+boxblock:id=%tile.fluid_duct_box,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=12,data=13,data=14,data=15
+
+# %tile.fluid_duct_exhaust:* (tile.fluid_duct_exhaust), render=com.hbm.render.block.RenderBoxDuct(CUSTOM), opaque=false,cls=com.hbm.blocks.network.FluidDuctBoxExhaust
+boxblock:id=%tile.fluid_duct_exhaust,xmin=0.0625,xmax=0.9375,ymin=0.0625,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2
+boxblock:id=%tile.fluid_duct_exhaust,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.875,zmin=0.125,zmax=0.875,data=3,data=4,data=5
+boxblock:id=%tile.fluid_duct_exhaust,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=6,data=7,data=8
+boxblock:id=%tile.fluid_duct_exhaust,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=9,data=10,data=11
+boxblock:id=%tile.fluid_duct_exhaust,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=12,data=13,data=14,data=15
+
+# %tile.anvil_dnt:* (tile.anvil_dnt), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
+boxblock:id=%tile.anvil_dnt,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.25,zmax=0.75,data=2,data=3
+boxblock:id=%tile.anvil_dnt,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.ducrete_smooth_stairs:* (tile.ducrete_smooth_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.ducrete_smooth_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.crane_extractor:* (tile.crane_extractor), render=com.hbm.render.block.RenderBlockSideRotation(CUSTOM), opaque=true,cls=com.hbm.blocks.network.CraneExtractor
+
+# %tile.crane_grabber:* (tile.crane_grabber), render=com.hbm.render.block.RenderBlockSideRotation(CUSTOM), opaque=true,cls=com.hbm.blocks.network.CraneGrabber
+
+# %tile.crane_boxer:* (tile.crane_boxer), render=com.hbm.render.block.RenderBlockSideRotation(CUSTOM), opaque=true,cls=com.hbm.blocks.network.CraneBoxer
+
+# %tile.crane_unboxer:* (tile.crane_unboxer), render=com.hbm.render.block.RenderBlockSideRotation(CUSTOM), opaque=true,cls=com.hbm.blocks.network.CraneUnboxer
+
+# %tile.fluid_duct_solid:* (tile.fluid_duct_solid), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.BlockFluidDuctSolid
+
+# %tile.ladder_sturdy:* (tile.ladder_sturdy), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
+patchblock:id=%tile.ladder_sturdy,patch0=VertX0In@270,data=2
+patchblock:id=%tile.ladder_sturdy,patch0=VertX0In@90,data=3
+patchblock:id=%tile.ladder_sturdy,patch0=VertX0In@180,data=4
+patchblock:id=%tile.ladder_sturdy,patch0=VertX0In,data=5
+
+# %tile.ladder_iron:* (tile.ladder_iron), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
+patchblock:id=%tile.ladder_iron,patch0=VertX0In@270,data=2
+patchblock:id=%tile.ladder_iron,patch0=VertX0In@90,data=3
+patchblock:id=%tile.ladder_iron,patch0=VertX0In@180,data=4
+patchblock:id=%tile.ladder_iron,patch0=VertX0In,data=5
+
+# %tile.ladder_copper:* (tile.ladder_copper), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
+patchblock:id=%tile.ladder_copper,patch0=VertX0In@270,data=2
+patchblock:id=%tile.ladder_copper,patch0=VertX0In@90,data=3
+patchblock:id=%tile.ladder_copper,patch0=VertX0In@180,data=4
+patchblock:id=%tile.ladder_copper,patch0=VertX0In,data=5
+
+# %tile.ladder_aluminium:* (tile.ladder_aluminium), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
+patchblock:id=%tile.ladder_aluminium,patch0=VertX0In@270,data=2
+patchblock:id=%tile.ladder_aluminium,patch0=VertX0In@90,data=3
+patchblock:id=%tile.ladder_aluminium,patch0=VertX0In@180,data=4
+patchblock:id=%tile.ladder_aluminium,patch0=VertX0In,data=5
+
+# %tile.ladder_steel:* (tile.ladder_steel), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
+patchblock:id=%tile.ladder_steel,patch0=VertX0In@270,data=2
+patchblock:id=%tile.ladder_steel,patch0=VertX0In@90,data=3
+patchblock:id=%tile.ladder_steel,patch0=VertX0In@180,data=4
+patchblock:id=%tile.ladder_steel,patch0=VertX0In,data=5
+
+# %tile.door_office:* (tile.door_office), render=(DOOR), opaque=false,cls=com.hbm.blocks.generic.BlockModDoor
+customblock:id=%tile.door_office,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.barrel_plastic:* (tile.barrel_plastic), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
+boxblock:id=%tile.barrel_plastic,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.barrel_iron:* (tile.barrel_iron), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
+boxblock:id=%tile.barrel_iron,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.barrel_tcalloy:* (tile.barrel_tcalloy), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
+boxblock:id=%tile.barrel_tcalloy,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.#void:* (tile.#void), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.DecoBlockAlt
+boxblock:id=%tile.#void,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.red_connector:* (tile.red_connector), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.network.ConnectorRedWire
+boxblock:id=%tile.red_connector,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=1.0,zmin=0.3125,zmax=0.6875,data=0
+boxblock:id=%tile.red_connector,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%tile.red_connector,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=1.0,data=2
+boxblock:id=%tile.red_connector,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.0,zmax=0.6875,data=3
+boxblock:id=%tile.red_connector,xmin=0.3125,xmax=1.0,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=4
+boxblock:id=%tile.red_connector,xmin=0.0,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=5
+boxblock:id=%tile.red_connector,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.barrel_steel:* (tile.barrel_steel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
+boxblock:id=%tile.barrel_steel,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.turret_richard:* (tile.turret_richard), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretRichard
+boxblock:id=%tile.turret_richard,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.turret_jeremy:* (tile.turret_jeremy), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretJeremy
+boxblock:id=%tile.turret_jeremy,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.turret_brandon:* (tile.turret_brandon), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretBrandon
+boxblock:id=%tile.turret_brandon,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %tile.red_cable:* (tile.red_cable), render=com.hbm.render.block.RenderCable(CUSTOM), opaque=false,cls=com.hbm.blocks.network.BlockCable
+boxblock:id=%tile.red_cable,xmin=0.34375,xmax=0.65625,ymin=0.34375,ymax=0.65625,zmin=0.34375,zmax=0.65625,data=*
+
+# %tile.foundry_channel:* (tile.foundry_channel), render=com.hbm.render.block.RenderFoundryChannel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.FoundryChannel
+boxblock:id=%tile.foundry_channel,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.5,zmin=0.3125,zmax=0.6875,data=*
+
+# %tile.volcanic_lava_block:* (tile.volcanic_lava_block), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.hbm.blocks.fluid.VolcanicBlock
+boxblock:id=%tile.volcanic_lava_block,ymax=0.875,data=1
+boxblock:id=%tile.volcanic_lava_block,ymax=0.75,data=2
+boxblock:id=%tile.volcanic_lava_block,ymax=0.625,data=3
+boxblock:id=%tile.volcanic_lava_block,ymax=0.5,data=4
+boxblock:id=%tile.volcanic_lava_block,ymax=0.375,data=5
+boxblock:id=%tile.volcanic_lava_block,ymax=0.25,data=6
+boxblock:id=%tile.volcanic_lava_block,ymax=0.125,data=7
+boxblock:id=%tile.volcanic_lava_block,ymax=0.875,data=9
+boxblock:id=%tile.volcanic_lava_block,ymax=0.75,data=10
+boxblock:id=%tile.volcanic_lava_block,ymax=0.625,data=11
+boxblock:id=%tile.volcanic_lava_block,ymax=0.5,data=12
+boxblock:id=%tile.volcanic_lava_block,ymax=0.375,data=13
+boxblock:id=%tile.volcanic_lava_block,ymax=0.25,data=14
+boxblock:id=%tile.volcanic_lava_block,ymax=0.125,data=15
+
+# %tile.fluid_duct_paintable:* (tile.fluid_duct_paintable), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.FluidDuctPaintable
+
+# %tile.deco_red_copper:* (tile.deco_red_copper), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockDecoCT
+
+# %tile.machine_storage_drum:* (tile.machine_storage_drum), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.StorageDrum
+boxblock:id=%tile.machine_storage_drum,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# %tile.plant_flower:* (tile.plant_flower), render=(CROSSEDSQUARES), opaque=false,cls=com.hbm.blocks.generic.BlockNTMFlower
+patchblock:id=%tile.plant_flower,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.machine_flare:* (tile.machine_flare), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineGasFlare
+boxblock:id=%tile.machine_flare,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9990000128746033,zmin=0.0,zmax=1.0,data=*
+
+# %tile.sat_dock:* (tile.sat_dock), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineSatDock
+boxblock:id=%tile.sat_dock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
+
+# %tile.mush:* (tile.mush), render=(CROSSEDSQUARES), opaque=false,cls=com.hbm.blocks.generic.BlockMush
+patchblock:id=%tile.mush,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %tile.sulfuric_acid_block:* (tile.sulfuric_acid_block), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.hbm.blocks.fluid.GenericFluidBlock
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.875,data=1
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.75,data=2
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.625,data=3
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.5,data=4
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.375,data=5
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.25,data=6
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.125,data=7
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.875,data=9
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.75,data=10
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.625,data=11
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.5,data=12
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.375,data=13
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.25,data=14
+boxblock:id=%tile.sulfuric_acid_block,ymax=0.125,data=15
+
+# %tile.steel_roof:* (tile.steel_roof), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.DecoBlock
+boxblock:id=%tile.steel_roof,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# %tile.radiorec:* (tile.radiorec), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.RadioRec
+boxblock:id=%tile.radiorec,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=0,data=1
+boxblock:id=%tile.radiorec,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.625,zmin=0.25,zmax=0.75,data=2,data=3
+boxblock:id=%tile.radiorec,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.625,zmin=0.0625,zmax=0.9375,data=4,data=5
+boxblock:id=%tile.radiorec,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.rail_narrow:* (tile.rail_narrow), render=(MINECARTTRACK), opaque=false,cls=com.hbm.blocks.machine.RailGeneric
+patchblock:id=%tile.rail_narrow,patch0=HorizY001ZTop,data=0
+patchblock:id=%tile.rail_narrow,patch0=HorizY001ZTop@90,data=1
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop,data=2
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=%tile.rail_narrow,patch0=HorizY001ZTop@90,data=6
+patchblock:id=%tile.rail_narrow,patch0=HorizY001ZTop@180,data=7
+patchblock:id=%tile.rail_narrow,patch0=HorizY001ZTop@270,data=8,data=9
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop,data=10
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=%tile.rail_narrow,patch0=SlopeXUpZTop@90,data=13
+
+# %tile.rail_wood:* (tile.rail_wood), render=(MINECARTTRACK), opaque=false,cls=com.hbm.blocks.machine.RailGeneric
+patchblock:id=%tile.rail_wood,patch0=HorizY001ZTop,data=0
+patchblock:id=%tile.rail_wood,patch0=HorizY001ZTop@90,data=1
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop,data=2
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=%tile.rail_wood,patch0=HorizY001ZTop@90,data=6
+patchblock:id=%tile.rail_wood,patch0=HorizY001ZTop@180,data=7
+patchblock:id=%tile.rail_wood,patch0=HorizY001ZTop@270,data=8,data=9
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop,data=10
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=%tile.rail_wood,patch0=SlopeXUpZTop@90,data=13
+
+# %tile.brick_concrete_cracked_stairs:* (tile.brick_concrete_cracked_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
+customblock:id=%tile.brick_concrete_cracked_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.deco_tungsten:* (tile.deco_tungsten), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockDecoCT
+
+# %tile.anvil_osmiridium:* (tile.anvil_osmiridium), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
+boxblock:id=%tile.anvil_osmiridium,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.25,zmax=0.75,data=2,data=3
+boxblock:id=%tile.anvil_osmiridium,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.fluid_duct_gauge:* (tile.fluid_duct_gauge), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.FluidDuctGauge
+
+# %tile.pwr_block:* (tile.pwr_block), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockPWR
