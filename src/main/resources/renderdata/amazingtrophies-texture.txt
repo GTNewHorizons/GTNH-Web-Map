@@ -1,0 +1,16 @@
+# amazingtrophies 1.1.4
+version:1.7
+modname:amazingtrophies
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/amazingtrophies/textures/blocks/
+texture:id=amazingtrophies/trophy_pedestal,filename=assets/amazingtrophies/textures/blocks/trophy_pedestal.png
+
+
+
+# %trophy:* (trophy), render=(CUSTOM), opaque=false,cls=glowredman.amazingtrophies.trophy.BlockTrophy
+block:id=%trophy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:amazingtrophies/trophy_pedestal
