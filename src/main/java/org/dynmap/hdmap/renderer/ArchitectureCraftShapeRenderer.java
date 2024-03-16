@@ -453,7 +453,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
             for(int[] t : f.triangles){
                 double[] a = f.vertices[t[0]], b = f.vertices[t[1]], c = f.vertices[t[2]];
 
-                list.add(rpf.getPatch(a[0]+0.5, a[1]+0.5, a[2]+0.5, b[0]+0.5, b[1]+0.5, b[2]+0.5, c[0]+0.5, c[1]+0.5, c[2]+0.5, 1, RenderPatchFactory.SideVisible.TOP, f.texture == lowestTextureNum ? 0 : textureIdForOptionalSecondary));
+                list.add(rpf.getTriangleAutoTexCoords(a[0]+0.5, a[1]+0.5, a[2]+0.5, b[0]+0.5, b[1]+0.5, b[2]+0.5, c[0]+0.5, c[1]+0.5, c[2]+0.5, RenderPatchFactory.SideVisible.TOP, f.texture == lowestTextureNum ? 0 : textureIdForOptionalSecondary));
             }
         }
 

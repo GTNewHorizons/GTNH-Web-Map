@@ -61,13 +61,13 @@ public class CarpentersCollapsibleBlockRenderer extends CarpentersBlocksRenderer
             return;
 
         if(a == b && a > 0) {
-            list.add(rpf.getRotatedPatch(rpf.getPatch(0, 0, 0, 1, 0, 0, 0, a / 16.0, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0), 0, rot, 0, 0));
+            list.add(rpf.getRotatedPatch(rpf.getQuadAutoTexCoords(0, 0, 0, 1, 0, 0, 0, a / 16.0, 0, RenderPatchFactory.SideVisible.BOTTOM, 0), 0, rot, 0, 0));
         } else {
             double min = (a < b ? a : b) / 16.0;
             double max = (a < b ? b : a) / 16.0;
 
             if(min > 0)
-                list.add(rpf.getRotatedPatch(rpf.getPatch(0, 0, 0, 1, 0, 0, 0, min, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0), 0, rot, 0, 0));
+                list.add(rpf.getRotatedPatch(rpf.getQuadAutoTexCoords(0, 0, 0, 1, 0, 0, 0, min, 0, RenderPatchFactory.SideVisible.BOTTOM, 0), 0, rot, 0, 0));
 
             if(a < b)
                 list.add(rpf.getRotatedPatch(rpf.getTriangleAutoTexCoords(0, min, 0, 1, min, 0, 0, max, 0, 1, RenderPatchFactory.SideVisible.BOTTOM, 0), 0, rot, 0, 0));
@@ -81,13 +81,13 @@ public class CarpentersCollapsibleBlockRenderer extends CarpentersBlocksRenderer
             return;
 
         if(a == b && a > 0) {
-            list.add(rpf.getRotatedPatch(rpf.getPatch(0, 1, 0, 1, 1, 0, 0, 1 - a / 16.0, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
+            list.add(rpf.getRotatedPatch(rpf.getQuadAutoTexCoords(0, 1, 0, 1, 1, 0, 0, 1 - a / 16.0, 0, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
         } else {
             double min = (a < b ? a : b) / 16.0;
             double max = (a < b ? b : a) / 16.0;
 
             if(min > 0)
-                list.add(rpf.getRotatedPatch(rpf.getPatch(0, 1, 0, 1, 1, 0, 0, 1-min, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
+                list.add(rpf.getRotatedPatch(rpf.getQuadAutoTexCoords(0, 1, 0, 1, 1, 0, 0, 1-min, 0, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
 
             if(a < b)
                 list.add(rpf.getRotatedPatch(rpf.getTriangleAutoTexCoords(0, 1-min, 0, 1, 1-min, 0, 0, 1-max, 0, 1, RenderPatchFactory.SideVisible.TOP, 0), 0, rot, 0, 0));
