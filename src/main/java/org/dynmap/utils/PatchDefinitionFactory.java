@@ -155,5 +155,73 @@ public class PatchDefinitionFactory implements RenderPatchFactory {
     public int getTextureCountFromMap(String id) {
         return TexturePack.getTextureMapLength(id);
     }
-    
+
+    @Override
+    public RenderPatch getTriangleExplTexCoords(double x0, double y0, double z0, double tu0, double tv0, double x1, double y1, double z1, double tu1, double tv1, double x2, double y2, double z2, double tu2, double tv2, SideVisible sidevis, int textureidx) {
+        PatchDefinition ret = new PatchDefinition();
+        ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,1,sidevis, textureidx);
+        ret.explicitTexCoords = new double[]{tu0, tv0, tu1, tv1, tu2, tv2};
+        return ret;
+    }
+    @Override
+    public RenderPatch getTriangleAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, SideVisible sidevis, int textureidx) {
+        return getTriangleAutoTexCoords(x0, y0, z0, x1, y1, z1, x2, y2, z2, 1, sidevis, textureidx);
+    }
+    @Override
+    public RenderPatch getTriangleAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, double uplusvmax, SideVisible sidevis, int textureidx) {
+        PatchDefinition ret = new PatchDefinition();
+        ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,uplusvmax,sidevis, textureidx);
+
+        switch(ret.step){
+            case X_PLUS:
+                ret.explicitTexCoords = new double[]{1-z0, 1-y0, 1-z1, 1-y1, 1-z2, 1-y2};
+                break;
+            case Y_PLUS:
+                ret.explicitTexCoords = new double[]{x0, 1-z0, x1, 1-z1, x2, 1-z2};
+                break;
+            case Z_PLUS:
+                ret.explicitTexCoords = new double[]{1-x0, 1-y0, 1-x1, 1-y1, 1-x2, 1-y2};
+                break;
+            case X_MINUS:
+                ret.explicitTexCoords = new double[]{z0, 1-y0, z1, 1-y1, z2, 1-y2};
+                break;
+            case Y_MINUS:
+                ret.explicitTexCoords = new double[]{x0, z0, x1, z1, x2, z2};
+                break;
+            case Z_MINUS:
+                ret.explicitTexCoords = new double[]{x0, 1-y0, x1, 1-y1, x2, 1-y2};
+                break;
+        }
+        return ret;
+    }
+    @Override
+    public RenderPatch getQuadAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, SideVisible sidevis, int textureidx){
+        PatchDefinition ret = new PatchDefinition();
+        ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,100,sidevis, textureidx);
+
+        // TODO: This can probably be optimized to move points and use umin/umax and vmin/vmax instead of explicit texcoords
+
+        switch(ret.step){
+            case X_PLUS:
+                ret.explicitTexCoords = new double[]{1-z0, 1-y0, 1-z1, 1-y1, 1-z2, 1-y2};
+                break;
+            case Y_PLUS:
+                ret.explicitTexCoords = new double[]{x0, 1-z0, x1, 1-z1, x2, 1-z2};
+                break;
+            case Z_PLUS:
+                ret.explicitTexCoords = new double[]{1-x0, 1-y0, 1-x1, 1-y1, 1-x2, 1-y2};
+                break;
+            case X_MINUS:
+                ret.explicitTexCoords = new double[]{z0, 1-y0, z1, 1-y1, z2, 1-y2};
+                break;
+            case Y_MINUS:
+                ret.explicitTexCoords = new double[]{x0, z0, x1, z1, x2, z2};
+                break;
+            case Z_MINUS:
+                ret.explicitTexCoords = new double[]{x0, 1-y0, x1, 1-y1, x2, 1-y2};
+                break;
+        }
+
+        return ret;
+    }
 }

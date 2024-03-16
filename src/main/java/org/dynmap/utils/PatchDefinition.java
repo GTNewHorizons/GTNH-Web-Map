@@ -19,6 +19,8 @@ public class PatchDefinition implements RenderPatch {
     private int hc;
     /* Offset vector of middle of block */
     private static final Vector3D offsetCenter = new Vector3D(0.5,0.5,0.5);
+
+    public double[] explicitTexCoords;
     
     PatchDefinition() {
         x0 = y0 = z0 = 0.0;
@@ -31,6 +33,7 @@ public class PatchDefinition implements RenderPatch {
         v = new Vector3D();
         sidevis = SideVisible.BOTH;
         textureindex = 0;
+        explicitTexCoords = null;
         update();
     }
     PatchDefinition(PatchDefinition pd) {
@@ -54,6 +57,7 @@ public class PatchDefinition implements RenderPatch {
         this.textureindex = pd.textureindex;
         this.step = pd.step;
         this.hc = pd.hc;
+        this.explicitTexCoords = pd.explicitTexCoords;
     }
     /**
      * Construct patch, based on rotation of existing patch clockwise by N
@@ -80,6 +84,7 @@ public class PatchDefinition implements RenderPatch {
         this.textureindex = textureindex;
         u = new Vector3D();
         v = new Vector3D();
+        this.explicitTexCoords = orig.explicitTexCoords;
         update();
     }
     
@@ -319,7 +324,7 @@ public class PatchDefinition implements RenderPatch {
                     (xv == p.xv) && (yv == p.yv) && (zv == p.zv) && 
                     (umin == p.umin) && (umax == p.umax) &&
                     (vmin == p.vmin) && (vmax == p.vmax) &&
-                    (uplusvmax == p.uplusvmax) && (sidevis == p.sidevis)) {
+                    (uplusvmax == p.uplusvmax) && (sidevis == p.sidevis) && explicitTexCoords == p.explicitTexCoords) {
                 return true;
             }
         }
