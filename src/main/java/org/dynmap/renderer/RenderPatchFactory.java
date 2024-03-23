@@ -66,6 +66,9 @@ public interface RenderPatchFactory {
      * @return patch requested
      */
     public RenderPatch getRotatedPatch(RenderPatch patch, int xrot, int yrot, int zrot, int textureidx);
+
+    RenderPatch getRotatedPatchAutoTexCoords(RenderPatch patch, int xrot, int yrot, int zrot, int textureindex);
+
     /**
      * Get named patch with given attributes.  Name can encode rotation and patch index info
      * "name" - simple name

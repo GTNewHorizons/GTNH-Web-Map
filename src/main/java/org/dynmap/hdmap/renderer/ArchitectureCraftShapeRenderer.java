@@ -373,7 +373,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                                     break;
                             }
 
-                            arr[i] = rpf.getRotatedPatch(arr[i], xrot, yrot, zrot, arr[i].getTextureIndex());
+                            arr[i] = rpf.getRotatedPatchAutoTexCoords(arr[i], xrot, yrot, zrot, arr[i].getTextureIndex());
                         }
                     }
 
@@ -411,27 +411,27 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
         // slope
-        list.add(rpf.getPatch(0, maxY,1,1, maxY, 1, 0, minY,0,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,textureIdForOptionalSecondary ));
+        list.add(rpf.getPatch(0, maxY,1,1, maxY, 1, 0, minY,0,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary ));
 
         if(minY > 0) {
             // front
-            list.add(rpf.getPatch(0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1-minY, 1, RenderPatchFactory.SideVisible.TOP, 0));
+            list.add(rpf.getPatch(1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, minY, RenderPatchFactory.SideVisible.TOP, 0));
         }
 
         // left side
-        list.add(rpf.getTriangleAutoTexCoords(0,minY, 1, 0,minY,0,0,maxY,1,1, RenderPatchFactory.SideVisible.BOTTOM, 0));
+        list.add(rpf.getTriangleAutoTexCoords( 0,minY,0,0,minY, 1,0,maxY,1,1, RenderPatchFactory.SideVisible.TOP, 0));
         if(minY > 0) {
-            list.add(rpf.getPatch(0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, minY, RenderPatchFactory.SideVisible.BOTTOM, 0));
+            list.add(rpf.getPatch(0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, minY, RenderPatchFactory.SideVisible.TOP, 0));
         }
 
         // right side
         list.add(rpf.getTriangleAutoTexCoords(1,minY, 1,1,minY,0, 1,maxY,1,1, RenderPatchFactory.SideVisible.TOP, 0));
         if(minY > 0) {
-            list.add(rpf.getPatch(1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, minY, RenderPatchFactory.SideVisible.BOTTOM, 0));
+            list.add(rpf.getPatch(1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, minY, RenderPatchFactory.SideVisible.TOP, 0));
         }
 
         // back
-        list.add(rpf.getPatch(1, 1,1,0, 1, 1, 1,0,1,0, 1, 1-maxY, 1, RenderPatchFactory.SideVisible.TOP,0 ));
+        list.add(rpf.getPatch(0, 0,1,1, 0, 1, 0,1,1,0, 1, 0, maxY, RenderPatchFactory.SideVisible.TOP,0 ));
 
         // bottom
         list.add(rpf.getPatch(0,0,0,1,0, 0, 0,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));

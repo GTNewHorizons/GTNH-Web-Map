@@ -75,6 +75,21 @@ public class PatchDefinitionFactory implements RenderPatchFactory {
             return pd2;
         }
     }
+
+    @Override
+    public RenderPatch getRotatedPatchAutoTexCoords(RenderPatch patch, int xrot, int yrot, int zrot, int textureindex) {
+        return getPatchAutoTexCoords((PatchDefinition)patch, xrot, yrot, zrot, textureindex);
+    }
+
+    public PatchDefinition getPatchAutoTexCoords(PatchDefinition patch, int xrot, int yrot, int zrot, int textureindex) {
+        PatchDefinition pd = new PatchDefinition(patch, xrot, yrot, zrot, textureindex);
+        if(pd.validate() == false)
+            return null;
+
+        autoTexCoords(pd);
+
+        return pd;
+    }
     /**
      * Get named patch with given attributes.  Name can encode rotation and patch index info
      * "name" - simple name
@@ -172,56 +187,41 @@ public class PatchDefinitionFactory implements RenderPatchFactory {
         PatchDefinition ret = new PatchDefinition();
         ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,uplusvmax,sidevis, textureidx);
 
-        switch(ret.step){
-            case X_PLUS:
-                ret.explicitTexCoords = new double[]{1-z0, 1-y0, 1-z1, 1-y1, 1-z2, 1-y2};
-                break;
-            case Y_PLUS:
-                ret.explicitTexCoords = new double[]{x0, 1-z0, x1, 1-z1, x2, 1-z2};
-                break;
-            case Z_PLUS:
-                ret.explicitTexCoords = new double[]{1-x0, 1-y0, 1-x1, 1-y1, 1-x2, 1-y2};
-                break;
-            case X_MINUS:
-                ret.explicitTexCoords = new double[]{z0, 1-y0, z1, 1-y1, z2, 1-y2};
-                break;
-            case Y_MINUS:
-                ret.explicitTexCoords = new double[]{x0, z0, x1, z1, x2, z2};
-                break;
-            case Z_MINUS:
-                ret.explicitTexCoords = new double[]{x0, 1-y0, x1, 1-y1, x2, 1-y2};
-                break;
-        }
+        autoTexCoords(ret);
         return ret;
     }
+
     @Override
     public RenderPatch getQuadAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, SideVisible sidevis, int textureidx){
         PatchDefinition ret = new PatchDefinition();
         ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,100,sidevis, textureidx);
 
         // TODO: This can probably be optimized to move points and use umin/umax and vmin/vmax instead of explicit texcoords
-
-        switch(ret.step){
-            case X_PLUS:
-                ret.explicitTexCoords = new double[]{1-z0, 1-y0, 1-z1, 1-y1, 1-z2, 1-y2};
-                break;
-            case Y_PLUS:
-                ret.explicitTexCoords = new double[]{x0, 1-z0, x1, 1-z1, x2, 1-z2};
-                break;
-            case Z_PLUS:
-                ret.explicitTexCoords = new double[]{1-x0, 1-y0, 1-x1, 1-y1, 1-x2, 1-y2};
-                break;
-            case X_MINUS:
-                ret.explicitTexCoords = new double[]{z0, 1-y0, z1, 1-y1, z2, 1-y2};
-                break;
-            case Y_MINUS:
-                ret.explicitTexCoords = new double[]{x0, z0, x1, z1, x2, z2};
-                break;
-            case Z_MINUS:
-                ret.explicitTexCoords = new double[]{x0, 1-y0, x1, 1-y1, x2, 1-y2};
-                break;
-        }
+        autoTexCoords(ret);
 
         return ret;
+    }
+
+    private static void autoTexCoords(PatchDefinition ret) {
+        switch(ret.step){
+            case X_PLUS:
+                ret.explicitTexCoords = new double[]{1 - ret.z0, ret.y0, 1 - ret.zu, ret.yu, 1 - ret.zv, ret.yv};
+                break;
+            case Y_PLUS:
+                ret.explicitTexCoords = new double[]{ret.x0, 1 - ret.z0, ret.xu, 1 - ret.zu, ret.xv, 1 - ret.zv};
+                break;
+            case Z_PLUS:
+                ret.explicitTexCoords = new double[]{1 - ret.x0, ret.y0, 1 - ret.xu, ret.yu, 1 - ret.xv, ret.yv};
+                break;
+            case X_MINUS:
+                ret.explicitTexCoords = new double[]{ret.z0, ret.y0, ret.zu, ret.yu, ret.zv, ret.yv};
+                break;
+            case Y_MINUS:
+                ret.explicitTexCoords = new double[]{ret.x0, ret.z0, ret.xu, ret.zu, ret.xv, ret.zv};
+                break;
+            case Z_MINUS:
+                ret.explicitTexCoords = new double[]{ret.x0, ret.y0, ret.xu, ret.yu, ret.xv, ret.yv};
+                break;
+        }
     }
 }
