@@ -1,4 +1,4 @@
-# TConstruct 1.9.36-GTNH
+# TConstruct 1.11.12-GTNH
 version:1.7
 modname:TConstruct
 
@@ -363,13 +363,13 @@ texture:id=tinker/woodrail_turn,filename=assets/tinker/textures/blocks/woodrail_
 # %liquid.slime:* (liquid.slime), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.blocks.slime.SlimeFluid
 block:id=%liquid.slime,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/slime_blue,face2-5=12000:tinker/slime_blue_flow
 
-# %MeatBlock:* (MeatBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.world.blocks.MeatBlock
+# %MeatBlock:* (MeatBlock), render=(STANDARD), opaque=true,cls=tconstruct.world.blocks.MeatBlock
 block:id=%MeatBlock,data=0,stdrot=true,face0-1=0:tinker/ham_bone,face2-5=0:tinker/ham_skin
 block:id=%MeatBlock,data=4,stdrot=true,face0-3=0:tinker/ham_skin,face4-5=0:tinker/ham_bone
 block:id=%MeatBlock,data=8,stdrot=true,face0-1=0:tinker/ham_skin,face2-3=0:tinker/ham_bone,face4-5=0:tinker/ham_skin
 block:id=%MeatBlock,data=12,stdrot=true,face0-5=0:tinker/ham_skin
 
-# %WoolSlab1:* (WoolSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
+# %WoolSlab1:* (WoolSlab1), render=(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
 block:id=%WoolSlab1,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white
 block:id=%WoolSlab1,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_orange
 block:id=%WoolSlab1,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_magenta
@@ -387,7 +387,7 @@ block:id=%WoolSlab1,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:minec
 block:id=%WoolSlab1,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_pink
 block:id=%WoolSlab1,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_gray
 
-# %WoolSlab2:* (WoolSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
+# %WoolSlab2:* (WoolSlab2), render=(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
 block:id=%WoolSlab2,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_silver
 block:id=%WoolSlab2,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_cyan
 block:id=%WoolSlab2,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_purple
@@ -420,17 +420,17 @@ block:id=%trap.barricade.birch,data=*,stdrot=true,face0-5=0:minecraft/log_birch
 # %trap.barricade.jungle:* (trap.barricade.jungle), render=tconstruct.world.model.BarricadeRender(CUSTOM), opaque=false,cls=tconstruct.blocks.traps.BarricadeBlock
 block:id=%trap.barricade.jungle,data=*,stdrot=true,face0-5=0:minecraft/log_jungle
 
-# %explosive.slime:* (explosive.slime), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.world.blocks.SlimeExplosive
+# %explosive.slime:* (explosive.slime), render=(STANDARD), opaque=true,cls=tconstruct.world.blocks.SlimeExplosive
 block:id=%explosive.slime,data=0,data=1,stdrot=true,face0=0:tinker/sdx_top_green,face1=0:tinker/sdx_bottom_green,face2-5=0:tinker/sdx_side_green
 block:id=%explosive.slime,data=2,data=3,stdrot=true,face0=0:tinker/sdx_top_blue,face1=0:tinker/sdx_bottom_blue,face2-5=0:tinker/sdx_side_blue
 
-# %slime.gel:* (slime.gel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.blocks.slime.SlimeGel
+# %slime.gel:* (slime.gel), render=(STANDARD), opaque=true,cls=tconstruct.blocks.slime.SlimeGel
 block:id=%slime.gel,data=0,stdrot=true,face0-5=0:tinker/slimeblock_blue
 block:id=%slime.gel,data=1,stdrot=true,face0-5=0:tinker/slimeblock_green
 block:id=%slime.gel,data=2,stdrot=true,face0-5=0:tinker/slimeblock_purple
 block:id=%slime.gel,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/slimeblock_blue
 
-# %slime.grass:* (slime.grass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.blocks.slime.SlimeGrass
+# %slime.grass:* (slime.grass), render=(STANDARD), opaque=true,cls=tconstruct.blocks.slime.SlimeGrass
 block:id=%slime.grass,data=0,stdrot=true,face0=0:tinker/slimedirt_blue,face1=0:tinker/slimegrass_green_top,face2-5=0:tinker/slimegrass_green_blue_side
 block:id=%slime.grass,data=1,stdrot=true,face0=0:minecraft/dirt,face1=0:tinker/slimegrass_green_top,face2-5=0:tinker/slimegrass_green_dirt_side
 block:id=%slime.grass,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:tinker/slimedirt_blue,face1=0:tinker/slimegrass_green_top,face2-5=0:tinker/slimegrass_green_blue_side
@@ -438,7 +438,7 @@ block:id=%slime.grass,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,da
 # %slime.grass.tall:* (slime.grass.tall), render=(CROSSEDSQUARES), opaque=false,cls=tconstruct.blocks.slime.SlimeTallGrass
 block:id=%slime.grass.tall,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/slimegrass_blue_tall
 
-# %slime.leaves:* (slime.leaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.blocks.slime.SlimeLeaves
+# %slime.leaves:* (slime.leaves), render=(STANDARD), opaque=false,cls=tconstruct.blocks.slime.SlimeLeaves
 block:id=%slime.leaves,data=*,stdrot=true,face0-5=0:tinker/slimeleaves_blue_fast
 
 # %slime.sapling:* (slime.sapling), render=(CROSSEDSQUARES), opaque=false,cls=tconstruct.blocks.slime.SlimeSapling
@@ -461,7 +461,7 @@ block:id=%decoration.stonetorch,data=*,stdrot=true,transparency=TRANSPARENT,patc
 # %decoration.stoneladder:* (decoration.stoneladder), render=(LADDER), opaque=false,cls=tconstruct.world.blocks.StoneLadder
 block:id=%decoration.stoneladder,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/ladder_stone
 
-# %decoration.multibrick:* (decoration.multibrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.tools.blocks.MultiBrick
+# %decoration.multibrick:* (decoration.multibrick), render=(STANDARD), opaque=true,cls=tconstruct.tools.blocks.MultiBrick
 block:id=%decoration.multibrick,data=0,stdrot=true,face0-5=0:tinker/bricks/brick_obsidian
 block:id=%decoration.multibrick,data=1,stdrot=true,face0-5=0:tinker/bricks/brick_sandstone
 block:id=%decoration.multibrick,data=2,stdrot=true,face0-5=0:tinker/bricks/brick_netherrack
@@ -478,7 +478,7 @@ block:id=%decoration.multibrick,data=12,stdrot=true,face0-5=0:tinker/bricks/bric
 block:id=%decoration.multibrick,data=13,stdrot=true,face0-5=0:tinker/bricks/brick_obsidian_ingot
 block:id=%decoration.multibrick,data=14,data=15,stdrot=true,face0-5=0:tinker/bricks/brick_obsidian
 
-# %decoration.multibrickfancy:* (decoration.multibrickfancy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.tools.blocks.MultiBrickFancy
+# %decoration.multibrickfancy:* (decoration.multibrickfancy), render=(STANDARD), opaque=true,cls=tconstruct.tools.blocks.MultiBrickFancy
 block:id=%decoration.multibrickfancy,data=0,stdrot=true,face0-5=0:tinker/bricks/fancybrick_obsidian
 block:id=%decoration.multibrickfancy,data=1,stdrot=true,face0-5=0:tinker/bricks/fancybrick_sandstone
 block:id=%decoration.multibrickfancy,data=2,stdrot=true,face0-5=0:tinker/bricks/fancybrick_netherrack
@@ -496,7 +496,7 @@ block:id=%decoration.multibrickfancy,data=13,stdrot=true,face0-5=0:tinker/bricks
 block:id=%decoration.multibrickfancy,data=14,stdrot=true,face0-5=0:tinker/bricks/fancybrick_stone
 block:id=%decoration.multibrickfancy,data=15,stdrot=true,face0-5=0:tinker/bricks/road_stone
 
-# %decoration.multibrickmetal:* (decoration.multibrickmetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.tools.blocks.MultiBrickMetal
+# %decoration.multibrickmetal:* (decoration.multibrickmetal), render=(STANDARD), opaque=true,cls=tconstruct.tools.blocks.MultiBrickMetal
 block:id=%decoration.multibrickmetal,data=0,stdrot=true,face0-5=0:tinker/bricks/brick_alumite
 block:id=%decoration.multibrickmetal,data=1,stdrot=true,face0-5=0:tinker/bricks/brick_ardite
 block:id=%decoration.multibrickmetal,data=2,stdrot=true,face0-5=0:tinker/bricks/brick_cobalt
@@ -535,7 +535,7 @@ block:id=%ore.berries.two,data=9,stdrot=true,face0-5=0:tinker/crops/berry_essenc
 block:id=%ore.berries.two,data=12,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_ripe_fast
 block:id=%ore.berries.two,data=13,stdrot=true,face0-5=0:tinker/crops/berry_essence_ripe_fast
 
-# %SearedBrick:* (SearedBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.MetalOre
+# %SearedBrick:* (SearedBrick), render=(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.MetalOre
 block:id=%SearedBrick,data=0,stdrot=true,face0-5=0:tinker/nether_slag
 block:id=%SearedBrick,data=1,stdrot=true,face0-5=0:tinker/nether_cobalt
 block:id=%SearedBrick,data=2,stdrot=true,face0-5=0:tinker/nether_ardite
@@ -545,7 +545,7 @@ block:id=%SearedBrick,data=5,stdrot=true,face0-5=0:tinker/ore_aluminum
 block:id=%SearedBrick,data=6,stdrot=true,face0-5=0:tinker/ore_slag
 block:id=%SearedBrick,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/nether_slag
 
-# %GravelOre:* (GravelOre), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.world.blocks.GravelOre
+# %GravelOre:* (GravelOre), render=(STANDARD), opaque=true,cls=tconstruct.world.blocks.GravelOre
 block:id=%GravelOre,data=0,stdrot=true,face0-5=0:tinker/ore_iron_gravel
 block:id=%GravelOre,data=1,stdrot=true,face0-5=0:tinker/ore_gold_gravel
 block:id=%GravelOre,data=2,stdrot=true,face0-5=0:tinker/ore_copper_gravel
@@ -558,7 +558,7 @@ block:id=%GravelOre,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,
 block:id=%rail.wood,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/woodrail
 block:id=%rail.wood,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/woodrail_turn
 
-# %MetalBlock:* (MetalBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.world.blocks.TMetalBlock
+# %MetalBlock:* (MetalBlock), render=(STANDARD), opaque=true,cls=tconstruct.world.blocks.TMetalBlock
 block:id=%MetalBlock,data=0,stdrot=true,face0-5=0:tinker/compressed_cobalt
 block:id=%MetalBlock,data=1,stdrot=true,face0-5=0:tinker/compressed_ardite
 block:id=%MetalBlock,data=2,stdrot=true,face0-5=0:tinker/compressed_manyullyn
@@ -605,7 +605,7 @@ block:id=%ToolForgeBlock,data=15,stdrot=true,face0=0:tinker/compressed_cobalt,fa
 # %CraftingStation:* (CraftingStation), render=tconstruct.tools.model.TableRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.CraftingStationBlock
 block:id=%CraftingStation,data=*,stdrot=true,face0=0:tinker/craftingstation_bottom,face1=0:tinker/craftingstation_top,face2-5=0:tinker/craftingstation_side
 
-# %CraftingSlab:* (CraftingSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
+# %CraftingSlab:* (CraftingSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
 block:id=%CraftingSlab,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/craftingstation_bottom,face1=0:tinker/craftingstation_top,face2-5=0:tinker/craftingstation_slab_side
 block:id=%CraftingSlab,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/toolstation_bottom,face1=0:tinker/toolstation_top,face2-5=0:tinker/toolstation_slab_side
 block:id=%CraftingSlab,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/partbuilder_oak_bottom,face1=0:tinker/partbuilder_oak_top,face2-5=0:tinker/partbuilder_slab_side
@@ -619,7 +619,7 @@ block:id=%CraftingSlab,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:tink
 block:id=%CraftingSlab,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/patternchest_bottom,face1=0:tinker/patternchest_top,face2-5=0:tinker/patternchest_slab_side
 block:id=%CraftingSlab,data=13,stdrot=true,transparency=TRANSPARENT,face0-1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_slab_side
 
-# %FurnaceSlab:* (FurnaceSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.tools.blocks.FurnaceSlab
+# %FurnaceSlab:* (FurnaceSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.FurnaceSlab
 block:id=%FurnaceSlab,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/furnace_top,face2=0:tinker/furnaceslab_side,face3=0:tinker/furnaceslab_front,face4-5=0:tinker/furnaceslab_side
 block:id=%FurnaceSlab,data=1,stdrot=true,transparency=TRANSPARENT,face3=0:minecraft/furnace_top
 block:id=%FurnaceSlab,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/furnace_top,face2=0:tinker/furnaceslab_side,face3=0:tinker/furnaceslab_front,face4-5=0:tinker/furnaceslab_side
@@ -631,7 +631,7 @@ block:id=%HeldItemBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mi
 # %BattleSignBlock:* (BattleSignBlock), render=tconstruct.tools.model.BattlesignRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.BattlesignBlock
 block:id=%BattleSignBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
 
-# %CraftedSoil:* (CraftedSoil), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.world.blocks.SoilBlock
+# %CraftedSoil:* (CraftedSoil), render=(STANDARD), opaque=true,cls=tconstruct.world.blocks.SoilBlock
 block:id=%CraftedSoil,data=0,stdrot=true,face0-5=0:tinker/slimesand
 block:id=%CraftedSoil,data=1,stdrot=true,face0-5=0:tinker/grout
 block:id=%CraftedSoil,data=2,stdrot=true,face0-5=0:tinker/slimesandblue
@@ -734,7 +734,7 @@ block:id=%liquid.glue,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12
 # %fluid.molten.pigiron:* (fluid.molten.pigiron), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.PigIronMoltenBlock
 block:id=%fluid.molten.pigiron,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:tinker/liquid_pigiron
 
-# %SearedSlab:* (SearedSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SearedSlab
+# %SearedSlab:* (SearedSlab), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SearedSlab
 block:id=%SearedSlab,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/searedbrick
 block:id=%SearedSlab,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/searedstone
 block:id=%SearedSlab,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/searedcobble
@@ -752,7 +752,7 @@ block:id=%SearedSlab,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:tink
 block:id=%SearedSlab,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/searedbricksquare
 block:id=%SearedSlab,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:tinker/searedpaver,face2-5=0:tinker/searedcreeper
 
-# %SpeedSlab:* (SpeedSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SpeedSlab
+# %SpeedSlab:* (SpeedSlab), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SpeedSlab
 block:id=%SpeedSlab,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/brownstone_rough
 block:id=%SpeedSlab,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/brownstone_rough_road
 block:id=%SpeedSlab,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/brownstone_smooth
@@ -769,7 +769,7 @@ block:id=%SpeedSlab,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinke
 block:id=%SpeedSlab,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/brownstone_smooth_chiseled
 block:id=%SpeedSlab,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/brownstone_rough
 
-# %GlueBlock:* (GlueBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.GlueBlock
+# %GlueBlock:* (GlueBlock), render=(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.GlueBlock
 block:id=%GlueBlock,data=*,stdrot=true,face0-5=0:tinker/glue
 
 # %Smeltery:* (Smeltery), render=tconstruct.smeltery.model.SmelteryRender(CUSTOM), opaque=true,cls=tconstruct.smeltery.blocks.SmelteryBlock
@@ -826,7 +826,7 @@ block:id=%SearedBlockNether,data=3,data=4,data=5,data=6,data=7,data=8,data=9,dat
 block:id=%CastingChannel,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/searedstone
 block:id=%CastingChannel,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/nether_searedstone
 
-# %SpeedBlock:* (SpeedBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.SpeedBlock
+# %SpeedBlock:* (SpeedBlock), render=(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.SpeedBlock
 block:id=%SpeedBlock,data=0,stdrot=true,face0-5=0:tinker/brownstone_rough
 block:id=%SpeedBlock,data=1,stdrot=true,face0-5=0:tinker/brownstone_rough_road
 block:id=%SpeedBlock,data=2,stdrot=true,face0-5=0:tinker/brownstone_smooth
@@ -836,13 +836,13 @@ block:id=%SpeedBlock,data=5,stdrot=true,face0-5=0:tinker/brownstone_smooth_fancy
 block:id=%SpeedBlock,data=6,stdrot=true,face0-5=0:tinker/brownstone_smooth_chiseled
 block:id=%SpeedBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/brownstone_rough
 
-# %GlassBlock:* (GlassBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnected
+# %GlassBlock:* (GlassBlock), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnected
 block:id=%GlassBlock,data=*,stdrot=true,face0-5=0:tinker/glass/clear/glass
 
 # %GlassPane:* (GlassPane), render=tconstruct.smeltery.model.PaneConnectedRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneConnected
 block:id=%GlassPane,data=*,stdrot=true,face0-5=0:tinker/glass/clear/glass
 
-# %GlassBlock.StainedClear:* (GlassBlock.StainedClear), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnectedMeta
+# %GlassBlock.StainedClear:* (GlassBlock.StainedClear), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnectedMeta
 block:id=%GlassBlock.StainedClear,data=0,stdrot=true,face0-5=12000:tinker/glass/stained/white/glass
 block:id=%GlassBlock.StainedClear,data=1,stdrot=true,face0-5=12000:tinker/glass/stained/orange/glass
 block:id=%GlassBlock.StainedClear,data=2,stdrot=true,face0-5=12000:tinker/glass/stained/magenta/glass

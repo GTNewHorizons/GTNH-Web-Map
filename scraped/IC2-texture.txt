@@ -190,19 +190,19 @@ texture:id=ic2/wiring/cable/blockTinCableI,filename=assets/ic2/textures/blocks/w
 
 
 
-# %blockOreCopper:* (blockOreCopper), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# %blockOreCopper:* (blockOreCopper), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=%blockOreCopper,data=0,stdrot=true,face0-5=0:ic2/blockOreCopper
 
-# %blockOreTin:* (blockOreTin), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# %blockOreTin:* (blockOreTin), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=%blockOreTin,data=0,stdrot=true,face0-5=0:ic2/blockOreTin
 
-# %blockOreUran:* (blockOreUran), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# %blockOreUran:* (blockOreUran), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=%blockOreUran,data=0,stdrot=true,face0-5=0:ic2/blockOreUran
 
-# %blockOreLead:* (blockOreLead), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# %blockOreLead:* (blockOreLead), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=%blockOreLead,data=0,stdrot=true,face0-5=0:ic2/blockOreLead
 
-# %blockRubWood:* (blockRubWood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockRubWood
+# %blockRubWood:* (blockRubWood), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockRubWood
 block:id=%blockRubWood,data=0,data=1,stdrot=true,face0-5=0:ic2/blockRubWood
 block:id=%blockRubWood,data=2,data=3,data=4,data=5,stdrot=true,face0-5=0:ic2/blockRubWood.wet
 block:id=%blockRubWood,data=6,data=7,stdrot=true,face0-5=0:ic2/blockRubWood
@@ -210,37 +210,37 @@ block:id=%blockRubWood,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:ic2/b
 block:id=%blockRubWood,data=12,data=13,stdrot=true,face0-5=0:ic2/blockRubWood
 block:id=%blockRubWood,data=14,data=15,stdrot=true,face0-5=0:ic2/blockRubWood.dry
 
-# %blockRubLeaves:* (blockRubLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockRubLeaves
+# %blockRubLeaves:* (blockRubLeaves), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubLeaves
 block:id=%blockRubLeaves,data=*,stdrot=true,face0-5=14000:ic2/blockRubLeaves
 
 # %blockRubSapling:* (blockRubSapling), render=(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
 block:id=%blockRubSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockRubSapling
 
-# %blockHarz:* (blockHarz), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
+# %blockHarz:* (blockHarz), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
 block:id=%blockHarz,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockHarz
 
-# %blockRubber:* (blockRubber), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
+# %blockRubber:* (blockRubber), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
 block:id=%blockRubber,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockRubber
 
 # %blockFenceIron:* (blockFenceIron), render=ic2.core.block.RenderBlockFence(FENCE), opaque=false,cls=ic2.core.block.BlockPoleFence
 block:id=%blockFenceIron,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/blockFenceIron
 
-# %blockAlloy:* (blockAlloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# %blockAlloy:* (blockAlloy), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=%blockAlloy,data=0,stdrot=true,face0-5=0:ic2/blockAlloy
 
-# %blockBasalt:* (blockBasalt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# %blockBasalt:* (blockBasalt), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=%blockBasalt,data=0,stdrot=true,face0-5=0:ic2/blockBasalt
 
-# %blockAlloyGlass:* (blockAlloyGlass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockTexGlass
+# %blockAlloyGlass:* (blockAlloyGlass), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockTexGlass
 block:id=%blockAlloyGlass,data=0,stdrot=true,face0-5=0:ic2/blockAlloyGlass
 
 # %blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
 block:id=%blockDoorAlloy,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDoorAlloy.top,patch1=0:ic2/blockDoorAlloy.bottom
 
-# %blockReinforcedFoam:* (blockReinforcedFoam), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockReinforcedFoam
+# %blockReinforcedFoam:* (blockReinforcedFoam), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockReinforcedFoam
 block:id=%blockReinforcedFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockReinforcedFoam
 
-# %blockFoam:* (blockFoam), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockFoam
+# %blockFoam:* (blockFoam), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockFoam
 block:id=%blockFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockFoam
 
 # %blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
@@ -261,17 +261,17 @@ block:id=%blockWall,data=13,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/
 block:id=%blockWall,data=14,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.orange
 block:id=%blockWall,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.white
 
-# %blockScaffold:* (blockScaffold), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
+# %blockScaffold:* (blockScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
 block:id=%blockScaffold,data=0,data=1,data=2,data=3,data=4,stdrot=true,face0-5=0:ic2/blockScaffold
 block:id=%blockScaffold,data=5,stdrot=true,face0-5=0:ic2/blockScaffold.reinforced
 block:id=%blockScaffold,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockScaffold
 
-# %blockIronScaffold:* (blockIronScaffold), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
+# %blockIronScaffold:* (blockIronScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
 block:id=%blockIronScaffold,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:ic2/blockIronScaffold
 block:id=%blockIronScaffold,data=12,stdrot=true,face0-5=0:ic2/blockIronScaffold.reinforced
 block:id=%blockIronScaffold,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockIronScaffold
 
-# %blockMetal:* (blockMetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockMetal
+# %blockMetal:* (blockMetal), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetal
 block:id=%blockMetal,data=0,stdrot=true,face0-5=0:ic2/blockMetalCopper
 block:id=%blockMetal,data=1,stdrot=true,face0-5=0:ic2/blockMetalTin
 block:id=%blockMetal,data=2,stdrot=true,face0-5=0:ic2/blockMetalBronze
@@ -405,10 +405,10 @@ block:id=%blockLuminatorDark,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLumina
 # %blockLuminator:* (blockLuminator), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
 block:id=%blockLuminator,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminator
 
-# %blockMiningPipe:* (blockMiningPipe), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
+# %blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
 block:id=%blockMiningPipe,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMiningPipe
 
-# %blockMiningTip:* (blockMiningTip), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.machine.BlockMiningTip
+# %blockMiningTip:* (blockMiningTip), render=(STANDARD), opaque=true,cls=ic2.core.block.machine.BlockMiningTip
 block:id=%blockMiningTip,data=0,stdrot=true,face0-5=0:ic2/machine/blockMiningTip
 
 # %blockPersonal:* (blockPersonal), render=ic2.core.block.personal.RenderBlockPersonal(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
@@ -416,10 +416,10 @@ block:id=%blockPersonal,data=0,stdrot=true,face0-5=0:ic2/personal/blockPersonalC
 block:id=%blockPersonal,data=1,stdrot=true,face0-5=0:ic2/personal/blockPersonalTrader
 block:id=%blockPersonal,data=2,stdrot=true,face0-5=0:ic2/personal/blockPersonalTraderEnergy
 
-# %blockITNT:* (blockITNT), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
+# %blockITNT:* (blockITNT), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
 block:id=%blockITNT,data=0,stdrot=true,face0-5=0:ic2/blockITNT
 
-# %blockNuke:* (blockNuke), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
+# %blockNuke:* (blockNuke), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
 block:id=%blockNuke,data=0,stdrot=true,face0-5=0:ic2/blockNuke
 
 # %blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite

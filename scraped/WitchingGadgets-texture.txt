@@ -1,4 +1,4 @@
-# WitchingGadgets 1.3.0-GTNH
+# WitchingGadgets 1.4.2-GTNH
 version:1.7
 modname:WitchingGadgets
 
@@ -37,7 +37,7 @@ texture:id=witchinggadgets/voidWalkway,filename=assets/witchinggadgets/textures/
 # %WG_WallMirror:* (WG_WallMirror), render=(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWallMirror
 block:id=%WG_WallMirror,data=*,stdrot=true,face0-5=0:witchinggadgets/nil
 
-# %WG_VoidWalkway:* (WG_VoidWalkway), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=witchinggadgets.common.blocks.BlockVoidWalkway
+# %WG_VoidWalkway:* (WG_VoidWalkway), render=(STANDARD), opaque=false,cls=witchinggadgets.common.blocks.BlockVoidWalkway
 block:id=%WG_VoidWalkway,data=*,stdrot=true,face0-5=12000:witchinggadgets/voidWalkway
 
 # %WG_StoneDevice:* (WG_StoneDevice), render=witchinggadgets.client.render.BlockRenderStoneDevice(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWGStoneDevice

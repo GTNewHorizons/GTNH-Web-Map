@@ -379,7 +379,7 @@ texture:id=minecraft/planks,filename=assets/minecraft/textures/blocks/planks.png
 # %chestMini:* (chestMini), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.chests.BlockMiniChest
 block:id=%chestMini,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/minichest_top,face2=0:extrautils/minichest_front,face3-5=0:extrautils/minichest_side
 
-# %chestFull:* (chestFull), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.tileentity.chests.BlockFullChest
+# %chestFull:* (chestFull), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.tileentity.chests.BlockFullChest
 block:id=%chestFull,data=0,stdrot=true,face0-1=0:extrautils/fullblockchest_top,face2=0:extrautils/fullblockchest_side,face3=0:extrautils/fullblockchest_front,face4-5=0:extrautils/fullblockchest_side
 block:id=%chestFull,data=1,stdrot=true,face0-1=0:extrautils/fullblockchest_top,face2-3=0:extrautils/fullblockchest_side,face4=0:extrautils/fullblockchest_front,face5=0:extrautils/fullblockchest_side
 block:id=%chestFull,data=2,stdrot=true,face0-1=0:extrautils/fullblockchest_top,face2=0:extrautils/fullblockchest_front,face3-5=0:extrautils/fullblockchest_side
@@ -402,10 +402,10 @@ block:id=%endMarker,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrau
 # %curtains:* (curtains), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.block.BlockCurtain
 block:id=%curtains,data=*,stdrot=true,face0-5=0:extrautils/curtains
 
-# %angelBlock:* (angelBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockAngelBlock
+# %angelBlock:* (angelBlock), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockAngelBlock
 block:id=%angelBlock,data=*,stdrot=true,face0-5=0:extrautils/angelBlock
 
-# %budoff:* (budoff), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockBUD
+# %budoff:* (budoff), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockBUD
 block:id=%budoff,data=0,data=1,data=2,stdrot=true,face0-5=0:extrautils/budoff
 block:id=%budoff,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/advbudoff
 
@@ -443,10 +443,10 @@ block:id=%decorativeBlock2,data=9,stdrot=true,face0-5=0:extrautils/glassQuadrant
 block:id=%decorativeBlock2,data=10,stdrot=true,face0-5=0:extrautils/ConnectedTextures/darkglass_corners
 block:id=%decorativeBlock2,data=11,stdrot=true,face0-5=0:extrautils/ConnectedTextures/obsidiandarkglass_corners
 
-# %pureLove:* (pureLove), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockPureLove
+# %pureLove:* (pureLove), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockPureLove
 block:id=%pureLove,data=*,stdrot=true,face0-5=0:extrautils/heart
 
-# %block_bedrockium:* (block_bedrockium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockBedrockium
+# %block_bedrockium:* (block_bedrockium), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockBedrockium
 block:id=%block_bedrockium,data=*,stdrot=true,face0-5=0:extrautils/bedrockiumBlock
 
 # %colorStoneBrick:* (colorStoneBrick), render=com.rwtema.extrautils.block.render.RenderBlockColor(CUSTOM), opaque=true,cls=com.rwtema.extrautils.block.BlockColor
@@ -683,7 +683,7 @@ block:id=%color_blockCoal,data=13,stdrot=true,colorMult=647A39,face0-5=17000:ext
 block:id=%color_blockCoal,data=14,stdrot=true,colorMult=8E3838,face0-5=17000:extrautils/bw_(coal_block)
 block:id=%color_blockCoal,data=15,stdrot=true,colorMult=191919,face0-5=17000:extrautils/bw_(coal_block)
 
-# %cobblestone_compressed:* (cobblestone_compressed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockCobblestoneCompressed
+# %cobblestone_compressed:* (cobblestone_compressed), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockCobblestoneCompressed
 block:id=%cobblestone_compressed,data=0,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_1
 block:id=%cobblestone_compressed,data=1,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_2
 block:id=%cobblestone_compressed,data=2,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_3
@@ -719,7 +719,7 @@ block:id=%conveyor,data=13,stdrot=true,face0-1=0:extrautils/conveyor_top,face2-3
 block:id=%conveyor,data=14,stdrot=true,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
 block:id=%conveyor,data=15,stdrot=true,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
 
-# %filing:* (filing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockFilingCabinet
+# %filing:* (filing), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockFilingCabinet
 block:id=%filing,data=0,stdrot=true,face0-3=0:extrautils/filingcabinet_side,face4=0:extrautils/filingcabinet,face5=0:extrautils/filingcabinet_back
 block:id=%filing,data=1,stdrot=true,face0-3=0:extrautils/filingcabinet_side_diamond,face4=0:extrautils/filingcabinet_diamond,face5=0:extrautils/filingcabinet_back_diamond
 block:id=%filing,data=2,stdrot=true,face0-1=0:extrautils/filingcabinet_side,face2=0:extrautils/filingcabinet,face3=0:extrautils/filingcabinet_back,face4-5=0:extrautils/filingcabinet_side
@@ -751,10 +751,10 @@ block:id=%greenscreen,data=13,stdrot=true,colorMult=009900,face0-5=17000:extraut
 block:id=%greenscreen,data=14,stdrot=true,colorMult=FF0000,face0-5=17000:extrautils/greenscreen
 block:id=%greenscreen,data=15,stdrot=true,face0-5=17000:extrautils/greenscreen
 
-# %trading_post:* (trading_post), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockTradingPost
+# %trading_post:* (trading_post), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockTradingPost
 block:id=%trading_post,data=*,stdrot=true,face0=0:minecraft/planks,face1=0:extrautils/trading_post_top,face2-5=0:extrautils/trading_post_side
 
-# %sound_muffler:* (sound_muffler), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockSoundMuffler
+# %sound_muffler:* (sound_muffler), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockSoundMuffler
 block:id=%sound_muffler,data=0,stdrot=true,face0-5=0:extrautils/sound_muffler
 block:id=%sound_muffler,data=1,stdrot=true,face0-5=0:extrautils/rain_muffler
 block:id=%sound_muffler,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/sound_muffler
@@ -797,7 +797,7 @@ block:id=%pipes,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils
 # %pipes.1:* (pipes.1), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockTransferPipe
 block:id=%pipes.1,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/pipes
 
-# %cursedearthside:* (cursedearthside), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockCursedEarth
+# %cursedearthside:* (cursedearthside), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockCursedEarth
 block:id=%cursedearthside,data=0,data=1,stdrot=true,face0=0:minecraft/dirt,face1=0:extrautils/cursedearthtop,face2-5=0:extrautils/cursedearthside
 block:id=%cursedearthside,data=2,data=3,stdrot=true,face0=0:minecraft/dirt,face1=0:extrautils/blessedEarthTop,face2-5=0:extrautils/blessedEarthSide
 block:id=%cursedearthside,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/dirt
@@ -892,10 +892,10 @@ block:id=%spike_base_wood,data=13,stdrot=true,face0=0:extrautils/spike_base_wood
 block:id=%spike_base_wood,data=14,stdrot=true,face0-2=0:extrautils/spike_side_wood,face3=0:extrautils/spike_base_wood,face4-5=0:extrautils/spike_side_wood
 block:id=%spike_base_wood,data=15,stdrot=true,face0-1=0:extrautils/spike_side_wood,face2=0:extrautils/spike_base_wood,face3-5=0:extrautils/spike_side_wood
 
-# %enderThermicPump:* (enderThermicPump), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockEnderthermicPump
+# %enderThermicPump:* (enderThermicPump), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockEnderthermicPump
 block:id=%enderThermicPump,data=*,stdrot=true,face0=0:extrautils/enderThermicPump,face1=0:extrautils/enderThermicPump_top,face2-5=0:extrautils/enderThermicPump_side
 
-# %enderQuarry:* (enderQuarry), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.tileentity.enderquarry.BlockEnderQuarry
+# %enderQuarry:* (enderQuarry), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.tileentity.enderquarry.BlockEnderQuarry
 block:id=%enderQuarry,data=0,stdrot=true,face0=0:extrautils/enderQuarry_bottom,face1=0:extrautils/enderQuarry_top,face2-5=0:extrautils/enderQuarry
 block:id=%enderQuarry,data=1,stdrot=true,face0=0:extrautils/enderQuarry_bottom,face1=0:extrautils/enderQuarry_top_active,face2-5=0:extrautils/enderQuarry_active
 block:id=%enderQuarry,data=2,stdrot=true,face0=0:extrautils/enderQuarry_bottom,face1=0:extrautils/enderQuarry_top,face2-5=0:extrautils/enderQuarry_finished
@@ -904,10 +904,10 @@ block:id=%enderQuarry,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,d
 # %enderQuarryUpgrade:* (enderQuarryUpgrade), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.enderquarry.BlockQuarryUpgrades
 block:id=%enderQuarryUpgrade,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/quarry_upgrades/quarryUpgradeArm
 
-# %timer:* (timer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockTimer
+# %timer:* (timer), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockTimer
 block:id=%timer,data=*,stdrot=true,face0-5=0:extrautils/timer
 
-# %magnumTorch:* (magnumTorch), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.rwtema.extrautils.block.BlockMagnumTorch
+# %magnumTorch:* (magnumTorch), render=(STANDARD), opaque=false,cls=com.rwtema.extrautils.block.BlockMagnumTorch
 block:id=%magnumTorch,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/magnumTorchBase,face1=0:extrautils/magnumTorchTop,face2-5=0:extrautils/magnumTorch
 
 # %drum:* (drum), render=com.rwtema.extrautils.block.render.RenderBlockDrum(CUSTOM), opaque=false,cls=com.rwtema.extrautils.block.BlockDrum
@@ -957,7 +957,7 @@ block:id=%generator.64,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extra
 block:id=%generator.64,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/supergenerators/sgenerator_overclocked_0_0,face1=0:extrautils/supergenerators/sgenerator_overclocked_0_1,face2=0:extrautils/supergenerators/sgenerator_overclocked_1_0,face3=0:extrautils/supergenerators/sgenerator_overclocked_1_1,face4=0:extrautils/supergenerators/sgenerator_overclocked_2_0,face5=0:extrautils/supergenerators/sgenerator_overclocked_2_1
 block:id=%generator.64,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/supergenerators/sgenerator_nether_0_0,face1=0:extrautils/supergenerators/sgenerator_nether_0_1,face2=0:extrautils/supergenerators/sgenerator_nether_1_0,face3=0:extrautils/supergenerators/sgenerator_nether_1_1,face4=0:extrautils/supergenerators/sgenerator_nether_2_0,face5=0:extrautils/supergenerators/sgenerator_nether_2_1
 
-# %dark_portal:* (dark_portal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockPortal
+# %dark_portal:* (dark_portal), render=(STANDARD), opaque=true,cls=com.rwtema.extrautils.block.BlockPortal
 block:id=%dark_portal,data=0,data=1,stdrot=true,face0-5=0:extrautils/dark_portal
 block:id=%dark_portal,data=2,data=3,stdrot=true,face0-5=0:extrautils/light_portal
 block:id=%dark_portal,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/dark_portal

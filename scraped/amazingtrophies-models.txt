@@ -1,6 +1,6 @@
-# opensecurity 1.1.1-GTNH
+# amazingtrophies 1.2.1
 version:1.7
-modname:opensecurity
+modname:amazingtrophies
 
 
 
@@ -23,8 +23,5 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %SecurityDoor:* (SecurityDoor), render=(DOOR), opaque=false,cls=pcl.opensecurity.blocks.BlockSecurityDoor
-customblock:id=%SecurityDoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-
-# %SecurityDoorPrivate:* (SecurityDoorPrivate), render=(DOOR), opaque=false,cls=pcl.opensecurity.blocks.BlockSecurityDoorPrivate
-customblock:id=%SecurityDoorPrivate,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# %trophy:* (trophy), render=(CUSTOM), opaque=false,cls=glowredman.amazingtrophies.trophy.BlockTrophy
+boxblock:id=%trophy,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=*

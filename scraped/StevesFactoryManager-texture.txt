@@ -1,4 +1,4 @@
-# StevesFactoryManager 1.1.7-GTNH
+# StevesFactoryManager 1.2.3-GTNH
 version:1.7
 modname:StevesFactoryManager
 
@@ -35,33 +35,33 @@ texture:id=stevesfactory/manager_top,filename=assets/stevesfactory/textures/bloc
 
 
 
-# %BlockMachineManagerName:* (BlockMachineManagerName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockManager
+# %BlockMachineManagerName:* (BlockMachineManagerName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockManager
 block:id=%BlockMachineManagerName,data=*,stdrot=true,face0=0:stevesfactory/manager_bot,face1=0:stevesfactory/manager_top,face2-5=0:stevesfactory/manager_side
 
-# %BlockCableName:* (BlockCableName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCable
+# %BlockCableName:* (BlockCableName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCable
 block:id=%BlockCableName,data=*,stdrot=true,face0-5=0:stevesfactory/cable
 
-# %BlockCableRelayName:* (BlockCableRelayName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableRelay
+# %BlockCableRelayName:* (BlockCableRelayName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableRelay
 block:id=%BlockCableRelayName,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_relay,face4-5=0:stevesfactory/cable_idle
 block:id=%BlockCableRelayName,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_relay_advanced,face4-5=0:stevesfactory/cable_idle
 
-# %BlockCableOutputName:* (BlockCableOutputName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableOutput
+# %BlockCableOutputName:* (BlockCableOutputName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableOutput
 block:id=%BlockCableOutputName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_output_weak
 
-# %BlockCableInputName:* (BlockCableInputName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableInput
+# %BlockCableInputName:* (BlockCableInputName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableInput
 block:id=%BlockCableInputName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_input
 
-# %BlockCableCreativeName:* (BlockCableCreativeName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableCreative
+# %BlockCableCreativeName:* (BlockCableCreativeName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableCreative
 block:id=%BlockCableCreativeName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_creative
 
-# %BlockCableIntakeName:* (BlockCableIntakeName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableIntake
+# %BlockCableIntakeName:* (BlockCableIntakeName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableIntake
 block:id=%BlockCableIntakeName,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-2=0:stevesfactory/cable_intake,face3=0:stevesfactory/cable_intake_out,face4-5=0:stevesfactory/cable_intake
 block:id=%BlockCableIntakeName,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=0:stevesfactory/cable_intake_instant,face3=0:stevesfactory/cable_intake_out_instant,face4-5=0:stevesfactory/cable_intake_instant
 
-# %BlockCableBUDName:* (BlockCableBUDName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableBUD
+# %BlockCableBUDName:* (BlockCableBUDName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableBUD
 block:id=%BlockCableBUDName,data=*,stdrot=true,face0-5=0:stevesfactory/cable_bud
 
-# %BlockCableBreakerName:* (BlockCableBreakerName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableBreaker
+# %BlockCableBreakerName:* (BlockCableBreakerName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableBreaker
 block:id=%BlockCableBreakerName,data=*,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_breaker,face4-5=0:stevesfactory/cable_idle
 
 # %BlockCableClusterName:* (BlockCableClusterName), render=vswe.stevesfactory.blocks.RenderCamouflage(CUSTOM), opaque=false,cls=vswe.stevesfactory.blocks.BlockCableCluster
@@ -86,5 +86,5 @@ block:id=%BlockCableCamouflageName,data=13,stdrot=true,face0-5=0:stevesfactory/c
 block:id=%BlockCableCamouflageName,data=14,stdrot=true,face0-5=0:stevesfactory/cable_camo_shape
 block:id=%BlockCableCamouflageName,data=15,stdrot=true,face0-5=0:stevesfactory/cable_camo
 
-# %BlockCableSignName:* (BlockCableSignName), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableSign
+# %BlockCableSignName:* (BlockCableSignName), render=(STANDARD), opaque=true,cls=vswe.stevesfactory.blocks.BlockCableSign
 block:id=%BlockCableSignName,data=*,stdrot=true,face0-2=0:stevesfactory/cable_idle,face3=0:stevesfactory/cable_sign,face4-5=0:stevesfactory/cable_idle

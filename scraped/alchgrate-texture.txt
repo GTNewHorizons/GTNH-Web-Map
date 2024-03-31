@@ -1,0 +1,16 @@
+# alchgrate 1.1.0-GTNH
+version:1.7
+modname:alchgrate
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/alchgrate/textures/blocks/
+texture:id=alchgrate/alchgrate,filename=assets/alchgrate/textures/blocks/alchgrate.png
+
+
+
+# %alchgrate:* (alchgrate), render=(STANDARD), opaque=false,cls=com.technicianlp.chestgrate.BlockChestGrate
+block:id=%alchgrate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:alchgrate/alchgrate

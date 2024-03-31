@@ -26,10 +26,10 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 # %blockRubSapling:* (blockRubSapling), render=(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
 patchblock:id=%blockRubSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %blockHarz:* (blockHarz), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
+# %blockHarz:* (blockHarz), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
 boxblock:id=%blockHarz,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
 
-# %blockRubber:* (blockRubber), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
+# %blockRubber:* (blockRubber), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
 boxblock:id=%blockRubber,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
 
 # %blockFenceIron:* (blockFenceIron), render=ic2.core.block.RenderBlockFence(FENCE), opaque=false,cls=ic2.core.block.BlockPoleFence
@@ -68,7 +68,7 @@ boxblock:id=%blockChargepad,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.949999988079071,zm
 
 # %blockMachine3:* (blockMachine3), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine3
 
-# %blockMiningPipe:* (blockMiningPipe), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
+# %blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
 boxblock:id=%blockMiningPipe,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 
 # %blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite

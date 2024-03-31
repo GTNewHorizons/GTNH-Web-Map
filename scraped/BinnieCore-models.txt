@@ -1,4 +1,4 @@
-# BinnieCore 2.1.4
+# BinnieCore 2.3.3
 version:1.7
 modname:BinnieCore
 
@@ -32,11 +32,11 @@ boxblock:id=%multifence,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=
 # %gate:* (gate), render=(FENCEGATE), opaque=false,cls=binnie.extratrees.block.decor.BlockGate
 customblock:id=%gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
 
-# %slab:* (slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
+# %slab:* (slab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
 boxblock:id=%slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %doubleSlab:* (doubleSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
+# %doubleSlab:* (doubleSlab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
 boxblock:id=%doubleSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%doubleSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -64,22 +64,22 @@ boxblock:id=%flower,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,yma
 # %plant:* (plant), render=(CROSSEDSQUARES), opaque=false,cls=binnie.botany.gardening.BlockPlant
 patchblock:id=%plant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %soil:* (soil), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+# %soil:* (soil), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%soil,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
-# %loam:* (loam), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+# %loam:* (loam), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%loam,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
-# %flowerbed:* (flowerbed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+# %flowerbed:* (flowerbed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%flowerbed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
-# %soilNoWeed:* (soilNoWeed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+# %soilNoWeed:* (soilNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%soilNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
-# %loamNoWeed:* (loamNoWeed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+# %loamNoWeed:* (loamNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%loamNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
-# %flowerbedNoWeed:* (flowerbedNoWeed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+# %flowerbedNoWeed:* (flowerbedNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%flowerbedNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
 # %ceramicPattern:* (ceramicPattern), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicPatterned

@@ -1,4 +1,4 @@
-# StevesAddons 0.10.27
+# StevesAddons 0.12.3
 version:1.7
 modname:StevesAddons
 
@@ -12,8 +12,8 @@ texture:id=StevesAddons/cable_rf_3,filename=assets/stevesaddons/textures/blocks/
 
 
 
-# %cable_rf:* (cable_rf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=stevesaddons.blocks.BlockCableRF
+# %cable_rf:* (cable_rf), render=(STANDARD), opaque=true,cls=stevesaddons.blocks.BlockCableRF
 block:id=%cable_rf,data=*,stdrot=true,face0-5=0:StevesAddons/cable_rf_3
 
-# %cable_ae:* (cable_ae), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=stevesaddons.blocks.BlockCableAE
+# %cable_ae:* (cable_ae), render=(STANDARD), opaque=true,cls=stevesaddons.blocks.BlockCableAE
 block:id=%cable_ae,data=*,stdrot=true,face0-5=0:StevesAddons/cable_ae

@@ -1,4 +1,4 @@
-# ThaumicHorizons 1.2.1.12
+# ThaumicHorizons 1.5.2
 version:1.7
 modname:ThaumicHorizons
 
@@ -83,7 +83,7 @@ texture:id=thaumichorizons/vortex,filename=assets/thaumichorizons/textures/block
 # %synthNode:* (synthNode), render=com.kentington.thaumichorizons.client.renderer.block.BlockSyntheticNodeRender(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockSyntheticNode
 block:id=%synthNode,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/crystal
 
-# %alchemite:* (alchemite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockAlchemite
+# %alchemite:* (alchemite), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockAlchemite
 block:id=%alchemite,data=*,stdrot=true,face0=0:ThaumicHorizons/alchemite_bottom,face1=0:ThaumicHorizons/alchemite_top,face2-5=0:ThaumicHorizons/alchemite_side
 
 # %visDynamo:* (visDynamo), render=com.kentington.thaumichorizons.client.renderer.block.BlockVisDynamoRender(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockVisDynamo
@@ -125,10 +125,10 @@ block:id=%soulBeacon,data=*,stdrot=true,face0-5=12000:minecraft/endframe_eye
 # %modMatrix:* (modMatrix), render=com.kentington.thaumichorizons.client.renderer.block.BlockVatMatrixRender(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockModifiedMatrix
 block:id=%modMatrix,data=*,stdrot=true,face0-5=12000:thaumcraft/arcane_stone
 
-# %chocolate:* (chocolate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockChocolate
+# %chocolate:* (chocolate), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockChocolate
 block:id=%chocolate,data=*,stdrot=true,face0-5=0:thaumichorizons/chocolate
 
-# %evanescent:* (evanescent), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockEvanescent
+# %evanescent:* (evanescent), render=(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockEvanescent
 block:id=%evanescent,data=*,stdrot=true,face0-5=12000:ThaumicHorizons/evanescent
 
 # %light:* (light), render=(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockLight
@@ -149,10 +149,10 @@ block:id=%vortexStabilizer,data=*,stdrot=true,face0-5=12000:minecraft/iron_block
 # %vortexTH:* (vortexTH), render=(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockVortex
 block:id=%vortexTH,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumichorizons/vortex
 
-# %voidTH:* (voidTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockVoid
+# %voidTH:* (voidTH), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockVoid
 block:id=%voidTH,data=*,stdrot=true,face0-5=0:thaumichorizons/void
 
-# %cloudTH:* (cloudTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCloud
+# %cloudTH:* (cloudTH), render=(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCloud
 block:id=%cloudTH,data=0,stdrot=true,face0-1=12000:thaumichorizons/cloudtop,face2-5=12000:thaumichorizons/cloud
 block:id=%cloudTH,data=1,stdrot=true,face0-1=12000:thaumichorizons/firecloudtop,face2-5=12000:thaumichorizons/firecloud
 block:id=%cloudTH,data=2,stdrot=true,face0-1=12000:thaumichorizons/thundercloudtop,face2-5=12000:thaumichorizons/thundercloud
@@ -164,7 +164,7 @@ block:id=%cloudTH,data=7,stdrot=true,face0-1=12000:thaumichorizons/glyphcloudtop
 block:id=%cloudTH,data=8,stdrot=true,face0-1=12000:thaumichorizons/sporecloudtop,face2-5=12000:thaumichorizons/sporecloud
 block:id=%cloudTH,data=9,stdrot=true,face0-1=12000:thaumichorizons/animuscloudtop,face2-5=12000:thaumichorizons/animuscloud
 
-# %cloudGlowingTH:* (cloudGlowingTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCloud
+# %cloudGlowingTH:* (cloudGlowingTH), render=(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCloud
 block:id=%cloudGlowingTH,data=0,stdrot=true,face0-1=12000:thaumichorizons/cloudtop,face2-5=12000:thaumichorizons/cloud
 block:id=%cloudGlowingTH,data=1,stdrot=true,face0-1=12000:thaumichorizons/firecloudtop,face2-5=12000:thaumichorizons/firecloud
 block:id=%cloudGlowingTH,data=2,stdrot=true,face0-1=12000:thaumichorizons/thundercloudtop,face2-5=12000:thaumichorizons/thundercloud
@@ -176,19 +176,19 @@ block:id=%cloudGlowingTH,data=7,stdrot=true,face0-1=12000:thaumichorizons/glyphc
 block:id=%cloudGlowingTH,data=8,stdrot=true,face0-1=12000:thaumichorizons/sporecloudtop,face2-5=12000:thaumichorizons/sporecloud
 block:id=%cloudGlowingTH,data=9,stdrot=true,face0-1=12000:thaumichorizons/animuscloudtop,face2-5=12000:thaumichorizons/animuscloud
 
-# %brainTH:* (brainTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockBrain
+# %brainTH:* (brainTH), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockBrain
 block:id=%brainTH,data=*,stdrot=true,face0-5=0:ThaumicHorizons/brain
 
-# %dustTH:* (dustTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockDust
+# %dustTH:* (dustTH), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockDust
 block:id=%dustTH,data=*,stdrot=true,face0-5=0:ThaumicHorizons/dust
 
-# %eyeTH:* (eyeTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockEyes
+# %eyeTH:* (eyeTH), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockEyes
 block:id=%eyeTH,data=*,stdrot=true,face0-5=0:ThaumicHorizons/eyecluster
 
-# %boneTH:* (boneTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockBone
+# %boneTH:* (boneTH), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockBone
 block:id=%boneTH,data=*,stdrot=true,face0-5=0:ThaumicHorizons/bone
 
-# %fleshTH:* (fleshTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockFlesh
+# %fleshTH:* (fleshTH), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockFlesh
 block:id=%fleshTH,data=*,stdrot=true,face0-5=0:thaumcraft/fleshblock
 
 # %spikeTH:* (spikeTH), render=com.kentington.thaumichorizons.client.renderer.block.BlockSpikeRenderer(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockSpike
@@ -200,7 +200,7 @@ block:id=%spikeWoodTH,data=*,stdrot=true,face0-5=0:thaumcraft/greatwoodtop
 # %spikeToothTH:* (spikeToothTH), render=com.kentington.thaumichorizons.client.renderer.block.BlockSpikeRenderer(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockSpike
 block:id=%spikeToothTH,data=*,stdrot=true,face0-5=0:thaumichorizons/bone
 
-# %crystalTH:* (crystalTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCrystal
+# %crystalTH:* (crystalTH), render=(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCrystal
 block:id=%crystalTH,data=0,stdrot=true,face0-5=12000:thaumichorizons/blockCrystalWhite
 block:id=%crystalTH,data=1,stdrot=true,face0-5=12000:thaumichorizons/blockCrystalOrange
 block:id=%crystalTH,data=2,stdrot=true,face0-5=12000:thaumichorizons/blockCrystalMagenta
@@ -218,14 +218,14 @@ block:id=%crystalTH,data=13,stdrot=true,face0-5=12000:thaumichorizons/blockCryst
 block:id=%crystalTH,data=14,stdrot=true,face0-5=12000:thaumichorizons/blockCrystalRed
 block:id=%crystalTH,data=15,stdrot=true,face0-5=12000:thaumichorizons/blockCrystalBlack
 
-# %crystalDeep:* (crystalDeep), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCrystalDeep
+# %crystalDeep:* (crystalDeep), render=(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockCrystalDeep
 block:id=%crystalDeep,data=*,stdrot=true,face0-5=12000:thaumichorizons/blockCrystalDeep
 
-# %leviathanTH:* (leviathanTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockLeviathan
+# %leviathanTH:* (leviathanTH), render=(STANDARD), opaque=true,cls=com.kentington.thaumichorizons.common.blocks.BlockLeviathan
 block:id=%leviathanTH,data=*,stdrot=true,face0-5=0:ThaumicHorizons/leviathan
 
 # %slotTH:* (slotTH), render=com.kentington.thaumichorizons.client.renderer.block.BlockSlotRender(CUSTOM), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockSlot
 block:id=%slotTH,data=*,stdrot=true,face0-5=0:ThaumicHorizons/void
 
-# %portalTH:* (portalTH), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockPortalTH
+# %portalTH:* (portalTH), render=(STANDARD), opaque=false,cls=com.kentington.thaumichorizons.common.blocks.BlockPortalTH
 block:id=%portalTH,data=*,stdrot=true,face0-5=12000:minecraft/portal

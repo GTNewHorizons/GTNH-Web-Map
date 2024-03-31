@@ -1,4 +1,4 @@
-# TConstruct 1.9.36-GTNH
+# TConstruct 1.11.12-GTNH
 version:1.7
 modname:TConstruct
 
@@ -39,11 +39,11 @@ boxblock:id=%liquid.slime,ymax=0.375,data=13
 boxblock:id=%liquid.slime,ymax=0.25,data=14
 boxblock:id=%liquid.slime,ymax=0.125,data=15
 
-# %WoolSlab1:* (WoolSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
+# %WoolSlab1:* (WoolSlab1), render=(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
 boxblock:id=%WoolSlab1,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%WoolSlab1,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %WoolSlab2:* (WoolSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
+# %WoolSlab2:* (WoolSlab2), render=(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
 boxblock:id=%WoolSlab2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%WoolSlab2,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -102,11 +102,11 @@ patchblock:id=%rail.wood,patch0=SlopeXUpZTop@180,data=11
 patchblock:id=%rail.wood,patch0=SlopeXUpZTop@270,data=12
 patchblock:id=%rail.wood,patch0=SlopeXUpZTop@90,data=13
 
-# %CraftingSlab:* (CraftingSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
+# %CraftingSlab:* (CraftingSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
 boxblock:id=%CraftingSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5
 boxblock:id=%CraftingSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13
 
-# %FurnaceSlab:* (FurnaceSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.tools.blocks.FurnaceSlab
+# %FurnaceSlab:* (FurnaceSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.FurnaceSlab
 boxblock:id=%FurnaceSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1
 boxblock:id=%FurnaceSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9
 
@@ -616,11 +616,11 @@ boxblock:id=%fluid.molten.pigiron,ymax=0.375,data=13
 boxblock:id=%fluid.molten.pigiron,ymax=0.25,data=14
 boxblock:id=%fluid.molten.pigiron,ymax=0.125,data=15
 
-# %SearedSlab:* (SearedSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SearedSlab
+# %SearedSlab:* (SearedSlab), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SearedSlab
 boxblock:id=%SearedSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%SearedSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %SpeedSlab:* (SpeedSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SpeedSlab
+# %SpeedSlab:* (SpeedSlab), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.SpeedSlab
 boxblock:id=%SpeedSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%SpeedSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 

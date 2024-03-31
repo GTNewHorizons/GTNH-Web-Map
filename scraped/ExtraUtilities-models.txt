@@ -90,7 +90,7 @@ boxblock:id=%trashcan,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.9375,zmin=0.0625,z
 # %enderQuarryUpgrade:* (enderQuarryUpgrade), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.enderquarry.BlockQuarryUpgrades
 boxblock:id=%enderQuarryUpgrade,xmin=0.0625,xmax=0.9375,ymin=0.0625,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=*
 
-# %magnumTorch:* (magnumTorch), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.rwtema.extrautils.block.BlockMagnumTorch
+# %magnumTorch:* (magnumTorch), render=(STANDARD), opaque=false,cls=com.rwtema.extrautils.block.BlockMagnumTorch
 boxblock:id=%magnumTorch,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
 
 # %drum:* (drum), render=com.rwtema.extrautils.block.render.RenderBlockDrum(CUSTOM), opaque=false,cls=com.rwtema.extrautils.block.BlockDrum
