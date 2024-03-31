@@ -32,3 +32,7 @@ block:id=%defc.casing,data=13,data=14,data=15,stdrot=true,face0-5=0:kubatech/cas
 # %kubablocks:* (kubablocks), render=(STANDARD), opaque=true,cls=kubatech.loaders.block.kubablock.KubaBlock
 block:id=%kubablocks,data=0,stdrot=true,face0-1=0:kubatech/blank,face2-5=0:kubatech/tea_acceptor
 block:id=%kubablocks,data=1,stdrot=true,face0-5=0:kubatech/tea_storage
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
+
+moddata:mod=gtmte,type=hatchbaseexpl,page=1,index=63,tex=0:kubatech/casing/defc_0
