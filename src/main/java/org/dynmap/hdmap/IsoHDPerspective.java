@@ -164,15 +164,17 @@ public class IsoHDPerspective implements HDPerspective {
         }
         
         private final void updateSemitransparentLight(LightLevels ll) {
-        	int emitted = 0, sky = 0;
+        	int emitted = mapiter.getBlockEmittedLight(), sky = mapiter.getBlockSkyLight();
         	for(int i = 0; i < semi_steps.length; i++) {
         	    BlockStep s = semi_steps[i];
-        		mapiter.stepPosition(s);
-        		int v = mapiter.getBlockEmittedLight();
-        		if(v > emitted) emitted = v;
-        		v = mapiter.getBlockSkyLight();
-        		if(v > sky) sky = v;
-        		mapiter.unstepPosition(s);
+                mapiter.stepPosition(s);
+                int v = mapiter.getBlockEmittedLight();
+                if (v - 1 > emitted) emitted = v - 1;
+                v = mapiter.getBlockSkyLight();
+                if (s != BlockStep.Y_PLUS && v > 0)
+                    v -= 1;
+                if (v > sky) sky = v;
+                mapiter.unstepPosition(s);
         	}
         	ll.sky = sky;
         	ll.emitted = emitted;
@@ -231,11 +233,18 @@ public class IsoHDPerspective implements HDPerspective {
                 return;
             }
             BlockStep blast = laststep;
+            int prevlastblocktypeid = lastblocktypeid;
             mapiter.stepPosition(step);
-            laststep = blast;
+
+            mapiter.unstepPosition(blast);
+            lastblocktypeid = mapiter.getBlockTypeID();
+            mapiter.stepPosition(blast);
+
             updateLightLevel(mapiter.getBlockTypeID(), ll);
             mapiter.unstepPosition(step);
+
             laststep = blast;
+            lastblocktypeid = prevlastblocktypeid;
         }
         /**
          * Get current block type ID
@@ -462,6 +471,16 @@ public class IsoHDPerspective implements HDPerspective {
                     if(pd.explicitTexCoords != null){
                         actualU = u * pd.explicitTexCoords[2] + v*pd.explicitTexCoords[4] + (1-u-v) * pd.explicitTexCoords[0];
                         actualV = u * pd.explicitTexCoords[3] + v*pd.explicitTexCoords[5] + (1-u-v) * pd.explicitTexCoords[1];
+
+                        if(actualU > 1)
+                            actualU -= 1.0;
+                        else if(actualU < 0)
+                            actualU += 1.0;
+
+                        if(actualV > 1)
+                            actualV -= 1.0;
+                        else if(actualV < 0)
+                            actualV += 1.0;
                     }
 
                     patch_t[hitcnt] = t;
