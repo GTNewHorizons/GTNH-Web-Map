@@ -42,13 +42,13 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
             case 2: //RoofInnerCorner:
                 return makeRoofInnerCornerPatches(rpf);
             case 3: //RoofRidge:
-                break;
+                return makeRoofRidgePatches(rpf);
             case 4: //RoofSmartRidge:
-                break;
+                return makeRoofSpikeTopPatches(rpf);
             case 5: //RoofValley:
-                break;
+                return makeRoofValleyPatches(rpf);
             case 6: //RoofSmartValley:
-                break;
+                 return makeRoofSpikeValleyPatches(rpf);
             case 7: //RoofOverhang:
                 return makePatchesFromModel(rpf, "roof_overhang");
             case 8: //RoofOverhangOuterCorner:
@@ -252,15 +252,83 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         return null;
     }
 
+    private RenderPatch[] makeRoofValleyPatches(RenderPatchFactory rpf) {
+        RenderPatch[] ret = new RenderPatch[9];
+        ret[0] = rpf.getPatch(0,0,0, 1,0,0,0,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[1] = rpf.getPatch(0,0,1, 1,0,1,0,1,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[2] = rpf.getPatch(1,0,0, 0,0,1,1,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+
+        // Slopes
+        ret[3] = rpf.getPatch(0,0,1, 1,0,1,0,1,0,0,1,0.5,1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+        ret[4] = rpf.getPatch(1,0,0, 0,0,0,1,1,1,0,1,0.5,1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+
+        // Weirdly shaped side 1
+        ret[5] = rpf.getTriangleAutoTexCoords(0,0,0, 0,0,1,0,1,1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[6] = rpf.getTriangleAutoTexCoords(0,0,1, 0,0.5,0.5,0,1,0, RenderPatchFactory.SideVisible.TOP, 0);
+
+        // Weirdly shaped side 2
+        ret[7] = rpf.getTriangleAutoTexCoords(1,0,1, 1,0,0,1,1,0, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[8] = rpf.getTriangleAutoTexCoords(1,0,1, 1,0.5,0.5,1,1,1, RenderPatchFactory.SideVisible.TOP, 0);
+        return ret;
+    }
+
+    private RenderPatch[] makeRoofSpikeValleyPatches(RenderPatchFactory rpf) {
+        RenderPatch[] ret = new RenderPatch[9];
+
+        ret[0] = rpf.getPatch(0,0,0, 1,0,0,0,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+
+        ret[1] = rpf.getTriangleAutoTexCoords(0,1,0, 0.5,0.5,0.5,1,1,0, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+        ret[2] = rpf.getTriangleAutoTexCoords(1,1,0, 0.5,0.5,0.5,1,1,1, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+        ret[3] = rpf.getTriangleAutoTexCoords(1,1,1, 0.5,0.5,0.5,0,1,1, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+        ret[4] = rpf.getTriangleAutoTexCoords(0,1,1, 0.5,0.5,0.5,0,1,0, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+
+        ret[5] = rpf.getPatch(0,0,1, 1,0,1,0,1,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[6] = rpf.getPatch(1,0,1, 1,0,0,1,1,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[7] = rpf.getPatch(1,0,0, 0,0,0,1,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[8] = rpf.getPatch(0,0,0, 0,0,1,0,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+
+        return ret;
+    }
+
+    private RenderPatch[] makeRoofSpikeTopPatches(RenderPatchFactory rpf) {
+        RenderPatch[] ret = new RenderPatch[5];
+
+        ret[0] = rpf.getPatch(0,0,0, 1,0,0,0,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
+
+        ret[1] = rpf.getTriangleAutoTexCoords(0,0,0, 0.5,0.5,0.5,1,0,0, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+        ret[2] = rpf.getTriangleAutoTexCoords(1,0,0, 0.5,0.5,0.5,1,0,1, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+        ret[3] = rpf.getTriangleAutoTexCoords(1,0,1, 0.5,0.5,0.5,0,0,1, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+        ret[4] = rpf.getTriangleAutoTexCoords(0,0,1, 0.5,0.5,0.5,0,0,0, 1, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary);
+
+        return ret;
+    }
+
+    private RenderPatch[] makeRoofRidgePatches(RenderPatchFactory rpf) {
+        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+        // bottom
+        list.add(rpf.getPatch(0,0,0,1,0, 0, 0,0,1,0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP,0 ));
+
+        // triangle sides
+        list.add(rpf.getTriangleAutoTexCoords(0,0,0, 0,0,1,0,0.5,0.5, RenderPatchFactory.SideVisible.TOP, 0));
+        list.add(rpf.getTriangleAutoTexCoords(1,0,1, 1,0,0,1,0.5,0.5, RenderPatchFactory.SideVisible.TOP, 0));
+
+        // Top slopes
+        list.add(rpf.getPatch(0,0,1, 1,0,1,0,1,0,0,1,0,0.5, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary));
+        list.add(rpf.getPatch(1,0,0, 0,0,0,1,1,1,0,1,0,0.5, RenderPatchFactory.SideVisible.TOP, textureIdForOptionalSecondary));
+
+        return list.toArray(new RenderPatch[list.size()]);
+    }
+
     private RenderPatch[] makeSlab(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
-        addBox(rpf, list, 0,1,0,0.5,0,1, patchlist);
+        addBox(rpf, list, 0,1,0,0.5,0,1, new int[]{0,textureIdForOptionalSecondary,0,0,0,0,0});
         return list.toArray(new RenderPatch[list.size()]);
     }
     public static RenderPatch[] makeStairs(RenderPatchFactory rpf) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
-        addBox(rpf, list, 0,1,0,0.5,0,1, patchlist);
-        addBox(rpf, list, 0,1,0.5,1,0.5,1, patchlist);
+        int[] localPatches = new int[]{0,textureIdForOptionalSecondary, 0, 0,textureIdForOptionalSecondary, 0};
+        addBox(rpf, list, 0,1,0,0.5,0,1, localPatches);
+        addBox(rpf, list, 0,1,0.5,1,0.5,1, localPatches);
         return list.toArray(new RenderPatch[list.size()]);
     }
     public static RenderPatch[] makeRoofInnerCornerPatches(RenderPatchFactory rpf) {
@@ -287,7 +355,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
 
         RenderPatch[] renderPatches = list.toArray(new RenderPatch[list.size()]);
         for(int i= 0;i < renderPatches.length; i++)
-            renderPatches[i] = rpf.getRotatedPatch(renderPatches[i], 0, 90, 0, 0);
+            renderPatches[i] = rpf.getRotatedPatch(renderPatches[i], 0, 90, 0, renderPatches[i].getTextureIndex());
         return renderPatches;
     }
 
@@ -309,7 +377,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
 
         RenderPatch[] renderPatches = list.toArray(new RenderPatch[list.size()]);
         for(int i= 0;i < renderPatches.length; i++)
-            renderPatches[i] = rpf.getRotatedPatch(renderPatches[i], 0, 90, 0, 0);
+            renderPatches[i] = rpf.getRotatedPatch(renderPatches[i], 0, 90, 0, renderPatches[i].getTextureIndex());
         return renderPatches;
     }
 
