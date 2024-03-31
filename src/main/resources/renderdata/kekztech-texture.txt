@@ -102,3 +102,7 @@ block:id=%kekztech_lapotronicenergyunit_block,data=11,data=12,data=13,data=14,da
 
 # %kekztech_largehextile_block:* (kekztech_largehextile_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_LargeHexPlate
 block:id=%kekztech_largehextile_block,data=*,stdrot=true,face0-5=0:kekztech/LargeHexTile_2_2
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
+
+moddata:mod=gtmte,type=hatchbase,block=kekztech:kekztech_lapotronicenergyunit_block

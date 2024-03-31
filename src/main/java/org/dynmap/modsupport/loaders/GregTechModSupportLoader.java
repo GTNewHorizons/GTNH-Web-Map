@@ -31,6 +31,9 @@ public class GregTechModSupportLoader extends CustomModSupportLoader {
         else if(type.equals("hatchbase")){
             GregTechSupport.INSTANCE.processHatchBase(data, filetoidx);
         }
+        else if(type.equals("hatchbaseexpl")){
+            GregTechSupport.INSTANCE.processHatchBaseExplicit(data, filetoidx);
+        }
         else if(type.equals("mehatch")){
             GregTechSupport.INSTANCE.processMeHatch(data);
         }

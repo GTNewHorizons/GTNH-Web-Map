@@ -93,7 +93,7 @@ texture:id=GoodGenerator/yottaFluidTankCell/7,filename=assets/goodgenerator/text
 texture:id=GoodGenerator/yottaFluidTankCell/8,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/8.png
 texture:id=GoodGenerator/yottaFluidTankCell/9,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/9.png
 texture:id=gregtech/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM.png
-
+texture:id=gregtech/iconsets/CONCRETE_LIGHT_STONE,filename=assets/gregtech/textures/blocks/iconsets/CONCRETE_LIGHT_STONE.png
 
 
 # %MAR_Casing:* (MAR_Casing), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
@@ -245,3 +245,13 @@ block:id=%coalTar,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:
 
 # %supercriticalSteam:* (supercriticalSteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
 block:id=%supercriticalSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:GoodGenerator/fluids/supercriticalSteam.still,face2-5=12000:GoodGenerator/fluids/supercriticalSteam.flowing
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
+
+moddata:mod=gtmte,type=hatchbase,block=GoodGenerator:preciseUnitCasing,start=0,page=12
+moddata:mod=gtmte,type=hatchbaseexpl,page=12,index=1,tex=0:GoodGenerator/yottaFluidTankCasing_SIDE
+moddata:mod=gtmte,type=hatchbaseexpl,page=12,index=2,tex=0:GoodGenerator/supercriticalFluidTurbineCasing
+moddata:mod=gtmte,type=hatchbaseexpl,page=12,index=3,tex=0:GoodGenerator/preciseUnitCasing/1
+moddata:mod=gtmte,type=hatchbaseexpl,page=12,index=4,tex=0:GoodGenerator/preciseUnitCasing/2
+moddata:mod=gtmte,type=hatchbaseexpl,page=12,index=5,tex=0:GoodGenerator/preciseUnitCasing/3
+moddata:mod=gtmte,type=hatchbaseexpl,page=12,index=6,tex=0:gregtech/iconsets/CONCRETE_LIGHT_STONE

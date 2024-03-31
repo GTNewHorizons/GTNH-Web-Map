@@ -856,11 +856,13 @@ block:id=%gt.block.multiblock.componentCasing.stone.wrench.0.0.15.true.true,data
 
 specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
 
-moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings
-moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings2
-moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings3
-moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings4
-moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings8
+moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings,start=0
+moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings2,start=16
+moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings3,start=32
+moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings4,start=48
+moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings5,start=0,page=1
+moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings8,start=48,page=1
+moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings6,start=112,page=8
 
 texture:id=gt_frame,filename=assets/gregtech/textures/blocks/materialicons/NONE/frameGt.png
 texture:id=gt_pipe,filename=assets/gregtech/textures/blocks/materialicons/NONE/pipeSide.png
