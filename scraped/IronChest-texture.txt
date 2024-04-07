@@ -1,4 +1,4 @@
-# IronChest 6.0.71
+# IronChest 6.0.85
 version:1.7
 modname:IronChest
 
@@ -13,6 +13,9 @@ texture:id=ironchest/copper_top,filename=assets/ironchest/textures/blocks/copper
 texture:id=ironchest/crystal_front,filename=assets/ironchest/textures/blocks/crystal_front.png
 texture:id=ironchest/crystal_side,filename=assets/ironchest/textures/blocks/crystal_side.png
 texture:id=ironchest/crystal_top,filename=assets/ironchest/textures/blocks/crystal_top.png
+texture:id=ironchest/darksteel_front,filename=assets/ironchest/textures/blocks/darksteel_front.png
+texture:id=ironchest/darksteel_side,filename=assets/ironchest/textures/blocks/darksteel_side.png
+texture:id=ironchest/darksteel_top,filename=assets/ironchest/textures/blocks/darksteel_top.png
 texture:id=ironchest/diamond_front,filename=assets/ironchest/textures/blocks/diamond_front.png
 texture:id=ironchest/diamond_side,filename=assets/ironchest/textures/blocks/diamond_side.png
 texture:id=ironchest/diamond_top,filename=assets/ironchest/textures/blocks/diamond_top.png
@@ -25,6 +28,9 @@ texture:id=ironchest/gold_top,filename=assets/ironchest/textures/blocks/gold_top
 texture:id=ironchest/iron_front,filename=assets/ironchest/textures/blocks/iron_front.png
 texture:id=ironchest/iron_side,filename=assets/ironchest/textures/blocks/iron_side.png
 texture:id=ironchest/iron_top,filename=assets/ironchest/textures/blocks/iron_top.png
+texture:id=ironchest/netherite_front,filename=assets/ironchest/textures/blocks/netherite_front.png
+texture:id=ironchest/netherite_side,filename=assets/ironchest/textures/blocks/netherite_side.png
+texture:id=ironchest/netherite_top,filename=assets/ironchest/textures/blocks/netherite_top.png
 texture:id=ironchest/obsidian_front,filename=assets/ironchest/textures/blocks/obsidian_front.png
 texture:id=ironchest/obsidian_side,filename=assets/ironchest/textures/blocks/obsidian_side.png
 texture:id=ironchest/obsidian_top,filename=assets/ironchest/textures/blocks/obsidian_top.png
@@ -43,3 +49,6 @@ block:id=%BlockIronChest,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:i
 block:id=%BlockIronChest,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/crystal_top,face2=0:ironchest/crystal_side,face3=0:ironchest/crystal_front,face4-5=0:ironchest/crystal_side
 block:id=%BlockIronChest,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/obsidian_top,face2=0:ironchest/obsidian_side,face3=0:ironchest/obsidian_front,face4-5=0:ironchest/obsidian_side
 block:id=%BlockIronChest,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/dirtchest9000_top,face2=0:ironchest/dirtchest9000_side,face3=0:ironchest/dirtchest9000_front,face4-5=0:ironchest/dirtchest9000_side
+block:id=%BlockIronChest,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/netherite_top,face2=0:ironchest/netherite_side,face3=0:ironchest/netherite_front,face4-5=0:ironchest/netherite_side
+block:id=%BlockIronChest,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/darksteel_top,face2=0:ironchest/darksteel_side,face3=0:ironchest/darksteel_front,face4-5=0:ironchest/darksteel_side
+block:id=%BlockIronChest,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/silver_top,face2=0:ironchest/silver_side,face3=0:ironchest/silver_front,face4-5=0:ironchest/silver_side
