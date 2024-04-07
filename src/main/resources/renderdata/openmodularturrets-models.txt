@@ -1,4 +1,4 @@
-# openmodularturrets 2.2.11-247
+# openmodularturrets 2.3.1
 version:1.7
 modname:openmodularturrets
 
@@ -68,31 +68,31 @@ customblock:id=%fenceTierFour,class=org.dynmap.hdmap.renderer.PaneRenderer,data=
 customblock:id=%fenceTierFive,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
 # %disposeItemTurret:* (disposeItemTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockDisposableTurret
-boxblock:id=%disposeItemTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%disposeItemTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %potatoCannonTurret:* (potatoCannonTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockPotatoCannonTurret
-boxblock:id=%potatoCannonTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%potatoCannonTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %machineGunTurret:* (machineGunTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockGunTurret
-boxblock:id=%machineGunTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%machineGunTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %incendiaryTurret:* (incendiaryTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockIncendiaryTurret
-boxblock:id=%incendiaryTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%incendiaryTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %grenadeTurret:* (grenadeTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockGrenadeTurret
-boxblock:id=%grenadeTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%grenadeTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %relativisticTurret:* (relativisticTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockRelativisticTurret
-boxblock:id=%relativisticTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%relativisticTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %rocketTurret:* (rocketTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockRocketTurret
-boxblock:id=%rocketTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%rocketTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %teleporterTurret:* (teleporterTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockTeleporterTurret
-boxblock:id=%teleporterTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%teleporterTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %laserTurret:* (laserTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockLaserTurret
-boxblock:id=%laserTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%laserTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %railGunTurret:* (railGunTurret), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.turretheads.BlockRailGunTurret
-boxblock:id=%railGunTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
+boxblock:id=%railGunTurret,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
