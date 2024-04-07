@@ -1,4 +1,4 @@
-# SGCraft 1.3.13-GTNH
+# SGCraft 1.4.4-GTNH
 version:1.7
 modname:SGCraft
 
@@ -13,33 +13,34 @@ texture:id=sgcraft/naquadahOre,filename=assets/sgcraft/textures/blocks/naquadahO
 
 
 
-# %stargateRing:* (stargateRing), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=false,cls=gcewing.sg.SGRingBlock
+# %stargateRing:* (stargateRing), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=false,cls=gcewing.sg.blocks.SGRingBlock
 block:id=%stargateRing,data=*,stdrot=true,face0-5=12000:minecraft/stone
 
-# %stargateBase:* (stargateBase), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=false,cls=gcewing.sg.SGBaseBlock
-block:id=%stargateBase,data=0,stdrot=true,face0-5=12000:minecraft/stone
-block:id=%stargateBase,data=1,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
-block:id=%stargateBase,data=4,stdrot=true,face0-5=12000:minecraft/stone
-block:id=%stargateBase,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
-block:id=%stargateBase,data=8,stdrot=true,face0-5=12000:minecraft/stone
-block:id=%stargateBase,data=9,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
-block:id=%stargateBase,data=12,stdrot=true,face0-5=12000:minecraft/stone
-block:id=%stargateBase,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+# %stargateBase:* (stargateBase), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=false,cls=gcewing.sg.blocks.SGBaseBlock
+block:id=%stargateBase,data=0,data=1,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%stargateBase,data=3,data=4,data=5,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%stargateBase,data=7,data=8,data=9,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%stargateBase,data=11,data=12,data=13,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+block:id=%stargateBase,data=15,stdrot=true,face0-5=12000:minecraft/stone
 
-# %stargateController:* (stargateController), render=(CUSTOM), opaque=false,cls=gcewing.sg.DHDBlock
+# %stargateController:* (stargateController), render=(CUSTOM), opaque=false,cls=gcewing.sg.blocks.DHDBlock
 block:id=%stargateController,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
 
-# %naquadahBlock:* (naquadahBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gcewing.sg.NaquadahBlock
+# %naquadahBlock:* (naquadahBlock), render=(STANDARD), opaque=true,cls=gcewing.sg.blocks.NaquadahBlock
 block:id=%naquadahBlock,data=*,stdrot=true,face0-5=0:sgcraft/naquadahBlock
 
-# %naquadahOre:* (naquadahOre), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=gcewing.sg.NaquadahOreBlock
+# %naquadahOre:* (naquadahOre), render=(STANDARD), opaque=true,cls=gcewing.sg.blocks.NaquadahOreBlock
 block:id=%naquadahOre,data=*,stdrot=true,face0-5=0:sgcraft/naquadahOre
 
-# %ic2PowerUnit:* (ic2PowerUnit), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=true,cls=gcewing.sg.ic2.IC2PowerBlock
+# %ic2PowerUnit:* (ic2PowerUnit), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=true,cls=gcewing.sg.compat.ic2.IC2PowerBlock
 block:id=%ic2PowerUnit,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %rfPowerUnit:* (rfPowerUnit), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=true,cls=gcewing.sg.rf.RFPowerBlock
+# %rfPowerUnit:* (rfPowerUnit), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=true,cls=gcewing.sg.compat.rf.RFPowerBlock
 block:id=%rfPowerUnit,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %ocInterface:* (ocInterface), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=true,cls=gcewing.sg.oc.OCInterfaceBlock
+# %ocInterface:* (ocInterface), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=true,cls=gcewing.sg.compat.oc.OCInterfaceBlock
 block:id=%ocInterface,data=*,stdrot=true,face0-5=0:minecraft/stone
