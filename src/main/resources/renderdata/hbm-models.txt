@@ -22,7 +22,7 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %tile.pink_slab:* (tile.pink_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockPinkSlab
+# %tile.pink_slab:* (tile.pink_slab), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockPinkSlab
 boxblock:id=%tile.pink_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.pink_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -52,7 +52,7 @@ boxblock:id=%tile.dummy_plate_launch_table,xmin=0.0,xmax=1.0,ymin=1.0,ymax=1.0,z
 # %tile.taint_barrel:* (tile.taint_barrel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.RedBarrel
 boxblock:id=%tile.taint_barrel,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
 
-# %tile.digamma_matter:* (tile.digamma_matter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.bomb.DigammaMatter
+# %tile.digamma_matter:* (tile.digamma_matter), render=(STANDARD), opaque=false,cls=com.hbm.blocks.bomb.DigammaMatter
 boxblock:id=%tile.digamma_matter,xmin=0.0,xmax=0.75,ymin=0.0625,ymax=0.9375,zmin=0.0625,zmax=0.8125,data=0
 boxblock:id=%tile.digamma_matter,xmin=0.1875,xmax=0.875,ymin=0.0625,ymax=0.75,zmin=0.4375,zmax=0.8125,data=1
 boxblock:id=%tile.digamma_matter,xmin=0.0,xmax=0.625,ymin=0.4375,ymax=0.5625,zmin=0.4375,zmax=1.0,data=2
@@ -164,7 +164,7 @@ boxblock:id=%tile.rail_narrow_curve,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0
 # %tile.reinforced_stone_stairs:* (tile.reinforced_stone_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 customblock:id=%tile.reinforced_stone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %tile.brick_slab:* (tile.brick_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockMultiSlab
+# %tile.brick_slab:* (tile.brick_slab), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockMultiSlab
 boxblock:id=%tile.brick_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.brick_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -220,7 +220,7 @@ boxblock:id=%tile.foundry_outlet,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.5,zmin=
 boxblock:id=%tile.foundry_outlet,xmin=0.625,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.3125,zmax=0.6875,data=4
 boxblock:id=%tile.foundry_outlet,xmin=0.0,xmax=0.375,ymin=0.0,ymax=0.5,zmin=0.3125,zmax=0.6875,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.sand_boron_layer:* (tile.sand_boron_layer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockLayering
+# %tile.sand_boron_layer:* (tile.sand_boron_layer), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockLayering
 boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
 boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=1
 boxblock:id=%tile.sand_boron_layer,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=2

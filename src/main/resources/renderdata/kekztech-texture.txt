@@ -57,13 +57,13 @@ texture:id=kekztech/thaumreinforced_jar_top_void,filename=assets/kekztech/textur
 
 
 
-# %kekztech_yszceramicelectrolyteunit_block:* (kekztech_yszceramicelectrolyteunit_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_YSZUnit
+# %kekztech_yszceramicelectrolyteunit_block:* (kekztech_yszceramicelectrolyteunit_block), render=(STANDARD), opaque=true,cls=common.blocks.Block_YSZUnit
 block:id=%kekztech_yszceramicelectrolyteunit_block,data=*,stdrot=true,face0-5=0:kekztech/YSZCeramicElectrolyteUnit
 
-# %kekztech_gdcceramicelectrolyteunit_block:* (kekztech_gdcceramicelectrolyteunit_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_GDCUnit
+# %kekztech_gdcceramicelectrolyteunit_block:* (kekztech_gdcceramicelectrolyteunit_block), render=(STANDARD), opaque=true,cls=common.blocks.Block_GDCUnit
 block:id=%kekztech_gdcceramicelectrolyteunit_block,data=*,stdrot=true,face0-5=0:kekztech/GDCCeramicElectrolyteUnit
 
-# %kekztech_tfftstoragefield_block:* (kekztech_tfftstoragefield_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_TFFTStorageField
+# %kekztech_tfftstoragefield_block:* (kekztech_tfftstoragefield_block), render=(STANDARD), opaque=true,cls=common.blocks.Block_TFFTStorageField
 block:id=%kekztech_tfftstoragefield_block,data=0,stdrot=true,face0-5=0:kekztech/TFFTCasing
 block:id=%kekztech_tfftstoragefield_block,data=1,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock1
 block:id=%kekztech_tfftstoragefield_block,data=2,stdrot=true,face0-5=0:kekztech/TFFTStorageFieldBlock2
@@ -86,7 +86,7 @@ block:id=%kekztech_ichorjar_block,data=0,data=1,data=2,stdrot=true,transparency=
 block:id=%kekztech_ichorjar_block,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:kekztech/ichor_jar_bottom,face1=0:kekztech/ichor_jar_top_void,face2-5=0:kekztech/ichor_jar_side_void
 block:id=%kekztech_ichorjar_block,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:kekztech/ichor_jar_bottom
 
-# %kekztech_lapotronicenergyunit_block:* (kekztech_lapotronicenergyunit_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_LapotronicEnergyUnit
+# %kekztech_lapotronicenergyunit_block:* (kekztech_lapotronicenergyunit_block), render=(STANDARD), opaque=true,cls=common.blocks.Block_LapotronicEnergyUnit
 block:id=%kekztech_lapotronicenergyunit_block,data=0,stdrot=true,face0-1=0:kekztech/LSCBase_top,face2-5=0:kekztech/LSCBase_side
 block:id=%kekztech_lapotronicenergyunit_block,data=1,stdrot=true,face0-1=0:kekztech/LapotronicEnergyUnit1_top,face2-5=0:kekztech/LapotronicEnergyUnit1_side
 block:id=%kekztech_lapotronicenergyunit_block,data=2,stdrot=true,face0-1=0:kekztech/LapotronicEnergyUnit2_top,face2-5=0:kekztech/LapotronicEnergyUnit2_side
@@ -100,7 +100,7 @@ block:id=%kekztech_lapotronicenergyunit_block,data=9,stdrot=true,face0-1=0:kekzt
 block:id=%kekztech_lapotronicenergyunit_block,data=10,stdrot=true,face0-1=0:kekztech/MegaUltimateEnergyUnit_top,face2-5=0:kekztech/MegaUltimateEnergyUnit_side
 block:id=%kekztech_lapotronicenergyunit_block,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:kekztech/UltimateEnergyUnit_top
 
-# %kekztech_largehextile_block:* (kekztech_largehextile_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=common.blocks.Block_LargeHexPlate
+# %kekztech_largehextile_block:* (kekztech_largehextile_block), render=(STANDARD), opaque=true,cls=common.blocks.Block_LargeHexPlate
 block:id=%kekztech_largehextile_block,data=*,stdrot=true,face0-5=0:kekztech/LargeHexTile_2_2
 
 specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte

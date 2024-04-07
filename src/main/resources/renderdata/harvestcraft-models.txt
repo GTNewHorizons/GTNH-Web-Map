@@ -22,10 +22,10 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %cuttingboard:* (cuttingboard), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCuttingBoard
+# %cuttingboard:* (cuttingboard), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCuttingBoard
 boxblock:id=%cuttingboard,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
 
-# %pot:* (pot), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamPot
+# %pot:* (pot), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamPot
 boxblock:id=%pot,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.4000000059604645,zmin=0.25,zmax=0.75,data=*
 
 # %berrygarden:* (berrygarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamNormalGarden
@@ -579,7 +579,7 @@ patchblock:id=%pamcandleDeco16,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,pat
 patchblock:id=%pamcandleDeco16,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
 patchblock:id=%pamcandleDeco16,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pamcarrotCake:* (pamcarrotCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamcarrotCake:* (pamcarrotCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pamcarrotCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pamcarrotCake,xmin=0.28125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pamcarrotCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -587,7 +587,7 @@ boxblock:id=%pamcarrotCake,xmin=0.71875,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.062
 boxblock:id=%pamcarrotCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
 boxblock:id=%pamcarrotCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pamcheeseCake:* (pamcheeseCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamcheeseCake:* (pamcheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pamcheeseCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pamcheeseCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pamcheeseCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -596,7 +596,7 @@ boxblock:id=%pamcheeseCake,xmin=0.762499988079071,xmax=0.9375,ymin=0.0,ymax=0.5,
 boxblock:id=%pamcheeseCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
 boxblock:id=%pamcheeseCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pamcherrycheeseCake:* (pamcherrycheeseCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamcherrycheeseCake:* (pamcherrycheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pamcherrycheeseCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pamcherrycheeseCake,xmin=0.2083333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pamcherrycheeseCake,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -606,7 +606,7 @@ boxblock:id=%pamcherrycheeseCake,xmin=0.7916666269302368,xmax=0.9375,ymin=0.0,ym
 boxblock:id=%pamcherrycheeseCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
 boxblock:id=%pamcherrycheeseCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pampineappleupsidedownCake:* (pampineappleupsidedownCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pampineappleupsidedownCake:* (pampineappleupsidedownCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pampineappleupsidedownCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pampineappleupsidedownCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pampineappleupsidedownCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -615,7 +615,7 @@ boxblock:id=%pampineappleupsidedownCake,xmin=0.762499988079071,xmax=0.9375,ymin=
 boxblock:id=%pampineappleupsidedownCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
 boxblock:id=%pampineappleupsidedownCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pamchocolatesprinkleCake:* (pamchocolatesprinkleCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamchocolatesprinkleCake:* (pamchocolatesprinkleCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pamchocolatesprinkleCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pamchocolatesprinkleCake,xmin=0.28125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pamchocolatesprinkleCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -623,7 +623,7 @@ boxblock:id=%pamchocolatesprinkleCake,xmin=0.71875,xmax=0.9375,ymin=0.0,ymax=0.5
 boxblock:id=%pamchocolatesprinkleCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
 boxblock:id=%pamchocolatesprinkleCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pamredvelvetCake:* (pamredvelvetCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamredvelvetCake:* (pamredvelvetCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pamredvelvetCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pamredvelvetCake,xmin=0.28125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pamredvelvetCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -631,14 +631,14 @@ boxblock:id=%pamredvelvetCake,xmin=0.71875,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.
 boxblock:id=%pamredvelvetCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
 boxblock:id=%pamredvelvetCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pamlamingtonCake:* (pamlamingtonCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamlamingtonCake:* (pamlamingtonCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pamlamingtonCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pamlamingtonCake,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pamlamingtonCake,xmin=0.6458333730697632,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
 boxblock:id=%pamlamingtonCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
 boxblock:id=%pamlamingtonCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pampavlovaCake:* (pampavlovaCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pampavlovaCake:* (pampavlovaCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pampavlovaCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pampavlovaCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pampavlovaCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -647,7 +647,7 @@ boxblock:id=%pampavlovaCake,xmin=0.762499988079071,xmax=0.9375,ymin=0.0,ymax=0.5
 boxblock:id=%pampavlovaCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
 boxblock:id=%pampavlovaCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pamholidayCake:* (pamholidayCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamholidayCake:* (pamholidayCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pamholidayCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pamholidayCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pamholidayCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
@@ -656,7 +656,7 @@ boxblock:id=%pamholidayCake,xmin=0.762499988079071,xmax=0.9375,ymin=0.0,ymax=0.5
 boxblock:id=%pamholidayCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
 boxblock:id=%pamholidayCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pampumpkincheeseCake:* (pampumpkincheeseCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pampumpkincheeseCake:* (pampumpkincheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 boxblock:id=%pampumpkincheeseCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pampumpkincheeseCake,xmin=0.2083333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pampumpkincheeseCake,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2

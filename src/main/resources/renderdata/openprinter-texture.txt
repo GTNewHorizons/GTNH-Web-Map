@@ -23,7 +23,7 @@ block:id=%openprinter.printer,data=3,stdrot=true,transparency=TRANSPARENT,face0-
 block:id=%openprinter.printer,data=4,stdrot=true,face0-2=0:openprinter/block_side,face3=0:openprinter/printer_front,face4-5=0:openprinter/block_side
 block:id=%openprinter.printer,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:openprinter/block_side
 
-# %openprinter.shredder:* (openprinter.shredder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=pcl.openprinter.blocks.BlockShredder
+# %openprinter.shredder:* (openprinter.shredder), render=(STANDARD), opaque=false,cls=pcl.openprinter.blocks.BlockShredder
 block:id=%openprinter.shredder,data=0,stdrot=true,face0-2=0:openprinter/block_side,face3=0:openprinter/shredder_front,face4-5=0:openprinter/block_side
 block:id=%openprinter.shredder,data=1,stdrot=true,face0-1=0:openprinter/block_side,face2=0:openprinter/shredder_front,face3-5=0:openprinter/block_side
 block:id=%openprinter.shredder,data=2,stdrot=true,face0-4=0:openprinter/block_side,face5=0:openprinter/shredder_front
@@ -31,7 +31,7 @@ block:id=%openprinter.shredder,data=3,stdrot=true,face0-2=0:openprinter/block_si
 block:id=%openprinter.shredder,data=4,stdrot=true,face0-3=0:openprinter/block_side,face4=0:openprinter/shredder_front,face5=0:openprinter/block_side
 block:id=%openprinter.shredder,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:openprinter/block_side
 
-# %openprinter.filecabinet:* (openprinter.filecabinet), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=pcl.openprinter.blocks.BlockFileCabinet
+# %openprinter.filecabinet:* (openprinter.filecabinet), render=(STANDARD), opaque=false,cls=pcl.openprinter.blocks.BlockFileCabinet
 block:id=%openprinter.filecabinet,data=0,stdrot=true,face0-2=0:openprinter/filingcabinet_bottom,face3=0:openprinter/filingcabinet_front,face4-5=0:openprinter/filingcabinet_bottom
 block:id=%openprinter.filecabinet,data=1,stdrot=true,face0-1=0:openprinter/filingcabinet_bottom,face2=0:openprinter/filingcabinet_front,face3-5=0:openprinter/filingcabinet_bottom
 block:id=%openprinter.filecabinet,data=2,stdrot=true,face0-4=0:openprinter/filingcabinet_bottom,face5=0:openprinter/filingcabinet_front

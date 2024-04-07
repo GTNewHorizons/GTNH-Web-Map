@@ -125,7 +125,7 @@ block:id=%blockTorchInversion_off,data=*,stdrot=true,transparency=TRANSPARENT,pa
 # %blockRemoteComparator:* (blockRemoteComparator), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRemoteComparator
 block:id=%blockRemoteComparator,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:Automagy/blockRemoteComparator
 
-# %blockVisReader:* (blockVisReader), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockVisReader
+# %blockVisReader:* (blockVisReader), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockVisReader
 block:id=%blockVisReader,data=0,stdrot=true,face0=0:Automagy/blockVisReader_btm,face1=0:Automagy/blockVisReader_top,face2=0:Automagy/blockVisReader_n,face3=0:Automagy/blockVisReader_s,face4=0:Automagy/blockVisReader_w,face5=0:Automagy/blockVisReader_e
 block:id=%blockVisReader,data=1,stdrot=true,face0=0:Automagy/blockVisReader_btm,face1=0:Automagy/blockVisReader_top,face2=0:Automagy/blockVisReader_w,face3=0:Automagy/blockVisReader_e,face4=0:Automagy/blockVisReader_s,face5=0:Automagy/blockVisReader_n
 block:id=%blockVisReader,data=2,stdrot=true,face0=0:Automagy/blockVisReader_btm,face1=0:Automagy/blockVisReader_top,face2=0:Automagy/blockVisReader_s,face3=0:Automagy/blockVisReader_n,face4=0:Automagy/blockVisReader_e,face5=0:Automagy/blockVisReader_w
@@ -143,7 +143,7 @@ block:id=%blockVisReader,data=13,stdrot=true,face0=0:Automagy/blockVisReader_btm
 block:id=%blockVisReader,data=14,stdrot=true,face0=0:Automagy/blockVisReader_btm,face1=0:Automagy/blockVisReader_top,face2=0:Automagy/blockVisReader_s,face3=0:Automagy/blockVisReader_n,face4=0:Automagy/blockVisReader_e,face5=0:Automagy/blockVisReader_w
 block:id=%blockVisReader,data=15,stdrot=true,face0=0:Automagy/blockVisReader_btm,face1=0:Automagy/blockVisReader_top,face2=0:Automagy/blockVisReader_w,face3=0:Automagy/blockVisReader_e,face4=0:Automagy/blockVisReader_s,face5=0:Automagy/blockVisReader_n
 
-# %blockTally:* (blockTally), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockTally
+# %blockTally:* (blockTally), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockTally
 block:id=%blockTally,data=*,stdrot=true,face0=0:Automagy/blockTallyRedOn,face1=0:Automagy/blockTallyRead,face2-5=0:Automagy/blockTally
 
 # %blockHourglass:* (blockHourglass), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockHourglass
@@ -170,7 +170,7 @@ block:id=%blockFinicalMaw,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 # %blockGolemInhibitor:* (blockGolemInhibitor), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockGolemInhibitor
 block:id=%blockGolemInhibitor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:Automagy/blockGolemInhibitor
 
-# %blockEntitySignal:* (blockEntitySignal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockEntitySignal
+# %blockEntitySignal:* (blockEntitySignal), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockEntitySignal
 block:id=%blockEntitySignal,data=*,stdrot=true,face0-5=0:Automagy/blockEntitySignal
 
 # %blockEssentiaLocus:* (blockEssentiaLocus), render=(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockEssentiaLocus
@@ -194,7 +194,7 @@ block:id=%blockGolemTaskmaster,data=*,stdrot=true,transparency=TRANSPARENT,face0
 # %blockReqTome:* (blockReqTome), render=tuhljin.automagy.renderers.ItemBlockBasicRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockRequisitionTome
 block:id=%blockReqTome,data=*,stdrot=true,face0-5=0:thaumcraft/pedestal_top
 
-# %blockBookshelfEnchanted:* (blockBookshelfEnchanted), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockBookshelfEnchanted
+# %blockBookshelfEnchanted:* (blockBookshelfEnchanted), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockBookshelfEnchanted
 block:id=%blockBookshelfEnchanted,data=0,stdrot=true,face0-1=0:thaumcraft/planks_greatwood,face2-5=0:Automagy/blockBookshelfEnchanted
 block:id=%blockBookshelfEnchanted,data=1,stdrot=true,face0-1=0:thaumcraft/planks_silverwood,face2-5=0:Automagy/blockBookshelfEnchantedSilverwood
 block:id=%blockBookshelfEnchanted,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:thaumcraft/planks_greatwood,face2-5=0:Automagy/blockBookshelfEnchanted
@@ -210,7 +210,7 @@ block:id=%blockMetalGlow,data=*,stdrot=true,face0-5=0:Automagy/amberMemory
 # %blockNethermind:* (blockNethermind), render=tuhljin.automagy.renderers.RenderBlockGlowOverlay(CUSTOM), opaque=true,cls=tuhljin.automagy.blocks.BlockNethermind
 block:id=%blockNethermind,data=*,stdrot=true,face0=0:Automagy/blockNethermindBottom,face1=0:Automagy/blockNethermind,face2-5=0:Automagy/blockNethermindSide
 
-# %blockRunedObsidian:* (blockRunedObsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockRunedObsidian
+# %blockRunedObsidian:* (blockRunedObsidian), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockRunedObsidian
 block:id=%blockRunedObsidian,data=0,stdrot=true,face0-5=0:Automagy/blockRunedObsidian2
 block:id=%blockRunedObsidian,data=1,stdrot=true,face0-5=0:Automagy/blockRunedObsidian3
 block:id=%blockRunedObsidian,data=2,stdrot=true,face0-5=0:Automagy/blockRunedObsidian4
@@ -219,7 +219,7 @@ block:id=%blockRunedObsidian,data=4,stdrot=true,face0-5=0:Automagy/blockRunedObs
 block:id=%blockRunedObsidian,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,face0-5=0:Automagy/blockRunedObsidian
 block:id=%blockRunedObsidian,data=15,stdrot=true,face0-5=0:thaumcraft/obsidiantile
 
-# %blockNetherRune:* (blockNetherRune), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockNetherRune
+# %blockNetherRune:* (blockNetherRune), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockNetherRune
 block:id=%blockNetherRune,data=0,stdrot=true,face0-5=0:Automagy/blockNetherRuneRock
 block:id=%blockNetherRune,data=1,stdrot=true,face0-5=0:Automagy/blockNetherRuneLava
 block:id=%blockNetherRune,data=2,stdrot=true,face0-5=0:Automagy/blockNetherRuneCrystal
@@ -233,7 +233,7 @@ block:id=%blockNetherRune,data=11,stdrot=true,face0-5=0:Automagy/blockNetherRune
 block:id=%blockNetherRune,data=12,stdrot=true,face0-5=0:Automagy/blockNetherRuneSoul
 block:id=%blockNetherRune,data=14,stdrot=true,face0-5=0:Automagy/blockNetherRuneCelerity
 
-# %blockNetherRuneMob:* (blockNetherRuneMob), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockNetherRuneCreature
+# %blockNetherRuneMob:* (blockNetherRuneMob), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockNetherRuneCreature
 block:id=%blockNetherRuneMob,data=0,stdrot=true,face0-5=0:Automagy/blockNetherRuneZombie
 block:id=%blockNetherRuneMob,data=1,stdrot=true,face0-5=0:Automagy/blockNetherRuneBlaze
 block:id=%blockNetherRuneMob,data=2,stdrot=true,face0-5=0:Automagy/blockNetherRuneGhast
@@ -269,7 +269,7 @@ block:id=%blockCreativeJar,data=0,data=1,data=2,stdrot=true,transparency=TRANSPA
 block:id=%blockCreativeJar,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:Automagy/jar_top_infinity,face2-5=0:Automagy/jar_side_infinity
 block:id=%blockCreativeJar,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/jar_bottom
 
-# %blockAmnesiac:* (blockAmnesiac), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockAmnesiac
+# %blockAmnesiac:* (blockAmnesiac), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockAmnesiac
 block:id=%blockAmnesiac,data=*,stdrot=true,face0-5=0:Automagy/blockAmnesiac
 
 # %blockXPStone:* (blockXPStone), render=tuhljin.automagy.renderers.ItemBlockBasicRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockXPStone
@@ -304,8 +304,8 @@ block:id=%blockPhenomenon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 # %blockThaumostaticSpire:* (blockThaumostaticSpire), render=tuhljin.automagy.renderers.ItemBlockBasicRenderer(CUSTOM), opaque=false,cls=tuhljin.automagy.blocks.BlockThaumostaticRefuelerSpire
 block:id=%blockThaumostaticSpire,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/thaumiumblock
 
-# %blockTallyLensWorld:* (blockTallyLensWorld), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockTallyWorld
+# %blockTallyLensWorld:* (blockTallyLensWorld), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockTallyWorld
 block:id=%blockTallyLensWorld,data=*,stdrot=true,face0=0:Automagy/blockTallyRedOn,face1=0:Automagy/blockTallyLensWorld,face2-5=0:Automagy/blockTally
 
-# %blockTallyLensDrops:* (blockTallyLensDrops), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockTallyDrops
+# %blockTallyLensDrops:* (blockTallyLensDrops), render=(STANDARD), opaque=true,cls=tuhljin.automagy.blocks.BlockTallyDrops
 block:id=%blockTallyLensDrops,data=*,stdrot=true,face0=0:Automagy/blockTallyRedOn,face1=0:Automagy/blockTallyLensDrops,face2-5=0:Automagy/blockTally

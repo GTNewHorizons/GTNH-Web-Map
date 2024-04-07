@@ -47,10 +47,10 @@ block:id=%walrus,data=0,data=1,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOC
 block:id=%walrus,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_3053_extracells.block.walrus
 block:id=%walrus,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3053_extracells.block.walrus
 
-# %fluidcrafter:* (fluidcrafter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=extracells.block.BlockFluidCrafter
+# %fluidcrafter:* (fluidcrafter), render=(STANDARD), opaque=true,cls=extracells.block.BlockFluidCrafter
 block:id=%fluidcrafter,data=*,stdrot=true,face0-5=0:extracells/fluid.crafter
 
-# %ecbaseblock:* (ecbaseblock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=extracells.block.ECBaseBlock
+# %ecbaseblock:* (ecbaseblock), render=(STANDARD), opaque=true,cls=extracells.block.ECBaseBlock
 block:id=%ecbaseblock,data=0,stdrot=true,face0-5=0:extracells/fluid.interface
 block:id=%ecbaseblock,data=1,stdrot=true,face0-5=0:extracells/fluid.filler
 
@@ -63,7 +63,7 @@ block:id=%hardmedrive,data=4,stdrot=true,face0=0:extracells/machine.bottom,face1
 block:id=%hardmedrive,data=5,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/machine.top,face2-4=0:extracells/hardmedrive.side,face5=0:extracells/hardmedrive.face
 block:id=%hardmedrive,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:extracells/machine.bottom,face1=0:extracells/machine.top,face2-5=0:extracells/hardmedrive.side
 
-# %vibrantchamberfluid:* (vibrantchamberfluid), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=extracells.block.BlockVibrationChamberFluid
+# %vibrantchamberfluid:* (vibrantchamberfluid), render=(STANDARD), opaque=true,cls=extracells.block.BlockVibrationChamberFluid
 block:id=%vibrantchamberfluid,data=*,stdrot=true,face0-3=0:extracells/VibrationChamberFluid,face4=0:extracells/VibrationChamberFluidFront,face5=0:extracells/VibrationChamberFluid
 
 # %craftingstorage:* (craftingstorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=extracells.block.BlockCraftingStorage

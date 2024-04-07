@@ -39,7 +39,7 @@ boxblock:id=%pyrofluid,ymax=0.375,data=13
 boxblock:id=%pyrofluid,ymax=0.25,data=14
 boxblock:id=%pyrofluid,ymax=0.125,data=15
 
-# %overchanter:* (overchanter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockOverchanter
+# %overchanter:* (overchanter), render=(STANDARD), opaque=false,cls=tb.common.block.BlockOverchanter
 boxblock:id=%overchanter,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
 # %relocator:* (relocator), render=tb.client.render.block.ThaumicRelocatorRenderer(CUSTOM), opaque=true,cls=tb.common.block.BlockRelocator
@@ -54,11 +54,11 @@ boxblock:id=%campfire,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax
 # %brazier:* (brazier), render=tb.client.render.block.BrazierRenderer(CUSTOM), opaque=false,cls=tb.common.block.BlockBrazier
 boxblock:id=%brazier,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=1.0,zmin=0.0625,zmax=0.9375,data=*
 
-# %genericSlab:* (genericSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockHalfSlab
+# %genericSlab:* (genericSlab), render=(STANDARD), opaque=false,cls=tb.common.block.BlockHalfSlab
 boxblock:id=%genericSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%genericSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %crystalSlab:* (crystalSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockCrystalSlab
+# %crystalSlab:* (crystalSlab), render=(STANDARD), opaque=false,cls=tb.common.block.BlockCrystalSlab
 boxblock:id=%crystalSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%crystalSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 

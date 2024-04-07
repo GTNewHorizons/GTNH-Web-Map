@@ -42,22 +42,22 @@ texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/pla
 
 
 
-# %playerinterface:* (playerinterface), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockPlayerInterface
+# %playerinterface:* (playerinterface), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockPlayerInterface
 block:id=%playerinterface,data=*,stdrot=true,face0=0:RandomThings/playerinterface/playerinterface_bottom,face1=0:RandomThings/playerinterface/playerinterface_top,face2-5=0:RandomThings/playerinterface/playerinterface_side
 
-# %creativePlayerInterface:* (creativePlayerInterface), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockCreativePlayerInterface
+# %creativePlayerInterface:* (creativePlayerInterface), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockCreativePlayerInterface
 block:id=%creativePlayerInterface,data=*,stdrot=true,face0=0:RandomThings/playerinterface/creative/playerinterface_bottom,face1=0:RandomThings/playerinterface/creative/playerinterface_top,face2-5=0:RandomThings/playerinterface/creative/playerinterface_side
 
-# %fluidDisplay:* (fluidDisplay), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockFluidDisplay
+# %fluidDisplay:* (fluidDisplay), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockFluidDisplay
 block:id=%fluidDisplay,data=*,stdrot=true,face0-5=0:RandomThings/fluidDisplay
 
-# %advancedFluidDisplay:* (advancedFluidDisplay), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockAdvancedFluidDisplay
+# %advancedFluidDisplay:* (advancedFluidDisplay), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockAdvancedFluidDisplay
 block:id=%advancedFluidDisplay,data=*,stdrot=true,face0-5=0:RandomThings/advancedFluidDisplay
 
-# %fertilizedDirt:* (fertilizedDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockFertilizedDirt
+# %fertilizedDirt:* (fertilizedDirt), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockFertilizedDirt
 block:id=%fertilizedDirt,data=*,stdrot=true,face0-5=0:RandomThings/fertilizedDirt
 
-# %fertilizedDirt_tilled:* (fertilizedDirt_tilled), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockFertilizedDirt
+# %fertilizedDirt_tilled:* (fertilizedDirt_tilled), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockFertilizedDirt
 block:id=%fertilizedDirt_tilled,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:RandomThings/fertilizedDirt
 
 # %itemCollector:* (itemCollector), render=(CUSTOM), opaque=false,cls=lumien.randomthings.Blocks.BlockItemCollector
@@ -66,37 +66,37 @@ block:id=%itemCollector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:Ra
 # %advancedItemCollector:* (advancedItemCollector), render=(CUSTOM), opaque=false,cls=lumien.randomthings.Blocks.BlockAdvancedItemCollector
 block:id=%advancedItemCollector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:RandomThings/itemCollector/advancedItemCollector
 
-# %onlineDetector:* (onlineDetector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockOnlineDetector
+# %onlineDetector:* (onlineDetector), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockOnlineDetector
 block:id=%onlineDetector,data=*,stdrot=true,face0-5=0:RandomThings/onlineDetector/offline
 
-# %moonSensor:* (moonSensor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockMoonSensor
+# %moonSensor:* (moonSensor), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockMoonSensor
 block:id=%moonSensor,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:RandomThings/moon_sensor_side,face1=0:RandomThings/moon_sensor_top,face2-5=0:RandomThings/moon_sensor_side
 
-# %bloodMoonSensor:* (bloodMoonSensor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockBloodmoonSensor
+# %bloodMoonSensor:* (bloodMoonSensor), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockBloodmoonSensor
 block:id=%bloodMoonSensor,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:RandomThings/bloodMoonSensor_side,face1=0:RandomThings/bloodMoonSensor_top,face2-5=0:RandomThings/bloodMoonSensor_side
 
-# %notificationInterface:* (notificationInterface), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockNotificationInterface
+# %notificationInterface:* (notificationInterface), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockNotificationInterface
 block:id=%notificationInterface,data=*,stdrot=true,face0-5=0:RandomThings/notificationInterface
 
-# %lapisLamp:* (lapisLamp), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockLapisLamp
+# %lapisLamp:* (lapisLamp), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.BlockLapisLamp
 block:id=%lapisLamp,data=*,stdrot=true,face0-5=12000:RandomThings/lapisLamp
 
 # %wirelessLever:* (wirelessLever), render=lumien.randomthings.Client.Renderer.RenderWirelessLever(CUSTOM), opaque=false,cls=lumien.randomthings.Blocks.BlockWirelessLever
 block:id=%wirelessLever,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:RandomThings/wirelessLever
 
-# %dyeingMachine:* (dyeingMachine), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockDyeingMachine
+# %dyeingMachine:* (dyeingMachine), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockDyeingMachine
 block:id=%dyeingMachine,data=*,stdrot=true,face0=0:minecraft/planks_spruce,face1=0:RandomThings/dyeingMachine/dyeingMachine_top,face2=0:RandomThings/dyeingMachine/dyeingMachine_front,face3=0:RandomThings/dyeingMachine/dyeingMachine_side,face4=0:RandomThings/dyeingMachine/dyeingMachine_front,face5=0:RandomThings/dyeingMachine/dyeingMachine_side
 
-# %spectreGlass:* (spectreGlass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.Spectre.BlockSpectreGlass
+# %spectreGlass:* (spectreGlass), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.Spectre.BlockSpectreGlass
 block:id=%spectreGlass,data=*,stdrot=true,face0-5=12000:RandomThings/spectreGlass
 
-# %energyDistributor:* (energyDistributor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.EnergyDistributors.BlockEnergyDistributor
+# %energyDistributor:* (energyDistributor), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.EnergyDistributors.BlockEnergyDistributor
 block:id=%energyDistributor,data=*,stdrot=true,face0-2=0:RandomThings/distributorBasic_In,face3=0:RandomThings/distributorBasic_Out,face4-5=0:RandomThings/distributorBasic_In
 
-# %enderEnergyDistributor:* (enderEnergyDistributor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.EnergyDistributors.BlockEnderEnergyDistributor
+# %enderEnergyDistributor:* (enderEnergyDistributor), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.EnergyDistributors.BlockEnderEnergyDistributor
 block:id=%enderEnergyDistributor,data=*,stdrot=true,face0=0:RandomThings/distributorEnder_In,face1=0:RandomThings/distributorEnder,face2-5=0:RandomThings/distributorEnder_In
 
-# %spectreBlock:* (spectreBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.Spectre.BlockSpectreBlock
+# %spectreBlock:* (spectreBlock), render=(STANDARD), opaque=false,cls=lumien.randomthings.Blocks.Spectre.BlockSpectreBlock
 block:id=%spectreBlock,data=0,stdrot=true,colorMult=1E1B1B,face0-5=17000:RandomThings/spectreBlock
 block:id=%spectreBlock,data=1,stdrot=true,colorMult=B3312C,face0-5=17000:RandomThings/spectreBlock
 block:id=%spectreBlock,data=2,stdrot=true,colorMult=3B511A,face0-5=17000:RandomThings/spectreBlock
@@ -114,5 +114,5 @@ block:id=%spectreBlock,data=13,stdrot=true,colorMult=C354CD,face0-5=17000:Random
 block:id=%spectreBlock,data=14,stdrot=true,colorMult=EB8844,face0-5=17000:RandomThings/spectreBlock
 block:id=%spectreBlock,data=15,stdrot=true,colorMult=F0F0F0,face0-5=17000:RandomThings/spectreBlock
 
-# %imbuingStation:* (imbuingStation), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockImbuingStation
+# %imbuingStation:* (imbuingStation), render=(STANDARD), opaque=true,cls=lumien.randomthings.Blocks.BlockImbuingStation
 block:id=%imbuingStation,data=*,stdrot=true,face0=0:RandomThings/imbuingStation/imbuingStationBottom,face1=0:RandomThings/imbuingStation/imbuingStationTop,face2-5=0:RandomThings/imbuingStation/imbuingStationSide

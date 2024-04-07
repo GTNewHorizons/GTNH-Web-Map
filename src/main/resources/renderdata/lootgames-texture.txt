@@ -29,7 +29,7 @@ texture:id=lootgames/shielded_dungeon_floor,filename=assets/lootgames/textures/b
 
 
 
-# %LootGamesDungeonWall:* (LootGamesDungeonWall), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=eu.usrv.legacylootgames.blocks.DungeonBrick
+# %LootGamesDungeonWall:* (LootGamesDungeonWall), render=(STANDARD), opaque=true,cls=eu.usrv.legacylootgames.blocks.DungeonBrick
 block:id=%LootGamesDungeonWall,data=0,stdrot=true,face0-5=0:LootGames/dungeon_wall
 block:id=%LootGamesDungeonWall,data=1,stdrot=true,face0-5=0:LootGames/dungeon_ceiling
 block:id=%LootGamesDungeonWall,data=2,stdrot=true,face0-5=0:LootGames/dungeon_floor
@@ -38,17 +38,17 @@ block:id=%LootGamesDungeonWall,data=4,stdrot=true,face0-5=0:LootGames/cracked_du
 block:id=%LootGamesDungeonWall,data=5,stdrot=true,face0-5=0:LootGames/cracked_dungeon_floor
 block:id=%LootGamesDungeonWall,data=6,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor
 
-# %LootGamesDungeonLight:* (LootGamesDungeonLight), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=eu.usrv.legacylootgames.blocks.DungeonLightSource
+# %LootGamesDungeonLight:* (LootGamesDungeonLight), render=(STANDARD), opaque=true,cls=eu.usrv.legacylootgames.blocks.DungeonLightSource
 block:id=%LootGamesDungeonLight,data=0,stdrot=true,face0-5=0:LootGames/dungeon_lamp
 block:id=%LootGamesDungeonLight,data=1,stdrot=true,face0-5=0:LootGames/broken_dungeon_lamp
 
-# %LootGamesMasterBlock:* (LootGamesMasterBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.PuzzleMasterBlock
+# %LootGamesMasterBlock:* (LootGamesMasterBlock), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.PuzzleMasterBlock
 block:id=%LootGamesMasterBlock,data=*,stdrot=true,face0-5=0:lootgames/puzzle_master
 
-# %smart_subordinate:* (smart_subordinate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.SmartSubordinateBlock
+# %smart_subordinate:* (smart_subordinate), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.SmartSubordinateBlock
 block:id=%smart_subordinate,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor
 
-# %board_border:* (board_border), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.BoardBorderBlock
+# %board_border:* (board_border), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.BoardBorderBlock
 block:id=%board_border,data=0,stdrot=true,face0-5=0:lootgames/border/horizontal
 block:id=%board_border,data=1,stdrot=true,face0-1=0:lootgames/border/vertical,face2-5=0:lootgames/border/horizontal
 block:id=%board_border,data=2,stdrot=true,face0-1=0:lootgames/border/top_left,face2-5=0:lootgames/border/horizontal
@@ -56,17 +56,17 @@ block:id=%board_border,data=3,stdrot=true,face0-1=0:lootgames/border/top_right,f
 block:id=%board_border,data=4,stdrot=true,face0-1=0:lootgames/border/bottom_right,face2-5=0:lootgames/border/horizontal
 block:id=%board_border,data=5,stdrot=true,face0-1=0:lootgames/border/bottom_left,face2-5=0:lootgames/border/horizontal
 
-# %gol_activator:* (gol_activator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.GOLActivatorBlock
+# %gol_activator:* (gol_activator), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.GOLActivatorBlock
 block:id=%gol_activator,data=*,stdrot=true,face0-5=0:lootgames/gol_activator
 
-# %ms_activator:* (ms_activator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.MSActivatorBlock
+# %ms_activator:* (ms_activator), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.MSActivatorBlock
 block:id=%ms_activator,data=*,stdrot=true,face0-5=0:lootgames/ms_activator
 
-# %gol_master:* (gol_master), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.GameMasterBlock
+# %gol_master:* (gol_master), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.GameMasterBlock
 block:id=%gol_master,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor
 
-# %ms_master:* (ms_master), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.GameMasterBlock
+# %ms_master:* (ms_master), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.GameMasterBlock
 block:id=%ms_master,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor
 
-# %GOLMasterBlock:* (GOLMasterBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=eu.usrv.legacylootgames.gol.blocks.LegacyLightGameBlock
+# %GOLMasterBlock:* (GOLMasterBlock), render=(STANDARD), opaque=true,cls=eu.usrv.legacylootgames.gol.blocks.LegacyLightGameBlock
 block:id=%GOLMasterBlock,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor

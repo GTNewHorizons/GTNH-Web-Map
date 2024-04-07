@@ -235,25 +235,25 @@ texture:id=natura/willow_workbench_top,filename=assets/natura/textures/blocks/wi
 
 
 
-# %soil.tainted:* (soil.tainted), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.nether.TaintedSoil
+# %soil.tainted:* (soil.tainted), render=(STANDARD), opaque=true,cls=mods.natura.blocks.nether.TaintedSoil
 block:id=%soil.tainted,data=0,stdrot=true,face0-5=0:natura/tainted_soil
 block:id=%soil.tainted,data=1,stdrot=true,face0-5=0:natura/tainted_farmland_dry
 block:id=%soil.tainted,data=2,stdrot=true,face0-5=0:natura/tainted_farmland_heated
 
-# %heatsand:* (heatsand), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.nether.HeatSand
+# %heatsand:* (heatsand), render=(STANDARD), opaque=true,cls=mods.natura.blocks.nether.HeatSand
 block:id=%heatsand,data=*,stdrot=true,face0-5=0:natura/heatsand
 
-# %NetherFurnace:* (NetherFurnace), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.tech.NetherrackFurnaceBlock
+# %NetherFurnace:* (NetherFurnace), render=(STANDARD), opaque=true,cls=mods.natura.blocks.tech.NetherrackFurnaceBlock
 block:id=%NetherFurnace,data=0,stdrot=true,face0-1=0:natura/nfurnace_top,face2=0:natura/nfurnace_side,face3=0:natura/nfurnace_off,face4-5=0:natura/nfurnace_side
 block:id=%NetherFurnace,data=1,stdrot=true,face3=0:natura/nfurnace_top
 block:id=%NetherFurnace,data=8,stdrot=true,face0-1=0:natura/nfurnace_top,face2=0:natura/nfurnace_side,face3=0:natura/nfurnace_off,face4-5=0:natura/nfurnace_side
 block:id=%NetherFurnace,data=9,stdrot=true,face3=0:natura/nfurnace_top
 
-# %Obelisk:* (Obelisk), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.tech.RespawnObelisk
+# %Obelisk:* (Obelisk), render=(STANDARD), opaque=true,cls=mods.natura.blocks.tech.RespawnObelisk
 block:id=%Obelisk,data=0,stdrot=true,face0-5=0:natura/obelisk
 block:id=%Obelisk,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:natura/obelisk_active
 
-# %NetherGlass:* (NetherGlass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.nether.NetherGlass
+# %NetherGlass:* (NetherGlass), render=(STANDARD), opaque=false,cls=mods.natura.blocks.nether.NetherGlass
 block:id=%NetherGlass,data=0,stdrot=true,face0-5=12000:natura/glass_soul_item
 block:id=%NetherGlass,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:natura/glass_heat_item
 
@@ -276,10 +276,10 @@ block:id=%BrailActivator,data=8,data=9,data=10,data=11,data=12,data=13,data=14,d
 # %NetherHopper:* (NetherHopper), render=mods.natura.client.HopperRender(CUSTOM), opaque=false,cls=mods.natura.blocks.tech.BlazeHopper
 block:id=%NetherHopper,data=*,stdrot=true,face0=0:natura/nhopper_outside,face1=0:natura/nhopper_top,face2-5=0:natura/nhopper_outside
 
-# %NetherPressurePlate:* (NetherPressurePlate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.AlternatePressurePlate
+# %NetherPressurePlate:* (NetherPressurePlate), render=(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.AlternatePressurePlate
 block:id=%NetherPressurePlate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/netherrack
 
-# %NetherButton:* (NetherButton), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
+# %NetherButton:* (NetherButton), render=(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
 block:id=%NetherButton,data=0,stdrot=true,face0-5=0:minecraft/netherrack
 block:id=%NetherButton,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/netherrack
 
@@ -307,7 +307,7 @@ block:id=%Glowshroom,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:natur
 block:id=%Glowshroom,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_blue
 block:id=%Glowshroom,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_green
 
-# %greenGlowshroom:* (greenGlowshroom), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
+# %greenGlowshroom:* (greenGlowshroom), render=(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
 block:id=%greenGlowshroom,data=0,stdrot=true,face0-5=12000:natura/mushroom_inside_green
 block:id=%greenGlowshroom,data=1,stdrot=true,face0=12000:natura/mushroom_inside_green,face1-2=12000:natura/mushroom_skin_green,face3=12000:natura/mushroom_inside_green,face4=12000:natura/mushroom_skin_green,face5=12000:natura/mushroom_inside_green
 block:id=%greenGlowshroom,data=2,stdrot=true,face0=12000:natura/mushroom_inside_green,face1-2=12000:natura/mushroom_skin_green,face3-5=12000:natura/mushroom_inside_green
@@ -323,7 +323,7 @@ block:id=%greenGlowshroom,data=11,data=12,data=13,stdrot=true,face0-5=12000:natu
 block:id=%greenGlowshroom,data=14,stdrot=true,face0-5=12000:natura/mushroom_skin_green
 block:id=%greenGlowshroom,data=15,stdrot=true,face0-5=12000:natura/mushroom_stem_green
 
-# %purpleGlowshroom:* (purpleGlowshroom), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
+# %purpleGlowshroom:* (purpleGlowshroom), render=(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
 block:id=%purpleGlowshroom,data=0,stdrot=true,face0-5=12000:natura/mushroom_inside_purple
 block:id=%purpleGlowshroom,data=1,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1-2=12000:natura/mushroom_skin_purple,face3=12000:natura/mushroom_inside_purple,face4=12000:natura/mushroom_skin_purple,face5=12000:natura/mushroom_inside_purple
 block:id=%purpleGlowshroom,data=2,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1-2=12000:natura/mushroom_skin_purple,face3-5=12000:natura/mushroom_inside_purple
@@ -339,7 +339,7 @@ block:id=%purpleGlowshroom,data=11,data=12,data=13,stdrot=true,face0-5=12000:nat
 block:id=%purpleGlowshroom,data=14,stdrot=true,face0-5=12000:natura/mushroom_skin_purple
 block:id=%purpleGlowshroom,data=15,stdrot=true,face0-5=12000:natura/mushroom_stem_purple
 
-# %blueGlowshroom:* (blueGlowshroom), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
+# %blueGlowshroom:* (blueGlowshroom), render=(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
 block:id=%blueGlowshroom,data=0,stdrot=true,face0-5=12000:natura/mushroom_inside_blue
 block:id=%blueGlowshroom,data=1,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1-2=12000:natura/mushroom_skin_blue,face3=12000:natura/mushroom_inside_blue,face4=12000:natura/mushroom_skin_blue,face5=12000:natura/mushroom_inside_blue
 block:id=%blueGlowshroom,data=2,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1-2=12000:natura/mushroom_skin_blue,face3-5=12000:natura/mushroom_inside_blue
@@ -410,19 +410,19 @@ block:id=%Saguaro,data=3,stdrot=true,face0-5=0:natura/saguaro_fruit
 # %Bluebells:* (Bluebells), render=(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.FlowerBlock
 block:id=%Bluebells,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/flower_bluebells
 
-# %GrassBlock:* (GrassBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.GrassBlock
+# %GrassBlock:* (GrassBlock), render=(STANDARD), opaque=true,cls=mods.natura.blocks.GrassBlock
 block:id=%GrassBlock,data=0,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
 block:id=%GrassBlock,data=1,stdrot=true,colorMult=FF00F3F6,face0-5=17000:natura/grass_top
 block:id=%GrassBlock,data=2,stdrot=true,colorMult=FFC92B00,face0-5=17000:natura/grass_top
 block:id=%GrassBlock,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
 
-# %GrassSlab:* (GrassSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
+# %GrassSlab:* (GrassSlab), render=(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
 block:id=%GrassSlab,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
 block:id=%GrassSlab,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FF00F3F6,face0-5=17000:natura/grass_top
 block:id=%GrassSlab,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FFC92B00,face0-5=17000:natura/grass_top
 block:id=%GrassSlab,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
 
-# %Cloud:* (Cloud), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.CloudBlock
+# %Cloud:* (Cloud), render=(STANDARD), opaque=false,cls=mods.natura.blocks.CloudBlock
 block:id=%Cloud,data=0,stdrot=true,face0-5=12000:natura/cloud_white
 block:id=%Cloud,data=1,stdrot=true,face0-5=12000:natura/cloud_gray
 block:id=%Cloud,data=2,stdrot=true,face0-5=12000:natura/cloud_dark
@@ -482,7 +482,7 @@ block:id=%tree,data=13,stdrot=true,face0-5=0:natura/sakura_bark
 block:id=%tree,data=14,stdrot=true,face0-5=0:natura/ghostwood_bark
 block:id=%tree,data=15,stdrot=true,face0-5=0:natura/hopseed_bark
 
-# %redwood:* (redwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.trees.SimpleLog
+# %redwood:* (redwood), render=(STANDARD), opaque=true,cls=mods.natura.blocks.trees.SimpleLog
 block:id=%redwood,data=0,stdrot=true,face0-5=0:natura/redwood_bark
 block:id=%redwood,data=1,stdrot=true,face0-5=0:natura/redwood_heart
 block:id=%redwood,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:natura/redwood_root
@@ -529,7 +529,7 @@ block:id=%Rare Tree,data=13,stdrot=true,face0-5=0:natura/silverbell_bark
 block:id=%Rare Tree,data=14,stdrot=true,face0-5=0:natura/purpleheart_bark
 block:id=%Rare Tree,data=15,stdrot=true,face0-5=0:natura/tiger_bark
 
-# %Dark Tree:* (Dark Tree), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.trees.DarkTreeBlock
+# %Dark Tree:* (Dark Tree), render=(STANDARD), opaque=true,cls=mods.natura.blocks.trees.DarkTreeBlock
 block:id=%Dark Tree,data=0,stdrot=true,face0-1=0:natura/darkwood_heart,face2-5=0:natura/darkwood_bark
 block:id=%Dark Tree,data=1,stdrot=true,face0-1=0:natura/fusewood_heart,face2-5=0:natura/fusewood_bark
 block:id=%Dark Tree,data=2,data=3,stdrot=true,face0-5=0:natura/darkwood_bark
@@ -542,7 +542,7 @@ block:id=%Dark Tree,data=10,data=11,data=12,stdrot=true,face0-5=0:natura/darkwoo
 block:id=%Dark Tree,data=13,stdrot=true,face0-5=0:natura/fusewood_bark
 block:id=%Dark Tree,data=14,data=15,stdrot=true,face0-5=0:natura/darkwood_bark
 
-# %floraleaves:* (floraleaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeaves
+# %floraleaves:* (floraleaves), render=(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeaves
 block:id=%floraleaves,data=0,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
 block:id=%floraleaves,data=1,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fancy
 block:id=%floraleaves,data=2,stdrot=true,face0-5=2000:natura/hopseed_leaves_fancy
@@ -556,7 +556,7 @@ block:id=%floraleaves,data=12,stdrot=true,face0-5=2000:natura/redwood_leaves_fan
 block:id=%floraleaves,data=13,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fancy
 block:id=%floraleaves,data=14,stdrot=true,face0-5=2000:natura/hopseed_leaves_fancy
 
-# %floraleavesnocolor:* (floraleavesnocolor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeavesNocolor
+# %floraleavesnocolor:* (floraleavesnocolor), render=(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeavesNocolor
 block:id=%floraleavesnocolor,data=0,stdrot=true,face0-5=0:natura/sakura_leaves_fancy
 block:id=%floraleavesnocolor,data=1,stdrot=true,face0-5=0:natura/ghostwood_leaves_fancy
 block:id=%floraleavesnocolor,data=2,stdrot=true,face0-5=0:natura/bloodwood_leaves_fancy
@@ -574,7 +574,7 @@ block:id=%floraleavesnocolor,data=13,stdrot=true,face0-5=0:natura/ghostwood_leav
 block:id=%floraleavesnocolor,data=14,stdrot=true,face0-5=0:natura/bloodwood_leaves_fancy
 block:id=%floraleavesnocolor,data=15,stdrot=true,face0-5=0:natura/willow_leaves_fancy
 
-# %Rare Leaves:* (Rare Leaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.trees.OverworldLeaves
+# %Rare Leaves:* (Rare Leaves), render=(STANDARD), opaque=false,cls=mods.natura.blocks.trees.OverworldLeaves
 block:id=%Rare Leaves,data=0,stdrot=true,face0-5=2000:natura/maple_leaves_fancy
 block:id=%Rare Leaves,data=1,stdrot=true,face0-5=2000:natura/silverbell_leaves_fancy
 block:id=%Rare Leaves,data=2,stdrot=true,face0-5=2000:natura/purpleheart_leaves_fancy
@@ -592,7 +592,7 @@ block:id=%Rare Leaves,data=13,stdrot=true,face0-5=2000:natura/silverbell_leaves_
 block:id=%Rare Leaves,data=14,stdrot=true,face0-5=2000:natura/purpleheart_leaves_fancy
 block:id=%Rare Leaves,data=15,stdrot=true,face0-5=2000:natura/tiger_leaves_fancy
 
-# %Dark Leaves:* (Dark Leaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeavesDark
+# %Dark Leaves:* (Dark Leaves), render=(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeavesDark
 block:id=%Dark Leaves,data=0,stdrot=true,face0-5=0:natura/darkwood_leaves_fancy
 block:id=%Dark Leaves,data=1,stdrot=true,face0-5=0:natura/darkwood_flowering_leaves_fancy
 block:id=%Dark Leaves,data=2,stdrot=true,face0-5=0:natura/darkwood_fruit_leaves_fancy
@@ -610,7 +610,7 @@ block:id=%Dark Leaves,data=13,stdrot=true,face0-5=0:natura/darkwood_flowering_le
 block:id=%Dark Leaves,data=14,stdrot=true,face0-5=0:natura/darkwood_fruit_leaves_fancy
 block:id=%Dark Leaves,data=15,stdrot=true,face0-5=0:natura/fusewood_leaves_fancy
 
-# %planks:* (planks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.trees.Planks
+# %planks:* (planks), render=(STANDARD), opaque=true,cls=mods.natura.blocks.trees.Planks
 block:id=%planks,data=0,stdrot=true,face0-5=0:natura/eucalyptus_planks
 block:id=%planks,data=1,stdrot=true,face0-5=0:natura/sakura_planks
 block:id=%planks,data=2,stdrot=true,face0-5=0:natura/ghostwood_planks
@@ -626,7 +626,7 @@ block:id=%planks,data=11,stdrot=true,face0-5=0:natura/darkwood_planks
 block:id=%planks,data=12,stdrot=true,face0-5=0:natura/fusewood_planks
 block:id=%planks,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/lava_still
 
-# %Natura.workbench:* (Natura.workbench), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.overrides.AlternateWorkbench
+# %Natura.workbench:* (Natura.workbench), render=(STANDARD), opaque=true,cls=mods.natura.blocks.overrides.AlternateWorkbench
 block:id=%Natura.workbench,data=0,stdrot=true,face0=0:natura/eucalyptus_planks,face1=0:natura/eucalyptus_workbench_top,face2=0:natura/eucalyptus_workbench_face,face3=0:natura/eucalyptus_workbench_side,face4=0:natura/eucalyptus_workbench_face,face5=0:natura/eucalyptus_workbench_side
 block:id=%Natura.workbench,data=1,stdrot=true,face0=0:natura/sakura_planks,face1=0:natura/sakura_workbench_top,face2=0:natura/sakura_workbench_face,face3=0:natura/sakura_workbench_side,face4=0:natura/sakura_workbench_face,face5=0:natura/sakura_workbench_side
 block:id=%Natura.workbench,data=2,stdrot=true,face0=0:natura/ghostwood_planks,face1=0:natura/ghostwood_workbench_top,face2=0:natura/ghostwood_workbench_face,face3=0:natura/ghostwood_workbench_side,face4=0:natura/ghostwood_workbench_face,face5=0:natura/ghostwood_workbench_side
@@ -642,7 +642,7 @@ block:id=%Natura.workbench,data=11,stdrot=true,face0=0:natura/darkwood_planks,fa
 block:id=%Natura.workbench,data=12,stdrot=true,face0=0:natura/fusewood_planks,face1=0:natura/fusewood_workbench_top,face2=0:natura/fusewood_workbench_face,face3=0:natura/fusewood_workbench_side,face4=0:natura/fusewood_workbench_face,face5=0:natura/fusewood_workbench_side
 block:id=%Natura.workbench,data=13,data=14,data=15,stdrot=true,face0=0:minecraft/lava_still
 
-# %Natura.bookshelf:* (Natura.bookshelf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.natura.blocks.overrides.AlternateBookshelf
+# %Natura.bookshelf:* (Natura.bookshelf), render=(STANDARD), opaque=true,cls=mods.natura.blocks.overrides.AlternateBookshelf
 block:id=%Natura.bookshelf,data=0,stdrot=true,face0-1=0:natura/eucalyptus_planks,face2-5=0:natura/eucalyptus_bookshelf
 block:id=%Natura.bookshelf,data=1,stdrot=true,face0-1=0:natura/sakura_planks,face2-5=0:natura/sakura_bookshelf
 block:id=%Natura.bookshelf,data=2,stdrot=true,face0-1=0:natura/ghostwood_planks,face2-5=0:natura/ghostwood_bookshelf
@@ -697,7 +697,7 @@ block:id=%stair.darkwood,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5
 # %stair.fusewood:* (stair.fusewood), render=(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
 block:id=%stair.fusewood,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/fusewood_planks
 
-# %plankSlab1:* (plankSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+# %plankSlab1:* (plankSlab1), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
 block:id=%plankSlab1,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
 block:id=%plankSlab1,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
 block:id=%plankSlab1,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
@@ -715,7 +715,7 @@ block:id=%plankSlab1,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:natu
 block:id=%plankSlab1,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
 block:id=%plankSlab1,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
 
-# %plankSlab2:* (plankSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+# %plankSlab2:* (plankSlab2), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
 block:id=%plankSlab2,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
 block:id=%plankSlab2,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
 block:id=%plankSlab2,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
@@ -729,43 +729,43 @@ block:id=%plankSlab2,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natu
 block:id=%plankSlab2,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
 block:id=%plankSlab2,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lava_still
 
-# %trapdoor.eucalyptus:* (trapdoor.eucalyptus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.eucalyptus:* (trapdoor.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.eucalyptus,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_trapdoor
 
-# %trapdoor.sakura:* (trapdoor.sakura), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.sakura:* (trapdoor.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.sakura,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_trapdoor
 
-# %trapdoor.ghostwood:* (trapdoor.ghostwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.ghostwood:* (trapdoor.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.ghostwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_trapdoor
 
-# %trapdoor.redwood:* (trapdoor.redwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.redwood:* (trapdoor.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.redwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_trapdoor
 
-# %trapdoor.bloodwood:* (trapdoor.bloodwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.bloodwood:* (trapdoor.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.bloodwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_trapdoor
 
-# %trapdoor.hopseed:* (trapdoor.hopseed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.hopseed:* (trapdoor.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.hopseed,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_trapdoor
 
-# %trapdoor.maple:* (trapdoor.maple), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.maple:* (trapdoor.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.maple,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_trapdoor
 
-# %trapdoor.amaranth:* (trapdoor.amaranth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.amaranth:* (trapdoor.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.amaranth,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_trapdoor
 
-# %trapdoor.silverbell:* (trapdoor.silverbell), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.silverbell:* (trapdoor.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.silverbell,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_trapdoor
 
-# %trapdoor.tiger:* (trapdoor.tiger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.tiger:* (trapdoor.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.tiger,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_trapdoor
 
-# %trapdoor.willow:* (trapdoor.willow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.willow:* (trapdoor.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.willow,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_trapdoor
 
-# %trapdoor.darkwood:* (trapdoor.darkwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.darkwood:* (trapdoor.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.darkwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_trapdoor
 
-# %trapdoor.fusewood:* (trapdoor.fusewood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.fusewood:* (trapdoor.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.fusewood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_trapdoor
 
 # %Natura.fence:* (Natura.fence), render=mods.natura.client.FenceRender(FENCE), opaque=false,cls=mods.natura.blocks.overrides.AlternateFence
@@ -823,94 +823,94 @@ block:id=%fenceGate.darkwood,data=*,stdrot=true,transparency=TRANSPARENT,patch0-
 # %fenceGate.fusewood:* (fenceGate.fusewood), render=(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
 block:id=%fenceGate.fusewood,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/fusewood_planks
 
-# %pressureplate.eucalyptus:* (pressureplate.eucalyptus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.eucalyptus:* (pressureplate.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.eucalyptus,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
 
-# %pressureplate.sakura:* (pressureplate.sakura), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.sakura:* (pressureplate.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.sakura,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
 
-# %pressureplate.ghostwood:* (pressureplate.ghostwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.ghostwood:* (pressureplate.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.ghostwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
 
-# %pressureplate.redwood:* (pressureplate.redwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.redwood:* (pressureplate.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.redwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
 
-# %pressureplate.bloodwood:* (pressureplate.bloodwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.bloodwood:* (pressureplate.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.bloodwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
 
-# %pressureplate.hopseed:* (pressureplate.hopseed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.hopseed:* (pressureplate.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.hopseed,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
 
-# %pressureplate.maple:* (pressureplate.maple), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.maple:* (pressureplate.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.maple,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
 
-# %pressureplate.amaranth:* (pressureplate.amaranth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.amaranth:* (pressureplate.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.amaranth,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
 
-# %pressureplate.silverbell:* (pressureplate.silverbell), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.silverbell:* (pressureplate.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.silverbell,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
 
-# %pressureplate.tiger:* (pressureplate.tiger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.tiger:* (pressureplate.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.tiger,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
 
-# %pressureplate.willow:* (pressureplate.willow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.willow:* (pressureplate.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.willow,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
 
-# %pressureplate.darkwood:* (pressureplate.darkwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.darkwood:* (pressureplate.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.darkwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
 
-# %pressureplate.fusewood:* (pressureplate.fusewood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.fusewood:* (pressureplate.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 block:id=%pressureplate.fusewood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
 
-# %button.eucalyptus:* (button.eucalyptus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.eucalyptus:* (button.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.eucalyptus,data=0,stdrot=true,face0-5=0:natura/eucalyptus_planks
 block:id=%button.eucalyptus,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
 
-# %button.sakura:* (button.sakura), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.sakura:* (button.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.sakura,data=0,stdrot=true,face0-5=0:natura/sakura_planks
 block:id=%button.sakura,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
 
-# %button.ghostwood:* (button.ghostwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.ghostwood:* (button.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.ghostwood,data=0,stdrot=true,face0-5=0:natura/ghostwood_planks
 block:id=%button.ghostwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
 
-# %button.redwood:* (button.redwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.redwood:* (button.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.redwood,data=0,stdrot=true,face0-5=0:natura/redwood_planks
 block:id=%button.redwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
 
-# %button.bloodwood:* (button.bloodwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.bloodwood:* (button.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.bloodwood,data=0,stdrot=true,face0-5=0:natura/bloodwood_planks
 block:id=%button.bloodwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
 
-# %button.hopseed:* (button.hopseed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.hopseed:* (button.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.hopseed,data=0,stdrot=true,face0-5=0:natura/hopseed_planks
 block:id=%button.hopseed,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
 
-# %button.maple:* (button.maple), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.maple:* (button.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.maple,data=0,stdrot=true,face0-5=0:natura/maple_planks
 block:id=%button.maple,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
 
-# %button.amaranth:* (button.amaranth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.amaranth:* (button.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.amaranth,data=0,stdrot=true,face0-5=0:natura/purpleheart_planks
 block:id=%button.amaranth,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
 
-# %button.silverbell:* (button.silverbell), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.silverbell:* (button.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.silverbell,data=0,stdrot=true,face0-5=0:natura/silverbell_planks
 block:id=%button.silverbell,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
 
-# %button.tiger:* (button.tiger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.tiger:* (button.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.tiger,data=0,stdrot=true,face0-5=0:natura/tiger_planks
 block:id=%button.tiger,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
 
-# %button.willow:* (button.willow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.willow:* (button.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.willow,data=0,stdrot=true,face0-5=0:natura/willow_planks
 block:id=%button.willow,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
 
-# %button.darkwood:* (button.darkwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.darkwood:* (button.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.darkwood,data=0,stdrot=true,face0-5=0:natura/darkwood_planks
 block:id=%button.darkwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
 
-# %button.fusewood:* (button.fusewood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.fusewood:* (button.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 block:id=%button.fusewood,data=0,stdrot=true,face0-5=0:natura/fusewood_planks
 block:id=%button.fusewood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
 

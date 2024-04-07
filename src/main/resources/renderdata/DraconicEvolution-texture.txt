@@ -64,59 +64,59 @@ texture:id=gwm/air,filename=assets/gwmcustom/air.png
 # %xRayBlock:* (xRayBlock), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.XRayBlock
 block:id=%xRayBlock,data=*,stdrot=true,face0-5=0:draconicevolution/xRayBlock
 
-# %weatherController:* (weatherController), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.WeatherController
+# %weatherController:* (weatherController), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.WeatherController
 block:id=%weatherController,data=*,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/weather_controller/weather_controller_top,face2-5=0:draconicevolution/weather_controller/weatherController_sun_active
 
-# %sunDial:* (sunDial), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.SunDial
+# %sunDial:* (sunDial), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.SunDial
 block:id=%sunDial,data=*,stdrot=true,face0-1=0:draconicevolution/machine_side,face2-3=0:draconicevolution/sun_dial_front,face4-5=0:draconicevolution/machine_side
 
-# %draconiumOre:* (draconiumOre), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumOre
+# %draconiumOre:* (draconiumOre), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumOre
 block:id=%draconiumOre,data=*,stdrot=true,face0-5=0:draconicevolution/animated/draconium_ore
 
-# %grinder:* (grinder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.Grinder
+# %grinder:* (grinder), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.Grinder
 block:id=%grinder,data=0,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2=0:draconicevolution/animated/grinder_front_active,face3=0:draconicevolution/animated/machine_fan,face4-5=0:draconicevolution/machine_side
 block:id=%grinder,data=1,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_1,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/machine_fan,face5=0:draconicevolution/animated/grinder_front_active
 block:id=%grinder,data=2,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_2,face2=0:draconicevolution/animated/machine_fan,face3=0:draconicevolution/animated/grinder_front_active,face4-5=0:draconicevolution/machine_side
 block:id=%grinder,data=3,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_3,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/grinder_front_active,face5=0:draconicevolution/animated/machine_fan
 block:id=%grinder,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:draconicevolution/machine_side,face2-5=0:draconicevolution/machine_side
 
-# %potentiometer:* (potentiometer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.Potentiometer
+# %potentiometer:* (potentiometer), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.Potentiometer
 block:id=%potentiometer,data=0,stdrot=true,face0-5=0:draconicevolution/potentiometer/potentiometer_0
 block:id=%potentiometer,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/potentiometer/potentiometer_0
 
-# %rainSensor:* (rainSensor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.RainSensor
+# %rainSensor:* (rainSensor), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.RainSensor
 block:id=%rainSensor,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:draconicevolution/rain_sensor_side,face1=0:draconicevolution/rain_sensor_inactive,face2-5=0:draconicevolution/rain_sensor_side
 block:id=%rainSensor,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:draconicevolution/rain_sensor_side,face1=0:draconicevolution/rain_sensor_active,face2-5=0:draconicevolution/rain_sensor_side
 
 # %particleGenerator:* (particleGenerator), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.ParticleGenerator
 block:id=%particleGenerator,data=*,stdrot=true,face0-5=0:draconicevolution/machine_side
 
-# %playerDetector:* (playerDetector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.PlayerDetector
+# %playerDetector:* (playerDetector), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.PlayerDetector
 block:id=%playerDetector,data=*,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/player_detector_side_active
 
-# %playerDetectorAdvanced:* (playerDetectorAdvanced), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.PlayerDetectorAdvanced
+# %playerDetectorAdvanced:* (playerDetectorAdvanced), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.PlayerDetectorAdvanced
 block:id=%playerDetectorAdvanced,data=*,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/advanced_player_detector_side_active
 
 # %energyInfuser:* (energyInfuser), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.EnergyInfuser
 block:id=%energyInfuser,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/machine_side
 
-# %customSpawner:* (customSpawner), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.CustomSpawner
+# %customSpawner:* (customSpawner), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.CustomSpawner
 block:id=%customSpawner,data=*,stdrot=true,face0-5=0:minecraft/mob_spawner
 
-# %generator:* (generator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.Generator
+# %generator:* (generator), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.Generator
 block:id=%generator,data=0,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_0,face2=0:draconicevolution/animated/generator_front_active,face3=0:draconicevolution/animated/machine_fan,face4-5=0:draconicevolution/machine_side
 block:id=%generator,data=1,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_1,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/machine_fan,face5=0:draconicevolution/animated/generator_front_active
 block:id=%generator,data=2,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_2,face2=0:draconicevolution/animated/machine_fan,face3=0:draconicevolution/animated/generator_front_active,face4-5=0:draconicevolution/machine_side
 block:id=%generator,data=3,stdrot=true,face0=0:draconicevolution/machine_side,face1=0:draconicevolution/machine_top_3,face2-3=0:draconicevolution/machine_side,face4=0:draconicevolution/animated/generator_front_active,face5=0:draconicevolution/animated/machine_fan
 block:id=%generator,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:draconicevolution/machine_side,face2-5=0:draconicevolution/machine_side
 
-# %energyStorageCore:* (energyStorageCore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.EnergyStorageCore
+# %energyStorageCore:* (energyStorageCore), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.EnergyStorageCore
 block:id=%energyStorageCore,data=*,stdrot=true,face0-5=0:draconicevolution/energy_storage_core
 
-# %earth:* (earth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.Earth
+# %earth:* (earth), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.Earth
 block:id=%earth,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
 
-# %draconium:* (draconium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumBlock
+# %draconium:* (draconium), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumBlock
 block:id=%draconium,data=0,stdrot=true,face0-5=0:draconicevolution/draconium_block_0
 block:id=%draconium,data=1,stdrot=true,face0-5=0:draconicevolution/draconium_block_1
 block:id=%draconium,data=2,stdrot=true,face0-5=0:draconicevolution/draconium_block_2
@@ -125,7 +125,7 @@ block:id=%draconium,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,dat
 # %invisibleMultiblock:* (invisibleMultiblock), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.InvisibleMultiblock
 block:id=%invisibleMultiblock,data=*,stdrot=true,face0-5=0:draconicevolution/draconium_block_0
 
-# %energyPylon:* (energyPylon), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.EnergyPylon
+# %energyPylon:* (energyPylon), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.EnergyPylon
 block:id=%energyPylon,data=0,stdrot=true,face0-5=0:draconicevolution/energy_pylon_input
 block:id=%energyPylon,data=1,stdrot=true,face0=0:draconicevolution/energy_pylon_input,face1=0:draconicevolution/energy_pylon_active_face,face2-5=0:draconicevolution/energy_pylon_input
 block:id=%energyPylon,data=2,stdrot=true,face0=0:draconicevolution/energy_pylon_active_face,face1-5=0:draconicevolution/energy_pylon_input
@@ -137,10 +137,10 @@ block:id=%placedItem,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:gwm/a
 # %safetyFlame:* (safetyFlame), render=(FIRE), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.SafetyFlame
 block:id=%safetyFlame,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/fire_layer_0
 
-# %cKeyStone:* (cKeyStone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.CKeyStone
+# %cKeyStone:* (cKeyStone), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.CKeyStone
 block:id=%cKeyStone,data=*,stdrot=true,face0-1=0:minecraft/furnace_top,face2-5=0:draconicevolution/key_stone_active
 
-# %dissEnchanter:* (dissEnchanter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.DissEnchanter
+# %dissEnchanter:* (dissEnchanter), render=(STANDARD), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.DissEnchanter
 block:id=%dissEnchanter,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:draconicevolution/dissEnchanter_bottom,face1=0:draconicevolution/dissEnchanter_top,face2-5=0:draconicevolution/dissEnchanter_side
 
 # %teleporterStand:* (teleporterStand), render=com.brandon3055.draconicevolution.client.render.block.RenderTeleporterStand(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.TeleporterStand
@@ -149,16 +149,16 @@ block:id=%teleporterStand,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 # %draconiumChest:* (draconiumChest), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.DraconiumChest
 block:id=%draconiumChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/draconiumChest
 
-# %draconicBlock:* (draconicBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconicBlock
+# %draconicBlock:* (draconicBlock), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.DraconicBlock
 block:id=%draconicBlock,data=*,stdrot=true,face0-1=0:draconicevolution/draconic_block_blank,face2-5=0:draconicevolution/draconic_block
 
 # %energyCrystal:* (energyCrystal), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.machine.EnergyCrystal
 block:id=%energyCrystal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:draconicevolution/draconium_block_0
 
-# %infusedObsidian:* (infusedObsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.InfusedObsidian
+# %infusedObsidian:* (infusedObsidian), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.InfusedObsidian
 block:id=%infusedObsidian,data=*,stdrot=true,face0-5=0:draconicevolution/animated/infusedObsidian
 
-# %dislocatorReceptacle:* (dislocatorReceptacle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.DislocatorReceptacle
+# %dislocatorReceptacle:* (dislocatorReceptacle), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.DislocatorReceptacle
 block:id=%dislocatorReceptacle,data=*,stdrot=true,face0-5=0:draconicevolution/animated/dislocatorReceptacle_active
 
 # %portal:* (portal), render=com.brandon3055.draconicevolution.client.render.block.RenderPortal(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.Portal
@@ -167,7 +167,7 @@ block:id=%portal,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
 # %reactorCore:* (reactorCore), render=(CUSTOM), opaque=false,cls=com.brandon3055.draconicevolution.common.blocks.multiblock.ReactorCore
 block:id=%reactorCore,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
 
-# %flowGate:* (flowGate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.FlowGate
+# %flowGate:* (flowGate), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.FlowGate
 block:id=%flowGate,data=0,stdrot=true,face0=0:draconicevolution/machine_io_o,face1=0:draconicevolution/machine_io_i,face2-5=0:draconicevolution/gates/fluxGate1
 block:id=%flowGate,data=1,stdrot=true,face0=0:draconicevolution/machine_io_i,face1=0:draconicevolution/machine_io_o,face2-5=0:draconicevolution/gates/fluxGate3
 block:id=%flowGate,data=2,stdrot=true,face0-1=0:draconicevolution/gates/fluxGate3,face2=0:draconicevolution/machine_io_o,face3=0:draconicevolution/machine_io_i,face4=0:draconicevolution/gates/fluxGate2,face5=0:draconicevolution/gates/fluxGate0
@@ -194,5 +194,5 @@ block:id=%reactorEnergyInjector,data=*,stdrot=true,face0-5=0:draconicevolution/t
 # %chaosCrystal:* (chaosCrystal), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.ChaosCrystal
 block:id=%chaosCrystal,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
 
-# %longRangeDislocator:* (longRangeDislocator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.LongRangeDislocator
+# %longRangeDislocator:* (longRangeDislocator), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.LongRangeDislocator
 block:id=%longRangeDislocator,data=*,stdrot=true,face0-1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/teleporter_front

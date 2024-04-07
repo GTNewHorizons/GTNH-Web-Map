@@ -68,5 +68,5 @@ block:id=%uvFloodlight,data=10,stdrot=true,face0-3=0:floodlights/uvFloodlight_si
 block:id=%uvFloodlight,data=11,stdrot=true,face0-3=0:floodlights/uvFloodlight_side,face4=0:floodlights/uvFloodlight_bot,face5=0:floodlights/uvFloodlight_top_on
 block:id=%uvFloodlight,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:floodlights/uvFloodlight_side
 
-# %tileUVLight:* (tileUVLight), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=de.keridos.floodlights.block.BlockUVLightBlock
+# %tileUVLight:* (tileUVLight), render=(STANDARD), opaque=false,cls=de.keridos.floodlights.block.BlockUVLightBlock
 block:id=%tileUVLight,data=*,stdrot=true,face0-5=0:floodlights/tileUVLight

@@ -80,30 +80,30 @@ block:id=%bw.werkstoffblockscasing.01,data=*,stdrot=true,face0-5=0:minecraft/sto
 # %bw.werkstoffblockscasingadvanced.01:* (bw.werkstoffblockscasingadvanced.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGeneratedBlocks_Casing
 block:id=%bw.werkstoffblockscasingadvanced.01,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %BW_FakeGlasBlock:* (BW_FakeGlasBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks
+# %BW_FakeGlasBlock:* (BW_FakeGlasBlock), render=(STANDARD), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks
 block:id=%BW_FakeGlasBlock,data=*,stdrot=true,face0-5=12000:bartworks/BoronSilicateGlassBlockRandlos
 
-# %BW_FakeGlasBlocks2:* (BW_FakeGlasBlocks2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks2
+# %BW_FakeGlasBlocks2:* (BW_FakeGlasBlocks2), render=(STANDARD), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks2
 block:id=%BW_FakeGlasBlocks2,data=*,stdrot=true,face0-5=12000:bartworks/BoronSilicateGlassBlockRandlos
 
-# %BW_Machinery_Casings:* (BW_Machinery_Casings), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
+# %BW_Machinery_Casings:* (BW_Machinery_Casings), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
 block:id=%BW_Machinery_Casings,data=0,stdrot=true,face0-5=0:bartworks/NickelFerriteBlocks
 block:id=%BW_Machinery_Casings,data=1,stdrot=true,face0-5=0:bartworks/TransformerCoil
 block:id=%BW_Machinery_Casings,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bartworks/NickelFerriteBlocks
 
-# %BWRotorBlock:* (BWRotorBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer_MachineBlock
+# %BWRotorBlock:* (BWRotorBlock), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer_MachineBlock
 block:id=%BWRotorBlock,data=*,stdrot=true,face0-5=0:bartworks/BWRotorBlock
 
-# %BWHeatedWaterPumpBlock:* (BWHeatedWaterPumpBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer
+# %BWHeatedWaterPumpBlock:* (BWHeatedWaterPumpBlock), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer
 block:id=%BWHeatedWaterPumpBlock,data=*,stdrot=true,face0=0:bartworks/heatedWaterPumpDown,face1=0:bartworks/heatedWaterPumpTop,face2-5=0:bartworks/heatedWaterPumpSide
 
-# %BWExpReversePumpBlock:* (BWExpReversePumpBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer
+# %BWExpReversePumpBlock:* (BWExpReversePumpBlock), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer
 block:id=%BWExpReversePumpBlock,data=*,stdrot=true,face0-5=0:bartworks/ExpReversePump
 
-# %BW_ItemBlocks:* (BW_ItemBlocks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
+# %BW_ItemBlocks:* (BW_ItemBlocks), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
 block:id=%BW_ItemBlocks,data=0,stdrot=true,face0-5=0:bartworks/EtchedLapisCell
 block:id=%BW_ItemBlocks,data=1,stdrot=true,face0-5=0:bartworks/PlatedLapisCell
 block:id=%BW_ItemBlocks,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bartworks/EtchedLapisCell
 
-# %GT_LESU_CASING:* (GT_LESU_CASING), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
+# %GT_LESU_CASING:* (GT_LESU_CASING), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
 block:id=%GT_LESU_CASING,data=*,stdrot=true,face0-5=0:bartworks/LESU_CELL

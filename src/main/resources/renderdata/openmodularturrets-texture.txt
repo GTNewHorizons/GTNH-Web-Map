@@ -45,19 +45,19 @@ texture:id=openmodularturrets/turretBaseTierTwo,filename=assets/openmodularturre
 
 
 
-# %baseTierWood:* (baseTierWood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierOne
+# %baseTierWood:* (baseTierWood), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierOne
 block:id=%baseTierWood,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierOne
 
-# %baseTierOneBlock:* (baseTierOneBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierTwo
+# %baseTierOneBlock:* (baseTierOneBlock), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierTwo
 block:id=%baseTierOneBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierTwo
 
-# %baseTierTwoBlock:* (baseTierTwoBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierThree
+# %baseTierTwoBlock:* (baseTierTwoBlock), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierThree
 block:id=%baseTierTwoBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierThree
 
-# %baseTierThreeBlock:* (baseTierThreeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierFour
+# %baseTierThreeBlock:* (baseTierThreeBlock), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierFour
 block:id=%baseTierThreeBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierFour
 
-# %baseTierFourBlock:* (baseTierFourBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierFive
+# %baseTierFourBlock:* (baseTierFourBlock), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.turretbases.BlockTurretBaseTierFive
 block:id=%baseTierFourBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierFive
 
 # %expanderPowerTierOne:* (expanderPowerTierOne), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderPowerTierOne
@@ -90,19 +90,19 @@ block:id=%expanderInvTierFour,data=*,stdrot=true,transparency=TRANSPARENT,face0-
 # %expanderInvTierFive:* (expanderInvTierFive), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.expanders.BlockExpanderInvTierFive
 block:id=%expanderInvTierFive,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/expanderInvTierFive
 
-# %hardWallTierOne:* (hardWallTierOne), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierOne
+# %hardWallTierOne:* (hardWallTierOne), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierOne
 block:id=%hardWallTierOne,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierOne
 
-# %hardWallTierTwo:* (hardWallTierTwo), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierTwo
+# %hardWallTierTwo:* (hardWallTierTwo), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierTwo
 block:id=%hardWallTierTwo,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierTwo
 
-# %hardWallTierThree:* (hardWallTierThree), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierThree
+# %hardWallTierThree:* (hardWallTierThree), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierThree
 block:id=%hardWallTierThree,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierThree
 
-# %hardWallTierFour:* (hardWallTierFour), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierFour
+# %hardWallTierFour:* (hardWallTierFour), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierFour
 block:id=%hardWallTierFour,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierFour
 
-# %hardWallTierFive:* (hardWallTierFive), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierFive
+# %hardWallTierFive:* (hardWallTierFive), render=(STANDARD), opaque=true,cls=openmodularturrets.blocks.misc.BlockHardWallTierFive
 block:id=%hardWallTierFive,data=*,stdrot=true,face0-5=0:openmodularturrets/hardWallTierFive
 
 # %fenceTierOne:* (fenceTierOne), render=(PANE), opaque=false,cls=openmodularturrets.blocks.misc.BlockFenceTierOne

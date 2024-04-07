@@ -133,10 +133,10 @@ texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.p
 
 
 
-# %eternalSpring:* (eternalSpring), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.core.BlockSpring
+# %eternalSpring:* (eternalSpring), render=(STANDARD), opaque=true,cls=buildcraft.core.BlockSpring
 block:id=%eternalSpring,data=*,stdrot=true,face0-5=0:minecraft/bedrock
 
-# %buildToolBlock:* (buildToolBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.core.BlockBuildTool
+# %buildToolBlock:* (buildToolBlock), render=(STANDARD), opaque=true,cls=buildcraft.core.BlockBuildTool
 block:id=%buildToolBlock,data=*,stdrot=true,face0-5=0:buildcraftcore/laserBox/blockRedLaser
 
 # %engineBlock:* (engineBlock), render=buildcraft.core.render.RenderingEntityBlocks(CUSTOM), opaque=false,cls=buildcraft.core.BlockEngine
@@ -207,7 +207,7 @@ block:id=%libraryBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=
 # %constructionMarkerBlock:* (constructionMarkerBlock), render=buildcraft.core.render.RenderingMarkers(TORCH), opaque=false,cls=buildcraft.builders.BlockConstructionMarker
 block:id=%constructionMarkerBlock,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:BuildCraftBuilders/constructionMarkerBlock/default
 
-# %filteredBufferBlock:* (filteredBufferBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.transport.BlockFilteredBuffer
+# %filteredBufferBlock:* (filteredBufferBlock), render=(STANDARD), opaque=true,cls=buildcraft.transport.BlockFilteredBuffer
 block:id=%filteredBufferBlock,data=*,stdrot=true,face0-5=0:BuildCraftTransport/filteredBufferBlock/default
 
 # %pipeBlock:* (pipeBlock), render=buildcraft.transport.render.PipeRendererWorld(CUSTOM), opaque=false,cls=buildcraft.transport.BlockGenericPipeCompat
@@ -231,7 +231,7 @@ block:id=%laserTableBlock,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 block:id=%laserTableBlock,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/stampingTable/default
 block:id=%laserTableBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:BuildCraftSilicon/assemblyTable/default
 
-# %packagerBlock:* (packagerBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.silicon.BlockPackager
+# %packagerBlock:* (packagerBlock), render=(STANDARD), opaque=true,cls=buildcraft.silicon.BlockPackager
 block:id=%packagerBlock,data=*,stdrot=true,face0=0:BuildCraftSilicon/packagerBlock/bottom,face1=0:BuildCraftSilicon/packagerBlock/top,face2-5=0:BuildCraftSilicon/packagerBlock/side
 
 # %miningWellBlock:* (miningWellBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockMiningWellCompat
@@ -242,16 +242,16 @@ block:id=%miningWellBlock,data=4,stdrot=true,face0=0:BuildCraftFactory/miningWel
 block:id=%miningWellBlock,data=5,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2-3=0:BuildCraftFactory/miningWellBlock/side,face4=0:BuildCraftFactory/miningWellBlock/back,face5=0:BuildCraftFactory/miningWellBlock/front
 block:id=%miningWellBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:BuildCraftFactory/miningWellBlock/bottom,face1=0:BuildCraftFactory/miningWellBlock/top,face2=0:BuildCraftFactory/miningWellBlock/back,face3=0:BuildCraftFactory/miningWellBlock/front,face4-5=0:BuildCraftFactory/miningWellBlock/side
 
-# %plainPipeBlock:* (plainPipeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=buildcraft.factory.BlockPlainPipe
+# %plainPipeBlock:* (plainPipeBlock), render=(STANDARD), opaque=false,cls=buildcraft.factory.BlockPlainPipe
 block:id=%plainPipeBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraftfactory/plainPipeBlock/default
 
-# %autoWorkbenchBlock:* (autoWorkbenchBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.factory.BlockAutoWorkbench
+# %autoWorkbenchBlock:* (autoWorkbenchBlock), render=(STANDARD), opaque=true,cls=buildcraft.factory.BlockAutoWorkbench
 block:id=%autoWorkbenchBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/autoWorkbenchBlock/bottom,face1=0:BuildCraftFactory/autoWorkbenchBlock/top,face2-5=0:BuildCraftFactory/autoWorkbenchBlock/side
 
-# %tankBlock:* (tankBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=buildcraft.factory.BlockTank
+# %tankBlock:* (tankBlock), render=(STANDARD), opaque=false,cls=buildcraft.factory.BlockTank
 block:id=%tankBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:BuildCraftFactory/tankBlock/topbottom,face2-5=0:BuildCraftFactory/tankBlock/side
 
-# %pumpBlock:* (pumpBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=buildcraft.factory.BlockPump
+# %pumpBlock:* (pumpBlock), render=(STANDARD), opaque=true,cls=buildcraft.factory.BlockPump
 block:id=%pumpBlock,data=*,stdrot=true,face0=0:BuildCraftFactory/pumpBlock/bottom,face1=0:BuildCraftFactory/pumpBlock/top,face2-5=0:BuildCraftFactory/pumpBlock/side
 
 # %floodGateBlock:* (floodGateBlock), render=buildcraft.core.lib.render.RenderBlockComplex(CUSTOM), opaque=true,cls=buildcraft.factory.BlockFloodGate
