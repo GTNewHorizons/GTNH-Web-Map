@@ -1,4 +1,4 @@
-# MagicBees 2.6.4-GTNH
+# MagicBees 2.7.14-GTNH
 version:1.7
 modname:MagicBees
 
@@ -7,6 +7,9 @@ cfgfile:config/MagicBees.cfg
 
 
 texturepath:assets/magicbees/textures/blocks/
+texture:id=magicbees/apimancersdrainer.0,filename=assets/magicbees/textures/blocks/apimancersdrainer.0.png
+texture:id=magicbees/apimancersdrainer.1,filename=assets/magicbees/textures/blocks/apimancersdrainer.1.png
+texture:id=magicbees/apimancersdrainer.2,filename=assets/magicbees/textures/blocks/apimancersdrainer.2.png
 texture:id=magicbees/beehive.0.side,filename=assets/magicbees/textures/blocks/beehive.0.side.png
 texture:id=magicbees/beehive.0.top,filename=assets/magicbees/textures/blocks/beehive.0.top.png
 texture:id=magicbees/beehive.1.side,filename=assets/magicbees/textures/blocks/beehive.1.side.png
@@ -32,10 +35,10 @@ texture:id=minecraft/planks_big_oak,filename=assets/minecraft/textures/blocks/pl
 
 
 
-# %magicbees.enchantedEarth:* (magicbees.enchantedEarth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=magicbees.block.BlockEnchantedEarth
+# %magicbees.enchantedEarth:* (magicbees.enchantedEarth), render=(STANDARD), opaque=true,cls=magicbees.block.BlockEnchantedEarth
 block:id=%magicbees.enchantedEarth,data=*,stdrot=true,face0=0:magicbees/enchantedEarth,face1=0:magicbees/enchantedEarth_top,face2-5=0:magicbees/enchantedEarth
 
-# %hive:* (hive), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=magicbees.block.BlockHive
+# %hive:* (hive), render=(STANDARD), opaque=true,cls=magicbees.block.BlockHive
 block:id=%hive,data=0,stdrot=true,face0-1=0:magicbees/beehive.0.top,face2-5=0:magicbees/beehive.0.side
 block:id=%hive,data=1,stdrot=true,face0-1=0:magicbees/beehive.1.top,face2-5=0:magicbees/beehive.1.side
 block:id=%hive,data=2,stdrot=true,face0-1=0:magicbees/beehive.2.top,face2-5=0:magicbees/beehive.2.side
@@ -47,11 +50,14 @@ block:id=%hive,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=
 # %effectJar:* (effectJar), render=(CUSTOM), opaque=false,cls=magicbees.block.BlockEffectJar
 block:id=%effectJar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/glass
 
-# %magicApiary:* (magicApiary), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=magicbees.block.BlockMagicApiary
+# %magicApiary:* (magicApiary), render=(STANDARD), opaque=true,cls=magicbees.block.BlockMagicApiary
 block:id=%magicApiary,data=*,stdrot=true,face0=0:magicbees/thaumicapiary.0,face1=0:magicbees/thaumicapiary.1,face2-3=0:magicbees/thaumicapiary.2,face4-5=0:magicbees/thaumicapiary.4
 
-# %manaAuraProvider:* (manaAuraProvider), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=magicbees.block.BlockManaAuraProvider
+# %manaAuraProvider:* (manaAuraProvider), render=(STANDARD), opaque=true,cls=magicbees.block.BlockManaAuraProvider
 block:id=%manaAuraProvider,data=*,stdrot=true,face0-1=0:magicbees/manaApiaryBooster1,face2-5=0:magicbees/manaApiaryBooster0
 
 # %visAuraProvider:* (visAuraProvider), render=(CUSTOM), opaque=false,cls=magicbees.block.BlockVisAuraProvider
 block:id=%visAuraProvider,data=*,stdrot=true,face0-5=0:minecraft/planks_big_oak
+
+# %apimancersDrainer:* (apimancersDrainer), render=(STANDARD), opaque=true,cls=magicbees.block.BlockApimancersDrainer
+block:id=%apimancersDrainer,data=*,stdrot=true,face0=0:magicbees/apimancersdrainer.0,face1=0:magicbees/apimancersdrainer.1,face2-5=0:magicbees/apimancersdrainer.2
