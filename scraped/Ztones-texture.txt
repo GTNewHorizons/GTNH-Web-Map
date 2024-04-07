@@ -562,31 +562,31 @@ texture:id=ztones/stoneTile,filename=assets/ztones/textures/blocks/stoneTile.png
 
 
 
-# %stoneTile:* (stoneTile), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.VBlocks.BlockStoneTile
+# %stoneTile:* (stoneTile), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.VBlocks.BlockStoneTile
 block:id=%stoneTile,data=*,stdrot=true,face0-5=0:ztones/stoneTile
 
-# %cleanDirt:* (cleanDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.VBlocks.BlockCleanDirt
+# %cleanDirt:* (cleanDirt), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.VBlocks.BlockCleanDirt
 block:id=%cleanDirt,data=*,stdrot=true,face0=0:ztones/cleanDirt,face1=0:ztones/cleanDirt1,face2-5=0:ztones/cleanDirt
 
-# %booster:* (booster), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockBooster
+# %booster:* (booster), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockBooster
 block:id=%booster,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ztones/booster
 
-# %lampf:* (lampf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampFlat
+# %lampf:* (lampf), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampFlat
 block:id=%lampf,data=0,stdrot=true,face0-5=12000:ztones/lampf
 block:id=%lampf,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:ztones/lampf
 
-# %lampt:* (lampt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampTransparent
+# %lampt:* (lampt), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampTransparent
 block:id=%lampt,data=0,stdrot=true,face0-5=12000:ztones/lampt
 block:id=%lampt,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:ztones/lampt
 
-# %lampb:* (lampb), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampBlack
+# %lampb:* (lampb), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockLampBlack
 block:id=%lampb,data=0,stdrot=true,face0-5=12000:ztones/lampb
 block:id=%lampb,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:ztones/lampb
 
-# %auroraBlock:* (auroraBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.VBlocks.BlockAurora
+# %auroraBlock:* (auroraBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.VBlocks.BlockAurora
 block:id=%auroraBlock,data=*,stdrot=true,face0-5=0:ztones/aurora
 
-# %tile.agonBlock:* (tile.agonBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockAgon
+# %tile.agonBlock:* (tile.agonBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockAgon
 block:id=%tile.agonBlock,data=0,stdrot=true,face0-5=0:ztones/sets/agon/agon_ (0)
 block:id=%tile.agonBlock,data=1,stdrot=true,face0-5=0:ztones/sets/agon/agon_ (1)
 block:id=%tile.agonBlock,data=2,stdrot=true,face0-5=0:ztones/sets/agon/agon_ (2)
@@ -604,7 +604,7 @@ block:id=%tile.agonBlock,data=13,stdrot=true,face0-5=0:ztones/sets/agon/agon_ (1
 block:id=%tile.agonBlock,data=14,stdrot=true,face0-5=0:ztones/sets/agon/agon_ (14)
 block:id=%tile.agonBlock,data=15,stdrot=true,face0-5=0:ztones/sets/agon/agon_ (15)
 
-# %tile.bittBlock:* (tile.bittBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockBitt
+# %tile.bittBlock:* (tile.bittBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockBitt
 block:id=%tile.bittBlock,data=0,stdrot=true,face0-5=0:ztones/sets/bitt/bitt_ (0)
 block:id=%tile.bittBlock,data=1,stdrot=true,face0-5=0:ztones/sets/bitt/bitt_ (1)
 block:id=%tile.bittBlock,data=2,stdrot=true,face0-5=0:ztones/sets/bitt/bitt_ (2)
@@ -622,7 +622,7 @@ block:id=%tile.bittBlock,data=13,stdrot=true,face0-5=0:ztones/sets/bitt/bitt_ (1
 block:id=%tile.bittBlock,data=14,stdrot=true,face0-5=0:ztones/sets/bitt/bitt_ (14)
 block:id=%tile.bittBlock,data=15,stdrot=true,face0-5=0:ztones/sets/bitt/bitt_ (15)
 
-# %tile.crayBlock:* (tile.crayBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockCray
+# %tile.crayBlock:* (tile.crayBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockCray
 block:id=%tile.crayBlock,data=0,stdrot=true,face0-5=0:ztones/sets/cray/cray_ (0)
 block:id=%tile.crayBlock,data=1,stdrot=true,face0-5=0:ztones/sets/cray/cray_ (1)
 block:id=%tile.crayBlock,data=2,stdrot=true,face0-5=0:ztones/sets/cray/cray_ (2)
@@ -640,7 +640,7 @@ block:id=%tile.crayBlock,data=13,stdrot=true,face0-5=0:ztones/sets/cray/cray_ (1
 block:id=%tile.crayBlock,data=14,stdrot=true,face0-5=0:ztones/sets/cray/cray_ (14)
 block:id=%tile.crayBlock,data=15,stdrot=true,face0-5=0:ztones/sets/cray/cray_ (15)
 
-# %tile.fortBlock:* (tile.fortBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockFort
+# %tile.fortBlock:* (tile.fortBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockFort
 block:id=%tile.fortBlock,data=0,stdrot=true,face0-5=0:ztones/sets/fort/fort_ (0)
 block:id=%tile.fortBlock,data=1,stdrot=true,face0-5=0:ztones/sets/fort/fort_ (1)
 block:id=%tile.fortBlock,data=2,stdrot=true,face0-5=0:ztones/sets/fort/fort_ (2)
@@ -658,7 +658,7 @@ block:id=%tile.fortBlock,data=13,stdrot=true,face0-5=0:ztones/sets/fort/fort_ (1
 block:id=%tile.fortBlock,data=14,stdrot=true,face0-5=0:ztones/sets/fort/fort_ (14)
 block:id=%tile.fortBlock,data=15,stdrot=true,face0-5=0:ztones/sets/fort/fort_ (15)
 
-# %tile.iszmBlock:* (tile.iszmBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockIszm
+# %tile.iszmBlock:* (tile.iszmBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockIszm
 block:id=%tile.iszmBlock,data=0,stdrot=true,face0-5=0:ztones/sets/iszm/iszm_ (0)
 block:id=%tile.iszmBlock,data=1,stdrot=true,face0-5=0:ztones/sets/iszm/iszm_ (1)
 block:id=%tile.iszmBlock,data=2,stdrot=true,face0-5=0:ztones/sets/iszm/iszm_ (2)
@@ -676,7 +676,7 @@ block:id=%tile.iszmBlock,data=13,stdrot=true,face0-5=0:ztones/sets/iszm/iszm_ (1
 block:id=%tile.iszmBlock,data=14,stdrot=true,face0-5=0:ztones/sets/iszm/iszm_ (14)
 block:id=%tile.iszmBlock,data=15,stdrot=true,face0-5=0:ztones/sets/iszm/iszm_ (15)
 
-# %tile.jeltBlock:* (tile.jeltBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockJelt
+# %tile.jeltBlock:* (tile.jeltBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockJelt
 block:id=%tile.jeltBlock,data=0,stdrot=true,face0-5=0:ztones/sets/jelt/jelt_ (0)
 block:id=%tile.jeltBlock,data=1,stdrot=true,face0-5=0:ztones/sets/jelt/jelt_ (1)
 block:id=%tile.jeltBlock,data=2,stdrot=true,face0-5=0:ztones/sets/jelt/jelt_ (2)
@@ -694,7 +694,7 @@ block:id=%tile.jeltBlock,data=13,stdrot=true,face0-5=0:ztones/sets/jelt/jelt_ (1
 block:id=%tile.jeltBlock,data=14,stdrot=true,face0-5=0:ztones/sets/jelt/jelt_ (14)
 block:id=%tile.jeltBlock,data=15,stdrot=true,face0-5=0:ztones/sets/jelt/jelt_ (15)
 
-# %tile.korpBlock:* (tile.korpBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockKorp
+# %tile.korpBlock:* (tile.korpBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockKorp
 block:id=%tile.korpBlock,data=0,stdrot=true,face0-5=0:ztones/sets/korp/korp_ (0)
 block:id=%tile.korpBlock,data=1,stdrot=true,face0-5=0:ztones/sets/korp/korp_ (1)
 block:id=%tile.korpBlock,data=2,stdrot=true,face0-5=0:ztones/sets/korp/korp_ (2)
@@ -712,7 +712,7 @@ block:id=%tile.korpBlock,data=13,stdrot=true,face0-5=0:ztones/sets/korp/korp_ (1
 block:id=%tile.korpBlock,data=14,stdrot=true,face0-5=0:ztones/sets/korp/korp_ (14)
 block:id=%tile.korpBlock,data=15,stdrot=true,face0-5=0:ztones/sets/korp/korp_ (15)
 
-# %tile.krypBlock:* (tile.krypBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockKryp
+# %tile.krypBlock:* (tile.krypBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockKryp
 block:id=%tile.krypBlock,data=0,stdrot=true,face0-5=0:ztones/sets/kryp/kryp_ (0)
 block:id=%tile.krypBlock,data=1,stdrot=true,face0-5=0:ztones/sets/kryp/kryp_ (1)
 block:id=%tile.krypBlock,data=2,stdrot=true,face0-5=0:ztones/sets/kryp/kryp_ (2)
@@ -730,7 +730,7 @@ block:id=%tile.krypBlock,data=13,stdrot=true,face0-5=0:ztones/sets/kryp/kryp_ (1
 block:id=%tile.krypBlock,data=14,stdrot=true,face0-5=0:ztones/sets/kryp/kryp_ (14)
 block:id=%tile.krypBlock,data=15,stdrot=true,face0-5=0:ztones/sets/kryp/kryp_ (15)
 
-# %tile.lairBlock:* (tile.lairBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockLair
+# %tile.lairBlock:* (tile.lairBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockLair
 block:id=%tile.lairBlock,data=0,stdrot=true,face0-5=0:ztones/sets/lair/lair_ (0)
 block:id=%tile.lairBlock,data=1,stdrot=true,face0-5=0:ztones/sets/lair/lair_ (1)
 block:id=%tile.lairBlock,data=2,stdrot=true,face0-5=0:ztones/sets/lair/lair_ (2)
@@ -748,7 +748,7 @@ block:id=%tile.lairBlock,data=13,stdrot=true,face0-5=0:ztones/sets/lair/lair_ (1
 block:id=%tile.lairBlock,data=14,stdrot=true,face0-5=0:ztones/sets/lair/lair_ (14)
 block:id=%tile.lairBlock,data=15,stdrot=true,face0-5=0:ztones/sets/lair/lair_ (15)
 
-# %tile.laveBlock:* (tile.laveBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockLave
+# %tile.laveBlock:* (tile.laveBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockLave
 block:id=%tile.laveBlock,data=0,stdrot=true,face0-5=0:ztones/sets/lave/lave_ (0)
 block:id=%tile.laveBlock,data=1,stdrot=true,face0-5=0:ztones/sets/lave/lave_ (1)
 block:id=%tile.laveBlock,data=2,stdrot=true,face0-5=0:ztones/sets/lave/lave_ (2)
@@ -766,7 +766,7 @@ block:id=%tile.laveBlock,data=13,stdrot=true,face0-5=0:ztones/sets/lave/lave_ (1
 block:id=%tile.laveBlock,data=14,stdrot=true,face0-5=0:ztones/sets/lave/lave_ (14)
 block:id=%tile.laveBlock,data=15,stdrot=true,face0-5=0:ztones/sets/lave/lave_ (15)
 
-# %tile.mintBlock:* (tile.mintBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockMint
+# %tile.mintBlock:* (tile.mintBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockMint
 block:id=%tile.mintBlock,data=0,stdrot=true,face0-5=0:ztones/sets/mint/mint_ (0)
 block:id=%tile.mintBlock,data=1,stdrot=true,face0-5=0:ztones/sets/mint/mint_ (1)
 block:id=%tile.mintBlock,data=2,stdrot=true,face0-5=0:ztones/sets/mint/mint_ (2)
@@ -784,7 +784,7 @@ block:id=%tile.mintBlock,data=13,stdrot=true,face0-5=0:ztones/sets/mint/mint_ (1
 block:id=%tile.mintBlock,data=14,stdrot=true,face0-5=0:ztones/sets/mint/mint_ (14)
 block:id=%tile.mintBlock,data=15,stdrot=true,face0-5=0:ztones/sets/mint/mint_ (15)
 
-# %tile.mystBlock:* (tile.mystBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockMyst
+# %tile.mystBlock:* (tile.mystBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockMyst
 block:id=%tile.mystBlock,data=0,stdrot=true,face0-5=0:ztones/sets/myst/myst_ (0)
 block:id=%tile.mystBlock,data=1,stdrot=true,face0-5=0:ztones/sets/myst/myst_ (1)
 block:id=%tile.mystBlock,data=2,stdrot=true,face0-5=0:ztones/sets/myst/myst_ (2)
@@ -802,7 +802,7 @@ block:id=%tile.mystBlock,data=13,stdrot=true,face0-5=0:ztones/sets/myst/myst_ (1
 block:id=%tile.mystBlock,data=14,stdrot=true,face0-5=0:ztones/sets/myst/myst_ (14)
 block:id=%tile.mystBlock,data=15,stdrot=true,face0-5=0:ztones/sets/myst/myst_ (15)
 
-# %tile.redsBlock:* (tile.redsBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockReds
+# %tile.redsBlock:* (tile.redsBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockReds
 block:id=%tile.redsBlock,data=0,stdrot=true,face0-5=0:ztones/sets/reds/reds_ (0)
 block:id=%tile.redsBlock,data=1,stdrot=true,face0-5=0:ztones/sets/reds/reds_ (1)
 block:id=%tile.redsBlock,data=2,stdrot=true,face0-5=0:ztones/sets/reds/reds_ (2)
@@ -820,7 +820,7 @@ block:id=%tile.redsBlock,data=13,stdrot=true,face0-5=0:ztones/sets/reds/reds_ (1
 block:id=%tile.redsBlock,data=14,stdrot=true,face0-5=0:ztones/sets/reds/reds_ (14)
 block:id=%tile.redsBlock,data=15,stdrot=true,face0-5=0:ztones/sets/reds/reds_ (15)
 
-# %tile.roenBlock:* (tile.roenBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockRoen
+# %tile.roenBlock:* (tile.roenBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockRoen
 block:id=%tile.roenBlock,data=0,stdrot=true,face0-5=0:ztones/sets/roen/roen_ (0)
 block:id=%tile.roenBlock,data=1,stdrot=true,face0-5=0:ztones/sets/roen/roen_ (1)
 block:id=%tile.roenBlock,data=2,stdrot=true,face0-5=0:ztones/sets/roen/roen_ (2)
@@ -838,7 +838,7 @@ block:id=%tile.roenBlock,data=13,stdrot=true,face0-5=0:ztones/sets/roen/roen_ (1
 block:id=%tile.roenBlock,data=14,stdrot=true,face0-5=0:ztones/sets/roen/roen_ (14)
 block:id=%tile.roenBlock,data=15,stdrot=true,face0-5=0:ztones/sets/roen/roen_ (15)
 
-# %tile.solsBlock:* (tile.solsBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockSols
+# %tile.solsBlock:* (tile.solsBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockSols
 block:id=%tile.solsBlock,data=0,stdrot=true,face0-5=0:ztones/sets/sols/sols_ (0)
 block:id=%tile.solsBlock,data=1,stdrot=true,face0-5=0:ztones/sets/sols/sols_ (1)
 block:id=%tile.solsBlock,data=2,stdrot=true,face0-5=0:ztones/sets/sols/sols_ (2)
@@ -856,7 +856,7 @@ block:id=%tile.solsBlock,data=13,stdrot=true,face0-5=0:ztones/sets/sols/sols_ (1
 block:id=%tile.solsBlock,data=14,stdrot=true,face0-5=0:ztones/sets/sols/sols_ (14)
 block:id=%tile.solsBlock,data=15,stdrot=true,face0-5=0:ztones/sets/sols/sols_ (15)
 
-# %tile.tankBlock:* (tile.tankBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockTank
+# %tile.tankBlock:* (tile.tankBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockTank
 block:id=%tile.tankBlock,data=0,stdrot=true,face0-5=0:ztones/sets/tank/tank_ (0)
 block:id=%tile.tankBlock,data=1,stdrot=true,face0-5=0:ztones/sets/tank/tank_ (1)
 block:id=%tile.tankBlock,data=2,stdrot=true,face0-5=0:ztones/sets/tank/tank_ (2)
@@ -874,7 +874,7 @@ block:id=%tile.tankBlock,data=13,stdrot=true,face0-5=0:ztones/sets/tank/tank_ (1
 block:id=%tile.tankBlock,data=14,stdrot=true,face0-5=0:ztones/sets/tank/tank_ (14)
 block:id=%tile.tankBlock,data=15,stdrot=true,face0-5=0:ztones/sets/tank/tank_ (15)
 
-# %tile.vectBlock:* (tile.vectBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockVect
+# %tile.vectBlock:* (tile.vectBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockVect
 block:id=%tile.vectBlock,data=0,stdrot=true,face0-5=0:ztones/sets/vect/vect_ (0)
 block:id=%tile.vectBlock,data=1,stdrot=true,face0-5=0:ztones/sets/vect/vect_ (1)
 block:id=%tile.vectBlock,data=2,stdrot=true,face0-5=0:ztones/sets/vect/vect_ (2)
@@ -892,7 +892,7 @@ block:id=%tile.vectBlock,data=13,stdrot=true,face0-5=0:ztones/sets/vect/vect_ (1
 block:id=%tile.vectBlock,data=14,stdrot=true,face0-5=0:ztones/sets/vect/vect_ (14)
 block:id=%tile.vectBlock,data=15,stdrot=true,face0-5=0:ztones/sets/vect/vect_ (15)
 
-# %tile.venaBlock:* (tile.venaBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockVena
+# %tile.venaBlock:* (tile.venaBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockVena
 block:id=%tile.venaBlock,data=0,stdrot=true,face0-5=0:ztones/sets/vena/vena_ (0)
 block:id=%tile.venaBlock,data=1,stdrot=true,face0-5=0:ztones/sets/vena/vena_ (1)
 block:id=%tile.venaBlock,data=2,stdrot=true,face0-5=0:ztones/sets/vena/vena_ (2)
@@ -910,7 +910,7 @@ block:id=%tile.venaBlock,data=13,stdrot=true,face0-5=0:ztones/sets/vena/vena_ (1
 block:id=%tile.venaBlock,data=14,stdrot=true,face0-5=0:ztones/sets/vena/vena_ (14)
 block:id=%tile.venaBlock,data=15,stdrot=true,face0-5=0:ztones/sets/vena/vena_ (15)
 
-# %tile.zechBlock:* (tile.zechBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZech
+# %tile.zechBlock:* (tile.zechBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZech
 block:id=%tile.zechBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zech/zech_ (0)
 block:id=%tile.zechBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zech/zech_ (1)
 block:id=%tile.zechBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zech/zech_ (2)
@@ -928,7 +928,7 @@ block:id=%tile.zechBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zech/zech_ (1
 block:id=%tile.zechBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zech/zech_ (14)
 block:id=%tile.zechBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zech/zech_ (15)
 
-# %tile.zionBlock:* (tile.zionBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZion
+# %tile.zionBlock:* (tile.zionBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZion
 block:id=%tile.zionBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zion/zion_ (0)
 block:id=%tile.zionBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zion/zion_ (1)
 block:id=%tile.zionBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zion/zion_ (2)
@@ -946,7 +946,7 @@ block:id=%tile.zionBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zion/zion_ (1
 block:id=%tile.zionBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zion/zion_ (14)
 block:id=%tile.zionBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zion/zion_ (15)
 
-# %tile.zomeBlock:* (tile.zomeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZome
+# %tile.zomeBlock:* (tile.zomeBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZome
 block:id=%tile.zomeBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zome/zome_ (0)
 block:id=%tile.zomeBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zome/zome_ (1)
 block:id=%tile.zomeBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zome/zome_ (2)
@@ -964,7 +964,7 @@ block:id=%tile.zomeBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zome/zome_ (1
 block:id=%tile.zomeBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zome/zome_ (14)
 block:id=%tile.zomeBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zome/zome_ (15)
 
-# %tile.zoneBlock:* (tile.zoneBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZone
+# %tile.zoneBlock:* (tile.zoneBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZone
 block:id=%tile.zoneBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zone/zone_ (0)
 block:id=%tile.zoneBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zone/zone_ (1)
 block:id=%tile.zoneBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zone/zone_ (2)
@@ -982,7 +982,7 @@ block:id=%tile.zoneBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zone/zone_ (1
 block:id=%tile.zoneBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zone/zone_ (14)
 block:id=%tile.zoneBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zone/zone_ (15)
 
-# %tile.zorgBlock:* (tile.zorgBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZorg
+# %tile.zorgBlock:* (tile.zorgBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZorg
 block:id=%tile.zorgBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zorg/zorg_ (0)
 block:id=%tile.zorgBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zorg/zorg_ (1)
 block:id=%tile.zorgBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zorg/zorg_ (2)
@@ -1000,7 +1000,7 @@ block:id=%tile.zorgBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zorg/zorg_ (1
 block:id=%tile.zorgBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zorg/zorg_ (14)
 block:id=%tile.zorgBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zorg/zorg_ (15)
 
-# %tile.glaxx:* (tile.glaxx), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockGlaxx
+# %tile.glaxx:* (tile.glaxx), render=(STANDARD), opaque=false,cls=com.riciJak.Ztones.block.VBlocks.BlockGlaxx
 block:id=%tile.glaxx,data=0,stdrot=true,face0-5=12000:ztones/sets/glaxx/glaxx_ (0)
 block:id=%tile.glaxx,data=1,stdrot=true,face0-5=12000:ztones/sets/glaxx/glaxx_ (1)
 block:id=%tile.glaxx,data=2,stdrot=true,face0-5=12000:ztones/sets/glaxx/glaxx_ (2)
@@ -1018,7 +1018,7 @@ block:id=%tile.glaxx,data=13,stdrot=true,face0-5=12000:ztones/sets/glaxx/glaxx_ 
 block:id=%tile.glaxx,data=14,stdrot=true,face0-5=12000:ztones/sets/glaxx/glaxx_ (14)
 block:id=%tile.glaxx,data=15,stdrot=true,face0-5=12000:ztones/sets/glaxx/glaxx_ (15)
 
-# %tile.reedBlock:* (tile.reedBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockReed
+# %tile.reedBlock:* (tile.reedBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockReed
 block:id=%tile.reedBlock,data=0,stdrot=true,face0-5=0:ztones/sets/reed/reed_ (0)
 block:id=%tile.reedBlock,data=1,stdrot=true,face0-5=0:ztones/sets/reed/reed_ (1)
 block:id=%tile.reedBlock,data=2,stdrot=true,face0-5=0:ztones/sets/reed/reed_ (2)
@@ -1036,7 +1036,7 @@ block:id=%tile.reedBlock,data=13,stdrot=true,face0-5=0:ztones/sets/reed/reed_ (1
 block:id=%tile.reedBlock,data=14,stdrot=true,face0-5=0:ztones/sets/reed/reed_ (14)
 block:id=%tile.reedBlock,data=15,stdrot=true,face0-5=0:ztones/sets/reed/reed_ (15)
 
-# %tile.syncBlock:* (tile.syncBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockSync
+# %tile.syncBlock:* (tile.syncBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockSync
 block:id=%tile.syncBlock,data=0,stdrot=true,face0-5=0:ztones/sets/sync/sync_ (0)
 block:id=%tile.syncBlock,data=1,stdrot=true,face0-5=0:ztones/sets/sync/sync_ (1)
 block:id=%tile.syncBlock,data=2,stdrot=true,face0-5=0:ztones/sets/sync/sync_ (2)
@@ -1054,7 +1054,7 @@ block:id=%tile.syncBlock,data=13,stdrot=true,face0-5=0:ztones/sets/sync/sync_ (1
 block:id=%tile.syncBlock,data=14,stdrot=true,face0-5=0:ztones/sets/sync/sync_ (14)
 block:id=%tile.syncBlock,data=15,stdrot=true,face0-5=0:ztones/sets/sync/sync_ (15)
 
-# %tile.zkulBlock:* (tile.zkulBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZkul
+# %tile.zkulBlock:* (tile.zkulBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZkul
 block:id=%tile.zkulBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zkul/zkul_ (0)
 block:id=%tile.zkulBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zkul/zkul_ (1)
 block:id=%tile.zkulBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zkul/zkul_ (2)
@@ -1072,7 +1072,7 @@ block:id=%tile.zkulBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zkul/zkul_ (1
 block:id=%tile.zkulBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zkul/zkul_ (14)
 block:id=%tile.zkulBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zkul/zkul_ (15)
 
-# %tile.azurBlock:* (tile.azurBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockAzur
+# %tile.azurBlock:* (tile.azurBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockAzur
 block:id=%tile.azurBlock,data=0,stdrot=true,face0-5=0:ztones/sets/azur/azur_ (0)
 block:id=%tile.azurBlock,data=1,stdrot=true,face0-5=0:ztones/sets/azur/azur_ (1)
 block:id=%tile.azurBlock,data=2,stdrot=true,face0-5=0:ztones/sets/azur/azur_ (2)
@@ -1090,7 +1090,7 @@ block:id=%tile.azurBlock,data=13,stdrot=true,face0-5=0:ztones/sets/azur/azur_ (1
 block:id=%tile.azurBlock,data=14,stdrot=true,face0-5=0:ztones/sets/azur/azur_ (14)
 block:id=%tile.azurBlock,data=15,stdrot=true,face0-5=0:ztones/sets/azur/azur_ (15)
 
-# %tile.zetaBlock:* (tile.zetaBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZeta
+# %tile.zetaBlock:* (tile.zetaBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZeta
 block:id=%tile.zetaBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zeta/zeta_ (0)
 block:id=%tile.zetaBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zeta/zeta_ (1)
 block:id=%tile.zetaBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zeta/zeta_ (2)
@@ -1108,7 +1108,7 @@ block:id=%tile.zetaBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zeta/zeta_ (1
 block:id=%tile.zetaBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zeta/zeta_ (14)
 block:id=%tile.zetaBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zeta/zeta_ (15)
 
-# %tile.zestBlock:* (tile.zestBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZest
+# %tile.zestBlock:* (tile.zestBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZest
 block:id=%tile.zestBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zest/zest_ (0)
 block:id=%tile.zestBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zest/zest_ (1)
 block:id=%tile.zestBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zest/zest_ (2)
@@ -1126,7 +1126,7 @@ block:id=%tile.zestBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zest/zest_ (1
 block:id=%tile.zestBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zest/zest_ (14)
 block:id=%tile.zestBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zest/zest_ (15)
 
-# %tile.zoeaBlock:* (tile.zoeaBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZoea
+# %tile.zoeaBlock:* (tile.zoeaBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZoea
 block:id=%tile.zoeaBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zoea/zoea_ (0)
 block:id=%tile.zoeaBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zoea/zoea_ (1)
 block:id=%tile.zoeaBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zoea/zoea_ (2)
@@ -1144,7 +1144,7 @@ block:id=%tile.zoeaBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zoea/zoea_ (1
 block:id=%tile.zoeaBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zoea/zoea_ (14)
 block:id=%tile.zoeaBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zoea/zoea_ (15)
 
-# %tile.zaneBlock:* (tile.zaneBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZane
+# %tile.zaneBlock:* (tile.zaneBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZane
 block:id=%tile.zaneBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zane/zane_ (0)
 block:id=%tile.zaneBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zane/zane_ (1)
 block:id=%tile.zaneBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zane/zane_ (2)
@@ -1162,7 +1162,7 @@ block:id=%tile.zaneBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zane/zane_ (1
 block:id=%tile.zaneBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zane/zane_ (14)
 block:id=%tile.zaneBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zane/zane_ (15)
 
-# %tile.zythBlock:* (tile.zythBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZyth
+# %tile.zythBlock:* (tile.zythBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZyth
 block:id=%tile.zythBlock,data=0,stdrot=true,face0-5=0:ztones/sets/zyth/zyth_ (0)
 block:id=%tile.zythBlock,data=1,stdrot=true,face0-5=0:ztones/sets/zyth/zyth_ (1)
 block:id=%tile.zythBlock,data=2,stdrot=true,face0-5=0:ztones/sets/zyth/zyth_ (2)
@@ -1180,7 +1180,7 @@ block:id=%tile.zythBlock,data=13,stdrot=true,face0-5=0:ztones/sets/zyth/zyth_ (1
 block:id=%tile.zythBlock,data=14,stdrot=true,face0-5=0:ztones/sets/zyth/zyth_ (14)
 block:id=%tile.zythBlock,data=15,stdrot=true,face0-5=0:ztones/sets/zyth/zyth_ (15)
 
-# %tile.ztylBlock:* (tile.ztylBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZtyl
+# %tile.ztylBlock:* (tile.ztylBlock), render=(STANDARD), opaque=true,cls=com.riciJak.Ztones.block.MBlocks.BlockZtyl
 block:id=%tile.ztylBlock,data=0,stdrot=true,face0-5=0:ztones/sets/ztyl/ztyl_ (0)
 block:id=%tile.ztylBlock,data=1,stdrot=true,face0-5=0:ztones/sets/ztyl/ztyl_ (1)
 block:id=%tile.ztylBlock,data=2,stdrot=true,face0-5=0:ztones/sets/ztyl/ztyl_ (2)

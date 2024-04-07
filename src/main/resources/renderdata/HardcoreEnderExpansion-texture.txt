@@ -141,16 +141,16 @@ texture:id=minecraft/tnt_top,filename=assets/minecraft/textures/blocks/tnt_top.p
 
 
 
-# %enhanced_tnt:* (enhanced_tnt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockEnhancedTNT
+# %enhanced_tnt:* (enhanced_tnt), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockEnhancedTNT
 block:id=%enhanced_tnt,data=*,stdrot=true,face0=0:minecraft/tnt_bottom,face1=0:minecraft/tnt_top,face2-5=0:minecraft/tnt_side
 
-# %end_powder_ore:* (end_powder_ore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockEndPowderOre
+# %end_powder_ore:* (end_powder_ore), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockEndPowderOre
 block:id=%end_powder_ore,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/end_powder_ore
 
 # %void_chest:* (void_chest), render=chylex.hee.render.block.RenderBlockVoidChest(CUSTOM), opaque=false,cls=chylex.hee.block.BlockVoidChest
 block:id=%void_chest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/obsidian
 
-# %end_stone_terrain:* (end_stone_terrain), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockEndstoneTerrain
+# %end_stone_terrain:* (end_stone_terrain), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockEndstoneTerrain
 block:id=%end_stone_terrain,data=0,stdrot=true,face0=0:minecraft/end_stone,face1=0:hardcoreenderexpansion/endstone_ter_infested_top,face2-5=0:hardcoreenderexpansion/endstone_ter_infested_side
 block:id=%end_stone_terrain,data=1,stdrot=true,face0=0:minecraft/end_stone,face1=0:hardcoreenderexpansion/endstone_ter_burned_top,face2-5=0:hardcoreenderexpansion/endstone_ter_burned_side
 block:id=%end_stone_terrain,data=2,stdrot=true,face0=0:minecraft/end_stone,face1=0:hardcoreenderexpansion/endstone_ter_enchanted_top,face2-5=0:hardcoreenderexpansion/endstone_ter_enchanted_side
@@ -165,7 +165,7 @@ block:id=%death_flower_pot,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0
 # %obsidian_stairs:* (obsidian_stairs), render=(STAIRS), opaque=false,cls=chylex.hee.block.vanilla.BlockBasicStairs
 block:id=%obsidian_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/obsidian
 
-# %stardust_ore:* (stardust_ore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockStardustOre
+# %stardust_ore:* (stardust_ore), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockStardustOre
 block:id=%stardust_ore,data=0,data=1,stdrot=true,face0=0:hardcoreenderexpansion/stardust_ore_12,face1=0:hardcoreenderexpansion/stardust_ore_7,face2=0:hardcoreenderexpansion/stardust_ore_10,face3=0:hardcoreenderexpansion/stardust_ore_2,face4=0:hardcoreenderexpansion/stardust_ore_8,face5=0:hardcoreenderexpansion/stardust_ore_12
 block:id=%stardust_ore,data=2,stdrot=true,face0=0:hardcoreenderexpansion/stardust_ore_7,face1=0:hardcoreenderexpansion/stardust_ore_10,face2=0:hardcoreenderexpansion/stardust_ore_16,face3=0:hardcoreenderexpansion/stardust_ore_4,face4=0:hardcoreenderexpansion/stardust_ore_5,face5=0:hardcoreenderexpansion/stardust_ore_3
 block:id=%stardust_ore,data=3,stdrot=true,face0=0:hardcoreenderexpansion/stardust_ore_16,face1=0:hardcoreenderexpansion/stardust_ore_5,face2=0:hardcoreenderexpansion/stardust_ore_7,face3=0:hardcoreenderexpansion/stardust_ore_14,face4=0:hardcoreenderexpansion/stardust_ore_10,face5=0:hardcoreenderexpansion/stardust_ore_2
@@ -186,16 +186,16 @@ block:id=%stardust_ore,data=15,stdrot=true,face0=0:hardcoreenderexpansion/stardu
 block:id=%death_flower,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:hardcoreenderexpansion/end_flower
 block:id=%death_flower,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:hardcoreenderexpansion/end_flower_dead
 
-# %decomposition_table:* (decomposition_table), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockDecompositionTable
+# %decomposition_table:* (decomposition_table), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockDecompositionTable
 block:id=%decomposition_table,data=*,stdrot=true,face0=0:hardcoreenderexpansion/table_bottom,face1=0:hardcoreenderexpansion/decomposition_table_top,face2-5=0:hardcoreenderexpansion/decomposition_table_side
 
-# %laboratory_obsidian:* (laboratory_obsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
+# %laboratory_obsidian:* (laboratory_obsidian), render=(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
 block:id=%laboratory_obsidian,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/laboratory_obsidian
 
-# %ravaged_brick_glow:* (ravaged_brick_glow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
+# %ravaged_brick_glow:* (ravaged_brick_glow), render=(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
 block:id=%ravaged_brick_glow,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/ravaged_brick_glow
 
-# %dungeon_puzzle:* (dungeon_puzzle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockDungeonPuzzle
+# %dungeon_puzzle:* (dungeon_puzzle), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockDungeonPuzzle
 block:id=%dungeon_puzzle,data=0,stdrot=true,face0-5=0:hardcoreenderexpansion/dungeon_puzzle_trigger_unlit
 block:id=%dungeon_puzzle,data=1,stdrot=true,face0-5=0:hardcoreenderexpansion/dungeon_puzzle_trigger_lit
 block:id=%dungeon_puzzle,data=2,stdrot=true,face0-5=0:hardcoreenderexpansion/dungeon_puzzle_chained_unlit
@@ -210,28 +210,28 @@ block:id=%dungeon_puzzle,data=13,stdrot=true,face0-5=0:hardcoreenderexpansion/du
 block:id=%dungeon_puzzle,data=14,stdrot=true,face0-5=0:hardcoreenderexpansion/dungeon_puzzle_wall_rock
 block:id=%dungeon_puzzle,data=15,stdrot=true,face0-5=0:hardcoreenderexpansion/dungeon_puzzle_trigger_lit
 
-# %laboratory_floor:* (laboratory_floor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
+# %laboratory_floor:* (laboratory_floor), render=(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
 block:id=%laboratory_floor,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/laboratory_floor
 
-# %custom_spawner:* (custom_spawner), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=chylex.hee.block.BlockCustomSpawner
+# %custom_spawner:* (custom_spawner), render=(STANDARD), opaque=false,cls=chylex.hee.block.BlockCustomSpawner
 block:id=%custom_spawner,data=*,stdrot=true,face0-5=0:minecraft/mob_spawner
 
-# %cinder:* (cinder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
+# %cinder:* (cinder), render=(STANDARD), opaque=true,cls=chylex.hee.block.vanilla.BlockBasic
 block:id=%cinder,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/cinder
 
 # %spooky_leaves:* (spooky_leaves), render=chylex.hee.render.block.RenderBlockSpookyLeaves(CUSTOM), opaque=false,cls=chylex.hee.block.BlockSpookyLeaves
 block:id=%spooky_leaves,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/spooky_leaves
 
-# %igneous_rock_ore:* (igneous_rock_ore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockIgneousRockOre
+# %igneous_rock_ore:* (igneous_rock_ore), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockIgneousRockOre
 block:id=%igneous_rock_ore,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/igneous_rock_ore
 
 # %enderman_head_block:* (enderman_head_block), render=(CUSTOM), opaque=false,cls=chylex.hee.block.BlockEndermanHead
 block:id=%enderman_head_block,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
 
-# %obsidian_end:* (obsidian_end), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockObsidianEnd
+# %obsidian_end:* (obsidian_end), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockObsidianEnd
 block:id=%obsidian_end,data=*,stdrot=true,face0-5=0:minecraft/obsidian
 
-# %endium_ore:* (endium_ore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockEndiumOre
+# %endium_ore:* (endium_ore), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockEndiumOre
 block:id=%endium_ore,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/endium_ore
 
 # %crossed_decoration:* (crossed_decoration), render=chylex.hee.render.block.RenderBlockCrossedDecoration(CUSTOM), opaque=false,cls=chylex.hee.block.BlockCrossedDecoration
@@ -258,7 +258,7 @@ block:id=%obsidian_special,data=5,stdrot=true,face0-5=0:hardcoreenderexpansion/o
 block:id=%obsidian_special,data=6,stdrot=true,face0=0:hardcoreenderexpansion/obsidian_chiseled,face1=0:hardcoreenderexpansion/obsidian_chiseled_top,face2-5=0:hardcoreenderexpansion/obsidian_chiseled
 block:id=%obsidian_special,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hardcoreenderexpansion/obsidian_smooth
 
-# %block_special_effects:* (block_special_effects), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockSpecialEffects
+# %block_special_effects:* (block_special_effects), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockSpecialEffects
 block:id=%block_special_effects,data=0,stdrot=true,face0=0:minecraft/end_stone,face1=0:hardcoreenderexpansion/endstone_ter_infested_top,face2-3=0:hardcoreenderexpansion/endstone_ter_burned_side,face4-5=0:hardcoreenderexpansion/endstone_ter_enchanted_side
 block:id=%block_special_effects,data=1,stdrot=true,face0-5=0:hardcoreenderexpansion/_1
 block:id=%block_special_effects,data=2,stdrot=true,face0-5=0:hardcoreenderexpansion/_2
@@ -266,10 +266,10 @@ block:id=%block_special_effects,data=3,stdrot=true,face0-5=0:hardcoreenderexpans
 block:id=%block_special_effects,data=4,stdrot=true,face0-5=0:hardcoreenderexpansion/_4
 block:id=%block_special_effects,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hardcoreenderexpansion/_5
 
-# %experience_table:* (experience_table), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockExperienceTable
+# %experience_table:* (experience_table), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockExperienceTable
 block:id=%experience_table,data=*,stdrot=true,face0=0:hardcoreenderexpansion/table_bottom,face1=0:hardcoreenderexpansion/experience_table_top,face2-5=0:hardcoreenderexpansion/experience_table_side
 
-# %ravaged_brick:* (ravaged_brick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockRavagedBrick
+# %ravaged_brick:* (ravaged_brick), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockRavagedBrick
 block:id=%ravaged_brick,data=0,stdrot=true,face0-5=0:hardcoreenderexpansion/ravaged_brick
 block:id=%ravaged_brick,data=1,stdrot=true,face0-5=0:hardcoreenderexpansion/ravaged_brick_cracked
 block:id=%ravaged_brick,data=2,stdrot=true,face0-1=0:hardcoreenderexpansion/ravaged_brick,face2-5=0:hardcoreenderexpansion/ravaged_brick_damaged_1
@@ -278,17 +278,17 @@ block:id=%ravaged_brick,data=4,stdrot=true,face0-1=0:hardcoreenderexpansion/rava
 block:id=%ravaged_brick,data=5,stdrot=true,face0-1=0:hardcoreenderexpansion/ravaged_brick,face2-5=0:hardcoreenderexpansion/ravaged_brick_damaged_4
 block:id=%ravaged_brick,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hardcoreenderexpansion/ravaged_brick
 
-# %sphalerite:* (sphalerite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockSphalerite
+# %sphalerite:* (sphalerite), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockSphalerite
 block:id=%sphalerite,data=0,stdrot=true,face0-5=0:hardcoreenderexpansion/sphalerite
 block:id=%sphalerite,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hardcoreenderexpansion/sphalerite_stardust
 
 # %ravaged_brick_fence:* (ravaged_brick_fence), render=(FENCE), opaque=false,cls=net.minecraft.block.BlockFence
 block:id=%ravaged_brick_fence,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:hardcoreenderexpansion/ravaged_brick
 
-# %biome_core:* (biome_core), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockBiomeIslandCore
+# %biome_core:* (biome_core), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockBiomeIslandCore
 block:id=%biome_core,data=*,stdrot=true,face0-5=0:minecraft/bedrock
 
-# %essence_altar:* (essence_altar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=chylex.hee.block.BlockEssenceAltar
+# %essence_altar:* (essence_altar), render=(STANDARD), opaque=false,cls=chylex.hee.block.BlockEssenceAltar
 block:id=%essence_altar,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:hardcoreenderexpansion/essence_altar_0_bottom,face1=0:hardcoreenderexpansion/essence_altar_0_top,face2-5=0:hardcoreenderexpansion/essence_altar_0_side
 block:id=%essence_altar,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:hardcoreenderexpansion/essence_altar_1_bottom,face1=0:hardcoreenderexpansion/essence_altar_1_top,face2-5=0:hardcoreenderexpansion/essence_altar_1_side
 block:id=%essence_altar,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:hardcoreenderexpansion/essence_altar_2_bottom,face1=0:hardcoreenderexpansion/essence_altar_2_top,face2-5=0:hardcoreenderexpansion/essence_altar_2_side
@@ -305,10 +305,10 @@ block:id=%obsidian_special_glow,data=5,stdrot=true,face0-5=0:hardcoreenderexpans
 block:id=%obsidian_special_glow,data=6,stdrot=true,face0=0:hardcoreenderexpansion/obsidian_chiseled,face1=0:hardcoreenderexpansion/obsidian_chiseled_top,face2-5=0:hardcoreenderexpansion/obsidian_chiseled
 block:id=%obsidian_special_glow,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hardcoreenderexpansion/obsidian_smooth
 
-# %ravaged_brick_slab:* (ravaged_brick_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=chylex.hee.block.vanilla.BlockBasicSlab
+# %ravaged_brick_slab:* (ravaged_brick_slab), render=(STANDARD), opaque=false,cls=chylex.hee.block.vanilla.BlockBasicSlab
 block:id=%ravaged_brick_slab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hardcoreenderexpansion/ravaged_brick
 
-# %persegrit:* (persegrit), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockPersegrit
+# %persegrit:* (persegrit), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockPersegrit
 block:id=%persegrit,data=0,stdrot=true,face0-5=0:hardcoreenderexpansion/persegrit
 block:id=%persegrit,data=1,stdrot=true,face0-5=0:hardcoreenderexpansion/persegrit_h
 block:id=%persegrit,data=2,stdrot=true,face0-5=0:hardcoreenderexpansion/persegrit_v
@@ -326,19 +326,19 @@ block:id=%persegrit,data=13,stdrot=true,face0-5=0:hardcoreenderexpansion/persegr
 block:id=%persegrit,data=14,stdrot=true,face0-5=0:hardcoreenderexpansion/persegrit_rbl
 block:id=%persegrit,data=15,stdrot=true,face0-5=0:hardcoreenderexpansion/persegrit_x
 
-# %endium_block:* (endium_block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockCompressed
+# %endium_block:* (endium_block), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockCompressed
 block:id=%endium_block,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/endium_block
 
 # %transport_beacon:* (transport_beacon), render=chylex.hee.render.block.RenderBlockTransportBeacon(CUSTOM), opaque=false,cls=chylex.hee.block.BlockTransportBeacon
 block:id=%transport_beacon,data=*,stdrot=true,face0-5=12000:hardcoreenderexpansion/transport_beacon
 
-# %energy_extraction_table:* (energy_extraction_table), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockExtractionTable
+# %energy_extraction_table:* (energy_extraction_table), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockExtractionTable
 block:id=%energy_extraction_table,data=*,stdrot=true,face0=0:hardcoreenderexpansion/table_bottom,face1=0:hardcoreenderexpansion/extraction_table_top,face2-5=0:hardcoreenderexpansion/extraction_table_side
 
-# %laboratory_glass:* (laboratory_glass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=chylex.hee.block.BlockLaboratoryGlass
+# %laboratory_glass:* (laboratory_glass), render=(STANDARD), opaque=false,cls=chylex.hee.block.BlockLaboratoryGlass
 block:id=%laboratory_glass,data=*,stdrot=true,face0-5=12000:hardcoreenderexpansion/laboratory_glass_outline
 
-# %spooky_log:* (spooky_log), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockSpookyLog
+# %spooky_log:* (spooky_log), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockSpookyLog
 block:id=%spooky_log,data=0,stdrot=true,face0-5=0:hardcoreenderexpansion/spooky_log_side
 block:id=%spooky_log,data=1,stdrot=true,face0-1=0:hardcoreenderexpansion/spooky_log_side,face2=0:hardcoreenderexpansion/spooky_log_face,face3-5=0:hardcoreenderexpansion/spooky_log_side
 block:id=%spooky_log,data=2,stdrot=true,face0-2=0:hardcoreenderexpansion/spooky_log_side,face3=0:hardcoreenderexpansion/spooky_log_face,face4-5=0:hardcoreenderexpansion/spooky_log_side
@@ -358,17 +358,17 @@ block:id=%ender_goo,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=1200
 # %temple_end_portal:* (temple_end_portal), render=(CUSTOM), opaque=false,cls=chylex.hee.block.BlockTempleEndPortal
 block:id=%temple_end_portal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/portal
 
-# %ravaged_brick_smooth:* (ravaged_brick_smooth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockRavagedBrickSmooth
+# %ravaged_brick_smooth:* (ravaged_brick_smooth), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockRavagedBrickSmooth
 block:id=%ravaged_brick_smooth,data=*,stdrot=true,face0-1=0:hardcoreenderexpansion/ravaged_brick,face2-5=0:hardcoreenderexpansion/ravaged_brick_smooth
 
 # %ravaged_brick_stairs:* (ravaged_brick_stairs), render=(STAIRS), opaque=false,cls=chylex.hee.block.vanilla.BlockBasicStairs
 block:id=%ravaged_brick_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hardcoreenderexpansion/ravaged_brick
 
-# %accumulation_table:* (accumulation_table), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockAccumulationTable
+# %accumulation_table:* (accumulation_table), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockAccumulationTable
 block:id=%accumulation_table,data=*,stdrot=true,face0=0:hardcoreenderexpansion/table_bottom,face1=0:hardcoreenderexpansion/accumulation_table_top,face2-5=0:hardcoreenderexpansion/accumulation_table_side
 
 # %laser_beam:* (laser_beam), render=(CUSTOM), opaque=false,cls=chylex.hee.block.BlockLaserBeam
 block:id=%laser_beam,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hardcoreenderexpansion/laser_beam
 
-# %instability_orb_ore:* (instability_orb_ore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=chylex.hee.block.BlockInstabilityOrbOre
+# %instability_orb_ore:* (instability_orb_ore), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockInstabilityOrbOre
 block:id=%instability_orb_ore,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/instability_orb_ore

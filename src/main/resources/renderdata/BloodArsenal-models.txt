@@ -22,7 +22,7 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %blood_cake:* (blood_cake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodCake
+# %blood_cake:* (blood_cake), render=(STANDARD), opaque=false,cls=com.arc.bloodarsenal.common.block.BlockBloodCake
 boxblock:id=%blood_cake,xmin=0.0833333358168602,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%blood_cake,xmin=0.1666666716337204,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%blood_cake,xmin=0.25,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2

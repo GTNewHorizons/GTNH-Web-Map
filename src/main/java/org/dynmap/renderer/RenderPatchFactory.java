@@ -66,6 +66,9 @@ public interface RenderPatchFactory {
      * @return patch requested
      */
     public RenderPatch getRotatedPatch(RenderPatch patch, int xrot, int yrot, int zrot, int textureidx);
+
+    RenderPatch getRotatedPatchAutoTexCoords(RenderPatch patch, int xrot, int yrot, int zrot, int textureindex);
+
     /**
      * Get named patch with given attributes.  Name can encode rotation and patch index info
      * "name" - simple name
@@ -91,4 +94,10 @@ public interface RenderPatchFactory {
      * @return number of textures, or -1 if map not found
      */
     public int getTextureCountFromMap(String id);
+
+    public RenderPatch getTriangleExplTexCoords(double x0, double y0, double z0, double tu0, double tv0, double x1, double y1, double z1, double tu1, double tv1, double x2, double y2, double z2, double tu2, double tv2, SideVisible sidevis, int textureidx);
+    public RenderPatch getTriangleAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, SideVisible sidevis, int textureidx);
+    public RenderPatch getTriangleAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, double uplusvmax, SideVisible sidevis, int textureidx);
+
+    public RenderPatch getQuadAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, SideVisible sidevis, int textureidx);
 }

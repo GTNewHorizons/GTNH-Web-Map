@@ -1,4 +1,4 @@
-# structurelib 1.2.7
+# structurelib 1.3.0
 version:1.7
 modname:structurelib
 
@@ -26,7 +26,7 @@ texture:id=structurelib/iconsets/HINT_NOAIR,filename=assets/structurelib/texture
 
 
 
-# %blockhint:* (blockhint), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.gtnewhorizon.structurelib.block.BlockHint
+# %blockhint:* (blockhint), render=(STANDARD), opaque=true,cls=com.gtnewhorizon.structurelib.block.BlockHint
 block:id=%blockhint,data=0,stdrot=true,face0-5=0:structurelib/iconsets/HINT_0
 block:id=%blockhint,data=1,stdrot=true,face0-5=0:structurelib/iconsets/HINT_1
 block:id=%blockhint,data=2,stdrot=true,face0-5=0:structurelib/iconsets/HINT_2

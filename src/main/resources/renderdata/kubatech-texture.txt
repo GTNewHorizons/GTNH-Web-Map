@@ -1,4 +1,4 @@
-# kubatech 0.11.1
+# kubatech 0.14.5
 version:1.7
 modname:kubatech
 
@@ -9,11 +9,30 @@ modname:kubatech
 
 texturepath:assets/kubatech/textures/blocks/
 texture:id=kubatech/blank,filename=assets/kubatech/textures/blocks/blank.png
+texture:id=kubatech/casing/defc_0,filename=assets/kubatech/textures/blocks/casing/defc_0.png
+texture:id=kubatech/casing/defc_1,filename=assets/kubatech/textures/blocks/casing/defc_1.png
+texture:id=kubatech/casing/defc_2,filename=assets/kubatech/textures/blocks/casing/defc_2.png
+texture:id=kubatech/casing/defc_3,filename=assets/kubatech/textures/blocks/casing/defc_3.png
+texture:id=kubatech/casing/defc_4,filename=assets/kubatech/textures/blocks/casing/defc_4.png
+texture:id=kubatech/casing/defc_5,filename=assets/kubatech/textures/blocks/casing/defc_5.png
 texture:id=kubatech/tea_acceptor,filename=assets/kubatech/textures/blocks/tea_acceptor.png
 texture:id=kubatech/tea_storage,filename=assets/kubatech/textures/blocks/tea_storage.png
 
 
 
-# %kubablocks:* (kubablocks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=kubatech.loaders.block.KubaBlock
+# %defc.casing:* (defc.casing), render=(STANDARD), opaque=true,cls=kubatech.loaders.block.defc.DEFCCasingBlock
+block:id=%defc.casing,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:kubatech/casing/defc_0
+block:id=%defc.casing,data=8,stdrot=true,face0-5=0:kubatech/casing/defc_1
+block:id=%defc.casing,data=9,stdrot=true,face0-5=0:kubatech/casing/defc_2
+block:id=%defc.casing,data=10,stdrot=true,face0-5=0:kubatech/casing/defc_3
+block:id=%defc.casing,data=11,stdrot=true,face0-5=0:kubatech/casing/defc_4
+block:id=%defc.casing,data=12,stdrot=true,face0-5=0:kubatech/casing/defc_5
+block:id=%defc.casing,data=13,data=14,data=15,stdrot=true,face0-5=0:kubatech/casing/defc_0
+
+# %kubablocks:* (kubablocks), render=(STANDARD), opaque=true,cls=kubatech.loaders.block.kubablock.KubaBlock
 block:id=%kubablocks,data=0,stdrot=true,face0-1=0:kubatech/blank,face2-5=0:kubatech/tea_acceptor
 block:id=%kubablocks,data=1,stdrot=true,face0-5=0:kubatech/tea_storage
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
+
+moddata:mod=gtmte,type=hatchbaseexpl,page=1,index=63,tex=0:kubatech/casing/defc_0

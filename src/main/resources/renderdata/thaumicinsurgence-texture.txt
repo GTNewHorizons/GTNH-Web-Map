@@ -1,9 +1,10 @@
-# thaumicinsurgence 0.2.4
+# thaumicinsurgence 0.3.1
 version:1.7
 modname:thaumicinsurgence
 
 
-cfgfile:config/thaumicinsurgence.cfg
+
+# Configuration file not found!
 
 
 texturepath:assets/thaumicinsurgence/textures/blocks/
@@ -16,16 +17,13 @@ texture:id=thaumicinsurgence/marble_pedestal_side,filename=assets/thaumicinsurge
 
 
 
-# %tile.arcaneMarble:* (tile.arcaneMarble), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarble
+# %tile.arcaneMarble:* (tile.arcaneMarble), render=(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarble
 block:id=%tile.arcaneMarble,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcane_marble
 
-# %tile.arcaneMarbleBrick:* (tile.arcaneMarbleBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarbleBrick
+# %tile.arcaneMarbleBrick:* (tile.arcaneMarbleBrick), render=(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockArcaneMarbleBrick
 block:id=%tile.arcaneMarbleBrick,data=*,stdrot=true,face0-5=0:thaumicinsurgence/arcane_marble_brick
 
-# %tile.dimensionalTeleporter:* (tile.dimensionalTeleporter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockDimensionalTeleporterBase
-block:id=%tile.dimensionalTeleporter,data=*,stdrot=true,face0=0:thaumicinsurgence/arcane_stone_bricks_alt4,face1=0:thaumicinsurgence/arcane_stone_bricks_alt5,face2-5=0:thaumicinsurgence/arcane_stone_bricks_alt6
-
-# %infusionIntercepter:* (infusionIntercepter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockInfusionFucker
+# %infusionIntercepter:* (infusionIntercepter), render=(STANDARD), opaque=true,cls=thaumicinsurgence.block.BlockInfusionIntercepter
 block:id=%infusionIntercepter,data=*,stdrot=true,face0=0:thaumicinsurgence/arcane_stone_bricks_alt4,face1=0:thaumicinsurgence/arcane_stone_bricks_alt5,face2-5=0:thaumicinsurgence/arcane_stone_bricks_alt6
 
 # %marblePedestal:* (marblePedestal), render=thaumicinsurgence.renderers.blockrenderers.BlockAlphaPedestalRenderer(CUSTOM), opaque=false,cls=thaumicinsurgence.block.BlockPedestalAlpha

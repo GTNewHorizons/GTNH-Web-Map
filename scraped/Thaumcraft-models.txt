@@ -158,10 +158,10 @@ customblock:id=%blockStairsSilverwood,class=org.dynmap.hdmap.renderer.StairBlock
 # %blockStairsEldritch:* (blockStairsEldritch), render=(STAIRS), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStairs
 customblock:id=%blockStairsEldritch,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %blockCosmeticSlabWood:* (blockCosmeticSlabWood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticWoodSlab
+# %blockCosmeticSlabWood:* (blockCosmeticSlabWood), render=(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticWoodSlab
 boxblock:id=%blockCosmeticSlabWood,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%blockCosmeticSlabWood,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %blockCosmeticSlabStone:* (blockCosmeticSlabStone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStoneSlab
+# %blockCosmeticSlabStone:* (blockCosmeticSlabStone), render=(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStoneSlab
 boxblock:id=%blockCosmeticSlabStone,ymax=0.5,data=0,data=1
 boxblock:id=%blockCosmeticSlabStone,ymin=0.5,data=8,data=9

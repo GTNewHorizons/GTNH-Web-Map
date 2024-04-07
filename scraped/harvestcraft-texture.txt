@@ -1,4 +1,4 @@
-# harvestcraft 1.1.0-GTNH
+# harvestcraft 1.1.10-GTNH
 version:1.7
 modname:harvestcraft
 
@@ -508,19 +508,19 @@ texture:id=harvestcraft/zucchinicrop_3,filename=assets/harvestcraft/textures/blo
 
 
 
-# %cuttingboard:* (cuttingboard), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCuttingBoard
+# %cuttingboard:* (cuttingboard), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCuttingBoard
 block:id=%cuttingboard,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/cuttingboardsidebottom,face1=0:harvestcraft/cuttingboardtop,face2-5=0:harvestcraft/cuttingboardsidebottom
 
-# %pot:* (pot), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamPot
+# %pot:* (pot), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamPot
 block:id=%pot,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/potsidebottom,face1=0:harvestcraft/pottop,face2-5=0:harvestcraft/potsidebottom
 
-# %beehive:* (beehive), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamBeehive
+# %beehive:* (beehive), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamBeehive
 block:id=%beehive,data=*,stdrot=true,face0=0:harvestcraft/beehivebottom,face1=0:harvestcraft/beehivetop,face2-5=0:harvestcraft/beehiveside
 
-# %apiary:* (apiary), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamApiary
+# %apiary:* (apiary), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamApiary
 block:id=%apiary,data=*,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:harvestcraft/apiarytop,face2-5=0:harvestcraft/apiaryside
 
-# %presser:* (presser), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamPresser
+# %presser:* (presser), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamPresser
 block:id=%presser,data=0,data=1,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:harvestcraft/pressertop,face2-5=0:harvestcraft/presserside
 block:id=%presser,data=2,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:harvestcraft/pressertop,face2=0:harvestcraft/presserfront,face3-5=0:harvestcraft/presserside
 block:id=%presser,data=3,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:harvestcraft/pressertop,face2=0:harvestcraft/presserside,face3=0:harvestcraft/presserfront,face4-5=0:harvestcraft/presserside
@@ -528,22 +528,22 @@ block:id=%presser,data=4,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:h
 block:id=%presser,data=5,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:harvestcraft/pressertop,face2-4=0:harvestcraft/presserside,face5=0:harvestcraft/presserfront
 block:id=%presser,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:harvestcraft/pressertop,face2-5=0:harvestcraft/presserside
 
-# %sink:* (sink), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSink
+# %sink:* (sink), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSink
 block:id=%sink,data=0,stdrot=true,face0=0:harvestcraft/sinkbottom_0,face1=0:harvestcraft/sinktop_0,face2-5=0:harvestcraft/sinkside_0
 block:id=%sink,data=1,stdrot=true,face0=0:harvestcraft/sinkbottom_1,face1=0:harvestcraft/sinktop_1,face2-5=0:harvestcraft/sinkside_1
 block:id=%sink,data=2,stdrot=true,face0=0:harvestcraft/sinkbottom_2,face1=0:harvestcraft/sinktop_2,face2-5=0:harvestcraft/sinkside_2
 block:id=%sink,data=3,stdrot=true,face0=0:harvestcraft/sinkbottom_3,face1=0:harvestcraft/sinktop_3,face2-5=0:harvestcraft/sinkside_3
 
-# %salt:* (salt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSalt
+# %salt:* (salt), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSalt
 block:id=%salt,data=*,stdrot=true,face0-5=0:harvestcraft/salt
 
-# %spamcompressedsaltBlockalt:* (spamcompressedsaltBlockalt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSalt
+# %spamcompressedsaltBlockalt:* (spamcompressedsaltBlockalt), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSalt
 block:id=%spamcompressedsaltBlockalt,data=*,stdrot=true,face0-5=0:harvestcraft/pamcompressedsaltBlock
 
-# %market:* (market), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamMarket
+# %market:* (market), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamMarket
 block:id=%market,data=*,stdrot=true,face0=0:harvestcraft/marketbottom,face1=0:harvestcraft/markettop,face2-5=0:harvestcraft/marketside
 
-# %oven:* (oven), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamOven
+# %oven:* (oven), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamOven
 block:id=%oven,data=0,data=1,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
 block:id=%oven,data=2,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenfrontoff,face3-5=0:harvestcraft/ovenside
 block:id=%oven,data=3,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenside,face3=0:harvestcraft/ovenfrontoff,face4-5=0:harvestcraft/ovenside
@@ -551,7 +551,7 @@ block:id=%oven,data=4,stdrot=true,face0-1=0:harvestcraft/oventop,face2-3=0:harve
 block:id=%oven,data=5,stdrot=true,face0-1=0:harvestcraft/oventop,face2-4=0:harvestcraft/ovenside,face5=0:harvestcraft/ovenfrontoff
 block:id=%oven,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
 
-# %ovenon:* (ovenon), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamOven
+# %ovenon:* (ovenon), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamOven
 block:id=%ovenon,data=0,data=1,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
 block:id=%ovenon,data=2,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenfronton,face3-5=0:harvestcraft/ovenside
 block:id=%ovenon,data=3,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenside,face3=0:harvestcraft/ovenfronton,face4-5=0:harvestcraft/ovenside
@@ -559,7 +559,7 @@ block:id=%ovenon,data=4,stdrot=true,face0-1=0:harvestcraft/oventop,face2-3=0:har
 block:id=%ovenon,data=5,stdrot=true,face0-1=0:harvestcraft/oventop,face2-4=0:harvestcraft/ovenside,face5=0:harvestcraft/ovenfronton
 block:id=%ovenon,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
 
-# %churn:* (churn), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamChurn
+# %churn:* (churn), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamChurn
 block:id=%churn,data=0,stdrot=true,face0=0:harvestcraft/churntop,face1-5=0:harvestcraft/churnside
 block:id=%churn,data=1,stdrot=true,face0=0:harvestcraft/churnside,face1=0:harvestcraft/churntop,face2-5=0:harvestcraft/churnside
 block:id=%churn,data=2,stdrot=true,face0-1=0:harvestcraft/churnside,face2=0:harvestcraft/churnfrontoff,face3-5=0:harvestcraft/churnside
@@ -568,7 +568,7 @@ block:id=%churn,data=4,stdrot=true,face0-3=0:harvestcraft/churnside,face4=0:harv
 block:id=%churn,data=5,stdrot=true,face0-4=0:harvestcraft/churnside,face5=0:harvestcraft/churnfrontoff
 block:id=%churn,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/churnside
 
-# %churnon:* (churnon), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamChurn
+# %churnon:* (churnon), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamChurn
 block:id=%churnon,data=0,stdrot=true,face0=0:harvestcraft/churntop,face1-5=0:harvestcraft/churnside
 block:id=%churnon,data=1,stdrot=true,face0=0:harvestcraft/churnside,face1=0:harvestcraft/churntop,face2-5=0:harvestcraft/churnside
 block:id=%churnon,data=2,stdrot=true,face0-1=0:harvestcraft/churnside,face2=0:harvestcraft/churnfronton,face3-5=0:harvestcraft/churnside
@@ -577,7 +577,7 @@ block:id=%churnon,data=4,stdrot=true,face0-3=0:harvestcraft/churnside,face4=0:ha
 block:id=%churnon,data=5,stdrot=true,face0-4=0:harvestcraft/churnside,face5=0:harvestcraft/churnfronton
 block:id=%churnon,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/churnside
 
-# %quern:* (quern), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamQuern
+# %quern:* (quern), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamQuern
 block:id=%quern,data=0,stdrot=true,face0=0:harvestcraft/querntop,face1-5=0:harvestcraft/quernside
 block:id=%quern,data=1,stdrot=true,face0=0:harvestcraft/quernside,face1=0:harvestcraft/querntop,face2-5=0:harvestcraft/quernside
 block:id=%quern,data=2,stdrot=true,face0-1=0:harvestcraft/quernside,face2=0:harvestcraft/quernfrontoff,face3-5=0:harvestcraft/quernside
@@ -586,7 +586,7 @@ block:id=%quern,data=4,stdrot=true,face0-3=0:harvestcraft/quernside,face4=0:harv
 block:id=%quern,data=5,stdrot=true,face0-4=0:harvestcraft/quernside,face5=0:harvestcraft/quernfrontoff
 block:id=%quern,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/quernside
 
-# %quernon:* (quernon), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamQuern
+# %quernon:* (quernon), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamQuern
 block:id=%quernon,data=0,stdrot=true,face0=0:harvestcraft/querntop,face1-5=0:harvestcraft/quernside
 block:id=%quernon,data=1,stdrot=true,face0=0:harvestcraft/quernside,face1=0:harvestcraft/querntop,face2-5=0:harvestcraft/quernside
 block:id=%quernon,data=2,stdrot=true,face0-1=0:harvestcraft/quernside,face2=0:harvestcraft/quernfronton,face3-5=0:harvestcraft/quernside
@@ -595,10 +595,10 @@ block:id=%quernon,data=4,stdrot=true,face0-3=0:harvestcraft/quernside,face4=0:ha
 block:id=%quernon,data=5,stdrot=true,face0-4=0:harvestcraft/quernside,face5=0:harvestcraft/quernfronton
 block:id=%quernon,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/quernside
 
-# %fishtrap:* (fishtrap), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamFishTrap
+# %fishtrap:* (fishtrap), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamFishTrap
 block:id=%fishtrap,data=*,stdrot=true,face0-5=0:harvestcraft/fishtrap
 
-# %animaltrap:* (animaltrap), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamAnimalTrap
+# %animaltrap:* (animaltrap), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamAnimalTrap
 block:id=%animaltrap,data=*,stdrot=true,face0-5=0:harvestcraft/animaltrap
 
 # %berrygarden:* (berrygarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamNormalGarden
@@ -1789,42 +1789,42 @@ block:id=%pamcandleDeco15,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:h
 # %pamcandleDeco16:* (pamcandleDeco16), render=(TORCH), opaque=false,cls=com.pam.harvestcraft.BlockPamCandleDeco
 block:id=%pamcandleDeco16,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/candle_15
 
-# %pamcarrotCake:* (pamcarrotCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamcarrotCake:* (pamcarrotCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pamcarrotCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcarrotcake_bottom,face1=0:harvestcraft/pamcarrotcake_top,face2-5=0:harvestcraft/pamcarrotcake_side
 block:id=%pamcarrotCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcarrotcake_bottom,face1=0:harvestcraft/pamcarrotcake_top,face2-3=0:harvestcraft/pamcarrotcake_side,face4=0:harvestcraft/pamcarrotcake_inner,face5=0:harvestcraft/pamcarrotcake_side
 
-# %pamcheeseCake:* (pamcheeseCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamcheeseCake:* (pamcheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pamcheeseCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcheesecake_bottom,face1=0:harvestcraft/pamcheesecake_top,face2-5=0:harvestcraft/pamcheesecake_side
 block:id=%pamcheeseCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcheesecake_bottom,face1=0:harvestcraft/pamcheesecake_top,face2-3=0:harvestcraft/pamcheesecake_side,face4=0:harvestcraft/pamcheesecake_inner,face5=0:harvestcraft/pamcheesecake_side
 
-# %pamcherrycheeseCake:* (pamcherrycheeseCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamcherrycheeseCake:* (pamcherrycheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pamcherrycheeseCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcherrycheesecake_bottom,face1=0:harvestcraft/pamcherrycheesecake_top,face2-5=0:harvestcraft/pamcherrycheesecake_side
 block:id=%pamcherrycheeseCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcherrycheesecake_bottom,face1=0:harvestcraft/pamcherrycheesecake_top,face2-3=0:harvestcraft/pamcherrycheesecake_side,face4=0:harvestcraft/pamcherrycheesecake_inner,face5=0:harvestcraft/pamcherrycheesecake_side
 
-# %pampineappleupsidedownCake:* (pampineappleupsidedownCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pampineappleupsidedownCake:* (pampineappleupsidedownCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pampineappleupsidedownCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampineappleupsidedowncake_bottom,face1=0:harvestcraft/pampineappleupsidedowncake_top,face2-5=0:harvestcraft/pampineappleupsidedowncake_side
 block:id=%pampineappleupsidedownCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampineappleupsidedowncake_bottom,face1=0:harvestcraft/pampineappleupsidedowncake_top,face2-3=0:harvestcraft/pampineappleupsidedowncake_side,face4=0:harvestcraft/pampineappleupsidedowncake_inner,face5=0:harvestcraft/pampineappleupsidedowncake_side
 
-# %pamchocolatesprinkleCake:* (pamchocolatesprinkleCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamchocolatesprinkleCake:* (pamchocolatesprinkleCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pamchocolatesprinkleCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamchocolatesprinklecake_bottom,face1=0:harvestcraft/pamchocolatesprinklecake_top,face2-5=0:harvestcraft/pamchocolatesprinklecake_side
 block:id=%pamchocolatesprinkleCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamchocolatesprinklecake_bottom,face1=0:harvestcraft/pamchocolatesprinklecake_top,face2-3=0:harvestcraft/pamchocolatesprinklecake_side,face4=0:harvestcraft/pamchocolatesprinklecake_inner,face5=0:harvestcraft/pamchocolatesprinklecake_side
 
-# %pamredvelvetCake:* (pamredvelvetCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamredvelvetCake:* (pamredvelvetCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pamredvelvetCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamredvelvetcake_bottom,face1=0:harvestcraft/pamredvelvetcake_top,face2-5=0:harvestcraft/pamredvelvetcake_side
 block:id=%pamredvelvetCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamredvelvetcake_bottom,face1=0:harvestcraft/pamredvelvetcake_top,face2-3=0:harvestcraft/pamredvelvetcake_side,face4=0:harvestcraft/pamredvelvetcake_inner,face5=0:harvestcraft/pamredvelvetcake_side
 
-# %pamlamingtonCake:* (pamlamingtonCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamlamingtonCake:* (pamlamingtonCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pamlamingtonCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamlamingtoncake_bottom,face1=0:harvestcraft/pamlamingtoncake_top,face2-5=0:harvestcraft/pamlamingtoncake_side
 block:id=%pamlamingtonCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamlamingtoncake_bottom,face1=0:harvestcraft/pamlamingtoncake_top,face2-3=0:harvestcraft/pamlamingtoncake_side,face4=0:harvestcraft/pamlamingtoncake_inner,face5=0:harvestcraft/pamlamingtoncake_side
 
-# %pampavlovaCake:* (pampavlovaCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pampavlovaCake:* (pampavlovaCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pampavlovaCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampavlovacake_bottom,face1=0:harvestcraft/pampavlovacake_top,face2-5=0:harvestcraft/pampavlovacake_side
 block:id=%pampavlovaCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampavlovacake_bottom,face1=0:harvestcraft/pampavlovacake_top,face2-3=0:harvestcraft/pampavlovacake_side,face4=0:harvestcraft/pampavlovacake_inner,face5=0:harvestcraft/pampavlovacake_side
 
-# %pamholidayCake:* (pamholidayCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pamholidayCake:* (pamholidayCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pamholidayCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamholidaycake_bottom,face1=0:harvestcraft/pamholidaycake_top,face2-5=0:harvestcraft/pamholidaycake_side
 block:id=%pamholidayCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamholidaycake_bottom,face1=0:harvestcraft/pamholidaycake_top,face2-3=0:harvestcraft/pamholidaycake_side,face4=0:harvestcraft/pamholidaycake_inner,face5=0:harvestcraft/pamholidaycake_side
 
-# %pampumpkincheeseCake:* (pampumpkincheeseCake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+# %pampumpkincheeseCake:* (pampumpkincheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
 block:id=%pampumpkincheeseCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampumpkincheesecake_bottom,face1=0:harvestcraft/pampumpkincheesecake_top,face2-5=0:harvestcraft/pampumpkincheesecake_side
 block:id=%pampumpkincheeseCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampumpkincheesecake_bottom,face1=0:harvestcraft/pampumpkincheesecake_top,face2-3=0:harvestcraft/pampumpkincheesecake_side,face4=0:harvestcraft/pampumpkincheesecake_inner,face5=0:harvestcraft/pampumpkincheesecake_side

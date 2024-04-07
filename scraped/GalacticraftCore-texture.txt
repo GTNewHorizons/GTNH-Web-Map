@@ -1,4 +1,4 @@
-# GalacticraftCore 3.0.69-GTNH
+# GalacticraftCore 3.1.3-GTNH
 version:1.7
 modname:GalacticraftCore
 
@@ -123,7 +123,7 @@ texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 
 
 
-# %tile.landingPad:* (tile.landingPad), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockLandingPad
+# %tile.landingPad:* (tile.landingPad), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockLandingPad
 block:id=%tile.landingPad,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
 block:id=%tile.landingPad,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/buggy_fueler_blank
 block:id=%tile.landingPad,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/cargo_pad
@@ -207,7 +207,7 @@ block:id=%tile.cargo,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=
 # %tile.rocketWorkbench:* (tile.rocketWorkbench), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererNasaWorkbench(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockNasaWorkbench
 block:id=%tile.rocketWorkbench,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/workbench_nasa_side,face1=0:galacticraftcore/workbench_nasa_top,face2-5=0:galacticraftcore/workbench_nasa_side
 
-# %tile.gcBlockCore:* (tile.gcBlockCore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockBasic
+# %tile.gcBlockCore:* (tile.gcBlockCore), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockBasic
 block:id=%tile.gcBlockCore,data=0,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_2
 block:id=%tile.gcBlockCore,data=1,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_4
 block:id=%tile.gcBlockCore,data=2,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_1
@@ -223,14 +223,14 @@ block:id=%tile.gcBlockCore,data=11,stdrot=true,face0-5=0:galacticraftcore/deco_a
 block:id=%tile.gcBlockCore,data=12,stdrot=true,face0-5=0:galacticraftcore/deco_meteoriron_block
 block:id=%tile.gcBlockCore,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_2
 
-# %tile.airLockFrame:* (tile.airLockFrame), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockAirLockFrame
+# %tile.airLockFrame:* (tile.airLockFrame), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockAirLockFrame
 block:id=%tile.airLockFrame,data=0,stdrot=true,face0-5=0:galacticraftcore/airlock_off
 block:id=%tile.airLockFrame,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/airlock_off,face2-5=0:galacticraftcore/airlock_control_off
 
-# %tile.airLockSeal:* (tile.airLockSeal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockAirLockWall
+# %tile.airLockSeal:* (tile.airLockSeal), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockAirLockWall
 block:id=%tile.airLockSeal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/deco_aluminium_4
 
-# %tile.enclosed:* (tile.enclosed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockEnclosed
+# %tile.enclosed:* (tile.enclosed), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockEnclosed
 block:id=%tile.enclosed,data=0,stdrot=true,face0-5=0:galacticraftcore/enclosed_hv_cable
 block:id=%tile.enclosed,data=1,stdrot=true,face0-5=0:galacticraftcore/enclosed_oxygen_pipe
 block:id=%tile.enclosed,data=2,stdrot=true,face0-5=0:galacticraftcore/enclosed_copper_cable
@@ -248,7 +248,7 @@ block:id=%tile.enclosed,data=13,stdrot=true,face0-5=0:galacticraftcore/enclosed_
 block:id=%tile.enclosed,data=14,stdrot=true,face0-5=0:galacticraftcore/enclosed_aluminum_wire
 block:id=%tile.enclosed,data=15,stdrot=true,face0-5=0:galacticraftcore/enclosed_heavy_aluminum_wire
 
-# %tile.spaceStationBase:* (tile.spaceStationBase), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSpaceStationBase
+# %tile.spaceStationBase:* (tile.spaceStationBase), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSpaceStationBase
 block:id=%tile.spaceStationBase,data=*,stdrot=true,face0=0:galacticraftcore/space_station_side,face1=0:galacticraftcore/space_station_top,face2-5=0:galacticraftcore/space_station_side
 
 # %tile.dummyblock:* (tile.dummyblock), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockMulti
@@ -264,7 +264,7 @@ block:id=%tile.dummyblock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,d
 # %tile.parachest:* (tile.parachest), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererParachest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockParaChest
 block:id=%tile.parachest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
-# %tile.solar:* (tile.solar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSolar
+# %tile.solar:* (tile.solar), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSolar
 block:id=%tile.solar,data=0,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_basic_0,face2=0:galacticraftcore/solar_basic_1,face3=0:galacticraftcore/machine_output,face4-5=0:galacticraftcore/solar_basic_1
 block:id=%tile.solar,data=1,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_basic_0,face2=0:galacticraftcore/machine_output,face3-5=0:galacticraftcore/solar_basic_1
 block:id=%tile.solar,data=2,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_basic_0,face2-4=0:galacticraftcore/solar_basic_1,face5=0:galacticraftcore/machine_output
@@ -275,7 +275,7 @@ block:id=%tile.solar,data=6,stdrot=true,face0=0:galacticraftcore/machine_blank,f
 block:id=%tile.solar,data=7,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_advanced_0,face2-3=0:galacticraftcore/solar_advanced_1,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/solar_advanced_1
 block:id=%tile.solar,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_advanced_0,face2-5=0:galacticraftcore/solar_advanced_1
 
-# %tile.dish:* (tile.dish), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockDish
+# %tile.dish:* (tile.dish), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockDish
 block:id=%tile.dish,data=*,stdrot=true,face0-5=0:galacticraftcore/machine_blank
 
 # %tile.machine:* (tile.machine), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockMachine
@@ -333,7 +333,7 @@ block:id=%tile.glowstoneTorch,data=*,stdrot=true,face0-5=0:galacticraftcore/glow
 # %tile.fallenMeteor:* (tile.fallenMeteor), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMeteor(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockFallenMeteor
 block:id=%tile.fallenMeteor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/fallen_meteor
 
-# %tile.moonBlock:* (tile.moonBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockBasicMoon
+# %tile.moonBlock:* (tile.moonBlock), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockBasicMoon
 block:id=%tile.moonBlock,data=0,stdrot=true,face0-5=0:galacticraftmoon/moonore_copper
 block:id=%tile.moonBlock,data=1,stdrot=true,face0-5=0:galacticraftmoon/moonore_tin
 block:id=%tile.moonBlock,data=2,stdrot=true,face0-5=0:galacticraftmoon/moonore_cheese
@@ -351,7 +351,7 @@ block:id=%tile.moonBlock,data=13,stdrot=true,face0=0:galacticraftmoon/middle,fac
 block:id=%tile.moonBlock,data=14,stdrot=true,face0-5=0:galacticraftmoon/brick
 block:id=%tile.moonBlock,data=15,stdrot=true,face0-5=0:galacticraftcore/blank
 
-# %tile.cheeseBlock:* (tile.cheeseBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockCheese
+# %tile.cheeseBlock:* (tile.cheeseBlock), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockCheese
 block:id=%tile.cheeseBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftmoon/cheese_1,face2-5=0:galacticraftmoon/cheese_2
 block:id=%tile.cheeseBlock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftmoon/cheese_1,face2-3=0:galacticraftmoon/cheese_2,face4=0:galacticraftmoon/cheese_3,face5=0:galacticraftmoon/cheese_2
 
@@ -418,7 +418,7 @@ block:id=%tile.wallGC,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:gal
 block:id=%tile.wallGC,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:galacticraftmars/cobblestone
 block:id=%tile.wallGC,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:galacticraftmars/brick
 
-# %slabGCHalf:* (slabGCHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSlabGC
+# %slabGCHalf:* (slabGCHalf), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSlabGC
 block:id=%slabGCHalf,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:galacticraftcore/deco_aluminium_4
 block:id=%slabGCHalf,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0=0:galacticraftcore/deco_aluminium_4,face1=0:galacticraftcore/deco_aluminium_2,face2-5=0:galacticraftcore/deco_aluminium_1
 block:id=%slabGCHalf,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:galacticraftmoon/bottom
@@ -432,7 +432,7 @@ block:id=%slabGCHalf,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:
 block:id=%slabGCHalf,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:galacticraftmars/cobblestone
 block:id=%slabGCHalf,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:galacticraftmars/brick
 
-# %slabGCDouble:* (slabGCDouble), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSlabGC
+# %slabGCDouble:* (slabGCDouble), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.BlockSlabGC
 block:id=%slabGCDouble,data=0,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_4
 block:id=%slabGCDouble,data=1,stdrot=true,face0=0:galacticraftcore/deco_aluminium_4,face1=0:galacticraftcore/deco_aluminium_2,face2-5=0:galacticraftcore/deco_aluminium_1
 block:id=%slabGCDouble,data=2,stdrot=true,face0-5=0:galacticraftmoon/bottom

@@ -190,7 +190,7 @@ patchblock:id=%moss,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@1
 
 # %newBopGrass:* (newBopGrass), render=biomesoplenty.client.render.blocks.RenderNewGrass(CUSTOM), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewGrass
 
-# %newBopFarmland:* (newBopFarmland), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPNewFarmland
+# %newBopFarmland:* (newBopFarmland), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPNewFarmland
 boxblock:id=%newBopFarmland,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
 # %saplings:* (saplings), render=(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSapling
@@ -214,15 +214,15 @@ boxblock:id=%grave,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.6875,zmin=0.310000002384185
 boxblock:id=%grave,xmin=0.3100000023841858,xmax=0.6899999976158142,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
 boxblock:id=%grave,xmin=0.3100000023841858,xmax=0.6899999976158142,ymin=0.0,ymax=0.6875,zmin=0.0,zmax=1.0,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %woodenSingleSlab1:* (woodenSingleSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenSingleSlab1:* (woodenSingleSlab1), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 boxblock:id=%woodenSingleSlab1,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%woodenSingleSlab1,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %woodenSingleSlab2:* (woodenSingleSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenSingleSlab2:* (woodenSingleSlab2), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 boxblock:id=%woodenSingleSlab2,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%woodenSingleSlab2,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stoneSingleSlab:* (stoneSingleSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %stoneSingleSlab:* (stoneSingleSlab), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 boxblock:id=%stoneSingleSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stoneSingleSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 

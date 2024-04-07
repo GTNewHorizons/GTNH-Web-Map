@@ -165,15 +165,17 @@ public class IsoHDPerspective implements HDPerspective {
         }
         
         private final void updateSemitransparentLight(LightLevels ll) {
-        	int emitted = 0, sky = 0;
+        	int emitted = mapiter.getBlockEmittedLight(), sky = mapiter.getBlockSkyLight();
         	for(int i = 0; i < semi_steps.length; i++) {
         	    BlockStep s = semi_steps[i];
-        		mapiter.stepPosition(s);
-        		int v = mapiter.getBlockEmittedLight();
-        		if(v > emitted) emitted = v;
-        		v = mapiter.getBlockSkyLight();
-        		if(v > sky) sky = v;
-        		mapiter.unstepPosition(s);
+                mapiter.stepPosition(s);
+                int v = mapiter.getBlockEmittedLight();
+                if (v - 1 > emitted) emitted = v - 1;
+                v = mapiter.getBlockSkyLight();
+                if (s != BlockStep.Y_PLUS && v > 0)
+                    v -= 1;
+                if (v > sky) sky = v;
+                mapiter.unstepPosition(s);
         	}
         	ll.sky = sky;
         	ll.emitted = emitted;
@@ -232,11 +234,18 @@ public class IsoHDPerspective implements HDPerspective {
                 return;
             }
             BlockStep blast = laststep;
+            int prevlastblocktypeid = lastblocktypeid;
             mapiter.stepPosition(step);
-            laststep = blast;
+
+            mapiter.unstepPosition(blast);
+            lastblocktypeid = mapiter.getBlockTypeID();
+            mapiter.stepPosition(blast);
+
             updateLightLevel(mapiter.getBlockTypeID(), ll);
             mapiter.unstepPosition(step);
+
             laststep = blast;
+            lastblocktypeid = prevlastblocktypeid;
         }
         /**
          * Get current block type ID
@@ -456,16 +465,35 @@ public class IsoHDPerspective implements HDPerspective {
                 /* Compute parametric value of intercept */
                 double t = inv_det * pd.v.innerProduct(vS);
                 if (t > 0.000001) { /* We've got a hit */
+
+                    double actualU = u;
+                    double actualV = v;
+
+                    if(pd.explicitTexCoords != null){
+                        actualU = u * pd.explicitTexCoords[2] + v*pd.explicitTexCoords[4] + (1-u-v) * pd.explicitTexCoords[0];
+                        actualV = u * pd.explicitTexCoords[3] + v*pd.explicitTexCoords[5] + (1-u-v) * pd.explicitTexCoords[1];
+
+                        if(actualU > 1)
+                            actualU -= 1.0;
+                        else if(actualU < 0)
+                            actualU += 1.0;
+
+                        if(actualV > 1)
+                            actualV -= 1.0;
+                        else if(actualV < 0)
+                            actualV += 1.0;
+                    }
+
                     patch_t[hitcnt] = t;
-                    patch_u[hitcnt] = u;
-                    patch_v[hitcnt] = v;
+                    patch_u[hitcnt] = actualU;
+                    patch_v[hitcnt] = actualV;
                     patch_id[hitcnt] = pd.textureindex;
                     if(det > 0) {
                         patch_step[hitcnt] = pd.step.opposite();
                     }
                     else {
                         if (pd.sidevis == SideVisible.FLIP) {
-                            patch_u[hitcnt] = 1 - u;
+                            patch_u[hitcnt] = 1 - actualU;
                         }
                         patch_step[hitcnt] = pd.step;
                     }

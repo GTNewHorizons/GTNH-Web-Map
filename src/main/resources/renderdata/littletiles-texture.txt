@@ -23,7 +23,7 @@ texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 
 
 
-# %LTColoredBlock:* (LTColoredBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.creativemd.littletiles.common.blocks.BlockLTColored
+# %LTColoredBlock:* (LTColoredBlock), render=(STANDARD), opaque=true,cls=com.creativemd.littletiles.common.blocks.BlockLTColored
 block:id=%LTColoredBlock,data=0,stdrot=true,face0-5=0:littletiles/LTColored0
 block:id=%LTColoredBlock,data=1,stdrot=true,face0-5=0:littletiles/LTColored1
 block:id=%LTColoredBlock,data=2,stdrot=true,face0-5=0:littletiles/LTColored2

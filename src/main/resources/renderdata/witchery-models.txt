@@ -87,7 +87,7 @@ patchblock:id=%embermoss,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data
 # %crittersnare:* (crittersnare), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockCritterSnare
 patchblock:id=%crittersnare,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %grassper:* (grassper), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockGrassper
+# %grassper:* (grassper), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockGrassper
 boxblock:id=%grassper,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5099999904632568,zmin=0.0,zmax=1.0,data=*
 
 # %bloodrose:* (bloodrose), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodRose
@@ -111,7 +111,7 @@ patchblock:id=%cactus,patch0=VertX00625,patch1=VertX00625@90,patch2=VertX00625@1
 # %lilypad:* (lilypad), render=(LILYPAD), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchLilyPad
 patchblock:id=%lilypad,patch0=HorizY001ZTop,data=*
 
-# %demonheart:* (demonheart), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDemonHeart
+# %demonheart:* (demonheart), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDemonHeart
 boxblock:id=%demonheart,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.800000011920929,zmin=0.25,zmax=0.75,data=*
 
 # %wolfhead:* (wolfhead), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockWolfHead
@@ -136,7 +136,7 @@ customblock:id=%stairswoodalder,class=org.dynmap.hdmap.renderer.StairBlockRender
 # %stairswoodhawthorn:* (stairswoodhawthorn), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchWoodStairs
 customblock:id=%stairswoodhawthorn,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %witchwoodslab:* (witchwoodslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchWoodSlab
+# %witchwoodslab:* (witchwoodslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchWoodSlab
 boxblock:id=%witchwoodslab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%witchwoodslab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -146,13 +146,13 @@ customblock:id=%rowanwooddoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=
 # %alderwooddoor:* (alderwooddoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchDoor
 customblock:id=%alderwooddoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
 
-# %chalice:* (chalice), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockChalice
+# %chalice:* (chalice), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockChalice
 boxblock:id=%chalice,xmin=0.30000001192092896,xmax=0.6299999952316284,ymin=0.0,ymax=0.46000000834465027,zmin=0.3700000047683716,zmax=0.6949999928474426,data=*
 
-# %candelabra:* (candelabra), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCandelabra
+# %candelabra:* (candelabra), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCandelabra
 boxblock:id=%candelabra,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
 
-# %placeditem:* (placeditem), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPlacedItem
+# %placeditem:* (placeditem), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPlacedItem
 boxblock:id=%placeditem,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.05000000074505806,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %alluringskull:* (alluringskull), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockAlluringSkull
@@ -171,7 +171,7 @@ boxblock:id=%alluringskull,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=
 # %glowglobe:* (glowglobe), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockGlowGlobe
 patchblock:id=%glowglobe,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %statuegoddess:* (statuegoddess), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueGoddess
+# %statuegoddess:* (statuegoddess), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueGoddess
 # FIXME: Box constraints truncated to 0.0<=val<=1.0
 boxblock:id=%statuegoddess,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
 
@@ -187,11 +187,11 @@ customblock:id=%icedoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
 # %icestairs:* (icestairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpertualIceStairs
 customblock:id=%icestairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %iceslab:* (iceslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+# %iceslab:* (iceslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
 boxblock:id=%iceslab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%iceslab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %icedoubleslab:* (icedoubleslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+# %icedoubleslab:* (icedoubleslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
 boxblock:id=%icedoubleslab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%icedoubleslab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -201,12 +201,12 @@ customblock:id=%icefence,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,
 # %icefencegate:* (icefencegate), render=(FENCEGATE), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceGate
 customblock:id=%icefencegate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
 
-# %icepressureplate:* (icepressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+# %icepressureplate:* (icepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
 boxblock:id=%icepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%icepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%icepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %snowpressureplate:* (snowpressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+# %snowpressureplate:* (snowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
 boxblock:id=%snowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%snowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%snowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
@@ -214,7 +214,7 @@ boxblock:id=%snowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin
 # %snowstairs:* (snowstairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowStairs
 customblock:id=%snowstairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %snowslab:* (snowslab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowSlab
+# %snowslab:* (snowslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowSlab
 boxblock:id=%snowslab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%snowslab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -230,54 +230,54 @@ boxblock:id=%garlicgarland,xmin=0.0,xmax=0.15000000596046448,ymin=0.800000011920
 # %refillingchest:* (refillingchest), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
 boxblock:id=%refillingchest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
-# %leechchest:* (leechchest), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockLeechChest
+# %leechchest:* (leechchest), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockLeechChest
 boxblock:id=%leechchest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
-# %poppetshelf:* (poppetshelf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPoppetShelf
+# %poppetshelf:* (poppetshelf), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPoppetShelf
 boxblock:id=%poppetshelf,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5099999904632568,zmin=0.0,zmax=1.0,data=*
 
-# %dreamcatcher:* (dreamcatcher), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDreamCatcher
+# %dreamcatcher:* (dreamcatcher), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDreamCatcher
 # FIXME: Box constraints truncated to 0.0<=val<=1.0
 boxblock:id=%dreamcatcher,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.8700000047683716,zmin=1.0,zmax=1.0,data=2
 boxblock:id=%dreamcatcher,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.8700000047683716,zmin=0.0,zmax=0.07999999821186066,data=3
 boxblock:id=%dreamcatcher,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.8700000047683716,zmin=0.25,zmax=0.75,data=4
 boxblock:id=%dreamcatcher,xmin=0.0,xmax=0.07999999821186066,ymin=0.0,ymax=0.8700000047683716,zmin=0.25,zmax=0.75,data=5
 
-# %crystalball:* (crystalball), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCrystalBall
+# %crystalball:* (crystalball), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCrystalBall
 boxblock:id=%crystalball,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.6000000238418579,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
 
-# %spiritportal:* (spiritportal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSpiritPortal
+# %spiritportal:* (spiritportal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSpiritPortal
 boxblock:id=%spiritportal,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
-# %tormentportal:* (tormentportal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockTormentPortal
+# %tormentportal:* (tormentportal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockTormentPortal
 boxblock:id=%tormentportal,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
-# %brazier:* (brazier), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBrazier
+# %brazier:* (brazier), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBrazier
 boxblock:id=%brazier,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.949999988079071,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
-# %scarecrow:* (scarecrow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
+# %scarecrow:* (scarecrow), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
 boxblock:id=%scarecrow,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
-# %trent:* (trent), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
+# %trent:* (trent), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
 boxblock:id=%trent,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=*
 
 # %witchsladder:* (witchsladder), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockFetish
 patchblock:id=%witchsladder,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %decurseteleport:* (decurseteleport), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
+# %decurseteleport:* (decurseteleport), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
 boxblock:id=%decurseteleport,xmin=0.15000000596046448,xmax=0.8500000238418579,ymin=0.0,ymax=0.5,zmin=0.15000000596046448,zmax=0.8500000238418579,data=*
 
-# %decursedirected:* (decursedirected), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
+# %decursedirected:* (decursedirected), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
 boxblock:id=%decursedirected,xmin=0.15000000596046448,xmax=0.8500000238418579,ymin=0.0,ymax=0.5,zmin=0.15000000596046448,zmax=0.8500000238418579,data=*
 
-# %cauldron:* (cauldron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockCauldron
+# %cauldron:* (cauldron), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockCauldron
 boxblock:id=%cauldron,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8500000238418579,zmin=0.0,zmax=1.0,data=*
 
-# %wolfaltar:* (wolfaltar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueWerewolf
+# %wolfaltar:* (wolfaltar), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueWerewolf
 # FIXME: Box constraints truncated to 0.0<=val<=1.0
 boxblock:id=%wolfaltar,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
-# %silvervat:* (silvervat), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSilverVat
+# %silvervat:* (silvervat), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSilverVat
 boxblock:id=%silvervat,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.6399999856948853,zmin=0.0,zmax=1.0,data=*
 
 # %beartrap:* (beartrap), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockBeartrap
@@ -289,19 +289,19 @@ boxblock:id=%wolftrap,xmin=0.19999998807907104,xmax=0.800000011920929,ymin=0.009
 # %daylightcollector:* (daylightcollector), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockDaylightCollector
 patchblock:id=%daylightcollector,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %bloodcrucible:* (bloodcrucible), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodCrucible
+# %bloodcrucible:* (bloodcrucible), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodCrucible
 boxblock:id=%bloodcrucible,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.3100000023841858,zmin=0.25,zmax=0.75,data=*
 
-# %circle:* (circle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircle
+# %circle:* (circle), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircle
 boxblock:id=%circle,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
 
-# %circleglyphritual:* (circleglyphritual), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
+# %circleglyphritual:* (circleglyphritual), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 boxblock:id=%circleglyphritual,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
 
-# %circleglyphotherwhere:* (circleglyphotherwhere), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
+# %circleglyphotherwhere:* (circleglyphotherwhere), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 boxblock:id=%circleglyphotherwhere,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
 
-# %circleglyphinfernal:* (circleglyphinfernal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
+# %circleglyphinfernal:* (circleglyphinfernal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 boxblock:id=%circleglyphinfernal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
 
 # %spiritflowing:* (spiritflowing), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.blocks.BlockFlowingSpirit
@@ -373,22 +373,22 @@ boxblock:id=%brew,ymax=0.125,data=15
 # %cwoodendoor:* (cwoodendoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.brewing.BlockDoorBase
 customblock:id=%cwoodendoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
 
-# %cwoodpressureplate:* (cwoodpressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+# %cwoodpressureplate:* (cwoodpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
 boxblock:id=%cwoodpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%cwoodpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%cwoodpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %cstonepressureplate:* (cstonepressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+# %cstonepressureplate:* (cstonepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
 boxblock:id=%cstonepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%cstonepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%cstonepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %csnowpressureplate:* (csnowpressureplate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+# %csnowpressureplate:* (csnowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
 boxblock:id=%csnowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%csnowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%csnowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %cbuttonwood:* (cbuttonwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$1
+# %cbuttonwood:* (cbuttonwood), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$1
 boxblock:id=%cbuttonwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%cbuttonwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%cbuttonwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -398,7 +398,7 @@ boxblock:id=%cbuttonwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,
 boxblock:id=%cbuttonwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%cbuttonwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %cbuttonstone:* (cbuttonstone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$2
+# %cbuttonstone:* (cbuttonstone), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$2
 boxblock:id=%cbuttonstone,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%cbuttonstone,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%cbuttonstone,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3

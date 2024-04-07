@@ -462,15 +462,15 @@ biome:id=biome_ids/Phantasmagoric_Inferno_ID,grassColorMult=1BFB755,foliageColor
 biome:id=biome_ids/Undergarden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 
 
-# %mud:* (mud), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockMud
+# %mud:* (mud), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockMud
 block:id=%mud,data=0,stdrot=true,face0-5=0:biomesoplenty/mud
 block:id=%mud,data=1,stdrot=true,face0-5=0:biomesoplenty/quicksand
 block:id=%mud,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/mud
 
-# %driedDirt:* (driedDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %driedDirt:* (driedDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%driedDirt,data=*,stdrot=true,face0-5=0:biomesoplenty/drieddirt
 
-# %rocks:* (rocks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPRocks
+# %rocks:* (rocks), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPRocks
 block:id=%rocks,data=0,stdrot=true,face0-5=0:biomesoplenty/limestone
 block:id=%rocks,data=1,stdrot=true,face0-5=0:biomesoplenty/limestonesmooth
 block:id=%rocks,data=2,stdrot=true,face0-5=0:biomesoplenty/siltstone
@@ -479,10 +479,10 @@ block:id=%rocks,data=4,stdrot=true,face0-5=0:biomesoplenty/shale
 block:id=%rocks,data=5,stdrot=true,face0-5=0:biomesoplenty/shalesmooth
 block:id=%rocks,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/limestone
 
-# %ash:* (ash), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockAsh
+# %ash:* (ash), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockAsh
 block:id=%ash,data=*,stdrot=true,face0-5=0:biomesoplenty/ashblock
 
-# %flesh:* (flesh), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockFlesh
+# %flesh:* (flesh), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockFlesh
 block:id=%flesh,data=*,stdrot=true,face0-5=0:biomesoplenty/flesh
 
 # %plants:* (plants), render=biomesoplenty.client.render.blocks.PlantsRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPlant
@@ -613,13 +613,13 @@ block:id=%coral1,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesopl
 # %coral2:* (coral2), render=(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPCoral
 block:id=%coral2,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/algae
 
-# %ashStone:* (ashStone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %ashStone:* (ashStone), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%ashStone,data=*,stdrot=true,face0-5=0:biomesoplenty/ashstone
 
-# %hardIce:* (hardIce), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %hardIce:* (hardIce), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%hardIce,data=*,stdrot=true,face0-5=0:biomesoplenty/hardice
 
-# %appleLeaves:* (appleLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPAppleLeaves
+# %appleLeaves:* (appleLeaves), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPAppleLeaves
 block:id=%appleLeaves,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_apple0_fancy
 block:id=%appleLeaves,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_fancy
 block:id=%appleLeaves,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
@@ -637,7 +637,7 @@ block:id=%appleLeaves,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_
 block:id=%appleLeaves,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
 block:id=%appleLeaves,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_apple3_fancy
 
-# %persimmonLeaves:* (persimmonLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPersimmonLeaves
+# %persimmonLeaves:* (persimmonLeaves), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPersimmonLeaves
 block:id=%persimmonLeaves,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon0_fancy
 block:id=%persimmonLeaves,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon1_fancy
 block:id=%persimmonLeaves,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon2_fancy
@@ -661,19 +661,19 @@ block:id=%moss,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:biomesopl
 # %bamboo:* (bamboo), render=biomesoplenty.client.render.blocks.BambooRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBamboo
 block:id=%bamboo,data=*,stdrot=true,face0-1=0:biomesoplenty/bambootop,face2-5=0:biomesoplenty/bamboo
 
-# %mudBricks:* (mudBricks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %mudBricks:* (mudBricks), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%mudBricks,data=*,stdrot=true,face0-5=0:biomesoplenty/mudbrick
 
-# %originGrass:* (originGrass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOriginGrass
+# %originGrass:* (originGrass), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOriginGrass
 block:id=%originGrass,data=*,stdrot=true,face0=0:biomesoplenty/origingrass3,face1=0:biomesoplenty/origingrass1,face2-5=0:biomesoplenty/origingrass2
 
-# %longGrass:* (longGrass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockLongGrass
+# %longGrass:* (longGrass), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockLongGrass
 block:id=%longGrass,data=*,stdrot=true,face0=0:biomesoplenty/longgrass3,face1=0:biomesoplenty/longgrass1,face2-5=0:biomesoplenty/longgrass2
 
-# %overgrownNetherrack:* (overgrownNetherrack), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOvergrownNetherrack
+# %overgrownNetherrack:* (overgrownNetherrack), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockOvergrownNetherrack
 block:id=%overgrownNetherrack,data=*,stdrot=true,face0=0:biomesoplenty/overgrownnetherrack3,face1=0:biomesoplenty/overgrownnetherrack1,face2-5=0:biomesoplenty/overgrownnetherrack2
 
-# %bopGrass:* (bopGrass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGrass
+# %bopGrass:* (bopGrass), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGrass
 block:id=%bopGrass,data=0,stdrot=true,face0=0:biomesoplenty/spectralmoss_bottom,face1=0:biomesoplenty/spectralmoss_top,face2-5=0:biomesoplenty/spectralmoss_side
 block:id=%bopGrass,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:biomesoplenty/smolderinggrass_bottom,face1=0:biomesoplenty/smolderinggrass_top,face2-5=0:biomesoplenty/smolderinggrass_side
 
@@ -683,7 +683,7 @@ block:id=%newBopGrass,data=1,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesop
 block:id=%newBopGrass,data=2,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_silty,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_silty_side
 block:id=%newBopGrass,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_loamy_side
 
-# %newBopDirt:* (newBopDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewDirt
+# %newBopDirt:* (newBopDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewDirt
 block:id=%newBopDirt,data=0,stdrot=true,face0-5=0:biomesoplenty/dirt_loamy
 block:id=%newBopDirt,data=1,stdrot=true,face0-5=0:biomesoplenty/coarse_dirt_loamy
 block:id=%newBopDirt,data=2,stdrot=true,face0-5=0:biomesoplenty/dirt_sandy
@@ -692,7 +692,7 @@ block:id=%newBopDirt,data=4,stdrot=true,face0-5=0:biomesoplenty/dirt_silty
 block:id=%newBopDirt,data=5,stdrot=true,face0-5=0:biomesoplenty/coarse_dirt_silty
 block:id=%newBopDirt,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/dirt_loamy
 
-# %newBopFarmland:* (newBopFarmland), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPNewFarmland
+# %newBopFarmland:* (newBopFarmland), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPNewFarmland
 block:id=%newBopFarmland,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_loamy,face1=0:biomesoplenty/farmland_dry_loamy,face2-5=0:biomesoplenty/dirt_loamy
 block:id=%newBopFarmland,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_loamy,face1=0:biomesoplenty/farmland_wet_loamy,face2-5=0:biomesoplenty/dirt_loamy
 block:id=%newBopFarmland,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_sandy,face1=0:biomesoplenty/farmland_dry_sandy,face2-5=0:biomesoplenty/dirt_sandy
@@ -770,7 +770,7 @@ block:id=%logs4,data=13,stdrot=true,face0-5=0:biomesoplenty/log_hellbark_side
 block:id=%logs4,data=14,stdrot=true,face0-5=0:biomesoplenty/log_jacaranda_side
 block:id=%logs4,data=15,stdrot=true,face0-5=0:biomesoplenty/log_mahogany_side
 
-# %leaves1:* (leaves1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves1:* (leaves1), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves1,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
 block:id=%leaves1,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_bamboo_fancy
 block:id=%leaves1,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_magic_fancy
@@ -788,7 +788,7 @@ block:id=%leaves1,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_bamboo_fanc
 block:id=%leaves1,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_magic_fancy
 block:id=%leaves1,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_dark_fancy
 
-# %leaves2:* (leaves2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves2:* (leaves2), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves2,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_dead_fancy
 block:id=%leaves2,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_fir_fancy
 block:id=%leaves2,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_ethereal_fancy
@@ -806,7 +806,7 @@ block:id=%leaves2,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_fir_fancy
 block:id=%leaves2,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_ethereal_fancy
 block:id=%leaves2,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_orangeautumn_fancy
 
-# %leaves3:* (leaves3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves3:* (leaves3), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves3,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_origin_fancy
 block:id=%leaves3,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_pinkcherry_fancy
 block:id=%leaves3,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_maple_fancy
@@ -824,7 +824,7 @@ block:id=%leaves3,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_pinkcherry_
 block:id=%leaves3,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_maple_fancy
 block:id=%leaves3,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_whitecherry_fancy
 
-# %leaves4:* (leaves4), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
+# %leaves4:* (leaves4), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLeaves
 block:id=%leaves4,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_hellbark_fancy
 block:id=%leaves4,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
 block:id=%leaves4,data=2,data=3,stdrot=true,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
@@ -838,7 +838,7 @@ block:id=%leaves4,data=12,stdrot=true,face0-5=0:biomesoplenty/leaves_hellbark_fa
 block:id=%leaves4,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
 block:id=%leaves4,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
 
-# %petals:* (petals), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPetals
+# %petals:* (petals), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPPetals
 block:id=%petals,data=0,stdrot=true,face0-5=0:biomesoplenty/bigflowerred
 block:id=%petals,data=1,stdrot=true,face0-5=0:biomesoplenty/bigfloweryellow
 block:id=%petals,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/bigflowerred
@@ -872,19 +872,19 @@ block:id=%colorizedSaplings,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0
 block:id=%colorizedSaplings,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_flowering
 block:id=%colorizedSaplings,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_sacredoak
 
-# %hardSand:* (hardSand), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %hardSand:* (hardSand), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%hardSand,data=*,stdrot=true,face0-5=0:biomesoplenty/hardsand
 
-# %hardDirt:* (hardDirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %hardDirt:* (hardDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%hardDirt,data=*,stdrot=true,face0-5=0:biomesoplenty/harddirt
 
-# %biomeBlock:* (biomeBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %biomeBlock:* (biomeBlock), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%biomeBlock,data=*,stdrot=true,face0-5=0:biomesoplenty/biomeblock
 
-# %crystal:* (crystal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %crystal:* (crystal), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%crystal,data=*,stdrot=true,face0-5=0:biomesoplenty/crystal
 
-# %gemOre:* (gemOre), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGems
+# %gemOre:* (gemOre), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGems
 block:id=%gemOre,data=0,stdrot=true,face0-5=0:biomesoplenty/amethystore
 block:id=%gemOre,data=1,stdrot=true,face0-5=0:biomesoplenty/amethystblock
 block:id=%gemOre,data=2,stdrot=true,face0-5=0:biomesoplenty/rubyore
@@ -902,17 +902,17 @@ block:id=%gemOre,data=13,stdrot=true,face0-5=0:biomesoplenty/sapphireblock
 block:id=%gemOre,data=14,stdrot=true,face0-5=0:biomesoplenty/amberore
 block:id=%gemOre,data=15,stdrot=true,face0-5=0:biomesoplenty/amberblock
 
-# %cragRock:* (cragRock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
+# %cragRock:* (cragRock), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%cragRock,data=*,stdrot=true,face0-5=0:biomesoplenty/cragrock
 
-# %hive:* (hive), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockHive
+# %hive:* (hive), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockHive
 block:id=%hive,data=0,stdrot=true,face0-5=0:biomesoplenty/honeycomb
 block:id=%hive,data=1,stdrot=true,face0-5=0:biomesoplenty/hive
 block:id=%hive,data=2,stdrot=true,face0-5=0:biomesoplenty/honeycombempty
 block:id=%hive,data=3,stdrot=true,face0-5=0:biomesoplenty/honeycombfilled
 block:id=%hive,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/honeycomb
 
-# %honeyBlock:* (honeyBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockHoney
+# %honeyBlock:* (honeyBlock), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockHoney
 block:id=%honeyBlock,data=*,stdrot=true,face0-5=12000:biomesoplenty/honeyblock
 
 # %bones:* (bones), render=biomesoplenty.client.render.blocks.SmallBlockRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBones
@@ -926,7 +926,7 @@ block:id=%bones,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,dat
 # %grave:* (grave), render=biomesoplenty.client.render.blocks.GraveRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockGrave
 block:id=%grave,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/grave
 
-# %planks:* (planks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPPlank
+# %planks:* (planks), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPPlank
 block:id=%planks,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 block:id=%planks,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_cherry
 block:id=%planks,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_dark
@@ -944,7 +944,7 @@ block:id=%planks,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_jacaranda
 block:id=%planks,data=14,stdrot=true,face0-5=0:biomesoplenty/plank_mahogany
 block:id=%planks,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 
-# %woodenSingleSlab1:* (woodenSingleSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenSingleSlab1:* (woodenSingleSlab1), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenSingleSlab1,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_sacredoak
 block:id=%woodenSingleSlab1,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_cherry
 block:id=%woodenSingleSlab1,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_dark
@@ -962,7 +962,7 @@ block:id=%woodenSingleSlab1,data=13,stdrot=true,transparency=SEMITRANSPARENT,fac
 block:id=%woodenSingleSlab1,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_mangrove
 block:id=%woodenSingleSlab1,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_palm
 
-# %woodenDoubleSlab1:* (woodenDoubleSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenDoubleSlab1:* (woodenDoubleSlab1), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenDoubleSlab1,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 block:id=%woodenDoubleSlab1,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_cherry
 block:id=%woodenDoubleSlab1,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_dark
@@ -980,7 +980,7 @@ block:id=%woodenDoubleSlab1,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_ma
 block:id=%woodenDoubleSlab1,data=14,stdrot=true,face0-5=0:biomesoplenty/plank_mangrove
 block:id=%woodenDoubleSlab1,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_palm
 
-# %woodenSingleSlab2:* (woodenSingleSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenSingleSlab2:* (woodenSingleSlab2), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenSingleSlab2,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_redwood
 block:id=%woodenSingleSlab2,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_willow
 block:id=%woodenSingleSlab2,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_pine
@@ -996,7 +996,7 @@ block:id=%woodenSingleSlab2,data=12,stdrot=true,transparency=SEMITRANSPARENT,fac
 block:id=%woodenSingleSlab2,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_mahogany
 block:id=%woodenSingleSlab2,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_sacredoak
 
-# %woodenDoubleSlab2:* (woodenDoubleSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %woodenDoubleSlab2:* (woodenDoubleSlab2), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%woodenDoubleSlab2,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_redwood
 block:id=%woodenDoubleSlab2,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_willow
 block:id=%woodenDoubleSlab2,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_pine
@@ -1012,10 +1012,10 @@ block:id=%woodenDoubleSlab2,data=12,stdrot=true,face0-5=0:biomesoplenty/plank_ja
 block:id=%woodenDoubleSlab2,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_mahogany
 block:id=%woodenDoubleSlab2,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_sacredoak
 
-# %stoneSingleSlab:* (stoneSingleSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %stoneSingleSlab:* (stoneSingleSlab), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%stoneSingleSlab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/mudbrick
 
-# %stoneDoubleSlab:* (stoneDoubleSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
+# %stoneDoubleSlab:* (stoneDoubleSlab), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPSlab
 block:id=%stoneDoubleSlab,data=*,stdrot=true,face0-5=0:biomesoplenty/mudbrick
 
 # %sacredoakStairs:* (sacredoakStairs), render=(STAIRS), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPStairs

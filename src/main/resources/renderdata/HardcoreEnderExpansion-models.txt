@@ -58,12 +58,12 @@ boxblock:id=%crossed_decoration,xmin=0.10000000149011612,xmax=0.8999999761581421
 # %ravaged_brick_fence:* (ravaged_brick_fence), render=(FENCE), opaque=false,cls=net.minecraft.block.BlockFence
 customblock:id=%ravaged_brick_fence,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
 
-# %essence_altar:* (essence_altar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=chylex.hee.block.BlockEssenceAltar
+# %essence_altar:* (essence_altar), render=(STANDARD), opaque=false,cls=chylex.hee.block.BlockEssenceAltar
 boxblock:id=%essence_altar,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
 # %obsidian_special_glow:* (obsidian_special_glow), render=chylex.hee.render.block.RenderBlockObsidianSpecial(CUSTOM), opaque=true,cls=chylex.hee.block.BlockObsidianSpecial
 
-# %ravaged_brick_slab:* (ravaged_brick_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=chylex.hee.block.vanilla.BlockBasicSlab
+# %ravaged_brick_slab:* (ravaged_brick_slab), render=(STANDARD), opaque=false,cls=chylex.hee.block.vanilla.BlockBasicSlab
 boxblock:id=%ravaged_brick_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%ravaged_brick_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 

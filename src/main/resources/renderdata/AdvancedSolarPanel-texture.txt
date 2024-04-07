@@ -23,7 +23,7 @@ texture:id=advancedsolarpanel/usp_top,filename=assets/advancedsolarpanel/texture
 
 
 
-# %BlockAdvSolarPanel:* (BlockAdvSolarPanel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=advsolar.common.blocks.BlockAdvSolarPanel
+# %BlockAdvSolarPanel:* (BlockAdvSolarPanel), render=(STANDARD), opaque=true,cls=advsolar.common.blocks.BlockAdvSolarPanel
 block:id=%BlockAdvSolarPanel,data=0,stdrot=true,face0=0:advancedsolarpanel/asp_bottom,face1=0:advancedsolarpanel/asp_top,face2-5=0:advancedsolarpanel/asp_side
 block:id=%BlockAdvSolarPanel,data=1,stdrot=true,face0=0:advancedsolarpanel/hsp_bottom,face1=0:advancedsolarpanel/hsp_top,face2-5=0:advancedsolarpanel/hsp_side
 block:id=%BlockAdvSolarPanel,data=2,stdrot=true,face0=0:advancedsolarpanel/usp_bottom,face1=0:advancedsolarpanel/usp_top,face2-5=0:advancedsolarpanel/usp_side

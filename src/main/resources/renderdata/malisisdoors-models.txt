@@ -410,7 +410,7 @@ boxblock:id=%camoFenceGate,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.0,zmax
 boxblock:id=%camoFenceGate,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=14
 boxblock:id=%camoFenceGate,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %player_sensor:* (player_sensor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=net.malisis.doors.block.PlayerSensor
+# %player_sensor:* (player_sensor), render=(STANDARD), opaque=false,cls=net.malisis.doors.block.PlayerSensor
 boxblock:id=%player_sensor,xmin=0.375,xmax=0.625,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%player_sensor,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=1
 boxblock:id=%player_sensor,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.25,zmin=0.875,zmax=1.0,data=2

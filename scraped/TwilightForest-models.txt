@@ -1,9 +1,9 @@
-# TwilightForest 2.4.3
+# TwilightForest 2.5.19
 version:1.7
 modname:TwilightForest
 
-var:biome/biome.id.DarkForest=0,biome/biome.id.EnchantedForest=0,biome/biome.id.Glacier=0,biome/biome.id.Highlands=0,biome/biome.id.Thornlands=0,biome/biome.id.OakSavanna=0,biome/biome.id.Swamp=0,biome/biome.id.DarkForestCenter=0,biome/biome.id.Stream=0,biome/biome.id.TwilightForestVariant=0
-var:biome/biome.id.DeepMushrooms=0,biome/biome.id.LightedForest=0,biome/biome.id.TwilightForest=0,biome/biome.id.Clearing=0,biome/biome.id.Lake=0,biome/biome.id.Mushrooms=0,biome/biome.id.HighlandsCenter=0,biome/biome.id.Snowfield=0,biome/biome.id.FireSwamp=0
+var:biome/biome.id.EnchantedForest=0,biome/biome.id.Glacier=0,biome/biome.id.Highlands=0,biome/biome.id.OakSavanna=0,biome/biome.id.Swamp=0,biome/biome.id.HighlandsCenter=0,biome/biome.id.DarkForest=0,biome/biome.id.Thornlands=0,biome/biome.id.DarkForestCenter=0,biome/biome.id.Stream=0
+var:biome/biome.id.TwilightForestVariant=0,biome/biome.id.DeepMushrooms=0,biome/biome.id.LightedForest=0,biome/biome.id.TwilightForest=0,biome/biome.id.Clearing=0,biome/biome.id.Lake=0,biome/biome.id.Mushrooms=0,biome/biome.id.Snowfield=0,biome/biome.id.FireSwamp=0
 
 cfgfile:config/TwilightForest.cfg
 
@@ -23,6 +23,154 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
+
+# %tile.TFWoodSlab:* (tile.TFWoodSlab), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFWoodSlab
+boxblock:id=%tile.TFWoodSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tile.TFWoodSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.TFWoodStairsTwilight:* (tile.TFWoodStairsTwilight), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsTwilight,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFWoodStairsCanopy:* (tile.TFWoodStairsCanopy), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsCanopy,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFWoodStairsMangrove:* (tile.TFWoodStairsMangrove), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsMangrove,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFWoodStairsDarkwood:* (tile.TFWoodStairsDarkwood), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsDarkwood,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFWoodStairsTime:* (tile.TFWoodStairsTime), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsTime,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFWoodStairsTrans:* (tile.TFWoodStairsTrans), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsTrans,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFWoodStairsMine:* (tile.TFWoodStairsMine), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsMine,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFWoodStairsSort:* (tile.TFWoodStairsSort), render=(STAIRS), opaque=false,cls=twilightforest.block.BlockTFWoodStairs
+customblock:id=%tile.TFWoodStairsSort,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tile.TFDoorTwilight:* (tile.TFDoorTwilight), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorTwilight,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFDoorCanopy:* (tile.TFDoorCanopy), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorCanopy,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFDoorMangrove:* (tile.TFDoorMangrove), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorMangrove,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFDoorDarkwood:* (tile.TFDoorDarkwood), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorDarkwood,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFDoorTime:* (tile.TFDoorTime), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorTime,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFDoorTrans:* (tile.TFDoorTrans), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorTrans,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFDoorMine:* (tile.TFDoorMine), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorMine,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFDoorSort:* (tile.TFDoorSort), render=(DOOR), opaque=false,cls=twilightforest.block.BlockTFDoor
+customblock:id=%tile.TFDoorSort,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %tile.TFTrapDoorTwilight:* (tile.TFTrapDoorTwilight), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorTwilight,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %tile.TFTrapDoorCanopy:* (tile.TFTrapDoorCanopy), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorCanopy,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %tile.TFTrapDoorMangrove:* (tile.TFTrapDoorMangrove), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorMangrove,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %tile.TFTrapDoorDarkwood:* (tile.TFTrapDoorDarkwood), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorDarkwood,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %tile.TFTrapDoorTime:* (tile.TFTrapDoorTime), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorTime,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %tile.TFTrapDoorTrans:* (tile.TFTrapDoorTrans), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorTrans,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %tile.TFTrapDoorMine:* (tile.TFTrapDoorMine), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorMine,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %tile.TFTrapDoorSort:* (tile.TFTrapDoorSort), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTrapDoor
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%tile.TFTrapDoorSort,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
 # %tile.TFFirefly:* (tile.TFFirefly), render=twilightforest.client.renderer.blocks.RenderBlockTFCritters(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFirefly
 boxblock:id=%tile.TFFirefly,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.6000000238418579,zmin=0.4000000059604645,zmax=0.6000000238418579,data=0
@@ -58,7 +206,7 @@ boxblock:id=%tile.TFCicada,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=
 boxblock:id=%tile.TFCicada,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.699999988079071,ymax=1.0,zmin=0.20000000298023224,zmax=0.800000011920929,data=14
 boxblock:id=%tile.TFCicada,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.6000000238418579,zmin=0.4000000059604645,zmax=0.6000000238418579,data=15
 
-# %tile.TFPortal:* (tile.TFPortal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFPortal
+# %tile.TFPortal:* (tile.TFPortal), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFPortal
 boxblock:id=%tile.TFPortal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
 # %tile.TFFireflyJar:* (tile.TFFireflyJar), render=twilightforest.client.renderer.blocks.RenderBlockTFFireflyJar(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFireflyJar
@@ -70,6 +218,8 @@ boxblock:id=%tile.TFPlant,xmin=0.25,xmax=0.8125,ymin=0.0,ymax=0.375,zmin=0.25,zm
 boxblock:id=%tile.TFPlant,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.1875,zmin=0.0625,zmax=0.875,data=5
 
 # %tile.TFNagastone:* (tile.TFNagastone), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
+
+# %tile.TFNagastoneEtched:* (tile.TFNagastoneEtched), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneEtched(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
 
 # %tile.TFSapling:* (tile.TFSapling), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFSapling
 patchblock:id=%tile.TFSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9
@@ -91,8 +241,13 @@ boxblock:id=%tile.TFMoonworm,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.25,zmin=0.25,zm
 boxblock:id=%tile.TFMoonworm,xmin=0.25,xmax=0.75,ymin=0.75,ymax=1.0,zmin=0.25,zmax=0.75,data=14
 boxblock:id=%tile.TFMoonworm,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.6000000238418579,zmin=0.4000000059604645,zmax=0.6000000238418579,data=15
 
-# %tile.TFTowerTranslucent:* (tile.TFTowerTranslucent), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
-boxblock:id=%tile.TFTowerTranslucent,xmin=0.14760947227478027,xmax=0.7370601892471313,ymin=0.03713428974151611,ymax=0.7374922037124634,zmin=0.233781099319458,zmax=0.674545407295227,data=5
+# %tile.TFTowerTranslucent:* (tile.TFTowerTranslucent), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
+boxblock:id=%tile.TFTowerTranslucent,xmin=0.3665436804294586,xmax=0.8324576020240784,ymin=0.23776336014270782,ymax=0.7394846081733704,zmin=0.35907936096191406,zmax=0.7991064190864563,data=5
+
+# %tile.TFExperiment115:* (tile.TFExperiment115), render=twilightforest.client.renderer.blocks.RenderBlockTFCake(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFExperiment115
+boxblock:id=%tile.TFExperiment115,xmin=0.0625,xmax=0.5,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.5,data=0,data=1,data=2
+boxblock:id=%tile.TFExperiment115,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.5,data=3,data=4
+boxblock:id=%tile.TFExperiment115,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %tile.TFTrophy:* (tile.TFTrophy), render=(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophy
 boxblock:id=%tile.TFTrophy,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=0,data=1
@@ -113,11 +268,11 @@ boxblock:id=%tile.TFTrophyPedestal,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=1.0,zmi
 # %tile.TFThornRose:* (tile.TFThornRose), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFThornRose
 patchblock:id=%tile.TFThornRose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %tile.AuroraSlab:* (tile.AuroraSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFAuroraSlab
+# %tile.AuroraSlab:* (tile.AuroraSlab), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFAuroraSlab
 boxblock:id=%tile.AuroraSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.AuroraSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %tile.UberousSoil:* (tile.UberousSoil), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFUberousSoil
+# %tile.UberousSoil:* (tile.UberousSoil), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFUberousSoil
 boxblock:id=%tile.UberousSoil,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
 # %tile.TrollVidr:* (tile.TrollVidr), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFTrollRoot
@@ -135,7 +290,7 @@ boxblock:id=%tile.HugeLilyPad,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,
 # %tile.HugeWaterLily:* (tile.HugeWaterLily), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFHugeWaterLily
 patchblock:id=%tile.HugeWaterLily,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %tile.Slider:* (tile.Slider), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=twilightforest.block.BlockTFSlider
+# %tile.Slider:* (tile.Slider), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFSlider
 boxblock:id=%tile.Slider,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=1.0,zmin=0.3125,zmax=0.6875,data=0,data=1,data=2,data=3
 boxblock:id=%tile.Slider,xmin=0.0,xmax=1.0,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=4,data=5,data=6,data=7
 boxblock:id=%tile.Slider,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
@@ -147,3 +302,51 @@ boxblock:id=%tile.Slider,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=1.0,zmin=0.3125,z
 customblock:id=%tile.ForceField,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
 # %tile.CastleDoor:* (tile.CastleDoor), render=twilightforest.client.renderer.blocks.RenderBlockTFCastleMagic(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFCastleDoor
+
+# %fiery_essence:* (fiery_essence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.blocks.TFFieryEssence
+boxblock:id=%fiery_essence,ymax=0.875,data=1
+boxblock:id=%fiery_essence,ymax=0.75,data=2
+boxblock:id=%fiery_essence,ymax=0.625,data=3
+boxblock:id=%fiery_essence,ymax=0.5,data=4
+boxblock:id=%fiery_essence,ymax=0.375,data=5
+boxblock:id=%fiery_essence,ymax=0.25,data=6
+boxblock:id=%fiery_essence,ymax=0.125,data=7
+boxblock:id=%fiery_essence,ymax=0.875,data=9
+boxblock:id=%fiery_essence,ymax=0.75,data=10
+boxblock:id=%fiery_essence,ymax=0.625,data=11
+boxblock:id=%fiery_essence,ymax=0.5,data=12
+boxblock:id=%fiery_essence,ymax=0.375,data=13
+boxblock:id=%fiery_essence,ymax=0.25,data=14
+boxblock:id=%fiery_essence,ymax=0.125,data=15
+
+# %fluid.molten.fierymetal:* (fluid.molten.fierymetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
+boxblock:id=%fluid.molten.fierymetal,ymax=0.875,data=1
+boxblock:id=%fluid.molten.fierymetal,ymax=0.75,data=2
+boxblock:id=%fluid.molten.fierymetal,ymax=0.625,data=3
+boxblock:id=%fluid.molten.fierymetal,ymax=0.5,data=4
+boxblock:id=%fluid.molten.fierymetal,ymax=0.375,data=5
+boxblock:id=%fluid.molten.fierymetal,ymax=0.25,data=6
+boxblock:id=%fluid.molten.fierymetal,ymax=0.125,data=7
+boxblock:id=%fluid.molten.fierymetal,ymax=0.875,data=9
+boxblock:id=%fluid.molten.fierymetal,ymax=0.75,data=10
+boxblock:id=%fluid.molten.fierymetal,ymax=0.625,data=11
+boxblock:id=%fluid.molten.fierymetal,ymax=0.5,data=12
+boxblock:id=%fluid.molten.fierymetal,ymax=0.375,data=13
+boxblock:id=%fluid.molten.fierymetal,ymax=0.25,data=14
+boxblock:id=%fluid.molten.fierymetal,ymax=0.125,data=15
+
+# %fluid.molten.knightmetal:* (fluid.molten.knightmetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
+boxblock:id=%fluid.molten.knightmetal,ymax=0.875,data=1
+boxblock:id=%fluid.molten.knightmetal,ymax=0.75,data=2
+boxblock:id=%fluid.molten.knightmetal,ymax=0.625,data=3
+boxblock:id=%fluid.molten.knightmetal,ymax=0.5,data=4
+boxblock:id=%fluid.molten.knightmetal,ymax=0.375,data=5
+boxblock:id=%fluid.molten.knightmetal,ymax=0.25,data=6
+boxblock:id=%fluid.molten.knightmetal,ymax=0.125,data=7
+boxblock:id=%fluid.molten.knightmetal,ymax=0.875,data=9
+boxblock:id=%fluid.molten.knightmetal,ymax=0.75,data=10
+boxblock:id=%fluid.molten.knightmetal,ymax=0.625,data=11
+boxblock:id=%fluid.molten.knightmetal,ymax=0.5,data=12
+boxblock:id=%fluid.molten.knightmetal,ymax=0.375,data=13
+boxblock:id=%fluid.molten.knightmetal,ymax=0.25,data=14
+boxblock:id=%fluid.molten.knightmetal,ymax=0.125,data=15

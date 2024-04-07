@@ -70,10 +70,10 @@ customblock:id=%tile.methanePlanks.stairs,class=org.dynmap.hdmap.renderer.StairB
 # %tile.podPlanks.stairs:* (tile.podPlanks.stairs), render=(STAIRS), opaque=false,cls=de.katzenpapst.amunra.block.BlockStairsAR
 customblock:id=%tile.podPlanks.stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %tile.rockSlab:* (tile.rockSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
+# %tile.rockSlab:* (tile.rockSlab), render=(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
 boxblock:id=%tile.rockSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4
 boxblock:id=%tile.rockSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12
 
-# %tile.woodSlab:* (tile.woodSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
+# %tile.woodSlab:* (tile.woodSlab), render=(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
 boxblock:id=%tile.woodSlab,ymax=0.5,data=0,data=1
 boxblock:id=%tile.woodSlab,ymin=0.5,data=8,data=9

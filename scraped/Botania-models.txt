@@ -1,4 +1,4 @@
-# Botania 1.9.23-GTNH
+# Botania 1.10.11-GTNH
 version:1.7
 modname:Botania
 
@@ -35,26 +35,26 @@ boxblock:id=%specialFlower,xmin=0.30000001192092896,xmax=0.800000011920929,ymin=
 # %pool:* (pool), render=vazkii.botania.client.render.block.RenderPool(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockPool
 boxblock:id=%pool,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
 
-# %runeAltar:* (runeAltar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockRuneAltar
+# %runeAltar:* (runeAltar), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockRuneAltar
 boxblock:id=%runeAltar,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
-# %unstableBlock:* (unstableBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockUnstable
+# %unstableBlock:* (unstableBlock), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockUnstable
 boxblock:id=%unstableBlock,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=*
 
 # %pylon:* (pylon), render=vazkii.botania.client.render.block.RenderPylon(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockPylon
 # FIXME: Box constraints truncated to 0.0<=val<=1.0
 boxblock:id=%pylon,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
 
-# %manaBeacon:* (manaBeacon), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockManaBeacon
+# %manaBeacon:* (manaBeacon), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockManaBeacon
 boxblock:id=%manaBeacon,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=*
 
-# %tinyPlanetBlock:* (tinyPlanetBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockTinyPlanet
+# %tinyPlanetBlock:* (tinyPlanetBlock), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockTinyPlanet
 boxblock:id=%tinyPlanetBlock,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=*
 
-# %forestEye:* (forestEye), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockForestEye
+# %forestEye:* (forestEye), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockForestEye
 boxblock:id=%forestEye,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=*
 
-# %forestDrum:* (forestDrum), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockForestDrum
+# %forestDrum:* (forestDrum), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockForestDrum
 boxblock:id=%forestDrum,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.875,zmin=0.1875,zmax=0.8125,data=*
 
 # %shinyFlower:* (shinyFlower), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockShinyFlower
@@ -77,7 +77,7 @@ patchblock:id=%solidVine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX
 patchblock:id=%solidVine,patch0=VertX0In@180#0,patch1=VertX0In#0,patch2=VertX0In@90#0,data=14
 patchblock:id=%solidVine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,patch3=VertX0In#0,data=15
 
-# %buriedPetals:* (buriedPetals), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockBuriedPetals
+# %buriedPetals:* (buriedPetals), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockBuriedPetals
 boxblock:id=%buriedPetals,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.10000000149011612,zmin=0.0,zmax=1.0,data=*
 
 # %miniIsland:* (miniIsland), render=vazkii.botania.client.render.block.RenderFloatingFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockFloatingFlower
@@ -86,13 +86,13 @@ boxblock:id=%miniIsland,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.
 # %tinyPotato:* (tinyPotato), render=vazkii.botania.client.render.block.RenderTinyPotato(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockTinyPotato
 boxblock:id=%tinyPotato,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.375,zmin=0.375,zmax=0.625,data=*
 
-# %starfield:* (starfield), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockStarfield
+# %starfield:* (starfield), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockStarfield
 boxblock:id=%starfield,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=*
 
 # %brewery:* (brewery), render=vazkii.botania.client.render.block.RenderBrewery(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockBrewery
 boxblock:id=%brewery,xmin=0.375,xmax=0.625,ymin=0.05000000074505806,ymax=0.949999988079071,zmin=0.375,zmax=0.625,data=*
 
-# %terraPlate:* (terraPlate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockTerraPlate
+# %terraPlate:* (terraPlate), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockTerraPlate
 boxblock:id=%terraPlate,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=*
 
 # %floatingSpecialFlower:* (floatingSpecialFlower), render=vazkii.botania.client.render.block.RenderFloatingFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockFloatingSpecialFlower
@@ -101,10 +101,10 @@ boxblock:id=%floatingSpecialFlower,xmin=0.10000000149011612,xmax=0.8999999761581
 # %manaFlame:* (manaFlame), render=(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockManaFlame
 boxblock:id=%manaFlame,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=*
 
-# %prism:* (prism), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockPrism
+# %prism:* (prism), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.mana.BlockPrism
 boxblock:id=%prism,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
 
-# %dirtPath:* (dirtPath), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockDirtPath
+# %dirtPath:* (dirtPath), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockDirtPath
 boxblock:id=%dirtPath,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
 # %mushroom:* (mushroom), render=(CROSSEDSQUARES), opaque=false,cls=vazkii.botania.common.block.decor.BlockModMushroom
@@ -143,7 +143,7 @@ patchblock:id=%ghostRail,patch0=SlopeXUpZTop@90,data=13
 patchblock:id=%ghostRail,patch0=HorizY001ZTop@90,data=14
 patchblock:id=%ghostRail,patch0=HorizY001ZTop@180,data=15
 
-# %sparkChanger:* (sparkChanger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockSparkChanger
+# %sparkChanger:* (sparkChanger), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockSparkChanger
 boxblock:id=%sparkChanger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=*
 
 # %cocoon:* (cocoon), render=vazkii.botania.client.render.block.RenderCocoon(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockCocoon
@@ -152,7 +152,7 @@ boxblock:id=%cocoon,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.875,zmin=0.1875,zmax
 # %lightRelay:* (lightRelay), render=(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockLightRelay
 boxblock:id=%lightRelay,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=*
 
-# %lightLauncher:* (lightLauncher), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockLightLauncher
+# %lightLauncher:* (lightLauncher), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockLightLauncher
 boxblock:id=%lightLauncher,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=*
 
 # %bellows:* (bellows), render=vazkii.botania.client.render.block.RenderBellows(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockBellows
@@ -401,262 +401,262 @@ customblock:id=%elfGlassPane,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 # %bifrostPermPane:* (bifrostPermPane), render=(PANE), opaque=false,cls=vazkii.botania.common.block.decor.panes.BlockBifrostPane
 customblock:id=%bifrostPermPane,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
-# %quartzSlabDarkHalf:* (quartzSlabDarkHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+# %quartzSlabDarkHalf:* (quartzSlabDarkHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
 boxblock:id=%quartzSlabDarkHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%quartzSlabDarkHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %quartzSlabManaHalf:* (quartzSlabManaHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+# %quartzSlabManaHalf:* (quartzSlabManaHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
 boxblock:id=%quartzSlabManaHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%quartzSlabManaHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %quartzSlabBlazeHalf:* (quartzSlabBlazeHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+# %quartzSlabBlazeHalf:* (quartzSlabBlazeHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
 boxblock:id=%quartzSlabBlazeHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%quartzSlabBlazeHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %quartzSlabLavenderHalf:* (quartzSlabLavenderHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+# %quartzSlabLavenderHalf:* (quartzSlabLavenderHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
 boxblock:id=%quartzSlabLavenderHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%quartzSlabLavenderHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %quartzSlabRedHalf:* (quartzSlabRedHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+# %quartzSlabRedHalf:* (quartzSlabRedHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
 boxblock:id=%quartzSlabRedHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%quartzSlabRedHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %quartzSlabElfHalf:* (quartzSlabElfHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+# %quartzSlabElfHalf:* (quartzSlabElfHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
 boxblock:id=%quartzSlabElfHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%quartzSlabElfHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %quartzSlabSunnyHalf:* (quartzSlabSunnyHalf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
+# %quartzSlabSunnyHalf:* (quartzSlabSunnyHalf), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab
 boxblock:id=%quartzSlabSunnyHalf,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%quartzSlabSunnyHalf,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %livingwood0Slab:* (livingwood0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodSlab
+# %livingwood0Slab:* (livingwood0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodSlab
 boxblock:id=%livingwood0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%livingwood0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %livingwood1Slab:* (livingwood1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodPlankSlab
+# %livingwood1Slab:* (livingwood1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodPlankSlab
 boxblock:id=%livingwood1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%livingwood1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %livingrock0Slab:* (livingrock0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingrockSlab
+# %livingrock0Slab:* (livingrock0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingrockSlab
 boxblock:id=%livingrock0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%livingrock0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %livingrock1Slab:* (livingrock1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingrockBrickSlab
+# %livingrock1Slab:* (livingrock1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockLivingrockBrickSlab
 boxblock:id=%livingrock1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%livingrock1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %dreamwood0Slab:* (dreamwood0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockDreamwoodSlab
+# %dreamwood0Slab:* (dreamwood0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockDreamwoodSlab
 boxblock:id=%dreamwood0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%dreamwood0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %dreamwood1Slab:* (dreamwood1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockDreamwoodPlankSlab
+# %dreamwood1Slab:* (dreamwood1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockDreamwoodPlankSlab
 boxblock:id=%dreamwood1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%dreamwood1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %reedBlock0Slab:* (reedBlock0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockReedSlab
+# %reedBlock0Slab:* (reedBlock0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockReedSlab
 boxblock:id=%reedBlock0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%reedBlock0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %thatch0Slab:* (thatch0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockThatchSlab
+# %thatch0Slab:* (thatch0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockThatchSlab
 boxblock:id=%thatch0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%thatch0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %prismarine0Slab:* (prismarine0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineSlab
+# %prismarine0Slab:* (prismarine0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineSlab
 boxblock:id=%prismarine0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%prismarine0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %prismarine1Slab:* (prismarine1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineBrickSlab
+# %prismarine1Slab:* (prismarine1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineBrickSlab
 boxblock:id=%prismarine1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%prismarine1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %prismarine2Slab:* (prismarine2Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockDarkPrismarineSlab
+# %prismarine2Slab:* (prismarine2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.prismarine.BlockDarkPrismarineSlab
 boxblock:id=%prismarine2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%prismarine2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %customBrick0Slab:* (customBrick0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockCustomBrickSlab
+# %customBrick0Slab:* (customBrick0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockCustomBrickSlab
 boxblock:id=%customBrick0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%customBrick0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %customBrick1Slab:* (customBrick1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockSoulBrickSlab
+# %customBrick1Slab:* (customBrick1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockSoulBrickSlab
 boxblock:id=%customBrick1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%customBrick1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %customBrick2Slab:* (customBrick2Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockSnowBrickSlab
+# %customBrick2Slab:* (customBrick2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockSnowBrickSlab
 boxblock:id=%customBrick2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%customBrick2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %customBrick3Slab:* (customBrick3Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockTileSlab
+# %customBrick3Slab:* (customBrick3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.bricks.BlockTileSlab
 boxblock:id=%customBrick3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%customBrick3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %dirtPath0Slab:* (dirtPath0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockDirtPathSlab
+# %dirtPath0Slab:* (dirtPath0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockDirtPathSlab
 boxblock:id=%dirtPath0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%dirtPath0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %endStoneBrick0Slab:* (endStoneBrick0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockEndStoneSlab
+# %endStoneBrick0Slab:* (endStoneBrick0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockEndStoneSlab
 boxblock:id=%endStoneBrick0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%endStoneBrick0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %endStoneBrick2Slab:* (endStoneBrick2Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockEnderBrickSlab
+# %endStoneBrick2Slab:* (endStoneBrick2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockEnderBrickSlab
 boxblock:id=%endStoneBrick2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%endStoneBrick2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %shimmerrock0Slab:* (shimmerrock0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockShimmerrockSlab
+# %shimmerrock0Slab:* (shimmerrock0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockShimmerrockSlab
 boxblock:id=%shimmerrock0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%shimmerrock0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %shimmerwoodPlanks0Slab:* (shimmerwoodPlanks0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockShimmerwoodPlankSlab
+# %shimmerwoodPlanks0Slab:* (shimmerwoodPlanks0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.living.BlockShimmerwoodPlankSlab
 boxblock:id=%shimmerwoodPlanks0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%shimmerwoodPlanks0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA0Slab:* (biomeStoneA0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA0Slab:* (biomeStoneA0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA1Slab:* (biomeStoneA1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA1Slab:* (biomeStoneA1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA2Slab:* (biomeStoneA2Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA2Slab:* (biomeStoneA2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA3Slab:* (biomeStoneA3Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA3Slab:* (biomeStoneA3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA4Slab:* (biomeStoneA4Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA4Slab:* (biomeStoneA4Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA4Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA4Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA5Slab:* (biomeStoneA5Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA5Slab:* (biomeStoneA5Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA5Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA5Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA6Slab:* (biomeStoneA6Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA6Slab:* (biomeStoneA6Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA6Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA6Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA7Slab:* (biomeStoneA7Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA7Slab:* (biomeStoneA7Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA7Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA7Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA8Slab:* (biomeStoneA8Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA8Slab:* (biomeStoneA8Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA8Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA8Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA9Slab:* (biomeStoneA9Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA9Slab:* (biomeStoneA9Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA9Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA9Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA10Slab:* (biomeStoneA10Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA10Slab:* (biomeStoneA10Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA10Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA10Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA11Slab:* (biomeStoneA11Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA11Slab:* (biomeStoneA11Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA11Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA11Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA12Slab:* (biomeStoneA12Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA12Slab:* (biomeStoneA12Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA12Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA12Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA13Slab:* (biomeStoneA13Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA13Slab:* (biomeStoneA13Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA13Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA13Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA14Slab:* (biomeStoneA14Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA14Slab:* (biomeStoneA14Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA14Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA14Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneA15Slab:* (biomeStoneA15Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneA15Slab:* (biomeStoneA15Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneA15Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneA15Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB0Slab:* (biomeStoneB0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB0Slab:* (biomeStoneB0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB1Slab:* (biomeStoneB1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB1Slab:* (biomeStoneB1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB2Slab:* (biomeStoneB2Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB2Slab:* (biomeStoneB2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB3Slab:* (biomeStoneB3Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB3Slab:* (biomeStoneB3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB4Slab:* (biomeStoneB4Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB4Slab:* (biomeStoneB4Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB4Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB4Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB5Slab:* (biomeStoneB5Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB5Slab:* (biomeStoneB5Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB5Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB5Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB6Slab:* (biomeStoneB6Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB6Slab:* (biomeStoneB6Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB6Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB6Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %biomeStoneB7Slab:* (biomeStoneB7Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
+# %biomeStoneB7Slab:* (biomeStoneB7Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockBiomeStoneSlab
 boxblock:id=%biomeStoneB7Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%biomeStoneB7Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone0Slab:* (stone0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone0Slab:* (stone0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone1Slab:* (stone1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone1Slab:* (stone1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone2Slab:* (stone2Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone2Slab:* (stone2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone3Slab:* (stone3Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone3Slab:* (stone3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone8Slab:* (stone8Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone8Slab:* (stone8Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone8Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone8Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone9Slab:* (stone9Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone9Slab:* (stone9Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone9Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone9Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone10Slab:* (stone10Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone10Slab:* (stone10Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone10Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone10Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %stone11Slab:* (stone11Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
+# %stone11Slab:* (stone11Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.Block18StoneSlab
 boxblock:id=%stone11Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%stone11Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pavement0Slab:* (pavement0Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+# %pavement0Slab:* (pavement0Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 boxblock:id=%pavement0Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%pavement0Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pavement1Slab:* (pavement1Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+# %pavement1Slab:* (pavement1Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 boxblock:id=%pavement1Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%pavement1Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pavement2Slab:* (pavement2Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+# %pavement2Slab:* (pavement2Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 boxblock:id=%pavement2Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%pavement2Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pavement3Slab:* (pavement3Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+# %pavement3Slab:* (pavement3Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 boxblock:id=%pavement3Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%pavement3Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pavement4Slab:* (pavement4Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+# %pavement4Slab:* (pavement4Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 boxblock:id=%pavement4Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%pavement4Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pavement5Slab:* (pavement5Slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
+# %pavement5Slab:* (pavement5Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 boxblock:id=%pavement5Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%pavement5Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

@@ -216,19 +216,19 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
 
     private void initSlopeShapes(RenderPatchFactory rpf) {
         RenderPatch[] halfHeightRoofPartToSlope = combineMultiple(
-                rpf.getPatch(0, 0, 0, 0.5, 0.5, 0, 1, 0, 0, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1, 0, 0, 0.5, 0.5, 0, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 1, RenderPatchFactory.SideVisible.TOP, 0)
+                rpf.getTriangleAutoTexCoords(0, 0, 0, 0.5, 0.5, 0, 1, 0, 0, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1, 0, 0, 0.5, 0.5, 0, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 1, RenderPatchFactory.SideVisible.TOP, 0)
         );
         RenderPatch[] halfHeightRoofPartSlopeToStraight = combineMultiple(
-                rpf.getPatch(1, 0, 1, 0.5, 0.5, 0.5, 0, 0, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(0, 0, 0.5, 0, 0, 1, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1, 0, 1, 1, 0, 0.5, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0)
+                rpf.getTriangleAutoTexCoords(1, 0, 1, 0.5, 0.5, 0.5, 0, 0, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0, 0, 0.5, 0, 0, 1, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1, 0, 1, 1, 0, 0.5, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0)
         );
         RenderPatch[] halfHeightRoofPartStraight = combineMultiple(
-                rpf.getPatch(0, 0, 0, 0.5, 0.5, 0, 1, 0, 0, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0.5, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1, 0, 1, 1, 0, 0, 0, 1, 1, 0.5, 1, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0)
+                rpf.getTriangleAutoTexCoords(0, 0, 0, 0.5, 0.5, 0, 1, 0, 0, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getQuadAutoTexCoords(0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0,  RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getQuadAutoTexCoords(1, 0, 0.5, 1, 0, 0, 0.5, 0.5, 0.5,  RenderPatchFactory.SideVisible.TOP, 0)
         );
         RenderPatch[] bottom = new RenderPatch[]{rpf.getPatch(0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, 0)};
 
@@ -245,17 +245,17 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
                 rpf.getPatch(0,0,0,0,0,1,0,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
                 rpf.getPatch(1,0,0,0,0,0,1,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
 
-                rpf.getPatch(0,0,1,1,0,1,0,1,1,1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1,0,1,1,0,0,1,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(0,1,0,0,1,1,1,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1,0,1,1,1,0,0,1,1,1, RenderPatchFactory.SideVisible.TOP, 0)
+                rpf.getTriangleAutoTexCoords(0,0,1,1,0,1,0,1,1,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1,0,1,1,0,0,1,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0,1,0,0,1,1,1,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1,0,1,1,1,0,0,1,1,1, RenderPatchFactory.SideVisible.TOP, 0)
         );
 
         shapes[40] = combineMultiple(
-                rpf.getPatch(0,0,1,0,0,0,1,0,0,1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(0,0,0,0,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1,0,0,0,0,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(0,0,1,1,0,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0)
+                rpf.getTriangleAutoTexCoords(0,0,1,0,0,0,1,0,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0,0,0,0,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1,0,0,0,0,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0,0,1,1,0,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0)
         );
 
         shapes[28] = getRotatedSet(rpf, getRotatedSet(rpf, shapes[32], 0, 0, 180), 0, 270, 0);
@@ -282,8 +282,8 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
 
         shapes[50] = combineMultiple(
                 bottom[0],
-                rpf.getPatch(0, 0, 0, 0.5, 0.5, 0, 1, 0, 0, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1, 0, 1, 0.5, 0.5, 1, 0, 0, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0, 0, 0, 0.5, 0.5, 0, 1, 0, 0, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1, 0, 1, 0.5, 0.5, 1, 0, 0, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
                 rpf.getPatch(0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0),
                 rpf.getPatch(1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0)
         );
@@ -291,17 +291,17 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
 
         shapes[52] = combineMultiple(
                 bottom[0],
-                rpf.getPatch(0, 0, 1, 1, 0, 1, 0.5, 0.5, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1, 0, 1, 1, 0, 0, 1, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0, 0, 1, 1, 0, 1, 0.5, 0.5, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1, 0, 1, 1, 0, 0, 1, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
 
                 rpf.getPatch(1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0.5, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0),
                 rpf.getPatch(0, 0, 0, 0, 0, 1, 1, 1, 0, 0.5, 1, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0),
 
-                rpf.getPatch(1, 0, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(1, 0, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1, 0, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(1, 0, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
 
-                rpf.getPatch(0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
-                rpf.getPatch(0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0)
+                rpf.getTriangleAutoTexCoords(0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
+                rpf.getTriangleAutoTexCoords(0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0)
         );
         shapes[53] = getRotatedSet(rpf, shapes[52], 0, 180, 0);
         shapes[54] = getRotatedSet(rpf, shapes[52], 0, 270, 0);
@@ -325,10 +325,10 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
 
         ret[0] = rpf.getPatch(0,0,0, 1,0,0,0,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0);
 
-        ret[1] = rpf.getPatch(0,0,0, 0.5,0.5,0.5,1,0,0, 1, RenderPatchFactory.SideVisible.TOP, 0);
-        ret[2] = rpf.getPatch(1,0,0, 0.5,0.5,0.5,1,0,1, 1, RenderPatchFactory.SideVisible.TOP, 0);
-        ret[3] = rpf.getPatch(1,0,1, 0.5,0.5,0.5,0,0,1, 1, RenderPatchFactory.SideVisible.TOP, 0);
-        ret[4] = rpf.getPatch(0,0,1, 0.5,0.5,0.5,0,0,0, 1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[1] = rpf.getTriangleAutoTexCoords(0,0,0, 0.5,0.5,0.5,1,0,0, 1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[2] = rpf.getTriangleAutoTexCoords(1,0,0, 0.5,0.5,0.5,1,0,1, 1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[3] = rpf.getTriangleAutoTexCoords(1,0,1, 0.5,0.5,0.5,0,0,1, 1, RenderPatchFactory.SideVisible.TOP, 0);
+        ret[4] = rpf.getTriangleAutoTexCoords(0,0,1, 0.5,0.5,0.5,0,0,0, 1, RenderPatchFactory.SideVisible.TOP, 0);
 
         return ret;
     }
@@ -395,7 +395,7 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
         @Override
         public int[] getTextureLayersForPatchId(int patchId) {
             if(map != null)
-                return new int[]{map.getIndexForFace(patchId)};
+                return new int[]{map.getIndexForFace(patchId % 6)};
             return new int[0];
         }
     }

@@ -48,10 +48,10 @@ block:id=%netherLog,data=4,data=5,data=6,data=7,face0-1=0:harvestthenether/nethe
 block:id=%netherLog,data=8,data=9,data=10,data=11,face0-1=4000:harvestthenether/netherLog_side,face2-3=0:harvestthenether/netherLog_top,face4-5=4000:harvestthenether/netherLog_side
 block:id=%netherLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestthenether/netherLog_side
 
-# %netherLeaves:* (netherLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.pam.harvestthenether.BlockNetherLeaves
+# %netherLeaves:* (netherLeaves), render=(STANDARD), opaque=false,cls=com.pam.harvestthenether.BlockNetherLeaves
 block:id=%netherLeaves,data=*,stdrot=true,face0-5=0:harvestthenether/netherLeaves
 
-# %netherPlanks:* (netherPlanks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.pam.harvestthenether.BlockNetherPlanks
+# %netherPlanks:* (netherPlanks), render=(STANDARD), opaque=true,cls=com.pam.harvestthenether.BlockNetherPlanks
 block:id=%netherPlanks,data=*,stdrot=true,face0-5=0:harvestthenether/netherPlanks
 
 # %netherSapling:* (netherSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestthenether.BlockNetherSapling

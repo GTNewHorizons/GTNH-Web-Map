@@ -1,4 +1,4 @@
-# appliedenergistics2 rv3-beta-225-GTNH
+# appliedenergistics2 rv3-beta-344-GTNH
 version:1.7
 modname:appliedenergistics2
 
@@ -51,6 +51,8 @@ texture:id=appliedenergistics2/BlockCraftingStorage4kFit,filename=assets/applied
 texture:id=appliedenergistics2/BlockCraftingStorage64k,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingStorage64k.png
 texture:id=appliedenergistics2/BlockCraftingStorage64kFit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingStorage64kFit.png
 texture:id=appliedenergistics2/BlockCraftingStorageFit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingStorageFit.png
+texture:id=appliedenergistics2/BlockCraftingStorageSingularity,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingStorageSingularity.png
+texture:id=appliedenergistics2/BlockCraftingStorageSingularityFit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingStorageSingularityFit.png
 texture:id=appliedenergistics2/BlockCraftingUnit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingUnit.png
 texture:id=appliedenergistics2/BlockCraftingUnitFit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingUnitFit.png
 texture:id=appliedenergistics2/BlockCreativeEnergyCell,filename=assets/appliedenergistics2/textures/blocks/BlockCreativeEnergyCell.png
@@ -86,12 +88,14 @@ texture:id=appliedenergistics2/BlockInterface,filename=assets/appliedenergistics
 texture:id=appliedenergistics2/BlockLightDetector,filename=assets/appliedenergistics2/textures/blocks/BlockLightDetector.png
 texture:id=appliedenergistics2/BlockMolecularAssembler,filename=assets/appliedenergistics2/textures/blocks/BlockMolecularAssembler.png
 texture:id=appliedenergistics2/BlockPaint,filename=assets/appliedenergistics2/textures/blocks/BlockPaint.png
+texture:id=appliedenergistics2/BlockPatternOptimizationMatrix,filename=assets/appliedenergistics2/textures/blocks/BlockPatternOptimizationMatrix.png
 texture:id=appliedenergistics2/BlockQuantumLinkChamber,filename=assets/appliedenergistics2/textures/blocks/BlockQuantumLinkChamber.png
 texture:id=appliedenergistics2/BlockQuantumRing,filename=assets/appliedenergistics2/textures/blocks/BlockQuantumRing.png
 texture:id=appliedenergistics2/BlockQuartz,filename=assets/appliedenergistics2/textures/blocks/BlockQuartz.png
 texture:id=appliedenergistics2/BlockQuartzChiseled,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzChiseled.png
 texture:id=appliedenergistics2/BlockQuartzChiseledSide,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzChiseledSide.png
 texture:id=appliedenergistics2/BlockQuartzGlass,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGlass.png
+texture:id=appliedenergistics2/BlockQuartzGlassB,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGlassB.png
 texture:id=appliedenergistics2/BlockQuartzGrowthAccelerator,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGrowthAccelerator.png
 texture:id=appliedenergistics2/BlockQuartzGrowthAcceleratorSide,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzGrowthAcceleratorSide.png
 texture:id=appliedenergistics2/BlockQuartzLamp,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzLamp.png
@@ -101,6 +105,7 @@ texture:id=appliedenergistics2/BlockQuartzTorch,filename=assets/appliedenergisti
 texture:id=appliedenergistics2/BlockSecurity,filename=assets/appliedenergistics2/textures/blocks/BlockSecurity.png
 texture:id=appliedenergistics2/BlockSecurityBottom,filename=assets/appliedenergistics2/textures/blocks/BlockSecurityBottom.png
 texture:id=appliedenergistics2/BlockSecuritySide,filename=assets/appliedenergistics2/textures/blocks/BlockSecuritySide.png
+texture:id=appliedenergistics2/BlockSingularityCraftingStorage,filename=assets/appliedenergistics2/textures/blocks/BlockSingularityCraftingStorage.png
 texture:id=appliedenergistics2/BlockSkyStone,filename=assets/appliedenergistics2/textures/blocks/BlockSkyStone.png
 texture:id=appliedenergistics2/BlockSkyStone.Block,filename=assets/appliedenergistics2/textures/blocks/BlockSkyStone.Block.png
 texture:id=appliedenergistics2/BlockSkyStone.Brick,filename=assets/appliedenergistics2/textures/blocks/BlockSkyStone.Brick.png
@@ -114,7 +119,6 @@ texture:id=appliedenergistics2/BlockVibrationChamberFront,filename=assets/applie
 texture:id=appliedenergistics2/BlockWireless,filename=assets/appliedenergistics2/textures/blocks/BlockWireless.png
 texture:id=appliedenergistics2/OreQuartz,filename=assets/appliedenergistics2/textures/blocks/OreQuartz.png
 texture:id=appliedenergistics2/OreQuartzCharged,filename=assets/appliedenergistics2/textures/blocks/OreQuartzCharged.png
-texture:id=appliedenergistics2/PartTerminal_Colored,filename=assets/appliedenergistics2/textures/blocks/PartTerminal_Colored.png
 texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
 texture:id=minecraft/tnt_bottom,filename=assets/minecraft/textures/blocks/tnt_bottom.png
 texture:id=minecraft/tnt_side,filename=assets/minecraft/textures/blocks/tnt_side.png
@@ -128,13 +132,13 @@ block:id=%tile.OreQuartz,data=*,stdrot=true,face0-5=0:appliedenergistics2/OreQua
 # %tile.OreQuartzCharged:* (tile.OreQuartzCharged), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartzCharged
 block:id=%tile.OreQuartzCharged,data=*,stdrot=true,face0-5=0:appliedenergistics2/OreQuartzCharged
 
-# %tile.BlockQuartz:* (tile.BlockQuartz), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.solids.BlockQuartz
+# %tile.BlockQuartz:* (tile.BlockQuartz), render=(STANDARD), opaque=true,cls=appeng.block.solids.BlockQuartz
 block:id=%tile.BlockQuartz,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockQuartz
 
 # %tile.BlockQuartzPillar:* (tile.BlockQuartzPillar), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.BlockQuartzPillar
 block:id=%tile.BlockQuartzPillar,data=*,stdrot=true,face0-1=0:appliedenergistics2/BlockQuartzPillar,face2-5=0:appliedenergistics2/BlockQuartzPillarSide
 
-# %tile.BlockQuartzChiseled:* (tile.BlockQuartzChiseled), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.solids.BlockQuartzChiseled
+# %tile.BlockQuartzChiseled:* (tile.BlockQuartzChiseled), render=(STANDARD), opaque=true,cls=appeng.block.solids.BlockQuartzChiseled
 block:id=%tile.BlockQuartzChiseled,data=*,stdrot=true,face0-1=0:appliedenergistics2/BlockQuartzChiseled,face2-5=0:appliedenergistics2/BlockQuartzChiseledSide
 
 # %tile.BlockQuartzGlass:* (tile.BlockQuartzGlass), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.solids.BlockQuartzGlass
@@ -146,7 +150,7 @@ block:id=%tile.BlockQuartzLamp,data=*,stdrot=true,face0-5=0:appliedenergistics2/
 # %tile.BlockQuartzTorch:* (tile.BlockQuartzTorch), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.misc.BlockQuartzTorch
 block:id=%tile.BlockQuartzTorch,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockQuartzTorch
 
-# %tile.BlockFluix:* (tile.BlockFluix), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.solids.BlockFluix
+# %tile.BlockFluix:* (tile.BlockFluix), render=(STANDARD), opaque=true,cls=appeng.block.solids.BlockFluix
 block:id=%tile.BlockFluix,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockFluix
 
 # %tile.BlockSkyStone:* (tile.BlockSkyStone), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.BlockSkyStone
@@ -194,7 +198,7 @@ block:id=%tile.BlockSpatialPylon,data=*,stdrot=true,face0-5=0:appliedenergistics
 block:id=%tile.BlockSpatialIOPort,data=*,stdrot=true,face0=0:appliedenergistics2/BlockSpatialIOPortBottom,face1=0:appliedenergistics2/BlockSpatialIOPort,face2-5=0:appliedenergistics2/BlockSpatialIOPortSide
 
 # %tile.BlockCableBus:* (tile.BlockCableBus), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockCableBus
-block:id=%tile.BlockCableBus,data=*,stdrot=true,face0-5=12000:appliedenergistics2/PartTerminal_Colored
+block:id=%tile.BlockCableBus,data=*,stdrot=true,face0-5=12000:appliedenergistics2/BlockQuartzGlassB
 
 # %tile.BlockController:* (tile.BlockController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockController
 block:id=%tile.BlockController,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockController
@@ -311,6 +315,24 @@ block:id=%tile.BlockAdvancedCraftingStorage,data=13,stdrot=true,face0-5=0:applie
 block:id=%tile.BlockAdvancedCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage4096kFit
 block:id=%tile.BlockAdvancedCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit
 
+# %tile.BlockSingularityCraftingStorage:* (tile.BlockSingularityCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
+block:id=%tile.BlockSingularityCraftingStorage,data=1,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
+block:id=%tile.BlockSingularityCraftingStorage,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=4,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
+block:id=%tile.BlockSingularityCraftingStorage,data=5,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=6,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
+block:id=%tile.BlockSingularityCraftingStorage,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
+block:id=%tile.BlockSingularityCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
+block:id=%tile.BlockSingularityCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=12,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
+block:id=%tile.BlockSingularityCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
+block:id=%tile.BlockSingularityCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+
 # %tile.BlockCraftingMonitor:* (tile.BlockCraftingMonitor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingMonitor
 block:id=%tile.BlockCraftingMonitor,data=0,stdrot=true,face0-2=0:appliedenergistics2/BlockCraftingUnit,face3=0:appliedenergistics2/BlockCraftingMonitor,face4-5=0:appliedenergistics2/BlockCraftingUnit
 block:id=%tile.BlockCraftingMonitor,data=1,stdrot=true,face0-2=0:appliedenergistics2/BlockCraftingAccelerator,face3=0:appliedenergistics2/BlockCraftingMonitor,face4-5=0:appliedenergistics2/BlockCraftingAccelerator
@@ -331,6 +353,9 @@ block:id=%tile.BlockLightDetector,data=*,stdrot=true,face0-5=0:appliedenergistic
 
 # %tile.BlockPaint:* (tile.BlockPaint), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.misc.BlockPaint
 block:id=%tile.BlockPaint,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockPaint
+
+# %tile.BlockPatternOptimizationMatrix:* (tile.BlockPatternOptimizationMatrix), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockPatternOptimizationMatrix
+block:id=%tile.BlockPatternOptimizationMatrix,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockPatternOptimizationMatrix
 
 # %tile.SkyStoneStairBlock:* (tile.SkyStoneStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.SkyStoneStairBlock
 block:id=%tile.SkyStoneStairBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:appliedenergistics2/BlockSkyStone
@@ -356,50 +381,50 @@ block:id=%tile.ChiseledQuartzStairBlock,data=*,stdrot=true,transparency=SEMITRAN
 # %tile.QuartzPillarStairBlock:* (tile.QuartzPillarStairBlock), render=(STAIRS), opaque=false,cls=appeng.block.stair.QuartzPillarStairBlock
 block:id=%tile.QuartzPillarStairBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:appliedenergistics2/BlockQuartzPillar,face2-5=0:appliedenergistics2/BlockQuartzPillarSide
 
-# %tile.SkyStoneSlabBlock:* (tile.SkyStoneSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneSlabBlock:* (tile.SkyStoneSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:appliedenergistics2/BlockSkyStone
 
-# %tile.SkyStoneSlabBlock.double:* (tile.SkyStoneSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneSlabBlock.double:* (tile.SkyStoneSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneSlabBlock.double,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockSkyStone
 
-# %tile.SkyStoneBlockSlabBlock:* (tile.SkyStoneBlockSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneBlockSlabBlock:* (tile.SkyStoneBlockSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneBlockSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:appliedenergistics2/BlockSkyStone.Block
 
-# %tile.SkyStoneBlockSlabBlock.double:* (tile.SkyStoneBlockSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneBlockSlabBlock.double:* (tile.SkyStoneBlockSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneBlockSlabBlock.double,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockSkyStone.Block
 
-# %tile.SkyStoneBrickSlabBlock:* (tile.SkyStoneBrickSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneBrickSlabBlock:* (tile.SkyStoneBrickSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneBrickSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:appliedenergistics2/BlockSkyStone.Brick
 
-# %tile.SkyStoneBrickSlabBlock.double:* (tile.SkyStoneBrickSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneBrickSlabBlock.double:* (tile.SkyStoneBrickSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneBrickSlabBlock.double,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockSkyStone.Brick
 
-# %tile.SkyStoneSmallBrickSlabBlock:* (tile.SkyStoneSmallBrickSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneSmallBrickSlabBlock:* (tile.SkyStoneSmallBrickSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneSmallBrickSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:appliedenergistics2/BlockSkyStone.SmallBrick
 
-# %tile.SkyStoneSmallBrickSlabBlock.double:* (tile.SkyStoneSmallBrickSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.SkyStoneSmallBrickSlabBlock.double:* (tile.SkyStoneSmallBrickSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.SkyStoneSmallBrickSlabBlock.double,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockSkyStone.SmallBrick
 
-# %tile.FluixSlabBlock:* (tile.FluixSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.FluixSlabBlock:* (tile.FluixSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.FluixSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:appliedenergistics2/BlockFluix
 
-# %tile.FluixSlabBlock.double:* (tile.FluixSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.FluixSlabBlock.double:* (tile.FluixSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.FluixSlabBlock.double,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockFluix
 
-# %tile.QuartzSlabBlock:* (tile.QuartzSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.QuartzSlabBlock:* (tile.QuartzSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.QuartzSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:appliedenergistics2/BlockQuartz
 
-# %tile.QuartzSlabBlock.double:* (tile.QuartzSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.QuartzSlabBlock.double:* (tile.QuartzSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.QuartzSlabBlock.double,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockQuartz
 
-# %tile.ChiseledQuartzSlabBlock:* (tile.ChiseledQuartzSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.ChiseledQuartzSlabBlock:* (tile.ChiseledQuartzSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.ChiseledQuartzSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:appliedenergistics2/BlockQuartzChiseled,face2-5=0:appliedenergistics2/BlockQuartzChiseledSide
 
-# %tile.ChiseledQuartzSlabBlock.double:* (tile.ChiseledQuartzSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.ChiseledQuartzSlabBlock.double:* (tile.ChiseledQuartzSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.ChiseledQuartzSlabBlock.double,data=*,stdrot=true,face0-1=0:appliedenergistics2/BlockQuartzChiseled,face2-5=0:appliedenergistics2/BlockQuartzChiseledSide
 
-# %tile.QuartzPillarSlabBlock:* (tile.QuartzPillarSlabBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
+# %tile.QuartzPillarSlabBlock:* (tile.QuartzPillarSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.QuartzPillarSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:appliedenergistics2/BlockQuartzPillar,face2-5=0:appliedenergistics2/BlockQuartzPillarSide
 
-# %tile.QuartzPillarSlabBlock.double:* (tile.QuartzPillarSlabBlock.double), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
+# %tile.QuartzPillarSlabBlock.double:* (tile.QuartzPillarSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.QuartzPillarSlabBlock.double,data=*,stdrot=true,face0-1=0:appliedenergistics2/BlockQuartzPillar,face2-5=0:appliedenergistics2/BlockQuartzPillarSide

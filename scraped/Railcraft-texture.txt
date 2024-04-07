@@ -1,4 +1,4 @@
-# Railcraft 9.14.3
+# Railcraft 9.15.7
 version:1.7
 modname:Railcraft
 
@@ -326,7 +326,7 @@ block:id=%fluid.creosote,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1
 # %fluid.steam:* (fluid.steam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=mods.railcraft.common.fluids.BlockRailcraftFluidFinite
 block:id=%fluid.steam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:railcraft/fluids/steam_still
 
-# %cube:* (cube), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.cube.BlockCube
+# %cube:* (cube), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.cube.BlockCube
 block:id=%cube,data=0,stdrot=true,face0-5=0:railcraft/cube.coke
 block:id=%cube,data=1,stdrot=true,face0-5=0:railcraft/concrete
 block:id=%cube,data=2,stdrot=true,face0-5=0:railcraft/cube.steel
@@ -344,7 +344,7 @@ block:id=%cube,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/c
 # %anvil:* (anvil), render=(ANVIL), opaque=false,cls=mods.railcraft.common.blocks.anvil.BlockRCAnvil
 block:id=%anvil,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:railcraft/anvil_base
 
-# %machine.alpha:* (machine.alpha), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.machine.BlockMachine
+# %machine.alpha:* (machine.alpha), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.machine.BlockMachine
 block:id=%machine.alpha,data=0,stdrot=true,face0-1=0:railcraft/anchor.world.0,face2-5=0:railcraft/anchor.world.1
 block:id=%machine.alpha,data=1,stdrot=true,face0-3=0:railcraft/turbine.2,face4=0:railcraft/turbine.6,face5=0:railcraft/turbine.2
 block:id=%machine.alpha,data=2,stdrot=true,face0-1=0:railcraft/anchor.personal.0,face2-5=0:railcraft/anchor.personal.1
@@ -464,7 +464,7 @@ block:id=%lantern.metal,data=4,stdrot=true,face0-5=0:railcraft/cube.lead
 block:id=%lantern.metal,data=5,stdrot=true,face0-5=0:railcraft/cube.steel
 block:id=%lantern.metal,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/iron_block
 
-# %brick.abyssal:* (brick.abyssal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.abyssal:* (brick.abyssal), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.abyssal,data=0,stdrot=true,face0-5=0:railcraft/brick.abyssal.0
 block:id=%brick.abyssal,data=1,stdrot=true,face0-5=0:railcraft/brick.abyssal.1
 block:id=%brick.abyssal,data=2,stdrot=true,face0-5=0:railcraft/brick.abyssal.2
@@ -473,7 +473,7 @@ block:id=%brick.abyssal,data=4,stdrot=true,face0-5=0:railcraft/brick.abyssal.4
 block:id=%brick.abyssal,data=5,stdrot=true,face0-5=0:railcraft/brick.abyssal.5
 block:id=%brick.abyssal,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/brick.abyssal.0
 
-# %brick.bleachedbone:* (brick.bleachedbone), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.bleachedbone:* (brick.bleachedbone), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.bleachedbone,data=0,stdrot=true,face0-5=0:railcraft/brick.bleachedbone.0
 block:id=%brick.bleachedbone,data=1,stdrot=true,face0-5=0:railcraft/brick.bleachedbone.1
 block:id=%brick.bleachedbone,data=2,stdrot=true,face0-5=0:railcraft/brick.bleachedbone.2
@@ -482,7 +482,7 @@ block:id=%brick.bleachedbone,data=4,stdrot=true,face0-5=0:railcraft/brick.bleach
 block:id=%brick.bleachedbone,data=5,stdrot=true,face0-5=0:railcraft/brick.bleachedbone.5
 block:id=%brick.bleachedbone,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/brick.bleachedbone.0
 
-# %brick.bloodstained:* (brick.bloodstained), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.bloodstained:* (brick.bloodstained), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.bloodstained,data=0,stdrot=true,face0-5=0:railcraft/brick.bloodstained.0
 block:id=%brick.bloodstained,data=1,stdrot=true,face0-5=0:railcraft/brick.bloodstained.1
 block:id=%brick.bloodstained,data=2,stdrot=true,face0-5=0:railcraft/brick.bloodstained.2
@@ -491,7 +491,7 @@ block:id=%brick.bloodstained,data=4,stdrot=true,face0-5=0:railcraft/brick.bloods
 block:id=%brick.bloodstained,data=5,stdrot=true,face0-5=0:railcraft/brick.bloodstained.5
 block:id=%brick.bloodstained,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/brick.bloodstained.0
 
-# %brick.frostbound:* (brick.frostbound), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.frostbound:* (brick.frostbound), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.frostbound,data=0,stdrot=true,face0-5=0:railcraft/brick.frostbound.0
 block:id=%brick.frostbound,data=1,stdrot=true,face0-5=0:railcraft/brick.frostbound.1
 block:id=%brick.frostbound,data=2,stdrot=true,face0-5=0:railcraft/brick.frostbound.2
@@ -500,7 +500,7 @@ block:id=%brick.frostbound,data=4,stdrot=true,face0-5=0:railcraft/brick.frostbou
 block:id=%brick.frostbound,data=5,stdrot=true,face0-5=0:railcraft/brick.frostbound.5
 block:id=%brick.frostbound,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/brick.frostbound.0
 
-# %brick.infernal:* (brick.infernal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.infernal:* (brick.infernal), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.infernal,data=0,stdrot=true,face0-5=0:railcraft/brick.infernal.0
 block:id=%brick.infernal,data=1,stdrot=true,face0-5=0:railcraft/brick.infernal.1
 block:id=%brick.infernal,data=2,stdrot=true,face0-5=0:railcraft/brick.infernal.2
@@ -509,7 +509,7 @@ block:id=%brick.infernal,data=4,stdrot=true,face0-5=0:railcraft/brick.infernal.4
 block:id=%brick.infernal,data=5,stdrot=true,face0-5=0:railcraft/brick.infernal.5
 block:id=%brick.infernal,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/brick.infernal.0
 
-# %brick.quarried:* (brick.quarried), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.quarried:* (brick.quarried), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.quarried,data=0,stdrot=true,face0-5=0:railcraft/brick.quarried.0
 block:id=%brick.quarried,data=1,stdrot=true,face0-5=0:railcraft/brick.quarried.1
 block:id=%brick.quarried,data=2,stdrot=true,face0-5=0:railcraft/brick.quarried.2
@@ -518,7 +518,7 @@ block:id=%brick.quarried,data=4,stdrot=true,face0-5=0:railcraft/brick.quarried.4
 block:id=%brick.quarried,data=5,stdrot=true,face0-5=0:railcraft/brick.quarried.5
 block:id=%brick.quarried,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/brick.quarried.0
 
-# %brick.sandy:* (brick.sandy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.sandy:* (brick.sandy), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.sandy,data=0,stdrot=true,face0-5=0:railcraft/brick.sandy.0
 block:id=%brick.sandy,data=1,stdrot=true,face0-5=0:railcraft/brick.sandy.1
 block:id=%brick.sandy,data=2,stdrot=true,face0-5=0:railcraft/brick.sandy.2
@@ -527,7 +527,7 @@ block:id=%brick.sandy,data=4,stdrot=true,face0-5=0:railcraft/brick.sandy.4
 block:id=%brick.sandy,data=5,stdrot=true,face0-5=0:railcraft/brick.sandy.5
 block:id=%brick.sandy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:railcraft/brick.sandy.0
 
-# %brick.nether:* (brick.nether), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
+# %brick.nether:* (brick.nether), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.aesthetics.brick.BlockBrick
 block:id=%brick.nether,data=0,stdrot=true,face0-5=0:railcraft/brick.nether.0
 block:id=%brick.nether,data=1,stdrot=true,face0-5=0:railcraft/brick.nether.1
 block:id=%brick.nether,data=2,stdrot=true,face0-5=0:railcraft/brick.nether.2
@@ -614,7 +614,7 @@ block:id=%wall.beta,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdro
 # %glass:* (glass), render=mods.railcraft.client.render.RenderBlockStrengthGlass(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.glass.BlockStrengthGlass
 block:id=%glass,data=*,stdrot=true,face0-5=0:railcraft/glass.0
 
-# %detector:* (detector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.detector.BlockDetector
+# %detector:* (detector), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.detector.BlockDetector
 block:id=%detector,data=0,stdrot=true,face0-2=0:railcraft/detector.item.0,face3=0:railcraft/detector.item.2,face4-5=0:railcraft/detector.item.0
 block:id=%detector,data=1,stdrot=true,face0-2=0:railcraft/detector.any.0,face3=0:railcraft/detector.any.2,face4-5=0:railcraft/detector.any.0
 block:id=%detector,data=2,stdrot=true,face0-2=0:railcraft/detector.empty.0,face3=0:railcraft/detector.empty.2,face4-5=0:railcraft/detector.empty.0
@@ -632,7 +632,7 @@ block:id=%detector,data=13,stdrot=true,face0-2=0:railcraft/detector.sheep.0,face
 block:id=%detector,data=14,stdrot=true,face0-2=0:railcraft/detector.villager.0,face3=0:railcraft/detector.villager.2,face4-5=0:railcraft/detector.villager.0
 block:id=%detector,data=15,stdrot=true,face0-2=0:railcraft/detector.locomotive.0,face3=0:railcraft/detector.locomotive.2,face4-5=0:railcraft/detector.locomotive.0
 
-# %machine.gamma:* (machine.gamma), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.railcraft.common.blocks.machine.BlockMachine
+# %machine.gamma:* (machine.gamma), render=(STANDARD), opaque=false,cls=mods.railcraft.common.blocks.machine.BlockMachine
 block:id=%machine.gamma,data=0,stdrot=true,face0=0:railcraft/loader.item.2,face1=0:railcraft/loader.item.0,face2-5=0:railcraft/loader.item.1
 block:id=%machine.gamma,data=1,stdrot=true,face0=0:railcraft/unloader.item.0,face1=0:railcraft/unloader.item.2,face2-5=0:railcraft/unloader.item.1
 block:id=%machine.gamma,data=2,stdrot=true,face0-1=0:railcraft/loader.item.advanced.0,face2=0:railcraft/loader.item.advanced.1,face3=0:railcraft/loader.item.advanced.2,face4-5=0:railcraft/loader.item.advanced.1
@@ -647,7 +647,7 @@ block:id=%machine.gamma,data=10,stdrot=true,face0-2=0:railcraft/loader.rf.side,f
 block:id=%machine.gamma,data=11,stdrot=true,face0-2=0:railcraft/unloader.rf.side,face3=0:railcraft/unloader.rf.facing,face4-5=0:railcraft/unloader.rf.side
 block:id=%machine.gamma,data=12,data=13,data=14,data=15,stdrot=true,face0=0:railcraft/loader.item.2,face1=0:railcraft/loader.item.0,face2-5=0:railcraft/loader.item.1
 
-# %machine.epsilon:* (machine.epsilon), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.machine.BlockMachine
+# %machine.epsilon:* (machine.epsilon), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.machine.BlockMachine
 block:id=%machine.epsilon,data=0,stdrot=true,face0-5=0:railcraft/electric.feeder.0
 block:id=%machine.epsilon,data=1,stdrot=true,face0-5=0:railcraft/electric.feeder.admin.0
 block:id=%machine.epsilon,data=2,stdrot=true,face0-5=0:railcraft/admin.steam.producer.0
@@ -693,7 +693,7 @@ block:id=%ore,data=2,data=3,data=4,stdrot=true,face0-5=0:railcraft/cube.stone.ab
 block:id=%ore,data=5,stdrot=true,face0-5=0:minecraft/netherrack
 block:id=%ore,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/stone
 
-# %worldlogic:* (worldlogic), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.ore.BlockWorldLogic
+# %worldlogic:* (worldlogic), render=(STANDARD), opaque=true,cls=mods.railcraft.common.blocks.ore.BlockWorldLogic
 block:id=%worldlogic,data=*,stdrot=true,face0-5=0:minecraft/bedrock
 
 # %firestone.recharge:* (firestone.recharge), render=(CUSTOM), opaque=false,cls=mods.railcraft.common.items.firestone.BlockFirestoneRecharge

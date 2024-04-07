@@ -558,10 +558,10 @@ block:id=%tile.block_euphemium_cluster,data=12,data=13,data=14,data=15,stdrot=tr
 # %tile.deco_pipe_quad_marked:* (tile.deco_pipe_quad_marked), render=com.hbm.render.block.RenderPipe(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockPipe
 block:id=%tile.deco_pipe_quad_marked,data=*,stdrot=true,face0-1=0:hbm/pipe_top_marked,face2-5=0:hbm/pipe_side_marked
 
-# %tile.cmb_brick:* (tile.cmb_brick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.cmb_brick:* (tile.cmb_brick), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.cmb_brick,data=*,stdrot=true,face0-5=0:hbm/cmb_brick
 
-# %tile.block_zirconium:* (tile.block_zirconium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_zirconium:* (tile.block_zirconium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_zirconium,data=*,stdrot=true,face0-5=0:hbm/block_zirconium
 
 # %tile.meteor_pillar:* (tile.meteor_pillar), render=(LOG), opaque=true,cls=com.hbm.blocks.generic.BlockRotatablePillar
@@ -576,13 +576,13 @@ block:id=%tile.dummy_port_compact_launcher,data=*,stdrot=true,face0-5=0:hbm/bloc
 # %tile.barbed_wire_acid:* (tile.barbed_wire_acid), render=com.hbm.render.block.RenderBarbedWire(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BarbedWire
 block:id=%tile.barbed_wire_acid,data=*,stdrot=true,face0-5=0:hbm/barbed_wire_acid_model
 
-# %tile.block_starmetal:* (tile.block_starmetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_starmetal:* (tile.block_starmetal), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_starmetal,data=*,stdrot=true,face0-5=0:hbm/block_starmetal
 
-# %tile.pink_slab:* (tile.pink_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockPinkSlab
+# %tile.pink_slab:* (tile.pink_slab), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockPinkSlab
 block:id=%tile.pink_slab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/pink_planks
 
-# %tile.brick_jungle_glyph:* (tile.brick_jungle_glyph), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGlyph
+# %tile.brick_jungle_glyph:* (tile.brick_jungle_glyph), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGlyph
 block:id=%tile.brick_jungle_glyph,data=0,stdrot=true,face0-1=0:hbm/brick_jungle,face2-5=0:hbm/brick_jungle_glyph_0
 block:id=%tile.brick_jungle_glyph,data=1,stdrot=true,face0-1=0:hbm/brick_jungle,face2-5=0:hbm/brick_jungle_glyph_1
 block:id=%tile.brick_jungle_glyph,data=2,stdrot=true,face0-1=0:hbm/brick_jungle,face2-5=0:hbm/brick_jungle_glyph_2
@@ -600,16 +600,16 @@ block:id=%tile.brick_jungle_glyph,data=13,stdrot=true,face0-1=0:hbm/brick_jungle
 block:id=%tile.brick_jungle_glyph,data=14,stdrot=true,face0-1=0:hbm/brick_jungle,face2-5=0:hbm/brick_jungle_glyph_14
 block:id=%tile.brick_jungle_glyph,data=15,stdrot=true,face0-1=0:hbm/brick_jungle,face2-5=0:hbm/brick_jungle_glyph_15
 
-# %tile.deco_emitter:* (tile.deco_emitter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockEmitter
+# %tile.deco_emitter:* (tile.deco_emitter), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockEmitter
 block:id=%tile.deco_emitter,data=*,stdrot=true,face0-5=0:hbm/emitter
 
 # %tile.deco_lead:* (tile.deco_lead), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockDecoCT
 block:id=%tile.deco_lead,data=*,stdrot=true,face0-5=0:hbm/deco_lead
 
-# %tile.crate_lead:* (tile.crate_lead), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCrate
+# %tile.crate_lead:* (tile.crate_lead), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCrate
 block:id=%tile.crate_lead,data=*,stdrot=true,face0-5=0:hbm/crate_lead
 
-# %tile.cluster_iron:* (tile.cluster_iron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCluster
+# %tile.cluster_iron:* (tile.cluster_iron), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCluster
 block:id=%tile.cluster_iron,data=*,stdrot=true,face0-5=0:hbm/cluster_iron
 
 # %tile.barbed_wire_ultradeath:* (tile.barbed_wire_ultradeath), render=com.hbm.render.block.RenderBarbedWire(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BarbedWire
@@ -618,7 +618,7 @@ block:id=%tile.barbed_wire_ultradeath,data=*,stdrot=true,face0-5=0:hbm/barbed_wi
 # %tile.brick_asbestos_stairs:* (tile.brick_asbestos_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.brick_asbestos_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_asbestos
 
-# %tile.ore_nether_coal:* (tile.ore_nether_coal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNetherCoal
+# %tile.ore_nether_coal:* (tile.ore_nether_coal), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNetherCoal
 block:id=%tile.ore_nether_coal,data=*,stdrot=true,face0-5=0:hbm/ore_nether_coal
 
 # %tile.rail_booster:* (tile.rail_booster), render=(MINECARTTRACK), opaque=false,cls=com.hbm.blocks.machine.RailBooster
@@ -633,7 +633,7 @@ block:id=%tile.dummy_plate_launch_table,data=*,stdrot=true,transparency=TRANSPAR
 # %tile.taint_barrel:* (tile.taint_barrel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.RedBarrel
 block:id=%tile.taint_barrel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/barrel_taint
 
-# %tile.digamma_matter:* (tile.digamma_matter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.bomb.DigammaMatter
+# %tile.digamma_matter:* (tile.digamma_matter), render=(STANDARD), opaque=false,cls=com.hbm.blocks.bomb.DigammaMatter
 block:id=%tile.digamma_matter,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/digamma_matter
 
 # %tile.block_schrabidium_cluster:* (tile.block_schrabidium_cluster), render=(LOG), opaque=true,cls=com.hbm.blocks.generic.BlockRotatablePillar
@@ -642,7 +642,7 @@ block:id=%tile.block_schrabidium_cluster,data=4,data=5,data=6,data=7,face0-1=0:h
 block:id=%tile.block_schrabidium_cluster,data=8,data=9,data=10,data=11,face0-1=4000:hbm/block_schrabidium_cluster_side,face2-3=0:hbm/block_schrabidium_cluster_top,face4-5=4000:hbm/block_schrabidium_cluster_side
 block:id=%tile.block_schrabidium_cluster,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hbm/block_schrabidium_cluster_side
 
-# %tile.brick_red:* (tile.brick_red), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockRedBrick
+# %tile.brick_red:* (tile.brick_red), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockRedBrick
 block:id=%tile.brick_red,data=0,stdrot=true,face0=0:hbm/brick_red_top,face1-5=0:hbm/brick_base
 block:id=%tile.brick_red,data=1,stdrot=true,face0=0:hbm/brick_base,face1=0:hbm/brick_red_top,face2-5=0:hbm/brick_base
 block:id=%tile.brick_red,data=2,stdrot=true,face0-1=0:hbm/brick_base,face2=0:hbm/brick_red,face3-5=0:hbm/brick_base
@@ -651,16 +651,16 @@ block:id=%tile.brick_red,data=4,stdrot=true,face0-3=0:hbm/brick_base,face4=0:hbm
 block:id=%tile.brick_red,data=5,stdrot=true,face0-4=0:hbm/brick_base,face5=0:hbm/brick_red
 block:id=%tile.brick_red,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hbm/brick_base
 
-# %tile.det_nuke:* (tile.det_nuke), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.ExplosiveCharge
+# %tile.det_nuke:* (tile.det_nuke), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.ExplosiveCharge
 block:id=%tile.det_nuke,data=*,stdrot=true,face0-1=0:hbm/det_nuke_top,face2-5=0:hbm/det_nuke
 
 # %tile.ore_sellafield_diamond:* (tile.ore_sellafield_diamond), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockSellafieldOre
 block:id=%tile.ore_sellafield_diamond,data=*,stdrot=true,face0-5=0:hbm/sellafield_slaked
 
-# %tile.block_fallout:* (tile.block_fallout), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazardFalling
+# %tile.block_fallout:* (tile.block_fallout), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazardFalling
 block:id=%tile.block_fallout,data=*,stdrot=true,face0-5=0:hbm/ash
 
-# %tile.ore_tikite:* (tile.ore_tikite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDragonProof
+# %tile.ore_tikite:* (tile.ore_tikite), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDragonProof
 block:id=%tile.ore_tikite,data=*,stdrot=true,face0-5=0:hbm/ore_tikite_alt
 
 # %tile.ams_emitter:* (tile.ams_emitter), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockAMSEmitter
@@ -672,16 +672,16 @@ block:id=%tile.nuke_tsar,data=*,stdrot=true,face0-5=0:hbm/tsarBomba
 # %tile.reinforced_brick_stairs:* (tile.reinforced_brick_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.reinforced_brick_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/reinforced_brick
 
-# %tile.ore_aluminium:* (tile.ore_aluminium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.ore_aluminium:* (tile.ore_aluminium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.ore_aluminium,data=*,stdrot=true,face0-5=0:hbm/ore_aluminium
 
-# %tile.ore_meteor_lithium:* (tile.ore_meteor_lithium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_meteor_lithium:* (tile.ore_meteor_lithium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_meteor_lithium,data=*,stdrot=true,face0-5=0:hbm/ore_meteor_lithium
 
 # %tile.rail_large_ramp:* (tile.rail_large_ramp), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailStandardRamp
 block:id=%tile.rail_large_ramp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/rail_standard_straight
 
-# %tile.sand_gold:* (tile.sand_gold), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGoldSand
+# %tile.sand_gold:* (tile.sand_gold), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGoldSand
 block:id=%tile.sand_gold,data=*,stdrot=true,face0-5=0:hbm/sand_gold
 
 # %tile.yellow_barrel:* (tile.yellow_barrel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.YellowBarrel
@@ -690,10 +690,10 @@ block:id=%tile.yellow_barrel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5
 # %tile.glass_boron:* (tile.glass_boron), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockNTMGlassCT
 block:id=%tile.glass_boron,data=*,stdrot=true,face0-5=0:hbm/glass_boron
 
-# %tile.siege_emergency:* (tile.siege_emergency), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.BlockBase
+# %tile.siege_emergency:* (tile.siege_emergency), render=(STANDARD), opaque=true,cls=com.hbm.blocks.BlockBase
 block:id=%tile.siege_emergency,data=*,stdrot=true,face0-5=0:hbm/siege_emergency
 
-# %tile.basalt_tiles:* (tile.basalt_tiles), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.basalt_tiles:* (tile.basalt_tiles), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.basalt_tiles,data=*,stdrot=true,face0-5=0:hbm/basalt_tiles
 
 # %tile.dummy_plate_cargo:* (tile.dummy_plate_cargo), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.DummyBlockMachine
@@ -708,7 +708,7 @@ block:id=%tile.dummy_block_ams_limiter,data=*,stdrot=true,face0-5=0:hbm/block_co
 # %tile.spotlight_incandescent_off:* (tile.spotlight_incandescent_off), render=com.hbm.render.block.RenderLight(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.Spotlight
 block:id=%tile.spotlight_incandescent_off,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/cage_lamp_off
 
-# %tile.deco_rbmk:* (tile.deco_rbmk), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.deco_rbmk:* (tile.deco_rbmk), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.deco_rbmk,data=*,stdrot=true,face0-5=0:hbm/rbmk/rbmk_side
 
 # %tile.fence_metal:* (tile.fence_metal), render=com.hbm.render.block.RenderFence(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockMetalFence
@@ -717,7 +717,7 @@ block:id=%tile.fence_metal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0
 # %tile.brick_concrete_stairs:* (tile.brick_concrete_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.brick_concrete_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_concrete
 
-# %tile.reinforced_light:* (tile.reinforced_light), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.reinforced_light:* (tile.reinforced_light), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.reinforced_light,data=*,stdrot=true,face0-5=0:hbm/reinforced_light
 
 # %tile.taint:* (tile.taint), render=com.hbm.render.block.RenderTaintBlock(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.BlockTaint
@@ -738,16 +738,16 @@ block:id=%tile.taint,data=13,stdrot=true,face0-5=0:hbm/taint_13
 block:id=%tile.taint,data=14,stdrot=true,face0-5=0:hbm/taint_14
 block:id=%tile.taint,data=15,stdrot=true,face0-5=0:hbm/taint_15
 
-# %tile.block_scrap:* (tile.block_scrap), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.block_scrap:* (tile.block_scrap), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.block_scrap,data=*,stdrot=true,face0-5=0:hbm/block_scrap
 
-# %tile.sand_uranium:* (tile.sand_uranium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.sand_uranium:* (tile.sand_uranium), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.sand_uranium,data=*,stdrot=true,face0-5=0:hbm/sand_uranium
 
 # %tile.ore_bedrock:* (tile.ore_bedrock), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockBedrockOreTE
 block:id=%tile.ore_bedrock,data=*,stdrot=true,face0-5=0:minecraft/bedrock
 
-# %tile.geysir_water:* (tile.geysir_water), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
+# %tile.geysir_water:* (tile.geysir_water), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
 block:id=%tile.geysir_water,data=*,stdrot=true,face0=0:minecraft/stone,face1=0:hbm/geysir_stone,face2-5=0:minecraft/stone
 
 # %tile.sliding_blast_door:* (tile.sliding_blast_door), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockDoorGeneric
@@ -756,19 +756,19 @@ block:id=%tile.sliding_blast_door,data=*,stdrot=true,face0-5=0:hbm/sliding_blast
 # %tile.brick_compound_stairs:* (tile.brick_compound_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.brick_compound_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_compound
 
-# %tile.crate_ammo:* (tile.crate_ammo), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockAmmoCrate
+# %tile.crate_ammo:* (tile.crate_ammo), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockAmmoCrate
 block:id=%tile.crate_ammo,data=*,stdrot=true,face0=0:hbm/crate_ammo_bottom,face1=0:hbm/crate_ammo_top,face2-5=0:hbm/crate_ammo_side
 
 # %tile.sat_laser:* (tile.sat_laser), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.DecoBlock
 block:id=%tile.sat_laser,data=*,stdrot=true,face0-5=0:hbm/sat_laser
 
-# %tile.ore_bedrock_oil:* (tile.ore_bedrock_oil), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.ore_bedrock_oil:* (tile.ore_bedrock_oil), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.ore_bedrock_oil,data=*,stdrot=true,face0-5=0:hbm/ore_bedrock_oil
 
 # %tile.test_rail:* (tile.test_rail), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.test.TestRail
 block:id=%tile.test_rail,data=*,stdrot=true,face0-5=0:hbm/test_rail
 
-# %tile.vinyl_tile:* (tile.vinyl_tile), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.BlockEnumMulti
+# %tile.vinyl_tile:* (tile.vinyl_tile), render=(STANDARD), opaque=true,cls=com.hbm.blocks.BlockEnumMulti
 block:id=%tile.vinyl_tile,data=0,stdrot=true,face0-5=0:hbm/vinyl_tile.large
 block:id=%tile.vinyl_tile,data=1,stdrot=true,face0-5=0:hbm/vinyl_tile.small
 block:id=%tile.vinyl_tile,data=2,stdrot=true,face0-5=0:hbm/vinyl_tile.large
@@ -786,7 +786,7 @@ block:id=%tile.vinyl_tile,data=13,stdrot=true,face0-5=0:hbm/vinyl_tile.small
 block:id=%tile.vinyl_tile,data=14,stdrot=true,face0-5=0:hbm/vinyl_tile.large
 block:id=%tile.vinyl_tile,data=15,stdrot=true,face0-5=0:hbm/vinyl_tile.small
 
-# %tile.block_slag:* (tile.block_slag), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockSlag
+# %tile.block_slag:* (tile.block_slag), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockSlag
 block:id=%tile.block_slag,data=0,stdrot=true,face0-5=0:hbm/block_slag
 block:id=%tile.block_slag,data=1,stdrot=true,face0-5=0:hbm/block_slag_broken
 block:id=%tile.block_slag,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hbm/block_slag
@@ -803,13 +803,13 @@ block:id=%tile.sliding_seal_door,data=*,stdrot=true,face0-5=0:hbm/block_steel
 # %tile.water_door:* (tile.water_door), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockDoorGeneric
 block:id=%tile.water_door,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.waste_earth:* (tile.waste_earth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteEarth
+# %tile.waste_earth:* (tile.waste_earth), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteEarth
 block:id=%tile.waste_earth,data=*,stdrot=true,face0=0:hbm/waste_earth_bottom,face1=0:hbm/waste_grass_top,face2-5=0:hbm/waste_grass_side
 
 # %tile.crate_can:* (tile.crate_can), render=com.hbm.render.block.RenderConserve(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockCanCrate
 block:id=%tile.crate_can,data=*,stdrot=true,face0-5=0:hbm/crate_can
 
-# %tile.crate_desh:* (tile.crate_desh), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockStorageCrate
+# %tile.crate_desh:* (tile.crate_desh), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockStorageCrate
 block:id=%tile.crate_desh,data=*,stdrot=true,face0-1=0:hbm/crate_desh_top,face2-5=0:hbm/crate_desh_side
 
 # %tile.concrete_asbestos_stairs:* (tile.concrete_asbestos_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
@@ -821,22 +821,22 @@ block:id=%tile.dummy_block_vault,data=*,stdrot=true,face0-5=0:hbm/block_steel
 # %tile.rad_lava_block:* (tile.rad_lava_block), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.hbm.blocks.fluid.RadBlock
 block:id=%tile.rad_lava_block,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:hbm/rad_lava_still,face2-5=12000:hbm/rad_lava_flowing
 
-# %tile.ore_cobalt:* (tile.ore_cobalt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_cobalt:* (tile.ore_cobalt), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_cobalt,data=*,stdrot=true,face0-5=0:hbm/ore_cobalt
 
 # %tile.turret_arty:* (tile.turret_arty), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretArty
 block:id=%tile.turret_arty,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.frozen_dirt:* (tile.frozen_dirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.frozen_dirt:* (tile.frozen_dirt), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.frozen_dirt,data=*,stdrot=true,face0-5=0:hbm/frozen_dirt
 
 # %tile.deco_computer:* (tile.deco_computer), render=com.hbm.render.block.RenderBlockDecoModel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockDecoModel
 block:id=%tile.deco_computer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/deco_computer
 
-# %tile.deco_rbmk_smooth:* (tile.deco_rbmk_smooth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.deco_rbmk_smooth:* (tile.deco_rbmk_smooth), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.deco_rbmk_smooth,data=*,stdrot=true,face0-5=0:hbm/rbmk/rbmk_top
 
-# %tile.basalt_smooth:* (tile.basalt_smooth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.basalt_smooth:* (tile.basalt_smooth), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.basalt_smooth,data=*,stdrot=true,face0-5=0:hbm/basalt_smooth
 
 # %tile.watz_pump:* (tile.watz_pump), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.WatzPump
@@ -845,19 +845,19 @@ block:id=%tile.watz_pump,data=*,stdrot=true,face0-5=0:hbm/block_steel
 # %tile.lamp_uv_on:* (tile.lamp_uv_on), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.UVLamp
 block:id=%tile.lamp_uv_on,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.reinforced_lamp_on:* (tile.reinforced_lamp_on), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.ReinforcedLamp
+# %tile.reinforced_lamp_on:* (tile.reinforced_lamp_on), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.ReinforcedLamp
 block:id=%tile.reinforced_lamp_on,data=*,stdrot=true,face0-5=0:hbm/reinforced_lamp_on
 
 # %tile.nuke_solinium:* (tile.nuke_solinium), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.NukeSolinium
 block:id=%tile.nuke_solinium,data=*,stdrot=true,face0-5=0:hbm/nuke_solinium
 
-# %tile.block_bakelite:* (tile.block_bakelite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_bakelite:* (tile.block_bakelite), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_bakelite,data=*,stdrot=true,face0-5=0:hbm/block_bakelite
 
 # %tile.brick_fire_stairs:* (tile.brick_fire_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.brick_fire_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_fire
 
-# %tile.moon_turf:* (tile.moon_turf), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.moon_turf:* (tile.moon_turf), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.moon_turf,data=*,stdrot=true,face0-5=0:hbm/moon_turf
 
 # %tile.brick_concrete_broken_stairs:* (tile.brick_concrete_broken_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
@@ -869,28 +869,28 @@ block:id=%tile.residue,data=*,stdrot=true,face0-5=0:hbm/residue
 # %tile.test_ct:* (tile.test_ct), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.test.TestCT
 block:id=%tile.test_ct,data=*,stdrot=true,face0-5=0:hbm/test_ct
 
-# %tile.depth_brick:* (tile.depth_brick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepth
+# %tile.depth_brick:* (tile.depth_brick), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepth
 block:id=%tile.depth_brick,data=*,stdrot=true,face0-5=0:hbm/depth_brick
 
-# %tile.block_cobalt:* (tile.block_cobalt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_cobalt:* (tile.block_cobalt), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_cobalt,data=*,stdrot=true,face0-5=0:hbm/block_cobalt
 
-# %tile.block_ra226:* (tile.block_ra226), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
+# %tile.block_ra226:* (tile.block_ra226), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
 block:id=%tile.block_ra226,data=*,stdrot=true,face0-5=0:hbm/block_ra226
 
 # %tile.machine_conveyor_press:* (tile.machine_conveyor_press), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineConveyorPress
 block:id=%tile.machine_conveyor_press,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.ore_nether_fire:* (tile.ore_nether_fire), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_nether_fire:* (tile.ore_nether_fire), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_nether_fire,data=*,stdrot=true,face0-5=0:hbm/ore_nether_fire
 
 # %tile.deco_pipe_marked:* (tile.deco_pipe_marked), render=com.hbm.render.block.RenderPipe(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockPipe
 block:id=%tile.deco_pipe_marked,data=*,stdrot=true,face0-1=0:hbm/pipe_top_marked,face2-5=0:hbm/pipe_side_marked
 
-# %tile.therm_endo:* (tile.therm_endo), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombThermo
+# %tile.therm_endo:* (tile.therm_endo), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombThermo
 block:id=%tile.therm_endo,data=*,stdrot=true,face0-1=0:hbm/therm_top,face2-5=0:hbm/therm_endo
 
-# %tile.ore_gneiss_gold:* (tile.ore_gneiss_gold), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_gneiss_gold:* (tile.ore_gneiss_gold), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_gneiss_gold,data=*,stdrot=true,face0-5=0:hbm/ore_gneiss_gold
 
 # %tile.nuke_gadget:* (tile.nuke_gadget), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.NukeGadget
@@ -902,19 +902,19 @@ block:id=%tile.heater_oilburner,data=*,stdrot=true,face0-5=0:hbm/block_steel
 # %tile.heater_electric:* (tile.heater_electric), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.HeaterElectric
 block:id=%tile.heater_electric,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.seal_hatch:* (tile.seal_hatch), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHatch
+# %tile.seal_hatch:* (tile.seal_hatch), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHatch
 block:id=%tile.seal_hatch,data=*,stdrot=true,face0-5=0:hbm/seal_hatch_3
 
 # %tile.mine_ap:* (tile.mine_ap), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.Landmine
 block:id=%tile.mine_ap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/mine_ap
 
-# %tile.brick_concrete_marked:* (tile.brick_concrete_marked), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockWriting
+# %tile.brick_concrete_marked:* (tile.brick_concrete_marked), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockWriting
 block:id=%tile.brick_concrete_marked,data=*,stdrot=true,face0-1=0:hbm/brick_concrete,face2-5=0:hbm/brick_concrete_marked
 
-# %tile.sand_lead:* (tile.sand_lead), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.sand_lead:* (tile.sand_lead), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.sand_lead,data=*,stdrot=true,face0-5=0:hbm/sand_lead
 
-# %tile.ore_meteor_starmetal:* (tile.ore_meteor_starmetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_meteor_starmetal:* (tile.ore_meteor_starmetal), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_meteor_starmetal,data=*,stdrot=true,face0-5=0:hbm/ore_meteor_starmetal
 
 # %tile.machine_stirling_steel:* (tile.machine_stirling_steel), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineStirling
@@ -947,7 +947,7 @@ block:id=%tile.stalactite,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:
 # %tile.deco_pipe_red:* (tile.deco_pipe_red), render=com.hbm.render.block.RenderPipe(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockPipe
 block:id=%tile.deco_pipe_red,data=*,stdrot=true,face0-1=0:hbm/pipe_top_red,face2-5=0:hbm/pipe_side_red
 
-# %tile.block_lithium:* (tile.block_lithium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockLithium
+# %tile.block_lithium:* (tile.block_lithium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockLithium
 block:id=%tile.block_lithium,data=*,stdrot=true,face0-5=0:hbm/block_lithium
 
 # %tile.brick_light_stairs:* (tile.brick_light_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
@@ -963,22 +963,22 @@ block:id=%tile.crystal_energy,data=*,stdrot=true,face0-5=0:hbm/crystal_energy
 # %tile.foundry_tank:* (tile.foundry_tank), render=com.hbm.render.block.RenderFoundryTank(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.FoundryTank
 block:id=%tile.foundry_tank,data=*,stdrot=true,face0-5=0:hbm/brick_fire
 
-# %tile.block_graphite:* (tile.block_graphite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.pile.BlockGraphite
+# %tile.block_graphite:* (tile.block_graphite), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.pile.BlockGraphite
 block:id=%tile.block_graphite,data=*,stdrot=true,face0-5=0:hbm/block_graphite
 
-# %tile.brick_concrete_cracked:* (tile.brick_concrete_cracked), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.brick_concrete_cracked:* (tile.brick_concrete_cracked), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.brick_concrete_cracked,data=*,stdrot=true,face0-5=0:hbm/brick_concrete_cracked
 
-# %tile.block_cap_nuka:* (tile.block_cap_nuka), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCap
+# %tile.block_cap_nuka:* (tile.block_cap_nuka), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCap
 block:id=%tile.block_cap_nuka,data=*,stdrot=true,face0-1=0:hbm/block_cap_nuka_top,face2-5=0:hbm/block_cap_nuka
 
-# %tile.frozen_grass:* (tile.frozen_grass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteEarth
+# %tile.frozen_grass:* (tile.frozen_grass), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteEarth
 block:id=%tile.frozen_grass,data=*,stdrot=true,face0=0:hbm/frozen_dirt,face1=0:hbm/frozen_grass_top,face2-5=0:hbm/frozen_grass_side
 
 # %tile.ore_sellafield_radgem:* (tile.ore_sellafield_radgem), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockSellafieldOre
 block:id=%tile.ore_sellafield_radgem,data=*,stdrot=true,face0-5=0:hbm/sellafield_slaked
 
-# %tile.machine_difurnace_off:* (tile.machine_difurnace_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineDiFurnace
+# %tile.machine_difurnace_off:* (tile.machine_difurnace_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineDiFurnace
 block:id=%tile.machine_difurnace_off,data=0,stdrot=true,face0=0:hbm/difurnace_front_off_alt,face1=0:hbm/difurnace_top_off_alt,face2=0:hbm/difurnace_side_alt,face3=0:hbm/difurnace_front_off_alt,face4-5=0:hbm/difurnace_side_alt
 block:id=%tile.machine_difurnace_off,data=1,stdrot=true,face0=0:hbm/difurnace_side_alt,face1=0:hbm/difurnace_front_off_alt,face2-5=0:hbm/difurnace_side_alt
 block:id=%tile.machine_difurnace_off,data=2,stdrot=true,face0=0:hbm/difurnace_side_alt,face1=0:hbm/difurnace_top_off_alt,face2=0:hbm/difurnace_front_off_alt,face3-5=0:hbm/difurnace_side_alt
@@ -987,10 +987,10 @@ block:id=%tile.machine_difurnace_off,data=4,stdrot=true,face0=0:hbm/difurnace_si
 block:id=%tile.machine_difurnace_off,data=5,stdrot=true,face0=0:hbm/difurnace_side_alt,face1=0:hbm/difurnace_top_off_alt,face2-4=0:hbm/difurnace_side_alt,face5=0:hbm/difurnace_front_off_alt
 block:id=%tile.machine_difurnace_off,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:hbm/difurnace_side_alt,face1=0:hbm/difurnace_top_off_alt,face2-5=0:hbm/difurnace_side_alt
 
-# %tile.ore_niter:* (tile.ore_niter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_niter:* (tile.ore_niter), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_niter,data=*,stdrot=true,face0-5=0:hbm/ore_niter
 
-# %tile.therm_exo:* (tile.therm_exo), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombThermo
+# %tile.therm_exo:* (tile.therm_exo), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombThermo
 block:id=%tile.therm_exo,data=*,stdrot=true,face0-1=0:hbm/therm_top,face2-5=0:hbm/therm_exo
 
 # %tile.turret_tauon:* (tile.turret_tauon), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretTauon
@@ -1017,13 +1017,13 @@ block:id=%tile.machine_crystallizer,data=*,stdrot=true,face0-5=0:hbm/machine_cry
 # %tile.reinforced_stone_stairs:* (tile.reinforced_stone_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.reinforced_stone_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/reinforced_stone
 
-# %tile.reinforced_lamp_off:* (tile.reinforced_lamp_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.ReinforcedLamp
+# %tile.reinforced_lamp_off:* (tile.reinforced_lamp_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.ReinforcedLamp
 block:id=%tile.reinforced_lamp_off,data=*,stdrot=true,face0-5=0:hbm/reinforced_lamp_off
 
 # %tile.machine_funnel:* (tile.machine_funnel), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineFunnel
 block:id=%tile.machine_funnel,data=*,stdrot=true,face0=0:hbm/machine_funnel_bottom,face1=0:hbm/machine_funnel_top,face2-5=0:hbm/machine_funnel_side
 
-# %tile.machine_nuke_furnace_off:* (tile.machine_nuke_furnace_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineNukeFurnace
+# %tile.machine_nuke_furnace_off:* (tile.machine_nuke_furnace_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineNukeFurnace
 block:id=%tile.machine_nuke_furnace_off,data=0,stdrot=true,face0=0:hbm/machine_nuke_furnace_front_off_alt,face1=0:hbm/machine_nuke_furnace_base_alt,face2=0:hbm/machine_nuke_furnace_side_alt,face3=0:hbm/machine_nuke_furnace_front_off_alt,face4-5=0:hbm/machine_nuke_furnace_side_alt
 block:id=%tile.machine_nuke_furnace_off,data=1,stdrot=true,face0=0:hbm/machine_nuke_furnace_base_alt,face1=0:hbm/machine_nuke_furnace_front_off_alt,face2-5=0:hbm/machine_nuke_furnace_side_alt
 block:id=%tile.machine_nuke_furnace_off,data=2,stdrot=true,face0-1=0:hbm/machine_nuke_furnace_base_alt,face2=0:hbm/machine_nuke_furnace_front_off_alt,face3-5=0:hbm/machine_nuke_furnace_side_alt
@@ -1032,13 +1032,13 @@ block:id=%tile.machine_nuke_furnace_off,data=4,stdrot=true,face0-1=0:hbm/machine
 block:id=%tile.machine_nuke_furnace_off,data=5,stdrot=true,face0-1=0:hbm/machine_nuke_furnace_base_alt,face2-4=0:hbm/machine_nuke_furnace_side_alt,face5=0:hbm/machine_nuke_furnace_front_off_alt
 block:id=%tile.machine_nuke_furnace_off,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:hbm/machine_nuke_furnace_base_alt,face2-5=0:hbm/machine_nuke_furnace_side_alt
 
-# %tile.ore_schrabidium:* (tile.ore_schrabidium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_schrabidium:* (tile.ore_schrabidium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_schrabidium,data=*,stdrot=true,face0-5=0:hbm/ore_schrabidium
 
-# %tile.block_asbestos:* (tile.block_asbestos), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
+# %tile.block_asbestos:* (tile.block_asbestos), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
 block:id=%tile.block_asbestos,data=*,stdrot=true,face0-5=0:hbm/block_asbestos
 
-# %tile.glyphid_base:* (tile.glyphid_base), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGlyphid
+# %tile.glyphid_base:* (tile.glyphid_base), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGlyphid
 block:id=%tile.glyphid_base,data=0,stdrot=true,face0-5=0:hbm/glyphid_base
 block:id=%tile.glyphid_base,data=1,stdrot=true,face0-5=0:hbm/glyphid_base_infested_alt
 block:id=%tile.glyphid_base,data=2,stdrot=true,face0-5=0:hbm/glyphid_base
@@ -1056,25 +1056,25 @@ block:id=%tile.glyphid_base,data=13,stdrot=true,face0-5=0:hbm/glyphid_base_alt
 block:id=%tile.glyphid_base,data=14,stdrot=true,face0-5=0:hbm/glyphid_base
 block:id=%tile.glyphid_base,data=15,stdrot=true,face0-5=0:hbm/glyphid_base_alt
 
-# %tile.volcano_core:* (tile.volcano_core), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BlockVolcano
+# %tile.volcano_core:* (tile.volcano_core), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BlockVolcano
 block:id=%tile.volcano_core,data=*,stdrot=true,face0-5=0:hbm/volcano_core
 
-# %tile.block_tcalloy:* (tile.block_tcalloy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_tcalloy:* (tile.block_tcalloy), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_tcalloy,data=*,stdrot=true,face0-5=0:hbm/block_tcalloy
 
 # %tile.machine_strand_caster:* (tile.machine_strand_caster), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineStrandCaster
 block:id=%tile.machine_strand_caster,data=*,stdrot=true,face0-5=0:hbm/brick_fire
 
-# %tile.block_lead:* (tile.block_lead), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_lead:* (tile.block_lead), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_lead,data=*,stdrot=true,face0-5=0:hbm/block_lead
 
-# %tile.machine_generator:* (tile.machine_generator), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineGenerator
+# %tile.machine_generator:* (tile.machine_generator), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineGenerator
 block:id=%tile.machine_generator,data=*,stdrot=true,face0-1=0:hbm/machine_generator,face2-5=0:hbm/machine_generator_side
 
 # %tile.deco_pipe_rusted:* (tile.deco_pipe_rusted), render=com.hbm.render.block.RenderPipe(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockPipe
 block:id=%tile.deco_pipe_rusted,data=*,stdrot=true,face0-1=0:hbm/pipe_top_rusty,face2-5=0:hbm/pipe_side_rusty
 
-# %tile.brick_slab:* (tile.brick_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockMultiSlab
+# %tile.brick_slab:* (tile.brick_slab), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockMultiSlab
 block:id=%tile.brick_slab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/reinforced_stone
 block:id=%tile.brick_slab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/reinforced_brick
 block:id=%tile.brick_slab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_obsidian
@@ -1091,13 +1091,13 @@ block:id=%tile.brick_slab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0
 block:id=%tile.brick_slab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_fire
 block:id=%tile.brick_slab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/reinforced_stone
 
-# %tile.sand_gold198:* (tile.sand_gold198), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGoldSand
+# %tile.sand_gold198:* (tile.sand_gold198), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGoldSand
 block:id=%tile.sand_gold198,data=*,stdrot=true,face0-5=0:hbm/sand_gold
 
 # %tile.gas_radon:* (tile.gas_radon), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.gas.BlockGasRadon
 block:id=%tile.gas_radon,data=*,stdrot=true,face0-5=0:hbm/gas_radon
 
-# %tile.frozen_planks:* (tile.frozen_planks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.frozen_planks:* (tile.frozen_planks), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.frozen_planks,data=*,stdrot=true,face0-5=0:hbm/frozen_planks
 
 # %tile.machine_radgen:* (tile.machine_radgen), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineRadGen
@@ -1109,22 +1109,22 @@ block:id=%tile.pump_steam,data=*,stdrot=true,face0-5=0:hbm/block_copper
 # %tile.turret_friendly:* (tile.turret_friendly), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretFriendly
 block:id=%tile.turret_friendly,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/block_steel
 
-# %tile.block_yellowcake:* (tile.block_yellowcake), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazardFalling
+# %tile.block_yellowcake:* (tile.block_yellowcake), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazardFalling
 block:id=%tile.block_yellowcake,data=*,stdrot=true,face0-5=0:hbm/block_yellowcake
 
-# %tile.stone_depth_nether:* (tile.stone_depth_nether), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepth
+# %tile.stone_depth_nether:* (tile.stone_depth_nether), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepth
 block:id=%tile.stone_depth_nether,data=*,stdrot=true,face0-5=0:hbm/stone_depth_nether
 
-# %tile.machine_amgen:* (tile.machine_amgen), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineAmgen
+# %tile.machine_amgen:* (tile.machine_amgen), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineAmgen
 block:id=%tile.machine_amgen,data=*,stdrot=true,face0-1=0:hbm/machine_amgen_top,face2-5=0:hbm/machine_amgen_side
 
 # %tile.ore_random:* (tile.ore_random), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockMotherOfAllOres
 block:id=%tile.ore_random,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %tile.test_bomb:* (tile.test_bomb), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.test.TestBomb
+# %tile.test_bomb:* (tile.test_bomb), render=(STANDARD), opaque=true,cls=com.hbm.blocks.test.TestBomb
 block:id=%tile.test_bomb,data=*,stdrot=true,face0-5=0:hbm/test_bomb
 
-# %tile.concrete_colored:* (tile.concrete_colored), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockConcreteColored
+# %tile.concrete_colored:* (tile.concrete_colored), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockConcreteColored
 block:id=%tile.concrete_colored,data=0,stdrot=true,face0-5=0:hbm/concrete_white
 block:id=%tile.concrete_colored,data=1,stdrot=true,face0-5=0:hbm/concrete_orange
 block:id=%tile.concrete_colored,data=2,stdrot=true,face0-5=0:hbm/concrete_magenta
@@ -1145,16 +1145,16 @@ block:id=%tile.concrete_colored,data=15,stdrot=true,face0-5=0:hbm/concrete_black
 # %tile.charge_miner:* (tile.charge_miner), render=com.hbm.render.block.RenderBlockRotated(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.BlockChargeMiner
 block:id=%tile.charge_miner,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/charge_miner
 
-# %tile.block_lanthanium:* (tile.block_lanthanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_lanthanium:* (tile.block_lanthanium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_lanthanium,data=*,stdrot=true,face0-5=0:hbm/block_lanthanium
 
-# %tile.geysir_nether:* (tile.geysir_nether), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
+# %tile.geysir_nether:* (tile.geysir_nether), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
 block:id=%tile.geysir_nether,data=*,stdrot=true,face0=0:minecraft/netherrack,face1=0:hbm/geysir_nether,face2-5=0:minecraft/netherrack
 
-# %tile.block_mox_fuel:* (tile.block_mox_fuel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
+# %tile.block_mox_fuel:* (tile.block_mox_fuel), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
 block:id=%tile.block_mox_fuel,data=*,stdrot=true,face0-5=0:hbm/block_mox_fuel
 
-# %tile.machine_furnace_brick_off:* (tile.machine_furnace_brick_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBrickFurnace
+# %tile.machine_furnace_brick_off:* (tile.machine_furnace_brick_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBrickFurnace
 block:id=%tile.machine_furnace_brick_off,data=0,stdrot=true,face0=0:hbm/machine_furnace_brick_front_off,face1=0:hbm/machine_furnace_brick_top,face2=0:hbm/machine_furnace_brick_side,face3=0:hbm/machine_furnace_brick_front_off,face4-5=0:hbm/machine_furnace_brick_side
 block:id=%tile.machine_furnace_brick_off,data=1,stdrot=true,face0=0:hbm/machine_furnace_brick_bottom,face1=0:hbm/machine_furnace_brick_front_off,face2-5=0:hbm/machine_furnace_brick_side
 block:id=%tile.machine_furnace_brick_off,data=2,stdrot=true,face0=0:hbm/machine_furnace_brick_bottom,face1=0:hbm/machine_furnace_brick_top,face2=0:hbm/machine_furnace_brick_front_off,face3-5=0:hbm/machine_furnace_brick_side
@@ -1169,16 +1169,16 @@ block:id=%tile.block_fiberglass,data=4,data=5,data=6,data=7,face0-1=0:hbm/block_
 block:id=%tile.block_fiberglass,data=8,data=9,data=10,data=11,face0-1=4000:hbm/block_fiberglass_side,face2-3=0:hbm/block_fiberglass_top,face4-5=4000:hbm/block_fiberglass_side
 block:id=%tile.block_fiberglass,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hbm/block_fiberglass_side
 
-# %tile.brick_jungle_ooze:* (tile.brick_jungle_ooze), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.brick_jungle_ooze:* (tile.brick_jungle_ooze), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.brick_jungle_ooze,data=*,stdrot=true,face0-5=0:hbm/brick_jungle_ooze
 
-# %tile.block_schrabidium:* (tile.block_schrabidium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
+# %tile.block_schrabidium:* (tile.block_schrabidium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
 block:id=%tile.block_schrabidium,data=*,stdrot=true,face0-5=0:hbm/block_schrabidium
 
 # %tile.sat_foeq:* (tile.sat_foeq), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.DecoBlock
 block:id=%tile.sat_foeq,data=*,stdrot=true,face0-5=0:hbm/sat_foeq
 
-# %tile.hadron_plating_voltz:* (tile.hadron_plating_voltz), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPlating
+# %tile.hadron_plating_voltz:* (tile.hadron_plating_voltz), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPlating
 block:id=%tile.hadron_plating_voltz,data=*,stdrot=true,face0-5=0:hbm/hadron_plating_voltz
 
 # %tile.hadron_coil_alloy:* (tile.hadron_coil_alloy), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockHadronCoil
@@ -1187,10 +1187,10 @@ block:id=%tile.hadron_coil_alloy,data=*,stdrot=true,face0-5=0:hbm/hadron_coil_al
 # %tile.hadron_coil_gold:* (tile.hadron_coil_gold), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockHadronCoil
 block:id=%tile.hadron_coil_gold,data=*,stdrot=true,face0-5=0:hbm/hadron_coil_gold
 
-# %tile.depth_tiles:* (tile.depth_tiles), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepth
+# %tile.depth_tiles:* (tile.depth_tiles), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepth
 block:id=%tile.depth_tiles,data=*,stdrot=true,face0-5=0:hbm/depth_tiles
 
-# %tile.block_meteor_treasure:* (tile.block_meteor_treasure), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.block_meteor_treasure:* (tile.block_meteor_treasure), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.block_meteor_treasure,data=*,stdrot=true,face0-5=0:hbm/meteor_treasure
 
 # %tile.turret_fritz:* (tile.turret_fritz), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretFritz
@@ -1199,7 +1199,7 @@ block:id=%tile.turret_fritz,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=
 # %tile.hadron_coil_schrabidate:* (tile.hadron_coil_schrabidate), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockHadronCoil
 block:id=%tile.hadron_coil_schrabidate,data=*,stdrot=true,face0-5=0:hbm/hadron_coil_schrabidate
 
-# %tile.brick_double_slab:* (tile.brick_double_slab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockMultiSlab
+# %tile.brick_double_slab:* (tile.brick_double_slab), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockMultiSlab
 block:id=%tile.brick_double_slab,data=0,stdrot=true,face0-5=0:hbm/reinforced_stone
 block:id=%tile.brick_double_slab,data=1,stdrot=true,face0-5=0:hbm/reinforced_brick
 block:id=%tile.brick_double_slab,data=2,stdrot=true,face0-5=0:hbm/brick_obsidian
@@ -1216,13 +1216,13 @@ block:id=%tile.brick_double_slab,data=13,stdrot=true,face0-5=0:hbm/brick_asbesto
 block:id=%tile.brick_double_slab,data=14,stdrot=true,face0-5=0:hbm/brick_fire
 block:id=%tile.brick_double_slab,data=15,stdrot=true,face0-5=0:hbm/reinforced_stone
 
-# %tile.waste_log:* (tile.waste_log), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteLog
+# %tile.waste_log:* (tile.waste_log), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteLog
 block:id=%tile.waste_log,data=*,stdrot=true,face0-1=0:hbm/waste_log_top,face2-5=0:hbm/waste_log_side
 
 # %tile.rail_large_straight_short:* (tile.rail_large_straight_short), render=com.hbm.render.block.RenderRail(CUSTOM), opaque=false,cls=com.hbm.blocks.rail.RailStandardStraightShort
 block:id=%tile.rail_large_straight_short,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/rail_standard_straight
 
-# %tile.sand_quartz:* (tile.sand_quartz), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.sand_quartz:* (tile.sand_quartz), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.sand_quartz,data=*,stdrot=true,face0-5=0:hbm/sand_quartz
 
 # %tile.lox_barrel:* (tile.lox_barrel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.RedBarrel
@@ -1234,13 +1234,13 @@ block:id=%tile.rail_large_curve,data=*,stdrot=true,transparency=TRANSPARENT,face
 # %tile.brick_ducrete_stairs:* (tile.brick_ducrete_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.brick_ducrete_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_ducrete
 
-# %tile.sand_polonium:* (tile.sand_polonium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.sand_polonium:* (tile.sand_polonium), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.sand_polonium,data=*,stdrot=true,face0-5=0:hbm/sand_polonium
 
-# %tile.hadron_power:* (tile.hadron_power), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPower
+# %tile.hadron_power:* (tile.hadron_power), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPower
 block:id=%tile.hadron_power,data=*,stdrot=true,face0-5=0:hbm/hadron_power
 
-# %tile.hadron_analysis:* (tile.hadron_analysis), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPlating
+# %tile.hadron_analysis:* (tile.hadron_analysis), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPlating
 block:id=%tile.hadron_analysis,data=*,stdrot=true,face0-5=0:hbm/hadron_analysis
 
 # %tile.glass_polonium:* (tile.glass_polonium), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockNTMGlassCT
@@ -1249,10 +1249,10 @@ block:id=%tile.glass_polonium,data=*,stdrot=true,face0-5=12000:hbm/glass_poloniu
 # %tile.#ngtv:* (tile.#ngtv), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.DecoBlockAlt
 block:id=%tile.#ngtv,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/code
 
-# %tile.brick_concrete:* (tile.brick_concrete), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.brick_concrete:* (tile.brick_concrete), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.brick_concrete,data=*,stdrot=true,face0-5=0:hbm/brick_concrete
 
-# %tile.mass_storage:* (tile.mass_storage), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockMassStorage
+# %tile.mass_storage:* (tile.mass_storage), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockMassStorage
 block:id=%tile.mass_storage,data=0,stdrot=true,face0-1=0:hbm/mass_storage_top_iron,face2-5=0:hbm/mass_storage_side_iron
 block:id=%tile.mass_storage,data=1,stdrot=true,face0-1=0:hbm/mass_storage_top_desh,face2-5=0:hbm/mass_storage_side_desh
 block:id=%tile.mass_storage,data=2,stdrot=true,face0-1=0:hbm/mass_storage_top,face2-5=0:hbm/mass_storage_side
@@ -1276,19 +1276,19 @@ block:id=%tile.rbmk_rod,data=*,stdrot=true,face0-5=0:hbm/rbmk/rbmk_element
 # %tile.tesla:* (tile.tesla), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineTesla
 block:id=%tile.tesla,data=*,stdrot=true,face0-5=0:hbm/tesla
 
-# %tile.geysir_chlorine:* (tile.geysir_chlorine), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
+# %tile.geysir_chlorine:* (tile.geysir_chlorine), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
 block:id=%tile.geysir_chlorine,data=*,stdrot=true,face0=0:minecraft/stone,face1=0:hbm/geysir_stone,face2-5=0:minecraft/stone
 
-# %tile.geysir_vapor:* (tile.geysir_vapor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
+# %tile.geysir_vapor:* (tile.geysir_vapor), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeysir
 block:id=%tile.geysir_vapor,data=*,stdrot=true,face0=0:minecraft/stone,face1=0:hbm/geysir_stone,face2-5=0:minecraft/stone
 
 # %tile.door_bunker:* (tile.door_bunker), render=(DOOR), opaque=false,cls=com.hbm.blocks.generic.BlockModDoor
 block:id=%tile.door_bunker,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/door_bunker_upper,patch1=0:hbm/door_bunker_lower
 
-# %tile.cmb_brick_reinforced:* (tile.cmb_brick_reinforced), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.cmb_brick_reinforced:* (tile.cmb_brick_reinforced), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.cmb_brick_reinforced,data=*,stdrot=true,face0-5=0:hbm/cmb_brick_reinforced
 
-# %tile.ore_gneiss_copper:* (tile.ore_gneiss_copper), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_gneiss_copper:* (tile.ore_gneiss_copper), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_gneiss_copper,data=*,stdrot=true,face0-5=0:hbm/ore_gneiss_copper
 
 # %tile.rbmk_blank:* (tile.rbmk_blank), render=com.hbm.render.block.RenderRBMKReflector(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.rbmk.RBMKBlank
@@ -1309,13 +1309,13 @@ block:id=%tile.concrete_pillar,data=12,data=13,data=14,data=15,stdrot=true,face0
 # %tile.rbmk_moderator:* (tile.rbmk_moderator), render=com.hbm.render.block.RenderRBMKReflector(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.rbmk.RBMKModerator
 block:id=%tile.rbmk_moderator,data=*,stdrot=true,face0-5=0:hbm/rbmk/rbmk_moderator
 
-# %tile.ore_australium:* (tile.ore_australium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.ore_australium:* (tile.ore_australium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.ore_australium,data=*,stdrot=true,face0-5=0:hbm/ore_australium
 
 # %tile.dfc_stabilizer:* (tile.dfc_stabilizer), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.CoreComponent
 block:id=%tile.dfc_stabilizer,data=*,stdrot=true,face0-5=0:hbm/dfc_stabilizer
 
-# %tile.block_reiium:* (tile.block_reiium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_reiium:* (tile.block_reiium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_reiium,data=*,stdrot=true,face0-5=0:hbm/block_reiium
 
 # %tile.rbmk_heater:* (tile.rbmk_heater), render=com.hbm.render.block.RenderRBMKControl(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.rbmk.RBMKHeater
@@ -1327,20 +1327,20 @@ block:id=%tile.rail_large_straight,data=*,stdrot=true,transparency=TRANSPARENT,f
 # %tile.lamp_uv_off:* (tile.lamp_uv_off), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.UVLamp
 block:id=%tile.lamp_uv_off,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.block_niobium:* (tile.block_niobium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_niobium:* (tile.block_niobium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_niobium,data=*,stdrot=true,face0-5=0:hbm/block_niobium
 
 # %tile.foundry_outlet:* (tile.foundry_outlet), render=com.hbm.render.block.RenderFoundryOutlet(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.FoundryOutlet
 block:id=%tile.foundry_outlet,data=0,data=1,stdrot=true,face0-5=0:hbm/brick_fire
 block:id=%tile.foundry_outlet,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/brick_fire
 
-# %tile.sand_boron_layer:* (tile.sand_boron_layer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockLayering
+# %tile.sand_boron_layer:* (tile.sand_boron_layer), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockLayering
 block:id=%tile.sand_boron_layer,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/sand_boron
 block:id=%tile.sand_boron_layer,data=7,stdrot=true,face0-5=0:hbm/sand_boron
 block:id=%tile.sand_boron_layer,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/sand_boron
 block:id=%tile.sand_boron_layer,data=15,stdrot=true,face0-5=0:hbm/sand_boron
 
-# %tile.rbmk_heatex:* (tile.rbmk_heatex), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.rbmk.RBMKHeatex
+# %tile.rbmk_heatex:* (tile.rbmk_heatex), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.rbmk.RBMKHeatex
 block:id=%tile.rbmk_heatex,data=*,stdrot=true,face0-5=0:hbm/rbmk_heatex
 
 # %tile.pribris:* (tile.pribris), render=com.hbm.render.block.RenderPribris(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.rbmk.RBMKDebris
@@ -1352,19 +1352,19 @@ block:id=%tile.brick_concrete_mossy_stairs,data=*,stdrot=true,transparency=SEMIT
 # %tile.pribris_radiating:* (tile.pribris_radiating), render=com.hbm.render.block.RenderPribris(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.rbmk.RBMKDebrisRadiating
 block:id=%tile.pribris_radiating,data=*,stdrot=true,face0-5=0:hbm/rbmk/rbmk_debris_radiating
 
-# %tile.ore_alexandrite:* (tile.ore_alexandrite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepthOre
+# %tile.ore_alexandrite:* (tile.ore_alexandrite), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepthOre
 block:id=%tile.ore_alexandrite,data=*,stdrot=true,face0-5=0:hbm/ore_alexandrite
 
-# %tile.ore_depth_cinnebar:* (tile.ore_depth_cinnebar), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepthOre
+# %tile.ore_depth_cinnebar:* (tile.ore_depth_cinnebar), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepthOre
 block:id=%tile.ore_depth_cinnebar,data=*,stdrot=true,face0-5=0:hbm/ore_depth_cinnebar
 
-# %tile.brick_concrete_broken:* (tile.brick_concrete_broken), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.brick_concrete_broken:* (tile.brick_concrete_broken), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.brick_concrete_broken,data=*,stdrot=true,face0-5=0:hbm/brick_concrete_broken
 
-# %tile.brick_concrete_mossy:* (tile.brick_concrete_broken), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.brick_concrete_mossy:* (tile.brick_concrete_broken), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.brick_concrete_mossy,data=*,stdrot=true,face0-5=0:hbm/brick_concrete_mossy
 
-# %tile.stone_cracked:* (tile.stone_cracked), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.stone_cracked:* (tile.stone_cracked), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.stone_cracked,data=*,stdrot=true,face0-5=0:hbm/stone_cracked
 
 # %tile.red_cable_gauge:* (tile.red_cable_gauge), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.BlockCableGauge
@@ -1373,7 +1373,7 @@ block:id=%tile.red_cable_gauge,data=*,stdrot=true,face0-5=0:hbm/deco_red_copper
 # %tile.large_vehicle_door:* (tile.large_vehicle_door), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockDoorGeneric
 block:id=%tile.large_vehicle_door,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.block_smore:* (tile.block_smore), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
+# %tile.block_smore:* (tile.block_smore), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
 block:id=%tile.block_smore,data=*,stdrot=true,face0-1=0:hbm/block_smore_top,face2-5=0:hbm/block_smore_side
 
 # %tile.red_pylon:* (tile.red_pylon), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.network.PylonRedWire
@@ -1386,7 +1386,7 @@ block:id=%tile.red_pylon_large,data=*,stdrot=true,face0-5=0:hbm/red_pylon_large
 block:id=%tile.anvil_murky,data=0,data=1,stdrot=true,face0=0:hbm/anvil_steel,face1=0:hbm/anvil_murky,face2-5=0:hbm/anvil_steel
 block:id=%tile.anvil_murky,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:hbm/anvil_steel,face1=0:hbm/anvil_murky,face2-5=0:hbm/anvil_steel
 
-# %tile.ore_meteor_sulfur:* (tile.ore_meteor_sulfur), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_meteor_sulfur:* (tile.ore_meteor_sulfur), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_meteor_sulfur,data=*,stdrot=true,face0-5=0:hbm/ore_meteor_sulfur
 
 # %tile.ams_limiter:* (tile.ams_limiter), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockAMSLimiter
@@ -1417,13 +1417,13 @@ block:id=%tile.deco_pipe,data=*,stdrot=true,face0-1=0:hbm/pipe_top,face2-5=0:hbm
 block:id=%tile.anvil_dnt,data=0,data=1,stdrot=true,face0-5=0:hbm/anvil_dnt
 block:id=%tile.anvil_dnt,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/anvil_dnt
 
-# %tile.block_foam:* (tile.block_foam), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.block_foam:* (tile.block_foam), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.block_foam,data=*,stdrot=true,face0-5=0:hbm/foam
 
 # %tile.ducrete_smooth_stairs:* (tile.ducrete_smooth_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
 block:id=%tile.ducrete_smooth_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/ducrete
 
-# %tile.ore_meteor_titanium:* (tile.ore_meteor_titanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_meteor_titanium:* (tile.ore_meteor_titanium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_meteor_titanium,data=*,stdrot=true,face0-5=0:hbm/ore_meteor_titanium
 
 # %tile.qe_sliding_door:* (tile.qe_sliding_door), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockDoorGeneric
@@ -1435,7 +1435,7 @@ block:id=%tile.radio_torch_receiver,data=*,stdrot=true,face0=0:hbm/rtty_rec_off,
 # %tile.radio_torch_counter:* (tile.radio_torch_counter), render=com.hbm.render.block.RenderRTTY(CUSTOM), opaque=false,cls=com.hbm.blocks.network.RadioTorchCounter
 block:id=%tile.radio_torch_counter,data=*,stdrot=true,face0-5=0:hbm/rtty_counter
 
-# %tile.concrete_super:* (tile.concrete_super), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockUberConcrete
+# %tile.concrete_super:* (tile.concrete_super), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockUberConcrete
 block:id=%tile.concrete_super,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,stdrot=true,face0-5=0:hbm/concrete_super
 block:id=%tile.concrete_super,data=10,data=11,stdrot=true,face0-5=0:hbm/concrete_super_m0
 block:id=%tile.concrete_super,data=12,data=13,stdrot=true,face0-5=0:hbm/concrete_super_m1
@@ -1487,10 +1487,10 @@ block:id=%tile.crane_unboxer,data=6,data=7,data=8,data=9,data=10,data=11,data=12
 # %tile.fluid_duct_solid:* (tile.fluid_duct_solid), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.BlockFluidDuctSolid
 block:id=%tile.fluid_duct_solid,data=*,stdrot=true,face0-5=0:hbm/fluid_duct_solid
 
-# %tile.ore_asbestos:* (tile.ore_asbestos), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
+# %tile.ore_asbestos:* (tile.ore_asbestos), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
 block:id=%tile.ore_asbestos,data=*,stdrot=true,face0-5=0:hbm/ore_asbestos
 
-# %tile.block_cap_star:* (tile.block_cap_star), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCap
+# %tile.block_cap_star:* (tile.block_cap_star), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCap
 block:id=%tile.block_cap_star,data=*,stdrot=true,face0-1=0:hbm/block_cap_star_top,face2-5=0:hbm/block_cap_star
 
 # %tile.nuke_boy:* (tile.nuke_boy), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.NukeBoy
@@ -1499,7 +1499,7 @@ block:id=%tile.nuke_boy,data=*,stdrot=true,face0-5=0:hbm/lilBoy
 # %tile.barbed_wire_wither:* (tile.barbed_wire_wither), render=com.hbm.render.block.RenderBarbedWire(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BarbedWire
 block:id=%tile.barbed_wire_wither,data=*,stdrot=true,face0-5=0:hbm/barbed_wire_wither_model
 
-# %tile.frozen_log:* (tile.frozen_log), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteLog
+# %tile.frozen_log:* (tile.frozen_log), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteLog
 block:id=%tile.frozen_log,data=*,stdrot=true,face0-1=0:hbm/frozen_log_top,face2-5=0:hbm/frozen_log
 
 # %tile.crane_splitter:* (tile.crane_splitter), render=com.hbm.render.block.RenderSplitter(CUSTOM), opaque=false,cls=com.hbm.blocks.network.CraneSplitter
@@ -1508,19 +1508,19 @@ block:id=%tile.crane_splitter,data=*,stdrot=true,face0-5=0:hbm/crane_side
 # %tile.machine_stirling_creative:* (tile.machine_stirling_creative), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineStirling
 block:id=%tile.machine_stirling_creative,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.block_aluminium:* (tile.block_aluminium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_aluminium:* (tile.block_aluminium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_aluminium,data=*,stdrot=true,face0-5=0:hbm/block_aluminium
 
-# %tile.block_corium_cobble:* (tile.block_corium_cobble), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
+# %tile.block_corium_cobble:* (tile.block_corium_cobble), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
 block:id=%tile.block_corium_cobble,data=*,stdrot=true,face0-5=0:hbm/block_corium_cobble
 
-# %tile.drone_dock:* (tile.drone_dock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.network.DroneDock
+# %tile.drone_dock:* (tile.drone_dock), render=(STANDARD), opaque=true,cls=com.hbm.blocks.network.DroneDock
 block:id=%tile.drone_dock,data=*,stdrot=true,face0=0:hbm/drone_dock_bottom,face1=0:hbm/drone_dock_top,face2-5=0:hbm/drone_dock_side
 
 # %tile.pump_electric:* (tile.pump_electric), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachinePump
 block:id=%tile.pump_electric,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.drone_crate_requester:* (tile.drone_crate_requester), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.network.DroneDock
+# %tile.drone_crate_requester:* (tile.drone_crate_requester), render=(STANDARD), opaque=true,cls=com.hbm.blocks.network.DroneDock
 block:id=%tile.drone_crate_requester,data=*,stdrot=true,face0=0:hbm/drone_crate_requester_bottom,face1=0:hbm/drone_crate_requester_top,face2-5=0:hbm/drone_crate_requester_side
 
 # %tile.fan:* (tile.fan), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineFan
@@ -1529,7 +1529,7 @@ block:id=%tile.fan,data=*,stdrot=true,face0-5=0:hbm/block_steel
 # %tile.machine_hephaestus:* (tile.machine_hephaestus), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineHephaestus
 block:id=%tile.machine_hephaestus,data=*,stdrot=true,face0-5=0:hbm/block_steel_machine
 
-# %tile.stone_resource:* (tile.stone_resource), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockResourceStone
+# %tile.stone_resource:* (tile.stone_resource), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockResourceStone
 block:id=%tile.stone_resource,data=0,stdrot=true,face0-5=0:hbm/stone_resource.sulfur
 block:id=%tile.stone_resource,data=1,stdrot=true,face0-5=0:hbm/stone_resource.asbestos
 block:id=%tile.stone_resource,data=2,stdrot=true,face0-5=0:hbm/stone_resource.hematite
@@ -1553,7 +1553,7 @@ block:id=%tile.ladder_sturdy,data=*,stdrot=true,transparency=TRANSPARENT,patch0=
 # %tile.ladder_iron:* (tile.ladder_iron), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
 block:id=%tile.ladder_iron,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/ladder_iron
 
-# %tile.block_graphite_rod:* (tile.block_graphite_rod), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.pile.BlockGraphiteRod
+# %tile.block_graphite_rod:* (tile.block_graphite_rod), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.pile.BlockGraphiteRod
 block:id=%tile.block_graphite_rod,data=0,stdrot=true,face0-1=0:hbm/block_graphite_rod_in,face2-5=0:hbm/block_graphite
 block:id=%tile.block_graphite_rod,data=1,stdrot=true,face0-1=0:hbm/block_graphite,face2-3=0:hbm/block_graphite_rod_in,face4-5=0:hbm/block_graphite
 block:id=%tile.block_graphite_rod,data=2,stdrot=true,face0-3=0:hbm/block_graphite,face4-5=0:hbm/block_graphite_rod_in
@@ -1571,13 +1571,13 @@ block:id=%tile.block_graphite_rod,data=13,stdrot=true,face0-1=0:hbm/block_graphi
 block:id=%tile.block_graphite_rod,data=14,stdrot=true,face0-3=0:hbm/block_graphite,face4-5=0:hbm/block_graphite_rod_out_aluminum
 block:id=%tile.block_graphite_rod,data=15,stdrot=true,face0-5=0:hbm/block_graphite
 
-# %tile.brick_light:* (tile.brick_light), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.brick_light:* (tile.brick_light), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.brick_light,data=*,stdrot=true,face0-5=0:hbm/brick_light
 
 # %tile.ladder_copper:* (tile.ladder_copper), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
 block:id=%tile.ladder_copper,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/ladder_copper
 
-# %tile.ore_coltan:* (tile.ore_coltan), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
+# %tile.ore_coltan:* (tile.ore_coltan), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
 block:id=%tile.ore_coltan,data=*,stdrot=true,face0-5=0:hbm/ore_coltan
 
 # %tile.ladder_aluminium:* (tile.ladder_aluminium), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
@@ -1586,7 +1586,7 @@ block:id=%tile.ladder_aluminium,data=*,stdrot=true,transparency=TRANSPARENT,patc
 # %tile.ladder_steel:* (tile.ladder_steel), render=(LADDER), opaque=false,cls=com.hbm.blocks.generic.BlockNTMLadder
 block:id=%tile.ladder_steel,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/ladder_steel
 
-# %tile.burning_earth:* (tile.burning_earth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteEarth
+# %tile.burning_earth:* (tile.burning_earth), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.WasteEarth
 block:id=%tile.burning_earth,data=*,stdrot=true,face0=0:hbm/waste_earth_bottom,face1=0:hbm/burning_grass_top,face2-5=0:hbm/burning_grass_side
 
 # %tile.door_office:* (tile.door_office), render=(DOOR), opaque=false,cls=com.hbm.blocks.generic.BlockModDoor
@@ -1595,7 +1595,7 @@ block:id=%tile.door_office,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:
 # %tile.barrel_plastic:* (tile.barrel_plastic), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
 block:id=%tile.barrel_plastic,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/barrel_plastic
 
-# %tile.hadron_power_10m:* (tile.hadron_power_10m), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPower
+# %tile.hadron_power_10m:* (tile.hadron_power_10m), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPower
 block:id=%tile.hadron_power_10m,data=*,stdrot=true,face0-5=0:hbm/hadron_power
 
 # %tile.barrel_iron:* (tile.barrel_iron), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
@@ -1610,16 +1610,16 @@ block:id=%tile.pink_log,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mi
 # %tile.barrel_tcalloy:* (tile.barrel_tcalloy), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
 block:id=%tile.barrel_tcalloy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/barrel_tcalloy
 
-# %tile.emp_bomb:* (tile.emp_bomb), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombFloat
+# %tile.emp_bomb:* (tile.emp_bomb), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombFloat
 block:id=%tile.emp_bomb,data=*,stdrot=true,face0-1=0:hbm/bomb_emp_top,face2-5=0:hbm/bomb_emp_side
 
-# %tile.cheater_virus:* (tile.cheater_virus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.CheaterVirus
+# %tile.cheater_virus:* (tile.cheater_virus), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.CheaterVirus
 block:id=%tile.cheater_virus,data=*,stdrot=true,face0-5=0:hbm/cheater_virus
 
-# %tile.hadron_power_10g:* (tile.hadron_power_10g), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPower
+# %tile.hadron_power_10g:* (tile.hadron_power_10g), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPower
 block:id=%tile.hadron_power_10g,data=*,stdrot=true,face0-5=0:hbm/hadron_power
 
-# %tile.machine_lithium_battery:* (tile.machine_lithium_battery), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBattery
+# %tile.machine_lithium_battery:* (tile.machine_lithium_battery), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBattery
 block:id=%tile.machine_lithium_battery,data=0,stdrot=true,face0-1=0:hbm/battery_lithium_top,face2=0:hbm/battery_lithium_side,face3=0:hbm/battery_lithium_front,face4-5=0:hbm/battery_lithium_side
 block:id=%tile.machine_lithium_battery,data=1,stdrot=true,face0-1=0:hbm/battery_lithium_top,face2-5=0:hbm/battery_lithium_side
 block:id=%tile.machine_lithium_battery,data=2,stdrot=true,face0-1=0:hbm/battery_lithium_top,face2=0:hbm/battery_lithium_front,face3-5=0:hbm/battery_lithium_side
@@ -1637,7 +1637,7 @@ block:id=%tile.#void,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/c
 # %tile.red_connector:* (tile.red_connector), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.network.ConnectorRedWire
 block:id=%tile.red_connector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/red_connector
 
-# %tile.block_euphemium:* (tile.block_euphemium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_euphemium:* (tile.block_euphemium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_euphemium,data=*,stdrot=true,face0-5=0:hbm/block_euphemium
 
 # %tile.rbmk_rod_mod:* (tile.rbmk_rod_mod), render=com.hbm.render.block.RenderRBMKRod(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.rbmk.RBMKRod
@@ -1646,7 +1646,7 @@ block:id=%tile.rbmk_rod_mod,data=*,stdrot=true,face0-5=0:hbm/rbmk/rbmk_element_m
 # %tile.capacitor_gold:* (tile.capacitor_gold), render=com.hbm.render.block.RenderCapacitor(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineCapacitor
 block:id=%tile.capacitor_gold,data=*,stdrot=true,face0-5=0:minecraft/gold_block
 
-# %tile.basalt:* (tile.basalt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.basalt:* (tile.basalt), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.basalt,data=*,stdrot=true,face0-5=0:hbm/basalt
 
 # %tile.deco_pipe_framed_marked:* (tile.deco_pipe_framed_marked), render=com.hbm.render.block.RenderPipe(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockPipe
@@ -1655,28 +1655,28 @@ block:id=%tile.deco_pipe_framed_marked,data=*,stdrot=true,face0-1=0:hbm/pipe_top
 # %tile.barrel_steel:* (tile.barrel_steel), render=com.hbm.render.block.RenderBarrel(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.BlockFluidBarrel
 block:id=%tile.barrel_steel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/barrel_steel
 
-# %tile.machine_transformer:* (tile.machine_transformer), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTransformer
+# %tile.machine_transformer:* (tile.machine_transformer), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTransformer
 block:id=%tile.machine_transformer,data=*,stdrot=true,face0-1=0:hbm/machine_transformer_top_iron,face2-5=0:hbm/machine_transformer_iron
 
-# %tile.ducrete:* (tile.ducrete), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.ducrete:* (tile.ducrete), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.ducrete,data=*,stdrot=true,face0-5=0:hbm/ducrete_tile
 
-# %tile.machine_transformer_dnt:* (tile.machine_transformer_dnt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTransformer
+# %tile.machine_transformer_dnt:* (tile.machine_transformer_dnt), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTransformer
 block:id=%tile.machine_transformer_dnt,data=*,stdrot=true,face0-1=0:hbm/machine_transformer_top,face2-5=0:hbm/machine_transformer
 
 # %tile.turret_richard:* (tile.turret_richard), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretRichard
 block:id=%tile.turret_richard,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/block_steel
 
-# %tile.siege_circuit:* (tile.siege_circuit), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.siege.SiegeCircuit
+# %tile.siege_circuit:* (tile.siege_circuit), render=(STANDARD), opaque=true,cls=com.hbm.blocks.siege.SiegeCircuit
 block:id=%tile.siege_circuit,data=*,stdrot=true,face0=0:hbm/siege_circuit_0,face1=0:hbm/siege_circuit_1,face2=0:hbm/siege_circuit_0,face3=0:hbm/siege_circuit_1,face4=0:hbm/siege_circuit_0,face5=0:hbm/siege_circuit_1
 
-# %tile.block_pu240:* (tile.block_pu240), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
+# %tile.block_pu240:* (tile.block_pu240), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
 block:id=%tile.block_pu240,data=*,stdrot=true,face0-5=0:hbm/block_pu240
 
 # %tile.turret_jeremy:* (tile.turret_jeremy), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretJeremy
 block:id=%tile.turret_jeremy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/block_steel
 
-# %tile.machine_electric_furnace_on:* (tile.machine_electric_furnace_on), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineElectricFurnace
+# %tile.machine_electric_furnace_on:* (tile.machine_electric_furnace_on), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineElectricFurnace
 block:id=%tile.machine_electric_furnace_on,data=0,stdrot=true,face0=0:hbm/machine_electric_furnace_front_on,face1=0:hbm/machine_electric_furnace_top,face2=0:hbm/machine_electric_furnace_side,face3=0:hbm/machine_electric_furnace_front_on,face4-5=0:hbm/machine_electric_furnace_side
 block:id=%tile.machine_electric_furnace_on,data=1,stdrot=true,face0=0:hbm/machine_electric_furnace_bottom,face1=0:hbm/machine_electric_furnace_front_on,face2-5=0:hbm/machine_electric_furnace_side
 block:id=%tile.machine_electric_furnace_on,data=2,stdrot=true,face0=0:hbm/machine_electric_furnace_bottom,face1=0:hbm/machine_electric_furnace_top,face2=0:hbm/machine_electric_furnace_front_on,face3-5=0:hbm/machine_electric_furnace_side
@@ -1685,10 +1685,10 @@ block:id=%tile.machine_electric_furnace_on,data=4,stdrot=true,face0=0:hbm/machin
 block:id=%tile.machine_electric_furnace_on,data=5,stdrot=true,face0=0:hbm/machine_electric_furnace_bottom,face1=0:hbm/machine_electric_furnace_top,face2-4=0:hbm/machine_electric_furnace_side,face5=0:hbm/machine_electric_furnace_front_on
 block:id=%tile.machine_electric_furnace_on,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:hbm/machine_electric_furnace_bottom,face1=0:hbm/machine_electric_furnace_top,face2-5=0:hbm/machine_electric_furnace_side
 
-# %tile.crate_tungsten:* (tile.crate_tungsten), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockStorageCrate
+# %tile.crate_tungsten:* (tile.crate_tungsten), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockStorageCrate
 block:id=%tile.crate_tungsten,data=*,stdrot=true,face0-1=0:hbm/crate_tungsten_top,face2-5=0:hbm/crate_tungsten_side
 
-# %tile.machine_arc_furnace_on:* (tile.machine_arc_furnace_on), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineArcFurnace
+# %tile.machine_arc_furnace_on:* (tile.machine_arc_furnace_on), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineArcFurnace
 block:id=%tile.machine_arc_furnace_on,data=0,stdrot=true,face0=0:hbm/machine_arc_furnace_bottom,face1=0:hbm/machine_arc_furnace_top_on,face2=0:hbm/machine_arc_furnace_side,face3=0:hbm/machine_arc_furnace_front_on,face4-5=0:hbm/machine_arc_furnace_side
 block:id=%tile.machine_arc_furnace_on,data=1,stdrot=true,face0=0:hbm/machine_arc_furnace_bottom,face1=0:hbm/machine_arc_furnace_top_on,face2-5=0:hbm/machine_arc_furnace_side
 block:id=%tile.machine_arc_furnace_on,data=2,stdrot=true,face0=0:hbm/machine_arc_furnace_bottom,face1=0:hbm/machine_arc_furnace_top_on,face2=0:hbm/machine_arc_furnace_front_on,face3-5=0:hbm/machine_arc_furnace_side
@@ -1704,16 +1704,16 @@ block:id=%tile.machine_arc_furnace_on,data=10,data=11,data=12,data=13,data=14,da
 # %tile.machine_microwave:* (tile.machine_microwave), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineMicrowave
 block:id=%tile.machine_microwave,data=*,stdrot=true,face0-5=0:hbm/machine_microwave
 
-# %tile.basalt_polished:* (tile.basalt_polished), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.basalt_polished:* (tile.basalt_polished), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.basalt_polished,data=*,stdrot=true,face0-5=0:hbm/basalt_polished
 
 # %tile.deco_pipe_framed_green:* (tile.deco_pipe_framed_green), render=com.hbm.render.block.RenderPipe(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockPipe
 block:id=%tile.deco_pipe_framed_green,data=*,stdrot=true,face0-1=0:hbm/pipe_top_green,face2-5=0:hbm/pipe_side_green
 
-# %tile.crate_iron:* (tile.crate_iron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockStorageCrate
+# %tile.crate_iron:* (tile.crate_iron), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockStorageCrate
 block:id=%tile.crate_iron,data=*,stdrot=true,face0-1=0:hbm/crate_iron_top,face2-5=0:hbm/crate_iron_side
 
-# %tile.block_pu238:* (tile.block_pu238), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHotHazard
+# %tile.block_pu238:* (tile.block_pu238), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHotHazard
 block:id=%tile.block_pu238,data=*,stdrot=true,face0-5=0:hbm/block_pu238
 
 # %tile.machine_arc_welder:* (tile.machine_arc_welder), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineArcWelder
@@ -1725,22 +1725,22 @@ block:id=%tile.steel_corner,data=*,stdrot=true,face0-5=0:hbm/steel_corner
 # %tile.turret_brandon:* (tile.turret_brandon), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.turret.TurretBrandon
 block:id=%tile.turret_brandon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/block_steel
 
-# %tile.flame_war:* (tile.flame_war), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombFlameWar
+# %tile.flame_war:* (tile.flame_war), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BombFlameWar
 block:id=%tile.flame_war,data=*,stdrot=true,face0-5=0:hbm/flame_war
 
-# %tile.block_waste:* (tile.block_waste), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNuclearWaste
+# %tile.block_waste:* (tile.block_waste), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNuclearWaste
 block:id=%tile.block_waste,data=*,stdrot=true,face0-5=0:hbm/block_waste
 
-# %tile.tnt_ntm:* (tile.tnt_ntm), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BlockTNT
+# %tile.tnt_ntm:* (tile.tnt_ntm), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BlockTNT
 block:id=%tile.tnt_ntm,data=*,stdrot=true,face0=0:hbm/tnt_bottom,face1=0:hbm/tnt_top,face2-5=0:hbm/tnt_side
 
-# %tile.block_polonium:* (tile.block_polonium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHotHazard
+# %tile.block_polonium:* (tile.block_polonium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHotHazard
 block:id=%tile.block_polonium,data=*,stdrot=true,face0-5=0:hbm/block_polonium
 
-# %tile.block_pu239:* (tile.block_pu239), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
+# %tile.block_pu239:* (tile.block_pu239), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
 block:id=%tile.block_pu239,data=*,stdrot=true,face0-5=0:hbm/block_pu239
 
-# %tile.machine_boiler_electric_off:* (tile.machine_boiler_electric_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBoiler
+# %tile.machine_boiler_electric_off:* (tile.machine_boiler_electric_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBoiler
 block:id=%tile.machine_boiler_electric_off,data=0,stdrot=true,face0-1=0:hbm/machine_boiler_port,face2=0:hbm/machine_boiler_side,face3=0:hbm/machine_boiler_electric_front,face4-5=0:hbm/machine_boiler_side
 block:id=%tile.machine_boiler_electric_off,data=1,stdrot=true,face0-1=0:hbm/machine_boiler_port,face2-5=0:hbm/machine_boiler_side
 block:id=%tile.machine_boiler_electric_off,data=2,stdrot=true,face0-1=0:hbm/machine_boiler_port,face2=0:hbm/machine_boiler_electric_front,face3-5=0:hbm/machine_boiler_side
@@ -1752,13 +1752,13 @@ block:id=%tile.machine_boiler_electric_off,data=6,data=7,data=8,data=9,data=10,d
 # %tile.heater_firebox:* (tile.heater_firebox), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.HeaterFirebox
 block:id=%tile.heater_firebox,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.machine_turbine:* (tile.machine_turbine), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTurbine
+# %tile.machine_turbine:* (tile.machine_turbine), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTurbine
 block:id=%tile.machine_turbine,data=*,stdrot=true,face0-1=0:hbm/machine_turbine_top,face2-5=0:hbm/machine_turbine_base
 
 # %tile.red_cable:* (tile.red_cable), render=com.hbm.render.block.RenderCable(CUSTOM), opaque=false,cls=com.hbm.blocks.network.BlockCable
 block:id=%tile.red_cable,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/cable_neo
 
-# %tile.ore_coal_oil:* (tile.ore_coal_oil), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCoalOil
+# %tile.ore_coal_oil:* (tile.ore_coal_oil), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCoalOil
 block:id=%tile.ore_coal_oil,data=*,stdrot=true,face0-5=0:hbm/ore_coal_oil
 
 # %tile.gas_flammable:* (tile.gas_flammable), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.gas.BlockGasFlammable
@@ -1776,10 +1776,10 @@ block:id=%tile.volcanic_lava_block,data=*,stdrot=true,transparency=SEMITRANSPARE
 # %tile.fluid_duct_paintable:* (tile.fluid_duct_paintable), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.FluidDuctPaintable
 block:id=%tile.fluid_duct_paintable,data=*,stdrot=true,face0-5=0:hbm/fluid_duct_paintable
 
-# %tile.cluster_titanium:* (tile.cluster_titanium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCluster
+# %tile.cluster_titanium:* (tile.cluster_titanium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCluster
 block:id=%tile.cluster_titanium,data=*,stdrot=true,face0-5=0:hbm/cluster_titanium
 
-# %tile.machine_furnace_brick_on:* (tile.machine_furnace_brick_on), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBrickFurnace
+# %tile.machine_furnace_brick_on:* (tile.machine_furnace_brick_on), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineBrickFurnace
 block:id=%tile.machine_furnace_brick_on,data=0,stdrot=true,face0=0:hbm/machine_furnace_brick_front_on,face1=0:hbm/machine_furnace_brick_top,face2=0:hbm/machine_furnace_brick_side,face3=0:hbm/machine_furnace_brick_front_on,face4-5=0:hbm/machine_furnace_brick_side
 block:id=%tile.machine_furnace_brick_on,data=1,stdrot=true,face0=0:hbm/machine_furnace_brick_bottom,face1=0:hbm/machine_furnace_brick_front_on,face2-5=0:hbm/machine_furnace_brick_side
 block:id=%tile.machine_furnace_brick_on,data=2,stdrot=true,face0=0:hbm/machine_furnace_brick_bottom,face1=0:hbm/machine_furnace_brick_top,face2=0:hbm/machine_furnace_brick_front_on,face3-5=0:hbm/machine_furnace_brick_side
@@ -1800,13 +1800,13 @@ block:id=%tile.machine_electrolyser,data=*,stdrot=true,face0-5=0:hbm/block_steel
 # %tile.machine_stirling:* (tile.machine_stirling), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineStirling
 block:id=%tile.machine_stirling,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.ore_nether_tungsten:* (tile.ore_nether_tungsten), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.ore_nether_tungsten:* (tile.ore_nether_tungsten), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.ore_nether_tungsten,data=*,stdrot=true,face0-5=0:hbm/ore_nether_tungsten
 
 # %tile.machine_storage_drum:* (tile.machine_storage_drum), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.StorageDrum
 block:id=%tile.machine_storage_drum,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/machine_storage_drum
 
-# %tile.machine_shredder:* (tile.machine_shredder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineShredder
+# %tile.machine_shredder:* (tile.machine_shredder), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineShredder
 block:id=%tile.machine_shredder,data=*,stdrot=true,face0=0:hbm/machine_shredder_bottom_alt,face1=0:hbm/machine_shredder_top_alt,face2-3=0:hbm/machine_shredder_front_alt,face4-5=0:hbm/machine_shredder_side_alt
 
 # %tile.machine_shredder_large:* (tile.machine_shredder_large), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineShredderLarge
@@ -1845,16 +1845,16 @@ block:id=%tile.chimney_brick,data=*,stdrot=true,face0-5=0:hbm/brick_fire
 # %tile.chimney_industrial:* (tile.chimney_industrial), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineChimneyIndustrial
 block:id=%tile.chimney_industrial,data=*,stdrot=true,face0-5=0:hbm/concrete_colored_ext.machine
 
-# %tile.cluster_depth_iron:* (tile.cluster_depth_iron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepthOre
+# %tile.cluster_depth_iron:* (tile.cluster_depth_iron), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockDepthOre
 block:id=%tile.cluster_depth_iron,data=*,stdrot=true,face0-5=0:hbm/cluster_depth_iron
 
-# %tile.block_cap_sparkle:* (tile.block_cap_sparkle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCap
+# %tile.block_cap_sparkle:* (tile.block_cap_sparkle), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCap
 block:id=%tile.block_cap_sparkle,data=*,stdrot=true,face0-1=0:hbm/block_cap_sparkle_top,face2-5=0:hbm/block_cap_sparkle
 
-# %tile.gravel_obsidian:* (tile.gravel_obsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %tile.gravel_obsidian:* (tile.gravel_obsidian), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%tile.gravel_obsidian,data=*,stdrot=true,face0-5=0:hbm/gravel_obsidian
 
-# %tile.hadron_plating_glass:* (tile.hadron_plating_glass), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockNTMGlass
+# %tile.hadron_plating_glass:* (tile.hadron_plating_glass), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockNTMGlass
 block:id=%tile.hadron_plating_glass,data=*,stdrot=true,face0-5=0:hbm/hadron_plating_glass
 
 # %tile.machine_catalytic_cracker:* (tile.machine_catalytic_cracker), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineCatalyticCracker
@@ -1878,15 +1878,15 @@ block:id=%tile.sat_dock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hb
 # %tile.mush:* (tile.mush), render=(CROSSEDSQUARES), opaque=false,cls=com.hbm.blocks.generic.BlockMush
 block:id=%tile.mush,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/mush
 
-# %tile.barricade:* (tile.barricade), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNoDrop
+# %tile.barricade:* (tile.barricade), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNoDrop
 block:id=%tile.barricade,data=*,stdrot=true,face0-5=0:hbm/barricade
 
-# %tile.ntm_dirt:* (tile.ntm_dirt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNTMDirt
+# %tile.ntm_dirt:* (tile.ntm_dirt), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockNTMDirt
 block:id=%tile.ntm_dirt,data=0,data=1,stdrot=true,face0-5=0:minecraft/dirt
 block:id=%tile.ntm_dirt,data=2,stdrot=true,face0=0:minecraft/dirt,face1=0:minecraft/dirt_podzol_top,face2-5=0:minecraft/dirt_podzol_side
 block:id=%tile.ntm_dirt,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/dirt
 
-# %tile.hazmat:* (tile.hazmat), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.hazmat:* (tile.hazmat), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.hazmat,data=*,stdrot=true,face0-5=0:hbm/hazmat
 
 # %tile.sulfuric_acid_block:* (tile.sulfuric_acid_block), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.hbm.blocks.fluid.GenericFluidBlock
@@ -1895,24 +1895,24 @@ block:id=%tile.sulfuric_acid_block,data=*,stdrot=true,transparency=SEMITRANSPARE
 # %tile.steel_roof:* (tile.steel_roof), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.DecoBlock
 block:id=%tile.steel_roof,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/steel_roof
 
-# %tile.teleanchor:* (tile.teleanchor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTeleanchor
+# %tile.teleanchor:* (tile.teleanchor), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineTeleanchor
 block:id=%tile.teleanchor,data=*,stdrot=true,face0=0:hbm/tele_anchor_side,face1=0:hbm/tele_anchor_top,face2-5=0:hbm/tele_anchor_side
 
-# %tile.brick_jungle_fragile:* (tile.brick_jungle_fragile), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.FragileBrick
+# %tile.brick_jungle_fragile:* (tile.brick_jungle_fragile), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.FragileBrick
 block:id=%tile.brick_jungle_fragile,data=*,stdrot=true,face0-5=0:hbm/brick_jungle_fragile
 
-# %tile.machine_detector:* (tile.machine_detector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.PowerDetector
+# %tile.machine_detector:* (tile.machine_detector), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.PowerDetector
 block:id=%tile.machine_detector,data=0,stdrot=true,face0-5=0:hbm/machine_detector_off
 block:id=%tile.machine_detector,data=1,stdrot=true,face0-5=0:hbm/machine_detector
 block:id=%tile.machine_detector,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hbm/machine_detector_off
 
-# %tile.concrete:* (tile.concrete), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.concrete:* (tile.concrete), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.concrete,data=*,stdrot=true,face0-5=0:hbm/concrete_tile
 
 # %tile.nuke_man:* (tile.nuke_man), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.bomb.NukeMan
 block:id=%tile.nuke_man,data=*,stdrot=true,face0-5=0:hbm/fatMan
 
-# %tile.brick_obsidian:* (tile.brick_obsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.brick_obsidian:* (tile.brick_obsidian), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.brick_obsidian,data=*,stdrot=true,face0-5=0:hbm/brick_obsidian
 
 # %tile.radiorec:* (tile.radiorec), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.RadioRec
@@ -1921,7 +1921,7 @@ block:id=%tile.radiorec,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hb
 # %tile.machine_puf6_tank:* (tile.machine_puf6_tank), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachinePuF6Tank
 block:id=%tile.machine_puf6_tank,data=*,stdrot=true,face0-5=0:hbm/machine_puf6_tank
 
-# %tile.struct_launcher:* (tile.struct_launcher), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.struct_launcher:* (tile.struct_launcher), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.struct_launcher,data=*,stdrot=true,face0-5=0:hbm/struct_launcher
 
 # %tile.test_pipe:* (tile.test_pipe), render=com.hbm.render.block.RenderTestPipe(CUSTOM), opaque=false,cls=com.hbm.blocks.test.TestPipe
@@ -1930,40 +1930,40 @@ block:id=%tile.test_pipe,data=*,stdrot=true,face0=0:hbm/pipe_neo,face1-5=0:hbm/p
 # %tile.pribris_burning:* (tile.pribris_burning), render=com.hbm.render.block.RenderPribris(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.rbmk.RBMKDebrisBurning
 block:id=%tile.pribris_burning,data=*,stdrot=true,face0-5=0:hbm/rbmk/rbmk_debris_burning
 
-# %tile.tektite:* (tile.tektite), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.tektite:* (tile.tektite), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.tektite,data=*,stdrot=true,face0-5=0:hbm/tektite
 
 # %tile.gas_asbestos:* (tile.gas_asbestos), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.gas.BlockGasAsbestos
 block:id=%tile.gas_asbestos,data=*,stdrot=true,face0-5=0:hbm/gas_asbestos
 
-# %tile.struct_iter_core:* (tile.struct_iter_core), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.machine.BlockITERStruct
+# %tile.struct_iter_core:* (tile.struct_iter_core), render=(STANDARD), opaque=false,cls=com.hbm.blocks.machine.BlockITERStruct
 block:id=%tile.struct_iter_core,data=*,stdrot=true,face0-5=0:hbm/struct_iter_core
 
 # %tile.furnace_combination:* (tile.furnace_combination), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.FurnaceCombination
 block:id=%tile.furnace_combination,data=*,stdrot=true,face0-5=0:hbm/brick_light_alt
 
-# %tile.struct_watz_core:* (tile.struct_watz_core), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.machine.BlockWatzStruct
+# %tile.struct_watz_core:* (tile.struct_watz_core), render=(STANDARD), opaque=false,cls=com.hbm.blocks.machine.BlockWatzStruct
 block:id=%tile.struct_watz_core,data=*,stdrot=true,face0-5=0:hbm/struct_watz_core
 
-# %tile.absorber:* (tile.absorber), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockAbsorber
+# %tile.absorber:* (tile.absorber), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockAbsorber
 block:id=%tile.absorber,data=*,stdrot=true,face0-5=0:hbm/absorber
 
 # %tile.machine_combustion_engine:* (tile.machine_combustion_engine), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineCombustionEngine
 block:id=%tile.machine_combustion_engine,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.absorber_green:* (tile.absorber_green), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockAbsorber
+# %tile.absorber_green:* (tile.absorber_green), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockAbsorber
 block:id=%tile.absorber_green,data=*,stdrot=true,face0-5=0:hbm/absorber_green
 
 # %tile.gas_coal:* (tile.gas_coal), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.gas.BlockGasCoal
 block:id=%tile.gas_coal,data=*,stdrot=true,face0-5=0:hbm/gas_coal
 
-# %tile.tile_lab_broken:* (tile.tile_lab_broken), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
+# %tile.tile_lab_broken:* (tile.tile_lab_broken), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOutgas
 block:id=%tile.tile_lab_broken,data=*,stdrot=true,face0-5=0:hbm/tile_lab_broken
 
-# %tile.transission_hatch:* (tile.transission_hatch), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockTransission
+# %tile.transission_hatch:* (tile.transission_hatch), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockTransission
 block:id=%tile.transission_hatch,data=*,stdrot=true,face0-5=0:hbm/transission_hatch
 
-# %tile.machine_electric_furnace_off:* (tile.machine_electric_furnace_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineElectricFurnace
+# %tile.machine_electric_furnace_off:* (tile.machine_electric_furnace_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineElectricFurnace
 block:id=%tile.machine_electric_furnace_off,data=0,stdrot=true,face0=0:hbm/machine_electric_furnace_front_off,face1=0:hbm/machine_electric_furnace_top,face2=0:hbm/machine_electric_furnace_side,face3=0:hbm/machine_electric_furnace_front_off,face4-5=0:hbm/machine_electric_furnace_side
 block:id=%tile.machine_electric_furnace_off,data=1,stdrot=true,face0=0:hbm/machine_electric_furnace_bottom,face1=0:hbm/machine_electric_furnace_front_off,face2-5=0:hbm/machine_electric_furnace_side
 block:id=%tile.machine_electric_furnace_off,data=2,stdrot=true,face0=0:hbm/machine_electric_furnace_bottom,face1=0:hbm/machine_electric_furnace_top,face2=0:hbm/machine_electric_furnace_front_off,face3-5=0:hbm/machine_electric_furnace_side
@@ -1978,23 +1978,23 @@ block:id=%tile.solar_mirror,data=*,stdrot=true,face0-5=0:hbm/solar_mirror
 # %tile.machine_radar_large:* (tile.machine_radar_large), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineRadarLarge
 block:id=%tile.machine_radar_large,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.factory_advanced_hull:* (tile.factory_advanced_hull), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.factory_advanced_hull:* (tile.factory_advanced_hull), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.factory_advanced_hull,data=*,stdrot=true,face0-5=0:hbm/factory_advanced_hull
 
-# %tile.hadron_plating_blue:* (tile.hadron_plating_blue), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPlating
+# %tile.hadron_plating_blue:* (tile.hadron_plating_blue), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockHadronPlating
 block:id=%tile.hadron_plating_blue,data=*,stdrot=true,face0-5=0:hbm/hadron_plating_blue
 
 # %tile.rail_narrow:* (tile.rail_narrow), render=(MINECARTTRACK), opaque=false,cls=com.hbm.blocks.machine.RailGeneric
 block:id=%tile.rail_narrow,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/rail_narrow
 block:id=%tile.rail_narrow,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/rail_narrow_turned
 
-# %tile.concrete_smooth:* (tile.concrete_smooth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockRadResistant
+# %tile.concrete_smooth:* (tile.concrete_smooth), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockRadResistant
 block:id=%tile.concrete_smooth,data=*,stdrot=true,face0-5=0:hbm/concrete
 
-# %tile.semtex:* (tile.semtex), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BlockSemtex
+# %tile.semtex:* (tile.semtex), render=(STANDARD), opaque=true,cls=com.hbm.blocks.bomb.BlockSemtex
 block:id=%tile.semtex,data=*,stdrot=true,face0=0:hbm/semtex_bottom,face1=0:hbm/semtex_top,face2-5=0:hbm/semtex_side
 
-# %tile.cm_tank:* (tile.cm_tank), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.machine.BlockCMGlass
+# %tile.cm_tank:* (tile.cm_tank), render=(STANDARD), opaque=false,cls=com.hbm.blocks.machine.BlockCMGlass
 block:id=%tile.cm_tank,data=0,stdrot=true,face0-5=0:hbm/cm_tank_steel
 block:id=%tile.cm_tank,data=1,stdrot=true,face0-5=0:hbm/cm_tank_alloy
 block:id=%tile.cm_tank,data=2,stdrot=true,face0-5=0:hbm/cm_tank_desh
@@ -2019,7 +2019,7 @@ block:id=%tile.machine_refinery,data=*,stdrot=true,face0-5=0:hbm/machine_refiner
 block:id=%tile.rail_wood,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/rail_wood
 block:id=%tile.rail_wood,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:hbm/rail_wood_turned
 
-# %tile.lamp_tritium_blue_off:* (tile.lamp_tritium_blue_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.TritiumLamp
+# %tile.lamp_tritium_blue_off:* (tile.lamp_tritium_blue_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.TritiumLamp
 block:id=%tile.lamp_tritium_blue_off,data=*,stdrot=true,face0-5=0:hbm/lamp_tritium_blue_off
 
 # %tile.brick_concrete_cracked_stairs:* (tile.brick_concrete_cracked_stairs), render=(STAIRS), opaque=false,cls=com.hbm.blocks.generic.BlockGenericStairs
@@ -2028,13 +2028,13 @@ block:id=%tile.brick_concrete_cracked_stairs,data=*,stdrot=true,transparency=SEM
 # %tile.deco_tungsten:* (tile.deco_tungsten), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.generic.BlockDecoCT
 block:id=%tile.deco_tungsten,data=*,stdrot=true,face0-5=0:hbm/deco_tungsten
 
-# %tile.asphalt:* (tile.asphalt), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockSpeedy
+# %tile.asphalt:* (tile.asphalt), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockSpeedy
 block:id=%tile.asphalt,data=*,stdrot=true,face0-5=0:hbm/asphalt
 
-# %tile.block_cadmium:* (tile.block_cadmium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
+# %tile.block_cadmium:* (tile.block_cadmium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockBeaconable
 block:id=%tile.block_cadmium,data=*,stdrot=true,face0-5=0:hbm/block_cadmium
 
-# %tile.machine_difurnace_rtg_off:* (tile.machine_difurnace_rtg_off), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineDiFurnaceRTG
+# %tile.machine_difurnace_rtg_off:* (tile.machine_difurnace_rtg_off), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachineDiFurnaceRTG
 block:id=%tile.machine_difurnace_rtg_off,data=0,stdrot=true,face0=0:hbm/rtg_difurnace_front_off,face1=0:hbm/rtg_difurnace_top_off,face2=0:hbm/machine_rtg_furnace_side_alt,face3=0:hbm/rtg_difurnace_front_off,face4-5=0:hbm/machine_rtg_furnace_side_alt
 block:id=%tile.machine_difurnace_rtg_off,data=1,stdrot=true,face0=0:hbm/machine_rtg_furnace_side_alt,face1=0:hbm/rtg_difurnace_front_off,face2-5=0:hbm/machine_rtg_furnace_side_alt
 block:id=%tile.machine_difurnace_rtg_off,data=2,stdrot=true,face0=0:hbm/machine_rtg_furnace_side_alt,face1=0:hbm/rtg_difurnace_top_off,face2=0:hbm/rtg_difurnace_front_off,face3-5=0:hbm/machine_rtg_furnace_side_alt
@@ -2043,13 +2043,13 @@ block:id=%tile.machine_difurnace_rtg_off,data=4,stdrot=true,face0=0:hbm/machine_
 block:id=%tile.machine_difurnace_rtg_off,data=5,stdrot=true,face0=0:hbm/machine_rtg_furnace_side_alt,face1=0:hbm/rtg_difurnace_top_off,face2-4=0:hbm/machine_rtg_furnace_side_alt,face5=0:hbm/rtg_difurnace_front_off
 block:id=%tile.machine_difurnace_rtg_off,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:hbm/machine_rtg_furnace_side_alt,face1=0:hbm/rtg_difurnace_top_off,face2-5=0:hbm/machine_rtg_furnace_side_alt
 
-# %tile.pwr_fuel:* (tile.pwr_fuel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillarPWR
+# %tile.pwr_fuel:* (tile.pwr_fuel), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillarPWR
 block:id=%tile.pwr_fuel,data=*,stdrot=true,face0-1=0:hbm/pwr_fuel_top,face2-5=0:hbm/pwr_fuel_side
 
-# %tile.fwatz_cooler:* (tile.fwatz_cooler), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
+# %tile.fwatz_cooler:* (tile.fwatz_cooler), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
 block:id=%tile.fwatz_cooler,data=*,stdrot=true,face0-1=0:hbm/fwatz_cooler_top,face2-5=0:hbm/fwatz_cooler
 
-# %tile.pwr_reflector:* (tile.pwr_reflector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockGenericPWR
+# %tile.pwr_reflector:* (tile.pwr_reflector), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockGenericPWR
 block:id=%tile.pwr_reflector,data=*,stdrot=true,face0-5=0:hbm/pwr_reflector
 
 # %tile.anvil_osmiridium:* (tile.anvil_osmiridium), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
@@ -2059,7 +2059,7 @@ block:id=%tile.anvil_osmiridium,data=2,data=3,data=4,data=5,data=6,data=7,data=8
 # %tile.fluid_duct_gauge:* (tile.fluid_duct_gauge), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.FluidDuctGauge
 block:id=%tile.fluid_duct_gauge,data=*,stdrot=true,face0-5=0:hbm/deco_steel
 
-# %tile.pwr_controller:* (tile.pwr_controller), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachinePWRController
+# %tile.pwr_controller:* (tile.pwr_controller), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.MachinePWRController
 block:id=%tile.pwr_controller,data=0,stdrot=true,face0=0:hbm/pwr_controller,face1-2=0:hbm/pwr_casing_blank,face3=0:hbm/pwr_controller,face4-5=0:hbm/pwr_casing_blank
 block:id=%tile.pwr_controller,data=1,stdrot=true,face0=0:hbm/pwr_casing_blank,face1=0:hbm/pwr_controller,face2-5=0:hbm/pwr_casing_blank
 block:id=%tile.pwr_controller,data=2,stdrot=true,face0-1=0:hbm/pwr_casing_blank,face2=0:hbm/pwr_controller,face3-5=0:hbm/pwr_casing_blank
@@ -2071,21 +2071,21 @@ block:id=%tile.pwr_controller,data=6,data=7,data=8,data=9,data=10,data=11,data=1
 # %tile.pwr_block:* (tile.pwr_block), render=com.hbm.render.block.RenderBlockCT(CUSTOM), opaque=true,cls=com.hbm.blocks.machine.BlockPWR
 block:id=%tile.pwr_block,data=*,stdrot=true,face0-5=0:hbm/pwr_block
 
-# %tile.fusion_conductor:* (tile.fusion_conductor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockToolConversionPillar
+# %tile.fusion_conductor:* (tile.fusion_conductor), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockToolConversionPillar
 block:id=%tile.fusion_conductor,data=0,stdrot=true,face0-1=0:hbm/fusion_conductor_top,face2-5=0:hbm/fusion_conductor_side
 block:id=%tile.fusion_conductor,data=1,stdrot=true,face0-1=0:hbm/fusion_conductor_top_welded,face2-5=0:hbm/fusion_conductor_side_welded
 block:id=%tile.fusion_conductor,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:hbm/fusion_conductor_top,face2-5=0:hbm/fusion_conductor_side
 
-# %tile.crate_red:* (tile.crate_red), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCrate
+# %tile.crate_red:* (tile.crate_red), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockCrate
 block:id=%tile.crate_red,data=*,stdrot=true,face0-5=0:hbm/crate_red
 
-# %tile.fusion_motor:* (tile.fusion_motor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
+# %tile.fusion_motor:* (tile.fusion_motor), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
 block:id=%tile.fusion_motor,data=*,stdrot=true,face0-1=0:hbm/fusion_motor_top_alt,face2-5=0:hbm/fusion_motor_side_alt
 
-# %tile.fusion_heater:* (tile.fusion_heater), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
+# %tile.fusion_heater:* (tile.fusion_heater), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
 block:id=%tile.fusion_heater,data=*,stdrot=true,face0-1=0:hbm/fusion_heater_top,face2-5=0:hbm/fusion_heater_side
 
-# %tile.block_graphite_lithium:* (tile.block_graphite_lithium), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.pile.BlockGraphiteBreedingFuel
+# %tile.block_graphite_lithium:* (tile.block_graphite_lithium), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.pile.BlockGraphiteBreedingFuel
 block:id=%tile.block_graphite_lithium,data=0,stdrot=true,face0-1=0:hbm/block_graphite_lithium,face2-5=0:hbm/block_graphite
 block:id=%tile.block_graphite_lithium,data=1,stdrot=true,face0-1=0:hbm/block_graphite,face2-3=0:hbm/block_graphite_lithium,face4-5=0:hbm/block_graphite
 block:id=%tile.block_graphite_lithium,data=2,stdrot=true,face0-3=0:hbm/block_graphite,face4-5=0:hbm/block_graphite_lithium
@@ -2103,7 +2103,7 @@ block:id=%tile.block_graphite_lithium,data=13,stdrot=true,face0-1=0:hbm/block_gr
 block:id=%tile.block_graphite_lithium,data=14,stdrot=true,face0-3=0:hbm/block_graphite,face4-5=0:hbm/block_graphite_lithium_aluminum
 block:id=%tile.block_graphite_lithium,data=15,stdrot=true,face0-5=0:hbm/block_graphite
 
-# %tile.plasma:* (tile.plasma), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockPlasma
+# %tile.plasma:* (tile.plasma), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockPlasma
 block:id=%tile.plasma,data=*,stdrot=true,face0-5=0:hbm/plasma
 
 # %tile.iter:* (tile.iter), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineITER
@@ -2112,21 +2112,21 @@ block:id=%tile.iter,data=*,stdrot=true,face0-5=0:hbm/iter
 # %tile.machine_wood_burner:* (tile.machine_wood_burner), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.MachineWoodBurner
 block:id=%tile.machine_wood_burner,data=*,stdrot=true,face0-5=0:hbm/block_steel
 
-# %tile.watz_element:* (tile.watz_element), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
+# %tile.watz_element:* (tile.watz_element), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
 block:id=%tile.watz_element,data=*,stdrot=true,face0-1=0:hbm/watz_element_top,face2-5=0:hbm/watz_element_side
 
-# %tile.brick_jungle:* (tile.brick_jungle), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
+# %tile.brick_jungle:* (tile.brick_jungle), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
 block:id=%tile.brick_jungle,data=*,stdrot=true,face0-5=0:hbm/brick_jungle
 
-# %tile.watz_cooler:* (tile.watz_cooler), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
+# %tile.watz_cooler:* (tile.watz_cooler), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.BlockPillar
 block:id=%tile.watz_cooler,data=*,stdrot=true,face0-1=0:hbm/watz_cooler_top,face2-5=0:hbm/watz_cooler_side
 
-# %tile.watz_end:* (tile.watz_end), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockToolConversion
+# %tile.watz_end:* (tile.watz_end), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockToolConversion
 block:id=%tile.watz_end,data=0,stdrot=true,face0-5=0:hbm/watz_casing
 block:id=%tile.watz_end,data=1,stdrot=true,face0-5=0:hbm/watz_casing_bolted
 block:id=%tile.watz_end,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:hbm/watz_casing
 
-# %tile.block_plutonium_fuel:* (tile.block_plutonium_fuel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
+# %tile.block_plutonium_fuel:* (tile.block_plutonium_fuel), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockHazard
 block:id=%tile.block_plutonium_fuel,data=*,stdrot=true,face0-5=0:hbm/block_plutonium_fuel
 
 # %tile.watz:* (tile.watz), render=(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.Watz

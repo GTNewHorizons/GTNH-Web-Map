@@ -1,4 +1,4 @@
-# openglasses 1.3.1-GTNH
+# openglasses 1.5.0-GTNH
 version:1.7
 modname:openglasses
 
@@ -13,5 +13,5 @@ texture:id=openglasses/glasses_top,filename=assets/openglasses/textures/blocks/g
 
 
 
-# %openglassesterminal:* (openglassesterminal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=com.bymarcin.openglasses.block.OpenGlassesTerminalBlock
+# %openglassesterminal:* (openglassesterminal), render=(STANDARD), opaque=true,cls=com.bymarcin.openglasses.block.OpenGlassesTerminalBlock
 block:id=%openglassesterminal,data=*,stdrot=true,face0=0:openglasses/glasses_bottom,face1=0:openglasses/glasses_top,face2-5=0:openglasses/glasses_side

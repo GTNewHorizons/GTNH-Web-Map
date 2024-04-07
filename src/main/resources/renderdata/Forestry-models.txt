@@ -175,7 +175,7 @@ patchblock:id=%stump,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchS
 patchblock:id=%stump,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
 patchblock:id=%stump,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %slabs:* (slabs), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
+# %slabs:* (slabs), render=(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
 boxblock:id=%slabs,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%slabs,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -185,7 +185,7 @@ customblock:id=%fences,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,ty
 # %stairs:* (stairs), render=(STAIRS), opaque=false,cls=forestry.arboriculture.blocks.BlockArbStairs
 customblock:id=%stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %slabsFireproof:* (slabsFireproof), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
+# %slabsFireproof:* (slabsFireproof), render=(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
 boxblock:id=%slabsFireproof,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%slabsFireproof,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 

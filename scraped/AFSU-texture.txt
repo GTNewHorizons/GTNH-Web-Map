@@ -1,4 +1,4 @@
-# AFSU 1.2.6-GTNH
+# AFSU 1.3.0-GTNH
 version:1.7
 modname:AFSU
 
@@ -13,5 +13,5 @@ texture:id=AFSU/AFSU_top_chloe1,filename=assets/afsu/textures/blocks/AFSU_top_ch
 
 
 
-# %AFSU:* (AFSU), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=xbony2.afsu.blocks.AFSUBlock
+# %AFSU:* (AFSU), render=(STANDARD), opaque=true,cls=xbony2.afsu.blocks.AFSUBlock
 block:id=%AFSU,data=*,stdrot=true,face0-1=0:AFSU/AFSU_top_chloe1,face2=0:AFSU/AFSU_input_chloe1,face3=0:AFSU/AFSU_output_chloe1,face4-5=0:AFSU/AFSU_input_chloe1

@@ -162,13 +162,13 @@ texture:id=thaumicbases/voidblock,filename=assets/thaumicbases/textures/blocks/v
 
 
 
-# %quicksilverBlock:* (quicksilverBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+# %quicksilverBlock:* (quicksilverBlock), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlock
 block:id=%quicksilverBlock,data=*,stdrot=true,face0-5=0:thaumicbases/quicksilverBlock
 
-# %quicksilverBrick:* (quicksilverBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.TBBlock
+# %quicksilverBrick:* (quicksilverBrick), render=(STANDARD), opaque=false,cls=tb.common.block.TBBlock
 block:id=%quicksilverBrick,data=*,stdrot=true,face0-5=12000:thaumicbases/quicksilverBrick
 
-# %crystalBlock:* (crystalBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalBlock
+# %crystalBlock:* (crystalBlock), render=(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalBlock
 block:id=%crystalBlock,data=0,stdrot=true,face0-5=0:thaumicbases/crystal/air
 block:id=%crystalBlock,data=1,stdrot=true,face0-5=0:thaumicbases/crystal/fire
 block:id=%crystalBlock,data=2,stdrot=true,face0-5=0:thaumicbases/crystal/water
@@ -178,26 +178,26 @@ block:id=%crystalBlock,data=5,stdrot=true,face0-5=0:thaumicbases/crystal/entropy
 block:id=%crystalBlock,data=6,stdrot=true,face0-5=0:thaumicbases/crystal/mixed
 block:id=%crystalBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumicbases/crystal/tainted
 
-# %blockSalisMundus:* (blockSalisMundus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+# %blockSalisMundus:* (blockSalisMundus), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlock
 block:id=%blockSalisMundus,data=*,stdrot=true,face0-5=0:thaumicbases/dust_block
 
-# %thauminiteBlock:* (thauminiteBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+# %thauminiteBlock:* (thauminiteBlock), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlock
 block:id=%thauminiteBlock,data=*,stdrot=true,face0-5=0:thaumicbases/thauminiteblock
 
-# %voidBlock:* (voidBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockVoid
+# %voidBlock:* (voidBlock), render=(STANDARD), opaque=true,cls=tb.common.block.BlockVoid
 block:id=%voidBlock,data=*,stdrot=true,face0-5=0:thaumicbases/voidblock
 
 # %pyrofluid:* (pyrofluid), render=(FLUIDS), opaque=false,cls=tb.common.block.BlockPyrofluid
 block:id=%pyrofluid,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:thaumicbases/blazingFluid/block
 block:id=%pyrofluid,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:thaumicbases/blazingFluid/leftovers
 
-# %overchanter:* (overchanter), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockOverchanter
+# %overchanter:* (overchanter), render=(STANDARD), opaque=false,cls=tb.common.block.BlockOverchanter
 block:id=%overchanter,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:thaumicbases/overchanter/bottom,face1=0:thaumicbases/overchanter/top,face2-5=0:thaumicbases/overchanter/side
 
-# %cryingObsidian:* (cryingObsidian), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockCryingObelisk
+# %cryingObsidian:* (cryingObsidian), render=(STANDARD), opaque=true,cls=tb.common.block.BlockCryingObelisk
 block:id=%cryingObsidian,data=*,stdrot=true,face0-5=0:thaumicbases/cryingObelisk/cryingObsidian
 
-# %advAlchFurnace:* (advAlchFurnace), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockAdvAlchemicalFurnace
+# %advAlchFurnace:* (advAlchFurnace), render=(STANDARD), opaque=true,cls=tb.common.block.BlockAdvAlchemicalFurnace
 block:id=%advAlchFurnace,data=*,stdrot=true,face0-1=0:thaumicbases/tFurnace/top,face2=0:thaumicbases/tFurnace/side,face3=0:thaumicbases/tFurnace/front_off,face4-5=0:thaumicbases/tFurnace/side
 
 # %relocator:* (relocator), render=tb.client.render.block.ThaumicRelocatorRenderer(CUSTOM), opaque=true,cls=tb.common.block.BlockRelocator
@@ -230,37 +230,37 @@ block:id=%campfire,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumic
 # %brazier:* (brazier), render=tb.client.render.block.BrazierRenderer(CUSTOM), opaque=false,cls=tb.common.block.BlockBrazier
 block:id=%brazier,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone
 
-# %eldritchArk:* (eldritchArk), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+# %eldritchArk:* (eldritchArk), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%eldritchArk,data=*,stdrot=true,face0-5=0:thaumicbases/eldritchArk
 
-# %ironGreatwood:* (ironGreatwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+# %ironGreatwood:* (ironGreatwood), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%ironGreatwood,data=*,stdrot=true,face0-5=0:thaumicbases/ironGreatwood
 
-# %oldBrick:* (oldBrick), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+# %oldBrick:* (oldBrick), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%oldBrick,data=*,stdrot=true,face0-5=0:thaumicbases/brick
 
-# %oldLapis:* (oldLapis), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+# %oldLapis:* (oldLapis), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%oldLapis,data=*,stdrot=true,face0-5=0:thaumicbases/lapis_block
 
-# %oldIron:* (oldIron), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
+# %oldIron:* (oldIron), render=(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
 block:id=%oldIron,data=*,stdrot=true,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
 
-# %oldGold:* (oldGold), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
+# %oldGold:* (oldGold), render=(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
 block:id=%oldGold,data=*,stdrot=true,face0-1=0:thaumicbases/gold_block,face2-5=0:thaumicbases/gold_block_side
 
-# %oldDiamond:* (oldDiamond), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
+# %oldDiamond:* (oldDiamond), render=(STANDARD), opaque=true,cls=tb.common.block.TBSidedBlock
 block:id=%oldDiamond,data=*,stdrot=true,face0-1=0:thaumicbases/diamond_block,face2-5=0:thaumicbases/diamond_block_side
 
-# %oldCobble:* (oldCobble), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+# %oldCobble:* (oldCobble), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%oldCobble,data=*,stdrot=true,face0-5=0:thaumicbases/cobblestone
 
-# %oldCobbleMossy:* (oldCobbleMossy), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+# %oldCobbleMossy:* (oldCobbleMossy), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%oldCobbleMossy,data=*,stdrot=true,face0-5=0:thaumicbases/cobblestone_mossy
 
-# %oldGravel:* (oldGravel), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
+# %oldGravel:* (oldGravel), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockFalling
 block:id=%oldGravel,data=*,stdrot=true,face0-5=0:thaumicbases/gravel
 
-# %genericSlab:* (genericSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockHalfSlab
+# %genericSlab:* (genericSlab), render=(STANDARD), opaque=false,cls=tb.common.block.BlockHalfSlab
 block:id=%genericSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/eldritchArk
 block:id=%genericSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/brick
 block:id=%genericSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/cobblestone
@@ -278,7 +278,7 @@ block:id=%genericSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0
 block:id=%genericSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
 block:id=%genericSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/lapis_block
 
-# %genericSlab_full:* (genericSlab_full), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockHalfSlab
+# %genericSlab_full:* (genericSlab_full), render=(STANDARD), opaque=true,cls=tb.common.block.BlockHalfSlab
 block:id=%genericSlab_full,data=0,stdrot=true,face0-5=0:thaumicbases/eldritchArk
 block:id=%genericSlab_full,data=1,stdrot=true,face0-5=0:thaumicbases/brick
 block:id=%genericSlab_full,data=2,stdrot=true,face0-5=0:thaumicbases/cobblestone
@@ -296,7 +296,7 @@ block:id=%genericSlab_full,data=13,stdrot=true,face0-1=0:thaumicbases/gold_block
 block:id=%genericSlab_full,data=14,stdrot=true,face0-1=0:thaumicbases/iron_block,face2-5=0:thaumicbases/iron_block_side
 block:id=%genericSlab_full,data=15,stdrot=true,face0-5=0:thaumicbases/lapis_block
 
-# %crystalSlab:* (crystalSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockCrystalSlab
+# %crystalSlab:* (crystalSlab), render=(STANDARD), opaque=false,cls=tb.common.block.BlockCrystalSlab
 block:id=%crystalSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/air
 block:id=%crystalSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/fire
 block:id=%crystalSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/water
@@ -314,7 +314,7 @@ block:id=%crystalSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0
 block:id=%crystalSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/mixed
 block:id=%crystalSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumicbases/crystal/tainted
 
-# %crystalSlab_full:* (crystalSlab_full), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalSlab
+# %crystalSlab_full:* (crystalSlab_full), render=(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalSlab
 block:id=%crystalSlab_full,data=0,stdrot=true,face0-5=0:thaumicbases/crystal/air
 block:id=%crystalSlab_full,data=1,stdrot=true,face0-5=0:thaumicbases/crystal/fire
 block:id=%crystalSlab_full,data=2,stdrot=true,face0-5=0:thaumicbases/crystal/water
@@ -464,7 +464,7 @@ block:id=%goldenOakSapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:
 block:id=%goldenOakSapling,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/netherTree/sapling
 block:id=%goldenOakSapling,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumicbases/enderTree/sapling
 
-# %genLeaves:* (genLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=tb.common.block.BlockTBLeaves
+# %genLeaves:* (genLeaves), render=(STANDARD), opaque=false,cls=tb.common.block.BlockTBLeaves
 block:id=%genLeaves,data=0,stdrot=true,face0-5=0:thaumicbases/goldenOak/leaves
 block:id=%genLeaves,data=1,stdrot=true,face0-5=0:thaumicbases/peacefullTree/leaves
 block:id=%genLeaves,data=2,stdrot=true,face0-5=0:thaumicbases/netherTree/leaves
@@ -492,7 +492,7 @@ block:id=%genLogs,data=13,stdrot=true,face0-5=0:thaumicbases/netherTree/log
 block:id=%genLogs,data=14,stdrot=true,face0-5=0:thaumicbases/enderTree/log
 block:id=%genLogs,data=15,stdrot=true,face0-5=0:thaumicbases/peacefullTree/log
 
-# %enderPlanks:* (enderPlanks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+# %enderPlanks:* (enderPlanks), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%enderPlanks,data=*,stdrot=true,face0-5=0:thaumicbases/enderTree/planks
 
 # %nodeManipulator:* (nodeManipulator), render=(CUSTOM), opaque=false,cls=tb.common.block.BlockNodeManipulator

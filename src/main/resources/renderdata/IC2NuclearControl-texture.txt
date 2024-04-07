@@ -55,12 +55,12 @@ block:id=%blockNuclearControlMain,data=8,stdrot=true,face0=0:nuclearcontrol/rang
 block:id=%blockNuclearControlMain,data=9,stdrot=true,face0=0:nuclearcontrol/infoPanel/panelAdvancedSide,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/panelAdvancedSide
 block:id=%blockNuclearControlMain,data=10,stdrot=true,face0=0:nuclearcontrol/infoPanel/extenderAdvancedSide,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/extenderAdvancedSide
 
-# %blockNuclearControlLight:* (blockNuclearControlLight), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.blocks.BlockNuclearControlLight
+# %blockNuclearControlLight:* (blockNuclearControlLight), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.blocks.BlockNuclearControlLight
 block:id=%blockNuclearControlLight,data=0,stdrot=true,face0-5=0:nuclearcontrol/light/lamp0
 block:id=%blockNuclearControlLight,data=1,stdrot=true,face0-5=0:nuclearcontrol/light/lamp1
 block:id=%blockNuclearControlLight,data=2,stdrot=true,face0-5=0:nuclearcontrol/light/lamp2
 block:id=%blockNuclearControlLight,data=3,stdrot=true,face0-5=0:nuclearcontrol/light/lamp3
 block:id=%blockNuclearControlLight,data=4,stdrot=true,face0-5=0:nuclearcontrol/light/lamp4
 
-# %networkLink:* (networkLink), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.crossmod.appeng.BlockNetworkLink
+# %networkLink:* (networkLink), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.crossmod.appeng.BlockNetworkLink
 block:id=%networkLink,data=*,stdrot=true,face0-5=0:nuclearcontrol/aeMonitor/monitorSide

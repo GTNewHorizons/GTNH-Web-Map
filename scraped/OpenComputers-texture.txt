@@ -1,4 +1,4 @@
-# OpenComputers 1.9.8-GTNH
+# OpenComputers 1.10.7-GTNH
 version:1.7
 modname:OpenComputers
 
@@ -160,7 +160,7 @@ block:id=%microcontroller,data=*,stdrot=true,face0-1=0:opencomputers/Microcontro
 block:id=%robotAfterimage,data=*,stdrot=true,face0-5=0:opencomputers/GenericTop
 
 # %robot:* (robot), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.RobotProxy
-block:id=%robot,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:opencomputers/GenericTop
+block:id=%robot,data=*,stdrot=true,face0-5=0:opencomputers/GenericTop
 
 # %print:* (print), render=li.cil.oc.client.renderer.block.BlockRenderer$(CUSTOM), opaque=false,cls=li.cil.oc.common.block.Print
 block:id=%print,data=*,stdrot=true,face0-1=0:opencomputers/GenericTop,face2-5=0:opencomputers/GenericSide

@@ -92,12 +92,12 @@ patchblock:id=%BrailActivator,patch0=SlopeXUpZTop@90,data=13
 patchblock:id=%BrailActivator,patch0=HorizY001ZTop@90,data=14
 patchblock:id=%BrailActivator,patch0=HorizY001ZTop@180,data=15
 
-# %NetherPressurePlate:* (NetherPressurePlate), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.AlternatePressurePlate
+# %NetherPressurePlate:* (NetherPressurePlate), render=(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.AlternatePressurePlate
 boxblock:id=%NetherPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%NetherPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%NetherPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %NetherButton:* (NetherButton), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
+# %NetherButton:* (NetherButton), render=(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
 boxblock:id=%NetherButton,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%NetherButton,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -156,7 +156,7 @@ patchblock:id=%N Crops,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,
 # %Bluebells:* (Bluebells), render=(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.FlowerBlock
 patchblock:id=%Bluebells,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %GrassSlab:* (GrassSlab), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
+# %GrassSlab:* (GrassSlab), render=(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
 boxblock:id=%GrassSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%GrassSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
@@ -205,15 +205,15 @@ customblock:id=%stair.darkwood,class=org.dynmap.hdmap.renderer.StairBlockRendere
 # %stair.fusewood:* (stair.fusewood), render=(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
 customblock:id=%stair.fusewood,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %plankSlab1:* (plankSlab1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+# %plankSlab1:* (plankSlab1), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
 boxblock:id=%plankSlab1,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%plankSlab1,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %plankSlab2:* (plankSlab2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+# %plankSlab2:* (plankSlab2), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
 boxblock:id=%plankSlab2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%plankSlab2,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %trapdoor.eucalyptus:* (trapdoor.eucalyptus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.eucalyptus:* (trapdoor.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.eucalyptus,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.eucalyptus,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.eucalyptus,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -225,7 +225,7 @@ boxblock:id=%trapdoor.eucalyptus,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zm
 boxblock:id=%trapdoor.eucalyptus,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.eucalyptus,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.sakura:* (trapdoor.sakura), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.sakura:* (trapdoor.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.sakura,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.sakura,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.sakura,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -237,7 +237,7 @@ boxblock:id=%trapdoor.sakura,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0
 boxblock:id=%trapdoor.sakura,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.sakura,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.ghostwood:* (trapdoor.ghostwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.ghostwood:* (trapdoor.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.ghostwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.ghostwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.ghostwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -249,7 +249,7 @@ boxblock:id=%trapdoor.ghostwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zma
 boxblock:id=%trapdoor.ghostwood,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.ghostwood,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.redwood:* (trapdoor.redwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.redwood:* (trapdoor.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.redwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.redwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.redwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -261,7 +261,7 @@ boxblock:id=%trapdoor.redwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=
 boxblock:id=%trapdoor.redwood,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.redwood,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.bloodwood:* (trapdoor.bloodwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.bloodwood:* (trapdoor.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.bloodwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.bloodwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.bloodwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -273,7 +273,7 @@ boxblock:id=%trapdoor.bloodwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zma
 boxblock:id=%trapdoor.bloodwood,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.bloodwood,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.hopseed:* (trapdoor.hopseed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.hopseed:* (trapdoor.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.hopseed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.hopseed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.hopseed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -285,7 +285,7 @@ boxblock:id=%trapdoor.hopseed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=
 boxblock:id=%trapdoor.hopseed,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.hopseed,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.maple:* (trapdoor.maple), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.maple:* (trapdoor.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.maple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.maple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.maple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -297,7 +297,7 @@ boxblock:id=%trapdoor.maple,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.
 boxblock:id=%trapdoor.maple,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.maple,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.amaranth:* (trapdoor.amaranth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.amaranth:* (trapdoor.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.amaranth,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.amaranth,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.amaranth,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -309,7 +309,7 @@ boxblock:id=%trapdoor.amaranth,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax
 boxblock:id=%trapdoor.amaranth,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.amaranth,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.silverbell:* (trapdoor.silverbell), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.silverbell:* (trapdoor.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.silverbell,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.silverbell,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.silverbell,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -321,7 +321,7 @@ boxblock:id=%trapdoor.silverbell,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zm
 boxblock:id=%trapdoor.silverbell,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.silverbell,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.tiger:* (trapdoor.tiger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.tiger:* (trapdoor.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.tiger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.tiger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.tiger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -333,7 +333,7 @@ boxblock:id=%trapdoor.tiger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.
 boxblock:id=%trapdoor.tiger,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.tiger,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.willow:* (trapdoor.willow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.willow:* (trapdoor.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.willow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.willow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.willow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -345,7 +345,7 @@ boxblock:id=%trapdoor.willow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0
 boxblock:id=%trapdoor.willow,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.willow,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.darkwood:* (trapdoor.darkwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.darkwood:* (trapdoor.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.darkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.darkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.darkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -357,7 +357,7 @@ boxblock:id=%trapdoor.darkwood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax
 boxblock:id=%trapdoor.darkwood,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%trapdoor.darkwood,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %trapdoor.fusewood:* (trapdoor.fusewood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+# %trapdoor.fusewood:* (trapdoor.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.fusewood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
 boxblock:id=%trapdoor.fusewood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
 boxblock:id=%trapdoor.fusewood,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
@@ -411,72 +411,72 @@ customblock:id=%fenceGate.darkwood,class=org.dynmap.hdmap.renderer.FenceGateBloc
 # %fenceGate.fusewood:* (fenceGate.fusewood), render=(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
 customblock:id=%fenceGate.fusewood,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
 
-# %pressureplate.eucalyptus:* (pressureplate.eucalyptus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.eucalyptus:* (pressureplate.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.eucalyptus,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.eucalyptus,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.eucalyptus,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.sakura:* (pressureplate.sakura), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.sakura:* (pressureplate.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.sakura,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.sakura,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.sakura,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.ghostwood:* (pressureplate.ghostwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.ghostwood:* (pressureplate.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.ghostwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.ghostwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.ghostwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.redwood:* (pressureplate.redwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.redwood:* (pressureplate.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.redwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.redwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.redwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.bloodwood:* (pressureplate.bloodwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.bloodwood:* (pressureplate.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.bloodwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.bloodwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.bloodwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.hopseed:* (pressureplate.hopseed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.hopseed:* (pressureplate.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.hopseed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.hopseed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.hopseed,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.maple:* (pressureplate.maple), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.maple:* (pressureplate.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.maple,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.maple,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.maple,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.amaranth:* (pressureplate.amaranth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.amaranth:* (pressureplate.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.amaranth,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.amaranth,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.amaranth,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.silverbell:* (pressureplate.silverbell), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.silverbell:* (pressureplate.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.silverbell,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.silverbell,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.silverbell,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.tiger:* (pressureplate.tiger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.tiger:* (pressureplate.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.tiger,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.tiger,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.tiger,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.willow:* (pressureplate.willow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.willow:* (pressureplate.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.willow,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.willow,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.willow,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.darkwood:* (pressureplate.darkwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.darkwood:* (pressureplate.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.darkwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.darkwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.darkwood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %pressureplate.fusewood:* (pressureplate.fusewood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+# %pressureplate.fusewood:* (pressureplate.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
 boxblock:id=%pressureplate.fusewood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressureplate.fusewood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%pressureplate.fusewood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %button.eucalyptus:* (button.eucalyptus), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.eucalyptus:* (button.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.eucalyptus,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.eucalyptus,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -486,7 +486,7 @@ boxblock:id=%button.eucalyptus,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0
 boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.sakura:* (button.sakura), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.sakura:* (button.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.sakura,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.sakura,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -496,7 +496,7 @@ boxblock:id=%button.sakura,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.312
 boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.ghostwood:* (button.ghostwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.ghostwood:* (button.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.ghostwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.ghostwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -506,7 +506,7 @@ boxblock:id=%button.ghostwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.
 boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.redwood:* (button.redwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.redwood:* (button.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.redwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.redwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -516,7 +516,7 @@ boxblock:id=%button.redwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.31
 boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.bloodwood:* (button.bloodwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.bloodwood:* (button.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.bloodwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.bloodwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -526,7 +526,7 @@ boxblock:id=%button.bloodwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.
 boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.hopseed:* (button.hopseed), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.hopseed:* (button.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.hopseed,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.hopseed,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -536,7 +536,7 @@ boxblock:id=%button.hopseed,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.31
 boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.maple:* (button.maple), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.maple:* (button.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.maple,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.maple,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -546,7 +546,7 @@ boxblock:id=%button.maple,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125
 boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.amaranth:* (button.amaranth), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.amaranth:* (button.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.amaranth,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.amaranth,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -556,7 +556,7 @@ boxblock:id=%button.amaranth,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3
 boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.silverbell:* (button.silverbell), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.silverbell:* (button.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.silverbell,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.silverbell,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -566,7 +566,7 @@ boxblock:id=%button.silverbell,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0
 boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.tiger:* (button.tiger), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.tiger:* (button.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.tiger,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.tiger,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -576,7 +576,7 @@ boxblock:id=%button.tiger,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125
 boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.willow:* (button.willow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.willow:* (button.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.willow,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.willow,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -586,7 +586,7 @@ boxblock:id=%button.willow,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.312
 boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.darkwood:* (button.darkwood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.darkwood:* (button.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.darkwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.darkwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
@@ -596,7 +596,7 @@ boxblock:id=%button.darkwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3
 boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
 boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
 
-# %button.fusewood:* (button.fusewood), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+# %button.fusewood:* (button.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
 boxblock:id=%button.fusewood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.fusewood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3

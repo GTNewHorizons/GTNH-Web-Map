@@ -51,10 +51,10 @@ texture:id=emt/solars/water/waterside,filename=assets/emt/textures/blocks/solars
 # %PortableNode:* (PortableNode), render=(CUSTOM), opaque=false,cls=emt.block.BlockPortableNode
 block:id=%PortableNode,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:emt/portablenode
 
-# %ShieldBlock:* (ShieldBlock), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=emt.block.BlockShield
+# %ShieldBlock:* (ShieldBlock), render=(STANDARD), opaque=false,cls=emt.block.BlockShield
 block:id=%ShieldBlock,data=*,stdrot=true,face0-5=0:emt/shield
 
-# %EMTSolars:* (EMTSolars), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.block.BlockSolars
+# %EMTSolars:* (EMTSolars), render=(STANDARD), opaque=true,cls=emt.block.BlockSolars
 block:id=%EMTSolars,data=0,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/solartop,face2-5=0:emt/solars/side
 block:id=%EMTSolars,data=1,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/doublesolartop,face2-5=0:emt/solars/side
 block:id=%EMTSolars,data=2,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/side
@@ -72,14 +72,14 @@ block:id=%EMTSolars,data=13,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/so
 block:id=%EMTSolars,data=14,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/fire/fireside
 block:id=%EMTSolars,data=15,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/solartop,face2-5=0:emt/solars/air/airside
 
-# %EMTSolars2:* (EMTSolars2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.block.BlockSolars
+# %EMTSolars2:* (EMTSolars2), render=(STANDARD), opaque=true,cls=emt.block.BlockSolars
 block:id=%EMTSolars2,data=0,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/doublesolartop,face2-5=0:emt/solars/air/airside
 block:id=%EMTSolars2,data=1,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/air/airside
 block:id=%EMTSolars2,data=2,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/solartop,face2-5=0:emt/solars/earth/earthside
 block:id=%EMTSolars2,data=3,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/doublesolartop,face2-5=0:emt/solars/earth/earthside
 block:id=%EMTSolars2,data=4,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/earth/earthside
 
-# %EMTSolars3:* (EMTSolars3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.block.BlockSolars
+# %EMTSolars3:* (EMTSolars3), render=(STANDARD), opaque=true,cls=emt.block.BlockSolars
 block:id=%EMTSolars3,data=0,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/side
 block:id=%EMTSolars3,data=1,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/order/orderside
 block:id=%EMTSolars3,data=2,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/dark/darkside
@@ -97,7 +97,7 @@ block:id=%EMTSolars3,data=13,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/s
 block:id=%EMTSolars3,data=14,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/side
 block:id=%EMTSolars3,data=15,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/order/orderside
 
-# %EMTSolars4:* (EMTSolars4), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.block.BlockSolars
+# %EMTSolars4:* (EMTSolars4), render=(STANDARD), opaque=true,cls=emt.block.BlockSolars
 block:id=%EMTSolars4,data=0,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/dark/darkside
 block:id=%EMTSolars4,data=1,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/air/airside
 block:id=%EMTSolars4,data=2,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/earth/earthside
@@ -115,17 +115,17 @@ block:id=%EMTSolars4,data=13,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/s
 block:id=%EMTSolars4,data=14,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/dark/darkside
 block:id=%EMTSolars4,data=15,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/air/airside
 
-# %EMTSolars5:* (EMTSolars5), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.block.BlockSolars
+# %EMTSolars5:* (EMTSolars5), render=(STANDARD), opaque=true,cls=emt.block.BlockSolars
 block:id=%EMTSolars5,data=0,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/earth/earthside
 block:id=%EMTSolars5,data=1,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/water/waterside
 block:id=%EMTSolars5,data=2,stdrot=true,face0=0:emt/solars/bottom,face1=0:emt/solars/triplesolartop,face2-5=0:emt/solars/fire/fireside
 
-# %EMTMachines:* (EMTMachines), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.block.BlockMachines
+# %EMTMachines:* (EMTMachines), render=(STANDARD), opaque=true,cls=emt.block.BlockMachines
 block:id=%EMTMachines,data=0,stdrot=true,face0=0:emt/machines/side,face1=0:emt/machines/top,face2=0:emt/machines/side,face3=0:emt/machines/wandcharger,face4-5=0:emt/machines/side
 block:id=%EMTMachines,data=1,stdrot=true,face0=0:emt/machines/etherealmacerator,face1=0:emt/machines/etherealmaceratortop,face2=0:emt/machines/etherealmacerator,face3=0:emt/machines/etherealmaceratorfront,face4-5=0:emt/machines/etherealmacerator
 block:id=%EMTMachines,data=2,stdrot=true,face0-5=0:emt/machines/etherealmaceratortop
 
-# %EssentiaGenerators:* (EssentiaGenerators), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.block.BlockEssentiaGenerators
+# %EssentiaGenerators:* (EssentiaGenerators), render=(STANDARD), opaque=true,cls=emt.block.BlockEssentiaGenerators
 block:id=%EssentiaGenerators,data=0,stdrot=true,face0-1=0:emt/essentiagenerator/top,face2=0:emt/essentiagenerator/side,face3=0:emt/essentiagenerator/potentiafront,face4-5=0:emt/essentiagenerator/side
 block:id=%EssentiaGenerators,data=1,stdrot=true,face0-1=0:emt/essentiagenerator/top,face2=0:emt/essentiagenerator/side,face3=0:emt/essentiagenerator/ignisfront,face4-5=0:emt/essentiagenerator/side
 block:id=%EssentiaGenerators,data=2,stdrot=true,face0-1=0:emt/essentiagenerator/top,face2=0:emt/essentiagenerator/side,face3=0:emt/essentiagenerator/auramfront,face4-5=0:emt/essentiagenerator/side
@@ -135,7 +135,7 @@ block:id=%EssentiaGenerators,data=4,data=5,stdrot=true,face0-1=0:emt/essentiagen
 # %electricCloud:* (electricCloud), render=(CUSTOM), opaque=false,cls=emt.block.BlockElectricCloud
 block:id=%electricCloud,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:emt/empty
 
-# %EMT_GTBLOCK_CASEING:* (EMT_GTBLOCK_CASEING), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=emt.gthandler.common.blocks.EMT_GT_Block
+# %EMT_GTBLOCK_CASEING:* (EMT_GTBLOCK_CASEING), render=(STANDARD), opaque=true,cls=emt.gthandler.common.blocks.EMT_GT_Block
 block:id=%EMT_GTBLOCK_CASEING,data=0,stdrot=true,face0-5=0:emt/machines/side
 block:id=%EMT_GTBLOCK_CASEING,data=1,stdrot=true,face0-5=0:emt/machines/GT/inner
 block:id=%EMT_GTBLOCK_CASEING,data=2,stdrot=true,face0-5=0:emt/machines/GT/siderawI

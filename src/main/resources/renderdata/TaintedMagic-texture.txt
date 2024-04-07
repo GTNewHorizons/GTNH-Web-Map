@@ -17,7 +17,7 @@ texture:id=taintedmagic/BlockWarpwoodSapling,filename=assets/taintedmagic/textur
 
 
 
-# %BlockShadowOre:* (BlockShadowOre), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=taintedmagic.common.blocks.BlockShadowOre
+# %BlockShadowOre:* (BlockShadowOre), render=(STANDARD), opaque=true,cls=taintedmagic.common.blocks.BlockShadowOre
 block:id=%BlockShadowOre,data=*,stdrot=true,face0-5=0:taintedmagic/BlockShadowOre
 
 # %BlockWarpwoodLog:* (BlockWarpwoodLog), render=(LOG), opaque=true,cls=taintedmagic.common.blocks.BlockWarpwoodLog
@@ -26,13 +26,13 @@ block:id=%BlockWarpwoodLog,data=4,data=5,data=6,data=7,face0-1=0:taintedmagic/Bl
 block:id=%BlockWarpwoodLog,data=8,data=9,data=10,data=11,face0-1=4000:taintedmagic/BlockWarpwoodLog_side,face2-3=0:taintedmagic/BlockWarpwoodLog_top,face4-5=4000:taintedmagic/BlockWarpwoodLog_side
 block:id=%BlockWarpwoodLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:taintedmagic/BlockWarpwoodLog_side
 
-# %BlockShadowmetal:* (BlockShadowmetal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=taintedmagic.common.blocks.BlockShadowmetal
+# %BlockShadowmetal:* (BlockShadowmetal), render=(STANDARD), opaque=true,cls=taintedmagic.common.blocks.BlockShadowmetal
 block:id=%BlockShadowmetal,data=*,stdrot=true,face0-5=0:taintedmagic/BlockShadowmetal
 
-# %BlockWarpwoodPlanks:* (BlockWarpwoodPlanks), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=taintedmagic.common.blocks.BlockWarpwoodPlanks
+# %BlockWarpwoodPlanks:* (BlockWarpwoodPlanks), render=(STANDARD), opaque=true,cls=taintedmagic.common.blocks.BlockWarpwoodPlanks
 block:id=%BlockWarpwoodPlanks,data=*,stdrot=true,face0-5=0:taintedmagic/BlockWarpwoodPlanks
 
-# %BlockWarpwoodLeaves:* (BlockWarpwoodLeaves), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=taintedmagic.common.blocks.BlockWarpwoodLeaves
+# %BlockWarpwoodLeaves:* (BlockWarpwoodLeaves), render=(STANDARD), opaque=false,cls=taintedmagic.common.blocks.BlockWarpwoodLeaves
 block:id=%BlockWarpwoodLeaves,data=*,stdrot=true,face0-5=0:taintedmagic/BlockWarpwoodLeaves_transparent
 
 # %BlockWarpwoodSapling:* (BlockWarpwoodSapling), render=(CROSSEDSQUARES), opaque=false,cls=taintedmagic.common.blocks.BlockWarpwoodSapling

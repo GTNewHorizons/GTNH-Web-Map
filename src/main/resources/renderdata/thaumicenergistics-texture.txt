@@ -30,19 +30,19 @@ block:id=%thaumicenergistics.block.essentia.provider,data=*,stdrot=true,face0-5=
 # %thaumicenergistics.block.infusion.provider:* (thaumicenergistics.block.infusion.provider), render=thaumicenergistics.client.render.RenderBlockInfusionProvider(CUSTOM), opaque=true,cls=thaumicenergistics.common.blocks.BlockInfusionProvider
 block:id=%thaumicenergistics.block.infusion.provider,data=*,stdrot=true,face0-5=12000:thaumicenergistics/infusion.provider.overlay
 
-# %thaumicenergistics.block.gear.box:* (thaumicenergistics.block.gear.box), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockGearBox
+# %thaumicenergistics.block.gear.box:* (thaumicenergistics.block.gear.box), render=(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockGearBox
 block:id=%thaumicenergistics.block.gear.box,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicenergistics/gear.box.fallback
 
-# %thaumicenergistics.block.golem.gear.box:* (thaumicenergistics.block.golem.gear.box), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockGolemGearBox
+# %thaumicenergistics.block.golem.gear.box:* (thaumicenergistics.block.golem.gear.box), render=(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockGolemGearBox
 block:id=%thaumicenergistics.block.golem.gear.box,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicenergistics/golem.gear.box.fallback
 
-# %thaumicenergistics.block.essentia.cell.workbench:* (thaumicenergistics.block.essentia.cell.workbench), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockEssentiaCellWorkbench
+# %thaumicenergistics.block.essentia.cell.workbench:* (thaumicenergistics.block.essentia.cell.workbench), render=(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockEssentiaCellWorkbench
 block:id=%thaumicenergistics.block.essentia.cell.workbench,data=*,stdrot=true,face0=0:thaumicenergistics/essentia.cell.workbench.bottom,face1=0:thaumicenergistics/essentia.cell.workbench.top,face2-5=0:thaumicenergistics/essentia.cell.workbench.side
 
-# %thaumicenergistics.block.arcane.assembler:* (thaumicenergistics.block.arcane.assembler), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockArcaneAssembler
+# %thaumicenergistics.block.arcane.assembler:* (thaumicenergistics.block.arcane.assembler), render=(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockArcaneAssembler
 block:id=%thaumicenergistics.block.arcane.assembler,data=*,stdrot=true,face0-5=0:thaumicenergistics/arcane.assembler.fallback
 
-# %thaumicenergistics.block.knowledge.inscriber:* (thaumicenergistics.block.knowledge.inscriber), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockKnowledgeInscriber
+# %thaumicenergistics.block.knowledge.inscriber:* (thaumicenergistics.block.knowledge.inscriber), render=(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockKnowledgeInscriber
 block:id=%thaumicenergistics.block.knowledge.inscriber,data=0,stdrot=true,face0=0:thaumicenergistics/knowledge.inscriber.bottom,face1=0:thaumicenergistics/knowledge.inscriber.top,face2-5=0:thaumicenergistics/knowledge.inscriber.side
 block:id=%thaumicenergistics.block.knowledge.inscriber,data=1,stdrot=true,face0=0:thaumicenergistics/knowledge.inscriber.top,face1=0:thaumicenergistics/knowledge.inscriber.bottom,face2-5=0:thaumicenergistics/knowledge.inscriber.side
 block:id=%thaumicenergistics.block.knowledge.inscriber,data=2,stdrot=true,face0-1=0:thaumicenergistics/knowledge.inscriber.bottom,face2=0:thaumicenergistics/knowledge.inscriber.side,face3=0:thaumicenergistics/knowledge.inscriber.top,face4-5=0:thaumicenergistics/knowledge.inscriber.side
@@ -51,10 +51,10 @@ block:id=%thaumicenergistics.block.knowledge.inscriber,data=4,stdrot=true,face0-
 block:id=%thaumicenergistics.block.knowledge.inscriber,data=5,stdrot=true,face0-1=0:thaumicenergistics/knowledge.inscriber.bottom,face2-3=0:thaumicenergistics/knowledge.inscriber.side,face4=0:thaumicenergistics/knowledge.inscriber.top,face5=0:thaumicenergistics/knowledge.inscriber.side
 block:id=%thaumicenergistics.block.knowledge.inscriber,data=6,stdrot=true,face0-1=0:thaumicenergistics/knowledge.inscriber.bottom,face2-5=0:thaumicenergistics/knowledge.inscriber.side
 
-# %thaumicenergistics.block.essentia.vibration.chamber:* (thaumicenergistics.block.essentia.vibration.chamber), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockEssentiaVibrationChamber
+# %thaumicenergistics.block.essentia.vibration.chamber:* (thaumicenergistics.block.essentia.vibration.chamber), render=(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockEssentiaVibrationChamber
 block:id=%thaumicenergistics.block.essentia.vibration.chamber,data=*,stdrot=true,face0-3=0:thaumicenergistics/e.vibration.input,face4=0:thaumicenergistics/e.vibration.face.off,face5=0:thaumicenergistics/e.vibration.input
 
-# %thaumicenergistics.block.distillation.encoder:* (thaumicenergistics.block.distillation.encoder), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockDistillationEncoder
+# %thaumicenergistics.block.distillation.encoder:* (thaumicenergistics.block.distillation.encoder), render=(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockDistillationEncoder
 block:id=%thaumicenergistics.block.distillation.encoder,data=0,stdrot=true,face0=0:thaumicenergistics/knowledge.inscriber.bottom,face1=0:thaumicenergistics/distillation.encoder.face,face2-5=0:thaumicenergistics/knowledge.inscriber.side
 block:id=%thaumicenergistics.block.distillation.encoder,data=1,stdrot=true,face0=0:thaumicenergistics/distillation.encoder.face,face1=0:thaumicenergistics/knowledge.inscriber.bottom,face2-5=0:thaumicenergistics/knowledge.inscriber.side
 block:id=%thaumicenergistics.block.distillation.encoder,data=2,stdrot=true,face0-1=0:thaumicenergistics/knowledge.inscriber.bottom,face2=0:thaumicenergistics/knowledge.inscriber.side,face3=0:thaumicenergistics/distillation.encoder.face,face4-5=0:thaumicenergistics/knowledge.inscriber.side

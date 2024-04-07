@@ -24,19 +24,19 @@ texture:id=minecraft/hardened_clay,filename=assets/minecraft/textures/blocks/har
 
 
 
-# %Double_Craft:* (Double_Craft), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockDoubleCraft
+# %Double_Craft:* (Double_Craft), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockDoubleCraft
 block:id=%Double_Craft,data=*,stdrot=true,face0-5=0:avaritia/double_craft
 
-# %Triple_Craft:* (Triple_Craft), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockTripleCraft
+# %Triple_Craft:* (Triple_Craft), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockTripleCraft
 block:id=%Triple_Craft,data=*,stdrot=true,face0-5=0:avaritia/triple_craft
 
-# %Dire_Crafting:* (Dire_Crafting), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockDireCrafting
+# %Dire_Crafting:* (Dire_Crafting), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockDireCrafting
 block:id=%Dire_Crafting,data=*,stdrot=true,face0=0:avaritia/block_crystal_matrix,face1=0:avaritia/dire_crafting_top,face2-5=0:avaritia/dire_crafting_side
 
-# %Crystal_Matrix:* (Crystal_Matrix), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockCrystalMatrix
+# %Crystal_Matrix:* (Crystal_Matrix), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockCrystalMatrix
 block:id=%Crystal_Matrix,data=*,stdrot=true,face0-5=0:avaritia/block_crystal_matrix
 
-# %Resource_Block:* (Resource_Block), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockResource
+# %Resource_Block:* (Resource_Block), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockResource
 block:id=%Resource_Block,data=0,stdrot=true,face0-5=0:avaritia/block_neutronium
 block:id=%Resource_Block,data=1,stdrot=true,face0-5=0:avaritia/block_infinity
 block:id=%Resource_Block,data=2,stdrot=true,face0-5=0:avaritia/block_neutronium
@@ -54,10 +54,10 @@ block:id=%Resource_Block,data=13,stdrot=true,face0-5=0:avaritia/block_infinity
 block:id=%Resource_Block,data=14,stdrot=true,face0-5=0:avaritia/block_neutronium
 block:id=%Resource_Block,data=15,stdrot=true,face0-5=0:avaritia/block_infinity
 
-# %Neutron_Collector:* (Neutron_Collector), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockNeutronCollector
+# %Neutron_Collector:* (Neutron_Collector), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockNeutronCollector
 block:id=%Neutron_Collector,data=*,stdrot=true,face0=0:avaritia/collector_side,face1=0:avaritia/collector_top,face2=0:avaritia/collector_side,face3=0:avaritia/collector_front,face4-5=0:avaritia/collector_side
 
-# %Neutronium_Compressor:* (Neutronium_Compressor), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockCompressor
+# %Neutronium_Compressor:* (Neutronium_Compressor), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockCompressor
 block:id=%Neutronium_Compressor,data=*,stdrot=true,face0=0:avaritia/compressor_side,face1=0:avaritia/compressor_top,face2=0:avaritia/compressor_side,face3=0:avaritia/compressor_front,face4-5=0:avaritia/compressor_side
 
 # %infinitato:* (infinitato), render=fox.spiteful.avaritia.compat.botania.RenderInfinitato(CUSTOM), opaque=false,cls=fox.spiteful.avaritia.compat.botania.BlockInfinitato

@@ -31,6 +31,7 @@ public class GregTechSupport {
     MetaTileEntityEntry[] metaTileEntries = new MetaTileEntityEntry[65536];
 
     public int[][] validHatchBaseBlocks = new int[65536][];
+    public int[][] hatchBaseTextures2 = new int[128][];
     public boolean[] meConnectables;
     private GregTechSupport(){
         GwmCommand.registerSubCommand(new GTDumpCommand());
@@ -131,11 +132,25 @@ public class GregTechSupport {
 
         return TexturePack.parseTextureIndex(filetoidx, val);
     }
+    public void processHatchBaseExplicit(HashMap<String, String> data, HashMap<String, Integer> filetoidx){
+        int index = GWM_Util.objectToInt(data.get("index"), -1);
+        int page = GWM_Util.objectToInt(data.get("page"), 0);
+        String tex = data.get("tex");
+        if(index >= 0 && index < 128 && page >= 0 && page < 128 && tex != null){
+            if(hatchBaseTextures2[page] == null)
+                hatchBaseTextures2[page] = new int[128];
 
+            hatchBaseTextures2[page][index] = TexturePack.parseTextureIndex(filetoidx, tex);
+        }
+    }
     public void processHatchBase(HashMap<String, String> data, HashMap<String, Integer> filetoidx) {
         String blockId = data.get("block");
         if(blockId != null){
             int id = GWM_Util.blockNameToId(blockId);
+
+            int start = GWM_Util.objectToInt(data.get("start"), -1);
+            int page = GWM_Util.objectToInt(data.get("page"), 0);
+
 
             if(id > 0 && id < 65536) {
                 if(validHatchBaseBlocks[id] == null) {
@@ -143,6 +158,14 @@ public class GregTechSupport {
                     for (int i = 0; i < 16; i++) {
                         TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(id, i, 0);
                         validHatchBaseBlocks[id][i] = map.getIndexForFace(0);
+
+                        if(start >= 0) {
+                            if (hatchBaseTextures2[page] == null)
+                                hatchBaseTextures2[page] = new int[128];
+
+                            if(hatchBaseTextures2[page][start + i] == 0)
+                                hatchBaseTextures2[page][start + i] = map.getIndexForFace(0);
+                        }
                     }
                 }
             }

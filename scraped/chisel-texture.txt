@@ -1,4 +1,4 @@
-# chisel 2.11.1-GTNH
+# chisel 2.14.1-GTNH
 version:1.7
 modname:chisel
 
@@ -1820,7 +1820,7 @@ block:id=%andesite,data=5,stdrot=true,face0-5=0:chisel/andesite/andesitePrism
 block:id=%andesite,data=6,stdrot=true,face0-5=0:chisel/andesite/andesiteTiles
 block:id=%andesite,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
 
-# %antiBlock:* (antiBlock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableAntiBlock
+# %antiBlock:* (antiBlock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowie
 block:id=%antiBlock,data=0,stdrot=true,face0-5=0:chisel/antiblock/black-antiBlock
 block:id=%antiBlock,data=1,stdrot=true,face0-5=0:chisel/antiblock/red-antiBlock
 block:id=%antiBlock,data=2,stdrot=true,face0-5=0:chisel/antiblock/green-antiBlock
@@ -2674,112 +2674,112 @@ block:id=%iron_block,data=13,stdrot=true,face0-5=0:chisel/iron/terrain-iron-spac
 block:id=%iron_block,data=14,stdrot=true,face0-1=0:chisel/iron/terrain-iron-vents-top,face2-5=0:chisel/iron/terrain-iron-vents-side
 block:id=%iron_block,data=15,stdrot=true,face0=0:chisel/iron/terrain-iron-simple-bottom,face1=0:chisel/iron/terrain-iron-simple-top,face2-5=0:chisel/iron/terrain-iron-simple-side
 
-# %jackolantern1:* (jackolantern1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern1:* (jackolantern1), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern1,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_1_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern1,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_1_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern1,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_1_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern1,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_1_on
 block:id=%jackolantern1,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern2:* (jackolantern2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern2:* (jackolantern2), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern2,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_2_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern2,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_2_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern2,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_2_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern2,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_2_on
 block:id=%jackolantern2,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern3:* (jackolantern3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern3:* (jackolantern3), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern3,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_3_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern3,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_3_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern3,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_3_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern3,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_3_on
 block:id=%jackolantern3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern4:* (jackolantern4), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern4:* (jackolantern4), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern4,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_4_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern4,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_4_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern4,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_4_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern4,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_4_on
 block:id=%jackolantern4,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern5:* (jackolantern5), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern5:* (jackolantern5), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern5,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_5_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern5,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_5_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern5,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_5_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern5,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_5_on
 block:id=%jackolantern5,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern6:* (jackolantern6), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern6:* (jackolantern6), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern6,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_6_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern6,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_6_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern6,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_6_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern6,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_6_on
 block:id=%jackolantern6,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern7:* (jackolantern7), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern7:* (jackolantern7), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern7,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_7_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern7,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_7_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern7,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_7_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern7,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_7_on
 block:id=%jackolantern7,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern8:* (jackolantern8), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern8:* (jackolantern8), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern8,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_8_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern8,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_8_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern8,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_8_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern8,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_8_on
 block:id=%jackolantern8,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern9:* (jackolantern9), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern9:* (jackolantern9), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern9,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_9_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern9,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_9_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern9,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_9_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern9,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_9_on
 block:id=%jackolantern9,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern10:* (jackolantern10), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern10:* (jackolantern10), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern10,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_10_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern10,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_10_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern10,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_10_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern10,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_10_on
 block:id=%jackolantern10,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern11:* (jackolantern11), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern11:* (jackolantern11), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern11,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_11_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern11,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_11_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern11,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_11_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern11,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_11_on
 block:id=%jackolantern11,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern12:* (jackolantern12), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern12:* (jackolantern12), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern12,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_12_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern12,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_12_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern12,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_12_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern12,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_12_on
 block:id=%jackolantern12,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern13:* (jackolantern13), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern13:* (jackolantern13), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern13,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_13_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern13,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_13_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern13,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_13_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern13,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_13_on
 block:id=%jackolantern13,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern14:* (jackolantern14), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern14:* (jackolantern14), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern14,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_14_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern14,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_14_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern14,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_14_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern14,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_14_on
 block:id=%jackolantern14,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern15:* (jackolantern15), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern15:* (jackolantern15), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern15,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_15_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern15,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_15_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern15,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_15_on,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern15,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_15_on
 block:id=%jackolantern15,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %jackolantern16:* (jackolantern16), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %jackolantern16:* (jackolantern16), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%jackolantern16,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_16_on,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern16,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_16_on,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%jackolantern16,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_16_on,face3-5=0:chisel/pumpkin/pumpkin_side
@@ -3266,112 +3266,112 @@ block:id=%paperwall_block,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 # %present:* (present), render=(CUSTOM), opaque=false,cls=team.chisel.block.BlockPresent
 block:id=%present,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
-# %pumpkin1:* (pumpkin1), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin1:* (pumpkin1), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin1,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_1_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin1,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_1_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin1,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_1_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin1,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_1_off
 block:id=%pumpkin1,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin2:* (pumpkin2), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin2:* (pumpkin2), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin2,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_2_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin2,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_2_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin2,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_2_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin2,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_2_off
 block:id=%pumpkin2,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin3:* (pumpkin3), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin3:* (pumpkin3), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin3,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_3_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin3,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_3_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin3,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_3_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin3,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_3_off
 block:id=%pumpkin3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin4:* (pumpkin4), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin4:* (pumpkin4), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin4,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_4_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin4,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_4_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin4,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_4_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin4,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_4_off
 block:id=%pumpkin4,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin5:* (pumpkin5), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin5:* (pumpkin5), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin5,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_5_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin5,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_5_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin5,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_5_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin5,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_5_off
 block:id=%pumpkin5,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin6:* (pumpkin6), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin6:* (pumpkin6), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin6,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_6_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin6,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_6_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin6,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_6_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin6,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_6_off
 block:id=%pumpkin6,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin7:* (pumpkin7), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin7:* (pumpkin7), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin7,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_7_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin7,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_7_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin7,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_7_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin7,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_7_off
 block:id=%pumpkin7,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin8:* (pumpkin8), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin8:* (pumpkin8), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin8,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_8_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin8,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_8_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin8,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_8_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin8,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_8_off
 block:id=%pumpkin8,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin9:* (pumpkin9), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin9:* (pumpkin9), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin9,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_9_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin9,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_9_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin9,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_9_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin9,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_9_off
 block:id=%pumpkin9,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin10:* (pumpkin10), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin10:* (pumpkin10), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin10,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_10_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin10,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_10_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin10,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_10_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin10,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_10_off
 block:id=%pumpkin10,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin11:* (pumpkin11), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin11:* (pumpkin11), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin11,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_11_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin11,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_11_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin11,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_11_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin11,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_11_off
 block:id=%pumpkin11,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin12:* (pumpkin12), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin12:* (pumpkin12), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin12,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_12_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin12,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_12_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin12,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_12_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin12,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_12_off
 block:id=%pumpkin12,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin13:* (pumpkin13), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin13:* (pumpkin13), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin13,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_13_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin13,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_13_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin13,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_13_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin13,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_13_off
 block:id=%pumpkin13,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin14:* (pumpkin14), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin14:* (pumpkin14), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin14,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_14_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin14,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_14_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin14,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_14_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin14,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_14_off
 block:id=%pumpkin14,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin15:* (pumpkin15), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin15:* (pumpkin15), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin15,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_15_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin15,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_15_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin15,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_15_off,face3-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin15,data=3,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-4=0:chisel/pumpkin/pumpkin_side,face5=0:chisel/pumpkin/pumpkin_face_15_off
 block:id=%pumpkin15,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-5=0:chisel/pumpkin/pumpkin_side
 
-# %pumpkin16:* (pumpkin16), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
+# %pumpkin16:* (pumpkin16), render=(STANDARD), opaque=true,cls=team.chisel.block.BlockCarvablePumpkin
 block:id=%pumpkin16,data=0,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_side,face3=0:chisel/pumpkin/pumpkin_face_16_off,face4-5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin16,data=1,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2-3=0:chisel/pumpkin/pumpkin_side,face4=0:chisel/pumpkin/pumpkin_face_16_off,face5=0:chisel/pumpkin/pumpkin_side
 block:id=%pumpkin16,data=2,stdrot=true,face0-1=0:chisel/pumpkin/pumpkin_top,face2=0:chisel/pumpkin/pumpkin_face_16_off,face3-5=0:chisel/pumpkin/pumpkin_side

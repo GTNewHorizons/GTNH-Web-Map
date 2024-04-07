@@ -1,4 +1,4 @@
-# betterquesting 3.3.24-GTNH
+# betterquesting 3.5.9-GTNH
 version:1.7
 modname:betterquesting
 
@@ -15,17 +15,17 @@ texture:id=minecraft/command_block,filename=assets/minecraft/textures/blocks/com
 
 
 
-# %submit_station:* (submit_station), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=betterquesting.blocks.BlockSubmitStation
+# %submit_station:* (submit_station), render=(STANDARD), opaque=true,cls=betterquesting.blocks.BlockSubmitStation
 block:id=%submit_station,data=*,stdrot=true,face0-1=0:betterquesting/submit_station_top,face2-5=0:betterquesting/submit_station_side
 
-# %observation_station:* (observation_station), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=betterquesting.blocks.BlockObservationStation
+# %observation_station:* (observation_station), render=(STANDARD), opaque=true,cls=betterquesting.blocks.BlockObservationStation
 block:id=%observation_station,data=*,stdrot=true,face0-1=0:betterquesting/observation_station_top,face2-5=0:betterquesting/observation_station_side
 
-# %BlockDLB:* (BlockDLB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockDLB
+# %BlockDLB:* (BlockDLB), render=(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockDLB
 block:id=%BlockDLB,data=*,stdrot=true,face0-5=0:minecraft/command_block
 
-# %BlockHSB:* (BlockHSB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockHSB
+# %BlockHSB:* (BlockHSB), render=(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockHSB
 block:id=%BlockHSB,data=*,stdrot=true,face0-5=0:minecraft/command_block
 
-# %BlockREB:* (BlockREB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockREB
+# %BlockREB:* (BlockREB), render=(STANDARD), opaque=true,cls=lokko12.CB4BQ.BlockREB
 block:id=%BlockREB,data=*,stdrot=true,face0-5=0:minecraft/command_block

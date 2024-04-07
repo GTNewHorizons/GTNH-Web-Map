@@ -1,4 +1,4 @@
-# gtneioreplugin 1.1.0
+# gtneioreplugin 1.2.0
 version:1.7
 modname:gtneioreplugin
 
@@ -7,227 +7,392 @@ cfgfile:config/gtneioreplugin.cfg
 
 
 texturepath:assets/gtneioreplugin/textures/blocks/
+texture:id=gtneioreplugin/An_back,filename=assets/gtneioreplugin/textures/blocks/An_back.png
+texture:id=gtneioreplugin/An_bottom,filename=assets/gtneioreplugin/textures/blocks/An_bottom.png
+texture:id=gtneioreplugin/An_front,filename=assets/gtneioreplugin/textures/blocks/An_front.png
+texture:id=gtneioreplugin/An_left,filename=assets/gtneioreplugin/textures/blocks/An_left.png
+texture:id=gtneioreplugin/An_right,filename=assets/gtneioreplugin/textures/blocks/An_right.png
+texture:id=gtneioreplugin/An_top,filename=assets/gtneioreplugin/textures/blocks/An_top.png
+texture:id=gtneioreplugin/As_back,filename=assets/gtneioreplugin/textures/blocks/As_back.png
+texture:id=gtneioreplugin/As_bottom,filename=assets/gtneioreplugin/textures/blocks/As_bottom.png
+texture:id=gtneioreplugin/As_front,filename=assets/gtneioreplugin/textures/blocks/As_front.png
 texture:id=gtneioreplugin/As_left,filename=assets/gtneioreplugin/textures/blocks/As_left.png
 texture:id=gtneioreplugin/As_right,filename=assets/gtneioreplugin/textures/blocks/As_right.png
 texture:id=gtneioreplugin/As_top,filename=assets/gtneioreplugin/textures/blocks/As_top.png
+texture:id=gtneioreplugin/BC_back,filename=assets/gtneioreplugin/textures/blocks/BC_back.png
+texture:id=gtneioreplugin/BC_bottom,filename=assets/gtneioreplugin/textures/blocks/BC_bottom.png
+texture:id=gtneioreplugin/BC_front,filename=assets/gtneioreplugin/textures/blocks/BC_front.png
 texture:id=gtneioreplugin/BC_left,filename=assets/gtneioreplugin/textures/blocks/BC_left.png
 texture:id=gtneioreplugin/BC_right,filename=assets/gtneioreplugin/textures/blocks/BC_right.png
 texture:id=gtneioreplugin/BC_top,filename=assets/gtneioreplugin/textures/blocks/BC_top.png
+texture:id=gtneioreplugin/BE_back,filename=assets/gtneioreplugin/textures/blocks/BE_back.png
+texture:id=gtneioreplugin/BE_bottom,filename=assets/gtneioreplugin/textures/blocks/BE_bottom.png
+texture:id=gtneioreplugin/BE_front,filename=assets/gtneioreplugin/textures/blocks/BE_front.png
 texture:id=gtneioreplugin/BE_left,filename=assets/gtneioreplugin/textures/blocks/BE_left.png
 texture:id=gtneioreplugin/BE_right,filename=assets/gtneioreplugin/textures/blocks/BE_right.png
 texture:id=gtneioreplugin/BE_top,filename=assets/gtneioreplugin/textures/blocks/BE_top.png
+texture:id=gtneioreplugin/BF_back,filename=assets/gtneioreplugin/textures/blocks/BF_back.png
+texture:id=gtneioreplugin/BF_bottom,filename=assets/gtneioreplugin/textures/blocks/BF_bottom.png
+texture:id=gtneioreplugin/BF_front,filename=assets/gtneioreplugin/textures/blocks/BF_front.png
 texture:id=gtneioreplugin/BF_left,filename=assets/gtneioreplugin/textures/blocks/BF_left.png
 texture:id=gtneioreplugin/BF_right,filename=assets/gtneioreplugin/textures/blocks/BF_right.png
 texture:id=gtneioreplugin/BF_top,filename=assets/gtneioreplugin/textures/blocks/BF_top.png
+texture:id=gtneioreplugin/CB_back,filename=assets/gtneioreplugin/textures/blocks/CB_back.png
+texture:id=gtneioreplugin/CB_bottom,filename=assets/gtneioreplugin/textures/blocks/CB_bottom.png
+texture:id=gtneioreplugin/CB_front,filename=assets/gtneioreplugin/textures/blocks/CB_front.png
 texture:id=gtneioreplugin/CB_left,filename=assets/gtneioreplugin/textures/blocks/CB_left.png
 texture:id=gtneioreplugin/CB_right,filename=assets/gtneioreplugin/textures/blocks/CB_right.png
 texture:id=gtneioreplugin/CB_top,filename=assets/gtneioreplugin/textures/blocks/CB_top.png
+texture:id=gtneioreplugin/Ca_back,filename=assets/gtneioreplugin/textures/blocks/Ca_back.png
+texture:id=gtneioreplugin/Ca_bottom,filename=assets/gtneioreplugin/textures/blocks/Ca_bottom.png
+texture:id=gtneioreplugin/Ca_front,filename=assets/gtneioreplugin/textures/blocks/Ca_front.png
 texture:id=gtneioreplugin/Ca_left,filename=assets/gtneioreplugin/textures/blocks/Ca_left.png
 texture:id=gtneioreplugin/Ca_right,filename=assets/gtneioreplugin/textures/blocks/Ca_right.png
 texture:id=gtneioreplugin/Ca_top,filename=assets/gtneioreplugin/textures/blocks/Ca_top.png
+texture:id=gtneioreplugin/Ce_back,filename=assets/gtneioreplugin/textures/blocks/Ce_back.png
+texture:id=gtneioreplugin/Ce_bottom,filename=assets/gtneioreplugin/textures/blocks/Ce_bottom.png
+texture:id=gtneioreplugin/Ce_front,filename=assets/gtneioreplugin/textures/blocks/Ce_front.png
 texture:id=gtneioreplugin/Ce_left,filename=assets/gtneioreplugin/textures/blocks/Ce_left.png
 texture:id=gtneioreplugin/Ce_right,filename=assets/gtneioreplugin/textures/blocks/Ce_right.png
 texture:id=gtneioreplugin/Ce_top,filename=assets/gtneioreplugin/textures/blocks/Ce_top.png
+texture:id=gtneioreplugin/DD_back,filename=assets/gtneioreplugin/textures/blocks/DD_back.png
+texture:id=gtneioreplugin/DD_bottom,filename=assets/gtneioreplugin/textures/blocks/DD_bottom.png
+texture:id=gtneioreplugin/DD_front,filename=assets/gtneioreplugin/textures/blocks/DD_front.png
 texture:id=gtneioreplugin/DD_left,filename=assets/gtneioreplugin/textures/blocks/DD_left.png
 texture:id=gtneioreplugin/DD_right,filename=assets/gtneioreplugin/textures/blocks/DD_right.png
 texture:id=gtneioreplugin/DD_top,filename=assets/gtneioreplugin/textures/blocks/DD_top.png
+texture:id=gtneioreplugin/De_back,filename=assets/gtneioreplugin/textures/blocks/De_back.png
+texture:id=gtneioreplugin/De_bottom,filename=assets/gtneioreplugin/textures/blocks/De_bottom.png
+texture:id=gtneioreplugin/De_front,filename=assets/gtneioreplugin/textures/blocks/De_front.png
 texture:id=gtneioreplugin/De_left,filename=assets/gtneioreplugin/textures/blocks/De_left.png
 texture:id=gtneioreplugin/De_right,filename=assets/gtneioreplugin/textures/blocks/De_right.png
 texture:id=gtneioreplugin/De_top,filename=assets/gtneioreplugin/textures/blocks/De_top.png
+texture:id=gtneioreplugin/EA_back,filename=assets/gtneioreplugin/textures/blocks/EA_back.png
+texture:id=gtneioreplugin/EA_bottom,filename=assets/gtneioreplugin/textures/blocks/EA_bottom.png
+texture:id=gtneioreplugin/EA_front,filename=assets/gtneioreplugin/textures/blocks/EA_front.png
 texture:id=gtneioreplugin/EA_left,filename=assets/gtneioreplugin/textures/blocks/EA_left.png
 texture:id=gtneioreplugin/EA_right,filename=assets/gtneioreplugin/textures/blocks/EA_right.png
 texture:id=gtneioreplugin/EA_top,filename=assets/gtneioreplugin/textures/blocks/EA_top.png
+texture:id=gtneioreplugin/ED_back,filename=assets/gtneioreplugin/textures/blocks/ED_back.png
+texture:id=gtneioreplugin/ED_bottom,filename=assets/gtneioreplugin/textures/blocks/ED_bottom.png
+texture:id=gtneioreplugin/ED_front,filename=assets/gtneioreplugin/textures/blocks/ED_front.png
 texture:id=gtneioreplugin/ED_left,filename=assets/gtneioreplugin/textures/blocks/ED_left.png
 texture:id=gtneioreplugin/ED_right,filename=assets/gtneioreplugin/textures/blocks/ED_right.png
 texture:id=gtneioreplugin/ED_top,filename=assets/gtneioreplugin/textures/blocks/ED_top.png
+texture:id=gtneioreplugin/En_back,filename=assets/gtneioreplugin/textures/blocks/En_back.png
+texture:id=gtneioreplugin/En_bottom,filename=assets/gtneioreplugin/textures/blocks/En_bottom.png
+texture:id=gtneioreplugin/En_front,filename=assets/gtneioreplugin/textures/blocks/En_front.png
 texture:id=gtneioreplugin/En_left,filename=assets/gtneioreplugin/textures/blocks/En_left.png
 texture:id=gtneioreplugin/En_right,filename=assets/gtneioreplugin/textures/blocks/En_right.png
 texture:id=gtneioreplugin/En_top,filename=assets/gtneioreplugin/textures/blocks/En_top.png
+texture:id=gtneioreplugin/Eu_back,filename=assets/gtneioreplugin/textures/blocks/Eu_back.png
+texture:id=gtneioreplugin/Eu_bottom,filename=assets/gtneioreplugin/textures/blocks/Eu_bottom.png
+texture:id=gtneioreplugin/Eu_front,filename=assets/gtneioreplugin/textures/blocks/Eu_front.png
 texture:id=gtneioreplugin/Eu_left,filename=assets/gtneioreplugin/textures/blocks/Eu_left.png
 texture:id=gtneioreplugin/Eu_right,filename=assets/gtneioreplugin/textures/blocks/Eu_right.png
 texture:id=gtneioreplugin/Eu_top,filename=assets/gtneioreplugin/textures/blocks/Eu_top.png
+texture:id=gtneioreplugin/Ga_back,filename=assets/gtneioreplugin/textures/blocks/Ga_back.png
+texture:id=gtneioreplugin/Ga_bottom,filename=assets/gtneioreplugin/textures/blocks/Ga_bottom.png
+texture:id=gtneioreplugin/Ga_front,filename=assets/gtneioreplugin/textures/blocks/Ga_front.png
 texture:id=gtneioreplugin/Ga_left,filename=assets/gtneioreplugin/textures/blocks/Ga_left.png
 texture:id=gtneioreplugin/Ga_right,filename=assets/gtneioreplugin/textures/blocks/Ga_right.png
 texture:id=gtneioreplugin/Ga_top,filename=assets/gtneioreplugin/textures/blocks/Ga_top.png
+texture:id=gtneioreplugin/Ha_back,filename=assets/gtneioreplugin/textures/blocks/Ha_back.png
+texture:id=gtneioreplugin/Ha_bottom,filename=assets/gtneioreplugin/textures/blocks/Ha_bottom.png
+texture:id=gtneioreplugin/Ha_front,filename=assets/gtneioreplugin/textures/blocks/Ha_front.png
 texture:id=gtneioreplugin/Ha_left,filename=assets/gtneioreplugin/textures/blocks/Ha_left.png
 texture:id=gtneioreplugin/Ha_right,filename=assets/gtneioreplugin/textures/blocks/Ha_right.png
 texture:id=gtneioreplugin/Ha_top,filename=assets/gtneioreplugin/textures/blocks/Ha_top.png
+texture:id=gtneioreplugin/Ho_back,filename=assets/gtneioreplugin/textures/blocks/Ho_back.png
+texture:id=gtneioreplugin/Ho_bottom,filename=assets/gtneioreplugin/textures/blocks/Ho_bottom.png
+texture:id=gtneioreplugin/Ho_front,filename=assets/gtneioreplugin/textures/blocks/Ho_front.png
+texture:id=gtneioreplugin/Ho_left,filename=assets/gtneioreplugin/textures/blocks/Ho_left.png
+texture:id=gtneioreplugin/Ho_right,filename=assets/gtneioreplugin/textures/blocks/Ho_right.png
+texture:id=gtneioreplugin/Ho_top,filename=assets/gtneioreplugin/textures/blocks/Ho_top.png
+texture:id=gtneioreplugin/Io_back,filename=assets/gtneioreplugin/textures/blocks/Io_back.png
+texture:id=gtneioreplugin/Io_bottom,filename=assets/gtneioreplugin/textures/blocks/Io_bottom.png
+texture:id=gtneioreplugin/Io_front,filename=assets/gtneioreplugin/textures/blocks/Io_front.png
 texture:id=gtneioreplugin/Io_left,filename=assets/gtneioreplugin/textures/blocks/Io_left.png
 texture:id=gtneioreplugin/Io_right,filename=assets/gtneioreplugin/textures/blocks/Io_right.png
 texture:id=gtneioreplugin/Io_top,filename=assets/gtneioreplugin/textures/blocks/Io_top.png
+texture:id=gtneioreplugin/KB_back,filename=assets/gtneioreplugin/textures/blocks/KB_back.png
+texture:id=gtneioreplugin/KB_bottom,filename=assets/gtneioreplugin/textures/blocks/KB_bottom.png
+texture:id=gtneioreplugin/KB_front,filename=assets/gtneioreplugin/textures/blocks/KB_front.png
 texture:id=gtneioreplugin/KB_left,filename=assets/gtneioreplugin/textures/blocks/KB_left.png
 texture:id=gtneioreplugin/KB_right,filename=assets/gtneioreplugin/textures/blocks/KB_right.png
 texture:id=gtneioreplugin/KB_top,filename=assets/gtneioreplugin/textures/blocks/KB_top.png
+texture:id=gtneioreplugin/MB_back,filename=assets/gtneioreplugin/textures/blocks/MB_back.png
+texture:id=gtneioreplugin/MB_bottom,filename=assets/gtneioreplugin/textures/blocks/MB_bottom.png
+texture:id=gtneioreplugin/MB_front,filename=assets/gtneioreplugin/textures/blocks/MB_front.png
+texture:id=gtneioreplugin/MB_left,filename=assets/gtneioreplugin/textures/blocks/MB_left.png
+texture:id=gtneioreplugin/MB_right,filename=assets/gtneioreplugin/textures/blocks/MB_right.png
+texture:id=gtneioreplugin/MB_top,filename=assets/gtneioreplugin/textures/blocks/MB_top.png
+texture:id=gtneioreplugin/MM_back,filename=assets/gtneioreplugin/textures/blocks/MM_back.png
+texture:id=gtneioreplugin/MM_bottom,filename=assets/gtneioreplugin/textures/blocks/MM_bottom.png
+texture:id=gtneioreplugin/MM_front,filename=assets/gtneioreplugin/textures/blocks/MM_front.png
 texture:id=gtneioreplugin/MM_left,filename=assets/gtneioreplugin/textures/blocks/MM_left.png
 texture:id=gtneioreplugin/MM_right,filename=assets/gtneioreplugin/textures/blocks/MM_right.png
 texture:id=gtneioreplugin/MM_top,filename=assets/gtneioreplugin/textures/blocks/MM_top.png
+texture:id=gtneioreplugin/Ma_back,filename=assets/gtneioreplugin/textures/blocks/Ma_back.png
+texture:id=gtneioreplugin/Ma_bottom,filename=assets/gtneioreplugin/textures/blocks/Ma_bottom.png
+texture:id=gtneioreplugin/Ma_front,filename=assets/gtneioreplugin/textures/blocks/Ma_front.png
 texture:id=gtneioreplugin/Ma_left,filename=assets/gtneioreplugin/textures/blocks/Ma_left.png
 texture:id=gtneioreplugin/Ma_right,filename=assets/gtneioreplugin/textures/blocks/Ma_right.png
 texture:id=gtneioreplugin/Ma_top,filename=assets/gtneioreplugin/textures/blocks/Ma_top.png
+texture:id=gtneioreplugin/Me_back,filename=assets/gtneioreplugin/textures/blocks/Me_back.png
+texture:id=gtneioreplugin/Me_bottom,filename=assets/gtneioreplugin/textures/blocks/Me_bottom.png
+texture:id=gtneioreplugin/Me_front,filename=assets/gtneioreplugin/textures/blocks/Me_front.png
 texture:id=gtneioreplugin/Me_left,filename=assets/gtneioreplugin/textures/blocks/Me_left.png
 texture:id=gtneioreplugin/Me_right,filename=assets/gtneioreplugin/textures/blocks/Me_right.png
 texture:id=gtneioreplugin/Me_top,filename=assets/gtneioreplugin/textures/blocks/Me_top.png
+texture:id=gtneioreplugin/Mh_back,filename=assets/gtneioreplugin/textures/blocks/Mh_back.png
+texture:id=gtneioreplugin/Mh_bottom,filename=assets/gtneioreplugin/textures/blocks/Mh_bottom.png
+texture:id=gtneioreplugin/Mh_front,filename=assets/gtneioreplugin/textures/blocks/Mh_front.png
+texture:id=gtneioreplugin/Mh_left,filename=assets/gtneioreplugin/textures/blocks/Mh_left.png
+texture:id=gtneioreplugin/Mh_right,filename=assets/gtneioreplugin/textures/blocks/Mh_right.png
+texture:id=gtneioreplugin/Mh_top,filename=assets/gtneioreplugin/textures/blocks/Mh_top.png
+texture:id=gtneioreplugin/Mi_back,filename=assets/gtneioreplugin/textures/blocks/Mi_back.png
+texture:id=gtneioreplugin/Mi_bottom,filename=assets/gtneioreplugin/textures/blocks/Mi_bottom.png
+texture:id=gtneioreplugin/Mi_front,filename=assets/gtneioreplugin/textures/blocks/Mi_front.png
 texture:id=gtneioreplugin/Mi_left,filename=assets/gtneioreplugin/textures/blocks/Mi_left.png
 texture:id=gtneioreplugin/Mi_right,filename=assets/gtneioreplugin/textures/blocks/Mi_right.png
 texture:id=gtneioreplugin/Mi_top,filename=assets/gtneioreplugin/textures/blocks/Mi_top.png
+texture:id=gtneioreplugin/Mo_back,filename=assets/gtneioreplugin/textures/blocks/Mo_back.png
+texture:id=gtneioreplugin/Mo_bottom,filename=assets/gtneioreplugin/textures/blocks/Mo_bottom.png
+texture:id=gtneioreplugin/Mo_front,filename=assets/gtneioreplugin/textures/blocks/Mo_front.png
 texture:id=gtneioreplugin/Mo_left,filename=assets/gtneioreplugin/textures/blocks/Mo_left.png
 texture:id=gtneioreplugin/Mo_right,filename=assets/gtneioreplugin/textures/blocks/Mo_right.png
 texture:id=gtneioreplugin/Mo_top,filename=assets/gtneioreplugin/textures/blocks/Mo_top.png
+texture:id=gtneioreplugin/Ne_back,filename=assets/gtneioreplugin/textures/blocks/Ne_back.png
+texture:id=gtneioreplugin/Ne_bottom,filename=assets/gtneioreplugin/textures/blocks/Ne_bottom.png
+texture:id=gtneioreplugin/Ne_front,filename=assets/gtneioreplugin/textures/blocks/Ne_front.png
 texture:id=gtneioreplugin/Ne_left,filename=assets/gtneioreplugin/textures/blocks/Ne_left.png
 texture:id=gtneioreplugin/Ne_right,filename=assets/gtneioreplugin/textures/blocks/Ne_right.png
 texture:id=gtneioreplugin/Ne_top,filename=assets/gtneioreplugin/textures/blocks/Ne_top.png
+texture:id=gtneioreplugin/Np_back,filename=assets/gtneioreplugin/textures/blocks/Np_back.png
+texture:id=gtneioreplugin/Np_bottom,filename=assets/gtneioreplugin/textures/blocks/Np_bottom.png
+texture:id=gtneioreplugin/Np_front,filename=assets/gtneioreplugin/textures/blocks/Np_front.png
+texture:id=gtneioreplugin/Np_left,filename=assets/gtneioreplugin/textures/blocks/Np_left.png
+texture:id=gtneioreplugin/Np_right,filename=assets/gtneioreplugin/textures/blocks/Np_right.png
+texture:id=gtneioreplugin/Np_top,filename=assets/gtneioreplugin/textures/blocks/Np_top.png
+texture:id=gtneioreplugin/Ob_back,filename=assets/gtneioreplugin/textures/blocks/Ob_back.png
+texture:id=gtneioreplugin/Ob_bottom,filename=assets/gtneioreplugin/textures/blocks/Ob_bottom.png
+texture:id=gtneioreplugin/Ob_front,filename=assets/gtneioreplugin/textures/blocks/Ob_front.png
 texture:id=gtneioreplugin/Ob_left,filename=assets/gtneioreplugin/textures/blocks/Ob_left.png
 texture:id=gtneioreplugin/Ob_right,filename=assets/gtneioreplugin/textures/blocks/Ob_right.png
 texture:id=gtneioreplugin/Ob_top,filename=assets/gtneioreplugin/textures/blocks/Ob_top.png
+texture:id=gtneioreplugin/Ow_back,filename=assets/gtneioreplugin/textures/blocks/Ow_back.png
+texture:id=gtneioreplugin/Ow_bottom,filename=assets/gtneioreplugin/textures/blocks/Ow_bottom.png
+texture:id=gtneioreplugin/Ow_front,filename=assets/gtneioreplugin/textures/blocks/Ow_front.png
 texture:id=gtneioreplugin/Ow_left,filename=assets/gtneioreplugin/textures/blocks/Ow_left.png
 texture:id=gtneioreplugin/Ow_right,filename=assets/gtneioreplugin/textures/blocks/Ow_right.png
 texture:id=gtneioreplugin/Ow_top,filename=assets/gtneioreplugin/textures/blocks/Ow_top.png
+texture:id=gtneioreplugin/Ph_back,filename=assets/gtneioreplugin/textures/blocks/Ph_back.png
+texture:id=gtneioreplugin/Ph_bottom,filename=assets/gtneioreplugin/textures/blocks/Ph_bottom.png
+texture:id=gtneioreplugin/Ph_front,filename=assets/gtneioreplugin/textures/blocks/Ph_front.png
 texture:id=gtneioreplugin/Ph_left,filename=assets/gtneioreplugin/textures/blocks/Ph_left.png
 texture:id=gtneioreplugin/Ph_right,filename=assets/gtneioreplugin/textures/blocks/Ph_right.png
 texture:id=gtneioreplugin/Ph_top,filename=assets/gtneioreplugin/textures/blocks/Ph_top.png
+texture:id=gtneioreplugin/Pl_back,filename=assets/gtneioreplugin/textures/blocks/Pl_back.png
+texture:id=gtneioreplugin/Pl_bottom,filename=assets/gtneioreplugin/textures/blocks/Pl_bottom.png
+texture:id=gtneioreplugin/Pl_front,filename=assets/gtneioreplugin/textures/blocks/Pl_front.png
 texture:id=gtneioreplugin/Pl_left,filename=assets/gtneioreplugin/textures/blocks/Pl_left.png
 texture:id=gtneioreplugin/Pl_right,filename=assets/gtneioreplugin/textures/blocks/Pl_right.png
 texture:id=gtneioreplugin/Pl_top,filename=assets/gtneioreplugin/textures/blocks/Pl_top.png
+texture:id=gtneioreplugin/Pr_back,filename=assets/gtneioreplugin/textures/blocks/Pr_back.png
+texture:id=gtneioreplugin/Pr_bottom,filename=assets/gtneioreplugin/textures/blocks/Pr_bottom.png
+texture:id=gtneioreplugin/Pr_front,filename=assets/gtneioreplugin/textures/blocks/Pr_front.png
 texture:id=gtneioreplugin/Pr_left,filename=assets/gtneioreplugin/textures/blocks/Pr_left.png
 texture:id=gtneioreplugin/Pr_right,filename=assets/gtneioreplugin/textures/blocks/Pr_right.png
 texture:id=gtneioreplugin/Pr_top,filename=assets/gtneioreplugin/textures/blocks/Pr_top.png
+texture:id=gtneioreplugin/Ra_back,filename=assets/gtneioreplugin/textures/blocks/Ra_back.png
+texture:id=gtneioreplugin/Ra_bottom,filename=assets/gtneioreplugin/textures/blocks/Ra_bottom.png
+texture:id=gtneioreplugin/Ra_front,filename=assets/gtneioreplugin/textures/blocks/Ra_front.png
 texture:id=gtneioreplugin/Ra_left,filename=assets/gtneioreplugin/textures/blocks/Ra_left.png
 texture:id=gtneioreplugin/Ra_right,filename=assets/gtneioreplugin/textures/blocks/Ra_right.png
 texture:id=gtneioreplugin/Ra_top,filename=assets/gtneioreplugin/textures/blocks/Ra_top.png
+texture:id=gtneioreplugin/Rb_back,filename=assets/gtneioreplugin/textures/blocks/Rb_back.png
+texture:id=gtneioreplugin/Rb_bottom,filename=assets/gtneioreplugin/textures/blocks/Rb_bottom.png
+texture:id=gtneioreplugin/Rb_front,filename=assets/gtneioreplugin/textures/blocks/Rb_front.png
 texture:id=gtneioreplugin/Rb_left,filename=assets/gtneioreplugin/textures/blocks/Rb_left.png
 texture:id=gtneioreplugin/Rb_right,filename=assets/gtneioreplugin/textures/blocks/Rb_right.png
 texture:id=gtneioreplugin/Rb_top,filename=assets/gtneioreplugin/textures/blocks/Rb_top.png
+texture:id=gtneioreplugin/Se_back,filename=assets/gtneioreplugin/textures/blocks/Se_back.png
+texture:id=gtneioreplugin/Se_bottom,filename=assets/gtneioreplugin/textures/blocks/Se_bottom.png
+texture:id=gtneioreplugin/Se_front,filename=assets/gtneioreplugin/textures/blocks/Se_front.png
+texture:id=gtneioreplugin/Se_left,filename=assets/gtneioreplugin/textures/blocks/Se_left.png
+texture:id=gtneioreplugin/Se_right,filename=assets/gtneioreplugin/textures/blocks/Se_right.png
+texture:id=gtneioreplugin/Se_top,filename=assets/gtneioreplugin/textures/blocks/Se_top.png
+texture:id=gtneioreplugin/TE_back,filename=assets/gtneioreplugin/textures/blocks/TE_back.png
+texture:id=gtneioreplugin/TE_bottom,filename=assets/gtneioreplugin/textures/blocks/TE_bottom.png
+texture:id=gtneioreplugin/TE_front,filename=assets/gtneioreplugin/textures/blocks/TE_front.png
 texture:id=gtneioreplugin/TE_left,filename=assets/gtneioreplugin/textures/blocks/TE_left.png
 texture:id=gtneioreplugin/TE_right,filename=assets/gtneioreplugin/textures/blocks/TE_right.png
 texture:id=gtneioreplugin/TE_top,filename=assets/gtneioreplugin/textures/blocks/TE_top.png
+texture:id=gtneioreplugin/TF_back,filename=assets/gtneioreplugin/textures/blocks/TF_back.png
+texture:id=gtneioreplugin/TF_bottom,filename=assets/gtneioreplugin/textures/blocks/TF_bottom.png
+texture:id=gtneioreplugin/TF_front,filename=assets/gtneioreplugin/textures/blocks/TF_front.png
 texture:id=gtneioreplugin/TF_left,filename=assets/gtneioreplugin/textures/blocks/TF_left.png
 texture:id=gtneioreplugin/TF_right,filename=assets/gtneioreplugin/textures/blocks/TF_right.png
 texture:id=gtneioreplugin/TF_top,filename=assets/gtneioreplugin/textures/blocks/TF_top.png
+texture:id=gtneioreplugin/Ti_back,filename=assets/gtneioreplugin/textures/blocks/Ti_back.png
+texture:id=gtneioreplugin/Ti_bottom,filename=assets/gtneioreplugin/textures/blocks/Ti_bottom.png
+texture:id=gtneioreplugin/Ti_front,filename=assets/gtneioreplugin/textures/blocks/Ti_front.png
 texture:id=gtneioreplugin/Ti_left,filename=assets/gtneioreplugin/textures/blocks/Ti_left.png
 texture:id=gtneioreplugin/Ti_right,filename=assets/gtneioreplugin/textures/blocks/Ti_right.png
 texture:id=gtneioreplugin/Ti_top,filename=assets/gtneioreplugin/textures/blocks/Ti_top.png
+texture:id=gtneioreplugin/Tr_back,filename=assets/gtneioreplugin/textures/blocks/Tr_back.png
+texture:id=gtneioreplugin/Tr_bottom,filename=assets/gtneioreplugin/textures/blocks/Tr_bottom.png
+texture:id=gtneioreplugin/Tr_front,filename=assets/gtneioreplugin/textures/blocks/Tr_front.png
 texture:id=gtneioreplugin/Tr_left,filename=assets/gtneioreplugin/textures/blocks/Tr_left.png
 texture:id=gtneioreplugin/Tr_right,filename=assets/gtneioreplugin/textures/blocks/Tr_right.png
 texture:id=gtneioreplugin/Tr_top,filename=assets/gtneioreplugin/textures/blocks/Tr_top.png
+texture:id=gtneioreplugin/VA_back,filename=assets/gtneioreplugin/textures/blocks/VA_back.png
+texture:id=gtneioreplugin/VA_bottom,filename=assets/gtneioreplugin/textures/blocks/VA_bottom.png
+texture:id=gtneioreplugin/VA_front,filename=assets/gtneioreplugin/textures/blocks/VA_front.png
 texture:id=gtneioreplugin/VA_left,filename=assets/gtneioreplugin/textures/blocks/VA_left.png
 texture:id=gtneioreplugin/VA_right,filename=assets/gtneioreplugin/textures/blocks/VA_right.png
 texture:id=gtneioreplugin/VA_top,filename=assets/gtneioreplugin/textures/blocks/VA_top.png
+texture:id=gtneioreplugin/VB_back,filename=assets/gtneioreplugin/textures/blocks/VB_back.png
+texture:id=gtneioreplugin/VB_bottom,filename=assets/gtneioreplugin/textures/blocks/VB_bottom.png
+texture:id=gtneioreplugin/VB_front,filename=assets/gtneioreplugin/textures/blocks/VB_front.png
 texture:id=gtneioreplugin/VB_left,filename=assets/gtneioreplugin/textures/blocks/VB_left.png
 texture:id=gtneioreplugin/VB_right,filename=assets/gtneioreplugin/textures/blocks/VB_right.png
 texture:id=gtneioreplugin/VB_top,filename=assets/gtneioreplugin/textures/blocks/VB_top.png
+texture:id=gtneioreplugin/Ve_back,filename=assets/gtneioreplugin/textures/blocks/Ve_back.png
+texture:id=gtneioreplugin/Ve_bottom,filename=assets/gtneioreplugin/textures/blocks/Ve_bottom.png
+texture:id=gtneioreplugin/Ve_front,filename=assets/gtneioreplugin/textures/blocks/Ve_front.png
 texture:id=gtneioreplugin/Ve_left,filename=assets/gtneioreplugin/textures/blocks/Ve_left.png
 texture:id=gtneioreplugin/Ve_right,filename=assets/gtneioreplugin/textures/blocks/Ve_right.png
 texture:id=gtneioreplugin/Ve_top,filename=assets/gtneioreplugin/textures/blocks/Ve_top.png
 
 
 
-# %blockDimensionDisplay_Ow:* (blockDimensionDisplay_Ow), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ow,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ow_top,face2-3=0:gtneioreplugin/Ow_right,face4-5=0:gtneioreplugin/Ow_left
+# %blockDimensionDisplay_Ow:* (blockDimensionDisplay_Ow), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ow,data=*,stdrot=true,face0=0:gtneioreplugin/Ow_bottom,face1=0:gtneioreplugin/Ow_top,face2=0:gtneioreplugin/Ow_back,face3=0:gtneioreplugin/Ow_front,face4=0:gtneioreplugin/Ow_left,face5=0:gtneioreplugin/Ow_right
 
-# %blockDimensionDisplay_Ne:* (blockDimensionDisplay_Ne), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ne,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ne_top,face2-3=0:gtneioreplugin/Ne_right,face4-5=0:gtneioreplugin/Ne_left
+# %blockDimensionDisplay_Ne:* (blockDimensionDisplay_Ne), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ne,data=*,stdrot=true,face0=0:gtneioreplugin/Ne_bottom,face1=0:gtneioreplugin/Ne_top,face2=0:gtneioreplugin/Ne_back,face3=0:gtneioreplugin/Ne_front,face4=0:gtneioreplugin/Ne_left,face5=0:gtneioreplugin/Ne_right
 
-# %blockDimensionDisplay_TF:* (blockDimensionDisplay_TF), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_TF,data=*,stdrot=true,face0-1=0:gtneioreplugin/TF_top,face2-3=0:gtneioreplugin/TF_right,face4-5=0:gtneioreplugin/TF_left
+# %blockDimensionDisplay_TF:* (blockDimensionDisplay_TF), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_TF,data=*,stdrot=true,face0=0:gtneioreplugin/TF_bottom,face1=0:gtneioreplugin/TF_top,face2=0:gtneioreplugin/TF_back,face3=0:gtneioreplugin/TF_front,face4=0:gtneioreplugin/TF_left,face5=0:gtneioreplugin/TF_right
 
-# %blockDimensionDisplay_ED:* (blockDimensionDisplay_ED), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_ED,data=*,stdrot=true,face0-1=0:gtneioreplugin/ED_top,face2-3=0:gtneioreplugin/ED_right,face4-5=0:gtneioreplugin/ED_left
+# %blockDimensionDisplay_ED:* (blockDimensionDisplay_ED), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_ED,data=*,stdrot=true,face0=0:gtneioreplugin/ED_bottom,face1=0:gtneioreplugin/ED_top,face2=0:gtneioreplugin/ED_back,face3=0:gtneioreplugin/ED_front,face4=0:gtneioreplugin/ED_left,face5=0:gtneioreplugin/ED_right
 
-# %blockDimensionDisplay_VA:* (blockDimensionDisplay_VA), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_VA,data=*,stdrot=true,face0-1=0:gtneioreplugin/VA_top,face2-3=0:gtneioreplugin/VA_right,face4-5=0:gtneioreplugin/VA_left
+# %blockDimensionDisplay_VA:* (blockDimensionDisplay_VA), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_VA,data=*,stdrot=true,face0=0:gtneioreplugin/VA_bottom,face1=0:gtneioreplugin/VA_top,face2=0:gtneioreplugin/VA_back,face3=0:gtneioreplugin/VA_front,face4=0:gtneioreplugin/VA_left,face5=0:gtneioreplugin/VA_right
 
-# %blockDimensionDisplay_EA:* (blockDimensionDisplay_EA), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_EA,data=*,stdrot=true,face0-1=0:gtneioreplugin/EA_top,face2-3=0:gtneioreplugin/EA_right,face4-5=0:gtneioreplugin/EA_left
+# %blockDimensionDisplay_EA:* (blockDimensionDisplay_EA), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_EA,data=*,stdrot=true,face0=0:gtneioreplugin/EA_bottom,face1=0:gtneioreplugin/EA_top,face2=0:gtneioreplugin/EA_back,face3=0:gtneioreplugin/EA_front,face4=0:gtneioreplugin/EA_left,face5=0:gtneioreplugin/EA_right
 
-# %blockDimensionDisplay_Mo:* (blockDimensionDisplay_Mo), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Mo,data=*,stdrot=true,face0-1=0:gtneioreplugin/Mo_top,face2-3=0:gtneioreplugin/Mo_right,face4-5=0:gtneioreplugin/Mo_left
+# %blockDimensionDisplay_Mo:* (blockDimensionDisplay_Mo), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Mo,data=*,stdrot=true,face0=0:gtneioreplugin/Mo_bottom,face1=0:gtneioreplugin/Mo_top,face2=0:gtneioreplugin/Mo_back,face3=0:gtneioreplugin/Mo_front,face4=0:gtneioreplugin/Mo_left,face5=0:gtneioreplugin/Mo_right
 
-# %blockDimensionDisplay_De:* (blockDimensionDisplay_De), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_De,data=*,stdrot=true,face0-1=0:gtneioreplugin/De_top,face2-3=0:gtneioreplugin/De_right,face4-5=0:gtneioreplugin/De_left
+# %blockDimensionDisplay_De:* (blockDimensionDisplay_De), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_De,data=*,stdrot=true,face0=0:gtneioreplugin/De_bottom,face1=0:gtneioreplugin/De_top,face2=0:gtneioreplugin/De_back,face3=0:gtneioreplugin/De_front,face4=0:gtneioreplugin/De_left,face5=0:gtneioreplugin/De_right
 
-# %blockDimensionDisplay_Ma:* (blockDimensionDisplay_Ma), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ma,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ma_top,face2-3=0:gtneioreplugin/Ma_right,face4-5=0:gtneioreplugin/Ma_left
+# %blockDimensionDisplay_Ma:* (blockDimensionDisplay_Ma), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ma,data=*,stdrot=true,face0=0:gtneioreplugin/Ma_bottom,face1=0:gtneioreplugin/Ma_top,face2=0:gtneioreplugin/Ma_back,face3=0:gtneioreplugin/Ma_front,face4=0:gtneioreplugin/Ma_left,face5=0:gtneioreplugin/Ma_right
 
-# %blockDimensionDisplay_Ph:* (blockDimensionDisplay_Ph), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ph,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ph_top,face2-3=0:gtneioreplugin/Ph_right,face4-5=0:gtneioreplugin/Ph_left
+# %blockDimensionDisplay_Ph:* (blockDimensionDisplay_Ph), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ph,data=*,stdrot=true,face0=0:gtneioreplugin/Ph_bottom,face1=0:gtneioreplugin/Ph_top,face2=0:gtneioreplugin/Ph_back,face3=0:gtneioreplugin/Ph_front,face4=0:gtneioreplugin/Ph_left,face5=0:gtneioreplugin/Ph_right
 
-# %blockDimensionDisplay_As:* (blockDimensionDisplay_As), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_As,data=*,stdrot=true,face0-1=0:gtneioreplugin/As_top,face2-3=0:gtneioreplugin/As_right,face4-5=0:gtneioreplugin/As_left
+# %blockDimensionDisplay_As:* (blockDimensionDisplay_As), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_As,data=*,stdrot=true,face0=0:gtneioreplugin/As_bottom,face1=0:gtneioreplugin/As_top,face2=0:gtneioreplugin/As_back,face3=0:gtneioreplugin/As_front,face4=0:gtneioreplugin/As_left,face5=0:gtneioreplugin/As_right
 
-# %blockDimensionDisplay_Ca:* (blockDimensionDisplay_Ca), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ca,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ca_top,face2-3=0:gtneioreplugin/Ca_right,face4-5=0:gtneioreplugin/Ca_left
+# %blockDimensionDisplay_Ca:* (blockDimensionDisplay_Ca), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ca,data=*,stdrot=true,face0=0:gtneioreplugin/Ca_bottom,face1=0:gtneioreplugin/Ca_top,face2=0:gtneioreplugin/Ca_back,face3=0:gtneioreplugin/Ca_front,face4=0:gtneioreplugin/Ca_left,face5=0:gtneioreplugin/Ca_right
 
-# %blockDimensionDisplay_Ce:* (blockDimensionDisplay_Ce), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ce,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ce_top,face2-3=0:gtneioreplugin/Ce_right,face4-5=0:gtneioreplugin/Ce_left
+# %blockDimensionDisplay_Ce:* (blockDimensionDisplay_Ce), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ce,data=*,stdrot=true,face0=0:gtneioreplugin/Ce_bottom,face1=0:gtneioreplugin/Ce_top,face2=0:gtneioreplugin/Ce_back,face3=0:gtneioreplugin/Ce_front,face4=0:gtneioreplugin/Ce_left,face5=0:gtneioreplugin/Ce_right
 
-# %blockDimensionDisplay_Eu:* (blockDimensionDisplay_Eu), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Eu,data=*,stdrot=true,face0-1=0:gtneioreplugin/Eu_top,face2-3=0:gtneioreplugin/Eu_right,face4-5=0:gtneioreplugin/Eu_left
+# %blockDimensionDisplay_Eu:* (blockDimensionDisplay_Eu), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Eu,data=*,stdrot=true,face0=0:gtneioreplugin/Eu_bottom,face1=0:gtneioreplugin/Eu_top,face2=0:gtneioreplugin/Eu_back,face3=0:gtneioreplugin/Eu_front,face4=0:gtneioreplugin/Eu_left,face5=0:gtneioreplugin/Eu_right
 
-# %blockDimensionDisplay_Ga:* (blockDimensionDisplay_Ga), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ga,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ga_top,face2-3=0:gtneioreplugin/Ga_right,face4-5=0:gtneioreplugin/Ga_left
+# %blockDimensionDisplay_Ga:* (blockDimensionDisplay_Ga), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ga,data=*,stdrot=true,face0=0:gtneioreplugin/Ga_bottom,face1=0:gtneioreplugin/Ga_top,face2=0:gtneioreplugin/Ga_back,face3=0:gtneioreplugin/Ga_front,face4=0:gtneioreplugin/Ga_left,face5=0:gtneioreplugin/Ga_right
 
-# %blockDimensionDisplay_Rb:* (blockDimensionDisplay_Rb), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Rb,data=*,stdrot=true,face0-1=0:gtneioreplugin/Rb_top,face2-3=0:gtneioreplugin/Rb_right,face4-5=0:gtneioreplugin/Rb_left
+# %blockDimensionDisplay_Rb:* (blockDimensionDisplay_Rb), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Rb,data=*,stdrot=true,face0=0:gtneioreplugin/Rb_bottom,face1=0:gtneioreplugin/Rb_top,face2=0:gtneioreplugin/Rb_back,face3=0:gtneioreplugin/Rb_front,face4=0:gtneioreplugin/Rb_left,face5=0:gtneioreplugin/Rb_right
 
-# %blockDimensionDisplay_Io:* (blockDimensionDisplay_Io), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Io,data=*,stdrot=true,face0-1=0:gtneioreplugin/Io_top,face2-3=0:gtneioreplugin/Io_right,face4-5=0:gtneioreplugin/Io_left
+# %blockDimensionDisplay_Io:* (blockDimensionDisplay_Io), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Io,data=*,stdrot=true,face0=0:gtneioreplugin/Io_bottom,face1=0:gtneioreplugin/Io_top,face2=0:gtneioreplugin/Io_back,face3=0:gtneioreplugin/Io_front,face4=0:gtneioreplugin/Io_left,face5=0:gtneioreplugin/Io_right
 
-# %blockDimensionDisplay_Me:* (blockDimensionDisplay_Me), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Me,data=*,stdrot=true,face0-1=0:gtneioreplugin/Me_top,face2-3=0:gtneioreplugin/Me_right,face4-5=0:gtneioreplugin/Me_left
+# %blockDimensionDisplay_Me:* (blockDimensionDisplay_Me), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Me,data=*,stdrot=true,face0=0:gtneioreplugin/Me_bottom,face1=0:gtneioreplugin/Me_top,face2=0:gtneioreplugin/Me_back,face3=0:gtneioreplugin/Me_front,face4=0:gtneioreplugin/Me_left,face5=0:gtneioreplugin/Me_right
 
-# %blockDimensionDisplay_Ve:* (blockDimensionDisplay_Ve), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ve,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ve_top,face2-3=0:gtneioreplugin/Ve_right,face4-5=0:gtneioreplugin/Ve_left
+# %blockDimensionDisplay_Ve:* (blockDimensionDisplay_Ve), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ve,data=*,stdrot=true,face0=0:gtneioreplugin/Ve_bottom,face1=0:gtneioreplugin/Ve_top,face2=0:gtneioreplugin/Ve_back,face3=0:gtneioreplugin/Ve_front,face4=0:gtneioreplugin/Ve_left,face5=0:gtneioreplugin/Ve_right
 
-# %blockDimensionDisplay_En:* (blockDimensionDisplay_En), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_En,data=*,stdrot=true,face0-1=0:gtneioreplugin/En_top,face2-3=0:gtneioreplugin/En_right,face4-5=0:gtneioreplugin/En_left
+# %blockDimensionDisplay_En:* (blockDimensionDisplay_En), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_En,data=*,stdrot=true,face0=0:gtneioreplugin/En_bottom,face1=0:gtneioreplugin/En_top,face2=0:gtneioreplugin/En_back,face3=0:gtneioreplugin/En_front,face4=0:gtneioreplugin/En_left,face5=0:gtneioreplugin/En_right
 
-# %blockDimensionDisplay_Mi:* (blockDimensionDisplay_Mi), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Mi,data=*,stdrot=true,face0-1=0:gtneioreplugin/Mi_top,face2-3=0:gtneioreplugin/Mi_right,face4-5=0:gtneioreplugin/Mi_left
+# %blockDimensionDisplay_Mi:* (blockDimensionDisplay_Mi), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Mi,data=*,stdrot=true,face0=0:gtneioreplugin/Mi_bottom,face1=0:gtneioreplugin/Mi_top,face2=0:gtneioreplugin/Mi_back,face3=0:gtneioreplugin/Mi_front,face4=0:gtneioreplugin/Mi_left,face5=0:gtneioreplugin/Mi_right
 
-# %blockDimensionDisplay_Ob:* (blockDimensionDisplay_Ob), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ob,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ob_top,face2-3=0:gtneioreplugin/Ob_right,face4-5=0:gtneioreplugin/Ob_left
+# %blockDimensionDisplay_Ob:* (blockDimensionDisplay_Ob), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ob,data=*,stdrot=true,face0=0:gtneioreplugin/Ob_bottom,face1=0:gtneioreplugin/Ob_top,face2=0:gtneioreplugin/Ob_back,face3=0:gtneioreplugin/Ob_front,face4=0:gtneioreplugin/Ob_left,face5=0:gtneioreplugin/Ob_right
 
-# %blockDimensionDisplay_Ti:* (blockDimensionDisplay_Ti), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ti,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ti_top,face2-3=0:gtneioreplugin/Ti_right,face4-5=0:gtneioreplugin/Ti_left
+# %blockDimensionDisplay_Ti:* (blockDimensionDisplay_Ti), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ti,data=*,stdrot=true,face0=0:gtneioreplugin/Ti_bottom,face1=0:gtneioreplugin/Ti_top,face2=0:gtneioreplugin/Ti_back,face3=0:gtneioreplugin/Ti_front,face4=0:gtneioreplugin/Ti_left,face5=0:gtneioreplugin/Ti_right
 
-# %blockDimensionDisplay_Ra:* (blockDimensionDisplay_Ra), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ra,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ra_top,face2-3=0:gtneioreplugin/Ra_right,face4-5=0:gtneioreplugin/Ra_left
+# %blockDimensionDisplay_Ra:* (blockDimensionDisplay_Ra), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ra,data=*,stdrot=true,face0=0:gtneioreplugin/Ra_bottom,face1=0:gtneioreplugin/Ra_top,face2=0:gtneioreplugin/Ra_back,face3=0:gtneioreplugin/Ra_front,face4=0:gtneioreplugin/Ra_left,face5=0:gtneioreplugin/Ra_right
 
-# %blockDimensionDisplay_Pr:* (blockDimensionDisplay_Pr), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Pr,data=*,stdrot=true,face0-1=0:gtneioreplugin/Pr_top,face2-3=0:gtneioreplugin/Pr_right,face4-5=0:gtneioreplugin/Pr_left
+# %blockDimensionDisplay_Pr:* (blockDimensionDisplay_Pr), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Pr,data=*,stdrot=true,face0=0:gtneioreplugin/Pr_bottom,face1=0:gtneioreplugin/Pr_top,face2=0:gtneioreplugin/Pr_back,face3=0:gtneioreplugin/Pr_front,face4=0:gtneioreplugin/Pr_left,face5=0:gtneioreplugin/Pr_right
 
-# %blockDimensionDisplay_Tr:* (blockDimensionDisplay_Tr), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Tr,data=*,stdrot=true,face0-1=0:gtneioreplugin/Tr_top,face2-3=0:gtneioreplugin/Tr_right,face4-5=0:gtneioreplugin/Tr_left
+# %blockDimensionDisplay_Tr:* (blockDimensionDisplay_Tr), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Tr,data=*,stdrot=true,face0=0:gtneioreplugin/Tr_bottom,face1=0:gtneioreplugin/Tr_top,face2=0:gtneioreplugin/Tr_back,face3=0:gtneioreplugin/Tr_front,face4=0:gtneioreplugin/Tr_left,face5=0:gtneioreplugin/Tr_right
 
-# %blockDimensionDisplay_Ha:* (blockDimensionDisplay_Ha), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Ha,data=*,stdrot=true,face0-1=0:gtneioreplugin/Ha_top,face2-3=0:gtneioreplugin/Ha_right,face4-5=0:gtneioreplugin/Ha_left
+# %blockDimensionDisplay_Ha:* (blockDimensionDisplay_Ha), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ha,data=*,stdrot=true,face0=0:gtneioreplugin/Ha_bottom,face1=0:gtneioreplugin/Ha_top,face2=0:gtneioreplugin/Ha_back,face3=0:gtneioreplugin/Ha_front,face4=0:gtneioreplugin/Ha_left,face5=0:gtneioreplugin/Ha_right
 
-# %blockDimensionDisplay_KB:* (blockDimensionDisplay_KB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_KB,data=*,stdrot=true,face0-1=0:gtneioreplugin/KB_top,face2-3=0:gtneioreplugin/KB_right,face4-5=0:gtneioreplugin/KB_left
+# %blockDimensionDisplay_KB:* (blockDimensionDisplay_KB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_KB,data=*,stdrot=true,face0=0:gtneioreplugin/KB_bottom,face1=0:gtneioreplugin/KB_top,face2=0:gtneioreplugin/KB_back,face3=0:gtneioreplugin/KB_front,face4=0:gtneioreplugin/KB_left,face5=0:gtneioreplugin/KB_right
 
-# %blockDimensionDisplay_MM:* (blockDimensionDisplay_MM), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_MM,data=*,stdrot=true,face0-1=0:gtneioreplugin/MM_top,face2-3=0:gtneioreplugin/MM_right,face4-5=0:gtneioreplugin/MM_left
+# %blockDimensionDisplay_MM:* (blockDimensionDisplay_MM), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_MM,data=*,stdrot=true,face0=0:gtneioreplugin/MM_bottom,face1=0:gtneioreplugin/MM_top,face2=0:gtneioreplugin/MM_back,face3=0:gtneioreplugin/MM_front,face4=0:gtneioreplugin/MM_left,face5=0:gtneioreplugin/MM_right
 
-# %blockDimensionDisplay_Pl:* (blockDimensionDisplay_Pl), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_Pl,data=*,stdrot=true,face0-1=0:gtneioreplugin/Pl_top,face2-3=0:gtneioreplugin/Pl_right,face4-5=0:gtneioreplugin/Pl_left
+# %blockDimensionDisplay_Pl:* (blockDimensionDisplay_Pl), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Pl,data=*,stdrot=true,face0=0:gtneioreplugin/Pl_bottom,face1=0:gtneioreplugin/Pl_top,face2=0:gtneioreplugin/Pl_back,face3=0:gtneioreplugin/Pl_front,face4=0:gtneioreplugin/Pl_left,face5=0:gtneioreplugin/Pl_right
 
-# %blockDimensionDisplay_BC:* (blockDimensionDisplay_BC), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_BC,data=*,stdrot=true,face0-1=0:gtneioreplugin/BC_top,face2-3=0:gtneioreplugin/BC_right,face4-5=0:gtneioreplugin/BC_left
+# %blockDimensionDisplay_BC:* (blockDimensionDisplay_BC), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_BC,data=*,stdrot=true,face0=0:gtneioreplugin/BC_bottom,face1=0:gtneioreplugin/BC_top,face2=0:gtneioreplugin/BC_back,face3=0:gtneioreplugin/BC_front,face4=0:gtneioreplugin/BC_left,face5=0:gtneioreplugin/BC_right
 
-# %blockDimensionDisplay_BE:* (blockDimensionDisplay_BE), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_BE,data=*,stdrot=true,face0-1=0:gtneioreplugin/BE_top,face2-3=0:gtneioreplugin/BE_right,face4-5=0:gtneioreplugin/BE_left
+# %blockDimensionDisplay_BE:* (blockDimensionDisplay_BE), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_BE,data=*,stdrot=true,face0=0:gtneioreplugin/BE_bottom,face1=0:gtneioreplugin/BE_top,face2=0:gtneioreplugin/BE_back,face3=0:gtneioreplugin/BE_front,face4=0:gtneioreplugin/BE_left,face5=0:gtneioreplugin/BE_right
 
-# %blockDimensionDisplay_BF:* (blockDimensionDisplay_BF), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_BF,data=*,stdrot=true,face0-1=0:gtneioreplugin/BF_top,face2-3=0:gtneioreplugin/BF_right,face4-5=0:gtneioreplugin/BF_left
+# %blockDimensionDisplay_BF:* (blockDimensionDisplay_BF), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_BF,data=*,stdrot=true,face0=0:gtneioreplugin/BF_bottom,face1=0:gtneioreplugin/BF_top,face2=0:gtneioreplugin/BF_back,face3=0:gtneioreplugin/BF_front,face4=0:gtneioreplugin/BF_left,face5=0:gtneioreplugin/BF_right
 
-# %blockDimensionDisplay_CB:* (blockDimensionDisplay_CB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_CB,data=*,stdrot=true,face0-1=0:gtneioreplugin/CB_top,face2-3=0:gtneioreplugin/CB_right,face4-5=0:gtneioreplugin/CB_left
+# %blockDimensionDisplay_CB:* (blockDimensionDisplay_CB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_CB,data=*,stdrot=true,face0=0:gtneioreplugin/CB_bottom,face1=0:gtneioreplugin/CB_top,face2=0:gtneioreplugin/CB_back,face3=0:gtneioreplugin/CB_front,face4=0:gtneioreplugin/CB_left,face5=0:gtneioreplugin/CB_right
 
-# %blockDimensionDisplay_TE:* (blockDimensionDisplay_TE), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_TE,data=*,stdrot=true,face0-1=0:gtneioreplugin/TE_top,face2-3=0:gtneioreplugin/TE_right,face4-5=0:gtneioreplugin/TE_left
+# %blockDimensionDisplay_TE:* (blockDimensionDisplay_TE), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_TE,data=*,stdrot=true,face0=0:gtneioreplugin/TE_bottom,face1=0:gtneioreplugin/TE_top,face2=0:gtneioreplugin/TE_back,face3=0:gtneioreplugin/TE_front,face4=0:gtneioreplugin/TE_left,face5=0:gtneioreplugin/TE_right
 
-# %blockDimensionDisplay_DD:* (blockDimensionDisplay_DD), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_DD,data=*,stdrot=true,face0-1=0:gtneioreplugin/DD_top,face2-3=0:gtneioreplugin/DD_right,face4-5=0:gtneioreplugin/DD_left
+# %blockDimensionDisplay_VB:* (blockDimensionDisplay_VB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_VB,data=*,stdrot=true,face0=0:gtneioreplugin/VB_bottom,face1=0:gtneioreplugin/VB_top,face2=0:gtneioreplugin/VB_back,face3=0:gtneioreplugin/VB_front,face4=0:gtneioreplugin/VB_left,face5=0:gtneioreplugin/VB_right
 
-# %blockDimensionDisplay_VB:* (blockDimensionDisplay_VB), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_VB,data=*,stdrot=true,face0-1=0:gtneioreplugin/VB_top,face2-3=0:gtneioreplugin/VB_right,face4-5=0:gtneioreplugin/VB_left
+# %blockDimensionDisplay_An:* (blockDimensionDisplay_An), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_An,data=*,stdrot=true,face0=0:gtneioreplugin/An_bottom,face1=0:gtneioreplugin/An_top,face2=0:gtneioreplugin/An_back,face3=0:gtneioreplugin/An_front,face4=0:gtneioreplugin/An_left,face5=0:gtneioreplugin/An_right
+
+# %blockDimensionDisplay_Ho:* (blockDimensionDisplay_Ho), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Ho,data=*,stdrot=true,face0=0:gtneioreplugin/Ho_bottom,face1=0:gtneioreplugin/Ho_top,face2=0:gtneioreplugin/Ho_back,face3=0:gtneioreplugin/Ho_front,face4=0:gtneioreplugin/Ho_left,face5=0:gtneioreplugin/Ho_right
+
+# %blockDimensionDisplay_Mh:* (blockDimensionDisplay_Mh), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Mh,data=*,stdrot=true,face0=0:gtneioreplugin/Mh_bottom,face1=0:gtneioreplugin/Mh_top,face2=0:gtneioreplugin/Mh_back,face3=0:gtneioreplugin/Mh_front,face4=0:gtneioreplugin/Mh_left,face5=0:gtneioreplugin/Mh_right
+
+# %blockDimensionDisplay_MB:* (blockDimensionDisplay_MB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_MB,data=*,stdrot=true,face0=0:gtneioreplugin/MB_bottom,face1=0:gtneioreplugin/MB_top,face2=0:gtneioreplugin/MB_back,face3=0:gtneioreplugin/MB_front,face4=0:gtneioreplugin/MB_left,face5=0:gtneioreplugin/MB_right
+
+# %blockDimensionDisplay_Np:* (blockDimensionDisplay_Np), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Np,data=*,stdrot=true,face0=0:gtneioreplugin/Np_bottom,face1=0:gtneioreplugin/Np_top,face2=0:gtneioreplugin/Np_back,face3=0:gtneioreplugin/Np_front,face4=0:gtneioreplugin/Np_left,face5=0:gtneioreplugin/Np_right
+
+# %blockDimensionDisplay_Se:* (blockDimensionDisplay_Se), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_Se,data=*,stdrot=true,face0=0:gtneioreplugin/Se_bottom,face1=0:gtneioreplugin/Se_top,face2=0:gtneioreplugin/Se_back,face3=0:gtneioreplugin/Se_front,face4=0:gtneioreplugin/Se_left,face5=0:gtneioreplugin/Se_right
+
+# %blockDimensionDisplay_DD:* (blockDimensionDisplay_DD), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+block:id=%blockDimensionDisplay_DD,data=*,stdrot=true,face0=0:gtneioreplugin/DD_bottom,face1=0:gtneioreplugin/DD_top,face2=0:gtneioreplugin/DD_back,face3=0:gtneioreplugin/DD_front,face4=0:gtneioreplugin/DD_left,face5=0:gtneioreplugin/DD_right

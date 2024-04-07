@@ -22,6 +22,6 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %controllerSlave:* (controllerSlave), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(CUSTOM), opaque=true,cls=com.jaquadro.minecraft.storagedrawers.block.BlockSlave
+# %controllerSlave:* (controllerSlave), render=(CUSTOM), opaque=true,cls=com.jaquadro.minecraft.storagedrawers.block.BlockSlave
 
-# %trim:* (trim), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(CUSTOM), opaque=true,cls=com.jaquadro.minecraft.storagedrawers.block.BlockTrim
+# %trim:* (trim), render=(CUSTOM), opaque=true,cls=com.jaquadro.minecraft.storagedrawers.block.BlockTrim
