@@ -1,4 +1,4 @@
-# miscutils 1.7.226
+# miscutils 1.11.46
 version:1.7
 modname:miscutils
 
@@ -137,26 +137,8 @@ boxblock:id=%miscutils_fluidBlockSludge,ymax=0.125,data=15
 
 # %blockHellFire:* (blockHellFire), render=(FIRE), opaque=false,cls=gtPlusPlus.core.block.general.HellFire
 
-# %blockNet:* (blockNet), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.core.block.general.BlockNet
-patchblock:id=%blockNet,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %blockDecayablesChest:* (blockDecayablesChest), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.machine.DecayablesChest
 boxblock:id=%blockDecayablesChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
-
-# %tile.playerDoorWood:* (tile.playerDoorWood), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
-customblock:id=%tile.playerDoorWood,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-
-# %tile.playerDoorIron:* (tile.playerDoorIron), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
-customblock:id=%tile.playerDoorIron,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-
-# %tile.playerDoorGlass:* (tile.playerDoorGlass), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
-customblock:id=%tile.playerDoorGlass,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-
-# %tile.playerDoorIce:* (tile.playerDoorIce), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
-customblock:id=%tile.playerDoorIce,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-
-# %tile.playerDoorCactus:* (tile.playerDoorCactus), render=(DOOR), opaque=false,cls=gtPlusPlus.core.block.general.PlayerDoors
-customblock:id=%tile.playerDoorCactus,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
 
 # %FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Pyrotheum
 boxblock:id=%FluidPyrotheum,ymax=0.875,data=1
@@ -228,7 +210,7 @@ boxblock:id=%fluidSludge,ymax=0.375,data=13
 boxblock:id=%fluidSludge,ymax=0.25,data=14
 boxblock:id=%fluidSludge,ymax=0.125,data=15
 
-# %dimensionDarkWorld_portal:* (dimensionDarkWorld_portal), render=gtPlusPlus.xmod.gregtech.common.render.GTPP_Render_MachineBlock(STANDARD), opaque=false,cls=gtPlusPlus.everglades.block.BlockEvergladesPortal
+# %dimensionDarkWorld_portal:* (dimensionDarkWorld_portal), render=(STANDARD), opaque=false,cls=gtPlusPlus.everglades.block.BlockEvergladesPortal
 boxblock:id=%dimensionDarkWorld_portal,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
 # %oreRareEarthI:* (oreRareEarthI), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
