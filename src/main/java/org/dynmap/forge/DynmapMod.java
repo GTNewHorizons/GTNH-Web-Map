@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
+import cpw.mods.fml.common.Loader;
 import org.dynmap.DynmapCommonAPI;
 import org.dynmap.DynmapCommonAPIListener;
 import org.dynmap.Log;
@@ -27,6 +28,7 @@ import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkCheckHandler;
 import cpw.mods.fml.relauncher.Side;
 import org.dynmap.forge.integration.ForgeChunkLoaderMarkers;
+import org.dynmap.forge.integration.ServerUtilitiesClaimedChunksMarkers;
 
 @Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
 public class DynmapMod
@@ -132,8 +134,11 @@ public class DynmapMod
 
         if(GwmConfig.enableChunkLoadingMarkers){
             DynmapCommonAPIListener.register(new ForgeChunkLoaderMarkers());
-
             ForgeChunkLoaderMarkers.updateMarkers();
+        }
+
+        if(GwmConfig.enableServerUtilitiesClaimsMarkers && Loader.isModLoaded("serverutilities")){
+            DynmapCommonAPIListener.register(new ServerUtilitiesClaimedChunksMarkers());
         }
     }
     @EventHandler
