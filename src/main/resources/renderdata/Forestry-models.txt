@@ -175,26 +175,6 @@ patchblock:id=%stump,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchS
 patchblock:id=%stump,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
 patchblock:id=%stump,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %slabs:* (slabs), render=(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
-boxblock:id=%slabs,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%slabs,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
-
-# %fences:* (fences), render=(FENCE), opaque=false,cls=forestry.arboriculture.blocks.BlockArbFence
-customblock:id=%fences,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
-
-# %stairs:* (stairs), render=(STAIRS), opaque=false,cls=forestry.arboriculture.blocks.BlockArbStairs
-customblock:id=%stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
-
-# %slabsFireproof:* (slabsFireproof), render=(STANDARD), opaque=false,cls=forestry.arboriculture.blocks.BlockSlab
-boxblock:id=%slabsFireproof,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%slabsFireproof,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
-
-# %fencesFireproof:* (fencesFireproof), render=(FENCE), opaque=false,cls=forestry.arboriculture.blocks.BlockArbFence
-customblock:id=%fencesFireproof,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
-
-# %stairsFireproof:* (stairsFireproof), render=(STAIRS), opaque=false,cls=forestry.arboriculture.blocks.BlockArbStairs
-customblock:id=%stairsFireproof,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
-
 # %saplingGE:* (saplingGE), render=forestry.arboriculture.render.RenderSaplingBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockSapling
 #boxblock:id=%saplingGE,xmin=0.09999999403953552,xmax=0.8999999761581421,ymin=0.0,ymax=0.800000011920929,zmin=0.09999999403953552,zmax=0.8999999761581421,data=*
 patchblock:id=%saplingGE,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
@@ -223,3 +203,9 @@ boxblock:id=%pods,xmin=0.3125,xmax=0.9375,ymin=0.0625,ymax=0.75,zmin=0.1875,zmax
 patchblock:id=%mushroom,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %ffarm:* (ffarm), render=forestry.farming.render.RenderFarmBlock(CUSTOM), opaque=true,cls=forestry.farming.blocks.BlockFarm
+
+customblock:id=%logs,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=WT,max=29,type=Wood
+customblock:id=%planks,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=WT,max=29,type=Plank
+customblock:id=%stairs,id=%stairsFireproof,class=org.dynmap.hdmap.renderer.ForestryStairBlockRenderer,data=*,key=WT,max=29,type=Plank
+customblock:id=%fences,id=%fencesFireproof,class=org.dynmap.hdmap.renderer.ForestryFenceBlockRenderer,data=*,key=WT,max=29,type=Plank
+customblock:id=%slabs,id=%slabsFireproof,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=WT,max=29,type=Slab
