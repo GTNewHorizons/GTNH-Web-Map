@@ -33,6 +33,13 @@ public abstract class CustomRenderer {
     protected static RenderPatch[] getBoxSingleTextureInt(RenderPatchFactory rpf, int xmin, int xmax, int ymin, int ymax, int zmin, int zmax, int tex, boolean rotateTopAndBottom) {
         return getBoxSingleTexture(rpf, xmin/16.0, xmax/16.0, ymin/16.0,ymax/16.0,zmin/16.0,zmax/16.0,tex, rotateTopAndBottom);
     }
+
+    protected static RenderPatch[] getBoxFull(RenderPatchFactory rpf, int[] patchIndices) {
+        ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
+        CustomRenderer.addBox(rpf, list, 0, 1, 0, 1, 0, 1, patchIndices);
+        return list.toArray(new RenderPatch[patchIndices.length]);
+    }
+
     /**
      * Initialize custom renderer
      *

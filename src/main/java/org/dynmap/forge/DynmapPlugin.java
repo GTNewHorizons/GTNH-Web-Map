@@ -1421,7 +1421,6 @@ public class DynmapPlugin
             return;
         }
         core_enabled = true;
-        VersionCheck.runCheck(core);
         // Get per tick time limit
         perTickLimit = core.getMaxTickUseMS() * 1000000;
         // Prep TPS

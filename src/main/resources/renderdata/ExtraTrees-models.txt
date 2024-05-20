@@ -23,19 +23,11 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %fence:* (fence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockFence
-customblock:id=%fence,class=org.dynmap.hdmap.renderer.ExtraTreesFenceRenderer,type=fence,link0=107,data=*
-
 # %multifence:* (multifence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockMultiFence
 boxblock:id=%multifence,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
 
 # %gate:* (gate), render=(FENCEGATE), opaque=false,cls=binnie.extratrees.block.decor.BlockGate
 customblock:id=%gate,class=org.dynmap.hdmap.renderer.ExtraTreesFenceGateRenderer,type=fence,link0=107,data=*
-
-customblock:id=%stairs,class=org.dynmap.hdmap.renderer.ExtraTreesStairBlockRenderer,data=*
-
-# %slab:* (slab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
-customblock:id=%slab,class=org.dynmap.hdmap.renderer.ExtraTreesSlabRenderer,data=*
 
 # %doubleSlab:* (doubleSlab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
 boxblock:id=%doubleSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
@@ -58,3 +50,9 @@ boxblock:id=%hedge,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,dat
 
 # %panel:* (panel), render=binnie.extratrees.carpentry.DesignBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockCarpentryPanel
 boxblock:id=%panel,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+customblock:id=%log,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=meta,max=40,type=Wood
+customblock:id=%planks,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=meta,max=35,type=Plank
+customblock:id=%stairs,class=org.dynmap.hdmap.renderer.ForestryStairBlockRenderer,data=*,key=meta,max=35,type=Plank
+customblock:id=%fence,class=org.dynmap.hdmap.renderer.ForestryFenceBlockRenderer,data=*,key=meta,max=35,type=Plank
+customblock:id=%slab,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=meta,max=35,type=Slab

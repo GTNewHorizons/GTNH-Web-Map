@@ -4,7 +4,8 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
-import org.dynmap.DynmapCommonAPI; 
+import cpw.mods.fml.common.Loader;
+import org.dynmap.DynmapCommonAPI;
 import org.dynmap.DynmapCommonAPIListener;
 import org.dynmap.Log;
 import org.dynmap.forge.DynmapPlugin.OurLog;
@@ -26,6 +27,8 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkCheckHandler;
 import cpw.mods.fml.relauncher.Side;
+import org.dynmap.forge.integration.ForgeChunkLoaderMarkers;
+import org.dynmap.forge.integration.ServerUtilitiesClaimedChunksMarkers;
 
 @Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
 public class DynmapMod
@@ -75,7 +78,7 @@ public class DynmapMod
     public void preInit(FMLPreInitializationEvent event)
     {
         jarfile = event.getSourceFile();
-        // Load configuration file - use suggested (config/WesterosBlocks.cfg)
+
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
         try {
             cfg.load();
@@ -86,6 +89,8 @@ public class DynmapMod
         {
             cfg.save();
         }
+
+        GwmConfig.init(new File(event.getModConfigurationDirectory(), "GTNH-Web-Map.cfg"));
 
     }
 
@@ -126,6 +131,15 @@ public class DynmapMod
         if(plugin == null)
             plugin = proxy.startServer();
         plugin.serverStarted();
+
+        if(GwmConfig.enableChunkLoadingMarkers){
+            DynmapCommonAPIListener.register(new ForgeChunkLoaderMarkers());
+            ForgeChunkLoaderMarkers.updateMarkers();
+        }
+
+        if(GwmConfig.enableServerUtilitiesClaimsMarkers && Loader.isModLoaded("serverutilities")){
+            DynmapCommonAPIListener.register(new ServerUtilitiesClaimedChunksMarkers());
+        }
     }
     @EventHandler
     public void serverStopping(FMLServerStoppingEvent event)

@@ -77,9 +77,6 @@ patchblock:id=%blockDynamite,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=V
 # %blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
 patchblock:id=%blockDynamiteRemote,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
 
-# %blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.crop.BlockCrop
-patchblock:id=%blockCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
-
 # %blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
 
 # %fluidUuMatter:* (fluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
@@ -257,3 +254,5 @@ boxblock:id=%fluidHotWater,ymax=0.5,data=12
 boxblock:id=%fluidHotWater,ymax=0.375,data=13
 boxblock:id=%fluidHotWater,ymax=0.25,data=14
 boxblock:id=%fluidHotWater,ymax=0.125,data=15
+
+customblock:id=%blockCrop,class=org.dynmap.hdmap.renderer.IC2CropsRenderer,data=*
