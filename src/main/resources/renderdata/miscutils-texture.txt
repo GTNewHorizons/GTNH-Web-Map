@@ -200,7 +200,16 @@ texture:id=miscutils/trees/logs/log_rainforest,filename=assets/miscutils/texture
 texture:id=miscutils/trees/logs/log_rainforest_top,filename=assets/miscutils/textures/blocks/trees/logs/log_rainforest_top.png
 texture:id=miscutils/trees/saplings/sapling_pine,filename=assets/miscutils/textures/blocks/trees/saplings/sapling_pine.png
 texture:id=miscutils/trees/saplings/sapling_rainforest,filename=assets/miscutils/textures/blocks/trees/saplings/sapling_rainforest.png
-
+texture:id=miscutils/crop/blockCrop.Force.1,filename=assets/miscutils/textures/blocks/crop/blockCrop.Force.1.png
+texture:id=miscutils/crop/blockCrop.Force.2,filename=assets/miscutils/textures/blocks/crop/blockCrop.Force.2.png
+texture:id=miscutils/crop/blockCrop.Force.3,filename=assets/miscutils/textures/blocks/crop/blockCrop.Force.3.png
+texture:id=miscutils/crop/blockCrop.Force.4,filename=assets/miscutils/textures/blocks/crop/blockCrop.Force.4.png
+texture:id=miscutils/crop/blockCrop.Force.5,filename=assets/miscutils/textures/blocks/crop/blockCrop.Force.5.png
+texture:id=miscutils/crop/blockCrop.Hemp.1,filename=assets/miscutils/textures/blocks/crop/blockCrop.Hemp.1.png
+texture:id=miscutils/crop/blockCrop.Hemp.2,filename=assets/miscutils/textures/blocks/crop/blockCrop.Hemp.2.png
+texture:id=miscutils/crop/blockCrop.Hemp.3,filename=assets/miscutils/textures/blocks/crop/blockCrop.Hemp.3.png
+texture:id=miscutils/crop/blockCrop.Hemp.4,filename=assets/miscutils/textures/blocks/crop/blockCrop.Hemp.4.png
+texture:id=miscutils/crop/blockCrop.Hemp.5,filename=assets/miscutils/textures/blocks/crop/blockCrop.Hemp.5.png
 
 
 # %blockBlockSelenium:* (blockBlockSelenium), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
@@ -1103,6 +1112,11 @@ moddata:mod=gtmte,type=hatchbase,block=miscutils:gtplusplus.blockcasings.3,start
 moddata:mod=gtmte,type=hatchbase,block=miscutils:gtplusplus.blockcasings.4,start=112
 moddata:mod=gtmte,type=hatchbase,block=miscutils:gtplusplus.blockcasings.5,start=0,page=1
 moddata:mod=gtmte,type=hatchbase,block=miscutils:gtplusplus.blockcasings.6,start=16,page=1
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.IC2CropsSupportLoader,name=ic2crops
+moddata:mod=ic2crops,crop=Force,steps=5,step0=0:miscutils/crop/blockCrop.Force.1,step1=0:miscutils/crop/blockCrop.Force.2,step2=0:miscutils/crop/blockCrop.Force.3,step3=0:miscutils/crop/blockCrop.Force.4,step4=0:miscutils/crop/blockCrop.Force.5
+moddata:mod=ic2crops,crop=Hemp,steps=5,step0=0:miscutils/crop/blockCrop.Hemp.1,step1=0:miscutils/crop/blockCrop.Hemp.2,step2=0:miscutils/crop/blockCrop.Hemp.3,step3=0:miscutils/crop/blockCrop.Hemp.4,step4=0:miscutils/crop/blockCrop.Hemp.5
+
 
 ######################################################################################################
 ######################################################################################################
