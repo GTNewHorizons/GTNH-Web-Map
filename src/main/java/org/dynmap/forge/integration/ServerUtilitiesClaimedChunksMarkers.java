@@ -41,6 +41,7 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
         GwmCommand.registerSubCommand(new UpdateSUClaimsGwmSubCommand("updatesuclaims"));
         markerAPI = api.getMarkerAPI();
         markerSet = markerAPI.createMarkerSet("suclaims", "Claimed Chunks (SU)", null, false);
+        markerSet.setHideByDefault(true);
         MinecraftServer server = MinecraftServer.getServer();
 
         for(WorldServer ws : server.worldServers){
