@@ -1546,6 +1546,18 @@ public class DynmapPlugin
 		public void onPlayerChangedDimension(PlayerChangedDimensionEvent event) {
             if(!core_enabled) return;
             getOrAddPlayer(event.player);	// Freshen player object reference
+
+            try {
+                MinecraftServer server = MinecraftServer.getServer();
+                WorldServer ws = server.worldServerForDimension(event.toDim);
+                if (ws != null) {
+                    String name = ForgeWorld.getWorldName(ws);
+                    core.visitWorld(name);
+                }
+            }
+            catch (Exception ex){
+                Log.severe("Exception when trying to visit dimension " + event.toDim + "!");
+            }
 		}
         @SubscribeEvent
 		public void onPlayerRespawn(PlayerRespawnEvent event) {

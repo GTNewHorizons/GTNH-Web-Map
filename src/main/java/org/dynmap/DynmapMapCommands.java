@@ -2,8 +2,11 @@ package org.dynmap;
 
 import java.util.*;
 
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.WorldServer;
 import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.common.DynmapPlayer;
+import org.dynmap.forge.ForgeWorld;
 import org.dynmap.hdmap.HDLighting;
 import org.dynmap.hdmap.HDMap;
 import org.dynmap.hdmap.HDPerspective;
@@ -75,6 +78,9 @@ public class DynmapMapCommands {
             else if(cmd.equalsIgnoreCase("enableonly")){
                 rslt = handleEnableOnly(sender, args, core, true);
             }
+            else if(cmd.equalsIgnoreCase("exploremode")){
+                rslt = handleExploreMode(sender, args, core);
+            }
             else if(cmd.equalsIgnoreCase("setorder")){
                 rslt = handleEnableOnly(sender, args, core, false);
             }
@@ -85,6 +91,45 @@ public class DynmapMapCommands {
                 sender.sendMessage("If you are done editing map data, run '/dynmap pause none' to resume rendering");
         }
         return rslt;
+    }
+
+    private boolean handleExploreMode(DynmapCommandSender sender, String[] args, DynmapCore core) {
+        if(!core.checkPlayerPermission(sender, "dmap.worldset"))
+            return true;
+
+        if(checkIfActive(core, sender)) {
+            return true;
+        }
+
+        Set<String> wnames = new HashSet<>();
+        if(args.length > 1) {
+            for(int i = 1; i < args.length; i++)
+                wnames.add(DynmapWorld.normalizeWorldName(args[i]));
+        } else {
+            MinecraftServer server = MinecraftServer.getServer();
+            WorldServer ws  = server.worldServerForDimension(0);
+            if(ws != null) {
+                wnames.add(ForgeWorld.getWorldName(ws));
+            }
+        }
+        boolean changed = false;
+
+        Collection<DynmapWorld> enabledWorlds = new ArrayList<>(core.getMapManager().getWorlds());
+        for (DynmapWorld w : enabledWorlds) {
+            String wname = w.getName();
+            boolean toBeEnabled = wnames.contains(wname);
+            changed |= core.setWorldEnable(wname, toBeEnabled);
+
+            if(!toBeEnabled) {
+                core.setWorldEnableOnVisit(wname, true);
+            }
+        }
+        if(changed) {
+            for (DynmapWorld w : enabledWorlds) {
+                core.refreshWorld(w.getName());
+            }
+        }
+        return true;
     }
 
     private boolean handleWorldList(DynmapCommandSender sender, String[] args, DynmapCore core) {
