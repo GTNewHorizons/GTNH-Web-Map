@@ -1,11 +1,6 @@
 package org.dynmap;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.common.DynmapPlayer;
@@ -34,8 +29,12 @@ public class DynmapMapCommands {
             return false;
         cmd = args[0];
         boolean rslt = false;
-        
-        if(cmd.equalsIgnoreCase("worldlist")) {
+
+        if(cmd.equalsIgnoreCase("help")) {
+            core.printCommandHelp(sender, "dmap", (args.length > 1)?args[1]:"");
+            return true;
+        }
+        else if(cmd.equalsIgnoreCase("worldlist")) {
             rslt = handleWorldList(sender, args, core);
         }
         else if(cmd.equalsIgnoreCase("perspectivelist")) {
@@ -73,12 +72,21 @@ public class DynmapMapCommands {
             else if(cmd.equalsIgnoreCase("mapadd")) {
                 rslt = handleMapSet(sender, args, core, true);
             }
+            else if(cmd.equalsIgnoreCase("enableonly")){
+                rslt = handleEnableOnly(sender, args, core, true);
+            }
+            else if(cmd.equalsIgnoreCase("setorder")){
+                rslt = handleEnableOnly(sender, args, core, false);
+            }
+            else if(cmd.equalsIgnoreCase("disableworlds")){
+                rslt = handleDisableWorlds(sender, args, core);
+            }
             if(rslt)
                 sender.sendMessage("If you are done editing map data, run '/dynmap pause none' to resume rendering");
         }
         return rslt;
     }
-    
+
     private boolean handleWorldList(DynmapCommandSender sender, String[] args, DynmapCore core) {
         if(!core.checkPlayerPermission(sender, "dmap.worldlist"))
             return true;
@@ -120,9 +128,114 @@ public class DynmapMapCommands {
         return true;
     }
 
+    private boolean handleEnableOnly(DynmapCommandSender sender, String[] args, DynmapCore core, boolean enableDisable) {
+        if(!core.checkPlayerPermission(sender, "dmap.worldset"))
+            return true;
+
+        if(checkIfActive(core, sender)) {
+            return true;
+        }
+
+        Set<String> wnames = new HashSet<>();
+        if(args.length > 1) {
+            for(int i = 1; i < args.length; i++)
+                wnames.add(DynmapWorld.normalizeWorldName(args[i]));
+        } else {
+            if(enableDisable) {
+                sender.sendMessage("No args provided - all current worlds will be disabled");
+            }
+            else {
+                sender.sendMessage("No args provided - order will be unaffected");
+            }
+        }
+
+        boolean changed = false;
+        if (enableDisable) {
+            Collection<DynmapWorld> enabledWorlds = new ArrayList<>(core.getMapManager().getWorlds());
+            for (DynmapWorld w : enabledWorlds) {
+                String wname = w.getName();
+                boolean toBeEnabled = wnames.contains(wname);
+                changed |= core.setWorldEnable(wname, toBeEnabled);
+            }
+
+            Collection<String> disabledWorlds = new ArrayList<>(core.getMapManager().getDisabledWorlds());
+            for (String wname : disabledWorlds) {
+                boolean toBeEnabled = wnames.contains(wname);
+                changed |= core.setWorldEnable(wname, toBeEnabled);
+                if(toBeEnabled) {
+                    core.refreshWorld(wname);
+                }
+            }
+        }
+
+        int numSet = 0;
+        for(int i = 1; i < args.length; i++){
+            String wname = args[i];
+
+            if(core.getWorld(wname) != null)
+                changed |= core.setWorldOrder(wname, numSet++);
+        }
+
+        if(changed) {
+            for (DynmapWorld w : core.getMapManager().getWorlds()) {
+                core.refreshWorld(w.getName());
+            }
+        }
+
+        if(enableDisable) {
+            sender.sendMessage("Number of enabled worlds: " + numSet);
+        }
+        else {
+            sender.sendMessage("Number of reordered worlds: " + numSet);
+        }
+
+        return true;
+    }
+
+    private boolean handleDisableWorlds(DynmapCommandSender sender, String[] args, DynmapCore core) {
+        if(!core.checkPlayerPermission(sender, "dmap.worldset"))
+            return true;
+
+        if(checkIfActive(core, sender)) {
+            return true;
+        }
+
+        Set<String> wnames = new HashSet<>();
+        if (args.length > 1) {
+            for (int i = 1; i < args.length; i++) {
+                String wname = DynmapWorld.normalizeWorldName(args[i]);
+                if(core.getWorld(wname) != null)
+                    wnames.add(wname);
+            }
+        } else {
+            sender.sendMessage("No args provided - no worlds will be affected");
+            return false;
+        }
+
+        if(wnames.size() <= 0){
+            sender.sendMessage("Found no enabled worlds to disable");
+            return false;
+        }
+
+        boolean changed = false;
+        for(String wname : wnames){
+            changed |= core.setWorldEnable(wname, false);
+        }
+
+        if(changed){
+            for(String wname : wnames) {
+                core.refreshWorld(wname);
+            }
+
+            sender.sendMessage("Disabled " + wnames.size() + " worlds");
+        }
+
+        return true;
+    }
     private boolean handleWorldSet(DynmapCommandSender sender, String[] args, DynmapCore core) {
         if(!core.checkPlayerPermission(sender, "dmap.worldset"))
             return true;
+
         if(args.length < 3) {
             sender.sendMessage("World name and setting:newvalue required");
             return true;
