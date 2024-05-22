@@ -88,7 +88,7 @@ public class DynmapCore implements DynmapCommonAPI {
         public abstract void configurationLoaded();
     }
 
-    public static final String TAG_TO_REPLACE_ON_EXTRACT = "${project.version}-${BUILD_NUMBER}";
+    public static final String TAG_TO_REPLACE_ON_EXTRACT = "${GWM_VERSION}";
     private File jarfile;
     private DynmapServerInterface server;
     private String version;
@@ -2274,7 +2274,7 @@ public class DynmapCore implements DynmapCommonAPI {
             deleteDirectory(new File(df, "texturepacks/standard"));
         }
         /* If matched, we're good */
-        if (prevver.equals(this.getDynmapCoreVersion())) {
+        if (prevver.equals(this.getDynmapCoreVersion()) && !prevver.contains("dirty")) {
             return;
         }
         /* Get deleted file list */
