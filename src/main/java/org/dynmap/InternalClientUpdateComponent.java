@@ -6,7 +6,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.dynmap.servlet.ClientUpdateServlet;
 import org.dynmap.servlet.SendMessageServlet;
 import org.json.simple.JSONObject;
-import static org.dynmap.JSONUtils.*;
 
 public class InternalClientUpdateComponent extends ClientUpdateComponent {
     protected long jsonInterval;
@@ -39,10 +38,10 @@ public class InternalClientUpdateComponent extends ClientUpdateComponent {
         dcore.events.addListener("buildclientconfiguration", new Event.Listener<JSONObject>() {
             @Override
             public void triggered(JSONObject t) {
-                s(t, "allowwebchat", allowwebchat);
-                s(t, "webchat-interval", webchatInterval);
-                s(t, "webchat-requires-login", req_login);
-                s(t, "chatlengthlimit", length_limit);
+                JSONUtils.s(t, "allowwebchat", allowwebchat);
+                JSONUtils.s(t, "webchat-interval", webchatInterval);
+                JSONUtils.s(t, "webchat-requires-login", req_login);
+                JSONUtils.s(t, "chatlengthlimit", length_limit);
             }
         });
 

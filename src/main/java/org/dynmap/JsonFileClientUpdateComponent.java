@@ -24,8 +24,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import static org.dynmap.JSONUtils.*;
-
 import java.nio.charset.Charset;
 
 public class JsonFileClientUpdateComponent extends ClientUpdateComponent {
@@ -160,13 +158,13 @@ public class JsonFileClientUpdateComponent extends ClientUpdateComponent {
         core.events.addListener("buildclientconfiguration", new Event.Listener<JSONObject>() {
             @Override
             public void triggered(JSONObject t) {
-                s(t, "jsonfile", true);
-                s(t, "allowwebchat", allowwebchat);
-                s(t, "webchat-requires-login", req_login);
-                s(t, "loginrequired", core.isLoginRequired());
+                JSONUtils.s(t, "jsonfile", true);
+                JSONUtils.s(t, "allowwebchat", allowwebchat);
+                JSONUtils.s(t, "webchat-requires-login", req_login);
+                JSONUtils.s(t, "loginrequired", core.isLoginRequired());
                 // For 'sendmessage.php'
-                s(t, "webchat-interval", configuration.getFloat("webchat-interval", 5.0f));
-                s(t, "chatlengthlimit", lengthlimit);
+                JSONUtils.s(t, "webchat-interval", configuration.getFloat("webchat-interval", 5.0f));
+                JSONUtils.s(t, "chatlengthlimit", lengthlimit);
             }
         });
         core.events.addListener("initialized", new Event.Listener<Object>() {

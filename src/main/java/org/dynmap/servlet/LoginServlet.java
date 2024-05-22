@@ -5,7 +5,7 @@ import static org.dynmap.JSONUtils.s;
 import org.dynmap.DynmapCore;
 import org.json.simple.JSONObject;
 
-import javax.servlet.*;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
