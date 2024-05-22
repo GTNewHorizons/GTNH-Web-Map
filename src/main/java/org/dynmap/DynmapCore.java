@@ -81,7 +81,7 @@ import org.eclipse.jetty.util.thread.ExecutorThreadPool;
 import org.eclipse.jetty.server.session.DefaultSessionIdManager;
 import org.yaml.snakeyaml.Yaml;
 
-import javax.servlet.*;
+import javax.servlet.Filter;
 import javax.servlet.http.HttpServlet;
 
 public class DynmapCore implements DynmapCommonAPI {

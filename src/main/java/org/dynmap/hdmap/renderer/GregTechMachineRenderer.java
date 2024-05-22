@@ -1,17 +1,23 @@
 package org.dynmap.hdmap.renderer;
 
+import gregtech.api.GregTech_API;
 import gregtech.api.enums.Dyes;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.metatileentity.MetaPipeEntity;
-import gregtech.api.metatileentity.implementations.*;
+import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Frame;
+import gregtech.api.metatileentity.implementations.GT_MetaTileEntity_MultiBlockBase;
+import gregtech.api.metatileentity.implementations.GT_MetaTileEntity_TieredMachineBlock;
 import gregtech.common.tileentities.machines.multi.GT_MetaTileEntity_PrimitiveBlastFurnace;
 import net.minecraftforge.common.util.ForgeDirection;
-import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.modsupport.gregtech.GregTechSupport;
-import org.dynmap.renderer.*;
-
-import gregtech.api.GregTech_API;
+import org.dynmap.renderer.CustomColorMultiplier;
+import org.dynmap.renderer.CustomRenderer;
+import org.dynmap.renderer.CustomRendererData;
+import org.dynmap.renderer.CustomTextureMapper;
+import org.dynmap.renderer.MapDataContext;
+import org.dynmap.renderer.RenderPatch;
+import org.dynmap.renderer.RenderPatchFactory;
 
 import java.util.ArrayList;
 import java.util.Map;

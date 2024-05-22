@@ -1,5 +1,26 @@
 package org.dynmap.hdmap;
 
+import org.dynmap.Color;
+import org.dynmap.ConfigurationNode;
+import org.dynmap.DynmapCore;
+import org.dynmap.Log;
+import org.dynmap.MapManager;
+import org.dynmap.common.BiomeMap;
+import org.dynmap.exporter.OBJExport;
+import org.dynmap.hdmap.textureprocessor.CustomTextureProcessor;
+import org.dynmap.modsupport.GWM_Util;
+import org.dynmap.renderer.CustomColorMultiplier;
+import org.dynmap.renderer.CustomModSupportLoader;
+import org.dynmap.renderer.CustomRendererData;
+import org.dynmap.renderer.CustomTextureMapper;
+import org.dynmap.utils.BlockStep;
+import org.dynmap.utils.BufferOutputStream;
+import org.dynmap.utils.DynIntHashMap;
+import org.dynmap.utils.DynmapBufferedImage;
+import org.dynmap.utils.ForgeConfigFile;
+import org.dynmap.utils.MapIterator;
+
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,25 +45,6 @@ import java.util.TreeSet;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
-
-import javax.imageio.ImageIO;
-
-import org.dynmap.Color;
-import org.dynmap.ConfigurationNode;
-import org.dynmap.DynmapCore;
-import org.dynmap.Log;
-import org.dynmap.MapManager;
-import org.dynmap.common.BiomeMap;
-import org.dynmap.exporter.OBJExport;
-import org.dynmap.hdmap.textureprocessor.CustomTextureProcessor;
-import org.dynmap.modsupport.GWM_Util;
-import org.dynmap.renderer.*;
-import org.dynmap.utils.BlockStep;
-import org.dynmap.utils.BufferOutputStream;
-import org.dynmap.utils.DynIntHashMap;
-import org.dynmap.utils.DynmapBufferedImage;
-import org.dynmap.utils.ForgeConfigFile;
-import org.dynmap.utils.MapIterator;
 
 /**
  * Loader and processor class for minecraft texture packs

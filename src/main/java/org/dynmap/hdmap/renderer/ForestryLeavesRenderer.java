@@ -1,7 +1,11 @@
 package org.dynmap.hdmap.renderer;
 
 import org.dynmap.modsupport.forestry.ForestrySupport;
-import org.dynmap.renderer.*;
+import org.dynmap.renderer.CustomRenderer;
+import org.dynmap.renderer.CustomRendererData;
+import org.dynmap.renderer.MapDataContext;
+import org.dynmap.renderer.RenderPatch;
+import org.dynmap.renderer.RenderPatchFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
