@@ -33,6 +33,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+import org.apache.commons.io.IOUtils;
 import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.common.DynmapListenerManager;
 import org.dynmap.common.DynmapListenerManager.EventType;
@@ -72,7 +73,6 @@ import org.eclipse.jetty.server.session.SessionHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.resource.FileResource;
 import org.eclipse.jetty.util.thread.ExecutorThreadPool;
-import org.yaml.snakeyaml.Yaml;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
@@ -87,6 +87,8 @@ public class DynmapCore implements DynmapCommonAPI {
          */
         public abstract void configurationLoaded();
     }
+
+    public static final String TAG_TO_REPLACE_ON_EXTRACT = "${project.version}-${BUILD_NUMBER}";
     private File jarfile;
     private DynmapServerInterface server;
     private String version;
@@ -2118,14 +2120,7 @@ public class DynmapCore implements DynmapCommonAPI {
     
     /* Load core version */
     private void loadVersion() {
-        InputStream in = getClass().getResourceAsStream("/core.yml");
-        if(in == null)
-            return;
-        Yaml yaml = new Yaml();
-        @SuppressWarnings("unchecked")
-        Map<String,Object> val = (Map<String,Object>)yaml.load(in);
-        if(val != null)
-            version = (String)val.get("version");
+        version = Tags.GRADLETOKEN_VERSION;
     }
     
     public int getSnapShotCacheSize() { return snapshotcachesize; }
@@ -2324,9 +2319,16 @@ public class DynmapCore implements DynmapCommonAPI {
                     f.getParentFile().mkdirs();
                     fos = new FileOutputStream(f);
                     ins = zf.getInputStream(ze);
-                    int len;
-                    while ((len = ins.read(buf)) >= 0) {
-                        fos.write(buf,  0,  len);
+
+                    if(n.endsWith(".html") || n.endsWith(".js") || n.endsWith(".php")){
+                        String data = IOUtils.toString(ins);
+                        data = data.replace(TAG_TO_REPLACE_ON_EXTRACT, Tags.GRADLETOKEN_VERSION);
+                        IOUtils.write(data, fos);
+                    }else {
+                        int len;
+                        while ((len = ins.read(buf)) >= 0) {
+                            fos.write(buf, 0, len);
+                        }
                     }
                     ins.close();
                     ins = null;

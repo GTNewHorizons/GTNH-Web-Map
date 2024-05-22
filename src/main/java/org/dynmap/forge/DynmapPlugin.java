@@ -65,15 +65,7 @@ import org.apache.commons.codec.Charsets;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.dynmap.ConfigurationNode;
-import org.dynmap.DynmapChunk;
-import org.dynmap.DynmapCommonAPIListener;
-import org.dynmap.DynmapCore;
-import org.dynmap.DynmapLocation;
-import org.dynmap.DynmapWorld;
-import org.dynmap.Log;
-import org.dynmap.MapManager;
-import org.dynmap.PlayerList;
+import org.dynmap.*;
 import org.dynmap.forge.DmapCommand;
 import org.dynmap.forge.DmarkerCommand;
 import org.dynmap.forge.DynmapCommand;
@@ -1392,7 +1384,7 @@ public class DynmapPlugin
 
         /* Inject dependencies */
         core.setPluginJarFile(DynmapMod.jarfile);
-        core.setPluginVersion(Version.VER);
+        core.setPluginVersion(Tags.GRADLETOKEN_VERSION);
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
         core.setServer(fserver);
