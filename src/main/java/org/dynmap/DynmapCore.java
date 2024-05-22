@@ -85,6 +85,7 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
 
 public class DynmapCore implements DynmapCommonAPI {
+
     /**
      * Callbacks for core initialization - subclassed by platform plugins
      */
@@ -1266,6 +1267,7 @@ public class DynmapCore implements DynmapCommonAPI {
         new CommandInfo("dmap", "disableworlds", "<world0> <world1> ...", "Disable all worlds in list."),
         new CommandInfo("dmap", "setorder", "<world0> <world1> ...", "Set the top worlds to the ones listed. Worlds not listed will be pushed down."),
         new CommandInfo("dmap", "enableonly", "<world0> <world1> ...", "Enable all worlds in list, disable the rest, and set the order of the enabled worlds to order of args."),
+        new CommandInfo("dmap", "exploremode", "<world0> <world1> ...", "Disable all currently enabled worlds not in args, and mark them as enable on visit. If list is empty, overworld will remain enabled."),
         new CommandInfo("dynmapexp", "", "Set and execute exports in OBJ format."),
         new CommandInfo("dynmapexp", "set", "<attrib> <value> ...", "Set bounds attributes for OBJ export."),
         new CommandInfo("dynmapexp", "reset", "Reset all bounds for OBJ export."),
@@ -2203,6 +2205,54 @@ public class DynmapCore implements DynmapCommonAPI {
         }
         return true;
     }
+    public boolean setWorldEnableOnVisit(String wname, boolean isenab) {
+        wname = DynmapWorld.normalizeWorldName(wname);
+        List<Map<String,Object>> worlds = world_config.getMapList("worlds");
+        for(Map<String,Object> m : worlds) {
+            String wn = (String)m.get("name");
+            if((wn != null) && (wn.equals(wname))) {
+                m.put("enableonvisit", isenab);
+                return true;
+            }
+        }
+        /* If not found, and disable, add disable node */
+        if(isenab == false) {
+            Map<String,Object> newworld = new LinkedHashMap<String,Object>();
+            newworld.put("name", wname);
+            newworld.put("enableonvisit", isenab);
+        }
+        return true;
+    }
+    public void visitWorld(String wname) {
+        wname = DynmapWorld.normalizeWorldName(wname);
+        List<Map<String,Object>> worlds = world_config.getMapList("worlds");
+        for(Map<String,Object> m : worlds) {
+            String wn = (String)m.get("name");
+            if((wn != null) && (wn.equals(wname))) {
+                if (m.get("enabled").equals(false)) {
+                    Object enableonvisit = m.get("enableonvisit");
+                    if (enableonvisit != null && enableonvisit.equals(true)) {
+                        boolean wasPausedFull = getPauseFullRadiusRenders();
+                        boolean wasPausedUpdate = getPauseUpdateRenders();
+
+                        setPauseFullRadiusRenders(true);
+                        setPauseUpdateRenders(true);
+
+                        setWorldEnable(wname, true);
+                        setWorldOrder(wname, 10000);
+                        refreshWorld(wname);
+
+                        if(!wasPausedFull)
+                            setPauseFullRadiusRenders(false);
+                        if(!wasPausedUpdate)
+                            setPauseUpdateRenders(false);
+                    }
+                }
+                return;
+            }
+        }
+    }
+
     public boolean setWorldZoomOut(String wname, int xzoomout) {
         wname = DynmapWorld.normalizeWorldName(wname);
         List<Map<String,Object>> worlds = world_config.getMapList("worlds");
