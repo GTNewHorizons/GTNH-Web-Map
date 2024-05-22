@@ -143,8 +143,9 @@ DynMap.prototype = {
 			.appendTo(container);
 
 		// Set the title if the options specify one.
-		if(me.options.title)
-			document.title = me.options.title;
+		if(me.options.title){
+		    document.title = me.options.title;
+		}
 
 		// Try to set the default zoom level based on the URL parameter.
 		var urlzoom = me.getIntParameterByName('zoom');
@@ -529,6 +530,10 @@ DynMap.prototype = {
 		me.map.options.minZoom = me.maptype.options.minZoom;
 
 		if (projectionChanged || worldChanged || location) {
+
+            if(me.options.title && (me.options.title.includes("$world") || me.options.title.includes("$map")))
+                document.title = me.options.title.replaceAll("$world",me.world.title).replaceAll("$map", map.options.title);
+
 			var centerPoint;
 			if(location) {
 				centerPoint = me.getProjection().fromLocationToLatLng(location);

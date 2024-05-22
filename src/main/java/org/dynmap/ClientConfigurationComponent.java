@@ -28,8 +28,8 @@ public class ClientConfigurationComponent extends Component {
                 s(t, "grayplayerswhenhidden", c.getBoolean("grayplayerswhenhidden", true));
                 s(t, "login-enabled", core.isLoginSupportEnabled());
                 String sn = core.getServer().getServerName();
-                if(sn.equals("Unknown Server"))
-                    sn = "Minecraft Dynamic Map";
+                if(sn.equals("Unknown Server") || sn.equals("") || sn.equals("0.0.0.0"))
+                    sn = "$world - $map - GTNH-Web-Map";
                 s(t, "title", c.getString("webpage-title", sn));
                 s(t, "msg-maptypes", c.getString("msg/maptypes", "Map Types"));
                 s(t, "msg-players", c.getString("msg/players", "Players"));
