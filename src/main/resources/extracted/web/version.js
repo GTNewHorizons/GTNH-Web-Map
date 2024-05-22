@@ -1,2 +1,1 @@
-var dynmapversion = "GRADLETOKEN_VERSION";
-
+var dynmapversion = "${GWM_VERSION}";

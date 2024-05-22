@@ -8,6 +8,7 @@ import cpw.mods.fml.common.Loader;
 import org.dynmap.DynmapCommonAPI;
 import org.dynmap.DynmapCommonAPIListener;
 import org.dynmap.Log;
+import org.dynmap.Tags;
 import org.dynmap.forge.DynmapPlugin.OurLog;
 
 import net.minecraft.server.MinecraftServer;
@@ -30,7 +31,7 @@ import cpw.mods.fml.relauncher.Side;
 import org.dynmap.forge.integration.ForgeChunkLoaderMarkers;
 import org.dynmap.forge.integration.ServerUtilitiesClaimedChunksMarkers;
 
-@Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
+@Mod(modid = "Dynmap", name = "Dynmap", version = Tags.GRADLETOKEN_VERSION)
 public class DynmapMod
 {
     // The instance of your mod that Forge uses.
