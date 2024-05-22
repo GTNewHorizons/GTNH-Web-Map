@@ -2734,10 +2734,10 @@ public class TexturePack {
 
             if(customTextureMapper != null) {
                 int[] layers = customTextureMapper.getTextureLayersForPatchId(patchid);
-                ccm = crd.getCustomColorMultiplier(patchid);
                 if(layers != null && layers.length > 0){
                     for(int layer = layers.length - 1; layer >= 0; layer--){
                         int customTextureId = layers[layer];
+                        ccm = crd.getCustomColorMultiplier(patchid, layer);
 
                         if (ctm != null) {
                             int mod = 0;
@@ -2760,6 +2760,9 @@ public class TexturePack {
                     }
                     handledByCustomRendering = true;
                 }
+            }
+            else {
+                ccm = crd.getCustomColorMultiplier(patchid, 0);
             }
         }
         if (!handledByCustomRendering) {

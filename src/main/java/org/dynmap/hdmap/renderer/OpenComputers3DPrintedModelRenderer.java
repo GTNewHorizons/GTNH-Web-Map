@@ -149,11 +149,11 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
         }
 
         @Override
-        public CustomColorMultiplier getCustomColorMultiplier(int patchId) {
+        public CustomColorMultiplier getCustomColorMultiplier(int patchId, int layer) {
             if(patchId >= 6)
                 return multipliers[patchId - 6];
 
-            return super.getCustomColorMultiplier(patchId);
+            return super.getCustomColorMultiplier(patchId, layer);
         }
 
         class SimpleColorMultiplier extends CustomColorMultiplier {

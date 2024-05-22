@@ -19,7 +19,7 @@ public class CustomRendererData {
         return custTextMapper;
     }
 
-    public CustomColorMultiplier getCustomColorMultiplier(int patchId) {
+    public CustomColorMultiplier getCustomColorMultiplier(int patchId, int layer) {
         return custColorMult;
     }
 }
