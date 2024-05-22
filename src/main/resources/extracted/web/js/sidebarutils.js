@@ -12,7 +12,7 @@ var SidebarUtils = {
 				content
 					.addClass('content')
 					.bind('mousewheel', function(event, delta){
-						this.scrollTop -= (delta * 10);
+						this.scrollTop -= (delta * 50);
 						event.preventDefault();
 					})
 			)
@@ -34,7 +34,7 @@ var SidebarUtils = {
 	
 	createScrollButton: function (up, target) {
 		var cls = up ? 'scrollup' : 'scrolldown';
-		var amount = (up ? '-' : '+') + '=300px';
+		var amount = (up ? '-' : '+') + '=800px';
 		
 		return $('<div/>')
 			.addClass(cls)
