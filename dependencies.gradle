@@ -57,9 +57,6 @@ dependencies {
     shadowImplementation("org.eclipse.jetty:jetty-annotations:9.4.51.v20230217") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016"){
-        transitive = false
-    }
     shadowImplementation("com.googlecode.json-simple:json-simple:1.1.1") {
         transitive = false
     }
