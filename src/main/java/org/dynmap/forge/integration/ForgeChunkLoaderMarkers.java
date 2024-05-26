@@ -14,6 +14,7 @@ import net.minecraftforge.common.MinecraftForge;
 import org.dynmap.DynmapCommonAPI;
 import org.dynmap.DynmapCommonAPIListener;
 import org.dynmap.DynmapCore;
+import org.dynmap.DynmapWorld;
 import org.dynmap.forge.ForgeWorld;
 import org.dynmap.forge.GwmCommand;
 import org.dynmap.forge.GwmConfig;
@@ -91,7 +92,8 @@ public class ForgeChunkLoaderMarkers extends DynmapCommonAPIListener {
 
         String worldName = ForgeWorld.getWorldName(ticket.world);
 
-        if(!fullAPI.getWorld(worldName).isEnabled())
+        DynmapWorld world = fullAPI.getWorld(worldName);
+        if(world == null || !world.isEnabled())
             return;
 
         int minX = Integer.MAX_VALUE, minZ = Integer.MAX_VALUE, maxX = Integer.MIN_VALUE, maxZ = Integer.MIN_VALUE;
