@@ -1,4 +1,4 @@
-# tectech 5.3.42
+# tectech 5.3.47
 version:1.7
 modname:tectech
 
@@ -54,14 +54,6 @@ texture:id=gregtech/iconsets/EM_TIMESPACE,filename=assets/gregtech/textures/bloc
 texture:id=gregtech/iconsets/EM_ULTIMATE_CASING,filename=assets/gregtech/textures/blocks/iconsets/EM_ULTIMATE_CASING.png
 texture:id=gregtech/iconsets/EM_ULTIMATE_FIELD,filename=assets/gregtech/textures/blocks/iconsets/EM_ULTIMATE_FIELD.png
 texture:id=gregtech/iconsets/EM_ULTIMATE_FIELD_CASING,filename=assets/gregtech/textures/blocks/iconsets/EM_ULTIMATE_FIELD_CASING.png
-texture:id=gregtech/iconsets/GODFORGE_ENERGY,filename=assets/gregtech/textures/blocks/iconsets/GODFORGE_ENERGY.png
-texture:id=gregtech/iconsets/GODFORGE_INNER,filename=assets/gregtech/textures/blocks/iconsets/GODFORGE_INNER.png
-texture:id=gregtech/iconsets/GODFORGE_SUPPORT,filename=assets/gregtech/textures/blocks/iconsets/GODFORGE_SUPPORT.png
-texture:id=gregtech/iconsets/GODFORGE_TRIM,filename=assets/gregtech/textures/blocks/iconsets/GODFORGE_TRIM.png
-texture:id=gregtech/iconsets/GRAVITON_CASING_0,filename=assets/gregtech/textures/blocks/iconsets/GRAVITON_CASING_0.png
-texture:id=gregtech/iconsets/GRAVITON_CASING_1,filename=assets/gregtech/textures/blocks/iconsets/GRAVITON_CASING_1.png
-texture:id=gregtech/iconsets/GRAVITON_CASING_2,filename=assets/gregtech/textures/blocks/iconsets/GRAVITON_CASING_2.png
-texture:id=gregtech/iconsets/GRAVITON_TOP_BOTTOM,filename=assets/gregtech/textures/blocks/iconsets/GRAVITON_TOP_BOTTOM.png
 texture:id=gregtech/iconsets/MACHINE_CASING_SOLID_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_SOLID_STEEL.png
 texture:id=gregtech/iconsets/STABILITY_CASING_0,filename=assets/gregtech/textures/blocks/iconsets/STABILITY_CASING_0.png
 texture:id=gregtech/iconsets/STABILITY_CASING_1,filename=assets/gregtech/textures/blocks/iconsets/STABILITY_CASING_1.png
@@ -94,7 +86,6 @@ texture:id=gregtech/iconsets/TM_TESLA_WINDING_SECONDARY_TOP_BOTTOM,filename=asse
 texture:id=gregtech/iconsets/TRANSPARENT,filename=assets/gregtech/textures/blocks/iconsets/TRANSPARENT.png
 texture:id=tectech/blockQuantumGlass,filename=assets/tectech/textures/blocks/blockQuantumGlass.png
 texture:id=tectech/blockReactorSimulator,filename=assets/tectech/textures/blocks/blockReactorSimulator.png
-texture:id=tectech/blockSpatiallyTranscendentGravitationalLens,filename=assets/tectech/textures/blocks/blockSpatiallyTranscendentGravitationalLens.png
 
 
 
@@ -173,20 +164,6 @@ block:id=%gt.stabilisation_field_generator,data=6,stdrot=true,face0-5=0:gregtech
 block:id=%gt.stabilisation_field_generator,data=7,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_7
 block:id=%gt.stabilisation_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_8
 block:id=%gt.stabilisation_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
-
-# %gt.godforgecasing:* (gt.godforgecasing), render=(STANDARD), opaque=true,cls=com.github.technus.tectech.thing.casing.GodforgeCasings
-block:id=%gt.godforgecasing,data=0,stdrot=true,face0-5=0:gregtech/iconsets/GODFORGE_TRIM
-block:id=%gt.godforgecasing,data=1,stdrot=true,face0-5=0:gregtech/iconsets/GODFORGE_INNER
-block:id=%gt.godforgecasing,data=2,stdrot=true,face0-5=0:gregtech/iconsets/GODFORGE_SUPPORT
-block:id=%gt.godforgecasing,data=3,stdrot=true,face0-5=0:gregtech/iconsets/GRAVITON_TOP_BOTTOM
-block:id=%gt.godforgecasing,data=4,stdrot=true,face0-5=0:gregtech/iconsets/GODFORGE_ENERGY
-block:id=%gt.godforgecasing,data=5,stdrot=true,face0-1=0:gregtech/iconsets/GRAVITON_TOP_BOTTOM,face2-5=0:gregtech/iconsets/GRAVITON_CASING_2
-block:id=%gt.godforgecasing,data=6,stdrot=true,face0-1=0:gregtech/iconsets/GRAVITON_TOP_BOTTOM,face2-5=0:gregtech/iconsets/GRAVITON_CASING_1
-block:id=%gt.godforgecasing,data=7,stdrot=true,face0-1=0:gregtech/iconsets/GRAVITON_TOP_BOTTOM,face2-5=0:gregtech/iconsets/GRAVITON_CASING_0
-block:id=%gt.godforgecasing,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
-
-# %tile.spatiallyTranscendentGravitationalLens:* (tile.spatiallyTranscendentGravitationalLens), render=com.github.technus.tectech.thing.block.GodforgeGlassRender(CUSTOM), opaque=false,cls=com.github.technus.tectech.thing.block.GodforgeGlassBlock
-block:id=%tile.spatiallyTranscendentGravitationalLens,data=*,stdrot=true,face0-5=12000:tectech/blockSpatiallyTranscendentGravitationalLens
 
 # %tile.quantumGlass:* (tile.quantumGlass), render=com.github.technus.tectech.thing.block.QuantumGlassRender(CUSTOM), opaque=false,cls=com.github.technus.tectech.thing.block.QuantumGlassBlock
 block:id=%tile.quantumGlass,data=*,stdrot=true,face0-5=12000:tectech/blockQuantumGlass
