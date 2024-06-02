@@ -60,7 +60,7 @@ dependencies {
     shadowImplementation("com.googlecode.json-simple:json-simple:1.1.1") {
         transitive = false
     }
-    shadowImplementation("org.yaml:snakeyaml:1.23") {
+    shadowImplementation("org.yaml:snakeyaml:2.2") {
         transitive = false
     }
     shadowImplementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20180219.1") {

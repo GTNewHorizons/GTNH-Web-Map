@@ -1,4 +1,4 @@
-# TwilightForest 2.5.19
+# TwilightForest 2.5.25
 version:1.7
 modname:TwilightForest
 
@@ -49,9 +49,6 @@ texture:id=TwilightForest/darkwood_top,filename=assets/twilightforest/textures/b
 texture:id=TwilightForest/deadrock_cracked,filename=assets/twilightforest/textures/blocks/deadrock_cracked.png
 texture:id=TwilightForest/deadrock_solid,filename=assets/twilightforest/textures/blocks/deadrock_solid.png
 texture:id=TwilightForest/deadrock_surface,filename=assets/twilightforest/textures/blocks/deadrock_surface.png
-texture:id=TwilightForest/etched_nagastone_down,filename=assets/twilightforest/textures/blocks/etched_nagastone_down.png
-texture:id=TwilightForest/etched_nagastone_down_mossy,filename=assets/twilightforest/textures/blocks/etched_nagastone_down_mossy.png
-texture:id=TwilightForest/etched_nagastone_down_weathered,filename=assets/twilightforest/textures/blocks/etched_nagastone_down_weathered.png
 texture:id=TwilightForest/experiment115/experiment115_bottom,filename=assets/twilightforest/textures/blocks/experiment115/experiment115_bottom.png
 texture:id=TwilightForest/experiment115/experiment115_inner,filename=assets/twilightforest/textures/blocks/experiment115/experiment115_inner.png
 texture:id=TwilightForest/experiment115/experiment115_side,filename=assets/twilightforest/textures/blocks/experiment115/experiment115_side.png
@@ -103,22 +100,48 @@ texture:id=TwilightForest/mine_section,filename=assets/twilightforest/textures/b
 texture:id=TwilightForest/mine_side,filename=assets/twilightforest/textures/blocks/mine_side.png
 texture:id=TwilightForest/mosspatch,filename=assets/twilightforest/textures/blocks/mosspatch.png
 texture:id=TwilightForest/mushgloom,filename=assets/twilightforest/textures/blocks/mushgloom.png
-texture:id=TwilightForest/nagastone_bottom_long,filename=assets/twilightforest/textures/blocks/nagastone_bottom_long.png
-texture:id=TwilightForest/nagastone_bottom_tip,filename=assets/twilightforest/textures/blocks/nagastone_bottom_tip.png
-texture:id=TwilightForest/nagastone_cross_section,filename=assets/twilightforest/textures/blocks/nagastone_cross_section.png
-texture:id=TwilightForest/nagastone_face_front,filename=assets/twilightforest/textures/blocks/nagastone_face_front.png
-texture:id=TwilightForest/nagastone_face_left,filename=assets/twilightforest/textures/blocks/nagastone_face_left.png
-texture:id=TwilightForest/nagastone_face_right,filename=assets/twilightforest/textures/blocks/nagastone_face_right.png
-texture:id=TwilightForest/nagastone_pillar_end,filename=assets/twilightforest/textures/blocks/nagastone_pillar_end.png
-texture:id=TwilightForest/nagastone_pillar_end_mossy,filename=assets/twilightforest/textures/blocks/nagastone_pillar_end_mossy.png
-texture:id=TwilightForest/nagastone_pillar_end_weathered,filename=assets/twilightforest/textures/blocks/nagastone_pillar_end_weathered.png
-texture:id=TwilightForest/nagastone_pillar_side,filename=assets/twilightforest/textures/blocks/nagastone_pillar_side.png
-texture:id=TwilightForest/nagastone_pillar_side_mossy,filename=assets/twilightforest/textures/blocks/nagastone_pillar_side_mossy.png
-texture:id=TwilightForest/nagastone_pillar_side_weathered,filename=assets/twilightforest/textures/blocks/nagastone_pillar_side_weathered.png
-texture:id=TwilightForest/nagastone_side_left,filename=assets/twilightforest/textures/blocks/nagastone_side_left.png
-texture:id=TwilightForest/nagastone_side_right,filename=assets/twilightforest/textures/blocks/nagastone_side_right.png
-texture:id=TwilightForest/nagastone_top_long,filename=assets/twilightforest/textures/blocks/nagastone_top_long.png
-texture:id=TwilightForest/nagastone_top_tip,filename=assets/twilightforest/textures/blocks/nagastone_top_tip.png
+texture:id=TwilightForest/nagastone/etched_nagastone_down,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_down.png
+texture:id=TwilightForest/nagastone/etched_nagastone_down_mossy,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_down_mossy.png
+texture:id=TwilightForest/nagastone/etched_nagastone_down_weathered,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_down_weathered.png
+texture:id=TwilightForest/nagastone/etched_nagastone_left,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_left.png
+texture:id=TwilightForest/nagastone/etched_nagastone_left_mossy,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_left_mossy.png
+texture:id=TwilightForest/nagastone/etched_nagastone_left_weathered,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_left_weathered.png
+texture:id=TwilightForest/nagastone/etched_nagastone_right,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_right.png
+texture:id=TwilightForest/nagastone/etched_nagastone_right_mossy,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_right_mossy.png
+texture:id=TwilightForest/nagastone/etched_nagastone_right_weathered,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_right_weathered.png
+texture:id=TwilightForest/nagastone/etched_nagastone_up,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_up.png
+texture:id=TwilightForest/nagastone/etched_nagastone_up_mossy,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_up_mossy.png
+texture:id=TwilightForest/nagastone/etched_nagastone_up_weathered,filename=assets/twilightforest/textures/blocks/nagastone/etched_nagastone_up_weathered.png
+texture:id=TwilightForest/nagastone/nagastone_bare,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_bare.png
+texture:id=TwilightForest/nagastone/nagastone_bare_mossy,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_bare_mossy.png
+texture:id=TwilightForest/nagastone/nagastone_bare_weathered,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_bare_weathered.png
+texture:id=TwilightForest/nagastone/nagastone_bottom_long,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_bottom_long.png
+texture:id=TwilightForest/nagastone/nagastone_bottom_tip,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_bottom_tip.png
+texture:id=TwilightForest/nagastone/nagastone_cross_section,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_cross_section.png
+texture:id=TwilightForest/nagastone/nagastone_face_front,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_face_front.png
+texture:id=TwilightForest/nagastone/nagastone_face_left,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_face_left.png
+texture:id=TwilightForest/nagastone/nagastone_face_right,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_face_right.png
+texture:id=TwilightForest/nagastone/nagastone_left_down,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_left_down.png
+texture:id=TwilightForest/nagastone/nagastone_left_up,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_left_up.png
+texture:id=TwilightForest/nagastone/nagastone_long_side,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_long_side.png
+texture:id=TwilightForest/nagastone/nagastone_pillar_end,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_pillar_end.png
+texture:id=TwilightForest/nagastone/nagastone_pillar_end_mossy,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_pillar_end_mossy.png
+texture:id=TwilightForest/nagastone/nagastone_pillar_end_weathered,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_pillar_end_weathered.png
+texture:id=TwilightForest/nagastone/nagastone_pillar_side,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_pillar_side.png
+texture:id=TwilightForest/nagastone/nagastone_pillar_side_mossy,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_pillar_side_mossy.png
+texture:id=TwilightForest/nagastone/nagastone_pillar_side_weathered,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_pillar_side_weathered.png
+texture:id=TwilightForest/nagastone/nagastone_right_down,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_right_down.png
+texture:id=TwilightForest/nagastone/nagastone_right_up,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_right_up.png
+texture:id=TwilightForest/nagastone/nagastone_side_left,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_side_left.png
+texture:id=TwilightForest/nagastone/nagastone_side_right,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_side_right.png
+texture:id=TwilightForest/nagastone/nagastone_tip_left,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_tip_left.png
+texture:id=TwilightForest/nagastone/nagastone_tip_right,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_tip_right.png
+texture:id=TwilightForest/nagastone/nagastone_top_long,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_top_long.png
+texture:id=TwilightForest/nagastone/nagastone_top_tip,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_top_tip.png
+texture:id=TwilightForest/nagastone/nagastone_turn_top,filename=assets/twilightforest/textures/blocks/nagastone/nagastone_turn_top.png
+texture:id=TwilightForest/nagastone/stone_tiles,filename=assets/twilightforest/textures/blocks/nagastone/stone_tiles.png
+texture:id=TwilightForest/nagastone/stone_tiles_mossy,filename=assets/twilightforest/textures/blocks/nagastone/stone_tiles_mossy.png
+texture:id=TwilightForest/nagastone/stone_tiles_weathered,filename=assets/twilightforest/textures/blocks/nagastone/stone_tiles_weathered.png
 texture:id=TwilightForest/oak_side,filename=assets/twilightforest/textures/blocks/oak_side.png
 texture:id=TwilightForest/oak_top,filename=assets/twilightforest/textures/blocks/oak_top.png
 texture:id=TwilightForest/oreroots,filename=assets/twilightforest/textures/blocks/oreroots.png
@@ -160,9 +183,6 @@ texture:id=TwilightForest/spiral_shadow_x_fix,filename=assets/twilightforest/tex
 texture:id=TwilightForest/steeleaf_block,filename=assets/twilightforest/textures/blocks/steeleaf_block.png
 texture:id=TwilightForest/stone_spiral_left_down,filename=assets/twilightforest/textures/blocks/stone_spiral_left_down.png
 texture:id=TwilightForest/stone_spiral_right_down_mirrored,filename=assets/twilightforest/textures/blocks/stone_spiral_right_down_mirrored.png
-texture:id=TwilightForest/stone_tiles,filename=assets/twilightforest/textures/blocks/stone_tiles.png
-texture:id=TwilightForest/stone_tiles_mossy,filename=assets/twilightforest/textures/blocks/stone_tiles_mossy.png
-texture:id=TwilightForest/stone_tiles_weathered,filename=assets/twilightforest/textures/blocks/stone_tiles_weathered.png
 texture:id=TwilightForest/thornRose,filename=assets/twilightforest/textures/blocks/thornRose.png
 texture:id=TwilightForest/time_clock,filename=assets/twilightforest/textures/blocks/time_clock.png
 texture:id=TwilightForest/time_clock_off,filename=assets/twilightforest/textures/blocks/time_clock_off.png
@@ -564,62 +584,67 @@ block:id=%tile.TFFireJet,data=12,data=13,stdrot=true,face0=0:TwilightForest/towe
 block:id=%tile.TFFireJet,data=14,data=15,stdrot=true,face0=0:TwilightForest/firejet_side,face1=0:TwilightForest/firejet_top,face2-5=0:TwilightForest/firejet_side
 
 # %tile.TFNagastone:* (tile.TFNagastone), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
-block:id=%tile.TFNagastone,data=0,stdrot=true,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_face_front,face3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_face_left,face5=0:TwilightForest/nagastone_face_right
-block:id=%tile.TFNagastone,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:TwilightForest/nagastone_bottom_long,face1=0:TwilightForest/nagastone_top_long,face2-3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_side_left,face5=0:TwilightForest/nagastone_side_right
+block:id=%tile.TFNagastone,data=0,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_face_front,face3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_face_left,face5=0:TwilightForest/nagastone/nagastone_face_right
+block:id=%tile.TFNagastone,data=1,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_cross_section,face3=0:TwilightForest/nagastone/nagastone_face_front,face4=0:TwilightForest/nagastone/nagastone_face_right,face5=0:TwilightForest/nagastone/nagastone_face_left
+block:id=%tile.TFNagastone,data=2,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_face_right,face3=0:TwilightForest/nagastone/nagastone_face_left,face4=0:TwilightForest/nagastone/nagastone_face_front,face5=0:TwilightForest/nagastone/nagastone_cross_section
+block:id=%tile.TFNagastone,data=3,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_face_left,face3=0:TwilightForest/nagastone/nagastone_face_right,face4=0:TwilightForest/nagastone/nagastone_cross_section,face5=0:TwilightForest/nagastone/nagastone_face_front
+block:id=%tile.TFNagastone,data=4,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_cross_section,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_cross_section,face3=0:TwilightForest/nagastone/nagastone_tip_right,face4=0:TwilightForest/nagastone/nagastone_left_down,face5=0:TwilightForest/nagastone/nagastone_right_down
+block:id=%tile.TFNagastone,data=5,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_cross_section,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_tip_left,face3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_right_down,face5=0:TwilightForest/nagastone/nagastone_left_down
+block:id=%tile.TFNagastone,data=6,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_cross_section,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_right_down,face3=0:TwilightForest/nagastone/nagastone_left_down,face4=0:TwilightForest/nagastone/nagastone_cross_section,face5=0:TwilightForest/nagastone/nagastone_tip_left
+block:id=%tile.TFNagastone,data=7,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_cross_section,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_left_down,face3=0:TwilightForest/nagastone/nagastone_right_down,face4=0:TwilightForest/nagastone/nagastone_tip_right,face5=0:TwilightForest/nagastone/nagastone_cross_section
+block:id=%tile.TFNagastone,data=8,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1-2=0:TwilightForest/nagastone/nagastone_cross_section,face3=0:TwilightForest/nagastone/nagastone_tip_left,face4=0:TwilightForest/nagastone/nagastone_left_up,face5=0:TwilightForest/nagastone/nagastone_right_up
+block:id=%tile.TFNagastone,data=9,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_cross_section,face2=0:TwilightForest/nagastone/nagastone_tip_right,face3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_right_up,face5=0:TwilightForest/nagastone/nagastone_left_up
+block:id=%tile.TFNagastone,data=10,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_cross_section,face2=0:TwilightForest/nagastone/nagastone_right_up,face3=0:TwilightForest/nagastone/nagastone_left_up,face4=0:TwilightForest/nagastone/nagastone_cross_section,face5=0:TwilightForest/nagastone/nagastone_tip_right
+block:id=%tile.TFNagastone,data=11,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_cross_section,face2=0:TwilightForest/nagastone/nagastone_left_up,face3=0:TwilightForest/nagastone/nagastone_right_up,face4=0:TwilightForest/nagastone/nagastone_tip_left,face5=0:TwilightForest/nagastone/nagastone_cross_section
+block:id=%tile.TFNagastone,data=12,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_long,face1=0:TwilightForest/nagastone/nagastone_top_long,face2-3=0:TwilightForest/nagastone/nagastone_long_side,face4-5=0:TwilightForest/nagastone/nagastone_cross_section
+block:id=%tile.TFNagastone,data=13,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_long,face1=0:TwilightForest/nagastone/nagastone_top_long,face2-3=0:TwilightForest/nagastone/nagastone_cross_section,face4-5=0:TwilightForest/nagastone/nagastone_long_side
+block:id=%tile.TFNagastone,data=14,stdrot=true,face0-1=0:TwilightForest/nagastone/nagastone_cross_section,face2-5=0:TwilightForest/nagastone/nagastone_long_side
+block:id=%tile.TFNagastone,data=15,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_cross_section,face1=0:TwilightForest/nagastone/nagastone_turn_top,face2-5=0:TwilightForest/nagastone/nagastone_long_side
 
-# %tile.TFNagastoneEtched:* (tile.TFNagastoneEtched), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneEtched(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
-block:id=%tile.TFNagastoneEtched,data=0,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
-block:id=%tile.TFNagastoneEtched,data=1,stdrot=true,face0-1=0:TwilightForest/stone_tiles_mossy,face2-5=0:TwilightForest/etched_nagastone_down_mossy
-block:id=%tile.TFNagastoneEtched,data=2,stdrot=true,face0-1=0:TwilightForest/stone_tiles_weathered,face2-5=0:TwilightForest/etched_nagastone_down_weathered
-block:id=%tile.TFNagastoneEtched,data=3,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
-block:id=%tile.TFNagastoneEtched,data=4,stdrot=true,face0-1=0:TwilightForest/stone_tiles_mossy,face2-5=0:TwilightForest/etched_nagastone_down_mossy
-block:id=%tile.TFNagastoneEtched,data=5,stdrot=true,face0-1=0:TwilightForest/stone_tiles_weathered,face2-5=0:TwilightForest/etched_nagastone_down_weathered
-block:id=%tile.TFNagastoneEtched,data=6,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
-block:id=%tile.TFNagastoneEtched,data=7,stdrot=true,face0-1=0:TwilightForest/stone_tiles_mossy,face2-5=0:TwilightForest/etched_nagastone_down_mossy
-block:id=%tile.TFNagastoneEtched,data=8,stdrot=true,face0-1=0:TwilightForest/stone_tiles_weathered,face2-5=0:TwilightForest/etched_nagastone_down_weathered
-block:id=%tile.TFNagastoneEtched,data=9,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
-block:id=%tile.TFNagastoneEtched,data=10,stdrot=true,face0-1=0:TwilightForest/stone_tiles_mossy,face2-5=0:TwilightForest/etched_nagastone_down_mossy
-block:id=%tile.TFNagastoneEtched,data=11,stdrot=true,face0-1=0:TwilightForest/stone_tiles_weathered,face2-5=0:TwilightForest/etched_nagastone_down_weathered
-block:id=%tile.TFNagastoneEtched,data=12,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
-block:id=%tile.TFNagastoneEtched,data=13,stdrot=true,face0-1=0:TwilightForest/stone_tiles_mossy,face2-5=0:TwilightForest/etched_nagastone_down_mossy
-block:id=%tile.TFNagastoneEtched,data=14,stdrot=true,face0-1=0:TwilightForest/stone_tiles_weathered,face2-5=0:TwilightForest/etched_nagastone_down_weathered
-block:id=%tile.TFNagastoneEtched,data=15,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
+# %tile.TFNagastoneEtched:* (tile.TFNagastoneEtched), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
+block:id=%tile.TFNagastoneEtched,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles,face2-5=0:TwilightForest/nagastone/etched_nagastone_up
+block:id=%tile.TFNagastoneEtched,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles,face2-5=0:TwilightForest/nagastone/etched_nagastone_down
+block:id=%tile.TFNagastoneEtched,data=2,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_up,face2-3=0:TwilightForest/nagastone/stone_tiles,face4=0:TwilightForest/nagastone/etched_nagastone_left,face5=0:TwilightForest/nagastone/etched_nagastone_right
+block:id=%tile.TFNagastoneEtched,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_down,face2-3=0:TwilightForest/nagastone/stone_tiles,face4=0:TwilightForest/nagastone/etched_nagastone_right,face5=0:TwilightForest/nagastone/etched_nagastone_left
+block:id=%tile.TFNagastoneEtched,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left,face2=0:TwilightForest/nagastone/etched_nagastone_right,face3=0:TwilightForest/nagastone/etched_nagastone_left,face4-5=0:TwilightForest/nagastone/stone_tiles
+block:id=%tile.TFNagastoneEtched,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right,face2=0:TwilightForest/nagastone/etched_nagastone_left,face3=0:TwilightForest/nagastone/etched_nagastone_right,face4-5=0:TwilightForest/nagastone/stone_tiles
+block:id=%tile.TFNagastoneEtched,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles,face2-5=0:TwilightForest/nagastone/etched_nagastone_up
 
 # %tile.TFNagastoneStairsLeft:* (tile.TFNagastoneStairsLeft), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneStairs(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFNagastoneStairs
-block:id=%tile.TFNagastoneStairsLeft,data=*,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
+block:id=%tile.TFNagastoneStairsLeft,data=*,stdrot=true,face0=0:TwilightForest/nagastone/stone_tiles,face1=0:TwilightForest/nagastone/nagastone_bare,face2-5=0:TwilightForest/nagastone/etched_nagastone_left
 
 # %tile.TFNagastoneStairsRight:* (tile.TFNagastoneStairsRight), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneStairs(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFNagastoneStairs
-block:id=%tile.TFNagastoneStairsRight,data=*,stdrot=true,face0-1=0:TwilightForest/stone_tiles,face2-5=0:TwilightForest/etched_nagastone_down
+block:id=%tile.TFNagastoneStairsRight,data=*,stdrot=true,face0=0:TwilightForest/nagastone/stone_tiles,face1=0:TwilightForest/nagastone/nagastone_bare,face2-5=0:TwilightForest/nagastone/etched_nagastone_right
 
 # %tile.TFNagastoneStairsMossyLeft:* (tile.TFNagastoneStairsMossyLeft), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneStairs(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFNagastoneStairs
-block:id=%tile.TFNagastoneStairsMossyLeft,data=*,stdrot=true,face0-1=0:TwilightForest/stone_tiles_mossy,face2-5=0:TwilightForest/etched_nagastone_down_mossy
+block:id=%tile.TFNagastoneStairsMossyLeft,data=*,stdrot=true,face0=0:TwilightForest/nagastone/stone_tiles_mossy,face1=0:TwilightForest/nagastone/nagastone_bare_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_left_mossy
 
 # %tile.TFNagastoneStairsMossyRight:* (tile.TFNagastoneStairsMossyRight), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneStairs(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFNagastoneStairs
-block:id=%tile.TFNagastoneStairsMossyRight,data=*,stdrot=true,face0-1=0:TwilightForest/stone_tiles_mossy,face2-5=0:TwilightForest/etched_nagastone_down_mossy
+block:id=%tile.TFNagastoneStairsMossyRight,data=*,stdrot=true,face0=0:TwilightForest/nagastone/stone_tiles_mossy,face1=0:TwilightForest/nagastone/nagastone_bare_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_right_mossy
 
 # %tile.TFNagastoneStairsWeatheredLeft:* (tile.TFNagastoneStairsWeatheredLeft), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneStairs(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFNagastoneStairs
-block:id=%tile.TFNagastoneStairsWeatheredLeft,data=*,stdrot=true,face0-1=0:TwilightForest/stone_tiles_weathered,face2-5=0:TwilightForest/etched_nagastone_down_weathered
+block:id=%tile.TFNagastoneStairsWeatheredLeft,data=*,stdrot=true,face0=0:TwilightForest/nagastone/stone_tiles_weathered,face1=0:TwilightForest/nagastone/nagastone_bare_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_left_weathered
 
 # %tile.TFNagastoneStairsWeatheredRight:* (tile.TFNagastoneStairsWeatheredRight), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneStairs(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFNagastoneStairs
-block:id=%tile.TFNagastoneStairsWeatheredRight,data=*,stdrot=true,face0-1=0:TwilightForest/stone_tiles_weathered,face2-5=0:TwilightForest/etched_nagastone_down_weathered
+block:id=%tile.TFNagastoneStairsWeatheredRight,data=*,stdrot=true,face0=0:TwilightForest/nagastone/stone_tiles_weathered,face1=0:TwilightForest/nagastone/nagastone_bare_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_right_weathered
 
 # %tile.TFNagastonePillar:* (tile.TFNagastonePillar), render=(LOG), opaque=true,cls=twilightforest.block.BlockTFNagastonePillar
-block:id=%tile.TFNagastonePillar,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone_pillar_end,face2-5=0:TwilightForest/nagastone_pillar_side
-block:id=%tile.TFNagastonePillar,data=4,data=5,data=6,data=7,face0-1=0:TwilightForest/nagastone_pillar_side,face2-3=4000:TwilightForest/nagastone_pillar_side,face4-5=0:TwilightForest/nagastone_pillar_end
-block:id=%tile.TFNagastonePillar,data=8,data=9,data=10,data=11,face0-1=4000:TwilightForest/nagastone_pillar_side,face2-3=0:TwilightForest/nagastone_pillar_end,face4-5=4000:TwilightForest/nagastone_pillar_side
-block:id=%tile.TFNagastonePillar,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/nagastone_pillar_side
+block:id=%tile.TFNagastonePillar,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/nagastone_pillar_end,face2-5=0:TwilightForest/nagastone/nagastone_pillar_side
+block:id=%tile.TFNagastonePillar,data=4,data=5,data=6,data=7,face0-1=0:TwilightForest/nagastone/nagastone_pillar_side,face2-3=4000:TwilightForest/nagastone/nagastone_pillar_side,face4-5=0:TwilightForest/nagastone/nagastone_pillar_end
+block:id=%tile.TFNagastonePillar,data=8,data=9,data=10,data=11,face0-1=4000:TwilightForest/nagastone/nagastone_pillar_side,face2-3=0:TwilightForest/nagastone/nagastone_pillar_end,face4-5=4000:TwilightForest/nagastone/nagastone_pillar_side
+block:id=%tile.TFNagastonePillar,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/nagastone/nagastone_pillar_side
 
 # %tile.TFNagastonePillarMossy:* (tile.TFNagastonePillarMossy), render=(LOG), opaque=true,cls=twilightforest.block.BlockTFNagastonePillar
-block:id=%tile.TFNagastonePillarMossy,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone_pillar_end_mossy,face2-5=0:TwilightForest/nagastone_pillar_side_mossy
-block:id=%tile.TFNagastonePillarMossy,data=4,data=5,data=6,data=7,face0-1=0:TwilightForest/nagastone_pillar_side_mossy,face2-3=4000:TwilightForest/nagastone_pillar_side_mossy,face4-5=0:TwilightForest/nagastone_pillar_end_mossy
-block:id=%tile.TFNagastonePillarMossy,data=8,data=9,data=10,data=11,face0-1=4000:TwilightForest/nagastone_pillar_side_mossy,face2-3=0:TwilightForest/nagastone_pillar_end_mossy,face4-5=4000:TwilightForest/nagastone_pillar_side_mossy
-block:id=%tile.TFNagastonePillarMossy,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/nagastone_pillar_side_mossy
+block:id=%tile.TFNagastonePillarMossy,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/nagastone_pillar_end_mossy,face2-5=0:TwilightForest/nagastone/nagastone_pillar_side_mossy
+block:id=%tile.TFNagastonePillarMossy,data=4,data=5,data=6,data=7,face0-1=0:TwilightForest/nagastone/nagastone_pillar_side_mossy,face2-3=4000:TwilightForest/nagastone/nagastone_pillar_side_mossy,face4-5=0:TwilightForest/nagastone/nagastone_pillar_end_mossy
+block:id=%tile.TFNagastonePillarMossy,data=8,data=9,data=10,data=11,face0-1=4000:TwilightForest/nagastone/nagastone_pillar_side_mossy,face2-3=0:TwilightForest/nagastone/nagastone_pillar_end_mossy,face4-5=4000:TwilightForest/nagastone/nagastone_pillar_side_mossy
+block:id=%tile.TFNagastonePillarMossy,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/nagastone/nagastone_pillar_side_mossy
 
 # %tile.TFNagastonePillarWeathered:* (tile.TFNagastonePillarWeathered), render=(LOG), opaque=true,cls=twilightforest.block.BlockTFNagastonePillar
-block:id=%tile.TFNagastonePillarWeathered,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone_pillar_end_weathered,face2-5=0:TwilightForest/nagastone_pillar_side_weathered
-block:id=%tile.TFNagastonePillarWeathered,data=4,data=5,data=6,data=7,face0-1=0:TwilightForest/nagastone_pillar_side_weathered,face2-3=4000:TwilightForest/nagastone_pillar_side_weathered,face4-5=0:TwilightForest/nagastone_pillar_end_weathered
-block:id=%tile.TFNagastonePillarWeathered,data=8,data=9,data=10,data=11,face0-1=4000:TwilightForest/nagastone_pillar_side_weathered,face2-3=0:TwilightForest/nagastone_pillar_end_weathered,face4-5=4000:TwilightForest/nagastone_pillar_side_weathered
-block:id=%tile.TFNagastonePillarWeathered,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/nagastone_pillar_side_weathered
+block:id=%tile.TFNagastonePillarWeathered,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/nagastone_pillar_end_weathered,face2-5=0:TwilightForest/nagastone/nagastone_pillar_side_weathered
+block:id=%tile.TFNagastonePillarWeathered,data=4,data=5,data=6,data=7,face0-1=0:TwilightForest/nagastone/nagastone_pillar_side_weathered,face2-3=4000:TwilightForest/nagastone/nagastone_pillar_side_weathered,face4-5=0:TwilightForest/nagastone/nagastone_pillar_end_weathered
+block:id=%tile.TFNagastonePillarWeathered,data=8,data=9,data=10,data=11,face0-1=4000:TwilightForest/nagastone/nagastone_pillar_side_weathered,face2-3=0:TwilightForest/nagastone/nagastone_pillar_end_weathered,face4-5=4000:TwilightForest/nagastone/nagastone_pillar_side_weathered
+block:id=%tile.TFNagastonePillarWeathered,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/nagastone/nagastone_pillar_side_weathered
 
 # %tile.TFSpiralBricks:* (tile.TFSpiralBricks), render=twilightforest.client.renderer.blocks.RenderBlockTFSpiralBricks(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFSpiralBricks
 block:id=%tile.TFSpiralBricks,data=*,stdrot=true,face0=0:minecraft/stonebrick_carved,face1=0:TwilightForest/spiral_inner_up,face2=0:TwilightForest/stone_spiral_right_down_mirrored,face3=0:TwilightForest/stone_spiral_left_down,face4=0:minecraft/stonebrick_carved,face5=0:TwilightForest/spiral_shadow_x_fix
@@ -724,7 +749,7 @@ block:id=%tile.TFTowerTranslucent,data=1,stdrot=true,face0-5=0:TwilightForest/to
 block:id=%tile.TFTowerTranslucent,data=2,stdrot=true,face0-5=0:TwilightForest/towerdev_built_off
 block:id=%tile.TFTowerTranslucent,data=3,stdrot=true,face0-5=0:TwilightForest/towerdev_built_on
 block:id=%tile.TFTowerTranslucent,data=4,stdrot=true,face0-5=0:TwilightForest/towerdev_antibuilt
-block:id=%tile.TFTowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/portal,face2=0:minecraft/netherrack,face3=0:minecraft/bedrock,face4-5=0:minecraft/portal
+block:id=%tile.TFTowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/obsidian,face1-2=0:minecraft/netherrack,face3-4=0:minecraft/portal,face5=0:minecraft/bedrock
 block:id=%tile.TFTowerTranslucent,data=6,stdrot=true,face0-5=0:minecraft/gold_block
 block:id=%tile.TFTowerTranslucent,data=7,stdrot=true,face0-5=0:minecraft/diamond_block
 block:id=%tile.TFTowerTranslucent,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off
@@ -980,11 +1005,35 @@ block:id=%tile.CastleDoor,data=*,stdrot=true,face0-5=0:TwilightForest/castle_doo
 # %tile.CastleDoorVanished:* (tile.CastleDoorVanished), render=twilightforest.client.renderer.blocks.RenderBlockTFCastleMagic(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFCastleDoor
 block:id=%tile.CastleDoorVanished,data=*,stdrot=true,face0-5=0:TwilightForest/castle_door_vanished
 
-# %fiery_essence:* (fiery_essence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.blocks.TFFieryEssence
-block:id=%fiery_essence,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/fiery_essence,face2-5=12000:tinker/fiery_essence_flow
+# %tile.TFNagastoneEtchedWeathered:* (tile.TFNagastoneEtchedWeathered), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
+block:id=%tile.TFNagastoneEtchedWeathered,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_down_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=2,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_up_weathered,face2-3=0:TwilightForest/nagastone/stone_tiles_weathered,face4=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face5=0:TwilightForest/nagastone/etched_nagastone_right_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_down_weathered,face2-3=0:TwilightForest/nagastone/stone_tiles_weathered,face4=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face5=0:TwilightForest/nagastone/etched_nagastone_left_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face2=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face3=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face4-5=0:TwilightForest/nagastone/stone_tiles_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face2=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face3=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face4-5=0:TwilightForest/nagastone/stone_tiles_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_weathered
 
 # %fluid.molten.fierymetal:* (fluid.molten.fierymetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
 block:id=%fluid.molten.fierymetal,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_fierymetal,face2-5=12000:tinker/liquid_fierymetal_flow
 
+# %tile.TFNagastoneEtchedMossy:* (tile.TFNagastoneEtchedMossy), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
+block:id=%tile.TFNagastoneEtchedMossy,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_down_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=2,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_up_mossy,face2-3=0:TwilightForest/nagastone/stone_tiles_mossy,face4=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face5=0:TwilightForest/nagastone/etched_nagastone_right_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_down_mossy,face2-3=0:TwilightForest/nagastone/stone_tiles_mossy,face4=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face5=0:TwilightForest/nagastone/etched_nagastone_left_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face2=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face3=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face4-5=0:TwilightForest/nagastone/stone_tiles_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face2=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face3=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face4-5=0:TwilightForest/nagastone/stone_tiles_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_mossy
+
+# %tile.TFNagastoneHead:* (tile.TFNagastoneHead), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
+block:id=%tile.TFNagastoneHead,data=*,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_face_front,face3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_face_left,face5=0:TwilightForest/nagastone/nagastone_face_right
+
 # %fluid.molten.knightmetal:* (fluid.molten.knightmetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
 block:id=%fluid.molten.knightmetal,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_knightmetal,face2-5=12000:tinker/liquid_knightmetal_flow
+
+# %tile.TFNagastoneBody:* (tile.TFNagastoneBody), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
+block:id=%tile.TFNagastoneBody,data=*,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_long,face1=0:TwilightForest/nagastone/nagastone_top_long,face2-3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_side_left,face5=0:TwilightForest/nagastone/nagastone_side_right
+
+# %fiery_essence:* (fiery_essence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.blocks.TFFieryEssence
+block:id=%fiery_essence,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/fiery_essence,face2-5=12000:tinker/fiery_essence_flow
