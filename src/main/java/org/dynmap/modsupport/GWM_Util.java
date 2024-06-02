@@ -3,10 +3,14 @@ package org.dynmap.modsupport;
 import cpw.mods.fml.common.registry.FMLControlledNamespacedRegistry;
 import cpw.mods.fml.common.registry.GameData;
 import net.minecraft.block.Block;
-import net.minecraft.client.stream.IngestServerTester;
+import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapCore;
+import org.dynmap.Log;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class GWM_Util {
@@ -14,6 +18,8 @@ public class GWM_Util {
     static Map<String, Integer> blockIdMap;
     static Map<String, Integer> unlocalizedNameToIdMap;
     static Map<String, Integer> textureNameToIdMap = new HashMap<>();
+    static public HashMap<String, ArrayList<Object>> blockGroups = new HashMap<>();
+
     public static void initialize(DynmapCore core)
     {
         if(initialized)
@@ -91,5 +97,108 @@ public class GWM_Util {
             return prependMinecraftAttempt;
 
         return -1;
+    }
+    public static void loadBlockGroups(DynmapCore core){
+        if(!initialized)
+            initialize(core);
+
+        Log.verboseinfo("Loading block groups...");
+        File f = new File(core.getDataFolder(), "blockgroups.yml");
+        if(!core.updateUsingDefaultResource("/blockgroups.yml", f, "block-groups")) {
+            return;
+        }
+        ConfigurationNode builtIn = new ConfigurationNode(f);
+        builtIn.load();
+
+        addBlockGroups(builtIn);
+
+        /* Load custom block groups, if file is defined - or create empty one if not */
+        f = new File(core.getDataFolder(), "blockgroups.yml");
+        core.createDefaultFileFromResource("/blockgroups.yml", f);
+        if(f.exists()) {
+            ConfigurationNode custom = new ConfigurationNode(f);
+            custom.load();
+            addBlockGroups(custom);
+        }
+    }
+
+    private static void addBlockGroups(ConfigurationNode builtIn) {
+        for(Map<String, Object> cn : builtIn.getMapList("block-groups")){
+            for(Map.Entry<String, Object> ent : cn.entrySet()){
+                String key = ent.getKey();
+                Object value = ent.getValue();
+                if(value instanceof ArrayList){
+                    blockGroups.put(key, (ArrayList) value);
+                }
+                else {
+                    blockGroups.put(key, new ArrayList<>());
+                }
+            }
+        }
+    }
+
+    public static BlockMatcher getBlockMatcher(ArrayList<Object> entries){
+        BlockMatcher ret = new BlockMatcher();
+        HashSet visitedGroups = new HashSet();
+
+        addList(entries, ret, visitedGroups);
+
+        return ret;
+    }
+
+    private static void addList(ArrayList<Object> entries, BlockMatcher bm, HashSet visitedGroups) {
+        for (Object o : entries) {
+            if (o instanceof Integer) {
+                bm.addBlock((Integer) o);
+            } else if (o instanceof String) {
+                String s = (String) o;
+                if (s.startsWith("@")) {
+                    String sub = s.substring(1);
+                    if (!visitedGroups.contains(sub)) {
+                        ArrayList<Object> group = blockGroups.get(sub);
+                        if (group != null) {
+                            visitedGroups.add(sub);
+                            addList(group, bm, visitedGroups);
+                        }
+                    }
+                } else {
+                    String blockName = s.trim();
+
+                    Integer blockId = blockIdMap.get(blockName);
+                    if(blockId == null)
+                        continue;
+
+                    String cond = null;
+                    int meta = 0xF;
+                    if(blockName.contains("[")){
+                        int idx = blockName.indexOf('[');
+                        int lastIdx = blockName.lastIndexOf(']');
+                        cond = blockName.substring(idx+1, lastIdx);
+                        blockName = blockName.substring(0, idx);
+                    }
+
+                    if(blockName.contains("#")){
+                        int idx = blockName.indexOf('#');
+                        String metaStr = blockName.substring(idx+1);
+                        blockName = blockName.substring(0, idx);
+                        if(metaStr.startsWith("m"))
+                            meta = Integer.parseInt(metaStr.substring(1));
+                        else
+                            meta = 1 << Integer.parseInt(metaStr);
+                    }
+
+                    if(cond != null){
+                        bm.addBlockWithCondition((int)blockId, meta, parseCondition(cond));
+                    } else {
+                        bm.addBlockMetaMask(blockId, meta);
+                    }
+                }
+            }
+        }
+    }
+
+    static BlockMatcher.AdvancedConditionParser dummyConditionParser = new BlockMatcher.AdvancedConditionParser();
+    private static BlockMatcher.AdvancedCondition parseCondition(String cond) {
+        return dummyConditionParser.parseExpression(cond);
     }
 }

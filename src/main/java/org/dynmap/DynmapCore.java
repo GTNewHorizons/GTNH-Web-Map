@@ -48,6 +48,7 @@ import org.dynmap.hdmap.TexturePack;
 import org.dynmap.hdmap.TexturePack.HDTextureMap;
 import org.dynmap.markers.MarkerAPI;
 import org.dynmap.markers.impl.MarkerAPIImpl;
+import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.modsupport.ModSupportImpl;
 import org.dynmap.servlet.FileResourceHandler;
 import org.dynmap.servlet.JettyNullLogger;
@@ -498,6 +499,8 @@ public class DynmapCore implements DynmapCommonAPI {
         /* Load texture mappings */
         Log.verboseinfo("Loading texture mappings...");
         TexturePack.loadTextureMapping(this, configuration);
+
+        GWM_Util.loadBlockGroups(this);
         
         /* Now, process worlds.txt - merge it in as an override of existing values (since it is only user supplied values) */
         File f = new File(dataDirectory, "worlds.txt");
@@ -2373,7 +2376,7 @@ public class DynmapCore implements DynmapCommonAPI {
                     fos = new FileOutputStream(f);
                     ins = zf.getInputStream(ze);
 
-                    if(n.endsWith(".html") || n.endsWith(".js") || n.endsWith(".php")){
+                    if(n.endsWith(".html") || n.endsWith(".js") || n.endsWith(".php") || n.endsWith(".txt")){
                         String data = IOUtils.toString(ins);
                         data = data.replace(TAG_TO_REPLACE_ON_EXTRACT, Tags.GRADLETOKEN_VERSION);
                         IOUtils.write(data, fos);
