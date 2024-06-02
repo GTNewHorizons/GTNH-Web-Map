@@ -1,4 +1,4 @@
-# Natura 2.6.1
+# Natura 2.6.4
 version:1.7
 modname:Natura
 
@@ -546,15 +546,16 @@ block:id=%Dark Tree,data=14,data=15,stdrot=true,face0-5=0:natura/darkwood_bark
 block:id=%floraleaves,data=0,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
 block:id=%floraleaves,data=1,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fancy
 block:id=%floraleaves,data=2,stdrot=true,face0-5=2000:natura/hopseed_leaves_fancy
-block:id=%floraleaves,data=4,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
+block:id=%floraleaves,data=3,data=4,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
 block:id=%floraleaves,data=5,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fancy
 block:id=%floraleaves,data=6,stdrot=true,face0-5=2000:natura/hopseed_leaves_fancy
-block:id=%floraleaves,data=8,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
+block:id=%floraleaves,data=7,data=8,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
 block:id=%floraleaves,data=9,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fancy
 block:id=%floraleaves,data=10,stdrot=true,face0-5=2000:natura/hopseed_leaves_fancy
-block:id=%floraleaves,data=12,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
+block:id=%floraleaves,data=11,data=12,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
 block:id=%floraleaves,data=13,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fancy
 block:id=%floraleaves,data=14,stdrot=true,face0-5=2000:natura/hopseed_leaves_fancy
+block:id=%floraleaves,data=15,stdrot=true,face0-5=2000:natura/redwood_leaves_fancy
 
 # %floraleavesnocolor:* (floraleavesnocolor), render=(STANDARD), opaque=false,cls=mods.natura.blocks.trees.NLeavesNocolor
 block:id=%floraleavesnocolor,data=0,stdrot=true,face0-5=0:natura/sakura_leaves_fancy
