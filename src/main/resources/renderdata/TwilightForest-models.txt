@@ -1,4 +1,4 @@
-# TwilightForest 2.5.19
+# TwilightForest 2.5.25
 version:1.7
 modname:TwilightForest
 
@@ -219,8 +219,6 @@ boxblock:id=%tile.TFPlant,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.1875,zmin=0.0625,z
 
 # %tile.TFNagastone:* (tile.TFNagastone), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
 
-# %tile.TFNagastoneEtched:* (tile.TFNagastoneEtched), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneEtched(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
-
 # %tile.TFSapling:* (tile.TFSapling), render=(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFSapling
 patchblock:id=%tile.TFSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9
 
@@ -242,7 +240,7 @@ boxblock:id=%tile.TFMoonworm,xmin=0.25,xmax=0.75,ymin=0.75,ymax=1.0,zmin=0.25,zm
 boxblock:id=%tile.TFMoonworm,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.6000000238418579,zmin=0.4000000059604645,zmax=0.6000000238418579,data=15
 
 # %tile.TFTowerTranslucent:* (tile.TFTowerTranslucent), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
-boxblock:id=%tile.TFTowerTranslucent,xmin=0.3665436804294586,xmax=0.8324576020240784,ymin=0.23776336014270782,ymax=0.7394846081733704,zmin=0.35907936096191406,zmax=0.7991064190864563,data=5
+boxblock:id=%tile.TFTowerTranslucent,xmin=0.21368341147899628,xmax=0.7540245056152344,ymin=0.3481716215610504,ymax=0.7505558133125305,zmin=0.08209417015314102,zmax=0.626488447189331,data=5
 
 # %tile.TFExperiment115:* (tile.TFExperiment115), render=twilightforest.client.renderer.blocks.RenderBlockTFCake(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFExperiment115
 boxblock:id=%tile.TFExperiment115,xmin=0.0625,xmax=0.5,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.5,data=0,data=1,data=2
@@ -303,22 +301,6 @@ customblock:id=%tile.ForceField,class=org.dynmap.hdmap.renderer.PaneRenderer,dat
 
 # %tile.CastleDoor:* (tile.CastleDoor), render=twilightforest.client.renderer.blocks.RenderBlockTFCastleMagic(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFCastleDoor
 
-# %fiery_essence:* (fiery_essence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.blocks.TFFieryEssence
-boxblock:id=%fiery_essence,ymax=0.875,data=1
-boxblock:id=%fiery_essence,ymax=0.75,data=2
-boxblock:id=%fiery_essence,ymax=0.625,data=3
-boxblock:id=%fiery_essence,ymax=0.5,data=4
-boxblock:id=%fiery_essence,ymax=0.375,data=5
-boxblock:id=%fiery_essence,ymax=0.25,data=6
-boxblock:id=%fiery_essence,ymax=0.125,data=7
-boxblock:id=%fiery_essence,ymax=0.875,data=9
-boxblock:id=%fiery_essence,ymax=0.75,data=10
-boxblock:id=%fiery_essence,ymax=0.625,data=11
-boxblock:id=%fiery_essence,ymax=0.5,data=12
-boxblock:id=%fiery_essence,ymax=0.375,data=13
-boxblock:id=%fiery_essence,ymax=0.25,data=14
-boxblock:id=%fiery_essence,ymax=0.125,data=15
-
 # %fluid.molten.fierymetal:* (fluid.molten.fierymetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
 boxblock:id=%fluid.molten.fierymetal,ymax=0.875,data=1
 boxblock:id=%fluid.molten.fierymetal,ymax=0.75,data=2
@@ -335,6 +317,8 @@ boxblock:id=%fluid.molten.fierymetal,ymax=0.375,data=13
 boxblock:id=%fluid.molten.fierymetal,ymax=0.25,data=14
 boxblock:id=%fluid.molten.fierymetal,ymax=0.125,data=15
 
+# %tile.TFNagastoneHead:* (tile.TFNagastoneHead), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
+
 # %fluid.molten.knightmetal:* (fluid.molten.knightmetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
 boxblock:id=%fluid.molten.knightmetal,ymax=0.875,data=1
 boxblock:id=%fluid.molten.knightmetal,ymax=0.75,data=2
@@ -350,3 +334,21 @@ boxblock:id=%fluid.molten.knightmetal,ymax=0.5,data=12
 boxblock:id=%fluid.molten.knightmetal,ymax=0.375,data=13
 boxblock:id=%fluid.molten.knightmetal,ymax=0.25,data=14
 boxblock:id=%fluid.molten.knightmetal,ymax=0.125,data=15
+
+# %tile.TFNagastoneBody:* (tile.TFNagastoneBody), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
+
+# %fiery_essence:* (fiery_essence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.blocks.TFFieryEssence
+boxblock:id=%fiery_essence,ymax=0.875,data=1
+boxblock:id=%fiery_essence,ymax=0.75,data=2
+boxblock:id=%fiery_essence,ymax=0.625,data=3
+boxblock:id=%fiery_essence,ymax=0.5,data=4
+boxblock:id=%fiery_essence,ymax=0.375,data=5
+boxblock:id=%fiery_essence,ymax=0.25,data=6
+boxblock:id=%fiery_essence,ymax=0.125,data=7
+boxblock:id=%fiery_essence,ymax=0.875,data=9
+boxblock:id=%fiery_essence,ymax=0.75,data=10
+boxblock:id=%fiery_essence,ymax=0.625,data=11
+boxblock:id=%fiery_essence,ymax=0.5,data=12
+boxblock:id=%fiery_essence,ymax=0.375,data=13
+boxblock:id=%fiery_essence,ymax=0.25,data=14
+boxblock:id=%fiery_essence,ymax=0.125,data=15
