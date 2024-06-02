@@ -1,4 +1,4 @@
-# GalaxySpace 1.1.60-GTNH
+# GalaxySpace 1.1.84-GTNH
 version:1.7
 modname:GalaxySpace
 
@@ -614,8 +614,11 @@ block:id=%barnardaCreed,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,
 # %barnardaCsapling:* (barnardaCsapling), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockSapling
 block:id=%barnardaCsapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2sapling_violet_tree
 
-# %barnardaClog:* (barnardaClog), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockLog
-block:id=%barnardaClog,data=*,stdrot=true,face0-1=0:galaxyspace/barnarda2/barnarda2log_oak_top,face2-5=0:galaxyspace/barnarda2/barnarda2log_oak
+# %barnardaClog:* (barnardaClog), render=(LOG), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockLog
+block:id=%barnardaClog,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:galaxyspace/barnarda2/barnarda2log_oak_top,face2-5=0:galaxyspace/barnarda2/barnarda2log_oak
+block:id=%barnardaClog,data=4,data=5,data=6,data=7,face0-1=0:galaxyspace/barnarda2/barnarda2log_oak_top,face2-3=4000:galaxyspace/barnarda2/barnarda2log_oak,face4-5=0:galaxyspace/barnarda2/barnarda2log_oak
+block:id=%barnardaClog,data=8,data=9,data=10,data=11,face0-1=4000:galaxyspace/barnarda2/barnarda2log_oak_top,face2-3=0:galaxyspace/barnarda2/barnarda2log_oak,face4-5=4000:galaxyspace/barnarda2/barnarda2log_oak
+block:id=%barnardaClog,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galaxyspace/barnarda2/barnarda2log_oak_top,face2-5=0:galaxyspace/barnarda2/barnarda2log_oak
 
 # %barnardaCplanks:* (barnardaCplanks), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockPlanks
 block:id=%barnardaCplanks,data=*,stdrot=true,face0-5=0:galaxyspace/barnarda2/barnarda2planks_oak
