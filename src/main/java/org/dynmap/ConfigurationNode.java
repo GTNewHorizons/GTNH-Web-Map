@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.yaml.snakeyaml.DumperOptions;
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.SafeConstructor;
 import org.yaml.snakeyaml.error.YAMLException;
@@ -40,14 +41,19 @@ public class ConfigurationNode implements Map<String, Object> {
 
     private void initparse() {
         if(yaml == null) {
-            DumperOptions options = new DumperOptions();
+            DumperOptions options = getDumperOptions();
 
-            options.setIndent(4);
-            options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
-            options.setPrettyFlow(true);
-
-            yaml = new Yaml(new SafeConstructor(), new EmptyNullRepresenter(), options);
+            yaml = new Yaml(new SafeConstructor(new LoaderOptions()), new EmptyNullRepresenter(), options);
         }
+    }
+
+    private static DumperOptions getDumperOptions() {
+        DumperOptions options = new DumperOptions();
+
+        options.setIndent(4);
+        options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
+        options.setPrettyFlow(true);
+        return options;
     }
 
     public ConfigurationNode(File f) {
@@ -409,7 +415,7 @@ public class ConfigurationNode implements Map<String, Object> {
     private class EmptyNullRepresenter extends Representer {
 
         public EmptyNullRepresenter() {
-            super();
+            super(getDumperOptions());
             this.nullRepresenter = new EmptyRepresentNull();
         }
 
