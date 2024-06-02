@@ -1,4 +1,4 @@
-# AWWayofTime 1.5.1
+# AWWayofTime 1.5.4
 version:1.7
 modname:AWWayofTime
 
@@ -42,6 +42,7 @@ texture:id=AlchemicalWizardry/LargeBloodStoneBrick,filename=assets/alchemicalwiz
 texture:id=AlchemicalWizardry/LightRitualStone,filename=assets/alchemicalwizardry/textures/blocks/LightRitualStone.png
 texture:id=AlchemicalWizardry/MasterStone,filename=assets/alchemicalwizardry/textures/blocks/MasterStone.png
 texture:id=AlchemicalWizardry/OrbCapacityRune,filename=assets/alchemicalwizardry/textures/blocks/OrbCapacityRune.png
+texture:id=AlchemicalWizardry/QuicknessRune,filename=assets/alchemicalwizardry/textures/blocks/QuicknessRune.png
 texture:id=AlchemicalWizardry/RitualStone,filename=assets/alchemicalwizardry/textures/blocks/RitualStone.png
 texture:id=AlchemicalWizardry/RuneOfSacrifice,filename=assets/alchemicalwizardry/textures/blocks/RuneOfSacrifice.png
 texture:id=AlchemicalWizardry/RuneOfSelfSacrifice,filename=assets/alchemicalwizardry/textures/blocks/RuneOfSelfSacrifice.png
@@ -77,26 +78,27 @@ block:id=%AlchemicalWizardrybloodRune,data=2,stdrot=true,face0-5=0:AlchemicalWiz
 block:id=%AlchemicalWizardrybloodRune,data=3,stdrot=true,face0-5=0:AlchemicalWizardry/OrbCapacityRune
 block:id=%AlchemicalWizardrybloodRune,data=4,stdrot=true,face0-5=0:AlchemicalWizardry/BetterCapacityRune
 block:id=%AlchemicalWizardrybloodRune,data=5,stdrot=true,face0-5=0:AlchemicalWizardry/AccelerationRune
-block:id=%AlchemicalWizardrybloodRune,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/BlankRune
+block:id=%AlchemicalWizardrybloodRune,data=6,stdrot=true,face0-5=0:AlchemicalWizardry/QuicknessRune
+block:id=%AlchemicalWizardrybloodRune,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/BlankRune
 
 # %lifeEssence:* (lifeEssence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.LifeEssenceBlock
 block:id=%lifeEssence,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:AlchemicalWizardry/lifeEssenceStill
 
 # %speedRune:* (speedRune), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.SpeedRune
 block:id=%speedRune,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/SpeedRune
-block:id=%speedRune,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/SpeedRune
+block:id=%speedRune,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/SpeedRune
 
 # %efficiencyRune:* (efficiencyRune), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.EfficiencyRune
 block:id=%efficiencyRune,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/EfficiencyRune
-block:id=%efficiencyRune,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/EfficiencyRune
+block:id=%efficiencyRune,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/EfficiencyRune
 
 # %runeOfSacrifice:* (runeOfSacrifice), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.RuneOfSacrifice
 block:id=%runeOfSacrifice,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSacrifice
-block:id=%runeOfSacrifice,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSacrifice
+block:id=%runeOfSacrifice,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSacrifice
 
 # %runeOfSelfSacrifice:* (runeOfSelfSacrifice), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.RuneOfSelfSacrifice
 block:id=%runeOfSelfSacrifice,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSelfSacrifice
-block:id=%runeOfSelfSacrifice,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSelfSacrifice
+block:id=%runeOfSelfSacrifice,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSelfSacrifice
 
 # %ritualStone:* (ritualStone), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.RitualStone
 block:id=%ritualStone,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/RitualStone
