@@ -1,4 +1,4 @@
-# TConstruct 1.11.12-GTNH
+# TConstruct 1.11.16-GTNH
 version:1.7
 modname:TConstruct
 
@@ -103,18 +103,18 @@ texture:id=tinker/craftingstation_bottom,filename=assets/tinker/textures/blocks/
 texture:id=tinker/craftingstation_side,filename=assets/tinker/textures/blocks/craftingstation_side.png
 texture:id=tinker/craftingstation_slab_side,filename=assets/tinker/textures/blocks/craftingstation_slab_side.png
 texture:id=tinker/craftingstation_top,filename=assets/tinker/textures/blocks/craftingstation_top.png
-texture:id=tinker/crops/berry_aluminum_fast,filename=assets/tinker/textures/blocks/crops/berry_aluminum_fast.png
-texture:id=tinker/crops/berry_aluminum_ripe_fast,filename=assets/tinker/textures/blocks/crops/berry_aluminum_ripe_fast.png
-texture:id=tinker/crops/berry_copper_fast,filename=assets/tinker/textures/blocks/crops/berry_copper_fast.png
-texture:id=tinker/crops/berry_copper_ripe_fast,filename=assets/tinker/textures/blocks/crops/berry_copper_ripe_fast.png
-texture:id=tinker/crops/berry_essence_fast,filename=assets/tinker/textures/blocks/crops/berry_essence_fast.png
-texture:id=tinker/crops/berry_essence_ripe_fast,filename=assets/tinker/textures/blocks/crops/berry_essence_ripe_fast.png
-texture:id=tinker/crops/berry_gold_fast,filename=assets/tinker/textures/blocks/crops/berry_gold_fast.png
-texture:id=tinker/crops/berry_gold_ripe_fast,filename=assets/tinker/textures/blocks/crops/berry_gold_ripe_fast.png
-texture:id=tinker/crops/berry_iron_fast,filename=assets/tinker/textures/blocks/crops/berry_iron_fast.png
-texture:id=tinker/crops/berry_iron_ripe_fast,filename=assets/tinker/textures/blocks/crops/berry_iron_ripe_fast.png
-texture:id=tinker/crops/berry_tin_fast,filename=assets/tinker/textures/blocks/crops/berry_tin_fast.png
-texture:id=tinker/crops/berry_tin_ripe_fast,filename=assets/tinker/textures/blocks/crops/berry_tin_ripe_fast.png
+texture:id=tinker/crops/berry_aluminum_fancy,filename=assets/tinker/textures/blocks/crops/berry_aluminum_fancy.png
+texture:id=tinker/crops/berry_aluminum_ripe_fancy,filename=assets/tinker/textures/blocks/crops/berry_aluminum_ripe_fancy.png
+texture:id=tinker/crops/berry_copper_fancy,filename=assets/tinker/textures/blocks/crops/berry_copper_fancy.png
+texture:id=tinker/crops/berry_copper_ripe_fancy,filename=assets/tinker/textures/blocks/crops/berry_copper_ripe_fancy.png
+texture:id=tinker/crops/berry_essence_fancy,filename=assets/tinker/textures/blocks/crops/berry_essence_fancy.png
+texture:id=tinker/crops/berry_essence_ripe_fancy,filename=assets/tinker/textures/blocks/crops/berry_essence_ripe_fancy.png
+texture:id=tinker/crops/berry_gold_fancy,filename=assets/tinker/textures/blocks/crops/berry_gold_fancy.png
+texture:id=tinker/crops/berry_gold_ripe_fancy,filename=assets/tinker/textures/blocks/crops/berry_gold_ripe_fancy.png
+texture:id=tinker/crops/berry_iron_fancy,filename=assets/tinker/textures/blocks/crops/berry_iron_fancy.png
+texture:id=tinker/crops/berry_iron_ripe_fancy,filename=assets/tinker/textures/blocks/crops/berry_iron_ripe_fancy.png
+texture:id=tinker/crops/berry_tin_fancy,filename=assets/tinker/textures/blocks/crops/berry_tin_fancy.png
+texture:id=tinker/crops/berry_tin_ripe_fancy,filename=assets/tinker/textures/blocks/crops/berry_tin_ripe_fancy.png
 texture:id=tinker/drain_out,filename=assets/tinker/textures/blocks/drain_out.png
 texture:id=tinker/drain_side,filename=assets/tinker/textures/blocks/drain_side.png
 texture:id=tinker/faucet,filename=assets/tinker/textures/blocks/faucet.png
@@ -315,7 +315,7 @@ texture:id=tinker/slimegrass_blue_tall,filename=assets/tinker/textures/blocks/sl
 texture:id=tinker/slimegrass_green_blue_side,filename=assets/tinker/textures/blocks/slimegrass_green_blue_side.png
 texture:id=tinker/slimegrass_green_dirt_side,filename=assets/tinker/textures/blocks/slimegrass_green_dirt_side.png
 texture:id=tinker/slimegrass_green_top,filename=assets/tinker/textures/blocks/slimegrass_green_top.png
-texture:id=tinker/slimeleaves_blue_fast,filename=assets/tinker/textures/blocks/slimeleaves_blue_fast.png
+texture:id=tinker/slimeleaves_blue_fancy,filename=assets/tinker/textures/blocks/slimeleaves_blue_fancy.png
 texture:id=tinker/slimesand,filename=assets/tinker/textures/blocks/slimesand.png
 texture:id=tinker/slimesandblue,filename=assets/tinker/textures/blocks/slimesandblue.png
 texture:id=tinker/slimesapling_blue,filename=assets/tinker/textures/blocks/slimesapling_blue.png
@@ -439,7 +439,7 @@ block:id=%slime.grass,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,da
 block:id=%slime.grass.tall,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/slimegrass_blue_tall
 
 # %slime.leaves:* (slime.leaves), render=(STANDARD), opaque=false,cls=tconstruct.blocks.slime.SlimeLeaves
-block:id=%slime.leaves,data=*,stdrot=true,face0-5=0:tinker/slimeleaves_blue_fast
+block:id=%slime.leaves,data=*,stdrot=true,face0-5=0:tinker/slimeleaves_blue_fancy
 
 # %slime.sapling:* (slime.sapling), render=(CROSSEDSQUARES), opaque=false,cls=tconstruct.blocks.slime.SlimeSapling
 block:id=%slime.sapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/slimesapling_blue
@@ -508,32 +508,32 @@ block:id=%decoration.multibrickmetal,data=7,stdrot=true,face0-5=0:tinker/bricks/
 block:id=%decoration.multibrickmetal,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/bricks/brick_alumite
 
 # %ore.berries.one:* (ore.berries.one), render=tconstruct.world.model.OreberryRender(CUSTOM), opaque=false,cls=tconstruct.world.blocks.OreberryBush
-block:id=%ore.berries.one,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_iron_fast
-block:id=%ore.berries.one,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_gold_fast
-block:id=%ore.berries.one,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_copper_fast
-block:id=%ore.berries.one,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_tin_fast
-block:id=%ore.berries.one,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_iron_fast
-block:id=%ore.berries.one,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_gold_fast
-block:id=%ore.berries.one,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_copper_fast
-block:id=%ore.berries.one,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_tin_fast
-block:id=%ore.berries.one,data=8,stdrot=true,face0-5=0:tinker/crops/berry_iron_fast
-block:id=%ore.berries.one,data=9,stdrot=true,face0-5=0:tinker/crops/berry_gold_fast
-block:id=%ore.berries.one,data=10,stdrot=true,face0-5=0:tinker/crops/berry_copper_fast
-block:id=%ore.berries.one,data=11,stdrot=true,face0-5=0:tinker/crops/berry_tin_fast
-block:id=%ore.berries.one,data=12,stdrot=true,face0-5=0:tinker/crops/berry_iron_ripe_fast
-block:id=%ore.berries.one,data=13,stdrot=true,face0-5=0:tinker/crops/berry_gold_ripe_fast
-block:id=%ore.berries.one,data=14,stdrot=true,face0-5=0:tinker/crops/berry_copper_ripe_fast
-block:id=%ore.berries.one,data=15,stdrot=true,face0-5=0:tinker/crops/berry_tin_ripe_fast
+block:id=%ore.berries.one,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_iron_fancy
+block:id=%ore.berries.one,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_gold_fancy
+block:id=%ore.berries.one,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_copper_fancy
+block:id=%ore.berries.one,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_tin_fancy
+block:id=%ore.berries.one,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_iron_fancy
+block:id=%ore.berries.one,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_gold_fancy
+block:id=%ore.berries.one,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_copper_fancy
+block:id=%ore.berries.one,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_tin_fancy
+block:id=%ore.berries.one,data=8,stdrot=true,face0-5=0:tinker/crops/berry_iron_fancy
+block:id=%ore.berries.one,data=9,stdrot=true,face0-5=0:tinker/crops/berry_gold_fancy
+block:id=%ore.berries.one,data=10,stdrot=true,face0-5=0:tinker/crops/berry_copper_fancy
+block:id=%ore.berries.one,data=11,stdrot=true,face0-5=0:tinker/crops/berry_tin_fancy
+block:id=%ore.berries.one,data=12,stdrot=true,face0-5=0:tinker/crops/berry_iron_ripe_fancy
+block:id=%ore.berries.one,data=13,stdrot=true,face0-5=0:tinker/crops/berry_gold_ripe_fancy
+block:id=%ore.berries.one,data=14,stdrot=true,face0-5=0:tinker/crops/berry_copper_ripe_fancy
+block:id=%ore.berries.one,data=15,stdrot=true,face0-5=0:tinker/crops/berry_tin_ripe_fancy
 
 # %ore.berries.two:* (ore.berries.two), render=tconstruct.world.model.OreberryRender(CUSTOM), opaque=false,cls=tconstruct.world.blocks.OreberryBushEssence
-block:id=%ore.berries.two,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_aluminum_fast
-block:id=%ore.berries.two,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_essence_fast
-block:id=%ore.berries.two,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_aluminum_fast
-block:id=%ore.berries.two,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_essence_fast
-block:id=%ore.berries.two,data=8,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_fast
-block:id=%ore.berries.two,data=9,stdrot=true,face0-5=0:tinker/crops/berry_essence_fast
-block:id=%ore.berries.two,data=12,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_ripe_fast
-block:id=%ore.berries.two,data=13,stdrot=true,face0-5=0:tinker/crops/berry_essence_ripe_fast
+block:id=%ore.berries.two,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_aluminum_fancy
+block:id=%ore.berries.two,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_essence_fancy
+block:id=%ore.berries.two,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_aluminum_fancy
+block:id=%ore.berries.two,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_essence_fancy
+block:id=%ore.berries.two,data=8,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_fancy
+block:id=%ore.berries.two,data=9,stdrot=true,face0-5=0:tinker/crops/berry_essence_fancy
+block:id=%ore.berries.two,data=12,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_ripe_fancy
+block:id=%ore.berries.two,data=13,stdrot=true,face0-5=0:tinker/crops/berry_essence_ripe_fancy
 
 # %SearedBrick:* (SearedBrick), render=(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.MetalOre
 block:id=%SearedBrick,data=0,stdrot=true,face0-5=0:tinker/nether_slag
