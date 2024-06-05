@@ -2,6 +2,7 @@ package org.dynmap.hdmap.renderer;
 
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
+import org.dynmap.modsupport.SimpleColorMultiplier;
 import org.dynmap.renderer.CustomColorMultiplier;
 import org.dynmap.renderer.CustomRenderer;
 import org.dynmap.renderer.CustomRendererData;
@@ -160,17 +161,6 @@ public class OpenComputers3DPrintedModelRenderer  extends CustomRenderer {
                 return multipliers[patchId - 6];
 
             return super.getCustomColorMultiplier(patchId, layer);
-        }
-
-        class SimpleColorMultiplier extends CustomColorMultiplier {
-            public SimpleColorMultiplier(int c){
-                color = c;
-            }
-            int color;
-            @Override
-            public int getColorMultiplier(MapDataContext mapDataCtx) {
-                return color;
-            }
         }
     }
 }
