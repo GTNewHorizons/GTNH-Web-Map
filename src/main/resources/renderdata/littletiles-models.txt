@@ -24,5 +24,4 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 
 
 # %BlockLittleTiles:* (BlockLittleTiles), render=com.creativemd.littletiles.client.render.SpecialBlockTilesRenderer(CUSTOM), opaque=false,cls=com.creativemd.littletiles.common.blocks.BlockTile
-# FIXME: Box constraints truncated to 0.0<=val<=1.0
-boxblock:id=%BlockLittleTiles,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=*
+customblock:id=%BlockLittleTiles,class=org.dynmap.hdmap.renderer.LittleTilesRenderer,data=*
