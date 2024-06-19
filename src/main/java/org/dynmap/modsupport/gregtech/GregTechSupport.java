@@ -4,7 +4,6 @@ import gregtech.api.GregTech_API;
 import gregtech.api.enums.Materials;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.metatileentity.MetaPipeEntity;
-import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Cable;
 import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Fluid;
 import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Frame;
@@ -29,6 +28,7 @@ public class GregTechSupport {
 
     HashMap<String, IconSet> iconSets = new HashMap<>();
     MetaTileEntityEntry[] metaTileEntries = new MetaTileEntityEntry[65536];
+    MaterialEntry[] materialEntries = new MaterialEntry[1000];
 
     public int[][] validHatchBaseBlocks = new int[65536][];
     public int[][] hatchBaseTextures2 = new int[128][];
@@ -123,6 +123,12 @@ public class GregTechSupport {
 
         return metaTileEntries[id];
     }
+    public MaterialEntry getMaterial(int id){
+        if(id < 0 || id >= materialEntries.length)
+            return null;
+
+        return materialEntries[id];
+    }
 
     int getTexture(HashMap<String, String> data, String key, HashMap<String, Integer> filetoidx){
         String val = data.get(key);
@@ -186,9 +192,23 @@ public class GregTechSupport {
 
     }
 
+    public void processMaterial(HashMap<String, String> data, HashMap<String, Integer> filetoidx) {
+        int id = GWM_Util.objectToInt(data.get("id"),-1);
+
+        if(id >= 0 && id < materialEntries.length){
+            MaterialEntry ent = new MaterialEntry();
+            ent.id = id;
+            ent.name = data.get("name");
+            ent.oreTexture = TexturePack.parseTextureIndex(filetoidx, data.get("oreTex"));
+            ent.smallOreTexture = TexturePack.parseTextureIndex(filetoidx, data.get("smallOreTex"));
+            ent.color = Integer.parseInt(data.get("color"), 16);
+
+            materialEntries[id] = ent;
+        }
+    }
+
     public class IconSet {
         public int front = -1, bottom = -1, side = -1, top = -1, output = -1;
-
     }
     public class MetaTileEntityEntry{
         public int baseTexture = -1;
@@ -203,6 +223,13 @@ public class GregTechSupport {
         public MteType type = MteType.None;
 
         public int thickness = 1000;
+    }
+    public class MaterialEntry{
+        public int id;
+        public String name;
+
+        public int oreTexture, smallOreTexture;
+        public int color;
     }
 
     public enum MteType {
@@ -224,13 +251,12 @@ public class GregTechSupport {
 
         @Override
         protected void process(ICommandSender sender, String[] args) {
-            BufferedWriter writerMteAll, writerMteUnhadled, writerMaterials;
+            BufferedWriter writerMteAll, writerMteUnhadled, writerMaterials, writerMaterials2;
             try {
                 writerMteAll = new BufferedWriter(new FileWriter("gwm-gt-dump.txt"));
                 writerMteUnhadled = new BufferedWriter(new FileWriter("gwm-gt-dump-unhandled.txt"));
                 writerMaterials = new BufferedWriter(new FileWriter("gwm-gt-dump-materials.txt"));
-
-
+                writerMaterials2 = new BufferedWriter(new FileWriter("gwm-gt-dump-materials2.txt"));
 
                 IMetaTileEntity[] metatileentities = GregTech_API.METATILEENTITIES;
                 for (int i = 0; i < metatileentities.length; i++) {
@@ -259,9 +285,33 @@ public class GregTechSupport {
                     writerMaterials.write("\r\n");
                 }
 
+                Materials[] sGeneratedMaterials = GregTech_API.sGeneratedMaterials;
+                for (int i = 0; i < sGeneratedMaterials.length; i++) {
+                    Materials mat = sGeneratedMaterials[i];
+                    writerMaterials2.write("idx=" + i);
+
+                    if(mat == null) {
+                        writerMaterials2.write("\r\n");
+                        continue;
+                    }
+
+                    writerMaterials2.write(",name=" + mat.mName);
+
+                    if (mat.mIconSet != null && mat.mIconSet.mSetName != null) {
+                        writerMaterials2.write(",iconset=" + mat.mIconSet.mSetName);
+                    }
+                    if (mat.mCustomID != null) {
+                        writerMaterials2.write(",customid=" + mat.mCustomID);
+                    }
+                    writerMaterials2.write(",color=" + String.format("%02X%02X%02X", mat.mRGBa[0], mat.mRGBa[1], mat.mRGBa[2]));
+
+                    writerMaterials2.write("\r\n");
+                }
+
                 writerMteAll.close();
                 writerMteUnhadled.close();
                 writerMaterials.close();
+                writerMaterials2.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
