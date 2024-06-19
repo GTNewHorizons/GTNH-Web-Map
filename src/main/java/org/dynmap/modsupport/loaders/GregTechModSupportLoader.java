@@ -37,5 +37,8 @@ public class GregTechModSupportLoader extends CustomModSupportLoader {
         else if(type.equals("mehatch")){
             GregTechSupport.INSTANCE.processMeHatch(data);
         }
+        else if(type.equals("material")){
+            GregTechSupport.INSTANCE.processMaterial(data, filetoidx);
+        }
     }
 }

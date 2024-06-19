@@ -16,6 +16,7 @@ import org.dynmap.forge.GwmSubCommand;
 import org.dynmap.markers.AreaMarker;
 import org.dynmap.markers.MarkerAPI;
 import org.dynmap.markers.MarkerSet;
+import serverutils.ServerUtilitiesConfig;
 import serverutils.data.ClaimedChunk;
 import serverutils.data.ClaimedChunks;
 import serverutils.events.chunks.ChunkModifiedEvent;
@@ -38,6 +39,9 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
 
     @Override
     public void apiEnabled(DynmapCommonAPI api) {
+        if(!ServerUtilitiesConfig.world.chunk_claiming)
+            return;
+
         GwmCommand.registerSubCommand(new UpdateSUClaimsGwmSubCommand("updatesuclaims"));
         markerAPI = api.getMarkerAPI();
         markerSet = markerAPI.createMarkerSet("suclaims", "Claimed Chunks (SU)", null, false);
@@ -53,6 +57,9 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
     }
 
     void update(){
+        if(!ClaimedChunks.isActive())
+            return;
+
         for(AreaMarker m : markerSet.getAreaMarkers())
             if(m != null)
                 m.deleteMarker();

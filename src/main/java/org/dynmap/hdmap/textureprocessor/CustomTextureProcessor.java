@@ -2,7 +2,11 @@ package org.dynmap.hdmap.textureprocessor;
 
 import org.dynmap.hdmap.TexturePack;
 
+import java.util.HashMap;
+
 public abstract class CustomTextureProcessor {
+
+    public boolean init(HashMap<String, String> data){return true;}
 
     public int getTextureCount(){ return 0; }
 

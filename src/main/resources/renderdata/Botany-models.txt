@@ -34,3 +34,8 @@ boxblock:id=%loam,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=
 
 # %flowerbed:* (flowerbed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%flowerbed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+customblock:id=%ceramicBrick,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*,type=brick
+customblock:id=%ceramicPattern,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*
+customblock:id=%ceramic,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*,type=basic
+customblock:id=%stained,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*,type=basic

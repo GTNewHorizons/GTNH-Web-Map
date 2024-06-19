@@ -2435,6 +2435,7 @@ public class TexturePack {
                     TileFileFormat fmt = TileFileFormat.GRID;
                     MaterialType mt = null;
                     CustomTextureProcessor customProcessor = null;
+                    HashMap<String, String> data = new HashMap<>();
                     if(istxt) {
                         xdim = ydim = 1;
                         fmt = TileFileFormat.GRID;
@@ -2443,6 +2444,7 @@ public class TexturePack {
                         String[] aval = arg.split("=");
                         if(aval.length < 2)
                             continue;
+                        data.put(aval[0], aval[1]);
                         if(aval[0].equals("id")) {
                             id = aval[1];
                             if (fname == null) {
@@ -2488,6 +2490,7 @@ public class TexturePack {
                         }
 
                         if(customProcessor != null){
+                            customProcessor.init(data);
                             int num = customProcessor.getTextureCount();
                             for(int i = 0; i < num; i++)
                                 TexturePack.parseTextureIndex(filetoidx, fid, String.format("%d:%s", i, id));

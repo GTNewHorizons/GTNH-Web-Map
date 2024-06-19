@@ -17,9 +17,8 @@ public class GrayScaleProcessor extends CustomTextureProcessor{
             int dst = ((srcR + srcG + srcB) / 3) & 0xFF;
 
             blended[p] = (blended[p] & 0xFF000000) | (dst << 16) | (dst << 8) | dst;
-
-            texturePack.setTileARGB(tileToDyntile[0], blended);
         }
+        texturePack.setTileARGB(tileToDyntile[0], blended);
     }
 
     @Override
