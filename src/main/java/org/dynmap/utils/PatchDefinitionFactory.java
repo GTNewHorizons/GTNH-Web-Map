@@ -174,10 +174,19 @@ public class PatchDefinitionFactory implements RenderPatchFactory {
     @Override
     public RenderPatch getTriangleExplTexCoords(double x0, double y0, double z0, double tu0, double tv0, double x1, double y1, double z1, double tu1, double tv1, double x2, double y2, double z2, double tu2, double tv2, SideVisible sidevis, int textureidx) {
         PatchDefinition ret = new PatchDefinition();
-        ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,1,sidevis, textureidx);
+        ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,1, sidevis, textureidx);
         ret.explicitTexCoords = new double[]{tu0, tv0, tu1, tv1, tu2, tv2};
         return ret;
     }
+
+    @Override
+    public RenderPatch getPatchExplTexCoords(double x0, double y0, double z0, double tu0, double tv0, double x1, double y1, double z1, double tu1, double tv1, double x2, double y2, double z2, double tu2, double tv2, double uplusvmax, SideVisible sidevis, int textureidx) {
+        PatchDefinition ret = new PatchDefinition();
+        ret.update(x0, y0, z0, x1, y1, z1, x2, y2, z2,0,1,0,1,uplusvmax, sidevis, textureidx);
+        ret.explicitTexCoords = new double[]{tu0, tv0, tu1, tv1, tu2, tv2};
+        return ret;
+    }
+
     @Override
     public RenderPatch getTriangleAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, SideVisible sidevis, int textureidx) {
         return getTriangleAutoTexCoords(x0, y0, z0, x1, y1, z1, x2, y2, z2, 1, sidevis, textureidx);
