@@ -96,6 +96,7 @@ public interface RenderPatchFactory {
     public int getTextureCountFromMap(String id);
 
     public RenderPatch getTriangleExplTexCoords(double x0, double y0, double z0, double tu0, double tv0, double x1, double y1, double z1, double tu1, double tv1, double x2, double y2, double z2, double tu2, double tv2, SideVisible sidevis, int textureidx);
+    public RenderPatch getPatchExplTexCoords(double x0, double y0, double z0, double tu0, double tv0, double x1, double y1, double z1, double tu1, double tv1, double x2, double y2, double z2, double tu2, double tv2, double uplusvmax, SideVisible sidevis, int textureidx);
     public RenderPatch getTriangleAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, SideVisible sidevis, int textureidx);
     public RenderPatch getTriangleAutoTexCoords(double x0, double y0, double z0, double x1, double y1, double z1, double x2, double y2, double z2, double uplusvmax, SideVisible sidevis, int textureidx);
 

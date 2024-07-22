@@ -1,5 +1,6 @@
 package org.dynmap.hdmap;
 
+import net.minecraft.world.biome.BiomeGenBase;
 import org.dynmap.Color;
 import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapCore;
@@ -7,6 +8,7 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.common.BiomeMap;
 import org.dynmap.exporter.OBJExport;
+import org.dynmap.forge.GwmConfig;
 import org.dynmap.hdmap.textureprocessor.CustomTextureProcessor;
 import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.renderer.CustomColorMultiplier;
@@ -2607,6 +2609,17 @@ public class TexturePack {
                         }
                         if(v[0].equals("id")) {
                             id = getIntValue(varvals, v[1]);
+                        }
+                        else if(v[0].equals("gwm_id")){
+                            if(GwmConfig.useOldBiomeColoring)
+                                break;
+
+                            for(BiomeGenBase bgb : BiomeGenBase.getBiomeGenArray()){
+                                if(bgb != null && bgb.biomeName.equals(v[1])){
+                                    id = bgb.biomeID;
+                                    break;
+                                }
+                            }
                         }
                         else if(v[0].equals("grassColorMult")) {
                             grasscolormult = Integer.valueOf(v[1], 16);

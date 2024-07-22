@@ -1082,6 +1082,10 @@ layer:0,1,2,3,4,5,6,7
 -**************-
 -**************-
 ----------------
+
+# Cocoa bean
+customblock:id=127,data=*,class=org.dynmap.hdmap.renderer.CocoaBeanRenderer
+
 # Tripwire Hook
 patch:id=HookBoxSide1,Ox=0.0,Oy=0.0,Oz=0.375,Ux=1.0,Uy=0.0,Uz=0.375,Vx=0.0,Vy=1.0,Vz=0.375,Umin=0.875,Umax=1.0,Vmin=0.0625,Vmax=0.5625,visibility=bottom
 patch:id=HookBoxSide2,Ox=0.0,Oy=0.0,Oz=0.625,Ux=1.0,Uy=0.0,Uz=0.625,Vx=0.0,Vy=1.0,Vz=0.625,Umin=0.875,Umax=1.0,Vmin=0.0625,Vmax=0.5625,visibility=top

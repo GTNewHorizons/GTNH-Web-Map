@@ -257,6 +257,8 @@ texture:id=emerald_ore
 texture:id=emerald_block
 texture:id=repeater_off
 texture:id=repeater_on
+texture:id=cocoa_stage_0
+texture:id=cocoa_stage_1
 texture:id=cocoa_stage_2
 texture:id=command_block
 texture:id=beacon
@@ -1011,7 +1013,9 @@ block:id=126,data=3,data=11,allfaces=0:planks_jungle,stdrot=true,transparency=SE
 # Wooden Slab (Big Oak)
 [1.7.0-]block:id=126,data=5,data=13,allfaces=0:planks_big_oak,stdrot=true,transparency=SEMITRANSPARENT
 # Cocoa Plant (TODO: handle different stages, orientations)
-block:id=127,data=*,allsides=0:cocoa_stage_2
+block:id=127,data=0,data=1,data=2,data=3,allsides=0:cocoa_stage_0
+block:id=127,data=4,data=5,data=6,data=7,allsides=0:cocoa_stage_1
+block:id=127,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,allsides=0:cocoa_stage_2
 # Sandstone stairs
 block:id=128,data=*,patch0=0:sandstone_normal,patch1=0:sandstone_top,patch2=0:sandstone_bottom,transparency=SEMITRANSPARENT
 # Emerald Ore
