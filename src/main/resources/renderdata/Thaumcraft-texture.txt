@@ -122,6 +122,10 @@ texture:id=thaumcraft/bellows,filename=assets/thaumcraft/textures/models/bellows
 texture:id=gwmcustom/tc4pipe,filename=assets/gwmcustom/tc4pipe.png,xcount=2
 texture:id=gwmcustom/tc4bellows,filename=assets/gwmcustom/tc4bellows.png,xcount=2
 
+biome:gwm_id=Eerie,grassColorMult=1404840,foliageColorMult=1405340,waterColorMult=FFFFFF
+biome:gwm_id=Eldritch,grassColorMult=18DB879,foliageColorMult=170A557,waterColorMult=FFFFFF
+biome:gwm_id=Magical Forest,grassColorMult=155FF81,foliageColorMult=166FFC5,waterColorMult=FFFFFF
+biome:gwm_id=Tainted Land,grassColorMult=16D4189,foliageColorMult=17C6D87,waterColorMult=FFFFFF
 
 
 # %blockFluxGoo:* (blockFluxGoo), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thaumcraft.common.blocks.BlockFluxGoo
@@ -194,11 +198,11 @@ block:id=%blockTaint,data=2,stdrot=true,face0-5=0:thaumcraft/fleshblock
 block:id=%blockTaint,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/taint_crust
 
 # %blockTaintFibres:* (blockTaintFibres), render=thaumcraft.client.renderers.block.BlockTaintFibreRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTaintFibres
-block:id=%blockTaintFibres,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:thaumcraft/taint_fibres
-block:id=%blockTaintFibres,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:thaumcraft/taintgrass1
-block:id=%blockTaintFibres,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:thaumcraft/taintgrass2
-block:id=%blockTaintFibres,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:thaumcraft/taint_spore_stalk_1
-block:id=%blockTaintFibres,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:thaumcraft/taint_spore_stalk_2
+block:id=%blockTaintFibres,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=1000:thaumcraft/taint_fibres
+block:id=%blockTaintFibres,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=1000:thaumcraft/taintgrass1
+block:id=%blockTaintFibres,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=1000:thaumcraft/taintgrass2
+block:id=%blockTaintFibres,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=1000:thaumcraft/taint_spore_stalk_1
+block:id=%blockTaintFibres,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=1000:thaumcraft/taint_spore_stalk_2
 
 # %blockCosmeticOpaque:* (blockCosmeticOpaque), render=thaumcraft.client.renderers.block.BlockCosmeticOpaqueRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticOpaque
 block:id=%blockCosmeticOpaque,data=0,stdrot=true,face0-1=12000:thaumcraft/amberblock_top,face2-5=12000:thaumcraft/amberblock
