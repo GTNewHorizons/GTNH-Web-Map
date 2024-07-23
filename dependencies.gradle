@@ -95,6 +95,7 @@ dependencies {
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:Catwalks-2:2.1.4-GTNH:dev')
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:TinkersConstruct:1.9.38-GTNH:dev')
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:OpenComputers:1.10.6-GTNH:dev')
-    runtimeOnlyNonPublishable('ForgeEssentials:forgeessentials:7.5.0:dev')
-    //runtimeOnlyNonPublishable(rfg.deobf("ForgeEssentials:forgeessentials:7.5.0:server"))
+
+    // Uncomment this to run with FE - only works on server, can't use in single player or on client
+    // runtimeOnlyNonPublishable('ForgeEssentials:forgeessentials:7.5.0:dev')
 }
