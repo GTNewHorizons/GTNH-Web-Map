@@ -29,6 +29,7 @@ import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkCheckHandler;
 import cpw.mods.fml.relauncher.Side;
 import org.dynmap.forge.integration.ForgeChunkLoaderMarkers;
+import org.dynmap.forge.integration.ForgeEssentialsSupport;
 import org.dynmap.forge.integration.ServerUtilitiesClaimedChunksMarkers;
 
 @Mod(modid = "Dynmap", name = "Dynmap", version = Tags.GRADLETOKEN_VERSION)
@@ -132,6 +133,11 @@ public class DynmapMod
         if(plugin == null)
             plugin = proxy.startServer();
         plugin.serverStarted();
+
+        if(Loader.isModLoaded("ForgeEssentials")){
+
+            DynmapCommonAPIListener.register(new ForgeEssentialsSupport());
+        }
 
         if(GwmConfig.enableChunkLoadingMarkers){
             DynmapCommonAPIListener.register(new ForgeChunkLoaderMarkers());

@@ -1,5 +1,21 @@
 // Add any additional repositories for your dependencies here
 
 repositories {
-
+    exclusiveContent {
+        forRepository {
+            ivy {
+                name = 'ForgeEssentials releases'
+                url = 'https://github.com/ForgeEssentials/ForgeEssentials/releases/download/'
+                patternLayout {
+                    artifact '[revision]/[module]-1.7.10-[revision](-[classifier])(.[ext])'
+                }
+                metadataSources {
+                    artifact()
+                }
+            }
+        }
+        filter {
+            includeGroup('ForgeEssentials')
+        }
+    }
 }

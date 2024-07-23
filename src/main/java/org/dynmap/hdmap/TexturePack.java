@@ -2620,6 +2620,9 @@ public class TexturePack {
                                     break;
                                 }
                             }
+                            if(id <= 0){
+                                Log.severe("Failed to determine ID for biome " + v[1]);
+                            }
                         }
                         else if(v[0].equals("grassColorMult")) {
                             grasscolormult = Integer.valueOf(v[1], 16);

@@ -78,6 +78,7 @@ dependencies {
     compileOnly("com.github.GTNewHorizons:ServerUtilities:2.0.35:dev"){
         transitive = false
     }
+    compileOnly("ForgeEssentials:forgeessentials:7.5.0:dev")
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:GT5-Unofficial:5.09.45.140:dev")
     runtimeOnlyNonPublishable("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.3.40-GTNH:dev")
@@ -94,4 +95,6 @@ dependencies {
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:Catwalks-2:2.1.4-GTNH:dev')
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:TinkersConstruct:1.9.38-GTNH:dev')
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:OpenComputers:1.10.6-GTNH:dev')
+    runtimeOnlyNonPublishable('ForgeEssentials:forgeessentials:7.5.0:dev')
+    //runtimeOnlyNonPublishable(rfg.deobf("ForgeEssentials:forgeessentials:7.5.0:server"))
 }
