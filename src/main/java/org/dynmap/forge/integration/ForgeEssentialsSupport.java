@@ -1,11 +1,12 @@
 package org.dynmap.forge.integration;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fe.event.world.SignEditEvent;
 import org.dynmap.DynmapCommonAPI;
 import org.dynmap.DynmapCommonAPIListener;
-import org.dynmap.DynmapCore;
 import org.dynmap.forge.ForgeWorld;
 import org.dynmap.forge.GwmConfig;
 
@@ -20,10 +21,17 @@ public class ForgeEssentialsSupport extends DynmapCommonAPIListener {
 
     @SubscribeEvent
     public void onSignChanged(SignEditEvent event){
-        if(api instanceof DynmapCore){
-            DynmapCore dc = (DynmapCore)api;
+        if (api == null)
+            return;
 
-            dc.processSignChange(0, ForgeWorld.getWorldName(event.editor.getEntityWorld()), event.x, event.y, event.z, event.text, event.editor.getDisplayName());
-        }
+        EntityPlayerMP player = event.editor;
+        if(player == null)
+            return;
+
+        World world = player.getEntityWorld();
+        if(world == null)
+            return;
+
+        api.processSignChange(0, ForgeWorld.getWorldName(world), event.x, event.y, event.z, event.text, player.getDisplayName());
     }
 }
