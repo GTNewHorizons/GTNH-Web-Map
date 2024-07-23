@@ -34,7 +34,7 @@ public class MarkerSignManager {
         public void signChangeEvent(int blkid, String wname, int x, int y, int z, String[] lines, DynmapPlayer p) {
             if(mgr == null)
                 return;
-            if(!lines[0].equalsIgnoreCase("[dynmap]")) {  /* If not dynmap sign, quit */
+            if(!lines[0].equalsIgnoreCase("[dynmap]") && !lines[0].toLowerCase().startsWith("[gwm]")) {  /* If not dynmap sign, quit */
                 return;
             }
             /* If allowed to do marker signs */
@@ -43,6 +43,11 @@ public class MarkerSignManager {
                 String set = defSignSet;
                 String icon = MarkerIcon.SIGN;
                 String label = "";
+
+                if(lines[0].toLowerCase().startsWith("[gwm]") && lines[0].length() > 5){
+                    icon = lines[0].substring(5).trim();
+                }
+
                 lines[0] = ""; /* Blank out [dynmap] */
                 for(int i = 1; i < 4; i++) {    /* Check other lines for icon: or set: */
                     String v = plugin.getServer().stripChatColor(lines[i]);
