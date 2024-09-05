@@ -1,13 +1,7 @@
 package org.dynmap.hdmap.renderer;
 
-import gregtech.api.GregTech_API;
+
 import gregtech.api.enums.Dyes;
-import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
-import gregtech.api.metatileentity.MetaPipeEntity;
-import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Frame;
-import gregtech.api.metatileentity.implementations.GT_MetaTileEntity_MultiBlockBase;
-import gregtech.api.metatileentity.implementations.GT_MetaTileEntity_TieredMachineBlock;
-import gregtech.common.tileentities.machines.multi.GT_MetaTileEntity_PrimitiveBlastFurnace;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.modsupport.gregtech.GregTechSupport;
@@ -69,12 +63,11 @@ public class GregTechMachineRenderer extends PipeRendererBase {
 
         if(typeIdObj instanceof Integer) {
             int typeId = ((Integer) typeIdObj).intValue();
-            IMetaTileEntity tmp = GregTech_API.METATILEENTITIES[typeId];
             GregTechSupport.MetaTileEntityEntry entry = GregTechSupport.INSTANCE.getMTEEntre(typeId);
             int mColor = GWM_Util.objectToInt(mapDataCtx.getBlockTileEntityField("mColor"),0);
 
             if (entry != null) {
-                if (tmp instanceof MetaPipeEntity && !(tmp instanceof GT_MetaPipeEntity_Frame)) {
+                if (entry.type == GregTechSupport.MteType.Cable || entry.type == GregTechSupport.MteType.Wire || entry.type == GregTechSupport.MteType.Frame || entry.type == GregTechSupport.MteType.Pipe) {
                     Object connections = mapDataCtx.getBlockTileEntityField("mConnections");
                     RenderPatch[][] patchSetToUse = pipes375;
 
@@ -115,7 +108,7 @@ public class GregTechMachineRenderer extends PipeRendererBase {
                     }
 
                     return new CustomRendererData(patchSetToUse[version], pipeTexturesAndColorsThing, pipeTexturesAndColorsThing);
-                } else if (tmp instanceof GT_MetaTileEntity_TieredMachineBlock || tmp instanceof GT_MetaPipeEntity_Frame || tmp instanceof GT_MetaTileEntity_MultiBlockBase || tmp instanceof GT_MetaTileEntity_PrimitiveBlastFurnace) {
+                } else {
                     Object tmpActive = mapDataCtx.getBlockTileEntityField("mActive");
                     Object tmpFacing = mapDataCtx.getBlockTileEntityField("mFacing");
                     Object tmpMainFacing = mapDataCtx.getBlockTileEntityField("mMainFacing");
