@@ -61,4 +61,6 @@ public interface MapDataContext {
      * Get current Z coordinate
      */
     public int getZ();
+
+    public int getBlockDataFull();
 }
