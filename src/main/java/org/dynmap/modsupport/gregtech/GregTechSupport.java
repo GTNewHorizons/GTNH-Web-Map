@@ -1,13 +1,13 @@
 package org.dynmap.modsupport.gregtech;
 
-import gregtech.api.GregTech_API;
+import gregtech.api.GregTechAPI;
 import gregtech.api.enums.Materials;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.metatileentity.MetaPipeEntity;
-import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Cable;
-import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Fluid;
-import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Frame;
-import gregtech.api.metatileentity.implementations.GT_MetaPipeEntity_Item;
+import gregtech.api.metatileentity.implementations.MTECable;
+import gregtech.api.metatileentity.implementations.MTEFluid;
+import gregtech.api.metatileentity.implementations.MTEFrame;
+import gregtech.api.metatileentity.implementations.MTEItem;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -258,7 +258,7 @@ public class GregTechSupport {
                 writerMaterials = new BufferedWriter(new FileWriter("gwm-gt-dump-materials.txt"));
                 writerMaterials2 = new BufferedWriter(new FileWriter("gwm-gt-dump-materials2.txt"));
 
-                IMetaTileEntity[] metatileentities = GregTech_API.METATILEENTITIES;
+                IMetaTileEntity[] metatileentities = GregTechAPI.METATILEENTITIES;
                 for (int i = 0; i < metatileentities.length; i++) {
                     IMetaTileEntity imte = metatileentities[i];
 
@@ -285,7 +285,7 @@ public class GregTechSupport {
                     writerMaterials.write("\r\n");
                 }
 
-                Materials[] sGeneratedMaterials = GregTech_API.sGeneratedMaterials;
+                Materials[] sGeneratedMaterials = GregTechAPI.sGeneratedMaterials;
                 for (int i = 0; i < sGeneratedMaterials.length; i++) {
                     Materials mat = sGeneratedMaterials[i];
                     writerMaterials2.write("idx=" + i);
@@ -329,20 +329,20 @@ public class GregTechSupport {
                 writer.write(",capacity="+mpe.getCapacity());
 
                 Materials mat = null;
-                if(mpe instanceof GT_MetaPipeEntity_Frame){
-                    GT_MetaPipeEntity_Frame frm = (GT_MetaPipeEntity_Frame) mpe;
+                if(mpe instanceof MTEFrame){
+                    MTEFrame frm = (MTEFrame) mpe;
                     mat =frm.mMaterial;
                 }
-                else if(mpe instanceof GT_MetaPipeEntity_Item){
-                    GT_MetaPipeEntity_Item frm = (GT_MetaPipeEntity_Item) mpe;
+                else if(mpe instanceof MTEItem){
+                    MTEItem frm = (MTEItem) mpe;
                     mat =frm.mMaterial;
                 }
-                else if(mpe instanceof GT_MetaPipeEntity_Fluid){
-                    GT_MetaPipeEntity_Fluid frm = (GT_MetaPipeEntity_Fluid) mpe;
+                else if(mpe instanceof MTEFluid){
+                    MTEFluid frm = (MTEFluid) mpe;
                     mat =frm.mMaterial;
                 }
-                else if(mpe instanceof GT_MetaPipeEntity_Cable){
-                    GT_MetaPipeEntity_Cable frm = (GT_MetaPipeEntity_Cable) mpe;
+                else if(mpe instanceof MTECable){
+                    MTECable frm = (MTECable) mpe;
                     mat =frm.mMaterial;
                 }
 

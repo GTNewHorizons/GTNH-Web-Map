@@ -405,6 +405,7 @@ texture:id=gregtech/iconsets/UV_SIDE_CYCLOTRON_SOLENOID,filename=assets/gregtech
 texture:id=gregtech/iconsets/UV_TOP_CYCLOTRON_SOLENOID,filename=assets/gregtech/textures/blocks/iconsets/UV_TOP_CYCLOTRON_SOLENOID.png
 texture:id=gregtech/iconsets/ZPM_SIDE_CYCLOTRON_SOLENOID,filename=assets/gregtech/textures/blocks/iconsets/ZPM_SIDE_CYCLOTRON_SOLENOID.png
 texture:id=gregtech/iconsets/ZPM_TOP_CYCLOTRON_SOLENOID,filename=assets/gregtech/textures/blocks/iconsets/ZPM_TOP_CYCLOTRON_SOLENOID.png
+texture:id=gregtech/materialicons/NONE/frameGt,filename=assets/gregtech/textures/blocks/materialicons/NONE/frameGt.png
 texture:id=minecraft/coal_block,filename=assets/minecraft/textures/blocks/coal_block.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 texture:id=minecraft/end_stone,filename=assets/minecraft/textures/blocks/end_stone.png
@@ -1136,6 +1137,8 @@ block:id=%gt.blockcasings.cyclotron_coils,data=9,stdrot=true,face0-1=0:gregtech/
 block:id=%gt.blockcasings.cyclotron_coils,data=10,stdrot=true,face0-1=0:gregtech/iconsets/UMV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/UMV_SIDE_CYCLOTRON_SOLENOID
 block:id=%gt.blockcasings.cyclotron_coils,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
+block:id=%gt.blockframes,data=*,stdrot=true,face0-5=17000:gregtech/materialicons/NONE/frameGt
+
 specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
 
 moddata:mod=gtmte,type=hatchbase,block=gregtech:gt.blockcasings,start=0
@@ -1150,6 +1153,8 @@ texture:id=gt_frame,filename=assets/gregtech/textures/blocks/materialicons/NONE/
 texture:id=gt_pipe,filename=assets/gregtech/textures/blocks/materialicons/NONE/pipeSide.png
 texture:id=gt_cable,filename=assets/gregtech/textures/blocks/iconsets/INSULATION_FULL.png
 texture:id=gt_wire,filename=assets/gregtech/textures/blocks/materialicons/NONE/wire.png
+
+
 
 ######################################################################################################
 ######################################################################################################

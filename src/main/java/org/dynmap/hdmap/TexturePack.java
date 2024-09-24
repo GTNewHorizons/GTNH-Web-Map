@@ -2778,6 +2778,9 @@ public class TexturePack {
                     }
                     handledByCustomRendering = true;
                 }
+                else {
+                    ccm = crd.getCustomColorMultiplier(patchid, 0);
+                }
             }
             else {
                 ccm = crd.getCustomColorMultiplier(patchid, 0);

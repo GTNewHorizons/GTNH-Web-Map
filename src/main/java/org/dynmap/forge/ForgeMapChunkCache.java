@@ -113,6 +113,7 @@ public class ForgeMapChunkCache extends MapChunkCache
         private BlockStep laststep;
         private int typeid = -1;
         private int blkdata = -1;
+        private int blkdatafull = -1;
         private final int worldheight;
         private final int x_base;
         private final int z_base;
@@ -151,11 +152,11 @@ public class ForgeMapChunkCache extends MapChunkCache
 
             if ((y >= 0) && (y < worldheight))
             {
-                typeid = blkdata = -1;
+                typeid = blkdata = blkdatafull = -1;
             }
             else
             {
-                typeid = blkdata = 0;
+                typeid = blkdata = blkdatafull = 0;
             }
         }
         @Override
@@ -512,6 +513,7 @@ public class ForgeMapChunkCache extends MapChunkCache
         {
             typeid = -1;
             blkdata = -1;
+            blkdatafull = -1;
 
             switch (step.ordinal())
             {
@@ -538,7 +540,7 @@ public class ForgeMapChunkCache extends MapChunkCache
 
                     if (y >= worldheight)
                     {
-                        typeid = blkdata = 0;
+                        typeid = blkdata = blkdatafull = 0;
                     }
 
                     break;
@@ -583,7 +585,7 @@ public class ForgeMapChunkCache extends MapChunkCache
 
                     if (y < 0)
                     {
-                        typeid = blkdata = 0;
+                        typeid = blkdata = blkdatafull = 0;
                     }
 
                     break;
@@ -642,11 +644,11 @@ public class ForgeMapChunkCache extends MapChunkCache
 
             if ((y < 0) || (y >= worldheight))
             {
-                typeid = blkdata = 0;
+                typeid = blkdata = blkdatafull = 0;
             }
             else
             {
-                typeid = blkdata = -1;
+                typeid = blkdata = blkdatafull = -1;
             }
         }
         @Override
@@ -664,6 +666,17 @@ public class ForgeMapChunkCache extends MapChunkCache
         {
             return z;
         }
+
+        @Override
+        public int getBlockDataFull() {
+            if (blkdatafull < 0)
+            {
+                blkdatafull = snap.getBlockDataFull(bx, y, bz);
+            }
+
+            return blkdatafull;
+        }
+
         @Override
         public final int getBlockTypeIDAt(BlockStep s)
         {

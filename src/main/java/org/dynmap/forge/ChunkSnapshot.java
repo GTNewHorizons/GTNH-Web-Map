@@ -20,6 +20,7 @@ public class ChunkSnapshot
     private final int x, z;
     private final short[][] blockids; /* Block IDs, by section */
     private final byte[][] blockdata;
+    private final short[][] blockdata16;
     private final byte[][] skylight;
     private final byte[][] emitlight;
     private final boolean[] empty;
@@ -28,6 +29,7 @@ public class ChunkSnapshot
     private final long captureFulltime;
     private final int sectionCnt;
     private final long inhabitedTicks;
+    private boolean have16bitBlockData;
 
     private static final int BLOCKS_PER_SECTION = 16 * 16 * 16;
     private static final int COLUMNS_PER_CHUNK = 16 * 16;
@@ -69,6 +71,7 @@ public class ChunkSnapshot
         this.sectionCnt = worldheight / 16;
         /* Allocate arrays indexed by section */
         this.blockids = new short[this.sectionCnt][];
+        this.blockdata16 = new short[this.sectionCnt][];
         this.blockdata = new byte[this.sectionCnt][];
         this.skylight = new byte[this.sectionCnt][];
         this.emitlight = new byte[this.sectionCnt][];
@@ -79,6 +82,7 @@ public class ChunkSnapshot
         {
             this.empty[i] = true;
             this.blockids[i] = emptyIDs;
+            this.blockdata16[i] = emptyIDs;
             this.blockdata[i] = emptyData;
             this.emitlight[i] = emptyData;
             this.skylight[i] = fullData;
@@ -104,6 +108,7 @@ public class ChunkSnapshot
         }
         /* Allocate arrays indexed by section */
         this.blockids = new short[this.sectionCnt][];
+        this.blockdata16 = new short[this.sectionCnt][];
         this.blockdata = new byte[this.sectionCnt][];
         this.skylight = new byte[this.sectionCnt][];
         this.emitlight = new byte[this.sectionCnt][];
@@ -112,6 +117,7 @@ public class ChunkSnapshot
         for (int i = 0; i < this.sectionCnt; i++) {
             this.empty[i] = true;
             this.blockids[i] = emptyIDs;
+            this.blockdata16[i] = emptyIDs;
             this.blockdata[i] = emptyData;
             this.emitlight[i] = emptyData;
             this.skylight[i] = fullData;
@@ -125,28 +131,58 @@ public class ChunkSnapshot
                 Log.info("Section " + (int) secnum + " above world height " + worldheight);
                 continue;
             }
-            byte[] lsb_bytes = sec.getByteArray("Blocks");
             short[] blkids = new short[BLOCKS_PER_SECTION];
             this.blockids[secnum] = blkids;
             int len = BLOCKS_PER_SECTION;
-            if(len > lsb_bytes.length) len = lsb_bytes.length;
-            for(int j = 0; j < len; j++) {
-                blkids[j] = (short)(0xFF & lsb_bytes[j]); 
-            }
-            if (sec.hasKey("Add")) {    /* If additional data, add it */
-                byte[] msb = sec.getByteArray("Add");
-                len = BLOCKS_PER_SECTION / 2;
-                if(len > msb.length) len = msb.length;
-                for (int j = 0; j < len; j++) {
-                    short b = (short)(msb[j] & 0xFF);
-                    if (b == 0) {
-                        continue;
-                    }
-                    blkids[j << 1] |= (b & 0x0F) << 8;
-                    blkids[(j << 1) + 1] |= (b & 0xF0) << 4;
+
+            byte[] blocks16 = sec.getByteArray("Blocks16");
+
+            if(blocks16 != null && blocks16.length > 0)
+            {
+                for(int b = 0; b < blkids.length; b++){
+                    blkids[b] = (short) (((0xFF & blocks16[2*b]) << 8) | (0xFF & blocks16[2*b+1]));
                 }
             }
+            else {
+                byte[] lsb_bytes = sec.getByteArray("Blocks");
+                if (len > lsb_bytes.length) len = lsb_bytes.length;
+                for (int j = 0; j < len; j++) {
+                    blkids[j] = (short) (0xFF & lsb_bytes[j]);
+                }
+                if (sec.hasKey("Add")) {    /* If additional data, add it */
+                    byte[] msb = sec.getByteArray("Add");
+                    len = BLOCKS_PER_SECTION / 2;
+                    if (len > msb.length) len = msb.length;
+                    for (int j = 0; j < len; j++) {
+                        short b = (short) (msb[j] & 0xFF);
+                        if (b == 0) {
+                            continue;
+                        }
+                        blkids[j << 1] |= (b & 0x0F) << 8;
+                        blkids[(j << 1) + 1] |= (b & 0xF0) << 4;
+                    }
+                }
+            }
+
             this.blockdata[secnum] = sec.getByteArray("Data");
+            byte[] data16 = sec.getByteArray("Data16");
+            if(data16 != null && data16.length > 0){
+                have16bitBlockData = true;
+                short[] blkdata = new short[BLOCKS_PER_SECTION];
+                for(int b = 0; b < blkdata.length; b++){
+                    blkdata[b] = (short) (((0xFF & data16[2*b]) << 8) | (0xFF & data16[2*b+1]));
+                }
+                blockdata16[secnum] = blkdata;
+
+                if(this.blockdata[secnum].length == 0) {
+                    byte[] olddata = new byte[BLOCKS_PER_SECTION / 2];
+                    for (int b = 0; b < olddata.length; b++) {
+                        olddata[b] = (byte) ((blkdata[2 * b] & 0xF) | ((blkdata[2 * b + 1] & 0xF) << 4));
+                    }
+                    this.blockdata[secnum] = olddata;
+                }
+            }
+
             this.emitlight[secnum] = sec.getByteArray("BlockLight");
             if (sec.hasKey("SkyLight")) {
                 this.skylight[secnum] = sec.getByteArray("SkyLight");
@@ -295,5 +331,18 @@ public class ChunkSnapshot
     
     public long getInhabitedTicks() {
         return inhabitedTicks;
+    }
+
+    public int getBlockDataFull(int bx, int y, int bz) {
+        if(have16bitBlockData) {
+            int tmp = blockdata16[y >> 4][((y & 0xF) << 8) | (bz << 4) | bx];
+
+            if(tmp < 0)
+                tmp += 0x10000;
+
+            return tmp;
+        }
+
+        return getBlockData(bx, y, bz);
     }
 }
