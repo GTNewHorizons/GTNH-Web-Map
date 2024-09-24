@@ -163,19 +163,33 @@ public class IsoHDPerspective implements HDPerspective {
             scalemodels = HDBlockModels.getModelsForScale(basemodscale << scaled);
         }
         
-        private final void updateSemitransparentLight(LightLevels ll) {
-        	int emitted = mapiter.getBlockEmittedLight(), sky = mapiter.getBlockSkyLight();
-        	for(int i = 0; i < semi_steps.length; i++) {
-        	    BlockStep s = semi_steps[i];
-                mapiter.stepPosition(s);
-                int v = mapiter.getBlockEmittedLight();
-                if (v - 1 > emitted) emitted = v - 1;
-                v = mapiter.getBlockSkyLight();
-                if (s != BlockStep.Y_PLUS && v > 0)
-                    v -= 1;
-                if (v > sky) sky = v;
-                mapiter.unstepPosition(s);
-        	}
+        private final void updateSemitransparentLight(LightLevels ll, boolean subtract) {
+        	int emitted = 0, sky = 0;
+
+            if(subtract) {
+                for (int i = 0; i < semi_steps.length; i++) {
+                    BlockStep s = semi_steps[i];
+                    mapiter.stepPosition(s);
+                    int v = mapiter.getBlockEmittedLight();
+                    if (v - 1 > emitted) emitted = v - 1;
+                    v = mapiter.getBlockSkyLight();
+                    if (s != BlockStep.Y_PLUS && v > 0)
+                        v -= 1;
+                    if (v > sky) sky = v;
+                    mapiter.unstepPosition(s);
+                }
+            }
+            else {
+                for(int i = 0; i < semi_steps.length; i++) {
+                    BlockStep s = semi_steps[i];
+                    mapiter.stepPosition(s);
+                    int v = mapiter.getBlockEmittedLight();
+                    if(v > emitted) emitted = v;
+                    v = mapiter.getBlockSkyLight();
+                    if(v > sky) sky = v;
+                    mapiter.unstepPosition(s);
+                }
+            }
         	ll.sky = sky;
         	ll.emitted = emitted;
         }
@@ -204,12 +218,12 @@ public class IsoHDPerspective implements HDPerspective {
         			}
         			else {
                 		mapiter.unstepPosition(laststep);  /* Back up to block we entered on */
-                		updateSemitransparentLight(ll);
+                		updateSemitransparentLight(ll, true);
                 		mapiter.stepPosition(laststep);
         			}
         			break;
             	case SEMITRANSPARENT:
-            		updateSemitransparentLight(ll);
+            		updateSemitransparentLight(ll, false);
             		break;
         		default:
                     ll.sky = mapiter.getBlockSkyLight();
