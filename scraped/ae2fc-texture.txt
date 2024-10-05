@@ -1,4 +1,4 @@
-# ae2fc 1.2.29-gtnh
+# ae2fc 1.3.36-gtnh
 version:1.7
 modname:ae2fc
 
@@ -26,7 +26,7 @@ texture:id=ae2fc/large_ingredient_buffer,filename=assets/ae2fc/textures/blocks/l
 texture:id=ae2fc/level_maintainer,filename=assets/ae2fc/textures/blocks/level_maintainer.png
 texture:id=ae2fc/level_maintainerFront,filename=assets/ae2fc/textures/blocks/level_maintainerFront.png
 texture:id=ae2fc/oc_pattern_editor,filename=assets/ae2fc/textures/blocks/oc_pattern_editor.png
-texture:id=minecraft/MISSING_ICON_BLOCK_472_walrus,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_472_walrus.png
+texture:id=minecraft/MISSING_ICON_BLOCK_527_walrus,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_527_walrus.png
 
 
 
@@ -68,6 +68,6 @@ block:id=%large_ingredient_buffer,data=*,stdrot=true,face0-5=0:ae2fc/large_ingre
 block:id=%oc_pattern_editor,data=*,stdrot=true,face0-5=0:ae2fc/oc_pattern_editor
 
 # %walrus:* (walrus), render=(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockWalrus
-block:id=%walrus,data=0,data=1,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_472_walrus
-block:id=%walrus,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_472_walrus
-block:id=%walrus,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_472_walrus
+block:id=%walrus,data=0,data=1,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_527_walrus
+block:id=%walrus,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_527_walrus
+block:id=%walrus,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_527_walrus

@@ -1,4 +1,4 @@
-# bartworks 0.9.26
+# bartworks 5.09.50.25
 version:1.7
 modname:bartworks
 
@@ -22,12 +22,12 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %bw.blockores.01:* (bw.blockores.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGenerated_Ores
+# %bw.blockores.01:* (bw.blockores.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedOres
 
-# %bw.blockores.02:* (bw.blockores.02), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGenerated_SmallOres
+# %bw.blockores.02:* (bw.blockores.02), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedSmallOres
 
-# %bw.werkstoffblocks.01:* (bw.werkstoffblocks.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGenerated_WerkstoffBlocks
+# %bw.werkstoffblocks.01:* (bw.werkstoffblocks.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedWerkstoffBlocks
 
-# %bw.werkstoffblockscasing.01:* (bw.werkstoffblockscasing.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGeneratedBlocks_Casing
+# %bw.werkstoffblockscasing.01:* (bw.werkstoffblockscasing.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedBlocksCasing
 
-# %bw.werkstoffblockscasingadvanced.01:* (bw.werkstoffblockscasingadvanced.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGeneratedBlocks_Casing
+# %bw.werkstoffblockscasingadvanced.01:* (bw.werkstoffblockscasingadvanced.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedBlocksCasing
