@@ -1,9 +1,10 @@
-# GoodGenerator 0.4.87
+# GoodGenerator 5.09.50.25
 version:1.7
 modname:GoodGenerator
 
 
-cfgfile:config/GoodGenerator.cfg
+
+# Configuration file not found!
 
 
 texturepath:assets/goodgenerator/textures/blocks/
@@ -13,6 +14,8 @@ texture:id=GoodGenerator/FRF_Coils/3,filename=assets/goodgenerator/textures/bloc
 texture:id=GoodGenerator/FRF_Coils/4,filename=assets/goodgenerator/textures/blocks/FRF_Coils/4.png
 texture:id=GoodGenerator/MAR_Casing,filename=assets/goodgenerator/textures/blocks/MAR_Casing.png
 texture:id=GoodGenerator/MagicCasing,filename=assets/goodgenerator/textures/blocks/MagicCasing.png
+texture:id=GoodGenerator/antimatterAnnihilationMatrix,filename=assets/goodgenerator/textures/blocks/antimatterAnnihilationMatrix.png
+texture:id=GoodGenerator/antimatterContainmentCasing,filename=assets/goodgenerator/textures/blocks/antimatterContainmentCasing.png
 texture:id=GoodGenerator/compAsslineCasing/0,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/0.png
 texture:id=GoodGenerator/compAsslineCasing/1,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/1.png
 texture:id=GoodGenerator/compAsslineCasing/10,filename=assets/goodgenerator/textures/blocks/compAsslineCasing/10.png
@@ -71,10 +74,15 @@ texture:id=GoodGenerator/fuison/2,filename=assets/goodgenerator/textures/blocks/
 texture:id=GoodGenerator/fuison/3,filename=assets/goodgenerator/textures/blocks/fuison/3.png
 texture:id=GoodGenerator/fuison/4,filename=assets/goodgenerator/textures/blocks/fuison/4.png
 texture:id=GoodGenerator/fuison/5,filename=assets/goodgenerator/textures/blocks/fuison/5.png
+texture:id=GoodGenerator/gravityStabilizationCasing,filename=assets/goodgenerator/textures/blocks/gravityStabilizationCasing.png
+texture:id=GoodGenerator/magneticFluxCasing,filename=assets/goodgenerator/textures/blocks/magneticFluxCasing.png
+texture:id=GoodGenerator/preciseUnitCasing/0,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/0.png
 texture:id=GoodGenerator/preciseUnitCasing/1,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/1.png
 texture:id=GoodGenerator/preciseUnitCasing/2,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/2.png
 texture:id=GoodGenerator/preciseUnitCasing/3,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/3.png
+texture:id=GoodGenerator/preciseUnitCasing/4,filename=assets/goodgenerator/textures/blocks/preciseUnitCasing/4.png
 texture:id=GoodGenerator/pressureResistantWalls,filename=assets/goodgenerator/textures/blocks/pressureResistantWalls.png
+texture:id=GoodGenerator/protomatterActivationCoil,filename=assets/goodgenerator/textures/blocks/protomatterActivationCoil.png
 texture:id=GoodGenerator/radiationProtectionSteelFrame,filename=assets/goodgenerator/textures/blocks/radiationProtectionSteelFrame.png
 texture:id=GoodGenerator/rawCylinder,filename=assets/goodgenerator/textures/blocks/rawCylinder.png
 texture:id=GoodGenerator/speedingPipe_SIDE,filename=assets/goodgenerator/textures/blocks/speedingPipe_SIDE.png
@@ -94,50 +102,44 @@ texture:id=GoodGenerator/yottaFluidTankCell/7,filename=assets/goodgenerator/text
 texture:id=GoodGenerator/yottaFluidTankCell/8,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/8.png
 texture:id=GoodGenerator/yottaFluidTankCell/9,filename=assets/goodgenerator/textures/blocks/yottaFluidTankCell/9.png
 texture:id=gregtech/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM.png
-texture:id=gregtech/iconsets/CONCRETE_LIGHT_STONE,filename=assets/gregtech/textures/blocks/iconsets/CONCRETE_LIGHT_STONE.png
-
-texture:id=goodgenerator/crops/saltroot.1,filename=assets/goodgenerator/textures/blocks/crops/saltroot.1.png
-texture:id=goodgenerator/crops/saltroot.2,filename=assets/goodgenerator/textures/blocks/crops/saltroot.2.png
-texture:id=goodgenerator/crops/saltroot.3,filename=assets/goodgenerator/textures/blocks/crops/saltroot.3.png
-
-specialModSupportLoader:org.dynmap.modsupport.loaders.IC2CropsSupportLoader,name=ic2crops
-moddata:mod=ic2crops,crop=saltroot,steps=3,step0=0:goodgenerator/crops/saltroot.1,step1=0:goodgenerator/crops/saltroot.2,step2=0:goodgenerator/crops/saltroot.3
+texture:id=gregtech/iconsets/TRANSPARENT,filename=assets/gregtech/textures/blocks/iconsets/TRANSPARENT.png
 
 
-# %MAR_Casing:* (MAR_Casing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+
+# %MAR_Casing:* (MAR_Casing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%MAR_Casing,data=*,stdrot=true,face0-5=0:GoodGenerator/MAR_Casing
 
-# %radiationProtectionSteelFrame:* (radiationProtectionSteelFrame), render=(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.Frame
+# %radiationProtectionSteelFrame:* (radiationProtectionSteelFrame), render=(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.BlockFrame
 block:id=%radiationProtectionSteelFrame,data=*,stdrot=true,face0-5=12000:GoodGenerator/radiationProtectionSteelFrame
 
-# %fieldRestrictingGlass:* (fieldRestrictingGlass), render=(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.Frame
+# %fieldRestrictingGlass:* (fieldRestrictingGlass), render=(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.BlockFrame
 block:id=%fieldRestrictingGlass,data=*,stdrot=true,face0-5=12000:GoodGenerator/fieldRestrictingGlass
 
-# %FRF_Casings:* (FRF_Casings), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %FRF_Casings:* (FRF_Casings), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%FRF_Casings,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM
 
-# %FRF_Coil_1:* (FRF_Coil_1), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %FRF_Coil_1:* (FRF_Coil_1), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%FRF_Coil_1,data=*,stdrot=true,face0-5=0:GoodGenerator/FRF_Coils/1
 
-# %FRF_Coil_2:* (FRF_Coil_2), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %FRF_Coil_2:* (FRF_Coil_2), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%FRF_Coil_2,data=*,stdrot=true,face0-5=0:GoodGenerator/FRF_Coils/2
 
-# %FRF_Coil_3:* (FRF_Coil_3), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %FRF_Coil_3:* (FRF_Coil_3), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%FRF_Coil_3,data=*,stdrot=true,face0-5=0:GoodGenerator/FRF_Coils/3
 
-# %FRF_Coil_4:* (FRF_Coil_4), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %FRF_Coil_4:* (FRF_Coil_4), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%FRF_Coil_4,data=*,stdrot=true,face0-5=0:GoodGenerator/FRF_Coils/4
 
-# %rawCylinder:* (rawCylinder), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %rawCylinder:* (rawCylinder), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%rawCylinder,data=*,stdrot=true,face0-5=0:GoodGenerator/rawCylinder
 
-# %titaniumPlatedCylinder:* (titaniumPlatedCylinder), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %titaniumPlatedCylinder:* (titaniumPlatedCylinder), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%titaniumPlatedCylinder,data=*,stdrot=true,face0-5=0:GoodGenerator/titaniumPlatedCylinder
 
-# %speedingPipe:* (speedingPipe), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.ComplexTextureCasing
+# %speedingPipe:* (speedingPipe), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockComplexTextureCasing
 block:id=%speedingPipe,data=*,stdrot=true,face0-1=0:GoodGenerator/speedingPipe_TOP,face2-5=0:GoodGenerator/speedingPipe_SIDE
 
-# %yottaFluidTankCells:* (yottaFluidTankCells), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %yottaFluidTankCells:* (yottaFluidTankCells), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%yottaFluidTankCells,data=0,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/1
 block:id=%yottaFluidTankCells,data=1,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/2
 block:id=%yottaFluidTankCells,data=2,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/3
@@ -150,13 +152,13 @@ block:id=%yottaFluidTankCells,data=8,stdrot=true,face0-5=0:GoodGenerator/yottaFl
 block:id=%yottaFluidTankCells,data=9,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/10
 block:id=%yottaFluidTankCells,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/yottaFluidTankCell/1
 
-# %yottaFluidTankCasing:* (yottaFluidTankCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.ComplexTextureCasing
+# %yottaFluidTankCasing:* (yottaFluidTankCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockComplexTextureCasing
 block:id=%yottaFluidTankCasing,data=*,stdrot=true,face0-1=0:GoodGenerator/yottaFluidTankCasing_TOP,face2-5=0:GoodGenerator/yottaFluidTankCasing_SIDE
 
-# %supercriticalFluidTurbineCasing:* (supercriticalFluidTurbineCasing), render=goodgenerator.client.render.BlockRenderHandler(CUSTOM), opaque=true,cls=goodgenerator.blocks.regularBlock.TurbineCasing
+# %supercriticalFluidTurbineCasing:* (supercriticalFluidTurbineCasing), render=goodgenerator.client.render.BlockRenderHandler(CUSTOM), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTurbineCasing
 block:id=%supercriticalFluidTurbineCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/supercriticalFluidTurbineCasing
 
-# %componentAssemblylineCasing:* (componentAssemblylineCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %componentAssemblylineCasing:* (componentAssemblylineCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%componentAssemblylineCasing,data=0,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0
 block:id=%componentAssemblylineCasing,data=1,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/1
 block:id=%componentAssemblylineCasing,data=2,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/2
@@ -173,16 +175,20 @@ block:id=%componentAssemblylineCasing,data=12,stdrot=true,face0-5=0:GoodGenerato
 block:id=%componentAssemblylineCasing,data=13,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/13
 block:id=%componentAssemblylineCasing,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/compAsslineCasing/0
 
-# %pressureResistantWalls:* (pressureResistantWalls), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %pressureResistantWalls:* (pressureResistantWalls), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%pressureResistantWalls,data=*,stdrot=true,face0-5=0:GoodGenerator/pressureResistantWalls
 
-# %preciseUnitCasing:* (preciseUnitCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %impreciseUnitCasing:* (impreciseUnitCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
+block:id=%impreciseUnitCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/0
+
+# %preciseUnitCasing:* (preciseUnitCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%preciseUnitCasing,data=0,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/1
 block:id=%preciseUnitCasing,data=1,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/2
 block:id=%preciseUnitCasing,data=2,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/3
-block:id=%preciseUnitCasing,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/1
+block:id=%preciseUnitCasing,data=3,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/4
+block:id=%preciseUnitCasing,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/preciseUnitCasing/1
 
-# %compactFusionCoil:* (compactFusionCoil), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %compactFusionCoil:* (compactFusionCoil), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%compactFusionCoil,data=0,stdrot=true,face0-5=0:GoodGenerator/fuison/1
 block:id=%compactFusionCoil,data=1,stdrot=true,face0-5=0:GoodGenerator/fuison/2
 block:id=%compactFusionCoil,data=2,stdrot=true,face0-5=0:GoodGenerator/fuison/3
@@ -190,26 +196,44 @@ block:id=%compactFusionCoil,data=3,stdrot=true,face0-5=0:GoodGenerator/fuison/4
 block:id=%compactFusionCoil,data=4,stdrot=true,face0-5=0:GoodGenerator/fuison/5
 block:id=%compactFusionCoil,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/fuison/1
 
-# %magicCasing:* (magicCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %antimatterContainmentCasing:* (antimatterContainmentCasing), render=(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.BlockFrame
+block:id=%antimatterContainmentCasing,data=*,stdrot=true,face0-5=12000:GoodGenerator/antimatterContainmentCasing
+
+# %magneticFluxCasing:* (magneticFluxCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
+block:id=%magneticFluxCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/magneticFluxCasing
+
+# %protomatterActivationCoil:* (protomatterActivationCoil), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
+block:id=%protomatterActivationCoil,data=*,stdrot=true,face0-5=0:GoodGenerator/protomatterActivationCoil
+
+# %antimatterAnnihilationMatrix:* (antimatterAnnihilationMatrix), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
+block:id=%antimatterAnnihilationMatrix,data=*,stdrot=true,face0-5=0:GoodGenerator/antimatterAnnihilationMatrix
+
+# %gravityStabilizationCasing:* (gravityStabilizationCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
+block:id=%gravityStabilizationCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/gravityStabilizationCasing
+
+# %antimatterRenderBlock:* (antimatterRenderBlock), render=(STANDARD), opaque=false,cls=goodgenerator.blocks.regularBlock.AntimatterRenderBlock
+block:id=%antimatterRenderBlock,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
+
+# %magicCasing:* (magicCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%magicCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/MagicCasing
 
-# %essentiaCell:* (essentiaCell), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %essentiaCell:* (essentiaCell), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%essentiaCell,data=0,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/1
 block:id=%essentiaCell,data=1,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/2
 block:id=%essentiaCell,data=2,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/3
 block:id=%essentiaCell,data=3,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/4
 block:id=%essentiaCell,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/1
 
-# %essentiaHatch:* (essentiaHatch), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.TEBlock
+# %essentiaHatch:* (essentiaHatch), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTEContainer
 block:id=%essentiaHatch,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaHatch
 
-# %essentiaOutputHatch:* (essentiaOutputHatch), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.TEBlock
+# %essentiaOutputHatch:* (essentiaOutputHatch), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTEContainer
 block:id=%essentiaOutputHatch,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaOutputHatch
 
-# %essentiaFilterCasing:* (essentiaFilterCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.Casing
+# %essentiaFilterCasing:* (essentiaFilterCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
 block:id=%essentiaFilterCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaFilterCasing
 
-# %essentiaOutputHatch_ME:* (essentiaOutputHatch_ME), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.TEBlock
+# %essentiaOutputHatch_ME:* (essentiaOutputHatch_ME), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTEContainer
 block:id=%essentiaOutputHatch_ME,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaOutputHatch_ME
 
 # %lightlyCrackedNaquadahGas:* (lightlyCrackedNaquadahGas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=goodgenerator.blocks.myFluids.BaseFluid
