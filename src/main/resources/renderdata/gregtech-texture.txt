@@ -735,10 +735,10 @@ moddata:mod=ic2crops,crop=Withereed,steps=4,step0=0:ic2/crop/blockCrop.Withereed
 moddata:mod=ic2crops,crop=Zomplant,steps=4,step0=0:ic2/crop/blockCrop.Zomplant.1,step1=0:ic2/crop/blockCrop.Zomplant.2,step2=0:ic2/crop/blockCrop.Zomplant.3,step3=0:ic2/crop/blockCrop.Zomplant.4
 
 
-# %gt.blockmachines:* (gt.blockmachines), render=gregtech.common.render.GT_Renderer_Block(CUSTOM), opaque=false,cls=gregtech.common.blocks.GT_Block_Machines
-block:id=%gt.blockmachines,data=*,transparency=SEMITRANSPARENT,stdrot=true,face0-5=17000:gregtech/iconsets/MACHINE_LV_SIDE,patch20=17000:gwmcustom/gt5cablepipe,patch21=17001:gwmcustom/gt5cablepipe
+# %gt.blockmachines:* (gt.blockmachines), render=gregtech.common.render.GTRendererBlock(CUSTOM), opaque=false,cls=gregtech.common.blocks.BlockMachines
+block:id=%gt.blockmachines,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
 
-# %gt.blockcasings:* (gt.blockcasings), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings1
+# %gt.blockcasings:* (gt.blockcasings), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings1
 block:id=%gt.blockcasings,data=0,stdrot=true,face0=0:gregtech/iconsets/MACHINE_8V_BOTTOM,face1=0:gregtech/iconsets/MACHINE_8V_TOP,face2-5=0:gregtech/iconsets/MACHINE_8V_SIDE
 block:id=%gt.blockcasings,data=1,stdrot=true,face0=0:gregtech/iconsets/MACHINE_LV_BOTTOM,face1=0:gregtech/iconsets/MACHINE_LV_TOP,face2-5=0:gregtech/iconsets/MACHINE_LV_SIDE
 block:id=%gt.blockcasings,data=2,stdrot=true,face0=0:gregtech/iconsets/MACHINE_MV_BOTTOM,face1=0:gregtech/iconsets/MACHINE_MV_TOP,face2-5=0:gregtech/iconsets/MACHINE_MV_SIDE
@@ -756,7 +756,7 @@ block:id=%gt.blockcasings,data=13,stdrot=true,face0-5=0:gregtech/iconsets/MACHIN
 block:id=%gt.blockcasings,data=14,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_DIM_BRIDGE
 block:id=%gt.blockcasings,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_SUPERCONDUCTOR
 
-# %gt.blockcasings2:* (gt.blockcasings2), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings2
+# %gt.blockcasings2:* (gt.blockcasings2), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings2
 block:id=%gt.blockcasings2,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 block:id=%gt.blockcasings2,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FROST_PROOF
 block:id=%gt.blockcasings2,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_GEARBOX_BRONZE
@@ -774,7 +774,7 @@ block:id=%gt.blockcasings2,data=13,stdrot=true,face0-5=0:gregtech/iconsets/MACHI
 block:id=%gt.blockcasings2,data=14,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PIPE_TITANIUM
 block:id=%gt.blockcasings2,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PIPE_TUNGSTENSTEEL
 
-# %gt.blockcasings3:* (gt.blockcasings3), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings3
+# %gt.blockcasings3:* (gt.blockcasings3), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings3
 block:id=%gt.blockcasings3,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STRIPES_A
 block:id=%gt.blockcasings3,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STRIPES_B
 block:id=%gt.blockcasings3,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_RADIOACTIVEHAZARD
@@ -792,7 +792,7 @@ block:id=%gt.blockcasings3,data=13,stdrot=true,face0-1=0:gregtech/iconsets/MACHI
 block:id=%gt.blockcasings3,data=14,stdrot=true,face0-1=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL,face2-5=0:gregtech/iconsets/MACHINE_CASING_FIREBOX_STEEL
 block:id=%gt.blockcasings3,data=15,stdrot=true,face0-1=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL,face2-5=0:gregtech/iconsets/MACHINE_CASING_FIREBOX_TUNGSTENSTEEL
 
-# %gt.blockcasings4:* (gt.blockcasings4), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings4
+# %gt.blockcasings4:* (gt.blockcasings4), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings4
 block:id=%gt.blockcasings4,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
 block:id=%gt.blockcasings4,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL
 block:id=%gt.blockcasings4,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
@@ -803,14 +803,14 @@ block:id=%gt.blockcasings4,data=6,stdrot=true,face0-5=0:gregtech/iconsets/MACHIN
 block:id=%gt.blockcasings4,data=7,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FUSION_COIL
 block:id=%gt.blockcasings4,data=8,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FUSION_2
 block:id=%gt.blockcasings4,data=9,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE
-block:id=%gt.blockcasings4,data=10,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL
-block:id=%gt.blockcasings4,data=11,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
-block:id=%gt.blockcasings4,data=12,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
+block:id=%gt.blockcasings4,data=10,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STAINLESSSTEEL
+block:id=%gt.blockcasings4,data=11,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_TITANIUM
+block:id=%gt.blockcasings4,data=12,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_TUNGSTENSTEEL
 block:id=%gt.blockcasings4,data=13,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ENGINE_INTAKE
 block:id=%gt.blockcasings4,data=14,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_MINING_OSMIRIDIUM
 block:id=%gt.blockcasings4,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_DENSEBRICKS
 
-# %gt.blockcasings5:* (gt.blockcasings5), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings5
+# %gt.blockcasings5:* (gt.blockcasings5), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings5
 block:id=%gt.blockcasings5,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_CUPRONICKEL
 block:id=%gt.blockcasings5,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_KANTHAL
 block:id=%gt.blockcasings5,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_NICHROME
@@ -825,9 +825,10 @@ block:id=%gt.blockcasings5,data=10,stdrot=true,face0-5=0:gregtech/iconsets/MACHI
 block:id=%gt.blockcasings5,data=11,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_INFINITY
 block:id=%gt.blockcasings5,data=12,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_HYPOGEN
 block:id=%gt.blockcasings5,data=13,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_ETERNAL
-block:id=%gt.blockcasings5,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_CUPRONICKEL
+block:id=%gt.blockcasings5,data=14,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SHIELDED_ACCELERATOR
+block:id=%gt.blockcasings5,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_COIL_CUPRONICKEL
 
-# %gt.blockcasings6:* (gt.blockcasings6), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings6
+# %gt.blockcasings6:* (gt.blockcasings6), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings6
 block:id=%gt.blockcasings6,data=0,stdrot=true,face0=0:gregtech/iconsets/MACHINE_8V_BOTTOM,face1=0:gregtech/iconsets/MACHINE_8V_TOP,face2-5=0:gregtech/iconsets/MACHINE_CASING_TANK_0
 block:id=%gt.blockcasings6,data=1,stdrot=true,face0=0:gregtech/iconsets/MACHINE_LV_BOTTOM,face1=0:gregtech/iconsets/MACHINE_LV_TOP,face2-5=0:gregtech/iconsets/MACHINE_CASING_TANK_1
 block:id=%gt.blockcasings6,data=2,stdrot=true,face0=0:gregtech/iconsets/MACHINE_MV_BOTTOM,face1=0:gregtech/iconsets/MACHINE_MV_TOP,face2-5=0:gregtech/iconsets/MACHINE_CASING_TANK_2
@@ -845,7 +846,7 @@ block:id=%gt.blockcasings6,data=13,stdrot=true,face0=0:gregtech/iconsets/MACHINE
 block:id=%gt.blockcasings6,data=14,stdrot=true,face0=0:gregtech/iconsets/MACHINE_MAXV_BOTTOM,face1=0:gregtech/iconsets/MACHINE_MAXV_TOP,face2-5=0:gregtech/iconsets/MACHINE_CASING_TANK_14
 block:id=%gt.blockcasings6,data=15,stdrot=true,face2-5=0:gregtech/iconsets/MACHINE_CASING_TANK_0
 
-# %gt.blockcasings8:* (gt.blockcasings8), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Casings8
+# %gt.blockcasings8:* (gt.blockcasings8), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings8
 block:id=%gt.blockcasings8,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_CHEMICALLY_INERT
 block:id=%gt.blockcasings8,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE
 block:id=%gt.blockcasings8,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_MINING_NEUTRONIUM
@@ -897,7 +898,7 @@ block:id=%gt.blockcasings10,data=11,stdrot=true,face0-5=0:gregtech/iconsets/EXTR
 block:id=%gt.blockcasings10,data=12,stdrot=true,face0-5=0:gregtech/iconsets/RADIATION_ABSORBENT_CASING
 block:id=%gt.blockcasings10,data=13,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_MS160
 block:id=%gt.blockcasings10,data=14,stdrot=true,face0-5=0:gregtech/iconsets/RADIATOR_MS160
-block:id=%gt.blockcasings10,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
+block:id=%gt.blockcasings10,data=15,stdrot=true,face0-1=0:gregtech/iconsets/CASING_REINFORCED_WOOD_TOP,face2-5=0:gregtech/iconsets/CASING_REINFORCED_WOOD
 
 # %gt.blockcasings11:* (gt.blockcasings11), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings11
 block:id=%gt.blockcasings11,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ITEM_PIPE_TIN
@@ -910,7 +911,7 @@ block:id=%gt.blockcasings11,data=6,stdrot=true,face0-5=0:gregtech/iconsets/MACHI
 block:id=%gt.blockcasings11,data=7,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ITEM_PIPE_BLACK_PLUTONIUM
 block:id=%gt.blockcasings11,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ITEM_PIPE_TIN
 
-# %gt.blockgranites:* (gt.blockgranites), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Granites
+# %gt.blockgranites:* (gt.blockgranites), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockGranites
 block:id=%gt.blockgranites,data=0,stdrot=true,face0-5=0:gregtech/iconsets/GRANITE_BLACK_STONE
 block:id=%gt.blockgranites,data=1,stdrot=true,face0-5=0:gregtech/iconsets/GRANITE_BLACK_COBBLE
 block:id=%gt.blockgranites,data=2,stdrot=true,face0-5=0:gregtech/iconsets/GRANITE_BLACK_COBBLE_MOSSY
@@ -928,7 +929,7 @@ block:id=%gt.blockgranites,data=13,stdrot=true,face0-5=0:gregtech/iconsets/GRANI
 block:id=%gt.blockgranites,data=14,stdrot=true,face0-5=0:gregtech/iconsets/GRANITE_RED_BRICKS_CHISELED
 block:id=%gt.blockgranites,data=15,stdrot=true,face0-5=0:gregtech/iconsets/GRANITE_RED_SMOOTH
 
-# %gt.block.longdistancepipe:* (gt.block.longdistancepipe), render=(STANDARD), opaque=true,cls=gregtech.api.items.GT_Block_LongDistancePipe
+# %gt.block.longdistancepipe:* (gt.block.longdistancepipe), render=(STANDARD), opaque=true,cls=gregtech.api.items.BlockLongDistancePipe
 block:id=%gt.block.longdistancepipe,data=0,stdrot=true,face0-5=0:gregtech/iconsets/LONG_DISTANCE_PIPE_FLUID
 block:id=%gt.block.longdistancepipe,data=1,stdrot=true,face0-5=0:gregtech/iconsets/LONG_DISTANCE_PIPE_ITEM
 block:id=%gt.block.longdistancepipe,data=2,stdrot=true,face0-5=0:gregtech/iconsets/LONG_DISTANCE_PIPE_FLUID
@@ -946,7 +947,7 @@ block:id=%gt.block.longdistancepipe,data=13,stdrot=true,face0-5=0:gregtech/icons
 block:id=%gt.block.longdistancepipe,data=14,stdrot=true,face0-5=0:gregtech/iconsets/LONG_DISTANCE_PIPE_FLUID
 block:id=%gt.block.longdistancepipe,data=15,stdrot=true,face0-5=0:gregtech/iconsets/LONG_DISTANCE_PIPE_ITEM
 
-# %gt.blockconcretes:* (gt.blockconcretes), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Concretes
+# %gt.blockconcretes:* (gt.blockconcretes), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockConcretes
 block:id=%gt.blockconcretes,data=0,stdrot=true,face0-5=0:gregtech/iconsets/CONCRETE_DARK_STONE
 block:id=%gt.blockconcretes,data=1,stdrot=true,face0-5=0:gregtech/iconsets/CONCRETE_DARK_COBBLE
 block:id=%gt.blockconcretes,data=2,stdrot=true,face0-5=0:gregtech/iconsets/CONCRETE_DARK_COBBLE_MOSSY
@@ -964,7 +965,7 @@ block:id=%gt.blockconcretes,data=13,stdrot=true,face0-5=0:gregtech/iconsets/CONC
 block:id=%gt.blockconcretes,data=14,stdrot=true,face0-5=0:gregtech/iconsets/CONCRETE_LIGHT_BRICKS_CHISELED
 block:id=%gt.blockconcretes,data=15,stdrot=true,face0-5=0:gregtech/iconsets/CONCRETE_LIGHT_SMOOTH
 
-# %gt.blockstones:* (gt.blockstones), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Stones
+# %gt.blockstones:* (gt.blockstones), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockStones
 block:id=%gt.blockstones,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MARBLE_STONE
 block:id=%gt.blockstones,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MARBLE_COBBLE
 block:id=%gt.blockstones,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MARBLE_COBBLE_MOSSY
@@ -982,7 +983,7 @@ block:id=%gt.blockstones,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BASALT_
 block:id=%gt.blockstones,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BASALT_BRICKS_CHISELED
 block:id=%gt.blockstones,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BASALT_SMOOTH
 
-# %gt.blockores:* (gt.blockores), render=gregtech.common.render.GT_Renderer_Block(CUSTOM), opaque=true,cls=gregtech.common.blocks.GT_Block_Ores
+# %gt.blockores:* (gt.blockores), render=gregtech.common.render.GTRendererBlock(CUSTOM), opaque=true,cls=gregtech.common.blocks.BlockOres
 block:id=%gt.blockores,data=0,stdrot=true,face0-5=0:minecraft/stone
 block:id=%gt.blockores,data=1,stdrot=true,face0-5=0:minecraft/netherrack
 block:id=%gt.blockores,data=2,stdrot=true,face0-5=0:minecraft/end_stone
@@ -1000,10 +1001,44 @@ block:id=%gt.blockores,data=13,stdrot=true,face0-5=0:minecraft/stone
 block:id=%gt.blockores,data=14,stdrot=true,face0-5=0:minecraft/stone
 block:id=%gt.blockores,data=15,stdrot=true,face0-5=0:minecraft/stone
 
-# %tile.gt.dronerender:* (tile.gt.dronerender), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.GT_Block_Drone
+# %gt.blockframes:* (gt.blockframes), render=gregtech.common.render.GTRendererBlock(CUSTOM), opaque=false,cls=gregtech.common.blocks.BlockFrameBox
+block:id=%gt.blockframes,data=0,stdrot=true,face0-5=12000:gregtech/materialicons/NONE/frameGt
+block:id=%gt.blockframes,data=1,data=2,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt
+block:id=%gt.blockframes,data=3,stdrot=true,face0-5=12000:gregtech/materialicons/METALLIC/frameGt
+block:id=%gt.blockframes,data=4,data=5,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt
+block:id=%gt.blockframes,data=6,stdrot=true,face0-5=12000:gregtech/materialicons/DULL/frameGt
+block:id=%gt.blockframes,data=8,stdrot=true,face0-5=12000:gregtech/materialicons/METALLIC/frameGt
+block:id=%gt.blockframes,data=9,data=10,stdrot=true,face0-5=12000:gregtech/materialicons/DULL/frameGt
+block:id=%gt.blockframes,data=12,data=13,data=14,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt
+
+# %tile.gt.dronerender:* (tile.gt.dronerender), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.BlockDrone
 block:id=%tile.gt.dronerender,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
 
-# %gt.blockmetal1:* (gt.blockmetal1), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockglass1:* (gt.blockglass1), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.BlockGlass1
+block:id=%gt.blockglass1,data=0,stdrot=true,face0-5=12000:gregtech/iconsets/GLASS_PH_RESISTANT
+block:id=%gt.blockglass1,data=1,stdrot=true,face0-5=12000:gregtech/iconsets/NEUTRONIUM_COATED_UV_RESISTANT_GLASS
+block:id=%gt.blockglass1,data=2,stdrot=true,face0-5=12000:gregtech/iconsets/OMNI_PURPOSE_INFINITY_FUSED_GLASS
+block:id=%gt.blockglass1,data=3,stdrot=true,face0-5=12000:gregtech/iconsets/GLASS_QUARK_CONTAINMENT
+block:id=%gt.blockglass1,data=4,stdrot=true,face0-5=12000:gregtech/iconsets/HAWKING_GLASS
+block:id=%gt.blockglass1,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
+
+# %gt.blocktintedglass:* (gt.blocktintedglass), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.BlockTintedIndustrialGlass
+block:id=%gt.blocktintedglass,data=0,stdrot=true,face0-5=12000:gregtech/iconsets/GLASS_TINTED_INDUSTRIAL_WHITE
+block:id=%gt.blocktintedglass,data=1,stdrot=true,face0-5=12000:gregtech/iconsets/GLASS_TINTED_INDUSTRIAL_LIGHT_GRAY
+block:id=%gt.blocktintedglass,data=2,stdrot=true,face0-5=12000:gregtech/iconsets/GLASS_TINTED_INDUSTRIAL_GRAY
+block:id=%gt.blocktintedglass,data=3,stdrot=true,face0-5=12000:gregtech/iconsets/GLASS_TINTED_INDUSTRIAL_BLACK
+block:id=%gt.blocktintedglass,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
+
+# %gt.laserplate:* (gt.laserplate), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.BlockLaser
+block:id=%gt.laserplate,data=*,stdrot=true,face0-5=0:gregtech/iconsets/LASER_PLATE
+
+# %gt.wormholerenderer:* (gt.wormholerenderer), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.BlockWormholeRender
+block:id=%gt.wormholerenderer,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
+
+# %gt.blackholerenderer:* (gt.blackholerenderer), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.BlockBlackholeRenderer
+block:id=%gt.blackholerenderer,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
+
+# %gt.blockmetal1:* (gt.blockmetal1), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal1,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ADAMANTIUM
 block:id=%gt.blockmetal1,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ALUMINIUM
 block:id=%gt.blockmetal1,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_AMERICIUM
@@ -1021,7 +1056,7 @@ block:id=%gt.blockmetal1,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_B
 block:id=%gt.blockmetal1,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BLUESTEEL
 block:id=%gt.blockmetal1,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BRASS
 
-# %gt.blockmetal2:* (gt.blockmetal2), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal2:* (gt.blockmetal2), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal2,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BRONZE
 block:id=%gt.blockmetal2,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_CAESIUM
 block:id=%gt.blockmetal2,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_CERIUM
@@ -1039,7 +1074,7 @@ block:id=%gt.blockmetal2,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_D
 block:id=%gt.blockmetal2,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_DYSPROSIUM
 block:id=%gt.blockmetal2,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ELECTRUM
 
-# %gt.blockmetal3:* (gt.blockmetal3), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal3:* (gt.blockmetal3), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal3,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ELECTRUMFLUX
 block:id=%gt.blockmetal3,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ENDERIUM
 block:id=%gt.blockmetal3,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ERBIUM
@@ -1057,7 +1092,7 @@ block:id=%gt.blockmetal3,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_I
 block:id=%gt.blockmetal3,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_IRONWOOD
 block:id=%gt.blockmetal3,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_KANTHAL
 
-# %gt.blockmetal4:* (gt.blockmetal4), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal4:* (gt.blockmetal4), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal4,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_KNIGHTMETAL
 block:id=%gt.blockmetal4,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_LANTHANUM
 block:id=%gt.blockmetal4,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_LEAD
@@ -1075,7 +1110,7 @@ block:id=%gt.blockmetal4,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_N
 block:id=%gt.blockmetal4,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_NAQUADAHENRICHED
 block:id=%gt.blockmetal4,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_NAQUADRIA
 
-# %gt.blockmetal5:* (gt.blockmetal5), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal5:* (gt.blockmetal5), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal5,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_NEODYMIUM
 block:id=%gt.blockmetal5,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_NEODYMIUMMAGNETIC
 block:id=%gt.blockmetal5,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_NEUTRONIUM
@@ -1093,7 +1128,7 @@ block:id=%gt.blockmetal5,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_P
 block:id=%gt.blockmetal5,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_PLUTONIUM241
 block:id=%gt.blockmetal5,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_PRASEODYMIUM
 
-# %gt.blockmetal6:* (gt.blockmetal6), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal6:* (gt.blockmetal6), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal6,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_PROMETHIUM
 block:id=%gt.blockmetal6,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_REDALLOY
 block:id=%gt.blockmetal6,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_REDSTEEL
@@ -1111,7 +1146,7 @@ block:id=%gt.blockmetal6,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_S
 block:id=%gt.blockmetal6,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_STEELMAGNETIC
 block:id=%gt.blockmetal6,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_STERLINGSILVER
 
-# %gt.blockmetal7:* (gt.blockmetal7), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal7:* (gt.blockmetal7), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal7,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_SUNNARIUM
 block:id=%gt.blockmetal7,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_TANTALUM
 block:id=%gt.blockmetal7,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_TELLURIUM
@@ -1129,7 +1164,7 @@ block:id=%gt.blockmetal7,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_U
 block:id=%gt.blockmetal7,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_URANIUM
 block:id=%gt.blockmetal7,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_URANIUM235
 
-# %gt.blockmetal8:* (gt.blockmetal8), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal8:* (gt.blockmetal8), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal8,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_VANADIUM
 block:id=%gt.blockmetal8,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_VANADIUMGALLIUM
 block:id=%gt.blockmetal8,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_WROUGHTIRON
@@ -1147,7 +1182,7 @@ block:id=%gt.blockmetal8,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_I
 block:id=%gt.blockmetal8,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_FIRESTONE
 block:id=%gt.blockmetal8,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_SHADOW
 
-# %gt.blockgem1:* (gt.blockgem1), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockgem1:* (gt.blockgem1), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockgem1,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_AERCRYSTAL
 block:id=%gt.blockgem1,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_AMBER
 block:id=%gt.blockgem1,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_AMETHYST
@@ -1165,7 +1200,7 @@ block:id=%gt.blockgem1,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_GRE
 block:id=%gt.blockgem1,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_IGNISCRYSTAL
 block:id=%gt.blockgem1,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_JASPER
 
-# %gt.blockgem2:* (gt.blockgem2), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockgem2:* (gt.blockgem2), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockgem2,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_LAZURITE
 block:id=%gt.blockgem2,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_LIGNITE
 block:id=%gt.blockgem2,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_MONAZITE
@@ -1183,7 +1218,7 @@ block:id=%gt.blockgem2,data=13,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_SOD
 block:id=%gt.blockgem2,data=14,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_TANZANITE
 block:id=%gt.blockgem2,data=15,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_TERRACRYSTAL
 
-# %gt.blockgem3:* (gt.blockgem3), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockgem3:* (gt.blockgem3), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockgem3,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_TOPAZ
 block:id=%gt.blockgem3,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_VINTEUM
 block:id=%gt.blockgem3,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_YELLOWGARNET
@@ -1191,7 +1226,7 @@ block:id=%gt.blockgem3,data=3,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_NETH
 block:id=%gt.blockgem3,data=4,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_CHARCOAL
 block:id=%gt.blockgem3,data=5,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BLAZE
 
-# %gt.blockmetal9:* (gt.blockmetal9), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Metal
+# %gt.blockmetal9:* (gt.blockmetal9), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockMetal
 block:id=%gt.blockmetal9,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_CRYOLITE
 block:id=%gt.blockmetal9,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_SILICONSG
 block:id=%gt.blockmetal9,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_NICKELALUMINIUM
@@ -1203,8 +1238,9 @@ block:id=%gt.blockmetal9,data=7,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BL
 block:id=%gt.blockmetal9,data=8,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_UNIVERSIUM
 block:id=%gt.blockmetal9,data=9,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_ETERNITY
 block:id=%gt.blockmetal9,data=10,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_MAGMATTER
+block:id=%gt.blockmetal9,data=11,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_SIXPHASEDCOPPER
 
-# %gt.blockreinforced:* (gt.blockreinforced), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Block_Reinforced
+# %gt.blockreinforced:* (gt.blockreinforced), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockReinforced
 block:id=%gt.blockreinforced,data=0,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_BRONZEPREIN
 block:id=%gt.blockreinforced,data=1,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_IRREIN
 block:id=%gt.blockreinforced,data=2,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_PLASCRETE
@@ -1219,7 +1255,7 @@ block:id=%gt.blockreinforced,data=11,stdrot=true,face0-5=0:gregtech/iconsets/BLO
 block:id=%gt.blockreinforced,data=12,stdrot=true,face0-5=0:gregtech/iconsets/BLOCK_DEEP_DARK_RAW
 block:id=%gt.blockreinforced,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %gt.blockcasings.cyclotron_coils:* (gt.blockcasings.cyclotron_coils), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.GT_Cyclotron_Coils
+# %gt.blockcasings.cyclotron_coils:* (gt.blockcasings.cyclotron_coils), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCyclotronCoils
 block:id=%gt.blockcasings.cyclotron_coils,data=0,stdrot=true,face0-1=0:gregtech/iconsets/MV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/MV_SIDE_CYCLOTRON_SOLENOID
 block:id=%gt.blockcasings.cyclotron_coils,data=1,stdrot=true,face0-1=0:gregtech/iconsets/HV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/HV_SIDE_CYCLOTRON_SOLENOID
 block:id=%gt.blockcasings.cyclotron_coils,data=2,stdrot=true,face0-1=0:gregtech/iconsets/EV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/EV_SIDE_CYCLOTRON_SOLENOID
@@ -1595,6 +1631,8 @@ texture:id=mte/TileEntities/gt4/redstone/machine_side_redstone_off,filename=asse
 texture:id=mte/TileEntities/gt4/redstone/Display/0,filename=assets/miscutils/textures/blocks/TileEntities/gt4/redstone/Display/0.png
 texture:id=mte/TileEntities/gt4/redstone/Scale/0,filename=assets/miscutils/textures/blocks/TileEntities/gt4/redstone/Scale/0.png
 texture:id=mte/TileEntities/gt4/redstone/ButtonPanel/0,filename=assets/miscutils/textures/blocks/TileEntities/gt4/redstone/ButtonPanel/0.png
+texture:id=mte/iconsets/OVERLAY_SIDE_JUKEBOX,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_SIDE_JUKEBOX.png
+texture:id=mte/iconsets/OVERLAY_TOP_JUKEBOX,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_TOP_JUKEBOX.png
 texture:id=mte/iconsets/BUCK,filename=assets/gregtech/textures/blocks/iconsets/BUCK.png
 texture:id=mte/iconsets/BUCK_ACTIVE,filename=assets/gregtech/textures/blocks/iconsets/BUCK_ACTIVE.png
 texture:id=mte/iconsets/OVERLAY_FRONT_ASSEMBLY_LINE,filename=assets/gregtech/textures/blocks/iconsets/OVERLAY_FRONT_ASSEMBLY_LINE.png
@@ -1849,14 +1887,14 @@ texture:id=mte/circuitassembler/OVERLAY_FRONT_ACTIVE,filename=assets/gregtech/te
 texture:id=mte/circuitassembler/OVERLAY_BOTTOM_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/circuitassembler/OVERLAY_BOTTOM_ACTIVE.png
 texture:id=mte/circuitassembler/OVERLAY_TOP_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/circuitassembler/OVERLAY_TOP_ACTIVE.png
 texture:id=mte/circuitassembler/OVERLAY_SIDE_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/circuitassembler/OVERLAY_SIDE_ACTIVE.png
-texture:id=mte/cold_trap/OVERLAY_FRONT,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_FRONT.png
-texture:id=mte/cold_trap/OVERLAY_BOTTOM,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_BOTTOM.png
-texture:id=mte/cold_trap/OVERLAY_TOP,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_TOP.png
-texture:id=mte/cold_trap/OVERLAY_SIDE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_SIDE.png
-texture:id=mte/cold_trap/OVERLAY_FRONT_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_FRONT_ACTIVE.png
-texture:id=mte/cold_trap/OVERLAY_BOTTOM_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_BOTTOM_ACTIVE.png
-texture:id=mte/cold_trap/OVERLAY_TOP_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_TOP_ACTIVE.png
-texture:id=mte/cold_trap/OVERLAY_SIDE_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_SIDE_ACTIVE.png,ycount=4
+texture:id=mte/coldtrap/OVERLAY_FRONT,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_FRONT.png
+texture:id=mte/coldtrap/OVERLAY_BOTTOM,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_BOTTOM.png
+texture:id=mte/coldtrap/OVERLAY_TOP,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_TOP.png
+texture:id=mte/coldtrap/OVERLAY_SIDE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_SIDE.png
+texture:id=mte/coldtrap/OVERLAY_FRONT_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_FRONT_ACTIVE.png
+texture:id=mte/coldtrap/OVERLAY_BOTTOM_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_BOTTOM_ACTIVE.png
+texture:id=mte/coldtrap/OVERLAY_TOP_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_TOP_ACTIVE.png
+texture:id=mte/coldtrap/OVERLAY_SIDE_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/cold_trap/OVERLAY_SIDE_ACTIVE.png,ycount=4
 texture:id=mte/compressor/OVERLAY_FRONT,filename=assets/gregtech/textures/blocks/basicmachines/compressor/OVERLAY_FRONT.png
 texture:id=mte/compressor/OVERLAY_BOTTOM,filename=assets/gregtech/textures/blocks/basicmachines/compressor/OVERLAY_BOTTOM.png
 texture:id=mte/compressor/OVERLAY_TOP,filename=assets/gregtech/textures/blocks/basicmachines/compressor/OVERLAY_TOP.png
@@ -2097,14 +2135,14 @@ texture:id=mte/pump/OVERLAY_FRONT_ACTIVE,filename=assets/gregtech/textures/block
 texture:id=mte/pump/OVERLAY_BOTTOM_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/pump/OVERLAY_BOTTOM_ACTIVE.png
 texture:id=mte/pump/OVERLAY_TOP_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/pump/OVERLAY_TOP_ACTIVE.png
 texture:id=mte/pump/OVERLAY_SIDE_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/pump/OVERLAY_SIDE_ACTIVE.png
-texture:id=mte/reactor_processing_unit/OVERLAY_FRONT,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_FRONT.png
-texture:id=mte/reactor_processing_unit/OVERLAY_BOTTOM,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_BOTTOM.png
-texture:id=mte/reactor_processing_unit/OVERLAY_TOP,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_TOP.png
-texture:id=mte/reactor_processing_unit/OVERLAY_SIDE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_SIDE.png
-texture:id=mte/reactor_processing_unit/OVERLAY_FRONT_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_FRONT_ACTIVE.png,ycount=4
-texture:id=mte/reactor_processing_unit/OVERLAY_BOTTOM_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_BOTTOM_ACTIVE.png
-texture:id=mte/reactor_processing_unit/OVERLAY_TOP_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_TOP_ACTIVE.png
-texture:id=mte/reactor_processing_unit/OVERLAY_SIDE_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_SIDE_ACTIVE.png,ycount=8
+texture:id=mte/rpu/OVERLAY_FRONT,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_FRONT.png
+texture:id=mte/rpu/OVERLAY_BOTTOM,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_BOTTOM.png
+texture:id=mte/rpu/OVERLAY_TOP,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_TOP.png
+texture:id=mte/rpu/OVERLAY_SIDE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_SIDE.png
+texture:id=mte/rpu/OVERLAY_FRONT_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_FRONT_ACTIVE.png,ycount=4
+texture:id=mte/rpu/OVERLAY_BOTTOM_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_BOTTOM_ACTIVE.png
+texture:id=mte/rpu/OVERLAY_TOP_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_TOP_ACTIVE.png
+texture:id=mte/rpu/OVERLAY_SIDE_ACTIVE,filename=assets/gregtech/textures/blocks/basicmachines/reactor_processing_unit/OVERLAY_SIDE_ACTIVE.png,ycount=8
 texture:id=mte/recycler/OVERLAY_FRONT,filename=assets/gregtech/textures/blocks/basicmachines/recycler/OVERLAY_FRONT.png
 texture:id=mte/recycler/OVERLAY_BOTTOM,filename=assets/gregtech/textures/blocks/basicmachines/recycler/OVERLAY_BOTTOM.png
 texture:id=mte/recycler/OVERLAY_TOP,filename=assets/gregtech/textures/blocks/basicmachines/recycler/OVERLAY_TOP.png
@@ -2351,6 +2389,10 @@ moddata:mod=gtmte,type=iconset,name=hatch.dynamotunnel6,output=0:mte/iconsets/OV
 moddata:mod=gtmte,type=iconset,name=hatch.energytunnel6,output=0:mte/iconsets/OVERLAY_ENERGY_IN_LASER
 moddata:mod=gtmte,type=iconset,name=hatch.dynamotunnel7,output=0:mte/iconsets/OVERLAY_ENERGY_OUT_LASER
 moddata:mod=gtmte,type=iconset,name=hatch.energytunnel7,output=0:mte/iconsets/OVERLAY_ENERGY_IN_LASER
+moddata:mod=gtmte,type=iconset,name=hatch.dynamotunnel8,output=0:mte/iconsets/OVERLAY_ENERGY_OUT_LASER
+moddata:mod=gtmte,type=iconset,name=hatch.energytunnel8,output=0:mte/iconsets/OVERLAY_ENERGY_IN_LASER
+moddata:mod=gtmte,type=iconset,name=hatch.dynamotunnel9,output=0:mte/iconsets/OVERLAY_ENERGY_OUT_LASER
+moddata:mod=gtmte,type=iconset,name=hatch.energytunnel9,output=0:mte/iconsets/OVERLAY_ENERGY_IN_LASER
 moddata:mod=gtmte,type=iconset,name=hatch.superbus,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.air,output=0:mte/iconsets/OVERLAY_MUFFLER
 moddata:mod=gtmte,type=iconset,name=hatch.input_battery,output=0:mte/iconsets/OVERLAY_PIPE_OUT
@@ -2376,6 +2418,14 @@ moddata:mod=gtmte,type=iconset,name=hatch.water,output=0:mte/TileEntities/adv_ma
 moddata:mod=gtmte,type=iconset,name=hatch.crafting_input.me,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.crafting_input.me.item_only,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.crafting_input.slave,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.mag_hatch,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.crafting_input.proxy,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.heatsensor,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.dronedownlink,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.phsensor,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.lenshousing,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.lensindicator,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.degasifiercontrol,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=machine.tffthatch,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=ggfab.machine.linked_input_bus,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=compressedfluidhatch,output=0:mte/iconsets/OVERLAY_PIPE_OUT
@@ -2688,10 +2738,10 @@ moddata:mod=gtmte,type=iconset,name=redstone.circuit,front=0:mte/TileEntities/gt
 moddata:mod=gtmte,type=iconset,name=redstone.display.strength,front=0:mte/TileEntities/gt4/redstone/Display/0,side=0:mte/TileEntities/gt4/redstone/Display/0,top=0:mte/TileEntities/gt4/redstone/Display/0,bottom=0:mte/TileEntities/gt4/redstone/Display/0,output=0:mte/TileEntities/gt4/redstone/Display/0
 moddata:mod=gtmte,type=iconset,name=redstone.display.scale,front=0:mte/TileEntities/gt4/redstone/Scale/0,side=0:mte/TileEntities/gt4/redstone/Scale/0,top=0:mte/TileEntities/gt4/redstone/Scale/0,bottom=0:mte/TileEntities/gt4/redstone/Scale/0,output=0:mte/TileEntities/gt4/redstone/Scale/0
 moddata:mod=gtmte,type=iconset,name=redstone.button.panel,front=0:mte/TileEntities/gt4/redstone/ButtonPanel/0,side=0:mte/TileEntities/gt4/redstone/ButtonPanel/0,top=0:mte/TileEntities/gt4/redstone/ButtonPanel/0,bottom=0:mte/TileEntities/gt4/redstone/ButtonPanel/0,output=0:mte/TileEntities/gt4/redstone/ButtonPanel/0
-moddata:mod=gtmte,type=iconset,name=workbench.basic,output=0:mte/iconsets/OVERLAY_PIPE_OUT
-moddata:mod=gtmte,type=iconset,name=workbench.advanced,top=0:mte/gt4/machine_top_crafting,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=steamcondensor.01.tier.single,front=0:mte/potionbrewer/OVERLAY_FRONT_POTIONBREWER,side=0:mte/iconsets/MACHINE_CASING_VENT,top=0:mte/iconsets/MACHINE_CASING_VENT,bottom=0:mte/iconsets/MACHINE_CASING_VENT,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=steamcondensor.01.tier.single_active,front=0:mte/potionbrewer/OVERLAY_FRONT_POTIONBREWER_ACTIVE,side=0:mte/iconsets/MACHINE_CASING_VENT,top=0:mte/iconsets/MACHINE_CASING_VENT,bottom=0:mte/iconsets/MACHINE_CASING_VENT,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=basicmachine.betterjukebox,side=0:mte/iconsets/OVERLAY_SIDE_JUKEBOX,top=0:mte/iconsets/OVERLAY_TOP_JUKEBOX,bottom=0:mte/iconsets/OVERLAY_SIDE_JUKEBOX,output=0:mte/iconsets/OVERLAY_PIPE_OUT
+moddata:mod=gtmte,type=iconset,name=basicmachine.betterjukebox_active,side=0:mte/iconsets/OVERLAY_SIDE_JUKEBOX,top=0:mte/iconsets/OVERLAY_TOP_JUKEBOX,bottom=0:mte/iconsets/OVERLAY_SIDE_JUKEBOX,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=computer.cube,output=0:mte/iconsets/OVERLAY_PIPE_OUT
 moddata:mod=gtmte,type=iconset,name=neutron_accelerator_ulv,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
 moddata:mod=gtmte,type=iconset,name=neutron_accelerator_lv,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
@@ -2808,6 +2858,8 @@ moddata:mod=gtmte,type=iconset,name=hatch.energywirelesstunnel4.tier.13,output=0
 moddata:mod=gtmte,type=iconset,name=hatch.energywirelesstunnel5.tier.13,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.energywirelesstunnel6.tier.13,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.energywirelesstunnel7.tier.13,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.energywirelesstunnel8.tier.13,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
+moddata:mod=gtmte,type=iconset,name=hatch.energywirelesstunnel9.tier.13,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.chisel.tier.00,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.chisel.tier.01,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
 moddata:mod=gtmte,type=iconset,name=hatch.chisel.tier.02,output=0:mte/iconsets/OVERLAY_ENERGY_OUT
@@ -3265,8 +3317,8 @@ moddata:mod=gtmte,type=iconset,name=basicmachine.chemicalreactor,front=0:mte/che
 moddata:mod=gtmte,type=iconset,name=basicmachine.chemicalreactor_active,front=0:mte/chemicalreactor/OVERLAY_FRONT_ACTIVE,side=0:mte/chemicalreactor/OVERLAY_SIDE_ACTIVE,top=0:mte/chemicalreactor/OVERLAY_TOP_ACTIVE,bottom=0:mte/chemicalreactor/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.circuitassembler,front=0:mte/circuitassembler/OVERLAY_FRONT,side=0:mte/circuitassembler/OVERLAY_SIDE,top=0:mte/circuitassembler/OVERLAY_TOP,bottom=0:mte/circuitassembler/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.circuitassembler_active,front=0:mte/circuitassembler/OVERLAY_FRONT_ACTIVE,side=0:mte/circuitassembler/OVERLAY_SIDE_ACTIVE,top=0:mte/circuitassembler/OVERLAY_TOP_ACTIVE,bottom=0:mte/circuitassembler/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
-moddata:mod=gtmte,type=iconset,name=basicmachine.cold_trap,front=0:mte/cold_trap/OVERLAY_FRONT,side=0:mte/cold_trap/OVERLAY_SIDE,top=0:mte/cold_trap/OVERLAY_TOP,bottom=0:mte/cold_trap/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
-moddata:mod=gtmte,type=iconset,name=basicmachine.cold_trap_active,front=0:mte/cold_trap/OVERLAY_FRONT_ACTIVE,side=0:mte/cold_trap/OVERLAY_SIDE_ACTIVE,top=0:mte/cold_trap/OVERLAY_TOP_ACTIVE,bottom=0:mte/cold_trap/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
+moddata:mod=gtmte,type=iconset,name=basicmachine.coldtrap,front=0:mte/coldtrap/OVERLAY_FRONT,side=0:mte/coldtrap/OVERLAY_SIDE,top=0:mte/coldtrap/OVERLAY_TOP,bottom=0:mte/coldtrap/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
+moddata:mod=gtmte,type=iconset,name=basicmachine.coldtrap_active,front=0:mte/coldtrap/OVERLAY_FRONT_ACTIVE,side=0:mte/coldtrap/OVERLAY_SIDE_ACTIVE,top=0:mte/coldtrap/OVERLAY_TOP_ACTIVE,bottom=0:mte/coldtrap/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.compressor,front=0:mte/compressor/OVERLAY_FRONT,side=0:mte/compressor/OVERLAY_SIDE,top=0:mte/compressor/OVERLAY_TOP,bottom=0:mte/compressor/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.compressor_active,front=0:mte/compressor/OVERLAY_FRONT_ACTIVE,side=0:mte/compressor/OVERLAY_SIDE_ACTIVE,top=0:mte/compressor/OVERLAY_TOP_ACTIVE,bottom=0:mte/compressor/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.cutter,front=0:mte/cutter/OVERLAY_FRONT,side=0:mte/cutter/OVERLAY_SIDE,top=0:mte/cutter/OVERLAY_TOP,bottom=0:mte/cutter/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
@@ -3327,8 +3379,8 @@ moddata:mod=gtmte,type=iconset,name=basicmachine.pulverizer,front=0:mte/pulveriz
 moddata:mod=gtmte,type=iconset,name=basicmachine.pulverizer_active,front=0:mte/pulverizer/OVERLAY_FRONT_ACTIVE,side=0:mte/pulverizer/OVERLAY_SIDE_ACTIVE,top=0:mte/pulverizer/OVERLAY_TOP_ACTIVE,bottom=0:mte/pulverizer/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.pump,front=0:mte/pump/OVERLAY_FRONT,side=0:mte/pump/OVERLAY_SIDE,top=0:mte/pump/OVERLAY_TOP,bottom=0:mte/pump/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.pump_active,front=0:mte/pump/OVERLAY_FRONT_ACTIVE,side=0:mte/pump/OVERLAY_SIDE_ACTIVE,top=0:mte/pump/OVERLAY_TOP_ACTIVE,bottom=0:mte/pump/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
-moddata:mod=gtmte,type=iconset,name=basicmachine.reactor_processing_unit,front=0:mte/reactor_processing_unit/OVERLAY_FRONT,side=0:mte/reactor_processing_unit/OVERLAY_SIDE,top=0:mte/reactor_processing_unit/OVERLAY_TOP,bottom=0:mte/reactor_processing_unit/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
-moddata:mod=gtmte,type=iconset,name=basicmachine.reactor_processing_unit_active,front=0:mte/reactor_processing_unit/OVERLAY_FRONT_ACTIVE,side=0:mte/reactor_processing_unit/OVERLAY_SIDE_ACTIVE,top=0:mte/reactor_processing_unit/OVERLAY_TOP_ACTIVE,bottom=0:mte/reactor_processing_unit/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
+moddata:mod=gtmte,type=iconset,name=basicmachine.rpu,front=0:mte/rpu/OVERLAY_FRONT,side=0:mte/rpu/OVERLAY_SIDE,top=0:mte/rpu/OVERLAY_TOP,bottom=0:mte/rpu/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
+moddata:mod=gtmte,type=iconset,name=basicmachine.rpu_active,front=0:mte/rpu/OVERLAY_FRONT_ACTIVE,side=0:mte/rpu/OVERLAY_SIDE_ACTIVE,top=0:mte/rpu/OVERLAY_TOP_ACTIVE,bottom=0:mte/rpu/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.recycler,front=0:mte/recycler/OVERLAY_FRONT,side=0:mte/recycler/OVERLAY_SIDE,top=0:mte/recycler/OVERLAY_TOP,bottom=0:mte/recycler/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.recycler_active,front=0:mte/recycler/OVERLAY_FRONT_ACTIVE,side=0:mte/recycler/OVERLAY_SIDE_ACTIVE,top=0:mte/recycler/OVERLAY_TOP_ACTIVE,bottom=0:mte/recycler/OVERLAY_BOTTOM_ACTIVE,output=0:mte/iconsets/OVERLAY_PIPE
 moddata:mod=gtmte,type=iconset,name=basicmachine.sifter,front=0:mte/sifter/OVERLAY_FRONT,side=0:mte/sifter/OVERLAY_SIDE,top=0:mte/sifter/OVERLAY_TOP,bottom=0:mte/sifter/OVERLAY_BOTTOM,output=0:mte/iconsets/OVERLAY_PIPE
@@ -3655,6 +3707,7 @@ moddata:mod=gtmte,type=mte,id=355,baseset=hull.tier.05,iconset=basicmachine.wire
 moddata:mod=gtmte,type=mte,id=356,iconset=multimachine.pcbfactory,mtetype=controller,activeset=multimachine.pcbfactory_active,basetex=0:gregtech/iconsets/MACHINE_CASING_PCB_TIER_1
 moddata:mod=gtmte,type=mte,id=357,iconset=multimachine.nanoforge,mtetype=controller,activeset=multimachine.nanoforge_active,basetex=0:gregtech/iconsets/MACHINE_CASING_RADIANT_NAQUADAH_ALLOY
 moddata:mod=gtmte,type=mte,id=358,iconset=multimachine.electromagneticseparator,mtetype=controller,activeset=multimachine.electromagneticseparator_active,basetex=0:gregtech/iconsets/MACHINE_CASING_EMS
+moddata:mod=gtmte,type=mte,id=359,baseset=hull.tier.01,iconset=hatch.mag_hatch,ishatch=true
 moddata:mod=gtmte,type=mte,id=360,iconset=multimachine.canner,mtetype=controller,activeset=multimachine.canner_active,basetex=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 moddata:mod=gtmte,type=mte,id=361,baseset=hull.tier.01,iconset=basicmachine.centrifuge,activeset=basicmachine.centrifuge_active
 moddata:mod=gtmte,type=mte,id=362,baseset=hull.tier.02,iconset=basicmachine.centrifuge,activeset=basicmachine.centrifuge_active
@@ -4626,6 +4679,7 @@ moddata:mod=gtmte,type=mte,id=2712,baseset=hull.tier.01,iconset=hatch.input,isha
 moddata:mod=gtmte,type=mte,id=2713,baseset=hull.tier.01,iconset=hatch.output,ishatch=true
 moddata:mod=gtmte,type=mte,id=2714,baseset=hull.tier.01,iconset=hatch.crafting_input.me,ishatch=true
 moddata:mod=gtmte,type=mte,id=2715,baseset=hull.tier.01,iconset=hatch.crafting_input.me.item_only,ishatch=true
+moddata:mod=gtmte,type=mte,id=2716,baseset=hull.tier.01,iconset=hatch.crafting_input.proxy,ishatch=true
 moddata:mod=gtmte,type=mte,id=2717,baseset=hull.tier.01,iconset=hatch.input,ishatch=true
 moddata:mod=gtmte,type=mte,id=2718,baseset=hull.tier.01,iconset=hatch.input_bus,ishatch=true
 moddata:mod=gtmte,type=mte,id=3004,iconset=multimachine.engraver,mtetype=controller,activeset=multimachine.engraver_active,basetex=0:gregtech/iconsets/MACHINE_CASING_LASER
@@ -4633,6 +4687,7 @@ moddata:mod=gtmte,type=mte,id=3005,iconset=multimachine.basiccompressor,mtetype=
 moddata:mod=gtmte,type=mte,id=3006,iconset=multimachine.hipcompressor,mtetype=controller,activeset=multimachine.hipcompressor_active,basetex=0:gregtech/iconsets/COMPRESSOR_CASING
 moddata:mod=gtmte,type=mte,id=3007,iconset=multimachine.neutroniumcompressor,mtetype=controller,activeset=multimachine.neutroniumcompressor_active,basetex=0:gregtech/iconsets/NEUTRONIUM_CASING
 moddata:mod=gtmte,type=mte,id=3008,iconset=multimachine.blackholecompressor,mtetype=controller,activeset=multimachine.blackholecompressor_active,basetex=0:gregtech/iconsets/EXTREME_DENSITY_CASING
+moddata:mod=gtmte,type=mte,id=3009,baseset=hull.tier.01,iconset=hatch.heatsensor,ishatch=true
 moddata:mod=gtmte,type=mte,id=3010,iconset=multimachine.extractor,mtetype=controller,activeset=multimachine.extractor_active,basetex=0:gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL
 moddata:mod=gtmte,type=mte,id=3011,iconset=multimachine.brewery,mtetype=controller,activeset=multimachine.brewery_active,basetex=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
 moddata:mod=gtmte,type=mte,id=4102,mtetype=frame,basetex=17000:gt_frame,colormul=E1DCFF
@@ -5145,14 +5200,19 @@ moddata:mod=gtmte,type=mte,id=9337,baseset=hull.tier.07,iconset=automation.recip
 moddata:mod=gtmte,type=mte,id=9338,baseset=hull.tier.08,iconset=automation.recipefilter
 moddata:mod=gtmte,type=mte,id=9339,baseset=hull.tier.09,iconset=automation.recipefilter
 moddata:mod=gtmte,type=mte,id=9399,baseset=hull.tier.01,iconset=basicmachine.industrialapiary,activeset=basicmachine.industrialapiary_active
+moddata:mod=gtmte,type=mte,id=9401,baseset=hull.tier.01,iconset=hatch.dronedownlink,ishatch=true
 moddata:mod=gtmte,type=mte,id=9402,iconset=multimachine.purificationplant,mtetype=controller,activeset=multimachine.purificationplant_active,basetex=0:gregtech/iconsets/MACHINE_CASING_INDUSTRIAL_WATER_PLANT
 moddata:mod=gtmte,type=mte,id=9403,iconset=multimachine.purificationunitclarifier,mtetype=controller,activeset=multimachine.purificationunitclarifier_active,basetex=0:gregtech/iconsets/WATER_PLANT_CONCRETE_CASING
 moddata:mod=gtmte,type=mte,id=9404,iconset=multimachine.purificationunitozonation,mtetype=controller,activeset=multimachine.purificationunitozonation_active,basetex=0:gregtech/iconsets/MACHINE_CASING_OZONE
 moddata:mod=gtmte,type=mte,id=9405,iconset=multimachine.purificationunitflocculator,mtetype=controller,activeset=multimachine.purificationunitflocculator_active,basetex=0:gregtech/iconsets/MACHINE_CASING_FLOCCULATION
 moddata:mod=gtmte,type=mte,id=9406,iconset=multimachine.purificationunitphadjustment,mtetype=controller,activeset=multimachine.purificationunitphadjustment_active,basetex=0:gregtech/iconsets/MACHINE_CASING_NAQUADAH_REINFORCED_WATER_PLANT
+moddata:mod=gtmte,type=mte,id=9407,baseset=hull.tier.01,iconset=hatch.phsensor,ishatch=true
 moddata:mod=gtmte,type=mte,id=9408,iconset=multimachine.purificationunitplasmaheater,mtetype=controller,activeset=multimachine.purificationunitplasmaheater_active,basetex=0:gregtech/iconsets/MACHINE_CASING_PLASMA_HEATER
 moddata:mod=gtmte,type=mte,id=9409,iconset=multimachine.purificationunituvtreatment,mtetype=controller,activeset=multimachine.purificationunituvtreatment_active,basetex=0:gregtech/iconsets/NAQUADRIA_REINFORCED_WATER_PLANT_CASING
+moddata:mod=gtmte,type=mte,id=9410,baseset=hull.tier.01,iconset=hatch.lenshousing,ishatch=true
+moddata:mod=gtmte,type=mte,id=9411,baseset=hull.tier.01,iconset=hatch.lensindicator,ishatch=true
 moddata:mod=gtmte,type=mte,id=9412,iconset=multimachine.purificationunitdegasifier,mtetype=controller,activeset=multimachine.purificationunitdegasifier_active,basetex=0:gregtech/iconsets/MACHINE_CASING_PLASMA_HEATER
+moddata:mod=gtmte,type=mte,id=9413,baseset=hull.tier.01,iconset=hatch.degasifiercontrol,ishatch=true
 moddata:mod=gtmte,type=mte,id=9414,iconset=multimachine.purificationunitextractor,mtetype=controller,activeset=multimachine.purificationunitextractor_active,basetex=0:gregtech/iconsets/BLOCK_QUARK_CONTAINMENT_CASING
 moddata:mod=gtmte,type=mte,id=10500,iconset=multimachine.digester,activeset=multimachine.digester_active,basetex=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
 moddata:mod=gtmte,type=mte,id=10501,iconset=multimachine.dissolution_tank,activeset=multimachine.dissolution_tank_active,basetex=0:gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL
@@ -5756,6 +5816,11 @@ moddata:mod=gtmte,type=mte,id=13367,iconset=multimachine.megaoilcracker,activese
 moddata:mod=gtmte,type=mte,id=13532,iconset=multimachine.ggfab.machine.adv_assline,activeset=multimachine.ggfab.machine.adv_assline_active,basetex=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 moddata:mod=gtmte,type=mte,id=13533,iconset=ggfab.machine.linked_input_bus,baseset=hull.tier.01,ishatch=true
 moddata:mod=gtmte,type=mte,id=14202,iconset=multimachine.extremeapiary,mtetype=controller,activeset=multimachine.extremeapiary_active,basetex=0:gregtech/iconsets/MACHINE_BRONZEPLATEDBRICKS
+moddata:mod=gtmte,type=mte,id=14301,baseset=hull.tier.01,iconset=basicmachine.betterjukebox,activeset=basicmachine.betterjukebox_active
+moddata:mod=gtmte,type=mte,id=14302,baseset=hull.tier.02,iconset=basicmachine.betterjukebox,activeset=basicmachine.betterjukebox_active
+moddata:mod=gtmte,type=mte,id=14303,baseset=hull.tier.03,iconset=basicmachine.betterjukebox,activeset=basicmachine.betterjukebox_active
+moddata:mod=gtmte,type=mte,id=14304,baseset=hull.tier.04,iconset=basicmachine.betterjukebox,activeset=basicmachine.betterjukebox_active
+moddata:mod=gtmte,type=mte,id=14305,baseset=hull.tier.05,iconset=basicmachine.betterjukebox,activeset=basicmachine.betterjukebox_active
 moddata:mod=gtmte,type=mte,id=15065,baseset=hull.tier.04,iconset=hatch.energywirelessmulti04.tier.04,ishatch=true
 moddata:mod=gtmte,type=mte,id=15066,baseset=hull.tier.04,iconset=hatch.energywirelessmulti16.tier.04,ishatch=true
 moddata:mod=gtmte,type=mte,id=15067,baseset=hull.tier.04,iconset=hatch.energywirelessmulti64.tier.04,ishatch=true
@@ -6049,6 +6114,14 @@ moddata:mod=gtmte,type=mte,id=16016,baseset=hull.tier.02,iconset=machine.tt.tesl
 moddata:mod=gtmte,type=mte,id=16017,baseset=hull.tier.03,iconset=machine.tt.tesla.03
 moddata:mod=gtmte,type=mte,id=16018,baseset=hull.tier.04,iconset=machine.tt.tesla.04
 moddata:mod=gtmte,type=mte,id=16019,baseset=hull.tier.05,iconset=machine.tt.tesla.05
+moddata:mod=gtmte,type=mte,id=16020,baseset=hull.tier.12,iconset=hatch.dynamotunnel8,ishatch=true
+moddata:mod=gtmte,type=mte,id=16021,baseset=hull.tier.13,iconset=hatch.dynamotunnel8,ishatch=true
+moddata:mod=gtmte,type=mte,id=16022,baseset=hull.tier.13,iconset=hatch.dynamotunnel9,ishatch=true
+moddata:mod=gtmte,type=mte,id=16023,baseset=hull.tier.12,iconset=hatch.energytunnel8,ishatch=true
+moddata:mod=gtmte,type=mte,id=16024,baseset=hull.tier.13,iconset=hatch.energytunnel8,ishatch=true
+moddata:mod=gtmte,type=mte,id=16025,baseset=hull.tier.13,iconset=hatch.energytunnel9,ishatch=true
+moddata:mod=gtmte,type=mte,id=16026,baseset=hull.tier.13,iconset=hatch.energywirelesstunnel8.tier.13,ishatch=true
+moddata:mod=gtmte,type=mte,id=16027,baseset=hull.tier.13,iconset=hatch.energywirelesstunnel9.tier.13,ishatch=true
 moddata:mod=gtmte,type=mte,id=16999,iconset=multimachine.frf,activeset=multimachine.frf_active,basetex=0:gregtech/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM
 moddata:mod=gtmte,type=mte,id=30001,baseset=hull.tier.01,iconset=hatch.muffler,ishatch=true
 moddata:mod=gtmte,type=mte,id=30002,baseset=hull.tier.02,iconset=hatch.muffler,ishatch=true
@@ -6201,6 +6274,10 @@ moddata:mod=gtmte,type=mte,id=31027,iconset=multimachine.gtpp.multimachine.isami
 moddata:mod=gtmte,type=mte,id=31028,iconset=multimachine.gtpp.multimachine.flotationcell,activeset=multimachine.gtpp.multimachine.flotationcell_active,basetex=0:gregtech/iconsets/TEXTURE_METAL_PANEL_D
 moddata:mod=gtmte,type=mte,id=31029,baseset=hull.tier.01,iconset=hatch.milling,ishatch=true
 moddata:mod=gtmte,type=mte,id=31030,baseset=hull.tier.01,iconset=hatch.catalysts,ishatch=true
+moddata:mod=gtmte,type=mte,id=31031,baseset=hull.tier.01,iconset=basicmachine.rpu
+moddata:mod=gtmte,type=mte,id=31032,baseset=hull.tier.02,iconset=basicmachine.rpu
+moddata:mod=gtmte,type=mte,id=31033,baseset=hull.tier.01,iconset=basicmachine.coldtrap
+moddata:mod=gtmte,type=mte,id=31034,baseset=hull.tier.02,iconset=basicmachine.coldtrap
 moddata:mod=gtmte,type=mte,id=31035,iconset=multimachine.sparge.controller.single,activeset=multimachine.sparge.controller.single_active,basetex=0:gregtech/iconsets/MACHINE_CASING_GEARBOX_T1
 moddata:mod=gtmte,type=mte,id=31040,baseset=hull.tier.00,iconset=hatch.steam,ishatch=true
 moddata:mod=gtmte,type=mte,id=31041,iconset=multimachine.gtpp.multimachine.steam.macerator,activeset=multimachine.gtpp.multimachine.steam.macerator_active,basetex=0:gregtech/iconsets/MACHINE_BRONZEPLATEDBRICKS
