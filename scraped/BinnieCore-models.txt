@@ -1,4 +1,4 @@
-# BinnieCore 2.3.4
+# BinnieCore 2.4.3
 version:1.7
 modname:BinnieCore
 
@@ -22,6 +22,37 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
+
+# %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
+patchblock:id=%ectoplasm,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %flower:* (flower), render=binnie.botany.flower.RendererBotany(CUSTOM), opaque=false,cls=binnie.botany.flower.BlockFlower
+boxblock:id=%flower,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.6000000238418579,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
+
+# %plant:* (plant), render=(CROSSEDSQUARES), opaque=false,cls=binnie.botany.gardening.BlockPlant
+patchblock:id=%plant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %soil:* (soil), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%soil,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %loam:* (loam), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%loam,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %flowerbed:* (flowerbed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%flowerbed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %soilNoWeed:* (soilNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%soilNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %loamNoWeed:* (loamNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%loamNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %flowerbedNoWeed:* (flowerbedNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%flowerbedNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %ceramicPattern:* (ceramicPattern), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicPatterned
+
+# %ceramicBrick:* (ceramicBrick), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicBrick
 
 # %fence:* (fence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockFence
 boxblock:id=%fence,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
@@ -54,34 +85,3 @@ boxblock:id=%door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=
 
 # %panel:* (panel), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockCarpentryPanel
 boxblock:id=%panel,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=*
-
-# %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
-patchblock:id=%ectoplasm,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %flower:* (flower), render=binnie.botany.flower.RendererBotany(CUSTOM), opaque=false,cls=binnie.botany.flower.BlockFlower
-boxblock:id=%flower,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.6000000238418579,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
-
-# %plant:* (plant), render=(CROSSEDSQUARES), opaque=false,cls=binnie.botany.gardening.BlockPlant
-patchblock:id=%plant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %soil:* (soil), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%soil,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %loam:* (loam), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%loam,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %flowerbed:* (flowerbed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%flowerbed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %soilNoWeed:* (soilNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%soilNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %loamNoWeed:* (loamNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%loamNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %flowerbedNoWeed:* (flowerbedNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%flowerbedNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %ceramicPattern:* (ceramicPattern), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicPatterned
-
-# %ceramicBrick:* (ceramicBrick), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicBrick

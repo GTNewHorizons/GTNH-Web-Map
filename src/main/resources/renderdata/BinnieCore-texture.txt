@@ -1,4 +1,4 @@
-# BinnieCore 2.0.48
+# BinnieCore 2.4.3
 version:1.7
 modname:BinnieCore
 
@@ -169,135 +169,6 @@ texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/pla
 
 
 
-# %planks:* (planks), render=(STANDARD), opaque=true,cls=binnie.extratrees.block.BlockETPlanks
-block:id=%planks,data=0,stdrot=true,face0-5=0:extratrees/planks/Fir
-block:id=%planks,data=1,stdrot=true,face0-5=0:extratrees/planks/Cedar
-block:id=%planks,data=2,stdrot=true,face0-5=0:extratrees/planks/Hemlock
-block:id=%planks,data=3,stdrot=true,face0-5=0:extratrees/planks/Cypress
-block:id=%planks,data=4,stdrot=true,face0-5=0:extratrees/planks/Fig
-block:id=%planks,data=5,stdrot=true,face0-5=0:extratrees/planks/Beech
-block:id=%planks,data=6,stdrot=true,face0-5=0:extratrees/planks/Alder
-block:id=%planks,data=7,stdrot=true,face0-5=0:extratrees/planks/Hazel
-block:id=%planks,data=8,stdrot=true,face0-5=0:extratrees/planks/Hornbeam
-block:id=%planks,data=9,stdrot=true,face0-5=0:extratrees/planks/Box
-block:id=%planks,data=10,stdrot=true,face0-5=0:extratrees/planks/Butternut
-block:id=%planks,data=11,stdrot=true,face0-5=0:extratrees/planks/Hickory
-block:id=%planks,data=12,stdrot=true,face0-5=0:extratrees/planks/Whitebeam
-block:id=%planks,data=13,stdrot=true,face0-5=0:extratrees/planks/Elm
-block:id=%planks,data=14,stdrot=true,face0-5=0:extratrees/planks/Apple
-block:id=%planks,data=15,stdrot=true,face0-5=0:extratrees/planks/Yew
-
-# %fence:* (fence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockFence
-block:id=%fence,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
-block:id=%fence,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
-block:id=%fence,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
-block:id=%fence,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
-block:id=%fence,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
-block:id=%fence,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
-block:id=%fence,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/planks/Fir
-
-# %multifence:* (multifence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockMultiFence
-block:id=%multifence,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
-block:id=%multifence,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
-block:id=%multifence,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
-block:id=%multifence,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
-block:id=%multifence,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
-block:id=%multifence,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
-block:id=%multifence,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/planks/Fir
-
-# %log:* (log), render=(LOG), opaque=true,cls=binnie.extratrees.block.BlockETLog
-block:id=%log,data=0,stdrot=true,face0-1=0:extratrees/logs/appleTrunk,face2-5=0:extratrees/logs/appleBark
-block:id=%log,data=1,stdrot=true,face0-1=0:extratrees/logs/figTrunk,face2-5=0:extratrees/logs/figBark
-block:id=%log,data=2,stdrot=true,face0-1=0:extratrees/logs/butternutTrunk,face2-5=0:extratrees/logs/butternutBark
-block:id=%log,data=3,stdrot=true,face0-1=0:extratrees/logs/cherryTrunk,face2-5=0:extratrees/logs/cherryBark
-block:id=%log,data=4,face0-1=0:extratrees/logs/whitebeamTrunk,face2-3=4000:extratrees/logs/whitebeamBark,face4-5=0:extratrees/logs/whitebeamBark
-block:id=%log,data=5,face0-1=0:extratrees/logs/rowanTrunk,face2-3=4000:extratrees/logs/rowanBark,face4-5=0:extratrees/logs/rowanBark
-block:id=%log,data=6,face0-1=0:extratrees/logs/hemlockTrunk,face2-3=4000:extratrees/logs/hemlockBark,face4-5=0:extratrees/logs/hemlockBark
-block:id=%log,data=7,face0-1=0:extratrees/logs/ashTrunk,face2-3=4000:extratrees/logs/ashBark,face4-5=0:extratrees/logs/ashBark
-block:id=%log,data=8,face0-1=4000:extratrees/logs/alderTrunk,face2-3=0:extratrees/logs/alderBark,face4-5=4000:extratrees/logs/alderBark
-block:id=%log,data=9,face0-1=4000:extratrees/logs/beechTrunk,face2-3=0:extratrees/logs/beechBark,face4-5=4000:extratrees/logs/beechBark
-block:id=%log,data=10,face0-1=4000:extratrees/logs/hawthornTrunk,face2-3=0:extratrees/logs/hawthornBark,face4-5=4000:extratrees/logs/hawthornBark
-block:id=%log,data=11,face0-1=4000:extratrees/logs/bananaTrunk,face2-3=0:extratrees/logs/bananaBark,face4-5=4000:extratrees/logs/bananaBark
-block:id=%log,data=12,stdrot=true,face0-1=0:extratrees/logs/yewTrunk,face2-5=0:extratrees/logs/yewBark
-block:id=%log,data=13,stdrot=true,face0-1=0:extratrees/logs/cypressTrunk,face2-5=0:extratrees/logs/cypressBark
-block:id=%log,data=14,stdrot=true,face0-1=0:extratrees/logs/firTrunk,face2-5=0:extratrees/logs/firBark
-block:id=%log,data=15,stdrot=true,face0-1=0:extratrees/logs/hazelTrunk,face2-5=0:extratrees/logs/hazelBark
-
-# %gate:* (gate), render=(FENCEGATE), opaque=false,cls=binnie.extratrees.block.decor.BlockGate
-block:id=%gate,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_oak
-block:id=%gate,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_spruce
-block:id=%gate,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_birch
-block:id=%gate,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_jungle
-block:id=%gate,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_acacia
-block:id=%gate,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_big_oak
-block:id=%gate,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:extratrees/planks/Fir
-
-# %slab:* (slab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
-block:id=%slab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fir
-block:id=%slab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cedar
-block:id=%slab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hemlock
-block:id=%slab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cypress
-block:id=%slab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fig
-block:id=%slab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Beech
-block:id=%slab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Alder
-block:id=%slab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hazel
-block:id=%slab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hornbeam
-block:id=%slab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Box
-block:id=%slab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Butternut
-block:id=%slab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hickory
-block:id=%slab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Whitebeam
-block:id=%slab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Elm
-block:id=%slab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Apple
-block:id=%slab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Yew
-
-# %doubleSlab:* (doubleSlab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
-block:id=%doubleSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fir
-block:id=%doubleSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cedar
-block:id=%doubleSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hemlock
-block:id=%doubleSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cypress
-block:id=%doubleSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fig
-block:id=%doubleSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Beech
-block:id=%doubleSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Alder
-block:id=%doubleSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hazel
-block:id=%doubleSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hornbeam
-block:id=%doubleSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Box
-block:id=%doubleSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Butternut
-block:id=%doubleSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hickory
-block:id=%doubleSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Whitebeam
-block:id=%doubleSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Elm
-block:id=%doubleSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Apple
-block:id=%doubleSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Yew
-
-# %door:* (door), render=binnie.extratrees.block.DoorBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.BlockETDoor
-block:id=%door,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/door.standard.lower
-
-# %stairs:* (stairs), render=binnie.extratrees.block.StairsRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.BlockETStairs
-block:id=%stairs,data=0,stdrot=true,face0-5=0:extratrees/planks/Fir
-block:id=%stairs,data=1,stdrot=true,face0-5=0:extratrees/planks/Cedar
-block:id=%stairs,data=2,stdrot=true,face0-5=0:extratrees/planks/Hemlock
-block:id=%stairs,data=3,stdrot=true,face0-5=0:extratrees/planks/Cypress
-block:id=%stairs,data=4,stdrot=true,face0-5=0:extratrees/planks/Fig
-block:id=%stairs,data=5,stdrot=true,face0-5=0:extratrees/planks/Beech
-block:id=%stairs,data=6,stdrot=true,face0-5=0:extratrees/planks/Alder
-block:id=%stairs,data=7,stdrot=true,face0-5=0:extratrees/planks/Hazel
-block:id=%stairs,data=8,stdrot=true,face0-5=0:extratrees/planks/Hornbeam
-block:id=%stairs,data=9,stdrot=true,face0-5=0:extratrees/planks/Box
-block:id=%stairs,data=10,stdrot=true,face0-5=0:extratrees/planks/Butternut
-block:id=%stairs,data=11,stdrot=true,face0-5=0:extratrees/planks/Hickory
-block:id=%stairs,data=12,stdrot=true,face0-5=0:extratrees/planks/Whitebeam
-block:id=%stairs,data=13,stdrot=true,face0-5=0:extratrees/planks/Elm
-block:id=%stairs,data=14,stdrot=true,face0-5=0:extratrees/planks/Apple
-block:id=%stairs,data=15,stdrot=true,face0-5=0:extratrees/planks/Yew
-
-# %carpentry:* (carpentry), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.extratrees.carpentry.BlockCarpentry
-block:id=%carpentry,data=*,stdrot=true,face0-5=0:extratrees/patterns/blank.0
-
-# %panel:* (panel), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockCarpentryPanel
-block:id=%panel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/patterns/blank.0
-
-# %stainedglass:* (stainedglass), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockStainedDesign
-block:id=%stainedglass,data=*,stdrot=true,face0-5=12000:extratrees/glass/blank.0
-
 # %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
 block:id=%ectoplasm,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabees/ectoplasm
 
@@ -435,3 +306,132 @@ block:id=%ceramicPattern,data=*,stdrot=true,face0-5=0:botany/ceramic/blank.0
 
 # %ceramicBrick:* (ceramicBrick), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicBrick
 block:id=%ceramicBrick,data=*,stdrot=true,face0-5=0:botany/ceramic.tile.0
+
+# %planks:* (planks), render=(STANDARD), opaque=true,cls=binnie.extratrees.block.BlockETPlanks
+block:id=%planks,data=0,stdrot=true,face0-5=0:extratrees/planks/Fir
+block:id=%planks,data=1,stdrot=true,face0-5=0:extratrees/planks/Cedar
+block:id=%planks,data=2,stdrot=true,face0-5=0:extratrees/planks/Hemlock
+block:id=%planks,data=3,stdrot=true,face0-5=0:extratrees/planks/Cypress
+block:id=%planks,data=4,stdrot=true,face0-5=0:extratrees/planks/Fig
+block:id=%planks,data=5,stdrot=true,face0-5=0:extratrees/planks/Beech
+block:id=%planks,data=6,stdrot=true,face0-5=0:extratrees/planks/Alder
+block:id=%planks,data=7,stdrot=true,face0-5=0:extratrees/planks/Hazel
+block:id=%planks,data=8,stdrot=true,face0-5=0:extratrees/planks/Hornbeam
+block:id=%planks,data=9,stdrot=true,face0-5=0:extratrees/planks/Box
+block:id=%planks,data=10,stdrot=true,face0-5=0:extratrees/planks/Butternut
+block:id=%planks,data=11,stdrot=true,face0-5=0:extratrees/planks/Hickory
+block:id=%planks,data=12,stdrot=true,face0-5=0:extratrees/planks/Whitebeam
+block:id=%planks,data=13,stdrot=true,face0-5=0:extratrees/planks/Elm
+block:id=%planks,data=14,stdrot=true,face0-5=0:extratrees/planks/Apple
+block:id=%planks,data=15,stdrot=true,face0-5=0:extratrees/planks/Yew
+
+# %fence:* (fence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockFence
+block:id=%fence,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%fence,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+block:id=%fence,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
+block:id=%fence,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
+block:id=%fence,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
+block:id=%fence,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+block:id=%fence,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/planks/Fir
+
+# %multifence:* (multifence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockMultiFence
+block:id=%multifence,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=%multifence,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+block:id=%multifence,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
+block:id=%multifence,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
+block:id=%multifence,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_acacia
+block:id=%multifence,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_big_oak
+block:id=%multifence,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/planks/Fir
+
+# %log:* (log), render=(LOG), opaque=true,cls=binnie.extratrees.block.BlockETLog
+block:id=%log,data=0,stdrot=true,face0-1=0:extratrees/logs/appleTrunk,face2-5=0:extratrees/logs/appleBark
+block:id=%log,data=1,stdrot=true,face0-1=0:extratrees/logs/figTrunk,face2-5=0:extratrees/logs/figBark
+block:id=%log,data=2,stdrot=true,face0-1=0:extratrees/logs/butternutTrunk,face2-5=0:extratrees/logs/butternutBark
+block:id=%log,data=3,stdrot=true,face0-1=0:extratrees/logs/cherryTrunk,face2-5=0:extratrees/logs/cherryBark
+block:id=%log,data=4,face0-1=0:extratrees/logs/whitebeamTrunk,face2-3=4000:extratrees/logs/whitebeamBark,face4-5=0:extratrees/logs/whitebeamBark
+block:id=%log,data=5,face0-1=0:extratrees/logs/rowanTrunk,face2-3=4000:extratrees/logs/rowanBark,face4-5=0:extratrees/logs/rowanBark
+block:id=%log,data=6,face0-1=0:extratrees/logs/hemlockTrunk,face2-3=4000:extratrees/logs/hemlockBark,face4-5=0:extratrees/logs/hemlockBark
+block:id=%log,data=7,face0-1=0:extratrees/logs/ashTrunk,face2-3=4000:extratrees/logs/ashBark,face4-5=0:extratrees/logs/ashBark
+block:id=%log,data=8,face0-1=4000:extratrees/logs/alderTrunk,face2-3=0:extratrees/logs/alderBark,face4-5=4000:extratrees/logs/alderBark
+block:id=%log,data=9,face0-1=4000:extratrees/logs/beechTrunk,face2-3=0:extratrees/logs/beechBark,face4-5=4000:extratrees/logs/beechBark
+block:id=%log,data=10,face0-1=4000:extratrees/logs/hawthornTrunk,face2-3=0:extratrees/logs/hawthornBark,face4-5=4000:extratrees/logs/hawthornBark
+block:id=%log,data=11,face0-1=4000:extratrees/logs/bananaTrunk,face2-3=0:extratrees/logs/bananaBark,face4-5=4000:extratrees/logs/bananaBark
+block:id=%log,data=12,stdrot=true,face0-1=0:extratrees/logs/yewTrunk,face2-5=0:extratrees/logs/yewBark
+block:id=%log,data=13,stdrot=true,face0-1=0:extratrees/logs/cypressTrunk,face2-5=0:extratrees/logs/cypressBark
+block:id=%log,data=14,stdrot=true,face0-1=0:extratrees/logs/firTrunk,face2-5=0:extratrees/logs/firBark
+block:id=%log,data=15,stdrot=true,face0-1=0:extratrees/logs/hazelTrunk,face2-5=0:extratrees/logs/hazelBark
+
+# %gate:* (gate), render=(FENCEGATE), opaque=false,cls=binnie.extratrees.block.decor.BlockGate
+block:id=%gate,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_oak
+block:id=%gate,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_spruce
+block:id=%gate,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_birch
+block:id=%gate,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_jungle
+block:id=%gate,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_acacia
+block:id=%gate,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/planks_big_oak
+block:id=%gate,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:extratrees/planks/Fir
+
+# %slab:* (slab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
+block:id=%slab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fir
+block:id=%slab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cedar
+block:id=%slab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hemlock
+block:id=%slab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cypress
+block:id=%slab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fig
+block:id=%slab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Beech
+block:id=%slab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Alder
+block:id=%slab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hazel
+block:id=%slab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hornbeam
+block:id=%slab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Box
+block:id=%slab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Butternut
+block:id=%slab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hickory
+block:id=%slab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Whitebeam
+block:id=%slab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Elm
+block:id=%slab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Apple
+block:id=%slab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Yew
+
+# %doubleSlab:* (doubleSlab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
+block:id=%doubleSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fir
+block:id=%doubleSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cedar
+block:id=%doubleSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hemlock
+block:id=%doubleSlab,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Cypress
+block:id=%doubleSlab,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Fig
+block:id=%doubleSlab,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Beech
+block:id=%doubleSlab,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Alder
+block:id=%doubleSlab,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hazel
+block:id=%doubleSlab,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hornbeam
+block:id=%doubleSlab,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Box
+block:id=%doubleSlab,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Butternut
+block:id=%doubleSlab,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Hickory
+block:id=%doubleSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Whitebeam
+block:id=%doubleSlab,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Elm
+block:id=%doubleSlab,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Apple
+block:id=%doubleSlab,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extratrees/planks/Yew
+
+# %door:* (door), render=binnie.extratrees.block.DoorBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.BlockETDoor
+block:id=%door,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/door.standard.lower
+
+# %stairs:* (stairs), render=binnie.extratrees.block.StairsRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.BlockETStairs
+block:id=%stairs,data=0,stdrot=true,face0-5=0:extratrees/planks/Fir
+block:id=%stairs,data=1,stdrot=true,face0-5=0:extratrees/planks/Cedar
+block:id=%stairs,data=2,stdrot=true,face0-5=0:extratrees/planks/Hemlock
+block:id=%stairs,data=3,stdrot=true,face0-5=0:extratrees/planks/Cypress
+block:id=%stairs,data=4,stdrot=true,face0-5=0:extratrees/planks/Fig
+block:id=%stairs,data=5,stdrot=true,face0-5=0:extratrees/planks/Beech
+block:id=%stairs,data=6,stdrot=true,face0-5=0:extratrees/planks/Alder
+block:id=%stairs,data=7,stdrot=true,face0-5=0:extratrees/planks/Hazel
+block:id=%stairs,data=8,stdrot=true,face0-5=0:extratrees/planks/Hornbeam
+block:id=%stairs,data=9,stdrot=true,face0-5=0:extratrees/planks/Box
+block:id=%stairs,data=10,stdrot=true,face0-5=0:extratrees/planks/Butternut
+block:id=%stairs,data=11,stdrot=true,face0-5=0:extratrees/planks/Hickory
+block:id=%stairs,data=12,stdrot=true,face0-5=0:extratrees/planks/Whitebeam
+block:id=%stairs,data=13,stdrot=true,face0-5=0:extratrees/planks/Elm
+block:id=%stairs,data=14,stdrot=true,face0-5=0:extratrees/planks/Apple
+block:id=%stairs,data=15,stdrot=true,face0-5=0:extratrees/planks/Yew
+
+# %carpentry:* (carpentry), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.extratrees.carpentry.BlockCarpentry
+block:id=%carpentry,data=*,stdrot=true,face0-5=0:extratrees/patterns/blank.0
+
+# %panel:* (panel), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockCarpentryPanel
+block:id=%panel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees/patterns/blank.0
+
+# %stainedglass:* (stainedglass), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockStainedDesign
+block:id=%stainedglass,data=*,stdrot=true,face0-5=12000:extratrees/glass/blank.0
