@@ -1,4 +1,4 @@
-# openmodularturrets 2.3.2
+# openmodularturrets 2.3.6
 version:1.7
 modname:openmodularturrets
 
@@ -151,4 +151,4 @@ block:id=%laserTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:open
 block:id=%railGunTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/railGunTurret
 
 # %leverBlock:* (leverBlock), render=(CUSTOM), opaque=false,cls=openmodularturrets.blocks.misc.LeverBlock
-block:id=%leverBlock,data=*,stdrot=true,face0-5=0:openmodularturrets/turretBaseTierTwo
+block:id=%leverBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openmodularturrets/turretBaseTierTwo
