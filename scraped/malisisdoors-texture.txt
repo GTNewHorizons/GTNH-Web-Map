@@ -1,4 +1,4 @@
-# malisisdoors 1.16.4-GTNH
+# malisisdoors 1.17.2-GTNH
 version:1.7
 modname:malisisdoors
 
@@ -7,6 +7,8 @@ cfgfile:config/malisisdoors.cfg
 
 
 texturepath:assets/malisisdoors/textures/blocks/
+texture:id=malisisdoors/CARRIAGE,filename=assets/malisisdoors/textures/blocks/CARRIAGE.png
+texture:id=malisisdoors/MEDIEVAL,filename=assets/malisisdoors/textures/blocks/MEDIEVAL.png
 texture:id=malisisdoors/block_mixer,filename=assets/malisisdoors/textures/blocks/block_mixer.png
 texture:id=malisisdoors/block_mixer_side,filename=assets/malisisdoors/textures/blocks/block_mixer_side.png
 texture:id=malisisdoors/camo_fencegate,filename=assets/malisisdoors/textures/blocks/camo_fencegate.png
@@ -340,10 +342,20 @@ block:id=%rustyLadder,data=0,data=1,stdrot=true,face0-5=0:malisisdoors/rusty_hat
 block:id=%rustyLadder,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/rusty_hatch_handle
 
 # %carriage_door:* (carriage_door), render=net.malisis.doors.door.renderer.BigDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.BigDoor
-block:id=%carriage_door,data=*,stdrot=true,face0-5=12000:malisisdoors/carriage_door
+block:id=%carriage_door,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/carriage_door
 
 # %medieval_door:* (medieval_door), render=net.malisis.doors.door.renderer.BigDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.BigDoor
-block:id=%medieval_door,data=*,stdrot=true,face0-5=12000:malisisdoors/medieval_door
+block:id=%medieval_door,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/medieval_door
 
 # %forcefieldDoor:* (forcefieldDoor), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.ForcefieldDoor
 block:id=%forcefieldDoor,data=*,stdrot=true,face0-5=0:malisisdoors/forcefield
+
+# %medieval_door_collisionHelper_MEDIEVAL:* (medieval_door_collisionHelper_MEDIEVAL), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.CollisionHelperBlock
+block:id=%medieval_door_collisionHelper_MEDIEVAL,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/CARRIAGE
+block:id=%medieval_door_collisionHelper_MEDIEVAL,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/MEDIEVAL
+block:id=%medieval_door_collisionHelper_MEDIEVAL,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/CARRIAGE
+
+# %carriage_door_collisionHelper_CARRIAGE:* (carriage_door_collisionHelper_CARRIAGE), render=(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.CollisionHelperBlock
+block:id=%carriage_door_collisionHelper_CARRIAGE,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/CARRIAGE
+block:id=%carriage_door_collisionHelper_CARRIAGE,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/MEDIEVAL
+block:id=%carriage_door_collisionHelper_CARRIAGE,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/CARRIAGE
