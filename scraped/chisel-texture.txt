@@ -1,4 +1,4 @@
-# chisel 2.14.1-GTNH
+# chisel 2.15.2-GTNH
 version:1.7
 modname:chisel
 
@@ -838,6 +838,16 @@ texture:id=chisel/fantasy2/pillar-side,filename=assets/chisel/textures/blocks/fa
 texture:id=chisel/fantasy2/pillar-top,filename=assets/chisel/textures/blocks/fantasy2/pillar-top.png
 texture:id=chisel/fantasy2/plate-side,filename=assets/chisel/textures/blocks/fantasy2/plate-side.png
 texture:id=chisel/fantasy2/plate-top,filename=assets/chisel/textures/blocks/fantasy2/plate-top.png
+texture:id=chisel/froglight/0,filename=assets/chisel/textures/blocks/froglight/0.png
+texture:id=chisel/froglight/1,filename=assets/chisel/textures/blocks/froglight/1.png
+texture:id=chisel/froglight/2,filename=assets/chisel/textures/blocks/froglight/2.png
+texture:id=chisel/froglight/3,filename=assets/chisel/textures/blocks/froglight/3.png
+texture:id=chisel/froglight/4,filename=assets/chisel/textures/blocks/froglight/4.png
+texture:id=chisel/froglight/5,filename=assets/chisel/textures/blocks/froglight/5.png
+texture:id=chisel/froglight/6,filename=assets/chisel/textures/blocks/froglight/6.png
+texture:id=chisel/froglight/7,filename=assets/chisel/textures/blocks/froglight/7.png
+texture:id=chisel/froglight/8,filename=assets/chisel/textures/blocks/froglight/8.png
+texture:id=chisel/froglight/9,filename=assets/chisel/textures/blocks/froglight/9.png
 texture:id=chisel/futura/WIP/controller,filename=assets/chisel/textures/blocks/futura/WIP/controller.png
 texture:id=chisel/futura/WIP/controllerPurple,filename=assets/chisel/textures/blocks/futura/WIP/controllerPurple.png
 texture:id=chisel/futura/WIP/screenCyanWIP,filename=assets/chisel/textures/blocks/futura/WIP/screenCyanWIP.png
@@ -3947,3 +3957,16 @@ block:id=%woolen_clay,data=12,stdrot=true,face0-5=0:chisel/woolenClay/brown
 block:id=%woolen_clay,data=13,stdrot=true,face0-5=0:chisel/woolenClay/green
 block:id=%woolen_clay,data=14,stdrot=true,face0-5=0:chisel/woolenClay/red
 block:id=%woolen_clay,data=15,stdrot=true,face0-5=0:chisel/woolenClay/black
+
+# %froglight:* (froglight), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+block:id=%froglight,data=0,stdrot=true,face0-5=0:chisel/froglight/0
+block:id=%froglight,data=1,stdrot=true,face0-5=0:chisel/froglight/1
+block:id=%froglight,data=2,stdrot=true,face0-5=0:chisel/froglight/2
+block:id=%froglight,data=3,stdrot=true,face0-5=0:chisel/froglight/3
+block:id=%froglight,data=4,stdrot=true,face0-5=0:chisel/froglight/4
+block:id=%froglight,data=5,stdrot=true,face0-5=0:chisel/froglight/5
+block:id=%froglight,data=6,stdrot=true,face0-5=0:chisel/froglight/6
+block:id=%froglight,data=7,stdrot=true,face0-5=0:chisel/froglight/7
+block:id=%froglight,data=8,stdrot=true,face0-5=0:chisel/froglight/8
+block:id=%froglight,data=9,stdrot=true,face0-5=0:chisel/froglight/9
+block:id=%froglight,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
