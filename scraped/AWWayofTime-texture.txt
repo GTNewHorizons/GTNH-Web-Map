@@ -1,4 +1,4 @@
-# AWWayofTime 1.5.4
+# AWWayofTime 1.6.6
 version:1.7
 modname:AWWayofTime
 
@@ -56,14 +56,14 @@ texture:id=AlchemicalWizardry/Teleposer_Side,filename=assets/alchemicalwizardry/
 texture:id=AlchemicalWizardry/Teleposer_Top,filename=assets/alchemicalwizardry/textures/blocks/Teleposer_Top.png
 texture:id=AlchemicalWizardry/WaterRitualStone,filename=assets/alchemicalwizardry/textures/blocks/WaterRitualStone.png
 texture:id=AlchemicalWizardry/lifeEssenceStill,filename=assets/alchemicalwizardry/textures/blocks/lifeEssenceStill.png
-texture:id=minecraft/MISSING_ICON_BLOCK_768_blockSpellParadigm,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_768_blockSpellParadigm.png
-texture:id=minecraft/MISSING_ICON_BLOCK_769_blockSpellEnhancement,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_769_blockSpellEnhancement.png
-texture:id=minecraft/MISSING_ICON_BLOCK_770_blockSpellModifier,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_770_blockSpellModifier.png
-texture:id=minecraft/MISSING_ICON_BLOCK_771_blockSpellEffect,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_771_blockSpellEffect.png
-texture:id=minecraft/MISSING_ICON_BLOCK_774_schematicSaver,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_774_schematicSaver.png
-texture:id=minecraft/MISSING_ICON_BLOCK_776_alchemicCalcinator,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_776_alchemicCalcinator.png
-texture:id=minecraft/MISSING_ICON_BLOCK_777_crystalBelljar,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_777_crystalBelljar.png
-texture:id=minecraft/MISSING_ICON_BLOCK_780_blockMimic,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_780_blockMimic.png
+texture:id=minecraft/MISSING_ICON_BLOCK_778_blockSpellParadigm,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_778_blockSpellParadigm.png
+texture:id=minecraft/MISSING_ICON_BLOCK_779_blockSpellEnhancement,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_779_blockSpellEnhancement.png
+texture:id=minecraft/MISSING_ICON_BLOCK_780_blockSpellModifier,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_780_blockSpellModifier.png
+texture:id=minecraft/MISSING_ICON_BLOCK_781_blockSpellEffect,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_781_blockSpellEffect.png
+texture:id=minecraft/MISSING_ICON_BLOCK_784_schematicSaver,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_784_schematicSaver.png
+texture:id=minecraft/MISSING_ICON_BLOCK_786_alchemicCalcinator,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_786_alchemicCalcinator.png
+texture:id=minecraft/MISSING_ICON_BLOCK_787_crystalBelljar,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_787_crystalBelljar.png
+texture:id=minecraft/MISSING_ICON_BLOCK_790_blockMimic,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_790_blockMimic.png
 texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
 
 
@@ -156,16 +156,16 @@ block:id=%bloodLight,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/BlockBloodL
 block:id=%blockConduit,data=*,stdrot=true,face0=0:AlchemicalWizardry/BloodAltar_Bottom,face1=0:AlchemicalWizardry/BloodAltar_Top,face2-5=0:AlchemicalWizardry/BloodAltar_SideType2
 
 # %AlchemicalWizardrytile.blockSpellParadigm:* (AlchemicalWizardrytile.blockSpellParadigm), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellParadigm
-block:id=%AlchemicalWizardrytile.blockSpellParadigm,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_768_blockSpellParadigm
+block:id=%AlchemicalWizardrytile.blockSpellParadigm,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_778_blockSpellParadigm
 
 # %AlchemicalWizardrytile.blockSpellEnhancement:* (AlchemicalWizardrytile.blockSpellEnhancement), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellEnhancement
-block:id=%AlchemicalWizardrytile.blockSpellEnhancement,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_769_blockSpellEnhancement
+block:id=%AlchemicalWizardrytile.blockSpellEnhancement,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_779_blockSpellEnhancement
 
 # %AlchemicalWizardrytile.blockSpellModifier:* (AlchemicalWizardrytile.blockSpellModifier), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellModifier
-block:id=%AlchemicalWizardrytile.blockSpellModifier,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_770_blockSpellModifier
+block:id=%AlchemicalWizardrytile.blockSpellModifier,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_780_blockSpellModifier
 
 # %AlchemicalWizardrytile.blockSpellEffect:* (AlchemicalWizardrytile.blockSpellEffect), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellEffect
-block:id=%AlchemicalWizardrytile.blockSpellEffect,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_771_blockSpellEffect
+block:id=%AlchemicalWizardrytile.blockSpellEffect,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_781_blockSpellEffect
 
 # %spectralContainer:* (spectralContainer), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpectralContainer
 block:id=%spectralContainer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:AlchemicalWizardry/BlockBloodLight
@@ -174,16 +174,16 @@ block:id=%spectralContainer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=
 block:id=%demonPortalMain,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/DemonPortal
 
 # %blockSchemSaver:* (blockSchemSaver), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.BlockSchematicSaver
-block:id=%blockSchemSaver,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_774_schematicSaver
+block:id=%blockSchemSaver,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_784_schematicSaver
 
 # %blockReagentConduit:* (blockReagentConduit), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockReagentConduit
 block:id=%blockReagentConduit,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/SimpleTransCircle
 
 # %blockAlchemicCalcinator:* (blockAlchemicCalcinator), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockAlchemicCalcinator
-block:id=%blockAlchemicCalcinator,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_776_alchemicCalcinator
+block:id=%blockAlchemicCalcinator,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_786_alchemicCalcinator
 
 # %blockCrystalBelljar:* (blockCrystalBelljar), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockBelljar
-block:id=%blockCrystalBelljar,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_777_crystalBelljar
+block:id=%blockCrystalBelljar,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_787_crystalBelljar
 
 # %blockDemonChest:* (blockDemonChest), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.demonVillage.tileEntity.BlockDemonChest
 block:id=%blockDemonChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
@@ -194,7 +194,7 @@ block:id=%blockCrystal,data=1,stdrot=true,face0-5=0:AlchemicalWizardry/ShardClus
 block:id=%blockCrystal,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/BlankRune
 
 # %blockMimic:* (blockMimic), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.MimicBlock
-block:id=%blockMimic,data=*,stdrot=true,face0-5=12000:minecraft/MISSING_ICON_BLOCK_780_blockMimic
+block:id=%blockMimic,data=*,stdrot=true,face0-5=12000:minecraft/MISSING_ICON_BLOCK_790_blockMimic
 
 # %blockEnchantmentGlyph:* (blockEnchantmentGlyph), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.BlockEnchantmentGlyph
 block:id=%blockEnchantmentGlyph,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/GlyphEnchantability

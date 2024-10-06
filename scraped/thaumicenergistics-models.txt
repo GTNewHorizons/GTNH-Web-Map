@@ -1,4 +1,4 @@
-# thaumicenergistics 1.6.10-GTNH
+# thaumicenergistics 1.6.25-GTNH
 version:1.7
 modname:thaumicenergistics
 
@@ -25,6 +25,8 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 # %thaumicenergistics.block.essentia.provider:* (thaumicenergistics.block.essentia.provider), render=thaumicenergistics.client.render.RenderBlockEssentiaProvider(CUSTOM), opaque=true,cls=thaumicenergistics.common.blocks.BlockEssentiaProvider
 
 # %thaumicenergistics.block.infusion.provider:* (thaumicenergistics.block.infusion.provider), render=thaumicenergistics.client.render.RenderBlockInfusionProvider(CUSTOM), opaque=true,cls=thaumicenergistics.common.blocks.BlockInfusionProvider
+
+# %thaumicenergistics.block.advanced.infusion.provider:* (thaumicenergistics.block.advanced.infusion.provider), render=thaumicenergistics.client.render.RenderBlockAdvancedInfusionProvider(CUSTOM), opaque=true,cls=thaumicenergistics.common.blocks.BlockAdvancedInfusionProvider
 
 # %thaumicenergistics.block.gear.box:* (thaumicenergistics.block.gear.box), render=(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockGearBox
 boxblock:id=%thaumicenergistics.block.gear.box,xmin=0.23000000417232513,xmax=0.7699999809265137,ymin=0.23000000417232513,ymax=0.7699999809265137,zmin=0.23000000417232513,zmax=0.7699999809265137,data=*

@@ -7,9 +7,9 @@ cfgfile:config/tinkersdefense.cfg
 
 
 texturepath:assets/tinkersdefense/textures/blocks/
-texture:id=minecraft/MISSING_ICON_BLOCK_3562_CrestMount,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3562_CrestMount.png
-texture:id=minecraft/MISSING_ICON_BLOCK_3563_ArmorAnvil,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3563_ArmorAnvil.png
-texture:id=minecraft/MISSING_ICON_BLOCK_3564_JewelersBench,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3564_JewelersBench.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3603_CrestMount,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3603_CrestMount.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3604_ArmorAnvil,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3604_ArmorAnvil.png
+texture:id=minecraft/MISSING_ICON_BLOCK_3605_JewelersBench,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_3605_JewelersBench.png
 texture:id=tinkersdefense/AeonSteelBlock,filename=assets/tinkersdefense/textures/blocks/AeonSteelBlock.png
 texture:id=tinkersdefense/DogbeariumBlock,filename=assets/tinkersdefense/textures/blocks/DogbeariumBlock.png
 texture:id=tinkersdefense/QueensGoldBlock,filename=assets/tinkersdefense/textures/blocks/QueensGoldBlock.png
@@ -23,13 +23,13 @@ texture:id=tinkersdefense/molten_QueensGold_flow,filename=assets/tinkersdefense/
 
 
 # %Block_CrestMount:* (Block_CrestMount), render=(CUSTOM), opaque=false,cls=gmail.Lance5057.blocks.CrestMount
-block:id=%Block_CrestMount,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3562_CrestMount
+block:id=%Block_CrestMount,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3603_CrestMount
 
 # %Block_ArmorAnvil:* (Block_ArmorAnvil), render=(CUSTOM), opaque=false,cls=gmail.Lance5057.blocks.ArmorAnvil
-block:id=%Block_ArmorAnvil,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3563_ArmorAnvil
+block:id=%Block_ArmorAnvil,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3604_ArmorAnvil
 
 # %Block_JewelersBench:* (Block_JewelersBench), render=(CUSTOM), opaque=false,cls=gmail.Lance5057.blocks.JewelersBench
-block:id=%Block_JewelersBench,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3564_JewelersBench
+block:id=%Block_JewelersBench,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_3605_JewelersBench
 
 # %aeonsteelblock:* (aeonsteelblock), render=(STANDARD), opaque=true,cls=gmail.Lance5057.blocks.AeonSteelBlock
 block:id=%aeonsteelblock,data=*,stdrot=true,face0-5=0:tinkersdefense/AeonSteelBlock

@@ -1,0 +1,56 @@
+# gtnhlanth 5.09.50.25
+version:1.7
+modname:gtnhlanth
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/gtnhlanth/textures/blocks/
+texture:id=gtnhlanth/casing.antenna_t1,filename=assets/gtnhlanth/textures/blocks/casing.antenna_t1.png
+texture:id=gtnhlanth/casing.antenna_t2,filename=assets/gtnhlanth/textures/blocks/casing.antenna_t2.png
+texture:id=gtnhlanth/casing.coolant_delivery,filename=assets/gtnhlanth/textures/blocks/casing.coolant_delivery.png
+texture:id=gtnhlanth/casing.electrode,filename=assets/gtnhlanth/textures/blocks/casing.electrode.png
+texture:id=gtnhlanth/casing.focus_holder,filename=assets/gtnhlanth/textures/blocks/casing.focus_holder.png
+texture:id=gtnhlanth/casing.focus_manipulator,filename=assets/gtnhlanth/textures/blocks/casing.focus_manipulator.png
+texture:id=gtnhlanth/casing.niobium_cavity,filename=assets/gtnhlanth/textures/blocks/casing.niobium_cavity.png
+texture:id=gtnhlanth/casing.shielded_accelerator,filename=assets/gtnhlanth/textures/blocks/casing.shielded_accelerator.png
+texture:id=gtnhlanth/casing.shielded_accelerator_glass,filename=assets/gtnhlanth/textures/blocks/casing.shielded_accelerator_glass.png
+texture:id=gtnhlanth/casing.target_holder,filename=assets/gtnhlanth/textures/blocks/casing.target_holder.png
+texture:id=gtnhlanth/casing.target_receptacle,filename=assets/gtnhlanth/textures/blocks/casing.target_receptacle.png
+
+
+
+# %casing.shielded_accelerator:* (casing.shielded_accelerator), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.shielded_accelerator,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.shielded_accelerator
+
+# %casing.electrode:* (casing.electrode), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.electrode,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.electrode
+
+# %casing.coolant_delivery:* (casing.coolant_delivery), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.coolant_delivery,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.coolant_delivery
+
+# %tile.casing.shielded_accelerator_glass:* (tile.casing.shielded_accelerator_glass), render=(STANDARD), opaque=false,cls=gtnhlanth.common.block.BlockShieldedAccGlass
+block:id=%tile.casing.shielded_accelerator_glass,data=*,stdrot=true,face0-5=12000:gtnhlanth/casing.shielded_accelerator_glass
+
+# %casing.antenna_t1:* (casing.antenna_t1), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockAntennaCasing
+block:id=%casing.antenna_t1,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.antenna_t1
+
+# %casing.antenna_t2:* (casing.antenna_t2), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockAntennaCasing
+block:id=%casing.antenna_t2,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.antenna_t2
+
+# %casing.niobium_cavity:* (casing.niobium_cavity), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.niobium_cavity,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.niobium_cavity
+
+# %casing.focus_manipulator:* (casing.focus_manipulator), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.focus_manipulator,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.focus_manipulator
+
+# %casing.focus_holder:* (casing.focus_holder), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.focus_holder,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.focus_holder
+
+# %casing.target_receptacle:* (casing.target_receptacle), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.target_receptacle,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.target_receptacle
+
+# %casing.target_holder:* (casing.target_holder), render=(STANDARD), opaque=true,cls=gtnhlanth.common.block.BlockCasing
+block:id=%casing.target_holder,data=*,stdrot=true,face0-5=0:gtnhlanth/casing.target_holder

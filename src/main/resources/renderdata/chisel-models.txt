@@ -1,4 +1,4 @@
-# chisel 2.11.1-GTNH
+# chisel 2.15.2-GTNH
 version:1.7
 modname:chisel
 
@@ -319,6 +319,9 @@ patchblock:id=%torch10,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04
 # %dark_oak_planks:* (dark_oak_planks), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 # %woolen_clay:* (woolen_clay), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %froglight:* (froglight), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
 boxblock:id=%aluminumblock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2,data=3,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 customblock:id=%aluminumblock,class=org.dynmap.hdmap.renderer.ChiselCTMBlockRenderer,data=0,data=1,data=4
 customblock:id=%aluminum_stairs.0,class=org.dynmap.hdmap.renderer.ChiselCTMBlockRenderer,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

@@ -1,4 +1,4 @@
-# miscutils 1.11.63
+# miscutils 5.09.50.25
 version:1.7
 modname:miscutils
 
@@ -115,7 +115,7 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 
 # %oreGreenockite:* (oreGreenockite), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
 
-# %oreBariteRd:* (oreBariteRd), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
+# %oreBariteRa:* (oreBariteRa), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
 
 # %oreRadioactiveMineralMix:* (oreRadioactiveMineralMix), render=gtPlusPlus.core.client.renderer.CustomOreBlockRenderer(CUSTOM), opaque=true,cls=gtPlusPlus.core.block.base.BlockBaseOre
 
@@ -135,12 +135,12 @@ boxblock:id=%miscutils_fluidBlockSludge,ymax=0.375,data=13
 boxblock:id=%miscutils_fluidBlockSludge,ymax=0.25,data=14
 boxblock:id=%miscutils_fluidBlockSludge,ymax=0.125,data=15
 
-# %blockHellFire:* (blockHellFire), render=(FIRE), opaque=false,cls=gtPlusPlus.core.block.general.HellFire
+# %blockHellFire:* (blockHellFire), render=(FIRE), opaque=false,cls=gtPlusPlus.core.block.general.BlockHellFire
 
-# %blockDecayablesChest:* (blockDecayablesChest), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.machine.DecayablesChest
+# %blockDecayablesChest:* (blockDecayablesChest), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.machine.BlockDecayablesChest
 boxblock:id=%blockDecayablesChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
-# %FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Pyrotheum
+# %FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TFBlockFluidPyrotheum
 boxblock:id=%FluidPyrotheum,ymax=0.875,data=1
 boxblock:id=%FluidPyrotheum,ymax=0.75,data=2
 boxblock:id=%FluidPyrotheum,ymax=0.625,data=3
@@ -156,7 +156,7 @@ boxblock:id=%FluidPyrotheum,ymax=0.375,data=13
 boxblock:id=%FluidPyrotheum,ymax=0.25,data=14
 boxblock:id=%FluidPyrotheum,ymax=0.125,data=15
 
-# %FluidCryotheum:* (FluidCryotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Cryotheum
+# %FluidCryotheum:* (FluidCryotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TFBlockFluidCryotheum
 boxblock:id=%FluidCryotheum,ymax=0.875,data=1
 boxblock:id=%FluidCryotheum,ymax=0.75,data=2
 boxblock:id=%FluidCryotheum,ymax=0.625,data=3
@@ -172,7 +172,7 @@ boxblock:id=%FluidCryotheum,ymax=0.375,data=13
 boxblock:id=%FluidCryotheum,ymax=0.25,data=14
 boxblock:id=%FluidCryotheum,ymax=0.125,data=15
 
-# %FluidEnder:* (FluidEnder), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TF_Block_Fluid_Ender
+# %FluidEnder:* (FluidEnder), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TFBlockFluidEnder
 boxblock:id=%FluidEnder,ymax=0.875,data=1
 boxblock:id=%FluidEnder,ymax=0.75,data=2
 boxblock:id=%FluidEnder,ymax=0.625,data=3

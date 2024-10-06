@@ -18,7 +18,6 @@ texture:id=bartworks/ColoredBoronSilicateGlassBlock5,filename=assets/bartworks/t
 texture:id=bartworks/ColoredBoronSilicateGlassBlock6,filename=assets/bartworks/textures/blocks/ColoredBoronSilicateGlassBlock6.png,processor=org.dynmap.hdmap.textureprocessor.BwGlassProcessor
 texture:id=bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,filename=assets/bartworks/textures/blocks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock.png,processor=org.dynmap.hdmap.textureprocessor.BwGlassProcessor
 texture:id=bartworks/EtchedLapisCell,filename=assets/bartworks/textures/blocks/EtchedLapisCell.png
-texture:id=bartworks/ExpReversePump,filename=assets/bartworks/textures/blocks/ExpReversePump.png
 texture:id=bartworks/InfinityReinforcedBoronSilicateGlassBlock,filename=assets/bartworks/textures/blocks/InfinityReinforcedBoronSilicateGlassBlock.png,processor=org.dynmap.hdmap.textureprocessor.BwGlassProcessor
 texture:id=bartworks/IridiumReinforcedBoronSilicateGlassBlock,filename=assets/bartworks/textures/blocks/IridiumReinforcedBoronSilicateGlassBlock.png,processor=org.dynmap.hdmap.textureprocessor.BwGlassProcessor
 texture:id=bartworks/LESU_CELL,filename=assets/bartworks/textures/blocks/LESU_CELL.png
@@ -41,7 +40,7 @@ texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 
 
 
-# %BW_GlasBlocks:* (BW_GlasBlocks), render=com.github.bartimaeusnek.bartworks.client.renderer.RendererGlasBlock(CUSTOM), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks
+# %BW_GlasBlocks:* (BW_GlasBlocks), render=bartworks.client.renderer.RendererGlassBlock(CUSTOM), opaque=false,cls=bartworks.common.blocks.BWBlocksGlass
 block:id=%BW_GlasBlocks,data=0,stdrot=true,patch0=12000:bartworks/BoronSilicateGlassBlock,patch1=12001:bartworks/BoronSilicateGlassBlock,patch2=12002:bartworks/BoronSilicateGlassBlock,patch3=12003:bartworks/BoronSilicateGlassBlock,patch4=12004:bartworks/BoronSilicateGlassBlock,patch5=12005:bartworks/BoronSilicateGlassBlock,patch6=12006:bartworks/BoronSilicateGlassBlock,patch7=12007:bartworks/BoronSilicateGlassBlock,patch8=12008:bartworks/BoronSilicateGlassBlock,patch9=12009:bartworks/BoronSilicateGlassBlock,patch10=12010:bartworks/BoronSilicateGlassBlock,patch11=12011:bartworks/BoronSilicateGlassBlock,patch12=12012:bartworks/BoronSilicateGlassBlock,patch13=12013:bartworks/BoronSilicateGlassBlock,patch14=12014:bartworks/BoronSilicateGlassBlock,patch15=12015:bartworks/BoronSilicateGlassBlock
 block:id=%BW_GlasBlocks,data=1,stdrot=true,patch0=12000:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch1=12001:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch2=12002:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch3=12003:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch4=12004:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch5=12005:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch6=12006:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch7=12007:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch8=12008:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch9=12009:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch10=12010:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch11=12011:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch12=12012:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch13=12013:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch14=12014:bartworks/TitaniumReinforcedBoronSilicateGlassBlock,patch15=12015:bartworks/TitaniumReinforcedBoronSilicateGlassBlock
 block:id=%BW_GlasBlocks,data=2,stdrot=true,patch0=12000:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch1=12001:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch2=12002:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch3=12003:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch4=12004:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch5=12005:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch6=12006:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch7=12007:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch8=12008:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch9=12009:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch10=12010:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch11=12011:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch12=12012:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch13=12013:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch14=12014:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock,patch15=12015:bartworks/TungstenSteelReinforcedBoronSilicateGlassBlock
@@ -59,51 +58,48 @@ block:id=%BW_GlasBlocks,data=13,stdrot=true,patch0=12000:bartworks/NeutroniumRei
 block:id=%BW_GlasBlocks,data=14,stdrot=true,patch0=12000:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch1=12001:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch2=12002:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch3=12003:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch4=12004:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch5=12005:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch6=12006:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch7=12007:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch8=12008:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch9=12009:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch10=12010:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch11=12011:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch12=12012:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch13=12013:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch14=12014:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock,patch15=12015:bartworks/CosmicNeutroniumReinforcedBoronSilicateGlassBlock
 block:id=%BW_GlasBlocks,data=15,stdrot=true,patch0=12000:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch1=12001:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch2=12002:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch3=12003:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch4=12004:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch5=12005:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch6=12006:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch7=12007:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch8=12008:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch9=12009:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch10=12010:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch11=12011:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch12=12012:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch13=12013:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch14=12014:bartworks/InfinityReinforcedBoronSilicateGlassBlock,patch15=12015:bartworks/InfinityReinforcedBoronSilicateGlassBlock
 
-# %BW_GlasBlocks2:* (BW_GlasBlocks2), render=com.github.bartimaeusnek.bartworks.client.renderer.RendererGlasBlock(CUSTOM), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks2
+# %BW_GlasBlocks2:* (BW_GlasBlocks2), render=bartworks.client.renderer.RendererGlassBlock(CUSTOM), opaque=false,cls=bartworks.common.blocks.BWBlocksGlass2
 block:id=%BW_GlasBlocks2,data=*,stdrot=true,patch0=12000:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch1=12001:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch2=12002:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch3=12003:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch4=12004:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch5=12005:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch6=12006:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch7=12007:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch8=12008:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch9=12009:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch10=12010:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch11=12011:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch12=12012:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch13=12013:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch14=12014:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock,patch15=12015:bartworks/TranscendentallyReinforcedBoronSilicateGlassBlock
 
-# %coloredFluidBlock:* (coloredFluidBlock), render=com.github.bartimaeusnek.bartworks.client.renderer.RendererSwitchingColorFluid(CUSTOM), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BioFluidBlock
+# %coloredFluidBlock:* (coloredFluidBlock), render=(CUSTOM), opaque=false,cls=bartworks.common.blocks.BlockBioFluid
 block:id=%coloredFluidBlock,data=*,stdrot=true,face0-5=12000:gregtech/fluids/fluid.molten.autogenerated
 
-# %bw.blockores.01:* (bw.blockores.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGenerated_Ores
+# %bw.blockores.01:* (bw.blockores.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedOres
 block:id=%bw.blockores.01,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %bw.blockores.02:* (bw.blockores.02), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGenerated_SmallOres
+# %bw.blockores.02:* (bw.blockores.02), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedSmallOres
 block:id=%bw.blockores.02,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %bw.werkstoffblocks.01:* (bw.werkstoffblocks.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGenerated_WerkstoffBlocks
+# %bw.werkstoffblocks.01:* (bw.werkstoffblocks.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedWerkstoffBlocks
 block:id=%bw.werkstoffblocks.01,data=*,stdrot=true,face0-5=0:minecraft/iron_block
 
-# %bw.werkstoffblockscasing.01:* (bw.werkstoffblockscasing.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGeneratedBlocks_Casing
+# %bw.werkstoffblockscasing.01:* (bw.werkstoffblockscasing.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedBlocksCasing
 block:id=%bw.werkstoffblockscasing.01,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %bw.werkstoffblockscasingadvanced.01:* (bw.werkstoffblockscasingadvanced.01), render=com.github.bartimaeusnek.bartworks.client.renderer.BW_Renderer_Block_Ores(CUSTOM), opaque=true,cls=com.github.bartimaeusnek.bartworks.system.material.BW_MetaGeneratedBlocks_Casing
+# %bw.werkstoffblockscasingadvanced.01:* (bw.werkstoffblockscasingadvanced.01), render=bartworks.client.renderer.BWBlockOreRenderer(CUSTOM), opaque=true,cls=bartworks.system.material.BWMetaGeneratedBlocksCasing
 block:id=%bw.werkstoffblockscasingadvanced.01,data=*,stdrot=true,face0-5=0:minecraft/stone
 
-# %BW_FakeGlasBlock:* (BW_FakeGlasBlock), render=(STANDARD), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks
+# %BW_FakeGlasBlock:* (BW_FakeGlasBlock), render=(STANDARD), opaque=false,cls=bartworks.common.blocks.BWBlocksGlass
 block:id=%BW_FakeGlasBlock,data=*,stdrot=true,face0-5=12000:bartworks/BoronSilicateGlassBlockRandlos
 
-# %BW_FakeGlasBlocks2:* (BW_FakeGlasBlocks2), render=(STANDARD), opaque=false,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_GlasBlocks2
+# %BW_FakeGlasBlocks2:* (BW_FakeGlasBlocks2), render=(STANDARD), opaque=false,cls=bartworks.common.blocks.BWBlocksGlass2
 block:id=%BW_FakeGlasBlocks2,data=*,stdrot=true,face0-5=12000:bartworks/BoronSilicateGlassBlockRandlos
 
-# %BW_Machinery_Casings:* (BW_Machinery_Casings), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
+# %BW_Machinery_Casings:* (BW_Machinery_Casings), render=(STANDARD), opaque=true,cls=bartworks.common.blocks.BWBlocks
 block:id=%BW_Machinery_Casings,data=0,stdrot=true,face0-5=0:bartworks/NickelFerriteBlocks
 block:id=%BW_Machinery_Casings,data=1,stdrot=true,face0-5=0:bartworks/TransformerCoil
 block:id=%BW_Machinery_Casings,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bartworks/NickelFerriteBlocks
 
-# %BWRotorBlock:* (BWRotorBlock), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer_MachineBlock
+# %BWRotorBlock:* (BWRotorBlock), render=(STANDARD), opaque=true,cls=bartworks.common.blocks.BWMachineBlockContainer
 block:id=%BWRotorBlock,data=*,stdrot=true,face0-5=0:bartworks/BWRotorBlock
 
-# %BWHeatedWaterPumpBlock:* (BWHeatedWaterPumpBlock), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer
+# %BWHeatedWaterPumpBlock:* (BWHeatedWaterPumpBlock), render=(STANDARD), opaque=true,cls=bartworks.common.blocks.BWTileEntityContainer
 block:id=%BWHeatedWaterPumpBlock,data=*,stdrot=true,face0=0:bartworks/heatedWaterPumpDown,face1=0:bartworks/heatedWaterPumpTop,face2-5=0:bartworks/heatedWaterPumpSide
 
-# %BWExpReversePumpBlock:* (BWExpReversePumpBlock), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_TileEntityContainer
-block:id=%BWExpReversePumpBlock,data=*,stdrot=true,face0-5=0:bartworks/ExpReversePump
-
-# %BW_ItemBlocks:* (BW_ItemBlocks), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
+# %BW_ItemBlocks:* (BW_ItemBlocks), render=(STANDARD), opaque=true,cls=bartworks.common.blocks.BWBlocks
 block:id=%BW_ItemBlocks,data=0,stdrot=true,face0-5=0:bartworks/EtchedLapisCell
 block:id=%BW_ItemBlocks,data=1,stdrot=true,face0-5=0:bartworks/PlatedLapisCell
 block:id=%BW_ItemBlocks,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:bartworks/EtchedLapisCell
 
-# %GT_LESU_CASING:* (GT_LESU_CASING), render=(STANDARD), opaque=true,cls=com.github.bartimaeusnek.bartworks.common.blocks.BW_Blocks
+# %GT_LESU_CASING:* (GT_LESU_CASING), render=(STANDARD), opaque=true,cls=bartworks.common.blocks.BWBlocks
 block:id=%GT_LESU_CASING,data=*,stdrot=true,face0-5=0:bartworks/LESU_CELL

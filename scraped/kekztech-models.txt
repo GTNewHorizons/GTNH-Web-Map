@@ -1,4 +1,4 @@
-# kekztech 0.10.6
+# kekztech 5.09.50.25
 version:1.7
 modname:kekztech
 
@@ -23,8 +23,8 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %kekztech_thaumiumreinforcedjar_block:* (kekztech_thaumiumreinforcedjar_block), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=common.blocks.Block_ThaumiumReinforcedJar
+# %kekztech_thaumiumreinforcedjar_block:* (kekztech_thaumiumreinforcedjar_block), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=kekztech.common.blocks.BlockThaumiumReinforcedJar
 boxblock:id=%kekztech_thaumiumreinforcedjar_block,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.75,zmin=0.1875,zmax=0.8125,data=*
 
-# %kekztech_ichorjar_block:* (kekztech_ichorjar_block), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=common.blocks.Block_IchorJar
+# %kekztech_ichorjar_block:* (kekztech_ichorjar_block), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=kekztech.common.blocks.BlockIchorJar
 boxblock:id=%kekztech_ichorjar_block,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.75,zmin=0.1875,zmax=0.8125,data=*

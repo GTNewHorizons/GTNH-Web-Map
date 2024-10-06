@@ -1,4 +1,4 @@
-# thaumicbases 1.6.7
+# thaumicbases 1.7.5
 version:1.7
 modname:thaumicbases
 
@@ -8,8 +8,8 @@ modname:thaumicbases
 
 
 texturepath:assets/thaumicbases/textures/blocks/
-texture:id=minecraft/MISSING_ICON_BLOCK_2287_nodeManipulator,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_2287_nodeManipulator.png
-texture:id=minecraft/MISSING_ICON_BLOCK_2288_nodeLinker,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_2288_nodeLinker.png
+texture:id=minecraft/MISSING_ICON_BLOCK_2787_nodeManipulator,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_2787_nodeManipulator.png
+texture:id=minecraft/MISSING_ICON_BLOCK_2788_nodeLinker,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_2788_nodeLinker.png
 texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
 texture:id=thaumcraft/arcaneearbottom,filename=assets/thaumcraft/textures/blocks/arcaneearbottom.png
 texture:id=thaumcraft/lifterside,filename=assets/thaumcraft/textures/blocks/lifterside.png
@@ -496,10 +496,10 @@ block:id=%genLogs,data=15,stdrot=true,face0-5=0:thaumicbases/peacefullTree/log
 block:id=%enderPlanks,data=*,stdrot=true,face0-5=0:thaumicbases/enderTree/planks
 
 # %nodeManipulator:* (nodeManipulator), render=(CUSTOM), opaque=false,cls=tb.common.block.BlockNodeManipulator
-block:id=%nodeManipulator,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_2287_nodeManipulator
+block:id=%nodeManipulator,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_2787_nodeManipulator
 
 # %nodeLinker:* (nodeLinker), render=(CUSTOM), opaque=false,cls=tb.common.block.BlockNodeLinker
-block:id=%nodeLinker,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_2288_nodeLinker
+block:id=%nodeLinker,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_2788_nodeLinker
 
 # %entityDeconstructor:* (entityDeconstructor), render=(CUSTOM), opaque=false,cls=tb.common.block.BlockEntityDeconstructor
 block:id=%entityDeconstructor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicbases/entityDeconstructor/block

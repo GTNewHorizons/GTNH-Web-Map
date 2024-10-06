@@ -1,4 +1,4 @@
-# thaumicenergistics 1.3.29-GTNH
+# thaumicenergistics 1.6.25-GTNH
 version:1.7
 modname:thaumicenergistics
 
@@ -29,6 +29,9 @@ block:id=%thaumicenergistics.block.essentia.provider,data=*,stdrot=true,face0-5=
 
 # %thaumicenergistics.block.infusion.provider:* (thaumicenergistics.block.infusion.provider), render=thaumicenergistics.client.render.RenderBlockInfusionProvider(CUSTOM), opaque=true,cls=thaumicenergistics.common.blocks.BlockInfusionProvider
 block:id=%thaumicenergistics.block.infusion.provider,data=*,stdrot=true,face0-5=12000:thaumicenergistics/infusion.provider.overlay
+
+# %thaumicenergistics.block.advanced.infusion.provider:* (thaumicenergistics.block.advanced.infusion.provider), render=thaumicenergistics.client.render.RenderBlockAdvancedInfusionProvider(CUSTOM), opaque=true,cls=thaumicenergistics.common.blocks.BlockAdvancedInfusionProvider
+block:id=%thaumicenergistics.block.advanced.infusion.provider,data=*,stdrot=true,face0-5=12000:thaumicenergistics/infusion.provider.overlay
 
 # %thaumicenergistics.block.gear.box:* (thaumicenergistics.block.gear.box), render=(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockGearBox
 block:id=%thaumicenergistics.block.gear.box,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicenergistics/gear.box.fallback

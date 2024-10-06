@@ -1,4 +1,4 @@
-# gtneioreplugin 1.2.0
+# gtneioreplugin 5.09.50.25
 version:1.7
 modname:gtneioreplugin
 
@@ -247,12 +247,6 @@ texture:id=gtneioreplugin/Tr_front,filename=assets/gtneioreplugin/textures/block
 texture:id=gtneioreplugin/Tr_left,filename=assets/gtneioreplugin/textures/blocks/Tr_left.png
 texture:id=gtneioreplugin/Tr_right,filename=assets/gtneioreplugin/textures/blocks/Tr_right.png
 texture:id=gtneioreplugin/Tr_top,filename=assets/gtneioreplugin/textures/blocks/Tr_top.png
-texture:id=gtneioreplugin/VA_back,filename=assets/gtneioreplugin/textures/blocks/VA_back.png
-texture:id=gtneioreplugin/VA_bottom,filename=assets/gtneioreplugin/textures/blocks/VA_bottom.png
-texture:id=gtneioreplugin/VA_front,filename=assets/gtneioreplugin/textures/blocks/VA_front.png
-texture:id=gtneioreplugin/VA_left,filename=assets/gtneioreplugin/textures/blocks/VA_left.png
-texture:id=gtneioreplugin/VA_right,filename=assets/gtneioreplugin/textures/blocks/VA_right.png
-texture:id=gtneioreplugin/VA_top,filename=assets/gtneioreplugin/textures/blocks/VA_top.png
 texture:id=gtneioreplugin/VB_back,filename=assets/gtneioreplugin/textures/blocks/VB_back.png
 texture:id=gtneioreplugin/VB_bottom,filename=assets/gtneioreplugin/textures/blocks/VB_bottom.png
 texture:id=gtneioreplugin/VB_front,filename=assets/gtneioreplugin/textures/blocks/VB_front.png
@@ -268,131 +262,128 @@ texture:id=gtneioreplugin/Ve_top,filename=assets/gtneioreplugin/textures/blocks/
 
 
 
-# %blockDimensionDisplay_Ow:* (blockDimensionDisplay_Ow), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ow:* (blockDimensionDisplay_Ow), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ow,data=*,stdrot=true,face0=0:gtneioreplugin/Ow_bottom,face1=0:gtneioreplugin/Ow_top,face2=0:gtneioreplugin/Ow_back,face3=0:gtneioreplugin/Ow_front,face4=0:gtneioreplugin/Ow_left,face5=0:gtneioreplugin/Ow_right
 
-# %blockDimensionDisplay_Ne:* (blockDimensionDisplay_Ne), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ne:* (blockDimensionDisplay_Ne), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ne,data=*,stdrot=true,face0=0:gtneioreplugin/Ne_bottom,face1=0:gtneioreplugin/Ne_top,face2=0:gtneioreplugin/Ne_back,face3=0:gtneioreplugin/Ne_front,face4=0:gtneioreplugin/Ne_left,face5=0:gtneioreplugin/Ne_right
 
-# %blockDimensionDisplay_TF:* (blockDimensionDisplay_TF), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_TF:* (blockDimensionDisplay_TF), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_TF,data=*,stdrot=true,face0=0:gtneioreplugin/TF_bottom,face1=0:gtneioreplugin/TF_top,face2=0:gtneioreplugin/TF_back,face3=0:gtneioreplugin/TF_front,face4=0:gtneioreplugin/TF_left,face5=0:gtneioreplugin/TF_right
 
-# %blockDimensionDisplay_ED:* (blockDimensionDisplay_ED), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_ED:* (blockDimensionDisplay_ED), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_ED,data=*,stdrot=true,face0=0:gtneioreplugin/ED_bottom,face1=0:gtneioreplugin/ED_top,face2=0:gtneioreplugin/ED_back,face3=0:gtneioreplugin/ED_front,face4=0:gtneioreplugin/ED_left,face5=0:gtneioreplugin/ED_right
 
-# %blockDimensionDisplay_VA:* (blockDimensionDisplay_VA), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
-block:id=%blockDimensionDisplay_VA,data=*,stdrot=true,face0=0:gtneioreplugin/VA_bottom,face1=0:gtneioreplugin/VA_top,face2=0:gtneioreplugin/VA_back,face3=0:gtneioreplugin/VA_front,face4=0:gtneioreplugin/VA_left,face5=0:gtneioreplugin/VA_right
-
-# %blockDimensionDisplay_EA:* (blockDimensionDisplay_EA), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_EA:* (blockDimensionDisplay_EA), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_EA,data=*,stdrot=true,face0=0:gtneioreplugin/EA_bottom,face1=0:gtneioreplugin/EA_top,face2=0:gtneioreplugin/EA_back,face3=0:gtneioreplugin/EA_front,face4=0:gtneioreplugin/EA_left,face5=0:gtneioreplugin/EA_right
 
-# %blockDimensionDisplay_Mo:* (blockDimensionDisplay_Mo), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Mo:* (blockDimensionDisplay_Mo), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Mo,data=*,stdrot=true,face0=0:gtneioreplugin/Mo_bottom,face1=0:gtneioreplugin/Mo_top,face2=0:gtneioreplugin/Mo_back,face3=0:gtneioreplugin/Mo_front,face4=0:gtneioreplugin/Mo_left,face5=0:gtneioreplugin/Mo_right
 
-# %blockDimensionDisplay_De:* (blockDimensionDisplay_De), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_De:* (blockDimensionDisplay_De), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_De,data=*,stdrot=true,face0=0:gtneioreplugin/De_bottom,face1=0:gtneioreplugin/De_top,face2=0:gtneioreplugin/De_back,face3=0:gtneioreplugin/De_front,face4=0:gtneioreplugin/De_left,face5=0:gtneioreplugin/De_right
 
-# %blockDimensionDisplay_Ma:* (blockDimensionDisplay_Ma), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ma:* (blockDimensionDisplay_Ma), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ma,data=*,stdrot=true,face0=0:gtneioreplugin/Ma_bottom,face1=0:gtneioreplugin/Ma_top,face2=0:gtneioreplugin/Ma_back,face3=0:gtneioreplugin/Ma_front,face4=0:gtneioreplugin/Ma_left,face5=0:gtneioreplugin/Ma_right
 
-# %blockDimensionDisplay_Ph:* (blockDimensionDisplay_Ph), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ph:* (blockDimensionDisplay_Ph), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ph,data=*,stdrot=true,face0=0:gtneioreplugin/Ph_bottom,face1=0:gtneioreplugin/Ph_top,face2=0:gtneioreplugin/Ph_back,face3=0:gtneioreplugin/Ph_front,face4=0:gtneioreplugin/Ph_left,face5=0:gtneioreplugin/Ph_right
 
-# %blockDimensionDisplay_As:* (blockDimensionDisplay_As), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_As:* (blockDimensionDisplay_As), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_As,data=*,stdrot=true,face0=0:gtneioreplugin/As_bottom,face1=0:gtneioreplugin/As_top,face2=0:gtneioreplugin/As_back,face3=0:gtneioreplugin/As_front,face4=0:gtneioreplugin/As_left,face5=0:gtneioreplugin/As_right
 
-# %blockDimensionDisplay_Ca:* (blockDimensionDisplay_Ca), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ca:* (blockDimensionDisplay_Ca), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ca,data=*,stdrot=true,face0=0:gtneioreplugin/Ca_bottom,face1=0:gtneioreplugin/Ca_top,face2=0:gtneioreplugin/Ca_back,face3=0:gtneioreplugin/Ca_front,face4=0:gtneioreplugin/Ca_left,face5=0:gtneioreplugin/Ca_right
 
-# %blockDimensionDisplay_Ce:* (blockDimensionDisplay_Ce), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ce:* (blockDimensionDisplay_Ce), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ce,data=*,stdrot=true,face0=0:gtneioreplugin/Ce_bottom,face1=0:gtneioreplugin/Ce_top,face2=0:gtneioreplugin/Ce_back,face3=0:gtneioreplugin/Ce_front,face4=0:gtneioreplugin/Ce_left,face5=0:gtneioreplugin/Ce_right
 
-# %blockDimensionDisplay_Eu:* (blockDimensionDisplay_Eu), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Eu:* (blockDimensionDisplay_Eu), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Eu,data=*,stdrot=true,face0=0:gtneioreplugin/Eu_bottom,face1=0:gtneioreplugin/Eu_top,face2=0:gtneioreplugin/Eu_back,face3=0:gtneioreplugin/Eu_front,face4=0:gtneioreplugin/Eu_left,face5=0:gtneioreplugin/Eu_right
 
-# %blockDimensionDisplay_Ga:* (blockDimensionDisplay_Ga), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ga:* (blockDimensionDisplay_Ga), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ga,data=*,stdrot=true,face0=0:gtneioreplugin/Ga_bottom,face1=0:gtneioreplugin/Ga_top,face2=0:gtneioreplugin/Ga_back,face3=0:gtneioreplugin/Ga_front,face4=0:gtneioreplugin/Ga_left,face5=0:gtneioreplugin/Ga_right
 
-# %blockDimensionDisplay_Rb:* (blockDimensionDisplay_Rb), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Rb:* (blockDimensionDisplay_Rb), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Rb,data=*,stdrot=true,face0=0:gtneioreplugin/Rb_bottom,face1=0:gtneioreplugin/Rb_top,face2=0:gtneioreplugin/Rb_back,face3=0:gtneioreplugin/Rb_front,face4=0:gtneioreplugin/Rb_left,face5=0:gtneioreplugin/Rb_right
 
-# %blockDimensionDisplay_Io:* (blockDimensionDisplay_Io), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Io:* (blockDimensionDisplay_Io), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Io,data=*,stdrot=true,face0=0:gtneioreplugin/Io_bottom,face1=0:gtneioreplugin/Io_top,face2=0:gtneioreplugin/Io_back,face3=0:gtneioreplugin/Io_front,face4=0:gtneioreplugin/Io_left,face5=0:gtneioreplugin/Io_right
 
-# %blockDimensionDisplay_Me:* (blockDimensionDisplay_Me), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Me:* (blockDimensionDisplay_Me), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Me,data=*,stdrot=true,face0=0:gtneioreplugin/Me_bottom,face1=0:gtneioreplugin/Me_top,face2=0:gtneioreplugin/Me_back,face3=0:gtneioreplugin/Me_front,face4=0:gtneioreplugin/Me_left,face5=0:gtneioreplugin/Me_right
 
-# %blockDimensionDisplay_Ve:* (blockDimensionDisplay_Ve), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ve:* (blockDimensionDisplay_Ve), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ve,data=*,stdrot=true,face0=0:gtneioreplugin/Ve_bottom,face1=0:gtneioreplugin/Ve_top,face2=0:gtneioreplugin/Ve_back,face3=0:gtneioreplugin/Ve_front,face4=0:gtneioreplugin/Ve_left,face5=0:gtneioreplugin/Ve_right
 
-# %blockDimensionDisplay_En:* (blockDimensionDisplay_En), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_En:* (blockDimensionDisplay_En), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_En,data=*,stdrot=true,face0=0:gtneioreplugin/En_bottom,face1=0:gtneioreplugin/En_top,face2=0:gtneioreplugin/En_back,face3=0:gtneioreplugin/En_front,face4=0:gtneioreplugin/En_left,face5=0:gtneioreplugin/En_right
 
-# %blockDimensionDisplay_Mi:* (blockDimensionDisplay_Mi), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Mi:* (blockDimensionDisplay_Mi), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Mi,data=*,stdrot=true,face0=0:gtneioreplugin/Mi_bottom,face1=0:gtneioreplugin/Mi_top,face2=0:gtneioreplugin/Mi_back,face3=0:gtneioreplugin/Mi_front,face4=0:gtneioreplugin/Mi_left,face5=0:gtneioreplugin/Mi_right
 
-# %blockDimensionDisplay_Ob:* (blockDimensionDisplay_Ob), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ob:* (blockDimensionDisplay_Ob), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ob,data=*,stdrot=true,face0=0:gtneioreplugin/Ob_bottom,face1=0:gtneioreplugin/Ob_top,face2=0:gtneioreplugin/Ob_back,face3=0:gtneioreplugin/Ob_front,face4=0:gtneioreplugin/Ob_left,face5=0:gtneioreplugin/Ob_right
 
-# %blockDimensionDisplay_Ti:* (blockDimensionDisplay_Ti), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ti:* (blockDimensionDisplay_Ti), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ti,data=*,stdrot=true,face0=0:gtneioreplugin/Ti_bottom,face1=0:gtneioreplugin/Ti_top,face2=0:gtneioreplugin/Ti_back,face3=0:gtneioreplugin/Ti_front,face4=0:gtneioreplugin/Ti_left,face5=0:gtneioreplugin/Ti_right
 
-# %blockDimensionDisplay_Ra:* (blockDimensionDisplay_Ra), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ra:* (blockDimensionDisplay_Ra), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ra,data=*,stdrot=true,face0=0:gtneioreplugin/Ra_bottom,face1=0:gtneioreplugin/Ra_top,face2=0:gtneioreplugin/Ra_back,face3=0:gtneioreplugin/Ra_front,face4=0:gtneioreplugin/Ra_left,face5=0:gtneioreplugin/Ra_right
 
-# %blockDimensionDisplay_Pr:* (blockDimensionDisplay_Pr), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Pr:* (blockDimensionDisplay_Pr), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Pr,data=*,stdrot=true,face0=0:gtneioreplugin/Pr_bottom,face1=0:gtneioreplugin/Pr_top,face2=0:gtneioreplugin/Pr_back,face3=0:gtneioreplugin/Pr_front,face4=0:gtneioreplugin/Pr_left,face5=0:gtneioreplugin/Pr_right
 
-# %blockDimensionDisplay_Tr:* (blockDimensionDisplay_Tr), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Tr:* (blockDimensionDisplay_Tr), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Tr,data=*,stdrot=true,face0=0:gtneioreplugin/Tr_bottom,face1=0:gtneioreplugin/Tr_top,face2=0:gtneioreplugin/Tr_back,face3=0:gtneioreplugin/Tr_front,face4=0:gtneioreplugin/Tr_left,face5=0:gtneioreplugin/Tr_right
 
-# %blockDimensionDisplay_Ha:* (blockDimensionDisplay_Ha), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ha:* (blockDimensionDisplay_Ha), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ha,data=*,stdrot=true,face0=0:gtneioreplugin/Ha_bottom,face1=0:gtneioreplugin/Ha_top,face2=0:gtneioreplugin/Ha_back,face3=0:gtneioreplugin/Ha_front,face4=0:gtneioreplugin/Ha_left,face5=0:gtneioreplugin/Ha_right
 
-# %blockDimensionDisplay_KB:* (blockDimensionDisplay_KB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_KB:* (blockDimensionDisplay_KB), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_KB,data=*,stdrot=true,face0=0:gtneioreplugin/KB_bottom,face1=0:gtneioreplugin/KB_top,face2=0:gtneioreplugin/KB_back,face3=0:gtneioreplugin/KB_front,face4=0:gtneioreplugin/KB_left,face5=0:gtneioreplugin/KB_right
 
-# %blockDimensionDisplay_MM:* (blockDimensionDisplay_MM), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_MM:* (blockDimensionDisplay_MM), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_MM,data=*,stdrot=true,face0=0:gtneioreplugin/MM_bottom,face1=0:gtneioreplugin/MM_top,face2=0:gtneioreplugin/MM_back,face3=0:gtneioreplugin/MM_front,face4=0:gtneioreplugin/MM_left,face5=0:gtneioreplugin/MM_right
 
-# %blockDimensionDisplay_Pl:* (blockDimensionDisplay_Pl), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Pl:* (blockDimensionDisplay_Pl), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Pl,data=*,stdrot=true,face0=0:gtneioreplugin/Pl_bottom,face1=0:gtneioreplugin/Pl_top,face2=0:gtneioreplugin/Pl_back,face3=0:gtneioreplugin/Pl_front,face4=0:gtneioreplugin/Pl_left,face5=0:gtneioreplugin/Pl_right
 
-# %blockDimensionDisplay_BC:* (blockDimensionDisplay_BC), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_BC:* (blockDimensionDisplay_BC), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_BC,data=*,stdrot=true,face0=0:gtneioreplugin/BC_bottom,face1=0:gtneioreplugin/BC_top,face2=0:gtneioreplugin/BC_back,face3=0:gtneioreplugin/BC_front,face4=0:gtneioreplugin/BC_left,face5=0:gtneioreplugin/BC_right
 
-# %blockDimensionDisplay_BE:* (blockDimensionDisplay_BE), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_BE:* (blockDimensionDisplay_BE), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_BE,data=*,stdrot=true,face0=0:gtneioreplugin/BE_bottom,face1=0:gtneioreplugin/BE_top,face2=0:gtneioreplugin/BE_back,face3=0:gtneioreplugin/BE_front,face4=0:gtneioreplugin/BE_left,face5=0:gtneioreplugin/BE_right
 
-# %blockDimensionDisplay_BF:* (blockDimensionDisplay_BF), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_BF:* (blockDimensionDisplay_BF), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_BF,data=*,stdrot=true,face0=0:gtneioreplugin/BF_bottom,face1=0:gtneioreplugin/BF_top,face2=0:gtneioreplugin/BF_back,face3=0:gtneioreplugin/BF_front,face4=0:gtneioreplugin/BF_left,face5=0:gtneioreplugin/BF_right
 
-# %blockDimensionDisplay_CB:* (blockDimensionDisplay_CB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_CB:* (blockDimensionDisplay_CB), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_CB,data=*,stdrot=true,face0=0:gtneioreplugin/CB_bottom,face1=0:gtneioreplugin/CB_top,face2=0:gtneioreplugin/CB_back,face3=0:gtneioreplugin/CB_front,face4=0:gtneioreplugin/CB_left,face5=0:gtneioreplugin/CB_right
 
-# %blockDimensionDisplay_TE:* (blockDimensionDisplay_TE), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_TE:* (blockDimensionDisplay_TE), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_TE,data=*,stdrot=true,face0=0:gtneioreplugin/TE_bottom,face1=0:gtneioreplugin/TE_top,face2=0:gtneioreplugin/TE_back,face3=0:gtneioreplugin/TE_front,face4=0:gtneioreplugin/TE_left,face5=0:gtneioreplugin/TE_right
 
-# %blockDimensionDisplay_VB:* (blockDimensionDisplay_VB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_VB:* (blockDimensionDisplay_VB), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_VB,data=*,stdrot=true,face0=0:gtneioreplugin/VB_bottom,face1=0:gtneioreplugin/VB_top,face2=0:gtneioreplugin/VB_back,face3=0:gtneioreplugin/VB_front,face4=0:gtneioreplugin/VB_left,face5=0:gtneioreplugin/VB_right
 
-# %blockDimensionDisplay_An:* (blockDimensionDisplay_An), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_An:* (blockDimensionDisplay_An), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_An,data=*,stdrot=true,face0=0:gtneioreplugin/An_bottom,face1=0:gtneioreplugin/An_top,face2=0:gtneioreplugin/An_back,face3=0:gtneioreplugin/An_front,face4=0:gtneioreplugin/An_left,face5=0:gtneioreplugin/An_right
 
-# %blockDimensionDisplay_Ho:* (blockDimensionDisplay_Ho), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Ho:* (blockDimensionDisplay_Ho), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Ho,data=*,stdrot=true,face0=0:gtneioreplugin/Ho_bottom,face1=0:gtneioreplugin/Ho_top,face2=0:gtneioreplugin/Ho_back,face3=0:gtneioreplugin/Ho_front,face4=0:gtneioreplugin/Ho_left,face5=0:gtneioreplugin/Ho_right
 
-# %blockDimensionDisplay_Mh:* (blockDimensionDisplay_Mh), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Mh:* (blockDimensionDisplay_Mh), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Mh,data=*,stdrot=true,face0=0:gtneioreplugin/Mh_bottom,face1=0:gtneioreplugin/Mh_top,face2=0:gtneioreplugin/Mh_back,face3=0:gtneioreplugin/Mh_front,face4=0:gtneioreplugin/Mh_left,face5=0:gtneioreplugin/Mh_right
 
-# %blockDimensionDisplay_MB:* (blockDimensionDisplay_MB), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_MB:* (blockDimensionDisplay_MB), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_MB,data=*,stdrot=true,face0=0:gtneioreplugin/MB_bottom,face1=0:gtneioreplugin/MB_top,face2=0:gtneioreplugin/MB_back,face3=0:gtneioreplugin/MB_front,face4=0:gtneioreplugin/MB_left,face5=0:gtneioreplugin/MB_right
 
-# %blockDimensionDisplay_Np:* (blockDimensionDisplay_Np), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Np:* (blockDimensionDisplay_Np), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Np,data=*,stdrot=true,face0=0:gtneioreplugin/Np_bottom,face1=0:gtneioreplugin/Np_top,face2=0:gtneioreplugin/Np_back,face3=0:gtneioreplugin/Np_front,face4=0:gtneioreplugin/Np_left,face5=0:gtneioreplugin/Np_right
 
-# %blockDimensionDisplay_Se:* (blockDimensionDisplay_Se), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_Se:* (blockDimensionDisplay_Se), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_Se,data=*,stdrot=true,face0=0:gtneioreplugin/Se_bottom,face1=0:gtneioreplugin/Se_top,face2=0:gtneioreplugin/Se_back,face3=0:gtneioreplugin/Se_front,face4=0:gtneioreplugin/Se_left,face5=0:gtneioreplugin/Se_right
 
-# %blockDimensionDisplay_DD:* (blockDimensionDisplay_DD), render=(STANDARD), opaque=true,cls=pers.gwyog.gtneioreplugin.plugin.block.BlockDimensionDisplay
+# %blockDimensionDisplay_DD:* (blockDimensionDisplay_DD), render=(STANDARD), opaque=true,cls=gtneioreplugin.plugin.block.BlockDimensionDisplay
 block:id=%blockDimensionDisplay_DD,data=*,stdrot=true,face0=0:gtneioreplugin/DD_bottom,face1=0:gtneioreplugin/DD_top,face2=0:gtneioreplugin/DD_back,face3=0:gtneioreplugin/DD_front,face4=0:gtneioreplugin/DD_left,face5=0:gtneioreplugin/DD_right
