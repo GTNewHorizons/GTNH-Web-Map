@@ -194,3 +194,11 @@ block:id=%tile.quantumGlass,data=*,stdrot=true,face0-5=12000:tectech/blockQuantu
 
 # %tile.reactorSim:* (tile.reactorSim), render=(STANDARD), opaque=true,cls=tectech.thing.block.BlockReactorSim
 block:id=%tile.reactorSim,data=*,stdrot=true,face0-5=0:tectech/blockReactorSimulator
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
+moddata:mod=gtmte,type=hatchbase,block=tectech:gt.spacetime_compression_field_generator,page=7,start=16
+moddata:mod=gtmte,type=hatchbase,block=tectech:gt.stabilisation_field_generator,page=7,start=32
+moddata:mod=gtmte,type=hatchbase,block=tectech:gt.time_acceleration_field_generator,page=7,start=48
+moddata:mod=gtmte,type=hatchbase,block=tectech:gt.godforgecasing,page=7,start=64
+moddata:mod=gtmte,type=hatchbase,block=tectech:gt.blockcasingsTT,page=8,start=0
+moddata:mod=gtmte,type=hatchbase,block=tectech:gt.blockcasingsBA0,page=8,start=16
