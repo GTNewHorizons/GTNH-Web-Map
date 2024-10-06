@@ -1,4 +1,4 @@
-# TwilightForest 2.5.25
+# TwilightForest 2.6.34
 version:1.7
 modname:TwilightForest
 
@@ -293,12 +293,6 @@ texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
 texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
 texture:id=minecraft/stonebrick_carved,filename=assets/minecraft/textures/blocks/stonebrick_carved.png
 texture:id=minecraft/tallgrass,filename=assets/minecraft/textures/blocks/tallgrass.png
-texture:id=tinker/fiery_essence,filename=assets/tinker/textures/blocks/fiery_essence.png
-texture:id=tinker/fiery_essence_flow,filename=assets/tinker/textures/blocks/fiery_essence_flow.png
-texture:id=tinker/liquid_fierymetal,filename=assets/tinker/textures/blocks/liquid_fierymetal.png
-texture:id=tinker/liquid_fierymetal_flow,filename=assets/tinker/textures/blocks/liquid_fierymetal_flow.png
-texture:id=tinker/liquid_knightmetal,filename=assets/tinker/textures/blocks/liquid_knightmetal.png
-texture:id=tinker/liquid_knightmetal_flow,filename=assets/tinker/textures/blocks/liquid_knightmetal_flow.png
 
 # biome/biome.id.Clearing
 biome:id=biome/biome.id.Clearing,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
@@ -358,6 +352,7 @@ block:id=%tile.TFLog,data=13,stdrot=true,face0-5=0:TwilightForest/canopy_side
 block:id=%tile.TFLog,data=14,stdrot=true,face0-5=0:TwilightForest/mangrove_side
 block:id=%tile.TFLog,data=15,stdrot=true,face0-5=0:TwilightForest/darkwood_side
 
+# Keep this for backwards compatibility
 # %tile.TFPlanks:* (tile.TFPlanks), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFWood
 block:id=%tile.TFPlanks,data=0,stdrot=true,face0-5=0:TwilightForest/wood/planks_twilight_oak_0
 block:id=%tile.TFPlanks,data=1,stdrot=true,face0-5=0:TwilightForest/wood/planks_canopy_0
@@ -368,6 +363,17 @@ block:id=%tile.TFPlanks,data=5,stdrot=true,face0-5=0:TwilightForest/wood/planks_
 block:id=%tile.TFPlanks,data=6,stdrot=true,face0-5=0:TwilightForest/wood/planks_mine_0
 block:id=%tile.TFPlanks,data=7,stdrot=true,face0-5=0:TwilightForest/wood/planks_sort_0
 block:id=%tile.TFPlanks,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/wood/planks_twilight_oak_0
+
+# %tile.TFPlank:* (tile.TFPlank), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFWood
+block:id=%tile.TFPlank,data=0,stdrot=true,face0-5=0:TwilightForest/wood/planks_twilight_oak_0
+block:id=%tile.TFPlank,data=1,stdrot=true,face0-5=0:TwilightForest/wood/planks_canopy_0
+block:id=%tile.TFPlank,data=2,stdrot=true,face0-5=0:TwilightForest/wood/planks_mangrove_0
+block:id=%tile.TFPlank,data=3,stdrot=true,face0-5=0:TwilightForest/wood/planks_darkwood_0
+block:id=%tile.TFPlank,data=4,stdrot=true,face0-5=0:TwilightForest/wood/planks_time_0
+block:id=%tile.TFPlank,data=5,stdrot=true,face0-5=0:TwilightForest/wood/planks_trans_0
+block:id=%tile.TFPlank,data=6,stdrot=true,face0-5=0:TwilightForest/wood/planks_mine_0
+block:id=%tile.TFPlank,data=7,stdrot=true,face0-5=0:TwilightForest/wood/planks_sort_0
+block:id=%tile.TFPlank,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/wood/planks_twilight_oak_0
 
 # %tile.TFWoodSlab:* (tile.TFWoodSlab), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFWoodSlab
 block:id=%tile.TFWoodSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:TwilightForest/wood/planks_twilight_oak_0
@@ -509,6 +515,54 @@ block:id=%tile.TFTrapDoorSort,data=4,data=5,data=6,data=7,data=8,data=9,stdrot=t
 block:id=%tile.TFTrapDoorSort,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/trapdoor/sort_trapdoor_horizontal
 block:id=%tile.TFTrapDoorSort,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/trapdoor/sort_trapdoor_vertical
 
+# %tile.TFChestTwilight:* (tile.TFChestTwilight), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTwilight,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_twilight_oak_0
+
+# %tile.TFChestCanopy:* (tile.TFChestCanopy), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestCanopy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_canopy_0
+
+# %tile.TFChestMangrove:* (tile.TFChestMangrove), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestMangrove,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_mangrove_0
+
+# %tile.TFChestDarkwood:* (tile.TFChestDarkwood), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestDarkwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_darkwood_0
+
+# %tile.TFChestTime:* (tile.TFChestTime), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTime,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_time_0
+
+# %tile.TFChestTrans:* (tile.TFChestTrans), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrans,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_trans_0
+
+# %tile.TFChestMine:* (tile.TFChestMine), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestMine,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_mine_0
+
+# %tile.TFChestSort:* (tile.TFChestSort), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestSort,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_sort_0
+
+# %tile.TFChestTrapTwilight:* (tile.TFChestTrapTwilight), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapTwilight,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_twilight_oak_0
+
+# %tile.TFChestTrapCanopy:* (tile.TFChestTrapCanopy), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapCanopy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_canopy_0
+
+# %tile.TFChestTrapMangrove:* (tile.TFChestTrapMangrove), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapMangrove,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_mangrove_0
+
+# %tile.TFChestTrapDarkwood:* (tile.TFChestTrapDarkwood), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapDarkwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_darkwood_0
+
+# %tile.TFChestTrapTime:* (tile.TFChestTrapTime), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapTime,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_time_0
+
+# %tile.TFChestTrapTrans:* (tile.TFChestTrapTrans), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapTrans,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_trans_0
+
+# %tile.TFChestTrapMine:* (tile.TFChestTrapMine), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapMine,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_mine_0
+
+# %tile.TFChestTrapSort:* (tile.TFChestTrapSort), render=twilightforest.client.renderer.blocks.RenderBlockTFChest(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFChest
+block:id=%tile.TFChestTrapSort,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/wood/planks_sort_0
+
 # %tile.TFRoots:* (tile.TFRoots), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFRoots
 block:id=%tile.TFRoots,data=0,stdrot=true,face0-5=0:TwilightForest/rootblock
 block:id=%tile.TFRoots,data=1,stdrot=true,face0-5=0:TwilightForest/oreroots
@@ -601,6 +655,12 @@ block:id=%tile.TFNagastone,data=13,stdrot=true,face0=0:TwilightForest/nagastone/
 block:id=%tile.TFNagastone,data=14,stdrot=true,face0-1=0:TwilightForest/nagastone/nagastone_cross_section,face2-5=0:TwilightForest/nagastone/nagastone_long_side
 block:id=%tile.TFNagastone,data=15,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_cross_section,face1=0:TwilightForest/nagastone/nagastone_turn_top,face2-5=0:TwilightForest/nagastone/nagastone_long_side
 
+# %tile.TFNagastoneBody:* (tile.TFNagastoneBody), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
+block:id=%tile.TFNagastoneBody,data=*,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_long,face1=0:TwilightForest/nagastone/nagastone_top_long,face2-3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_side_left,face5=0:TwilightForest/nagastone/nagastone_side_right
+
+# %tile.TFNagastoneHead:* (tile.TFNagastoneHead), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
+block:id=%tile.TFNagastoneHead,data=*,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_face_front,face3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_face_left,face5=0:TwilightForest/nagastone/nagastone_face_right
+
 # %tile.TFNagastoneEtched:* (tile.TFNagastoneEtched), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
 block:id=%tile.TFNagastoneEtched,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles,face2-5=0:TwilightForest/nagastone/etched_nagastone_up
 block:id=%tile.TFNagastoneEtched,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles,face2-5=0:TwilightForest/nagastone/etched_nagastone_down
@@ -609,6 +669,24 @@ block:id=%tile.TFNagastoneEtched,data=3,stdrot=true,face0-1=0:TwilightForest/nag
 block:id=%tile.TFNagastoneEtched,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left,face2=0:TwilightForest/nagastone/etched_nagastone_right,face3=0:TwilightForest/nagastone/etched_nagastone_left,face4-5=0:TwilightForest/nagastone/stone_tiles
 block:id=%tile.TFNagastoneEtched,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right,face2=0:TwilightForest/nagastone/etched_nagastone_left,face3=0:TwilightForest/nagastone/etched_nagastone_right,face4-5=0:TwilightForest/nagastone/stone_tiles
 block:id=%tile.TFNagastoneEtched,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles,face2-5=0:TwilightForest/nagastone/etched_nagastone_up
+
+# %tile.TFNagastoneEtchedMossy:* (tile.TFNagastoneEtchedMossy), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
+block:id=%tile.TFNagastoneEtchedMossy,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_down_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=2,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_up_mossy,face2-3=0:TwilightForest/nagastone/stone_tiles_mossy,face4=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face5=0:TwilightForest/nagastone/etched_nagastone_right_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_down_mossy,face2-3=0:TwilightForest/nagastone/stone_tiles_mossy,face4=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face5=0:TwilightForest/nagastone/etched_nagastone_left_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face2=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face3=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face4-5=0:TwilightForest/nagastone/stone_tiles_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face2=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face3=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face4-5=0:TwilightForest/nagastone/stone_tiles_mossy
+block:id=%tile.TFNagastoneEtchedMossy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_mossy
+
+# %tile.TFNagastoneEtchedWeathered:* (tile.TFNagastoneEtchedWeathered), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
+block:id=%tile.TFNagastoneEtchedWeathered,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_down_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=2,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_up_weathered,face2-3=0:TwilightForest/nagastone/stone_tiles_weathered,face4=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face5=0:TwilightForest/nagastone/etched_nagastone_right_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_down_weathered,face2-3=0:TwilightForest/nagastone/stone_tiles_weathered,face4=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face5=0:TwilightForest/nagastone/etched_nagastone_left_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face2=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face3=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face4-5=0:TwilightForest/nagastone/stone_tiles_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face2=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face3=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face4-5=0:TwilightForest/nagastone/stone_tiles_weathered
+block:id=%tile.TFNagastoneEtchedWeathered,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_weathered
 
 # %tile.TFNagastoneStairsLeft:* (tile.TFNagastoneStairsLeft), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastoneStairs(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFNagastoneStairs
 block:id=%tile.TFNagastoneStairsLeft,data=*,stdrot=true,face0=0:TwilightForest/nagastone/stone_tiles,face1=0:TwilightForest/nagastone/nagastone_bare,face2-5=0:TwilightForest/nagastone/etched_nagastone_left
@@ -749,7 +827,7 @@ block:id=%tile.TFTowerTranslucent,data=1,stdrot=true,face0-5=0:TwilightForest/to
 block:id=%tile.TFTowerTranslucent,data=2,stdrot=true,face0-5=0:TwilightForest/towerdev_built_off
 block:id=%tile.TFTowerTranslucent,data=3,stdrot=true,face0-5=0:TwilightForest/towerdev_built_on
 block:id=%tile.TFTowerTranslucent,data=4,stdrot=true,face0-5=0:TwilightForest/towerdev_antibuilt
-block:id=%tile.TFTowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/obsidian,face1-2=0:minecraft/netherrack,face3-4=0:minecraft/portal,face5=0:minecraft/bedrock
+block:id=%tile.TFTowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/portal,face1=0:minecraft/obsidian,face2-3=0:minecraft/netherrack,face4=0:minecraft/bedrock,face5=0:minecraft/obsidian
 block:id=%tile.TFTowerTranslucent,data=6,stdrot=true,face0-5=0:minecraft/gold_block
 block:id=%tile.TFTowerTranslucent,data=7,stdrot=true,face0-5=0:minecraft/diamond_block
 block:id=%tile.TFTowerTranslucent,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off
@@ -927,7 +1005,7 @@ block:id=%tile.ArcticFurBlock,data=*,stdrot=true,face0-5=0:TwilightForest/arctic
 # %tile.CarminiteBlock:* (tile.CarminiteBlock), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFCompressed
 block:id=%tile.CarminiteBlock,data=*,stdrot=true,face0-5=0:TwilightForest/carminite_block
 
-# %tile.FieryBlock:* (tile.FieryBlock), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFCompressed
+# %tile.FieryBlock:* (tile.FieryBlock), render=twilightforest.client.renderer.blocks.RenderBlockTFFieryMetal(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFCompressed
 block:id=%tile.FieryBlock,data=*,stdrot=true,face0-5=0:TwilightForest/fiery_block
 
 # %tile.IronwoodBlock:* (tile.IronwoodBlock), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFCompressed
@@ -1004,36 +1082,3 @@ block:id=%tile.CastleDoor,data=*,stdrot=true,face0-5=0:TwilightForest/castle_doo
 
 # %tile.CastleDoorVanished:* (tile.CastleDoorVanished), render=twilightforest.client.renderer.blocks.RenderBlockTFCastleMagic(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFCastleDoor
 block:id=%tile.CastleDoorVanished,data=*,stdrot=true,face0-5=0:TwilightForest/castle_door_vanished
-
-# %tile.TFNagastoneEtchedWeathered:* (tile.TFNagastoneEtchedWeathered), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
-block:id=%tile.TFNagastoneEtchedWeathered,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_weathered
-block:id=%tile.TFNagastoneEtchedWeathered,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_down_weathered
-block:id=%tile.TFNagastoneEtchedWeathered,data=2,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_up_weathered,face2-3=0:TwilightForest/nagastone/stone_tiles_weathered,face4=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face5=0:TwilightForest/nagastone/etched_nagastone_right_weathered
-block:id=%tile.TFNagastoneEtchedWeathered,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_down_weathered,face2-3=0:TwilightForest/nagastone/stone_tiles_weathered,face4=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face5=0:TwilightForest/nagastone/etched_nagastone_left_weathered
-block:id=%tile.TFNagastoneEtchedWeathered,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face2=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face3=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face4-5=0:TwilightForest/nagastone/stone_tiles_weathered
-block:id=%tile.TFNagastoneEtchedWeathered,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face2=0:TwilightForest/nagastone/etched_nagastone_left_weathered,face3=0:TwilightForest/nagastone/etched_nagastone_right_weathered,face4-5=0:TwilightForest/nagastone/stone_tiles_weathered
-block:id=%tile.TFNagastoneEtchedWeathered,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_weathered,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_weathered
-
-# %fluid.molten.fierymetal:* (fluid.molten.fierymetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
-block:id=%fluid.molten.fierymetal,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_fierymetal,face2-5=12000:tinker/liquid_fierymetal_flow
-
-# %tile.TFNagastoneEtchedMossy:* (tile.TFNagastoneEtchedMossy), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFNagastoneEtched
-block:id=%tile.TFNagastoneEtchedMossy,data=0,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_mossy
-block:id=%tile.TFNagastoneEtchedMossy,data=1,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_down_mossy
-block:id=%tile.TFNagastoneEtchedMossy,data=2,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_up_mossy,face2-3=0:TwilightForest/nagastone/stone_tiles_mossy,face4=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face5=0:TwilightForest/nagastone/etched_nagastone_right_mossy
-block:id=%tile.TFNagastoneEtchedMossy,data=3,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_down_mossy,face2-3=0:TwilightForest/nagastone/stone_tiles_mossy,face4=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face5=0:TwilightForest/nagastone/etched_nagastone_left_mossy
-block:id=%tile.TFNagastoneEtchedMossy,data=4,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face2=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face3=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face4-5=0:TwilightForest/nagastone/stone_tiles_mossy
-block:id=%tile.TFNagastoneEtchedMossy,data=5,stdrot=true,face0-1=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face2=0:TwilightForest/nagastone/etched_nagastone_left_mossy,face3=0:TwilightForest/nagastone/etched_nagastone_right_mossy,face4-5=0:TwilightForest/nagastone/stone_tiles_mossy
-block:id=%tile.TFNagastoneEtchedMossy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:TwilightForest/nagastone/stone_tiles_mossy,face2-5=0:TwilightForest/nagastone/etched_nagastone_up_mossy
-
-# %tile.TFNagastoneHead:* (tile.TFNagastoneHead), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
-block:id=%tile.TFNagastoneHead,data=*,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_tip,face1=0:TwilightForest/nagastone/nagastone_top_tip,face2=0:TwilightForest/nagastone/nagastone_face_front,face3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_face_left,face5=0:TwilightForest/nagastone/nagastone_face_right
-
-# %fluid.molten.knightmetal:* (fluid.molten.knightmetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
-block:id=%fluid.molten.knightmetal,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_knightmetal,face2-5=12000:tinker/liquid_knightmetal_flow
-
-# %tile.TFNagastoneBody:* (tile.TFNagastoneBody), render=twilightforest.client.renderer.blocks.RenderBlockTFNagastone2(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone2
-block:id=%tile.TFNagastoneBody,data=*,stdrot=true,face0=0:TwilightForest/nagastone/nagastone_bottom_long,face1=0:TwilightForest/nagastone/nagastone_top_long,face2-3=0:TwilightForest/nagastone/nagastone_cross_section,face4=0:TwilightForest/nagastone/nagastone_side_left,face5=0:TwilightForest/nagastone/nagastone_side_right
-
-# %fiery_essence:* (fiery_essence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.blocks.TFFieryEssence
-block:id=%fiery_essence,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/fiery_essence,face2-5=12000:tinker/fiery_essence_flow
