@@ -1,14 +1,21 @@
 package org.dynmap.modsupport.gregtech;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.GregTechAPI;
 import gregtech.api.enums.Materials;
+import gregtech.api.enums.Textures;
+import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.metatileentity.MetaPipeEntity;
 import gregtech.api.metatileentity.implementations.MTECable;
 import gregtech.api.metatileentity.implementations.MTEFluid;
 import gregtech.api.metatileentity.implementations.MTEFrame;
 import gregtech.api.metatileentity.implementations.MTEItem;
+import gregtech.common.render.GTCopiedBlockTextureRender;
+import gregtech.common.render.GTMultiTextureRender;
+import net.minecraft.block.Block;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.forge.GwmCommand;
@@ -316,8 +323,43 @@ public class GregTechSupport {
                 throw new RuntimeException(e);
             }
 
-
+            if (MinecraftServer.getServer() == null || !MinecraftServer.getServer().isDedicatedServer()) {
+                dumpTextures();
+            }
             sender.addChatMessage(new ChatComponentText("[GWM] Dumped GT data"));
+        }
+
+        private void dumpTextures() {
+            try {
+                BufferedWriter writerTex = new BufferedWriter(new FileWriter("gwm-gt-dump-textures.txt"));
+
+                for(int i = 0; i < 16384;i++) {
+                    ITexture tex = Textures.BlockIcons.getCasingTextureForId(i);
+                    writerTex.write("idx=" + i + ",p=" + (i >> 7) + "," + "t=" + (i & 0x7F) + ",");
+                    try {
+                        if (tex == null) {
+                            writerTex.write("tex=NULL");
+                        }
+                        else if (tex instanceof GTCopiedBlockTextureRender) {
+                            GTCopiedBlockTextureRender gtTex = (GTCopiedBlockTextureRender) tex;
+                            Block b = gtTex.getBlock();
+                            writerTex.write("block=" + GameRegistry.findUniqueIdentifierFor(b) + ",meta=" + gtTex.getMeta());
+                            writerTex.write(",icon=" + b.getIcon(2, gtTex.getMeta()));
+                            writerTex.write(",class=" + b.getClass().getName());
+                        }
+                        else {
+                            writerTex.write("tex=" + tex);
+                        }
+                    } catch (Exception ex){
+                        writerTex.write("ERROR=" + ex.getMessage());
+                    }
+                    writerTex.write("\r\n");
+                }
+
+                writerTex.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         private void dumpMetaTileEntity(BufferedWriter writer, int i, IMetaTileEntity imte) throws IOException {
