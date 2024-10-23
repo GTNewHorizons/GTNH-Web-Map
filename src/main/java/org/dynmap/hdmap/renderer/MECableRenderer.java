@@ -242,13 +242,21 @@ public class MECableRenderer extends PipeRendererBase {
                     HashMap<String, Object> tagMap = (HashMap<String, Object>) tag;
                     Object tagX = tagMap.get("x");
 
+                    Object objModId = tagMap.get("modid");
+                    Object objItemName = tagMap.get("itemname");
+
                     if(tagX instanceof int[]) {
                         int[] arr = (int[]) tagX;
 
                         if(arr.length < 2)
                             continue;
 
-                        TexturePack.HDTextureMap tmpMap = TexturePack.HDTextureMap.getMap(arr[0], arr[1], 0);
+                        int blockId = arr[0];
+
+                        if(objModId instanceof String && objItemName instanceof String)
+                            blockId = GWM_Util.blockNameToId(objModId + ":" + objItemName);
+
+                        TexturePack.HDTextureMap tmpMap = TexturePack.HDTextureMap.getMap(blockId, arr[1], 0);
 
                         if(tmpMap == null)
                             continue;
