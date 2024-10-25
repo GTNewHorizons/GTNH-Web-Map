@@ -131,6 +131,9 @@ public class ShadowHDLighting extends DefaultHDLighting {
             weight -= w2;
         else if(ll2 > ll0)
             weight += w2;
+
+        weight = adjustWeight(ps, weight, ll1, ll0, ll2, s1, s2, w1, w2, true);
+
         outcolor[0].setColor(incolor);
         int cscale = 256;
         if(weight == 0) {
@@ -171,6 +174,9 @@ public class ShadowHDLighting extends DefaultHDLighting {
                 weight -= w2;
             else if(ll2 > ll0)
                 weight += w2;
+
+            weight = adjustWeight(ps, weight, ll1, ll0, ll2, s1, s2, w1, w2, false);
+
             outcolor[1].setColor(incolor);
             cscale = 256;
             if(weight == 0) {
@@ -195,12 +201,37 @@ public class ShadowHDLighting extends DefaultHDLighting {
             }
             if(cscale < 256) {
                 Color c = outcolor[1];
-                c.setRGBA((c.getRed() * cscale) >> 8, (c.getGreen() * cscale) >> 8, 
+                c.setRGBA((c.getRed() * cscale) >> 8, (c.getGreen() * cscale) >> 8,
                     (c.getBlue() * cscale) >> 8, c.getAlpha());
             }
         }
     }
-    
+
+    private int adjustWeight(HDPerspectiveState ps, int weight, int ll1, int ll0, int ll2, BlockStep s1, BlockStep s2, int w1, int w2, boolean useambient) {
+        if (weight != 0 && (ll1 == ll0 || (ll2 == ll0))) {
+            LightLevels skyemit3 = ps.getCachedLightLevels(3);
+            ps.getLightLevelsAt2Step(s1, s2, skyemit3);
+            int ll3 = getLightLevel(skyemit3, useambient);
+
+            if(ll0 == ll3) {
+                if (ll1 == ll0) {
+                    if (weight < 0) {
+                        weight += Math.min(-weight, w1);
+                    } else if (weight > 0) {
+                        weight -= Math.min(weight, w1);
+                    }
+                } else if (ll2 == ll0) {
+                    if (weight < 0) {
+                        weight += Math.min(-weight, w2);
+                    } else if (weight > 0) {
+                        weight -= Math.min(weight, w2);
+                    }
+                }
+            }
+        }
+        return weight;
+    }
+
     private final int getLightLevel(final LightLevels ll, boolean useambient) {
         int lightlevel;
         /* If ambient light, adjust base lighting for it */
