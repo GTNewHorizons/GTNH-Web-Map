@@ -90,19 +90,22 @@ public abstract class CustomRenderer {
     }
 
     public static RenderPatch[] getRotatedSet(RenderPatchFactory rpf, RenderPatch[] input, int rotX, int rotY, int rotZ){
+        return getRotatedSet(rpf, input, rotX, rotY, rotZ, false);
+    }
+    public static RenderPatch[] getRotatedSet(RenderPatchFactory rpf, RenderPatch[] input, int rotX, int rotY, int rotZ, boolean autoTexCoords){
         RenderPatch[] ret = new RenderPatch[input.length];
 
         for (int i = 0; i < input.length; i++){
-            ret[i] = rpf.getRotatedPatch(input[i], 0, rotY, 0, input[i].getTextureIndex());
+            ret[i] = autoTexCoords ? rpf.getRotatedPatchAutoTexCoords(input[i], 0, rotY, 0, input[i].getTextureIndex()) : rpf.getRotatedPatch(input[i], 0, rotY, 0, input[i].getTextureIndex());
         }
         if(rotX != 0) {
             for (int i = 0; i < input.length; i++){
-                ret[i] = rpf.getRotatedPatch(ret[i], rotX, 0, 0, ret[i].getTextureIndex());
+                ret[i] = autoTexCoords ? rpf.getRotatedPatchAutoTexCoords(ret[i], rotX, 0, 0, ret[i].getTextureIndex()) : rpf.getRotatedPatch(ret[i], rotX, 0, 0, ret[i].getTextureIndex());
             }
         }
         if(rotZ != 0) {
             for (int i = 0; i < input.length; i++){
-                ret[i] = rpf.getRotatedPatch(ret[i], 0, 0, rotZ, ret[i].getTextureIndex());
+                ret[i] = autoTexCoords ? rpf.getRotatedPatchAutoTexCoords(ret[i], 0, 0, rotZ, ret[i].getTextureIndex()) : rpf.getRotatedPatch(ret[i], 0, 0, rotZ, ret[i].getTextureIndex());
             }
         }
         return ret;
