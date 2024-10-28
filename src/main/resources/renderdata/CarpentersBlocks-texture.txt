@@ -7,12 +7,33 @@ cfgfile:config/CarpentersBlocks.cfg
 
 
 texturepath:assets/carpentersblocks/textures/blocks/
+texture:id=CarpentersBlocks/designs/flowerpot/black,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/black.png
+texture:id=CarpentersBlocks/designs/flowerpot/blue,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/blue.png
+texture:id=CarpentersBlocks/designs/flowerpot/brown,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/brown.png
+texture:id=CarpentersBlocks/designs/flowerpot/cyan,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/cyan.png
+texture:id=CarpentersBlocks/designs/flowerpot/gray,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/gray.png
+texture:id=CarpentersBlocks/designs/flowerpot/green,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/green.png
+texture:id=CarpentersBlocks/designs/flowerpot/light_blue,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/light_blue.png
+texture:id=CarpentersBlocks/designs/flowerpot/light_gray,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/light_gray.png
+texture:id=CarpentersBlocks/designs/flowerpot/lime,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/lime.png
+texture:id=CarpentersBlocks/designs/flowerpot/magenta,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/magenta.png
+texture:id=CarpentersBlocks/designs/flowerpot/orange,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/orange.png
+texture:id=CarpentersBlocks/designs/flowerpot/original,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/original.png
+texture:id=CarpentersBlocks/designs/flowerpot/pink,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/pink.png
+texture:id=CarpentersBlocks/designs/flowerpot/purple,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/purple.png
+texture:id=CarpentersBlocks/designs/flowerpot/rainbow,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/rainbow.png
+texture:id=CarpentersBlocks/designs/flowerpot/red,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/red.png
+texture:id=CarpentersBlocks/designs/flowerpot/white,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/white.png
+texture:id=CarpentersBlocks/designs/flowerpot/yellow,filename=assets/carpentersblocks/textures/blocks/designs/flowerpot/yellow.png
+
 texture:id=CarpentersBlocks/flowerpot/flower_pot,filename=assets/carpentersblocks/textures/blocks/flowerpot/flower_pot.png
 texture:id=CarpentersBlocks/lever/lever,filename=assets/carpentersblocks/textures/blocks/lever/lever.png
 texture:id=CarpentersBlocks/torch/torch,filename=assets/carpentersblocks/textures/blocks/torch/torch.png
 texture:id=CarpentersBlocks/slope/oblique_pos,filename=assets/carpentersblocks/textures/blocks/slope/oblique_pos.png
 texture:id=CarpentersBlocks/solid,filename=assets/carpentersblocks/textures/blocks/general/solid.png
 texture:id=minecraft/redstone_dust_cross_overlay,filename=assets/minecraft/textures/blocks/redstone_dust_cross_overlay.png
+texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=gwm/air,filename=assets/gwmcustom/air.png
 
 
 
@@ -38,8 +59,7 @@ block:id=%blockCarpentersDaylightSensor,data=*,stdrot=true,face0-5=0:CarpentersB
 block:id=%blockCarpentersDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersFlowerPot:* (blockCarpentersFlowerPot), render=com.carpentersblocks.renderer.BlockHandlerCarpentersFlowerPot(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersFlowerPot
-block:id=%blockCarpentersFlowerPot,data=0,stdrot=true,face0=0:minecraft/redstone_dust_cross_overlay,face1=0:CarpentersBlocks/flowerpot/flower_pot,face2-5=0:CarpentersBlocks/slope/oblique_pos
-block:id=%blockCarpentersFlowerPot,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersFlowerPot,data=*,stdrot=true,patch0=0:CarpentersBlocks/solid,patch1=0:CarpentersBlocks/designs/flowerpot/black,patch2=0:CarpentersBlocks/designs/flowerpot/blue,patch3=0:CarpentersBlocks/designs/flowerpot/brown,patch4=0:CarpentersBlocks/designs/flowerpot/cyan,patch5=0:CarpentersBlocks/designs/flowerpot/gray,patch6=0:CarpentersBlocks/designs/flowerpot/green,patch7=0:CarpentersBlocks/designs/flowerpot/light_blue,patch8=0:CarpentersBlocks/designs/flowerpot/light_gray,patch9=0:CarpentersBlocks/designs/flowerpot/lime,patch10=0:CarpentersBlocks/designs/flowerpot/magenta,patch11=0:CarpentersBlocks/designs/flowerpot/orange,patch12=0:CarpentersBlocks/designs/flowerpot/original,patch13=0:CarpentersBlocks/designs/flowerpot/pink,patch14=0:CarpentersBlocks/designs/flowerpot/purple,patch15=0:CarpentersBlocks/designs/flowerpot/rainbow,patch16=0:CarpentersBlocks/designs/flowerpot/red,patch17=0:CarpentersBlocks/designs/flowerpot/white,patch18=0:CarpentersBlocks/designs/flowerpot/yellow,patch18-23=0:gwm/air
 
 # %blockCarpentersGarageDoor:* (blockCarpentersGarageDoor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGarageDoor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGarageDoor
 block:id=%blockCarpentersGarageDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
@@ -51,7 +71,7 @@ block:id=%blockCarpentersGate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/soli
 block:id=%blockCarpentersHatch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
 
 # %blockCarpentersLadder:* (blockCarpentersLadder), render=com.carpentersblocks.renderer.BlockHandlerCarpentersLadder(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersLadder
-block:id=%blockCarpentersLadder,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersLadder,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,patch6-8=0:minecraft/iron_block
 
 # %blockCarpentersLever:* (blockCarpentersLever), render=com.carpentersblocks.renderer.BlockHandlerCarpentersLever(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersLever
 block:id=%blockCarpentersLever,data=*,stdrot=true,face0-5=0:CarpentersBlocks/lever/lever

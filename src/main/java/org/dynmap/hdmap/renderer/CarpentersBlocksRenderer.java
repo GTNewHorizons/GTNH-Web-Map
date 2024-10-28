@@ -51,6 +51,8 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
         return true;
     }
 
+
+
     private void initGateShapes(RenderPatchFactory rpf) {
         shapes[0] = combineMultiple(
                 CustomRenderer.getBoxSingleTextureInt(rpf, 0,2,5, 16, 7,9, 0, false),
@@ -203,7 +205,7 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
     }
 
     private void initStairsShapes(RenderPatchFactory rpf) {
-        shapes[8] = ArchitectureCraftShapeRenderer.makeStairs(rpf);
+        shapes[8] = ArchitectureCraftShapeRenderer.makeStairs(rpf, 0);
         shapes[9] =  getRotatedSet(rpf, shapes[8], 0, 180, 0);
         shapes[10] = getRotatedSet(rpf, shapes[8], 0, 270, 0);
         shapes[11] = getRotatedSet(rpf, shapes[8], 0, 90, 0);
@@ -238,13 +240,13 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
         RenderPatch[] bottom = new RenderPatch[]{rpf.getPatch(0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, RenderPatchFactory.SideVisible.TOP, 0)};
 
 
-        shapes[0] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofPatches(rpf), 0, 180, 90);
-        shapes[4] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofPatches(rpf), 0, 0, 180);
-        shapes[8] = ArchitectureCraftShapeRenderer.makeRoofPatches(rpf);
-        shapes[12] = getRotatedSet(rpf, getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofInnerCornerPatches(rpf), 0, 0, 180), 0, 180, 0);
-        shapes[16] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofInnerCornerPatches(rpf), 0, 90, 0);
-        shapes[20] = getRotatedSet(rpf,getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofOuterCornerPatches(rpf), 0, 0, 180), 0, 180, 0);
-        shapes[24] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofOuterCornerPatches(rpf), 0, 90, 0);
+        shapes[0] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofPatches(rpf, 0), 0, 180, 90, true);
+        shapes[4] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofPatches(rpf, 0), 0, 0, 180, true);
+        shapes[8] = ArchitectureCraftShapeRenderer.makeRoofPatches(rpf, 0);
+        shapes[12] = getRotatedSet(rpf, getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofInnerCornerPatches(rpf, 0), 0, 0, 180), 0, 180, 0, true);
+        shapes[16] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofInnerCornerPatches(rpf, 0), 0, 90, 0, true);
+        shapes[20] = getRotatedSet(rpf,getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofOuterCornerPatches(rpf, 0), 0, 0, 180), 0, 180, 0, true);
+        shapes[24] = getRotatedSet(rpf, ArchitectureCraftShapeRenderer.makeRoofOuterCornerPatches(rpf, 0), 0, 90, 0, true);
         shapes[32] = combineMultiple(
                 rpf.getPatch(0,0,1,0,0,0,1,0,1,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
                 rpf.getPatch(0,0,0,0,0,1,0,1,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0),
@@ -263,27 +265,27 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
                 rpf.getTriangleAutoTexCoords(0,0,1,1,0,0,0,1,0,1, RenderPatchFactory.SideVisible.TOP, 0)
         );
 
-        shapes[28] = getRotatedSet(rpf, getRotatedSet(rpf, shapes[32], 0, 0, 180), 0, 270, 0);
-        shapes[36] = getRotatedSet(rpf, getRotatedSet(rpf, shapes[40], 0, 0, 180), 0, 270, 0);
+        shapes[28] = getRotatedSet(rpf, getRotatedSet(rpf, shapes[32], 0, 0, 180), 0, 270, 0, true);
+        shapes[36] = getRotatedSet(rpf, getRotatedSet(rpf, shapes[40], 0, 0, 180), 0, 270, 0, true);
 
         for(int i =0 ; i < 44; i+=4){
             if(shapes[i] != null){
-                shapes[i+1] = getRotatedSet(rpf, shapes[i], 0, 180, 0);
-                shapes[i+2] = getRotatedSet(rpf, shapes[i], 0, 270, 0);
-                shapes[i+3] = getRotatedSet(rpf, shapes[i], 0, 90, 0);
+                shapes[i+1] = getRotatedSet(rpf, shapes[i], 0, 180, 0, true);
+                shapes[i+2] = getRotatedSet(rpf, shapes[i], 0, 270, 0, true);
+                shapes[i+3] = getRotatedSet(rpf, shapes[i], 0, 90, 0, true);
             }
         }
 
-        shapes[44] = getRotatedSet(rpf, getSpikeTop(rpf), 180, 0, 0);
+        shapes[44] = getRotatedSet(rpf, getSpikeTop(rpf), 180, 0, 0, true);
         shapes[45] = getSpikeTop(rpf);
         shapes[46] = combineMultiple(
                 bottom,
                 halfHeightRoofPartStraight,
                 halfHeightRoofPartSlopeToStraight
         );
-        shapes[47] = getRotatedSet(rpf, shapes[46], 0, 180, 0);
-        shapes[48] = getRotatedSet(rpf, shapes[46], 0, 270, 0);
-        shapes[49] = getRotatedSet(rpf, shapes[46], 0, 90, 0);
+        shapes[47] = getRotatedSet(rpf, shapes[46], 0, 180, 0, true);
+        shapes[48] = getRotatedSet(rpf, shapes[46], 0, 270, 0, true);
+        shapes[49] = getRotatedSet(rpf, shapes[46], 0, 90, 0, true);
 
         shapes[50] = combineMultiple(
                 bottom[0],
@@ -292,7 +294,7 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
                 rpf.getPatch(0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0),
                 rpf.getPatch(1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0.5, RenderPatchFactory.SideVisible.TOP, 0)
         );
-        shapes[51] = getRotatedSet(rpf, shapes[50], 0, 90, 0);
+        shapes[51] = getRotatedSet(rpf, shapes[50], 0, 90, 0, true);
 
         shapes[52] = combineMultiple(
                 bottom[0],
@@ -308,21 +310,21 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
                 rpf.getTriangleAutoTexCoords(0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0),
                 rpf.getTriangleAutoTexCoords(0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 1, RenderPatchFactory.SideVisible.TOP, 0)
         );
-        shapes[53] = getRotatedSet(rpf, shapes[52], 0, 180, 0);
-        shapes[54] = getRotatedSet(rpf, shapes[52], 0, 270, 0);
-        shapes[55] = getRotatedSet(rpf, shapes[52], 0, 90, 0);
+        shapes[53] = getRotatedSet(rpf, shapes[52], 0, 180, 0, true);
+        shapes[54] = getRotatedSet(rpf, shapes[52], 0, 270, 0, true);
+        shapes[55] = getRotatedSet(rpf, shapes[52], 0, 90, 0, true);
 
         shapes[56] = combineMultiple(bottom, halfHeightRoofPartToSlope, shapes[51]);
-        shapes[57] = getRotatedSet(rpf, shapes[56], 0, 180, 0);
-        shapes[58] = getRotatedSet(rpf, shapes[56], 0, 270, 0);
-        shapes[59] = getRotatedSet(rpf, shapes[56], 0, 90, 0);
+        shapes[57] = getRotatedSet(rpf, shapes[56], 0, 180, 0, true);
+        shapes[58] = getRotatedSet(rpf, shapes[56], 0, 270, 0, true);
+        shapes[59] = getRotatedSet(rpf, shapes[56], 0, 90, 0, true);
 
-        shapes[60] = combineMultiple(bottom, halfHeightRoofPartToSlope, getRotatedSet(rpf, halfHeightRoofPartToSlope,0,90,0), getRotatedSet(rpf, halfHeightRoofPartToSlope,0,180,0), getRotatedSet(rpf, halfHeightRoofPartToSlope,0,270,0));
+        shapes[60] = combineMultiple(bottom, halfHeightRoofPartToSlope, getRotatedSet(rpf, halfHeightRoofPartToSlope,0,90,0, true), getRotatedSet(rpf, halfHeightRoofPartToSlope,0,180,0, true), getRotatedSet(rpf, halfHeightRoofPartToSlope,0,270,0, true));
 
         shapes[61] = combineMultiple(shapes[8], halfHeightRoofPartToSlope);
-        shapes[62] = getRotatedSet(rpf, shapes[61], 0, 180, 0);
-        shapes[63] = getRotatedSet(rpf, shapes[61], 0, 270, 0);
-        shapes[64] = getRotatedSet(rpf, shapes[61], 0, 90, 0);
+        shapes[62] = getRotatedSet(rpf, shapes[61], 0, 180, 0, true);
+        shapes[63] = getRotatedSet(rpf, shapes[61], 0, 270, 0, true);
+        shapes[64] = getRotatedSet(rpf, shapes[61], 0, 90, 0, true);
     }
 
     private RenderPatch[] getSpikeTop(RenderPatchFactory rpf) {
@@ -367,15 +369,28 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
     public static class TextureSelector implements CustomTextureMapper {
 
         TexturePack.HDTextureMap map;
-        public TextureSelector(MapDataContext mapDataCtx) {
+        TexturePack.HDTextureMap[] maps;
+        public TextureSelector(MapDataContext mapDataCtx){
+            this(mapDataCtx, -1);
+        }
+        public TextureSelector(MapDataContext mapDataCtx, int maxMaps) {
             Object objAttrList = mapDataCtx.getBlockTileEntityField("cbAttrList");
+
+            if(maxMaps > 6)
+                maps = new TexturePack.HDTextureMap[maxMaps];
 
             if(objAttrList instanceof ArrayList){
                 ArrayList attrList = (ArrayList) objAttrList;
+                boolean sixFound = false;
 
                 for (Object attrSet : attrList) {
                     if (attrSet instanceof HashMap) {
                         HashMap<String, Object> attrs = (HashMap<String, Object>) attrSet;
+
+                        int attr = GWM_Util.objectToInt(attrs.get("cbAttribute"), -1);
+
+                        if(attr == 6)
+                            sixFound = true;
 
                         Object strId = attrs.get("cbUniqueId");
                         int id;
@@ -390,17 +405,33 @@ public class CarpentersBlocksRenderer extends FenceGateBase {
 
                         map = TexturePack.HDTextureMap.getMap(id, data, 0);
 
-                        if (map != null)
+                        if(maps != null && attr >= 0 && attr < maxMaps)
+                            maps[attr] = map;
+
+                        if (sixFound && map != null && maps == null)
                             break;
                     }
                 }
+                if(maps != null && maps[6] != null)
+                    map = maps[6];
             }
         }
 
         @Override
         public int[] getTextureLayersForPatchId(int patchId) {
+            if(maps != null) {
+                if (patchId > 0 && patchId < maps.length && maps[patchId] != null)
+                    return new int[]{maps[patchId].getIndexForFace(0)};
+
+                if(patchId == 0 && maps[6] != null)
+                    return new int[]{maps[6].getIndexForFace(0)};
+
+                return null;
+            }
+
             if(map != null)
                 return new int[]{map.getIndexForFace(patchId % 6)};
+
             return new int[0];
         }
     }
