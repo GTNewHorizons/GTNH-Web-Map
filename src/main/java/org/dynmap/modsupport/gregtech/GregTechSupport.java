@@ -13,6 +13,8 @@ import gregtech.api.metatileentity.implementations.MTEFrame;
 import gregtech.api.metatileentity.implementations.MTEItem;
 import gregtech.common.render.GTCopiedBlockTextureRender;
 import gregtech.common.render.GTMultiTextureRender;
+import gtPlusPlus.xmod.gregtech.api.enums.GregtechOrePrefixes;
+import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.GTPPMTEFluid;
 import net.minecraft.block.Block;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
@@ -400,7 +402,26 @@ public class GregTechSupport {
                     }
                 }
                 else{
-                    writer.write(",material=NULL,matCol=000000,matIcons=NULL");
+                    if(mpe instanceof GTPPMTEFluid){
+                        GTPPMTEFluid ppfp = (GTPPMTEFluid)mpe;
+                        GregtechOrePrefixes.GT_Materials ppmat = ppfp.mMaterial;
+                        if(ppmat != null){
+                            writer.write(",material=" + ppmat.name());
+                            writer.write(",matCol="+String.format("%02X%02X%02X",  ppmat.mRGBa[0]&0xFF,  ppmat.mRGBa[1]&0xFF,  ppmat.mRGBa[2]&0xFF) );
+                            writer.write(",matIcons=" );
+                            if(ppmat.mIconSet != null){
+                                writer.write(ppmat.mIconSet.mSetName);
+                            }
+                            else{
+                                writer.write("NULL");
+                            }
+                        } else {
+                            writer.write(",material=NULL,matCol=000000,matIcons=NULL");
+                        }
+                    }
+                    else {
+                        writer.write(",material=NULL,matCol=000000,matIcons=NULL");
+                    }
                 }
             }
             writer.write(",class=" + imte.getClass().toString().replace("class ",""));
