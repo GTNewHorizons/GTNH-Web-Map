@@ -39,3 +39,7 @@ block:id=%gt.blockcasingsSEMotor,data=2,stdrot=true,face0-1=0:gtnhintergalactic/
 block:id=%gt.blockcasingsSEMotor,data=3,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gtnhintergalactic/spaceElevator/MotorT4_Side
 block:id=%gt.blockcasingsSEMotor,data=4,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gtnhintergalactic/spaceElevator/MotorT5_Side
 block:id=%gt.blockcasingsSEMotor,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:gtnhintergalactic/spaceElevator/Motor,face2-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
+moddata:mod=gtmte,type=hatchbase,block=gtnhintergalactic:gt.blockcasingsSE,page=32,start=0
+moddata:mod=gtmte,type=hatchbase,block=gtnhintergalactic:gt.blockcasingsSEMotor,page=32,start=16
