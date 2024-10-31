@@ -124,8 +124,8 @@ texture:id=botania/dreamwood3,filename=assets/botania/textures/blocks/dreamwood3
 texture:id=botania/dreamwood4,filename=assets/botania/textures/blocks/dreamwood4.png
 texture:id=botania/dreamwood5,filename=assets/botania/textures/blocks/dreamwood5.png
 texture:id=botania/elfGlass,filename=assets/botania/textures/blocks/elfGlass.png
-texture:id=botania/enchantedSoil0,filename=assets/botania/textures/blocks/enchantedSoil0.png
-texture:id=botania/enchantedSoil1,filename=assets/botania/textures/blocks/enchantedSoil1.png
+texture:id=botania/enchantedSoil0,filename=assets/botania/textures/blocks/enchantedSoil0.png,ycount=4
+texture:id=botania/enchantedSoil1,filename=assets/botania/textures/blocks/enchantedSoil1.png,ycount=4
 texture:id=botania/enchanter,filename=assets/botania/textures/blocks/enchanter.png
 texture:id=botania/endStoneBrick0,filename=assets/botania/textures/blocks/endStoneBrick0.png
 texture:id=botania/endStoneBrick1,filename=assets/botania/textures/blocks/endStoneBrick1.png
@@ -343,6 +343,8 @@ texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
 texture:id=minecraft/dirt_podzol_side,filename=assets/minecraft/textures/blocks/dirt_podzol_side.png
 texture:id=minecraft/dirt_podzol_top,filename=assets/minecraft/textures/blocks/dirt_podzol_top.png
 texture:id=minecraft/fire_layer_0,filename=assets/minecraft/textures/blocks/fire_layer_0.png
+texture:id=minecraft/grass_top,filename=assets/minecraft/textures/blocks/grass_top.png
+texture:id=minecraft/grass_side,filename=assets/minecraft/textures/blocks/grass_side.png
 texture:id=minecraft/hardened_clay,filename=assets/minecraft/textures/blocks/hardened_clay.png
 texture:id=minecraft/pumpkin_side,filename=assets/minecraft/textures/blocks/pumpkin_side.png
 texture:id=minecraft/pumpkin_top,filename=assets/minecraft/textures/blocks/pumpkin_top.png
@@ -404,7 +406,7 @@ block:id=%livingwood,data=4,stdrot=true,face0-5=0:botania/livingwood4
 block:id=%livingwood,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/livingwood5
 
 # %specialFlower:* (specialFlower), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockSpecialFlower
-block:id=%specialFlower,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower16
+block:id=%specialFlower,data=*,stdrot=true,transparency=TRANSPARENT,patch0-6=0:botania/flower16
 
 # %spreader:* (spreader), render=vazkii.botania.client.render.block.RenderSpreader(CUSTOM), opaque=false,cls=vazkii.botania.common.block.mana.BlockSpreader
 block:id=%spreader,data=0,data=1,stdrot=true,face0-5=0:botania/livingwood0
@@ -560,9 +562,22 @@ block:id=%prismarine,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,dat
 block:id=%seaLamp,data=*,stdrot=true,face0-5=0:botania/seaLamp
 
 # %miniIsland:* (miniIsland), render=vazkii.botania.client.render.block.RenderFloatingFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockFloatingFlower
-block:id=%miniIsland,data=0,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/dirt
-block:id=%miniIsland,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:minecraft/dirt_podzol_top,face2-5=0:minecraft/dirt_podzol_side
-block:id=%miniIsland,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/dirt
+block:id=%miniIsland,data=0,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower0
+block:id=%miniIsland,data=1,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower1
+block:id=%miniIsland,data=2,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower2
+block:id=%miniIsland,data=3,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower3
+block:id=%miniIsland,data=4,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower4
+block:id=%miniIsland,data=5,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower5
+block:id=%miniIsland,data=6,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower6
+block:id=%miniIsland,data=7,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower7
+block:id=%miniIsland,data=8,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower8
+block:id=%miniIsland,data=9,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower9
+block:id=%miniIsland,data=10,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower10
+block:id=%miniIsland,data=11,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower11
+block:id=%miniIsland,data=12,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower12
+block:id=%miniIsland,data=13,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower13
+block:id=%miniIsland,data=14,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower14
+block:id=%miniIsland,data=15,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower15
 
 # %tinyPotato:* (tinyPotato), render=vazkii.botania.client.render.block.RenderTinyPotato(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockTinyPotato
 block:id=%tinyPotato,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/hardened_clay
@@ -662,9 +677,7 @@ block:id=%redStringRelay,data=5,stdrot=true,face0-4=0:botania/redStringRelay,fac
 block:id=%redStringRelay,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/redStringRelay
 
 # %floatingSpecialFlower:* (floatingSpecialFlower), render=vazkii.botania.client.render.block.RenderFloatingFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockFloatingSpecialFlower
-block:id=%floatingSpecialFlower,data=0,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/dirt
-block:id=%floatingSpecialFlower,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:minecraft/dirt_podzol_top,face2-5=0:minecraft/dirt_podzol_side
-block:id=%floatingSpecialFlower,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/dirt
+block:id=%floatingSpecialFlower,data=*,stdrot=true,transparency=TRANSPARENT,face0=1000:minecraft/grass_top,face1=1000:minecraft/grass_top,face2-5=11000:minecraft/grass_side,patch6=0:botania/flower16
 
 # %manaFlame:* (manaFlame), render=(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockManaFlame
 block:id=%manaFlame,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/fire_layer_0
@@ -731,40 +744,40 @@ block:id=%mushroom,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:botania
 block:id=%pump,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/livingrock0
 
 # %doubleFlower1:* (doubleFlower1), render=vazkii.botania.client.render.block.RenderDoubleFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockModDoubleFlower
-block:id=%doubleFlower1,data=0,stdrot=true,face0-5=0:botania/flower0Tall1
-block:id=%doubleFlower1,data=1,stdrot=true,face0-5=0:botania/flower1Tall1
-block:id=%doubleFlower1,data=2,stdrot=true,face0-5=0:botania/flower2Tall1
-block:id=%doubleFlower1,data=3,stdrot=true,face0-5=0:botania/flower3Tall1
-block:id=%doubleFlower1,data=4,stdrot=true,face0-5=0:botania/flower4Tall1
-block:id=%doubleFlower1,data=5,stdrot=true,face0-5=0:botania/flower5Tall1
-block:id=%doubleFlower1,data=6,stdrot=true,face0-5=0:botania/flower6Tall1
-block:id=%doubleFlower1,data=7,stdrot=true,face0-5=0:botania/flower7Tall1
-block:id=%doubleFlower1,data=8,stdrot=true,face0-5=0:botania/flower0Tall0
-block:id=%doubleFlower1,data=9,stdrot=true,face0-5=0:botania/flower1Tall0
-block:id=%doubleFlower1,data=10,stdrot=true,face0-5=0:botania/flower2Tall0
-block:id=%doubleFlower1,data=11,stdrot=true,face0-5=0:botania/flower3Tall0
-block:id=%doubleFlower1,data=12,stdrot=true,face0-5=0:botania/flower4Tall0
-block:id=%doubleFlower1,data=13,stdrot=true,face0-5=0:botania/flower5Tall0
-block:id=%doubleFlower1,data=14,stdrot=true,face0-5=0:botania/flower6Tall0
-block:id=%doubleFlower1,data=15,stdrot=true,face0-5=0:botania/flower7Tall0
+block:id=%doubleFlower1,data=0,stdrot=true,face0-5=0:botania/flower0Tall0
+block:id=%doubleFlower1,data=1,stdrot=true,face0-5=0:botania/flower1Tall0
+block:id=%doubleFlower1,data=2,stdrot=true,face0-5=0:botania/flower2Tall0
+block:id=%doubleFlower1,data=3,stdrot=true,face0-5=0:botania/flower3Tall0
+block:id=%doubleFlower1,data=4,stdrot=true,face0-5=0:botania/flower4Tall0
+block:id=%doubleFlower1,data=5,stdrot=true,face0-5=0:botania/flower5Tall0
+block:id=%doubleFlower1,data=6,stdrot=true,face0-5=0:botania/flower6Tall0
+block:id=%doubleFlower1,data=7,stdrot=true,face0-5=0:botania/flower7Tall0
+block:id=%doubleFlower1,data=8,stdrot=true,face0-5=0:botania/flower0Tall1
+block:id=%doubleFlower1,data=9,stdrot=true,face0-5=0:botania/flower1Tall1
+block:id=%doubleFlower1,data=10,stdrot=true,face0-5=0:botania/flower2Tall1
+block:id=%doubleFlower1,data=11,stdrot=true,face0-5=0:botania/flower3Tall1
+block:id=%doubleFlower1,data=12,stdrot=true,face0-5=0:botania/flower4Tall1
+block:id=%doubleFlower1,data=13,stdrot=true,face0-5=0:botania/flower5Tall1
+block:id=%doubleFlower1,data=14,stdrot=true,face0-5=0:botania/flower6Tall1
+block:id=%doubleFlower1,data=15,stdrot=true,face0-5=0:botania/flower7Tall1
 
 # %doubleFlower2:* (doubleFlower2), render=vazkii.botania.client.render.block.RenderDoubleFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockModDoubleFlower
-block:id=%doubleFlower2,data=0,stdrot=true,face0-5=0:botania/flower8Tall1
-block:id=%doubleFlower2,data=1,stdrot=true,face0-5=0:botania/flower9Tall1
-block:id=%doubleFlower2,data=2,stdrot=true,face0-5=0:botania/flower10Tall1
-block:id=%doubleFlower2,data=3,stdrot=true,face0-5=0:botania/flower11Tall1
-block:id=%doubleFlower2,data=4,stdrot=true,face0-5=0:botania/flower12Tall1
-block:id=%doubleFlower2,data=5,stdrot=true,face0-5=0:botania/flower13Tall1
-block:id=%doubleFlower2,data=6,stdrot=true,face0-5=0:botania/flower14Tall1
-block:id=%doubleFlower2,data=7,stdrot=true,face0-5=0:botania/flower15Tall1
-block:id=%doubleFlower2,data=8,stdrot=true,face0-5=0:botania/flower8Tall0
-block:id=%doubleFlower2,data=9,stdrot=true,face0-5=0:botania/flower9Tall0
-block:id=%doubleFlower2,data=10,stdrot=true,face0-5=0:botania/flower10Tall0
-block:id=%doubleFlower2,data=11,stdrot=true,face0-5=0:botania/flower11Tall0
-block:id=%doubleFlower2,data=12,stdrot=true,face0-5=0:botania/flower12Tall0
-block:id=%doubleFlower2,data=13,stdrot=true,face0-5=0:botania/flower13Tall0
-block:id=%doubleFlower2,data=14,stdrot=true,face0-5=0:botania/flower14Tall0
-block:id=%doubleFlower2,data=15,stdrot=true,face0-5=0:botania/flower15Tall0
+block:id=%doubleFlower2,data=0,stdrot=true,face0-5=0:botania/flower8Tall0
+block:id=%doubleFlower2,data=1,stdrot=true,face0-5=0:botania/flower9Tall0
+block:id=%doubleFlower2,data=2,stdrot=true,face0-5=0:botania/flower10Tall0
+block:id=%doubleFlower2,data=3,stdrot=true,face0-5=0:botania/flower11Tall0
+block:id=%doubleFlower2,data=4,stdrot=true,face0-5=0:botania/flower12Tall0
+block:id=%doubleFlower2,data=5,stdrot=true,face0-5=0:botania/flower13Tall0
+block:id=%doubleFlower2,data=6,stdrot=true,face0-5=0:botania/flower14Tall0
+block:id=%doubleFlower2,data=7,stdrot=true,face0-5=0:botania/flower15Tall0
+block:id=%doubleFlower2,data=8,stdrot=true,face0-5=0:botania/flower8Tall1
+block:id=%doubleFlower2,data=9,stdrot=true,face0-5=0:botania/flower9Tall1
+block:id=%doubleFlower2,data=10,stdrot=true,face0-5=0:botania/flower10Tall1
+block:id=%doubleFlower2,data=11,stdrot=true,face0-5=0:botania/flower11Tall1
+block:id=%doubleFlower2,data=12,stdrot=true,face0-5=0:botania/flower12Tall1
+block:id=%doubleFlower2,data=13,stdrot=true,face0-5=0:botania/flower13Tall1
+block:id=%doubleFlower2,data=14,stdrot=true,face0-5=0:botania/flower14Tall1
+block:id=%doubleFlower2,data=15,stdrot=true,face0-5=0:botania/flower15Tall1
 
 # %blazeBlock:* (blazeBlock), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.decor.BlockBlaze
 block:id=%blazeBlock,data=*,stdrot=true,face0-5=0:botania/blazeBlock
@@ -1617,3 +1630,94 @@ block:id=%pavement5Slab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=
 
 # %pavement5SlabFull:* (pavement5SlabFull), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 block:id=%pavement5SlabFull,data=*,stdrot=true,face0-5=0:botania/pavement5
+
+######################################################################################################
+######################################################################################################
+######################################################################################################
+######################################################################################################
+######################################################################################################
+
+texture:id=botania/manastar,filename=assets/botania/textures/blocks/manastar.png
+texture:id=botania/puredaisy,filename=assets/botania/textures/blocks/puredaisy.png
+texture:id=botania/agricarnation,filename=assets/botania/textures/blocks/agricarnation.png
+texture:id=botania/bellethorn,filename=assets/botania/textures/blocks/bellethorn.png
+texture:id=botania/bubbell,filename=assets/botania/textures/blocks/bubbell.png
+texture:id=botania/clayconia,filename=assets/botania/textures/blocks/clayconia.png
+texture:id=botania/daffomill,filename=assets/botania/textures/blocks/daffomill.png
+texture:id=botania/dreadthorn,filename=assets/botania/textures/blocks/dreadthorn.png
+texture:id=botania/exoflame,filename=assets/botania/textures/blocks/exoflame.png
+texture:id=botania/fallenKanade,filename=assets/botania/textures/blocks/fallenKanade.png
+texture:id=botania/heiseiDream,filename=assets/botania/textures/blocks/heiseiDream.png
+texture:id=botania/hopperhock,filename=assets/botania/textures/blocks/hopperhock.png
+texture:id=botania/hyacidus,filename=assets/botania/textures/blocks/hyacidus.png
+texture:id=botania/jadedAmaranthus,filename=assets/botania/textures/blocks/jadedAmaranthus.png
+texture:id=botania/jiyuulia,filename=assets/botania/textures/blocks/jiyuulia.png
+texture:id=botania/loonium,filename=assets/botania/textures/blocks/loonium.png
+texture:id=botania/marimorphosis,filename=assets/botania/textures/blocks/marimorphosis.png
+texture:id=botania/medumone,filename=assets/botania/textures/blocks/medumone.png
+texture:id=botania/orechid,filename=assets/botania/textures/blocks/orechid.png
+texture:id=botania/orechidIgnem,filename=assets/botania/textures/blocks/orechidIgnem.png
+texture:id=botania/pollidisiac,filename=assets/botania/textures/blocks/pollidisiac.png
+texture:id=botania/rannuncarpus,filename=assets/botania/textures/blocks/rannuncarpus.png
+texture:id=botania/solegnolia,filename=assets/botania/textures/blocks/solegnolia.png
+texture:id=botania/spectranthemum,filename=assets/botania/textures/blocks/spectranthemum.png
+texture:id=botania/tangleberrie,filename=assets/botania/textures/blocks/tangleberrie.png
+texture:id=botania/tigerseye,filename=assets/botania/textures/blocks/tigerseye.png
+texture:id=botania/vinculotus,filename=assets/botania/textures/blocks/vinculotus.png
+texture:id=botania/arcanerose,filename=assets/botania/textures/blocks/arcanerose.png
+texture:id=botania/dandelifeon,filename=assets/botania/textures/blocks/dandelifeon.png,ycount=3
+texture:id=botania/daybloom,filename=assets/botania/textures/blocks/daybloom.png
+texture:id=botania/endoflame,filename=assets/botania/textures/blocks/endoflame.png
+texture:id=botania/entropinnyum,filename=assets/botania/textures/blocks/entropinnyum.png
+texture:id=botania/gourmaryllis,filename=assets/botania/textures/blocks/gourmaryllis.png
+texture:id=botania/hydroangeas,filename=assets/botania/textures/blocks/hydroangeas.png
+texture:id=botania/kekimurus,filename=assets/botania/textures/blocks/kekimurus.png
+texture:id=botania/munchdew,filename=assets/botania/textures/blocks/munchdew.png
+texture:id=botania/narslimmus,filename=assets/botania/textures/blocks/narslimmus.png
+texture:id=botania/nightshade,filename=assets/botania/textures/blocks/nightshade.png
+texture:id=botania/rafflowsia,filename=assets/botania/textures/blocks/rafflowsia.png
+texture:id=botania/spectrolus,filename=assets/botania/textures/blocks/spectrolus.png
+texture:id=botania/thermalily,filename=assets/botania/textures/blocks/thermalily.png
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.BotaniaModSupportLoader,name=botania
+moddata:mod=botania,type=flower,id=manastar,tex=0:botania/manastar
+moddata:mod=botania,type=flower,id=puredaisy,tex=0:botania/puredaisy
+moddata:mod=botania,type=flower,id=agricarnation,tex=0:botania/agricarnation
+moddata:mod=botania,type=flower,id=bellethorn,tex=0:botania/bellethorn
+moddata:mod=botania,type=flower,id=bubbell,tex=0:botania/bubbell
+moddata:mod=botania,type=flower,id=clayconia,tex=0:botania/clayconia
+moddata:mod=botania,type=flower,id=daffomill,tex=0:botania/daffomill
+moddata:mod=botania,type=flower,id=dreadthorn,tex=0:botania/dreadthorn
+moddata:mod=botania,type=flower,id=exoflame,tex=0:botania/exoflame
+moddata:mod=botania,type=flower,id=fallenkanade,tex=0:botania/fallenKanade
+moddata:mod=botania,type=flower,id=heiseidream,tex=0:botania/heiseiDream
+moddata:mod=botania,type=flower,id=hopperhock,tex=0:botania/hopperhock
+moddata:mod=botania,type=flower,id=hyacidus,tex=0:botania/hyacidus
+moddata:mod=botania,type=flower,id=jadedamaranthus,tex=0:botania/jadedAmaranthus
+moddata:mod=botania,type=flower,id=jiyuulia,tex=0:botania/jiyuulia
+moddata:mod=botania,type=flower,id=loonium,tex=0:botania/loonium
+moddata:mod=botania,type=flower,id=marimorphosis,tex=0:botania/marimorphosis
+moddata:mod=botania,type=flower,id=medumone,tex=0:botania/medumone
+moddata:mod=botania,type=flower,id=orechid,tex=0:botania/orechid
+moddata:mod=botania,type=flower,id=orechidignem,tex=0:botania/orechidIgnem
+moddata:mod=botania,type=flower,id=pollidisiac,tex=0:botania/pollidisiac
+moddata:mod=botania,type=flower,id=rannuncarpus,tex=0:botania/rannuncarpus
+moddata:mod=botania,type=flower,id=solegnolia,tex=0:botania/solegnolia
+moddata:mod=botania,type=flower,id=spectranthemum,tex=0:botania/spectranthemum
+moddata:mod=botania,type=flower,id=tangleberrie,tex=0:botania/tangleberrie
+moddata:mod=botania,type=flower,id=tigerseye,tex=0:botania/tigerseye
+moddata:mod=botania,type=flower,id=vinculotus,tex=0:botania/vinculotus
+moddata:mod=botania,type=flower,id=arcanerose,tex=0:botania/arcanerose
+moddata:mod=botania,type=flower,id=dandelifeon,tex=0:botania/dandelifeon
+moddata:mod=botania,type=flower,id=daybloom,tex=0:botania/daybloom
+moddata:mod=botania,type=flower,id=endoflame,tex=0:botania/endoflame
+moddata:mod=botania,type=flower,id=entropinnyum,tex=0:botania/entropinnyum
+moddata:mod=botania,type=flower,id=gourmaryllis,tex=0:botania/gourmaryllis
+moddata:mod=botania,type=flower,id=hydroangeas,tex=0:botania/hydroangeas
+moddata:mod=botania,type=flower,id=kekimurus,tex=0:botania/kekimurus
+moddata:mod=botania,type=flower,id=munchdew,tex=0:botania/munchdew
+moddata:mod=botania,type=flower,id=narslimmus,tex=0:botania/narslimmus
+moddata:mod=botania,type=flower,id=nightshade,tex=0:botania/nightshade
+moddata:mod=botania,type=flower,id=rafflowsia,tex=0:botania/rafflowsia
+moddata:mod=botania,type=flower,id=spectrolus,tex=0:botania/spectrolus
+moddata:mod=botania,type=flower,id=thermalily,tex=0:botania/thermalily
