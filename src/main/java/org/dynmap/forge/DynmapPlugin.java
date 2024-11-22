@@ -1002,7 +1002,7 @@ public class DynmapPlugin
                     Log.warning("Exception caught reading unique ID for item " + i);
                 }
                 if (ui != null) {
-                    map.put(ui.modId + ":" + ui.name, i - 256);
+                    map.put(ui.modId + ":" + ui.name, i);
                 }
             }
             return map;
