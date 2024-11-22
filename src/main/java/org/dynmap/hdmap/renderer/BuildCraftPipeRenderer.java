@@ -3,7 +3,11 @@ package org.dynmap.hdmap.renderer;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
-import org.dynmap.renderer.*;
+import org.dynmap.renderer.CustomRendererData;
+import org.dynmap.renderer.CustomTextureMapper;
+import org.dynmap.renderer.MapDataContext;
+import org.dynmap.renderer.RenderPatch;
+import org.dynmap.renderer.RenderPatchFactory;
 
 import java.util.Map;
 
