@@ -1,4 +1,4 @@
-# Forestry 4.9.16
+# Forestry 4.9.19
 version:1.7
 modname:Forestry
 
@@ -293,7 +293,7 @@ block:id=%stairsFireproof,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-
 # %saplingGE:* (saplingGE), render=forestry.arboriculture.render.RenderSaplingBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockSapling
 block:id=%saplingGE,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/germlings/sapling.treeBalsa
 
-# %leaves:* (leaves), render=forestry.arboriculture.render.RenderLeavesBlock(CUSTOM), opaque=true,cls=forestry.arboriculture.blocks.BlockForestryLeaves
+# %leaves:* (leaves), render=forestry.arboriculture.render.RenderLeavesBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockForestryLeaves
 block:id=%leaves,data=*,stdrot=true,face0-5=2000:forestry/leaves/deciduous.fancy
 
 # %pods:* (pods), render=forestry.arboriculture.render.RenderFruitPodBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockFruitPod
