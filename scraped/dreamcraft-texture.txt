@@ -1,4 +1,4 @@
-# dreamcraft 2.6.57
+# dreamcraft 2.6.87
 version:1.7
 modname:dreamcraft
 
@@ -67,7 +67,7 @@ texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_TITANIUM,filename=assets/gregte
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_TUNGSTENSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_STABLE_TITANIUM.png
-texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_STEEL.png
 texture:id=gregtech/iconsets/MACHINE_MAXV_BOTTOM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_MAXV_BOTTOM.png
 texture:id=gregtech/iconsets/MACHINE_MAXV_SIDE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_MAXV_SIDE.png
 texture:id=gregtech/iconsets/MACHINE_MAXV_TOP,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_MAXV_TOP.png
@@ -232,7 +232,7 @@ block:id=%dreamcraft_Pollution,data=*,stdrot=true,transparency=SEMITRANSPARENT,f
 block:id=%BabyChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
 # %gt.blockcasingsNH:* (gt.blockcasingsNH), render=(STANDARD), opaque=true,cls=com.dreammaster.gthandler.casings.GT_Block_CasingsNH
-block:id=%gt.blockcasingsNH,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+block:id=%gt.blockcasingsNH,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 block:id=%gt.blockcasingsNH,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PIPE_STEEL
 block:id=%gt.blockcasingsNH,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_8V_SIDE
 block:id=%gt.blockcasingsNH,data=3,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM

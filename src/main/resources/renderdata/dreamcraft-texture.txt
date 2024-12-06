@@ -67,7 +67,7 @@ texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_TITANIUM,filename=assets/gregte
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_TUNGSTENSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_STABLE_TITANIUM.png
-texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_STEEL.png
 texture:id=gregtech/iconsets/MACHINE_MAXV_BOTTOM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_MAXV_BOTTOM.png
 texture:id=gregtech/iconsets/MACHINE_MAXV_SIDE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_MAXV_SIDE.png
 texture:id=gregtech/iconsets/MACHINE_MAXV_TOP,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_MAXV_TOP.png
@@ -380,7 +380,7 @@ block:id=%dreamcraft_Pollution,data=*,stdrot=true,transparency=SEMITRANSPARENT,f
 block:id=%BabyChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
 # %gt.blockcasingsNH:* (gt.blockcasingsNH), render=(STANDARD), opaque=true,cls=com.dreammaster.gthandler.casings.GT_Block_CasingsNH
-block:id=%gt.blockcasingsNH,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+block:id=%gt.blockcasingsNH,data=0,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 block:id=%gt.blockcasingsNH,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PIPE_STEEL
 block:id=%gt.blockcasingsNH,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_8V_SIDE
 block:id=%gt.blockcasingsNH,data=3,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
@@ -719,7 +719,7 @@ texture:id=gregtech/iconsets/MACHINE_CASING_TANK_6,filename=assets/gregtech/text
 texture:id=gregtech/iconsets/MACHINE_CASING_TANK_7,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TANK_7.png
 texture:id=gregtech/iconsets/MACHINE_CASING_TANK_8,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TANK_8.png
 texture:id=gregtech/iconsets/MACHINE_CASING_TANK_9,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TANK_9.png
-texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_STEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_VENT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_VENT.png
 texture:id=gregtech/iconsets/MACHINE_CASING_VENT_T2,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_VENT_T2.png
 texture:id=gregtech/iconsets/MACHINE_COIL_AWAKENEDDRACONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_COIL_AWAKENEDDRACONIUM.png
@@ -3604,8 +3604,8 @@ moddata:mod=gtmte,type=mte,id=861,baseset=hull.tier.00,iconset=hatch.air,ishatch
 moddata:mod=gtmte,type=mte,id=862,iconset=multimachine.industrialarcfurnace,mtetype=controller,basetex=0:gregtech/iconsets/TEXTURE_METAL_PANEL_A
 moddata:mod=gtmte,type=mte,id=863,iconset=multimachine.solartower,mtetype=controller,basetex=0:gregtech/iconsets/MACHINE_CASING_STABLE_STELLITE
 moddata:mod=gtmte,type=mte,id=864,iconset=solarreflector.simple.single,baseset=hull.tier.01
-moddata:mod=gtmte,type=mte,id=865,iconset=multimachine.largerturbine,mtetype=controller,activeset=multimachine.largerturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE
-moddata:mod=gtmte,type=mte,id=866,iconset=multimachine.largerhpturbine,mtetype=controller,activeset=multimachine.largerhpturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+moddata:mod=gtmte,type=mte,id=865,iconset=multimachine.largerturbine,mtetype=controller,activeset=multimachine.largerturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
+moddata:mod=gtmte,type=mte,id=866,iconset=multimachine.largerhpturbine,mtetype=controller,activeset=multimachine.largerhpturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 moddata:mod=gtmte,type=mte,id=869,baseset=hull.tier.01,iconset=basicgenerator.rtg.tier.01
 moddata:mod=gtmte,type=mte,id=875,iconset=multimachine.gtplusplus.thermal.boiler,activeset=multimachine.gtplusplus.thermal.boiler_active,basetex=0:gregtech/iconsets/MACHINE_CASING_STABLE_TANTALLOY61
 moddata:mod=gtmte,type=mte,id=876,iconset=multimachine.gtplusplus.autocrafter.multi,activeset=multimachine.gtplusplus.autocrafter.multi_active,basetex=0:gregtech/iconsets/machine_top
@@ -3698,7 +3698,7 @@ moddata:mod=gtmte,type=mte,id=1127,baseset=hull.tier.01,iconset=basicgenerator.m
 moddata:mod=gtmte,type=mte,id=1128,baseset=hull.tier.02,iconset=basicgenerator.magicenergyabsorber,activeset=basicgenerator.magicenergyabsorber_active
 moddata:mod=gtmte,type=mte,id=1129,baseset=hull.tier.03,iconset=basicgenerator.magicenergyabsorber,activeset=basicgenerator.magicenergyabsorber_active
 moddata:mod=gtmte,type=mte,id=1130,baseset=hull.tier.04,iconset=basicgenerator.magicenergyabsorber,activeset=basicgenerator.magicenergyabsorber_active
-moddata:mod=gtmte,type=mte,id=1131,iconset=multimachine.largeturbine,mtetype=controller,activeset=multimachine.largeturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+moddata:mod=gtmte,type=mte,id=1131,iconset=multimachine.largeturbine,mtetype=controller,activeset=multimachine.largeturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 moddata:mod=gtmte,type=mte,id=1132,iconset=multimachine.oreprocessor,mtetype=controller,activeset=multimachine.oreprocessor_active,basetex=0:gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL
 moddata:mod=gtmte,type=mte,id=1135,baseset=hull.tier.06,iconset=basicmachine.mobrep,activeset=basicmachine.mobrep_active
 moddata:mod=gtmte,type=mte,id=1136,baseset=hull.tier.07,iconset=basicmachine.mobrep,activeset=basicmachine.mobrep_active
@@ -5485,7 +5485,7 @@ moddata:mod=gtmte,type=mte,id=12010,iconset=wettransformer.tier.10,baseset=hull.
 moddata:mod=gtmte,type=mte,id=12011,iconset=wettransformer.tier.11,baseset=hull.tier.01
 moddata:mod=gtmte,type=mte,id=12012,iconset=wettransformer.tier.12,baseset=hull.tier.01
 moddata:mod=gtmte,type=mte,id=12013,iconset=wettransformer.tier.13,baseset=hull.tier.01
-moddata:mod=gtmte,type=mte,id=12020,iconset=multimachine.airfilter.01,mtetype=controller,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+moddata:mod=gtmte,type=mte,id=12020,iconset=multimachine.airfilter.01,mtetype=controller,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 moddata:mod=gtmte,type=mte,id=12021,iconset=multimachine.airfilter.02,mtetype=controller,basetex=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
 moddata:mod=gtmte,type=mte,id=12022,iconset=multimachine.airfilter.03,mtetype=controller,basetex=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
 moddata:mod=gtmte,type=mte,id=12040,iconset=batteryturbocharger.16.tier.00,baseset=hull.tier.01
@@ -6277,10 +6277,10 @@ moddata:mod=gtmte,type=mte,id=31069,iconset=multimachine.adv.chisel,mtetype=cont
 moddata:mod=gtmte,type=mte,id=31070,baseset=hull.tier.01,iconset=hatch.air,ishatch=true
 moddata:mod=gtmte,type=mte,id=31071,baseset=hull.tier.00,iconset=hatch.water,ishatch=true
 moddata:mod=gtmte,type=mte,id=31072,iconset=multimachine.moleculartransformer,mtetype=controller,basetex=0:gregtech/iconsets/MACHINE_CASING_STABLE_GRISIUM
-moddata:mod=gtmte,type=mte,id=31073,iconset=multimachine.largergasturbine,mtetype=controller,activeset=multimachine.largergasturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE
-moddata:mod=gtmte,type=mte,id=31074,iconset=multimachine.largerplasmaturbine,mtetype=controller,activeset=multimachine.largerplasmaturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+moddata:mod=gtmte,type=mte,id=31073,iconset=multimachine.largergasturbine,mtetype=controller,activeset=multimachine.largergasturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
+moddata:mod=gtmte,type=mte,id=31074,iconset=multimachine.largerplasmaturbine,mtetype=controller,activeset=multimachine.largerplasmaturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 moddata:mod=gtmte,type=mte,id=31075,iconset=multimachine.industrialhammer,mtetype=controller,basetex=0:gregtech/iconsets/TEXTURE_TECH_PANEL_H
-moddata:mod=gtmte,type=mte,id=31076,iconset=multimachine.largerscturbine,mtetype=controller,activeset=multimachine.largerscturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+moddata:mod=gtmte,type=mte,id=31076,iconset=multimachine.largerscturbine,mtetype=controller,activeset=multimachine.largerscturbine_active,basetex=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 moddata:mod=gtmte,type=mte,id=31077,iconset=multimachine.industrialfluidheater,mtetype=controller,basetex=0:gregtech/iconsets/MACHINE_CASING_STABLE_TANTALLOY61
 moddata:mod=gtmte,type=mte,id=31078,iconset=multimachine.gtpp.multimachine.steam.compressor,activeset=multimachine.gtpp.multimachine.steam.compressor_active,basetex=0:gregtech/iconsets/MACHINE_BRONZEPLATEDBRICKS
 moddata:mod=gtmte,type=mte,id=31079,iconset=multimachine.reallybigheatexchanger,mtetype=controller,activeset=multimachine.reallybigheatexchanger_active,basetex=0:gregtech/iconsets/MACHINE_CASING_STABLE_TALONITE
