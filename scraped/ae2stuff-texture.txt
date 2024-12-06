@@ -1,4 +1,4 @@
-# ae2stuff 0.8.3-GTNH
+# ae2stuff 0.8.5-GTNH
 version:1.7
 modname:ae2stuff
 
@@ -16,7 +16,22 @@ texture:id=ae2stuff/grower/main_on,filename=assets/ae2stuff/textures/blocks/grow
 texture:id=ae2stuff/inscriber/side_off,filename=assets/ae2stuff/textures/blocks/inscriber/side_off.png
 texture:id=ae2stuff/inscriber/side_on,filename=assets/ae2stuff/textures/blocks/inscriber/side_on.png
 texture:id=ae2stuff/inscriber/top,filename=assets/ae2stuff/textures/blocks/inscriber/top.png
+texture:id=ae2stuff/wireless/side_on1,filename=assets/ae2stuff/textures/blocks/wireless/side_on1.png
+texture:id=ae2stuff/wireless/side_on10,filename=assets/ae2stuff/textures/blocks/wireless/side_on10.png
+texture:id=ae2stuff/wireless/side_on11,filename=assets/ae2stuff/textures/blocks/wireless/side_on11.png
+texture:id=ae2stuff/wireless/side_on12,filename=assets/ae2stuff/textures/blocks/wireless/side_on12.png
+texture:id=ae2stuff/wireless/side_on13,filename=assets/ae2stuff/textures/blocks/wireless/side_on13.png
+texture:id=ae2stuff/wireless/side_on14,filename=assets/ae2stuff/textures/blocks/wireless/side_on14.png
+texture:id=ae2stuff/wireless/side_on15,filename=assets/ae2stuff/textures/blocks/wireless/side_on15.png
 texture:id=ae2stuff/wireless/side_on17,filename=assets/ae2stuff/textures/blocks/wireless/side_on17.png
+texture:id=ae2stuff/wireless/side_on2,filename=assets/ae2stuff/textures/blocks/wireless/side_on2.png
+texture:id=ae2stuff/wireless/side_on3,filename=assets/ae2stuff/textures/blocks/wireless/side_on3.png
+texture:id=ae2stuff/wireless/side_on4,filename=assets/ae2stuff/textures/blocks/wireless/side_on4.png
+texture:id=ae2stuff/wireless/side_on5,filename=assets/ae2stuff/textures/blocks/wireless/side_on5.png
+texture:id=ae2stuff/wireless/side_on6,filename=assets/ae2stuff/textures/blocks/wireless/side_on6.png
+texture:id=ae2stuff/wireless/side_on7,filename=assets/ae2stuff/textures/blocks/wireless/side_on7.png
+texture:id=ae2stuff/wireless/side_on8,filename=assets/ae2stuff/textures/blocks/wireless/side_on8.png
+texture:id=ae2stuff/wireless/side_on9,filename=assets/ae2stuff/textures/blocks/wireless/side_on9.png
 
 
 
@@ -36,4 +51,19 @@ block:id=%Inscriber,data=1,stdrot=true,face0-1=0:ae2stuff/inscriber/top,face2-5=
 block:id=%Inscriber,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:ae2stuff/inscriber/top,face2-5=0:ae2stuff/inscriber/side_off
 
 # %Wireless:* (Wireless), render=(STANDARD), opaque=true,cls=net.bdew.ae2stuff.machines.wireless.BlockWireless$
-block:id=%Wireless,data=*,stdrot=true,face0-5=0:ae2stuff/wireless/side_on17
+block:id=%Wireless,data=0,stdrot=true,face0-5=0:ae2stuff/wireless/side_on17
+block:id=%Wireless,data=1,stdrot=true,face0-5=0:ae2stuff/wireless/side_on1
+block:id=%Wireless,data=2,stdrot=true,face0-5=0:ae2stuff/wireless/side_on2
+block:id=%Wireless,data=3,stdrot=true,face0-5=0:ae2stuff/wireless/side_on3
+block:id=%Wireless,data=4,stdrot=true,face0-5=0:ae2stuff/wireless/side_on4
+block:id=%Wireless,data=5,stdrot=true,face0-5=0:ae2stuff/wireless/side_on5
+block:id=%Wireless,data=6,stdrot=true,face0-5=0:ae2stuff/wireless/side_on6
+block:id=%Wireless,data=7,stdrot=true,face0-5=0:ae2stuff/wireless/side_on7
+block:id=%Wireless,data=8,stdrot=true,face0-5=0:ae2stuff/wireless/side_on8
+block:id=%Wireless,data=9,stdrot=true,face0-5=0:ae2stuff/wireless/side_on9
+block:id=%Wireless,data=10,stdrot=true,face0-5=0:ae2stuff/wireless/side_on10
+block:id=%Wireless,data=11,stdrot=true,face0-5=0:ae2stuff/wireless/side_on11
+block:id=%Wireless,data=12,stdrot=true,face0-5=0:ae2stuff/wireless/side_on12
+block:id=%Wireless,data=13,stdrot=true,face0-5=0:ae2stuff/wireless/side_on13
+block:id=%Wireless,data=14,stdrot=true,face0-5=0:ae2stuff/wireless/side_on14
+block:id=%Wireless,data=15,stdrot=true,face0-5=0:ae2stuff/wireless/side_on15
