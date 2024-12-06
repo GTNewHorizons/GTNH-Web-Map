@@ -1,4 +1,4 @@
-# ThaumicTinkerer 2.10.1
+# ThaumicTinkerer 2.10.2
 version:1.7
 modname:ThaumicTinkerer
 
@@ -22,50 +22,50 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %fireEarth:* (fireEarth), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireEarth
-
 # %spawner:* (spawner), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockSummon
 boxblock:id=%spawner,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
 
-# %fireOrder:* (fireOrder), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireOrder
-
-# %animationTablet:* (animationTablet), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockAnimationTablet
-boxblock:id=%animationTablet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
-
-# %travelStairs:* (travelStairs), render=(STAIRS), opaque=false,cls=thaumic.tinkerer.common.block.BlockTravelStairs
-customblock:id=%travelStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
-
-# %funnel:* (funnel), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockFunnel
-boxblock:id=%funnel,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+# %fireEarth:* (fireEarth), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireEarth
 
 # %enchanter:* (enchanter), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockEnchanter
 boxblock:id=%enchanter,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
-# %fireChaos:* (fireChaos), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireChaos
+# %darkQuartzStairs:* (darkQuartzStairs), render=(STAIRS), opaque=false,cls=thaumic.tinkerer.common.block.quartz.BlockDarkQuartzStairs
+customblock:id=%darkQuartzStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %wardSlab:* (wardSlab), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockWardSlab
-boxblock:id=%wardSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%wardSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# %fireWater:* (fireWater), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireWater
+
+# %fireOrder:* (fireOrder), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireOrder
 
 # %fireAir:* (fireAir), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireAir
 
-# %magnet:* (magnet), render=thaumic.tinkerer.client.render.block.RenderMagnet(CUSTOM), opaque=false,cls=thaumic.tinkerer.common.block.BlockMagnet
-boxblock:id=%magnet,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.125,zmin=0.0625,zmax=0.9375,data=*
+# %animationTablet:* (animationTablet), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockAnimationTablet
+boxblock:id=%animationTablet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
 
-# %travelSlab:* (travelSlab), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockTravelSlab
-boxblock:id=%travelSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%travelSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# %fireFire:* (fireFire), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireIgnis
 
 # %darkQuartzSlab:* (darkQuartzSlab), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.quartz.BlockDarkQuartzSlab
 boxblock:id=%darkQuartzSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%darkQuartzSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
+# %wardSlab:* (wardSlab), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockWardSlab
+boxblock:id=%wardSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%wardSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
 # %infusedGrainBlock:* (infusedGrainBlock), render=thaumic.tinkerer.client.render.block.RenderInfusedCrops(CUSTOM), opaque=false,cls=thaumic.tinkerer.common.block.BlockInfusedGrain
 boxblock:id=%infusedGrainBlock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=*
 
-# %fireWater:* (fireWater), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireWater
+# %travelStairs:* (travelStairs), render=(STAIRS), opaque=false,cls=thaumic.tinkerer.common.block.BlockTravelStairs
+customblock:id=%travelStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %darkQuartzStairs:* (darkQuartzStairs), render=(STAIRS), opaque=false,cls=thaumic.tinkerer.common.block.quartz.BlockDarkQuartzStairs
-customblock:id=%darkQuartzStairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# %magnet:* (magnet), render=thaumic.tinkerer.client.render.block.RenderMagnet(CUSTOM), opaque=false,cls=thaumic.tinkerer.common.block.BlockMagnet
+boxblock:id=%magnet,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.125,zmin=0.0625,zmax=0.9375,data=*
 
-# %fireFire:* (fireFire), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireIgnis
+# %funnel:* (funnel), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockFunnel
+boxblock:id=%funnel,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# %fireChaos:* (fireChaos), render=(FIRE), opaque=false,cls=thaumic.tinkerer.common.block.fire.BlockFireChaos
+
+# %travelSlab:* (travelSlab), render=(STANDARD), opaque=false,cls=thaumic.tinkerer.common.block.BlockTravelSlab
+boxblock:id=%travelSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%travelSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
