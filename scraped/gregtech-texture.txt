@@ -269,7 +269,6 @@ texture:id=gregtech/iconsets/MACHINE_8V_SIDE,filename=assets/gregtech/textures/b
 texture:id=gregtech/iconsets/MACHINE_8V_TOP,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_8V_TOP.png
 texture:id=gregtech/iconsets/MACHINE_BRONZEPLATEDBRICKS,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_BRONZEPLATEDBRICKS.png
 texture:id=gregtech/iconsets/MACHINE_CASING_ACIDHAZARD,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ACIDHAZARD.png
-texture:id=gregtech/iconsets/MACHINE_CASING_ADVANCEDGAS,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ADVANCEDGAS.png
 texture:id=gregtech/iconsets/MACHINE_CASING_ADVANCEDRADIATIONPROOF,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ADVANCEDRADIATIONPROOF.png
 texture:id=gregtech/iconsets/MACHINE_CASING_ASSEMBLER,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ASSEMBLER.png
 texture:id=gregtech/iconsets/MACHINE_CASING_AUTOCLAVE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_AUTOCLAVE.png
@@ -361,8 +360,9 @@ texture:id=gregtech/iconsets/MACHINE_CASING_TANK_6,filename=assets/gregtech/text
 texture:id=gregtech/iconsets/MACHINE_CASING_TANK_7,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TANK_7.png
 texture:id=gregtech/iconsets/MACHINE_CASING_TANK_8,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TANK_8.png
 texture:id=gregtech/iconsets/MACHINE_CASING_TANK_9,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TANK_9.png
-texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_HSSS,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_HSSS.png
 texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_STAINLESSSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_STAINLESSSTEEL.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_STEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_TITANIUM.png
 texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_TUNGSTENSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_VENT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_VENT.png
@@ -534,7 +534,7 @@ block:id=%gt.blockcasings4,data=5,stdrot=true,face0-5=0:gregtech/iconsets/MACHIN
 block:id=%gt.blockcasings4,data=6,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FUSION
 block:id=%gt.blockcasings4,data=7,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FUSION_COIL
 block:id=%gt.blockcasings4,data=8,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_FUSION_2
-block:id=%gt.blockcasings4,data=9,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE
+block:id=%gt.blockcasings4,data=9,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
 block:id=%gt.blockcasings4,data=10,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STAINLESSSTEEL
 block:id=%gt.blockcasings4,data=11,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_TITANIUM
 block:id=%gt.blockcasings4,data=12,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_TUNGSTENSTEEL
@@ -588,7 +588,7 @@ block:id=%gt.blockcasings8,data=5,stdrot=true,face0-5=0:gregtech/iconsets/MACHIN
 block:id=%gt.blockcasings8,data=6,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_RHODIUM_PALLADIUM
 block:id=%gt.blockcasings8,data=7,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_IRIDIUM
 block:id=%gt.blockcasings8,data=8,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_MAGICAL
-block:id=%gt.blockcasings8,data=9,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ADVANCEDGAS
+block:id=%gt.blockcasings8,data=9,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_HSSS
 block:id=%gt.blockcasings8,data=10,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_RADIANT_NAQUADAH_ALLOY
 block:id=%gt.blockcasings8,data=11,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PCB_TIER_1
 block:id=%gt.blockcasings8,data=12,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_PCB_TIER_2
