@@ -13,6 +13,7 @@ import java.util.Map;
 public class BotaniaFlowerRenderer extends CustomRenderer {
 
     RenderPatch[] model;
+    RenderPatch[][] models;
     boolean plain;
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
@@ -36,12 +37,25 @@ public class BotaniaFlowerRenderer extends CustomRenderer {
                         )
                 );
 
+                models = new RenderPatch[8][];
+
+                models[0] = getRotatedSet(rpf, model, 3, 10,0);
+                models[1] = getRotatedSet(rpf, model, -3, 8,1);
+                models[2] = getRotatedSet(rpf, model, 3, 15,0);
+                models[3] = getRotatedSet(rpf, model, 2, -14,3);
+                models[4] = getRotatedSet(rpf, model, 0, 7,0);
+                models[5] = getRotatedSet(rpf, model, 1, -9,-2);
+                models[6] = getRotatedSet(rpf, model, -2, 9,0);
+                models[7] = getRotatedSet(rpf, model, 3, 12,-2);
             }
         }
         if(model == null) {
+            double off = (Math.sqrt(2)-1) / 2;
+            double high = 1.0 - off;
+            double low = off;
             model = combineMultiple(
-                    rpf.getPatch(0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTH, 6),
-                    rpf.getPatch(0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTH, 6)
+                    rpf.getPatch(low, 0, low, high, 0, high, low, 1, low, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTH, 6),
+                    rpf.getPatch(low, 0, high, high, 0, low, low, 1, high, 0, 1, 0, 1, RenderPatchFactory.SideVisible.BOTH, 6)
             );
         }
 
@@ -51,6 +65,14 @@ public class BotaniaFlowerRenderer extends CustomRenderer {
 
     @Override
     public RenderPatch[] getRenderPatchList(MapDataContext mapDataCtx) {
+        if(models != null){
+            int x = mapDataCtx.getX();
+            int y = mapDataCtx.getY();
+            int z = mapDataCtx.getZ();
+
+            int posHashThing = x * x + y * x + x * z + z * -z + y * z + y * -y;
+            return models[posHashThing & 7];
+        }
         return model;
     }
 
@@ -58,7 +80,7 @@ public class BotaniaFlowerRenderer extends CustomRenderer {
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
 
         if(plain)
-            return new CustomRendererData(model, null, null);
+            return new CustomRendererData(getRenderPatchList(mapDataCtx), null, null);
 
         Object objName = mapDataCtx.getBlockTileEntityField("subTileName");
 
@@ -66,7 +88,7 @@ public class BotaniaFlowerRenderer extends CustomRenderer {
         if(objName instanceof String)
             tex = BotaniaSupport.getTextureForFlower((String)objName);
 
-        return new CustomRendererData(model, null, tex != -1 ? new TextureSelector(tex) : null);
+        return new CustomRendererData(getRenderPatchList(mapDataCtx), null, tex != -1 ? new TextureSelector(tex) : null);
     }
     static String[] nbtFieldsNeeded = {"subTileName"};
 
