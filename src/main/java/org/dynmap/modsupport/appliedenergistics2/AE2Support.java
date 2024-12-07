@@ -38,6 +38,8 @@ public class AE2Support {
         connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockAdvancedCraftingStorage"), new ConnectableBlockData());
         connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockMolecularAssembler"), new ConnectableBlockData());
         connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockIOPort"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockIOPort"), new ConnectableBlockData());
+        connectableBlocks.put(GWM_Util.blockNameToId("ae2stuff:Wireless"), new ConnectableBlockData());
     }
 
     public static void addConnectableBlock(int blockId, ConnectableBlockData data){

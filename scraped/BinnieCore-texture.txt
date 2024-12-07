@@ -1,4 +1,4 @@
-# BinnieCore 2.4.3
+# BinnieCore 2.4.4
 version:1.7
 modname:BinnieCore
 
@@ -168,15 +168,6 @@ texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks
 texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
 
 
-
-# %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
-block:id=%ectoplasm,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabees/ectoplasm
-
-# %hive:* (hive), render=(STANDARD), opaque=true,cls=binnie.extrabees.worldgen.BlockExtraBeeHive
-block:id=%hive,data=0,stdrot=true,face0-1=0:extrabees/hive/water.1,face2-5=0:extrabees/hive/water.0
-block:id=%hive,data=1,stdrot=true,face0-1=0:extrabees/hive/rock.1,face2-5=0:extrabees/hive/rock.0
-block:id=%hive,data=2,stdrot=true,face0-1=0:extrabees/hive/nether.1,face2-5=0:extrabees/hive/nether.0
-block:id=%hive,data=3,stdrot=true,face0-1=0:extrabees/hive/marble.1,face2-5=0:extrabees/hive/marble.0
 
 # %flower:* (flower), render=binnie.botany.flower.RendererBotany(CUSTOM), opaque=false,cls=binnie.botany.flower.BlockFlower
 block:id=%flower,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/flower_dandelion
@@ -435,3 +426,12 @@ block:id=%panel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extratrees
 
 # %stainedglass:* (stainedglass), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockStainedDesign
 block:id=%stainedglass,data=*,stdrot=true,face0-5=12000:extratrees/glass/blank.0
+
+# %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
+block:id=%ectoplasm,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabees/ectoplasm
+
+# %hive:* (hive), render=(STANDARD), opaque=true,cls=binnie.extrabees.worldgen.BlockExtraBeeHive
+block:id=%hive,data=0,stdrot=true,face0-1=0:extrabees/hive/water.1,face2-5=0:extrabees/hive/water.0
+block:id=%hive,data=1,stdrot=true,face0-1=0:extrabees/hive/rock.1,face2-5=0:extrabees/hive/rock.0
+block:id=%hive,data=2,stdrot=true,face0-1=0:extrabees/hive/nether.1,face2-5=0:extrabees/hive/nether.0
+block:id=%hive,data=3,stdrot=true,face0-1=0:extrabees/hive/marble.1,face2-5=0:extrabees/hive/marble.0

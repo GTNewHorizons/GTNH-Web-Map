@@ -1,4 +1,4 @@
-# TwilightForest 2.6.34
+# TwilightForest 2.6.35
 version:1.7
 modname:TwilightForest
 
@@ -815,7 +815,7 @@ block:id=%tile.TFTowerTranslucent,data=1,stdrot=true,face0-5=0:TwilightForest/to
 block:id=%tile.TFTowerTranslucent,data=2,stdrot=true,face0-5=0:TwilightForest/towerdev_built_off
 block:id=%tile.TFTowerTranslucent,data=3,stdrot=true,face0-5=0:TwilightForest/towerdev_built_on
 block:id=%tile.TFTowerTranslucent,data=4,stdrot=true,face0-5=0:TwilightForest/towerdev_antibuilt
-block:id=%tile.TFTowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/portal,face1=0:minecraft/obsidian,face2-3=0:minecraft/netherrack,face4=0:minecraft/bedrock,face5=0:minecraft/obsidian
+block:id=%tile.TFTowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/obsidian,face2=0:minecraft/bedrock,face3=0:minecraft/netherrack,face4=0:minecraft/portal,face5=0:minecraft/netherrack
 block:id=%tile.TFTowerTranslucent,data=6,stdrot=true,face0-5=0:minecraft/gold_block
 block:id=%tile.TFTowerTranslucent,data=7,stdrot=true,face0-5=0:minecraft/diamond_block
 block:id=%tile.TFTowerTranslucent,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off

@@ -1,4 +1,4 @@
-# thaumicbases 1.7.5
+# thaumicbases 1.7.7
 version:1.7
 modname:thaumicbases
 
@@ -162,10 +162,10 @@ texture:id=thaumicbases/voidblock,filename=assets/thaumicbases/textures/blocks/v
 
 
 
-# %quicksilverBlock:* (quicksilverBlock), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+# %quicksilverBlock:* (quicksilverBlock), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%quicksilverBlock,data=*,stdrot=true,face0-5=0:thaumicbases/quicksilverBlock
 
-# %quicksilverBrick:* (quicksilverBrick), render=(STANDARD), opaque=false,cls=tb.common.block.TBBlock
+# %quicksilverBrick:* (quicksilverBrick), render=(STANDARD), opaque=false,cls=tb.common.block.TBBlockDeco
 block:id=%quicksilverBrick,data=*,stdrot=true,face0-5=12000:thaumicbases/quicksilverBrick
 
 # %crystalBlock:* (crystalBlock), render=(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalBlock
@@ -178,10 +178,10 @@ block:id=%crystalBlock,data=5,stdrot=true,face0-5=0:thaumicbases/crystal/entropy
 block:id=%crystalBlock,data=6,stdrot=true,face0-5=0:thaumicbases/crystal/mixed
 block:id=%crystalBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumicbases/crystal/tainted
 
-# %blockSalisMundus:* (blockSalisMundus), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+# %blockSalisMundus:* (blockSalisMundus), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%blockSalisMundus,data=*,stdrot=true,face0-5=0:thaumicbases/dust_block
 
-# %thauminiteBlock:* (thauminiteBlock), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlock
+# %thauminiteBlock:* (thauminiteBlock), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
 block:id=%thauminiteBlock,data=*,stdrot=true,face0-5=0:thaumicbases/thauminiteblock
 
 # %voidBlock:* (voidBlock), render=(STANDARD), opaque=true,cls=tb.common.block.BlockVoid

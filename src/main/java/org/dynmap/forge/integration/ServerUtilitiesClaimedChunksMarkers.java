@@ -87,7 +87,10 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             String desc = team.getDesc();
             if(desc != null && !desc.equals(""))
                 label += "<br/><i>" + team.getDesc() + "</i>";
-            label += "<br/><b>Founder: </b>" + team.owner.getName();
+
+            if(team.owner != null)
+                label += "<br/><b>Founder: </b>" + team.owner.getName();
+            
             if(team.players != null){
                 for(java.util.Map.Entry<ForgePlayer, EnumTeamStatus> p : team.players.entrySet()){
                     label += "<br/>" +p.getValue()+ ": " +  p.getKey().getName();

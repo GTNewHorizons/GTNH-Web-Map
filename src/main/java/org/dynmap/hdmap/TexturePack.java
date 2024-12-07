@@ -657,7 +657,7 @@ public class TexturePack {
      * Get index of texture in texture map
      * @param id - texture pack id
      * @param key - key for texture
-     * @return index of texture, or -1 if not found
+     * @return index of texture within map, or -1 if not found
      */
     public static int getTextureIndexFromTextureMap(String id, int key) {
         int idx = -1;
@@ -666,6 +666,25 @@ public class TexturePack {
             Integer txtidx = map.key_to_index.get(key);
             if(txtidx != null) {
                 idx = txtidx.intValue();
+            }
+        }
+        return idx;
+    }
+    /**
+     * Get texture id from key in texture map
+     * @param id - texture pack id
+     * @param key - key for texture
+     * @return texture id, or -1 if not found
+     */
+    public static int getTextureIdFromTextureMap(String id, int key) {
+        int idx = -1;
+        TextureMap map = textmap_by_id.get(id);
+        if(map != null) {
+            Integer txtidx = map.key_to_index.get(key);
+            if(txtidx != null) {
+                idx = txtidx.intValue();
+                if(idx >= 0 && idx < map.texture_ids.size())
+                    return map.texture_ids.get(idx);
             }
         }
         return idx;

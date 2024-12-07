@@ -1,4 +1,4 @@
-# Forestry 4.9.16
+# Forestry 4.9.19
 version:1.7
 modname:Forestry
 
@@ -197,8 +197,6 @@ customblock:id=%stairsFireproof,class=org.dynmap.hdmap.renderer.StairBlockRender
 
 # %saplingGE:* (saplingGE), render=forestry.arboriculture.render.RenderSaplingBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockSapling
 boxblock:id=%saplingGE,xmin=0.09999999403953552,xmax=0.8999999761581421,ymin=0.0,ymax=0.800000011920929,zmin=0.09999999403953552,zmax=0.8999999761581421,data=*
-
-# %leaves:* (leaves), render=forestry.arboriculture.render.RenderLeavesBlock(CUSTOM), opaque=true,cls=forestry.arboriculture.blocks.BlockForestryLeaves
 
 # %pods:* (pods), render=forestry.arboriculture.render.RenderFruitPodBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockFruitPod
 boxblock:id=%pods,xmin=0.375,xmax=0.625,ymin=0.4375,ymax=0.75,zmin=0.6875,zmax=0.9375,data=0

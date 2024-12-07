@@ -9,14 +9,15 @@ modname:miscutils
 
 texturepath:assets/miscutils/textures/blocks/
 texture:id=gregtech/iconsets/MACHINE_BRONZEPLATEDBRICKS,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_BRONZEPLATEDBRICKS.png
-texture:id=gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_FIREBOX_BRONZE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_FIREBOX_BRONZE.png
 texture:id=gregtech/iconsets/MACHINE_CASING_FIREBOX_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_FIREBOX_STEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_FROST_PROOF,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_FROST_PROOF.png
 texture:id=gregtech/iconsets/MACHINE_CASING_RADIATIONPROOF,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_RADIATIONPROOF.png
-texture:id=gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_STABLE_TITANIUM.png
-texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_STAINLESSSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_STAINLESSSTEEL.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_STEEL.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_TITANIUM.png
+texture:id=gregtech/iconsets/MACHINE_CASING_TURBINE_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_TURBINE_TUNGSTENSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_HEATPROOFCASING,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_HEATPROOFCASING.png
 texture:id=gregtech/iconsets/RENDERING_ERROR,filename=assets/gregtech/textures/blocks/iconsets/RENDERING_ERROR.png
 texture:id=gregtech/materialicons/DULL/block1,filename=assets/gregtech/textures/blocks/materialicons/DULL/block1.png
@@ -53,17 +54,6 @@ texture:id=minecraft/jukebox_top,filename=assets/minecraft/textures/blocks/jukeb
 texture:id=minecraft/planks_acacia,filename=assets/minecraft/textures/blocks/planks_acacia.png
 texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
-texture:id=miscutils/Blank,filename=assets/miscutils/textures/blocks/Blank.png
-texture:id=miscutils/CosmicFabricManipulator,filename=assets/miscutils/textures/blocks/CosmicFabricManipulator.png
-texture:id=miscutils/CosmicFabricShieldingCore,filename=assets/miscutils/textures/blocks/CosmicFabricShieldingCore.png
-texture:id=miscutils/ForceFieldGlass,filename=assets/miscutils/textures/blocks/ForceFieldGlass.png
-texture:id=miscutils/InfinityInfusedManipulator,filename=assets/miscutils/textures/blocks/InfinityInfusedManipulator.png
-texture:id=miscutils/InfinityInfusedShieldingCore,filename=assets/miscutils/textures/blocks/InfinityInfusedShieldingCore.png
-texture:id=miscutils/Manipulator_Top,filename=assets/miscutils/textures/blocks/Manipulator_Top.png
-texture:id=miscutils/NeutronPulseManipulator,filename=assets/miscutils/textures/blocks/NeutronPulseManipulator.png
-texture:id=miscutils/NeutronShieldingCore,filename=assets/miscutils/textures/blocks/NeutronShieldingCore.png
-texture:id=miscutils/SpaceTimeBendingCore,filename=assets/miscutils/textures/blocks/SpaceTimeBendingCore.png
-texture:id=miscutils/SpaceTimeContinuumRipper,filename=assets/miscutils/textures/blocks/SpaceTimeContinuumRipper.png
 texture:id=miscutils/TileEntities/CASING_AMAZON,filename=assets/miscutils/textures/blocks/TileEntities/CASING_AMAZON.png
 texture:id=miscutils/TileEntities/DecayablesChest_Side,filename=assets/miscutils/textures/blocks/TileEntities/DecayablesChest_Side.png
 texture:id=miscutils/TileEntities/DecayablesChest_bottom,filename=assets/miscutils/textures/blocks/TileEntities/DecayablesChest_bottom.png
@@ -100,12 +90,12 @@ texture:id=miscutils/TileEntities/MACHINE_PESTKILLER_TOP,filename=assets/miscuti
 texture:id=miscutils/TileEntities/_PlaceHolder,filename=assets/miscutils/textures/blocks/TileEntities/_PlaceHolder.png
 texture:id=miscutils/TileEntities/cover_crafting,filename=assets/miscutils/textures/blocks/TileEntities/cover_crafting.png
 texture:id=miscutils/TileEntities/fishtrap,filename=assets/miscutils/textures/blocks/TileEntities/fishtrap.png
-texture:id=miscutils/TileEntities/log_acacia_top,filename=assets/miscutils/textures/blocks/TileEntities/log_acacia_top.png
 texture:id=miscutils/TileEntities/machine_top,filename=assets/miscutils/textures/blocks/TileEntities/machine_top.png
 texture:id=miscutils/TileEntities/sewer_adv_sides,filename=assets/miscutils/textures/blocks/TileEntities/sewer_adv_sides.png
 texture:id=miscutils/TileEntities/sewer_adv_top,filename=assets/miscutils/textures/blocks/TileEntities/sewer_adv_top.png
 texture:id=miscutils/TileEntities/sewer_sides,filename=assets/miscutils/textures/blocks/TileEntities/sewer_sides.png
 texture:id=miscutils/TileEntities/sewer_top,filename=assets/miscutils/textures/blocks/TileEntities/sewer_top.png
+texture:id=miscutils/TileEntities/sterileCasing,filename=assets/miscutils/textures/blocks/TileEntities/sterileCasing.png
 texture:id=miscutils/blockFrameGt,filename=assets/miscutils/textures/blocks/blockFrameGt.png
 texture:id=miscutils/chrono/CyberPanel,filename=assets/miscutils/textures/blocks/chrono/CyberPanel.png
 texture:id=miscutils/chrono/MetalFunnel,filename=assets/miscutils/textures/blocks/chrono/MetalFunnel.png
@@ -199,6 +189,17 @@ texture:id=miscutils/metro/TEXTURE_TECH_PANEL_B,filename=assets/miscutils/textur
 texture:id=miscutils/metro/TEXTURE_TECH_PANEL_C,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_C.png
 texture:id=miscutils/metro/TEXTURE_TECH_PANEL_D,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_D.png
 texture:id=miscutils/metro/TEXTURE_TECH_PANEL_H,filename=assets/miscutils/textures/blocks/metro/TEXTURE_TECH_PANEL_H.png
+texture:id=miscutils/qft/CosmicFabricManipulator,filename=assets/miscutils/textures/blocks/qft/CosmicFabricManipulator.png
+texture:id=miscutils/qft/CosmicFabricShieldingCore,filename=assets/miscutils/textures/blocks/qft/CosmicFabricShieldingCore.png
+texture:id=miscutils/qft/ForceFieldGlass,filename=assets/miscutils/textures/blocks/qft/ForceFieldGlass.png
+texture:id=miscutils/qft/InfinityInfusedManipulator,filename=assets/miscutils/textures/blocks/qft/InfinityInfusedManipulator.png
+texture:id=miscutils/qft/InfinityInfusedShieldingCore,filename=assets/miscutils/textures/blocks/qft/InfinityInfusedShieldingCore.png
+texture:id=miscutils/qft/Manipulator_Top,filename=assets/miscutils/textures/blocks/qft/Manipulator_Top.png
+texture:id=miscutils/qft/NeutronPulseManipulator,filename=assets/miscutils/textures/blocks/qft/NeutronPulseManipulator.png
+texture:id=miscutils/qft/NeutronShieldingCore,filename=assets/miscutils/textures/blocks/qft/NeutronShieldingCore.png
+texture:id=miscutils/qft/SpaceTimeBendingCore,filename=assets/miscutils/textures/blocks/qft/SpaceTimeBendingCore.png
+texture:id=miscutils/qft/SpaceTimeContinuumRipper,filename=assets/miscutils/textures/blocks/qft/SpaceTimeContinuumRipper.png
+texture:id=miscutils/qft/blank,filename=assets/miscutils/textures/blocks/qft/blank.png
 texture:id=miscutils/redox/redox1,filename=assets/miscutils/textures/blocks/redox/redox1.png
 texture:id=miscutils/redox/redox2,filename=assets/miscutils/textures/blocks/redox/redox2.png
 texture:id=miscutils/redox/redox3,filename=assets/miscutils/textures/blocks/redox/redox3.png
@@ -965,7 +966,7 @@ block:id=%gtplusplus.blockcasings.2,data=11,stdrot=true,face0-5=0:miscutils/Tile
 block:id=%gtplusplus.blockcasings.2,data=12,stdrot=true,face0-5=0:miscutils/TileEntities/machine_top
 block:id=%gtplusplus.blockcasings.2,data=13,stdrot=true,face0-1=0:miscutils/metro/TEXTURE_TECH_A,face2-5=0:miscutils/metro/TEXTURE_TECH_B
 block:id=%gtplusplus.blockcasings.2,data=14,stdrot=true,face0-5=0:gregtech/iconsets/RENDERING_ERROR
-block:id=%gtplusplus.blockcasings.2,data=15,stdrot=true,face0-5=0:miscutils/TileEntities/log_acacia_top
+block:id=%gtplusplus.blockcasings.2,data=15,stdrot=true,face0-5=0:miscutils/TileEntities/sterileCasing
 
 # %gtplusplus.blockcasings.3:* (gtplusplus.blockcasings.3), render=(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks3
 block:id=%gtplusplus.blockcasings.3,data=0,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_METAL_PANEL_B
@@ -1005,15 +1006,15 @@ block:id=%gtplusplus.blockcasings.5,data=3,stdrot=true,face0-5=0:miscutils/metro
 block:id=%gtplusplus.blockcasings.5,data=4,stdrot=true,face0-5=0:miscutils/chrono/MetalSheet8
 block:id=%gtplusplus.blockcasings.5,data=5,stdrot=true,face0-5=0:miscutils/chrono/MetalSheet9
 block:id=%gtplusplus.blockcasings.5,data=6,stdrot=true,face0-5=0:miscutils/metro/TEXTURE_TECH_PANEL_H
-block:id=%gtplusplus.blockcasings.5,data=7,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/NeutronPulseManipulator
-block:id=%gtplusplus.blockcasings.5,data=8,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/CosmicFabricManipulator
-block:id=%gtplusplus.blockcasings.5,data=9,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/InfinityInfusedManipulator
-block:id=%gtplusplus.blockcasings.5,data=10,stdrot=true,face0-1=0:miscutils/Manipulator_Top,face2-5=0:miscutils/SpaceTimeContinuumRipper
-block:id=%gtplusplus.blockcasings.5,data=11,stdrot=true,face0-5=0:miscutils/NeutronShieldingCore
-block:id=%gtplusplus.blockcasings.5,data=12,stdrot=true,face0-5=0:miscutils/CosmicFabricShieldingCore
-block:id=%gtplusplus.blockcasings.5,data=13,stdrot=true,face0-5=0:miscutils/InfinityInfusedShieldingCore
-block:id=%gtplusplus.blockcasings.5,data=14,stdrot=true,face0-5=0:miscutils/SpaceTimeBendingCore
-block:id=%gtplusplus.blockcasings.5,data=15,stdrot=true,face0-1=0:miscutils/Blank,face2-5=0:miscutils/ForceFieldGlass
+block:id=%gtplusplus.blockcasings.5,data=7,stdrot=true,face0-1=0:miscutils/qft/Manipulator_Top,face2-5=0:miscutils/qft/NeutronPulseManipulator
+block:id=%gtplusplus.blockcasings.5,data=8,stdrot=true,face0-1=0:miscutils/qft/Manipulator_Top,face2-5=0:miscutils/qft/CosmicFabricManipulator
+block:id=%gtplusplus.blockcasings.5,data=9,stdrot=true,face0-1=0:miscutils/qft/Manipulator_Top,face2-5=0:miscutils/qft/InfinityInfusedManipulator
+block:id=%gtplusplus.blockcasings.5,data=10,stdrot=true,face0-1=0:miscutils/qft/Manipulator_Top,face2-5=0:miscutils/qft/SpaceTimeContinuumRipper
+block:id=%gtplusplus.blockcasings.5,data=11,stdrot=true,face0-5=0:miscutils/qft/NeutronShieldingCore
+block:id=%gtplusplus.blockcasings.5,data=12,stdrot=true,face0-5=0:miscutils/qft/CosmicFabricShieldingCore
+block:id=%gtplusplus.blockcasings.5,data=13,stdrot=true,face0-5=0:miscutils/qft/InfinityInfusedShieldingCore
+block:id=%gtplusplus.blockcasings.5,data=14,stdrot=true,face0-5=0:miscutils/qft/SpaceTimeBendingCore
+block:id=%gtplusplus.blockcasings.5,data=15,stdrot=true,face0-1=0:miscutils/qft/blank,face2-5=0:miscutils/qft/ForceFieldGlass
 
 # %gtplusplus.blockcasings.6:* (gtplusplus.blockcasings.6), render=(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaCasingBlocks6
 block:id=%gtplusplus.blockcasings.6,data=0,stdrot=true,face0-5=0:miscutils/iconsets/MACHINE_CASING_FUSION_4
@@ -1036,10 +1037,10 @@ block:id=%gtplusplus.blocktieredcasings.1,data=10,data=11,data=12,data=13,data=1
 
 # %gtplusplus.blockspecialcasings.1:* (gtplusplus.blockspecialcasings.1), render=(STANDARD), opaque=false,cls=gtPlusPlus.xmod.gregtech.common.blocks.GregtechMetaSpecialMultiCasings
 block:id=%gtplusplus.blockspecialcasings.1,data=0,stdrot=true,face0-5=0:miscutils/redox/redox1
-block:id=%gtplusplus.blockspecialcasings.1,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE
-block:id=%gtplusplus.blockspecialcasings.1,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_STABLE_TITANIUM
-block:id=%gtplusplus.blockspecialcasings.1,data=3,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL
-block:id=%gtplusplus.blockspecialcasings.1,data=4,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_ROBUST_TUNGSTENSTEEL
+block:id=%gtplusplus.blockspecialcasings.1,data=1,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STEEL
+block:id=%gtplusplus.blockspecialcasings.1,data=2,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_TITANIUM
+block:id=%gtplusplus.blockspecialcasings.1,data=3,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_STAINLESSSTEEL
+block:id=%gtplusplus.blockspecialcasings.1,data=4,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_TURBINE_TUNGSTENSTEEL
 block:id=%gtplusplus.blockspecialcasings.1,data=5,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_RED_STEEL
 block:id=%gtplusplus.blockspecialcasings.1,data=6,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_MARAGINGSTEEL
 block:id=%gtplusplus.blockspecialcasings.1,data=7,stdrot=true,face0-5=0:miscutils/TileEntities/MACHINE_CASING_STABLE_STELLITE
