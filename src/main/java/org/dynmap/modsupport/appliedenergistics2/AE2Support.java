@@ -17,6 +17,8 @@ public class AE2Support {
         if(connectableBlocks == null){
             initConnectableBlocks();
         }
+        if(id == 0)
+            return null;
         return connectableBlocks.get(id);
     }
     private static void initConnectableBlocks() {
@@ -39,7 +41,10 @@ public class AE2Support {
         connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockMolecularAssembler"), new ConnectableBlockData());
         connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockIOPort"), new ConnectableBlockData());
         connectableBlocks.put(GWM_Util.blockNameToId("appliedenergistics2:tile.BlockIOPort"), new ConnectableBlockData());
-        connectableBlocks.put(GWM_Util.blockNameToId("ae2stuff:Wireless"), new ConnectableBlockData());
+
+        int ae2stuffWirelessBlockId = GWM_Util.blockNameToId("ae2stuff:Wireless");
+        if(ae2stuffWirelessBlockId > 0)
+            connectableBlocks.put(ae2stuffWirelessBlockId, new ConnectableBlockData());
     }
 
     public static void addConnectableBlock(int blockId, ConnectableBlockData data){

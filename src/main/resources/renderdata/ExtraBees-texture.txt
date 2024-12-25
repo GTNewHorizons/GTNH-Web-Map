@@ -17,7 +17,14 @@ texture:id=extrabees/hive/rock.0,filename=assets/extrabees/textures/blocks/hive/
 texture:id=extrabees/hive/rock.1,filename=assets/extrabees/textures/blocks/hive/rock.1.png
 texture:id=extrabees/hive/water.0,filename=assets/extrabees/textures/blocks/hive/water.0.png
 texture:id=extrabees/hive/water.1,filename=assets/extrabees/textures/blocks/hive/water.1.png
-
+texture:id=extrabees/alveary/AlvearyFrame,filename=assets/extrabees/textures/tile/alveary/AlvearyFrame.png,xcount=4,ycount=2
+texture:id=extrabees/alveary/AlvearyHatchery,filename=assets/extrabees/textures/tile/alveary/AlvearyHatchery.png,xcount=4,ycount=2
+texture:id=extrabees/alveary/AlvearyLighting,filename=assets/extrabees/textures/tile/alveary/AlvearyLighting.png,xcount=4,ycount=2
+texture:id=extrabees/alveary/AlvearyMutator,filename=assets/extrabees/textures/tile/alveary/AlvearyMutator.png,xcount=4,ycount=2
+texture:id=extrabees/alveary/AlvearyRainShield,filename=assets/extrabees/textures/tile/alveary/AlvearyRainShield.png,xcount=4,ycount=2
+texture:id=extrabees/alveary/AlvearyStimulator,filename=assets/extrabees/textures/tile/alveary/AlvearyStimulator.png,xcount=4,ycount=2
+texture:id=extrabees/alveary/AlvearyTransmission,filename=assets/extrabees/textures/tile/alveary/AlvearyTransmission.png,xcount=4,ycount=2
+texture:id=extrabees/alveary/AlvearyUnlighting,filename=assets/extrabees/textures/tile/alveary/AlvearyUnlighting.png,xcount=4,ycount=2
 
 
 # %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
@@ -28,3 +35,12 @@ block:id=%hive,data=0,stdrot=true,face0-1=0:extrabees/hive/water.1,face2-5=0:ext
 block:id=%hive,data=1,stdrot=true,face0-1=0:extrabees/hive/rock.1,face2-5=0:extrabees/hive/rock.0
 block:id=%hive,data=2,stdrot=true,face0-1=0:extrabees/hive/nether.1,face2-5=0:extrabees/hive/nether.0
 block:id=%hive,data=3,stdrot=true,face0-1=0:extrabees/hive/marble.1,face2-5=0:extrabees/hive/marble.0
+
+block:id=%alveary,data=0,stdrot=true,face0-1=1:extrabees/alveary/AlvearyMutator,face2-5=4:extrabees/alveary/AlvearyMutator
+block:id=%alveary,data=1,stdrot=true,face0-1=1:extrabees/alveary/AlvearyFrame,face2-5=4:extrabees/alveary/AlvearyFrame
+block:id=%alveary,data=2,stdrot=true,face0-1=1:extrabees/alveary/AlvearyRainShield,face2-5=4:extrabees/alveary/AlvearyRainShield
+block:id=%alveary,data=3,stdrot=true,face0-1=1:extrabees/alveary/AlvearyLighting,face2-5=4:extrabees/alveary/AlvearyLighting
+block:id=%alveary,data=4,stdrot=true,face0-1=1:extrabees/alveary/AlvearyStimulator,face2-5=4:extrabees/alveary/AlvearyStimulator
+block:id=%alveary,data=5,stdrot=true,face0-1=1:extrabees/alveary/AlvearyHatchery,face2-5=4:extrabees/alveary/AlvearyHatchery
+block:id=%alveary,data=6,stdrot=true,face0-1=1:extrabees/alveary/AlvearyTransmission,face2-5=4:extrabees/alveary/AlvearyTransmission
+block:id=%alveary,data=7,stdrot=true,face0-1=1:extrabees/alveary/AlvearyUnlighting,face2-5=4:extrabees/alveary/AlvearyUnlighting
