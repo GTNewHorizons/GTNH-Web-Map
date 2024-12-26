@@ -50,8 +50,8 @@ public class IsoHDPerspective implements HDPerspective {
     public final double azimuth;  /* Angle in degrees from looking north (0), east (90), south (180), or west (270) */
     public final double compassazimuth;	// Angle in degrees from looking north (0), east (90), for the compass (default same as azimuth)
     public final double inclination;  /* Angle in degrees from horizontal (0) to vertical (90) */
-    public final double maxheight;
-    public final double minheight;
+    public final int maxheight;
+    public final int minheight;
     /* Coordinate space for tiles consists of a plane (X, Y), corresponding to the projection of each tile on to the
      * plane of the bottom of the world (X positive to the right, Y positive to the top), with Z+ corresponding to the
      * height above this plane on a vector towards the viewer).  Logically, this makes the parallelogram representing the
@@ -84,6 +84,7 @@ public class IsoHDPerspective implements HDPerspective {
     private static final BlockStep [] semi_steps = { BlockStep.Y_PLUS, BlockStep.X_MINUS, BlockStep.X_PLUS, BlockStep.Z_MINUS, BlockStep.Z_PLUS };
 
     private class OurPerspectiveState implements HDPerspectiveState {
+        int ignoreUntil = -1;
         int blocktypeid = 0;
         int blockdata = 0;
         int blockrenderdata = -1;
@@ -597,6 +598,9 @@ public class IsoHDPerspective implements HDPerspective {
                 if(blocktypeid == 0) {	/* If air, we're done */
                 	skiptoair = false;
                 }
+            }
+            else if(ignoreUntil >= 0 && y > ignoreUntil){
+
             }
             else if(nonairhit || (blocktypeid != 0)) {
                 blockdata = mapiter.getBlockData();  
@@ -1219,12 +1223,19 @@ public class IsoHDPerspective implements HDPerspective {
         boolean shaderdone[] = new boolean[numshaders];
         boolean rendered[] = new boolean[numshaders];
         double height = maxheight;
+
+        double heightOff = 0.5;
         if (height == Integer.MIN_VALUE) {    /* Not set - assume world height - 1 */
             if (isnether)
                 height = 127;
             else
                 height = tile.getDynmapWorld().worldheight - 1;
         }
+        else {
+            heightOff = 1.5;
+            ps.ignoreUntil = maxheight;
+        }
+		
         double miny = minheight;
         if (miny == Integer.MIN_VALUE) {    /* Not set - assume world height - 1 */
             miny = tile.getDynmapWorld().minY;
@@ -1235,7 +1246,8 @@ public class IsoHDPerspective implements HDPerspective {
             for(int y = 0; y < tileSize * sizescale; y++) {
                 ps.top.x = ps.bottom.x = xbase + ((double)x)/sizescale + 0.5;    /* Start at center of pixel at Y=height+0.5, bottom at Y=-0.5 */
                 ps.top.y = ps.bottom.y = ybase + ((double)y)/sizescale + 0.5;
-                ps.top.z = height + 0.5; ps.bottom.z = miny - 0.5;
+                ps.top.z = height + heightOff; ps.bottom.z = miny - 0.5;
+
                 map_to_world.transform(ps.top);            /* Transform to world coordinates */
                 map_to_world.transform(ps.bottom);
                 ps.direction.set(ps.bottom);
