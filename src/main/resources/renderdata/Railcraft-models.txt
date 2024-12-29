@@ -57,9 +57,20 @@ boxblock:id=%fluid.steam,ymax=0.125,data=15
 # %anvil:* (anvil), render=(ANVIL), opaque=false,cls=mods.railcraft.common.blocks.anvil.BlockRCAnvil
 
 # %track:* (track), render=mods.railcraft.client.render.RenderTrack(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.tracks.BlockTrack
-boxblock:id=%track,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0,data=1
-boxblock:id=%track,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=2,data=3,data=4,data=5
-boxblock:id=%track,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+#boxblock:id=%track,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0,data=1
+#boxblock:id=%track,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.625,zmin=0.0,zmax=1.0,data=2,data=3,data=4,data=5
+#boxblock:id=%track,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+patchblock:id=%track,data=0,patch0=HorizY001ZTop
+patchblock:id=%track,data=1,patch0=HorizY001ZTop@90
+patchblock:id=%track,data=2,data=10,patch0=SlopeXUpZTop
+patchblock:id=%track,data=3,data=11,patch0=SlopeXUpZTop@180
+patchblock:id=%track,data=4,data=12,patch0=SlopeXUpZTop@270
+patchblock:id=%track,data=5,data=13,patch0=SlopeXUpZTop@90
+patchblock:id=%track,data=6,patch0=HorizY001ZTop@90
+patchblock:id=%track,data=7,patch0=HorizY001ZTop@180
+patchblock:id=%track,data=8,patch0=HorizY001ZTop@270
+patchblock:id=%track,data=9,patch0=HorizY001ZTop
+patchblock:id=%track,data=14,data=15,patch0=HorizY001ZTop
 
 # %track.elevator:* (track.elevator), render=mods.railcraft.client.render.RenderElevator(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.tracks.BlockTrackElevator
 boxblock:id=%track.elevator,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.875,zmax=1.0,data=2
@@ -98,3 +109,15 @@ boxblock:id=%firestone.recharge,xmin=0.30000001192092896,xmax=0.699999988079071,
 
 customblock:id=%lantern.stone,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=*,box0=i:5-11:14-15:5-11:0,box1=i:3-13:12-14:3-13:0,box2=i:4-6:6-12:4-6:0,box3=i:4-6:6-12:10-12:0,box4=i:10-12:6-12:4-6:0,box5=i:10-12:6-12:10-12:0,box6=i:4-12:4-6:4-12:0,box7=i:6-10:0-4:6-10:0
 customblock:id=%lantern.metal,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=*,box0=i:5-11:14-15:5-11:0,box1=i:3-13:12-14:3-13:0,box2=i:4-6:6-12:4-6:0,box3=i:4-6:6-12:10-12:0,box4=i:10-12:6-12:4-6:0,box5=i:10-12:6-12:10-12:0,box6=i:4-12:4-6:4-12:0,box7=i:6-10:0-4:6-10:0
+
+customblock:id=%signal,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=0,data=6,data=7,data=8,data=9,data=10,data=13,box0=i:2-14:0-15:2-14:b0
+customblock:id=%signal,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=1,data=12,box0=i:3-13:0-16:3-13:b0
+customblock:id=%signal,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=3,data=11,box0=i:3-13:6-16:3-13:b0,box1=i:6-10:0-6:6-10:6
+customblock:id=%signal,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=2,data=4,data=5,box0=i:4-12:0-5:4-12:b0,box1=i:7-9:5-13:7-9:b0,box2=i:6-10:0-2:0-4:8,box3=i:6-10:0-2:12-16:8,box4=i:7-8:9-12:9-12:6,box5=i:8-9:9-12:4-7:6,box6=i:9-12:9-12:8-9:7,box7=i:4-7:9-12:7-8:7
+
+customblock:id=%machine.beta,class=org.dynmap.hdmap.renderer.RailCraftTankGaugeRenderer,data=1,data=14
+customblock:id=%machine.beta,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=10,box0=i:0-16:0-5:0-16:b0,box1=i:4-12:5-16:4-12:b0
+customblock:id=%machine.beta,class=org.dynmap.hdmap.renderer.SimpleMultiBoxRenderer,data=11,data=12,box0=i:1-15:0-15:1-15:b0
+
+customblock:id=%machine.zeta,class=org.dynmap.hdmap.renderer.RailCraftTankGaugeRenderer,data=1,data=4,data=7,data=10,data=13
+customblock:id=%machine.eta,class=org.dynmap.hdmap.renderer.RailCraftTankGaugeRenderer,data=1,data=4,data=7
