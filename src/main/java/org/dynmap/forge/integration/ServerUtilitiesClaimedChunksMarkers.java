@@ -26,6 +26,8 @@ import serverutils.lib.data.ForgeTeam;
 import serverutils.lib.math.ChunkDimPos;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener {
 
@@ -90,10 +92,18 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
 
             if(team.owner != null)
                 label += "<br/><b>Founder: </b>" + team.owner.getName();
-            
+
+            List<ForgePlayer> members = team.getMembers();
+            if(members != null){
+                for(ForgePlayer m : members){
+                    if(m != team.owner)
+                        label += "<br/>Member: " + m.getName();
+                }
+            }
+
             if(team.players != null){
-                for(java.util.Map.Entry<ForgePlayer, EnumTeamStatus> p : team.players.entrySet()){
-                    label += "<br/>" +p.getValue()+ ": " +  p.getKey().getName();
+                for(Map.Entry<ForgePlayer, EnumTeamStatus> p : team.players.entrySet()){
+                    label += "<br/>" + p.getValue() + ": " +  p.getKey().getName();
                 }
             }
 
