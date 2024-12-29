@@ -113,6 +113,7 @@ public class TexturePack {
     public static final int COLORMOD_MULTTONED_CLEARINSIDE = 21; // MULTTONED + CLEARINSIDE
     public static final int COLORMOD_FOLIAGEMULTTONED = 22; // FOLIAGETONED + colorMult or custColorMult
     public static final int COLORMOD_IGNORE_LIGHT = 23; // NEON / GLOW
+    public static final int COLORMOD_IGNORE_LIGHT_MULTTONED = 24; // NEON / GLOW
 
     private static final int COLORMOD_MULT_FILE = 1000;
     public static final int COLORMOD_MULT_INTERNAL = 1000000;
@@ -3183,6 +3184,7 @@ public class TexturePack {
                     clrmult = colorMultLily;
                     break;
                 case COLORMOD_MULTTONED:    /* Use color multiplier */
+                case COLORMOD_IGNORE_LIGHT_MULTTONED:    /* Use color multiplier */
                     if(custColorMult != null) {
                         clrmult = custColorMult.getColorMultiplier(mapiter);
                     }
@@ -3208,6 +3210,7 @@ public class TexturePack {
 
         switch(textop){
             case COLORMOD_IGNORE_LIGHT:
+            case COLORMOD_IGNORE_LIGHT_MULTTONED:
                 if(rslt.getAlpha() > 128)
                     ss.setIgnoreLight(true);
                 break;
