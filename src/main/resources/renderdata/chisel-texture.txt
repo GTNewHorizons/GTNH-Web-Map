@@ -7,6 +7,7 @@ cfgfile:config/chisel.cfg
 
 
 texturepath:assets/chisel/textures/blocks/
+texture:id=Chisel/animations/strobe,filename=assets/chisel/textures/blocks/animations/strobe.png,ycount=10
 texture:id=Chisel/carpet/black,filename=assets/chisel/textures/blocks/carpet/black-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
 texture:id=Chisel/carpet/brown,filename=assets/chisel/textures/blocks/carpet/brown-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
 texture:id=Chisel/carpet/darkblue,filename=assets/chisel/textures/blocks/carpet/darkblue-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
@@ -848,13 +849,13 @@ texture:id=chisel/froglight/6,filename=assets/chisel/textures/blocks/froglight/6
 texture:id=chisel/froglight/7,filename=assets/chisel/textures/blocks/froglight/7.png
 texture:id=chisel/froglight/8,filename=assets/chisel/textures/blocks/froglight/8.png
 texture:id=chisel/froglight/9,filename=assets/chisel/textures/blocks/froglight/9.png
-texture:id=chisel/futura/WIP/controller,filename=assets/chisel/textures/blocks/futura/WIP/controller.png
-texture:id=chisel/futura/WIP/controllerPurple,filename=assets/chisel/textures/blocks/futura/WIP/controllerPurple.png
-texture:id=chisel/futura/WIP/screenCyanWIP,filename=assets/chisel/textures/blocks/futura/WIP/screenCyanWIP-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
-texture:id=chisel/futura/WIP/screenMetallicWIP,filename=assets/chisel/textures/blocks/futura/WIP/screenMetallicWIP-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
-texture:id=chisel/futura/WIP/uberWavy,filename=assets/chisel/textures/blocks/futura/WIP/uberWavy.png
-texture:id=chisel/futura/WIP/wavyWIP,filename=assets/chisel/textures/blocks/futura/WIP/wavyWIP.png
-texture:id=chisel/futura/circuitPlate-v9,filename=assets/chisel/textures/blocks/futura/circuitPlate-v9.png
+texture:id=chisel/futura/WIP/controller,filename=assets/chisel/textures/blocks/futura/WIP/controller.png,xcount=2,ycount=24
+texture:id=chisel/futura/WIP/controllerPurple,filename=assets/chisel/textures/blocks/futura/WIP/controllerPurple.png,xcount=2,ycount=24
+texture:id=chisel/futura/WIP/screenCyanWIP,filename=assets/chisel/textures/blocks/futura/WIP/screenCyanWIP.png
+texture:id=chisel/futura/WIP/screenMetallicWIP,filename=assets/chisel/textures/blocks/futura/WIP/screenMetallicWIP.png
+texture:id=chisel/futura/WIP/uberWavy,filename=assets/chisel/textures/blocks/futura/WIP/uberWavy.png,xcount=2,ycount=32
+texture:id=chisel/futura/WIP/wavyWIP,filename=assets/chisel/textures/blocks/futura/WIP/wavyWIP.png,ycount=16
+texture:id=chisel/futura/circuitPlate-v9,filename=assets/chisel/textures/blocks/futura/circuitPlate-v9.png,xcount=3,ycount=3
 texture:id=chisel/glotek/0,filename=assets/chisel/textures/blocks/glotek/0-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
 texture:id=chisel/glotek/1,filename=assets/chisel/textures/blocks/glotek/1-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
 texture:id=chisel/glotek/10,filename=assets/chisel/textures/blocks/glotek/10-ctm.png,processor=org.dynmap.hdmap.textureprocessor.ChiselCTMTextureProcessor
@@ -2181,7 +2182,22 @@ block:id=%futura,data=5,stdrot=true,face0-5=0:chisel/futura/WIP/uberWavy
 block:id=%futura,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
 
 # %futuraCircuit:* (futuraCircuit), render=team.chisel.client.render.RendererLayeredGlow(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlow
-block:id=%futuraCircuit,data=*,stdrot=true,face0-5=0:chisel/futura/circuitPlate-v9
+block:id=%futuraCircuit,data=0,colorMult=010101,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=1,colorMult=FF0000,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=2,colorMult=009900,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=3,colorMult=7F3300,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=4,colorMult=0000FF,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=5,colorMult=B233FF,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=6,colorMult=00FFFF,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=7,colorMult=CCCCCC,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=8,colorMult=7F7F7F,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=9,colorMult=FF99A5,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=10,colorMult=00FF00,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=11,colorMult=FFFF00,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=12,colorMult=007FD8,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=13,colorMult=FF00FF,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=14,colorMult=FF7F00,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
+block:id=%futuraCircuit,data=15,colorMult=FFFFFF,stdrot=true,patch0=0:chisel/futura/circuitPlate-v9,patch1=1:chisel/futura/circuitPlate-v9,patch2=2:chisel/futura/circuitPlate-v9,patch3=3:chisel/futura/circuitPlate-v9,patch4=4:chisel/futura/circuitPlate-v9,patch5=5:chisel/futura/circuitPlate-v9,patch6=6:chisel/futura/circuitPlate-v9,patch7=7:chisel/futura/circuitPlate-v9,patch8=8:chisel/futura/circuitPlate-v9,patch9=24000:Chisel/animations/strobe,layer0-8=9
 
 # %glass:* (glass), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvableGlass
 block:id=%glass,data=0,stdrot=true,face0-5=0:minecraft/missingno
@@ -3101,22 +3117,22 @@ block:id=%rebel,data=4,stdrot=true,face0-5=0:chisel/military/rebelCautionRed
 block:id=%rebel,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
 
 # %neonite:* (neonite), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowie
-block:id=%neonite,data=0,stdrot=true,face0-5=0:chisel/neonite/0
-block:id=%neonite,data=1,stdrot=true,face0-5=0:chisel/neonite/1
-block:id=%neonite,data=2,stdrot=true,face0-5=0:chisel/neonite/2
-block:id=%neonite,data=3,stdrot=true,face0-5=0:chisel/neonite/3
-block:id=%neonite,data=4,stdrot=true,face0-5=0:chisel/neonite/4
-block:id=%neonite,data=5,stdrot=true,face0-5=0:chisel/neonite/5
-block:id=%neonite,data=6,stdrot=true,face0-5=0:chisel/neonite/6
-block:id=%neonite,data=7,stdrot=true,face0-5=0:chisel/neonite/7
-block:id=%neonite,data=8,stdrot=true,face0-5=0:chisel/neonite/8
-block:id=%neonite,data=9,stdrot=true,face0-5=0:chisel/neonite/9
-block:id=%neonite,data=10,stdrot=true,face0-5=0:chisel/neonite/10
-block:id=%neonite,data=11,stdrot=true,face0-5=0:chisel/neonite/11
-block:id=%neonite,data=12,stdrot=true,face0-5=0:chisel/neonite/12
-block:id=%neonite,data=13,stdrot=true,face0-5=0:chisel/neonite/13
-block:id=%neonite,data=14,stdrot=true,face0-5=0:chisel/neonite/14
-block:id=%neonite,data=15,stdrot=true,face0-5=0:chisel/neonite/15
+block:id=%neonite,data=0,stdrot=true,face0-5=23000:chisel/neonite/0
+block:id=%neonite,data=1,stdrot=true,face0-5=23000:chisel/neonite/1
+block:id=%neonite,data=2,stdrot=true,face0-5=23000:chisel/neonite/2
+block:id=%neonite,data=3,stdrot=true,face0-5=23000:chisel/neonite/3
+block:id=%neonite,data=4,stdrot=true,face0-5=23000:chisel/neonite/4
+block:id=%neonite,data=5,stdrot=true,face0-5=23000:chisel/neonite/5
+block:id=%neonite,data=6,stdrot=true,face0-5=23000:chisel/neonite/6
+block:id=%neonite,data=7,stdrot=true,face0-5=23000:chisel/neonite/7
+block:id=%neonite,data=8,stdrot=true,face0-5=23000:chisel/neonite/8
+block:id=%neonite,data=9,stdrot=true,face0-5=23000:chisel/neonite/9
+block:id=%neonite,data=10,stdrot=true,face0-5=23000:chisel/neonite/10
+block:id=%neonite,data=11,stdrot=true,face0-5=23000:chisel/neonite/11
+block:id=%neonite,data=12,stdrot=true,face0-5=23000:chisel/neonite/12
+block:id=%neonite,data=13,stdrot=true,face0-5=23000:chisel/neonite/13
+block:id=%neonite,data=14,stdrot=true,face0-5=23000:chisel/neonite/14
+block:id=%neonite,data=15,stdrot=true,face0-5=23000:chisel/neonite/15
 
 # %nether_brick:* (nether_brick), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 block:id=%nether_brick,data=0,stdrot=true,face0-5=0:minecraft/missingno
