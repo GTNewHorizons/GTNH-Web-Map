@@ -126,6 +126,8 @@ texture:id=appliedenergistics2/PartMonitorSides,filename=assets/appliedenergisti
 texture:id=appliedenergistics2/PartMonitor_Bright,filename=assets/appliedenergistics2/textures/blocks/PartMonitor_Bright.png,processor=org.dynmap.hdmap.textureprocessor.AE2MonitorProcessor
 texture:id=appliedenergistics2/PartTerminal_Bright,filename=assets/appliedenergistics2/textures/blocks/PartTerminal_Bright.png
 texture:id=appliedenergistics2/White,filename=assets/appliedenergistics2/textures/blocks/White.png
+texture:id=appliedenergistics2/QuartzFiber,filename=assets/appliedenergistics2/textures/blocks/ItemPart.QuartzFiber.png
+texture:id=appliedenergistics2/CableAnchor,filename=assets/appliedenergistics2/textures/blocks/ItemPart.CableAnchor.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 
 
@@ -264,7 +266,7 @@ texture:id=gwmcustom/ae2cable,filename=assets/gwmcustom/ae2cable.png,xcount=2
 specialModSupportLoader:org.dynmap.modsupport.loaders.AppliedEnergisticsModSupportLoader,name=ae2
 
 # %tile.BlockCableBus:* (tile.BlockCableBus), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockCableBus
-block:id=%tile.BlockCableBus,data=*,stdrot=true,colorMult=ff33cc,transparency=SEMITRANSPARENT,patch0=0:cable16,patch1=0:appliedenergistics2/PartMonitor_Bright,patch2=0:appliedenergistics2/PartMonitorBack,patch3-6=0:appliedenergistics2/PartMonitorSides
+block:id=%tile.BlockCableBus,data=*,stdrot=true,colorMult=ff33cc,transparency=SEMITRANSPARENT,patch0=0:cable16,patch1=0:appliedenergistics2/PartMonitor_Bright,patch2=0:appliedenergistics2/PartMonitorBack,patch3-6=0:appliedenergistics2/PartMonitorSides,patch7=0:appliedenergistics2/QuartzFiber,patch8=0:appliedenergistics2/CableAnchor
 
 # %tile.OreQuartz:* (tile.OreQuartz), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartz
 block:id=%tile.OreQuartz,data=*,stdrot=true,face0-5=0:appliedenergistics2/OreQuartz,patch6=0:minecraft/stone,layer0-5=6
