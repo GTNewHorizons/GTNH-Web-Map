@@ -303,6 +303,7 @@ public class MECableRenderer extends PipeRendererBase {
                 setToUse = mediumPipes[version];
                 break;
             case 3:
+            case 26:
             case 27:
             case 28:
                 setToUse = largePipes[version];
