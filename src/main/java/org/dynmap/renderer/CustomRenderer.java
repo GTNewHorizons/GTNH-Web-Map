@@ -19,7 +19,7 @@ public abstract class CustomRenderer {
 
     }
 
-    protected static RenderPatch[] getBoxSingleTexture(RenderPatchFactory rpf, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int tex, boolean rotateTopAndBottom) {
+    public static RenderPatch[] getBoxSingleTexture(RenderPatchFactory rpf, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int tex, boolean rotateTopAndBottom) {
         int[] patchTextureIds = new int[]{tex, tex, tex, tex, tex, tex};
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
 
@@ -30,24 +30,24 @@ public abstract class CustomRenderer {
 
         return list.toArray(new RenderPatch[patchTextureIds.length]);
     }
-    protected static RenderPatch[] getBoxSingleTextureInt(RenderPatchFactory rpf, int xmin, int xmax, int ymin, int ymax, int zmin, int zmax, int tex, boolean rotateTopAndBottom) {
+    public static RenderPatch[] getBoxSingleTextureInt(RenderPatchFactory rpf, int xmin, int xmax, int ymin, int ymax, int zmin, int zmax, int tex, boolean rotateTopAndBottom) {
         return getBoxSingleTexture(rpf, xmin/16.0, xmax/16.0, ymin/16.0,ymax/16.0,zmin/16.0,zmax/16.0,tex, rotateTopAndBottom);
     }
-    protected static RenderPatch[] getBoxMultiTexture(RenderPatchFactory rpf, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int startTex) {
+    public static RenderPatch[] getBoxMultiTexture(RenderPatchFactory rpf, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int startTex) {
         int[] patchTextureIds = new int[]{startTex, startTex + 1, startTex + 2, startTex + 3, startTex + 4, startTex + 5};
 
         return getBoxMultiTexture(rpf, xmin, xmax, ymin, ymax, zmin, zmax, patchTextureIds);
     }
 
-    protected static RenderPatch[] getBoxMultiTexture(RenderPatchFactory rpf, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int[] patchTextureIds) {
+    public static RenderPatch[] getBoxMultiTexture(RenderPatchFactory rpf, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax, int[] patchTextureIds) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         CustomRenderer.addBox(rpf, list, xmin, xmax, ymin, ymax, zmin, zmax, patchTextureIds);
         return list.toArray(new RenderPatch[patchTextureIds.length]);
     }
-    protected static RenderPatch[] getBoxMultiTextureInt(RenderPatchFactory rpf, int xmin, int xmax, int ymin, int ymax, int zmin, int zmax, int startTex) {
+    public static RenderPatch[] getBoxMultiTextureInt(RenderPatchFactory rpf, int xmin, int xmax, int ymin, int ymax, int zmin, int zmax, int startTex) {
         return getBoxMultiTexture(rpf, xmin/16.0, xmax/16.0, ymin/16.0,ymax/16.0,zmin/16.0,zmax/16.0, startTex);
     }
-    protected static RenderPatch[] getBoxFull(RenderPatchFactory rpf, int[] patchIndices) {
+    public static RenderPatch[] getBoxFull(RenderPatchFactory rpf, int[] patchIndices) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         CustomRenderer.addBox(rpf, list, 0, 1, 0, 1, 0, 1, patchIndices);
         return list.toArray(new RenderPatch[patchIndices.length]);
@@ -137,7 +137,7 @@ public abstract class CustomRenderer {
 
     public abstract RenderPatch[] getRenderPatchList(MapDataContext mapDataCtx);
 
-    protected RenderPatch[] combineMultiple(RenderPatch[]... list){
+    public static RenderPatch[] combineMultiple(RenderPatch[]... list){
         int count = 0;
         for(RenderPatch[] rp : list){
             count += rp.length;
@@ -151,7 +151,7 @@ public abstract class CustomRenderer {
         }
         return ret;
     }
-    protected RenderPatch[] combineMultiple(RenderPatch... list){
+    public static RenderPatch[] combineMultiple(RenderPatch... list){
         RenderPatch[] ret = new RenderPatch[list.length];
         int j = 0;
         for(RenderPatch rp : list){
@@ -241,7 +241,7 @@ public abstract class CustomRenderer {
      * @param rot - rotation of texture (clockwise on given side)
      * @param textureidx - texture index
      */
-    public RenderPatch getSidePatch(RenderPatchFactory rpf, int side, double setback, double umin, double umax, double vmin, double vmax, int rot, int textureidx) {
+    public static RenderPatch getSidePatch(RenderPatchFactory rpf, int side, double setback, double umin, double umax, double vmin, double vmax, int rot, int textureidx) {
         RenderPatch rp = null;
         switch(side) {
             case 0:
@@ -290,11 +290,11 @@ public abstract class CustomRenderer {
      * @param rot - rotation of texture (clockwise on given side)
      * @param textureidx - texture index
      */
-    public RenderPatch getSidePatch(RenderPatchFactory rpf, int side, int rot, int textureidx) {
+    public static RenderPatch getSidePatch(RenderPatchFactory rpf, int side, int rot, int textureidx) {
         return getSidePatch(rpf, side, 0.0, 0.0, 1.0, 0.0, 1.0, rot, textureidx);
     }
 
-    public RenderPatch[] getFullBlock(RenderPatchFactory rpf, int fixedTexture){
+    public static RenderPatch[] getFullBlock(RenderPatchFactory rpf, int fixedTexture){
         int patchTextureIds[] = { 0, 1, 4, 5, 2, 3 };
 
         if(fixedTexture != -1)
@@ -306,7 +306,7 @@ public abstract class CustomRenderer {
         return list.toArray(new RenderPatch[patchTextureIds.length]);
     }
 
-    public RenderPatch[] getFullBlock(RenderPatchFactory rpf, int patchTextureIds[]){
+    public static RenderPatch[] getFullBlock(RenderPatchFactory rpf, int patchTextureIds[]){
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         CustomRenderer.addBox(rpf, list, 0, 1, 0, 1,0, 1, patchTextureIds);
         return list.toArray(new RenderPatch[patchTextureIds.length]);

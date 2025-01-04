@@ -9,14 +9,20 @@ import org.dynmap.renderer.MapDataContext;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory;
 
+import java.util.BitSet;
 import java.util.Map;
 
 public class BuildCraftPipeRenderer extends PipeRendererBase {
+
+    public static BitSet buildCraftCompatiblePipeBlocks = new BitSet(65536);
+
     RenderPatch[][] pipes;
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
         if(!super.initializeRenderer(rpf, blkid, blockdatamask, custparm))
             return false;
+
+        buildCraftCompatiblePipeBlocks.set(blkid);
 
         pipes = generateSingleSize(rpf, 4.0/16, 4.0/16, 0, 0);
 
@@ -28,11 +34,11 @@ public class BuildCraftPipeRenderer extends PipeRendererBase {
         int open = GWM_Util.objectToInt(mapDataCtx.getBlockTileEntityField("inputOpen"), 63);
         int version = 0;
         for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
-            if((open & dir.ordinal()) != 0)
+            if((open & (1 << dir.ordinal())) != 0)
             {
                 int id = mapDataCtx.getBlockTypeIDAt(dir.offsetX, dir.offsetY, dir.offsetZ);
 
-                if(id == mapDataCtx.getBlockTypeID())
+                if(buildCraftCompatiblePipeBlocks.get(id))
                     version |= dir.flag;
             }
         }
