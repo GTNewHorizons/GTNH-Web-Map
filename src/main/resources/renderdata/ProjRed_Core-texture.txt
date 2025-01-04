@@ -109,6 +109,9 @@ texture:id=projectred/world/silver_ore,filename=assets/projectred/textures/block
 texture:id=projectred/world/tin_block,filename=assets/projectred/textures/blocks/world/tin_block.png
 texture:id=projectred/world/tin_ore,filename=assets/projectred/textures/blocks/world/tin_ore.png
 
+texture:id=projectred/integration/wirematte-OFF,filename=assets/projectred/textures/blocks/integration/surface/wirematte-OFF.png
+texture:id=projectred/integration/wirematte-ON,filename=assets/projectred/textures/blocks/integration/surface/wirematte-ON.png
+
 
 
 # %projectred.expansion.machine1:* (projectred.expansion.machine1), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=true,cls=mrtjp.projectred.expansion.BlockMachine
@@ -183,3 +186,7 @@ block:id=%projectred.compatibility.liqcondredmetal,data=*,stdrot=true,transparen
 # %projectred.integration.icblock:* (projectred.integration.icblock), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=false,cls=mrtjp.projectred.fabrication.BlockICMachine
 block:id=%projectred.integration.icblock,data=0,stdrot=true,face0=0:projectred/fabrication/icworkbench/bottom,face1=0:projectred/fabrication/icworkbench/topbp,face2-3=0:projectred/fabrication/icworkbench/sidebp1,face4-5=0:projectred/fabrication/icworkbench/sidebp2
 block:id=%projectred.integration.icblock,data=1,stdrot=true,face0=0:projectred/fabrication/printer/bottom,face1=0:projectred/fabrication/printer/top,face2-3=0:projectred/fabrication/printer/side1,face4-5=0:projectred/fabrication/printer/side2
+
+specialModSupportLoader:org.dynmap.modsupport.loaders.ForgeMultiPartSupportLoader,name=fmp
+
+moddata:mod=fmp,part=pr_redwire,class=org.dynmap.hdmap.renderer.multipart.ProjectRedSurfaceWireRenderer,on=0:projectred/integration/wirematte-ON,off=0:projectred/integration/wirematte-OFF
