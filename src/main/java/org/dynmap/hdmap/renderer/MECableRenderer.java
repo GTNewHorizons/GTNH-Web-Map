@@ -27,6 +27,7 @@ public class MECableRenderer extends PipeRendererBase {
 
     public static final int ME_P2P_ID = 460;
 
+    static int[] quartzIndices = {7,7,7,7,7,7}, anchorIndices = {8,8,8,8,8,8};
 
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
@@ -303,6 +304,7 @@ public class MECableRenderer extends PipeRendererBase {
                 setToUse = mediumPipes[version];
                 break;
             case 3:
+            case 26:
             case 27:
             case 28:
                 setToUse = largePipes[version];
@@ -326,6 +328,62 @@ public class MECableRenderer extends PipeRendererBase {
         double pipeNegative = 0.5 - smallPipeRadius;
 
         // Usage "id" and "Damage" of def to select model and/or terminal type
+
+        int damage = GWM_Util.objectToInt(def.get("Damage"),-1);
+
+
+        if(damage == 120){ // anchor
+            switch (dir){
+                case DOWN:
+                    addBoxInt(rpf, list, 7, 9, 0, 7, 7, 9, anchorIndices);
+                    break;
+                case UP:
+                    addBoxInt(rpf, list, 7, 9, 9, 16, 7, 9, anchorIndices);
+                    break;
+                case NORTH:
+                    addBoxInt(rpf, list, 7, 9, 7, 9, 0, 7, anchorIndices);
+                    break;
+                case SOUTH:
+                    addBoxInt(rpf, list, 7, 9, 7, 9, 9, 16, anchorIndices);
+                    break;
+                case WEST:
+                    addBoxInt(rpf, list, 0, 7, 7, 9, 7, 9, anchorIndices);
+                    break;
+                case EAST:
+                    addBoxInt(rpf, list, 9, 16, 7, 9, 7, 9, anchorIndices);
+                    break;
+                case UNKNOWN:
+                    break;
+            }
+
+            return;
+        }
+        else if(damage == 140){ // quartz pipe
+            switch (dir){
+                case DOWN:
+                    addBoxInt(rpf, list, 6, 10, 0, 6, 6, 10, quartzIndices);
+                    break;
+                case UP:
+                    addBoxInt(rpf, list, 6, 10, 10, 16, 6, 10, quartzIndices);
+                    break;
+                case NORTH:
+                    addBoxInt(rpf, list, 6, 10, 6, 10, 0, 6, quartzIndices);
+                    break;
+                case SOUTH:
+                    addBoxInt(rpf, list, 6, 10, 6, 10, 10, 16, quartzIndices);
+                    break;
+                case WEST:
+                    addBoxInt(rpf, list, 0, 6, 6, 10, 6, 10, quartzIndices);
+                    break;
+                case EAST:
+                    addBoxInt(rpf, list, 10, 16, 6, 10, 6, 10, quartzIndices);
+                    break;
+                case UNKNOWN:
+                    break;
+            }
+            return;
+        }
+
 
         switch (dir) {
             case DOWN:

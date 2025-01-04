@@ -2,7 +2,18 @@ package org.dynmap.hdmap.textureprocessor;
 
 import org.dynmap.hdmap.TexturePack;
 
+import java.util.HashMap;
+
 public class AE2CableTextureProcessor extends CustomTextureProcessor {
+    boolean noSmart;
+
+    @Override
+    public boolean init(HashMap<String, String> data) {
+        if(data.get("nosmart") != null)
+            noSmart = true;
+        return super.init(data);
+    }
+
     @Override
     public int getTextureCount() {
         return 3;
@@ -65,17 +76,17 @@ public class AE2CableTextureProcessor extends CustomTextureProcessor {
         }
 
 
-
-        for(int y = 0; y < h; y++){
-            for(int x = 0; x < w; x++){
-                new_argb2[y*w+x] = new_argb[w*h/2 + x];
-                new_argb3[y*w+x] = new_argb[y*w + w/2];
-
-                if(x == w/2 || x == w/2+1){
-                    new_argb2[y*w+x] = 0xFF000000;
+        for (int y = 0; y < h; y++) {
+            for (int x = 0; x < w; x++) {
+                new_argb2[y * w + x] = new_argb[w * h / 2 + x];
+                new_argb3[y * w + x] = new_argb[y * w + w / 2];
+                if (!noSmart) {
+                    if (x == w / 2 || x == w / 2 + 1) {
+                        new_argb2[y * w + x] = 0xFF000000;
+                    }
+                    if (y == h / 2 || y == h / 2 + 1)
+                        new_argb3[y * w + x] = 0xFF000000;
                 }
-                if(y == h/2 ||y == h/2+1)
-                    new_argb3[y*w+x] = 0xFF000000;
             }
         }
     }

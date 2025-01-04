@@ -24,6 +24,7 @@ public class GregTechMachineRenderer extends PipeRendererBase {
     RenderPatch[][] pipes250;
     RenderPatch[][] pipes375;
     RenderPatch[][] pipes500;
+    RenderPatch[][] pipes600;
     RenderPatch[][] pipes625;
     RenderPatch[][] pipes750;
     RenderPatch[][] pipes875;
@@ -39,6 +40,7 @@ public class GregTechMachineRenderer extends PipeRendererBase {
         pipes250 = generateSingleSize(rpf, 0.250 /2, 0, 0, 0);
         pipes375 = generateSingleSize(rpf, 0.375 /2, 0, 0, 0);
         pipes500 = generateSingleSize(rpf, 0.500 /2, 0, 0, 0);
+        pipes600 = generateSingleSize(rpf, 0.600 /2, 0, 0, 0);
         pipes625 = generateSingleSize(rpf, 0.625 /2, 0, 0, 0);
         pipes750 = generateSingleSize(rpf, 0.750 /2, 0, 0, 0);
         pipes875 = generateSingleSize(rpf, 0.875 /2, 0, 0, 0);
@@ -86,6 +88,9 @@ public class GregTechMachineRenderer extends PipeRendererBase {
                             break;
                         case 500:
                             patchSetToUse = pipes500;
+                            break;
+                        case 600:
+                            patchSetToUse = pipes600;
                             break;
                         case 625:
                             patchSetToUse = pipes625;

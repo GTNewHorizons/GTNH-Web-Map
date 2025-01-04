@@ -115,6 +115,7 @@ texture:id=railcraft/post.metal.painted,filename=assets/railcraft/textures/block
 texture:id=railcraft/post.wood,filename=assets/railcraft/textures/blocks/post.wood.png
 texture:id=railcraft/rock.crusher,filename=assets/railcraft/textures/blocks/rock.crusher.png,xcount=4,ycount=3
 texture:id=railcraft/rolling.machine,filename=assets/railcraft/textures/blocks/rolling.machine.png,xcount=3,ycount=1
+texture:id=railcraft/signal.box,filename=assets/railcraft/textures/blocks/signal.box.png,xcount=6
 texture:id=railcraft/signal.box.analog,filename=assets/railcraft/textures/blocks/signal.box.analog.png
 texture:id=railcraft/signal.box.block.relay,filename=assets/railcraft/textures/blocks/signal.box.block.relay.png
 texture:id=railcraft/signal.box.capacitor,filename=assets/railcraft/textures/blocks/signal.box.capacitor.png
@@ -122,11 +123,13 @@ texture:id=railcraft/signal.box.controller,filename=assets/railcraft/textures/bl
 texture:id=railcraft/signal.box.interlock,filename=assets/railcraft/textures/blocks/signal.box.interlock.png
 texture:id=railcraft/signal.box.receiver,filename=assets/railcraft/textures/blocks/signal.box.receiver.png
 texture:id=railcraft/signal.box.sequencer,filename=assets/railcraft/textures/blocks/signal.box.sequencer.png
-texture:id=railcraft/signal.dual,filename=assets/railcraft/textures/blocks/signal.dual.png
-texture:id=railcraft/signal.single,filename=assets/railcraft/textures/blocks/signal.single.png
+texture:id=railcraft/signal.dual,filename=assets/railcraft/textures/blocks/signal.dual.png,xcount=5
+texture:id=railcraft/signal.single,filename=assets/railcraft/textures/blocks/signal.single.png,xcount=5
+texture:id=railcraft/signal.switch,filename=assets/railcraft/textures/blocks/signal.switch.png,xcount=2
 texture:id=railcraft/signal.switch.lever,filename=assets/railcraft/textures/blocks/signal.switch.lever.png
 texture:id=railcraft/signal.switch.motor,filename=assets/railcraft/textures/blocks/signal.switch.motor.png
-texture:id=railcraft/signal.switch.routing,filename=assets/railcraft/textures/blocks/signal.switch.routing.png
+texture:id=railcraft/signal.switch.routing,filename=assets/railcraft/textures/blocks/signal.switch.routing.png,ycount=2
+texture:id=railcraft/signal.switch.target,filename=assets/railcraft/textures/blocks/signal.switch.target.png,xcount=2
 texture:id=railcraft/smoker,filename=assets/railcraft/textures/blocks/smoker.png,xcount=3,ycount=1
 texture:id=railcraft/steam.oven,filename=assets/railcraft/textures/blocks/steam.oven.png,xcount=4,ycount=2
 texture:id=railcraft/steam.trap,filename=assets/railcraft/textures/blocks/steam.trap.png,xcount=3,ycount=1
@@ -219,7 +222,7 @@ block:id=%machine.alpha,data=15,stdrot=true,face0=3:railcraft/rock.crusher,face1
 
 # %machine.beta:* (machine.beta), render=mods.railcraft.client.render.RenderBlockMachineBeta(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.machine.BlockMachine
 block:id=%machine.beta,data=0,stdrot=true,face0-1=0:railcraft/tank.iron.wall,face2-5=1:railcraft/tank.iron.wall
-block:id=%machine.beta,data=1,stdrot=true,face0-5=0:railcraft/tank.iron.gauge
+block:id=%machine.beta,data=1,stdrot=true,patch0=12000:railcraft/tank.iron.gauge,patch1=12001:railcraft/tank.iron.gauge,patch2=12003:railcraft/tank.iron.gauge,patch3=12002:railcraft/tank.iron.gauge
 block:id=%machine.beta,data=2,stdrot=true,face0-1=0:railcraft/tank.iron.valve,face2-5=1:railcraft/tank.iron.valve
 block:id=%machine.beta,data=3,stdrot=true,face0-1=0:railcraft/boiler.tank.pressure.low,face2-5=1:railcraft/boiler.tank.pressure.low
 block:id=%machine.beta,data=4,stdrot=true,face0-1=0:railcraft/boiler.tank.pressure.high,face2-5=1:railcraft/boiler.tank.pressure.high
@@ -232,7 +235,7 @@ block:id=%machine.beta,data=10,stdrot=true,face0-1=0:railcraft/anchor.sentinel,f
 block:id=%machine.beta,data=11,stdrot=true,face0-5=0:railcraft/chest.void
 block:id=%machine.beta,data=12,stdrot=true,face0-5=0:railcraft/chest.metals
 block:id=%machine.beta,data=13,stdrot=true,face0-1=0:railcraft/tank.steel.wall,face2-5=1:railcraft/tank.steel.wall
-block:id=%machine.beta,data=14,stdrot=true,face0-5=0:railcraft/tank.steel.gauge
+block:id=%machine.beta,data=14,stdrot=true,patch0=12000:railcraft/tank.steel.gauge,patch1=12001:railcraft/tank.steel.gauge,patch2=12003:railcraft/tank.steel.gauge,patch3=12002:railcraft/tank.steel.gauge
 block:id=%machine.beta,data=15,stdrot=true,face0-1=0:railcraft/tank.steel.valve,face2-5=1:railcraft/tank.steel.valve
 
 # %track:* (track), render=mods.railcraft.client.render.RenderTrack(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.tracks.BlockTrack
@@ -245,21 +248,21 @@ block:id=%track.elevator,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,t
 block:id=%track.elevator,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:railcraft/tracks/track.elevator
 
 # %signal:* (signal), render=mods.railcraft.client.render.RenderBlockSignal(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.signals.BlockSignalRailcraft
-block:id=%signal,data=0,stdrot=true,face0-5=0:railcraft/signal.box.interlock
-block:id=%signal,data=1,stdrot=true,face0-5=0:railcraft/signal.dual
-block:id=%signal,data=2,stdrot=true,face0-5=0:railcraft/signal.switch.motor
-block:id=%signal,data=3,stdrot=true,face0-5=0:railcraft/signal.single
-block:id=%signal,data=4,stdrot=true,face0-5=0:railcraft/signal.switch.lever
-block:id=%signal,data=5,stdrot=true,face0-5=0:railcraft/signal.switch.routing
-block:id=%signal,data=6,stdrot=true,face0-5=0:railcraft/signal.box.sequencer
-block:id=%signal,data=7,stdrot=true,face0-5=0:railcraft/signal.box.capacitor
-block:id=%signal,data=8,stdrot=true,face0-5=0:railcraft/signal.box.receiver
-block:id=%signal,data=9,stdrot=true,face0-5=0:railcraft/signal.box.controller
-block:id=%signal,data=10,stdrot=true,face0-5=0:railcraft/signal.box.analog
-block:id=%signal,data=11,stdrot=true,face0-5=0:railcraft/signal.single
-block:id=%signal,data=12,stdrot=true,face0-5=0:railcraft/signal.dual
-block:id=%signal,data=13,stdrot=true,face0-5=0:railcraft/signal.box.block.relay
-block:id=%signal,data=14,data=15,stdrot=true,face0-5=0:railcraft/signal.switch.lever
+block:id=%signal,data=0,stdrot=true,face0-1=0:railcraft/signal.box.interlock,face2-5=0:railcraft/signal.box
+block:id=%signal,data=1,stdrot=true,face0-1=0:railcraft/signal.dual,face2-5=1:railcraft/signal.dual
+block:id=%signal,data=2,stdrot=true,face0-1=0:railcraft/signal.switch,face2-5=0:railcraft/signal.switch.motor,patch6=0:railcraft/signal.switch.target,patch7=1:railcraft/signal.switch.target,patch8=1:railcraft/signal.switch
+block:id=%signal,data=3,stdrot=true,face0-1=0:railcraft/signal.single,face2-5=1:railcraft/signal.single,patch6=3:railcraft/signal.single
+block:id=%signal,data=4,stdrot=true,face0-1=0:railcraft/signal.switch,face2-5=0:railcraft/signal.switch.lever,patch6=0:railcraft/signal.switch.target,patch7=1:railcraft/signal.switch.target,patch8=1:railcraft/signal.switch
+block:id=%signal,data=5,stdrot=true,face0-1=0:railcraft/signal.switch,face2-3=0:railcraft/signal.switch.routing,face4-5=0:railcraft/signal.switch.lever,patch6=0:railcraft/signal.switch.target,patch7=1:railcraft/signal.switch.target,patch8=1:railcraft/signal.switch
+block:id=%signal,data=6,stdrot=true,face0-1=0:railcraft/signal.box.sequencer,face2-5=0:railcraft/signal.box
+block:id=%signal,data=7,stdrot=true,face0-1=0:railcraft/signal.box.capacitor,face2-5=0:railcraft/signal.box
+block:id=%signal,data=8,stdrot=true,face0-1=0:railcraft/signal.box.receiver,face2-5=0:railcraft/signal.box
+block:id=%signal,data=9,stdrot=true,face0-1=0:railcraft/signal.box.controller,face2-5=0:railcraft/signal.box
+block:id=%signal,data=10,stdrot=true,face0-1=0:railcraft/signal.box.analog,face2-5=0:railcraft/signal.box
+block:id=%signal,data=11,stdrot=true,face0-1=0:railcraft/signal.single,face2-5=1:railcraft/signal.single,patch6=3:railcraft/signal.single
+block:id=%signal,data=12,stdrot=true,face0-1=0:railcraft/signal.dual,face2-5=1:railcraft/signal.dual
+block:id=%signal,data=13,stdrot=true,face0-1=0:railcraft/signal.box.block.relay,face2-5=0:railcraft/signal.box
+block:id=%signal,data=14,data=15,stdrot=true,face0-1=0:railcraft/signal.switch,face2-5=0:railcraft/signal.switch.lever,patch6=0:railcraft/signal.switch.target,patch7=1:railcraft/signal.switch.target,patch8=1:railcraft/signal.switch
 
 # %stair:* (stair), render=mods.railcraft.client.render.RenderStair(STAIRS), opaque=false,cls=mods.railcraft.common.blocks.aesthetics.stairs.BlockRailcraftStairs
 
@@ -484,31 +487,31 @@ block:id=%machine.epsilon,data=6,data=7,data=8,data=9,data=10,data=11,data=12,da
 
 # %machine.zeta:* (machine.zeta), render=mods.railcraft.client.render.RenderBlockMachineZeta(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.machine.BlockMachine
 block:id=%machine.zeta,data=0,stdrot=true,face0-1=0:railcraft/tank.aluminium.wall,face2-5=1:railcraft/tank.aluminium.wall
-block:id=%machine.zeta,data=1,stdrot=true,face0-5=0:railcraft/tank.aluminium.gauge
+block:id=%machine.zeta,data=1,stdrot=true,patch0=12000:railcraft/tank.aluminium.gauge,patch1=12001:railcraft/tank.aluminium.gauge,patch2=12003:railcraft/tank.aluminium.gauge,patch3=12002:railcraft/tank.aluminium.gauge
 block:id=%machine.zeta,data=2,stdrot=true,face0-1=0:railcraft/tank.aluminium.valve,face2-5=1:railcraft/tank.aluminium.valve
 block:id=%machine.zeta,data=3,stdrot=true,face0-1=0:railcraft/tank.stainless.wall,face2-5=1:railcraft/tank.stainless.wall
-block:id=%machine.zeta,data=4,stdrot=true,face0-5=0:railcraft/tank.stainless.gauge
+block:id=%machine.zeta,data=4,stdrot=true,patch0=12000:railcraft/tank.stainless.gauge,patch1=12001:railcraft/tank.stainless.gauge,patch2=12003:railcraft/tank.stainless.gauge,patch3=12002:railcraft/tank.stainless.gauge
 block:id=%machine.zeta,data=5,stdrot=true,face0-1=0:railcraft/tank.stainless.valve,face2-5=1:railcraft/tank.stainless.valve
 block:id=%machine.zeta,data=6,stdrot=true,face0-1=0:railcraft/tank.titanium.wall,face2-5=1:railcraft/tank.titanium.wall
-block:id=%machine.zeta,data=7,stdrot=true,face0-5=0:railcraft/tank.titanium.gauge
+block:id=%machine.zeta,data=7,stdrot=true,patch0=12000:railcraft/tank.titanium.gauge,patch1=12001:railcraft/tank.titanium.gauge,patch2=12003:railcraft/tank.titanium.gauge,patch3=12002:railcraft/tank.titanium.gauge
 block:id=%machine.zeta,data=8,stdrot=true,face0-1=0:railcraft/tank.titanium.valve,face2-5=1:railcraft/tank.titanium.valve
 block:id=%machine.zeta,data=9,stdrot=true,face0-1=0:railcraft/tank.tungstensteel.wall,face2-5=1:railcraft/tank.tungstensteel.wall
-block:id=%machine.zeta,data=10,stdrot=true,face0-5=0:railcraft/tank.tungstensteel.gauge
+block:id=%machine.zeta,data=10,stdrot=true,patch0=12000:railcraft/tank.tungstensteel.gauge,patch1=12001:railcraft/tank.tungstensteel.gauge,patch2=12003:railcraft/tank.tungstensteel.gauge,patch3=12002:railcraft/tank.tungstensteel.gauge
 block:id=%machine.zeta,data=11,stdrot=true,face0-1=0:railcraft/tank.tungstensteel.valve,face2-5=1:railcraft/tank.tungstensteel.valve
 block:id=%machine.zeta,data=12,stdrot=true,face0-1=0:railcraft/tank.palladium.wall,face2-5=1:railcraft/tank.palladium.wall
-block:id=%machine.zeta,data=13,stdrot=true,face0-5=0:railcraft/tank.palladium.gauge
+block:id=%machine.zeta,data=13,stdrot=true,patch0=12000:railcraft/tank.palladium.gauge,patch1=12001:railcraft/tank.palladium.gauge,patch2=12003:railcraft/tank.palladium.gauge,patch3=12002:railcraft/tank.palladium.gauge
 block:id=%machine.zeta,data=14,stdrot=true,face0-1=0:railcraft/tank.palladium.valve,face2-5=1:railcraft/tank.palladium.valve
 block:id=%machine.zeta,data=15,stdrot=true,face0-1=0:railcraft/tank.aluminium.wall,face2-5=1:railcraft/tank.aluminium.wall
 
 # %machine.eta:* (machine.eta), render=mods.railcraft.client.render.RenderBlockMachineEta(CUSTOM), opaque=false,cls=mods.railcraft.common.blocks.machine.BlockMachine
 block:id=%machine.eta,data=0,stdrot=true,face0-1=0:railcraft/tank.iridium.wall,face2-5=1:railcraft/tank.iridium.wall
-block:id=%machine.eta,data=1,stdrot=true,face0-5=0:railcraft/tank.iridium.gauge
+block:id=%machine.eta,data=1,stdrot=true,patch0=12000:railcraft/tank.iridium.gauge,patch1=12001:railcraft/tank.iridium.gauge,patch2=12003:railcraft/tank.iridium.gauge,patch3=12002:railcraft/tank.iridium.gauge
 block:id=%machine.eta,data=2,stdrot=true,face0-1=0:railcraft/tank.iridium.valve,face2-5=1:railcraft/tank.iridium.valve
 block:id=%machine.eta,data=3,stdrot=true,face0-1=0:railcraft/tank.osmium.wall,face2-5=1:railcraft/tank.osmium.wall
-block:id=%machine.eta,data=4,stdrot=true,face0-5=0:railcraft/tank.osmium.gauge
+block:id=%machine.eta,data=4,stdrot=true,patch0=12000:railcraft/tank.osmium.gauge,patch1=12001:railcraft/tank.osmium.gauge,patch2=12003:railcraft/tank.osmium.gauge,patch3=12002:railcraft/tank.osmium.gauge
 block:id=%machine.eta,data=5,stdrot=true,face0-1=0:railcraft/tank.osmium.valve,face2-5=1:railcraft/tank.osmium.valve
 block:id=%machine.eta,data=6,stdrot=true,face0-1=0:railcraft/tank.neutronium.wall,face2-5=1:railcraft/tank.neutronium.wall
-block:id=%machine.eta,data=7,stdrot=true,face0-5=0:railcraft/tank.neutronium.gauge
+block:id=%machine.eta,data=7,stdrot=true,patch0=12000:railcraft/tank.neutronium.gauge,patch1=12001:railcraft/tank.neutronium.gauge,patch2=12003:railcraft/tank.neutronium.gauge,patch3=12002:railcraft/tank.neutronium.gauge
 block:id=%machine.eta,data=8,stdrot=true,face0-1=0:railcraft/tank.neutronium.valve,face2-5=1:railcraft/tank.neutronium.valve
 block:id=%machine.eta,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:railcraft/tank.iridium.wall,face2-5=1:railcraft/tank.iridium.wall
 
