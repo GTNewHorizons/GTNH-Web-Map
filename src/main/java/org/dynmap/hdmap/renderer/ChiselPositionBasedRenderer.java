@@ -27,10 +27,18 @@ public class ChiselPositionBasedRenderer extends CustomRenderer {
 
     @Override
     public RenderPatch[] getRenderPatchList(MapDataContext mapDataCtx) {
-        int x = mapDataCtx.getX();
-        int y = mapDataCtx.getY();
-        int z = mapDataCtx.getZ();
-        int version = (x % num) * num * num + (y % num) * num + (z % num);
+        int x = mapDataCtx.getX() % num;
+        int y = mapDataCtx.getY() % num;
+        int z = mapDataCtx.getZ() % num;
+
+        if(x < 0)
+            x += num;
+        if(y < 0)
+            y += num;
+        if(z < 0)
+            z += num;
+
+        int version = x * num * num + y * num + z;
 
         if(num == 2)
             return versions2x2[version];
