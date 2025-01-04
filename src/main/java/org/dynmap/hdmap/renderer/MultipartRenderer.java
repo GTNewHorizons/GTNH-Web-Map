@@ -2,6 +2,8 @@ package org.dynmap.hdmap.renderer;
 
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
+import org.dynmap.hdmap.renderer.multipart.MultiPartHelper;
+import org.dynmap.hdmap.renderer.multipart.MultiPartRenderer;
 import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.renderer.CustomColorMultiplier;
 import org.dynmap.renderer.CustomRenderer;
@@ -298,7 +300,14 @@ public class MultipartRenderer extends CustomRenderer {
                         } else if(strId.equals("ae2_cablebus") && MECableRenderer.INSTANCE != null){
                             CustomRendererData crd = MECableRenderer.INSTANCE.getRenderData(mapDataCtx);
                             mrd.addComplexShape(rpf, crd, MECableRenderer.INSTANCE.meCableBusBlockId, 0);
+                        } else {
+                            MultiPartRenderer rend = MultiPartHelper.getRendererForPart(strId);
+                            if(rend != null){
+                                CustomRendererData crd = rend.getRenderData(mapDataCtx, fields);
+                                mrd.addComplexShape(rpf, crd,0, 0);
+                            }
                         }
+
                     }
 
                 }
