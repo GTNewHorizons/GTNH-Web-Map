@@ -148,6 +148,7 @@ public class MECableRenderer extends PipeRendererBase {
                 Object otherExtra = null;
                 Object otherDef = null;
                 Object otherDirDef = null;
+                boolean hasAe2CablePart = false;
 
                 if (id == meCableBusBlockId) {
                     otherExtra = mapDataCtx.getBlockTileEntityFieldAt("extra:" + opposite.ordinal(), dir.offsetX, dir.offsetY, dir.offsetZ);
@@ -165,6 +166,7 @@ public class MECableRenderer extends PipeRendererBase {
                                     otherDef = tmp.get("def:6");
                                     otherExtra = tmp.get("extra:"+opposite.ordinal());
                                     otherDirDef = tmp.get("def:"+opposite.ordinal());
+                                    hasAe2CablePart = true;
                                     break;
                                 }
                             }
@@ -172,7 +174,7 @@ public class MECableRenderer extends PipeRendererBase {
                     }
                 }
 
-                if(id == meCableBusBlockId || id == multipartBlockId) {
+                if(id == meCableBusBlockId || (id == multipartBlockId && hasAe2CablePart)) {
                     short otherDamage = 0;
                     if (otherDef instanceof HashMap) {
                         HashMap<String, Object> map = (HashMap<String, Object>) otherDef;
