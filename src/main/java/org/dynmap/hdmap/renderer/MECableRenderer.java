@@ -26,6 +26,8 @@ public class MECableRenderer extends PipeRendererBase {
     int meCableBusBlockId, multipartBlockId = -1000;
 
     public static final int ME_P2P_ID = 460;
+    public static final int ME_QUARTZ_ID = 140;
+    public static final int ME_ANCHOR_ID = 120;
 
     static int[] quartzIndices = {7,7,7,7,7,7}, anchorIndices = {8,8,8,8,8,8};
 
@@ -187,7 +189,8 @@ public class MECableRenderer extends PipeRendererBase {
                     } else if(otherExtra != null && otherDirDef != null){
                         if (otherDirDef instanceof HashMap) {
                             HashMap hm = (HashMap) otherDirDef;
-                            if(GWM_Util.objectToInt(hm.get("Damage"),0) == ME_P2P_ID)
+                            int damage = GWM_Util.objectToInt(hm.get("Damage"), 0);
+                            if(damage == ME_P2P_ID || damage == ME_QUARTZ_ID)
                                 version |= dir.flag;
                         }
 
@@ -332,7 +335,7 @@ public class MECableRenderer extends PipeRendererBase {
         int damage = GWM_Util.objectToInt(def.get("Damage"),-1);
 
 
-        if(damage == 120){ // anchor
+        if(damage == ME_ANCHOR_ID){ // anchor
             switch (dir){
                 case DOWN:
                     addBoxInt(rpf, list, 7, 9, 0, 7, 7, 9, anchorIndices);
@@ -358,7 +361,7 @@ public class MECableRenderer extends PipeRendererBase {
 
             return;
         }
-        else if(damage == 140){ // quartz pipe
+        else if(damage == ME_QUARTZ_ID){ // quartz pipe
             switch (dir){
                 case DOWN:
                     addBoxInt(rpf, list, 6, 10, 0, 6, 6, 10, quartzIndices);
