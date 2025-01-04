@@ -1130,6 +1130,7 @@ texture:id=mte/spaceElevator/MotorT3_Side,filename=assets/gtnhintergalactic/text
 texture:id=mte/spaceElevator/MotorT4_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/MotorT4_Side.png
 texture:id=mte/spaceElevator/MotorT5_Side,filename=assets/gtnhintergalactic/textures/blocks/spaceElevator/MotorT5_Side.png
 texture:id=mte/iconsets/EM_LASER,filename=assets/gregtech/textures/blocks/iconsets/EM_LASER.png
+texture:id=mte/iconsets/EM_LASERMIRROR,filename=assets/gregtech/textures/blocks/iconsets/EM_LASERMIRROR.png
 texture:id=mte/iconsets/EM_CANDY,filename=assets/gregtech/textures/blocks/iconsets/EM_CANDY.png,ycount=4
 texture:id=mte/iconsets/EM_PIPE,filename=assets/gregtech/textures/blocks/iconsets/EM_PIPE.png
 texture:id=mte/iconsets/EM_DATA,filename=assets/gregtech/textures/blocks/iconsets/EM_DATA.png
@@ -6336,7 +6337,7 @@ moddata:mod=gtmte,type=mte,id=15450,baseset=hull.tier.08,iconset=hatch.rack,isha
 moddata:mod=gtmte,type=mte,id=15451,baseset=hull.tier.09,iconset=hatch.holder,ishatch=true
 moddata:mod=gtmte,type=mte,id=15452,baseset=hull.tier.03,iconset=hatch.capacitor,ishatch=true
 moddata:mod=gtmte,type=mte,id=15465,mtetype=pipe,basetex=0:mte/iconsets/EM_LASER,basetex2=17000:mte/iconsets/EM_CANDY,colormul=000000,size=500
-moddata:mod=gtmte,type=mte,id=15466,mtetype=pipe,basetex=17000:gt_pipe,colormul=000000,size=600
+moddata:mod=gtmte,type=mte,id=15466,mtetype=pipe,basetex=0:mte/iconsets/EM_LASERMIRROR,basetex2=17000:mte/iconsets/EM_CANDY,colormul=000000,size=600
 moddata:mod=gtmte,type=mte,id=15470,mtetype=pipe,basetex=0:mte/iconsets/EM_DATA,basetex2=17000:mte/iconsets/EM_BAR,colormul=000000,size=375
 moddata:mod=gtmte,type=mte,id=15472,mtetype=pipe,basetex=0:mte/iconsets/EM_LASER,basetex2=17000:mte/iconsets/EM_CANDY,colormul=000000,size=1000
 moddata:mod=gtmte,type=mte,id=15473,mtetype=pipe,basetex=0:mte/iconsets/EM_DATA,basetex2=17000:mte/iconsets/EM_BAR,colormul=000000,size=1000
