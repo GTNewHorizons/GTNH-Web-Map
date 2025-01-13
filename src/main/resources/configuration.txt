@@ -166,13 +166,35 @@ components:
     type: timeofdayclock
     showdigitalclock: true
     #showweather: true
+
   # Mouse pointer world coordinate display
   - class: org.dynmap.ClientComponent
     type: coord
     label: "Location"
     hidey: false
     show-mcr: false
-    
+
+  # Configurable grid overlay
+  #- class: org.dynmap.ClientComponent
+  #  type: regiongrid
+  #  grids:
+  #    - title: "Grid - Chunks"
+  #      sizeInChunks: 1
+  #      color: "#FF0000"
+  #      weight: 1
+  #    - title: "Grid - Veins (3x3)"
+  #      sizeInChunks: 3
+  #      color: "#00FFFF"
+  #      weight: 2
+  #    - title: "Grid - Oilfields (8x8)"
+  #      sizeInChunks: 8
+  #      color: "#FFFF00"
+  #      weight: 3
+  #    - title: "Grid - Regions (32x32)"
+  #      sizeInChunks: 32
+  #      color: "#0000FF"
+  #      weight: 4
+
   # Note: more than one logo component can be defined
   #- class: org.dynmap.ClientComponent
   #  type: logo
