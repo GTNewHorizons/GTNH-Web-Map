@@ -1,0 +1,725 @@
+# etfuturum 2.6.2
+version:1.7
+modname:etfuturum
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %daylight_detector_inverted:* (daylight_detector_inverted), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockInvertedDaylightDetector
+boxblock:id=%daylight_detector_inverted,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.375,zmin=0.0,zmax=1.0,data=*
+
+# %banner:* (banner), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBanner
+boxblock:id=%banner,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %beetroots:* (beetroots), render=(CROPS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBeetroot
+patchblock:id=%beetroots,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %grass_path:* (grass_path), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDirtPath
+boxblock:id=%grass_path,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %end_rod:* (end_rod), render=ganymedes01.etfuturum.client.renderer.block.BlockEndRodRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockEndRod
+boxblock:id=%end_rod,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0,data=1
+boxblock:id=%end_rod,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.0,zmax=1.0,data=2,data=3
+boxblock:id=%end_rod,xmin=0.0,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.375,zmax=0.625,data=4,data=5
+boxblock:id=%end_rod,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=6,data=7
+boxblock:id=%end_rod,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.0,zmax=1.0,data=8,data=9
+boxblock:id=%end_rod,xmin=0.0,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.375,zmax=0.625,data=10,data=11
+boxblock:id=%end_rod,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=12,data=13
+boxblock:id=%end_rod,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.0,zmax=1.0,data=14,data=15
+
+# %chorus_plant:* (chorus_plant), render=ganymedes01.etfuturum.client.renderer.block.BlockChorusPlantRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockChorusPlant
+boxblock:id=%chorus_plant,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=*
+
+# %cornflower:* (cornflower), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseFlower
+patchblock:id=%cornflower,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %lily_of_the_valley:* (lily_of_the_valley), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseFlower
+patchblock:id=%lily_of_the_valley,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %wither_rose:* (wither_rose), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWitherRose
+patchblock:id=%wither_rose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %sweet_berry_bush:* (sweet_berry_bush), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBerryBush
+patchblock:id=%sweet_berry_bush,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %white_glazed_terracotta:* (white_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %orange_glazed_terracotta:* (orange_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %magenta_glazed_terracotta:* (magenta_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %light_blue_glazed_terracotta:* (light_blue_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %yellow_glazed_terracotta:* (yellow_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %lime_glazed_terracotta:* (lime_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %pink_glazed_terracotta:* (pink_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %gray_glazed_terracotta:* (gray_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %light_gray_glazed_terracotta:* (light_gray_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %cyan_glazed_terracotta:* (cyan_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %purple_glazed_terracotta:* (purple_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %blue_glazed_terracotta:* (blue_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %brown_glazed_terracotta:* (brown_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %green_glazed_terracotta:* (green_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %red_glazed_terracotta:* (red_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %black_glazed_terracotta:* (black_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %observer:* (observer), render=ganymedes01.etfuturum.client.renderer.block.BlockObserverRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockObserver
+
+# %red_sandstone_slab:* (red_sandstone_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockRedSandstoneSlab
+boxblock:id=%red_sandstone_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%red_sandstone_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %purpur_slab:* (purpur_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockPurpurSlab
+boxblock:id=%purpur_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%purpur_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stone_slab:* (stone_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockStoneSlab1
+boxblock:id=%stone_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%stone_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %smooth_red_sandstone_slab:* (smooth_red_sandstone_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockSmoothSandstoneSlab
+boxblock:id=%smooth_red_sandstone_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%smooth_red_sandstone_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %smooth_quartz_slab:* (smooth_quartz_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockSmoothQuartzSlab
+boxblock:id=%smooth_quartz_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%smooth_quartz_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %red_netherbrick_slab:* (red_netherbrick_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseSlab
+boxblock:id=%red_netherbrick_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%red_netherbrick_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %end_brick_slab:* (end_brick_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseSlab
+boxblock:id=%end_brick_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%end_brick_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %deepslate_slab:* (deepslate_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseSlab
+boxblock:id=%deepslate_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%deepslate_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %deepslate_brick_slab:* (deepslate_brick_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseSlab
+boxblock:id=%deepslate_brick_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%deepslate_brick_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tuff_slab:* (tuff_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseSlab
+boxblock:id=%tuff_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%tuff_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %cut_copper_slab:* (cut_copper_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperSlab
+boxblock:id=%cut_copper_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%cut_copper_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %smooth_red_sandstone_stairs:* (smooth_red_sandstone_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%smooth_red_sandstone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %smooth_quartz_stairs:* (smooth_quartz_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%smooth_quartz_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %red_netherbrick_stairs:* (red_netherbrick_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%red_netherbrick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %mossy_stone_brick_stairs:* (mossy_stone_brick_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%mossy_stone_brick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %mossy_cobblestone_stairs:* (mossy_cobblestone_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%mossy_cobblestone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone_stairs:* (stone_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%stone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %end_brick_stairs:* (end_brick_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%end_brick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %red_sandstone_stairs:* (red_sandstone_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%red_sandstone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %purpur_stairs:* (purpur_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%purpur_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %cobbled_deepslate_stairs:* (cobbled_deepslate_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%cobbled_deepslate_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %polished_deepslate_stairs:* (polished_deepslate_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%polished_deepslate_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %deepslate_brick_stairs:* (deepslate_brick_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%deepslate_brick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %deepslate_tile_stairs:* (deepslate_tile_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%deepslate_tile_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tuff_stairs:* (tuff_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%tuff_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %polished_tuff_stairs:* (polished_tuff_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%polished_tuff_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %tuff_brick_stairs:* (tuff_brick_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%tuff_brick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %cut_copper_stairs:* (cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %exposed_cut_copper_stairs:* (exposed_cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%exposed_cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %weathered_cut_copper_stairs:* (weathered_cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%weathered_cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %oxidized_cut_copper_stairs:* (oxidized_cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%oxidized_cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %waxed_cut_copper_stairs:* (waxed_cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%waxed_cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %waxed_exposed_cut_copper_stairs:* (waxed_exposed_cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%waxed_exposed_cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %waxed_weathered_cut_copper_stairs:* (waxed_weathered_cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%waxed_weathered_cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %waxed_oxidized_cut_copper_stairs:* (waxed_oxidized_cut_copper_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCutCopperStairs
+customblock:id=%waxed_oxidized_cut_copper_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %stone_wall:* (stone_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockStoneWall
+customblock:id=%stone_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %nether_brick_wall:* (nether_brick_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseWall
+customblock:id=%nether_brick_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %red_sandstone_wall:* (red_sandstone_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseWall
+customblock:id=%red_sandstone_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %red_nether_brick_wall:* (red_nether_brick_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseWall
+customblock:id=%red_nether_brick_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %end_brick_wall:* (end_brick_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseWall
+customblock:id=%end_brick_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %deepslate_wall:* (deepslate_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseWall
+customblock:id=%deepslate_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %deepslate_brick_wall:* (deepslate_brick_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseWall
+customblock:id=%deepslate_brick_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %tuff_wall:* (tuff_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseWall
+customblock:id=%tuff_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %copper_door:* (copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %exposed_copper_door:* (exposed_copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%exposed_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%exposed_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%exposed_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%exposed_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %weathered_copper_door:* (weathered_copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%weathered_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%weathered_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%weathered_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%weathered_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %oxidized_copper_door:* (oxidized_copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%oxidized_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%oxidized_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%oxidized_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%oxidized_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %waxed_copper_door:* (waxed_copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%waxed_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%waxed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%waxed_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%waxed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%waxed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%waxed_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%waxed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%waxed_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %waxed_exposed_copper_door:* (waxed_exposed_copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%waxed_exposed_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%waxed_exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%waxed_exposed_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%waxed_exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%waxed_exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%waxed_exposed_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%waxed_exposed_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%waxed_exposed_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %waxed_weathered_copper_door:* (waxed_weathered_copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%waxed_weathered_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%waxed_weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%waxed_weathered_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%waxed_weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%waxed_weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%waxed_weathered_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%waxed_weathered_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%waxed_weathered_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %waxed_oxidized_copper_door:* (waxed_oxidized_copper_door), render=ganymedes01.etfuturum.client.renderer.block.BlockDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperDoor
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=1
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=3
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=4
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
+boxblock:id=%waxed_oxidized_copper_door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %copper_trapdoor:* (copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %exposed_copper_trapdoor:* (exposed_copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%exposed_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%exposed_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%exposed_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %weathered_copper_trapdoor:* (weathered_copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%weathered_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%weathered_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%weathered_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %oxidized_copper_trapdoor:* (oxidized_copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%oxidized_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %waxed_copper_trapdoor:* (waxed_copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%waxed_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%waxed_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%waxed_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %waxed_exposed_copper_trapdoor:* (waxed_exposed_copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%waxed_exposed_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %waxed_weathered_copper_trapdoor:* (waxed_weathered_copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%waxed_weathered_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %waxed_oxidized_copper_trapdoor:* (waxed_oxidized_copper_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCopperTrapdoor
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %barrel:* (barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %lantern:* (lantern), render=ganymedes01.etfuturum.client.renderer.block.BlockLanternRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockLantern
+boxblock:id=%lantern,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.4375,zmin=0.3125,zmax=0.6875,data=0
+boxblock:id=%lantern,xmin=0.3125,xmax=0.6875,ymin=0.0625,ymax=0.5,zmin=0.3125,zmax=0.6875,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %soul_lantern:* (soul_lantern), render=ganymedes01.etfuturum.client.renderer.block.BlockLanternRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockLantern
+boxblock:id=%soul_lantern,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.4375,zmin=0.3125,zmax=0.6875,data=0
+boxblock:id=%soul_lantern,xmin=0.3125,xmax=0.6875,ymin=0.0625,ymax=0.5,zmin=0.3125,zmax=0.6875,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %soul_torch:* (soul_torch), render=(TORCH), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockSoulTorch
+patchblock:id=%soul_torch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=%soul_torch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=%soul_torch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=%soul_torch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=%soul_torch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=%soul_torch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %stonecutter:* (stonecutter), render=ganymedes01.etfuturum.client.renderer.block.BlockStonecutterRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockStonecutter
+boxblock:id=%stonecutter,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5625,zmin=0.0,zmax=1.0,data=*
+
+# %loom:* (loom), render=ganymedes01.etfuturum.client.renderer.block.BlockLoomRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockLoom
+
+# %chain:* (chain), render=ganymedes01.etfuturum.client.renderer.block.BlockChainRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockChain
+boxblock:id=%chain,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=1.0,zmin=0.40625,zmax=0.59375,data=0
+boxblock:id=%chain,xmin=0.0,xmax=1.0,ymin=0.40625,ymax=0.59375,zmin=0.40625,zmax=0.59375,data=1
+boxblock:id=%chain,xmin=0.40625,xmax=0.59375,ymin=0.40625,ymax=0.59375,zmin=0.0,zmax=1.0,data=2
+boxblock:id=%chain,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=1.0,zmin=0.40625,zmax=0.59375,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %brewing_stand:* (brewing_stand), render=(BREWINGSTAND), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewBrewingStand
+
+# %beacon:* (beacon), render=(BEACON), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewBeacon
+
+# %enchantment_table:* (enchantment_table), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewEnchantmentTable
+boxblock:id=%enchantment_table,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
+
+# %anvil:* (anvil), render=(ANVIL), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewAnvil
+
+# %blackstone_slab:* (blackstone_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBlackstoneSlab
+boxblock:id=%blackstone_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%blackstone_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %blackstone_stairs:* (blackstone_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%blackstone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %polished_blackstone_stairs:* (polished_blackstone_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%polished_blackstone_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %polished_blackstone_brick_stairs:* (polished_blackstone_brick_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%polished_blackstone_brick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %blackstone_wall:* (blackstone_wall), render=(WALL), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBlackstoneWall
+customblock:id=%blackstone_wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# %polished_blackstone_pressure_plate:* (polished_blackstone_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockPolishedBlackstonePressurePlate
+boxblock:id=%polished_blackstone_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%polished_blackstone_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%polished_blackstone_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %polished_blackstone_button:* (polished_blackstone_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockPolishedBlackstoneButton
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%polished_blackstone_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%polished_blackstone_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%polished_blackstone_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%polished_blackstone_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%polished_blackstone_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %pink_petals:* (pink_petals), render=ganymedes01.etfuturum.client.renderer.block.BlockPinkPetalsRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockPinkPetals
+boxblock:id=%pink_petals,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=*
+
+# %sapling:* (sapling), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockModernSapling
+patchblock:id=%sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %wood_slab:* (wood_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockModernWoodSlab
+boxblock:id=%wood_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%wood_slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %cherry_stairs:* (cherry_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseStairs
+customblock:id=%cherry_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %button_spruce:* (button_spruce), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%button_spruce,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%button_spruce,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%button_spruce,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%button_spruce,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button_spruce,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %button_birch:* (button_birch), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%button_birch,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%button_birch,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%button_birch,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%button_birch,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button_birch,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %button_jungle:* (button_jungle), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%button_jungle,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%button_jungle,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%button_jungle,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%button_jungle,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button_jungle,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %button_acacia:* (button_acacia), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%button_acacia,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%button_acacia,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%button_acacia,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%button_acacia,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button_acacia,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %button_dark_oak:* (button_dark_oak), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%button_dark_oak,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%button_dark_oak,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%button_dark_oak,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%button_dark_oak,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button_dark_oak,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %cherry_button:* (cherry_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%cherry_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%cherry_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%cherry_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%cherry_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %pressure_plate_spruce:* (pressure_plate_spruce), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%pressure_plate_spruce,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pressure_plate_spruce,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pressure_plate_spruce,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pressure_plate_birch:* (pressure_plate_birch), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%pressure_plate_birch,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pressure_plate_birch,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pressure_plate_birch,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pressure_plate_jungle:* (pressure_plate_jungle), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%pressure_plate_jungle,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pressure_plate_jungle,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pressure_plate_jungle,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pressure_plate_acacia:* (pressure_plate_acacia), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%pressure_plate_acacia,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pressure_plate_acacia,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pressure_plate_acacia,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pressure_plate_dark_oak:* (pressure_plate_dark_oak), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%pressure_plate_dark_oak,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pressure_plate_dark_oak,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pressure_plate_dark_oak,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %cherry_pressure_plate:* (cherry_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %cherry_trapdoor:* (cherry_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseTrapdoor
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=%cherry_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=%cherry_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+
+# %sign_spruce:* (sign_spruce), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%sign_spruce,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %wall_sign_spruce:* (wall_sign_spruce), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%wall_sign_spruce,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%wall_sign_spruce,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%wall_sign_spruce,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%wall_sign_spruce,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %sign_birch:* (sign_birch), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%sign_birch,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %wall_sign_birch:* (wall_sign_birch), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%wall_sign_birch,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%wall_sign_birch,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%wall_sign_birch,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%wall_sign_birch,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %sign_jungle:* (sign_jungle), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%sign_jungle,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %wall_sign_jungle:* (wall_sign_jungle), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%wall_sign_jungle,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%wall_sign_jungle,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%wall_sign_jungle,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%wall_sign_jungle,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %sign_acacia:* (sign_acacia), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%sign_acacia,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %wall_sign_acacia:* (wall_sign_acacia), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%wall_sign_acacia,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%wall_sign_acacia,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%wall_sign_acacia,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%wall_sign_acacia,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %sign_dark_oak:* (sign_dark_oak), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%sign_dark_oak,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %wall_sign_dark_oak:* (wall_sign_dark_oak), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%wall_sign_dark_oak,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%wall_sign_dark_oak,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%wall_sign_dark_oak,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%wall_sign_dark_oak,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %cherry_sign:* (cherry_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%cherry_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %cherry_wall_sign:* (cherry_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%cherry_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%cherry_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%cherry_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%cherry_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %white_bed:* (white_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%white_bed,ymax=0.5,data=*
+
+# %orange_bed:* (orange_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%orange_bed,ymax=0.5,data=*
+
+# %magenta_bed:* (magenta_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%magenta_bed,ymax=0.5,data=*
+
+# %light_blue_bed:* (light_blue_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%light_blue_bed,ymax=0.5,data=*
+
+# %yellow_bed:* (yellow_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%yellow_bed,ymax=0.5,data=*
+
+# %lime_bed:* (lime_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%lime_bed,ymax=0.5,data=*
+
+# %pink_bed:* (pink_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%pink_bed,ymax=0.5,data=*
+
+# %gray_bed:* (gray_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%gray_bed,ymax=0.5,data=*
+
+# %light_gray_bed:* (light_gray_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%light_gray_bed,ymax=0.5,data=*
+
+# %cyan_bed:* (cyan_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%cyan_bed,ymax=0.5,data=*
+
+# %purple_bed:* (purple_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%purple_bed,ymax=0.5,data=*
+
+# %blue_bed:* (blue_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%blue_bed,ymax=0.5,data=*
+
+# %brown_bed:* (brown_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%brown_bed,ymax=0.5,data=*
+
+# %green_bed:* (green_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%green_bed,ymax=0.5,data=*
+
+# %black_bed:* (black_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
+boxblock:id=%black_bed,ymax=0.5,data=*
+
+# %rose:* (rose), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockOldRose
+patchblock:id=%rose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
