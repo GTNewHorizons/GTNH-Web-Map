@@ -440,7 +440,7 @@ block:id=%purpur_pillar,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mi
 block:id=%end_bricks,data=*,stdrot=true,face0-5=0:minecraft/end_bricks
 
 # %grass_path:* (grass_path), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDirtPath
-block:id=%grass_path,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:minecraft/dirt_path_top,face2-5=0:minecraft/dirt_path_side
+block:id=%grass_path,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0=0:minecraft/dirt,face1=0:minecraft/dirt_path_top,face2-5=0:minecraft/dirt_path_side
 
 # %end_rod:* (end_rod), render=ganymedes01.etfuturum.client.renderer.block.BlockEndRodRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockEndRod
 block:id=%end_rod,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/end_rod
