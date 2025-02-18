@@ -739,7 +739,7 @@ moddata:mod=ic2crops,crop=Zomplant,steps=4,step0=0:ic2/crop/blockCrop.Zomplant.1
 
 
 # %gt.blockmachines:* (gt.blockmachines), render=gregtech.common.render.GTRendererBlock(CUSTOM), opaque=false,cls=gregtech.common.blocks.BlockMachines
-block:id=%gt.blockmachines,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
+block:id=%gt.blockmachines,transparency=SEMITRANSPARENT,data=*,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_LV_SIDE
 
 # %gt.blockcasings:* (gt.blockcasings), render=(STANDARD), opaque=true,cls=gregtech.common.blocks.BlockCasings1
 block:id=%gt.blockcasings,data=0,stdrot=true,face0=0:gregtech/iconsets/MACHINE_8V_BOTTOM,face1=0:gregtech/iconsets/MACHINE_8V_TOP,face2-5=0:gregtech/iconsets/MACHINE_8V_SIDE
