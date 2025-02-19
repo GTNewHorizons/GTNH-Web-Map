@@ -21,7 +21,7 @@ texture:id=nuclearcontrol/industrialAlarm/sidesHor0,filename=assets/nuclearcontr
 texture:id=nuclearcontrol/infoPanel/extenderAdvancedSide,filename=assets/nuclearcontrol/textures/blocks/infoPanel/extenderAdvancedSide.png
 texture:id=nuclearcontrol/infoPanel/extenderBack,filename=assets/nuclearcontrol/textures/blocks/infoPanel/extenderBack.png
 texture:id=nuclearcontrol/infoPanel/extenderSide,filename=assets/nuclearcontrol/textures/blocks/infoPanel/extenderSide.png
-texture:id=nuclearcontrol/infoPanel/off/2/15,filename=assets/nuclearcontrol/textures/blocks/infoPanel/off/2/15.png
+texture:id=nuclearcontrol/infoPanel/off/2/0,filename=assets/nuclearcontrol/textures/blocks/infoPanel/off/2/0.png
 texture:id=nuclearcontrol/infoPanel/panelAdvancedSide,filename=assets/nuclearcontrol/textures/blocks/infoPanel/panelAdvancedSide.png
 texture:id=nuclearcontrol/infoPanel/panelBack,filename=assets/nuclearcontrol/textures/blocks/infoPanel/panelBack.png
 texture:id=nuclearcontrol/infoPanel/panelSide,filename=assets/nuclearcontrol/textures/blocks/infoPanel/panelSide.png
@@ -47,13 +47,13 @@ block:id=%blockNuclearControlMain,data=0,stdrot=true,transparency=TRANSPARENT,fa
 block:id=%blockNuclearControlMain,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:nuclearcontrol/industrialAlarm/back,face1=0:nuclearcontrol/industrialAlarm/face0,face2-5=0:nuclearcontrol/industrialAlarm/sidesHor0
 block:id=%blockNuclearControlMain,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:nuclearcontrol/howlerAlarm/back,face1=0:nuclearcontrol/howlerAlarm/face,face2-5=0:nuclearcontrol/howlerAlarm/sidesHor
 block:id=%blockNuclearControlMain,data=3,stdrot=true,face0=0:nuclearcontrol/remoteThermo/back,face1=0:nuclearcontrol/remoteThermo/face,face2-5=0:nuclearcontrol/remoteThermo/side
-block:id=%blockNuclearControlMain,data=4,stdrot=true,face0=0:nuclearcontrol/infoPanel/panelBack,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/panelSide
-block:id=%blockNuclearControlMain,data=5,stdrot=true,face0=0:nuclearcontrol/infoPanel/extenderBack,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/extenderSide
+block:id=%blockNuclearControlMain,data=4,stdrot=true,patch0=0:nuclearcontrol/infoPanel/panelBack,patch1=0:nuclearcontrol/infoPanel/off/2/0,patch2-5=0:nuclearcontrol/infoPanel/panelSide
+block:id=%blockNuclearControlMain,data=5,stdrot=true,patch0=0:nuclearcontrol/infoPanel/extenderBack,patch1=0:nuclearcontrol/infoPanel/off/2/0,patch2-5=0:nuclearcontrol/infoPanel/extenderSide
 block:id=%blockNuclearControlMain,data=6,stdrot=true,face0=0:nuclearcontrol/energyCounter/output,face1=0:nuclearcontrol/energyCounter/input,face2-5=0:nuclearcontrol/energyCounter/output
 block:id=%blockNuclearControlMain,data=7,stdrot=true,face0=0:nuclearcontrol/averageCounter/output,face1=0:nuclearcontrol/averageCounter/input,face2-5=0:nuclearcontrol/averageCounter/output
 block:id=%blockNuclearControlMain,data=8,stdrot=true,face0=0:nuclearcontrol/rangeTrigger/back,face1=0:nuclearcontrol/rangeTrigger/faceGray,face2-5=0:nuclearcontrol/rangeTrigger/side
-block:id=%blockNuclearControlMain,data=9,stdrot=true,face0=0:nuclearcontrol/infoPanel/panelAdvancedSide,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/panelAdvancedSide
-block:id=%blockNuclearControlMain,data=10,stdrot=true,face0=0:nuclearcontrol/infoPanel/extenderAdvancedSide,face1=0:nuclearcontrol/infoPanel/off/2/15,face2-5=0:nuclearcontrol/infoPanel/extenderAdvancedSide
+block:id=%blockNuclearControlMain,data=9,stdrot=true,patch0=0:nuclearcontrol/infoPanel/panelAdvancedSide,patch1=0:nuclearcontrol/infoPanel/off/2/0,patch2-5=0:nuclearcontrol/infoPanel/panelAdvancedSide
+block:id=%blockNuclearControlMain,data=10,stdrot=true,patch0=0:nuclearcontrol/infoPanel/extenderAdvancedSide,patch1=0:nuclearcontrol/infoPanel/off/2/0,patch2-5=0:nuclearcontrol/infoPanel/extenderAdvancedSide
 
 # %blockNuclearControlLight:* (blockNuclearControlLight), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.blocks.BlockNuclearControlLight
 block:id=%blockNuclearControlLight,data=0,stdrot=true,face0-5=0:nuclearcontrol/light/lamp0
