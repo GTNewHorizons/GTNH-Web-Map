@@ -41,7 +41,13 @@ perspectives:
     inclination: 60
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_S_60_vhires
+    azimuth: 180
+    inclination: 60
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_SE_60_vlowres
     azimuth: 135
     inclination: 60
@@ -65,7 +71,13 @@ perspectives:
     inclination: 60
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_SE_60_vhires
+    azimuth: 135
+    inclination: 60
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_E_60_vlowres
     azimuth: 90
     inclination: 60
@@ -89,7 +101,13 @@ perspectives:
     inclination: 60
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_E_60_vhires
+    azimuth: 90
+    inclination: 60
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_NE_60_vlowres
     azimuth: 45
     inclination: 60
@@ -113,7 +131,13 @@ perspectives:
     inclination: 60
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_NE_60_vhires
+    azimuth: 45
+    inclination: 60
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_N_60_vlowres
     azimuth: 0
     inclination: 60
@@ -137,7 +161,13 @@ perspectives:
     inclination: 60
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_N_60_vhires
+    azimuth: 0
+    inclination: 60
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_NW_60_vlowres
     azimuth: 315
     inclination: 60
@@ -161,7 +191,13 @@ perspectives:
     inclination: 60
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_NW_60_vhires
+    azimuth: 315
+    inclination: 60
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_W_60_vlowres
     azimuth: 270
     inclination: 60
@@ -185,7 +221,13 @@ perspectives:
     inclination: 60
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_W_60_vhires
+    azimuth: 270
+    inclination: 60
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_SW_60_vlowres
     azimuth: 225
     inclination: 60
@@ -209,6 +251,12 @@ perspectives:
     inclination: 60
     scale: 16
     
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_SW_60_vhires
+    azimuth: 225
+    inclination: 60
+    scale: 32
+
 # Low angle perspectives (30 degrees)
   - class: org.dynmap.hdmap.IsoHDPerspective 
     name: iso_S_30_vlowres
@@ -234,7 +282,13 @@ perspectives:
     inclination: 30
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_S_30_vhires
+    azimuth: 180
+    inclination: 30
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_SE_30_vlowres
     azimuth: 135
     inclination: 30
@@ -258,7 +312,13 @@ perspectives:
     inclination: 30
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_SE_30_vhires
+    azimuth: 135
+    inclination: 30
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_E_30_vlowres
     azimuth: 90
     inclination: 30
@@ -282,7 +342,13 @@ perspectives:
     inclination: 30
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_E_30_vhires
+    azimuth: 90
+    inclination: 30
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_NE_30_vlowres
     azimuth: 45
     inclination: 30
@@ -306,7 +372,13 @@ perspectives:
     inclination: 30
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_NE_30_vhires
+    azimuth: 45
+    inclination: 30
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_N_30_vlowres
     azimuth: 0
     inclination: 30
@@ -330,7 +402,13 @@ perspectives:
     inclination: 30
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_N_30_vhires
+    azimuth: 0
+    inclination: 30
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_NW_30_vlowres
     azimuth: 315
     inclination: 30
@@ -354,7 +432,13 @@ perspectives:
     inclination: 30
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_NW_30_vhires
+    azimuth: 315
+    inclination: 30
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_W_30_vlowres
     azimuth: 270
     inclination: 30
@@ -378,7 +462,13 @@ perspectives:
     inclination: 30
     scale: 16
     
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_W_30_vhires
+    azimuth: 270
+    inclination: 30
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_SW_30_vlowres
     azimuth: 225
     inclination: 30
@@ -402,6 +492,12 @@ perspectives:
     inclination: 30
     scale: 16    
     
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_SW_30_vhires
+    azimuth: 225
+    inclination: 30
+    scale: 32
+
 # Vertical perspectives (90 deg)
   - class: org.dynmap.hdmap.IsoHDPerspective 
     name: iso_N_90_vlowres
@@ -427,7 +523,13 @@ perspectives:
     inclination: 90
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_N_90_vhires
+    azimuth: 0
+    inclination: 90
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_S_90_vlowres
     azimuth: 180
     inclination: 90
@@ -451,7 +553,13 @@ perspectives:
     inclination: 90
     scale: 16
 
-  - class: org.dynmap.hdmap.IsoHDPerspective 
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_S_90_vhires
+    azimuth: 180
+    inclination: 90
+    scale: 32
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_E_90_vlowres
     azimuth: 90
     inclination: 90
@@ -474,6 +582,12 @@ perspectives:
     azimuth: 90
     inclination: 90
     scale: 16
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_E_90_vhires
+    azimuth: 90
+    inclination: 90
+    scale: 32
 
   - class: org.dynmap.hdmap.IsoHDPerspective 
     name: iso_W_90_vlowres
@@ -498,4 +612,9 @@ perspectives:
     azimuth: 270
     inclination: 90
     scale: 16
-    
+
+  - class: org.dynmap.hdmap.IsoHDPerspective
+    name: iso_W_90_vhires
+    azimuth: 270
+    inclination: 90
+    scale: 32

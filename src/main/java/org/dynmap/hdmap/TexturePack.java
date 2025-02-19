@@ -1100,6 +1100,8 @@ public class TexturePack {
      * @param src_x - starting X of source column (scaled based on 64 high)
      */
     private void makeShulkerSideImage(int img_id, int dest_idx, int src_x) {
+        if(dest_idx == -1)
+            return;
         int mult = imgs[img_id].width / 64; /* Nominal height for shulker images is 64 */
         int src_y_top = 16;
         int src_y_btm = 44;
@@ -1122,6 +1124,8 @@ public class TexturePack {
      * @param src_y - starting Y of source (scaled based on 64 high)
      */
     private void makeShulkerTopBottomImage(int img_id, int dest_idx, int src_x, int src_y) {
+        if(dest_idx == -1)
+            return;
         int mult = imgs[img_id].width / 64; /* Nominal height for shulker images is 64 */
         int[] tile = new int[16 * 16 * mult * mult];    /* Make image (all are 16x16) */
         copySubimageFromImage(img_id, src_x * mult, src_y * mult, 0, 0, 16 * mult, 16 * mult, tile, 16 * mult);

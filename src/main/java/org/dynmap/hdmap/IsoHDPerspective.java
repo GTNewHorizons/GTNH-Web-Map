@@ -248,7 +248,14 @@ public class IsoHDPerspective implements HDPerspective {
                 getLightLevels(ll);
                 return;
             }
+
+            if(laststep == BlockStep.Y_MINUS && (y == worldheight)){
+                getLightLevels(ll);
+                return;
+            }
+
             BlockStep blast = laststep;
+
             int prevlastblocktypeid = lastblocktypeid;
             mapiter.stepPosition(step);
 
@@ -274,9 +281,13 @@ public class IsoHDPerspective implements HDPerspective {
                 getLightLevels(ll);
                 return;
             }
-
+            if(laststep == BlockStep.Y_MINUS && (y == worldheight)){
+                getLightLevels(ll);
+                return;
+            }
 
             BlockStep blast = laststep;
+
             int prevlastblocktypeid = lastblocktypeid;
             mapiter.stepPosition(step0);
             mapiter.stepPosition(step1);

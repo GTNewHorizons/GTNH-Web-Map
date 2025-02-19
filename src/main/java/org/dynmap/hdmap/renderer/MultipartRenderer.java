@@ -12,6 +12,7 @@ import org.dynmap.renderer.CustomTextureMapper;
 import org.dynmap.renderer.MapDataContext;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory;
+import org.dynmap.utils.BlockStep;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -361,7 +362,9 @@ public class MultipartRenderer extends CustomRenderer {
             TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
 
             for(RenderPatch rp : patches){
-                int textureId = map.getIndexForFace(rp.getTextureIndex());
+                int patchId = rp.getTextureIndex();
+                patchId = forgeDirToBlockStep(patchId);
+                int textureId = map.getIndexForFace(patchId);
                 patchToTex.put(patchNum, textureId);
 
                 if(textureId / TexturePack.COLORMOD_MULT_INTERNAL == TexturePack.COLORMOD_MULTTONED){
@@ -371,6 +374,26 @@ public class MultipartRenderer extends CustomRenderer {
 
                 this.patches.add(rpf.getRotatedPatch(rp, 0,0,0, patchNum++));
             }
+        }
+
+        int forgeDirToBlockStep(int dir){
+            switch (ForgeDirection.getOrientation(dir)){
+                case DOWN:
+                    return BlockStep.Y_PLUS.ordinal();
+                case UP:
+                    return BlockStep.Y_MINUS.ordinal();
+                case NORTH:
+                    return BlockStep.Z_PLUS.ordinal();
+                case SOUTH:
+                    return BlockStep.Z_MINUS.ordinal();
+                case WEST:
+                    return BlockStep.X_PLUS.ordinal();
+                case EAST:
+                    return BlockStep.X_MINUS.ordinal();
+                case UNKNOWN:
+                    break;
+            }
+            return 0;
         }
 
         @Override
