@@ -288,23 +288,35 @@ public class ChunkSnapshot
 
     public int getBlockTypeId(int x, int y, int z)
     {
+        if(y > 255)
+            return 0;
+
         return blockids[y >> 4][((y & 0xF) << 8) | (z << 4) | x];
     }
 
     public int getBlockData(int x, int y, int z)
     {
+        if(y > 255)
+            return 0;
+
         int off = ((y & 0xF) << 7) | (z << 3) | (x >> 1);
         return (blockdata[y >> 4][off] >> ((x & 1) << 2)) & 0xF;
     }
 
     public int getBlockSkyLight(int x, int y, int z)
     {
+        if(y > 255)
+            return 15;
+
         int off = ((y & 0xF) << 7) | (z << 3) | (x >> 1);
         return (skylight[y >> 4][off] >> ((x & 1) << 2)) & 0xF;
     }
 
     public int getBlockEmittedLight(int x, int y, int z)
     {
+        if(y > 255)
+            return 0;
+
         int off = ((y & 0xF) << 7) | (z << 3) | (x >> 1);
         return (emitlight[y >> 4][off] >> ((x & 1) << 2)) & 0xF;
     }
@@ -334,6 +346,9 @@ public class ChunkSnapshot
     }
 
     public int getBlockDataFull(int bx, int y, int bz) {
+        if(y > 255)
+            return 0;
+
         if(have16bitBlockData) {
             int tmp = blockdata16[y >> 4][((y & 0xF) << 8) | (bz << 4) | bx];
 
