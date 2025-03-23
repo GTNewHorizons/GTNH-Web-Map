@@ -1194,7 +1194,14 @@ public class MapManager {
     public void loadWorld(DynmapWorld dynmapWorld) {
         /* Now, restore any pending renders for this world */
         if(saverestorepending)
-            loadPending(dynmapWorld);
+        {
+            try {
+                loadPending(dynmapWorld);
+            }
+            catch(Exception ex){
+                Log.severe("Failed to load pending tiles for world " + dynmapWorld.getName(), ex);
+            }
+        }
     }
 
     public void unloadWorld(DynmapWorld dynmapWorld) {
