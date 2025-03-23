@@ -43,7 +43,9 @@ public class ConfigurationNode implements Map<String, Object> {
         if(yaml == null) {
             DumperOptions options = getDumperOptions();
 
-            yaml = new Yaml(new SafeConstructor(new LoaderOptions()), new EmptyNullRepresenter(), options);
+            LoaderOptions loaderOptions = new LoaderOptions();
+            loaderOptions.setCodePointLimit(32 * 1024 * 1024);
+            yaml = new Yaml(new SafeConstructor(loaderOptions), new EmptyNullRepresenter(), options);
         }
     }
 

@@ -69,6 +69,8 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
         if(ClaimedChunks.instance == null)
             return;
 
+        int claimId = 1;
+
         for(ClaimedChunk cc : ClaimedChunks.instance.getAllChunks()){
             ChunkDimPos pos = cc.getPos();
 
@@ -107,7 +109,7 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
                 }
             }
 
-            AreaMarker am = markerSet.createAreaMarker(null, label, true, worldId, x,z, false);
+            AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), label, true, worldId, x,z, false);
 
             if(GwmConfig.boostServerUtilitiesClaimsMarkers)
                 am.setBoostFlag(true);
