@@ -83,6 +83,21 @@ By default, a chat system is included which allows users to see chat from the ga
       # Optional: send push button
       sendbutton: false
   ```
+
+# Permissions
+
+GTNH-Web-Map uses its own permissions system in addition to that of ServerUtilities. This can lead to confusing **You don't have permission to use this command!** messages from the mod itself even when rank permissions are configured correctly, so you may want to tweak the config if you are hosting a server. Mod will look for permissions config file under the path `dynmap/permissions.yml` and fallback to op permissions when the configuration file is missing, allowing only players in `ops.json` to execute most commands. You will see `[Dynmap] Using permissions.yml for access control` in server logs on startup if the config file was used.
+
+Configuration file `permissions.yml` is a mapping of player names to lists of permissions. Special key `defaultuser` can be used to configure permissions given to every player by default. For example, if you trust your players enough to allow them adding and deleting simple markers with commands, you may use the following configuration:
+
+```yaml
+defaultuser:
+    - marker.add
+    - marker.delete
+```
+
+See [here](https://github.com/webbukkit/dynmap/wiki/Permissions) for a full list of permissions. Note that entries in `permissions.yml` do not use `dynmap.` prefix. Also see [permissions.yml.example](./src/main/resources/permissions.yml.example) provided in the repository resources directory.
+
 # Other tips
 * You can change the port the webserver listens on in dynmap/configuration.txt. Look for `webserver-port: 8123`. The commented out `port` setting in the beginning of the file is for using a database engine like MySQL/MariaDB to store map data.
 * You can uncomment and set `#webpage-title` to set the web page title (what appears on the browser tab). The default is `"$world - $map - GTNH-Web-Map"`, where `$world` will be replaced with the current dimension name (like Overworld) and `$map` with the map name (like Flat or Surface).
