@@ -11,7 +11,7 @@ Latest releases are available on the GWM GitHub page: https://github.com/GTNewHo
 
 # Support and reporting issues
 * All issues should be reported to the GWM issue tracker in GitHub: https://github.com/GTNewHorizons/GTNH-Web-Map/issues
-* Discussions, development and support are handled on the GTNH Discord server: https://discord.gg/gtnh (see channel #special-projects-dev)
+* Discussions, development and support are handled on the GTNH Discord server: https://discord.gg/gtnh (see channel #areas-of-interest - GTNH Web Map)
 
 # Some useful commands to get started
 * `/dynmap fullrender <dim>` can be used to force a re-render of the maps of a dimension. Otherwise, it'll only render new or modified chunks.
