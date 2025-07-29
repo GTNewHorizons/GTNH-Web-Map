@@ -104,6 +104,9 @@ patchblock:id=%barnardaCreed,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,
 # %barnardaCsapling:* (barnardaCsapling), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockSapling
 patchblock:id=%barnardaCsapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
+# %barnardaCreed:* (barnardaCreed), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockReed
+patchblock:id=%barnardaCreed,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
 # %unknowwater:* (unknowwater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockUnknowWater
 boxblock:id=%unknowwater,ymax=0.875,data=1
 boxblock:id=%unknowwater,ymax=0.75,data=2

@@ -1,4 +1,4 @@
-# GalaxySpace 1.1.97-GTNH
+# GalaxySpace 1.1.116-GTNH
 version:1.7
 modname:GalaxySpace
 
@@ -35,29 +35,29 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 
 # %oxstoragemoduleT2:* (oxstoragemoduleT2), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=galaxyspace.core.block.machine.BlockOxStorageModuleT2
 
-# %ceresTChestT4:* (ceresTChestT4), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT4(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT4TreasureChest
+# %ceresTChestT4:* (ceresTChestT4), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 boxblock:id=%ceresTChestT4,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
-# %ceresweb:* (ceresweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.SolarSystem.planets.ceres.blocks.CeresBlockWeb
+# %ceresweb:* (ceresweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.core.block.BlockWebGS
 patchblock:id=%ceresweb,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %plutoTChestT8:* (plutoTChestT8), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT8(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT8TreasureChest
+# %plutoTChestT8:* (plutoTChestT8), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 boxblock:id=%plutoTChestT8,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
-# %ioTChestT5:* (ioTChestT5), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT5(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT5TreasureChest
+# %ioTChestT5:* (ioTChestT5), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 boxblock:id=%ioTChestT5,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
-# %ioweb:* (ioweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.SolarSystem.moons.io.block.IOBlockWeb
+# %ioweb:* (ioweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.core.block.BlockWebGS
 patchblock:id=%ioweb,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %enceladuscrystal:* (enceladuscrystal), render=(CUSTOM), opaque=false,cls=galaxyspace.SolarSystem.moons.enceladus.block.EnceladusBlockCrystal
 # FIXME: Box constraints truncated to 0.0<=val<=1.0
 boxblock:id=%enceladuscrystal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
-# %enceladusTChestT6:* (enceladusTChestT6), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT6(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT6TreasureChest
+# %enceladusTChestT6:* (enceladusTChestT6), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 boxblock:id=%enceladusTChestT6,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
-# %proteusTChestT7:* (proteusTChestT7), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT7(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT7TreasureChest
+# %proteusTChestT7:* (proteusTChestT7), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 boxblock:id=%proteusTChestT7,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
 # %liquidmethane:* (liquidmethane), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=galaxyspace.core.block.BlockMethane
@@ -98,11 +98,11 @@ patchblock:id=%barnardaCdandelions,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1
 # %barnardaCdandelion3:* (barnardaCdandelion3), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockDandelion3
 patchblock:id=%barnardaCdandelion3,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %barnardaCreed:* (barnardaCreed), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockReed
-patchblock:id=%barnardaCreed,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %barnardaCsapling:* (barnardaCsapling), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockSapling
 patchblock:id=%barnardaCsapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %barnardaCreed:* (barnardaCreed), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockReed
+patchblock:id=%barnardaCreed,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %unknowwater:* (unknowwater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockUnknowWater
 boxblock:id=%unknowwater,ymax=0.875,data=1
