@@ -1,0 +1,56 @@
+# botanichorizons 1.11.14-GTNH
+version:1.7
+modname:botanichorizons
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/botanichorizons/textures/blocks/
+texture:id=botania/alfheimPortal0,filename=assets/botania/textures/blocks/alfheimPortal0.png
+texture:id=botania/alfheimPortal1,filename=assets/botania/textures/blocks/alfheimPortal1.png
+texture:id=botanichorizons/quartzBlueSide,filename=assets/botanichorizons/textures/blocks/quartzBlueSide.png
+texture:id=botanichorizons/quartzBlueTop,filename=assets/botanichorizons/textures/blocks/quartzBlueTop.png
+texture:id=botanichorizons/quartzGreenSide,filename=assets/botanichorizons/textures/blocks/quartzGreenSide.png
+texture:id=botanichorizons/quartzGreenTop,filename=assets/botanichorizons/textures/blocks/quartzGreenTop.png
+texture:id=botanichorizons/quartzYellowSide,filename=assets/botanichorizons/textures/blocks/quartzYellowSide.png
+texture:id=botanichorizons/quartzYellowTop,filename=assets/botanichorizons/textures/blocks/quartzYellowTop.png
+
+
+
+# %automatedCraftingPool:* (automatedCraftingPool), render=(STANDARD), opaque=true,cls=net.fuzzycraft.botanichorizons.addons.block.BlockAdvancedCraftingPool
+block:id=%automatedCraftingPool,data=0,data=1,stdrot=true,face0=0:botanichorizons/quartzBlueSide,face1-2=0:botanichorizons/quartzBlueTop,face3-5=0:botanichorizons/quartzBlueSide
+block:id=%automatedCraftingPool,data=2,data=3,stdrot=true,face0=0:botanichorizons/quartzBlueSide,face1=0:botanichorizons/quartzBlueTop,face2-4=0:botanichorizons/quartzBlueSide,face5=0:botanichorizons/quartzBlueTop
+block:id=%automatedCraftingPool,data=4,data=5,stdrot=true,face0=0:botanichorizons/quartzBlueSide,face1=0:botanichorizons/quartzBlueTop,face2=0:botanichorizons/quartzBlueSide,face3=0:botanichorizons/quartzBlueTop,face4-5=0:botanichorizons/quartzBlueSide
+block:id=%automatedCraftingPool,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:botanichorizons/quartzBlueSide,face1=0:botanichorizons/quartzBlueTop,face2-3=0:botanichorizons/quartzBlueSide,face4=0:botanichorizons/quartzBlueTop,face5=0:botanichorizons/quartzBlueSide
+
+# %automatedAlchemyPool:* (automatedAlchemyPool), render=(STANDARD), opaque=true,cls=net.fuzzycraft.botanichorizons.addons.block.BlockAdvancedAlchemyPool
+block:id=%automatedAlchemyPool,data=0,data=1,stdrot=true,face0=0:botanichorizons/quartzYellowSide,face1-2=0:botanichorizons/quartzYellowTop,face3-5=0:botanichorizons/quartzYellowSide
+block:id=%automatedAlchemyPool,data=2,data=3,stdrot=true,face0=0:botanichorizons/quartzYellowSide,face1=0:botanichorizons/quartzYellowTop,face2-4=0:botanichorizons/quartzYellowSide,face5=0:botanichorizons/quartzYellowTop
+block:id=%automatedAlchemyPool,data=4,data=5,stdrot=true,face0=0:botanichorizons/quartzYellowSide,face1=0:botanichorizons/quartzYellowTop,face2=0:botanichorizons/quartzYellowSide,face3=0:botanichorizons/quartzYellowTop,face4-5=0:botanichorizons/quartzYellowSide
+block:id=%automatedAlchemyPool,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:botanichorizons/quartzYellowSide,face1=0:botanichorizons/quartzYellowTop,face2-3=0:botanichorizons/quartzYellowSide,face4=0:botanichorizons/quartzYellowTop,face5=0:botanichorizons/quartzYellowSide
+
+# %automatedConjurationPool:* (automatedConjurationPool), render=(STANDARD), opaque=true,cls=net.fuzzycraft.botanichorizons.addons.block.BlockAdvancedConjurationPool
+block:id=%automatedConjurationPool,data=0,data=1,stdrot=true,face0=0:botanichorizons/quartzGreenSide,face1-2=0:botanichorizons/quartzGreenTop,face3-5=0:botanichorizons/quartzGreenSide
+block:id=%automatedConjurationPool,data=2,data=3,stdrot=true,face0=0:botanichorizons/quartzGreenSide,face1=0:botanichorizons/quartzGreenTop,face2-4=0:botanichorizons/quartzGreenSide,face5=0:botanichorizons/quartzGreenTop
+block:id=%automatedConjurationPool,data=4,data=5,stdrot=true,face0=0:botanichorizons/quartzGreenSide,face1=0:botanichorizons/quartzGreenTop,face2=0:botanichorizons/quartzGreenSide,face3=0:botanichorizons/quartzGreenTop,face4-5=0:botanichorizons/quartzGreenSide
+block:id=%automatedConjurationPool,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:botanichorizons/quartzGreenSide,face1=0:botanichorizons/quartzGreenTop,face2-3=0:botanichorizons/quartzGreenSide,face4=0:botanichorizons/quartzGreenTop,face5=0:botanichorizons/quartzGreenSide
+
+# %automatedAlfPortal:* (automatedAlfPortal), render=(STANDARD), opaque=true,cls=net.fuzzycraft.botanichorizons.addons.block.BlockAdvancedAlfPortal
+block:id=%automatedAlfPortal,data=0,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=1,stdrot=true,face0-5=0:botania/alfheimPortal1
+block:id=%automatedAlfPortal,data=2,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=3,stdrot=true,face0-5=0:botania/alfheimPortal1
+block:id=%automatedAlfPortal,data=4,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=5,stdrot=true,face0-5=0:botania/alfheimPortal1
+block:id=%automatedAlfPortal,data=6,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=7,stdrot=true,face0-5=0:botania/alfheimPortal1
+block:id=%automatedAlfPortal,data=8,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=9,stdrot=true,face0-5=0:botania/alfheimPortal1
+block:id=%automatedAlfPortal,data=10,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=11,stdrot=true,face0-5=0:botania/alfheimPortal1
+block:id=%automatedAlfPortal,data=12,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=13,stdrot=true,face0-5=0:botania/alfheimPortal1
+block:id=%automatedAlfPortal,data=14,stdrot=true,face0-5=0:botania/alfheimPortal0
+block:id=%automatedAlfPortal,data=15,stdrot=true,face0-5=0:botania/alfheimPortal1
