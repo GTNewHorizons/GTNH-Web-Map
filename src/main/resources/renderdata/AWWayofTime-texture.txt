@@ -46,6 +46,7 @@ texture:id=AlchemicalWizardry/QuicknessRune,filename=assets/alchemicalwizardry/t
 texture:id=AlchemicalWizardry/RitualStone,filename=assets/alchemicalwizardry/textures/blocks/RitualStone.png
 texture:id=AlchemicalWizardry/RuneOfSacrifice,filename=assets/alchemicalwizardry/textures/blocks/RuneOfSacrifice.png
 texture:id=AlchemicalWizardry/RuneOfSelfSacrifice,filename=assets/alchemicalwizardry/textures/blocks/RuneOfSelfSacrifice.png
+texture:id=AlchemicalWizardry/SchematicSaver,filename=assets/alchemicalwizardry/textures/blocks/SchematicSaver.png
 texture:id=AlchemicalWizardry/ShardCluster,filename=assets/alchemicalwizardry/textures/blocks/ShardCluster.png
 texture:id=AlchemicalWizardry/ShardClusterBrick,filename=assets/alchemicalwizardry/textures/blocks/ShardClusterBrick.png
 texture:id=AlchemicalWizardry/SimpleTransCircle,filename=assets/alchemicalwizardry/textures/blocks/SimpleTransCircle.png
@@ -169,9 +170,6 @@ block:id=%spectralContainer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=
 # %demonPortalMain:* (demonPortalMain), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.BlockDemonPortal
 block:id=%demonPortalMain,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/DemonPortal
 
-# %blockSchemSaver:* (blockSchemSaver), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.BlockSchematicSaver
-block:id=%blockSchemSaver,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_774_schematicSaver
-
 # %blockReagentConduit:* (blockReagentConduit), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockReagentConduit
 block:id=%blockReagentConduit,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/SimpleTransCircle
 
@@ -203,3 +201,6 @@ block:id=%blockStabilityGlyph,data=1,data=2,data=3,data=4,data=5,data=6,data=7,d
 
 # %blockCrucible:* (blockCrucible), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockCrucible
 block:id=%blockCrucible,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:AlchemicalWizardry/Crucible_Bottom,face1=0:AlchemicalWizardry/Crucible_Top,face2-5=0:AlchemicalWizardry/Crucible_Side
+
+# %blockSchemSaver:* (blockSchemSaver), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.BlockSchematicSaver
+block:id=%blockSchemSaver,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/SchematicSaver
