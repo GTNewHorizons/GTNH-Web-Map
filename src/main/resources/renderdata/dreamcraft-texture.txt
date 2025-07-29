@@ -23,12 +23,16 @@ texture:id=dreamcraft/blockDiamondFrameBox,filename=assets/dreamcraft/textures/b
 texture:id=dreamcraft/blockDoubleCompressedCharcoal,filename=assets/dreamcraft/textures/blocks/blockDoubleCompressedCharcoal.png
 texture:id=dreamcraft/blockDoubleCompressedCoal,filename=assets/dreamcraft/textures/blocks/blockDoubleCompressedCoal.png
 texture:id=dreamcraft/blockDoubleCompressedCoalCoke,filename=assets/dreamcraft/textures/blocks/blockDoubleCompressedCoalCoke.png
+texture:id=dreamcraft/blockGaia,filename=assets/dreamcraft/textures/blocks/blockGaia.png
 texture:id=dreamcraft/blockLedox,filename=assets/dreamcraft/textures/blocks/blockLedox.png
+texture:id=dreamcraft/blockManaPearl,filename=assets/dreamcraft/textures/blocks/blockManaPearl.png
+texture:id=dreamcraft/blockManaPowder,filename=assets/dreamcraft/textures/blocks/blockManaPowder.png
 texture:id=dreamcraft/blockMysteriousCrystal,filename=assets/dreamcraft/textures/blocks/blockMysteriousCrystal.png
 texture:id=dreamcraft/blockMytryl,filename=assets/dreamcraft/textures/blocks/blockMytryl.png
 texture:id=dreamcraft/blockNaquadahPlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockNaquadahPlatedReinforcedStone.png
 texture:id=dreamcraft/blockNeutroniumPlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockNeutroniumPlatedReinforcedStone.png
 texture:id=dreamcraft/blockPistonBlock,filename=assets/dreamcraft/textures/blocks/blockPistonBlock.png
+texture:id=dreamcraft/blockPixieDust,filename=assets/dreamcraft/textures/blocks/blockPixieDust.png
 texture:id=dreamcraft/blockQuadrupleCompressedCharcoal,filename=assets/dreamcraft/textures/blocks/blockQuadrupleCompressedCharcoal.png
 texture:id=dreamcraft/blockQuadrupleCompressedCoal,filename=assets/dreamcraft/textures/blocks/blockQuadrupleCompressedCoal.png
 texture:id=dreamcraft/blockQuadrupleCompressedCoalCoke,filename=assets/dreamcraft/textures/blocks/blockQuadrupleCompressedCoalCoke.png
@@ -61,6 +65,7 @@ texture:id=dreamcraft/fluidPollution_flow,filename=assets/dreamcraft/textures/bl
 texture:id=dreamcraft/fluidPollution_still,filename=assets/dreamcraft/textures/blocks/fluidPollution_still.png
 texture:id=dreamcraft/fluidSodiumPotassium_flow,filename=assets/dreamcraft/textures/blocks/fluidSodiumPotassium_flow.png
 texture:id=dreamcraft/fluidSodiumPotassium_still,filename=assets/dreamcraft/textures/blocks/fluidSodiumPotassium_still.png
+texture:id=dreamcraft/ore_zinc_gravel,filename=assets/dreamcraft/textures/blocks/ore_zinc_gravel.png
 texture:id=gregtech/iconsets/MACHINE_8V_SIDE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_8V_SIDE.png
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_STEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_TITANIUM.png
@@ -292,6 +297,9 @@ block:id=%tile.NeutroniumPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:drea
 # %tile.BloodyIchorium:* (tile.BloodyIchorium), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
 block:id=%tile.BloodyIchorium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyIchorium
 
+# %tile.ManaPowder:* (tile.ManaPowder), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
+block:id=%tile.ManaPowder,data=*,stdrot=true,face0-5=0:dreamcraft/blockManaPowder
+
 # %tile.MysteriousCrystal:* (tile.MysteriousCrystal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
 block:id=%tile.MysteriousCrystal,data=*,stdrot=true,face0-5=0:dreamcraft/blockMysteriousCrystal
 
@@ -319,8 +327,14 @@ block:id=%tile.TungstensteelPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:d
 # %tile.BloodyVoid:* (tile.BloodyVoid), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
 block:id=%tile.BloodyVoid,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyVoid
 
+# %tile.PixieDust:* (tile.PixieDust), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
+block:id=%tile.PixieDust,data=*,stdrot=true,face0-5=0:dreamcraft/blockPixieDust
+
 # %tile.BlackPlutonium:* (tile.BlackPlutonium), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
 block:id=%tile.BlackPlutonium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBlackPlutonium
+
+# %tile.ManaPearl:* (tile.ManaPearl), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
+block:id=%tile.ManaPearl,data=*,stdrot=true,face0-5=0:dreamcraft/blockManaPearl
 
 # %tile.DoubleCompressedCoal:* (tile.DoubleCompressedCoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
 block:id=%tile.DoubleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockDoubleCompressedCoal
@@ -330,6 +344,9 @@ block:id=%tile.DoubleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/
 
 # %tile.CompressedGraphite:* (tile.CompressedGraphite), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
 block:id=%tile.CompressedGraphite,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedGraphite
+
+# %tile.Gaia:* (tile.Gaia), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
+block:id=%tile.Gaia,data=*,stdrot=true,face0-5=0:dreamcraft/blockGaia
 
 # %tile.Quantinum:* (tile.Quantinum), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
 block:id=%tile.Quantinum,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuantinum
@@ -375,6 +392,9 @@ block:id=%dreamcraft_CompressedNitrogen,data=*,stdrot=true,transparency=SEMITRAN
 
 # %dreamcraft_Pollution:* (dreamcraft_Pollution), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
 block:id=%dreamcraft_Pollution,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidPollution_still,face2-5=12000:dreamcraft/fluidPollution_flow
+
+# %ZincGravelOre:* (ZincGravelOre), render=(STANDARD), opaque=true,cls=com.dreammaster.tinkersConstruct.worldgen.ZincGravelOre
+block:id=%ZincGravelOre,data=*,stdrot=true,face0-5=0:dreamcraft/ore_zinc_gravel
 
 # %BabyChest:* (BabyChest), render=(CUSTOM), opaque=false,cls=com.dreammaster.modbabychest.BlockBabyChest
 block:id=%BabyChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
