@@ -69,38 +69,50 @@ dependencies {
     shadowImplementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20180219.1") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:GT5-Unofficial:5.09.50.114:dev"){
+    compileOnly("com.github.GTNewHorizons:GT5-Unofficial:5.09.51.382:dev"){
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-484-GTNH:dev"){
+    compileOnly("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-652-GTNH:dev"){
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:ServerUtilities:2.0.92:dev"){
+    compileOnly("com.github.GTNewHorizons:ServerUtilities:2.1.54:dev"){
         transitive = false
     }
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:GT5-Unofficial:5.09.50.114:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Hodgepodge:2.5.57:dev")
-    runtimeOnlyNonPublishable("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.3.40-GTNH:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Railcraft:9.15.12:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:ArchitectureCraft:1.9.5:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Chisel:2.15.2-GTNH:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:EnderIO:2.8.17:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Postea:1.0.13:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughIds:2.1.6:dev")
-    runtimeOnlyNonPublishable("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-484-GTNH:dev")
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ForgeMultipart:1.5.0:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:CarpentersBlocks:3.6.2-GTNH:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:EnderStorage:1.6.0:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Jabba:1.4.6:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Catwalks-2:2.3.2-GTNH:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:TinkersConstruct:1.12.9-GTNH:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:OpenComputers:1.10.23-GTNH:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ServerUtilities:2.0.66:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ForestryMC:4.9.10:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Binnie:2.4.1:dev')
+    compileOnly("com.github.GTNewHorizons:GTNHLib:0.6.36:dev"){
+        transitive = false
+    }
+    api("com.github.GTNewHorizons:ModularUI:1.2.20:dev")
+    api("com.github.GTNewHorizons:ModularUI2:2.2.15-1.7.10:dev")
 
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Postea:1.1.2:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughIds:2.1.9:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.7.62-GTNH:dev")
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ServerUtilities:2.1.54:dev')
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Hodgepodge:2.6.89:dev")
+
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:GT5-Unofficial:5.09.51.382:dev")
+    runtimeOnlyNonPublishable("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Railcraft:9.16.30:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:ArchitectureCraft:1.11.2:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Chisel:2.16.5-GTNH:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:EnderIO:2.9.18:dev")
+    runtimeOnlyNonPublishable("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-652-GTNH:dev")
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ForgeMultipart:1.6.7:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:CarpentersBlocks:3.7.0-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:EnderStorage:1.7.3:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Jabba:1.5.10:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Catwalks-2:2.4.0-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:TinkersConstruct:1.13.40-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:OpenComputers:1.11.16-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ForestryMC:4.10.14:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Binnie:2.5.12:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Botania:1.12.12-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:LogisticsPipes:1.4.20-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:ProjectRed:4.11.5-GTNH:dev')
+    runtimeOnlyNonPublishable('com.github.GTNewHorizons:Nuclear-Control:2.6.17:dev')
+
+//    runtimeOnlyNonPublishable('com.github.GTNewHorizons:StorageDrawers:2.1.0-GTNH:dev')
     // Uncomment this to run with FE - only works on server, can't use in single player or on client
     // runtimeOnlyNonPublishable('ForgeEssentials:forgeessentials:7.5.0:dev')
 }
