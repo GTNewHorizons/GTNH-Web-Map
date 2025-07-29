@@ -8,13 +8,11 @@ import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.metatileentity.MetaPipeEntity;
 import gregtech.api.metatileentity.implementations.MTECable;
-import gregtech.api.metatileentity.implementations.MTEFluid;
+import gregtech.api.metatileentity.implementations.MTEFluidPipe;
 import gregtech.api.metatileentity.implementations.MTEFrame;
-import gregtech.api.metatileentity.implementations.MTEItem;
+import gregtech.api.metatileentity.implementations.MTEItemPipe;
 import gregtech.common.render.GTCopiedBlockTextureRender;
-import gregtech.common.render.GTMultiTextureRender;
-import gtPlusPlus.xmod.gregtech.api.enums.GregtechOrePrefixes;
-import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.GTPPMTEFluid;
+import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.GTPPMTEFluidPipe;
 import net.minecraft.block.Block;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
@@ -369,7 +367,7 @@ public class GregTechSupport {
             writer.write(imte.getMetaName());
             if(imte instanceof MetaPipeEntity){
                 MetaPipeEntity mpe = (MetaPipeEntity) imte;
-                writer.write(",thickness="+mpe.getThickNess());
+                writer.write(",thickness="+mpe.getThickness());
                 writer.write(",capacity="+mpe.getCapacity());
 
                 Materials mat = null;
@@ -377,12 +375,12 @@ public class GregTechSupport {
                     MTEFrame frm = (MTEFrame) mpe;
                     mat =frm.mMaterial;
                 }
-                else if(mpe instanceof MTEItem){
-                    MTEItem frm = (MTEItem) mpe;
+                else if(mpe instanceof MTEItemPipe){
+                    MTEItemPipe frm = (MTEItemPipe) mpe;
                     mat =frm.mMaterial;
                 }
-                else if(mpe instanceof MTEFluid){
-                    MTEFluid frm = (MTEFluid) mpe;
+                else if(mpe instanceof MTEFluidPipe){
+                    MTEFluidPipe frm = (MTEFluidPipe) mpe;
                     mat =frm.mMaterial;
                 }
                 else if(mpe instanceof MTECable){
@@ -402,9 +400,9 @@ public class GregTechSupport {
                     }
                 }
                 else{
-                    if(mpe instanceof GTPPMTEFluid){
-                        GTPPMTEFluid ppfp = (GTPPMTEFluid)mpe;
-                        GregtechOrePrefixes.GT_Materials ppmat = ppfp.mMaterial;
+                    if(mpe instanceof GTPPMTEFluidPipe){
+                        GTPPMTEFluidPipe ppfp = (GTPPMTEFluidPipe) mpe;
+                        Materials ppmat = ppfp.mMaterial;
                         if(ppmat != null){
                             writer.write(",material=" + ppmat.name());
                             writer.write(",matCol="+String.format("%02X%02X%02X",  ppmat.mRGBa[0]&0xFF,  ppmat.mRGBa[1]&0xFF,  ppmat.mRGBa[2]&0xFF) );
