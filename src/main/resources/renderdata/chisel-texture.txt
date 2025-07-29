@@ -2230,16 +2230,16 @@ block:id=%glass2,data=0,stdrot=true,face0-5=0:Chisel/glass/chrono
 block:id=%glass2,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
 
 # %glass_pane:* (glass_pane), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%glass_pane,data=0,stdrot=true,face0-5=0:minecraft/missingno
-block:id=%glass_pane,data=1,stdrot=true,face0-1=0:Chisel/glasspane/terrain-glassbubble-top,face2-5=0:Chisel/glasspane/terrain-glassbubble-side
-block:id=%glass_pane,data=2,stdrot=true,face0-1=0:Chisel/glasspane/terrain-glassnoborder-top,face2-5=0:Chisel/glasspane/terrain-glassnoborder-side
-block:id=%glass_pane,data=3,stdrot=true,face0-5=0:Chisel/glasspane/terrain-glass-screen
-block:id=%glass_pane,data=4,stdrot=true,face0-1=0:Chisel/glasspane/terrain-glassstreak-top,face2-5=0:Chisel/glasspane/terrain-glassstreak-side
-block:id=%glass_pane,data=5,data=6,data=7,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:minecraft/missingno
-block:id=%glass_pane,data=12,stdrot=true,face0-1=0:Chisel/glasspane/chinese-top,face2-5=0:Chisel/glasspane/chinese-side
-block:id=%glass_pane,data=13,stdrot=true,face0-1=0:Chisel/glasspane/chinese2-top,face2-5=0:Chisel/glasspane/chinese2-side
-block:id=%glass_pane,data=14,stdrot=true,face0-1=0:Chisel/glasspane/japanese-top,face2-5=0:Chisel/glasspane/japanese-side
-block:id=%glass_pane,data=15,stdrot=true,face0-1=0:Chisel/glasspane/japanese2-top,face2-5=0:Chisel/glasspane/japanese2-side
+block:id=%glass_pane,data=0,transparency=TRANSPARENT,stdrot=true,face0-5=0:minecraft/missingno
+block:id=%glass_pane,data=1,transparency=TRANSPARENT,stdrot=true,face0-1=0:Chisel/glasspane/terrain-glassbubble-top,face2-5=0:Chisel/glasspane/terrain-glassbubble-side
+block:id=%glass_pane,data=2,transparency=TRANSPARENT,stdrot=true,face0-1=0:Chisel/glasspane/terrain-glassnoborder-top,face2-5=0:Chisel/glasspane/terrain-glassnoborder-side
+block:id=%glass_pane,data=3,transparency=TRANSPARENT,stdrot=true,face0-5=0:Chisel/glasspane/terrain-glass-screen
+block:id=%glass_pane,data=4,transparency=TRANSPARENT,stdrot=true,face0-1=0:Chisel/glasspane/terrain-glassstreak-top,face2-5=0:Chisel/glasspane/terrain-glassstreak-side
+block:id=%glass_pane,data=5,data=6,data=7,data=8,data=9,data=10,data=11,transparency=TRANSPARENT,stdrot=true,face0-5=0:minecraft/missingno
+block:id=%glass_pane,data=12,transparency=TRANSPARENT,stdrot=true,face0-1=0:Chisel/glasspane/chinese-top,face2-5=0:Chisel/glasspane/chinese-side
+block:id=%glass_pane,data=13,transparency=TRANSPARENT,stdrot=true,face0-1=0:Chisel/glasspane/chinese2-top,face2-5=0:Chisel/glasspane/chinese2-side
+block:id=%glass_pane,data=14,transparency=TRANSPARENT,stdrot=true,face0-1=0:Chisel/glasspane/japanese-top,face2-5=0:Chisel/glasspane/japanese-side
+block:id=%glass_pane,data=15,transparency=TRANSPARENT,stdrot=true,face0-1=0:Chisel/glasspane/japanese2-top,face2-5=0:Chisel/glasspane/japanese2-side
 
 # %stained_glass_forestry:* (stained_glass_forestry), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvableGlass
 block:id=%stained_glass_forestry,data=0,stdrot=true,face0-5=12000:Chisel/glassdyed/white-forestry
@@ -2332,132 +2332,132 @@ block:id=%stained_glass_brown,data=14,stdrot=true,face0-5=12000:Chisel/glassdyed
 block:id=%stained_glass_brown,data=15,stdrot=true,face0-5=12000:Chisel/glassdyed/black-transparent
 
 # %stained_glass_pane_white:* (stained_glass_pane_white), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_white,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-bubble-top,face2-5=12000:Chisel/glasspanedyed/white-bubble-side
-block:id=%stained_glass_pane_white,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-panel-top,face2-5=12000:Chisel/glasspanedyed/white-panel-side
-block:id=%stained_glass_pane_white,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/white-panel-fancy-side
-block:id=%stained_glass_pane_white,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-transparent-top,face2-5=12000:Chisel/glasspanedyed/white-transparent-side
-block:id=%stained_glass_pane_white,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-quad-top,face2-5=12000:Chisel/glasspanedyed/white-quad-side
-block:id=%stained_glass_pane_white,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/white-quad-fancy-side
-block:id=%stained_glass_pane_white,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_white,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-bubble-top,face2-5=12000:Chisel/glasspanedyed/orange-bubble-side
-block:id=%stained_glass_pane_white,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-panel-top,face2-5=12000:Chisel/glasspanedyed/orange-panel-side
-block:id=%stained_glass_pane_white,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/orange-panel-fancy-side
-block:id=%stained_glass_pane_white,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-transparent-top,face2-5=12000:Chisel/glasspanedyed/orange-transparent-side
-block:id=%stained_glass_pane_white,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-quad-top,face2-5=12000:Chisel/glasspanedyed/orange-quad-side
-block:id=%stained_glass_pane_white,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/orange-quad-fancy-side
-block:id=%stained_glass_pane_white,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-bubble-top,face2-5=12000:Chisel/glasspanedyed/white-bubble-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-panel-top,face2-5=12000:Chisel/glasspanedyed/white-panel-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/white-panel-fancy-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-transparent-top,face2-5=12000:Chisel/glasspanedyed/white-transparent-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-quad-top,face2-5=12000:Chisel/glasspanedyed/white-quad-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/white-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/white-quad-fancy-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-bubble-top,face2-5=12000:Chisel/glasspanedyed/orange-bubble-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-panel-top,face2-5=12000:Chisel/glasspanedyed/orange-panel-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/orange-panel-fancy-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-transparent-top,face2-5=12000:Chisel/glasspanedyed/orange-transparent-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-quad-top,face2-5=12000:Chisel/glasspanedyed/orange-quad-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/orange-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/orange-quad-fancy-side
+block:id=%stained_glass_pane_white,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %stained_glass_pane_magenta:* (stained_glass_pane_magenta), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_magenta,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-bubble-top,face2-5=12000:Chisel/glasspanedyed/magenta-bubble-side
-block:id=%stained_glass_pane_magenta,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-panel-top,face2-5=12000:Chisel/glasspanedyed/magenta-panel-side
-block:id=%stained_glass_pane_magenta,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/magenta-panel-fancy-side
-block:id=%stained_glass_pane_magenta,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-transparent-top,face2-5=12000:Chisel/glasspanedyed/magenta-transparent-side
-block:id=%stained_glass_pane_magenta,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-quad-top,face2-5=12000:Chisel/glasspanedyed/magenta-quad-side
-block:id=%stained_glass_pane_magenta,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/magenta-quad-fancy-side
-block:id=%stained_glass_pane_magenta,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_magenta,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-bubble-top,face2-5=12000:Chisel/glasspanedyed/lightblue-bubble-side
-block:id=%stained_glass_pane_magenta,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-panel-top,face2-5=12000:Chisel/glasspanedyed/lightblue-panel-side
-block:id=%stained_glass_pane_magenta,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightblue-panel-fancy-side
-block:id=%stained_glass_pane_magenta,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-transparent-top,face2-5=12000:Chisel/glasspanedyed/lightblue-transparent-side
-block:id=%stained_glass_pane_magenta,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-quad-top,face2-5=12000:Chisel/glasspanedyed/lightblue-quad-side
-block:id=%stained_glass_pane_magenta,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightblue-quad-fancy-side
-block:id=%stained_glass_pane_magenta,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-bubble-top,face2-5=12000:Chisel/glasspanedyed/magenta-bubble-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-panel-top,face2-5=12000:Chisel/glasspanedyed/magenta-panel-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/magenta-panel-fancy-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-transparent-top,face2-5=12000:Chisel/glasspanedyed/magenta-transparent-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-quad-top,face2-5=12000:Chisel/glasspanedyed/magenta-quad-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/magenta-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/magenta-quad-fancy-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-bubble-top,face2-5=12000:Chisel/glasspanedyed/lightblue-bubble-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-panel-top,face2-5=12000:Chisel/glasspanedyed/lightblue-panel-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightblue-panel-fancy-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-transparent-top,face2-5=12000:Chisel/glasspanedyed/lightblue-transparent-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-quad-top,face2-5=12000:Chisel/glasspanedyed/lightblue-quad-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightblue-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightblue-quad-fancy-side
+block:id=%stained_glass_pane_magenta,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %stained_glass_pane_yellow:* (stained_glass_pane_yellow), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_yellow,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-bubble-top,face2-5=12000:Chisel/glasspanedyed/yellow-bubble-side
-block:id=%stained_glass_pane_yellow,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-panel-top,face2-5=12000:Chisel/glasspanedyed/yellow-panel-side
-block:id=%stained_glass_pane_yellow,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/yellow-panel-fancy-side
-block:id=%stained_glass_pane_yellow,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-transparent-top,face2-5=12000:Chisel/glasspanedyed/yellow-transparent-side
-block:id=%stained_glass_pane_yellow,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-quad-top,face2-5=12000:Chisel/glasspanedyed/yellow-quad-side
-block:id=%stained_glass_pane_yellow,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/yellow-quad-fancy-side
-block:id=%stained_glass_pane_yellow,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_yellow,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-bubble-top,face2-5=12000:Chisel/glasspanedyed/lime-bubble-side
-block:id=%stained_glass_pane_yellow,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-panel-top,face2-5=12000:Chisel/glasspanedyed/lime-panel-side
-block:id=%stained_glass_pane_yellow,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/lime-panel-fancy-side
-block:id=%stained_glass_pane_yellow,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-transparent-top,face2-5=12000:Chisel/glasspanedyed/lime-transparent-side
-block:id=%stained_glass_pane_yellow,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-quad-top,face2-5=12000:Chisel/glasspanedyed/lime-quad-side
-block:id=%stained_glass_pane_yellow,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/lime-quad-fancy-side
-block:id=%stained_glass_pane_yellow,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-bubble-top,face2-5=12000:Chisel/glasspanedyed/yellow-bubble-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-panel-top,face2-5=12000:Chisel/glasspanedyed/yellow-panel-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/yellow-panel-fancy-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-transparent-top,face2-5=12000:Chisel/glasspanedyed/yellow-transparent-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-quad-top,face2-5=12000:Chisel/glasspanedyed/yellow-quad-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/yellow-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/yellow-quad-fancy-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-bubble-top,face2-5=12000:Chisel/glasspanedyed/lime-bubble-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-panel-top,face2-5=12000:Chisel/glasspanedyed/lime-panel-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/lime-panel-fancy-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-transparent-top,face2-5=12000:Chisel/glasspanedyed/lime-transparent-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-quad-top,face2-5=12000:Chisel/glasspanedyed/lime-quad-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lime-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/lime-quad-fancy-side
+block:id=%stained_glass_pane_yellow,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %stained_glass_pane_pink:* (stained_glass_pane_pink), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_pink,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-bubble-top,face2-5=12000:Chisel/glasspanedyed/pink-bubble-side
-block:id=%stained_glass_pane_pink,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-panel-top,face2-5=12000:Chisel/glasspanedyed/pink-panel-side
-block:id=%stained_glass_pane_pink,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/pink-panel-fancy-side
-block:id=%stained_glass_pane_pink,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-transparent-top,face2-5=12000:Chisel/glasspanedyed/pink-transparent-side
-block:id=%stained_glass_pane_pink,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-quad-top,face2-5=12000:Chisel/glasspanedyed/pink-quad-side
-block:id=%stained_glass_pane_pink,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/pink-quad-fancy-side
-block:id=%stained_glass_pane_pink,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_pink,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-bubble-top,face2-5=12000:Chisel/glasspanedyed/gray-bubble-side
-block:id=%stained_glass_pane_pink,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-panel-top,face2-5=12000:Chisel/glasspanedyed/gray-panel-side
-block:id=%stained_glass_pane_pink,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/gray-panel-fancy-side
-block:id=%stained_glass_pane_pink,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-transparent-top,face2-5=12000:Chisel/glasspanedyed/gray-transparent-side
-block:id=%stained_glass_pane_pink,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-quad-top,face2-5=12000:Chisel/glasspanedyed/gray-quad-side
-block:id=%stained_glass_pane_pink,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/gray-quad-fancy-side
-block:id=%stained_glass_pane_pink,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-bubble-top,face2-5=12000:Chisel/glasspanedyed/pink-bubble-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-panel-top,face2-5=12000:Chisel/glasspanedyed/pink-panel-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/pink-panel-fancy-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-transparent-top,face2-5=12000:Chisel/glasspanedyed/pink-transparent-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-quad-top,face2-5=12000:Chisel/glasspanedyed/pink-quad-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/pink-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/pink-quad-fancy-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-bubble-top,face2-5=12000:Chisel/glasspanedyed/gray-bubble-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-panel-top,face2-5=12000:Chisel/glasspanedyed/gray-panel-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/gray-panel-fancy-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-transparent-top,face2-5=12000:Chisel/glasspanedyed/gray-transparent-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-quad-top,face2-5=12000:Chisel/glasspanedyed/gray-quad-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/gray-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/gray-quad-fancy-side
+block:id=%stained_glass_pane_pink,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %stained_glass_pane_lightgray:* (stained_glass_pane_lightgray), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_lightgray,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-bubble-top,face2-5=12000:Chisel/glasspanedyed/lightgray-bubble-side
-block:id=%stained_glass_pane_lightgray,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-panel-top,face2-5=12000:Chisel/glasspanedyed/lightgray-panel-side
-block:id=%stained_glass_pane_lightgray,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightgray-panel-fancy-side
-block:id=%stained_glass_pane_lightgray,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-transparent-top,face2-5=12000:Chisel/glasspanedyed/lightgray-transparent-side
-block:id=%stained_glass_pane_lightgray,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-quad-top,face2-5=12000:Chisel/glasspanedyed/lightgray-quad-side
-block:id=%stained_glass_pane_lightgray,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightgray-quad-fancy-side
-block:id=%stained_glass_pane_lightgray,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_lightgray,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-bubble-top,face2-5=12000:Chisel/glasspanedyed/cyan-bubble-side
-block:id=%stained_glass_pane_lightgray,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-panel-top,face2-5=12000:Chisel/glasspanedyed/cyan-panel-side
-block:id=%stained_glass_pane_lightgray,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/cyan-panel-fancy-side
-block:id=%stained_glass_pane_lightgray,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-transparent-top,face2-5=12000:Chisel/glasspanedyed/cyan-transparent-side
-block:id=%stained_glass_pane_lightgray,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-quad-top,face2-5=12000:Chisel/glasspanedyed/cyan-quad-side
-block:id=%stained_glass_pane_lightgray,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/cyan-quad-fancy-side
-block:id=%stained_glass_pane_lightgray,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-bubble-top,face2-5=12000:Chisel/glasspanedyed/lightgray-bubble-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-panel-top,face2-5=12000:Chisel/glasspanedyed/lightgray-panel-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightgray-panel-fancy-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-transparent-top,face2-5=12000:Chisel/glasspanedyed/lightgray-transparent-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-quad-top,face2-5=12000:Chisel/glasspanedyed/lightgray-quad-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/lightgray-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/lightgray-quad-fancy-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-bubble-top,face2-5=12000:Chisel/glasspanedyed/cyan-bubble-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-panel-top,face2-5=12000:Chisel/glasspanedyed/cyan-panel-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/cyan-panel-fancy-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-transparent-top,face2-5=12000:Chisel/glasspanedyed/cyan-transparent-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-quad-top,face2-5=12000:Chisel/glasspanedyed/cyan-quad-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/cyan-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/cyan-quad-fancy-side
+block:id=%stained_glass_pane_lightgray,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %stained_glass_pane_purple:* (stained_glass_pane_purple), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_purple,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-bubble-top,face2-5=12000:Chisel/glasspanedyed/purple-bubble-side
-block:id=%stained_glass_pane_purple,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-panel-top,face2-5=12000:Chisel/glasspanedyed/purple-panel-side
-block:id=%stained_glass_pane_purple,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/purple-panel-fancy-side
-block:id=%stained_glass_pane_purple,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-transparent-top,face2-5=12000:Chisel/glasspanedyed/purple-transparent-side
-block:id=%stained_glass_pane_purple,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-quad-top,face2-5=12000:Chisel/glasspanedyed/purple-quad-side
-block:id=%stained_glass_pane_purple,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/purple-quad-fancy-side
-block:id=%stained_glass_pane_purple,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_purple,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-bubble-top,face2-5=12000:Chisel/glasspanedyed/blue-bubble-side
-block:id=%stained_glass_pane_purple,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-panel-top,face2-5=12000:Chisel/glasspanedyed/blue-panel-side
-block:id=%stained_glass_pane_purple,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/blue-panel-fancy-side
-block:id=%stained_glass_pane_purple,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-transparent-top,face2-5=12000:Chisel/glasspanedyed/blue-transparent-side
-block:id=%stained_glass_pane_purple,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-quad-top,face2-5=12000:Chisel/glasspanedyed/blue-quad-side
-block:id=%stained_glass_pane_purple,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/blue-quad-fancy-side
-block:id=%stained_glass_pane_purple,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-bubble-top,face2-5=12000:Chisel/glasspanedyed/purple-bubble-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-panel-top,face2-5=12000:Chisel/glasspanedyed/purple-panel-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/purple-panel-fancy-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-transparent-top,face2-5=12000:Chisel/glasspanedyed/purple-transparent-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-quad-top,face2-5=12000:Chisel/glasspanedyed/purple-quad-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/purple-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/purple-quad-fancy-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-bubble-top,face2-5=12000:Chisel/glasspanedyed/blue-bubble-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-panel-top,face2-5=12000:Chisel/glasspanedyed/blue-panel-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/blue-panel-fancy-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-transparent-top,face2-5=12000:Chisel/glasspanedyed/blue-transparent-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-quad-top,face2-5=12000:Chisel/glasspanedyed/blue-quad-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/blue-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/blue-quad-fancy-side
+block:id=%stained_glass_pane_purple,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %stained_glass_pane_brown:* (stained_glass_pane_brown), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_brown,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-bubble-top,face2-5=12000:Chisel/glasspanedyed/brown-bubble-side
-block:id=%stained_glass_pane_brown,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-panel-top,face2-5=12000:Chisel/glasspanedyed/brown-panel-side
-block:id=%stained_glass_pane_brown,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/brown-panel-fancy-side
-block:id=%stained_glass_pane_brown,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-transparent-top,face2-5=12000:Chisel/glasspanedyed/brown-transparent-side
-block:id=%stained_glass_pane_brown,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-quad-top,face2-5=12000:Chisel/glasspanedyed/brown-quad-side
-block:id=%stained_glass_pane_brown,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/brown-quad-fancy-side
-block:id=%stained_glass_pane_brown,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_brown,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-bubble-top,face2-5=12000:Chisel/glasspanedyed/green-bubble-side
-block:id=%stained_glass_pane_brown,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-panel-top,face2-5=12000:Chisel/glasspanedyed/green-panel-side
-block:id=%stained_glass_pane_brown,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/green-panel-fancy-side
-block:id=%stained_glass_pane_brown,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-transparent-top,face2-5=12000:Chisel/glasspanedyed/green-transparent-side
-block:id=%stained_glass_pane_brown,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-quad-top,face2-5=12000:Chisel/glasspanedyed/green-quad-side
-block:id=%stained_glass_pane_brown,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/green-quad-fancy-side
-block:id=%stained_glass_pane_brown,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-bubble-top,face2-5=12000:Chisel/glasspanedyed/brown-bubble-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-panel-top,face2-5=12000:Chisel/glasspanedyed/brown-panel-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/brown-panel-fancy-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-transparent-top,face2-5=12000:Chisel/glasspanedyed/brown-transparent-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-quad-top,face2-5=12000:Chisel/glasspanedyed/brown-quad-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/brown-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/brown-quad-fancy-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-bubble-top,face2-5=12000:Chisel/glasspanedyed/green-bubble-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-panel-top,face2-5=12000:Chisel/glasspanedyed/green-panel-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/green-panel-fancy-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-transparent-top,face2-5=12000:Chisel/glasspanedyed/green-transparent-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-quad-top,face2-5=12000:Chisel/glasspanedyed/green-quad-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/green-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/green-quad-fancy-side
+block:id=%stained_glass_pane_brown,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %stained_glass_pane_red:* (stained_glass_pane_red), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%stained_glass_pane_red,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-bubble-top,face2-5=12000:Chisel/glasspanedyed/red-bubble-side
-block:id=%stained_glass_pane_red,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-panel-top,face2-5=12000:Chisel/glasspanedyed/red-panel-side
-block:id=%stained_glass_pane_red,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/red-panel-fancy-side
-block:id=%stained_glass_pane_red,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-transparent-top,face2-5=12000:Chisel/glasspanedyed/red-transparent-side
-block:id=%stained_glass_pane_red,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-quad-top,face2-5=12000:Chisel/glasspanedyed/red-quad-side
-block:id=%stained_glass_pane_red,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/red-quad-fancy-side
-block:id=%stained_glass_pane_red,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
-block:id=%stained_glass_pane_red,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-bubble-top,face2-5=12000:Chisel/glasspanedyed/black-bubble-side
-block:id=%stained_glass_pane_red,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-panel-top,face2-5=12000:Chisel/glasspanedyed/black-panel-side
-block:id=%stained_glass_pane_red,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/black-panel-fancy-side
-block:id=%stained_glass_pane_red,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-transparent-top,face2-5=12000:Chisel/glasspanedyed/black-transparent-side
-block:id=%stained_glass_pane_red,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-quad-top,face2-5=12000:Chisel/glasspanedyed/black-quad-side
-block:id=%stained_glass_pane_red,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/black-quad-fancy-side
-block:id=%stained_glass_pane_red,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=0,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-bubble-top,face2-5=12000:Chisel/glasspanedyed/red-bubble-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=1,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-panel-top,face2-5=12000:Chisel/glasspanedyed/red-panel-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=2,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/red-panel-fancy-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=3,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-transparent-top,face2-5=12000:Chisel/glasspanedyed/red-transparent-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=4,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-quad-top,face2-5=12000:Chisel/glasspanedyed/red-quad-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=5,stdrot=true,face0-1=12000:Chisel/glasspanedyed/red-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/red-quad-fancy-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=6,data=7,stdrot=true,face0-5=12000:minecraft/missingno
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=8,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-bubble-top,face2-5=12000:Chisel/glasspanedyed/black-bubble-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=9,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-panel-top,face2-5=12000:Chisel/glasspanedyed/black-panel-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=10,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-panel-fancy-top,face2-5=12000:Chisel/glasspanedyed/black-panel-fancy-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=11,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-transparent-top,face2-5=12000:Chisel/glasspanedyed/black-transparent-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=12,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-quad-top,face2-5=12000:Chisel/glasspanedyed/black-quad-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=13,stdrot=true,face0-1=12000:Chisel/glasspanedyed/black-quad-fancy-top,face2-5=12000:Chisel/glasspanedyed/black-quad-fancy-side
+block:id=%stained_glass_pane_red,transparency=TRANSPARENT,data=14,data=15,stdrot=true,face0-5=12000:minecraft/missingno
 
 # %glotek:* (glotek), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowie
 block:id=%glotek,data=0,stdrot=true,face0-5=0:chisel/glotek/0
@@ -2670,17 +2670,17 @@ block:id=%ice_stairs.7,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,s
 block:id=%ice_stairs.7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:Chisel/ice/poison
 
 # %iron_bars:* (iron_bars), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%iron_bars,data=0,stdrot=true,face0-5=0:minecraft/missingno
-block:id=%iron_bars,data=1,stdrot=true,face0=0:Chisel/ironpane/fenceIron-bottom,face1=0:Chisel/ironpane/fenceIron-top,face2-5=0:Chisel/ironpane/fenceIron-side
-block:id=%iron_bars,data=2,stdrot=true,face0=0:Chisel/ironpane/barbedwire-bottom,face1=0:Chisel/ironpane/barbedwire-top,face2-5=0:Chisel/ironpane/barbedwire-side
-block:id=%iron_bars,data=3,stdrot=true,face0-1=0:Chisel/ironpane/cage-top,face2-5=0:Chisel/ironpane/cage-side
-block:id=%iron_bars,data=4,stdrot=true,face0=0:Chisel/ironpane/fenceIronTop-bottom,face1=0:Chisel/ironpane/fenceIronTop-top,face2-5=0:Chisel/ironpane/fenceIronTop-side
-block:id=%iron_bars,data=5,stdrot=true,face0-5=0:Chisel/ironpane/terrain-glass-thickgrid
-block:id=%iron_bars,data=6,stdrot=true,face0-1=0:Chisel/ironpane/terrain-glass-thingrid-top,face2-5=0:Chisel/ironpane/terrain-glass-thingrid-side
-block:id=%iron_bars,data=7,stdrot=true,face0-1=0:Chisel/ironpane/terrain-glass-ornatesteel-top,face2-5=0:Chisel/ironpane/terrain-glass-ornatesteel-side
-block:id=%iron_bars,data=8,stdrot=true,face0=0:Chisel/ironpane/bars-bottom,face1=0:Chisel/ironpane/bars-top,face2-5=0:Chisel/ironpane/bars-side
-block:id=%iron_bars,data=9,stdrot=true,face0=0:Chisel/ironpane/spikes-bottom,face1=0:Chisel/ironpane/spikes-top,face2-5=0:Chisel/ironpane/spikes-side
-block:id=%iron_bars,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
+block:id=%iron_bars,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/missingno
+block:id=%iron_bars,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:Chisel/ironpane/fenceIron-bottom,face1=0:Chisel/ironpane/fenceIron-top,face2-5=0:Chisel/ironpane/fenceIron-side
+block:id=%iron_bars,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:Chisel/ironpane/barbedwire-bottom,face1=0:Chisel/ironpane/barbedwire-top,face2-5=0:Chisel/ironpane/barbedwire-side
+block:id=%iron_bars,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:Chisel/ironpane/cage-top,face2-5=0:Chisel/ironpane/cage-side
+block:id=%iron_bars,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:Chisel/ironpane/fenceIronTop-bottom,face1=0:Chisel/ironpane/fenceIronTop-top,face2-5=0:Chisel/ironpane/fenceIronTop-side
+block:id=%iron_bars,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/ironpane/terrain-glass-thickgrid
+block:id=%iron_bars,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:Chisel/ironpane/terrain-glass-thingrid-top,face2-5=0:Chisel/ironpane/terrain-glass-thingrid-side
+block:id=%iron_bars,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:Chisel/ironpane/terrain-glass-ornatesteel-top,face2-5=0:Chisel/ironpane/terrain-glass-ornatesteel-side
+block:id=%iron_bars,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:Chisel/ironpane/bars-bottom,face1=0:Chisel/ironpane/bars-top,face2-5=0:Chisel/ironpane/bars-side
+block:id=%iron_bars,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:Chisel/ironpane/spikes-bottom,face1=0:Chisel/ironpane/spikes-top,face2-5=0:Chisel/ironpane/spikes-side
+block:id=%iron_bars,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/missingno
 
 # %iron2:* (iron2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
 block:id=%iron2,data=0,stdrot=true,face0-5=0:chisel/metals/iron/caution
@@ -3275,16 +3275,16 @@ block:id=%packedice_stairs.7,data=0,data=1,data=2,data=3,data=4,data=5,data=6,da
 block:id=%packedice_stairs.7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Chisel/ice/poison
 
 # %paperwall:* (paperwall), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
-block:id=%paperwall,data=0,stdrot=true,face0-5=0:Chisel/paper/box
-block:id=%paperwall,data=1,stdrot=true,face0-5=0:Chisel/paper/throughMiddle
-block:id=%paperwall,data=2,stdrot=true,face0-5=0:Chisel/paper/cross
-block:id=%paperwall,data=3,stdrot=true,face0-5=0:Chisel/paper/sixSections
-block:id=%paperwall,data=4,stdrot=true,face0-5=0:Chisel/paper/vertical
-block:id=%paperwall,data=5,stdrot=true,face0-5=0:Chisel/paper/horizontal
-block:id=%paperwall,data=6,stdrot=true,face0-5=0:Chisel/paper/floral
-block:id=%paperwall,data=7,stdrot=true,face0-5=0:Chisel/paper/plain
-block:id=%paperwall,data=8,stdrot=true,face0-5=0:Chisel/paper/door
-block:id=%paperwall,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
+block:id=%paperwall,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/box
+block:id=%paperwall,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/throughMiddle
+block:id=%paperwall,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/cross
+block:id=%paperwall,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/sixSections
+block:id=%paperwall,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/vertical
+block:id=%paperwall,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/horizontal
+block:id=%paperwall,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/floral
+block:id=%paperwall,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/plain
+block:id=%paperwall,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:Chisel/paper/door
+block:id=%paperwall,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/missingno
 
 # %paperwall_block:* (paperwall_block), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 block:id=%paperwall_block,data=0,stdrot=true,face0-5=0:chisel/paper/box

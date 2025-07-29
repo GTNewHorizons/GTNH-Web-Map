@@ -82,6 +82,33 @@ boxblock:id=%carpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,dat
 
 # %futuraCircuit:* (futuraCircuit), render=team.chisel.client.render.RendererLayeredGlow(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlow
 
+# %glass_pane:* (glass_pane), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%glass_pane,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_white:* (stained_glass_pane_white), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_white,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_magenta:* (stained_glass_pane_magenta), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_magenta,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_yellow:* (stained_glass_pane_yellow), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_yellow,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_pink:* (stained_glass_pane_pink), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_pink,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_lightgray:* (stained_glass_pane_lightgray), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_lightgray,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_purple:* (stained_glass_pane_purple), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_purple,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_brown:* (stained_glass_pane_brown), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_brown,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
+# %stained_glass_pane_red:* (stained_glass_pane_red), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%stained_glass_pane_red,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
 # %glotek:* (glotek), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowie
 
 # %glowstone:* (glowstone), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlowstone
@@ -103,6 +130,9 @@ boxblock:id=%carpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,dat
 # %hempcrete:* (hempcrete), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 # %hempcretesand:* (hempcretesand), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableSand
+
+# %iron_bars:* (iron_bars), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%iron_bars,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
 
 # %iron2:* (iron2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
 
@@ -157,6 +187,9 @@ boxblock:id=%marble_pillar_slab_top,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0
 # %packedice:* (packedice), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvablePackedIce
 
 # %packedice_pillar:* (packedice_pillar), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvablePackedIce
+
+# %paperwall:* (paperwall), render=team.chisel.client.render.RendererCTMPane(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvablePane
+boxblock:id=%paperwall,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
 
 # %paperwall_block:* (paperwall_block), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
