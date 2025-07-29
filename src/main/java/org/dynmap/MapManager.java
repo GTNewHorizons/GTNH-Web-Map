@@ -882,7 +882,7 @@ public class MapManager {
         hideores = configuration.getBoolean("hideores", false);
         useBrightnessTable = configuration.getBoolean("use-brightness-table", false);
         
-        blockidalias = new short[4096];
+        blockidalias = new short[65536];
         for (int i = 0; i < blockidalias.length; i++) {
             blockidalias[i] = (short) i;
         }
@@ -1576,7 +1576,7 @@ public class MapManager {
     }
     /* Set block ID alias */
     public void setBlockIDAlias(int id, int newid) {
-        if ((id > 0) && (id < 4096) && (newid >= 0) && (newid < 4096)) {
+        if ((id > 0) && (id < 65536) && (newid >= 0) && (newid < 65536)) {
             blockidalias[id] = (short)newid;
         }
     }

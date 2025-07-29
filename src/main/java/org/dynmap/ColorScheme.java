@@ -54,8 +54,8 @@ public class ColorScheme {
 
     public static ColorScheme loadScheme(DynmapCore core, String name) {
         File colorSchemeFile = new File(getColorSchemeDirectory(core), name + ".txt");
-        Color[][] colors = new Color[4096][];
-        Color[][][] datacolors = new Color[4096][][];
+        Color[][] colors = new Color[65536][];
+        Color[][][] datacolors = new Color[65536][][];
         Color[][] biomecolors = new Color[BiomeMap.values().length][];
         Color[][] raincolors = new Color[64][];
         Color[][] tempcolors = new Color[64][];

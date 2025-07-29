@@ -40,7 +40,7 @@ import org.dynmap.utils.PatchDefinitionFactory;
  * Used by perspectives to determine if rays have intersected a block that doesn't occupy its whole block
  */
 public class HDBlockModels {
-    private static final int BLOCKTABLELEN = 4096;
+    private static final int BLOCKTABLELEN = 65536;
     private static int linkalg[] = new int[BLOCKTABLELEN];
     private static int linkmap[][] = new int[BLOCKTABLELEN][];
     private static int max_patches;
