@@ -1,4 +1,4 @@
-# Natura 2.7.5
+# Natura 2.8.8
 version:1.7
 modname:Natura
 
@@ -98,14 +98,18 @@ boxblock:id=%NetherPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,z
 boxblock:id=%NetherPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %NetherButton:* (NetherButton), render=(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
+boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%NetherButton,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%NetherButton,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%NetherButton,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%NetherButton,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%NetherButton,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %NetherLever:* (NetherLever), render=mods.natura.client.LeverRender(CUSTOM), opaque=false,cls=mods.natura.blocks.overrides.NetherLever
 boxblock:id=%NetherLever,xmin=0.25,xmax=0.75,ymin=0.4000000059604645,ymax=1.0,zmin=0.25,zmax=0.75,data=0
@@ -157,8 +161,8 @@ patchblock:id=%N Crops,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,
 patchblock:id=%Bluebells,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %GrassSlab:* (GrassSlab), render=(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
-boxblock:id=%GrassSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%GrassSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+boxblock:id=%GrassSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%GrassSlab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %Rare Sapling:* (Rare Sapling), render=(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.trees.OverworldSapling
 patchblock:id=%Rare Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
@@ -205,13 +209,13 @@ customblock:id=%stair.darkwood,class=org.dynmap.hdmap.renderer.StairBlockRendere
 # %stair.fusewood:* (stair.fusewood), render=(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
 customblock:id=%stair.fusewood,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
 
-# %plankSlab1:* (plankSlab1), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
-boxblock:id=%plankSlab1,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%plankSlab1,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# %plankSlab1:* (plankSlab1), render=(STANDARD), opaque=false,cls=mods.natura.blocks.PlankSlab1
+boxblock:id=%plankSlab1,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%plankSlab1,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %plankSlab2:* (plankSlab2), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
-boxblock:id=%plankSlab2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%plankSlab2,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# %plankSlab2:* (plankSlab2), render=(STANDARD), opaque=false,cls=mods.natura.blocks.PlankSlab2
+boxblock:id=%plankSlab2,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%plankSlab2,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %trapdoor.eucalyptus:* (trapdoor.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 boxblock:id=%trapdoor.eucalyptus,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
@@ -477,134 +481,186 @@ boxblock:id=%pressureplate.fusewood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0312
 boxblock:id=%pressureplate.fusewood,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %button.eucalyptus:* (button.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.eucalyptus,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.eucalyptus,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.eucalyptus,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.eucalyptus,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.eucalyptus,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.sakura:* (button.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.sakura,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.sakura,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.sakura,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.sakura,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.sakura,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.ghostwood:* (button.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.ghostwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.ghostwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.ghostwood,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.ghostwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.ghostwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.redwood:* (button.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.redwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.redwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.redwood,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.redwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.redwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.bloodwood:* (button.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.bloodwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.bloodwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.bloodwood,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.bloodwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.bloodwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.hopseed:* (button.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.hopseed,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.hopseed,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.hopseed,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.hopseed,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.hopseed,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.maple:* (button.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.maple,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.maple,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.maple,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.maple,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.maple,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.amaranth:* (button.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.amaranth,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.amaranth,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.amaranth,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.amaranth,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.amaranth,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.silverbell:* (button.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.silverbell,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.silverbell,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.silverbell,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.silverbell,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.silverbell,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.tiger:* (button.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.tiger,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.tiger,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.tiger,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.tiger,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.tiger,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.willow:* (button.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.willow,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.willow,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.willow,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.willow,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.willow,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.darkwood:* (button.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.darkwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.darkwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.darkwood,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.darkwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.darkwood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %button.fusewood:* (button.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 boxblock:id=%button.fusewood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
 boxblock:id=%button.fusewood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
 boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
 boxblock:id=%button.fusewood,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
 boxblock:id=%button.fusewood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
 boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
-boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%button.fusewood,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
 # %door.redwood:* (door.redwood), render=(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
 customblock:id=%door.redwood,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
