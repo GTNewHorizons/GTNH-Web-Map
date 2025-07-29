@@ -1,4 +1,4 @@
-# ae2fc 1.3.50-gtnh
+# ae2fc 1.4.99-gtnh
 version:1.7
 modname:ae2fc
 
@@ -37,6 +37,4 @@ boxblock:id=%certus_quartz_tank,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=1.0,zmin=0
 
 # %oc_pattern_editor:* (oc_pattern_editor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockOCPatternEditor
 
-# %walrus:* (walrus), render=(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockWalrus
-# FIXME: Box constraints truncated to 0.0<=val<=1.0
-boxblock:id=%walrus,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2,data=3,data=4,data=5
+# %super_stock_replenisher:* (super_stock_replenisher), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockSuperStockReplenisher
