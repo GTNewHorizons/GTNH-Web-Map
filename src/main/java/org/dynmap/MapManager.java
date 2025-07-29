@@ -1572,7 +1572,7 @@ public class MapManager {
     }
     /* Map block ID to aliased ID - used to hide ores */
     public int getBlockIDAlias(int id) {
-        return blockidalias[id];
+        return blockidalias[id] & 0xFFFF;
     }
     /* Set block ID alias */
     public void setBlockIDAlias(int id, int newid) {
