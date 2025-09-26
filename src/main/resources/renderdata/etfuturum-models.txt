@@ -780,3 +780,9 @@ patchblock:id=%rose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %netherite_stairs:* (netherite_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNetheriteStairs
 customblock:id=%netherite_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %cave_vine_plant:* (cave_vine_plant), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVinesPlant
+patchblock:id=%cave_vine_plant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1
+
+# %cave_vine:* (cave_vine), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVines
+patchblock:id=%cave_vine,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1

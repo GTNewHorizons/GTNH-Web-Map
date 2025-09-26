@@ -1,4 +1,4 @@
-# etfuturum 2.6.2.18-GTNH-daily
+# etfuturum 2.6.2.24-GTNH
 version:1.7
 modname:etfuturum
 
@@ -49,7 +49,6 @@ texture:id=minecraft/amethyst_block,filename=assets/minecraft/textures/blocks/am
 texture:id=minecraft/amethyst_cluster,filename=assets/minecraft/textures/blocks/amethyst_cluster.png
 texture:id=minecraft/ancient_debris_side,filename=assets/minecraft/textures/blocks/ancient_debris_side.png
 texture:id=minecraft/ancient_debris_top,filename=assets/minecraft/textures/blocks/ancient_debris_top.png
-texture:id=minecraft/anvil_base,filename=assets/minecraft/textures/blocks/anvil_base.png
 texture:id=minecraft/bamboo_planks,filename=assets/minecraft/textures/blocks/bamboo_planks.png
 texture:id=minecraft/barrel_bottom,filename=assets/minecraft/textures/blocks/barrel_bottom.png
 texture:id=minecraft/barrel_side,filename=assets/minecraft/textures/blocks/barrel_side.png
@@ -67,6 +66,8 @@ texture:id=minecraft/black_bed_feet_top,filename=assets/minecraft/textures/block
 texture:id=minecraft/black_bed_head_end,filename=assets/minecraft/textures/blocks/black_bed_head_end.png
 texture:id=minecraft/black_bed_head_side,filename=assets/minecraft/textures/blocks/black_bed_head_side.png
 texture:id=minecraft/black_bed_head_top,filename=assets/minecraft/textures/blocks/black_bed_head_top.png
+texture:id=minecraft/black_concrete,filename=assets/minecraft/textures/blocks/black_concrete.png
+texture:id=minecraft/black_concrete_powder,filename=assets/minecraft/textures/blocks/black_concrete_powder.png
 texture:id=minecraft/black_glazed_terracotta,filename=assets/minecraft/textures/blocks/black_glazed_terracotta.png
 texture:id=minecraft/blackstone,filename=assets/minecraft/textures/blocks/blackstone.png
 texture:id=minecraft/blackstone_top,filename=assets/minecraft/textures/blocks/blackstone_top.png
@@ -80,6 +81,8 @@ texture:id=minecraft/blue_bed_feet_top,filename=assets/minecraft/textures/blocks
 texture:id=minecraft/blue_bed_head_end,filename=assets/minecraft/textures/blocks/blue_bed_head_end.png
 texture:id=minecraft/blue_bed_head_side,filename=assets/minecraft/textures/blocks/blue_bed_head_side.png
 texture:id=minecraft/blue_bed_head_top,filename=assets/minecraft/textures/blocks/blue_bed_head_top.png
+texture:id=minecraft/blue_concrete,filename=assets/minecraft/textures/blocks/blue_concrete.png
+texture:id=minecraft/blue_concrete_powder,filename=assets/minecraft/textures/blocks/blue_concrete_powder.png
 texture:id=minecraft/blue_glazed_terracotta,filename=assets/minecraft/textures/blocks/blue_glazed_terracotta.png
 texture:id=minecraft/blue_ice,filename=assets/minecraft/textures/blocks/blue_ice.png
 texture:id=minecraft/bone_block_side,filename=assets/minecraft/textures/blocks/bone_block_side.png
@@ -92,6 +95,8 @@ texture:id=minecraft/brown_bed_feet_top,filename=assets/minecraft/textures/block
 texture:id=minecraft/brown_bed_head_end,filename=assets/minecraft/textures/blocks/brown_bed_head_end.png
 texture:id=minecraft/brown_bed_head_side,filename=assets/minecraft/textures/blocks/brown_bed_head_side.png
 texture:id=minecraft/brown_bed_head_top,filename=assets/minecraft/textures/blocks/brown_bed_head_top.png
+texture:id=minecraft/brown_concrete,filename=assets/minecraft/textures/blocks/brown_concrete.png
+texture:id=minecraft/brown_concrete_powder,filename=assets/minecraft/textures/blocks/brown_concrete_powder.png
 texture:id=minecraft/brown_glazed_terracotta,filename=assets/minecraft/textures/blocks/brown_glazed_terracotta.png
 texture:id=minecraft/budding_amethyst,filename=assets/minecraft/textures/blocks/budding_amethyst.png
 texture:id=minecraft/calcite,filename=assets/minecraft/textures/blocks/calcite.png
@@ -102,6 +107,10 @@ texture:id=minecraft/cartography_table_top,filename=assets/minecraft/textures/bl
 texture:id=minecraft/cauldron_bottom,filename=assets/minecraft/textures/blocks/cauldron_bottom.png
 texture:id=minecraft/cauldron_side,filename=assets/minecraft/textures/blocks/cauldron_side.png
 texture:id=minecraft/cauldron_top,filename=assets/minecraft/textures/blocks/cauldron_top.png
+texture:id=minecraft/cave_vines,filename=assets/minecraft/textures/blocks/cave_vines.png
+texture:id=minecraft/cave_vines_lit,filename=assets/minecraft/textures/blocks/cave_vines_lit.png
+texture:id=minecraft/cave_vines_plant,filename=assets/minecraft/textures/blocks/cave_vines_plant.png
+texture:id=minecraft/cave_vines_plant_lit,filename=assets/minecraft/textures/blocks/cave_vines_plant_lit.png
 texture:id=minecraft/chain,filename=assets/minecraft/textures/blocks/chain.png
 texture:id=minecraft/cherry_leaves,filename=assets/minecraft/textures/blocks/cherry_leaves.png
 texture:id=minecraft/cherry_log,filename=assets/minecraft/textures/blocks/cherry_log.png
@@ -147,6 +156,8 @@ texture:id=minecraft/cyan_bed_feet_top,filename=assets/minecraft/textures/blocks
 texture:id=minecraft/cyan_bed_head_end,filename=assets/minecraft/textures/blocks/cyan_bed_head_end.png
 texture:id=minecraft/cyan_bed_head_side,filename=assets/minecraft/textures/blocks/cyan_bed_head_side.png
 texture:id=minecraft/cyan_bed_head_top,filename=assets/minecraft/textures/blocks/cyan_bed_head_top.png
+texture:id=minecraft/cyan_concrete,filename=assets/minecraft/textures/blocks/cyan_concrete.png
+texture:id=minecraft/cyan_concrete_powder,filename=assets/minecraft/textures/blocks/cyan_concrete_powder.png
 texture:id=minecraft/cyan_glazed_terracotta,filename=assets/minecraft/textures/blocks/cyan_glazed_terracotta.png
 texture:id=minecraft/daylight_detector_inverted_top,filename=assets/minecraft/textures/blocks/daylight_detector_inverted_top.png
 texture:id=minecraft/daylight_detector_side,filename=assets/minecraft/textures/blocks/daylight_detector_side.png
@@ -188,12 +199,15 @@ texture:id=minecraft/frosted_ice_1,filename=assets/minecraft/textures/blocks/fro
 texture:id=minecraft/frosted_ice_2,filename=assets/minecraft/textures/blocks/frosted_ice_2.png
 texture:id=minecraft/frosted_ice_3,filename=assets/minecraft/textures/blocks/frosted_ice_3.png
 texture:id=minecraft/gilded_blackstone,filename=assets/minecraft/textures/blocks/gilded_blackstone.png
+texture:id=minecraft/glow_lichen,filename=assets/minecraft/textures/blocks/glow_lichen.png
 texture:id=minecraft/gray_bed_feet_end,filename=assets/minecraft/textures/blocks/gray_bed_feet_end.png
 texture:id=minecraft/gray_bed_feet_side,filename=assets/minecraft/textures/blocks/gray_bed_feet_side.png
 texture:id=minecraft/gray_bed_feet_top,filename=assets/minecraft/textures/blocks/gray_bed_feet_top.png
 texture:id=minecraft/gray_bed_head_end,filename=assets/minecraft/textures/blocks/gray_bed_head_end.png
 texture:id=minecraft/gray_bed_head_side,filename=assets/minecraft/textures/blocks/gray_bed_head_side.png
 texture:id=minecraft/gray_bed_head_top,filename=assets/minecraft/textures/blocks/gray_bed_head_top.png
+texture:id=minecraft/gray_concrete,filename=assets/minecraft/textures/blocks/gray_concrete.png
+texture:id=minecraft/gray_concrete_powder,filename=assets/minecraft/textures/blocks/gray_concrete_powder.png
 texture:id=minecraft/gray_glazed_terracotta,filename=assets/minecraft/textures/blocks/gray_glazed_terracotta.png
 texture:id=minecraft/green_bed_feet_end,filename=assets/minecraft/textures/blocks/green_bed_feet_end.png
 texture:id=minecraft/green_bed_feet_side,filename=assets/minecraft/textures/blocks/green_bed_feet_side.png
@@ -201,6 +215,8 @@ texture:id=minecraft/green_bed_feet_top,filename=assets/minecraft/textures/block
 texture:id=minecraft/green_bed_head_end,filename=assets/minecraft/textures/blocks/green_bed_head_end.png
 texture:id=minecraft/green_bed_head_side,filename=assets/minecraft/textures/blocks/green_bed_head_side.png
 texture:id=minecraft/green_bed_head_top,filename=assets/minecraft/textures/blocks/green_bed_head_top.png
+texture:id=minecraft/green_concrete,filename=assets/minecraft/textures/blocks/green_concrete.png
+texture:id=minecraft/green_concrete_powder,filename=assets/minecraft/textures/blocks/green_concrete_powder.png
 texture:id=minecraft/green_glazed_terracotta,filename=assets/minecraft/textures/blocks/green_glazed_terracotta.png
 texture:id=minecraft/honey_block_bottom,filename=assets/minecraft/textures/blocks/honey_block_bottom.png
 texture:id=minecraft/honey_block_side,filename=assets/minecraft/textures/blocks/honey_block_side.png
@@ -230,6 +246,8 @@ texture:id=minecraft/light_blue_bed_feet_top,filename=assets/minecraft/textures/
 texture:id=minecraft/light_blue_bed_head_end,filename=assets/minecraft/textures/blocks/light_blue_bed_head_end.png
 texture:id=minecraft/light_blue_bed_head_side,filename=assets/minecraft/textures/blocks/light_blue_bed_head_side.png
 texture:id=minecraft/light_blue_bed_head_top,filename=assets/minecraft/textures/blocks/light_blue_bed_head_top.png
+texture:id=minecraft/light_blue_concrete,filename=assets/minecraft/textures/blocks/light_blue_concrete.png
+texture:id=minecraft/light_blue_concrete_powder,filename=assets/minecraft/textures/blocks/light_blue_concrete_powder.png
 texture:id=minecraft/light_blue_glazed_terracotta,filename=assets/minecraft/textures/blocks/light_blue_glazed_terracotta.png
 texture:id=minecraft/light_gray_bed_feet_end,filename=assets/minecraft/textures/blocks/light_gray_bed_feet_end.png
 texture:id=minecraft/light_gray_bed_feet_side,filename=assets/minecraft/textures/blocks/light_gray_bed_feet_side.png
@@ -237,6 +255,8 @@ texture:id=minecraft/light_gray_bed_feet_top,filename=assets/minecraft/textures/
 texture:id=minecraft/light_gray_bed_head_end,filename=assets/minecraft/textures/blocks/light_gray_bed_head_end.png
 texture:id=minecraft/light_gray_bed_head_side,filename=assets/minecraft/textures/blocks/light_gray_bed_head_side.png
 texture:id=minecraft/light_gray_bed_head_top,filename=assets/minecraft/textures/blocks/light_gray_bed_head_top.png
+texture:id=minecraft/light_gray_concrete,filename=assets/minecraft/textures/blocks/light_gray_concrete.png
+texture:id=minecraft/light_gray_concrete_powder,filename=assets/minecraft/textures/blocks/light_gray_concrete_powder.png
 texture:id=minecraft/light_gray_glazed_terracotta,filename=assets/minecraft/textures/blocks/light_gray_glazed_terracotta.png
 texture:id=minecraft/lily_of_the_valley,filename=assets/minecraft/textures/blocks/lily_of_the_valley.png
 texture:id=minecraft/lime_bed_feet_end,filename=assets/minecraft/textures/blocks/lime_bed_feet_end.png
@@ -245,6 +265,8 @@ texture:id=minecraft/lime_bed_feet_top,filename=assets/minecraft/textures/blocks
 texture:id=minecraft/lime_bed_head_end,filename=assets/minecraft/textures/blocks/lime_bed_head_end.png
 texture:id=minecraft/lime_bed_head_side,filename=assets/minecraft/textures/blocks/lime_bed_head_side.png
 texture:id=minecraft/lime_bed_head_top,filename=assets/minecraft/textures/blocks/lime_bed_head_top.png
+texture:id=minecraft/lime_concrete,filename=assets/minecraft/textures/blocks/lime_concrete.png
+texture:id=minecraft/lime_concrete_powder,filename=assets/minecraft/textures/blocks/lime_concrete_powder.png
 texture:id=minecraft/lime_glazed_terracotta,filename=assets/minecraft/textures/blocks/lime_glazed_terracotta.png
 texture:id=minecraft/log_acacia,filename=assets/minecraft/textures/blocks/log_acacia.png
 texture:id=minecraft/log_big_oak,filename=assets/minecraft/textures/blocks/log_big_oak.png
@@ -262,6 +284,8 @@ texture:id=minecraft/magenta_bed_feet_top,filename=assets/minecraft/textures/blo
 texture:id=minecraft/magenta_bed_head_end,filename=assets/minecraft/textures/blocks/magenta_bed_head_end.png
 texture:id=minecraft/magenta_bed_head_side,filename=assets/minecraft/textures/blocks/magenta_bed_head_side.png
 texture:id=minecraft/magenta_bed_head_top,filename=assets/minecraft/textures/blocks/magenta_bed_head_top.png
+texture:id=minecraft/magenta_concrete,filename=assets/minecraft/textures/blocks/magenta_concrete.png
+texture:id=minecraft/magenta_concrete_powder,filename=assets/minecraft/textures/blocks/magenta_concrete_powder.png
 texture:id=minecraft/magenta_glazed_terracotta,filename=assets/minecraft/textures/blocks/magenta_glazed_terracotta.png
 texture:id=minecraft/magma,filename=assets/minecraft/textures/blocks/magma.png
 texture:id=minecraft/mangrove_leaves,filename=assets/minecraft/textures/blocks/mangrove_leaves.png
@@ -285,6 +309,8 @@ texture:id=minecraft/orange_bed_feet_top,filename=assets/minecraft/textures/bloc
 texture:id=minecraft/orange_bed_head_end,filename=assets/minecraft/textures/blocks/orange_bed_head_end.png
 texture:id=minecraft/orange_bed_head_side,filename=assets/minecraft/textures/blocks/orange_bed_head_side.png
 texture:id=minecraft/orange_bed_head_top,filename=assets/minecraft/textures/blocks/orange_bed_head_top.png
+texture:id=minecraft/orange_concrete,filename=assets/minecraft/textures/blocks/orange_concrete.png
+texture:id=minecraft/orange_concrete_powder,filename=assets/minecraft/textures/blocks/orange_concrete_powder.png
 texture:id=minecraft/orange_glazed_terracotta,filename=assets/minecraft/textures/blocks/orange_glazed_terracotta.png
 texture:id=minecraft/oxidized_chiseled_copper,filename=assets/minecraft/textures/blocks/oxidized_chiseled_copper.png
 texture:id=minecraft/oxidized_copper,filename=assets/minecraft/textures/blocks/oxidized_copper.png
@@ -302,6 +328,8 @@ texture:id=minecraft/pink_bed_feet_top,filename=assets/minecraft/textures/blocks
 texture:id=minecraft/pink_bed_head_end,filename=assets/minecraft/textures/blocks/pink_bed_head_end.png
 texture:id=minecraft/pink_bed_head_side,filename=assets/minecraft/textures/blocks/pink_bed_head_side.png
 texture:id=minecraft/pink_bed_head_top,filename=assets/minecraft/textures/blocks/pink_bed_head_top.png
+texture:id=minecraft/pink_concrete,filename=assets/minecraft/textures/blocks/pink_concrete.png
+texture:id=minecraft/pink_concrete_powder,filename=assets/minecraft/textures/blocks/pink_concrete_powder.png
 texture:id=minecraft/pink_glazed_terracotta,filename=assets/minecraft/textures/blocks/pink_glazed_terracotta.png
 texture:id=minecraft/pink_petals,filename=assets/minecraft/textures/blocks/pink_petals.png
 texture:id=minecraft/planks_acacia,filename=assets/minecraft/textures/blocks/planks_acacia.png
@@ -320,12 +348,16 @@ texture:id=minecraft/purple_bed_feet_top,filename=assets/minecraft/textures/bloc
 texture:id=minecraft/purple_bed_head_end,filename=assets/minecraft/textures/blocks/purple_bed_head_end.png
 texture:id=minecraft/purple_bed_head_side,filename=assets/minecraft/textures/blocks/purple_bed_head_side.png
 texture:id=minecraft/purple_bed_head_top,filename=assets/minecraft/textures/blocks/purple_bed_head_top.png
+texture:id=minecraft/purple_concrete,filename=assets/minecraft/textures/blocks/purple_concrete.png
+texture:id=minecraft/purple_concrete_powder,filename=assets/minecraft/textures/blocks/purple_concrete_powder.png
 texture:id=minecraft/purple_glazed_terracotta,filename=assets/minecraft/textures/blocks/purple_glazed_terracotta.png
 texture:id=minecraft/purpur_block,filename=assets/minecraft/textures/blocks/purpur_block.png
 texture:id=minecraft/purpur_pillar,filename=assets/minecraft/textures/blocks/purpur_pillar.png
 texture:id=minecraft/purpur_pillar_top,filename=assets/minecraft/textures/blocks/purpur_pillar_top.png
 texture:id=minecraft/quartz_block_bottom,filename=assets/minecraft/textures/blocks/quartz_block_bottom.png
 texture:id=minecraft/quartz_bricks,filename=assets/minecraft/textures/blocks/quartz_bricks.png
+texture:id=minecraft/red_concrete,filename=assets/minecraft/textures/blocks/red_concrete.png
+texture:id=minecraft/red_concrete_powder,filename=assets/minecraft/textures/blocks/red_concrete_powder.png
 texture:id=minecraft/red_glazed_terracotta,filename=assets/minecraft/textures/blocks/red_glazed_terracotta.png
 texture:id=minecraft/red_nether_bricks,filename=assets/minecraft/textures/blocks/red_nether_bricks.png
 texture:id=minecraft/red_sandstone,filename=assets/minecraft/textures/blocks/red_sandstone.png
@@ -400,6 +432,8 @@ texture:id=minecraft/white_bed_feet_top,filename=assets/minecraft/textures/block
 texture:id=minecraft/white_bed_head_end,filename=assets/minecraft/textures/blocks/white_bed_head_end.png
 texture:id=minecraft/white_bed_head_side,filename=assets/minecraft/textures/blocks/white_bed_head_side.png
 texture:id=minecraft/white_bed_head_top,filename=assets/minecraft/textures/blocks/white_bed_head_top.png
+texture:id=minecraft/white_concrete,filename=assets/minecraft/textures/blocks/white_concrete.png
+texture:id=minecraft/white_concrete_powder,filename=assets/minecraft/textures/blocks/white_concrete_powder.png
 texture:id=minecraft/white_glazed_terracotta,filename=assets/minecraft/textures/blocks/white_glazed_terracotta.png
 texture:id=minecraft/wither_rose,filename=assets/minecraft/textures/blocks/wither_rose.png
 texture:id=minecraft/yellow_bed_feet_end,filename=assets/minecraft/textures/blocks/yellow_bed_feet_end.png
@@ -408,6 +442,8 @@ texture:id=minecraft/yellow_bed_feet_top,filename=assets/minecraft/textures/bloc
 texture:id=minecraft/yellow_bed_head_end,filename=assets/minecraft/textures/blocks/yellow_bed_head_end.png
 texture:id=minecraft/yellow_bed_head_side,filename=assets/minecraft/textures/blocks/yellow_bed_head_side.png
 texture:id=minecraft/yellow_bed_head_top,filename=assets/minecraft/textures/blocks/yellow_bed_head_top.png
+texture:id=minecraft/yellow_concrete,filename=assets/minecraft/textures/blocks/yellow_concrete.png
+texture:id=minecraft/yellow_concrete_powder,filename=assets/minecraft/textures/blocks/yellow_concrete_powder.png
 texture:id=minecraft/yellow_glazed_terracotta,filename=assets/minecraft/textures/blocks/yellow_glazed_terracotta.png
 
 
@@ -637,6 +673,42 @@ block:id=%wood2_stripped,data=12,stdrot=true,face0-5=0:minecraft/stripped_acacia
 block:id=%wood2_stripped,data=13,stdrot=true,face0-5=0:minecraft/stripped_dark_oak_log
 block:id=%wood2_stripped,data=14,stdrot=true,face0-5=0:minecraft/stripped_acacia_log
 block:id=%wood2_stripped,data=15,stdrot=true,face0-5=0:minecraft/stripped_dark_oak_log
+
+# %concrete:* (concrete), render=(STANDARD), opaque=true,cls=ganymedes01.etfuturum.blocks.BaseSubtypesBlock
+block:id=%concrete,data=0,stdrot=true,face0-5=0:minecraft/white_concrete
+block:id=%concrete,data=1,stdrot=true,face0-5=0:minecraft/orange_concrete
+block:id=%concrete,data=2,stdrot=true,face0-5=0:minecraft/magenta_concrete
+block:id=%concrete,data=3,stdrot=true,face0-5=0:minecraft/light_blue_concrete
+block:id=%concrete,data=4,stdrot=true,face0-5=0:minecraft/yellow_concrete
+block:id=%concrete,data=5,stdrot=true,face0-5=0:minecraft/lime_concrete
+block:id=%concrete,data=6,stdrot=true,face0-5=0:minecraft/pink_concrete
+block:id=%concrete,data=7,stdrot=true,face0-5=0:minecraft/gray_concrete
+block:id=%concrete,data=8,stdrot=true,face0-5=0:minecraft/light_gray_concrete
+block:id=%concrete,data=9,stdrot=true,face0-5=0:minecraft/cyan_concrete
+block:id=%concrete,data=10,stdrot=true,face0-5=0:minecraft/purple_concrete
+block:id=%concrete,data=11,stdrot=true,face0-5=0:minecraft/blue_concrete
+block:id=%concrete,data=12,stdrot=true,face0-5=0:minecraft/brown_concrete
+block:id=%concrete,data=13,stdrot=true,face0-5=0:minecraft/green_concrete
+block:id=%concrete,data=14,stdrot=true,face0-5=0:minecraft/red_concrete
+block:id=%concrete,data=15,stdrot=true,face0-5=0:minecraft/black_concrete
+
+# %concrete_powder:* (concrete_powder), render=(STANDARD), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockConcretePowder
+block:id=%concrete_powder,data=0,stdrot=true,face0-5=0:minecraft/white_concrete_powder
+block:id=%concrete_powder,data=1,stdrot=true,face0-5=0:minecraft/orange_concrete_powder
+block:id=%concrete_powder,data=2,stdrot=true,face0-5=0:minecraft/magenta_concrete_powder
+block:id=%concrete_powder,data=3,stdrot=true,face0-5=0:minecraft/light_blue_concrete_powder
+block:id=%concrete_powder,data=4,stdrot=true,face0-5=0:minecraft/yellow_concrete_powder
+block:id=%concrete_powder,data=5,stdrot=true,face0-5=0:minecraft/lime_concrete_powder
+block:id=%concrete_powder,data=6,stdrot=true,face0-5=0:minecraft/pink_concrete_powder
+block:id=%concrete_powder,data=7,stdrot=true,face0-5=0:minecraft/gray_concrete_powder
+block:id=%concrete_powder,data=8,stdrot=true,face0-5=0:minecraft/light_gray_concrete_powder
+block:id=%concrete_powder,data=9,stdrot=true,face0-5=0:minecraft/cyan_concrete_powder
+block:id=%concrete_powder,data=10,stdrot=true,face0-5=0:minecraft/purple_concrete_powder
+block:id=%concrete_powder,data=11,stdrot=true,face0-5=0:minecraft/blue_concrete_powder
+block:id=%concrete_powder,data=12,stdrot=true,face0-5=0:minecraft/brown_concrete_powder
+block:id=%concrete_powder,data=13,stdrot=true,face0-5=0:minecraft/green_concrete_powder
+block:id=%concrete_powder,data=14,stdrot=true,face0-5=0:minecraft/red_concrete_powder
+block:id=%concrete_powder,data=15,stdrot=true,face0-5=0:minecraft/black_concrete_powder
 
 # %deepslate_copper_ore:* (deepslate_copper_ore), render=(STANDARD), opaque=true,cls=ganymedes01.etfuturum.blocks.ores.BlockDeepslateCopperOre
 block:id=%deepslate_copper_ore,data=*,stdrot=true,face0-5=0:minecraft/deepslate_copper_ore
@@ -1439,9 +1511,6 @@ block:id=%beacon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft
 # %enchantment_table:* (enchantment_table), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewEnchantmentTable
 block:id=%enchantment_table,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/enchanting_table_bottom,face1=0:minecraft/enchanting_table_top,face2-5=0:minecraft/enchanting_table_side
 
-# %anvil:* (anvil), render=(ANVIL), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewAnvil
-block:id=%anvil,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/anvil_base
-
 # %frosted_ice:* (frosted_ice), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockFrostedIce
 block:id=%frosted_ice,data=0,stdrot=true,face0-5=12000:minecraft/frosted_ice_0
 block:id=%frosted_ice,data=1,stdrot=true,face0-5=12000:minecraft/frosted_ice_1
@@ -2227,3 +2296,14 @@ block:id=%light,data=15,stdrot=true,face0-5=0:minecraft/light_15
 
 # %barrier:* (barrier), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBarrier
 block:id=%barrier,data=*,stdrot=true,face0-5=0:minecraft/barrier
+
+# %glow_lichen:* (glow_lichen), render=ganymedes01.etfuturum.client.renderer.block.BlockGlowLichenRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockGlowLichen
+block:id=%glow_lichen,data=*,stdrot=true,face0-5=0:minecraft/glow_lichen
+
+# %cave_vine_plant:* (cave_vine_plant), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVinesPlant
+block:id=%cave_vine_plant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/cave_vines_plant
+block:id=%cave_vine_plant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/cave_vines_plant_lit
+
+# %cave_vine:* (cave_vine), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVines
+block:id=%cave_vine,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/cave_vines
+block:id=%cave_vine,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/cave_vines_lit

@@ -1,4 +1,4 @@
-# etfuturum 2.6.2.18-GTNH-daily
+# etfuturum 2.6.2.24-GTNH
 version:1.7
 modname:etfuturum
 
@@ -480,8 +480,6 @@ boxblock:id=%chain,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=1.0,zmin=0.40625,zmax
 # %enchantment_table:* (enchantment_table), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewEnchantmentTable
 boxblock:id=%enchantment_table,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
-# %anvil:* (anvil), render=(ANVIL), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewAnvil
-
 # %barrel:* (barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
 
 # %iron_barrel:* (iron_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
@@ -765,3 +763,9 @@ patchblock:id=%rose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %netherite_stairs:* (netherite_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNetheriteStairs
 customblock:id=%netherite_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %cave_vine_plant:* (cave_vine_plant), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVinesPlant
+patchblock:id=%cave_vine_plant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1
+
+# %cave_vine:* (cave_vine), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVines
+patchblock:id=%cave_vine,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1
