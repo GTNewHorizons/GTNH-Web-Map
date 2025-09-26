@@ -1,4 +1,4 @@
-# TConstruct 1.12.16-GTNH
+# TConstruct 1.13.40-GTNH
 version:1.7
 modname:TConstruct
 
@@ -86,21 +86,6 @@ boxblock:id=%ore.berries.one,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.75,zmin=0.125
 # %ore.berries.two:* (ore.berries.two), render=tconstruct.world.model.OreberryRender(CUSTOM), opaque=false,cls=tconstruct.world.blocks.OreberryBushEssence
 boxblock:id=%ore.berries.two,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=0,data=1
 boxblock:id=%ore.berries.two,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.75,zmin=0.125,zmax=0.875,data=4,data=5
-
-# %rail.wood:* (rail.wood), render=(MINECARTTRACK), opaque=false,cls=tconstruct.world.blocks.WoodRail
-patchblock:id=%rail.wood,patch0=HorizY001ZTop,data=0
-patchblock:id=%rail.wood,patch0=HorizY001ZTop@90,data=1
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop,data=2
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop@180,data=3
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop@270,data=4
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop@90,data=5
-patchblock:id=%rail.wood,patch0=HorizY001ZTop@90,data=6
-patchblock:id=%rail.wood,patch0=HorizY001ZTop@180,data=7
-patchblock:id=%rail.wood,patch0=HorizY001ZTop@270,data=8,data=9
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop,data=10
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop@180,data=11
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop@270,data=12
-patchblock:id=%rail.wood,patch0=SlopeXUpZTop@90,data=13
 
 # %CraftingSlab:* (CraftingSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
 boxblock:id=%CraftingSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5
@@ -636,6 +621,9 @@ boxblock:id=%SearedBlockNether,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.625,zmin=0.2
 
 # %CastingChannel:* (CastingChannel), render=tconstruct.smeltery.model.BlockRenderCastingChannel(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.CastingChannelBlock
 boxblock:id=%CastingChannel,xmin=0.0,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.0,zmax=1.0,data=*
+
+# %GlassPaneClearStained:* (GlassPaneClearStained), render=tconstruct.smeltery.model.PaneRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneStained
+boxblock:id=%GlassPaneClearStained,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
 
 # %Redstone.Landmine:* (Redstone.Landmine), render=tconstruct.world.model.RenderLandmine(CUSTOM), opaque=false,cls=tconstruct.mechworks.blocks.BlockLandmine
 boxblock:id=%Redstone.Landmine,xmin=0.0625,xmax=0.9375,ymin=0.9375,ymax=1.0,zmin=0.0625,zmax=0.9375,data=0

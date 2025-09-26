@@ -1,4 +1,4 @@
-# BinnieCore 2.4.4
+# BinnieCore 2.5.12
 version:1.7
 modname:BinnieCore
 
@@ -169,135 +169,6 @@ texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/pla
 
 
 
-# %flower:* (flower), render=binnie.botany.flower.RendererBotany(CUSTOM), opaque=false,cls=binnie.botany.flower.BlockFlower
-block:id=%flower,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/flower_dandelion
-
-# %plant:* (plant), render=(CROSSEDSQUARES), opaque=false,cls=binnie.botany.gardening.BlockPlant
-block:id=%plant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
-block:id=%plant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedslong
-block:id=%plant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedsverylong
-block:id=%plant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/deadflower
-block:id=%plant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/decayingflower
-block:id=%plant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
-block:id=%plant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedslong
-block:id=%plant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedsverylong
-block:id=%plant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/deadflower
-block:id=%plant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/decayingflower
-block:id=%plant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
-block:id=%plant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedslong
-block:id=%plant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedsverylong
-block:id=%plant,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/deadflower
-block:id=%plant,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/decayingflower
-block:id=%plant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
-
-# %soil:* (soil), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-block:id=%soil,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.dry.0,face2-5=0:botany/soil/soil.acid.dry.1
-block:id=%soil,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.normal.0,face2-5=0:botany/soil/soil.acid.normal.1
-block:id=%soil,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.damp.0,face2-5=0:botany/soil/soil.acid.damp.1
-block:id=%soil,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.dry.0,face2-5=0:botany/soil/soil.neutral.dry.1
-block:id=%soil,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.normal.0,face2-5=0:botany/soil/soil.neutral.normal.1
-block:id=%soil,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.damp.0,face2-5=0:botany/soil/soil.neutral.damp.1
-block:id=%soil,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.dry.0,face2-5=0:botany/soil/soil.alkaline.dry.1
-block:id=%soil,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.normal.0,face2-5=0:botany/soil/soil.alkaline.normal.1
-block:id=%soil,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.damp.0,face2-5=0:botany/soil/soil.alkaline.damp.1
-
-# %loam:* (loam), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-block:id=%loam,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.dry.0,face2-5=0:botany/soil/loam.acid.dry.1
-block:id=%loam,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.normal.0,face2-5=0:botany/soil/loam.acid.normal.1
-block:id=%loam,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.damp.0,face2-5=0:botany/soil/loam.acid.damp.1
-block:id=%loam,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.dry.0,face2-5=0:botany/soil/loam.neutral.dry.1
-block:id=%loam,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.normal.0,face2-5=0:botany/soil/loam.neutral.normal.1
-block:id=%loam,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.damp.0,face2-5=0:botany/soil/loam.neutral.damp.1
-block:id=%loam,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.dry.0,face2-5=0:botany/soil/loam.alkaline.dry.1
-block:id=%loam,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.normal.0,face2-5=0:botany/soil/loam.alkaline.normal.1
-block:id=%loam,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.damp.0,face2-5=0:botany/soil/loam.alkaline.damp.1
-
-# %flowerbed:* (flowerbed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-block:id=%flowerbed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.dry.0,face2-5=0:botany/soil/flowerbed.acid.dry.1
-block:id=%flowerbed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.normal.0,face2-5=0:botany/soil/flowerbed.acid.normal.1
-block:id=%flowerbed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.damp.0,face2-5=0:botany/soil/flowerbed.acid.damp.1
-block:id=%flowerbed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.dry.0,face2-5=0:botany/soil/flowerbed.neutral.dry.1
-block:id=%flowerbed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.normal.0,face2-5=0:botany/soil/flowerbed.neutral.normal.1
-block:id=%flowerbed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.damp.0,face2-5=0:botany/soil/flowerbed.neutral.damp.1
-block:id=%flowerbed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.dry.0,face2-5=0:botany/soil/flowerbed.alkaline.dry.1
-block:id=%flowerbed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.normal.0,face2-5=0:botany/soil/flowerbed.alkaline.normal.1
-block:id=%flowerbed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.damp.0,face2-5=0:botany/soil/flowerbed.alkaline.damp.1
-
-# %soilNoWeed:* (soilNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-block:id=%soilNoWeed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.dry.2,face2-5=0:botany/soil/soil.acid.dry.1
-block:id=%soilNoWeed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.normal.2,face2-5=0:botany/soil/soil.acid.normal.1
-block:id=%soilNoWeed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.damp.2,face2-5=0:botany/soil/soil.acid.damp.1
-block:id=%soilNoWeed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.dry.2,face2-5=0:botany/soil/soil.neutral.dry.1
-block:id=%soilNoWeed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.normal.2,face2-5=0:botany/soil/soil.neutral.normal.1
-block:id=%soilNoWeed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.damp.2,face2-5=0:botany/soil/soil.neutral.damp.1
-block:id=%soilNoWeed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.dry.2,face2-5=0:botany/soil/soil.alkaline.dry.1
-block:id=%soilNoWeed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.normal.2,face2-5=0:botany/soil/soil.alkaline.normal.1
-block:id=%soilNoWeed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.damp.2,face2-5=0:botany/soil/soil.alkaline.damp.1
-
-# %loamNoWeed:* (loamNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-block:id=%loamNoWeed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.dry.2,face2-5=0:botany/soil/loam.acid.dry.1
-block:id=%loamNoWeed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.normal.2,face2-5=0:botany/soil/loam.acid.normal.1
-block:id=%loamNoWeed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.damp.2,face2-5=0:botany/soil/loam.acid.damp.1
-block:id=%loamNoWeed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.dry.2,face2-5=0:botany/soil/loam.neutral.dry.1
-block:id=%loamNoWeed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.normal.2,face2-5=0:botany/soil/loam.neutral.normal.1
-block:id=%loamNoWeed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.damp.2,face2-5=0:botany/soil/loam.neutral.damp.1
-block:id=%loamNoWeed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.dry.2,face2-5=0:botany/soil/loam.alkaline.dry.1
-block:id=%loamNoWeed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.normal.2,face2-5=0:botany/soil/loam.alkaline.normal.1
-block:id=%loamNoWeed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.damp.2,face2-5=0:botany/soil/loam.alkaline.damp.1
-
-# %flowerbedNoWeed:* (flowerbedNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-block:id=%flowerbedNoWeed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.dry.2,face2-5=0:botany/soil/flowerbed.acid.dry.1
-block:id=%flowerbedNoWeed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.normal.2,face2-5=0:botany/soil/flowerbed.acid.normal.1
-block:id=%flowerbedNoWeed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.damp.2,face2-5=0:botany/soil/flowerbed.acid.damp.1
-block:id=%flowerbedNoWeed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.dry.2,face2-5=0:botany/soil/flowerbed.neutral.dry.1
-block:id=%flowerbedNoWeed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.normal.2,face2-5=0:botany/soil/flowerbed.neutral.normal.1
-block:id=%flowerbedNoWeed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.damp.2,face2-5=0:botany/soil/flowerbed.neutral.damp.1
-block:id=%flowerbedNoWeed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.dry.2,face2-5=0:botany/soil/flowerbed.alkaline.dry.1
-block:id=%flowerbedNoWeed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.normal.2,face2-5=0:botany/soil/flowerbed.alkaline.normal.1
-block:id=%flowerbedNoWeed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.damp.2,face2-5=0:botany/soil/flowerbed.alkaline.damp.1
-
-# %ceramic:* (ceramic), render=(STANDARD), opaque=true,cls=binnie.botany.ceramic.BlockCeramic
-block:id=%ceramic,data=0,stdrot=true,colorMult=7FFFD4,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=1,stdrot=true,colorMult=282828,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=2,stdrot=true,colorMult=0000FF,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=3,stdrot=true,colorMult=A52A2A,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=4,stdrot=true,colorMult=5F9EA0,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=5,stdrot=true,colorMult=D2691E,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=6,stdrot=true,colorMult=FF7F50,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=7,stdrot=true,colorMult=DC143C,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=8,stdrot=true,colorMult=00FFFF,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=9,stdrot=true,colorMult=B8860B,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=10,stdrot=true,colorMult=A9A9A9,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=11,stdrot=true,colorMult=006400,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=12,stdrot=true,colorMult=BDB76B,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=13,stdrot=true,colorMult=556B2F,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=14,stdrot=true,colorMult=FF8C00,face0-5=17000:botany/ceramic
-block:id=%ceramic,data=15,stdrot=true,colorMult=E9967A,face0-5=17000:botany/ceramic
-
-# %stained:* (stained), render=(STANDARD), opaque=false,cls=binnie.botany.ceramic.BlockStained
-block:id=%stained,data=0,stdrot=true,colorMult=7FFFD4,face0-5=17000:botany/stained
-block:id=%stained,data=1,stdrot=true,colorMult=282828,face0-5=17000:botany/stained
-block:id=%stained,data=2,stdrot=true,colorMult=0000FF,face0-5=17000:botany/stained
-block:id=%stained,data=3,stdrot=true,colorMult=A52A2A,face0-5=17000:botany/stained
-block:id=%stained,data=4,stdrot=true,colorMult=5F9EA0,face0-5=17000:botany/stained
-block:id=%stained,data=5,stdrot=true,colorMult=D2691E,face0-5=17000:botany/stained
-block:id=%stained,data=6,stdrot=true,colorMult=FF7F50,face0-5=17000:botany/stained
-block:id=%stained,data=7,stdrot=true,colorMult=DC143C,face0-5=17000:botany/stained
-block:id=%stained,data=8,stdrot=true,colorMult=00FFFF,face0-5=17000:botany/stained
-block:id=%stained,data=9,stdrot=true,colorMult=B8860B,face0-5=17000:botany/stained
-block:id=%stained,data=10,stdrot=true,colorMult=A9A9A9,face0-5=17000:botany/stained
-block:id=%stained,data=11,stdrot=true,colorMult=006400,face0-5=17000:botany/stained
-block:id=%stained,data=12,stdrot=true,colorMult=BDB76B,face0-5=17000:botany/stained
-block:id=%stained,data=13,stdrot=true,colorMult=556B2F,face0-5=17000:botany/stained
-block:id=%stained,data=14,stdrot=true,colorMult=FF8C00,face0-5=17000:botany/stained
-block:id=%stained,data=15,stdrot=true,colorMult=E9967A,face0-5=17000:botany/stained
-
-# %ceramicPattern:* (ceramicPattern), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicPatterned
-block:id=%ceramicPattern,data=*,stdrot=true,face0-5=0:botany/ceramic/blank.0
-
-# %ceramicBrick:* (ceramicBrick), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicBrick
-block:id=%ceramicBrick,data=*,stdrot=true,face0-5=0:botany/ceramic.tile.0
-
 # %planks:* (planks), render=(STANDARD), opaque=true,cls=binnie.extratrees.block.BlockETPlanks
 block:id=%planks,data=0,stdrot=true,face0-5=0:extratrees/planks/Fir
 block:id=%planks,data=1,stdrot=true,face0-5=0:extratrees/planks/Cedar
@@ -435,3 +306,132 @@ block:id=%hive,data=0,stdrot=true,face0-1=0:extrabees/hive/water.1,face2-5=0:ext
 block:id=%hive,data=1,stdrot=true,face0-1=0:extrabees/hive/rock.1,face2-5=0:extrabees/hive/rock.0
 block:id=%hive,data=2,stdrot=true,face0-1=0:extrabees/hive/nether.1,face2-5=0:extrabees/hive/nether.0
 block:id=%hive,data=3,stdrot=true,face0-1=0:extrabees/hive/marble.1,face2-5=0:extrabees/hive/marble.0
+
+# %flower:* (flower), render=binnie.botany.flower.RendererBotany(CUSTOM), opaque=false,cls=binnie.botany.flower.BlockFlower
+block:id=%flower,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/flower_dandelion
+
+# %plant:* (plant), render=(CROSSEDSQUARES), opaque=false,cls=binnie.botany.gardening.BlockPlant
+block:id=%plant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
+block:id=%plant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedslong
+block:id=%plant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedsverylong
+block:id=%plant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/deadflower
+block:id=%plant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/decayingflower
+block:id=%plant,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
+block:id=%plant,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedslong
+block:id=%plant,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedsverylong
+block:id=%plant,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/deadflower
+block:id=%plant,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/decayingflower
+block:id=%plant,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
+block:id=%plant,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedslong
+block:id=%plant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weedsverylong
+block:id=%plant,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/deadflower
+block:id=%plant,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/decayingflower
+block:id=%plant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:botany/weeds
+
+# %soil:* (soil), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+block:id=%soil,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.dry.0,face2-5=0:botany/soil/soil.acid.dry.1
+block:id=%soil,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.normal.0,face2-5=0:botany/soil/soil.acid.normal.1
+block:id=%soil,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.damp.0,face2-5=0:botany/soil/soil.acid.damp.1
+block:id=%soil,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.dry.0,face2-5=0:botany/soil/soil.neutral.dry.1
+block:id=%soil,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.normal.0,face2-5=0:botany/soil/soil.neutral.normal.1
+block:id=%soil,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.damp.0,face2-5=0:botany/soil/soil.neutral.damp.1
+block:id=%soil,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.dry.0,face2-5=0:botany/soil/soil.alkaline.dry.1
+block:id=%soil,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.normal.0,face2-5=0:botany/soil/soil.alkaline.normal.1
+block:id=%soil,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.damp.0,face2-5=0:botany/soil/soil.alkaline.damp.1
+
+# %loam:* (loam), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+block:id=%loam,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.dry.0,face2-5=0:botany/soil/loam.acid.dry.1
+block:id=%loam,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.normal.0,face2-5=0:botany/soil/loam.acid.normal.1
+block:id=%loam,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.damp.0,face2-5=0:botany/soil/loam.acid.damp.1
+block:id=%loam,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.dry.0,face2-5=0:botany/soil/loam.neutral.dry.1
+block:id=%loam,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.normal.0,face2-5=0:botany/soil/loam.neutral.normal.1
+block:id=%loam,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.damp.0,face2-5=0:botany/soil/loam.neutral.damp.1
+block:id=%loam,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.dry.0,face2-5=0:botany/soil/loam.alkaline.dry.1
+block:id=%loam,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.normal.0,face2-5=0:botany/soil/loam.alkaline.normal.1
+block:id=%loam,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.damp.0,face2-5=0:botany/soil/loam.alkaline.damp.1
+
+# %flowerbed:* (flowerbed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+block:id=%flowerbed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.dry.0,face2-5=0:botany/soil/flowerbed.acid.dry.1
+block:id=%flowerbed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.normal.0,face2-5=0:botany/soil/flowerbed.acid.normal.1
+block:id=%flowerbed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.damp.0,face2-5=0:botany/soil/flowerbed.acid.damp.1
+block:id=%flowerbed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.dry.0,face2-5=0:botany/soil/flowerbed.neutral.dry.1
+block:id=%flowerbed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.normal.0,face2-5=0:botany/soil/flowerbed.neutral.normal.1
+block:id=%flowerbed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.damp.0,face2-5=0:botany/soil/flowerbed.neutral.damp.1
+block:id=%flowerbed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.dry.0,face2-5=0:botany/soil/flowerbed.alkaline.dry.1
+block:id=%flowerbed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.normal.0,face2-5=0:botany/soil/flowerbed.alkaline.normal.1
+block:id=%flowerbed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.damp.0,face2-5=0:botany/soil/flowerbed.alkaline.damp.1
+
+# %soilNoWeed:* (soilNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+block:id=%soilNoWeed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.dry.2,face2-5=0:botany/soil/soil.acid.dry.1
+block:id=%soilNoWeed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.normal.2,face2-5=0:botany/soil/soil.acid.normal.1
+block:id=%soilNoWeed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.acid.damp.2,face2-5=0:botany/soil/soil.acid.damp.1
+block:id=%soilNoWeed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.dry.2,face2-5=0:botany/soil/soil.neutral.dry.1
+block:id=%soilNoWeed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.normal.2,face2-5=0:botany/soil/soil.neutral.normal.1
+block:id=%soilNoWeed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.neutral.damp.2,face2-5=0:botany/soil/soil.neutral.damp.1
+block:id=%soilNoWeed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.dry.2,face2-5=0:botany/soil/soil.alkaline.dry.1
+block:id=%soilNoWeed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.normal.2,face2-5=0:botany/soil/soil.alkaline.normal.1
+block:id=%soilNoWeed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/soil.alkaline.damp.2,face2-5=0:botany/soil/soil.alkaline.damp.1
+
+# %loamNoWeed:* (loamNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+block:id=%loamNoWeed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.dry.2,face2-5=0:botany/soil/loam.acid.dry.1
+block:id=%loamNoWeed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.normal.2,face2-5=0:botany/soil/loam.acid.normal.1
+block:id=%loamNoWeed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.acid.damp.2,face2-5=0:botany/soil/loam.acid.damp.1
+block:id=%loamNoWeed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.dry.2,face2-5=0:botany/soil/loam.neutral.dry.1
+block:id=%loamNoWeed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.normal.2,face2-5=0:botany/soil/loam.neutral.normal.1
+block:id=%loamNoWeed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.neutral.damp.2,face2-5=0:botany/soil/loam.neutral.damp.1
+block:id=%loamNoWeed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.dry.2,face2-5=0:botany/soil/loam.alkaline.dry.1
+block:id=%loamNoWeed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.normal.2,face2-5=0:botany/soil/loam.alkaline.normal.1
+block:id=%loamNoWeed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/loam.alkaline.damp.2,face2-5=0:botany/soil/loam.alkaline.damp.1
+
+# %flowerbedNoWeed:* (flowerbedNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+block:id=%flowerbedNoWeed,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.dry.2,face2-5=0:botany/soil/flowerbed.acid.dry.1
+block:id=%flowerbedNoWeed,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.normal.2,face2-5=0:botany/soil/flowerbed.acid.normal.1
+block:id=%flowerbedNoWeed,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.acid.damp.2,face2-5=0:botany/soil/flowerbed.acid.damp.1
+block:id=%flowerbedNoWeed,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.dry.2,face2-5=0:botany/soil/flowerbed.neutral.dry.1
+block:id=%flowerbedNoWeed,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.normal.2,face2-5=0:botany/soil/flowerbed.neutral.normal.1
+block:id=%flowerbedNoWeed,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.neutral.damp.2,face2-5=0:botany/soil/flowerbed.neutral.damp.1
+block:id=%flowerbedNoWeed,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.dry.2,face2-5=0:botany/soil/flowerbed.alkaline.dry.1
+block:id=%flowerbedNoWeed,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.normal.2,face2-5=0:botany/soil/flowerbed.alkaline.normal.1
+block:id=%flowerbedNoWeed,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/dirt,face1=0:botany/soil/flowerbed.alkaline.damp.2,face2-5=0:botany/soil/flowerbed.alkaline.damp.1
+
+# %ceramic:* (ceramic), render=(STANDARD), opaque=true,cls=binnie.botany.ceramic.BlockCeramic
+block:id=%ceramic,data=0,stdrot=true,colorMult=7FFFD4,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=1,stdrot=true,colorMult=282828,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=2,stdrot=true,colorMult=0000FF,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=3,stdrot=true,colorMult=A52A2A,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=4,stdrot=true,colorMult=5F9EA0,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=5,stdrot=true,colorMult=D2691E,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=6,stdrot=true,colorMult=FF7F50,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=7,stdrot=true,colorMult=DC143C,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=8,stdrot=true,colorMult=00FFFF,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=9,stdrot=true,colorMult=B8860B,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=10,stdrot=true,colorMult=A9A9A9,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=11,stdrot=true,colorMult=006400,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=12,stdrot=true,colorMult=BDB76B,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=13,stdrot=true,colorMult=556B2F,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=14,stdrot=true,colorMult=FF8C00,face0-5=17000:botany/ceramic
+block:id=%ceramic,data=15,stdrot=true,colorMult=E9967A,face0-5=17000:botany/ceramic
+
+# %stained:* (stained), render=(STANDARD), opaque=false,cls=binnie.botany.ceramic.BlockStained
+block:id=%stained,data=0,stdrot=true,colorMult=7FFFD4,face0-5=17000:botany/stained
+block:id=%stained,data=1,stdrot=true,colorMult=282828,face0-5=17000:botany/stained
+block:id=%stained,data=2,stdrot=true,colorMult=0000FF,face0-5=17000:botany/stained
+block:id=%stained,data=3,stdrot=true,colorMult=A52A2A,face0-5=17000:botany/stained
+block:id=%stained,data=4,stdrot=true,colorMult=5F9EA0,face0-5=17000:botany/stained
+block:id=%stained,data=5,stdrot=true,colorMult=D2691E,face0-5=17000:botany/stained
+block:id=%stained,data=6,stdrot=true,colorMult=FF7F50,face0-5=17000:botany/stained
+block:id=%stained,data=7,stdrot=true,colorMult=DC143C,face0-5=17000:botany/stained
+block:id=%stained,data=8,stdrot=true,colorMult=00FFFF,face0-5=17000:botany/stained
+block:id=%stained,data=9,stdrot=true,colorMult=B8860B,face0-5=17000:botany/stained
+block:id=%stained,data=10,stdrot=true,colorMult=A9A9A9,face0-5=17000:botany/stained
+block:id=%stained,data=11,stdrot=true,colorMult=006400,face0-5=17000:botany/stained
+block:id=%stained,data=12,stdrot=true,colorMult=BDB76B,face0-5=17000:botany/stained
+block:id=%stained,data=13,stdrot=true,colorMult=556B2F,face0-5=17000:botany/stained
+block:id=%stained,data=14,stdrot=true,colorMult=FF8C00,face0-5=17000:botany/stained
+block:id=%stained,data=15,stdrot=true,colorMult=E9967A,face0-5=17000:botany/stained
+
+# %ceramicPattern:* (ceramicPattern), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicPatterned
+block:id=%ceramicPattern,data=*,stdrot=true,face0-5=0:botany/ceramic/blank.0
+
+# %ceramicBrick:* (ceramicBrick), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicBrick
+block:id=%ceramicBrick,data=*,stdrot=true,face0-5=0:botany/ceramic.tile.0

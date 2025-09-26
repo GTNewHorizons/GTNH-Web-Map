@@ -58,6 +58,7 @@ texture:id=appliedenergistics2/BlockCraftingStorageSingularityFit,filename=asset
 texture:id=appliedenergistics2/BlockCraftingUnit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingUnit.png
 texture:id=appliedenergistics2/BlockCraftingUnitFit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingUnitFit.png
 texture:id=appliedenergistics2/BlockCreativeEnergyCell,filename=assets/appliedenergistics2/textures/blocks/BlockCreativeEnergyCell.png
+texture:id=appliedenergistics2/BlockCreativeEnergyController,filename=assets/appliedenergistics2/textures/blocks/BlockCreativeEnergyController.png
 texture:id=appliedenergistics2/BlockDenseEnergyCell,filename=assets/appliedenergistics2/textures/blocks/BlockDenseEnergyCell.png
 texture:id=appliedenergistics2/BlockDenseEnergyCell0,filename=assets/appliedenergistics2/textures/blocks/BlockDenseEnergyCell0.png
 texture:id=appliedenergistics2/BlockDenseEnergyCell1,filename=assets/appliedenergistics2/textures/blocks/BlockDenseEnergyCell1.png
@@ -343,6 +344,9 @@ block:id=%tile.BlockSpatialIOPort,data=*,stdrot=true,face0=0:appliedenergistics2
 block:id=%tile.BlockController,data=0,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockController
 block:id=%tile.BlockController,data=1,stdrot=true,face0-5=23003:appliedenergistics2/BlockControllerLights,patch6=0:appliedenergistics2/BlockController,layer0-5=6
 block:id=%tile.BlockController,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockControllerConflict,patch6=0:appliedenergistics2/BlockController,layer0-5=6
+
+# %tile.BlockCreativeEnergyController:* (tile.BlockCreativeEnergyController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockCreativeEnergyController
+block:id=%tile.BlockCreativeEnergyController,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockCreativeEnergyController
 
 # %tile.BlockDrive:* (tile.BlockDrive), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.storage.BlockDrive
 block:id=%tile.BlockDrive,data=*,stdrot=true,face0=0:appliedenergistics2/BlockDriveBottom,face1=0:appliedenergistics2/BlockDrive,face2=0:appliedenergistics2/BlockDriveSide,face3=0:appliedenergistics2/BlockDriveFront,face4-5=0:appliedenergistics2/BlockDriveSide

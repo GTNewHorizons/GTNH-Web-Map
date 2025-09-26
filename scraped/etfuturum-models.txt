@@ -1,4 +1,4 @@
-# etfuturum 2.6.2
+# etfuturum 2.6.2.24-GTNH
 version:1.7
 modname:etfuturum
 
@@ -91,6 +91,42 @@ patchblock:id=%sweet_berry_bush,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90
 # %red_glazed_terracotta:* (red_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
 
 # %black_glazed_terracotta:* (black_glazed_terracotta), render=ganymedes01.etfuturum.client.renderer.block.BlockGlazedTerracottaRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockGlazedTerracotta
+
+# %amethyst_cluster_1:* (amethyst_cluster_1), render=ganymedes01.etfuturum.client.renderer.block.BlockAmethystClusterRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockAmethystCluster
+boxblock:id=%amethyst_cluster_1,xmin=0.25,xmax=0.75,ymin=0.8125,ymax=1.0,zmin=0.25,zmax=0.75,data=0
+boxblock:id=%amethyst_cluster_1,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.1875,zmin=0.25,zmax=0.75,data=1
+boxblock:id=%amethyst_cluster_1,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.8125,zmax=1.0,data=2
+boxblock:id=%amethyst_cluster_1,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.0,zmax=0.1875,data=3
+boxblock:id=%amethyst_cluster_1,xmin=0.8125,xmax=1.0,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=4
+boxblock:id=%amethyst_cluster_1,xmin=0.0,xmax=0.1875,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=5
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.75,ymax=1.0,zmin=0.1875,zmax=0.8125,data=6
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.25,zmin=0.1875,zmax=0.8125,data=7
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.75,zmax=1.0,data=8
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.0,zmax=0.25,data=9
+boxblock:id=%amethyst_cluster_1,xmin=0.75,xmax=1.0,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=10
+boxblock:id=%amethyst_cluster_1,xmin=0.0,xmax=0.25,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=11
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.75,ymax=1.0,zmin=0.1875,zmax=0.8125,data=12
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.25,zmin=0.1875,zmax=0.8125,data=13
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.75,zmax=1.0,data=14
+boxblock:id=%amethyst_cluster_1,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.0,zmax=0.25,data=15
+
+# %amethyst_cluster_2:* (amethyst_cluster_2), render=ganymedes01.etfuturum.client.renderer.block.BlockAmethystClusterRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockAmethystCluster
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.6875,ymax=1.0,zmin=0.1875,zmax=0.8125,data=0
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.3125,zmin=0.1875,zmax=0.8125,data=1
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.6875,zmax=1.0,data=2
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.0,zmax=0.3125,data=3
+boxblock:id=%amethyst_cluster_2,xmin=0.6875,xmax=1.0,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=4
+boxblock:id=%amethyst_cluster_2,xmin=0.0,xmax=0.3125,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=5
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.5625,ymax=1.0,zmin=0.1875,zmax=0.8125,data=6
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.4375,zmin=0.1875,zmax=0.8125,data=7
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.5625,zmax=1.0,data=8
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.0,zmax=0.4375,data=9
+boxblock:id=%amethyst_cluster_2,xmin=0.5625,xmax=1.0,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=10
+boxblock:id=%amethyst_cluster_2,xmin=0.0,xmax=0.4375,ymin=0.1875,ymax=0.8125,zmin=0.1875,zmax=0.8125,data=11
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.5625,ymax=1.0,zmin=0.1875,zmax=0.8125,data=12
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.4375,zmin=0.1875,zmax=0.8125,data=13
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.5625,zmax=1.0,data=14
+boxblock:id=%amethyst_cluster_2,xmin=0.1875,xmax=0.8125,ymin=0.1875,ymax=0.8125,zmin=0.0,zmax=0.4375,data=15
 
 # %observer:* (observer), render=ganymedes01.etfuturum.client.renderer.block.BlockObserverRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockObserver
 
@@ -410,8 +446,6 @@ boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,
 boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
 boxblock:id=%waxed_oxidized_copper_trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
 
-# %barrel:* (barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
-
 # %lantern:* (lantern), render=ganymedes01.etfuturum.client.renderer.block.BlockLanternRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockLantern
 boxblock:id=%lantern,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.4375,zmin=0.3125,zmax=0.6875,data=0
 boxblock:id=%lantern,xmin=0.3125,xmax=0.6875,ymin=0.0625,ymax=0.5,zmin=0.3125,zmax=0.6875,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
@@ -446,7 +480,25 @@ boxblock:id=%chain,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=1.0,zmin=0.40625,zmax
 # %enchantment_table:* (enchantment_table), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewEnchantmentTable
 boxblock:id=%enchantment_table,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
-# %anvil:* (anvil), render=(ANVIL), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewAnvil
+# %barrel:* (barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %iron_barrel:* (iron_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %gold_barrel:* (gold_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %diamond_barrel:* (diamond_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %copper_barrel:* (copper_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %silver_barrel:* (silver_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %steel_barrel:* (steel_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %obsidian_barrel:* (obsidian_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %darksteel_barrel:* (darksteel_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
+
+# %netherite_barrel:* (netherite_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
 
 # %blackstone_slab:* (blackstone_slab), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBlackstoneSlab
 boxblock:id=%blackstone_slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
@@ -708,3 +760,12 @@ boxblock:id=%cherry_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin
 
 # %rose:* (rose), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockOldRose
 patchblock:id=%rose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %netherite_stairs:* (netherite_stairs), render=(STAIRS), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNetheriteStairs
+customblock:id=%netherite_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %cave_vine_plant:* (cave_vine_plant), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVinesPlant
+patchblock:id=%cave_vine_plant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1
+
+# %cave_vine:* (cave_vine), render=(CROSSEDSQUARES), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockCaveVines
+patchblock:id=%cave_vine,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1

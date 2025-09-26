@@ -1,4 +1,4 @@
-# Natura 2.7.5
+# Natura 2.8.8
 version:1.7
 modname:Natura
 
@@ -280,8 +280,7 @@ block:id=%NetherHopper,data=*,stdrot=true,face0=0:natura/nhopper_outside,face1=0
 block:id=%NetherPressurePlate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/netherrack
 
 # %NetherButton:* (NetherButton), render=(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
-block:id=%NetherButton,data=0,stdrot=true,face0-5=0:minecraft/netherrack
-block:id=%NetherButton,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/netherrack
+block:id=%NetherButton,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/netherrack
 
 # %NetherLever:* (NetherLever), render=mods.natura.client.LeverRender(CUSTOM), opaque=false,cls=mods.natura.blocks.overrides.NetherLever
 block:id=%NetherLever,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/nlever
@@ -417,10 +416,16 @@ block:id=%GrassBlock,data=2,stdrot=true,colorMult=FFC92B00,face0-5=17000:natura/
 block:id=%GrassBlock,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
 
 # %GrassSlab:* (GrassSlab), render=(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
-block:id=%GrassSlab,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
-block:id=%GrassSlab,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FF00F3F6,face0-5=17000:natura/grass_top
-block:id=%GrassSlab,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FFC92B00,face0-5=17000:natura/grass_top
-block:id=%GrassSlab,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+block:id=%GrassSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+block:id=%GrassSlab,data=1,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF00F3F6,face0-5=17000:natura/grass_top
+block:id=%GrassSlab,data=2,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FFC92B00,face0-5=17000:natura/grass_top
+block:id=%GrassSlab,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+
+# %GrassSlabDouble:* (GrassSlabDouble), render=(STANDARD), opaque=true,cls=mods.natura.blocks.GrassSlab
+block:id=%GrassSlabDouble,data=0,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+block:id=%GrassSlabDouble,data=1,stdrot=true,colorMult=FF00F3F6,face0-5=17000:natura/grass_top
+block:id=%GrassSlabDouble,data=2,stdrot=true,colorMult=FFC92B00,face0-5=17000:natura/grass_top
+block:id=%GrassSlabDouble,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
 
 # %Cloud:* (Cloud), render=(STANDARD), opaque=false,cls=mods.natura.blocks.CloudBlock
 block:id=%Cloud,data=0,stdrot=true,face0-5=12000:natura/cloud_white
@@ -698,37 +703,69 @@ block:id=%stair.darkwood,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5
 # %stair.fusewood:* (stair.fusewood), render=(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
 block:id=%stair.fusewood,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/fusewood_planks
 
-# %plankSlab1:* (plankSlab1), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
-block:id=%plankSlab1,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
-block:id=%plankSlab1,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
-block:id=%plankSlab1,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
-block:id=%plankSlab1,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
-block:id=%plankSlab1,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
-block:id=%plankSlab1,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
-block:id=%plankSlab1,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
-block:id=%plankSlab1,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
-block:id=%plankSlab1,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
-block:id=%plankSlab1,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
-block:id=%plankSlab1,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
-block:id=%plankSlab1,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
-block:id=%plankSlab1,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
-block:id=%plankSlab1,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
-block:id=%plankSlab1,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
-block:id=%plankSlab1,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+# %plankSlab1Double:* (plankSlab1Double), render=(STANDARD), opaque=true,cls=mods.natura.blocks.PlankSlab1
+block:id=%plankSlab1Double,data=0,stdrot=true,face0-5=0:natura/eucalyptus_planks
+block:id=%plankSlab1Double,data=1,stdrot=true,face0-5=0:natura/sakura_planks
+block:id=%plankSlab1Double,data=2,stdrot=true,face0-5=0:natura/ghostwood_planks
+block:id=%plankSlab1Double,data=3,stdrot=true,face0-5=0:natura/redwood_planks
+block:id=%plankSlab1Double,data=4,stdrot=true,face0-5=0:natura/bloodwood_planks
+block:id=%plankSlab1Double,data=5,stdrot=true,face0-5=0:natura/hopseed_planks
+block:id=%plankSlab1Double,data=6,stdrot=true,face0-5=0:natura/maple_planks
+block:id=%plankSlab1Double,data=7,stdrot=true,face0-5=0:natura/silverbell_planks
+block:id=%plankSlab1Double,data=8,stdrot=true,face0-5=0:natura/eucalyptus_planks
+block:id=%plankSlab1Double,data=9,stdrot=true,face0-5=0:natura/sakura_planks
+block:id=%plankSlab1Double,data=10,stdrot=true,face0-5=0:natura/ghostwood_planks
+block:id=%plankSlab1Double,data=11,stdrot=true,face0-5=0:natura/redwood_planks
+block:id=%plankSlab1Double,data=12,stdrot=true,face0-5=0:natura/bloodwood_planks
+block:id=%plankSlab1Double,data=13,stdrot=true,face0-5=0:natura/hopseed_planks
+block:id=%plankSlab1Double,data=14,stdrot=true,face0-5=0:natura/maple_planks
+block:id=%plankSlab1Double,data=15,stdrot=true,face0-5=0:natura/silverbell_planks
 
-# %plankSlab2:* (plankSlab2), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
-block:id=%plankSlab2,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
-block:id=%plankSlab2,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
-block:id=%plankSlab2,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
-block:id=%plankSlab2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
-block:id=%plankSlab2,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
-block:id=%plankSlab2,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lava_still
-block:id=%plankSlab2,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
-block:id=%plankSlab2,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
-block:id=%plankSlab2,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
-block:id=%plankSlab2,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
-block:id=%plankSlab2,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
-block:id=%plankSlab2,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lava_still
+# %plankSlab1:* (plankSlab1), render=(STANDARD), opaque=false,cls=mods.natura.blocks.PlankSlab1
+block:id=%plankSlab1,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/eucalyptus_planks
+block:id=%plankSlab1,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/sakura_planks
+block:id=%plankSlab1,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/ghostwood_planks
+block:id=%plankSlab1,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/redwood_planks
+block:id=%plankSlab1,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/bloodwood_planks
+block:id=%plankSlab1,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/hopseed_planks
+block:id=%plankSlab1,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/maple_planks
+block:id=%plankSlab1,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/silverbell_planks
+block:id=%plankSlab1,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/eucalyptus_planks
+block:id=%plankSlab1,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/sakura_planks
+block:id=%plankSlab1,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/ghostwood_planks
+block:id=%plankSlab1,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/redwood_planks
+block:id=%plankSlab1,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/bloodwood_planks
+block:id=%plankSlab1,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/hopseed_planks
+block:id=%plankSlab1,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/maple_planks
+block:id=%plankSlab1,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/silverbell_planks
+
+# %plankSlab2Double:* (plankSlab2Double), render=(STANDARD), opaque=true,cls=mods.natura.blocks.PlankSlab2
+block:id=%plankSlab2Double,data=0,stdrot=true,face0-5=0:natura/purpleheart_planks
+block:id=%plankSlab2Double,data=1,stdrot=true,face0-5=0:natura/tiger_planks
+block:id=%plankSlab2Double,data=2,stdrot=true,face0-5=0:natura/willow_planks
+block:id=%plankSlab2Double,data=3,stdrot=true,face0-5=0:natura/darkwood_planks
+block:id=%plankSlab2Double,data=4,stdrot=true,face0-5=0:natura/fusewood_planks
+block:id=%plankSlab2Double,data=5,data=6,data=7,stdrot=true,face0-5=0:minecraft/lava_still
+block:id=%plankSlab2Double,data=8,stdrot=true,face0-5=0:natura/purpleheart_planks
+block:id=%plankSlab2Double,data=9,stdrot=true,face0-5=0:natura/tiger_planks
+block:id=%plankSlab2Double,data=10,stdrot=true,face0-5=0:natura/willow_planks
+block:id=%plankSlab2Double,data=11,stdrot=true,face0-5=0:natura/darkwood_planks
+block:id=%plankSlab2Double,data=12,stdrot=true,face0-5=0:natura/fusewood_planks
+block:id=%plankSlab2Double,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/lava_still
+
+# %plankSlab2:* (plankSlab2), render=(STANDARD), opaque=false,cls=mods.natura.blocks.PlankSlab2
+block:id=%plankSlab2,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/purpleheart_planks
+block:id=%plankSlab2,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/tiger_planks
+block:id=%plankSlab2,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/willow_planks
+block:id=%plankSlab2,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/darkwood_planks
+block:id=%plankSlab2,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/fusewood_planks
+block:id=%plankSlab2,data=5,data=6,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/lava_still
+block:id=%plankSlab2,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/purpleheart_planks
+block:id=%plankSlab2,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/tiger_planks
+block:id=%plankSlab2,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/willow_planks
+block:id=%plankSlab2,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/darkwood_planks
+block:id=%plankSlab2,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/fusewood_planks
+block:id=%plankSlab2,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/lava_still
 
 # %trapdoor.eucalyptus:* (trapdoor.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
 block:id=%trapdoor.eucalyptus,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_trapdoor
@@ -864,56 +901,43 @@ block:id=%pressureplate.darkwood,data=*,stdrot=true,transparency=TRANSPARENT,fac
 block:id=%pressureplate.fusewood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
 
 # %button.eucalyptus:* (button.eucalyptus), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.eucalyptus,data=0,stdrot=true,face0-5=0:natura/eucalyptus_planks
-block:id=%button.eucalyptus,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
+block:id=%button.eucalyptus,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
 
 # %button.sakura:* (button.sakura), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.sakura,data=0,stdrot=true,face0-5=0:natura/sakura_planks
-block:id=%button.sakura,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
+block:id=%button.sakura,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
 
 # %button.ghostwood:* (button.ghostwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.ghostwood,data=0,stdrot=true,face0-5=0:natura/ghostwood_planks
-block:id=%button.ghostwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
+block:id=%button.ghostwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
 
 # %button.redwood:* (button.redwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.redwood,data=0,stdrot=true,face0-5=0:natura/redwood_planks
-block:id=%button.redwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
+block:id=%button.redwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
 
 # %button.bloodwood:* (button.bloodwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.bloodwood,data=0,stdrot=true,face0-5=0:natura/bloodwood_planks
-block:id=%button.bloodwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
+block:id=%button.bloodwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
 
 # %button.hopseed:* (button.hopseed), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.hopseed,data=0,stdrot=true,face0-5=0:natura/hopseed_planks
-block:id=%button.hopseed,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
+block:id=%button.hopseed,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
 
 # %button.maple:* (button.maple), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.maple,data=0,stdrot=true,face0-5=0:natura/maple_planks
-block:id=%button.maple,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
+block:id=%button.maple,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
 
 # %button.amaranth:* (button.amaranth), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.amaranth,data=0,stdrot=true,face0-5=0:natura/purpleheart_planks
-block:id=%button.amaranth,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
+block:id=%button.amaranth,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
 
 # %button.silverbell:* (button.silverbell), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.silverbell,data=0,stdrot=true,face0-5=0:natura/silverbell_planks
-block:id=%button.silverbell,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+block:id=%button.silverbell,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
 
 # %button.tiger:* (button.tiger), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.tiger,data=0,stdrot=true,face0-5=0:natura/tiger_planks
-block:id=%button.tiger,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
+block:id=%button.tiger,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
 
 # %button.willow:* (button.willow), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.willow,data=0,stdrot=true,face0-5=0:natura/willow_planks
-block:id=%button.willow,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
+block:id=%button.willow,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
 
 # %button.darkwood:* (button.darkwood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.darkwood,data=0,stdrot=true,face0-5=0:natura/darkwood_planks
-block:id=%button.darkwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
+block:id=%button.darkwood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
 
 # %button.fusewood:* (button.fusewood), render=(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
-block:id=%button.fusewood,data=0,stdrot=true,face0-5=0:natura/fusewood_planks
-block:id=%button.fusewood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
+block:id=%button.fusewood,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
 
 # %door.redwood:* (door.redwood), render=(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
 block:id=%door.redwood,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/redwood_door_top,patch1=0:natura/redwood_door_bottom

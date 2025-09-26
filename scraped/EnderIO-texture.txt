@@ -1,4 +1,4 @@
-# EnderIO 2.8.22
+# EnderIO 2.9.18
 version:1.7
 modname:EnderIO
 
@@ -160,9 +160,6 @@ block:id=%blockSagMill,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:
 
 # %blockAlloySmelter:* (blockAlloySmelter), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.alloy.BlockAlloySmelter
 block:id=%blockAlloySmelter,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/machineTop,face2=0:enderio/machineBack,face3=0:enderio/alloySmelterFront,face4-5=0:enderio/machineSide
-
-# %blockCapacitorBank:* (blockCapacitorBank), render=crazypants.enderio.machine.power.CapBankRenderer2(CUSTOM), opaque=false,cls=crazypants.enderio.machine.power.BlockCapacitorBank
-block:id=%blockCapacitorBank,data=*,stdrot=true,face0-5=0:enderio/capacitorBank
 
 # %blockCapBank:* (blockCapBank), render=crazypants.enderio.machine.capbank.render.CapBankRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.capbank.BlockCapBank
 block:id=%blockCapBank,data=*,stdrot=true,face0-5=0:enderio/capacitorBank

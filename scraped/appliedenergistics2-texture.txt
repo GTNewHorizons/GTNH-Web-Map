@@ -1,4 +1,4 @@
-# appliedenergistics2 rv3-beta-478-GTNH
+# appliedenergistics2 rv3-beta-652-GTNH
 version:1.7
 modname:appliedenergistics2
 
@@ -56,6 +56,7 @@ texture:id=appliedenergistics2/BlockCraftingStorageSingularityFit,filename=asset
 texture:id=appliedenergistics2/BlockCraftingUnit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingUnit.png
 texture:id=appliedenergistics2/BlockCraftingUnitFit,filename=assets/appliedenergistics2/textures/blocks/BlockCraftingUnitFit.png
 texture:id=appliedenergistics2/BlockCreativeEnergyCell,filename=assets/appliedenergistics2/textures/blocks/BlockCreativeEnergyCell.png
+texture:id=appliedenergistics2/BlockCreativeEnergyController,filename=assets/appliedenergistics2/textures/blocks/BlockCreativeEnergyController.png
 texture:id=appliedenergistics2/BlockDenseEnergyCell,filename=assets/appliedenergistics2/textures/blocks/BlockDenseEnergyCell.png
 texture:id=appliedenergistics2/BlockDenseEnergyCell0,filename=assets/appliedenergistics2/textures/blocks/BlockDenseEnergyCell0.png
 texture:id=appliedenergistics2/BlockDenseEnergyCell1,filename=assets/appliedenergistics2/textures/blocks/BlockDenseEnergyCell1.png
@@ -202,6 +203,9 @@ block:id=%tile.BlockCableBus,data=*,stdrot=true,face0-5=12000:appliedenergistics
 
 # %tile.BlockController:* (tile.BlockController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockController
 block:id=%tile.BlockController,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockController
+
+# %tile.BlockCreativeEnergyController:* (tile.BlockCreativeEnergyController), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockCreativeEnergyController
+block:id=%tile.BlockCreativeEnergyController,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockCreativeEnergyController
 
 # %tile.BlockDrive:* (tile.BlockDrive), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.storage.BlockDrive
 block:id=%tile.BlockDrive,data=*,stdrot=true,face0=0:appliedenergistics2/BlockDriveBottom,face1=0:appliedenergistics2/BlockDrive,face2=0:appliedenergistics2/BlockDriveSide,face3=0:appliedenergistics2/BlockDriveFront,face4-5=0:appliedenergistics2/BlockDriveSide

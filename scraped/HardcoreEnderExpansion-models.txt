@@ -1,4 +1,4 @@
-# HardcoreEnderExpansion 1.11.3-GTNH
+# HardcoreEnderExpansion 1.12.7-GTNH
 version:1.7
 modname:HardcoreEnderExpansion
 
@@ -89,7 +89,7 @@ boxblock:id=%ender_goo,ymax=0.25,data=14
 boxblock:id=%ender_goo,ymax=0.125,data=15
 
 # %temple_end_portal:* (temple_end_portal), render=(CUSTOM), opaque=false,cls=chylex.hee.block.BlockTempleEndPortal
-boxblock:id=%temple_end_portal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+boxblock:id=%temple_end_portal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
 # %ravaged_brick_stairs:* (ravaged_brick_stairs), render=(STAIRS), opaque=false,cls=chylex.hee.block.vanilla.BlockBasicStairs
 customblock:id=%ravaged_brick_stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*

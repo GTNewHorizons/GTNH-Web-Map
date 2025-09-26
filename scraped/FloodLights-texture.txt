@@ -1,4 +1,4 @@
-# FloodLights 1.4.2
+# FloodLights 1.5.4
 version:1.7
 modname:FloodLights
 
@@ -15,7 +15,6 @@ texture:id=floodlights/electricFloodlight_bot,filename=assets/floodlights/textur
 texture:id=floodlights/electricFloodlight_side,filename=assets/floodlights/textures/blocks/electricFloodlight_side.png
 texture:id=floodlights/electricFloodlight_top,filename=assets/floodlights/textures/blocks/electricFloodlight_top.png
 texture:id=floodlights/electricFloodlight_top_on,filename=assets/floodlights/textures/blocks/electricFloodlight_top_on.png
-texture:id=floodlights/tileUVLight,filename=assets/floodlights/textures/blocks/tileUVLight.png
 texture:id=floodlights/uvFloodlight_bot,filename=assets/floodlights/textures/blocks/uvFloodlight_bot.png
 texture:id=floodlights/uvFloodlight_side,filename=assets/floodlights/textures/blocks/uvFloodlight_side.png
 texture:id=floodlights/uvFloodlight_top,filename=assets/floodlights/textures/blocks/uvFloodlight_top.png
@@ -67,6 +66,3 @@ block:id=%uvFloodlight,data=9,stdrot=true,face0-1=0:floodlights/uvFloodlight_sid
 block:id=%uvFloodlight,data=10,stdrot=true,face0-3=0:floodlights/uvFloodlight_side,face4=0:floodlights/uvFloodlight_top_on,face5=0:floodlights/uvFloodlight_bot
 block:id=%uvFloodlight,data=11,stdrot=true,face0-3=0:floodlights/uvFloodlight_side,face4=0:floodlights/uvFloodlight_bot,face5=0:floodlights/uvFloodlight_top_on
 block:id=%uvFloodlight,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:floodlights/uvFloodlight_side
-
-# %tileUVLight:* (tileUVLight), render=(STANDARD), opaque=false,cls=de.keridos.floodlights.block.BlockUVLightBlock
-block:id=%tileUVLight,data=*,stdrot=true,face0-5=0:floodlights/tileUVLight

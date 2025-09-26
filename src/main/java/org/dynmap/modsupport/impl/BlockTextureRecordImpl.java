@@ -116,7 +116,7 @@ public class BlockTextureRecordImpl implements BlockTextureRecord {
      */
     @Override
     public void addBlockID(int blockID) {
-        if ((blockID > 0) && (blockID < 4096)) {
+        if ((blockID > 0) && (blockID < 65536)) {
             for (int i = 0; i < ids.length; i++) {
                 if (ids[i] == blockID) {
                     return;

@@ -678,10 +678,10 @@ block:id=%bopGrass,data=0,stdrot=true,face0=0:biomesoplenty/spectralmoss_bottom,
 block:id=%bopGrass,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:biomesoplenty/smolderinggrass_bottom,face1=0:biomesoplenty/smolderinggrass_top,face2-5=0:biomesoplenty/smolderinggrass_side
 
 # %newBopGrass:* (newBopGrass), render=biomesoplenty.client.render.blocks.RenderNewGrass(CUSTOM), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewGrass
-block:id=%newBopGrass,data=0,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_loamy_side
-block:id=%newBopGrass,data=1,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_sandy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_sandy_side
-block:id=%newBopGrass,data=2,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_silty,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_silty_side
-block:id=%newBopGrass,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_loamy_side
+block:id=%newBopGrass,data=0,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=22000:minecraft/grass_top,face2-5=11000:biomesoplenty/grass_loamy_side
+block:id=%newBopGrass,data=1,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_sandy,face1=22000:minecraft/grass_top,face2-5=11000:biomesoplenty/grass_sandy_side
+block:id=%newBopGrass,data=2,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_silty,face1=22000:minecraft/grass_top,face2-5=11000:biomesoplenty/grass_silty_side
+block:id=%newBopGrass,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=22000:minecraft/grass_top,face2-5=11000:biomesoplenty/grass_loamy_side
 
 # %newBopDirt:* (newBopDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewDirt
 block:id=%newBopDirt,data=0,stdrot=true,face0-5=0:biomesoplenty/dirt_loamy

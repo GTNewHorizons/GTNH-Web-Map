@@ -283,10 +283,10 @@ block:id=%storagemoduleT3,data=1,stdrot=true,face0-1=0:galaxyspace/overworld/mac
 block:id=%storagemoduleT3,data=2,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/machine_input
 block:id=%storagemoduleT3,data=3,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_input,face5=0:galaxyspace/overworld/machine_output
 block:id=%storagemoduleT3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-5=0:galaxyspace/overworld/machine_side
-block:id=%storagemoduleT3,data=8,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_output,face3=0:galaxyspace/overworld/machine_input,face4-5=0:galaxyspace/overworld/storagemodule/module_t4_16
-block:id=%storagemoduleT3,data=9,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_input,face3=0:galaxyspace/overworld/machine_output,face4-5=0:galaxyspace/overworld/storagemodule/module_t4_16
-block:id=%storagemoduleT3,data=10,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t4_16,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/machine_input
-block:id=%storagemoduleT3,data=11,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t4_16,face4=0:galaxyspace/overworld/machine_input,face5=0:galaxyspace/overworld/machine_output
+block:id=%storagemoduleT3,data=8,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_output,face3=0:galaxyspace/overworld/machine_input,face4-5=0:galaxyspace/overworld/storagemodule/module_t3_16
+block:id=%storagemoduleT3,data=9,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_input,face3=0:galaxyspace/overworld/machine_output,face4-5=0:galaxyspace/overworld/storagemodule/module_t3_16
+block:id=%storagemoduleT3,data=10,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/machine_input
+block:id=%storagemoduleT3,data=11,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_input,face5=0:galaxyspace/overworld/machine_output
 block:id=%storagemoduleT3,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-5=0:galaxyspace/overworld/machine_side
 
 # %oxstoragemoduleT2:* (oxstoragemoduleT2), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=galaxyspace.core.block.machine.BlockOxStorageModuleT2
@@ -301,11 +301,7 @@ block:id=%solarPanel,data=0,stdrot=true,face0=0:galaxyspace/overworld/machine,fa
 block:id=%solarPanel,data=1,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2=0:galaxyspace/overworld/machine_output,face3-5=0:galaxyspace/overworld/solar_hybrid_1
 block:id=%solarPanel,data=2,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2-4=0:galaxyspace/overworld/solar_hybrid_1,face5=0:galaxyspace/overworld/machine_output
 block:id=%solarPanel,data=3,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2-3=0:galaxyspace/overworld/solar_hybrid_1,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/solar_hybrid_1
-block:id=%solarPanel,data=4,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2=0:galaxyspace/overworld/solar_ultra_1,face3=0:galaxyspace/overworld/machine_output,face4-5=0:galaxyspace/overworld/solar_ultra_1
-block:id=%solarPanel,data=5,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2=0:galaxyspace/overworld/machine_output,face3-5=0:galaxyspace/overworld/solar_ultra_1
-block:id=%solarPanel,data=6,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2-4=0:galaxyspace/overworld/solar_ultra_1,face5=0:galaxyspace/overworld/machine_output
-block:id=%solarPanel,data=7,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2-3=0:galaxyspace/overworld/solar_ultra_1,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/solar_ultra_1
-block:id=%solarPanel,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2-5=0:galaxyspace/overworld/solar_ultra_1
+block:id=%solarPanel,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2-5=0:galaxyspace/overworld/solar_hybrid_1
 
 # %metalsblock:* (metalsblock), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockMetals
 block:id=%metalsblock,data=0,stdrot=true,face0-1=0:galaxyspace/overworld/blocksmetals/deco_lead_2,face2-5=0:galaxyspace/overworld/blocksmetals/deco_lead_1
@@ -606,11 +602,6 @@ block:id=%barnardaCdandelions,data=3,data=4,data=5,data=6,data=7,data=8,data=9,d
 # %barnardaCdandelion3:* (barnardaCdandelion3), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockDandelion3
 block:id=%barnardaCdandelion3,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion2
 
-# %barnardaCreed:* (barnardaCreed), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockReed
-block:id=%barnardaCreed,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
-block:id=%barnardaCreed,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion4
-block:id=%barnardaCreed,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
-
 # %barnardaCsapling:* (barnardaCsapling), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockSapling
 block:id=%barnardaCsapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2sapling_violet_tree
 
@@ -629,7 +620,12 @@ block:id=%barnardaCleaves,data=*,stdrot=true,face0-5=0:galaxyspace/barnarda2/bar
 # %barnardaCcrystal:* (barnardaCcrystal), render=(CUSTOM), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockCrystal
 block:id=%barnardaCcrystal,data=*,stdrot=true,face0-5=12000:galaxyspace/enceladus/enceladuscrystal
 
-# %barnardaEgrunt:* (barnardaEgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaE.block.BarnardaEBlockGrunt
+# %barnardaCreed:* (barnardaCreed), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockReed
+block:id=%barnardaCreed,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
+block:id=%barnardaCreed,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion4
+block:id=%barnardaCreed,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
+
+# %barnardaEgrunt:* (barnardaEgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%barnardaEgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/barnardaE/barnardaEgrunt
 
 # %barnardaEsubgrunt:* (barnardaEsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaE.block.BarnardaEBlockSubGrunt

@@ -637,6 +637,9 @@ boxblock:id=%SearedBlockNether,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.625,zmin=0.2
 # %CastingChannel:* (CastingChannel), render=tconstruct.smeltery.model.BlockRenderCastingChannel(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.CastingChannelBlock
 boxblock:id=%CastingChannel,xmin=0.0,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.0,zmax=1.0,data=*
 
+# %GlassPaneClearStained:* (GlassPaneClearStained), render=tconstruct.smeltery.model.PaneRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneStained
+boxblock:id=%GlassPaneClearStained,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
+
 # %Redstone.Landmine:* (Redstone.Landmine), render=tconstruct.world.model.RenderLandmine(CUSTOM), opaque=false,cls=tconstruct.mechworks.blocks.BlockLandmine
 boxblock:id=%Redstone.Landmine,xmin=0.0625,xmax=0.9375,ymin=0.9375,ymax=1.0,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%Redstone.Landmine,xmin=0.0,xmax=0.0625,ymin=0.0625,ymax=0.9375,zmin=0.0625,zmax=0.9375,data=1

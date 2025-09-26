@@ -195,7 +195,7 @@ public class TexturePack {
     private static final int TILEINDEX_SHULKER_BOTTOM = 5;
     private static final int TILEINDEX_SHULKER_COUNT = 6;
 
-    private static final int BLOCKTABLELEN = 4096; // Max block ID range
+    private static final int BLOCKTABLELEN = 65536; // Max block ID range
 
     public static enum TileFileFormat {
         GRID,

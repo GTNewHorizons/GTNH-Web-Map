@@ -941,7 +941,7 @@ public class DynmapPlugin
         @Override
         public Map<Integer, String> getBlockIDMap() {
             Map<Integer, String> map = new HashMap<Integer, String>();
-            for (int i = 0; i < 4096; i++) {
+            for (int i = 0; i < 65536; i++) {
                 Block b = getBlockByID(i);
                 if (b == null) continue;
                 String blockname = GameData.getBlockRegistry().getNameForObject(b);
@@ -981,7 +981,7 @@ public class DynmapPlugin
         @Override
         public Map<String, Integer> getBlockUniqueIDMap() {
             HashMap<String, Integer> map = new HashMap<String, Integer>();
-            for (int i = 0; i < 4096; i++) {
+            for (int i = 0; i < 65536; i++) {
                 Block b = getBlockByID(i);
                 if (b == null) continue;
                 String blockname = GameData.getBlockRegistry().getNameForObject(b);
@@ -1331,7 +1331,7 @@ public class DynmapPlugin
     }
     
     private String[] getBlockNames() {
-        String[] lst = new String[4096];
+        String[] lst = new String[65536];
         for(int i = 0; i < lst.length; i++) {
             Block b = getBlockByID(i);
             if(b != null) {
@@ -1345,7 +1345,7 @@ public class DynmapPlugin
     }
 
     private int[] getBlockMaterialMap() {
-        int[] map = new int[4096];
+        int[] map = new int[65536];
         ArrayList<Material> mats = new ArrayList<Material>();
         for (int i = 0; i < map.length; i++) {
             Block b = getBlockByID(i);
