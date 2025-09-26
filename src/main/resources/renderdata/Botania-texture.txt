@@ -1631,6 +1631,9 @@ block:id=%pavement5Slab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=
 # %pavement5SlabFull:* (pavement5SlabFull), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 block:id=%pavement5SlabFull,data=*,stdrot=true,face0-5=0:botania/pavement5
 
+# %flower_structurelib:* (flower_structurelib), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.tile.TileEnchanter$StructureLibFlower
+block:id=%flower_structurelib,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower0
+
 ######################################################################################################
 ######################################################################################################
 ######################################################################################################
