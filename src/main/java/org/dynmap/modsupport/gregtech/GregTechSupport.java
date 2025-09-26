@@ -208,6 +208,14 @@ public class GregTechSupport {
             ent.name = data.get("name");
             ent.oreTexture = TexturePack.parseTextureIndex(filetoidx, data.get("oreTex"));
             ent.smallOreTexture = TexturePack.parseTextureIndex(filetoidx, data.get("smallOreTex"));
+
+            String oreTexOver = data.get("oreTexOver");
+            if(oreTexOver != null)
+                ent.oreTextureOverlay = TexturePack.parseTextureIndex(filetoidx, oreTexOver);
+
+            String smallOreTexOver = data.get("smallOreTexOver");
+            if(smallOreTexOver != null)
+                ent.smallOreTextureOverlay = TexturePack.parseTextureIndex(filetoidx, smallOreTexOver);
             ent.color = Integer.parseInt(data.get("color"), 16);
 
             materialEntries[id] = ent;
@@ -236,6 +244,7 @@ public class GregTechSupport {
         public String name;
 
         public int oreTexture, smallOreTexture;
+        public int oreTextureOverlay, smallOreTextureOverlay;
         public int color;
     }
 
