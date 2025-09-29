@@ -286,39 +286,68 @@ public class ChunkSnapshot
         return z;
     }
 
-    public int getBlockTypeId(int x, int y, int z)
-    {
-        if(y > 255)
+    public int getBlockTypeId(int x, int y, int z) {
+        if (y > 255 || y < 0)
             return 0;
 
-        return blockids[y >> 4][((y & 0xF) << 8) | (z << 4) | x];
+        x &= 0xF;
+        z &= 0xF;
+
+        int sectionIndex = y >> 4;
+        int index = ((y & 0xF) << 8) | (z << 4) | x;
+
+        if (blockids[sectionIndex] == null || index < 0 || index >= blockids[sectionIndex].length)
+            return 0;
+
+        return blockids[sectionIndex][index];
     }
 
-    public int getBlockData(int x, int y, int z)
-    {
-        if(y > 255)
+    public int getBlockData(int x, int y, int z) {
+        if (y > 255 || y < 0)
             return 0;
 
+        x &= 0xF;
+        z &= 0xF;
+
+        int sectionIndex = y >> 4;
         int off = ((y & 0xF) << 7) | (z << 3) | (x >> 1);
-        return (blockdata[y >> 4][off] >> ((x & 1) << 2)) & 0xF;
+
+        if (blockdata[sectionIndex] == null || off < 0 || off >= blockdata[sectionIndex].length)
+            return 0;
+
+        return (blockdata[sectionIndex][off] >> ((x & 1) << 2)) & 0xF;
     }
 
-    public int getBlockSkyLight(int x, int y, int z)
-    {
-        if(y > 255)
+    public int getBlockSkyLight(int x, int y, int z) {
+        if (y > 255 || y < 0)
             return 15;
 
+        x &= 0xF;
+        z &= 0xF;
+
+        int sectionIndex = y >> 4;
         int off = ((y & 0xF) << 7) | (z << 3) | (x >> 1);
-        return (skylight[y >> 4][off] >> ((x & 1) << 2)) & 0xF;
+
+        if (skylight[sectionIndex] == null || off < 0 || off >= skylight[sectionIndex].length)
+            return 15;
+
+        return (skylight[sectionIndex][off] >> ((x & 1) << 2)) & 0xF;
     }
 
-    public int getBlockEmittedLight(int x, int y, int z)
-    {
-        if(y > 255)
+    public int getBlockEmittedLight(int x, int y, int z) {
+        if (y > 255 || y < 0)
             return 0;
 
+        x &= 0xF;
+        z &= 0xF;
+
+        int sectionIndex = y >> 4;
         int off = ((y & 0xF) << 7) | (z << 3) | (x >> 1);
-        return (emitlight[y >> 4][off] >> ((x & 1) << 2)) & 0xF;
+
+        if (emitlight[sectionIndex] == null || off < 0 || off >= emitlight[sectionIndex].length)
+            return 0;
+
+        return (emitlight[sectionIndex][off] >> ((x & 1) << 2)) & 0xF;
     }
 
     public int getHighestBlockYAt(int x, int z)
@@ -346,18 +375,23 @@ public class ChunkSnapshot
     }
 
     public int getBlockDataFull(int bx, int y, int bz) {
-        if(y > 255)
+        if (y > 255 || y < 0)
             return 0;
 
-        if(have16bitBlockData) {
-            int tmp = blockdata16[y >> 4][((y & 0xF) << 8) | (bz << 4) | bx];
+        bx &= 0xF;
+        bz &= 0xF;
 
-            if(tmp < 0)
-                tmp += 0x10000;
+        int sectionIndex = y >> 4;
 
-            return tmp;
+        if (have16bitBlockData) {
+            int index = ((y & 0xF) << 8) | (bz << 4) | bx;
+
+            if (blockdata16[sectionIndex] == null || index < 0 || index >= blockdata16[sectionIndex].length)
+                return 0;
+
+            int tmp = blockdata16[sectionIndex][index];
+            return tmp < 0 ? tmp + 0x10000 : tmp;
         }
-
         return getBlockData(bx, y, bz);
     }
 }
