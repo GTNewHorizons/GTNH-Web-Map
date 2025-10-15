@@ -423,7 +423,19 @@ public class GregTechSupport {
                                 writer.write("NULL");
                             }
                         } else {
-                            writer.write(",material=NULL,matCol=000000,matIcons=NULL");
+                            if(ppfp.pipeStats != null){
+                                writer.write(",material=" + ppfp.pipeStats.name());
+                                writer.write(",matCol=" + String.format("%02X%02X%02X", ppfp.pipeStats.rgba[0] & 0xFF, ppfp.pipeStats.rgba[1] & 0xFF, ppfp.pipeStats.rgba[2] & 0xFF));
+                                writer.write(",matIcons=" );
+                                if( ppfp.pipeStats.iconSet != null){
+                                    writer.write(ppfp.pipeStats.iconSet.mSetName);
+                                }
+                                else{
+                                    writer.write("NULL");
+                                }
+                            } else {
+                                writer.write(",material=NULL,matCol=000000,matIcons=NULL");
+                            }
                         }
                     }
                     else {
