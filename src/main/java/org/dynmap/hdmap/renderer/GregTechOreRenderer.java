@@ -80,7 +80,7 @@ public class GregTechOreRenderer extends CustomRenderer {
             if(ent != null){
                 multiplier = new SimpleColorMultiplier(ent.color);
                 int overlay = isSmall ? ent.smallOreTextureOverlay : ent.oreTextureOverlay;
-                if(overlay >= 0)
+                if(overlay > 0)
                     textures = new int[]{baseTextures[actualMeta], isSmall ? ent.smallOreTexture : ent.oreTexture, overlay};
                 else
                     textures = new int[]{baseTextures[actualMeta], isSmall ? ent.smallOreTexture : ent.oreTexture};
