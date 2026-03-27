@@ -688,6 +688,9 @@ public class PostgreSQLMapStorage extends MapStorage {
 	            Statement stmt = c.createStatement();
 	            ResultSet rs = stmt.executeQuery(String.format("SELECT x,y,zoom,Format FROM %s WHERE MapID=%d OFFSET %d LIMIT %d;", tableTiles, mapkey, offset, limit));
 	            int cnt = 0;
+	            if(!rs.isBeforeFirst()){
+	              cnt = limit+1; //or break out, there is no data to be read at this offset, and unless you expect to find more data at a later offset, it is more likely we've reached the end.
+	            }
 	            while (rs.next()) {
 	                StorageTile st = new StorageTile(world, map, rs.getInt("x"), rs.getInt("y"), rs.getInt("zoom"), var);
 	                final MapType.ImageEncoding encoding = MapType.ImageEncoding.fromOrd(rs.getInt("Format"));
@@ -698,7 +701,7 @@ public class PostgreSQLMapStorage extends MapStorage {
 	            }
 	            rs.close();
 	            stmt.close();
-	            if (cnt < limit) done = true;
+	            if (cnt > limit) done = true; //Break out if too many items are found, previous was break out or loop infinitely if rs.next (cnt++) happened to be over 100
             	offset += cnt;
             }
         } catch (SQLException x) {
