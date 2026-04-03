@@ -1,0 +1,870 @@
+# modernmarkings 0.3.12-1.7.10
+version:1.7
+modname:modernmarkings
+
+
+
+# Configuration file not found!
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %tile.floor_marking_black_singleline:* (tile.floor_marking_black_singleline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_black_singleline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_arrow:* (tile.floor_marking_white_arrow), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_arrow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_lane:* (tile.floor_marking_white_lane), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_lane,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_lane_cross:* (tile.floor_marking_white_lane_cross), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_lane_cross,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_singleline:* (tile.floor_marking_white_singleline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_singleline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_square:* (tile.floor_marking_white_square), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_square,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_whiteblack_hazardline:* (tile.floor_marking_whiteblack_hazardline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_whiteblack_hazardline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_noentry:* (tile.floor_marking_noentry), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_noentry,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_nostep:* (tile.floor_marking_nostep), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_nostep,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_exit:* (tile.floor_marking_exit), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_exit,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_arrow:* (tile.floor_marking_yellow_arrow), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_arrow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_hazardline:* (tile.floor_marking_yellow_hazardline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_hazardline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_lane:* (tile.floor_marking_yellow_lane), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_lane,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_sideline:* (tile.floor_marking_yellow_sideline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_sideline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_singleline:* (tile.floor_marking_yellow_singleline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_singleline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_square:* (tile.floor_marking_yellow_square), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_square,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_stripes:* (tile.floor_marking_yellow_stripes), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_stripes,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_t_crossing:* (tile.floor_marking_yellow_t_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_t_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_crossing:* (tile.floor_marking_yellow_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_turn:* (tile.floor_marking_yellow_turn), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_turn,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_yellow_end:* (tile.floor_marking_yellow_end), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_yellow_end,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_danger_yellow:* (tile.floor_marking_danger_yellow), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_danger_yellow,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_t_crossing:* (tile.floor_marking_white_t_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_t_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_crossing:* (tile.floor_marking_white_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_turn:* (tile.floor_marking_white_turn), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_turn,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_end:* (tile.floor_marking_white_end), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_end,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_white_sideline:* (tile.floor_marking_white_sideline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_white_sideline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_t_crossing:* (tile.floor_marking_green_t_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_t_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_crossing:* (tile.floor_marking_green_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_turn:* (tile.floor_marking_green_turn), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_turn,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_end:* (tile.floor_marking_green_end), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_end,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_sideline:* (tile.floor_marking_green_sideline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_sideline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_square:* (tile.floor_marking_green_square), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_square,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_hazardline:* (tile.floor_marking_green_hazardline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_hazardline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_green_singleline:* (tile.floor_marking_green_singleline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_green_singleline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_t_crossing:* (tile.floor_marking_blue_t_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_t_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_crossing:* (tile.floor_marking_blue_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_turn:* (tile.floor_marking_blue_turn), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_turn,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_end:* (tile.floor_marking_blue_end), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_end,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_sideline:* (tile.floor_marking_blue_sideline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_sideline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_square:* (tile.floor_marking_blue_square), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_square,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_hazardline:* (tile.floor_marking_blue_hazardline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_hazardline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_blue_singleline:* (tile.floor_marking_blue_singleline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_blue_singleline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_t_crossing:* (tile.floor_marking_red_t_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_t_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_crossing:* (tile.floor_marking_red_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_turn:* (tile.floor_marking_red_turn), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_turn,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_end:* (tile.floor_marking_red_end), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_end,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_sideline:* (tile.floor_marking_red_sideline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_sideline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_square:* (tile.floor_marking_red_square), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_square,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_hazardline:* (tile.floor_marking_red_hazardline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_hazardline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_red_singleline:* (tile.floor_marking_red_singleline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_red_singleline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_danger_red:* (tile.floor_marking_danger_red), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_danger_red,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_redx:* (tile.floor_marking_redx), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_redx,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_t_crossing:* (tile.floor_marking_orange_t_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_t_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_crossing:* (tile.floor_marking_orange_crossing), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_crossing,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_turn:* (tile.floor_marking_orange_turn), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_turn,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_end:* (tile.floor_marking_orange_end), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_end,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_sideline:* (tile.floor_marking_orange_sideline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_sideline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_square:* (tile.floor_marking_orange_square), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_square,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_hazardline:* (tile.floor_marking_orange_hazardline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_hazardline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_orange_singleline:* (tile.floor_marking_orange_singleline), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_orange_singleline,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_a:* (tile.floor_marking_letter_a), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_a,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_b:* (tile.floor_marking_letter_b), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_b,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_c:* (tile.floor_marking_letter_c), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_c,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_d:* (tile.floor_marking_letter_d), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_d,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_e:* (tile.floor_marking_letter_e), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_e,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_f:* (tile.floor_marking_letter_f), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_f,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_g:* (tile.floor_marking_letter_g), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_g,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_h:* (tile.floor_marking_letter_h), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_h,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_i:* (tile.floor_marking_letter_i), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_i,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_j:* (tile.floor_marking_letter_j), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_j,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_k:* (tile.floor_marking_letter_k), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_k,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_l:* (tile.floor_marking_letter_l), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_l,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_m:* (tile.floor_marking_letter_m), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_m,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_n:* (tile.floor_marking_letter_n), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_n,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_o:* (tile.floor_marking_letter_o), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_o,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_p:* (tile.floor_marking_letter_p), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_p,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_q:* (tile.floor_marking_letter_q), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_q,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_r:* (tile.floor_marking_letter_r), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_r,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_s:* (tile.floor_marking_letter_s), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_s,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_t:* (tile.floor_marking_letter_t), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_t,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_u:* (tile.floor_marking_letter_u), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_u,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_v:* (tile.floor_marking_letter_v), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_v,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_w:* (tile.floor_marking_letter_w), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_w,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_x:* (tile.floor_marking_letter_x), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_x,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_y:* (tile.floor_marking_letter_y), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_y,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.floor_marking_letter_z:* (tile.floor_marking_letter_z), render=modernmarkings.renderer.MarkingFloorRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingFloor
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%tile.floor_marking_letter_z,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=*
+
+# %tile.wall_marking_exit:* (tile.wall_marking_exit), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_exit,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_exit,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_exit,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_exit,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_unit:* (tile.wall_marking_unit), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_unit,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_unit,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_unit,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_unit,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_first_aid:* (tile.wall_marking_first_aid), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_first_aid,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_first_aid,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_first_aid,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_first_aid,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_fire_extinguisher:* (tile.wall_marking_fire_extinguisher), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_fire_extinguisher,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_fire_extinguisher,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_fire_extinguisher,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_fire_extinguisher,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_0:* (tile.wall_marking_number_0), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_0,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_0,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_0,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_0,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_1:* (tile.wall_marking_number_1), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_1,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_1,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_1,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_1,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_2:* (tile.wall_marking_number_2), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_2,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_2,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_3:* (tile.wall_marking_number_3), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_3,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_3,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_3,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_3,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_4:* (tile.wall_marking_number_4), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_4,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_4,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_4,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_4,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_5:* (tile.wall_marking_number_5), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_5,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_5,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_5,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_5,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_6:* (tile.wall_marking_number_6), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_6,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_6,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_6,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_6,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_7:* (tile.wall_marking_number_7), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_7,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_7,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_7,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_7,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_8:* (tile.wall_marking_number_8), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_8,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_8,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_8,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_8,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_9:* (tile.wall_marking_number_9), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_9,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_9,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_9,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_9,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_no:* (tile.wall_marking_number_no), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_no,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_no,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_no,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_no,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_numero:* (tile.wall_marking_number_numero), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_numero,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_numero,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_numero,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_numero,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_dash:* (tile.wall_marking_number_dash), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_dash,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_dash,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_dash,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_dash,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_comma:* (tile.wall_marking_number_comma), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_comma,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_comma,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_comma,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_comma,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_number_period:* (tile.wall_marking_number_period), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_number_period,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_number_period,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_number_period,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_number_period,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_chemical:* (tile.wall_marking_symbol_chemical), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_chemical,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_chemical,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_chemical,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_chemical,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_electric:* (tile.wall_marking_symbol_electric), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_electric,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_electric,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_electric,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_electric,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_fire:* (tile.wall_marking_symbol_fire), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_fire,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_fire,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_fire,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_fire,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_fluid:* (tile.wall_marking_symbol_fluid), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_fluid,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_fluid,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_fluid,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_fluid,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_frost:* (tile.wall_marking_symbol_frost), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_frost,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_frost,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_frost,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_frost,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_gears:* (tile.wall_marking_symbol_gears), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_gears,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_gears,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_gears,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_gears,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_laser:* (tile.wall_marking_symbol_laser), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_laser,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_laser,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_laser,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_laser,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_magic:* (tile.wall_marking_symbol_magic), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_magic,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_magic,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_magic,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_magic,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_mob:* (tile.wall_marking_symbol_mob), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_mob,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_mob,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_mob,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_mob,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_pinch:* (tile.wall_marking_symbol_pinch), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_pinch,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_pinch,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_pinch,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_pinch,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_production:* (tile.wall_marking_symbol_production), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_production,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_production,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_production,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_production,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_radiation:* (tile.wall_marking_symbol_radiation), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_radiation,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_radiation,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_radiation,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_radiation,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_radiation_2:* (tile.wall_marking_symbol_radiation_2), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_radiation_2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_radiation_2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_radiation_2,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_radiation_2,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_symbol_storage:* (tile.wall_marking_symbol_storage), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_symbol_storage,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_symbol_storage,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_symbol_storage,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_symbol_storage,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_warning_danger:* (tile.wall_marking_warning_danger), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_warning_danger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_warning_danger,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_warning_danger,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_warning_danger,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_arrowleft:* (tile.wall_marking_arrowleft), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_arrowleft,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_arrowleft,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_arrowleft,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_arrowleft,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_arrowright:* (tile.wall_marking_arrowright), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_arrowright,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_arrowright,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_arrowright,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_arrowright,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_hazardline_left:* (tile.wall_marking_hazardline_left), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_hazardline_left,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_hazardline_left,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_hazardline_left,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_hazardline_left,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_hazardline_right:* (tile.wall_marking_hazardline_right), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_hazardline_right,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_hazardline_right,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_hazardline_right,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_hazardline_right,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_hazard_diamond:* (tile.wall_marking_hazard_diamond), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_hazard_diamond,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_hazard_diamond,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_hazard_diamond,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_hazard_diamond,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_eu:* (tile.wall_marking_voltage_eu), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_eu,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_eu,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_eu,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_eu,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_ev:* (tile.wall_marking_voltage_ev), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_ev,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_ev,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_ev,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_ev,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_fe:* (tile.wall_marking_voltage_fe), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_fe,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_fe,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_fe,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_fe,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_hv:* (tile.wall_marking_voltage_hv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_hv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_hv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_hv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_hv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_iv:* (tile.wall_marking_voltage_iv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_iv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_iv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_iv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_iv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_luv:* (tile.wall_marking_voltage_luv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_luv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_luv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_luv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_luv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_lv:* (tile.wall_marking_voltage_lv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_lv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_lv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_lv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_lv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_max:* (tile.wall_marking_voltage_max), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_max,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_max,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_max,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_max,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_mv:* (tile.wall_marking_voltage_mv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_mv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_mv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_mv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_mv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_pert:* (tile.wall_marking_voltage_pert), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_pert,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_pert,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_pert,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_pert,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_rf:* (tile.wall_marking_voltage_rf), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_rf,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_rf,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_rf,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_rf,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_uev:* (tile.wall_marking_voltage_uev), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_uev,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_uev,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_uev,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_uev,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_uhv:* (tile.wall_marking_voltage_uhv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_uhv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_uhv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_uhv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_uhv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_uiv:* (tile.wall_marking_voltage_uiv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_uiv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_uiv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_uiv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_uiv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_umv:* (tile.wall_marking_voltage_umv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_umv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_umv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_umv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_umv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_uv:* (tile.wall_marking_voltage_uv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_uv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_uv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_uv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_uv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_uxv:* (tile.wall_marking_voltage_uxv), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_uxv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_uxv,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_uxv,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_uxv,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_voltage_zpm:* (tile.wall_marking_voltage_zpm), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_voltage_zpm,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_voltage_zpm,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_voltage_zpm,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_voltage_zpm,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_a:* (tile.wall_marking_letter_a), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_a,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_a,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_a,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_a,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_b:* (tile.wall_marking_letter_b), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_b,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_b,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_b,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_b,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_c:* (tile.wall_marking_letter_c), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_c,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_c,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_c,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_c,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_d:* (tile.wall_marking_letter_d), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_d,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_d,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_d,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_d,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_e:* (tile.wall_marking_letter_e), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_e,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_e,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_e,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_e,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_f:* (tile.wall_marking_letter_f), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_f,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_f,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_f,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_f,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_g:* (tile.wall_marking_letter_g), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_g,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_g,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_g,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_g,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_h:* (tile.wall_marking_letter_h), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_h,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_h,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_h,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_h,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_i:* (tile.wall_marking_letter_i), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_i,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_i,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_i,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_i,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_j:* (tile.wall_marking_letter_j), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_j,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_j,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_j,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_j,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_k:* (tile.wall_marking_letter_k), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_k,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_k,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_k,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_k,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_l:* (tile.wall_marking_letter_l), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_l,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_l,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_l,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_l,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_m:* (tile.wall_marking_letter_m), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_m,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_m,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_m,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_m,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_n:* (tile.wall_marking_letter_n), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_n,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_n,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_n,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_n,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_o:* (tile.wall_marking_letter_o), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_o,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_o,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_o,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_o,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_p:* (tile.wall_marking_letter_p), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_p,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_p,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_p,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_p,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_q:* (tile.wall_marking_letter_q), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_q,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_q,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_q,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_q,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_r:* (tile.wall_marking_letter_r), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_r,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_r,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_r,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_r,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_s:* (tile.wall_marking_letter_s), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_s,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_s,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_s,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_s,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_t:* (tile.wall_marking_letter_t), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_t,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_t,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_t,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_t,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_u:* (tile.wall_marking_letter_u), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_u,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_u,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_u,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_u,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_v:* (tile.wall_marking_letter_v), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_v,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_v,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_v,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_v,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_w:* (tile.wall_marking_letter_w), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_w,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_w,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_w,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_w,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_x:* (tile.wall_marking_letter_x), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_x,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_x,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_x,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_x,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_y:* (tile.wall_marking_letter_y), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_y,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_y,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_y,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_y,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5
+
+# %tile.wall_marking_letter_z:* (tile.wall_marking_letter_z), render=modernmarkings.renderer.MarkingWallRenderer(CUSTOM), opaque=false,cls=modernmarkings.blocks.MarkingWall
+boxblock:id=%tile.wall_marking_letter_z,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9900000095367432,zmax=1.0,data=2
+boxblock:id=%tile.wall_marking_letter_z,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.009999999776482582,data=3
+boxblock:id=%tile.wall_marking_letter_z,xmin=0.9900000095367432,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%tile.wall_marking_letter_z,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5

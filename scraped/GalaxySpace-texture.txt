@@ -1,4 +1,4 @@
-# GalaxySpace 1.1.97-GTNH
+# GalaxySpace 1.1.116-GTNH
 version:1.7
 modname:GalaxySpace
 
@@ -53,26 +53,6 @@ texture:id=galaxyspace/deimos/deimosgrunt,filename=assets/galaxyspace/textures/b
 texture:id=galaxyspace/deimos/deimosoriharukonore,filename=assets/galaxyspace/textures/blocks/deimos/deimosoriharukonore.png
 texture:id=galaxyspace/deimos/deimossubgrunt,filename=assets/galaxyspace/textures/blocks/deimos/deimossubgrunt.png
 texture:id=galaxyspace/deimos/deimostinore,filename=assets/galaxyspace/textures/blocks/deimos/deimostinore.png
-texture:id=galaxyspace/dysonSwarm/ControlCasing,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlCasing.png
-texture:id=galaxyspace/dysonSwarm/ControlCasing_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlCasing_Side.png
-texture:id=galaxyspace/dysonSwarm/ControlPrimary,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlPrimary.png
-texture:id=galaxyspace/dysonSwarm/ControlPrimary_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlPrimary_Side.png
-texture:id=galaxyspace/dysonSwarm/ControlSecondary,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlSecondary.png
-texture:id=galaxyspace/dysonSwarm/ControlSecondary_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlSecondary_Side.png
-texture:id=galaxyspace/dysonSwarm/ControlToroid,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlToroid.png
-texture:id=galaxyspace/dysonSwarm/ControlToroid_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ControlToroid_Side.png
-texture:id=galaxyspace/dysonSwarm/DeploymentUnitCasing,filename=assets/galaxyspace/textures/blocks/dysonSwarm/DeploymentUnitCasing.png
-texture:id=galaxyspace/dysonSwarm/DeploymentUnitCasing_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/DeploymentUnitCasing_Side.png
-texture:id=galaxyspace/dysonSwarm/DeploymentUnitCore,filename=assets/galaxyspace/textures/blocks/dysonSwarm/DeploymentUnitCore.png
-texture:id=galaxyspace/dysonSwarm/DeploymentUnitCore_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/DeploymentUnitCore_Side.png
-texture:id=galaxyspace/dysonSwarm/DeploymentUnitMagnet,filename=assets/galaxyspace/textures/blocks/dysonSwarm/DeploymentUnitMagnet.png
-texture:id=galaxyspace/dysonSwarm/DeploymentUnitMagnet_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/DeploymentUnitMagnet_Side.png
-texture:id=galaxyspace/dysonSwarm/Floor,filename=assets/galaxyspace/textures/blocks/dysonSwarm/Floor.png
-texture:id=galaxyspace/dysonSwarm/Floor_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/Floor_Side.png
-texture:id=galaxyspace/dysonSwarm/ReceiverCasing,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ReceiverCasing.png
-texture:id=galaxyspace/dysonSwarm/ReceiverCasing_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ReceiverCasing_Side.png
-texture:id=galaxyspace/dysonSwarm/ReceiverDish,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ReceiverDish.png
-texture:id=galaxyspace/dysonSwarm/ReceiverDish_Side,filename=assets/galaxyspace/textures/blocks/dysonSwarm/ReceiverDish_Side.png
 texture:id=galaxyspace/enceladus/enceladusTreasureChest,filename=assets/galaxyspace/textures/blocks/enceladus/enceladusTreasureChest.png
 texture:id=galaxyspace/enceladus/enceladusbricks,filename=assets/galaxyspace/textures/blocks/enceladus/enceladusbricks.png
 texture:id=galaxyspace/enceladus/enceladuscrystal,filename=assets/galaxyspace/textures/blocks/enceladus/enceladuscrystal.png
@@ -169,12 +149,9 @@ texture:id=galaxyspace/overworld/machine_side,filename=assets/galaxyspace/textur
 texture:id=galaxyspace/overworld/machine_water_input,filename=assets/galaxyspace/textures/blocks/overworld/machine_water_input.png
 texture:id=galaxyspace/overworld/solar_hybrid_0,filename=assets/galaxyspace/textures/blocks/overworld/solar_hybrid_0.png
 texture:id=galaxyspace/overworld/solar_hybrid_1,filename=assets/galaxyspace/textures/blocks/overworld/solar_hybrid_1.png
-texture:id=galaxyspace/overworld/solar_ultra_0,filename=assets/galaxyspace/textures/blocks/overworld/solar_ultra_0.png
-texture:id=galaxyspace/overworld/solar_ultra_1,filename=assets/galaxyspace/textures/blocks/overworld/solar_ultra_1.png
 texture:id=galaxyspace/overworld/solarwind_basic_0,filename=assets/galaxyspace/textures/blocks/overworld/solarwind_basic_0.png
 texture:id=galaxyspace/overworld/solarwind_basic_1,filename=assets/galaxyspace/textures/blocks/overworld/solarwind_basic_1.png
 texture:id=galaxyspace/overworld/storagemodule/module_t3_16,filename=assets/galaxyspace/textures/blocks/overworld/storagemodule/module_t3_16.png
-texture:id=galaxyspace/overworld/storagemodule/module_t4_16,filename=assets/galaxyspace/textures/blocks/overworld/storagemodule/module_t4_16.png
 texture:id=galaxyspace/overworld/storagemodule/oxmodule_t2_16,filename=assets/galaxyspace/textures/blocks/overworld/storagemodule/oxmodule_t2_16.png
 texture:id=galaxyspace/phobos/phoboscobaltumore,filename=assets/galaxyspace/textures/blocks/phobos/phoboscobaltumore.png
 texture:id=galaxyspace/phobos/phobosdeshore,filename=assets/galaxyspace/textures/blocks/phobos/phobosdeshore.png
@@ -226,9 +203,6 @@ texture:id=minecraft/ice_packed,filename=assets/minecraft/textures/blocks/ice_pa
 
 
 
-# %machineframes:* (machineframes), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockMachineFrames
-block:id=%machineframes,data=*,stdrot=true,face0-5=0:galaxyspace/overworld/machine
-
 # %geothermalgenerator:* (geothermalgenerator), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=galaxyspace.core.block.machine.BlockGeothermalGenerator
 block:id=%geothermalgenerator,data=0,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galaxyspace/overworld/geothermalGenerator_lava_input,face4=0:galaxyspace/overworld/geothermalGenerator_0,face5=0:galacticraftcore/machine_side
 block:id=%geothermalgenerator,data=1,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galaxyspace/overworld/geothermalGenerator_lava_input,face3=0:galacticraftcore/machine_output,face4=0:galacticraftcore/machine_side,face5=0:galaxyspace/overworld/geothermalGenerator_0
@@ -243,7 +217,7 @@ block:id=%fuelgenerator,data=2,stdrot=true,face0-1=0:galacticraftcore/machine,fa
 block:id=%fuelgenerator,data=3,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galaxyspace/overworld/fuelGenerator_0,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/machine_fuel_input,face5=0:galacticraftcore/machine_output
 block:id=%fuelgenerator,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine,face2-5=0:galacticraftcore/machine_side
 
-# %solarwindpanel:* (solarwindpanel), render=(STANDARD), opaque=false,cls=galaxyspace.core.block.machine.BlockSolarWindPanel
+# %solarwindpanel:* (solarwindpanel), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=false,cls=galaxyspace.core.block.machine.BlockSolarWindPanel
 block:id=%solarwindpanel,data=0,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galaxyspace/overworld/solarwind_basic_0,face2=0:galaxyspace/overworld/solarwind_basic_1,face3=0:galacticraftcore/machine_output,face4-5=0:galaxyspace/overworld/solarwind_basic_1
 block:id=%solarwindpanel,data=1,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galaxyspace/overworld/solarwind_basic_0,face2=0:galacticraftcore/machine_output,face3-5=0:galaxyspace/overworld/solarwind_basic_1
 block:id=%solarwindpanel,data=2,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galaxyspace/overworld/solarwind_basic_0,face2-4=0:galaxyspace/overworld/solarwind_basic_1,face5=0:galacticraftcore/machine_output
@@ -270,10 +244,10 @@ block:id=%storagemoduleT3,data=1,stdrot=true,face0-1=0:galaxyspace/overworld/mac
 block:id=%storagemoduleT3,data=2,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/machine_input
 block:id=%storagemoduleT3,data=3,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_input,face5=0:galaxyspace/overworld/machine_output
 block:id=%storagemoduleT3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-5=0:galaxyspace/overworld/machine_side
-block:id=%storagemoduleT3,data=8,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_output,face3=0:galaxyspace/overworld/machine_input,face4-5=0:galaxyspace/overworld/storagemodule/module_t4_16
-block:id=%storagemoduleT3,data=9,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_input,face3=0:galaxyspace/overworld/machine_output,face4-5=0:galaxyspace/overworld/storagemodule/module_t4_16
-block:id=%storagemoduleT3,data=10,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t4_16,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/machine_input
-block:id=%storagemoduleT3,data=11,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t4_16,face4=0:galaxyspace/overworld/machine_input,face5=0:galaxyspace/overworld/machine_output
+block:id=%storagemoduleT3,data=8,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_output,face3=0:galaxyspace/overworld/machine_input,face4-5=0:galaxyspace/overworld/storagemodule/module_t3_16
+block:id=%storagemoduleT3,data=9,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2=0:galaxyspace/overworld/machine_input,face3=0:galaxyspace/overworld/machine_output,face4-5=0:galaxyspace/overworld/storagemodule/module_t3_16
+block:id=%storagemoduleT3,data=10,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/machine_input
+block:id=%storagemoduleT3,data=11,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/module_t3_16,face4=0:galaxyspace/overworld/machine_input,face5=0:galaxyspace/overworld/machine_output
 block:id=%storagemoduleT3,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-5=0:galaxyspace/overworld/machine_side
 
 # %oxstoragemoduleT2:* (oxstoragemoduleT2), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=true,cls=galaxyspace.core.block.machine.BlockOxStorageModuleT2
@@ -283,18 +257,14 @@ block:id=%oxstoragemoduleT2,data=2,stdrot=true,face0-1=0:galaxyspace/overworld/m
 block:id=%oxstoragemoduleT2,data=3,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-3=0:galaxyspace/overworld/storagemodule/oxmodule_t2_16,face4=0:galaxyspace/overworld/machine_oxygen_output,face5=0:galaxyspace/overworld/machine_oxygen_input
 block:id=%oxstoragemoduleT2,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galaxyspace/overworld/machine,face2-5=0:galaxyspace/overworld/storagemodule/oxmodule_t2_16
 
-# %solarPanel:* (solarPanel), render=(STANDARD), opaque=false,cls=galaxyspace.core.block.machine.BlockSolarPanel
+# %solarPanel:* (solarPanel), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererMachine(CUSTOM), opaque=false,cls=galaxyspace.core.block.machine.BlockSolarPanel
 block:id=%solarPanel,data=0,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2=0:galaxyspace/overworld/solar_hybrid_1,face3=0:galaxyspace/overworld/machine_output,face4-5=0:galaxyspace/overworld/solar_hybrid_1
 block:id=%solarPanel,data=1,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2=0:galaxyspace/overworld/machine_output,face3-5=0:galaxyspace/overworld/solar_hybrid_1
 block:id=%solarPanel,data=2,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2-4=0:galaxyspace/overworld/solar_hybrid_1,face5=0:galaxyspace/overworld/machine_output
 block:id=%solarPanel,data=3,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2-3=0:galaxyspace/overworld/solar_hybrid_1,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/solar_hybrid_1
-block:id=%solarPanel,data=4,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2=0:galaxyspace/overworld/solar_ultra_1,face3=0:galaxyspace/overworld/machine_output,face4-5=0:galaxyspace/overworld/solar_ultra_1
-block:id=%solarPanel,data=5,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2=0:galaxyspace/overworld/machine_output,face3-5=0:galaxyspace/overworld/solar_ultra_1
-block:id=%solarPanel,data=6,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2-4=0:galaxyspace/overworld/solar_ultra_1,face5=0:galaxyspace/overworld/machine_output
-block:id=%solarPanel,data=7,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2-3=0:galaxyspace/overworld/solar_ultra_1,face4=0:galaxyspace/overworld/machine_output,face5=0:galaxyspace/overworld/solar_ultra_1
-block:id=%solarPanel,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_ultra_0,face2-5=0:galaxyspace/overworld/solar_ultra_1
+block:id=%solarPanel,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galaxyspace/overworld/machine,face1=0:galaxyspace/overworld/solar_hybrid_0,face2-5=0:galaxyspace/overworld/solar_hybrid_1
 
-# %metalsblock:* (metalsblock), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockMetals
+# %metalsblock:* (metalsblock), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockMetal
 block:id=%metalsblock,data=0,stdrot=true,face0-1=0:galaxyspace/overworld/blocksmetals/deco_lead_2,face2-5=0:galaxyspace/overworld/blocksmetals/deco_lead_1
 block:id=%metalsblock,data=1,stdrot=true,face0-1=0:galaxyspace/overworld/blocksmetals/deco_adm_2,face2-5=0:galaxyspace/overworld/blocksmetals/deco_adm_1
 block:id=%metalsblock,data=2,stdrot=true,face0-1=0:galaxyspace/overworld/blocksmetals/deco_cbt_2,face2-5=0:galaxyspace/overworld/blocksmetals/deco_cbt_1
@@ -310,7 +280,7 @@ block:id=%metalsblock,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=tru
 # %futureglass:* (futureglass), render=(STANDARD), opaque=false,cls=galaxyspace.core.block.BlockFutureGlass
 block:id=%futureglass,data=*,stdrot=true,face0-5=12000:galaxyspace/overworld/blockfutureglass/futureglass_none
 
-# %futureglasses:* (futureglasses), render=(STANDARD), opaque=false,cls=galaxyspace.core.block.BlockFutureGlasses
+# %futureglasses:* (futureglasses), render=(STANDARD), opaque=false,cls=galaxyspace.core.block.BlockStainedFutureGlass
 block:id=%futureglasses,data=0,stdrot=true,face0-5=12000:galaxyspace/overworld/blockfutureglass/futureglass_black
 block:id=%futureglasses,data=1,stdrot=true,face0-5=12000:galaxyspace/overworld/blockfutureglass/futureglass_red
 block:id=%futureglasses,data=2,stdrot=true,face0-5=12000:galaxyspace/overworld/blockfutureglass/futureglass_green
@@ -328,25 +298,7 @@ block:id=%futureglasses,data=13,stdrot=true,face0-5=12000:galaxyspace/overworld/
 block:id=%futureglasses,data=14,stdrot=true,face0-5=12000:galaxyspace/overworld/blockfutureglass/futureglass_orange
 block:id=%futureglasses,data=15,stdrot=true,face0-5=12000:galaxyspace/overworld/blockfutureglass/futureglass_white
 
-# %dysonswarmparts:* (dysonswarmparts), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockDysonSwarmPart
-block:id=%dysonswarmparts,data=0,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ReceiverCasing,face2-5=0:galaxyspace/dysonSwarm/ReceiverCasing_Side
-block:id=%dysonswarmparts,data=1,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ReceiverDish,face2-5=0:galaxyspace/dysonSwarm/ReceiverDish_Side
-block:id=%dysonswarmparts,data=2,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/DeploymentUnitCasing,face2-5=0:galaxyspace/dysonSwarm/DeploymentUnitCasing_Side
-block:id=%dysonswarmparts,data=3,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/DeploymentUnitCore,face2-5=0:galaxyspace/dysonSwarm/DeploymentUnitCore_Side
-block:id=%dysonswarmparts,data=4,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/DeploymentUnitMagnet,face2-5=0:galaxyspace/dysonSwarm/DeploymentUnitMagnet_Side
-block:id=%dysonswarmparts,data=5,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ControlCasing,face2-5=0:galaxyspace/dysonSwarm/ControlCasing_Side
-block:id=%dysonswarmparts,data=6,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ControlPrimary,face2-5=0:galaxyspace/dysonSwarm/ControlPrimary_Side
-block:id=%dysonswarmparts,data=7,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ControlSecondary,face2-5=0:galaxyspace/dysonSwarm/ControlSecondary_Side
-block:id=%dysonswarmparts,data=8,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ControlToroid,face2-5=0:galaxyspace/dysonSwarm/ControlToroid_Side
-block:id=%dysonswarmparts,data=9,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/Floor,face2-5=0:galaxyspace/dysonSwarm/Floor_Side
-block:id=%dysonswarmparts,data=10,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ReceiverCasing,face2-5=0:galaxyspace/dysonSwarm/ReceiverCasing_Side
-block:id=%dysonswarmparts,data=11,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ReceiverDish,face2-5=0:galaxyspace/dysonSwarm/ReceiverDish_Side
-block:id=%dysonswarmparts,data=12,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/DeploymentUnitCasing,face2-5=0:galaxyspace/dysonSwarm/DeploymentUnitCasing_Side
-block:id=%dysonswarmparts,data=13,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/DeploymentUnitCore,face2-5=0:galaxyspace/dysonSwarm/DeploymentUnitCore_Side
-block:id=%dysonswarmparts,data=14,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/DeploymentUnitMagnet,face2-5=0:galaxyspace/dysonSwarm/DeploymentUnitMagnet_Side
-block:id=%dysonswarmparts,data=15,stdrot=true,face0-1=0:galaxyspace/dysonSwarm/ControlCasing,face2-5=0:galaxyspace/dysonSwarm/ControlCasing_Side
-
-# %mercuryblocks:* (mercuryblocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.planets.mercury.block.MercuryBlocks
+# %mercuryblocks:* (mercuryblocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%mercuryblocks,data=0,stdrot=true,face0-5=0:galaxyspace/mercury/mercurysurface
 block:id=%mercuryblocks,data=1,stdrot=true,face0-5=0:galaxyspace/mercury/mercurysubsurface
 block:id=%mercuryblocks,data=2,stdrot=true,face0-5=0:galaxyspace/mercury/mercurymetalcore
@@ -374,16 +326,16 @@ block:id=%ceresblocks,data=4,stdrot=true,face0-5=0:galaxyspace/ceres/ceresfloor
 block:id=%ceresblocks,data=5,stdrot=true,face0-5=0:galaxyspace/ceres/cerestop
 block:id=%ceresblocks,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/ceres/ceresgrunt
 
-# %ceresglowstone:* (ceresglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.planets.ceres.blocks.CeresBlockGlowStone
+# %ceresglowstone:* (ceresglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockSpaceGlowstone
 block:id=%ceresglowstone,data=*,stdrot=true,face0-5=0:galaxyspace/ceres/ceresglowstone
 
-# %ceresTChestT4:* (ceresTChestT4), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT4(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT4TreasureChest
+# %ceresTChestT4:* (ceresTChestT4), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 block:id=%ceresTChestT4,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galaxyspace/ceres/ceresTreasureChest
 
-# %ceresweb:* (ceresweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.SolarSystem.planets.ceres.blocks.CeresBlockWeb
+# %ceresweb:* (ceresweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.core.block.BlockWebGS
 block:id=%ceresweb,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/ceres/ceresweb
 
-# %plutoblocks:* (plutoblocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.planets.pluto.block.PlutoBlocks
+# %plutoblocks:* (plutoblocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%plutoblocks,data=0,stdrot=true,face0-5=0:galaxyspace/pluto/plutogrunt
 block:id=%plutoblocks,data=1,stdrot=true,face0-5=0:galaxyspace/pluto/plutogrunt2
 block:id=%plutoblocks,data=2,stdrot=true,face0-5=0:galaxyspace/pluto/plutogrunt3
@@ -393,16 +345,16 @@ block:id=%plutoblocks,data=5,stdrot=true,face0-5=0:galaxyspace/pluto/plutostone
 block:id=%plutoblocks,data=6,stdrot=true,face0-5=0:galaxyspace/pluto/plutobricks
 block:id=%plutoblocks,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/pluto/plutogrunt
 
-# %plutoglowstone:* (plutoglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.planets.pluto.block.PlutoBlockGlowStone
+# %plutoglowstone:* (plutoglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockSpaceGlowstone
 block:id=%plutoglowstone,data=*,stdrot=true,face0-5=0:galaxyspace/pluto/plutoglowstone
 
-# %plutoTChestT8:* (plutoTChestT8), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT8(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT8TreasureChest
+# %plutoTChestT8:* (plutoTChestT8), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 block:id=%plutoTChestT8,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galaxyspace/pluto/plutoTreasureChest
 
-# %haumeablocks:* (haumeablocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.planets.haumea.block.HaumeaBlocks
+# %haumeablocks:* (haumeablocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%haumeablocks,data=*,stdrot=true,face0-5=0:galaxyspace/haumea/haumeagrunt
 
-# %makemakegrunt:* (makemakegrunt), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.planets.makemake.block.MakemakeBlocks
+# %makemakegrunt:* (makemakegrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%makemakegrunt,data=0,stdrot=true,face0-5=0:galaxyspace/makemake/makemakegrunt
 block:id=%makemakegrunt,data=1,stdrot=true,face0-5=0:galaxyspace/makemake/makemakesubgrunt
 block:id=%makemakegrunt,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/makemake/makemakegrunt
@@ -434,19 +386,19 @@ block:id=%ioblocks,data=7,stdrot=true,face0-5=0:galaxyspace/io/iotop
 block:id=%ioblocks,data=8,stdrot=true,face0-5=0:galaxyspace/io/iofloor
 block:id=%ioblocks,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/io/iogrunt
 
-# %ioglowstone:* (ioglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.io.block.IOBlockGlowStone
+# %ioglowstone:* (ioglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockSpaceGlowstone
 block:id=%ioglowstone,data=*,stdrot=true,face0-5=0:galaxyspace/io/ioglowstone
 
-# %ioTChestT5:* (ioTChestT5), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT5(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT5TreasureChest
+# %ioTChestT5:* (ioTChestT5), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 block:id=%ioTChestT5,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galaxyspace/io/ioTreasureChest
 
-# %ioweb:* (ioweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.SolarSystem.moons.io.block.IOBlockWeb
+# %ioweb:* (ioweb), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.core.block.BlockWebGS
 block:id=%ioweb,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/io/ioweb
 
 # %iodualstone:* (iodualstone), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.io.block.IOBlockDualStone
 block:id=%iodualstone,data=*,stdrot=true,face0=0:galaxyspace/io/iogrunt,face1=0:galaxyspace/io/ioash,face2-5=0:galaxyspace/io/iodualstone_front
 
-# %europagrunt:* (europagrunt), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.europa.block.EuropaBlocks
+# %europagrunt:* (europagrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%europagrunt,data=0,stdrot=true,face0-5=0:galaxyspace/europa/europagrunt
 block:id=%europagrunt,data=1,stdrot=true,face0-5=0:galaxyspace/europa/europaice
 block:id=%europagrunt,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/europa/europagrunt
@@ -464,12 +416,12 @@ block:id=%ganymedeblocks,data=2,stdrot=true,face0-5=0:galaxyspace/ganymede/ganym
 block:id=%ganymedeblocks,data=3,stdrot=true,face0-5=0:galaxyspace/ganymede/ganymedetitanuimore
 block:id=%ganymedeblocks,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/ganymede/ganymedegrunt
 
-# %callistoblocks:* (callistoblocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.callisto.block.CallistoBlocks
+# %callistoblocks:* (callistoblocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%callistoblocks,data=0,stdrot=true,face0-5=0:galaxyspace/callisto/callistogrunt
 block:id=%callistoblocks,data=1,stdrot=true,face0-5=0:galaxyspace/callisto/callistosubgrunt
 block:id=%callistoblocks,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/callisto/callistogrunt
 
-# %enceladusblocks:* (enceladusblocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.enceladus.block.EnceladusBlocks
+# %enceladusblocks:* (enceladusblocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%enceladusblocks,data=0,stdrot=true,face0-5=0:galaxyspace/enceladus/enceladussnow
 block:id=%enceladusblocks,data=1,stdrot=true,face0-5=0:galaxyspace/enceladus/enceladusgrunt
 block:id=%enceladusblocks,data=2,stdrot=true,face0-5=0:galaxyspace/enceladus/enceladusbricks
@@ -479,19 +431,19 @@ block:id=%enceladusblocks,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data
 # %enceladuscrystal:* (enceladuscrystal), render=(CUSTOM), opaque=false,cls=galaxyspace.SolarSystem.moons.enceladus.block.EnceladusBlockCrystal
 block:id=%enceladuscrystal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galaxyspace/enceladus/enceladuscrystal
 
-# %enceladusglowstone:* (enceladusglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.enceladus.block.EnceladusBlockGlowStone
+# %enceladusglowstone:* (enceladusglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockSpaceGlowstone
 block:id=%enceladusglowstone,data=*,stdrot=true,face0-5=0:galaxyspace/enceladus/enceladusglowstone
 
-# %enceladusTChestT6:* (enceladusTChestT6), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT6(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT6TreasureChest
+# %enceladusTChestT6:* (enceladusTChestT6), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 block:id=%enceladusTChestT6,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galaxyspace/enceladus/enceladusTreasureChest
 
-# %titanblocks:* (titanblocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.titan.block.TitanBlocks
+# %titanblocks:* (titanblocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%titanblocks,data=0,stdrot=true,face0-5=0:galaxyspace/titan/titangrunt
 block:id=%titanblocks,data=1,stdrot=true,face0-5=0:galaxyspace/titan/titansubgrunt
 block:id=%titanblocks,data=2,stdrot=true,face0-5=0:galaxyspace/titan/titanstone
 block:id=%titanblocks,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/titan/titangrunt
 
-# %mirandablocks:* (mirandablocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.miranda.block.MirandaBlocks
+# %mirandablocks:* (mirandablocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%mirandablocks,data=0,stdrot=true,face0-5=0:galaxyspace/miranda/mirandagrunt
 block:id=%mirandablocks,data=1,stdrot=true,face0-5=0:galaxyspace/miranda/mirandasubgrunt
 block:id=%mirandablocks,data=2,stdrot=true,face0-5=0:galaxyspace/miranda/mirandastone
@@ -514,10 +466,10 @@ block:id=%proteusblocks,data=4,stdrot=true,face0-5=0:galaxyspace/proteus/proteus
 block:id=%proteusblocks,data=5,stdrot=true,face0-5=0:galaxyspace/proteus/proteuswolframiumore
 block:id=%proteusblocks,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galaxyspace/proteus/proteusgrunt
 
-# %proteusglowstone:* (proteusglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.proteus.block.ProteusBlockGlowStone
+# %proteusglowstone:* (proteusglowstone), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockSpaceGlowstone
 block:id=%proteusglowstone,data=*,stdrot=true,face0-5=0:galaxyspace/proteus/proteusglowstone
 
-# %proteusTChestT7:* (proteusTChestT7), render=galaxyspace.core.render.block.chest.BlockRendererTreasureChestT7(CUSTOM), opaque=false,cls=galaxyspace.core.block.chest.BlockT7TreasureChest
+# %proteusTChestT7:* (proteusTChestT7), render=galaxyspace.core.render.block.BlockRendererTreasureChestGS(CUSTOM), opaque=false,cls=galaxyspace.core.block.BlockTreasureChestGS
 block:id=%proteusTChestT7,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galaxyspace/proteus/proteusTreasureChest
 
 # %tritonblocks:* (tritonblocks), render=(STANDARD), opaque=true,cls=galaxyspace.SolarSystem.moons.triton.block.TritonBlocks
@@ -536,7 +488,7 @@ block:id=%biofuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:
 # %acentauribbgrunt:* (acentauribbgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.ACentauriSystem.planets.aCentauriBb.block.ACentauriBbBlockGrunt
 block:id=%acentauribbgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/acentauribb/acentauribbgrunt
 
-# %acentauribbsubgrunt:* (acentauribbsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.ACentauriSystem.planets.aCentauriBb.block.ACentauriBbBlockSubGrunt
+# %acentauribbsubgrunt:* (acentauribbsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%acentauribbsubgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/acentauribb/acentauribbsubgrunt
 
 # %barnardaCgrass:* (barnardaCgrass), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockGrass
@@ -553,11 +505,6 @@ block:id=%barnardaCdandelions,data=3,data=4,data=5,data=6,data=7,data=8,data=9,d
 
 # %barnardaCdandelion3:* (barnardaCdandelion3), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockDandelion3
 block:id=%barnardaCdandelion3,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion2
-
-# %barnardaCreed:* (barnardaCreed), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockReed
-block:id=%barnardaCreed,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
-block:id=%barnardaCreed,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion4
-block:id=%barnardaCreed,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
 
 # %barnardaCsapling:* (barnardaCsapling), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockSapling
 block:id=%barnardaCsapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2sapling_violet_tree
@@ -577,34 +524,39 @@ block:id=%barnardaCleaves,data=*,stdrot=true,face0-5=0:galaxyspace/barnarda2/bar
 # %barnardaCcrystal:* (barnardaCcrystal), render=(CUSTOM), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockCrystal
 block:id=%barnardaCcrystal,data=*,stdrot=true,face0-5=12000:galaxyspace/enceladus/enceladuscrystal
 
-# %barnardaEgrunt:* (barnardaEgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaE.block.BarnardaEBlockGrunt
+# %barnardaCreed:* (barnardaCreed), render=(CROSSEDSQUARES), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockReed
+block:id=%barnardaCreed,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
+block:id=%barnardaCreed,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion4
+block:id=%barnardaCreed,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:galaxyspace/barnarda2/barnarda2dandelion3
+
+# %barnardaEgrunt:* (barnardaEgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%barnardaEgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/barnardaE/barnardaEgrunt
 
-# %barnardaEsubgrunt:* (barnardaEsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaE.block.BarnardaEBlockSubGrunt
+# %barnardaEsubgrunt:* (barnardaEsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%barnardaEsubgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/barnardaE/barnardaEsubgrunt
 
-# %barnardaEoreiron:* (barnardaEoreiron), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaE.block.BarnardaEBlockOreIron
+# %barnardaEoreiron:* (barnardaEoreiron), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%barnardaEoreiron,data=*,stdrot=true,face0-5=0:galaxyspace/barnardaE/barnardaEoreiron
 
-# %barnardaEoregold:* (barnardaEoregold), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaE.block.BarnardaEBlockOreGold
+# %barnardaEoregold:* (barnardaEoregold), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%barnardaEoregold,data=*,stdrot=true,face0-5=0:galaxyspace/barnardaE/barnardaEoregold
 
-# %barnardaFgrunt:* (barnardaFgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaF.block.BarnardaFBlockGrunt
+# %barnardaFgrunt:* (barnardaFgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%barnardaFgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/barnardaF/barnardaFgrunt
 
-# %barnardaFsubgrunt:* (barnardaFsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.BarnardsSystem.planets.barnardaF.block.BarnardaFBlockSubGrunt
+# %barnardaFsubgrunt:* (barnardaFsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%barnardaFsubgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/barnardaF/barnardaFsubgrunt
 
 # %unknowwater:* (unknowwater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=galaxyspace.BarnardsSystem.planets.barnardaC.block.BarnardaCBlockUnknowWater
 block:id=%unknowwater,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:galaxyspace/barnarda2/barnarda2unknowwaterstill,face2-5=12000:galaxyspace/barnarda2/barnarda2unknowwaterflowing
 
-# %vegabgrunt:* (vegabgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.VegaSystem.planets.vegaB.block.VegaBBlockGrunt
+# %vegabgrunt:* (vegabgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%vegabgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/vegaB/vegaBgrunt
 
-# %vegabsubgrunt:* (vegabsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.VegaSystem.planets.vegaB.block.VegaBBlockSubGrunt
+# %vegabsubgrunt:* (vegabsubgrunt), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformable
 block:id=%vegabsubgrunt,data=*,stdrot=true,face0-5=0:galaxyspace/vegaB/vegaBsubgrunt
 
-# %tcetieblocks:* (tcetieblocks), render=(STANDARD), opaque=true,cls=galaxyspace.TCetiSystem.planets.tcetiE.block.TCetiEBlocks
+# %tcetieblocks:* (tcetieblocks), render=(STANDARD), opaque=true,cls=galaxyspace.core.block.BlockTerraformableMeta
 block:id=%tcetieblocks,data=0,stdrot=true,face0-5=0:galaxyspace/tcetie/tcetiegrunt
 block:id=%tcetieblocks,data=1,stdrot=true,face0-5=0:galaxyspace/tcetie/tcetiesubgrunt
 block:id=%tcetieblocks,data=2,stdrot=true,face0-5=0:galaxyspace/tcetie/tcetiestone

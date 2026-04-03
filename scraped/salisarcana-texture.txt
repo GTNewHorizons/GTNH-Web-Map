@@ -1,0 +1,17 @@
+# salisarcana 1.1.22-GTNH
+version:1.7
+modname:salisarcana
+
+
+cfgfile:config/salisarcana.cfg
+
+
+texturepath:assets/salisarcana/textures/blocks/
+texture:id=thaumcraft/planks_greatwood,filename=assets/thaumcraft/textures/blocks/planks_greatwood.png
+texture:id=thaumcraft/planks_silverwood,filename=assets/thaumcraft/textures/blocks/planks_silverwood.png
+
+
+
+# %blockCustomPlank:* (blockCustomPlank), render=(STANDARD), opaque=true,cls=dev.rndmorris.salisarcana.common.blocks.BlockPlank
+block:id=%blockCustomPlank,data=0,stdrot=true,face0-5=0:thaumcraft/planks_greatwood
+block:id=%blockCustomPlank,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/planks_silverwood

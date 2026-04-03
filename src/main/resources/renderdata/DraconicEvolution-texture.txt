@@ -34,6 +34,7 @@ texture:id=draconicevolution/gates/fluxGate0,filename=assets/draconicevolution/t
 texture:id=draconicevolution/gates/fluxGate1,filename=assets/draconicevolution/textures/blocks/gates/fluxGate1.png
 texture:id=draconicevolution/gates/fluxGate2,filename=assets/draconicevolution/textures/blocks/gates/fluxGate2.png
 texture:id=draconicevolution/gates/fluxGate3,filename=assets/draconicevolution/textures/blocks/gates/fluxGate3.png
+texture:id=draconicevolution/inhibitor_block,filename=assets/draconicevolution/textures/blocks/inhibitor_block.png
 texture:id=draconicevolution/key_stone_active,filename=assets/draconicevolution/textures/blocks/key_stone_active.png
 texture:id=draconicevolution/machine_io_i,filename=assets/draconicevolution/textures/blocks/machine_io_i.png
 texture:id=draconicevolution/machine_io_o,filename=assets/draconicevolution/textures/blocks/machine_io_o.png
@@ -193,6 +194,9 @@ block:id=%reactorEnergyInjector,data=*,stdrot=true,face0-5=0:draconicevolution/t
 
 # %chaosCrystal:* (chaosCrystal), render=(CUSTOM), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.ChaosCrystal
 block:id=%chaosCrystal,data=*,stdrot=true,face0-5=0:draconicevolution/transparency
+
+# %dislocatorInhibitor:* (dislocatorInhibitor), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.DislocatorInhibitor
+block:id=%dislocatorInhibitor,data=*,stdrot=true,face0-5=0:draconicevolution/inhibitor_block
 
 # %longRangeDislocator:* (longRangeDislocator), render=(STANDARD), opaque=true,cls=com.brandon3055.draconicevolution.common.blocks.machine.LongRangeDislocator
 block:id=%longRangeDislocator,data=*,stdrot=true,face0-1=0:draconicevolution/machine_top_0,face2-5=0:draconicevolution/teleporter_front

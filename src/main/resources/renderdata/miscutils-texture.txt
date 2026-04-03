@@ -110,6 +110,9 @@ texture:id=miscutils/compressed/glowstone2,filename=assets/miscutils/textures/bl
 texture:id=miscutils/compressed/glowstone3,filename=assets/miscutils/textures/blocks/compressed/glowstone3.png
 texture:id=miscutils/compressed/glowstone4,filename=assets/miscutils/textures/blocks/compressed/glowstone4.png
 texture:id=miscutils/compressed/glowstone5,filename=assets/miscutils/textures/blocks/compressed/glowstone5.png
+texture:id=miscutils/compressed/netherrack1,filename=assets/miscutils/textures/blocks/compressed/netherrack1.png
+texture:id=miscutils/compressed/netherrack2,filename=assets/miscutils/textures/blocks/compressed/netherrack2.png
+texture:id=miscutils/compressed/netherrack3,filename=assets/miscutils/textures/blocks/compressed/netherrack3.png
 texture:id=miscutils/compressed/obsidian1,filename=assets/miscutils/textures/blocks/compressed/obsidian1.png
 texture:id=miscutils/compressed/obsidian2,filename=assets/miscutils/textures/blocks/compressed/obsidian2.png
 texture:id=miscutils/compressed/obsidian3,filename=assets/miscutils/textures/blocks/compressed/obsidian3.png
@@ -436,10 +439,10 @@ block:id=%blockBlockInconel625,data=*,stdrot=true,colorMult=80C880,face0-5=17000
 block:id=%blockFrameGtInconel625,data=*,stdrot=true,colorMult=80C880,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
 
 # %blockBlockInconel690:* (blockBlockInconel690), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockInconel690,data=*,stdrot=true,colorMult=76DC8A,face0-5=17000:gregtech/materialicons/SHINY/block1
+block:id=%blockBlockInconel690,data=*,stdrot=true,colorMult=76DC8A,face0-5=17000:gregtech/materialicons/METALLIC/block1
 
 # %blockFrameGtInconel690:* (blockFrameGtInconel690), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockFrameGtInconel690,data=*,stdrot=true,colorMult=76DC8A,face0-5=17000:gregtech/materialicons/SHINY/frameGt
+block:id=%blockFrameGtInconel690,data=*,stdrot=true,colorMult=76DC8A,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
 
 # %blockBlockInconel792:* (blockBlockInconel792), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
 block:id=%blockBlockInconel792,data=*,stdrot=true,colorMult=6CF076,face0-5=17000:gregtech/materialicons/METALLIC/block1
@@ -538,10 +541,10 @@ block:id=%blockBlockIncoloyMA956,data=*,stdrot=true,colorMult=C8DCDE,face0-5=170
 block:id=%blockFrameGtIncoloyMA956,data=*,stdrot=true,colorMult=C8DCDE,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
 
 # %blockBlockGrisium:* (blockBlockGrisium), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockGrisium,data=*,stdrot=true,colorMult=355D6A,face0-5=17000:gregtech/materialicons/DULL/block1
+block:id=%blockBlockGrisium,data=*,stdrot=true,colorMult=355D6A,face0-5=17000:gregtech/materialicons/METALLIC/block1
 
 # %blockFrameGtGrisium:* (blockFrameGtGrisium), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockFrameGtGrisium,data=*,stdrot=true,colorMult=355D6A,face0-5=17000:gregtech/materialicons/DULL/frameGt
+block:id=%blockFrameGtGrisium,data=*,stdrot=true,colorMult=355D6A,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
 
 # %blockBlockTriniumTitaniumAlloy:* (blockBlockTriniumTitaniumAlloy), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
 block:id=%blockBlockTriniumTitaniumAlloy,data=*,stdrot=true,colorMult=D2B4E1,face0-5=17000:gregtech/materialicons/SHINY/block1
@@ -625,10 +628,10 @@ block:id=%blockBlockArcanite,data=*,stdrot=true,colorMult=777E53,face0-5=17000:g
 block:id=%blockFrameGtArcanite,data=*,stdrot=true,colorMult=777E53,face0-5=17000:gregtech/materialicons/GEM_A/frameGt
 
 # %blockBlockOctiron:* (blockBlockOctiron), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockOctiron,data=*,stdrot=true,colorMult=726D63,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/block5
+block:id=%blockBlockOctiron,data=*,stdrot=true,colorMult=726D63,face0-5=17000:gregtech/materialicons/METALLIC/block5
 
 # %blockFrameGtOctiron:* (blockFrameGtOctiron), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockFrameGtOctiron,data=*,stdrot=true,colorMult=726D63,face0-5=17000:gregtech/materialicons/GEM_HORIZONTAL/frameGt
+block:id=%blockFrameGtOctiron,data=*,stdrot=true,colorMult=726D63,face0-5=17000:gregtech/materialicons/METALLIC/frameGt
 
 # %blockBlockBabbitAlloy:* (blockBlockBabbitAlloy), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
 block:id=%blockBlockBabbitAlloy,data=*,stdrot=true,colorMult=D0C6D5,face0-5=17000:gregtech/materialicons/DULL/block1
@@ -637,7 +640,7 @@ block:id=%blockBlockBabbitAlloy,data=*,stdrot=true,colorMult=D0C6D5,face0-5=1700
 block:id=%blockBlockBlackTitanium,data=*,stdrot=true,colorMult=91A68B,face0-5=17000:gregtech/materialicons/METALLIC/block5
 
 # %blockBlockIndalloy140:* (blockBlockIndalloy140), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
-block:id=%blockBlockIndalloy140,data=*,stdrot=true,colorMult=726A8D,face0-5=17000:gregtech/materialicons/DULL/block5
+block:id=%blockBlockIndalloy140,data=*,stdrot=true,colorMult=726A8D,face0-5=17000:gregtech/materialicons/METALLIC/block5
 
 # %blockBlockRhugnor:* (blockBlockRhugnor), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.base.BlockBaseModular
 block:id=%blockBlockRhugnor,data=*,stdrot=true,colorMult=BE00FF,face0-5=17000:gregtech/materialicons/ENRICHED/block5
@@ -810,18 +813,24 @@ block:id=%blockProjectBench,data=*,stdrot=true,face0=0:miscutils/TileEntities/ma
 # %blockBlackGate:* (blockBlackGate), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.general.antigrief.BlockWitherProof
 block:id=%blockBlackGate,data=*,stdrot=true,colorMult=202020,face0-5=17000:miscutils/blockFrameGt
 
-# %blockCompressedObsidian:* (blockCompressedObsidian), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.general.BlockCompressedObsidian
-block:id=%blockCompressedObsidian,data=0,stdrot=true,face0-5=0:miscutils/compressed/obsidian1
-block:id=%blockCompressedObsidian,data=1,stdrot=true,face0-5=0:miscutils/compressed/obsidian2
-block:id=%blockCompressedObsidian,data=2,stdrot=true,face0-5=0:miscutils/compressed/obsidian3
-block:id=%blockCompressedObsidian,data=3,stdrot=true,face0-5=0:miscutils/compressed/obsidian4
-block:id=%blockCompressedObsidian,data=4,stdrot=true,face0-5=0:miscutils/compressed/obsidian5
-block:id=%blockCompressedObsidian,data=5,stdrot=true,face0-5=0:miscutils/compressed/obsidian_invert
-block:id=%blockCompressedObsidian,data=6,stdrot=true,face0-5=0:miscutils/compressed/glowstone1
-block:id=%blockCompressedObsidian,data=7,stdrot=true,face0-5=0:miscutils/compressed/glowstone2
-block:id=%blockCompressedObsidian,data=8,stdrot=true,face0-5=0:miscutils/compressed/glowstone3
-block:id=%blockCompressedObsidian,data=9,stdrot=true,face0-5=0:miscutils/compressed/glowstone4
-block:id=%blockCompressedObsidian,data=10,stdrot=true,face0-5=0:miscutils/compressed/glowstone5
+# %blockCircuitProgrammer:* (blockCircuitProgrammer), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.BlockCircuitProgrammer
+block:id=%blockCircuitProgrammer,data=0,stdrot=true,face0=12000:miscutils/metro/TEXTURE_METAL_PANEL_H,face1=12000:miscutils/metro/TEXTURE_TECH_PANEL_B,face2-5=12000:miscutils/metro/TEXTURE_METAL_PANEL_I
+
+# %blockDecayablesChest:* (blockDecayablesChest), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.machine.BlockDecayablesChest
+block:id=%blockDecayablesChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:miscutils/TileEntities/DecayablesChest_top
+
+# %blockSuperJukebox:* (blockSuperJukebox), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.BlockSuperJukebox
+block:id=%blockSuperJukebox,data=*,stdrot=true,face0=0:minecraft/jukebox_side,face1=0:minecraft/jukebox_top,face2-5=0:minecraft/jukebox_side
+
+# %blockPooCollector:* (blockPooCollector), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.BlockPooCollector
+block:id=%blockPooCollector,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:miscutils/TileEntities/sewer_top,face2-5=0:miscutils/TileEntities/sewer_sides
+block:id=%blockPooCollector,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:miscutils/TileEntities/sewer_adv_top,face2-5=0:miscutils/TileEntities/sewer_adv_sides
+
+# %blockPestKiller:* (blockPestKiller), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.BlockPestKiller
+block:id=%blockPestKiller,data=*,stdrot=true,face0=0:minecraft/planks_acacia,face1=0:miscutils/TileEntities/MACHINE_PESTKILLER_TOP,face2-5=0:miscutils/TileEntities/MACHINE_CASING_FARM_MANAGER_STRUCTURAL
+
+# %blockVolumetricFlaskSetter:* (blockVolumetricFlaskSetter), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.BlockFlaskSetter
+block:id=%blockVolumetricFlaskSetter,data=0,stdrot=true,face0=0:miscutils/metro/TEXTURE_METAL_PANEL_H,face1=0:miscutils/metro/TEXTURE_TECH_PANEL_C,face2-5=0:miscutils/metro/TEXTURE_METAL_PANEL_H
 
 # %blockCactusCharcoal:* (blockCactusCharcoal), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.fuel.BlockCactusCharcoal
 block:id=%blockCactusCharcoal,data=0,stdrot=true,face0-5=0:miscutils/fuel/blockCactusCharcoal0
@@ -855,24 +864,21 @@ block:id=%blockSugarCoke,data=3,stdrot=true,face0-5=0:miscutils/fuel/blockSugarC
 block:id=%blockSugarCoke,data=4,stdrot=true,face0-5=0:miscutils/fuel/blockSugarCoke4
 block:id=%blockSugarCoke,data=5,stdrot=true,face0-5=0:miscutils/fuel/blockSugarCoke5
 
-# %blockCircuitProgrammer:* (blockCircuitProgrammer), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.BlockCircuitProgrammer
-block:id=%blockCircuitProgrammer,data=0,stdrot=true,face0=12000:miscutils/metro/TEXTURE_METAL_PANEL_H,face1=12000:miscutils/metro/TEXTURE_TECH_PANEL_B,face2-5=12000:miscutils/metro/TEXTURE_METAL_PANEL_I
-
-# %blockDecayablesChest:* (blockDecayablesChest), render=(CUSTOM), opaque=false,cls=gtPlusPlus.core.block.machine.BlockDecayablesChest
-block:id=%blockDecayablesChest,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:miscutils/TileEntities/DecayablesChest_bottom,face1=0:miscutils/TileEntities/DecayablesChest_top,face2-5=0:miscutils/TileEntities/DecayablesChest_Side
-
-# %blockSuperJukebox:* (blockSuperJukebox), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.BlockSuperJukebox
-block:id=%blockSuperJukebox,data=*,stdrot=true,face0=0:minecraft/jukebox_side,face1=0:minecraft/jukebox_top,face2-5=0:minecraft/jukebox_side
-
-# %blockPooCollector:* (blockPooCollector), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.BlockPooCollector
-block:id=%blockPooCollector,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:miscutils/TileEntities/sewer_top,face2-5=0:miscutils/TileEntities/sewer_sides
-block:id=%blockPooCollector,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:miscutils/TileEntities/sewer_adv_top,face2-5=0:miscutils/TileEntities/sewer_adv_sides
-
-# %blockPestKiller:* (blockPestKiller), render=(STANDARD), opaque=false,cls=gtPlusPlus.core.block.machine.BlockPestKiller
-block:id=%blockPestKiller,data=*,stdrot=true,face0=0:minecraft/planks_acacia,face1=0:miscutils/TileEntities/MACHINE_PESTKILLER_TOP,face2-5=0:miscutils/TileEntities/MACHINE_CASING_FARM_MANAGER_STRUCTURAL
-
-# %blockVolumetricFlaskSetter:* (blockVolumetricFlaskSetter), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.machine.BlockFlaskSetter
-block:id=%blockVolumetricFlaskSetter,data=0,stdrot=true,face0=0:miscutils/metro/TEXTURE_METAL_PANEL_H,face1=0:miscutils/metro/TEXTURE_TECH_PANEL_C,face2-5=0:miscutils/metro/TEXTURE_METAL_PANEL_H
+# %blockCompressedObsidian:* (blockCompressedObsidian), render=(STANDARD), opaque=true,cls=gtPlusPlus.core.block.general.BlockCompressedObsidian
+block:id=%blockCompressedObsidian,data=0,stdrot=true,face0-5=0:miscutils/compressed/obsidian1
+block:id=%blockCompressedObsidian,data=1,stdrot=true,face0-5=0:miscutils/compressed/obsidian2
+block:id=%blockCompressedObsidian,data=2,stdrot=true,face0-5=0:miscutils/compressed/obsidian3
+block:id=%blockCompressedObsidian,data=3,stdrot=true,face0-5=0:miscutils/compressed/obsidian4
+block:id=%blockCompressedObsidian,data=4,stdrot=true,face0-5=0:miscutils/compressed/obsidian5
+block:id=%blockCompressedObsidian,data=5,stdrot=true,face0-5=0:miscutils/compressed/obsidian_invert
+block:id=%blockCompressedObsidian,data=6,stdrot=true,face0-5=0:miscutils/compressed/glowstone1
+block:id=%blockCompressedObsidian,data=7,stdrot=true,face0-5=0:miscutils/compressed/glowstone2
+block:id=%blockCompressedObsidian,data=8,stdrot=true,face0-5=0:miscutils/compressed/glowstone3
+block:id=%blockCompressedObsidian,data=9,stdrot=true,face0-5=0:miscutils/compressed/glowstone4
+block:id=%blockCompressedObsidian,data=10,stdrot=true,face0-5=0:miscutils/compressed/glowstone5
+block:id=%blockCompressedObsidian,data=11,stdrot=true,face0-5=0:miscutils/compressed/netherrack1
+block:id=%blockCompressedObsidian,data=12,stdrot=true,face0-5=0:miscutils/compressed/netherrack2
+block:id=%blockCompressedObsidian,data=13,stdrot=true,face0-5=0:miscutils/compressed/netherrack3
 
 # %FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=gtPlusPlus.xmod.thermalfoundation.block.TFBlockFluidPyrotheum
 block:id=%FluidPyrotheum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:miscutils/fluid/Fluid_Pyrotheum_Still,face2-5=12000:miscutils/fluid/Fluid_Pyrotheum_Flow

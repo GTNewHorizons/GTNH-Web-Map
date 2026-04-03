@@ -1,4 +1,4 @@
-# kubatech 5.09.50.95
+# kubatech 5.09.51.382
 version:1.7
 modname:kubatech
 
@@ -20,7 +20,7 @@ texture:id=kubatech/tea_storage,filename=assets/kubatech/textures/blocks/tea_sto
 
 
 
-# %defc.casing:* (defc.casing), render=(STANDARD), opaque=true,cls=kubatech.loaders.block.defc.BlockDEFCCasing
+# %defc.casing:* (defc.casing), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=kubatech.loaders.block.defc.BlockDEFCCasing
 block:id=%defc.casing,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:kubatech/casing/defc_0
 block:id=%defc.casing,data=8,stdrot=true,face0-5=0:kubatech/casing/defc_1
 block:id=%defc.casing,data=9,stdrot=true,face0-5=0:kubatech/casing/defc_2

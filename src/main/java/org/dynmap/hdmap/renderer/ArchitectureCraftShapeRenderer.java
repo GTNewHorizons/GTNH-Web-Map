@@ -3,6 +3,8 @@ package org.dynmap.hdmap.renderer;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
+import org.dynmap.modsupport.SimpleColorMultiplier;
+import org.dynmap.renderer.CustomColorMultiplier;
 import org.dynmap.renderer.CustomRenderer;
 import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.CustomTextureMapper;
@@ -537,7 +539,7 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
     @Override
     public CustomRendererData getRenderData(MapDataContext mapDataCtx) {
 
-        return new CustomRendererData(getRenderPatchList(mapDataCtx), null, new ArchitectureCraftTextureLookupThing(mapDataCtx));
+        return new ArchitectureCraftCustomRendererData(mapDataCtx);
     }
 
     static String[] nbtFieldsNeeded = {"turn", "Shape", "side", "BaseName", "BaseData", "Name2", "Data2"};
@@ -547,14 +549,18 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
         return nbtFieldsNeeded;
     }
 
-    class ArchitectureCraftTextureLookupThing implements CustomTextureMapper {
+    class ArchitectureCraftCustomRendererData extends CustomRendererData implements CustomTextureMapper {
 
         private MapDataContext mapDataCtx;
         int[][] textures = new int[6][0];
         int[][] textures2 = {{-1}, {-1}, {-1}, {-1}, {-1}, {-1}};
         boolean foundSecondaryTextures = false;
 
-        public ArchitectureCraftTextureLookupThing(MapDataContext mapDataCtx) {
+        CustomColorMultiplier colorMultiplier = null;
+        CustomColorMultiplier colorMultiplier2 = null;
+
+        public ArchitectureCraftCustomRendererData(MapDataContext mapDataCtx) {
+            super(getRenderPatchList(mapDataCtx), null, null);
 
             this.mapDataCtx = mapDataCtx;
 
@@ -575,6 +581,8 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                 TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
                 textures2 = new int[][]{ {map.getIndexForFace(0)}, {map.getIndexForFace(1)}, {map.getIndexForFace(2)}, {map.getIndexForFace(3)}, {map.getIndexForFace(4)}, {map.getIndexForFace(5)} };
 
+                colorMultiplier2 = new SimpleColorMultiplier(map.getColorMult());
+
                 foundSecondaryTextures = true;
             }
             if(blockNameObj instanceof String){
@@ -589,6 +597,8 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                 TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blockId, data, 0);
 
                 textures = new int[][]{ {map.getIndexForFace(0)}, {map.getIndexForFace(1)}, {map.getIndexForFace(2)}, {map.getIndexForFace(3)}, {map.getIndexForFace(4)}, {map.getIndexForFace(5)} };
+
+                colorMultiplier = new SimpleColorMultiplier(map.getColorMult());
             }
         }
 
@@ -603,6 +613,23 @@ public class ArchitectureCraftShapeRenderer extends CustomRenderer {
                 patchId -= 12;
             }
             return textures[patchId];
+        }
+
+        @Override
+        public CustomTextureMapper getCustomTextureMapper() {
+            return this;
+        }
+
+        @Override
+        public CustomColorMultiplier getCustomColorMultiplier(int patchId, int layer) {
+            if(patchId >= 6 && patchId < 12)
+                return colorMultiplier2;
+            if(patchId >= 12 && patchId < 18){
+                if(foundSecondaryTextures){
+                    return colorMultiplier2;
+                }
+            }
+            return colorMultiplier;
         }
     }
 }

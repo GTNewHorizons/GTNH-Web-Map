@@ -1,4 +1,4 @@
-# tectech 5.09.50.95
+# tectech 5.09.51.382
 version:1.7
 modname:tectech
 
@@ -98,7 +98,7 @@ texture:id=tectech/blockSpatiallyTranscendentGravitationalLens,filename=assets/t
 
 
 
-# %gt.blockcasingsTT:* (gt.blockcasingsTT), render=(STANDARD), opaque=true,cls=tectech.thing.casing.BlockGTCasingsTT
+# %gt.blockcasingsTT:* (gt.blockcasingsTT), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=tectech.thing.casing.BlockGTCasingsTT
 block:id=%gt.blockcasingsTT,data=0,stdrot=true,face0-5=0:gregtech/iconsets/EM_POWER
 block:id=%gt.blockcasingsTT,data=1,stdrot=true,face0-1=0:gregtech/iconsets/EM_PC_NONSIDE,face2-5=0:gregtech/iconsets/EM_PC
 block:id=%gt.blockcasingsTT,data=2,stdrot=true,face0-1=0:gregtech/iconsets/EM_PC_VENT_NONSIDE,face2-5=0:gregtech/iconsets/EM_PC_VENT
@@ -122,7 +122,7 @@ block:id=%Eye of Harmony Renderer,data=*,stdrot=true,face0-5=0:gregtech/iconsets
 # %ForgeOfGodsRenderBlock:* (ForgeOfGodsRenderBlock), render=(STANDARD), opaque=false,cls=tectech.thing.block.BlockForgeOfGods
 block:id=%ForgeOfGodsRenderBlock,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
 
-# %gt.blockcasingsBA0:* (gt.blockcasingsBA0), render=(STANDARD), opaque=true,cls=tectech.thing.casing.BlockGTCasingsBA0
+# %gt.blockcasingsBA0:* (gt.blockcasingsBA0), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=tectech.thing.casing.BlockGTCasingsBA0
 block:id=%gt.blockcasingsBA0,data=0,stdrot=true,face0-1=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_TOP_BOTTOM_0,face2-5=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_SIDES_0
 block:id=%gt.blockcasingsBA0,data=1,stdrot=true,face0-1=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_TOP_BOTTOM_1,face2-5=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_SIDES_1
 block:id=%gt.blockcasingsBA0,data=2,stdrot=true,face0-1=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_TOP_BOTTOM_2,face2-5=0:gregtech/iconsets/TM_TESLA_WINDING_PRIMARY_SIDES_2
@@ -138,7 +138,7 @@ block:id=%gt.blockcasingsBA0,data=11,stdrot=true,face0-5=0:gregtech/iconsets/EM_
 block:id=%gt.blockcasingsBA0,data=12,stdrot=true,face0-5=0:gregtech/iconsets/EM_POWER_INFINITE
 block:id=%gt.blockcasingsBA0,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %gt.spacetime_compression_field_generator:* (gt.spacetime_compression_field_generator), render=(STANDARD), opaque=true,cls=tectech.thing.casing.SpacetimeCompressionFieldCasing
+# %gt.spacetime_compression_field_generator:* (gt.spacetime_compression_field_generator), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=tectech.thing.casing.SpacetimeCompressionFieldCasing
 block:id=%gt.spacetime_compression_field_generator,data=0,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_0
 block:id=%gt.spacetime_compression_field_generator,data=1,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_1
 block:id=%gt.spacetime_compression_field_generator,data=2,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_2
@@ -150,7 +150,7 @@ block:id=%gt.spacetime_compression_field_generator,data=7,stdrot=true,face0-5=0:
 block:id=%gt.spacetime_compression_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/EM_DIM_8
 block:id=%gt.spacetime_compression_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %gt.time_acceleration_field_generator:* (gt.time_acceleration_field_generator), render=(STANDARD), opaque=true,cls=tectech.thing.casing.TimeAccelerationFieldCasing
+# %gt.time_acceleration_field_generator:* (gt.time_acceleration_field_generator), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=tectech.thing.casing.TimeAccelerationFieldCasing
 block:id=%gt.time_acceleration_field_generator,data=0,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_0
 block:id=%gt.time_acceleration_field_generator,data=1,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_1
 block:id=%gt.time_acceleration_field_generator,data=2,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_2
@@ -162,7 +162,7 @@ block:id=%gt.time_acceleration_field_generator,data=7,stdrot=true,face0-5=0:greg
 block:id=%gt.time_acceleration_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/EM_FIELD_8
 block:id=%gt.time_acceleration_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %gt.stabilisation_field_generator:* (gt.stabilisation_field_generator), render=(STANDARD), opaque=true,cls=tectech.thing.casing.StabilisationFieldCasing
+# %gt.stabilisation_field_generator:* (gt.stabilisation_field_generator), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=tectech.thing.casing.StabilisationFieldCasing
 block:id=%gt.stabilisation_field_generator,data=0,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_0
 block:id=%gt.stabilisation_field_generator,data=1,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_1
 block:id=%gt.stabilisation_field_generator,data=2,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_2
@@ -174,7 +174,7 @@ block:id=%gt.stabilisation_field_generator,data=7,stdrot=true,face0-5=0:gregtech
 block:id=%gt.stabilisation_field_generator,data=8,stdrot=true,face0-5=0:gregtech/iconsets/STABILITY_CASING_8
 block:id=%gt.stabilisation_field_generator,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-# %gt.godforgecasing:* (gt.godforgecasing), render=(STANDARD), opaque=true,cls=tectech.thing.casing.BlockGodforgeCasings
+# %gt.godforgecasing:* (gt.godforgecasing), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=tectech.thing.casing.BlockGodforgeCasings
 block:id=%gt.godforgecasing,data=0,stdrot=true,face0-5=0:gregtech/iconsets/GODFORGE_TRIM
 block:id=%gt.godforgecasing,data=1,stdrot=true,face0-5=0:gregtech/iconsets/GODFORGE_INNER
 block:id=%gt.godforgecasing,data=2,stdrot=true,face0-5=0:gregtech/iconsets/GODFORGE_SUPPORT

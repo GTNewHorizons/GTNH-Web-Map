@@ -1,4 +1,4 @@
-# IronChest 6.0.87
+# IronChest 6.1.6
 version:1.7
 modname:IronChest
 
@@ -40,7 +40,7 @@ texture:id=ironchest/silver_top,filename=assets/ironchest/textures/blocks/silver
 
 
 
-# %BlockIronChest:* (BlockIronChest), render=(CUSTOM), opaque=false,cls=cpw.mods.ironchest.BlockIronChest
+# %BlockIronChest:* (BlockIronChest), render=ganymedes01.etfuturum.client.renderer.block.BlockChestRenderer(CUSTOM), opaque=false,cls=cpw.mods.ironchest.BlockIronChest
 block:id=%BlockIronChest,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/iron_top,face2=0:ironchest/iron_side,face3=0:ironchest/iron_front,face4-5=0:ironchest/iron_side
 block:id=%BlockIronChest,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/gold_top,face2=0:ironchest/gold_side,face3=0:ironchest/gold_front,face4-5=0:ironchest/gold_side
 block:id=%BlockIronChest,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:ironchest/diamond_top,face2=0:ironchest/diamond_side,face3=0:ironchest/diamond_front,face4-5=0:ironchest/diamond_side

@@ -1,4 +1,4 @@
-# GoodGenerator 5.09.50.95
+# GoodGenerator 5.09.51.382
 version:1.7
 modname:GoodGenerator
 
@@ -35,7 +35,6 @@ texture:id=GoodGenerator/essentiaCell/2,filename=assets/goodgenerator/textures/b
 texture:id=GoodGenerator/essentiaCell/3,filename=assets/goodgenerator/textures/blocks/essentiaCell/3.png
 texture:id=GoodGenerator/essentiaCell/4,filename=assets/goodgenerator/textures/blocks/essentiaCell/4.png
 texture:id=GoodGenerator/essentiaFilterCasing,filename=assets/goodgenerator/textures/blocks/essentiaFilterCasing.png
-texture:id=GoodGenerator/essentiaHatch,filename=assets/goodgenerator/textures/blocks/essentiaHatch.png
 texture:id=GoodGenerator/essentiaOutputHatch,filename=assets/goodgenerator/textures/blocks/essentiaOutputHatch.png
 texture:id=GoodGenerator/essentiaOutputHatch_ME,filename=assets/goodgenerator/textures/blocks/essentiaOutputHatch_ME.png
 texture:id=GoodGenerator/fieldRestrictingGlass,filename=assets/goodgenerator/textures/blocks/fieldRestrictingGlass.png
@@ -155,7 +154,7 @@ block:id=%yottaFluidTankCells,data=10,data=11,data=12,data=13,data=14,data=15,st
 # %yottaFluidTankCasing:* (yottaFluidTankCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockComplexTextureCasing
 block:id=%yottaFluidTankCasing,data=*,stdrot=true,face0-1=0:GoodGenerator/yottaFluidTankCasing_TOP,face2-5=0:GoodGenerator/yottaFluidTankCasing_SIDE
 
-# %supercriticalFluidTurbineCasing:* (supercriticalFluidTurbineCasing), render=goodgenerator.client.render.BlockRenderHandler(CUSTOM), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTurbineCasing
+# %supercriticalFluidTurbineCasing:* (supercriticalFluidTurbineCasing), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTurbineCasing
 block:id=%supercriticalFluidTurbineCasing,data=*,stdrot=true,face0-5=0:GoodGenerator/supercriticalFluidTurbineCasing
 
 # %componentAssemblylineCasing:* (componentAssemblylineCasing), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockCasing
@@ -223,9 +222,6 @@ block:id=%essentiaCell,data=1,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/2
 block:id=%essentiaCell,data=2,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/3
 block:id=%essentiaCell,data=3,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/4
 block:id=%essentiaCell,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:GoodGenerator/essentiaCell/1
-
-# %essentiaHatch:* (essentiaHatch), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTEContainer
-block:id=%essentiaHatch,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaHatch
 
 # %essentiaOutputHatch:* (essentiaOutputHatch), render=(STANDARD), opaque=true,cls=goodgenerator.blocks.regularBlock.BlockTEContainer
 block:id=%essentiaOutputHatch,data=*,stdrot=true,face0-5=0:GoodGenerator/essentiaOutputHatch

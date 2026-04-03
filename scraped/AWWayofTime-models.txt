@@ -1,4 +1,4 @@
-# AWWayofTime 1.6.9
+# AWWayofTime 1.7.46
 version:1.7
 modname:AWWayofTime
 
@@ -22,6 +22,19 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
+# %blockCrucible:* (blockCrucible), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockCrucible
+boxblock:id=%blockCrucible,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.625,zmin=0.3125,zmax=0.6875,data=*
+
+# %blockPedestal:* (blockPedestal), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockPedestal
+boxblock:id=%blockPedestal,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.6000000238418579,zmin=0.1875,zmax=0.8125,data=*
+
+# %blockPlinth:* (blockPlinth), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockPlinth
+boxblock:id=%blockPlinth,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# %spectralContainer:* (spectralContainer), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpectralContainer
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%spectralContainer,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=*
+
 # %lifeEssence:* (lifeEssence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.LifeEssenceBlock
 boxblock:id=%lifeEssence,ymax=0.875,data=1
 boxblock:id=%lifeEssence,ymax=0.75,data=2
@@ -38,18 +51,5 @@ boxblock:id=%lifeEssence,ymax=0.375,data=13
 boxblock:id=%lifeEssence,ymax=0.25,data=14
 boxblock:id=%lifeEssence,ymax=0.125,data=15
 
-# %blockPedestal:* (blockPedestal), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockPedestal
-boxblock:id=%blockPedestal,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.6000000238418579,zmin=0.1875,zmax=0.8125,data=*
-
-# %blockPlinth:* (blockPlinth), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockPlinth
-boxblock:id=%blockPlinth,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
-
-# %spectralContainer:* (spectralContainer), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpectralContainer
-# FIXME: Box constraints truncated to 0.0<=val<=1.0
-boxblock:id=%spectralContainer,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=*
-
-# %blockDemonChest:* (blockDemonChest), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.demonVillage.tileEntity.BlockDemonChest
+# %blockDemonChest:* (blockDemonChest), render=ganymedes01.etfuturum.client.renderer.block.BlockChestRenderer(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.demonVillage.tileEntity.BlockDemonChest
 boxblock:id=%blockDemonChest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
-
-# %blockCrucible:* (blockCrucible), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockCrucible
-boxblock:id=%blockCrucible,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.625,zmin=0.3125,zmax=0.6875,data=*

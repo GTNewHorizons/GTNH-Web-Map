@@ -1,4 +1,4 @@
-# HardcoreEnderExpansion 1.11.3-GTNH
+# HardcoreEnderExpansion 1.12.7-GTNH
 version:1.7
 modname:HardcoreEnderExpansion
 
@@ -133,7 +133,6 @@ texture:id=minecraft/end_stone,filename=assets/minecraft/textures/blocks/end_sto
 texture:id=minecraft/flower_pot,filename=assets/minecraft/textures/blocks/flower_pot.png
 texture:id=minecraft/mob_spawner,filename=assets/minecraft/textures/blocks/mob_spawner.png
 texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
-texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
 texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
 texture:id=minecraft/tnt_bottom,filename=assets/minecraft/textures/blocks/tnt_bottom.png
 texture:id=minecraft/tnt_side,filename=assets/minecraft/textures/blocks/tnt_side.png
@@ -356,7 +355,7 @@ block:id=%enhanced_brewing_stand_block,data=*,stdrot=true,transparency=TRANSPARE
 block:id=%ender_goo,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:hardcoreenderexpansion/endergoo_flow
 
 # %temple_end_portal:* (temple_end_portal), render=(CUSTOM), opaque=false,cls=chylex.hee.block.BlockTempleEndPortal
-block:id=%temple_end_portal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/portal
+block:id=%temple_end_portal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/obsidian
 
 # %ravaged_brick_smooth:* (ravaged_brick_smooth), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockRavagedBrickSmooth
 block:id=%ravaged_brick_smooth,data=*,stdrot=true,face0-1=0:hardcoreenderexpansion/ravaged_brick,face2-5=0:hardcoreenderexpansion/ravaged_brick_smooth

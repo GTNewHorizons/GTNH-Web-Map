@@ -1,4 +1,4 @@
-# Avaritia 1.54
+# Avaritia 1.68
 version:1.7
 modname:Avaritia
 
@@ -20,7 +20,6 @@ texture:id=avaritia/dire_crafting_side,filename=assets/avaritia/textures/blocks/
 texture:id=avaritia/dire_crafting_top,filename=assets/avaritia/textures/blocks/dire_crafting_top.png
 texture:id=avaritia/double_craft,filename=assets/avaritia/textures/blocks/double_craft.png
 texture:id=avaritia/triple_craft,filename=assets/avaritia/textures/blocks/triple_craft.png
-texture:id=minecraft/hardened_clay,filename=assets/minecraft/textures/blocks/hardened_clay.png
 
 
 
@@ -59,6 +58,3 @@ block:id=%Neutron_Collector,data=*,stdrot=true,face0=0:avaritia/collector_side,f
 
 # %Neutronium_Compressor:* (Neutronium_Compressor), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockCompressor
 block:id=%Neutronium_Compressor,data=*,stdrot=true,face0=0:avaritia/compressor_side,face1=0:avaritia/compressor_top,face2=0:avaritia/compressor_side,face3=0:avaritia/compressor_front,face4-5=0:avaritia/compressor_side
-
-# %infinitato:* (infinitato), render=fox.spiteful.avaritia.compat.botania.RenderInfinitato(CUSTOM), opaque=false,cls=fox.spiteful.avaritia.compat.botania.BlockInfinitato
-block:id=%infinitato,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/hardened_clay

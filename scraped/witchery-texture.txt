@@ -592,7 +592,7 @@ block:id=%shadedglass_active,data=15,stdrot=true,face0-5=12000:witchery/shadedgl
 # %mirrorwall:* (mirrorwall), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockMirrorWall
 block:id=%mirrorwall,data=*,stdrot=true,colorMult=CCDDFF,face0-1=17000:witchery/brew_still,face2-5=17000:witchery/brew_flow
 
-# %refillingchest:* (refillingchest), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
+# %refillingchest:* (refillingchest), render=ganymedes01.etfuturum.client.renderer.block.BlockChestRenderer(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
 block:id=%refillingchest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
 # %force:* (force), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockForce
@@ -723,7 +723,7 @@ block:id=%circleglyphritual,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=
 block:id=%circleglyphritual,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.9
 block:id=%circleglyphritual,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.10
 block:id=%circleglyphritual,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.11
-block:id=%circleglyphritual,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.12
+block:id=%circleglyphritual,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph1.12
 
 # %circleglyphotherwhere:* (circleglyphotherwhere), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 block:id=%circleglyphotherwhere,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.1
@@ -737,7 +737,7 @@ block:id=%circleglyphotherwhere,data=7,stdrot=true,transparency=TRANSPARENT,face
 block:id=%circleglyphotherwhere,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.9
 block:id=%circleglyphotherwhere,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.10
 block:id=%circleglyphotherwhere,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.11
-block:id=%circleglyphotherwhere,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.12
+block:id=%circleglyphotherwhere,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph2.12
 
 # %circleglyphinfernal:* (circleglyphinfernal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
 block:id=%circleglyphinfernal,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.1
@@ -751,7 +751,7 @@ block:id=%circleglyphinfernal,data=7,stdrot=true,transparency=TRANSPARENT,face0-
 block:id=%circleglyphinfernal,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.9
 block:id=%circleglyphinfernal,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.10
 block:id=%circleglyphinfernal,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.11
-block:id=%circleglyphinfernal,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.12
+block:id=%circleglyphinfernal,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/circleglyph3.12
 
 # %spiritflowing:* (spiritflowing), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.blocks.BlockFlowingSpirit
 block:id=%spiritflowing,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:witchery/flowspirit_still,face2-5=12000:witchery/flowspirit_flow

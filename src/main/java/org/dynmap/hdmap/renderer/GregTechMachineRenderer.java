@@ -154,12 +154,19 @@ public class GregTechMachineRenderer extends PipeRendererBase {
                 }
 
                 if(entry.isHatch){
-                    Object machineType = mapDataCtx.getBlockTileEntityField("mMachineBlock");
+                    Object machineType = mapDataCtx.getBlockTileEntityField("textureIndex");
+
+                    if(machineType == null)
+                        machineType = mapDataCtx.getBlockTileEntityField("mMachineBlock");
+
                     boolean success = false;
                     if(machineType != null){
-                        int page = GWM_Util.objectToInt(mapDataCtx.getBlockTileEntityField("mTexturePage"),0);
+                        int page = GWM_Util.objectToInt(mapDataCtx.getBlockTileEntityField("texturePage"),0);
+                        if(page == 0)
+                            page = GWM_Util.objectToInt(mapDataCtx.getBlockTileEntityField("mTexturePage"), 0);
 
                         int num = GWM_Util.objectToInt(machineType,0);
+
                         if(num < 0)
                             num += 128;
 
@@ -335,7 +342,7 @@ public class GregTechMachineRenderer extends PipeRendererBase {
     }
 
 
-    static String[] nbtFieldsNeeded = {"id", "mID", "mColor", "mConnections", "mFacing", "mActive", "mMainFacing", "mMachineBlock", "mTexturePage"};
+    static String[] nbtFieldsNeeded = {"id", "mID", "mColor", "mConnections", "mFacing", "mActive", "mMainFacing", "mMachineBlock", "mTexturePage", "texturePage", "textureIndex"};
 
     @Override
     public String[] getTileEntityFieldsNeeded() {

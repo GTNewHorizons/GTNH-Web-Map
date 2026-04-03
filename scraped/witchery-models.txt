@@ -227,7 +227,7 @@ boxblock:id=%garlicgarland,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin
 boxblock:id=%garlicgarland,xmin=1.0,xmax=1.0,ymin=0.800000011920929,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=4
 boxblock:id=%garlicgarland,xmin=0.0,xmax=0.15000000596046448,ymin=0.800000011920929,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=5
 
-# %refillingchest:* (refillingchest), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
+# %refillingchest:* (refillingchest), render=ganymedes01.etfuturum.client.renderer.block.BlockChestRenderer(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
 boxblock:id=%refillingchest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
 
 # %leechchest:* (leechchest), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockLeechChest
@@ -296,13 +296,13 @@ boxblock:id=%bloodcrucible,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.3100000023841858,
 boxblock:id=%circle,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
 
 # %circleglyphritual:* (circleglyphritual), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
-boxblock:id=%circleglyphritual,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
+boxblock:id=%circleglyphritual,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
 
 # %circleglyphotherwhere:* (circleglyphotherwhere), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
-boxblock:id=%circleglyphotherwhere,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
+boxblock:id=%circleglyphotherwhere,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
 
 # %circleglyphinfernal:* (circleglyphinfernal), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircleGlyph
-boxblock:id=%circleglyphinfernal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
+boxblock:id=%circleglyphinfernal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
 
 # %spiritflowing:* (spiritflowing), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.blocks.BlockFlowingSpirit
 boxblock:id=%spiritflowing,ymax=0.875,data=1

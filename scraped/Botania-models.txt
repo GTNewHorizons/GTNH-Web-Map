@@ -1,4 +1,4 @@
-# Botania 1.11.5-GTNH
+# Botania 1.12.25-GTNH
 version:1.7
 modname:Botania
 
@@ -660,3 +660,6 @@ boxblock:id=%pavement4Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=1
 # %pavement5Slab:* (pavement5Slab), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.slabs.BlockPavementSlab
 boxblock:id=%pavement5Slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%pavement5Slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %flower_structurelib:* (flower_structurelib), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.tile.TileEnchanter$StructureLibFlower
+boxblock:id=%flower_structurelib,xmin=0.30000001192092896,xmax=0.800000011920929,ymin=0.0,ymax=1.0,zmin=0.30000001192092896,zmax=0.800000011920929,data=*

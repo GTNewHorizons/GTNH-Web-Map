@@ -226,8 +226,8 @@ block:id=%machine.beta,data=1,stdrot=true,patch0=12000:railcraft/tank.iron.gauge
 block:id=%machine.beta,data=2,stdrot=true,face0-1=0:railcraft/tank.iron.valve,face2-5=1:railcraft/tank.iron.valve
 block:id=%machine.beta,data=3,stdrot=true,face0-1=0:railcraft/boiler.tank.pressure.low,face2-5=1:railcraft/boiler.tank.pressure.low
 block:id=%machine.beta,data=4,stdrot=true,face0-1=0:railcraft/boiler.tank.pressure.high,face2-5=1:railcraft/boiler.tank.pressure.high
-block:id=%machine.beta,data=5,stdrot=true,face0-1=0:railcraft/boiler.firebox.solid,face2-5=1:railcraft/boiler.firebox.solid
-block:id=%machine.beta,data=6,stdrot=true,face0-1=0:railcraft/boiler.firebox.liquid,face2-5=1:railcraft/boiler.firebox.liquid
+block:id=%machine.beta,data=5,stdrot=true,patch0=0:railcraft/boiler.firebox.solid,patch1=1:railcraft/boiler.firebox.solid,patch2=2:railcraft/boiler.firebox.solid
+block:id=%machine.beta,data=6,stdrot=true,patch0=0:railcraft/boiler.firebox.liquid,patch1=1:railcraft/boiler.firebox.liquid,patch2=2:railcraft/boiler.firebox.liquid
 block:id=%machine.beta,data=7,stdrot=true,face0-5=0:railcraft/engine.steam.hobby
 block:id=%machine.beta,data=8,stdrot=true,face0-5=0:railcraft/engine.steam.low
 block:id=%machine.beta,data=9,stdrot=true,face0-5=0:railcraft/engine.steam.high

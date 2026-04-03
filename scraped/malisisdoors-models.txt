@@ -1,4 +1,4 @@
-# malisisdoors 1.17.4-GTNH
+# malisisdoors 1.18.1-GTNH
 version:1.7
 modname:malisisdoors
 
@@ -433,10 +433,10 @@ boxblock:id=%vanishing_block,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,
 boxblock:id=%vanishing_block_diamond,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %rustyLadder:* (rustyLadder), render=net.malisis.doors.renderer.RustyLadderRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.RustyLadder
-boxblock:id=%rustyLadder,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.875,zmax=1.0,data=2
-boxblock:id=%rustyLadder,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.125,data=3
-boxblock:id=%rustyLadder,xmin=0.875,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
-boxblock:id=%rustyLadder,xmin=0.0,xmax=0.125,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+boxblock:id=%rustyLadder,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=2
+boxblock:id=%rustyLadder,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=3
+boxblock:id=%rustyLadder,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%rustyLadder,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %carriage_door:* (carriage_door), render=net.malisis.doors.door.renderer.BigDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.BigDoor
 # FIXME: Box constraints truncated to 0.0<=val<=1.0
