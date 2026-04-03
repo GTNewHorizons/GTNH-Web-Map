@@ -30,7 +30,7 @@ public class DynmapListenerManager {
         public void chatEvent(DynmapPlayer p, String msg);
     }
     public interface BlockEventListener extends EventListener {
-        public void blockEvent(String material, String w, int x, int y, int z);
+        public void blockEvent(int blkId, String w, int x, int y, int z);
     }
     public interface SignChangeEventListener extends EventListener {
         public void signChangeEvent(int blkId, String w, int x, int y, int z, String[] lines, DynmapPlayer p);
@@ -105,7 +105,7 @@ public class DynmapListenerManager {
             }
         }
     }
-    public void processBlockEvent(EventType type, String material, String world, int x, int y, int z)
+    public void processBlockEvent(EventType type, int blkId, String world, int x, int y, int z)
     {
         ArrayList<EventListener> lst = listeners.get(type);
         if(lst == null) return;
@@ -114,9 +114,9 @@ public class DynmapListenerManager {
             EventListener el = lst.get(i);
             if(el instanceof BlockEventListener) {
                 try {
-                    ((BlockEventListener)el).blockEvent(material, world, x, y, z);
+                    ((BlockEventListener)el).blockEvent(blkId, world, x, y, z);
                 } catch (Throwable t) {
-                    Log.warning("processBlockEvent(" + type + "," + material + "," + world + "," + x + "," + y + "," + z + ") - exception", t);
+                    Log.warning("processBlockEvent(" + type + "," + blkId + "," + world + "," + x + "," + y + "," + z + ") - exception", t);
                 }
             }
         }
