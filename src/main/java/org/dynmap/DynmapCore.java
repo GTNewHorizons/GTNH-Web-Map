@@ -30,6 +30,7 @@ import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.ImageIOManager;
 import org.dynmap.web.BanIPFilter;
 import org.dynmap.web.CustomHeaderFilter;
+import org.dynmap.web.FileNameFilter;
 import org.dynmap.web.FilterHandler;
 import org.dynmap.web.HandlerRouter;
 import org.eclipse.jetty.server.Connector;
@@ -937,16 +938,21 @@ public class DynmapCore implements DynmapCommonAPI {
         if (checkbannedips) {
             filters.add(new BanIPFilter(this));
         }
+        filters.add(new FileNameFilter(this));
+
 //        filters.add(new LoginFilter(this));
         
         /* Load customized response headers, if any */
         filters.add(new CustomHeaderFilter(configuration.getNode("http-response-headers")));
 
         FilterHandler fh = new FilterHandler(router, filters);
+        ContextHandler contextHandler = new ContextHandler();
+        contextHandler.setContextPath("/");
+        contextHandler.setHandler(fh);
         HandlerList hlist = new HandlerList();
-        hlist.setHandlers(new org.eclipse.jetty.server.Handler[] { new SessionHandler(), fh });
+        hlist.setHandlers(new org.eclipse.jetty.server.Handler[] { new SessionHandler(), contextHandler });
         webServer.setHandler(hlist);
-        
+
         addServlet("/up/configuration", new org.dynmap.servlet.ClientConfigurationServlet(this));
         addServlet("/standalone/config.js", new org.dynmap.servlet.ConfigJSServlet(this));
         if(authmgr != null) {
