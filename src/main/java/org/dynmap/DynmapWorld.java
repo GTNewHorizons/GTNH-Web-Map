@@ -37,6 +37,7 @@ public abstract class DynmapWorld {
     public int servertime;
     public boolean sendposition;
     public boolean sendhealth;
+    public boolean showborder;
     private int extrazoomoutlevels;  /* Number of additional zoom out levels to generate */
     private boolean cancelled;
     private final String wname;
@@ -51,22 +52,27 @@ public abstract class DynmapWorld {
     private MapStorage storage; // Storage handler for this world's maps
     
     /* World height data */
-    public final int worldheight;
-    public final int heightshift;
-    public final int heightmask;
+    public int worldheight;	// really maxY+1
+    public int minY;
     public int sealevel;
     
+    protected void updateWorldHeights(int worldheight, int minY, int sealevel) {
+    	this.worldheight = worldheight;
+    	this.minY = minY;
+    	this.sealevel = sealevel;
+    }
+    
     protected DynmapWorld(String wname, int worldheight, int sealevel) {
+    	this(wname, worldheight, sealevel, 0);
+    }
+    protected DynmapWorld(String wname, int worldheight, int sealevel, int miny) {
         this.raw_wname = wname;
         this.wname = normalizeWorldName(wname);
         this.hashcode = this.wname.hashCode();
         this.title = wname;
         this.worldheight = worldheight;
+        this.minY = miny;
         this.sealevel = sealevel;
-        int shift;
-        for(shift = 0; ((1 << shift) < worldheight); shift++) {}
-        heightshift = shift;
-        heightmask = (1 << shift) - 1;
         /* Generate default brightness table for surface world */
         for (int i = 0; i <= 15; ++i) {
             float f1 = 1.0F - (float)i / 15.0F;
@@ -127,9 +133,10 @@ public abstract class DynmapWorld {
     private static final int[] stepseq = { 3, 1, 2, 0 };
 
     private void processZoomFile(MapTypeState mts, MapStorageTile tile, boolean firstVariant) {
+        long mostRecentTimestamp = 0;
         int step = 1 << tile.zoom;
         MapStorageTile ztile = tile.getZoomOutTile();
-        int width = 128, height = 128;
+        int width = mts.tileSize, height = mts.tileSize;
         BufferedImage zIm = null;
         DynmapBufferedImage kzIm = null;
         boolean blank = true;
@@ -156,7 +163,9 @@ public abstract class DynmapWorld {
                 if (tr != null) {
                     BufferedImage im = null;
                     try {
-                        im = ImageIOManager.imageIODecode(tr.image);
+                        im = ImageIOManager.imageIODecode(tr);
+                        // Only consider the timestamp when the tile exists and isn't broken
+                        mostRecentTimestamp = Math.max(mostRecentTimestamp, tr.lastModified);
                     } catch (IOException iox) {
                         // Broken file - zap it
                         tile1.delete();
@@ -169,7 +178,7 @@ public abstract class DynmapWorld {
                         if ((iwidth == width) && (iheight == height)) {
                             im.getRGB(0, 0, width, height, argb, 0, width);    /* Read data */
                             im.flush();
-                            /* Do binlinear scale to 64x64 */
+                            /* Do binlinear scale to width/2 x height/2 */
                             int off = 0;
                             for(int y = 0; y < height; y += 2) {
                                 off = y*width;
@@ -237,7 +246,7 @@ public abstract class DynmapWorld {
                 }
             }
             else /* if (!ztile.matchesHashCode(crc)) */ {
-                ztile.write(crc, zIm);
+                ztile.write(crc, zIm, (mostRecentTimestamp == 0)? System.currentTimeMillis() : mostRecentTimestamp);
                 MapManager.mapman.pushUpdate(this, new Client.Tile(ztile.getURI()));
                 enqueueZoomOutUpdate(ztile);
             }
@@ -315,7 +324,7 @@ public abstract class DynmapWorld {
         }
         title = worldconfig.getString("title", title);
         ConfigurationNode ctr = worldconfig.getNode("center");
-        int mid_y = worldheight/2;
+        int mid_y = (worldheight + minY)/2;
         if(ctr != null)
             center = new DynmapLocation(wname, ctr.getDouble("x", 0.0), ctr.getDouble("y", mid_y), ctr.getDouble("z", 0));
         else
@@ -326,6 +335,7 @@ public abstract class DynmapWorld {
         servertime = (int)(getTime() % 24000);
         sendposition = worldconfig.getBoolean("sendposition", true);
         sendhealth = worldconfig.getBoolean("sendhealth", true);
+        showborder = worldconfig.getBoolean("showborder", true);
         is_protected = worldconfig.getBoolean("protected", false);
         setExtraZoomOutLevels(worldconfig.getInteger("extrazoomout", 0));
         setTileUpdateDelay(worldconfig.getInteger("tileupdatedelay", -1));
@@ -400,12 +410,8 @@ public abstract class DynmapWorld {
             }            
         }
         String hiddenchunkstyle = worldconfig.getString("hidestyle", "stone");
-        if(hiddenchunkstyle.equals("air"))
-            this.hiddenchunkstyle = MapChunkCache.HiddenChunkStyle.FILL_AIR;
-        else if(hiddenchunkstyle.equals("ocean"))
-            this.hiddenchunkstyle = MapChunkCache.HiddenChunkStyle.FILL_OCEAN;
-        else
-            this.hiddenchunkstyle = MapChunkCache.HiddenChunkStyle.FILL_STONE_PLAIN;
+        this.hiddenchunkstyle = MapChunkCache.HiddenChunkStyle.fromValue(hiddenchunkstyle);
+        if (this.hiddenchunkstyle == null) this.hiddenchunkstyle = MapChunkCache.HiddenChunkStyle.FILL_STONE_PLAIN;
         
         return true;
     }
@@ -419,6 +425,7 @@ public abstract class DynmapWorld {
         node.put("title", getTitle());
         node.put("enabled", is_enabled);
         node.put("protected", is_protected);
+        node.put("showborder", showborder);
         if(tileupdatedelay > 0) {
             node.put("tileupdatedelay",  tileupdatedelay);
         }
@@ -474,7 +481,7 @@ public abstract class DynmapWorld {
         if(hidden_limits != null) {
             ArrayList<Map<String,Object>> lims = new ArrayList<Map<String,Object>>();
             for(int i = 0; i < hidden_limits.size(); i++) {
-                VisibilityLimit lim = visibility_limits.get(i);
+                VisibilityLimit lim = hidden_limits.get(i);
                 LinkedHashMap<String, Object> lv = new LinkedHashMap<String,Object>();
                 if (lim instanceof RectangleVisibilityLimit) {
                     RectangleVisibilityLimit rect_lim = (RectangleVisibilityLimit) lim;
@@ -494,18 +501,7 @@ public abstract class DynmapWorld {
             node.put("hiddenlimits", lims);
         }
         /* Handle hide style */
-        String hide = "stone";
-        switch(hiddenchunkstyle) {
-            case FILL_AIR:
-                hide = "air";
-                break;
-            case FILL_OCEAN:
-                hide = "ocean";
-                break;
-            default:
-                break;
-        }
-        node.put("hidestyle", hide);
+        node.put("hidestyle", hiddenchunkstyle.getValue());
         /* Handle map settings */
         ArrayList<Map<String,Object>> mapinfo = new ArrayList<Map<String,Object>>();
         for(MapType mt : maps) {

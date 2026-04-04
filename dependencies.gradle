@@ -29,35 +29,32 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    shadowImplementation("org.eclipse.jetty:jetty-server:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-server:9.4.26.v20200117") {
     }
-    shadowImplementation("org.eclipse.jetty:jetty-servlet:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-servlet:9.4.26.v20200117") {
     }
-    shadowImplementation("org.eclipse.jetty:jetty-util:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-util:9.4.26.v20200117") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-io:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-io:9.4.26.v20200117") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-http:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-http:9.4.26.v20200117") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-security:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-security:9.4.26.v20200117") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-client:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-client:9.4.26.v20200117") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-webapp:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-webapp:9.4.26.v20200117") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-continuation:8.2.0.v20160908") {
+    shadowImplementation("org.eclipse.jetty:jetty-continuation:9.4.26.v20200117") {
         transitive = false
     }
-    shadowImplementation("org.eclipse.jetty:jetty-annotations:8.2.0.v20160908") {
-        transitive = false
-    }
-    shadowImplementation("org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016"){
+    shadowImplementation("org.eclipse.jetty:jetty-annotations:9.4.26.v20200117") {
         transitive = false
     }
     shadowImplementation("com.googlecode.json-simple:json-simple:1.1.1") {

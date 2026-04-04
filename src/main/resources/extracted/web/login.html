@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/standalone.css?_=${GWM_VERSION}" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/dynmap_style.css?_=${GWM_VERSION}" media="screen" />
 	<script type="text/javascript" src="standalone/config.js?_=${GWM_VERSION}"></script>
-	<script type="text/javascript" src="js/jquery-1.11.0.js?_=${GWM_VERSION}"></script>
+	<script type="text/javascript" src="js/jquery-3.5.1.js?_=${GWM_VERSION}"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -29,7 +29,7 @@
 		
 		$(function(){
             $('form[name=register]').submit(function(){
-                $.post($(this).attr('action'), $(this).serialize(), function(json) {
+                \$.post($(this).attr('action'), $(this).serialize(), function(json) {
                     if(json.result == 'success')
                     	window.location = 'index.html';
                     else
@@ -41,7 +41,7 @@
 
 		$(function(){
             $('form[name=login]').submit(function(){
-                $.post($(this).attr('action'), $(this).serialize(), function(json) {
+                \$.post($(this).attr('action'), $(this).serialize(), function(json) {
                     if(json.result == 'success')
                     	window.location = 'index.html';
                     else
