@@ -302,9 +302,9 @@ public class DynmapPlugin
     
     public static class OurLog implements DynmapLogger {
         Logger log;
-        public static final String DM = "[Dynmap] ";
+        public static final String DM = "[GTNH-Web-Map] ";
         OurLog() {
-            log = LogManager.getLogger("Dynmap");
+            log = LogManager.getLogger("GTNH-Web-Map");
         }
         @Override
         public void info(String s) {
