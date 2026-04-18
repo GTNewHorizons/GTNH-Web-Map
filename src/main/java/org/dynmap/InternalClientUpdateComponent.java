@@ -5,6 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.dynmap.servlet.ClientUpdateServlet;
 import org.dynmap.servlet.SendMessageServlet;
+import org.dynmap.utils.IpAddressMatcher;
 import org.json.simple.JSONObject;
 
 public class InternalClientUpdateComponent extends ClientUpdateComponent {
@@ -21,6 +22,9 @@ public class InternalClientUpdateComponent extends ClientUpdateComponent {
         super(dcore, configuration);
         dcore.addServlet("/up/world/*", new ClientUpdateServlet(dcore));
 
+        if (dcore.isInternalWebServerDisabled) {
+        	Log.severe("Using InternalClientUpdateComponent with disable-webserver=true is not supported: there will likely be problems");        	
+        }
         jsonInterval = (long)(configuration.getFloat("writeinterval", 1) * 1000);
         final Boolean allowwebchat = configuration.getBoolean("allowwebchat", false);
         final Boolean hidewebchatip = configuration.getBoolean("hidewebchatip", false);
@@ -61,12 +65,12 @@ public class InternalClientUpdateComponent extends ClientUpdateComponent {
                 this.core = dcore;
                 if(trustedproxy != null) {
                     for(String s : trustedproxy) {
-                        this.proxyaddress.add(s.trim());
+                        this.proxyaddress.add(new IpAddressMatcher(s.trim()));
                     }
                 }
                 else {
-                    this.proxyaddress.add("127.0.0.1");
-                    this.proxyaddress.add("0:0:0:0:0:0:0:1");
+                    this.proxyaddress.add(new IpAddressMatcher("127.0.0.1"));
+                    this.proxyaddress.add(new IpAddressMatcher("0:0:0:0:0:0:0:1"));
                 }
                 onMessageReceived.addListener(new Event.Listener<Message> () {
                     @Override

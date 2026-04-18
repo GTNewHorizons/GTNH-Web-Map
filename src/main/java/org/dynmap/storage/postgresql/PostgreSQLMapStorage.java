@@ -23,8 +23,10 @@ import org.dynmap.WebAuthManager;
 import org.dynmap.MapType.ImageVariant;
 import org.dynmap.PlayerFaces.FaceType;
 import org.dynmap.storage.MapStorage;
+import org.dynmap.storage.MapStorageBaseTileEnumCB;
 import org.dynmap.storage.MapStorageTile;
 import org.dynmap.storage.MapStorageTileEnumCB;
+import org.dynmap.storage.MapStorageTileSearchEndCB;
 import org.dynmap.utils.BufferInputStream;
 import org.dynmap.utils.BufferOutputStream;
 
@@ -85,8 +87,10 @@ public class PostgreSQLMapStorage extends MapStorage {
                 rs.close();
                 stmt.close();
             } catch (SQLException x) {
-                Log.severe("Tile exists error - " + x.getMessage());
+            	logSQLException("Tile exists error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -110,8 +114,10 @@ public class PostgreSQLMapStorage extends MapStorage {
                 rs.close();
                 stmt.close();
             } catch (SQLException x) {
-                Log.severe("Tile matches hash error - " + x.getMessage());
+            	logSQLException("Tile matches hash error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -143,8 +149,10 @@ public class PostgreSQLMapStorage extends MapStorage {
                 rs.close();
                 stmt.close();
             } catch (SQLException x) {
-                Log.severe("Tile read error - " + x.getMessage());
+            	logSQLException("Tile read error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -152,7 +160,7 @@ public class PostgreSQLMapStorage extends MapStorage {
         }
 
         @Override
-        public boolean write(long hash, BufferOutputStream encImage) {
+        public boolean write(long hash, BufferOutputStream encImage, long timestamp) {
             if (mapkey == null) return false;
             Connection c = null;
             boolean err = false;
@@ -173,7 +181,7 @@ public class PostgreSQLMapStorage extends MapStorage {
                 else if (exists) {
                     stmt = c.prepareStatement("UPDATE " + tableTiles + " SET HashCode=?, LastUpdate=?, Format=?, Image=? WHERE MapID=? AND x=? and y=? AND zoom=?;");
                     stmt.setLong(1, hash);
-                    stmt.setLong(2, System.currentTimeMillis());
+                    stmt.setLong(2, timestamp);
                     stmt.setInt(3, map.getImageFormat().getEncoding().ordinal());
                     stmt.setBinaryStream(4, new BufferInputStream(encImage.buf, encImage.len), encImage.len);
                     stmt.setInt(5, mapkey);
@@ -188,7 +196,7 @@ public class PostgreSQLMapStorage extends MapStorage {
                     stmt.setInt(3, y);
                     stmt.setInt(4, zoom);
                     stmt.setLong(5, hash);
-                    stmt.setLong(6, System.currentTimeMillis());
+                    stmt.setLong(6, timestamp);
                     stmt.setInt(7, map.getImageFormat().getEncoding().ordinal());
                     stmt.setBinaryStream(8, new BufferInputStream(encImage.buf, encImage.len), encImage.len);
                }
@@ -199,8 +207,10 @@ public class PostgreSQLMapStorage extends MapStorage {
                     world.enqueueZoomOutUpdate(this);
                 }
             } catch (SQLException x) {
-                Log.severe("Tile write error - " + x.getMessage());
+            	logSQLException("Tile write error", x);
                 err = true;
+            } catch (StorageShutdownException x) {
+            	err = true;
             } finally {
                 releaseConnection(c, err);
             }
@@ -299,7 +309,7 @@ public class PostgreSQLMapStorage extends MapStorage {
         connectionString = "jdbc:postgresql://" + hostname + ":" + port + "/" + database + flags;
         Log.info("Opening PostgreSQL database " + hostname + ":" + port + "/" + database + " as map store");
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName("org.dynmap.org.postgresql.Driver");	// Use shaded name for our bundled driver
             // Initialize/update tables, if needed
             if(!initializeTables()) {
                 return false;
@@ -312,12 +322,14 @@ public class PostgreSQLMapStorage extends MapStorage {
     }
     private boolean writeConfigPHP(DynmapCore core) {
     	File cfgfile = new File(baseStandaloneDir, "PostgreSQL_config.php");
-
+    	if (!core.isInternalWebServerDisabled) {	// If using internal server
+    		cfgfile.delete();	// Zap file (in case we left junk from last time)
+    		return true;
+    	}
     	// During initial startup, this can happen before baseStandaloneDir is setup
     	if (!baseStandaloneDir.exists()) {
     		baseStandaloneDir.mkdirs();
     	}
-
         FileWriter fw = null;
         try {
             fw = new FileWriter(cfgfile);
@@ -368,6 +380,8 @@ public class PostgreSQLMapStorage extends MapStorage {
             stmt.close();
         } catch (SQLException x) {
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             if (c != null) { releaseConnection(c, err); }
         }
@@ -403,8 +417,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-            Log.severe("Error loading map table - " + x.getMessage());
+        	logSQLException("Error loading map table", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
             c = null;
@@ -442,8 +458,10 @@ public class PostgreSQLMapStorage extends MapStorage {
                     rs.close();
                     stmt.close();
                 } catch (SQLException x) {
-                    Log.severe("Error updating Maps table - " + x.getMessage());
+                	logSQLException("Error updating Maps table", x);
                     err = true;
+                } catch (StorageShutdownException x) {
+                	err = true;
                 } finally {
                     releaseConnection(c, err);
                 }
@@ -473,9 +491,12 @@ public class PostgreSQLMapStorage extends MapStorage {
                 doUpdate(c, "INSERT INTO " + tableSchemaVersion + " (level) VALUES (4)");
                 version = 4;	// initialzed to current schema
             } catch (SQLException x) {
-            	Log.severe("Error creating tables - " +  x.getMessage());
+            	logSQLException("Error creating tables", x);
                 err = true;
                 return false;
+            } catch (StorageShutdownException x) {
+            	err = true;
+            	return false;
             } finally {
                 releaseConnection(c, err);
                 c = null;
@@ -490,8 +511,11 @@ public class PostgreSQLMapStorage extends MapStorage {
                 doUpdate(c, "UPDATE " + tableSchemaVersion + " SET level=2 WHERE level = 1;");
                 version = 2;
             } catch (SQLException x) {
-            	Log.severe("Error upgrading tables to version=2 - " +  x.getMessage());
+            	logSQLException("Error upgrading tables to version=2", x);
                 err = true;
+                return false;
+            } catch (StorageShutdownException x) {
+            	err = true;
             	return false;
             } finally {
                 releaseConnection(c, err);
@@ -508,9 +532,12 @@ public class PostgreSQLMapStorage extends MapStorage {
                 doUpdate(c, "UPDATE " + tableSchemaVersion + " SET level=3 WHERE level = 2;");
                 version = 3;
             } catch (SQLException x) {
-            	Log.severe("Error upgrading tables to version=3 - " +  x.getMessage());
+            	logSQLException("Error upgrading tables to version=3", x);
                 err = true;
                 return false;
+            } catch (StorageShutdownException x) {
+            	err = true;
+            	return false;
             } finally {
                 releaseConnection(c, err);
                 c = null;
@@ -524,9 +551,12 @@ public class PostgreSQLMapStorage extends MapStorage {
                 doUpdate(c, "UPDATE " + tableSchemaVersion + " SET level=4 WHERE level = 3;");
                 version = 4;
             } catch (SQLException x) {
-            	Log.severe("Error upgrading tables to version=4 - " +  x.getMessage());
+            	logSQLException("Error upgrading tables to version=4", x);
                 err = true;
                 return false;
+            } catch (StorageShutdownException x) {
+            	err = true;
+            	return false;
             } finally {
                 releaseConnection(c, err);
                 c = null;
@@ -539,8 +569,9 @@ public class PostgreSQLMapStorage extends MapStorage {
         return true;
     }
 
-    private Connection getConnection() throws SQLException {
+    private Connection getConnection() throws SQLException, StorageShutdownException {
         Connection c = null;
+        if (isShutdown) throw new StorageShutdownException();
         synchronized (cpool) {
         	long now = System.currentTimeMillis();
             while (c == null) {
@@ -669,15 +700,19 @@ public class PostgreSQLMapStorage extends MapStorage {
         for (MapType mt : mtlist) {
             ImageVariant[] vars = mt.getVariants();
             for (ImageVariant var : vars) {
-                processEnumMapTiles(world, mt, var, cb);
+                processEnumMapTiles(world, mt, var, cb, null, null);
             }
         }
     }
-    private void processEnumMapTiles(DynmapWorld world, MapType map, ImageVariant var, MapStorageTileEnumCB cb) {
+    private void processEnumMapTiles(DynmapWorld world, MapType map, ImageVariant var, MapStorageTileEnumCB cb, MapStorageBaseTileEnumCB cbBase, MapStorageTileSearchEndCB cbEnd) {
         Connection c = null;
         boolean err = false;
         Integer mapkey = getMapKey(world, map, var);
-        if (mapkey == null) return;
+        if (mapkey == null) {
+            if(cbEnd != null)
+                cbEnd.searchEnded();
+            return;
+        }
         try {
             c = getConnection();
             boolean done = false;
@@ -688,27 +723,47 @@ public class PostgreSQLMapStorage extends MapStorage {
 	            Statement stmt = c.createStatement();
 	            ResultSet rs = stmt.executeQuery(String.format("SELECT x,y,zoom,Format FROM %s WHERE MapID=%d OFFSET %d LIMIT %d;", tableTiles, mapkey, offset, limit));
 	            int cnt = 0;
-	            if(!rs.isBeforeFirst()){
-	              cnt = limit+1; //or break out, there is no data to be read at this offset, and unless you expect to find more data at a later offset, it is more likely we've reached the end.
-	            }
 	            while (rs.next()) {
 	                StorageTile st = new StorageTile(world, map, rs.getInt("x"), rs.getInt("y"), rs.getInt("zoom"), var);
 	                final MapType.ImageEncoding encoding = MapType.ImageEncoding.fromOrd(rs.getInt("Format"));
 	                if(cb != null)
 	                    cb.tileFound(st, encoding);
+	                if(cbBase != null && st.zoom == 0)
+	                    cbBase.tileFound(st, encoding);
 	                st.cleanup();
 	                cnt++;
 	            }
 	            rs.close();
 	            stmt.close();
-	            if (cnt > limit) done = true; //Break out if too many items are found, previous was break out or loop infinitely if rs.next (cnt++) happened to be over 100
+	            if (cnt < limit) done = true;
             	offset += cnt;
             }
+            if(cbEnd != null)
+                cbEnd.searchEnded();
         } catch (SQLException x) {
-        	Log.severe("Tile enum error - " +  x.getMessage());
+        	logSQLException("Tile enum error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
+        }
+    }
+    @Override
+    public void enumMapBaseTiles(DynmapWorld world, MapType map, MapStorageBaseTileEnumCB cbBase, MapStorageTileSearchEndCB cbEnd) {
+        List<MapType> mtlist;
+
+        if (map != null) {
+            mtlist = Collections.singletonList(map);
+        }
+        else {  // Else, add all directories under world directory (for maps)
+            mtlist = new ArrayList<MapType>(world.maps);
+        }
+        for (MapType mt : mtlist) {
+            ImageVariant[] vars = mt.getVariants();
+            for (ImageVariant var : vars) {
+                processEnumMapTiles(world, mt, var, null, cbBase, cbEnd);
+            }
         }
     }
 
@@ -742,8 +797,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             stmt.executeUpdate("DELETE FROM " + tableTiles + " WHERE MapID=" + mapkey + ";");
             stmt.close();
         } catch (SQLException x) {
-        	Log.severe("Tile purge error - " +  x.getMessage());
+        	logSQLException("Tile purge error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -781,8 +838,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             stmt.executeUpdate();
             stmt.close();
         } catch (SQLException x) {
-        	Log.severe("Face write error - " +  x.getMessage());
+        	logSQLException("Face write error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -808,8 +867,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-        	Log.severe("Face read error - " +  x.getMessage());
+        	logSQLException("Face read error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -833,8 +894,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-        	Log.severe("Face exists error - " +  x.getMessage());
+        	logSQLException("Face exists error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -880,8 +943,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             }
             stmt.executeUpdate();
         } catch (SQLException x) {
-        	Log.severe("Marker write error - " +  x.getMessage());
+        	logSQLException("Marker write error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             if (rs != null) { try { rs.close(); } catch (SQLException sx) {} }
             if (stmt != null) { try { stmt.close(); } catch (SQLException sx) {} }
@@ -907,8 +972,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-        	Log.severe("Marker read error - " +  x.getMessage());
+        	logSQLException("Marker read error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -953,8 +1020,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             }
             stmt.executeUpdate();
         } catch (SQLException x) {
-        	Log.severe("Marker file write error - " +  x.getMessage());
+        	logSQLException("Marker file write error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             if (rs != null) { try { rs.close(); } catch (SQLException sx) {} }
             if (stmt != null) { try { stmt.close(); } catch (SQLException sx) {} }
@@ -980,8 +1049,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-        	Log.severe("Marker file read error - " +  x.getMessage());
+        	logSQLException("Marker file read error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -1036,8 +1107,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             rs.close();
             stmt.close();
         } catch (SQLException x) {
-        	Log.severe("Standalone file read error - " +  x.getMessage());
+        	logSQLException("Standalone file read error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             releaseConnection(c, err);
         }
@@ -1086,8 +1159,10 @@ public class PostgreSQLMapStorage extends MapStorage {
             }
             stmt.executeUpdate();
         } catch (SQLException x) {
-            Log.severe("Standalone file write error - " + x.getMessage());
+        	logSQLException("Standalone file write error", x);
             err = true;
+        } catch (StorageShutdownException x) {
+        	err = true;
         } finally {
             if (rs != null) { try { rs.close(); } catch (SQLException sx) {} }
             if (stmt != null) { try { stmt.close(); } catch (SQLException sx) {} }

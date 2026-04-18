@@ -2,7 +2,6 @@ package org.dynmap.servlet;
 
 import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
-import org.dynmap.MapType.ImageEncoding;
 import org.dynmap.PlayerFaces;
 import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
@@ -22,13 +21,13 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.IOException;
 import java.io.OutputStream;
 
 public class MapStorageResourceHandler extends AbstractHandler {
 
     private DynmapCore core;
     private byte[] blankpng;
+    private long blankpnghash = 0x12345678;
     
     public MapStorageResourceHandler() {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -46,7 +45,11 @@ public class MapStorageResourceHandler extends AbstractHandler {
         int soff = 0, eoff;
         // We're handling this request
         baseRequest.setHandled(true);
-
+        if(core.getLoginRequired()
+            && request.getSession(true).getAttribute(LoginServlet.USERID_ATTRIB) == null){
+            response.sendError(HttpStatus.UNAUTHORIZED_401);
+            return;
+        }
         if (path.charAt(0) == '/') soff = 1;
         eoff = path.indexOf('/', soff);
         if (soff < 0) {
@@ -92,8 +95,23 @@ public class MapStorageResourceHandler extends AbstractHandler {
             tr = tile.read();
             tile.releaseReadLock();
         }
+        response.setHeader("Cache-Control", "max-age=0,must-revalidate");
+        String etag;
+        if (tr == null) {
+        	etag = "\"" + blankpnghash + "\"";
+        }
+        else {
+        	etag = "\"" + tr.hashCode + "\"";
+        }
+        response.setHeader("ETag", etag);
+        String ifnullmatch = request.getHeader("If-None-Match");
+        if ((ifnullmatch != null) && ifnullmatch.equals(etag)) {
+            response.sendError(HttpStatus.NOT_MODIFIED_304);
+        	return;
+        }
         if (tr == null) {
             response.setContentType("image/png");
+            response.setIntHeader("Content-Length", blankpng.length);
             OutputStream os = response.getOutputStream();
             os.write(blankpng);
             return;
@@ -101,13 +119,7 @@ public class MapStorageResourceHandler extends AbstractHandler {
         // Got tile, package up for response
         response.setDateHeader("Last-Modified", tr.lastModified);
         response.setIntHeader("Content-Length", tr.image.length());
-        response.setHeader("ETag", "\"" + tr.hashCode + "\"");
-        if (tr.format == ImageEncoding.PNG) {
-            response.setContentType("image/png");
-        }
-        else {
-            response.setContentType("image/jpeg");
-        }
+        response.setContentType(tr.format.getContentType());
         ServletOutputStream out = response.getOutputStream();
         out.write(tr.image.buffer(), 0, tr.image.length());
         out.flush();

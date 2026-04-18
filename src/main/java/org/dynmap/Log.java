@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import org.dynmap.utils.DynmapLogger;
 
 public class Log {
-    private static Logger log = Logger.getLogger("Dynmap");
+    private static Logger log = Logger.getLogger("GTNH-Web-Map");
     private static String prefix = "";
     private static DynmapLogger dlog = null;
     public static boolean verbose = false;
