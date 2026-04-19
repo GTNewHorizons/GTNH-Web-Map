@@ -79,12 +79,16 @@ var DynmapTileLayer = L.TileLayer.extend({
 	_cachedTileUrls: null,
 	_loadQueue: null,
 	_loadingTiles: null,
+	_reloadQueue: null,
+	_reloadingTiles: null,
 
 	initialize: function() {
 		this._namedTiles = {};
 		this._cachedTileUrls = {};
 		this._loadQueue = [];
 		this._loadingTiles = [];
+		this._reloadQueue = [];
+		this._reloadingTiles = [];
 	},
 
 	createTile: function(coords, done) {
@@ -106,7 +110,10 @@ var DynmapTileLayer = L.TileLayer.extend({
 			me._tileOnLoad(done, tile);
 
 			//Dynmap - Update load queue
-			me._loadingTiles.splice(me._loadingTiles.indexOf(tile), 1);
+			var loadIndex = me._loadingTiles.indexOf(tile);
+			if (loadIndex > -1) {
+				me._loadingTiles.splice(loadIndex, 1);
+			}
 			me._tickLoadQueue();
 		};
 
@@ -114,7 +121,10 @@ var DynmapTileLayer = L.TileLayer.extend({
 			me._tileOnError(done, tile);
 
 			//Dynmap - Update load queue
-			me._loadingTiles.splice(me._loadingTiles.indexOf(tile), 1);
+			var loadIndex = me._loadingTiles.indexOf(tile);
+			if (loadIndex > -1) {
+				me._loadingTiles.splice(loadIndex, 1);
+			}
 			me._tickLoadQueue();
 		};
 
@@ -141,6 +151,7 @@ var DynmapTileLayer = L.TileLayer.extend({
 				if (tile.loaded && tile.el && tile.el.tileName) {
 					delete this._namedTiles[tile.el.tileName];
 				}
+				this._dropReloadsForTile(tile.el);
 
 				if(this._loadQueue.indexOf(tile.el) > -1) {
 					this._loadQueue.splice(this._loadQueue.indexOf(tile.el), 1);
@@ -168,6 +179,7 @@ var DynmapTileLayer = L.TileLayer.extend({
 		if (tileName) {
 			delete this._namedTiles[tileName];
 		}
+		this._dropReloadsForTile(tile.el);
 
 		//Dynmap - remove from load queue
 		if(this._loadingTiles.indexOf(tile.el) > -1) {
@@ -223,6 +235,102 @@ var DynmapTileLayer = L.TileLayer.extend({
 		next.src = next.url;
 	},
 
+	_tickReloadQueue: function() {
+		var me = this;
+
+		if (this._reloadingTiles.length > 4) {
+			return;
+		}
+
+		var next = this._reloadQueue.shift();
+
+		if (!next) {
+			return;
+		}
+
+		var loader = next.loader = new Image();
+		if (this.options.crossOrigin || this.options.crossOrigin === '') {
+			loader.crossOrigin = this.options.crossOrigin === true ? '' : this.options.crossOrigin;
+		}
+
+		this._reloadingTiles.push(next);
+		loader.onload = function() {
+			if (me._namedTiles[next.tile.tileName] === next.tile && next.tile._reloadToken === next.reloadToken) {
+				me._swapReloadedTile(next);
+			}
+			me._finishReload(next);
+		};
+		loader.onerror = function() {
+			me._finishReload(next);
+		};
+		loader.src = next.url;
+	},
+
+	_finishReload: function(reload) {
+		var index = this._reloadingTiles.indexOf(reload);
+
+		if (index > -1) {
+			this._reloadingTiles.splice(index, 1);
+		}
+		this._tickReloadQueue();
+	},
+
+	_findTileRecord: function(tile) {
+		for (var key in this._tiles) {
+			if (!Object.prototype.hasOwnProperty.call(this._tiles, key)) {
+				continue;
+			}
+			if (this._tiles[key].el === tile) {
+				return this._tiles[key];
+			}
+		}
+	},
+
+	_swapReloadedTile: function(reload) {
+		var tile = reload.tile;
+		var tileRecord = this._findTileRecord(tile);
+		var replacement = reload.loader;
+		var parent = tile.parentNode;
+
+		if (!tileRecord || !parent) {
+			return;
+		}
+
+		replacement.className = tile.className;
+		replacement.style.cssText = tile.style.cssText;
+		replacement.alt = tile.alt;
+		replacement.setAttribute('role', tile.getAttribute('role') || 'presentation');
+		replacement.tileName = tile.tileName;
+		replacement.url = reload.url;
+		replacement._reloadToken = reload.reloadToken;
+		replacement.onload = tile.onload;
+		replacement.onerror = tile.onerror;
+		replacement._leaflet_pos = tile._leaflet_pos;
+
+		parent.replaceChild(replacement, tile);
+		tile.onload = null;
+		tile.onerror = null;
+		tileRecord.el = replacement;
+		this._namedTiles[replacement.tileName] = replacement;
+	},
+
+	_dropReloadsForTile: function(tile) {
+		if (!tile) {
+			return;
+		}
+
+		for (var i = this._reloadQueue.length - 1; i >= 0; i--) {
+			if (this._reloadQueue[i].tile === tile) {
+				this._reloadQueue.splice(i, 1);
+			}
+		}
+		for (i = this._reloadingTiles.length - 1; i >= 0; i--) {
+			if (this._reloadingTiles[i].tile === tile) {
+				this._reloadingTiles.splice(i, 1);
+			}
+		}
+	},
+
 	getTileName: function(coords) {
 		throw "getTileName not implemented";
 	},
@@ -232,8 +340,14 @@ var DynmapTileLayer = L.TileLayer.extend({
 
 		if (tile) {
 			tile.url = this.getTileUrlFromName(name, timestamp);
-			this._loadQueue.push(tile);
-			this._tickLoadQueue();
+			tile._reloadToken = (tile._reloadToken || 0) + 1;
+			this._dropReloadsForTile(tile);
+			this._reloadQueue.push({
+				tile: tile,
+				url: tile.url,
+				reloadToken: tile._reloadToken
+			});
+			this._tickReloadQueue();
 		}
 	},
 
