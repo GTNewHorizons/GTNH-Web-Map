@@ -6,16 +6,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.dynmap.Client;
 import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapWorld;
 import org.dynmap.MapManager;
 import org.dynmap.hdmap.HDPerspective;
 import org.dynmap.markers.AreaMarker;
+import org.dynmap.markers.EnterExitMarker;
 import org.dynmap.markers.MarkerSet;
 import org.dynmap.markers.impl.MarkerAPIImpl.MarkerUpdate;
 import org.dynmap.utils.Vector3D;
 
-class AreaMarkerImpl implements AreaMarker {
+class AreaMarkerImpl implements AreaMarker, EnterExitMarker {
     private String markerid;
     private String label;
     private boolean markup;
@@ -35,11 +37,17 @@ class AreaMarkerImpl implements AreaMarker {
     private boolean boostflag = false;
     private int minzoom;
     private int maxzoom;
+    private EnterExitText greeting;
+    private EnterExitText farewell;
+    
     
     private static class Coord {
         double x, z;
         Coord(double x, double z) {
             this.x = x; this.z = z;
+        }
+        public String toString() {
+        	return String.format("{%f,%f}",  x, z);
         }
     }
     private static class BoundingBox {
@@ -64,9 +72,9 @@ class AreaMarkerImpl implements AreaMarker {
     AreaMarkerImpl(String id, String lbl, boolean markup, String world, double x[], double z[], boolean persistent, MarkerSetImpl set) {
         markerid = id;
         if(lbl != null)
-            label = lbl;
+            label = markup ? Client.sanitizeHTML(lbl) : Client.encodeForHTML(lbl);
         else
-            label = id;
+            label = markup ? Client.sanitizeHTML(id) : Client.encodeForHTML(id);
         this.markup = markup;
         this.corners = new ArrayList<Coord>();
         for(int i = 0; i < x.length; i++) {
@@ -85,6 +93,8 @@ class AreaMarkerImpl implements AreaMarker {
         }
         this.minzoom = -1;
         this.maxzoom = -1;
+        this.greeting = null;
+        this.farewell = null;
     }
     /**
      * Make bare area marker - used for persistence load
@@ -94,21 +104,24 @@ class AreaMarkerImpl implements AreaMarker {
     AreaMarkerImpl(String id, MarkerSetImpl set) {
         markerid = id;
         markerset = set;
-        label = id;
+        label = Client.encodeForHTML(id);
         markup = false;
         desc = null;
         corners = new ArrayList<Coord>();
         world = normalized_world = "world";
         this.minzoom = -1;
         this.maxzoom = -1;
+        this.greeting = null;
+        this.farewell = null;
     }
     /**
      *  Load marker from configuration node
      *  @param node - configuration node
      */
-    boolean loadPersistentData(ConfigurationNode node) {
-        label = node.getString("label", markerid);
+    boolean loadPersistentData(ConfigurationNode node, boolean isSafe) {
         markup = node.getBoolean("markup", false);
+        label = MarkerAPIImpl.escapeForHTMLIfNeeded(node.getString("label", markerid), markup);
+        if (!isSafe) label = Client.sanitizeHTML(label);
         ytop = node.getDouble("ytop", 64.0);
         ybottom = node.getDouble("ybottom", 64.0);
         List<Double> xx = node.getList("x");
@@ -121,6 +134,7 @@ class AreaMarkerImpl implements AreaMarker {
         world = node.getString("world", "world");
         normalized_world = DynmapWorld.normalizeWorldName(world);
         desc = node.getString("desc", null);
+        if (!isSafe) desc = Client.sanitizeHTML(desc);
         lineweight = node.getInteger("strokeWeight", -1);
         if(lineweight == -1) {	/* Handle typo-saved value */
         	 lineweight = node.getInteger("stokeWeight", 3);
@@ -132,7 +146,21 @@ class AreaMarkerImpl implements AreaMarker {
         boostflag = node.getBoolean("boostFlag",  false);
         minzoom = node.getInteger("minzoom", -1);
         maxzoom = node.getInteger("maxzoom", -1);
-
+        String gt = node.getString("greeting", null);
+        String gst = node.getString("greetingsub", null);
+        if ((gt != null) || (gst != null)) {
+        	greeting = new EnterExitText();
+        	greeting.title = gt;
+        	greeting.subtitle = gst;
+        }
+        String ft = node.getString("farewell", null);
+        String fst = node.getString("farewellsub", null);
+        if ((ft != null) || (fst != null)) {
+        	farewell = new EnterExitText();
+        	farewell.title = ft;
+        	farewell.subtitle = fst;
+        }
+        
         ispersistent = true;    /* Loaded from config, so must be */
         
         return true;
@@ -144,6 +172,16 @@ class AreaMarkerImpl implements AreaMarker {
         bb_cache = null;
     }
     
+    @Override
+	public String getUniqueMarkerID() {
+    	if (markerset != null) {
+    		return markerset + ":area:" + markerid;
+    	}
+    	else {
+    		return null;
+    	}
+    }
+
     @Override
     public String getMarkerID() {
         return markerid;
@@ -179,7 +217,7 @@ class AreaMarkerImpl implements AreaMarker {
     @Override
     public void setLabel(String lbl, boolean markup) {
         if(markerset == null) return;
-        label = lbl;
+        label = markup ? Client.sanitizeHTML(lbl) : Client.encodeForHTML(lbl);
         this.markup = markup;
         MarkerAPIImpl.areaMarkerUpdated(this, MarkerUpdate.UPDATED);
         if(ispersistent)
@@ -223,6 +261,23 @@ class AreaMarkerImpl implements AreaMarker {
         if (maxzoom >= 0) {
             node.put("maxzoom", maxzoom);
         }
+        if (greeting != null) {
+        	if (greeting.title != null) {
+        		node.put("greeting", greeting.title);
+        	}
+        	if (greeting.subtitle != null) {
+        		node.put("greetingsub", greeting.subtitle);
+        	}        	
+        }
+        if (farewell != null) {
+        	if (farewell.title != null) {
+        		node.put("farewell", farewell.title);        		
+        	}
+        	if (farewell.subtitle != null) {
+        		node.put("farewellsub", farewell.subtitle);        		
+        	}
+        }
+
         return node;
     }
     @Override
@@ -240,6 +295,7 @@ class AreaMarkerImpl implements AreaMarker {
     @Override
     public void setDescription(String desc) {
         if(markerset == null) return;
+        desc = Client.sanitizeHTML(desc);
         if((this.desc == null) || (this.desc.equals(desc) == false)) {
             this.desc = desc;
             MarkerAPIImpl.areaMarkerUpdated(this, MarkerUpdate.UPDATED);
@@ -456,14 +512,14 @@ class AreaMarkerImpl implements AreaMarker {
                     bb.yp[i] = v2.y;
                 }
             }
-            //System.out.println("x=" + bb.xmin + " - " + bb.xmax + ",  y=" + bb.ymin + " - " + bb.ymax);
+            //Log.info("x=" + bb.xmin + " - " + bb.xmax + ",  y=" + bb.ymin + " - " + bb.ymax);
             bbc.put(perspective.getName(), bb);
             bb_cache = bbc;
         }
         final double tile_x2 = tile_x + tile_dim;
         final double tile_y2 = tile_y + tile_dim;
         if ((bb.xmin > tile_x2) || (bb.xmax < tile_x) || (bb.ymin > tile_y2) || (bb.ymax < tile_y)) {
-            //System.out.println("tile: " + tile_x + " / " + tile_y + " - miss");
+            //Log.info("tile: " + tile_x + " / " + tile_y + " - miss");
             return false;
         }
         final int cnt = bb.xp.length;
@@ -493,7 +549,7 @@ class AreaMarkerImpl implements AreaMarker {
         //    // Test for X=tile_x side
         //    if ((px[i] < tile_x) && (px[j] >= tile_x) && ()
         // }
-        //System.out.println("tile: " + tile_x + " / " + tile_y + " - hit");
+        //Log.info("tile: " + tile_x + " / " + tile_y + " - hit");
         return false;
     }
     @Override
@@ -522,4 +578,78 @@ class AreaMarkerImpl implements AreaMarker {
         if(ispersistent)
             MarkerAPIImpl.saveMarkers();
     }
+	@Override
+	public EnterExitText getGreetingText() {
+		return greeting;
+	}
+	@Override
+	public EnterExitText getFarewellText() {
+		return farewell;
+	}
+	@Override
+	public void setGreetingText(String title, String subtitle) {
+		if ((title != null) || (subtitle != null)) {
+			greeting = new EnterExitText();
+			greeting.title = title;
+			greeting.subtitle = subtitle;
+		}
+		else {
+			greeting = null;
+		}
+        if (markerset != null) {
+            setMarkerSet(markerset);
+        }
+        if(ispersistent)
+            MarkerAPIImpl.saveMarkers();
+	}
+	@Override
+	public void setFarewellText(String title, String subtitle) {
+		if ((title != null) || (subtitle != null)) {
+			farewell = new EnterExitText();
+			farewell.title = title;
+			farewell.subtitle = subtitle;
+		}
+		else {
+			farewell = null;
+		}
+        if (markerset != null) {
+            setMarkerSet(markerset);
+        }
+        if(ispersistent)
+            MarkerAPIImpl.saveMarkers();
+	}
+	@Override
+	public boolean testIfPointWithinMarker(String worldid, double x, double y, double z) {
+		// Wrong world
+		if (!worldid.equals(this.world)) {
+			return false;
+		}
+		// If Y is in range (if there is a range)
+		if ((ytop != ybottom) && ((y < ybottom) || (y > ytop))) {
+			return false;
+		}
+		// Test if inside polygon
+        int nvert = corners.size();
+        Coord v0, v1;
+        boolean c = false;
+        if (nvert == 2) {	// Diagonal corners (simple rectangle
+    		v0 = corners.get(0);
+    		v1 = corners.get(1);
+    		if (((v0.x > x) != (v1.x > x)) &&
+    				((v0.z > z) != (v1.z > z))) {
+    			c = true;
+    		}
+        }
+        else {
+        	for (int i = 0, j = nvert-1; i < nvert; j = i, i++) {
+        		v0 = corners.get(i);
+        		v1 = corners.get(j);
+        		if (((v0.z > z) != (v1.z > z)) &&
+        			(x < (v0.x + ((v1.x-v0.x)*(z-v0.z)/(v1.z-v0.z))))) {
+        			c = !c;
+        		}
+        	}
+        }
+        return c;
+	}
 }

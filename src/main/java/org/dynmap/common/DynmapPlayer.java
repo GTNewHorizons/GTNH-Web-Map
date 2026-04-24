@@ -88,10 +88,18 @@ public interface DynmapPlayer extends DynmapCommandSender {
      * Get skin URL for player
      * @return URL, or null if not available
      */
-    public String getSkinURL();
+    public default String getSkinURL() { return null; }
     /**
      * Get player UUID
      * Return UUID, or null if not available
      */
-    public UUID getUUID();
+    public default UUID getUUID() { return null; }
+    /**
+     * Send title and subtitle text (called from server thread)
+     */
+    public default void sendTitleText(String title, String subtitle, int fadeInTicks, int stayTicks, int fadeOutTIcks) {
+        // Fallback if not implemented
+        if (title != null) this.sendMessage(title);;
+        if (subtitle != null) this.sendMessage(subtitle);
+    }
 }

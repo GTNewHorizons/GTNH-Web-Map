@@ -302,9 +302,9 @@ public class DynmapPlugin
     
     public static class OurLog implements DynmapLogger {
         Logger log;
-        public static final String DM = "[Dynmap] ";
+        public static final String DM = "[GTNH-Web-Map] ";
         OurLog() {
-            log = LogManager.getLogger("Dynmap");
+            log = LogManager.getLogger("GTNH-Web-Map");
         }
         @Override
         public void info(String s) {
@@ -432,6 +432,11 @@ public class DynmapPlugin
         		}
         	}
             return -1;
+        }
+
+        @Override
+        public int isSignAt(String wname, int x, int y, int z) {
+            return 0;
         }
 
         @Override
