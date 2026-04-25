@@ -1,11 +1,20 @@
 package org.dynmap.modelmap;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.dynmap.Client;
 import org.dynmap.DynmapChunk;
+import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
+import org.dynmap.Log;
+import org.dynmap.MapManager;
 import org.dynmap.MapTile;
 import org.dynmap.MapType;
+import org.dynmap.exporter.GLBExport;
+import org.dynmap.storage.MapStorage;
+import org.dynmap.storage.MapStorageTile;
+import org.dynmap.utils.BufferOutputStream;
 import org.dynmap.utils.MapChunkCache;
 
 public class ModelMapTile extends MapTile {
@@ -50,7 +59,53 @@ public class ModelMapTile extends MapTile {
 
     @Override
     public boolean render(MapChunkCache cache, String mapname) {
-        return false;
+        DynmapCore core = map.getCore();
+        ModelMap.TileAddress address = map.getTileAddress(tx, tz);
+        int minBlockX = address.getMinChunkX() * 16;
+        int minBlockZ = address.getMinChunkZ() * 16;
+        int maxBlockX = (address.getMaxChunkX() * 16) + 15;
+        int maxBlockZ = (address.getMaxChunkZ() * 16) + 15;
+
+        GLBExport export = new GLBExport(null, map.getShader(), world, core, map.getName() + "_" + tx + "_" + tz);
+        export.setRenderBounds(minBlockX, world.minY, minBlockZ, maxBlockX, world.worldheight - 1, maxBlockZ);
+
+        BufferOutputStream glb;
+        try {
+            glb = export.exportToBuffer(cache);
+        } catch (IOException iox) {
+            Log.severe("ModelMap export failed for " + toString() + ": " + iox.getMessage());
+            return false;
+        }
+
+        MapStorage storage = world.getMapStorage();
+        MapStorageTile tile = storage.getTile(world, map, tx, tz, 0, MapType.ImageVariant.STANDARD);
+        boolean updated = false;
+        boolean rendered = (glb != null);
+
+        tile.getWriteLock();
+        try {
+            if (glb == null) {
+                if (tile.exists()) {
+                    if (tile.delete()) {
+                        MapManager.mapman.pushUpdate(world, new Client.Tile(tile.getURI()));
+                        updated = true;
+                    }
+                }
+            } else {
+                long crc = MapStorage.calculateTileHashCode(glb.buf, 0, glb.len);
+                if (!tile.matchesHashCode(crc)) {
+                    if (tile.write(crc, glb, System.currentTimeMillis())) {
+                        MapManager.mapman.pushUpdate(world, new Client.Tile(tile.getURI()));
+                        updated = true;
+                    }
+                }
+            }
+        } finally {
+            tile.releaseWriteLock();
+        }
+
+        MapManager.mapman.updateStatistics(this, map.getPrefix(), rendered, updated, !rendered);
+        return updated;
     }
 
     @Override

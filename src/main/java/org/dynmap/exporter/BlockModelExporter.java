@@ -125,48 +125,54 @@ public class BlockModelExporter {
                 if (cache == null) {
                     throw new IOException("Error loading chunk cache");
                 }
+                exportLoadedRegion(cache, sink, Math.max(minX, chunkX * 16), Math.min(maxX, (chunkX * 16) + 63),
+                        Math.max(minZ, chunkZ * 16), Math.min(maxZ, (chunkZ * 16) + 63), edgeBits);
+            }
+        }
+    }
 
-                MapIterator iterator = cache.getIterator(minX, minY, minZ);
-                for (int x = chunkX * 16; (x < (chunkX * 16 + 64)) && (x <= maxX); x++) {
-                    if (x < minX) {
-                        x = minX;
+    public void export(MapChunkCache cache, BlockModelExportSink sink) throws IOException {
+        if (cache == null) {
+            throw new IOException("Error loading chunk cache");
+        }
+        exportLoadedRegion(cache, sink, minX, maxX, minZ, maxZ, new boolean[6]);
+    }
+
+    private void exportLoadedRegion(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX,
+            int rangeMinZ, int rangeMaxZ, boolean[] edgeBits) throws IOException {
+        MapIterator iterator = cache.getIterator(rangeMinX, minY, rangeMinZ);
+        for (int x = rangeMinX; x <= rangeMaxX; x++) {
+            edgeBits[BlockStep.X_PLUS.ordinal()] = (x == minX);
+            edgeBits[BlockStep.X_MINUS.ordinal()] = (x == maxX);
+
+            for (int z = rangeMinZ; z <= rangeMaxZ; z++) {
+                edgeBits[BlockStep.Z_PLUS.ordinal()] = (z == minZ);
+                edgeBits[BlockStep.Z_MINUS.ordinal()] = (z == maxZ);
+
+                iterator.initialize(x, minY, z);
+                sink.setChunk(x >> 4, z >> 4);
+
+                edgeBits[BlockStep.Y_MINUS.ordinal()] = true;
+                edgeBits[BlockStep.Y_PLUS.ordinal()] = false;
+                int blockId = iterator.getBlockTypeID();
+                if (blockId > 0) {
+                    handleBlock(blockId, iterator, edgeBits, sink);
+                }
+
+                edgeBits[BlockStep.Y_MINUS.ordinal()] = false;
+                for (int y = minY + 1; y < maxY; y++) {
+                    iterator.setY(y);
+                    blockId = iterator.getBlockTypeID();
+                    if (blockId > 0) {
+                        handleBlock(blockId, iterator, edgeBits, sink);
                     }
-                    edgeBits[BlockStep.X_PLUS.ordinal()] = (x == minX);
-                    edgeBits[BlockStep.X_MINUS.ordinal()] = (x == maxX);
+                }
 
-                    for (int z = chunkZ * 16; (z < (chunkZ * 16 + 64)) && (z <= maxZ); z++) {
-                        if (z < minZ) {
-                            z = minZ;
-                        }
-                        edgeBits[BlockStep.Z_PLUS.ordinal()] = (z == minZ);
-                        edgeBits[BlockStep.Z_MINUS.ordinal()] = (z == maxZ);
-
-                        iterator.initialize(x, minY, z);
-                        sink.setChunk(x >> 4, z >> 4);
-
-                        edgeBits[BlockStep.Y_MINUS.ordinal()] = true;
-                        edgeBits[BlockStep.Y_PLUS.ordinal()] = false;
-                        int blockId = iterator.getBlockTypeID();
-                        if (blockId > 0) {
-                            handleBlock(blockId, iterator, edgeBits, sink);
-                        }
-
-                        edgeBits[BlockStep.Y_MINUS.ordinal()] = false;
-                        for (int y = minY + 1; y < maxY; y++) {
-                            iterator.setY(y);
-                            blockId = iterator.getBlockTypeID();
-                            if (blockId > 0) {
-                                handleBlock(blockId, iterator, edgeBits, sink);
-                            }
-                        }
-
-                        edgeBits[BlockStep.Y_PLUS.ordinal()] = true;
-                        iterator.setY(maxY);
-                        blockId = iterator.getBlockTypeID();
-                        if (blockId > 0) {
-                            handleBlock(blockId, iterator, edgeBits, sink);
-                        }
-                    }
+                edgeBits[BlockStep.Y_PLUS.ordinal()] = true;
+                iterator.setY(maxY);
+                blockId = iterator.getBlockTypeID();
+                if (blockId > 0) {
+                    handleBlock(blockId, iterator, edgeBits, sink);
                 }
             }
         }

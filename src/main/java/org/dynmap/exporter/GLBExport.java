@@ -4,6 +4,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.Charset;
@@ -19,6 +20,8 @@ import org.dynmap.hdmap.TexturePack;
 import org.dynmap.hdmap.TexturePack.ExportedTextureData;
 import org.dynmap.hdmap.TexturePackHDShader;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
+import org.dynmap.utils.BufferOutputStream;
+import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.PatchDefinition;
 
 public class GLBExport implements BlockModelExportSink {
@@ -133,21 +136,40 @@ public class GLBExport implements BlockModelExportSink {
 
     public boolean processExport(DynmapCommandSender sender) {
         try {
-            TexturePack texturePack = shader.getTexturePackForExport();
-            if (texturePack == null) {
-                throw new IOException("Export unsupported - invalid texture pack");
+            BufferOutputStream glb = exportToBuffer();
+            if (glb == null) {
+                throw new IOException("Export produced no geometry");
             }
-            primitives.clear();
-            BlockModelExporter exporter = new BlockModelExporter(world, core, shader);
-            exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
-            exporter.export(this);
-            writeGLB(texturePack);
+            writeGLB(new BufferedOutputStream(new FileOutputStream(destination)), glb.buf, glb.len);
             sender.sendMessage("Export completed - " + destination.getPath());
             return true;
         } catch (IOException iox) {
             sender.sendMessage("Export failed: " + iox.getMessage());
             return false;
         }
+    }
+
+    public BufferOutputStream exportToBuffer() throws IOException {
+        return exportToBuffer(null);
+    }
+
+    public BufferOutputStream exportToBuffer(MapChunkCache cache) throws IOException {
+        TexturePack texturePack = shader.getTexturePackForExport();
+        if (texturePack == null) {
+            throw new IOException("Export unsupported - invalid texture pack");
+        }
+        primitives.clear();
+        BlockModelExporter exporter = new BlockModelExporter(world, core, shader);
+        exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
+        if (cache != null) {
+            exporter.export(cache, this);
+        } else {
+            exporter.export(this);
+        }
+        if (primitives.isEmpty()) {
+            return null;
+        }
+        return buildGLB(texturePack);
     }
 
     @Override
@@ -247,7 +269,7 @@ public class GLBExport implements BlockModelExportSink {
         return (float) ((coordinate - origin) * scale);
     }
 
-    private void writeGLB(TexturePack texturePack) throws IOException {
+    private BufferOutputStream buildGLB(TexturePack texturePack) throws IOException {
         ArrayList<PrimitiveData> primitiveList = new ArrayList<PrimitiveData>(primitives.values());
         ArrayList<ExportedTextureData> textures = new ArrayList<ExportedTextureData>(primitiveList.size());
         for (PrimitiveData primitive : primitiveList) {
@@ -339,17 +361,22 @@ public class GLBExport implements BlockModelExportSink {
         byte[] binBytes = pad(binary.toByteArray(), (byte) 0x00);
         int totalLength = 12 + 8 + jsonBytes.length + 8 + binBytes.length;
 
-        BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(destination));
+        BufferOutputStream out = new BufferOutputStream();
+        out.write(intToBytes(0x46546C67));
+        out.write(intToBytes(2));
+        out.write(intToBytes(totalLength));
+        out.write(intToBytes(jsonBytes.length));
+        out.write(intToBytes(0x4E4F534A));
+        out.write(jsonBytes);
+        out.write(intToBytes(binBytes.length));
+        out.write(intToBytes(0x004E4942));
+        out.write(binBytes);
+        return out;
+    }
+
+    private void writeGLB(OutputStream out, byte[] buffer, int length) throws IOException {
         try {
-            out.write(intToBytes(0x46546C67));
-            out.write(intToBytes(2));
-            out.write(intToBytes(totalLength));
-            out.write(intToBytes(jsonBytes.length));
-            out.write(intToBytes(0x4E4F534A));
-            out.write(jsonBytes);
-            out.write(intToBytes(binBytes.length));
-            out.write(intToBytes(0x004E4942));
-            out.write(binBytes);
+            out.write(buffer, 0, length);
         } finally {
             out.close();
         }
