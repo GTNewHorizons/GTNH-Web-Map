@@ -17,6 +17,8 @@ import org.dynmap.hdmap.HDLighting;
 import org.dynmap.hdmap.HDMap;
 import org.dynmap.hdmap.HDPerspective;
 import org.dynmap.hdmap.HDShader;
+import org.dynmap.hdmap.TexturePackHDShader;
+import org.dynmap.modelmap.ModelMap;
 
 /**
  * Handler for world and map edit commands (via /dmap)
@@ -463,6 +465,21 @@ public class DynmapMapCommands {
                 }
                 sender.sendMessage(sb.toString());
             }
+            else if (mt instanceof ModelMap) {
+                ModelMap modelmt = (ModelMap) mt;
+                StringBuilder sb = new StringBuilder();
+                sb.append("map ").append(mt.getName()).append(": type=modelmap, prefix=").append(modelmt.getPrefix())
+                        .append(", title=").append(modelmt.getTitle());
+                sb.append(", shader=").append(modelmt.getShader().getName()).append(", granularity=")
+                        .append(modelmt.getGranularity());
+                sb.append(", icon=").append(modelmt.getIcon()).append(", append-to-world=")
+                        .append(modelmt.getAppendToWorld());
+                sb.append(", protected=").append(modelmt.isProtected());
+                if (modelmt.tileupdatedelay > 0) {
+                    sb.append(", tileupdatedelay=").append(modelmt.tileupdatedelay);
+                }
+                sender.sendMessage(sb.toString());
+            }
         }
         
         return true;
@@ -569,14 +586,12 @@ public class DynmapMapCommands {
             sender.sendMessage("Cannot update maps from disabled or unloaded world: " + wname);
             return true;
         }
-        HDMap mt = null;
+        MapType mt = null;
         /* Find the map */
         for(MapType map : w.maps) {
-            if(map instanceof HDMap) {
-                if(map.getName().equals(mname)) {
-                    mt = (HDMap)map;
-                    break;
-                }
+            if(map.getName().equals(mname)) {
+                mt = map;
+                break;
             }
         }
         /* If new, make default map instance */
@@ -587,8 +602,9 @@ public class DynmapMapCommands {
             }
             ConfigurationNode cn = new ConfigurationNode();
             cn.put("name", mname);
-            mt = new HDMap(core, cn);
-            if(mt.getName() != null) {
+            cn.put("class", getRequestedMapClass(args, 2, true));
+            mt = cn.<MapType>createInstance(new Class<?>[] { DynmapCore.class }, new Object[] { core });
+            if((mt != null) && (mt.getName() != null)) {
                 w.maps.add(mt); /* Add to end, by default */
             }
             else {
@@ -601,6 +617,11 @@ public class DynmapMapCommands {
                 sender.sendMessage("Map " + mname + " not found on world " + wname);
                 return true;
             }
+            String requestedClass = getRequestedMapClass(args, 2, false);
+            if ((requestedClass != null) && !mt.getClass().getName().equals(requestedClass)) {
+                sender.sendMessage("Map class cannot be changed with mapset; delete and recreate the map instead");
+                return true;
+            }
         }
         boolean did_update = isnew;
         for(int i = 2; i < args.length; i++) {
@@ -611,26 +632,46 @@ public class DynmapMapCommands {
                 newtok[1] = "";
                 tok = newtok;
             }
+            if(tok[0].equalsIgnoreCase("class") || tok[0].equalsIgnoreCase("type")) {
+                continue;
+            }
             if(tok[0].equalsIgnoreCase("prefix")) {
                 /* Check to make sure prefix is unique */
                 for(MapType map : w.maps){
                     if(map == mt) continue;
-                    if(map instanceof HDMap) {
-                        if(((HDMap)map).getPrefix().equals(tok[1])) {
-                            sender.sendMessage("Prefix " + tok[1] + " already in use");
-                            return true;
-                        }
+                    if(map.getPrefix().equals(tok[1])) {
+                        sender.sendMessage("Prefix " + tok[1] + " already in use");
+                        return true;
                     }
                 }
-                did_update |= mt.setPrefix(tok[1]);
+                if (mt instanceof HDMap) {
+                    did_update |= ((HDMap) mt).setPrefix(tok[1]);
+                }
+                else if (mt instanceof ModelMap) {
+                    did_update |= ((ModelMap) mt).setPrefix(tok[1]);
+                }
             }
             else if(tok[0].equalsIgnoreCase("title")) {
-                did_update |= mt.setTitle(tok[1]);
+                if (mt instanceof HDMap) {
+                    did_update |= ((HDMap) mt).setTitle(tok[1]);
+                }
+                else if (mt instanceof ModelMap) {
+                    did_update |= ((ModelMap) mt).setTitle(tok[1]);
+                }
             }
             else if(tok[0].equalsIgnoreCase("icon")) {
-                did_update |= mt.setIcon(tok[1]);
+                if (mt instanceof HDMap) {
+                    did_update |= ((HDMap) mt).setIcon(tok[1]);
+                }
+                else if (mt instanceof ModelMap) {
+                    did_update |= ((ModelMap) mt).setIcon(tok[1]);
+                }
             }
             else if(tok[0].equalsIgnoreCase("mapzoomin")) {
+                if (!(mt instanceof HDMap)) {
+                    sender.sendMessage("mapzoomin is only supported on HD maps");
+                    return true;
+                }
                 int mzi = -1;
                 try {
                     mzi = Integer.valueOf(tok[1]);
@@ -640,9 +681,13 @@ public class DynmapMapCommands {
                     sender.sendMessage("Invalid mapzoomin value: " + tok[1]);
                     return true;
                 }
-                did_update |= mt.setMapZoomIn(mzi);
+                did_update |= ((HDMap) mt).setMapZoomIn(mzi);
             }
             else if(tok[0].equalsIgnoreCase("mapzoomout")) {
+                if (!(mt instanceof HDMap)) {
+                    sender.sendMessage("mapzoomout is only supported on HD maps");
+                    return true;
+                }
                 int mzi = -1;
                 try {
                     mzi = Integer.valueOf(tok[1]);
@@ -652,9 +697,13 @@ public class DynmapMapCommands {
                     sender.sendMessage("Invalid mapzoomout value: " + tok[1]);
                     return true;
                 }
-                did_update |= mt.setMapZoomOut(mzi);
+                did_update |= ((HDMap) mt).setMapZoomOut(mzi);
             }
             else if(tok[0].equalsIgnoreCase("boostzoom")) {
+                if (!(mt instanceof HDMap)) {
+                    sender.sendMessage("boostzoom is only supported on HD maps");
+                    return true;
+                }
                 int mzi = -1;
                 try {
                     mzi = Integer.valueOf(tok[1]);
@@ -664,7 +713,7 @@ public class DynmapMapCommands {
                     sender.sendMessage("Invalid boostzoom value: " + tok[1]);
                     return true;
                 }
-                did_update |= mt.setBoostZoom(mzi);
+                did_update |= ((HDMap) mt).setBoostZoom(mzi);
             }
             else if(tok[0].equalsIgnoreCase("tileupdatedelay")) {
                 int tud = -1;
@@ -675,13 +724,17 @@ public class DynmapMapCommands {
                 did_update |= mt.setTileUpdateDelay(tud);
             }
             else if(tok[0].equalsIgnoreCase("perspective")) {
+                if (!(mt instanceof HDMap)) {
+                    sender.sendMessage("perspective is only supported on HD maps");
+                    return true;
+                }
                 if(MapManager.mapman != null) {
                     HDPerspective p = MapManager.mapman.hdmapman.perspectives.get(tok[1]);
                     if(p == null) {
                         sender.sendMessage("Perspective not found: " + tok[1]);
                         return true;
                     }
-                    did_update |= mt.setPerspective(p);
+                    did_update |= ((HDMap) mt).setPerspective(p);
                 }
             }
             else if(tok[0].equalsIgnoreCase("shader")) {
@@ -691,25 +744,58 @@ public class DynmapMapCommands {
                         sender.sendMessage("Shader not found: " + tok[1]);
                         return true;
                     }
-                    did_update |= mt.setShader(s);
+                    if (mt instanceof HDMap) {
+                        did_update |= ((HDMap) mt).setShader(s);
+                    }
+                    else if (mt instanceof ModelMap) {
+                        if (!(s instanceof TexturePackHDShader)) {
+                            sender.sendMessage("Shader must extend TexturePackHDShader for model maps");
+                            return true;
+                        }
+                        did_update |= ((ModelMap) mt).setShader((TexturePackHDShader) s);
+                    }
                 }
             }
             else if(tok[0].equalsIgnoreCase("lighting")) {
+                if (!(mt instanceof HDMap)) {
+                    sender.sendMessage("lighting is only supported on HD maps");
+                    return true;
+                }
                 if(MapManager.mapman != null) {
                     HDLighting l = MapManager.mapman.hdmapman.lightings.get(tok[1]);
                     if(l == null) {
                         sender.sendMessage("Lighting not found: " + tok[1]);
                         return true;
                     }
-                    did_update |= mt.setLighting(l);
+                    did_update |= ((HDMap) mt).setLighting(l);
                 }
             }
             else if(tok[0].equalsIgnoreCase("img-format")) {
+                if (!(mt instanceof HDMap)) {
+                    sender.sendMessage("img-format is only supported on HD maps");
+                    return true;
+                }
                 if((!tok[1].equals("default")) && (MapType.ImageFormat.fromID(tok[1]) == null)) {
                     sender.sendMessage("Image format not found: " + tok[1]);
                     return true;
                 }
-                did_update |= mt.setImageFormatSetting(tok[1]);
+                did_update |= ((HDMap) mt).setImageFormatSetting(tok[1]);
+            }
+            else if(tok[0].equalsIgnoreCase("granularity")) {
+                if (!(mt instanceof ModelMap)) {
+                    sender.sendMessage("granularity is only supported on model maps");
+                    return true;
+                }
+                int granularity = -1;
+                try {
+                    granularity = Integer.valueOf(tok[1]);
+                } catch (NumberFormatException nfx) {
+                }
+                if(granularity < 1) {
+                    sender.sendMessage("Invalid granularity value: " + tok[1]);
+                    return true;
+                }
+                did_update |= ((ModelMap) mt).setGranularity(granularity);
             }
             else if(tok[0].equalsIgnoreCase("order")) {
                 int idx = -1;
@@ -731,10 +817,19 @@ public class DynmapMapCommands {
                 did_update = true;
             }
             else if(tok[0].equalsIgnoreCase("append-to-world")) {
-                did_update |= mt.setAppendToWorld(tok[1]);
+                if (mt instanceof HDMap) {
+                    did_update |= ((HDMap) mt).setAppendToWorld(tok[1]);
+                }
+                else if (mt instanceof ModelMap) {
+                    did_update |= ((ModelMap) mt).setAppendToWorld(tok[1]);
+                }
             }
             else if(tok[0].equalsIgnoreCase("protected")) {
                 did_update |= mt.setProtected(Boolean.parseBoolean(tok[1]));
+            }
+            else {
+                sender.sendMessage("Unsupported map attribute: " + tok[0]);
+                return true;
             }
         }
         if(did_update) {
@@ -745,6 +840,36 @@ public class DynmapMapCommands {
         }
 
         return true;
+    }
+
+    private String getRequestedMapClass(String[] args, int startIndex, boolean applyDefault) {
+        String requested = null;
+        for (int i = startIndex; i < args.length; i++) {
+            String[] tok = args[i].split(":", 2);
+            if (tok.length < 2) {
+                continue;
+            }
+            if (tok[0].equalsIgnoreCase("class") || tok[0].equalsIgnoreCase("type")) {
+                requested = tok[1];
+            }
+        }
+        return resolveMapClass(requested, applyDefault);
+    }
+
+    private String resolveMapClass(String requested, boolean applyDefault) {
+        if ((requested == null) || requested.isEmpty()) {
+            return applyDefault ? HDMap.class.getName() : null;
+        }
+        if (requested.equals(HDMap.class.getName()) || requested.equals("HDMap") ||
+                requested.equalsIgnoreCase("hdmap") || requested.equalsIgnoreCase("hd")) {
+            return HDMap.class.getName();
+        }
+        if (requested.equals(ModelMap.class.getName()) || requested.equals("ModelMap") ||
+                requested.equalsIgnoreCase("modelmap") || requested.equalsIgnoreCase("model") ||
+                requested.equalsIgnoreCase("glb") || requested.equalsIgnoreCase("3d")) {
+            return ModelMap.class.getName();
+        }
+        return requested;
     }
     
     private boolean handlePerspectiveList(DynmapCommandSender sender, String[] args, DynmapCore core) {

@@ -1270,8 +1270,8 @@ public class DynmapCore implements DynmapCommonAPI {
         new CommandInfo("dmap", "worldset", "<world> extrazoomout:<N>", "Set extra zoom out levels for world <world>."),
         new CommandInfo("dmap", "maplist", "<world>", "List all maps for world <world>"),
         new CommandInfo("dmap", "mapdelete", "<world>:<map>", "Delete map <map> from world <world>."),
-        new CommandInfo("dmap", "mapadd", "<world>:<map> <attrib>:<value> <attrib>:<value>", "Create map for world <world> with name <map> using provided attributes."),
-        new CommandInfo("dmap", "mapset", "<world>:<map> <attrib>:<value> <attrib>:<value>", "Update map <map> of world <world> with new attribute values."),
+        new CommandInfo("dmap", "mapadd", "<world>:<map> [class:<fqcn>|type:<hdmap|modelmap>] <attrib>:<value> ...", "Create map for world <world> with name <map>. Defaults to HDMap if class/type is omitted."),
+        new CommandInfo("dmap", "mapset", "<world>:<map> <attrib>:<value> ...", "Update map <map> of world <world> with new attribute values. Existing map class cannot be changed."),
         new CommandInfo("dmap", "worldreset", "<world>", "Reset world <world> to default template for world type"),
         new CommandInfo("dmap", "worldreset", "<world> <templatename>", "Reset world <world> to temaplte <templatename>."),
         new CommandInfo("dmap", "disableworlds", "<world0> <world1> ...", "Disable all worlds in list."),
@@ -2685,4 +2685,3 @@ public class DynmapCore implements DynmapCommonAPI {
         return defaultStorage;
     }
 }
-
