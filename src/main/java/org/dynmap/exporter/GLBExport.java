@@ -262,11 +262,15 @@ public class GLBExport implements BlockModelExportSink {
         int xyzOffset = vertexIndex * 3;
         int uvOffset = vertexIndex * 2;
         return primitive.addVertex(transform(xyz[xyzOffset], originX), transform(xyz[xyzOffset + 1], originY),
-                transform(xyz[xyzOffset + 2], originZ), (float) uv[uvOffset], (float) uv[uvOffset + 1]);
+                transform(xyz[xyzOffset + 2], originZ), (float) uv[uvOffset], flipV((float) uv[uvOffset + 1]));
     }
 
     private float transform(double coordinate, double origin) {
         return (float) ((coordinate - origin) * scale);
+    }
+
+    private float flipV(float v) {
+        return 1.0F - v;
     }
 
     private BufferOutputStream buildGLB(TexturePack texturePack) throws IOException {
