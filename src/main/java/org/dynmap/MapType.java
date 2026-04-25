@@ -150,6 +150,7 @@ public abstract class MapType {
 
     /* Return number of zoom levels needed by this map (before extra levels from extrazoomout) */
     public int getMapZoomOutLevels() { return 0; }
+    public boolean isZoomOutSupported() { return true; }
 
     public ImageFormat getImageFormat() { return ImageFormat.FORMAT_PNG; }
     public ImageEncoding getTileEncoding() { return getImageFormat().getEncoding(); }

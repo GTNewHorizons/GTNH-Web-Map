@@ -296,6 +296,11 @@ public class ModelMap extends MapType {
     }
 
     @Override
+    public boolean isZoomOutSupported() {
+        return false;
+    }
+
+    @Override
     public void purgeOldTiles(final DynmapWorld world, final TileFlags rendered) {
         final MapStorage storage = world.getMapStorage();
         storage.enumMapTiles(world, this, new MapStorageTileEnumCB() {
