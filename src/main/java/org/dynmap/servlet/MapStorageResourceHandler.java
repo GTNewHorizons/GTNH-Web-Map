@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.OutputStream;
 
+import org.dynmap.MapType.ImageEncoding;
+
 public class MapStorageResourceHandler extends AbstractHandler {
 
     private DynmapCore core;
@@ -58,6 +60,7 @@ public class MapStorageResourceHandler extends AbstractHandler {
         }
         String world = path.substring(soff, eoff);
         String uri = path.substring(eoff+1);
+        ImageEncoding requestedEncoding = getRequestedEncoding(uri);
         // If faces directory, handle faces
         if (world.equals("faces")) {
             handleFace(response, uri);
@@ -75,18 +78,18 @@ public class MapStorageResourceHandler extends AbstractHandler {
         }
         // If world not found quit
         if (w == null) {
-            response.setContentType("image/png");
-            OutputStream os = response.getOutputStream();
-            os.write(blankpng);
+            if (!writeBlankImage(response, requestedEncoding)) {
+                response.sendError(HttpStatus.NOT_FOUND_404);
+            }
             return;
         }
         MapStorage store = w.getMapStorage();    // Get storage handler
         // Get tile reference, based on URI and world
         MapStorageTile tile = store.getTile(w, uri);
         if (tile == null) {
-            response.setContentType("image/png");
-            OutputStream os = response.getOutputStream();
-            os.write(blankpng);
+            if (!writeBlankImage(response, requestedEncoding)) {
+                response.sendError(HttpStatus.NOT_FOUND_404);
+            }
             return;
         }
         // Read tile
@@ -110,10 +113,9 @@ public class MapStorageResourceHandler extends AbstractHandler {
         	return;
         }
         if (tr == null) {
-            response.setContentType("image/png");
-            response.setIntHeader("Content-Length", blankpng.length);
-            OutputStream os = response.getOutputStream();
-            os.write(blankpng);
+            if (!writeBlankImage(response, requestedEncoding)) {
+                response.sendError(HttpStatus.NOT_FOUND_404);
+            }
             return;
         }
         // Got tile, package up for response
@@ -124,6 +126,25 @@ public class MapStorageResourceHandler extends AbstractHandler {
         out.write(tr.image.buffer(), 0, tr.image.length());
         out.flush();
 
+    }
+
+    private ImageEncoding getRequestedEncoding(String uri) {
+        int extoff = uri.lastIndexOf('.');
+        if ((extoff < 0) || (extoff == (uri.length() - 1))) {
+            return null;
+        }
+        return ImageEncoding.fromExt(uri.substring(extoff + 1));
+    }
+
+    private boolean writeBlankImage(HttpServletResponse response, ImageEncoding requestedEncoding) throws IOException {
+        if ((requestedEncoding != null) && (requestedEncoding != ImageEncoding.PNG) && (requestedEncoding != ImageEncoding.JPG) && (requestedEncoding != ImageEncoding.WEBP)) {
+            return false;
+        }
+        response.setContentType("image/png");
+        response.setIntHeader("Content-Length", blankpng.length);
+        OutputStream os = response.getOutputStream();
+        os.write(blankpng);
+        return true;
     }
 
     private void handleFace(HttpServletResponse response, String uri) throws IOException, ServletException {

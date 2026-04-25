@@ -14,6 +14,9 @@ import org.dynmap.MapTile;
 import org.dynmap.MapType;
 import org.dynmap.utils.TileFlags;
 import org.dynmap.hdmap.TexturePackHDShader;
+import org.dynmap.storage.MapStorage;
+import org.dynmap.storage.MapStorageTile;
+import org.dynmap.storage.MapStorageTileEnumCB;
 
 public class ModelMap extends MapType {
     public static final int DEFAULT_GRANULARITY = 1;
@@ -197,6 +200,11 @@ public class ModelMap extends MapType {
         return AssetFormat.GLB;
     }
 
+    @Override
+    public ImageEncoding getTileEncoding() {
+        return ImageEncoding.GLB;
+    }
+
     public String getAssetContentType() {
         return getAssetFormat().getContentType();
     }
@@ -285,6 +293,22 @@ public class ModelMap extends MapType {
     @Override
     public int getTileSize() {
         return getBlockSpan();
+    }
+
+    @Override
+    public void purgeOldTiles(final DynmapWorld world, final TileFlags rendered) {
+        final MapStorage storage = world.getMapStorage();
+        storage.enumMapTiles(world, this, new MapStorageTileEnumCB() {
+            @Override
+            public void tileFound(MapStorageTile tile, ImageEncoding fmt) {
+                if (fmt != getTileEncoding()) {
+                    tile.delete();
+                }
+                else if ((tile.zoom == 0) && !rendered.getFlag(tile.x, tile.y)) {
+                    tile.delete();
+                }
+            }
+        });
     }
 
     @Override

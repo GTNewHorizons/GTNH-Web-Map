@@ -30,7 +30,8 @@ public abstract class MapType {
     }
 
     public enum ImageEncoding {
-        PNG("png", "image/png", true), JPG("jpg", "image/jpeg", false), WEBP("webp", "image/webp", true);
+        PNG("png", "image/png", true), JPG("jpg", "image/jpeg", false), WEBP("webp", "image/webp", true),
+        GLB("glb", "model/gltf-binary", false);
         public final String ext;
         public final String mimetype;
         public final boolean hasAlpha;
@@ -151,6 +152,9 @@ public abstract class MapType {
     public int getMapZoomOutLevels() { return 0; }
 
     public ImageFormat getImageFormat() { return ImageFormat.FORMAT_PNG; }
+    public ImageEncoding getTileEncoding() { return getImageFormat().getEncoding(); }
+    public String getTileFileExt() { return getTileEncoding().getFileExt(); }
+    public String getTileContentType() { return getTileEncoding().getContentType(); }
 
     public int getBackgroundARGBNight() { return 0; }
 
@@ -171,7 +175,7 @@ public abstract class MapType {
 
     protected void walkMapTree(File root, FileCallback cb, boolean day) {
         LinkedList<File> dirs = new LinkedList<File>();
-        String ext = "." + getImageFormat().getFileExt();
+        String ext = "." + getTileFileExt();
         dirs.add(root);
         while(dirs.isEmpty() == false) {
             File dir = dirs.pop();
