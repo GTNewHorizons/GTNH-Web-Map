@@ -50,7 +50,7 @@ public class FileTreeMapStorage extends MapStorage {
                 baseURI = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + x + "_" + y;
             }
             baseFilename = world.getName() + "/" + baseURI;
-            uri = baseURI + "." + map.getImageFormat().getFileExt();
+            uri = baseURI + "." + map.getTileFileExt();
         }
         private File getTileFile(ImageEncoding fmt) {
             if ((f == null) || (fmt != f_fmt)) {
@@ -60,25 +60,26 @@ public class FileTreeMapStorage extends MapStorage {
             return f;
         }
         private File getTileFile() {
-            ImageEncoding fmt = map.getImageFormat().getEncoding();
+            ImageEncoding fmt = map.getTileEncoding();
             File ff = getTileFile(fmt);
             if (ff.exists() == false) {
-                if (fmt == ImageEncoding.PNG) {
-                    fmt = ImageEncoding.JPG;
+                for (File file : getTileFilesAltFormats()) {
+                    if (file.isFile()) {
+                        return file;
+                    }
                 }
-                else {
-                    fmt = ImageEncoding.PNG;
-                }
-                ff = getTileFile(fmt);
             }
             return ff;
         }
         private List<File> getTileFilesAltFormats() {
-            ImageEncoding fmt = map.getImageFormat().getEncoding();
+            ImageEncoding fmt = map.getTileEncoding();
 
             List<File> files = new ArrayList<File>();
+            if (fmt == ImageEncoding.GLB) {
+                return files;
+            }
             for (ImageEncoding ie: ImageEncoding.values()) {
-                if (ie != fmt) {
+                if ((ie != fmt) && (ie != ImageEncoding.GLB)) {
                     files.add(getTileFile(ie));
                 }
             }
@@ -93,22 +94,25 @@ public class FileTreeMapStorage extends MapStorage {
 
         @Override
         public boolean matchesHashCode(long hash) {
-            File ff = getTileFile(map.getImageFormat().getEncoding());
+            File ff = getTileFile(map.getTileEncoding());
             return ff.isFile() && ff.canRead() && (hash == hashmap.getImageHashCode(world.getName() + "." + map.getPrefix(), x, y));
         }
 
         @Override
         public TileRead read() {
-            ImageEncoding fmt = map.getImageFormat().getEncoding();
+            ImageEncoding fmt = map.getTileEncoding();
             File ff = getTileFile(fmt);
             if (ff.exists() == false) { // Fallback and try to read other format
-                if (fmt == ImageEncoding.PNG) {
-                    fmt = ImageEncoding.JPG;
+                for (ImageEncoding altfmt : ImageEncoding.values()) {
+                    if ((altfmt == fmt) || (altfmt == ImageEncoding.GLB)) {
+                        continue;
+                    }
+                    ff = getTileFile(altfmt);
+                    if (ff.isFile()) {
+                        fmt = altfmt;
+                        break;
+                    }
                 }
-                else {
-                    fmt = ImageEncoding.PNG;
-                }
-                ff = getTileFile(fmt);
             }
             if (ff.isFile()) {
                 TileRead tr = new TileRead();
@@ -137,7 +141,7 @@ public class FileTreeMapStorage extends MapStorage {
 
         @Override
         public boolean write(long hash, BufferOutputStream encImage, long timestamp) {
-            File ff = getTileFile(map.getImageFormat().getEncoding());
+            File ff = getTileFile(map.getTileEncoding());
             List<File> ffalt = getTileFilesAltFormats();
             File ffpar = ff.getParentFile();
             // Always clean up old alternate files, if they exist
