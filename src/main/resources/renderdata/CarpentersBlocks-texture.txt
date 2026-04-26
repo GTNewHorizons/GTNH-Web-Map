@@ -38,10 +38,10 @@ texture:id=gwm/air,filename=assets/gwmcustom/air.png
 
 
 # %blockCarpentersBlock:* (blockCarpentersBlock), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBlock(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBlock
-block:id=%blockCarpentersBlock,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersBlock,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos,transparency=SEMITRANSPARENT
 
 # %blockCarpentersBarrier:* (blockCarpentersBarrier), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBarrier(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBarrier
-block:id=%blockCarpentersBarrier,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
+block:id=%blockCarpentersBarrier,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,transparency=SEMITRANSPARENT
 
 # %blockCarpentersBed:* (blockCarpentersBed), render=com.carpentersblocks.renderer.BlockHandlerCarpentersBed(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersBed
 block:id=%blockCarpentersBed,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:CarpentersBlocks/slope/oblique_pos
@@ -50,43 +50,43 @@ block:id=%blockCarpentersBed,data=*,stdrot=true,transparency=TRANSPARENT,face0-5
 block:id=%blockCarpentersButton,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
 
 # %blockCarpentersCollapsibleBlock:* (blockCarpentersCollapsibleBlock), render=com.carpentersblocks.renderer.BlockHandlerCarpentersCollapsibleBlock(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersCollapsibleBlock
-block:id=%blockCarpentersCollapsibleBlock,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersCollapsibleBlock,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos,transparency=SEMITRANSPARENT
 
 # %blockCarpentersDaylightSensor:* (blockCarpentersDaylightSensor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersDaylightSensor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersDaylightSensor
 block:id=%blockCarpentersDaylightSensor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
 
 # %blockCarpentersDoor:* (blockCarpentersDoor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersDoor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersDoor
-block:id=%blockCarpentersDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
+block:id=%blockCarpentersDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,transparency=SEMITRANSPARENT
 
 # %blockCarpentersFlowerPot:* (blockCarpentersFlowerPot), render=com.carpentersblocks.renderer.BlockHandlerCarpentersFlowerPot(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersFlowerPot
-block:id=%blockCarpentersFlowerPot,data=*,stdrot=true,patch0=0:CarpentersBlocks/solid,patch1=0:CarpentersBlocks/designs/flowerpot/black,patch2=0:CarpentersBlocks/designs/flowerpot/blue,patch3=0:CarpentersBlocks/designs/flowerpot/brown,patch4=0:CarpentersBlocks/designs/flowerpot/cyan,patch5=0:CarpentersBlocks/designs/flowerpot/gray,patch6=0:CarpentersBlocks/designs/flowerpot/green,patch7=0:CarpentersBlocks/designs/flowerpot/light_blue,patch8=0:CarpentersBlocks/designs/flowerpot/light_gray,patch9=0:CarpentersBlocks/designs/flowerpot/lime,patch10=0:CarpentersBlocks/designs/flowerpot/magenta,patch11=0:CarpentersBlocks/designs/flowerpot/orange,patch12=0:CarpentersBlocks/designs/flowerpot/original,patch13=0:CarpentersBlocks/designs/flowerpot/pink,patch14=0:CarpentersBlocks/designs/flowerpot/purple,patch15=0:CarpentersBlocks/designs/flowerpot/rainbow,patch16=0:CarpentersBlocks/designs/flowerpot/red,patch17=0:CarpentersBlocks/designs/flowerpot/white,patch18=0:CarpentersBlocks/designs/flowerpot/yellow,patch18-23=0:gwm/air
+block:id=%blockCarpentersFlowerPot,data=*,stdrot=true,patch0=0:CarpentersBlocks/solid,patch1=0:CarpentersBlocks/designs/flowerpot/black,patch2=0:CarpentersBlocks/designs/flowerpot/blue,patch3=0:CarpentersBlocks/designs/flowerpot/brown,patch4=0:CarpentersBlocks/designs/flowerpot/cyan,patch5=0:CarpentersBlocks/designs/flowerpot/gray,patch6=0:CarpentersBlocks/designs/flowerpot/green,patch7=0:CarpentersBlocks/designs/flowerpot/light_blue,patch8=0:CarpentersBlocks/designs/flowerpot/light_gray,patch9=0:CarpentersBlocks/designs/flowerpot/lime,patch10=0:CarpentersBlocks/designs/flowerpot/magenta,patch11=0:CarpentersBlocks/designs/flowerpot/orange,patch12=0:CarpentersBlocks/designs/flowerpot/original,patch13=0:CarpentersBlocks/designs/flowerpot/pink,patch14=0:CarpentersBlocks/designs/flowerpot/purple,patch15=0:CarpentersBlocks/designs/flowerpot/rainbow,patch16=0:CarpentersBlocks/designs/flowerpot/red,patch17=0:CarpentersBlocks/designs/flowerpot/white,patch18=0:CarpentersBlocks/designs/flowerpot/yellow,patch18-23=0:gwm/air,transparency=SEMITRANSPARENT
 
 # %blockCarpentersGarageDoor:* (blockCarpentersGarageDoor), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGarageDoor(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGarageDoor
-block:id=%blockCarpentersGarageDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
+block:id=%blockCarpentersGarageDoor,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,transparency=SEMITRANSPARENT
 
 # %blockCarpentersGate:* (blockCarpentersGate), render=com.carpentersblocks.renderer.BlockHandlerCarpentersGate(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersGate
-block:id=%blockCarpentersGate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
+block:id=%blockCarpentersGate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,transparency=SEMITRANSPARENT
 
 # %blockCarpentersHatch:* (blockCarpentersHatch), render=com.carpentersblocks.renderer.BlockHandlerCarpentersHatch(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersHatch
-block:id=%blockCarpentersHatch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid
+block:id=%blockCarpentersHatch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,transparency=SEMITRANSPARENT
 
 # %blockCarpentersLadder:* (blockCarpentersLadder), render=com.carpentersblocks.renderer.BlockHandlerCarpentersLadder(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersLadder
-block:id=%blockCarpentersLadder,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,patch6-8=0:minecraft/iron_block
+block:id=%blockCarpentersLadder,data=*,stdrot=true,face0-5=0:CarpentersBlocks/solid,patch6-8=0:minecraft/iron_block,transparency=SEMITRANSPARENT
 
 # %blockCarpentersLever:* (blockCarpentersLever), render=com.carpentersblocks.renderer.BlockHandlerCarpentersLever(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersLever
 block:id=%blockCarpentersLever,data=*,stdrot=true,face0-5=0:CarpentersBlocks/lever/lever
 
 # %blockCarpentersPressurePlate:* (blockCarpentersPressurePlate), render=com.carpentersblocks.renderer.BlockHandlerCarpentersPressurePlate(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersPressurePlate
-block:id=%blockCarpentersPressurePlate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersPressurePlate,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos,transparency=SEMITRANSPARENT
 
 # %blockCarpentersSafe:* (blockCarpentersSafe), render=com.carpentersblocks.renderer.BlockHandlerCarpentersSafe(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersSafe
 block:id=%blockCarpentersSafe,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
 
 # %blockCarpentersSlope:* (blockCarpentersSlope), render=com.carpentersblocks.renderer.BlockHandlerCarpentersSlope(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersSlope
-block:id=%blockCarpentersSlope,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersSlope,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos,transparency=SEMITRANSPARENT
 
 # %blockCarpentersStairs:* (blockCarpentersStairs), render=com.carpentersblocks.renderer.BlockHandlerCarpentersStairs(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersStairs
-block:id=%blockCarpentersStairs,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos
+block:id=%blockCarpentersStairs,data=*,stdrot=true,face0-5=0:CarpentersBlocks/slope/oblique_pos,transparency=SEMITRANSPARENT
 
 # %blockCarpentersTorch:* (blockCarpentersTorch), render=com.carpentersblocks.renderer.BlockHandlerCarpentersTorch(CUSTOM), opaque=false,cls=com.carpentersblocks.block.BlockCarpentersTorch
 block:id=%blockCarpentersTorch,data=*,stdrot=true,face0-5=0:CarpentersBlocks/torch/torch

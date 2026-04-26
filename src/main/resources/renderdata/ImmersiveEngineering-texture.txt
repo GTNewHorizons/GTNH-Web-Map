@@ -206,36 +206,36 @@ block:id=%metalDevice,data=14,stdrot=true,face0-5=0:immersiveengineering/metal_c
 block:id=%metalDevice,data=15,stdrot=true,face0-1=0:immersiveengineering/metal_conveyor_dropper,face2-5=0:immersiveengineering/metal_dynamo_bottom
 
 # %metalDevice2:* (metalDevice2), render=blusunrize.immersiveengineering.client.render.BlockRenderMetalDevices2(CUSTOM), opaque=false,cls=blusunrize.immersiveengineering.common.blocks.metal.BlockMetalDevices2
-block:id=%metalDevice2,data=0,stdrot=true,face0-5=12000:immersiveEngineering/metal2_breakerSwitch
-block:id=%metalDevice2,data=1,stdrot=true,face0-5=12000:immersiveEngineering/metal2_skycrateDispenser
-block:id=%metalDevice2,data=2,stdrot=true,face0-5=12000:immersiveEngineering/metal2_energyMeter
+block:id=%metalDevice2,data=0,stdrot=true,face0-5=12000:immersiveEngineering/metal2_breakerSwitch,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=1,stdrot=true,face0-5=12000:immersiveEngineering/metal2_skycrateDispenser,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=2,stdrot=true,face0-5=12000:immersiveEngineering/metal2_energyMeter,transparency=SEMITRANSPARENT
 block:id=%metalDevice2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveEngineering/metal2_electricLantern
-block:id=%metalDevice2,data=4,stdrot=true,face0=12000:immersiveEngineering/metal2_floodlight,face1=12000:immersiveEngineering/metal2_floodlightGlass,face2-5=12000:immersiveEngineering/metal2_floodlight
-block:id=%metalDevice2,data=5,stdrot=true,face0-5=12000:immersiveEngineering/metal2_fluidPipe
-block:id=%metalDevice2,data=6,stdrot=true,face0=12000:immersiveEngineering/metal2_pump_side_in,face1=12000:immersiveEngineering/metal2_pump_side_out,face2=12000:immersiveEngineering/metal2_pump_bottom_none,face3=12000:immersiveEngineering/metal2_pump_bottom_in,face4=12000:immersiveEngineering/metal2_pump_bottom_out,face5=12000:immersiveEngineering/metal2_pump_top
-block:id=%metalDevice2,data=7,stdrot=true,face0-1=12000:immersiveengineering/metal2_barrel_top_none,face2-5=12000:immersiveEngineering/metal2_barrel
-block:id=%metalDevice2,data=8,stdrot=true,face0=12000:immersiveengineering/metal2_capacitorCreative_bottom_none,face1=12000:immersiveengineering/metal2_capacitorCreative_top_none,face2-5=12000:immersiveengineering/metal2_capacitorCreative_side_none
-block:id=%metalDevice2,data=9,stdrot=true,face0-5=12000:immersiveEngineering/metal2_redstoneBreaker
-block:id=%metalDevice2,data=10,stdrot=true,face0-5=12000:immersiveEngineering/metal2_chargingStation
-block:id=%metalDevice2,data=11,stdrot=true,face0-5=12000:immersiveEngineering/metal2_blastFurnacePreheater
+block:id=%metalDevice2,data=4,stdrot=true,face0=12000:immersiveEngineering/metal2_floodlight,face1=12000:immersiveEngineering/metal2_floodlightGlass,face2-5=12000:immersiveEngineering/metal2_floodlight,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=5,stdrot=true,face0-5=12000:immersiveEngineering/metal2_fluidPipe,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=6,stdrot=true,face0=12000:immersiveEngineering/metal2_pump_side_in,face1=12000:immersiveEngineering/metal2_pump_side_out,face2=12000:immersiveEngineering/metal2_pump_bottom_none,face3=12000:immersiveEngineering/metal2_pump_bottom_in,face4=12000:immersiveEngineering/metal2_pump_bottom_out,face5=12000:immersiveEngineering/metal2_pump_top,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=7,stdrot=true,face0-1=12000:immersiveengineering/metal2_barrel_top_none,face2-5=12000:immersiveEngineering/metal2_barrel,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=8,stdrot=true,face0=12000:immersiveengineering/metal2_capacitorCreative_bottom_none,face1=12000:immersiveengineering/metal2_capacitorCreative_top_none,face2-5=12000:immersiveengineering/metal2_capacitorCreative_side_none,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=9,stdrot=true,face0-5=12000:immersiveEngineering/metal2_redstoneBreaker,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=10,stdrot=true,face0-5=12000:immersiveEngineering/metal2_chargingStation,transparency=SEMITRANSPARENT
+block:id=%metalDevice2,data=11,stdrot=true,face0-5=12000:immersiveEngineering/metal2_blastFurnacePreheater,transparency=SEMITRANSPARENT
 
 # %metalDecoration:* (metalDecoration), render=blusunrize.immersiveengineering.client.render.BlockRenderMetalDecoration(CUSTOM), opaque=false,cls=blusunrize.immersiveengineering.common.blocks.metal.BlockMetalDecoration
 block:id=%metalDecoration,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveengineering/storage_Steel
-block:id=%metalDecoration,data=1,stdrot=true,face0-1=0:immersiveengineering/metalDeco_scaffolding_top,face2-5=0:immersiveengineering/metalDeco_scaffolding_side
-block:id=%metalDecoration,data=2,stdrot=true,face0=0:immersiveengineering/lantern_0,face1=0:immersiveengineering/metalDeco_lantern_top,face2-5=0:immersiveengineering/metalDeco_lantern_side
-block:id=%metalDecoration,data=3,stdrot=true,face0-1=0:immersiveengineering/metalDeco_scaffolding_top,face2-5=0:immersiveengineering/metalDeco_scaffolding_side
-block:id=%metalDecoration,data=4,stdrot=true,face0-5=0:immersiveengineering/metalDeco_radiator
-block:id=%metalDecoration,data=5,stdrot=true,face0-5=0:immersiveengineering/metalDeco_engine
-block:id=%metalDecoration,data=6,stdrot=true,face0-5=0:immersiveengineering/metalDeco_generator
-block:id=%metalDecoration,data=7,stdrot=true,face0-5=0:immersiveengineering/metalDeco_electricMachine
-block:id=%metalDecoration,data=8,stdrot=true,face0-5=0:immersiveengineering/metalDeco_connectorStructural
-block:id=%metalDecoration,data=9,stdrot=true,face0-5=0:immersiveengineering/metalDeco_wallmount
-block:id=%metalDecoration,data=10,stdrot=true,face0-5=0:immersiveengineering/metalDeco_sheetMetal
-block:id=%metalDecoration,data=11,stdrot=true,face0=0:immersiveengineering/metalDeco_scaffolding_top,face1=0:immersiveengineering/metalDeco_scaffolding_top2,face2-5=0:immersiveengineering/metalDeco_scaffolding_side
+block:id=%metalDecoration,data=1,stdrot=true,face0-1=0:immersiveengineering/metalDeco_scaffolding_top,face2-5=0:immersiveengineering/metalDeco_scaffolding_side,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=2,stdrot=true,face0=0:immersiveengineering/lantern_0,face1=0:immersiveengineering/metalDeco_lantern_top,face2-5=0:immersiveengineering/metalDeco_lantern_side,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=3,stdrot=true,face0-1=0:immersiveengineering/metalDeco_scaffolding_top,face2-5=0:immersiveengineering/metalDeco_scaffolding_side,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=4,stdrot=true,face0-5=0:immersiveengineering/metalDeco_radiator,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=5,stdrot=true,face0-5=0:immersiveengineering/metalDeco_engine,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=6,stdrot=true,face0-5=0:immersiveengineering/metalDeco_generator,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=7,stdrot=true,face0-5=0:immersiveengineering/metalDeco_electricMachine,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=8,stdrot=true,face0-5=0:immersiveengineering/metalDeco_connectorStructural,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=9,stdrot=true,face0-5=0:immersiveengineering/metalDeco_wallmount,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=10,stdrot=true,face0-5=0:immersiveengineering/metalDeco_sheetMetal,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=11,stdrot=true,face0=0:immersiveengineering/metalDeco_scaffolding_top,face1=0:immersiveengineering/metalDeco_scaffolding_top2,face2-5=0:immersiveengineering/metalDeco_scaffolding_side,transparency=SEMITRANSPARENT
 block:id=%metalDecoration,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveengineering/storage_Aluminum
-block:id=%metalDecoration,data=13,stdrot=true,face0-1=0:immersiveengineering/metalDeco_aluScaffolding_top,face2-5=0:immersiveengineering/metalDeco_aluScaffolding_side
-block:id=%metalDecoration,data=14,stdrot=true,face0=0:immersiveengineering/metalDeco_aluScaffolding_top,face1=0:immersiveengineering/metalDeco_aluScaffolding_top2,face2-5=0:immersiveengineering/metalDeco_aluScaffolding_side
-block:id=%metalDecoration,data=15,stdrot=true,face0-1=0:immersiveengineering/metalDeco_aluScaffolding_top,face2-5=0:immersiveengineering/metalDeco_aluScaffolding_side
+block:id=%metalDecoration,data=13,stdrot=true,face0-1=0:immersiveengineering/metalDeco_aluScaffolding_top,face2-5=0:immersiveengineering/metalDeco_aluScaffolding_side,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=14,stdrot=true,face0=0:immersiveengineering/metalDeco_aluScaffolding_top,face1=0:immersiveengineering/metalDeco_aluScaffolding_top2,face2-5=0:immersiveengineering/metalDeco_aluScaffolding_side,transparency=SEMITRANSPARENT
+block:id=%metalDecoration,data=15,stdrot=true,face0-1=0:immersiveengineering/metalDeco_aluScaffolding_top,face2-5=0:immersiveengineering/metalDeco_aluScaffolding_side,transparency=SEMITRANSPARENT
 
 # %metalDecoration2:* (metalDecoration2), render=(STANDARD), opaque=true,cls=blusunrize.immersiveengineering.common.blocks.metal.BlockMetalDecoration2
 block:id=%metalDecoration2,data=0,stdrot=true,face0-5=0:immersiveengineering/metalDeco2_sheetMetalAlu
@@ -265,11 +265,11 @@ block:id=%woodenDevice,data=5,stdrot=true,face0-5=0:immersiveengineering/workben
 block:id=%woodenDevice,data=6,stdrot=true,face0-1=0:immersiveengineering/woodBarrel_top_none,face2-5=0:immersiveengineering/woodBarrel
 
 # %woodenDecoration:* (woodenDecoration), render=blusunrize.immersiveengineering.client.render.BlockRenderWoodenDecoration(CUSTOM), opaque=false,cls=blusunrize.immersiveengineering.common.blocks.wooden.BlockWoodenDecoration
-block:id=%woodenDecoration,data=0,stdrot=true,face0-5=0:immersiveengineering/treatedWood
+block:id=%woodenDecoration,data=0,stdrot=true,face0-5=0:immersiveengineering/treatedWood,transparency=SEMITRANSPARENT
 block:id=%woodenDecoration,data=1,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveengineering/treatedWood
-block:id=%woodenDecoration,data=4,stdrot=true,face0-5=0:immersiveengineering/treatedWood
-block:id=%woodenDecoration,data=5,stdrot=true,face0-1=0:immersiveengineering/scaffolding_top,face2-5=0:immersiveengineering/scaffolding_side
-block:id=%woodenDecoration,data=6,stdrot=true,face0-5=0:immersiveengineering/wood_wallmount
+block:id=%woodenDecoration,data=4,stdrot=true,face0-5=0:immersiveengineering/treatedWood,transparency=SEMITRANSPARENT
+block:id=%woodenDecoration,data=5,stdrot=true,face0-1=0:immersiveengineering/scaffolding_top,face2-5=0:immersiveengineering/scaffolding_side,transparency=SEMITRANSPARENT
+block:id=%woodenDecoration,data=6,stdrot=true,face0-5=0:immersiveengineering/wood_wallmount,transparency=SEMITRANSPARENT
 
 # %treatedWood:* (treatedWood), render=(STANDARD), opaque=true,cls=blusunrize.immersiveengineering.common.blocks.BlockIEBase$BlockIESimple
 block:id=%treatedWood,data=0,stdrot=true,face0-5=0:immersiveengineering/treatedWood_0

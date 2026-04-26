@@ -718,11 +718,11 @@ block:id=%tile.lotr:pressurePlateMordorRock,data=*,stdrot=true,transparency=TRAN
 block:id=%tile.lotr:pressurePlateGondorRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_gondor
 
 # %tile.lotr:buttonMordorRock:* (tile.lotr:buttonMordorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
-block:id=%tile.lotr:buttonMordorRock,data=0,stdrot=true,face0-5=0:lotr/rock_mordor
+block:id=%tile.lotr:buttonMordorRock,data=0,stdrot=true,face0-5=0:lotr/rock_mordor,transparency=SEMITRANSPARENT
 block:id=%tile.lotr:buttonMordorRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_mordor
 
 # %tile.lotr:buttonGondorRock:* (tile.lotr:buttonGondorRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
-block:id=%tile.lotr:buttonGondorRock,data=0,stdrot=true,face0-5=0:lotr/rock_gondor
+block:id=%tile.lotr:buttonGondorRock,data=0,stdrot=true,face0-5=0:lotr/rock_gondor,transparency=SEMITRANSPARENT
 block:id=%tile.lotr:buttonGondorRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_gondor
 
 # %tile.lotr:elvenPortal:* (tile.lotr:elvenPortal), render=(CUSTOM), opaque=false,cls=lotr.common.block.LOTRBlockElvenPortal
@@ -976,7 +976,7 @@ block:id=%tile.lotr:morgulPortal,data=*,stdrot=true,transparency=TRANSPARENT,fac
 block:id=%tile.lotr:armorStand,data=*,stdrot=true,face0-5=0:minecraft/planks_oak
 
 # %tile.lotr:buttonRohanRock:* (tile.lotr:buttonRohanRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
-block:id=%tile.lotr:buttonRohanRock,data=0,stdrot=true,face0-5=0:lotr/rock_rohan
+block:id=%tile.lotr:buttonRohanRock,data=0,stdrot=true,face0-5=0:lotr/rock_rohan,transparency=SEMITRANSPARENT
 block:id=%tile.lotr:buttonRohanRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_rohan
 
 # %tile.lotr:asphodel:* (tile.lotr:asphodel), render=(CROSSEDSQUARES), opaque=false,cls=lotr.common.block.LOTRBlockFlower
@@ -1139,7 +1139,7 @@ block:id=%tile.lotr:stairsHolly,data=*,stdrot=true,transparency=SEMITRANSPARENT,
 block:id=%tile.lotr:pressurePlateBlueRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_blue
 
 # %tile.lotr:buttonBlueRock:* (tile.lotr:buttonBlueRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
-block:id=%tile.lotr:buttonBlueRock,data=0,stdrot=true,face0-5=0:lotr/rock_blue
+block:id=%tile.lotr:buttonBlueRock,data=0,stdrot=true,face0-5=0:lotr/rock_blue,transparency=SEMITRANSPARENT
 block:id=%tile.lotr:buttonBlueRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_blue
 
 # %tile.lotr:slabSingle3:* (tile.lotr:slabSingle3), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockSlab3
@@ -1365,7 +1365,7 @@ block:id=%tile.lotr:highElvenBed,data=15,stdrot=true,transparency=TRANSPARENT,fa
 block:id=%tile.lotr:pressurePlateRedRock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_red
 
 # %tile.lotr:buttonRedRock:* (tile.lotr:buttonRedRock), render=(STANDARD), opaque=false,cls=lotr.common.block.LOTRBlockButton
-block:id=%tile.lotr:buttonRedRock,data=0,stdrot=true,face0-5=0:lotr/rock_red
+block:id=%tile.lotr:buttonRedRock,data=0,stdrot=true,face0-5=0:lotr/rock_red,transparency=SEMITRANSPARENT
 block:id=%tile.lotr:buttonRedRock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:lotr/rock_red
 
 # %tile.lotr:stairsRedRockBrick:* (tile.lotr:stairsRedRockBrick), render=(STAIRS), opaque=false,cls=lotr.common.block.LOTRBlockStairs

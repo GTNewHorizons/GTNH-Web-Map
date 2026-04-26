@@ -151,14 +151,14 @@ block:id=%volcanicCoreBlock,data=*,stdrot=true,face0-5=0:rftools/volcanicCore
 block:id=%volcanicBlock,data=*,stdrot=true,face0-5=0:rftools/volcanic
 
 # %screenBlock:* (screenBlock), render=(CUSTOM), opaque=false,cls=mcjty.rftools.blocks.screens.ScreenBlock
-block:id=%screenBlock,data=0,data=1,stdrot=true,face0-5=0:rftools/screenFrame_icon
+block:id=%screenBlock,data=0,data=1,stdrot=true,face0-5=0:rftools/screenFrame_icon,transparency=SEMITRANSPARENT
 block:id=%screenBlock,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:rftools/screenFrame_icon
-block:id=%screenBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:rftools/screenFrame_icon
+block:id=%screenBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:rftools/screenFrame_icon,transparency=SEMITRANSPARENT
 
 # %screenHitBlock:* (screenHitBlock), render=(CUSTOM), opaque=false,cls=mcjty.rftools.blocks.screens.ScreenHitBlock
-block:id=%screenHitBlock,data=0,data=1,stdrot=true,face0-5=0:rftools/screenFrame_icon
+block:id=%screenHitBlock,data=0,data=1,stdrot=true,face0-5=0:rftools/screenFrame_icon,transparency=SEMITRANSPARENT
 block:id=%screenHitBlock,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:rftools/screenFrame_icon
-block:id=%screenHitBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:rftools/screenFrame_icon
+block:id=%screenHitBlock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:rftools/screenFrame_icon,transparency=SEMITRANSPARENT
 
 # %screenControllerBlock:* (screenControllerBlock), render=(STANDARD), opaque=true,cls=mcjty.rftools.blocks.screens.ScreenControllerBlock
 block:id=%screenControllerBlock,data=*,stdrot=true,face0=0:rftools/machineBottom,face1=0:rftools/machineTop,face2=0:rftools/machineSide,face3=0:rftools/machineScreenController,face4-5=0:rftools/machineSide

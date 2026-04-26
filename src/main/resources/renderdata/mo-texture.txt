@@ -190,13 +190,13 @@ block:id=%charging_station,data=*,stdrot=true,face0-5=0:mo/base
 block:id=%heavy_matter_pipe,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/heavy_matter_pipe
 
 # %holo_sign:* (holo_sign), render=matteroverdrive.client.render.block.MOBlockRenderer(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockHoloSign
-block:id=%holo_sign,data=0,stdrot=true,face0=0:mo/holo_monitor,face1-5=0:mo/base
-block:id=%holo_sign,data=1,stdrot=true,face0=0:mo/base,face1=0:mo/holo_monitor,face2-5=0:mo/base
+block:id=%holo_sign,data=0,stdrot=true,face0=0:mo/holo_monitor,face1-5=0:mo/base,transparency=SEMITRANSPARENT
+block:id=%holo_sign,data=1,stdrot=true,face0=0:mo/base,face1=0:mo/holo_monitor,face2-5=0:mo/base,transparency=SEMITRANSPARENT
 block:id=%holo_sign,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:mo/base,face2=0:mo/holo_monitor,face3-5=0:mo/base
 block:id=%holo_sign,data=3,stdrot=true,transparency=TRANSPARENT,face0-2=0:mo/base,face3=0:mo/holo_monitor,face4-5=0:mo/base
 block:id=%holo_sign,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:mo/base,face4=0:mo/holo_monitor,face5=0:mo/base
 block:id=%holo_sign,data=5,stdrot=true,transparency=TRANSPARENT,face0-4=0:mo/base,face5=0:mo/holo_monitor
-block:id=%holo_sign,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/base
+block:id=%holo_sign,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/base,transparency=SEMITRANSPARENT
 
 # %force_glass:* (force_glass), render=(STANDARD), opaque=false,cls=matteroverdrive.blocks.ForceGlass
 block:id=%force_glass,data=*,stdrot=true,face0-5=0:mo/force_glass
@@ -214,84 +214,84 @@ block:id=%bounding_box,data=*,stdrot=true,face0-5=0:mo/base
 block:id=%fusion_reactor_io,data=*,stdrot=true,face0-5=0:mo/network_port
 
 # %tritanium_crate.black:* (tritanium_crate.black), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.black,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.black,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.black,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.black,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.black,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.red:* (tritanium_crate.red), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.red,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.red,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.red,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.red,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.red,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.green:* (tritanium_crate.green), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.green,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.green,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.green,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.green,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.green,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.brown:* (tritanium_crate.brown), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.brown,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.brown,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.brown,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.brown,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.brown,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.blue:* (tritanium_crate.blue), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.blue,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.blue,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.blue,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.blue,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.blue,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.purple:* (tritanium_crate.purple), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.purple,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.purple,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.purple,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.purple,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.purple,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.cyan:* (tritanium_crate.cyan), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.cyan,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.cyan,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.cyan,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.cyan,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.cyan,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.silver:* (tritanium_crate.silver), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.silver,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.silver,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.silver,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.silver,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.silver,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.gray:* (tritanium_crate.gray), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.gray,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.gray,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.gray,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.gray,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.gray,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.pink:* (tritanium_crate.pink), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.pink,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.pink,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.pink,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.pink,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.pink,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.lime:* (tritanium_crate.lime), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.lime,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.lime,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.lime,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.lime,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.lime,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.yellow:* (tritanium_crate.yellow), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.yellow,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.yellow,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.yellow,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.yellow,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.yellow,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.lightBlue:* (tritanium_crate.lightBlue), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.lightBlue,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.lightBlue,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.lightBlue,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.lightBlue,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.lightBlue,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.magenta:* (tritanium_crate.magenta), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.magenta,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.magenta,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.magenta,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.magenta,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.magenta,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.orange:* (tritanium_crate.orange), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.orange,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.orange,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.orange,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.orange,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.orange,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %tritanium_crate.white:* (tritanium_crate.white), render=matteroverdrive.client.render.block.RendererBlockTritaniumCrate(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockTritaniumCrate
-block:id=%tritanium_crate.white,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.white,data=0,data=1,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 block:id=%tritanium_crate.white,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:mo/tritanium_crate_base
-block:id=%tritanium_crate.white,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base
+block:id=%tritanium_crate.white,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mo/tritanium_crate_base,transparency=SEMITRANSPARENT
 
 # %contract_market:* (contract_market), render=matteroverdrive.client.render.block.MOBlockRenderer(CUSTOM), opaque=false,cls=matteroverdrive.blocks.BlockContractMarket
 block:id=%contract_market,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:mo/holo_monitor,face1=0:mo/network_port,face2-5=0:mo/base

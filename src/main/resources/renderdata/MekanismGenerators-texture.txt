@@ -27,16 +27,16 @@ texture:id=mekanism/ctm/TurbineVent,filename=assets/mekanism/textures/blocks/ctm
 
 
 # %Generator:* (Generator), render=mekanism.client.render.block.CTMRenderingHandler(CUSTOM), opaque=false,cls=mekanism.generators.common.block.BlockGenerator
-block:id=%Generator,data=0,stdrot=true,face0-5=0:mekanism/SteelCasing
+block:id=%Generator,data=0,stdrot=true,face0-5=0:mekanism/SteelCasing,transparency=SEMITRANSPARENT
 block:id=%Generator,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:mekanism/SteelCasing
-block:id=%Generator,data=3,data=4,data=5,data=6,stdrot=true,face0-5=0:mekanism/SteelCasing
+block:id=%Generator,data=3,data=4,data=5,data=6,stdrot=true,face0-5=0:mekanism/SteelCasing,transparency=SEMITRANSPARENT
 block:id=%Generator,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:mekanism/TurbineRod
-block:id=%Generator,data=8,stdrot=true,face0-1=0:mekanism/RotationalComplexTop,face2-5=0:mekanism/RotationalComplexSide
-block:id=%Generator,data=9,stdrot=true,face0-5=0:mekanism/ctm/ElectromagneticCoil
-block:id=%Generator,data=10,stdrot=true,face0-5=0:mekanism/ctm/TurbineCasing
-block:id=%Generator,data=11,stdrot=true,face0-5=0:mekanism/ctm/TurbineValve
-block:id=%Generator,data=12,stdrot=true,face0-5=0:mekanism/ctm/TurbineVent
-block:id=%Generator,data=13,stdrot=true,face0-5=0:mekanism/ctm/SaturatingCondenser
+block:id=%Generator,data=8,stdrot=true,face0-1=0:mekanism/RotationalComplexTop,face2-5=0:mekanism/RotationalComplexSide,transparency=SEMITRANSPARENT
+block:id=%Generator,data=9,stdrot=true,face0-5=0:mekanism/ctm/ElectromagneticCoil,transparency=SEMITRANSPARENT
+block:id=%Generator,data=10,stdrot=true,face0-5=0:mekanism/ctm/TurbineCasing,transparency=SEMITRANSPARENT
+block:id=%Generator,data=11,stdrot=true,face0-5=0:mekanism/ctm/TurbineValve,transparency=SEMITRANSPARENT
+block:id=%Generator,data=12,stdrot=true,face0-5=0:mekanism/ctm/TurbineVent,transparency=SEMITRANSPARENT
+block:id=%Generator,data=13,stdrot=true,face0-5=0:mekanism/ctm/SaturatingCondenser,transparency=SEMITRANSPARENT
 
 # %Reactor:* (Reactor), render=mekanism.client.render.block.CTMRenderingHandler(CUSTOM), opaque=false,cls=mekanism.generators.common.block.BlockReactor
 block:id=%Reactor,data=0,stdrot=true,face0=0:mekanism/ctm/ReactorFrame,face1=0:mekanism/ctm/ReactorControllerOff,face2-5=0:mekanism/ctm/ReactorFrame

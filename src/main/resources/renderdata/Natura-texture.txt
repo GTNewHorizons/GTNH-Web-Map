@@ -363,14 +363,14 @@ block:id=%NetherBerryBush,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 block:id=%NetherBerryBush,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/duskberry_fancy
 block:id=%NetherBerryBush,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/skyberry_fancy
 block:id=%NetherBerryBush,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/stingberry_fancy
-block:id=%NetherBerryBush,data=8,stdrot=true,face0-5=0:natura/blightberry_fancy
-block:id=%NetherBerryBush,data=9,stdrot=true,face0-5=0:natura/duskberry_fancy
-block:id=%NetherBerryBush,data=10,stdrot=true,face0-5=0:natura/skyberry_fancy
-block:id=%NetherBerryBush,data=11,stdrot=true,face0-5=0:natura/stingberry_fancy
-block:id=%NetherBerryBush,data=12,stdrot=true,face0-5=0:natura/blightberry_ripe_fancy
-block:id=%NetherBerryBush,data=13,stdrot=true,face0-5=0:natura/duskberry_ripe_fancy
-block:id=%NetherBerryBush,data=14,stdrot=true,face0-5=0:natura/skyberry_ripe_fancy
-block:id=%NetherBerryBush,data=15,stdrot=true,face0-5=0:natura/stingberry_ripe_fancy
+block:id=%NetherBerryBush,data=8,stdrot=true,face0-5=0:natura/blightberry_fancy,transparency=SEMITRANSPARENT
+block:id=%NetherBerryBush,data=9,stdrot=true,face0-5=0:natura/duskberry_fancy,transparency=SEMITRANSPARENT
+block:id=%NetherBerryBush,data=10,stdrot=true,face0-5=0:natura/skyberry_fancy,transparency=SEMITRANSPARENT
+block:id=%NetherBerryBush,data=11,stdrot=true,face0-5=0:natura/stingberry_fancy,transparency=SEMITRANSPARENT
+block:id=%NetherBerryBush,data=12,stdrot=true,face0-5=0:natura/blightberry_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%NetherBerryBush,data=13,stdrot=true,face0-5=0:natura/duskberry_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%NetherBerryBush,data=14,stdrot=true,face0-5=0:natura/skyberry_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%NetherBerryBush,data=15,stdrot=true,face0-5=0:natura/stingberry_ripe_fancy,transparency=SEMITRANSPARENT
 
 # %BerryBush:* (BerryBush), render=mods.natura.client.BerryRender(CUSTOM), opaque=false,cls=mods.natura.blocks.crops.BerryBush
 block:id=%BerryBush,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/raspberry_fancy
@@ -381,14 +381,14 @@ block:id=%BerryBush,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura
 block:id=%BerryBush,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blueberry_fancy
 block:id=%BerryBush,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blackberry_fancy
 block:id=%BerryBush,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/geoberry_fancy
-block:id=%BerryBush,data=8,stdrot=true,face0-5=0:natura/raspberry_fancy
-block:id=%BerryBush,data=9,stdrot=true,face0-5=0:natura/blueberry_fancy
-block:id=%BerryBush,data=10,stdrot=true,face0-5=0:natura/blackberry_fancy
-block:id=%BerryBush,data=11,stdrot=true,face0-5=0:natura/geoberry_fancy
-block:id=%BerryBush,data=12,stdrot=true,face0-5=0:natura/raspberry_ripe_fancy
-block:id=%BerryBush,data=13,stdrot=true,face0-5=0:natura/blueberry_ripe_fancy
-block:id=%BerryBush,data=14,stdrot=true,face0-5=0:natura/blackberry_ripe_fancy
-block:id=%BerryBush,data=15,stdrot=true,face0-5=0:natura/geoberry_ripe_fancy
+block:id=%BerryBush,data=8,stdrot=true,face0-5=0:natura/raspberry_fancy,transparency=SEMITRANSPARENT
+block:id=%BerryBush,data=9,stdrot=true,face0-5=0:natura/blueberry_fancy,transparency=SEMITRANSPARENT
+block:id=%BerryBush,data=10,stdrot=true,face0-5=0:natura/blackberry_fancy,transparency=SEMITRANSPARENT
+block:id=%BerryBush,data=11,stdrot=true,face0-5=0:natura/geoberry_fancy,transparency=SEMITRANSPARENT
+block:id=%BerryBush,data=12,stdrot=true,face0-5=0:natura/raspberry_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%BerryBush,data=13,stdrot=true,face0-5=0:natura/blueberry_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%BerryBush,data=14,stdrot=true,face0-5=0:natura/blackberry_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%BerryBush,data=15,stdrot=true,face0-5=0:natura/geoberry_ripe_fancy,transparency=SEMITRANSPARENT
 
 # %N Crops:* (N Crops), render=mods.natura.client.CropRender(CROPS), opaque=false,cls=mods.natura.blocks.crops.CropBlock
 block:id=%N Crops,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/barley_1
@@ -402,9 +402,9 @@ block:id=%N Crops,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/co
 block:id=%N Crops,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/cotton_5
 
 # %Saguaro:* (Saguaro), render=mods.natura.client.SaguaroRenderer(CUSTOM), opaque=false,cls=mods.natura.blocks.trees.SaguaroBlock
-block:id=%Saguaro,data=0,stdrot=true,face0=0:natura/saguaro_bottom,face1=0:natura/saguaro_top,face2-5=0:natura/saguaro_side
-block:id=%Saguaro,data=1,data=2,stdrot=true,face0-5=0:natura/saguaro_top
-block:id=%Saguaro,data=3,stdrot=true,face0-5=0:natura/saguaro_fruit
+block:id=%Saguaro,data=0,stdrot=true,face0=0:natura/saguaro_bottom,face1=0:natura/saguaro_top,face2-5=0:natura/saguaro_side,transparency=SEMITRANSPARENT
+block:id=%Saguaro,data=1,data=2,stdrot=true,face0-5=0:natura/saguaro_top,transparency=SEMITRANSPARENT
+block:id=%Saguaro,data=3,stdrot=true,face0-5=0:natura/saguaro_fruit,transparency=SEMITRANSPARENT
 
 # %Bluebells:* (Bluebells), render=(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.FlowerBlock
 block:id=%Bluebells,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/flower_bluebells

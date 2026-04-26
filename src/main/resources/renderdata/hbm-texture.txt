@@ -955,7 +955,7 @@ block:id=%tile.block_lithium,data=*,stdrot=true,face0-5=0:hbm/block_lithium
 block:id=%tile.brick_light_stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:hbm/brick_light
 
 # %tile.anvil_bismuth:* (tile.anvil_bismuth), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
-block:id=%tile.anvil_bismuth,data=0,data=1,stdrot=true,face0-5=0:hbm/anvil_bismuth
+block:id=%tile.anvil_bismuth,data=0,data=1,stdrot=true,face0-5=0:hbm/anvil_bismuth,transparency=SEMITRANSPARENT
 block:id=%tile.anvil_bismuth,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/anvil_bismuth
 
 # %tile.crystal_energy:* (tile.crystal_energy), render=com.hbm.render.block.RenderCrystal(CUSTOM), opaque=false,cls=com.hbm.blocks.generic.BlockCrystal
@@ -1332,14 +1332,14 @@ block:id=%tile.lamp_uv_off,data=*,stdrot=true,face0-5=0:hbm/block_steel
 block:id=%tile.block_niobium,data=*,stdrot=true,face0-5=0:hbm/block_niobium
 
 # %tile.foundry_outlet:* (tile.foundry_outlet), render=com.hbm.render.block.RenderFoundryOutlet(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.FoundryOutlet
-block:id=%tile.foundry_outlet,data=0,data=1,stdrot=true,face0-5=0:hbm/brick_fire
+block:id=%tile.foundry_outlet,data=0,data=1,stdrot=true,face0-5=0:hbm/brick_fire,transparency=SEMITRANSPARENT
 block:id=%tile.foundry_outlet,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/brick_fire
 
 # %tile.sand_boron_layer:* (tile.sand_boron_layer), render=(STANDARD), opaque=false,cls=com.hbm.blocks.generic.BlockLayering
 block:id=%tile.sand_boron_layer,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/sand_boron
-block:id=%tile.sand_boron_layer,data=7,stdrot=true,face0-5=0:hbm/sand_boron
+block:id=%tile.sand_boron_layer,data=7,stdrot=true,face0-5=0:hbm/sand_boron,transparency=SEMITRANSPARENT
 block:id=%tile.sand_boron_layer,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/sand_boron
-block:id=%tile.sand_boron_layer,data=15,stdrot=true,face0-5=0:hbm/sand_boron
+block:id=%tile.sand_boron_layer,data=15,stdrot=true,face0-5=0:hbm/sand_boron,transparency=SEMITRANSPARENT
 
 # %tile.rbmk_heatex:* (tile.rbmk_heatex), render=(STANDARD), opaque=true,cls=com.hbm.blocks.machine.rbmk.RBMKHeatex
 block:id=%tile.rbmk_heatex,data=*,stdrot=true,face0-5=0:hbm/rbmk_heatex
@@ -1384,7 +1384,7 @@ block:id=%tile.red_pylon,data=*,stdrot=true,face0-5=0:hbm/red_pylon
 block:id=%tile.red_pylon_large,data=*,stdrot=true,face0-5=0:hbm/red_pylon_large
 
 # %tile.anvil_murky:* (tile.anvil_murky), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
-block:id=%tile.anvil_murky,data=0,data=1,stdrot=true,face0=0:hbm/anvil_steel,face1=0:hbm/anvil_murky,face2-5=0:hbm/anvil_steel
+block:id=%tile.anvil_murky,data=0,data=1,stdrot=true,face0=0:hbm/anvil_steel,face1=0:hbm/anvil_murky,face2-5=0:hbm/anvil_steel,transparency=SEMITRANSPARENT
 block:id=%tile.anvil_murky,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:hbm/anvil_steel,face1=0:hbm/anvil_murky,face2-5=0:hbm/anvil_steel
 
 # %tile.ore_meteor_sulfur:* (tile.ore_meteor_sulfur), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockOre
@@ -1415,7 +1415,7 @@ block:id=%tile.fluid_duct_exhaust,data=*,stdrot=true,transparency=TRANSPARENT,fa
 block:id=%tile.deco_pipe,data=*,stdrot=true,face0-1=0:hbm/pipe_top,face2-5=0:hbm/pipe_side
 
 # %tile.anvil_dnt:* (tile.anvil_dnt), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
-block:id=%tile.anvil_dnt,data=0,data=1,stdrot=true,face0-5=0:hbm/anvil_dnt
+block:id=%tile.anvil_dnt,data=0,data=1,stdrot=true,face0-5=0:hbm/anvil_dnt,transparency=SEMITRANSPARENT
 block:id=%tile.anvil_dnt,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/anvil_dnt
 
 # %tile.block_foam:* (tile.block_foam), render=(STANDARD), opaque=true,cls=com.hbm.blocks.generic.BlockGeneric
@@ -2054,7 +2054,7 @@ block:id=%tile.fwatz_cooler,data=*,stdrot=true,face0-1=0:hbm/fwatz_cooler_top,fa
 block:id=%tile.pwr_reflector,data=*,stdrot=true,face0-5=0:hbm/pwr_reflector
 
 # %tile.anvil_osmiridium:* (tile.anvil_osmiridium), render=com.hbm.render.block.RenderAnvil(CUSTOM), opaque=false,cls=com.hbm.blocks.machine.NTMAnvil
-block:id=%tile.anvil_osmiridium,data=0,data=1,stdrot=true,face0-5=0:hbm/anvil_osmiridium
+block:id=%tile.anvil_osmiridium,data=0,data=1,stdrot=true,face0-5=0:hbm/anvil_osmiridium,transparency=SEMITRANSPARENT
 block:id=%tile.anvil_osmiridium,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:hbm/anvil_osmiridium
 
 # %tile.fluid_duct_gauge:* (tile.fluid_duct_gauge), render=com.hbm.render.block.RenderBlockMultipass(CUSTOM), opaque=true,cls=com.hbm.blocks.network.FluidDuctGauge
