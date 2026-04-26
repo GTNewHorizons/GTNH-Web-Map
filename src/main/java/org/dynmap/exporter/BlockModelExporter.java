@@ -190,6 +190,7 @@ public class BlockModelExporter {
         int blockData = map.getBlockData();
         int renderData = HDBlockModels.getBlockRenderData(blockId, map);
         CustomRendererData customRenderData = null;
+        boolean patchModelUsesPatchTextureCoords = false;
 
         RenderPatch[] patches = models.getPatchModel(blockId, blockData, renderData);
         if (patches == null) {
@@ -202,6 +203,7 @@ public class BlockModelExporter {
             }
         }
         if (patches != null) {
+            patchModelUsesPatchTextureCoords = true;
             steps = new BlockStep[patches.length];
             textureIndexes = new int[patches.length];
             for (int i = 0; i < textureIndexes.length; i++) {
@@ -225,7 +227,8 @@ public class BlockModelExporter {
 
         sink.setBlock(blockId, blockData);
         ExportMaterial[][] materials =
-                resolveMaterials(blockId, blockData, renderData, map, textureIndexes, steps, customRenderData);
+                resolveMaterials(blockId, blockData, renderData, map, textureIndexes, steps, customRenderData,
+                        !patchModelUsesPatchTextureCoords);
 
         if (patches != null) {
             for (int i = 0; i < patches.length; i++) {
@@ -435,10 +438,11 @@ public class BlockModelExporter {
     }
 
     private ExportMaterial[][] resolveMaterials(int blockId, int blockData, int renderData, MapIterator map,
-            int[] textureIndexes, BlockStep[] steps, CustomRendererData customRenderData) {
+            int[] textureIndexes, BlockStep[] steps, CustomRendererData customRenderData,
+            boolean allowLegacyTopBottomRotationCorrection) {
         if (shader instanceof TexturePackHDShader) {
             return ((TexturePackHDShader) shader).getCurrentBlockExportMaterials(blockId, blockData, renderData, map,
-                    textureIndexes, steps, customRenderData);
+                    textureIndexes, steps, customRenderData, allowLegacyTopBottomRotationCorrection);
         }
         if (shader != null) {
             String[] materials = shader.getCurrentBlockMaterials(blockId, blockData, renderData, map, textureIndexes, steps);

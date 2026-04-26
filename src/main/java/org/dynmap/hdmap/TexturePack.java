@@ -3762,7 +3762,7 @@ public class TexturePack {
     public String[] getCurrentBlockMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter, int[] txtidx,
             BlockStep[] steps) {
         ExportMaterial[][] exported = getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps,
-                null);
+                null, true);
         String[] rslt = new String[exported.length];
         for (int i = 0; i < exported.length; i++) {
             if ((exported[i] != null) && (exported[i].length > 0)) {
@@ -3777,6 +3777,13 @@ public class TexturePack {
 
     public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
             int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData) {
+        return getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps, customRenderData,
+                true);
+    }
+
+    public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
+            int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData,
+            boolean allowLegacyTopBottomRotationCorrection) {
         HDTextureMap map = HDTextureMap.getMap(blkid, blkdata, renderdata);
         int blkindex = indexByIDMeta(blkid, blkdata);
         if (txtidx == null) {
@@ -3787,7 +3794,7 @@ public class TexturePack {
         }
 
         ExportMaterial[][] rslt = new ExportMaterial[txtidx.length][];
-        boolean handleStdRotation = !map.stdrotate;
+        boolean handleStdRotation = allowLegacyTopBottomRotationCorrection && !map.stdrotate;
         boolean blockHasColoring = hasBlockColoring.get(blkindex);
         int customBlockColorMultiplier = -1;
         if (blockHasColoring) {
