@@ -231,9 +231,9 @@ public class ModelMap extends MapType {
 
     public List<DynmapChunk> getRequiredChunksForTile(int tileX, int tileZ) {
         TileAddress address = getTileAddress(tileX, tileZ);
-        ArrayList<DynmapChunk> chunks = new ArrayList<DynmapChunk>(granularity * granularity);
-        for (int chunkX = address.getMinChunkX(); chunkX <= address.getMaxChunkX(); chunkX++) {
-            for (int chunkZ = address.getMinChunkZ(); chunkZ <= address.getMaxChunkZ(); chunkZ++) {
+        ArrayList<DynmapChunk> chunks = new ArrayList<DynmapChunk>((granularity + 2) * (granularity + 2));
+        for (int chunkX = address.getMinChunkX() - 1; chunkX <= address.getMaxChunkX() + 1; chunkX++) {
+            for (int chunkZ = address.getMinChunkZ() - 1; chunkZ <= address.getMaxChunkZ() + 1; chunkZ++) {
                 chunks.add(new DynmapChunk(chunkX, chunkZ));
             }
         }
