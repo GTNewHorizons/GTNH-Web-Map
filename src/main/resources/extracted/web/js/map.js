@@ -92,6 +92,9 @@ DynMap.prototype = {
 					world: world,
 					dynmap: me
 				});
+				if(!maptypes[mapentry.type]) {
+					throw "Unknown map type " + mapentry.type;
+				}
 				map = world.maps[mapentry.name] = maptypes[mapentry.type](map);
 				if(me.options.defaultmap && me.options.defaultmap == mapentry.name)
 					world.defaultmap = map;
@@ -476,6 +479,17 @@ DynMap.prototype = {
 		}
 	},
 	getProjection: function() { return this.maptype.getProjection(); },
+	setMapInteractionEnabled: function(enabled) {
+		var map = this.map;
+		var method = enabled ? 'enable' : 'disable';
+		if (map.dragging) map.dragging[method]();
+		if (map.touchZoom) map.touchZoom[method]();
+		if (map.doubleClickZoom) map.doubleClickZoom[method]();
+		if (map.scrollWheelZoom) map.scrollWheelZoom[method]();
+		if (map.boxZoom) map.boxZoom[method]();
+		if (map.keyboard) map.keyboard[method]();
+		if (map.tap) map.tap[method]();
+	},
 	selectMapAndPan: function(map, location, completed) {
 		if (!map) { throw "Cannot select map " + map; }
 		var me = this;
@@ -496,6 +510,10 @@ DynMap.prototype = {
 		var projectionChanged = (me.maptype && me.maptype.getProjection()) !== (map && map.projection);
 
 		var prevzoom = me.map.getZoom();
+		var prevloc = null;
+		if (me.maptype != null) {
+			prevloc = me.maptype.getProjection().fromLatLngToLocation(me.map.getCenter(), 64);
+		}
 
 		var prevworld = me.world;
 
@@ -540,9 +558,6 @@ DynMap.prototype = {
 				centerPoint = me.getProjection().fromLocationToLatLng(centerLocation);
 			}
 			else {
-				var prevloc = null;
-				if(prevmap != null)
-					prevloc = prevmap.getProjection().fromLatLngToLocation(me.map.getCenter(), 64);
 				if(prevloc != null)
 					centerPoint = me.getProjection().fromLocationToLatLng(prevloc);
 				else
@@ -554,6 +569,12 @@ DynMap.prototype = {
 			me.map.setZoom(prevzoom);
 		}
 		me.map.addLayer(me.maptype);
+		if (me.maptype.onSelectedMap) {
+			me.maptype.onSelectedMap(prevmap, prevloc);
+		}
+		me.setMapInteractionEnabled(!me.maptype.options.is3dviewer);
+		$(me.map.getContainer()).toggleClass('modelmap-mode', !!me.maptype.options.is3dviewer);
+		compass.toggle(!me.maptype.options.is3dviewer);
 
 		if (worldChanged) {
 			$(me).trigger('worldchanged');
@@ -876,6 +897,7 @@ DynMap.prototype = {
 				col = me.maptype.options.background;
 		}
 		$('.map').css('background', col);
+		$('.modelmap-view').css('background', col);
 		$('.leaflet-tile').css('background', col);
 	},
 	getParameterByName: function(name) {

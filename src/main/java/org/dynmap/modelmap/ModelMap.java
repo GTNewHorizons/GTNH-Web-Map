@@ -1,5 +1,8 @@
 package org.dynmap.modelmap;
 
+import static org.dynmap.JSONUtils.a;
+import static org.dynmap.JSONUtils.s;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,6 +20,7 @@ import org.dynmap.hdmap.TexturePackHDShader;
 import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
 import org.dynmap.storage.MapStorageTileEnumCB;
+import org.json.simple.JSONObject;
 
 public class ModelMap extends MapType {
     public static final int DEFAULT_GRANULARITY = 1;
@@ -319,6 +323,28 @@ public class ModelMap extends MapType {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public void buildClientConfiguration(JSONObject worldObject, DynmapWorld world) {
+        JSONObject o = new JSONObject();
+        s(o, "type", "ModelMapType");
+        s(o, "name", name);
+        s(o, "title", title);
+        s(o, "icon", getIcon());
+        s(o, "prefix", prefix);
+        s(o, "protected", isProtected());
+        s(o, "tileblocksize", getBlockSpan());
+        s(o, "granularity", granularity);
+        s(o, "tileformat", getTileFileExt());
+        s(o, "compassview", "N");
+        s(o, "bigmap", false);
+        s(o, "modelminzoom", 0);
+        s(o, "modelmaxzoom", 6);
+        if (appendToWorld.length() > 0) {
+            s(o, "append_to_world", appendToWorld);
+        }
+        a(worldObject, "maps", o);
     }
 
     @Override

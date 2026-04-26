@@ -73,6 +73,64 @@
     z-index: 0;
 }
 
+.dynmap > .map.modelmap-mode .leaflet-map-pane,
+.dynmap > .map.modelmap-mode .leaflet-control-container,
+.dynmap > .map.modelmap-mode .leaflet-tile-pane,
+.dynmap > .map.modelmap-mode .leaflet-overlay-pane,
+.dynmap > .map.modelmap-mode .leaflet-shadow-pane,
+.dynmap > .map.modelmap-mode .leaflet-marker-pane,
+.dynmap > .map.modelmap-mode .leaflet-tooltip-pane,
+.dynmap > .map.modelmap-mode .leaflet-popup-pane {
+    visibility: hidden;
+}
+
+.modelmap-view {
+    position: absolute;
+    inset: 0;
+    z-index: 350;
+    cursor: crosshair;
+}
+
+.modelmap-view.modelmap-captured {
+    cursor: none;
+}
+
+.modelmap-view canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.modelmap-hud {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 360;
+    min-width: 150px;
+    padding: 8px 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+.modelmap-hud-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.modelmap-hud-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.modelmap-hud-value {
+    font-weight: bold;
+}
+
 /* Map Controls */
 .gmnoprint{
     margin-top:-75px;
