@@ -562,6 +562,7 @@
 				emissive: material.emissive ? material.emissive.clone() : new THREE.Color(0x000000),
 				emissiveIntensity: (typeof material.emissiveIntensity === "number") ? material.emissiveIntensity : 1.0
 			});
+			displayMaterial.depthWrite = !displayMaterial.transparent;
 			if (displayMaterial.map) {
 				displayMaterial.map.encoding = THREE.sRGBEncoding;
 				this._configureTexture(displayMaterial.map);
