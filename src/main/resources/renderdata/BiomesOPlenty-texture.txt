@@ -918,10 +918,10 @@ block:id=%honeyBlock,data=*,stdrot=true,face0-5=12000:biomesoplenty/honeyblock
 # %bones:* (bones), render=biomesoplenty.client.render.blocks.SmallBlockRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBones
 block:id=%bones,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_small
 block:id=%bones,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_medium
-block:id=%bones,data=2,stdrot=true,face0-5=0:biomesoplenty/bones_large
+block:id=%bones,data=2,stdrot=true,face0-5=0:biomesoplenty/bones_large,transparency=SEMITRANSPARENT
 block:id=%bones,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_small
 block:id=%bones,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_medium
-block:id=%bones,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/bones_small
+block:id=%bones,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/bones_small,transparency=SEMITRANSPARENT
 
 # %grave:* (grave), render=biomesoplenty.client.render.blocks.GraveRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockGrave
 block:id=%grave,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/grave

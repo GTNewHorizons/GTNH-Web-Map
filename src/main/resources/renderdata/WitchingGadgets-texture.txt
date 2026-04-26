@@ -46,16 +46,16 @@ block:id=%WG_StoneDevice,data=1,stdrot=true,face0-5=0:witchinggadgets/timeStone
 block:id=%WG_StoneDevice,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:witchinggadgets/blastFurnace
 
 # %WG_WoodenDevice:* (WG_WoodenDevice), render=witchinggadgets.client.render.BlockRenderWoodenDevice(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWGWoodenDevice
-block:id=%WG_WoodenDevice,data=0,stdrot=true,face0-5=0:thaumcraft/woodplain
-block:id=%WG_WoodenDevice,data=2,stdrot=true,face0-5=0:thaumcraft/woodplain
+block:id=%WG_WoodenDevice,data=0,stdrot=true,face0-5=0:thaumcraft/woodplain,transparency=SEMITRANSPARENT
+block:id=%WG_WoodenDevice,data=2,stdrot=true,face0-5=0:thaumcraft/woodplain,transparency=SEMITRANSPARENT
 block:id=%WG_WoodenDevice,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/woodplain
-block:id=%WG_WoodenDevice,data=4,stdrot=true,face0=0:witchinggadgets/saunaStove_side,face1=0:witchinggadgets/saunaStove_top,face2-5=0:witchinggadgets/saunaStove_side
-block:id=%WG_WoodenDevice,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/woodplain
+block:id=%WG_WoodenDevice,data=4,stdrot=true,face0=0:witchinggadgets/saunaStove_side,face1=0:witchinggadgets/saunaStove_top,face2-5=0:witchinggadgets/saunaStove_side,transparency=SEMITRANSPARENT
+block:id=%WG_WoodenDevice,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/woodplain,transparency=SEMITRANSPARENT
 
 # %WG_MetalDevice:* (WG_MetalDevice), render=witchinggadgets.client.render.BlockRenderMetalDevice(CUSTOM), opaque=false,cls=witchinggadgets.common.blocks.BlockWGMetalDevice
-block:id=%WG_MetalDevice,data=0,stdrot=true,face0-5=0:witchinggadgets/essentiaPump
-block:id=%WG_MetalDevice,data=1,stdrot=true,face0-5=0:thaumcraft/metalbase
-block:id=%WG_MetalDevice,data=2,stdrot=true,face0-5=0:witchinggadgets/terraformer
+block:id=%WG_MetalDevice,data=0,stdrot=true,face0-5=0:witchinggadgets/essentiaPump,transparency=SEMITRANSPARENT
+block:id=%WG_MetalDevice,data=1,stdrot=true,face0-5=0:thaumcraft/metalbase,transparency=SEMITRANSPARENT
+block:id=%WG_MetalDevice,data=2,stdrot=true,face0-5=0:witchinggadgets/terraformer,transparency=SEMITRANSPARENT
 block:id=%WG_MetalDevice,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusPlains
 block:id=%WG_MetalDevice,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusColdTaiga
 block:id=%WG_MetalDevice,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchinggadgets/tfFocusDesert

@@ -1069,14 +1069,14 @@ block:id=%gt.blockores,data=14,stdrot=true,face0-5=0:minecraft/stone
 block:id=%gt.blockores,data=15,stdrot=true,face0-5=0:minecraft/stone
 
 # %gt.blockframes:* (gt.blockframes), render=gregtech.common.render.GTRendererBlock(CUSTOM), opaque=false,cls=gregtech.common.blocks.BlockFrameBox
-block:id=%gt.blockframes,data=0,stdrot=true,face0-5=12000:gregtech/materialicons/NONE/frameGt
-block:id=%gt.blockframes,data=1,data=2,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt
-block:id=%gt.blockframes,data=3,stdrot=true,face0-5=12000:gregtech/materialicons/METALLIC/frameGt
-block:id=%gt.blockframes,data=4,data=5,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt
-block:id=%gt.blockframes,data=6,stdrot=true,face0-5=12000:gregtech/materialicons/DULL/frameGt
-block:id=%gt.blockframes,data=8,stdrot=true,face0-5=12000:gregtech/materialicons/METALLIC/frameGt
-block:id=%gt.blockframes,data=9,data=10,stdrot=true,face0-5=12000:gregtech/materialicons/DULL/frameGt
-block:id=%gt.blockframes,data=12,data=13,data=14,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt
+block:id=%gt.blockframes,data=0,stdrot=true,face0-5=12000:gregtech/materialicons/NONE/frameGt,transparency=SEMITRANSPARENT
+block:id=%gt.blockframes,data=1,data=2,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt,transparency=SEMITRANSPARENT
+block:id=%gt.blockframes,data=3,stdrot=true,face0-5=12000:gregtech/materialicons/METALLIC/frameGt,transparency=SEMITRANSPARENT
+block:id=%gt.blockframes,data=4,data=5,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt,transparency=SEMITRANSPARENT
+block:id=%gt.blockframes,data=6,stdrot=true,face0-5=12000:gregtech/materialicons/DULL/frameGt,transparency=SEMITRANSPARENT
+block:id=%gt.blockframes,data=8,stdrot=true,face0-5=12000:gregtech/materialicons/METALLIC/frameGt,transparency=SEMITRANSPARENT
+block:id=%gt.blockframes,data=9,data=10,stdrot=true,face0-5=12000:gregtech/materialicons/DULL/frameGt,transparency=SEMITRANSPARENT
+block:id=%gt.blockframes,data=12,data=13,data=14,stdrot=true,face0-5=12000:gregtech/materialicons/FLUID/frameGt,transparency=SEMITRANSPARENT
 
 # %tile.gt.dronerender:* (tile.gt.dronerender), render=(STANDARD), opaque=false,cls=gregtech.common.blocks.BlockDrone
 block:id=%tile.gt.dronerender,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
@@ -1342,7 +1342,7 @@ block:id=%gt.blockcasings.cyclotron_coils,data=9,stdrot=true,face0-1=0:gregtech/
 block:id=%gt.blockcasings.cyclotron_coils,data=10,stdrot=true,face0-1=0:gregtech/iconsets/UMV_TOP_CYCLOTRON_SOLENOID,face2-5=0:gregtech/iconsets/UMV_SIDE_CYCLOTRON_SOLENOID
 block:id=%gt.blockcasings.cyclotron_coils,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:gregtech/iconsets/MACHINE_CASING_SOLID_STEEL
 
-block:id=%gt.blockframes,data=*,stdrot=true,face0-5=17000:gregtech/materialicons/NONE/frameGt
+block:id=%gt.blockframes,data=*,stdrot=true,face0-5=17000:gregtech/materialicons/NONE/frameGt,transparency=SEMITRANSPARENT
 
 specialModSupportLoader:org.dynmap.modsupport.loaders.GregTechModSupportLoader,name=gtmte
 

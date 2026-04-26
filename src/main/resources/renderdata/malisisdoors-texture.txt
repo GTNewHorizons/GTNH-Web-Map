@@ -277,10 +277,10 @@ block:id=%trapdoor_spruce,data=*,stdrot=true,face0-5=0:malisisdoors/trapdoor_spr
 block:id=%player_sensor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/player_sensor
 
 # %vanishing_block:* (vanishing_block), render=net.malisis.doors.renderer.VanishingBlockRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.VanishingBlock
-block:id=%vanishing_block,data=0,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_wood
-block:id=%vanishing_block,data=1,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_iron
-block:id=%vanishing_block,data=2,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_gold
-block:id=%vanishing_block,data=3,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block,data=0,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_wood,transparency=SEMITRANSPARENT
+block:id=%vanishing_block,data=1,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_iron,transparency=SEMITRANSPARENT
+block:id=%vanishing_block,data=2,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_gold,transparency=SEMITRANSPARENT
+block:id=%vanishing_block,data=3,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_diamond,transparency=SEMITRANSPARENT
 block:id=%vanishing_block,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
 block:id=%vanishing_block,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
 block:id=%vanishing_block,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
@@ -295,10 +295,10 @@ block:id=%vanishing_block,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0
 block:id=%vanishing_block,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_diamond
 
 # %vanishing_block_diamond:* (vanishing_block_diamond), render=net.malisis.doors.renderer.VanishingBlockRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.VanishingDiamondBlock
-block:id=%vanishing_block_diamond,data=0,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_wood
-block:id=%vanishing_block_diamond,data=1,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_iron
-block:id=%vanishing_block_diamond,data=2,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_gold
-block:id=%vanishing_block_diamond,data=3,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_diamond
+block:id=%vanishing_block_diamond,data=0,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_wood,transparency=SEMITRANSPARENT
+block:id=%vanishing_block_diamond,data=1,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_iron,transparency=SEMITRANSPARENT
+block:id=%vanishing_block_diamond,data=2,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_gold,transparency=SEMITRANSPARENT
+block:id=%vanishing_block_diamond,data=3,stdrot=true,face0-5=12000:malisisdoors/vanishing_block_diamond,transparency=SEMITRANSPARENT
 block:id=%vanishing_block_diamond,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_wood
 block:id=%vanishing_block_diamond,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_iron
 block:id=%vanishing_block_diamond,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/vanishing_block_gold
@@ -338,7 +338,7 @@ block:id=%door_factory,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=
 block:id=%rustyHatch,data=*,stdrot=true,face0-5=0:malisisdoors/rusty_hatch
 
 # %rustyLadder:* (rustyLadder), render=net.malisis.doors.renderer.RustyLadderRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.block.RustyLadder
-block:id=%rustyLadder,data=0,data=1,stdrot=true,face0-5=0:malisisdoors/rusty_hatch_handle
+block:id=%rustyLadder,data=0,data=1,stdrot=true,face0-5=0:malisisdoors/rusty_hatch_handle,transparency=SEMITRANSPARENT
 block:id=%rustyLadder,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:malisisdoors/rusty_hatch_handle
 
 # %carriage_door:* (carriage_door), render=net.malisis.doors.door.renderer.BigDoorRenderer(CUSTOM), opaque=false,cls=net.malisis.doors.door.block.BigDoor

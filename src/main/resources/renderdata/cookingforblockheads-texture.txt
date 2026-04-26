@@ -104,7 +104,7 @@ block:id=%black_kitchen_floor,data=*,stdrot=true,face0-5=0:cookingforblockheads/
 block:id=%sink,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_spruce_top,face2-5=0:minecraft/log_spruce
 
 # %toolrack:* (toolrack), render=net.blay09.mods.cookingforblockheads.client.render.block.ToolRackBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockToolRack
-block:id=%toolrack,data=0,data=1,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%toolrack,data=0,data=1,stdrot=true,face0-5=0:minecraft/planks_oak,transparency=SEMITRANSPARENT
 block:id=%toolrack,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
 # %toaster:* (toaster), render=net.blay09.mods.cookingforblockheads.client.render.block.ToasterBlockRenderer(CUSTOM), opaque=false,cls=net.blay09.mods.cookingforblockheads.block.BlockToaster

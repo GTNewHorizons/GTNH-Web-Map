@@ -618,12 +618,12 @@ block:id=%tile.TFFireflyJar,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=
 block:id=%tile.TFPlant,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/mosspatch
 block:id=%tile.TFPlant,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:TwilightForest/mayapple
 block:id=%tile.TFPlant,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:TwilightForest/cloverpatch
-block:id=%tile.TFPlant,data=8,stdrot=true,face0-5=2000:TwilightForest/fiddlehead
-block:id=%tile.TFPlant,data=9,stdrot=true,face0-5=0:TwilightForest/mushgloom
-block:id=%tile.TFPlant,data=10,stdrot=true,face0-5=2000:minecraft/tallgrass
-block:id=%tile.TFPlant,data=11,stdrot=true,face0-5=0:minecraft/deadbush
-block:id=%tile.TFPlant,data=13,stdrot=true,face0-5=0:TwilightForest/torchberry
-block:id=%tile.TFPlant,data=14,stdrot=true,face0-5=0:TwilightForest/rootstrand
+block:id=%tile.TFPlant,data=8,stdrot=true,face0-5=2000:TwilightForest/fiddlehead,transparency=SEMITRANSPARENT
+block:id=%tile.TFPlant,data=9,stdrot=true,face0-5=0:TwilightForest/mushgloom,transparency=SEMITRANSPARENT
+block:id=%tile.TFPlant,data=10,stdrot=true,face0-5=2000:minecraft/tallgrass,transparency=SEMITRANSPARENT
+block:id=%tile.TFPlant,data=11,stdrot=true,face0-5=0:minecraft/deadbush,transparency=SEMITRANSPARENT
+block:id=%tile.TFPlant,data=13,stdrot=true,face0-5=0:TwilightForest/torchberry,transparency=SEMITRANSPARENT
+block:id=%tile.TFPlant,data=14,stdrot=true,face0-5=0:TwilightForest/rootstrand,transparency=SEMITRANSPARENT
 
 # %tile.TFUncraftingTable:* (tile.TFUncraftingTable), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFUncraftingTable
 block:id=%tile.TFUncraftingTable,data=*,stdrot=true,face0=0:minecraft/planks_jungle,face1=0:TwilightForest/uncrafting_top,face2-5=0:TwilightForest/uncrafting_side
@@ -822,15 +822,15 @@ block:id=%tile.TFTowerDevice,data=13,stdrot=true,face0-5=0:TwilightForest/towerd
 block:id=%tile.TFTowerDevice,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_off
 
 # %tile.TFTowerTranslucent:* (tile.TFTowerTranslucent), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
-block:id=%tile.TFTowerTranslucent,data=0,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off
-block:id=%tile.TFTowerTranslucent,data=1,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_on
-block:id=%tile.TFTowerTranslucent,data=2,stdrot=true,face0-5=0:TwilightForest/towerdev_built_off
-block:id=%tile.TFTowerTranslucent,data=3,stdrot=true,face0-5=0:TwilightForest/towerdev_built_on
-block:id=%tile.TFTowerTranslucent,data=4,stdrot=true,face0-5=0:TwilightForest/towerdev_antibuilt
+block:id=%tile.TFTowerTranslucent,data=0,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off,transparency=SEMITRANSPARENT
+block:id=%tile.TFTowerTranslucent,data=1,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_on,transparency=SEMITRANSPARENT
+block:id=%tile.TFTowerTranslucent,data=2,stdrot=true,face0-5=0:TwilightForest/towerdev_built_off,transparency=SEMITRANSPARENT
+block:id=%tile.TFTowerTranslucent,data=3,stdrot=true,face0-5=0:TwilightForest/towerdev_built_on,transparency=SEMITRANSPARENT
+block:id=%tile.TFTowerTranslucent,data=4,stdrot=true,face0-5=0:TwilightForest/towerdev_antibuilt,transparency=SEMITRANSPARENT
 block:id=%tile.TFTowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/portal,face1=0:minecraft/obsidian,face2-3=0:minecraft/netherrack,face4=0:minecraft/bedrock,face5=0:minecraft/obsidian
-block:id=%tile.TFTowerTranslucent,data=6,stdrot=true,face0-5=0:minecraft/gold_block
-block:id=%tile.TFTowerTranslucent,data=7,stdrot=true,face0-5=0:minecraft/diamond_block
-block:id=%tile.TFTowerTranslucent,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off
+block:id=%tile.TFTowerTranslucent,data=6,stdrot=true,face0-5=0:minecraft/gold_block,transparency=SEMITRANSPARENT
+block:id=%tile.TFTowerTranslucent,data=7,stdrot=true,face0-5=0:minecraft/diamond_block,transparency=SEMITRANSPARENT
+block:id=%tile.TFTowerTranslucent,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off,transparency=SEMITRANSPARENT
 
 # %tile.TFExperiment115:* (tile.TFExperiment115), render=twilightforest.client.renderer.blocks.RenderBlockTFCake(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFExperiment115
 block:id=%tile.TFExperiment115,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/experiment115/experiment115_bottom,face1=0:TwilightForest/experiment115/experiment115_top,face2-5=0:TwilightForest/experiment115/experiment115_side

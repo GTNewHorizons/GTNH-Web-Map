@@ -531,24 +531,24 @@ block:id=%ore.berries.one,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 block:id=%ore.berries.one,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_gold_fancy
 block:id=%ore.berries.one,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_copper_fancy
 block:id=%ore.berries.one,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_tin_fancy
-block:id=%ore.berries.one,data=8,stdrot=true,face0-5=0:tinker/crops/berry_iron_fancy
-block:id=%ore.berries.one,data=9,stdrot=true,face0-5=0:tinker/crops/berry_gold_fancy
-block:id=%ore.berries.one,data=10,stdrot=true,face0-5=0:tinker/crops/berry_copper_fancy
-block:id=%ore.berries.one,data=11,stdrot=true,face0-5=0:tinker/crops/berry_tin_fancy
-block:id=%ore.berries.one,data=12,stdrot=true,face0-5=0:tinker/crops/berry_iron_ripe_fancy
-block:id=%ore.berries.one,data=13,stdrot=true,face0-5=0:tinker/crops/berry_gold_ripe_fancy
-block:id=%ore.berries.one,data=14,stdrot=true,face0-5=0:tinker/crops/berry_copper_ripe_fancy
-block:id=%ore.berries.one,data=15,stdrot=true,face0-5=0:tinker/crops/berry_tin_ripe_fancy
+block:id=%ore.berries.one,data=8,stdrot=true,face0-5=0:tinker/crops/berry_iron_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.one,data=9,stdrot=true,face0-5=0:tinker/crops/berry_gold_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.one,data=10,stdrot=true,face0-5=0:tinker/crops/berry_copper_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.one,data=11,stdrot=true,face0-5=0:tinker/crops/berry_tin_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.one,data=12,stdrot=true,face0-5=0:tinker/crops/berry_iron_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.one,data=13,stdrot=true,face0-5=0:tinker/crops/berry_gold_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.one,data=14,stdrot=true,face0-5=0:tinker/crops/berry_copper_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.one,data=15,stdrot=true,face0-5=0:tinker/crops/berry_tin_ripe_fancy,transparency=SEMITRANSPARENT
 
 # %ore.berries.two:* (ore.berries.two), render=tconstruct.world.model.OreberryRender(CUSTOM), opaque=false,cls=tconstruct.world.blocks.OreberryBushEssence
 block:id=%ore.berries.two,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_aluminum_fancy
 block:id=%ore.berries.two,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_essence_fancy
 block:id=%ore.berries.two,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_aluminum_fancy
 block:id=%ore.berries.two,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_essence_fancy
-block:id=%ore.berries.two,data=8,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_fancy
-block:id=%ore.berries.two,data=9,stdrot=true,face0-5=0:tinker/crops/berry_essence_fancy
-block:id=%ore.berries.two,data=12,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_ripe_fancy
-block:id=%ore.berries.two,data=13,stdrot=true,face0-5=0:tinker/crops/berry_essence_ripe_fancy
+block:id=%ore.berries.two,data=8,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.two,data=9,stdrot=true,face0-5=0:tinker/crops/berry_essence_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.two,data=12,stdrot=true,face0-5=0:tinker/crops/berry_aluminum_ripe_fancy,transparency=SEMITRANSPARENT
+block:id=%ore.berries.two,data=13,stdrot=true,face0-5=0:tinker/crops/berry_essence_ripe_fancy,transparency=SEMITRANSPARENT
 
 # %SearedBrick:* (SearedBrick), render=(STANDARD), opaque=true,cls=tconstruct.smeltery.blocks.MetalOre
 block:id=%SearedBrick,data=0,stdrot=true,face0-5=0:tinker/nether_slag
@@ -588,37 +588,37 @@ block:id=%MetalBlock,data=10,stdrot=true,face0-5=0:tinker/compressed_ender
 block:id=%MetalBlock,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/compressed_cobalt
 
 # %ToolStationBlock:* (ToolStationBlock), render=tconstruct.tools.model.TableRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.ToolStationBlock
-block:id=%ToolStationBlock,data=0,stdrot=true,patch0=0:tinker/toolstation_bottom,patch1=0:tinker/toolstation_top,patch2-5=0:tinker/toolstation_side
-block:id=%ToolStationBlock,data=1,stdrot=true,patch0=0:tinker/partbuilder_oak_bottom,patch1=0:tinker/partbuilder_oak_top,patch2-5=0:tinker/partbuilder_oak_side
-block:id=%ToolStationBlock,data=2,stdrot=true,patch0=0:tinker/partbuilder_spruce_bottom,patch1=0:tinker/partbuilder_spruce_top,patch2-5=0:tinker/partbuilder_spruce_side
-block:id=%ToolStationBlock,data=3,stdrot=true,patch0=0:tinker/partbuilder_birch_bottom,patch1=0:tinker/partbuilder_birch_top,patch2-5=0:tinker/partbuilder_birch_side
-block:id=%ToolStationBlock,data=4,stdrot=true,patch0=0:tinker/partbuilder_jungle_bottom,patch1=0:tinker/partbuilder_jungle_top,patch2-5=0:tinker/partbuilder_jungle_side
-block:id=%ToolStationBlock,data=5,data=6,data=7,data=8,data=9,stdrot=true,patch0=0:tinker/patternchest_bottom,patch1=0:tinker/patternchest_top,patch2-5=0:tinker/patternchest_side
-block:id=%ToolStationBlock,data=10,stdrot=true,patch0=0:tinker/stenciltable_oak_bottom,patch1=0:tinker/stenciltable_oak_top,patch2-5=0:tinker/stenciltable_oak_side
-block:id=%ToolStationBlock,data=11,stdrot=true,patch0=0:tinker/stenciltable_spruce_bottom,patch1=0:tinker/stenciltable_spruce_top,patch2-5=0:tinker/stenciltable_spruce_side
-block:id=%ToolStationBlock,data=12,stdrot=true,patch0=0:tinker/stenciltable_birch_bottom,patch1=0:tinker/stenciltable_birch_top,patch2-5=0:tinker/stenciltable_birch_side
-block:id=%ToolStationBlock,data=13,stdrot=true,patch0=0:tinker/stenciltable_jungle_bottom,patch1=0:tinker/stenciltable_jungle_top,patch2-5=0:tinker/stenciltable_jungle_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=0,stdrot=true,patch0=0:tinker/toolstation_bottom,patch1=0:tinker/toolstation_top,patch2-5=0:tinker/toolstation_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=1,stdrot=true,patch0=0:tinker/partbuilder_oak_bottom,patch1=0:tinker/partbuilder_oak_top,patch2-5=0:tinker/partbuilder_oak_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=2,stdrot=true,patch0=0:tinker/partbuilder_spruce_bottom,patch1=0:tinker/partbuilder_spruce_top,patch2-5=0:tinker/partbuilder_spruce_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=3,stdrot=true,patch0=0:tinker/partbuilder_birch_bottom,patch1=0:tinker/partbuilder_birch_top,patch2-5=0:tinker/partbuilder_birch_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=4,stdrot=true,patch0=0:tinker/partbuilder_jungle_bottom,patch1=0:tinker/partbuilder_jungle_top,patch2-5=0:tinker/partbuilder_jungle_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=5,data=6,data=7,data=8,data=9,stdrot=true,patch0=0:tinker/patternchest_bottom,patch1=0:tinker/patternchest_top,patch2-5=0:tinker/patternchest_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=10,stdrot=true,patch0=0:tinker/stenciltable_oak_bottom,patch1=0:tinker/stenciltable_oak_top,patch2-5=0:tinker/stenciltable_oak_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=11,stdrot=true,patch0=0:tinker/stenciltable_spruce_bottom,patch1=0:tinker/stenciltable_spruce_top,patch2-5=0:tinker/stenciltable_spruce_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=12,stdrot=true,patch0=0:tinker/stenciltable_birch_bottom,patch1=0:tinker/stenciltable_birch_top,patch2-5=0:tinker/stenciltable_birch_side
+block:id=%ToolStationBlock,transparency=SEMITRANSPARENT,data=13,stdrot=true,patch0=0:tinker/stenciltable_jungle_bottom,patch1=0:tinker/stenciltable_jungle_top,patch2-5=0:tinker/stenciltable_jungle_side
 
 # %ToolForgeBlock:* (ToolForgeBlock), render=tconstruct.tools.model.TableRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.ToolForgeBlock
-block:id=%ToolForgeBlock,data=0,stdrot=true,patch0=0:minecraft/iron_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_iron
-block:id=%ToolForgeBlock,data=1,stdrot=true,patch0=0:minecraft/gold_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_gold
-block:id=%ToolForgeBlock,data=2,stdrot=true,patch0=0:minecraft/diamond_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_diamond
-block:id=%ToolForgeBlock,data=3,stdrot=true,patch0=0:minecraft/emerald_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_emerald
-block:id=%ToolForgeBlock,data=4,stdrot=true,patch0=0:tinker/compressed_cobalt,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_cobalt
-block:id=%ToolForgeBlock,data=5,stdrot=true,patch0=0:tinker/compressed_ardite,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_ardite
-block:id=%ToolForgeBlock,data=6,stdrot=true,patch0=0:tinker/compressed_manyullyn,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_manyullyn
-block:id=%ToolForgeBlock,data=7,stdrot=true,patch0=0:tinker/compressed_copper,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_copper
-block:id=%ToolForgeBlock,data=8,stdrot=true,patch0=0:tinker/compressed_bronze,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_bronze
-block:id=%ToolForgeBlock,data=9,stdrot=true,patch0=0:tinker/compressed_tin,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_tin
-block:id=%ToolForgeBlock,data=10,stdrot=true,patch0=0:tinker/compressed_aluminum,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_aluminum
-block:id=%ToolForgeBlock,data=11,stdrot=true,patch0=0:tinker/compressed_alubrass,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_alubrass
-block:id=%ToolForgeBlock,data=12,stdrot=true,patch0=0:tinker/compressed_alumite,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_alumite
-block:id=%ToolForgeBlock,data=13,stdrot=true,patch0=0:tinker/compressed_steel,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_steel
-block:id=%ToolForgeBlock,data=14,stdrot=true,patch0=0:tinker/compressed_ender,patch1=0:tinker/toolforge_top
-block:id=%ToolForgeBlock,data=15,stdrot=true,patch0=0:tinker/compressed_cobalt,patch1=0:tinker/toolforge_top
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=0,stdrot=true,patch0=0:minecraft/iron_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_iron
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=1,stdrot=true,patch0=0:minecraft/gold_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_gold
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=2,stdrot=true,patch0=0:minecraft/diamond_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_diamond
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=3,stdrot=true,patch0=0:minecraft/emerald_block,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_emerald
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=4,stdrot=true,patch0=0:tinker/compressed_cobalt,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_cobalt
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=5,stdrot=true,patch0=0:tinker/compressed_ardite,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_ardite
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=6,stdrot=true,patch0=0:tinker/compressed_manyullyn,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_manyullyn
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=7,stdrot=true,patch0=0:tinker/compressed_copper,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_copper
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=8,stdrot=true,patch0=0:tinker/compressed_bronze,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_bronze
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=9,stdrot=true,patch0=0:tinker/compressed_tin,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_tin
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=10,stdrot=true,patch0=0:tinker/compressed_aluminum,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_aluminum
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=11,stdrot=true,patch0=0:tinker/compressed_alubrass,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_alubrass
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=12,stdrot=true,patch0=0:tinker/compressed_alumite,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_alumite
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=13,stdrot=true,patch0=0:tinker/compressed_steel,patch1=0:tinker/toolforge_top,patch2-5=0:tinker/toolforge_steel
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=14,stdrot=true,patch0=0:tinker/compressed_ender,patch1=0:tinker/toolforge_top
+block:id=%ToolForgeBlock,transparency=SEMITRANSPARENT,data=15,stdrot=true,patch0=0:tinker/compressed_cobalt,patch1=0:tinker/toolforge_top
 
 # %CraftingStation:* (CraftingStation), render=tconstruct.tools.model.TableRender(CUSTOM), opaque=false,cls=tconstruct.tools.blocks.CraftingStationBlock
-block:id=%CraftingStation,data=*,stdrot=true,patch0=0:tinker/craftingstation_bottom,patch1=0:tinker/craftingstation_top,patch2-5=0:tinker/craftingstation_side
+block:id=%CraftingStation,transparency=SEMITRANSPARENT,data=*,stdrot=true,patch0=0:tinker/craftingstation_bottom,patch1=0:tinker/craftingstation_top,patch2-5=0:tinker/craftingstation_side
 
 # %CraftingSlab:* (CraftingSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
 block:id=%CraftingSlab,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/craftingstation_bottom,face1=0:tinker/craftingstation_top,face2-5=0:tinker/craftingstation_slab_side
@@ -826,16 +826,16 @@ block:id=%LavaTankNether,data=2,stdrot=true,face0=12000:tinker/nether_searedwind
 block:id=%LavaTankNether,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=12000:tinker/nether_lavatank_top,face2-5=12000:tinker/nether_lavatank_side
 
 # %SearedBlock:* (SearedBlock), render=tconstruct.smeltery.model.CastingBlockRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.SearedBlock
-block:id=%SearedBlock,data=0,stdrot=true,face0=0:tinker/castingtable_bottom,face1=0:tinker/castingtable_top,face2-5=0:tinker/castingtable_side
+block:id=%SearedBlock,data=0,stdrot=true,face0=0:tinker/castingtable_bottom,face1=0:tinker/castingtable_top,face2-5=0:tinker/castingtable_side,transparency=SEMITRANSPARENT
 block:id=%SearedBlock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/faucet
-block:id=%SearedBlock,data=2,stdrot=true,face0=0:tinker/blockcast_bottom,face1=0:tinker/blockcast_top,face2-5=0:tinker/blockcast_side
-block:id=%SearedBlock,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/faucet
+block:id=%SearedBlock,data=2,stdrot=true,face0=0:tinker/blockcast_bottom,face1=0:tinker/blockcast_top,face2-5=0:tinker/blockcast_side,transparency=SEMITRANSPARENT
+block:id=%SearedBlock,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/faucet,transparency=SEMITRANSPARENT
 
 # %SearedBlockNether:* (SearedBlockNether), render=tconstruct.smeltery.model.CastingBlockRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.SearedBlock
-block:id=%SearedBlockNether,data=0,stdrot=true,face0=0:tinker/nether_castingtable_bottom,face1=0:tinker/nether_castingtable_top,face2-5=0:tinker/nether_castingtable_side
+block:id=%SearedBlockNether,data=0,stdrot=true,face0=0:tinker/nether_castingtable_bottom,face1=0:tinker/nether_castingtable_top,face2-5=0:tinker/nether_castingtable_side,transparency=SEMITRANSPARENT
 block:id=%SearedBlockNether,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/nether_faucet
-block:id=%SearedBlockNether,data=2,stdrot=true,face0=0:tinker/nether_blockcast_bottom,face1=0:tinker/nether_blockcast_top,face2-5=0:tinker/nether_blockcast_side
-block:id=%SearedBlockNether,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/nether_faucet
+block:id=%SearedBlockNether,data=2,stdrot=true,face0=0:tinker/nether_blockcast_bottom,face1=0:tinker/nether_blockcast_top,face2-5=0:tinker/nether_blockcast_side,transparency=SEMITRANSPARENT
+block:id=%SearedBlockNether,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/nether_faucet,transparency=SEMITRANSPARENT
 
 # %CastingChannel:* (CastingChannel), render=tconstruct.smeltery.model.BlockRenderCastingChannel(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.CastingChannelBlock
 block:id=%CastingChannel,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/searedstone
@@ -852,10 +852,10 @@ block:id=%SpeedBlock,data=6,stdrot=true,face0-5=0:tinker/brownstone_smooth_chise
 block:id=%SpeedBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/brownstone_rough
 
 # %GlassBlock:* (GlassBlock), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnected
-block:id=%GlassBlock,data=*,stdrot=true,patch0=12000:tinker/glass/clear/glass,patch1=12000:tinker/glass/clear/glass_1_d,patch2=12000:tinker/glass/clear/glass_1_u,patch3=12000:tinker/glass/clear/glass_2_v,patch4=12000:tinker/glass/clear/glass_1_l,patch5=12000:tinker/glass/clear/glass_2_ur,patch6=12000:tinker/glass/clear/glass_2_dr,patch7=12000:tinker/glass/clear/glass_3_r,patch8=12000:tinker/glass/clear/glass_1_r,patch9=12000:tinker/glass/clear/glass_2_ul,patch10=12000:tinker/glass/clear/glass_2_dl,patch11=12000:tinker/glass/clear/glass_3_l,patch12=12000:tinker/glass/clear/glass_2_h,patch13=12000:tinker/glass/clear/glass_3_u,patch14=12000:tinker/glass/clear/glass_3_d,patch15=12000:tinker/glass/clear/glass_4
+block:id=%GlassBlock,data=*,stdrot=true,patch0=12000:tinker/glass/clear/glass,patch1=12000:tinker/glass/clear/glass_1_d,patch2=12000:tinker/glass/clear/glass_1_u,patch3=12000:tinker/glass/clear/glass_2_v,patch4=12000:tinker/glass/clear/glass_1_l,patch5=12000:tinker/glass/clear/glass_2_ur,patch6=12000:tinker/glass/clear/glass_2_dr,patch7=12000:tinker/glass/clear/glass_3_r,patch8=12000:tinker/glass/clear/glass_1_r,patch9=12000:tinker/glass/clear/glass_2_ul,patch10=12000:tinker/glass/clear/glass_2_dl,patch11=12000:tinker/glass/clear/glass_3_l,patch12=12000:tinker/glass/clear/glass_2_h,patch13=12000:tinker/glass/clear/glass_3_u,patch14=12000:tinker/glass/clear/glass_3_d,patch15=12000:tinker/glass/clear/glass_4,transparency=SEMITRANSPARENT
 
 # %GlassPane:* (GlassPane), render=tconstruct.smeltery.model.PaneConnectedRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneConnected
-block:id=%GlassPane,data=*,stdrot=true,patch0=12000:tinker/glass/clear/glass,patch1=12000:tinker/glass/clear/glass_1_d,patch2=12000:tinker/glass/clear/glass_1_u,patch3=12000:tinker/glass/clear/glass_2_v,patch4=12000:tinker/glass/clear/glass_1_l,patch5=12000:tinker/glass/clear/glass_2_ur,patch6=12000:tinker/glass/clear/glass_2_dr,patch7=12000:tinker/glass/clear/glass_3_r,patch8=12000:tinker/glass/clear/glass_1_r,patch9=12000:tinker/glass/clear/glass_2_ul,patch10=12000:tinker/glass/clear/glass_2_dl,patch11=12000:tinker/glass/clear/glass_3_l,patch12=12000:tinker/glass/clear/glass_2_h,patch13=12000:tinker/glass/clear/glass_3_u,patch14=12000:tinker/glass/clear/glass_3_d,patch15=12000:tinker/glass/clear/glass_4
+block:id=%GlassPane,data=*,stdrot=true,patch0=12000:tinker/glass/clear/glass,patch1=12000:tinker/glass/clear/glass_1_d,patch2=12000:tinker/glass/clear/glass_1_u,patch3=12000:tinker/glass/clear/glass_2_v,patch4=12000:tinker/glass/clear/glass_1_l,patch5=12000:tinker/glass/clear/glass_2_ur,patch6=12000:tinker/glass/clear/glass_2_dr,patch7=12000:tinker/glass/clear/glass_3_r,patch8=12000:tinker/glass/clear/glass_1_r,patch9=12000:tinker/glass/clear/glass_2_ul,patch10=12000:tinker/glass/clear/glass_2_dl,patch11=12000:tinker/glass/clear/glass_3_l,patch12=12000:tinker/glass/clear/glass_2_h,patch13=12000:tinker/glass/clear/glass_3_u,patch14=12000:tinker/glass/clear/glass_3_d,patch15=12000:tinker/glass/clear/glass_4,transparency=SEMITRANSPARENT
 
 # %GlassBlock.StainedClear:* (GlassBlock.StainedClear), render=(STANDARD), opaque=false,cls=tconstruct.smeltery.blocks.GlassBlockConnectedMeta
 block:id=%GlassBlock.StainedClear,data=0,stdrot=true,face0-5=12000:tinker/glass/stained/white/glass
@@ -898,4 +898,4 @@ block:id=%Redstone.Landmine,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=
 
 # %Armor.DryingRack:* (Armor.DryingRack), render=tconstruct.armor.modelblock.DryingRackRender(CUSTOM), opaque=false,cls=tconstruct.armor.blocks.DryingRack
 block:id=%Armor.DryingRack,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
-block:id=%Armor.DryingRack,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/planks_oak
+block:id=%Armor.DryingRack,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:minecraft/planks_oak,transparency=SEMITRANSPARENT

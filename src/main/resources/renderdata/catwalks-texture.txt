@@ -66,7 +66,7 @@ block:id=%sturdy_rail_activator,data=8,data=9,data=10,data=11,data=12,data=13,da
 
 # %support_column:* (support_column), render=com.thecodewarrior.catwalks.render.SupportRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockSupportColumn
 block:id=%support_column,data=0,data=1,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:catwalks/support
-block:id=%support_column,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:catwalks/support
+block:id=%support_column,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:catwalks/support,transparency=SEMITRANSPARENT
 
 # %scaffold:* (scaffold), render=com.thecodewarrior.catwalks.render.InAndOutRenderer(CUSTOM), opaque=false,cls=com.thecodewarrior.catwalks.block.BlockScaffold
 block:id=%scaffold,data=0,stdrot=true,face0-1=0:catwalks/scaffold_top,face2-5=0:catwalks/scaffold_side

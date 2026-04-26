@@ -965,7 +965,7 @@ block:id=%LogPile,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data
 
 # %Charcoal:* (Charcoal), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockCharcoal
 block:id=%Charcoal,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Charcoal
-block:id=%Charcoal,data=8,stdrot=true,face0-5=0:terrafirmacraft/devices/Charcoal
+block:id=%Charcoal,data=8,stdrot=true,face0-5=0:terrafirmacraft/devices/Charcoal,transparency=SEMITRANSPARENT
 block:id=%Charcoal,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Charcoal
 
 # %tilledSoil:* (tilledSoil), render=(STANDARD), opaque=true,cls=com.bioxx.tfc.Blocks.BlockFarmland
@@ -1183,9 +1183,9 @@ block:id=%Forge,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,d
 
 # %Molten:* (Molten), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockMolten
 block:id=%Molten,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Molten Rock Off
-block:id=%Molten,data=7,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock Off
+block:id=%Molten,data=7,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock Off,transparency=SEMITRANSPARENT
 block:id=%Molten,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Molten Rock
-block:id=%Molten,data=15,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock
+block:id=%Molten,data=15,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock,transparency=SEMITRANSPARENT
 
 # %Bloomery:* (Bloomery), render=(STANDARD), opaque=true,cls=com.bioxx.tfc.Blocks.Devices.BlockBlastFurnace
 block:id=%Bloomery,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:terrafirmacraft/devices/Blast Furnace Bottom Off,face2-5=0:terrafirmacraft/devices/Blast Furnace Off
@@ -1199,8 +1199,8 @@ block:id=%EarlyBloomery,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRA
 block:id=%EarlyBloomery,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Bloomery Off
 
 # %Sluice:* (Sluice), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockSluice
-block:id=%Sluice,data=0,data=1,data=2,data=3,stdrot=true,face0-5=0:terrafirmacraft/wood/WoodSheet/Pine
-block:id=%Sluice,data=4,data=5,data=6,data=7,stdrot=true,face0=0:terrafirmacraft/wood/WoodSheet/Pine,face1=0:minecraft/water_flow,face2-5=0:terrafirmacraft/wood/WoodSheet/Pine
+block:id=%Sluice,data=0,data=1,data=2,data=3,stdrot=true,face0-5=0:terrafirmacraft/wood/WoodSheet/Pine,transparency=SEMITRANSPARENT
+block:id=%Sluice,data=4,data=5,data=6,data=7,stdrot=true,face0=0:terrafirmacraft/wood/WoodSheet/Pine,face1=0:minecraft/water_flow,face2-5=0:terrafirmacraft/wood/WoodSheet/Pine,transparency=SEMITRANSPARENT
 block:id=%Sluice,data=8,data=9,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/WoodSheet/Pine
 block:id=%Sluice,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:terrafirmacraft/wood/WoodSheet/Pine,face1=0:minecraft/water_flow,face2-5=0:terrafirmacraft/wood/WoodSheet/Pine
 
@@ -1899,7 +1899,7 @@ block:id=%Pumpkin,data=3,stdrot=true,face0-1=0:minecraft/pumpkin_top,face2-4=0:m
 block:id=%Pumpkin,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:minecraft/pumpkin_top,face2-5=0:minecraft/pumpkin_side
 
 # %ButtonWood:* (ButtonWood), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomButtonWood
-block:id=%ButtonWood,data=0,stdrot=true,face0-5=0:terrafirmacraft/wood/Oak Plank
+block:id=%ButtonWood,data=0,stdrot=true,face0-5=0:terrafirmacraft/wood/Oak Plank,transparency=SEMITRANSPARENT
 block:id=%ButtonWood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/Oak Plank
 
 # %Vine:* (Vine), render=(VINE), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomVine
@@ -1969,6 +1969,6 @@ block:id=%SmokeRack,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:terraf
 
 # %Snow:* (Snow), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomSnow
 block:id=%Snow,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/snow
-block:id=%Snow,data=7,stdrot=true,face0-5=0:terrafirmacraft/snow
+block:id=%Snow,data=7,stdrot=true,face0-5=0:terrafirmacraft/snow,transparency=SEMITRANSPARENT
 block:id=%Snow,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/snow
-block:id=%Snow,data=15,stdrot=true,face0-5=0:terrafirmacraft/snow
+block:id=%Snow,data=15,stdrot=true,face0-5=0:terrafirmacraft/snow,transparency=SEMITRANSPARENT
