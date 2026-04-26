@@ -234,7 +234,8 @@ public class BlockModelExporter {
                 }
                 for (ExportMaterial material : patchMaterials) {
                     sink.addPatch((PatchDefinition) patches[i], map.getX(), map.getY(), map.getZ(), material,
-                            buildPatchVertexColors((PatchDefinition) patches[i], steps[i], map, blockId, material));
+                            buildPatchVertexColors((PatchDefinition) patches[i], map.getX(), map.getY(), map.getZ(),
+                                    steps[i], map, blockId, material));
                 }
             }
         } else {
@@ -250,25 +251,102 @@ public class BlockModelExporter {
                     }
                     for (ExportMaterial material : faceMaterials) {
                         sink.addPatch(defaultPatches[face], map.getX(), map.getY(), map.getZ(), material,
-                                buildPatchVertexColors(defaultPatches[face], steps[face], map, blockId, material));
+                                buildPatchVertexColors(defaultPatches[face], map.getX(), map.getY(), map.getZ(),
+                                        steps[face], map, blockId, material));
                     }
                 }
             }
         }
     }
 
-    private float[] buildPatchVertexColors(PatchDefinition patch, BlockStep faceStep, MapIterator map, int blockId,
-            ExportMaterial material) {
+    private float[] buildPatchVertexColors(PatchDefinition patch, double x, double y, double z, BlockStep faceStep,
+            MapIterator map, int blockId, ExportMaterial material) {
         int vertexCount = (patch.uplusvmax <= 1.0000001) ? 3 : 4;
+        ExportPatchGeometry.Geometry geometry = ExportPatchGeometry.build(patch, x, y, z, 0);
         float lightScale = computeLightScale(blockId, faceStep, map, material);
         float[] colors = new float[vertexCount * 3];
         for (int i = 0; i < vertexCount; i++) {
+            BlockStep[] neighborSteps = getVertexNeighborSteps(faceStep, x, y, z, geometry.xyz, i);
+            float neighbor1 = sampleNeighborLightScale(neighborSteps[0], faceStep, map, lightScale);
+            float neighbor2 = sampleNeighborLightScale(neighborSteps[1], faceStep, map, lightScale);
+            float diagonal = sampleNeighborLightScale(neighborSteps[0], neighborSteps[1], faceStep, map, lightScale);
+            float smoothed = (lightScale + neighbor1 + neighbor2 + diagonal) * 0.25F;
             int off = i * 3;
-            colors[off] = lightScale;
-            colors[off + 1] = lightScale;
-            colors[off + 2] = lightScale;
+            colors[off] = smoothed;
+            colors[off + 1] = smoothed;
+            colors[off + 2] = smoothed;
         }
         return colors;
+    }
+
+    private BlockStep[] getVertexNeighborSteps(BlockStep faceStep, double blockX, double blockY, double blockZ,
+            double[] xyz, int vertexIndex) {
+        int off = vertexIndex * 3;
+        double localX = xyz[off] - blockX;
+        double localY = xyz[off + 1] - blockY;
+        double localZ = xyz[off + 2] - blockZ;
+        switch (faceStep) {
+            case X_PLUS:
+            case X_MINUS:
+                return new BlockStep[] { (localY >= 0.5) ? BlockStep.Y_PLUS : BlockStep.Y_MINUS,
+                        (localZ >= 0.5) ? BlockStep.Z_PLUS : BlockStep.Z_MINUS };
+            case Y_PLUS:
+            case Y_MINUS:
+                return new BlockStep[] { (localX >= 0.5) ? BlockStep.X_PLUS : BlockStep.X_MINUS,
+                        (localZ >= 0.5) ? BlockStep.Z_PLUS : BlockStep.Z_MINUS };
+            case Z_PLUS:
+            case Z_MINUS:
+            default:
+                return new BlockStep[] { (localX >= 0.5) ? BlockStep.X_PLUS : BlockStep.X_MINUS,
+                        (localY >= 0.5) ? BlockStep.Y_PLUS : BlockStep.Y_MINUS };
+        }
+    }
+
+    private float sampleNeighborLightScale(BlockStep neighborStep, BlockStep faceStep, MapIterator map, float fallback) {
+        if (!isStepYInBounds(map, neighborStep)) {
+            return fallback;
+        }
+        map.stepPosition(neighborStep);
+        try {
+            int neighborBlockId = map.getBlockTypeID();
+            return computeLightScale(neighborBlockId, faceStep, map, null);
+        } finally {
+            map.unstepPosition(neighborStep);
+        }
+    }
+
+    private float sampleNeighborLightScale(BlockStep neighborStep0, BlockStep neighborStep1, BlockStep faceStep,
+            MapIterator map, float fallback) {
+        if (!isStepYInBounds(map, neighborStep0)) {
+            return fallback;
+        }
+        map.stepPosition(neighborStep0);
+        map.stepPosition(neighborStep1);
+        try {
+            if (!isCurrentYInBounds(map)) {
+                return fallback;
+            }
+            int neighborBlockId = map.getBlockTypeID();
+            return computeLightScale(neighborBlockId, faceStep, map, null);
+        } finally {
+            map.unstepPosition(neighborStep1);
+            map.unstepPosition(neighborStep0);
+        }
+    }
+
+    private boolean isStepYInBounds(MapIterator map, BlockStep step) {
+        int y = map.getY();
+        if (step == BlockStep.Y_PLUS) {
+            y++;
+        } else if (step == BlockStep.Y_MINUS) {
+            y--;
+        }
+        return (y >= 0) && (y < map.getWorldHeight());
+    }
+
+    private boolean isCurrentYInBounds(MapIterator map) {
+        int y = map.getY();
+        return (y >= 0) && (y < map.getWorldHeight());
     }
 
     private float computeLightScale(int blockId, BlockStep faceStep, MapIterator map, ExportMaterial material) {
