@@ -205,8 +205,9 @@ public class BlockModelExporter {
             steps = new BlockStep[patches.length];
             textureIndexes = new int[patches.length];
             for (int i = 0; i < textureIndexes.length; i++) {
-                textureIndexes[i] = ((PatchDefinition) patches[i]).getTextureIndex();
-                steps[i] = ((PatchDefinition) patches[i]).step;
+                PatchDefinition patch = (PatchDefinition) patches[i];
+                textureIndexes[i] = patch.getTextureIndex();
+                steps[i] = getVisiblePatchStep(patch);
             }
         } else {
             short[] scaledModel = models.getScaledModel(blockId, blockData, renderData);
@@ -216,7 +217,7 @@ public class BlockModelExporter {
                 textureIndexes = new int[patches.length];
                 for (int i = 0; i < patches.length; i++) {
                     PatchDefinition patch = (PatchDefinition) patches[i];
-                    steps[i] = patch.step;
+                    steps[i] = getVisiblePatchStep(patch);
                     textureIndexes[i] = patch.getTextureIndex();
                 }
             }
@@ -347,6 +348,22 @@ public class BlockModelExporter {
     private boolean isCurrentYInBounds(MapIterator map) {
         int y = map.getY();
         return (y >= 0) && (y < map.getWorldHeight());
+    }
+
+    private BlockStep getVisiblePatchStep(PatchDefinition patch) {
+        BlockStep step = patch.step;
+        if (step == null) {
+            return BlockStep.Y_MINUS;
+        }
+        switch (patch.sidevis) {
+            case BOTTOM:
+                return step;
+            case TOP:
+            case BOTH:
+            case FLIP:
+            default:
+                return step.opposite();
+        }
     }
 
     private float computeLightScale(int blockId, BlockStep faceStep, MapIterator map, ExportMaterial material) {
