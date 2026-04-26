@@ -383,7 +383,11 @@ public class GLBExport implements BlockModelExportSink {
                     .append("\",\"pbrMetallicRoughness\":{\"baseColorTexture\":{\"index\":").append(i)
                     .append("},\"metallicFactor\":0.0,\"roughnessFactor\":1.0}");
             if (texture.hasAlpha) {
-                materialJson.append(",\"alphaMode\":\"BLEND\"");
+                if (texture.hasTranslucentAlpha) {
+                    materialJson.append(",\"alphaMode\":\"BLEND\"");
+                } else {
+                    materialJson.append(",\"alphaMode\":\"MASK\",\"alphaCutoff\":0.5");
+                }
             }
             if (primitive.material.isEmissive()) {
                 materialJson.append(",\"emissiveFactor\":[1.0,1.0,1.0],\"emissiveTexture\":{\"index\":").append(i)

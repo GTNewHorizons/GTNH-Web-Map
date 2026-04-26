@@ -3528,6 +3528,7 @@ public class TexturePack {
         public Color diffuseColor;
         public MaterialType material;
         public boolean hasAlpha;
+        public boolean hasTranslucentAlpha;
     }
 
     private static class ExportedTexturePack {
@@ -3562,6 +3563,7 @@ public class TexturePack {
         }
 
         boolean hasAlpha = false;
+        boolean hasTranslucentAlpha = false;
         double r = 0.0;
         double g = 0.0;
         double b = 0.0;
@@ -3578,6 +3580,9 @@ public class TexturePack {
             w += ww;
             if (ww != 0xFF) {
                 hasAlpha = true;
+                if (ww != 0) {
+                    hasTranslucentAlpha = true;
+                }
             }
         }
 
@@ -3594,6 +3599,7 @@ public class TexturePack {
         }
         data.material = getMaterialTypeByTile(idx);
         data.hasAlpha = hasAlpha;
+        data.hasTranslucentAlpha = hasTranslucentAlpha;
 
         if (hasAlpha) {
             for (int i = 0; i < image.argb_buf.length; i++) {
