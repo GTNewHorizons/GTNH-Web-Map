@@ -76,8 +76,8 @@
 			this._fpsFrameCount = 0;
 			this._displayFPS = 0;
 			this._fpsAverage = 0;
-			this._ignoreLeafletMove = false;
-			this._ignoreLeafletZoom = false;
+			this._ignoreLeafletMoveCount = 0;
+			this._ignoreLeafletZoomCount = 0;
 		},
 
 		onAdd: function(map) {
@@ -224,8 +224,8 @@
 			}
 			me._mapEventHandlers = {
 				moveend: function() {
-					if (me._ignoreLeafletMove) {
-						me._ignoreLeafletMove = false;
+					if (me._ignoreLeafletMoveCount > 0) {
+						me._ignoreLeafletMoveCount--;
 						return;
 					}
 					me._syncFromLeaflet();
@@ -233,8 +233,8 @@
 					me._requestRender();
 				},
 				zoomend: function() {
-					if (me._ignoreLeafletZoom) {
-						me._ignoreLeafletZoom = false;
+					if (me._ignoreLeafletZoomCount > 0) {
+						me._ignoreLeafletZoomCount--;
 						return;
 					}
 					me._syncFromLeaflet();
@@ -303,8 +303,8 @@
 				return;
 			}
 			this._lastLeafletSync = now;
-			this._ignoreLeafletMove = true;
-			this._ignoreLeafletZoom = true;
+			this._ignoreLeafletMoveCount++;
+			this._ignoreLeafletZoomCount++;
 			this._map.setView(
 				this.projection.fromLocationToLatLng(this._cameraPosition),
 				this._zoomFromDistance(this._viewDistance),
@@ -579,8 +579,6 @@
 				node.frustumCulled = false;
 				if (node.geometry && !node.geometry.attributes.normal) {
 					node.geometry.computeVertexNormals();
-				}
-				if (node.geometry && node.geometry.attributes.normal) {
 					node.geometry.normalizeNormals();
 					node.geometry.attributes.normal.needsUpdate = true;
 				}

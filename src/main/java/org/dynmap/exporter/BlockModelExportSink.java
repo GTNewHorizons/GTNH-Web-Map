@@ -9,5 +9,6 @@ public interface BlockModelExportSink {
 
     void setBlock(int blockId, int blockData) throws IOException;
 
-    void addPatch(PatchDefinition patch, double x, double y, double z, ExportMaterial material) throws IOException;
+    void addPatch(PatchDefinition patch, double x, double y, double z, ExportMaterial material, float[] vertexColors)
+            throws IOException;
 }
