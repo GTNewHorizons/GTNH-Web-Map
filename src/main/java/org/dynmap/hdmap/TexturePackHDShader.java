@@ -392,11 +392,19 @@ public class TexturePackHDShader implements HDShader {
 
     public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
             int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData) {
+        return getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps, customRenderData,
+                true);
+    }
+
+    public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
+            int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData,
+            boolean allowLegacyTopBottomRotationCorrection) {
         if (tp == null) {
             getTexturePack();
         }
         if (tp != null) {
-            return tp.getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps, customRenderData);
+            return tp.getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps,
+                    customRenderData, allowLegacyTopBottomRotationCorrection);
         }
         return new ExportMaterial[txtidx.length][];
     }

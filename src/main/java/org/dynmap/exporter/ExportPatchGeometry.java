@@ -47,7 +47,7 @@ public final class ExportPatchGeometry {
             double u = patchU[i];
             double v = patchV[i];
             fillVertex(xyz, i * 3, x + ux * u + vx * v, y + uy * u + vy * v, z + uz * u + vz * v);
-            setUV(uv, i, rotateUV(getTextureU(patch, u, v), getTextureV(patch, u, v), rotation));
+            setUV(uv, i, rotateUV(getTextureCoordinates(patch, i, u, v, triangle), rotation));
         }
 
         return new Geometry(xyz, uv, vertexCount, patch.sidevis);
@@ -59,20 +59,31 @@ public final class ExportPatchGeometry {
         xyz[offset + 2] = z;
     }
 
-    private static double getTextureU(PatchDefinition patch, double u, double v) {
+    private static double[] getTextureCoordinates(PatchDefinition patch, int vertexIndex, double u, double v, boolean triangle) {
         if (patch.explicitTexCoords != null) {
-            return normalizeUV(
-                    u * patch.explicitTexCoords[2] + v * patch.explicitTexCoords[4] + (1 - u - v) * patch.explicitTexCoords[0]);
+            if (!triangle) {
+                switch (vertexIndex) {
+                    case 0:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[0]), normalizeUV(patch.explicitTexCoords[1]) };
+                    case 1:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[2]), normalizeUV(patch.explicitTexCoords[3]) };
+                    case 2:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[2] + patch.explicitTexCoords[4]
+                                - patch.explicitTexCoords[0]), normalizeUV(patch.explicitTexCoords[3]
+                                + patch.explicitTexCoords[5] - patch.explicitTexCoords[1]) };
+                    case 3:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[4]), normalizeUV(patch.explicitTexCoords[5]) };
+                    default:
+                        break;
+                }
+            }
+            return new double[] {
+                    normalizeUV(
+                            u * patch.explicitTexCoords[2] + v * patch.explicitTexCoords[4] + (1 - u - v) * patch.explicitTexCoords[0]),
+                    normalizeUV(
+                            u * patch.explicitTexCoords[3] + v * patch.explicitTexCoords[5] + (1 - u - v) * patch.explicitTexCoords[1]) };
         }
-        return u;
-    }
-
-    private static double getTextureV(PatchDefinition patch, double u, double v) {
-        if (patch.explicitTexCoords != null) {
-            return normalizeUV(
-                    u * patch.explicitTexCoords[3] + v * patch.explicitTexCoords[5] + (1 - u - v) * patch.explicitTexCoords[1]);
-        }
-        return v;
+        return new double[] { u, v };
     }
 
     private static double normalizeUV(double value) {
@@ -85,7 +96,9 @@ public final class ExportPatchGeometry {
         return value;
     }
 
-    private static double[] rotateUV(double u, double v, int rotation) {
+    private static double[] rotateUV(double[] uv, int rotation) {
+        double u = uv[0];
+        double v = uv[1];
         if (rotation == 1) {
             return new double[] { 1.0 - v, u };
         } else if (rotation == 2) {
