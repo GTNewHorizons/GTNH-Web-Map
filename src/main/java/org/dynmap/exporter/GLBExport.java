@@ -30,6 +30,8 @@ public class GLBExport implements BlockModelExportSink {
     private static final class PrimitiveData {
         final ExportMaterial material;
         final ArrayList<Float> positions = new ArrayList<Float>();
+        final ArrayList<Float> normals = new ArrayList<Float>();
+        final ArrayList<Float> colors = new ArrayList<Float>();
         final ArrayList<Float> texcoords = new ArrayList<Float>();
         final ArrayList<Integer> indices = new ArrayList<Integer>();
         float minX = Float.POSITIVE_INFINITY;
@@ -43,11 +45,18 @@ public class GLBExport implements BlockModelExportSink {
             this.material = material;
         }
 
-        int addVertex(float x, float y, float z, float u, float v) {
+        int addVertex(float x, float y, float z, float nx, float ny, float nz, float r, float g, float b, float u,
+                float v) {
             int index = positions.size() / 3;
             positions.add(Float.valueOf(x));
             positions.add(Float.valueOf(y));
             positions.add(Float.valueOf(z));
+            normals.add(Float.valueOf(nx));
+            normals.add(Float.valueOf(ny));
+            normals.add(Float.valueOf(nz));
+            colors.add(Float.valueOf(r));
+            colors.add(Float.valueOf(g));
+            colors.add(Float.valueOf(b));
             texcoords.add(Float.valueOf(u));
             texcoords.add(Float.valueOf(v));
             minX = Math.min(minX, x);
@@ -57,6 +66,22 @@ public class GLBExport implements BlockModelExportSink {
             maxY = Math.max(maxY, y);
             maxZ = Math.max(maxZ, z);
             return index;
+        }
+    }
+
+    private static final class FaceNormal {
+        final float x;
+        final float y;
+        final float z;
+
+        FaceNormal(float x, float y, float z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        FaceNormal invert() {
+            return new FaceNormal(-x, -y, -z);
         }
     }
 
@@ -181,7 +206,8 @@ public class GLBExport implements BlockModelExportSink {
     }
 
     @Override
-    public void addPatch(PatchDefinition patch, double x, double y, double z, ExportMaterial material) throws IOException {
+    public void addPatch(PatchDefinition patch, double x, double y, double z, ExportMaterial material, float[] vertexColors)
+            throws IOException {
         if (material == null) {
             return;
         }
@@ -191,50 +217,52 @@ public class GLBExport implements BlockModelExportSink {
             primitives.put(material.getMaterialId(), primitive);
         }
         ExportPatchGeometry.Geometry geometry = ExportPatchGeometry.build(patch, x, y, z, material.getRotation());
-        addGeometry(primitive, geometry);
+        addGeometry(primitive, geometry, vertexColors);
     }
 
-    private void addGeometry(PrimitiveData primitive, ExportPatchGeometry.Geometry geometry) {
+    private void addGeometry(PrimitiveData primitive, ExportPatchGeometry.Geometry geometry, float[] vertexColors) {
         switch (geometry.sideVisible) {
             case TOP:
-                addFrontFace(primitive, geometry.xyz, geometry.uv, geometry.vertexCount);
+                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
                 break;
             case BOTTOM:
-                addBackFace(primitive, geometry.xyz, geometry.uv, geometry.vertexCount);
+                addBackFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
                 break;
             case BOTH:
-                addFrontFace(primitive, geometry.xyz, geometry.uv, geometry.vertexCount);
-                addBackFace(primitive, geometry.xyz, geometry.uv, geometry.vertexCount);
+                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
+                addBackFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
                 break;
             case FLIP:
-                addFrontFace(primitive, geometry.xyz, geometry.uv, geometry.vertexCount);
-                addBackFace(primitive, geometry.xyz, buildFlipBackUVs(geometry.uv, geometry.vertexCount),
+                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
+                addBackFace(primitive, geometry.xyz, buildFlipBackUVs(geometry.uv, geometry.vertexCount), vertexColors,
                         geometry.vertexCount);
                 break;
         }
     }
 
-    private void addFrontFace(PrimitiveData primitive, double[] xyz, double[] uv, int vertexCount) {
-        int v0 = addVertex(primitive, xyz, uv, 0);
-        int v1 = addVertex(primitive, xyz, uv, 1);
-        int v2 = addVertex(primitive, xyz, uv, 2);
+    private void addFrontFace(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors, int vertexCount) {
+        FaceNormal normal = buildFaceNormal(xyz);
+        int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
+        int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
+        int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
         primitive.indices.add(Integer.valueOf(v0));
         primitive.indices.add(Integer.valueOf(v1));
         primitive.indices.add(Integer.valueOf(v2));
         if (vertexCount == 4) {
-            int v3 = addVertex(primitive, xyz, uv, 3);
+            int v3 = addVertex(primitive, xyz, uv, vertexColors, normal, 3);
             primitive.indices.add(Integer.valueOf(v0));
             primitive.indices.add(Integer.valueOf(v2));
             primitive.indices.add(Integer.valueOf(v3));
         }
     }
 
-    private void addBackFace(PrimitiveData primitive, double[] xyz, double[] uv, int vertexCount) {
+    private void addBackFace(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors, int vertexCount) {
+        FaceNormal normal = buildFaceNormal(xyz).invert();
         if (vertexCount == 4) {
-            int v3 = addVertex(primitive, xyz, uv, 3);
-            int v2 = addVertex(primitive, xyz, uv, 2);
-            int v1 = addVertex(primitive, xyz, uv, 1);
-            int v0 = addVertex(primitive, xyz, uv, 0);
+            int v3 = addVertex(primitive, xyz, uv, vertexColors, normal, 3);
+            int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
+            int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
+            int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
             primitive.indices.add(Integer.valueOf(v3));
             primitive.indices.add(Integer.valueOf(v2));
             primitive.indices.add(Integer.valueOf(v1));
@@ -242,9 +270,9 @@ public class GLBExport implements BlockModelExportSink {
             primitive.indices.add(Integer.valueOf(v1));
             primitive.indices.add(Integer.valueOf(v0));
         } else {
-            int v2 = addVertex(primitive, xyz, uv, 2);
-            int v1 = addVertex(primitive, xyz, uv, 1);
-            int v0 = addVertex(primitive, xyz, uv, 0);
+            int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
+            int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
+            int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
             primitive.indices.add(Integer.valueOf(v2));
             primitive.indices.add(Integer.valueOf(v1));
             primitive.indices.add(Integer.valueOf(v0));
@@ -258,11 +286,32 @@ public class GLBExport implements BlockModelExportSink {
         return new double[] { uv[0], uv[1], uv[4], uv[5], uv[2], uv[3] };
     }
 
-    private int addVertex(PrimitiveData primitive, double[] xyz, double[] uv, int vertexIndex) {
+    private int addVertex(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors, FaceNormal normal,
+            int vertexIndex) {
         int xyzOffset = vertexIndex * 3;
         int uvOffset = vertexIndex * 2;
+        int colorOffset = vertexIndex * 3;
         return primitive.addVertex(transform(xyz[xyzOffset], originX), transform(xyz[xyzOffset + 1], originY),
-                transform(xyz[xyzOffset + 2], originZ), (float) uv[uvOffset], flipV((float) uv[uvOffset + 1]));
+                transform(xyz[xyzOffset + 2], originZ), normal.x, normal.y, normal.z, vertexColors[colorOffset],
+                vertexColors[colorOffset + 1], vertexColors[colorOffset + 2], (float) uv[uvOffset],
+                flipV((float) uv[uvOffset + 1]));
+    }
+
+    private FaceNormal buildFaceNormal(double[] xyz) {
+        double ax = xyz[3] - xyz[0];
+        double ay = xyz[4] - xyz[1];
+        double az = xyz[5] - xyz[2];
+        double bx = xyz[6] - xyz[0];
+        double by = xyz[7] - xyz[1];
+        double bz = xyz[8] - xyz[2];
+        double nx = (ay * bz) - (az * by);
+        double ny = (az * bx) - (ax * bz);
+        double nz = (ax * by) - (ay * bx);
+        double len = Math.sqrt((nx * nx) + (ny * ny) + (nz * nz));
+        if (len < 1.0E-9) {
+            return new FaceNormal(0.0F, 1.0F, 0.0F);
+        }
+        return new FaceNormal((float) (nx / len), (float) (ny / len), (float) (nz / len));
     }
 
     private float transform(double coordinate, double origin) {
@@ -298,6 +347,18 @@ public class GLBExport implements BlockModelExportSink {
             accessors.add(makeAccessor(positionView, 5126, primitive.positions.size() / 3, "VEC3", primitive.minX,
                     primitive.minY, primitive.minZ, primitive.maxX, primitive.maxY, primitive.maxZ));
 
+            int normalView = appendSegment(binary, toFloatBytes(primitive.normals), 34962);
+            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34962));
+            int normalAccessor = accessors.size();
+            accessors.add(makeAccessor(normalView, 5126, primitive.normals.size() / 3, "VEC3", null, null, null, null,
+                    null, null));
+
+            int colorView = appendSegment(binary, toFloatBytes(primitive.colors), 34962);
+            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34962));
+            int colorAccessor = accessors.size();
+            accessors.add(makeAccessor(colorView, 5126, primitive.colors.size() / 3, "VEC3", null, null, null, null, null,
+                    null));
+
             int uvView = appendSegment(binary, toFloatBytes(primitive.texcoords), 34962);
             bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34962));
             int uvAccessor = accessors.size();
@@ -332,8 +393,8 @@ public class GLBExport implements BlockModelExportSink {
             appendJsonEntry(materialsJson, materialJson.toString());
 
             appendJsonEntry(primitivesJson, String.format(Locale.US,
-                    "{\"attributes\":{\"POSITION\":%d,\"TEXCOORD_0\":%d},\"indices\":%d,\"material\":%d}", positionAccessor,
-                    uvAccessor, indexAccessor, i));
+                    "{\"attributes\":{\"POSITION\":%d,\"NORMAL\":%d,\"COLOR_0\":%d,\"TEXCOORD_0\":%d},\"indices\":%d,\"material\":%d}",
+                    positionAccessor, normalAccessor, colorAccessor, uvAccessor, indexAccessor, i));
         }
 
         StringBuilder json = new StringBuilder();

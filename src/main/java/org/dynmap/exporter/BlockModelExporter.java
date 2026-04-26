@@ -20,6 +20,7 @@ import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.RenderPatch;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 import org.dynmap.utils.BlockStep;
+import org.dynmap.utils.LightLevels;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.PatchDefinition;
@@ -28,6 +29,8 @@ import org.dynmap.utils.PatchDefinitionFactory;
 public class BlockModelExporter {
     private static final int MODELSCALE = 16;
     private static final double BLKSIZE = 1.0 / (double) MODELSCALE;
+    private static final BlockStep[] SEMI_STEPS =
+            { BlockStep.Y_PLUS, BlockStep.X_MINUS, BlockStep.X_PLUS, BlockStep.Z_MINUS, BlockStep.Z_PLUS };
     private static final double[][] BOX_PATCH_POINTS = {
             { 0, 0, 0, 1, 0, 0, 0, 0, 1 },
             { 0, 1, 1, 1, 1, 1, 0, 1, 0 },
@@ -43,6 +46,7 @@ public class BlockModelExporter {
     private final HDShader shader;
     private final PatchDefinition[] defaultPatches;
     private final HDScaledBlockModels models;
+    private final int[] brightnessTable;
 
     private int minX;
     private int minY;
@@ -65,6 +69,7 @@ public class BlockModelExporter {
                     1, 100, SideVisible.TOP, ordinal);
         }
         models = HDBlockModels.getModelsForScale(MODELSCALE);
+        brightnessTable = world.getBrightnessTable();
     }
 
     public void setRenderBounds(int minx, int miny, int minz, int maxx, int maxy, int maxz) {
@@ -228,7 +233,8 @@ public class BlockModelExporter {
                     continue;
                 }
                 for (ExportMaterial material : patchMaterials) {
-                    sink.addPatch((PatchDefinition) patches[i], map.getX(), map.getY(), map.getZ(), material);
+                    sink.addPatch((PatchDefinition) patches[i], map.getX(), map.getY(), map.getZ(), material,
+                            buildPatchVertexColors((PatchDefinition) patches[i], steps[i], map, blockId, material));
                 }
             }
         } else {
@@ -243,11 +249,94 @@ public class BlockModelExporter {
                         continue;
                     }
                     for (ExportMaterial material : faceMaterials) {
-                        sink.addPatch(defaultPatches[face], map.getX(), map.getY(), map.getZ(), material);
+                        sink.addPatch(defaultPatches[face], map.getX(), map.getY(), map.getZ(), material,
+                                buildPatchVertexColors(defaultPatches[face], steps[face], map, blockId, material));
                     }
                 }
             }
         }
+    }
+
+    private float[] buildPatchVertexColors(PatchDefinition patch, BlockStep faceStep, MapIterator map, int blockId,
+            ExportMaterial material) {
+        int vertexCount = (patch.uplusvmax <= 1.0000001) ? 3 : 4;
+        float lightScale = computeLightScale(blockId, faceStep, map, material);
+        float[] colors = new float[vertexCount * 3];
+        for (int i = 0; i < vertexCount; i++) {
+            int off = i * 3;
+            colors[off] = lightScale;
+            colors[off + 1] = lightScale;
+            colors[off + 2] = lightScale;
+        }
+        return colors;
+    }
+
+    private float computeLightScale(int blockId, BlockStep faceStep, MapIterator map, ExportMaterial material) {
+        if ((material != null) && material.isEmissive()) {
+            return 1.0F;
+        }
+        LightLevels ll = new LightLevels();
+        sampleFaceLightLevels(blockId, faceStep, map, ll);
+        int lightLevel = Math.max(ll.sky, ll.emitted);
+        if ((brightnessTable != null) && (lightLevel >= 0) && (lightLevel < brightnessTable.length)) {
+            return Math.max(0.0F, Math.min(1.0F, brightnessTable[lightLevel] / 256.0F));
+        }
+        return Math.max(0.0F, Math.min(1.0F, lightLevel / 15.0F));
+    }
+
+    private void sampleFaceLightLevels(int blockId, BlockStep faceStep, MapIterator map, LightLevels ll) {
+        TexturePack.BlockTransparency transparency = TexturePack.HDTextureMap.getTransparency(blockId);
+        if ((faceStep == null) || (transparency != BlockTransparency.OPAQUE)
+                && (transparency != BlockTransparency.SEMITRANSPARENT)) {
+            ll.sky = map.getBlockSkyLight();
+            ll.emitted = map.getBlockEmittedLight();
+            return;
+        }
+        if (transparency == BlockTransparency.SEMITRANSPARENT) {
+            sampleSemitransparentLightLevels(map, ll, false);
+            return;
+        }
+
+        map.stepPosition(faceStep.opposite());
+        try {
+            int neighborType = map.getBlockTypeID();
+            if (TexturePack.HDTextureMap.getTransparency(neighborType) == BlockTransparency.SEMITRANSPARENT) {
+                sampleSemitransparentLightLevels(map, ll, true);
+            } else {
+                ll.sky = map.getBlockSkyLight();
+                ll.emitted = map.getBlockEmittedLight();
+            }
+        } finally {
+            map.unstepPosition(faceStep.opposite());
+        }
+    }
+
+    private void sampleSemitransparentLightLevels(MapIterator map, LightLevels ll, boolean subtract) {
+        int emitted = 0;
+        int sky = 0;
+        for (BlockStep step : SEMI_STEPS) {
+            map.stepPosition(step);
+            try {
+                int emittedLight = map.getBlockEmittedLight();
+                if (subtract && (emittedLight > 0)) {
+                    emittedLight--;
+                }
+                if (emittedLight > emitted) {
+                    emitted = emittedLight;
+                }
+                int skyLight = map.getBlockSkyLight();
+                if (subtract && (step != BlockStep.Y_PLUS) && (skyLight > 0)) {
+                    skyLight--;
+                }
+                if (skyLight > sky) {
+                    sky = skyLight;
+                }
+            } finally {
+                map.unstepPosition(step);
+            }
+        }
+        ll.emitted = emitted;
+        ll.sky = sky;
     }
 
     private ExportMaterial[][] resolveMaterials(int blockId, int blockData, int renderData, MapIterator map,

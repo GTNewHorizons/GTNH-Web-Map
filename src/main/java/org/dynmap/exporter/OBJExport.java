@@ -276,7 +276,8 @@ public class OBJExport implements BlockModelExportSink {
         updateGroup(GROUP_BLOCKIDMETA, "blk" + blockId + "_" + blockData);
     }
     @Override
-    public void addPatch(PatchDefinition pd, double x, double y, double z, ExportMaterial material) throws IOException {
+    public void addPatch(PatchDefinition pd, double x, double y, double z, ExportMaterial material, float[] vertexColors)
+            throws IOException {
         if (material == null) {
             return;
         }
