@@ -47,6 +47,7 @@ public class BlockModelExporter {
     private final PatchDefinition[] defaultPatches;
     private final HDScaledBlockModels models;
     private final int[] brightnessTable;
+    private boolean cullExportRegionEdges;
 
     private int minX;
     private int minY;
@@ -100,6 +101,10 @@ public class BlockModelExporter {
         if (maxY >= world.worldheight) {
             maxY = world.worldheight - 1;
         }
+    }
+
+    public void setCullExportRegionEdges(boolean cullExportRegionEdges) {
+        this.cullExportRegionEdges = cullExportRegionEdges;
     }
 
     public void export(BlockModelExportSink sink) throws IOException {
@@ -234,13 +239,13 @@ public class BlockModelExporter {
             for (int i = 0; i < patches.length; i++) {
                 PatchDefinition patch = (PatchDefinition) patches[i];
                 ExportMaterial[] patchMaterials = ((materials.length > i) && (materials[i] != null)) ? materials[i] : null;
-                if (patchMaterials == null) {
+                if ((patchMaterials == null) || shouldCullPatchAgainstOpaqueNeighbor(patch, steps[i], map, edgeBits)) {
                     continue;
                 }
                 for (ExportMaterial material : patchMaterials) {
-                    sink.addPatch((PatchDefinition) patches[i], map.getX(), map.getY(), map.getZ(), material,
-                            buildPatchVertexColors((PatchDefinition) patches[i], map.getX(), map.getY(), map.getZ(),
-                                    steps[i], map, blockId, material));
+                    sink.addPatch(patch, map.getX(), map.getY(), map.getZ(), material,
+                            buildPatchVertexColors(patch, map.getX(), map.getY(), map.getZ(), steps[i], map, blockId,
+                                    material));
                 }
             }
         } else {
@@ -368,6 +373,68 @@ public class BlockModelExporter {
             default:
                 return step.opposite();
         }
+    }
+
+    private boolean shouldCullPatchAgainstOpaqueNeighbor(PatchDefinition patch, BlockStep faceStep, MapIterator map,
+            boolean[] edgeBits) {
+        BlockStep outwardStep = getVisibleBoundaryStep(patch, faceStep);
+        if (outwardStep == null) {
+            return false;
+        }
+        if (edgeBits[faceStep.ordinal()] && !cullExportRegionEdges) {
+            return false;
+        }
+        if (!isStepYInBounds(map, outwardStep)) {
+            return false;
+        }
+        int adjacentBlock = map.getBlockTypeIDAt(outwardStep);
+
+        if(adjacentBlock <= 0)
+            return false;
+
+        return TexturePack.HDTextureMap.getTransparency(adjacentBlock) == BlockTransparency.OPAQUE;
+    }
+
+    private BlockStep getVisibleBoundaryStep(PatchDefinition patch, BlockStep faceStep) {
+        if (faceStep == null) {
+            return null;
+        }
+        switch (patch.sidevis) {
+            case TOP:
+            case BOTTOM:
+                break;
+            case BOTH:
+            case FLIP:
+            default:
+                return null;
+        }
+        BlockStep outwardStep = faceStep.opposite();
+        return isPatchOnBoundary(patch, outwardStep) ? outwardStep : null;
+    }
+
+    private boolean isPatchOnBoundary(PatchDefinition patch, BlockStep step) {
+        final double epsilon = 1.0E-9;
+        switch (step) {
+            case X_MINUS:
+                return areAllEqual(patch.x0, patch.xu, patch.xv, 0.0, epsilon);
+            case X_PLUS:
+                return areAllEqual(patch.x0, patch.xu, patch.xv, 1.0, epsilon);
+            case Y_MINUS:
+                return areAllEqual(patch.y0, patch.yu, patch.yv, 0.0, epsilon);
+            case Y_PLUS:
+                return areAllEqual(patch.y0, patch.yu, patch.yv, 1.0, epsilon);
+            case Z_MINUS:
+                return areAllEqual(patch.z0, patch.zu, patch.zv, 0.0, epsilon);
+            case Z_PLUS:
+                return areAllEqual(patch.z0, patch.zu, patch.zv, 1.0, epsilon);
+            default:
+                return false;
+        }
+    }
+
+    private boolean areAllEqual(double v0, double v1, double v2, double expected, double epsilon) {
+        return (Math.abs(v0 - expected) <= epsilon) && (Math.abs(v1 - expected) <= epsilon)
+                && (Math.abs(v2 - expected) <= epsilon);
     }
 
     private float computeLightScale(int blockId, BlockStep faceStep, MapIterator map, ExportMaterial material) {
