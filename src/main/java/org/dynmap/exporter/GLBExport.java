@@ -104,6 +104,7 @@ public class GLBExport implements BlockModelExportSink {
     private double originZ;
     private double scale = 1.0;
     private boolean centerOrigin = true;
+    private boolean cullExportRegionEdges;
 
     public GLBExport(File destination, TexturePackHDShader shader, DynmapWorld world, DynmapCore core, String basename) {
         this.destination = destination;
@@ -159,6 +160,10 @@ public class GLBExport implements BlockModelExportSink {
         this.scale = scale;
     }
 
+    public void setCullExportRegionEdges(boolean cullExportRegionEdges) {
+        this.cullExportRegionEdges = cullExportRegionEdges;
+    }
+
     public boolean processExport(DynmapCommandSender sender) {
         try {
             BufferOutputStream glb = exportToBuffer();
@@ -186,6 +191,7 @@ public class GLBExport implements BlockModelExportSink {
         primitives.clear();
         BlockModelExporter exporter = new BlockModelExporter(world, core, shader);
         exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
+        exporter.setCullExportRegionEdges(cullExportRegionEdges);
         if (cache != null) {
             exporter.export(cache, this);
         } else {

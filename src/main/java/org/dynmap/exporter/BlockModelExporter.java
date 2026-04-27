@@ -232,6 +232,7 @@ public class BlockModelExporter {
 
         if (patches != null) {
             for (int i = 0; i < patches.length; i++) {
+                PatchDefinition patch = (PatchDefinition) patches[i];
                 ExportMaterial[] patchMaterials = ((materials.length > i) && (materials[i] != null)) ? materials[i] : null;
                 if (patchMaterials == null) {
                     continue;
