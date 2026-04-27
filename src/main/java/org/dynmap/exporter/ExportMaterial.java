@@ -9,15 +9,22 @@ public class ExportMaterial {
     private final int rotation;
     private final TexturePack.MaterialType materialType;
     private final boolean emissive;
+    private final ExportMaterial[] bakedLayers;
 
     public ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
             TexturePack.MaterialType materialType, boolean emissive) {
+        this(materialId, textureIndex, colorMultiplier, rotation, materialType, emissive, null);
+    }
+
+    private ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
+            TexturePack.MaterialType materialType, boolean emissive, ExportMaterial[] bakedLayers) {
         this.materialId = materialId;
         this.textureIndex = textureIndex;
         this.colorMultiplier = colorMultiplier;
         this.rotation = rotation;
         this.materialType = materialType;
         this.emissive = emissive;
+        this.bakedLayers = bakedLayers;
     }
 
     public String getMaterialId() {
@@ -42,6 +49,31 @@ public class ExportMaterial {
 
     public boolean isEmissive() {
         return emissive;
+    }
+
+    public ExportMaterial[] getBakedLayers() {
+        return bakedLayers;
+    }
+
+    public static ExportMaterial bakeLayers(ExportMaterial[] layers) {
+        if ((layers == null) || (layers.length == 0)) {
+            return null;
+        }
+        if (layers.length == 1) {
+            return layers[0];
+        }
+        StringBuilder materialId = new StringBuilder("baked");
+        TexturePack.MaterialType materialType = null;
+        for (ExportMaterial layer : layers) {
+            materialId.append("__").append(layer.materialId);
+            if (layer.rotation != 0) {
+                materialId.append("_r").append(layer.rotation);
+            }
+            if (layer.materialType != null) {
+                materialType = layer.materialType;
+            }
+        }
+        return new ExportMaterial(materialId.toString(), -1, 0xFFFFFF, 0, materialType, false, layers.clone());
     }
 
     public static ExportMaterial fromLegacyString(String material) {

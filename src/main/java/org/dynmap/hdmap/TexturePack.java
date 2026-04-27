@@ -3541,27 +3541,122 @@ public class TexturePack {
     public ExportedTextureData exportTexture(ExportMaterial material) throws IOException {
         DynmapBufferedImage image = DynmapBufferedImage.allocateBufferedImage(this.native_scale, this.native_scale);
         try {
-            return buildExportedTextureData(material.getTextureIndex(), material.getColorMultiplier(), image);
+            return buildExportedTextureData(material, image);
         } finally {
             DynmapBufferedImage.freeBufferedImage(image);
         }
     }
 
+    private ExportedTextureData buildExportedTextureData(ExportMaterial material, DynmapBufferedImage image)
+            throws IOException {
+        fillExportedTextureData(material, image.argb_buf);
+        return encodeExportedTextureData(image, material.getMaterialType());
+    }
+
     private ExportedTextureData buildExportedTextureData(int idx, int colormult, DynmapBufferedImage image)
             throws IOException {
+        fillExportedTextureData(idx, colormult, 0, image.argb_buf);
+        return encodeExportedTextureData(image, getMaterialTypeByTile(idx));
+    }
+
+    private void fillExportedTextureData(ExportMaterial material, int[] argbOut) {
+        ExportMaterial[] bakedLayers = material.getBakedLayers();
+        if ((bakedLayers != null) && (bakedLayers.length > 0)) {
+            Arrays.fill(argbOut, 0);
+            int[] layerArgb = new int[argbOut.length];
+            for (int i = bakedLayers.length - 1; i >= 0; i--) {
+                fillExportedTextureData(bakedLayers[i], layerArgb);
+                blendExportedTextureData(argbOut, layerArgb);
+            }
+            return;
+        }
+        fillExportedTextureData(material.getTextureIndex(), material.getColorMultiplier(), material.getRotation(), argbOut);
+    }
+
+    private void fillExportedTextureData(int idx, int colormult, int rotation, int[] argbOut) {
         colormult = colormult & 0xFFFFFF;
         int[] argb = getTileARGB(idx);
         if (colormult != 0xFFFFFF) {
             colormult |= 0xFF000000;
-            for (int i = 0; i < image.argb_buf.length; i++) {
-                image.argb_buf[i] = Color.blendColor(argb[i], colormult);
-            }
-        } else {
-            for (int i = 0; i < image.argb_buf.length; i++) {
-                image.argb_buf[i] = argb[i];
+        }
+        for (int y = 0; y < this.native_scale; y++) {
+            int rowOff = y * this.native_scale;
+            for (int x = 0; x < this.native_scale; x++) {
+                int pixel = argb[getRotatedExportTextureIndex(x, y, rotation)];
+                if (colormult != 0xFFFFFF) {
+                    pixel = Color.blendColor(pixel, colormult);
+                }
+                argbOut[rowOff + x] = pixel;
             }
         }
+    }
 
+    private int getRotatedExportTextureIndex(int x, int y, int rotation) {
+        int srcX = x;
+        int srcY = y;
+        switch (rotation) {
+            case OBJExport.ROT90:
+                srcX = this.native_scale - 1 - y;
+                srcY = x;
+                break;
+            case OBJExport.ROT180:
+                srcX = this.native_scale - 1 - x;
+                srcY = this.native_scale - 1 - y;
+                break;
+            case OBJExport.ROT270:
+                srcX = y;
+                srcY = this.native_scale - 1 - x;
+                break;
+            case OBJExport.HFLIP:
+                srcX = this.native_scale - 1 - x;
+                break;
+            default:
+                break;
+        }
+        return (srcY * this.native_scale) + srcX;
+    }
+
+    private void blendExportedTextureData(int[] dst, int[] src) {
+        for (int i = 0; i < dst.length; i++) {
+            int srcPixel = src[i];
+            int srcAlpha = (srcPixel >> 24) & 0xFF;
+            if (srcAlpha == 0) {
+                continue;
+            }
+            if (srcAlpha == 0xFF) {
+                dst[i] = srcPixel;
+                continue;
+            }
+
+            int dstPixel = dst[i];
+            int dstAlpha = (dstPixel >> 24) & 0xFF;
+            if (dstAlpha == 0) {
+                dst[i] = srcPixel;
+                continue;
+            }
+
+            int outAlpha = srcAlpha + ((dstAlpha * (255 - srcAlpha) + 127) / 255);
+            int srcRed = (srcPixel >> 16) & 0xFF;
+            int srcGreen = (srcPixel >> 8) & 0xFF;
+            int srcBlue = srcPixel & 0xFF;
+            int dstRed = (dstPixel >> 16) & 0xFF;
+            int dstGreen = (dstPixel >> 8) & 0xFF;
+            int dstBlue = dstPixel & 0xFF;
+            int outRed =
+                    ((srcRed * srcAlpha * 255) + (dstRed * dstAlpha * (255 - srcAlpha)) + (outAlpha * 127))
+                            / (outAlpha * 255);
+            int outGreen =
+                    ((srcGreen * srcAlpha * 255) + (dstGreen * dstAlpha * (255 - srcAlpha)) + (outAlpha * 127))
+                            / (outAlpha * 255);
+            int outBlue =
+                    ((srcBlue * srcAlpha * 255) + (dstBlue * dstAlpha * (255 - srcAlpha)) + (outAlpha * 127))
+                            / (outAlpha * 255);
+            dst[i] = (outAlpha << 24) | (outRed << 16) | (outGreen << 8) | outBlue;
+        }
+    }
+
+    private ExportedTextureData encodeExportedTextureData(DynmapBufferedImage image, MaterialType materialType)
+            throws IOException {
         boolean hasAlpha = false;
         boolean hasTranslucentAlpha = false;
         double r = 0.0;
@@ -3597,7 +3692,7 @@ public class TexturePack {
         } else {
             data.diffuseColor = new Color();
         }
-        data.material = getMaterialTypeByTile(idx);
+        data.material = materialType;
         data.hasAlpha = hasAlpha;
         data.hasTranslucentAlpha = hasTranslucentAlpha;
 
@@ -3644,8 +3739,7 @@ public class TexturePack {
         if (etp.txtids.containsKey(material.getMaterialId())) {
             return;
         }
-        ExportedTextureData data = buildExportedTextureData(material.getTextureIndex(), material.getColorMultiplier(),
-                etp.img);
+        ExportedTextureData data = buildExportedTextureData(material, etp.img);
 
         String fname = etp.name + "/" + material.getMaterialId() + ".png";
         etp.exp.startExportedFile(fname);
@@ -3719,7 +3813,7 @@ public class TexturePack {
         etp.name = name;
         etp.exp = exp;
         for (ExportMaterial material : materials) {
-            if ((material != null) && (material.getTextureIndex() >= 0)) {
+            if (material != null) {
                 addImageToZip(material, etp);
             }
         }
