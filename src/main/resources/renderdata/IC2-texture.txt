@@ -354,7 +354,7 @@ block:id=%blockAlloy,data=0,stdrot=true,face0-5=0:ic2/blockAlloy
 block:id=%blockBasalt,data=0,stdrot=true,face0-5=0:ic2/blockBasalt
 
 # %blockAlloyGlass:* (blockAlloyGlass), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockTexGlass
-block:id=%blockAlloyGlass,data=0,stdrot=true,face0-5=0:ic2/blockAlloyGlass
+block:id=%blockAlloyGlass,data=0,stdrot=true,face0-5=0:ic2/blockAlloyGlass,transparency=TRANSPARENT
 
 # %blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
 block:id=%blockDoorAlloy,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDoorAlloy.top,patch1=0:ic2/blockDoorAlloy.bottom
