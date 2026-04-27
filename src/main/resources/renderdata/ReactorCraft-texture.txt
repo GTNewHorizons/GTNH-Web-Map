@@ -203,7 +203,7 @@ block:id=%reactorcraft_block_steam,data=*,stdrot=true,face0-5=12000:ReactorCraft
 # %reactorcraft_block_duct:* (reactorcraft_block_duct), render=Reika.RotaryCraft.PipeBodyRenderer(CUSTOM), opaque=false,cls=Reika.ReactorCraft.Blocks.BlockDuct
 block:id=%reactorcraft_block_duct,data=0,stdrot=true,face0=12000:minecraft/hardened_clay,face1-5=12000:minecraft/glass
 block:id=%reactorcraft_block_duct,data=1,stdrot=true,face0=12000:minecraft/gold_block,face1-5=12000:rotarycraft/obsidiglass
-block:id=%reactorcraft_block_duct,data=2,stdrot=true,face0=12000:reactorcraft/mat/concrete,face1-5=12000:minecraft/leaves_spruce
+block:id=%reactorcraft_block_duct,data=2,stdrot=true,transparency=TRANSPARENT,face0=12000:reactorcraft/mat/concrete,face1-5=12000:minecraft/leaves_spruce
 
 # %reactorcraft_block_injectormulti:* (reactorcraft_block_injectormulti), render=(STANDARD), opaque=false,cls=Reika.ReactorCraft.Blocks.Multi.BlockInjectorMulti
 block:id=%reactorcraft_block_injectormulti,data=0,stdrot=true,face0=0:reactorcraft/multi/injector_9,face1=0:reactorcraft/multi/injector_0,face2-5=0:reactorcraft/multi/injector_4

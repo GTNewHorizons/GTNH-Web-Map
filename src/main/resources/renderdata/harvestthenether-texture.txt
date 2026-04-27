@@ -49,7 +49,7 @@ block:id=%netherLog,data=8,data=9,data=10,data=11,face0-1=4000:harvestthenether/
 block:id=%netherLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestthenether/netherLog_side
 
 # %netherLeaves:* (netherLeaves), render=(STANDARD), opaque=false,cls=com.pam.harvestthenether.BlockNetherLeaves
-block:id=%netherLeaves,data=*,stdrot=true,face0-5=0:harvestthenether/netherLeaves
+block:id=%netherLeaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:harvestthenether/netherLeaves
 
 # %netherPlanks:* (netherPlanks), render=(STANDARD), opaque=true,cls=com.pam.harvestthenether.BlockNetherPlanks
 block:id=%netherPlanks,data=*,stdrot=true,face0-5=0:harvestthenether/netherPlanks

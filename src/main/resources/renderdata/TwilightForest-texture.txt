@@ -569,19 +569,19 @@ block:id=%tile.TFRoots,data=1,stdrot=true,face0-5=0:TwilightForest/oreroots
 block:id=%tile.TFRoots,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/rootblock
 
 # %tile.TFLeaves:* (tile.TFLeaves), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFLeaves
-block:id=%tile.TFLeaves,data=0,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves,data=1,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
-block:id=%tile.TFLeaves,data=2,stdrot=true,face0-5=14000:minecraft/leaves_birch
-block:id=%tile.TFLeaves,data=3,data=4,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves,data=5,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
-block:id=%tile.TFLeaves,data=6,stdrot=true,face0-5=14000:minecraft/leaves_birch
-block:id=%tile.TFLeaves,data=7,data=8,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves,data=9,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
-block:id=%tile.TFLeaves,data=10,stdrot=true,face0-5=14000:minecraft/leaves_birch
-block:id=%tile.TFLeaves,data=11,data=12,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves,data=13,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
-block:id=%tile.TFLeaves,data=14,stdrot=true,face0-5=14000:minecraft/leaves_birch
-block:id=%tile.TFLeaves,data=15,stdrot=true,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
+block:id=%tile.TFLeaves,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%tile.TFLeaves,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
+block:id=%tile.TFLeaves,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%tile.TFLeaves,data=7,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
+block:id=%tile.TFLeaves,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%tile.TFLeaves,data=11,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
+block:id=%tile.TFLeaves,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_birch
+block:id=%tile.TFLeaves,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
 
 # %tile.TFFirefly:* (tile.TFFirefly), render=twilightforest.client.renderer.blocks.RenderBlockTFCritters(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFirefly
 block:id=%tile.TFFirefly,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/TFFirefly
@@ -605,7 +605,7 @@ block:id=%tile.TFMazestone,data=8,data=9,data=10,data=11,data=12,data=13,data=14
 
 # %tile.TFHedge:* (tile.TFHedge), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFHedge
 block:id=%tile.TFHedge,data=0,stdrot=true,face0-5=0:TwilightForest/hedge
-block:id=%tile.TFHedge,data=1,stdrot=true,face0-5=0:TwilightForest/darkwood_leaves
+block:id=%tile.TFHedge,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/darkwood_leaves
 block:id=%tile.TFHedge,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/hedge
 
 # %tile.TFBossSpawner:* (tile.TFBossSpawner), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFBossSpawner
@@ -761,22 +761,22 @@ block:id=%tile.TFMagicLog,data=14,stdrot=true,face0-5=0:TwilightForest/mine_side
 block:id=%tile.TFMagicLog,data=15,stdrot=true,face0-5=0:TwilightForest/sort_side
 
 # %tile.TFMagicLeaves:* (tile.TFMagicLeaves), render=twilightforest.client.renderer.blocks.RenderBlockTFMagicLeaves(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMagicLeaves
-block:id=%tile.TFMagicLeaves,data=0,stdrot=true,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=1,stdrot=true,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
-block:id=%tile.TFMagicLeaves,data=2,stdrot=true,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=3,stdrot=true,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
-block:id=%tile.TFMagicLeaves,data=4,stdrot=true,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=5,stdrot=true,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
-block:id=%tile.TFMagicLeaves,data=6,stdrot=true,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=7,stdrot=true,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
-block:id=%tile.TFMagicLeaves,data=8,stdrot=true,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=9,stdrot=true,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
-block:id=%tile.TFMagicLeaves,data=10,stdrot=true,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=11,stdrot=true,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
-block:id=%tile.TFMagicLeaves,data=12,stdrot=true,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=13,stdrot=true,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
-block:id=%tile.TFMagicLeaves,data=14,stdrot=true,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
-block:id=%tile.TFMagicLeaves,data=15,stdrot=true,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
+block:id=%tile.TFMagicLeaves,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
+block:id=%tile.TFMagicLeaves,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
+block:id=%tile.TFMagicLeaves,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
+block:id=%tile.TFMagicLeaves,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
+block:id=%tile.TFMagicLeaves,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
+block:id=%tile.TFMagicLeaves,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
+block:id=%tile.TFMagicLeaves,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
+block:id=%tile.TFMagicLeaves,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
+block:id=%tile.TFMagicLeaves,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
 
 # %tile.TFMagicLogSpecial:* (tile.TFMagicLogSpecial), render=(LOG), opaque=true,cls=twilightforest.block.BlockTFMagicLogSpecial
 block:id=%tile.TFMagicLogSpecial,data=0,stdrot=true,face0-1=0:TwilightForest/time_section,face2-5=0:TwilightForest/time_clock
@@ -909,19 +909,19 @@ block:id=%tile.TFBurntThorns,data=12,stdrot=true,face0-5=0:TwilightForest/burnt_
 block:id=%tile.TFThornRose,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/thornRose
 
 # %tile.TFLeaves3:* (tile.TFLeaves3), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFLeaves3
-block:id=%tile.TFLeaves3,data=0,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=1,stdrot=true,face0-5=13000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=2,stdrot=true,face0-5=14000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=3,data=4,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=5,stdrot=true,face0-5=13000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=6,stdrot=true,face0-5=14000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=7,data=8,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=9,stdrot=true,face0-5=13000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=10,stdrot=true,face0-5=14000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=11,data=12,stdrot=true,face0-5=2000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=13,stdrot=true,face0-5=13000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=14,stdrot=true,face0-5=14000:minecraft/leaves_oak
-block:id=%tile.TFLeaves3,data=15,stdrot=true,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=7,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=11,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=13000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=14000:minecraft/leaves_oak
+block:id=%tile.TFLeaves3,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
 
 # %tile.TFDeadrock:* (tile.TFDeadrock), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFDeadrock
 block:id=%tile.TFDeadrock,data=0,stdrot=true,face0-5=0:TwilightForest/deadrock_surface
@@ -930,7 +930,7 @@ block:id=%tile.TFDeadrock,data=2,stdrot=true,face0-5=0:TwilightForest/deadrock_s
 block:id=%tile.TFDeadrock,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/deadrock_surface
 
 # %tile.DarkLeaves:* (tile.DarkLeaves), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFDarkLeaves
-block:id=%tile.DarkLeaves,data=*,stdrot=true,face0-5=2000:TwilightForest/darkwood_leaves2
+block:id=%tile.DarkLeaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=2000:TwilightForest/darkwood_leaves2
 
 # %tile.AuroraPillar:* (tile.AuroraPillar), render=(LOG), opaque=true,cls=twilightforest.block.BlockTFAuroraPillar
 block:id=%tile.AuroraPillar,data=0,data=1,data=2,data=3,stdrot=true,colorMult=FF7CE686,face0-1=17000:TwilightForest/aurora_pillar_top,face2-5=17000:TwilightForest/aurora_pillar_side
@@ -960,7 +960,7 @@ block:id=%tile.GiantCobble,data=*,stdrot=true,face0-5=0:minecraft/cobblestone
 block:id=%tile.GiantLog,data=*,stdrot=true,face0-1=0:minecraft/log_oak_top,face2-5=0:minecraft/log_oak
 
 # %tile.GiantLeaves:* (tile.GiantLeaves), render=(STANDARD), opaque=false,cls=twilightforest.block.BlockTFGiantLeaves
-block:id=%tile.GiantLeaves,data=*,stdrot=true,face0-5=2000:minecraft/leaves_oak
+block:id=%tile.GiantLeaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
 
 # %tile.GiantObsidian:* (tile.GiantObsidian), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFGiantObsidian
 block:id=%tile.GiantObsidian,data=*,stdrot=true,face0-5=0:minecraft/obsidian
@@ -1012,7 +1012,7 @@ block:id=%tile.FieryBlock,data=*,stdrot=true,face0-5=0:TwilightForest/fiery_bloc
 block:id=%tile.IronwoodBlock,data=*,stdrot=true,face0-5=0:TwilightForest/ironwood_block
 
 # %tile.SteeleafBlock:* (tile.SteeleafBlock), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFCompressed
-block:id=%tile.SteeleafBlock,data=*,stdrot=true,face0-5=0:TwilightForest/steeleaf_block
+block:id=%tile.SteeleafBlock,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/steeleaf_block
 
 # %tile.HugeLilyPad:* (tile.HugeLilyPad), render=twilightforest.client.renderer.blocks.RenderBlockTFHugeLilyPad(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFHugeLilyPad
 block:id=%tile.HugeLilyPad,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=15000:TwilightForest/huge_lilypad_0,face2-5=15000:TwilightForest/blank

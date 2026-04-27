@@ -88,7 +88,7 @@ block:id=%grc.fermentJar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:g
 block:id=%grc.appleSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:grcapples/apple_sapling
 
 # %grc.appleLeaves:* (grc.appleLeaves), render=(STANDARD), opaque=false,cls=growthcraft.apples.common.block.BlockAppleLeaves
-block:id=%grc.appleLeaves,data=*,stdrot=true,face0-5=2000:minecraft/leaves_oak
+block:id=%grc.appleLeaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/leaves_oak
 
 # %grc.appleBlock:* (grc.appleBlock), render=growthcraft.core.client.renderer.RenderBlockFruit(CUSTOM), opaque=false,cls=growthcraft.apples.common.block.BlockApple
 block:id=%grc.appleBlock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:grcapples/apples_1

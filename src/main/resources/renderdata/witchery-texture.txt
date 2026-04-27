@@ -331,19 +331,19 @@ block:id=%witchlog,data=14,stdrot=true,face0-5=0:witchery/log_hawthorn
 block:id=%witchlog,data=15,stdrot=true,face0-5=0:witchery/log_rowan
 
 # %witchleaves:* (witchleaves), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchLeaves
-block:id=%witchleaves,data=0,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=1,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=2,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=3,data=4,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=5,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=6,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=7,data=8,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=9,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=10,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=11,data=12,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=13,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=14,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=15,stdrot=true,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=7,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=11,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
 
 # %voidbramble:* (voidbramble), render=(CROPS), opaque=false,cls=com.emoniph.witchery.blocks.BlockVoidBramble
 block:id=%voidbramble,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/voidBramble
