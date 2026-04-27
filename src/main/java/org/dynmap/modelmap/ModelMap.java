@@ -26,6 +26,7 @@ public class ModelMap extends MapType {
     public static final int DEFAULT_GRANULARITY = 1;
     public static final String DEFAULT_SHADER = "stdtexture";
     public static final boolean DEFAULT_CULL_EXPORT_REGION_EDGES = true;
+    public static final OutputCompression DEFAULT_OUTPUT_COMPRESSION = OutputCompression.GZIP;
 
     public enum AssetFormat {
         GLB("glb", "model/gltf-binary");
@@ -44,6 +45,39 @@ public class ModelMap extends MapType {
 
         public String getContentType() {
             return contentType;
+        }
+    }
+
+    public enum OutputCompression {
+        NONE("none", null),
+        GZIP("gzip", "gzip");
+
+        private final String id;
+        private final String contentEncoding;
+
+        OutputCompression(String id, String contentEncoding) {
+            this.id = id;
+            this.contentEncoding = contentEncoding;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public String getContentEncoding() {
+            return contentEncoding;
+        }
+
+        public static OutputCompression fromId(String value) {
+            if (value == null) {
+                return null;
+            }
+            for (OutputCompression compression : values()) {
+                if (compression.id.equalsIgnoreCase(value)) {
+                    return compression;
+                }
+            }
+            return null;
         }
     }
 
@@ -116,6 +150,7 @@ public class ModelMap extends MapType {
     private int granularity;
     private TexturePackHDShader shader;
     private boolean cullExportRegionEdges;
+    private OutputCompression outputCompression;
 
     public ModelMap(DynmapCore core, ConfigurationNode configuration) {
         this.core = core;
@@ -143,6 +178,8 @@ public class ModelMap extends MapType {
         icon = configuration.getString("icon");
         appendToWorld = configuration.getString("append_to_world", "");
         cullExportRegionEdges = configuration.getBoolean("cull_export_region_edges", DEFAULT_CULL_EXPORT_REGION_EDGES);
+        outputCompression =
+                resolveOutputCompression(configuration.getString("compression", DEFAULT_OUTPUT_COMPRESSION.getId()));
         setProtected(configuration.getBoolean("protected", false));
         setTileUpdateDelay(configuration.getInteger("tileupdatedelay", -1));
     }
@@ -161,6 +198,7 @@ public class ModelMap extends MapType {
         cn.put("granularity", granularity);
         cn.put("append_to_world", appendToWorld);
         cn.put("cull_export_region_edges", cullExportRegionEdges);
+        cn.put("compression", outputCompression.getId());
         cn.put("protected", isProtected());
         if (tileupdatedelay > 0) {
             cn.put("tileupdatedelay", tileupdatedelay);
@@ -186,6 +224,16 @@ public class ModelMap extends MapType {
             return null;
         }
         return (TexturePackHDShader) requestedShader;
+    }
+
+    private OutputCompression resolveOutputCompression(String compressionId) {
+        OutputCompression resolved = OutputCompression.fromId(compressionId);
+        if (resolved == null) {
+            Log.severe("ModelMap '" + name + "' set invalid compression '" + compressionId + "' - using '"
+                    + DEFAULT_OUTPUT_COMPRESSION.getId() + "'");
+            return DEFAULT_OUTPUT_COMPRESSION;
+        }
+        return resolved;
     }
 
     public TexturePackHDShader getShader() {
@@ -382,6 +430,10 @@ public class ModelMap extends MapType {
         return cullExportRegionEdges;
     }
 
+    public OutputCompression getOutputCompression() {
+        return outputCompression;
+    }
+
     public boolean setPrefix(String value) {
         if (!value.equals(prefix)) {
             prefix = value;
@@ -428,6 +480,14 @@ public class ModelMap extends MapType {
         }
         if (value != granularity) {
             granularity = value;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean setOutputCompression(OutputCompression value) {
+        if ((value != null) && (value != outputCompression)) {
+            outputCompression = value;
             return true;
         }
         return false;

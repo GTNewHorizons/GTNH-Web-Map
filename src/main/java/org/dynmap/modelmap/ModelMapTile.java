@@ -1,7 +1,9 @@
 package org.dynmap.modelmap;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
+import java.util.zip.GZIPOutputStream;
 
 import org.dynmap.Client;
 import org.dynmap.DynmapChunk;
@@ -14,6 +16,7 @@ import org.dynmap.MapType;
 import org.dynmap.exporter.GLBExport;
 import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
+import org.dynmap.storage.MapStorageTile.TileRead;
 import org.dynmap.utils.BufferOutputStream;
 import org.dynmap.utils.MapChunkCache;
 
@@ -82,6 +85,7 @@ public class ModelMapTile extends MapTile {
         MapStorageTile tile = storage.getTile(world, map, tx, tz, 0, MapType.ImageVariant.STANDARD);
         boolean updated = false;
         boolean rendered = (glb != null);
+        boolean compressOutput = map.getOutputCompression() == ModelMap.OutputCompression.GZIP;
 
         tile.getWriteLock();
         try {
@@ -94,8 +98,20 @@ public class ModelMapTile extends MapTile {
                 }
             } else {
                 long crc = MapStorage.calculateTileHashCode(glb.buf, 0, glb.len);
-                if (!tile.matchesHashCode(crc)) {
-                    if (tile.write(crc, glb, System.currentTimeMillis())) {
+                BufferOutputStream output;
+                try {
+                    output = compressOutput ? gzip(glb) : glb;
+                } catch (IOException iox) {
+                    Log.severe("ModelMap compression failed for " + toString() + ": " + iox.getMessage());
+                    return false;
+                }
+                boolean rewrite = !tile.matchesHashCode(crc);
+                if (!rewrite) {
+                    TileRead existing = tile.read();
+                    rewrite = (existing == null) || (isGzipCompressed(existing.image) != compressOutput);
+                }
+                if (rewrite) {
+                    if (tile.write(crc, output, System.currentTimeMillis())) {
                         MapManager.mapman.pushUpdate(world, new Client.Tile(tile.getURI()));
                         updated = true;
                     }
@@ -107,6 +123,22 @@ public class ModelMapTile extends MapTile {
 
         MapManager.mapman.updateStatistics(this, map.getPrefix(), rendered, updated, !rendered);
         return updated;
+    }
+
+    private static BufferOutputStream gzip(BufferOutputStream input) throws IOException {
+        BufferOutputStream compressed = new BufferOutputStream();
+        OutputStream gzip = new GZIPOutputStream(compressed);
+        try {
+            gzip.write(input.buf, 0, input.len);
+        } finally {
+            gzip.close();
+        }
+        return compressed;
+    }
+
+    private static boolean isGzipCompressed(org.dynmap.utils.BufferInputStream input) {
+        return (input != null) && (input.length() >= 2) && ((input.buffer()[0] & 0xFF) == 0x1F)
+                && ((input.buffer()[1] & 0xFF) == 0x8B);
     }
 
     @Override
