@@ -26,6 +26,8 @@ import org.dynmap.utils.PatchDefinition;
 
 public class GLBExport implements BlockModelExportSink {
     private static final Charset UTF8 = Charset.forName("UTF-8");
+    private static final int FILTER_NEAREST = 9728;
+    private static final int WRAP_CLAMP_TO_EDGE = 33071;
 
     private static final class PrimitiveData {
         final ExportMaterial material;
@@ -340,8 +342,13 @@ public class GLBExport implements BlockModelExportSink {
         ByteArrayBuilder binary = new ByteArrayBuilder();
         StringBuilder primitivesJson = new StringBuilder();
         StringBuilder imagesJson = new StringBuilder();
+        StringBuilder samplersJson = new StringBuilder();
         StringBuilder texturesJson = new StringBuilder();
         StringBuilder materialsJson = new StringBuilder();
+
+        appendJsonEntry(samplersJson, String.format(Locale.US,
+                "{\"magFilter\":%d,\"minFilter\":%d,\"wrapS\":%d,\"wrapT\":%d}", FILTER_NEAREST, FILTER_NEAREST,
+                WRAP_CLAMP_TO_EDGE, WRAP_CLAMP_TO_EDGE));
 
         for (int i = 0; i < primitiveList.size(); i++) {
             PrimitiveData primitive = primitiveList.get(i);
@@ -382,7 +389,7 @@ public class GLBExport implements BlockModelExportSink {
             int imageIndex = i;
             appendJsonEntry(imagesJson, String.format(Locale.US, "{\"bufferView\":%d,\"mimeType\":\"image/png\"}",
                     imageView));
-            appendJsonEntry(texturesJson, String.format(Locale.US, "{\"source\":%d}", imageIndex));
+            appendJsonEntry(texturesJson, String.format(Locale.US, "{\"sampler\":0,\"source\":%d}", imageIndex));
 
             StringBuilder materialJson = new StringBuilder();
             materialJson.append("{\"name\":\"").append(primitive.material.getMaterialId())
@@ -424,6 +431,9 @@ public class GLBExport implements BlockModelExportSink {
         json.append("],");
         json.append("\"images\":[");
         json.append(imagesJson);
+        json.append("],");
+        json.append("\"samplers\":[");
+        json.append(samplersJson);
         json.append("],");
         json.append("\"textures\":[");
         json.append(texturesJson);
