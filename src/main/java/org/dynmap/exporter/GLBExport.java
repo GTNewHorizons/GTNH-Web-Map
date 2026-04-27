@@ -28,14 +28,32 @@ public class GLBExport implements BlockModelExportSink {
     private static final Charset UTF8 = Charset.forName("UTF-8");
     private static final int FILTER_NEAREST = 9728;
     private static final int WRAP_CLAMP_TO_EDGE = 33071;
+    private static final int ARRAY_BUFFER_TARGET = 34962;
+    private static final int ELEMENT_ARRAY_BUFFER_TARGET = 34963;
+    private static final int COMPONENT_TYPE_BYTE = 5120;
+    private static final int COMPONENT_TYPE_UNSIGNED_BYTE = 5121;
+    private static final int COMPONENT_TYPE_UNSIGNED_SHORT = 5123;
+    private static final int COMPONENT_TYPE_UNSIGNED_INT = 5125;
+    private static final int COMPONENT_TYPE_FLOAT = 5126;
+    private static final String GLTF_ASSET_VERSION = "2.0";
+    private static final int GLB_HEADER_LENGTH = 12;
+    private static final int GLB_CHUNK_HEADER_LENGTH = 8;
+    private static final int GLB_VERSION = 2;
+    private static final int GLB_MAGIC = 0x46546C67;
+    private static final int JSON_CHUNK_TYPE = 0x4E4F534A;
+    private static final int BIN_CHUNK_TYPE = 0x004E4942;
+    private static final byte JSON_CHUNK_PADDING_BYTE = (byte) 0x20;
+    private static final byte BIN_CHUNK_PADDING_BYTE = (byte) 0x00;
+    private static final int FOUR_BYTE_ALIGNMENT = 4;
+    private static final int FOUR_BYTE_ALIGNMENT_MASK = FOUR_BYTE_ALIGNMENT - 1;
 
     private static final class PrimitiveData {
         final ExportMaterial material;
-        final ArrayList<Float> positions = new ArrayList<Float>();
-        final ArrayList<Float> normals = new ArrayList<Float>();
-        final ArrayList<Float> colors = new ArrayList<Float>();
-        final ArrayList<Float> texcoords = new ArrayList<Float>();
-        final ArrayList<Integer> indices = new ArrayList<Integer>();
+        final FloatArrayBuilder positions = new FloatArrayBuilder();
+        final FloatArrayBuilder normals = new FloatArrayBuilder();
+        final FloatArrayBuilder colors = new FloatArrayBuilder();
+        final FloatArrayBuilder texcoords = new FloatArrayBuilder();
+        final IntArrayBuilder indices = new IntArrayBuilder();
         float minX = Float.POSITIVE_INFINITY;
         float minY = Float.POSITIVE_INFINITY;
         float minZ = Float.POSITIVE_INFINITY;
@@ -50,17 +68,17 @@ public class GLBExport implements BlockModelExportSink {
         int addVertex(float x, float y, float z, float nx, float ny, float nz, float r, float g, float b, float u,
                 float v) {
             int index = positions.size() / 3;
-            positions.add(Float.valueOf(x));
-            positions.add(Float.valueOf(y));
-            positions.add(Float.valueOf(z));
-            normals.add(Float.valueOf(nx));
-            normals.add(Float.valueOf(ny));
-            normals.add(Float.valueOf(nz));
-            colors.add(Float.valueOf(r));
-            colors.add(Float.valueOf(g));
-            colors.add(Float.valueOf(b));
-            texcoords.add(Float.valueOf(u));
-            texcoords.add(Float.valueOf(v));
+            positions.add(x);
+            positions.add(y);
+            positions.add(z);
+            normals.add(nx);
+            normals.add(ny);
+            normals.add(nz);
+            colors.add(r);
+            colors.add(g);
+            colors.add(b);
+            texcoords.add(u);
+            texcoords.add(v);
             minX = Math.min(minX, x);
             minY = Math.min(minY, y);
             minZ = Math.min(minZ, z);
@@ -84,6 +102,18 @@ public class GLBExport implements BlockModelExportSink {
 
         FaceNormal invert() {
             return new FaceNormal(-x, -y, -z);
+        }
+    }
+
+    private static final class AccessorBinary {
+        final byte[] bytes;
+        final int componentType;
+        final boolean normalized;
+
+        AccessorBinary(byte[] bytes, int componentType, boolean normalized) {
+            this.bytes = bytes;
+            this.componentType = componentType;
+            this.normalized = normalized;
         }
     }
 
@@ -253,14 +283,14 @@ public class GLBExport implements BlockModelExportSink {
         int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
         int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
         int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
-        primitive.indices.add(Integer.valueOf(v0));
-        primitive.indices.add(Integer.valueOf(v1));
-        primitive.indices.add(Integer.valueOf(v2));
+        primitive.indices.add(v0);
+        primitive.indices.add(v1);
+        primitive.indices.add(v2);
         if (vertexCount == 4) {
             int v3 = addVertex(primitive, xyz, uv, vertexColors, normal, 3);
-            primitive.indices.add(Integer.valueOf(v0));
-            primitive.indices.add(Integer.valueOf(v2));
-            primitive.indices.add(Integer.valueOf(v3));
+            primitive.indices.add(v0);
+            primitive.indices.add(v2);
+            primitive.indices.add(v3);
         }
     }
 
@@ -271,19 +301,19 @@ public class GLBExport implements BlockModelExportSink {
             int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
             int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
             int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
-            primitive.indices.add(Integer.valueOf(v3));
-            primitive.indices.add(Integer.valueOf(v2));
-            primitive.indices.add(Integer.valueOf(v1));
-            primitive.indices.add(Integer.valueOf(v3));
-            primitive.indices.add(Integer.valueOf(v1));
-            primitive.indices.add(Integer.valueOf(v0));
+            primitive.indices.add(v3);
+            primitive.indices.add(v2);
+            primitive.indices.add(v1);
+            primitive.indices.add(v3);
+            primitive.indices.add(v1);
+            primitive.indices.add(v0);
         } else {
             int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
             int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
             int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
-            primitive.indices.add(Integer.valueOf(v2));
-            primitive.indices.add(Integer.valueOf(v1));
-            primitive.indices.add(Integer.valueOf(v0));
+            primitive.indices.add(v2);
+            primitive.indices.add(v1);
+            primitive.indices.add(v0);
         }
     }
 
@@ -353,36 +383,41 @@ public class GLBExport implements BlockModelExportSink {
         for (int i = 0; i < primitiveList.size(); i++) {
             PrimitiveData primitive = primitiveList.get(i);
             ExportedTextureData texture = textures.get(i);
+            AccessorBinary normalBinary = toNormalizedSignedByteBytes(primitive.normals);
+            AccessorBinary colorBinary = toNormalizedUnsignedByteBytes(primitive.colors);
+            AccessorBinary uvBinary = toNormalizedUnsignedShortBytes(primitive.texcoords);
+            AccessorBinary indexBinary = toIndexBytes(primitive.indices);
 
-            int positionView = appendSegment(binary, toFloatBytes(primitive.positions), 34962);
-            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34962));
+            int positionView = appendSegment(binary, toFloatBytes(primitive.positions), ARRAY_BUFFER_TARGET);
+            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ARRAY_BUFFER_TARGET));
             int positionAccessor = accessors.size();
-            accessors.add(makeAccessor(positionView, 5126, primitive.positions.size() / 3, "VEC3", primitive.minX,
+            accessors.add(makeAccessor(positionView, COMPONENT_TYPE_FLOAT, primitive.positions.size() / 3, "VEC3", false,
+                    primitive.minX,
                     primitive.minY, primitive.minZ, primitive.maxX, primitive.maxY, primitive.maxZ));
 
-            int normalView = appendSegment(binary, toFloatBytes(primitive.normals), 34962);
-            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34962));
+            int normalView = appendSegment(binary, normalBinary.bytes, ARRAY_BUFFER_TARGET);
+            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ARRAY_BUFFER_TARGET));
             int normalAccessor = accessors.size();
-            accessors.add(makeAccessor(normalView, 5126, primitive.normals.size() / 3, "VEC3", null, null, null, null,
-                    null, null));
+            accessors.add(makeAccessor(normalView, normalBinary.componentType, primitive.normals.size() / 3, "VEC3",
+                    normalBinary.normalized, null, null, null, null, null, null));
 
-            int colorView = appendSegment(binary, toFloatBytes(primitive.colors), 34962);
-            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34962));
+            int colorView = appendSegment(binary, colorBinary.bytes, ARRAY_BUFFER_TARGET);
+            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ARRAY_BUFFER_TARGET));
             int colorAccessor = accessors.size();
-            accessors.add(makeAccessor(colorView, 5126, primitive.colors.size() / 3, "VEC3", null, null, null, null, null,
-                    null));
+            accessors.add(makeAccessor(colorView, colorBinary.componentType, primitive.colors.size() / 3, "VEC3",
+                    colorBinary.normalized, null, null, null, null, null, null));
 
-            int uvView = appendSegment(binary, toFloatBytes(primitive.texcoords), 34962);
-            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34962));
+            int uvView = appendSegment(binary, uvBinary.bytes, ARRAY_BUFFER_TARGET);
+            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ARRAY_BUFFER_TARGET));
             int uvAccessor = accessors.size();
-            accessors.add(makeAccessor(uvView, 5126, primitive.texcoords.size() / 2, "VEC2", null, null, null, null,
-                    null, null));
+            accessors.add(makeAccessor(uvView, uvBinary.componentType, primitive.texcoords.size() / 2, "VEC2",
+                    uvBinary.normalized, null, null, null, null, null, null));
 
-            int indexView = appendSegment(binary, toIntBytes(primitive.indices), 34963);
-            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, 34963));
+            int indexView = appendSegment(binary, indexBinary.bytes, ELEMENT_ARRAY_BUFFER_TARGET);
+            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ELEMENT_ARRAY_BUFFER_TARGET));
             int indexAccessor = accessors.size();
-            accessors.add(makeAccessor(indexView, 5125, primitive.indices.size(), "SCALAR", null, null, null, null,
-                    null, null));
+            accessors.add(makeAccessor(indexView, indexBinary.componentType, primitive.indices.size(), "SCALAR",
+                    indexBinary.normalized, null, null, null, null, null, null));
 
             int imageView = appendSegment(binary, texture.imagePng, null);
             bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, null));
@@ -415,7 +450,7 @@ public class GLBExport implements BlockModelExportSink {
         }
 
         StringBuilder json = new StringBuilder();
-        json.append("{\"asset\":{\"version\":\"2.0\",\"generator\":\"GTNH-Web-Map\"},");
+        json.append("{\"asset\":{\"version\":\"").append(GLTF_ASSET_VERSION).append("\",\"generator\":\"GTNH-Web-Map\"},");
         json.append("\"scene\":0,");
         json.append("\"scenes\":[{\"name\":\"").append(basename).append("\",\"nodes\":[0]}],");
         json.append("\"nodes\":[{\"mesh\":0}],");
@@ -442,19 +477,20 @@ public class GLBExport implements BlockModelExportSink {
         json.append(materialsJson);
         json.append("]}");
 
-        byte[] jsonBytes = pad(json.toString().getBytes(UTF8), (byte) 0x20);
-        byte[] binBytes = pad(binary.toByteArray(), (byte) 0x00);
-        int totalLength = 12 + 8 + jsonBytes.length + 8 + binBytes.length;
+        byte[] jsonBytes = pad(json.toString().getBytes(UTF8), JSON_CHUNK_PADDING_BYTE);
+        byte[] binBytes = pad(binary.toByteArray(), BIN_CHUNK_PADDING_BYTE);
+        int totalLength = GLB_HEADER_LENGTH + GLB_CHUNK_HEADER_LENGTH + jsonBytes.length + GLB_CHUNK_HEADER_LENGTH
+                + binBytes.length;
 
         BufferOutputStream out = new BufferOutputStream();
-        out.write(intToBytes(0x46546C67));
-        out.write(intToBytes(2));
+        out.write(intToBytes(GLB_MAGIC));
+        out.write(intToBytes(GLB_VERSION));
         out.write(intToBytes(totalLength));
         out.write(intToBytes(jsonBytes.length));
-        out.write(intToBytes(0x4E4F534A));
+        out.write(intToBytes(JSON_CHUNK_TYPE));
         out.write(jsonBytes);
         out.write(intToBytes(binBytes.length));
-        out.write(intToBytes(0x004E4942));
+        out.write(intToBytes(BIN_CHUNK_TYPE));
         out.write(binBytes);
         return out;
     }
@@ -493,11 +529,14 @@ public class GLBExport implements BlockModelExportSink {
         return String.format(Locale.US, "{\"buffer\":0,\"byteOffset\":%d,\"byteLength\":%d}", offset, length);
     }
 
-    private static String makeAccessor(int bufferView, int componentType, int count, String type, Float minX, Float minY,
-            Float minZ, Float maxX, Float maxY, Float maxZ) {
+    private static String makeAccessor(int bufferView, int componentType, int count, String type, boolean normalized,
+            Float minX, Float minY, Float minZ, Float maxX, Float maxY, Float maxZ) {
         StringBuilder builder = new StringBuilder();
         builder.append("{\"bufferView\":").append(bufferView).append(",\"componentType\":").append(componentType)
                 .append(",\"count\":").append(count).append(",\"type\":\"").append(type).append("\"");
+        if (normalized) {
+            builder.append(",\"normalized\":true");
+        }
         if ((minX != null) && (maxX != null)) {
             builder.append(",\"min\":[")
                     .append(String.format(Locale.US, "%.6f,%.6f,%.6f", minX.floatValue(), minY.floatValue(),
@@ -520,28 +559,83 @@ public class GLBExport implements BlockModelExportSink {
         return binary.segmentCount++;
     }
 
-    private static byte[] toFloatBytes(ArrayList<Float> values) {
+    private static byte[] toFloatBytes(FloatArrayBuilder values) {
         ByteBuffer buffer = ByteBuffer.allocate(values.size() * 4).order(ByteOrder.LITTLE_ENDIAN);
-        for (Float value : values) {
-            buffer.putFloat(value.floatValue());
+        for (int i = 0; i < values.size(); i++) {
+            buffer.putFloat(values.get(i));
         }
         return buffer.array();
     }
 
-    private static byte[] toIntBytes(ArrayList<Integer> values) {
-        ByteBuffer buffer = ByteBuffer.allocate(values.size() * 4).order(ByteOrder.LITTLE_ENDIAN);
-        for (Integer value : values) {
-            buffer.putInt(value.intValue());
+    private static AccessorBinary toNormalizedSignedByteBytes(FloatArrayBuilder values) {
+        byte[] bytes = new byte[values.size()];
+        for (int i = 0; i < values.size(); i++) {
+            float value = clamp(values.get(i), -1.0F, 1.0F);
+            if (value <= -1.0F) {
+                bytes[i] = (byte) -128;
+            } else if (value >= 1.0F) {
+                bytes[i] = (byte) 127;
+            } else {
+                bytes[i] = (byte) Math.round(value * 127.0F);
+            }
         }
-        return buffer.array();
+        return new AccessorBinary(bytes, COMPONENT_TYPE_BYTE, true);
+    }
+
+    private static AccessorBinary toNormalizedUnsignedByteBytes(FloatArrayBuilder values) {
+        byte[] bytes = new byte[values.size()];
+        for (int i = 0; i < values.size(); i++) {
+            int encoded = Math.round(clamp(values.get(i), 0.0F, 1.0F) * 255.0F);
+            bytes[i] = (byte) encoded;
+        }
+        return new AccessorBinary(bytes, COMPONENT_TYPE_UNSIGNED_BYTE, true);
+    }
+
+    private static AccessorBinary toNormalizedUnsignedShortBytes(FloatArrayBuilder values) {
+        ByteBuffer buffer = ByteBuffer.allocate(values.size() * 2).order(ByteOrder.LITTLE_ENDIAN);
+        for (int i = 0; i < values.size(); i++) {
+            int encoded = Math.round(clamp(values.get(i), 0.0F, 1.0F) * 65535.0F);
+            buffer.putShort((short) encoded);
+        }
+        return new AccessorBinary(buffer.array(), COMPONENT_TYPE_UNSIGNED_SHORT, true);
+    }
+
+    private static AccessorBinary toIndexBytes(IntArrayBuilder values) {
+        int maxValue = 0;
+        for (int i = 0; i < values.size(); i++) {
+            maxValue = Math.max(maxValue, values.get(i));
+        }
+        if (maxValue <= 0xFF) {
+            byte[] bytes = new byte[values.size()];
+            for (int i = 0; i < values.size(); i++) {
+                bytes[i] = (byte) values.get(i);
+            }
+            return new AccessorBinary(bytes, COMPONENT_TYPE_UNSIGNED_BYTE, false);
+        }
+        if (maxValue <= 0xFFFF) {
+            ByteBuffer buffer = ByteBuffer.allocate(values.size() * 2).order(ByteOrder.LITTLE_ENDIAN);
+            for (int i = 0; i < values.size(); i++) {
+                buffer.putShort((short) values.get(i));
+            }
+            return new AccessorBinary(buffer.array(), COMPONENT_TYPE_UNSIGNED_SHORT, false);
+        }
+        ByteBuffer buffer = ByteBuffer.allocate(values.size() * 4).order(ByteOrder.LITTLE_ENDIAN);
+        for (int i = 0; i < values.size(); i++) {
+            buffer.putInt(values.get(i));
+        }
+        return new AccessorBinary(buffer.array(), COMPONENT_TYPE_UNSIGNED_INT, false);
     }
 
     private static byte[] intToBytes(int value) {
         return ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(value).array();
     }
 
+    private static float clamp(float value, float min, float max) {
+        return Math.max(min, Math.min(max, value));
+    }
+
     private static byte[] pad(byte[] bytes, byte padByte) {
-        int paddedLength = (bytes.length + 3) & ~3;
+        int paddedLength = (bytes.length + FOUR_BYTE_ALIGNMENT_MASK) & ~FOUR_BYTE_ALIGNMENT_MASK;
         if (paddedLength == bytes.length) {
             return bytes;
         }
@@ -564,7 +658,7 @@ public class GLBExport implements BlockModelExportSink {
         }
 
         void padTo4() {
-            while ((out.size() & 3) != 0) {
+            while ((out.size() & FOUR_BYTE_ALIGNMENT_MASK) != 0) {
                 out.write(0);
             }
         }
@@ -575,6 +669,60 @@ public class GLBExport implements BlockModelExportSink {
 
         byte[] toByteArray() {
             return out.toByteArray();
+        }
+    }
+
+    private static final class FloatArrayBuilder {
+        private float[] values = new float[64];
+        private int size = 0;
+
+        void add(float value) {
+            ensureCapacity(size + 1);
+            values[size++] = value;
+        }
+
+        float get(int index) {
+            return values[index];
+        }
+
+        int size() {
+            return size;
+        }
+
+        private void ensureCapacity(int capacity) {
+            if (capacity <= values.length) {
+                return;
+            }
+            float[] expanded = new float[Math.max(capacity, values.length * 2)];
+            System.arraycopy(values, 0, expanded, 0, size);
+            values = expanded;
+        }
+    }
+
+    private static final class IntArrayBuilder {
+        private int[] values = new int[64];
+        private int size = 0;
+
+        void add(int value) {
+            ensureCapacity(size + 1);
+            values[size++] = value;
+        }
+
+        int get(int index) {
+            return values[index];
+        }
+
+        int size() {
+            return size;
+        }
+
+        private void ensureCapacity(int capacity) {
+            if (capacity <= values.length) {
+                return;
+            }
+            int[] expanded = new int[Math.max(capacity, values.length * 2)];
+            System.arraycopy(values, 0, expanded, 0, size);
+            values = expanded;
         }
     }
 }
