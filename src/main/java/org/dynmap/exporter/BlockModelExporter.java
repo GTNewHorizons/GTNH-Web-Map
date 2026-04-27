@@ -554,16 +554,19 @@ public class BlockModelExporter {
         }
 
         ExportMaterial emissiveLayer = null;
-        int bakeCount = filtered.size();
-        ExportMaterial lastLayer = filtered.get(filtered.size() - 1);
-        if (lastLayer.isEmissive()) {
-            emissiveLayer = lastLayer;
-            bakeCount--;
+        int bakeStart = 0;
+        int bakeEnd = filtered.size();
+        ExportMaterial topLayer = filtered.get(0);
+        if (topLayer.isEmissive()) {
+            emissiveLayer = topLayer;
+            bakeStart = 1;
         }
 
         ArrayList<ExportMaterial> collapsed = new ArrayList<ExportMaterial>(2);
-        if (bakeCount > 0) {
-            collapsed.add(ExportMaterial.bakeLayers(filtered.subList(0, bakeCount).toArray(new ExportMaterial[bakeCount])));
+        if (bakeEnd > bakeStart) {
+            int bakeCount = bakeEnd - bakeStart;
+            collapsed.add(
+                    ExportMaterial.bakeLayers(filtered.subList(bakeStart, bakeEnd).toArray(new ExportMaterial[bakeCount])));
         }
         if (emissiveLayer != null) {
             collapsed.add(emissiveLayer);
