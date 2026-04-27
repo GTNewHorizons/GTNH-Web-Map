@@ -234,6 +234,7 @@ public class BlockModelExporter {
         ExportMaterial[][] materials =
                 resolveMaterials(blockId, blockData, renderData, map, textureIndexes, steps, customRenderData,
                         !patchModelUsesPatchTextureCoords);
+        collapseLayeredMaterials(materials);
 
         if (patches != null) {
             for (int i = 0; i < patches.length; i++) {
@@ -524,6 +525,50 @@ public class BlockModelExporter {
             return resolved;
         }
         return EMPTY_MATERIALS;
+    }
+
+    private void collapseLayeredMaterials(ExportMaterial[][] materials) {
+        if (materials == null) {
+            return;
+        }
+        for (int i = 0; i < materials.length; i++) {
+            materials[i] = collapseLayeredMaterials(materials[i]);
+        }
+    }
+
+    private ExportMaterial[] collapseLayeredMaterials(ExportMaterial[] materials) {
+        if ((materials == null) || (materials.length <= 1)) {
+            return materials;
+        }
+        ArrayList<ExportMaterial> filtered = new ArrayList<ExportMaterial>(materials.length);
+        for (ExportMaterial material : materials) {
+            if (material != null) {
+                filtered.add(material);
+            }
+        }
+        if (filtered.isEmpty()) {
+            return null;
+        }
+        if (filtered.size() == 1) {
+            return new ExportMaterial[] { filtered.get(0) };
+        }
+
+        ExportMaterial emissiveLayer = null;
+        int bakeCount = filtered.size();
+        ExportMaterial lastLayer = filtered.get(filtered.size() - 1);
+        if (lastLayer.isEmissive()) {
+            emissiveLayer = lastLayer;
+            bakeCount--;
+        }
+
+        ArrayList<ExportMaterial> collapsed = new ArrayList<ExportMaterial>(2);
+        if (bakeCount > 0) {
+            collapsed.add(ExportMaterial.bakeLayers(filtered.subList(0, bakeCount).toArray(new ExportMaterial[bakeCount])));
+        }
+        if (emissiveLayer != null) {
+            collapsed.add(emissiveLayer);
+        }
+        return collapsed.toArray(new ExportMaterial[collapsed.size()]);
     }
 
     private static boolean getSubblock(short[] mod, int x, int y, int z) {
