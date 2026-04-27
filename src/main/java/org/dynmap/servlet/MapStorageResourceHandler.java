@@ -7,6 +7,7 @@ import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
 import org.dynmap.storage.MapStorageTile.TileRead;
 import org.dynmap.utils.BufferInputStream;
+import org.dynmap.utils.BufferOutputStream;
 import org.eclipse.jetty.http.HttpStatus;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
@@ -22,6 +23,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.OutputStream;
+import java.util.zip.GZIPInputStream;
 
 import org.dynmap.MapType.ImageEncoding;
 
@@ -120,12 +122,51 @@ public class MapStorageResourceHandler extends AbstractHandler {
         }
         // Got tile, package up for response
         response.setDateHeader("Last-Modified", tr.lastModified);
-        response.setIntHeader("Content-Length", tr.image.length());
         response.setContentType(tr.format.getContentType());
+        byte[] responseBody = tr.image.buffer();
+        int responseLength = tr.image.length();
+        if (isGzipCompressed(tr)) {
+            response.setHeader("Vary", "Accept-Encoding");
+        }
+        if (isGzipCompressed(tr) && !clientAcceptsGzip(request)) {
+            BufferInputStream uncompressed = gunzip(tr.image);
+            responseBody = uncompressed.buffer();
+            responseLength = uncompressed.length();
+        } else if (isGzipCompressed(tr)) {
+            response.setHeader("Content-Encoding", "gzip");
+        }
+        response.setIntHeader("Content-Length", responseLength);
         ServletOutputStream out = response.getOutputStream();
-        out.write(tr.image.buffer(), 0, tr.image.length());
+        out.write(responseBody, 0, responseLength);
         out.flush();
 
+    }
+
+    private boolean isGzipCompressed(TileRead tr) {
+        return (tr != null) && (tr.image != null) && (tr.image.length() >= 2) && ((tr.image.buffer()[0] & 0xFF) == 0x1F)
+                && ((tr.image.buffer()[1] & 0xFF) == 0x8B);
+    }
+
+    private boolean clientAcceptsGzip(HttpServletRequest request) {
+        String acceptEncoding = request.getHeader("Accept-Encoding");
+        return (acceptEncoding != null) && acceptEncoding.toLowerCase().contains("gzip");
+    }
+
+    private BufferInputStream gunzip(BufferInputStream compressed) throws IOException {
+        GZIPInputStream gzip = new GZIPInputStream(compressed);
+        BufferOutputStream out = new BufferOutputStream();
+        byte[] buffer = new byte[8192];
+        try {
+            int len;
+            while ((len = gzip.read(buffer)) >= 0) {
+                if (len > 0) {
+                    out.write(buffer, 0, len);
+                }
+            }
+        } finally {
+            gzip.close();
+        }
+        return new BufferInputStream(out.buf, out.len);
     }
 
     private ImageEncoding getRequestedEncoding(String uri) {

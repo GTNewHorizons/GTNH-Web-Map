@@ -472,6 +472,7 @@ public class DynmapMapCommands {
                         .append(", title=").append(modelmt.getTitle());
                 sb.append(", shader=").append(modelmt.getShader().getName()).append(", granularity=")
                         .append(modelmt.getGranularity());
+                sb.append(", compression=").append(modelmt.getOutputCompression().getId());
                 sb.append(", icon=").append(modelmt.getIcon()).append(", append-to-world=")
                         .append(modelmt.getAppendToWorld());
                 sb.append(", protected=").append(modelmt.isProtected());
@@ -796,6 +797,18 @@ public class DynmapMapCommands {
                     return true;
                 }
                 did_update |= ((ModelMap) mt).setGranularity(granularity);
+            }
+            else if(tok[0].equalsIgnoreCase("compression")) {
+                if (!(mt instanceof ModelMap)) {
+                    sender.sendMessage("compression is only supported on model maps");
+                    return true;
+                }
+                ModelMap.OutputCompression compression = ModelMap.OutputCompression.fromId(tok[1]);
+                if (compression == null) {
+                    sender.sendMessage("Invalid compression value: " + tok[1] + " (use none or gzip)");
+                    return true;
+                }
+                did_update |= ((ModelMap) mt).setOutputCompression(compression);
             }
             else if(tok[0].equalsIgnoreCase("order")) {
                 int idx = -1;
