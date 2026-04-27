@@ -43,7 +43,7 @@ block:id=%fluidChlorophyll,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0
 block:id=%totemSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:totemic/infusedSapling
 
 # %totemLeaves:* (totemLeaves), render=(STANDARD), opaque=true,cls=totemic_commons.pokefenn.block.BlockTotemLeaves
-block:id=%totemLeaves,data=*,stdrot=true,face0-5=2000:totemic/totemLeavesOpaque
+block:id=%totemLeaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=2000:totemic/totemLeavesOpaque
 
 # %totemMana:* (totemMana), render=(STANDARD), opaque=true,cls=totemic_commons.pokefenn.block.BlockManaTotem
 block:id=%totemMana,data=*,stdrot=true,face0-5=0:totemic/manaTotem

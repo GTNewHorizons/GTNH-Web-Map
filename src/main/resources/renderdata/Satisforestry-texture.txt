@@ -82,9 +82,9 @@ block:id=%satisforestry_block_log,data=15,stdrot=true,face0-5=0:Satisforestry/pi
 block:id=%satisforestry_block_bamboo,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:Satisforestry/bamboo/top,face2-5=0:Satisforestry/bamboo/side
 
 # %satisforestry_block_leaves:* (satisforestry_block_leaves), render=(STANDARD), opaque=false,cls=Reika.Satisforestry.Blocks.BlockPinkLeaves
-block:id=%satisforestry_block_leaves,data=0,stdrot=true,colorMult=FFE94E78,face0-5=17000:satisforestry/pinkleaf_fancy
-block:id=%satisforestry_block_leaves,data=1,stdrot=true,colorMult=FFED5A83,face0-5=17000:satisforestry/pinkleaf_fancy
-block:id=%satisforestry_block_leaves,data=2,stdrot=true,colorMult=FFBA444E,face0-5=17000:satisforestry/pinkleaf_fancy
+block:id=%satisforestry_block_leaves,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FFE94E78,face0-5=17000:satisforestry/pinkleaf_fancy
+block:id=%satisforestry_block_leaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FFED5A83,face0-5=17000:satisforestry/pinkleaf_fancy
+block:id=%satisforestry_block_leaves,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FFBA444E,face0-5=17000:satisforestry/pinkleaf_fancy
 
 # %satisforestry_block_grass:* (satisforestry_block_grass), render=Reika.Satisforestry.Render.PinkGrassRenderer(CUSTOM), opaque=false,cls=Reika.Satisforestry.Blocks.BlockPinkGrass
 block:id=%satisforestry_block_grass,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:Satisforestry/foliage/peach_fringe

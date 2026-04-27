@@ -896,11 +896,11 @@ block:id=%blockRainforestOakLog,data=8,data=9,data=10,data=11,face0-1=4000:miscu
 block:id=%blockRainforestOakLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:miscutils/trees/logs/log_rainforest
 
 # %blockRainforestOakLeaves:* (blockRainforestOakLeaves), render=(STANDARD), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.rainforest.LeavesRainforestTree
-block:id=%blockRainforestOakLeaves,data=0,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
-block:id=%blockRainforestOakLeaves,data=2,data=3,data=4,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
-block:id=%blockRainforestOakLeaves,data=6,data=7,data=8,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
-block:id=%blockRainforestOakLeaves,data=10,data=11,data=12,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
-block:id=%blockRainforestOakLeaves,data=14,data=15,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=2,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=6,data=7,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=10,data=11,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
+block:id=%blockRainforestOakLeaves,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_rainforest
 
 # %blockRainforestOakSapling:* (blockRainforestOakSapling), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.rainforest.SaplingRainforestTree
 block:id=%blockRainforestOakSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/trees/saplings/sapling_rainforest
@@ -912,11 +912,11 @@ block:id=%blockPineLogLog,data=8,data=9,data=10,data=11,face0-1=4000:miscutils/t
 block:id=%blockPineLogLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:miscutils/trees/logs/log_pine
 
 # %blockPineLeaves:* (blockPineLeaves), render=(STANDARD), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.pine.LeavesPineTree
-block:id=%blockPineLeaves,data=0,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
-block:id=%blockPineLeaves,data=2,data=3,data=4,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
-block:id=%blockPineLeaves,data=6,data=7,data=8,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
-block:id=%blockPineLeaves,data=10,data=11,data=12,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
-block:id=%blockPineLeaves,data=14,data=15,stdrot=true,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=2,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=6,data=7,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=10,data=11,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_pine
+block:id=%blockPineLeaves,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:miscutils/trees/leaves/leaves_pine
 
 # %blockPineSapling:* (blockPineSapling), render=(CROSSEDSQUARES), opaque=false,cls=gtPlusPlus.xmod.bop.blocks.pine.SaplingPineTree
 block:id=%blockPineSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:miscutils/trees/saplings/sapling_pine
