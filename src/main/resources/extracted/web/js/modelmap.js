@@ -19,7 +19,11 @@
 		DOWN_ALT: "ShiftRight",
 		DOWN_ALT2: "KeyQ",
 		BOOST: "ControlLeft",
-		BOOST_ALT: "ControlRight"
+		BOOST_ALT: "ControlRight",
+		SPEED_UP: "Equal",
+		SPEED_UP_ALT: "NumpadAdd",
+		SPEED_DOWN: "Minus",
+		SPEED_DOWN_ALT: "NumpadSubtract"
 	};
 
 	var ModelProjection = DynmapProjection.extend({
@@ -57,7 +61,10 @@
 			this._yaw = Math.PI / 2;
 			this._pitch = -0.2;
 			this._viewDistance = this._distanceFromZoom(options.maxZoom - 1);
-			this._moveSpeed = options.tileblocksize * 2.0;
+			this._moveSpeed = options.tileblocksize;
+			this._minMoveSpeed = Math.max(1.0, options.tileblocksize * 0.25);
+			this._maxMoveSpeed = options.tileblocksize * 16.0;
+			this._moveSpeedStep = 1.25;
 			this._lookSensitivity = 0.0025;
 			this._loadedTiles = {};
 			this._loadingTiles = {};
@@ -76,8 +83,8 @@
 			this._fpsFrameCount = 0;
 			this._displayFPS = 0;
 			this._fpsAverage = 0;
-			this._ignoreLeafletMoveCount = 0;
-			this._ignoreLeafletZoomCount = 0;
+			this._pendingLeafletMoveEvents = 0;
+			this._pendingLeafletZoomEvents = 0;
 		},
 
 		onAdd: function(map) {
@@ -128,11 +135,19 @@
 
 			me._hud = document.createElement("div");
 			me._hud.className = "modelmap-hud";
-			me._hud.innerHTML = '<div class="modelmap-hud-row"><span class="modelmap-hud-label">FPS</span><span class="modelmap-hud-value">0</span></div>'
-				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Render distance</span><span class="modelmap-hud-value">0 chunks</span></div>';
+			me._hud.innerHTML = '<div class="modelmap-hud-row"><span class="modelmap-hud-label">FPS</span><span class="modelmap-hud-value" data-field="fps">0</span></div>'
+				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Render distance</span><span class="modelmap-hud-value" data-field="distance">0 chunks</span></div>'
+				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Move speed</span><span class="modelmap-hud-value" data-field="speed">0 blocks/s</span></div>'
+				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Camera</span><span class="modelmap-hud-value" data-field="position">0, 0, 0</span></div>'
+				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Chunk</span><span class="modelmap-hud-value" data-field="chunk">0, 0, 0</span></div>'
+				+ '<div class="modelmap-hud-row modelmap-hud-row-stack"><span class="modelmap-hud-label">Tile GLB</span><span class="modelmap-hud-value" data-field="tile">-</span></div>';
 			parent.appendChild(me._hud);
-			me._hudFPS = me._hud.getElementsByClassName("modelmap-hud-value")[0];
-			me._hudDistance = me._hud.getElementsByClassName("modelmap-hud-value")[1];
+			me._hudFPS = me._hud.querySelector("[data-field='fps']");
+			me._hudDistance = me._hud.querySelector("[data-field='distance']");
+			me._hudSpeed = me._hud.querySelector("[data-field='speed']");
+			me._hudPosition = me._hud.querySelector("[data-field='position']");
+			me._hudChunk = me._hud.querySelector("[data-field='chunk']");
+			me._hudTile = me._hud.querySelector("[data-field='tile']");
 
 			me._renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 			me._renderer.setPixelRatio(window.devicePixelRatio || 1);
@@ -198,6 +213,13 @@
 				if (!me._isViewerActive()) {
 					return;
 				}
+				if (me._isSpeedAdjustKey(event.code)) {
+					if (!event.repeat) {
+						me._adjustMoveSpeed(event.code === KEY_CODES.SPEED_UP || event.code === KEY_CODES.SPEED_UP_ALT ? 1 : -1);
+					}
+					event.preventDefault();
+					return;
+				}
 				if (me._isMovementKey(event.code)) {
 					me._keysDown[event.code] = true;
 					me._requestRender();
@@ -224,19 +246,19 @@
 			}
 			me._mapEventHandlers = {
 				moveend: function() {
-					if (me._ignoreLeafletMoveCount > 0) {
-						me._ignoreLeafletMoveCount--;
+					if (me._consumeLeafletMoveEvent()) {
 						return;
 					}
+					me._clearPendingLeafletEvents();
 					me._syncFromLeaflet();
 					me._refreshVisibleTiles();
 					me._requestRender();
 				},
 				zoomend: function() {
-					if (me._ignoreLeafletZoomCount > 0) {
-						me._ignoreLeafletZoomCount--;
+					if (me._consumeLeafletZoomEvent()) {
 						return;
 					}
+					me._clearPendingLeafletEvents();
 					me._syncFromLeaflet();
 					me._refreshVisibleTiles();
 					me._requestRender();
@@ -280,8 +302,22 @@
 				code === KEY_CODES.BOOST_ALT;
 		},
 
+		_isSpeedAdjustKey: function(code) {
+			return code === KEY_CODES.SPEED_UP ||
+				code === KEY_CODES.SPEED_UP_ALT ||
+				code === KEY_CODES.SPEED_DOWN ||
+				code === KEY_CODES.SPEED_DOWN_ALT;
+		},
+
 		_clearMovementKeys: function() {
 			this._keysDown = {};
+		},
+
+		_adjustMoveSpeed: function(direction) {
+			var scale = direction > 0 ? this._moveSpeedStep : (1.0 / this._moveSpeedStep);
+			this._moveSpeed = THREE.MathUtils.clamp(this._moveSpeed * scale, this._minMoveSpeed, this._maxMoveSpeed);
+			this._updateHUD();
+			this._requestRender();
 		},
 
 		_syncFromLeaflet: function() {
@@ -302,14 +338,62 @@
 			if (!force && ((now - this._lastLeafletSync) < 100)) {
 				return;
 			}
+			var targetCenter = this.projection.fromLocationToLatLng(this._cameraPosition);
+			var targetZoom = this._zoomFromDistance(this._viewDistance);
+			var currentCenter = this._map.getCenter();
+			var currentZoom = this._map.getZoom();
+			var centerChanged = !this._sameLatLng(currentCenter, targetCenter);
+			var zoomChanged = !this._sameZoom(currentZoom, targetZoom);
+			if (!centerChanged && !zoomChanged) {
+				return;
+			}
 			this._lastLeafletSync = now;
-			this._ignoreLeafletMoveCount++;
-			this._ignoreLeafletZoomCount++;
+			if (centerChanged) {
+				this._pendingLeafletMoveEvents++;
+			}
+			if (zoomChanged) {
+				this._pendingLeafletZoomEvents++;
+			}
 			this._map.setView(
-				this.projection.fromLocationToLatLng(this._cameraPosition),
-				this._zoomFromDistance(this._viewDistance),
+				targetCenter,
+				targetZoom,
 				{ animate: false }
 			);
+		},
+
+		_clearPendingLeafletEvents: function() {
+			this._pendingLeafletMoveEvents = 0;
+			this._pendingLeafletZoomEvents = 0;
+		},
+
+		_consumeLeafletMoveEvent: function() {
+			if (this._pendingLeafletMoveEvents <= 0 || !this._map) {
+				return false;
+			}
+			if (!this._sameLatLng(this._map.getCenter(), this.projection.fromLocationToLatLng(this._cameraPosition))) {
+				return false;
+			}
+			this._pendingLeafletMoveEvents--;
+			return true;
+		},
+
+		_consumeLeafletZoomEvent: function() {
+			if (this._pendingLeafletZoomEvents <= 0 || !this._map) {
+				return false;
+			}
+			if (!this._sameZoom(this._map.getZoom(), this._zoomFromDistance(this._viewDistance))) {
+				return false;
+			}
+			this._pendingLeafletZoomEvents--;
+			return true;
+		},
+
+		_sameLatLng: function(a, b) {
+			return Math.abs(a.lat - b.lat) < 0.000001 && Math.abs(a.lng - b.lng) < 0.000001;
+		},
+
+		_sameZoom: function(a, b) {
+			return Math.abs(a - b) < 0.000001;
 		},
 
 		_distanceFromZoom: function(zoom) {
@@ -469,12 +553,35 @@
 				return;
 			}
 			this._hud.style.display = this._isViewerActive() ? "block" : "none";
+			var tileX = Math.floor(this._cameraPosition.x / this.options.tileblocksize);
+			var tileZ = Math.floor(this._cameraPosition.z / this.options.tileblocksize);
+			var tileName = this._getTileName(tileX, tileZ);
 			if (this._hudFPS) {
 				this._hudFPS.textContent = String(this._displayFPS);
 			}
 			if (this._hudDistance) {
 				this._hudDistance.textContent = Math.max(1, Math.round(this._viewDistance / 16)) + " chunks";
 			}
+			if (this._hudSpeed) {
+				this._hudSpeed.textContent = this._formatHUDNumber(this._moveSpeed) + " blocks/s";
+			}
+			if (this._hudPosition) {
+				this._hudPosition.textContent = this._formatHUDNumber(this._cameraPosition.x)
+					+ ", " + this._formatHUDNumber(this._cameraPosition.y)
+					+ ", " + this._formatHUDNumber(this._cameraPosition.z);
+			}
+			if (this._hudChunk) {
+				this._hudChunk.textContent = Math.floor(this._cameraPosition.x / 16)
+					+ ", " + Math.floor(this._cameraPosition.y / 16)
+					+ ", " + Math.floor(this._cameraPosition.z / 16);
+			}
+			if (this._hudTile) {
+				this._hudTile.textContent = tileName;
+			}
+		},
+
+		_formatHUDNumber: function(value) {
+			return value.toFixed(2).replace(/\.00$/, "").replace(/(\.\d)0$/, "$1");
 		},
 
 		onSelectedMap: function(previousMap, previousLocation) {
