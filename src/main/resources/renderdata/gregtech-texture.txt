@@ -1499,8 +1499,8 @@ texture:id=mte/dysonSwarm/ControlCasing_Side,filename=assets/gtnhintergalactic/t
 texture:id=mte/dysonSwarm/DeploymentUnitCasing_Side,filename=assets/gtnhintergalactic/textures/blocks/dysonSwarm/DeploymentUnitCasing_Side.png
 texture:id=mte/dysonSwarm/Floor_Side,filename=assets/gtnhintergalactic/textures/blocks/dysonSwarm/Floor_Side.png
 texture:id=mte/gasSiphon/SiphonCasing,filename=assets/gtnhintergalactic/textures/blocks/gasSiphon/SiphonCasing.png
-texture:id=mte/iconsets/MACHINE_CASING_CHEMICALLY_INERT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CHEMICALLY_INERT.png
-texture:id=mte/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE.png
+texture:id=mte/iconsets/MACHINE_CASING_CHEMICALLY_INERT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CHEMICALLY_INERT.png,processor=org.dynmap.hdmap.textureprocessor.RemoveTranslucencyProcessor
+texture:id=mte/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE.png,processor=org.dynmap.hdmap.textureprocessor.RemoveTranslucencyProcessor
 texture:id=mte/iconsets/MACHINE_CASING_MINING_NEUTRONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_MINING_NEUTRONIUM.png
 texture:id=mte/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM.png
 texture:id=mte/iconsets/MACHINE_CASING_EXTREME_ENGINE_INTAKE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_EXTREME_ENGINE_INTAKE.png
