@@ -560,12 +560,17 @@
 				vertexColors: material.vertexColors,
 				fog: false,
 				emissive: material.emissive ? material.emissive.clone() : new THREE.Color(0x000000),
+				emissiveMap: material.emissiveMap || null,
 				emissiveIntensity: (typeof material.emissiveIntensity === "number") ? material.emissiveIntensity : 1.0
 			});
 			displayMaterial.depthWrite = !displayMaterial.transparent;
 			if (displayMaterial.map) {
 				displayMaterial.map.encoding = THREE.sRGBEncoding;
 				this._configureTexture(displayMaterial.map);
+			}
+			if (displayMaterial.emissiveMap) {
+				displayMaterial.emissiveMap.encoding = THREE.sRGBEncoding;
+				this._configureTexture(displayMaterial.emissiveMap);
 			}
 			displayMaterial.needsUpdate = true;
 			return displayMaterial;
@@ -657,12 +662,18 @@
 							if (material.map) {
 								material.map.dispose();
 							}
+							if (material.emissiveMap && (material.emissiveMap !== material.map)) {
+								material.emissiveMap.dispose();
+							}
 							material.dispose();
 						});
 					}
 					else {
 						if (node.material.map) {
 							node.material.map.dispose();
+						}
+						if (node.material.emissiveMap && (node.material.emissiveMap !== node.material.map)) {
+							node.material.emissiveMap.dispose();
 						}
 						node.material.dispose();
 					}
