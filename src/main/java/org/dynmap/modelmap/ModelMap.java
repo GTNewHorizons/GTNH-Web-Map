@@ -25,6 +25,7 @@ import org.json.simple.JSONObject;
 public class ModelMap extends MapType {
     public static final int DEFAULT_GRANULARITY = 1;
     public static final String DEFAULT_SHADER = "stdtexture";
+    public static final boolean DEFAULT_CULL_EXPORT_REGION_EDGES = true;
 
     public enum AssetFormat {
         GLB("glb", "model/gltf-binary");
@@ -114,6 +115,7 @@ public class ModelMap extends MapType {
     private String appendToWorld;
     private int granularity;
     private TexturePackHDShader shader;
+    private boolean cullExportRegionEdges;
 
     public ModelMap(DynmapCore core, ConfigurationNode configuration) {
         this.core = core;
@@ -140,6 +142,7 @@ public class ModelMap extends MapType {
         title = configuration.getString("title", name);
         icon = configuration.getString("icon");
         appendToWorld = configuration.getString("append_to_world", "");
+        cullExportRegionEdges = configuration.getBoolean("cull_export_region_edges", DEFAULT_CULL_EXPORT_REGION_EDGES);
         setProtected(configuration.getBoolean("protected", false));
         setTileUpdateDelay(configuration.getInteger("tileupdatedelay", -1));
     }
@@ -157,6 +160,7 @@ public class ModelMap extends MapType {
         }
         cn.put("granularity", granularity);
         cn.put("append_to_world", appendToWorld);
+        cn.put("cull_export_region_edges", cullExportRegionEdges);
         cn.put("protected", isProtected());
         if (tileupdatedelay > 0) {
             cn.put("tileupdatedelay", tileupdatedelay);
@@ -374,6 +378,10 @@ public class ModelMap extends MapType {
         return appendToWorld;
     }
 
+    public boolean isCullExportRegionEdges() {
+        return cullExportRegionEdges;
+    }
+
     public boolean setPrefix(String value) {
         if (!value.equals(prefix)) {
             prefix = value;
@@ -401,6 +409,14 @@ public class ModelMap extends MapType {
     public boolean setAppendToWorld(String value) {
         if (!value.equals(appendToWorld)) {
             appendToWorld = value;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean setCullExportRegionEdges(boolean value) {
+        if (cullExportRegionEdges != value) {
+            cullExportRegionEdges = value;
             return true;
         }
         return false;

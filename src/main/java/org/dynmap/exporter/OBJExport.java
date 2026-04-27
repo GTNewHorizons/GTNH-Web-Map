@@ -218,6 +218,7 @@ public class OBJExport implements BlockModelExportSink {
             exportMaterials.clear();
             BlockModelExporter exporter = new BlockModelExporter(world, core, shader);
             exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
+            exporter.setCullExportRegionEdges(false);
             exporter.export(this);
 
             String grp = "";
