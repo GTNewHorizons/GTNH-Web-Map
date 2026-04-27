@@ -138,13 +138,15 @@
 			me._hud.innerHTML = '<div class="modelmap-hud-row"><span class="modelmap-hud-label">FPS</span><span class="modelmap-hud-value" data-field="fps">0</span></div>'
 				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Render distance</span><span class="modelmap-hud-value" data-field="distance">0 chunks</span></div>'
 				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Move speed</span><span class="modelmap-hud-value" data-field="speed">0 blocks/s</span></div>'
+				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Direction</span><span class="modelmap-hud-value" data-field="direction">N</span></div>'
 				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Camera</span><span class="modelmap-hud-value" data-field="position">0, 0, 0</span></div>'
-				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Chunk</span><span class="modelmap-hud-value" data-field="chunk">0, 0, 0</span></div>'
+				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Chunk</span><span class="modelmap-hud-value" data-field="chunk">0, 0</span></div>'
 				+ '<div class="modelmap-hud-row modelmap-hud-row-stack"><span class="modelmap-hud-label">Tile GLB</span><span class="modelmap-hud-value" data-field="tile">-</span></div>';
 			parent.appendChild(me._hud);
 			me._hudFPS = me._hud.querySelector("[data-field='fps']");
 			me._hudDistance = me._hud.querySelector("[data-field='distance']");
 			me._hudSpeed = me._hud.querySelector("[data-field='speed']");
+			me._hudDirection = me._hud.querySelector("[data-field='direction']");
 			me._hudPosition = me._hud.querySelector("[data-field='position']");
 			me._hudChunk = me._hud.querySelector("[data-field='chunk']");
 			me._hudTile = me._hud.querySelector("[data-field='tile']");
@@ -210,7 +212,7 @@
 				me._requestRender();
 			});
 			window.addEventListener("keydown", function(event) {
-				if (!me._isViewerActive()) {
+				if (!me._isViewerActive() || !me._pointerLocked) {
 					return;
 				}
 				if (me._isSpeedAdjustKey(event.code)) {
@@ -457,7 +459,7 @@
 		},
 
 		_updateMovement: function(deltaSeconds) {
-			if (deltaSeconds <= 0) {
+			if (deltaSeconds <= 0 || !this._pointerLocked) {
 				return false;
 			}
 
@@ -565,6 +567,9 @@
 			if (this._hudSpeed) {
 				this._hudSpeed.textContent = this._formatHUDNumber(this._moveSpeed) + " blocks/s";
 			}
+			if (this._hudDirection) {
+				this._hudDirection.textContent = this._getViewDirection();
+			}
 			if (this._hudPosition) {
 				this._hudPosition.textContent = this._formatHUDNumber(this._cameraPosition.x)
 					+ ", " + this._formatHUDNumber(this._cameraPosition.y)
@@ -572,7 +577,6 @@
 			}
 			if (this._hudChunk) {
 				this._hudChunk.textContent = Math.floor(this._cameraPosition.x / 16)
-					+ ", " + Math.floor(this._cameraPosition.y / 16)
 					+ ", " + Math.floor(this._cameraPosition.z / 16);
 			}
 			if (this._hudTile) {
@@ -582,6 +586,15 @@
 
 		_formatHUDNumber: function(value) {
 			return value.toFixed(2).replace(/\.00$/, "").replace(/(\.\d)0$/, "$1");
+		},
+
+		_getViewDirection: function() {
+			var forward = this._getForwardVector();
+			var directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+			var angle = Math.atan2(forward.x, -forward.z);
+			var index = Math.round(angle / (Math.PI / 4));
+			index = ((index % directions.length) + directions.length) % directions.length;
+			return directions[index];
 		},
 
 		onSelectedMap: function(previousMap, previousLocation) {
