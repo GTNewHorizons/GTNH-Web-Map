@@ -15,18 +15,64 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.MapTile;
 import org.dynmap.MapType;
-import org.dynmap.utils.TileFlags;
+import org.dynmap.exporter.GLBExport;
 import org.dynmap.hdmap.TexturePackHDShader;
+import org.dynmap.utils.TileFlags;
 import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
 import org.dynmap.storage.MapStorageTileEnumCB;
 import org.json.simple.JSONObject;
 
 public class ModelMap extends MapType {
+    public enum LightingMode {
+        DAY("day"),
+        NIGHT("night"),
+        BOTH("both");
+
+        private final String id;
+
+        LightingMode(String id) {
+            this.id = id;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public GLBExport.LightingMode toExportLightingMode() {
+            switch (this) {
+                case NIGHT:
+                    return GLBExport.LightingMode.NIGHT;
+                case BOTH:
+                    return GLBExport.LightingMode.BOTH;
+                case DAY:
+                default:
+                    return GLBExport.LightingMode.DAY;
+            }
+        }
+
+        public static LightingMode fromId(String value) {
+            if (value == null) {
+                return null;
+            }
+            for (LightingMode mode : values()) {
+                if (mode.id.equalsIgnoreCase(value)) {
+                    return mode;
+                }
+            }
+            return null;
+        }
+    }
+
     public static final int DEFAULT_GRANULARITY = 1;
     public static final String DEFAULT_SHADER = "stdtexture";
     public static final boolean DEFAULT_CULL_EXPORT_REGION_EDGES = true;
     public static final OutputCompression DEFAULT_OUTPUT_COMPRESSION = OutputCompression.GZIP;
+    public static final LightingMode DEFAULT_LIGHTING_MODE = LightingMode.DAY;
+    public static final double DEFAULT_DAY_AMBIENT_LIGHT = 0.7;
+    public static final double DEFAULT_NIGHT_AMBIENT_LIGHT = 0.14;
+    public static final double DEFAULT_DAY_SUN_LIGHT = 0.8;
+    public static final double DEFAULT_NIGHT_SUN_LIGHT = 0.16;
 
     public enum AssetFormat {
         GLB("glb", "model/gltf-binary");
@@ -151,6 +197,11 @@ public class ModelMap extends MapType {
     private TexturePackHDShader shader;
     private boolean cullExportRegionEdges;
     private OutputCompression outputCompression;
+    private LightingMode lightingMode;
+    private double dayAmbientLight;
+    private double nightAmbientLight;
+    private double daySunLight;
+    private double nightSunLight;
 
     public ModelMap(DynmapCore core, ConfigurationNode configuration) {
         this.core = core;
@@ -180,6 +231,16 @@ public class ModelMap extends MapType {
         cullExportRegionEdges = configuration.getBoolean("cull_export_region_edges", DEFAULT_CULL_EXPORT_REGION_EDGES);
         outputCompression =
                 resolveOutputCompression(configuration.getString("compression", DEFAULT_OUTPUT_COMPRESSION.getId()));
+        lightingMode = resolveLightingMode(configuration.getString("lighting_mode", DEFAULT_LIGHTING_MODE.getId()));
+        dayAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightday", DEFAULT_DAY_AMBIENT_LIGHT),
+                DEFAULT_DAY_AMBIENT_LIGHT, "ambientlightday");
+        nightAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightnight", DEFAULT_NIGHT_AMBIENT_LIGHT),
+                DEFAULT_NIGHT_AMBIENT_LIGHT, "ambientlightnight");
+        daySunLight =
+                resolveLightLevel(configuration.getDouble("sunlightday", DEFAULT_DAY_SUN_LIGHT), DEFAULT_DAY_SUN_LIGHT,
+                        "sunlightday");
+        nightSunLight = resolveLightLevel(configuration.getDouble("sunlightnight", DEFAULT_NIGHT_SUN_LIGHT),
+                DEFAULT_NIGHT_SUN_LIGHT, "sunlightnight");
         setProtected(configuration.getBoolean("protected", false));
         setTileUpdateDelay(configuration.getInteger("tileupdatedelay", -1));
     }
@@ -199,6 +260,11 @@ public class ModelMap extends MapType {
         cn.put("append_to_world", appendToWorld);
         cn.put("cull_export_region_edges", cullExportRegionEdges);
         cn.put("compression", outputCompression.getId());
+        cn.put("lighting_mode", lightingMode.getId());
+        cn.put("ambientlightday", dayAmbientLight);
+        cn.put("ambientlightnight", nightAmbientLight);
+        cn.put("sunlightday", daySunLight);
+        cn.put("sunlightnight", nightSunLight);
         cn.put("protected", isProtected());
         if (tileupdatedelay > 0) {
             cn.put("tileupdatedelay", tileupdatedelay);
@@ -234,6 +300,24 @@ public class ModelMap extends MapType {
             return DEFAULT_OUTPUT_COMPRESSION;
         }
         return resolved;
+    }
+
+    private LightingMode resolveLightingMode(String lightingModeId) {
+        LightingMode resolved = LightingMode.fromId(lightingModeId);
+        if (resolved == null) {
+            Log.severe("ModelMap '" + name + "' set invalid lighting_mode '" + lightingModeId + "' - using '"
+                    + DEFAULT_LIGHTING_MODE.getId() + "'");
+            return DEFAULT_LIGHTING_MODE;
+        }
+        return resolved;
+    }
+
+    private double resolveLightLevel(double value, double defaultValue, String settingName) {
+        if (value < 0.0) {
+            Log.severe("ModelMap '" + name + "' set invalid " + settingName + " " + value + " - using " + defaultValue);
+            return defaultValue;
+        }
+        return value;
     }
 
     public TexturePackHDShader getShader() {
@@ -393,6 +477,11 @@ public class ModelMap extends MapType {
         s(o, "bigmap", false);
         s(o, "modelminzoom", 0);
         s(o, "modelmaxzoom", 6);
+        s(o, "lightingmode", lightingMode.getId());
+        s(o, "ambientlightday", dayAmbientLight);
+        s(o, "ambientlightnight", nightAmbientLight);
+        s(o, "sunlightday", daySunLight);
+        s(o, "sunlightnight", nightSunLight);
         if (appendToWorld.length() > 0) {
             s(o, "append_to_world", appendToWorld);
         }
@@ -428,6 +517,10 @@ public class ModelMap extends MapType {
 
     public boolean isCullExportRegionEdges() {
         return cullExportRegionEdges;
+    }
+
+    public LightingMode getLightingMode() {
+        return lightingMode;
     }
 
     public OutputCompression getOutputCompression() {

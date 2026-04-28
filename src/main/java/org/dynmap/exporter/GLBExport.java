@@ -25,6 +25,22 @@ import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.PatchDefinition;
 
 public class GLBExport implements BlockModelExportSink {
+    public enum LightingMode {
+        DAY("day"),
+        NIGHT("night"),
+        BOTH("both");
+
+        private final String id;
+
+        LightingMode(String id) {
+            this.id = id;
+        }
+
+        public String getId() {
+            return id;
+        }
+    }
+
     private static final Charset UTF8 = Charset.forName("UTF-8");
     private static final int FILTER_NEAREST = 9728;
     private static final int WRAP_CLAMP_TO_EDGE = 33071;
@@ -52,6 +68,7 @@ public class GLBExport implements BlockModelExportSink {
         final FloatArrayBuilder positions = new FloatArrayBuilder();
         final FloatArrayBuilder normals = new FloatArrayBuilder();
         final FloatArrayBuilder colors = new FloatArrayBuilder();
+        final FloatArrayBuilder nightLights = new FloatArrayBuilder();
         final FloatArrayBuilder texcoords = new FloatArrayBuilder();
         final IntArrayBuilder indices = new IntArrayBuilder();
         float minX = Float.POSITIVE_INFINITY;
@@ -65,8 +82,8 @@ public class GLBExport implements BlockModelExportSink {
             this.material = material;
         }
 
-        int addVertex(float x, float y, float z, float nx, float ny, float nz, float r, float g, float b, float u,
-                float v) {
+        int addVertex(float x, float y, float z, float nx, float ny, float nz, float r, float g, float b,
+                float nightLight, float u, float v) {
             int index = positions.size() / 3;
             positions.add(x);
             positions.add(y);
@@ -77,6 +94,7 @@ public class GLBExport implements BlockModelExportSink {
             colors.add(r);
             colors.add(g);
             colors.add(b);
+            nightLights.add(nightLight);
             texcoords.add(u);
             texcoords.add(v);
             minX = Math.min(minX, x);
@@ -137,6 +155,7 @@ public class GLBExport implements BlockModelExportSink {
     private double scale = 1.0;
     private boolean centerOrigin = true;
     private boolean cullExportRegionEdges;
+    private LightingMode lightingMode = LightingMode.DAY;
 
     public GLBExport(File destination, TexturePackHDShader shader, DynmapWorld world, DynmapCore core, String basename) {
         this.destination = destination;
@@ -196,6 +215,10 @@ public class GLBExport implements BlockModelExportSink {
         this.cullExportRegionEdges = cullExportRegionEdges;
     }
 
+    public void setLightingMode(LightingMode lightingMode) {
+        this.lightingMode = (lightingMode == null) ? LightingMode.DAY : lightingMode;
+    }
+
     public boolean processExport(DynmapCommandSender sender) {
         try {
             BufferOutputStream glb = exportToBuffer();
@@ -224,6 +247,7 @@ public class GLBExport implements BlockModelExportSink {
         BlockModelExporter exporter = new BlockModelExporter(world, core, shader);
         exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
         exporter.setCullExportRegionEdges(cullExportRegionEdges);
+        exporter.setLightingMode(lightingMode);
         if (cache != null) {
             exporter.export(cache, this);
         } else {
@@ -244,8 +268,8 @@ public class GLBExport implements BlockModelExportSink {
     }
 
     @Override
-    public void addPatch(PatchDefinition patch, double x, double y, double z, ExportMaterial material, float[] vertexColors)
-            throws IOException {
+    public void addPatch(PatchDefinition patch, double x, double y, double z, ExportMaterial material,
+            float[] vertexColors, float[] nightVertexLights) throws IOException {
         if (material == null) {
             return;
         }
@@ -255,52 +279,55 @@ public class GLBExport implements BlockModelExportSink {
             primitives.put(material.getMaterialId(), primitive);
         }
         ExportPatchGeometry.Geometry geometry = ExportPatchGeometry.build(patch, x, y, z, material.getRotation());
-        addGeometry(primitive, geometry, vertexColors);
+        addGeometry(primitive, geometry, vertexColors, nightVertexLights);
     }
 
-    private void addGeometry(PrimitiveData primitive, ExportPatchGeometry.Geometry geometry, float[] vertexColors) {
+    private void addGeometry(PrimitiveData primitive, ExportPatchGeometry.Geometry geometry, float[] vertexColors,
+            float[] nightVertexLights) {
         switch (geometry.sideVisible) {
             case TOP:
-                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
+                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, nightVertexLights, geometry.vertexCount);
                 break;
             case BOTTOM:
-                addBackFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
+                addBackFace(primitive, geometry.xyz, geometry.uv, vertexColors, nightVertexLights, geometry.vertexCount);
                 break;
             case BOTH:
-                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
-                addBackFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
+                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, nightVertexLights, geometry.vertexCount);
+                addBackFace(primitive, geometry.xyz, geometry.uv, vertexColors, nightVertexLights, geometry.vertexCount);
                 break;
             case FLIP:
-                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, geometry.vertexCount);
+                addFrontFace(primitive, geometry.xyz, geometry.uv, vertexColors, nightVertexLights, geometry.vertexCount);
                 addBackFace(primitive, geometry.xyz, buildFlipBackUVs(geometry.uv, geometry.vertexCount), vertexColors,
-                        geometry.vertexCount);
+                        nightVertexLights, geometry.vertexCount);
                 break;
         }
     }
 
-    private void addFrontFace(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors, int vertexCount) {
+    private void addFrontFace(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors,
+            float[] nightVertexLights, int vertexCount) {
         FaceNormal normal = buildFaceNormal(xyz);
-        int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
-        int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
-        int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
+        int v0 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 0);
+        int v1 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 1);
+        int v2 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 2);
         primitive.indices.add(v0);
         primitive.indices.add(v1);
         primitive.indices.add(v2);
         if (vertexCount == 4) {
-            int v3 = addVertex(primitive, xyz, uv, vertexColors, normal, 3);
+            int v3 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 3);
             primitive.indices.add(v0);
             primitive.indices.add(v2);
             primitive.indices.add(v3);
         }
     }
 
-    private void addBackFace(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors, int vertexCount) {
+    private void addBackFace(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors,
+            float[] nightVertexLights, int vertexCount) {
         FaceNormal normal = buildFaceNormal(xyz).invert();
         if (vertexCount == 4) {
-            int v3 = addVertex(primitive, xyz, uv, vertexColors, normal, 3);
-            int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
-            int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
-            int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
+            int v3 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 3);
+            int v2 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 2);
+            int v1 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 1);
+            int v0 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 0);
             primitive.indices.add(v3);
             primitive.indices.add(v2);
             primitive.indices.add(v1);
@@ -308,9 +335,9 @@ public class GLBExport implements BlockModelExportSink {
             primitive.indices.add(v1);
             primitive.indices.add(v0);
         } else {
-            int v2 = addVertex(primitive, xyz, uv, vertexColors, normal, 2);
-            int v1 = addVertex(primitive, xyz, uv, vertexColors, normal, 1);
-            int v0 = addVertex(primitive, xyz, uv, vertexColors, normal, 0);
+            int v2 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 2);
+            int v1 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 1);
+            int v0 = addVertex(primitive, xyz, uv, vertexColors, nightVertexLights, normal, 0);
             primitive.indices.add(v2);
             primitive.indices.add(v1);
             primitive.indices.add(v0);
@@ -324,14 +351,15 @@ public class GLBExport implements BlockModelExportSink {
         return new double[] { uv[0], uv[1], uv[4], uv[5], uv[2], uv[3] };
     }
 
-    private int addVertex(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors, FaceNormal normal,
-            int vertexIndex) {
+    private int addVertex(PrimitiveData primitive, double[] xyz, double[] uv, float[] vertexColors,
+            float[] nightVertexLights, FaceNormal normal, int vertexIndex) {
         int xyzOffset = vertexIndex * 3;
         int uvOffset = vertexIndex * 2;
         int colorOffset = vertexIndex * 3;
+        float nightLight = (nightVertexLights != null) ? nightVertexLights[vertexIndex] : 0.0F;
         return primitive.addVertex(transform(xyz[xyzOffset], originX), transform(xyz[xyzOffset + 1], originY),
                 transform(xyz[xyzOffset + 2], originZ), normal.x, normal.y, normal.z, vertexColors[colorOffset],
-                vertexColors[colorOffset + 1], vertexColors[colorOffset + 2], (float) uv[uvOffset],
+                vertexColors[colorOffset + 1], vertexColors[colorOffset + 2], nightLight, (float) uv[uvOffset],
                 flipV((float) uv[uvOffset + 1]));
     }
 
@@ -385,6 +413,7 @@ public class GLBExport implements BlockModelExportSink {
             ExportedTextureData texture = textures.get(i);
             AccessorBinary normalBinary = toNormalizedSignedByteBytes(primitive.normals);
             AccessorBinary colorBinary = toNormalizedUnsignedByteBytes(primitive.colors);
+            AccessorBinary nightLightBinary = toNormalizedUnsignedByteBytes(primitive.nightLights);
             AccessorBinary uvBinary = toNormalizedUnsignedShortBytes(primitive.texcoords);
             AccessorBinary indexBinary = toIndexBytes(primitive.indices);
 
@@ -412,6 +441,15 @@ public class GLBExport implements BlockModelExportSink {
             int uvAccessor = accessors.size();
             accessors.add(makeAccessor(uvView, uvBinary.componentType, primitive.texcoords.size() / 2, "VEC2",
                     uvBinary.normalized, null, null, null, null, null, null));
+
+            Integer nightLightAccessor = null;
+            if (lightingMode == LightingMode.BOTH) {
+                int nightLightView = appendSegment(binary, nightLightBinary.bytes, ARRAY_BUFFER_TARGET);
+                bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ARRAY_BUFFER_TARGET));
+                nightLightAccessor = Integer.valueOf(accessors.size());
+                accessors.add(makeAccessor(nightLightView, nightLightBinary.componentType, primitive.nightLights.size(),
+                        "SCALAR", nightLightBinary.normalized, null, null, null, null, null, null));
+            }
 
             int indexView = appendSegment(binary, indexBinary.bytes, ELEMENT_ARRAY_BUFFER_TARGET);
             bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ELEMENT_ARRAY_BUFFER_TARGET));
@@ -444,9 +482,14 @@ public class GLBExport implements BlockModelExportSink {
             materialJson.append("}");
             appendJsonEntry(materialsJson, materialJson.toString());
 
+            StringBuilder attributesJson = new StringBuilder();
+            attributesJson.append("\"POSITION\":").append(positionAccessor).append(",\"NORMAL\":").append(normalAccessor)
+                    .append(",\"COLOR_0\":").append(colorAccessor).append(",\"TEXCOORD_0\":").append(uvAccessor);
+            if (nightLightAccessor != null) {
+                attributesJson.append(",\"_NIGHTLIGHT\":").append(nightLightAccessor.intValue());
+            }
             appendJsonEntry(primitivesJson, String.format(Locale.US,
-                    "{\"attributes\":{\"POSITION\":%d,\"NORMAL\":%d,\"COLOR_0\":%d,\"TEXCOORD_0\":%d},\"indices\":%d,\"material\":%d}",
-                    positionAccessor, normalAccessor, colorAccessor, uvAccessor, indexAccessor, i));
+                    "{\"attributes\":{%s},\"indices\":%d,\"material\":%d}", attributesJson.toString(), indexAccessor, i));
         }
 
         StringBuilder json = new StringBuilder();
