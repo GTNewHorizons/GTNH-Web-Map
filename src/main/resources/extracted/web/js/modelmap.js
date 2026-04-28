@@ -950,14 +950,18 @@
 			return directions[index];
 		},
 
-		onSelectedMap: function(previousMap, previousLocation) {
+		onSelectedMap: function(previousMap, previousLocation, previousScreenLocation) {
 			if (!previousMap || (typeof previousMap.options.azimuth !== "number") || (typeof previousMap.options.inclination !== "number")) {
 				return;
 			}
 
-			var focusLocation = previousLocation;
-			if (!focusLocation && this._map) {
-				focusLocation = this.projection.fromLatLngToLocation(this._map.getCenter(), this._cameraPosition.y);
+			var focusLocation = previousScreenLocation || null;
+			if (!focusLocation && previousLocation) {
+				focusLocation = {
+					x: previousLocation.x,
+					y: 160,
+					z: previousLocation.z
+				};
 			}
 			if (!focusLocation) {
 				return;
@@ -965,11 +969,7 @@
 
 			this._yaw = THREE.MathUtils.degToRad(90.0 + previousMap.options.azimuth);
 			this._pitch = -THREE.MathUtils.degToRad(previousMap.options.inclination);
-
-			var forward = this._getForwardVector();
-			var initialDistance = Math.max(this.options.tileblocksize * 6.0, this._viewDistance);
 			this._cameraPosition.set(focusLocation.x, focusLocation.y, focusLocation.z);
-			this._cameraPosition.addScaledVector(forward, -initialDistance);
 			this._cameraPosition.y = Math.max((this.options.world.miny || 0) + 1, this._cameraPosition.y);
 			this._refreshVisibleTiles();
 			this._requestRender();
