@@ -81,15 +81,23 @@
 			this._maxMoveSpeed = options.tileblocksize * 16.0;
 			this._moveSpeedStep = 1.25;
 			this._lookSensitivity = 0.0025;
+			this._touchLookSensitivity = this._lookSensitivity * 1.5;
 			this._loadedTiles = {};
 			this._loadingTiles = {};
 			this._pendingTileLoads = [];
 			this._tileTimestamps = {};
 			this._desiredTiles = {};
 			this._keysDown = {};
+			this._touchMovementKeys = {};
 			this._needsRender = true;
 			this._renderLoopActive = false;
 			this._pointerLocked = false;
+			this._touchSupported = ("ontouchstart" in window) || ((navigator.maxTouchPoints || 0) > 0);
+			this._touchMoveTouchId = null;
+			this._touchLookTouchId = null;
+			this._touchLookLastX = 0;
+			this._touchLookLastY = 0;
+			this._activeTouchDirection = null;
 			this._mapEventHandlers = null;
 			this._loadCounter = 0;
 			this._lastFrameTime = 0;
@@ -143,6 +151,7 @@
 				this._viewerContainer.classList.remove("modelmap-captured");
 				this._viewerContainer.style.display = "none";
 			}
+			this._clearTouchInputs();
 			if (this._hud) {
 				this._hud.style.display = "none";
 			}
@@ -218,6 +227,21 @@
 			me._renderer.toneMapping = THREE.NoToneMapping;
 			me._viewerContainer.appendChild(me._renderer.domElement);
 
+			me._touchControls = document.createElement("div");
+			me._touchControls.className = "modelmap-touch-controls";
+			me._touchControls.innerHTML = '<div class="modelmap-touch-button modelmap-touch-forward" data-direction="forward">&#9650;</div>'
+				+ '<div class="modelmap-touch-button modelmap-touch-left" data-direction="left">&#9664;</div>'
+				+ '<div class="modelmap-touch-button modelmap-touch-right" data-direction="right">&#9654;</div>'
+				+ '<div class="modelmap-touch-button modelmap-touch-backward" data-direction="backward">&#9660;</div>';
+			me._viewerContainer.appendChild(me._touchControls);
+			me._touchDirectionButtons = {
+				forward: me._touchControls.querySelector("[data-direction='forward']"),
+				backward: me._touchControls.querySelector("[data-direction='backward']"),
+				left: me._touchControls.querySelector("[data-direction='left']"),
+				right: me._touchControls.querySelector("[data-direction='right']")
+			};
+			me._touchControls.style.display = me._touchSupported ? "block" : "none";
+
 			me._scene = new THREE.Scene();
 			me._root = new THREE.Group();
 			me._scene.add(me._root);
@@ -260,14 +284,7 @@
 				if (!me._pointerLocked || !me._isViewerActive()) {
 					return;
 				}
-				me._yaw += (event.movementX || 0) * me._lookSensitivity;
-				me._pitch = THREE.MathUtils.clamp(
-					me._pitch - (event.movementY || 0) * me._lookSensitivity,
-					-1.45,
-					1.45
-				);
-				me._refreshVisibleTiles();
-				me._requestRender();
+				me._applyLookDelta((event.movementX || 0) * me._lookSensitivity, -(event.movementY || 0) * me._lookSensitivity);
 			});
 			document.addEventListener("wheel", function(event) {
 				if (!me._pointerLocked || !me._isViewerActive()) {
@@ -312,8 +329,33 @@
 					delete me._keysDown[event.code];
 				}
 			});
+			me._viewerContainer.addEventListener("touchstart", function(event) {
+				if (!me._touchSupported || !me._isViewerActive()) {
+					return;
+				}
+				me._handleTouchStart(event);
+			}, { passive: false });
+			me._viewerContainer.addEventListener("touchmove", function(event) {
+				if (!me._touchSupported || !me._isViewerActive()) {
+					return;
+				}
+				me._handleTouchMove(event);
+			}, { passive: false });
+			me._viewerContainer.addEventListener("touchend", function(event) {
+				if (!me._touchSupported) {
+					return;
+				}
+				me._handleTouchEnd(event);
+			}, { passive: false });
+			me._viewerContainer.addEventListener("touchcancel", function(event) {
+				if (!me._touchSupported) {
+					return;
+				}
+				me._handleTouchEnd(event);
+			}, { passive: false });
 			window.addEventListener("blur", function() {
 				me._clearMovementKeys();
+				me._clearTouchInputs();
 			});
 
 			me._resizeViewer();
@@ -408,6 +450,163 @@
 
 		_clearMovementKeys: function() {
 			this._keysDown = {};
+		},
+
+		_clearTouchInputs: function() {
+			this._touchMoveTouchId = null;
+			this._touchLookTouchId = null;
+			this._touchLookLastX = 0;
+			this._touchLookLastY = 0;
+			this._setTouchDirection(null);
+		},
+
+		_applyLookDelta: function(deltaYaw, deltaPitch) {
+			if (!deltaYaw && !deltaPitch) {
+				return;
+			}
+			this._yaw += deltaYaw;
+			this._pitch = THREE.MathUtils.clamp(this._pitch + deltaPitch, -1.45, 1.45);
+			this._refreshVisibleTiles();
+			this._requestRender();
+		},
+
+		_getTouchByIdentifier: function(touches, identifier) {
+			var i;
+			for (i = 0; i < touches.length; i++) {
+				if (touches[i].identifier === identifier) {
+					return touches[i];
+				}
+			}
+			return null;
+		},
+
+		_isTouchInsideMovementPad: function(clientX, clientY) {
+			if (!this._touchControls || this._touchControls.style.display === "none") {
+				return false;
+			}
+			var rect = this._touchControls.getBoundingClientRect();
+			return clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom;
+		},
+
+		_updateTouchMovementFromPoint: function(clientX, clientY) {
+			if (!this._touchControls) {
+				return;
+			}
+			var rect = this._touchControls.getBoundingClientRect();
+			var centerX = rect.left + (rect.width * 0.5);
+			var centerY = rect.top + (rect.height * 0.5);
+			var deltaX = clientX - centerX;
+			var deltaY = clientY - centerY;
+			var deadZone = Math.min(rect.width, rect.height) * 0.15;
+			var direction = null;
+			if (Math.abs(deltaX) > deadZone || Math.abs(deltaY) > deadZone) {
+				if (Math.abs(deltaX) > Math.abs(deltaY)) {
+					direction = deltaX > 0 ? "right" : "left";
+				}
+				else {
+					direction = deltaY > 0 ? "backward" : "forward";
+				}
+			}
+			this._setTouchDirection(direction);
+		},
+
+		_setTouchDirection: function(direction) {
+			var nextKeys = {};
+			if (direction === "forward") {
+				nextKeys[KEY_CODES.FORWARD] = true;
+			}
+			else if (direction === "backward") {
+				nextKeys[KEY_CODES.BACKWARD] = true;
+			}
+			else if (direction === "left") {
+				nextKeys[KEY_CODES.LEFT] = true;
+			}
+			else if (direction === "right") {
+				nextKeys[KEY_CODES.RIGHT] = true;
+			}
+			this._touchMovementKeys = nextKeys;
+			this._activeTouchDirection = direction;
+			this._updateTouchPadState();
+			this._requestRender();
+		},
+
+		_updateTouchPadState: function() {
+			if (!this._touchDirectionButtons) {
+				return;
+			}
+			$.each(this._touchDirectionButtons, function(direction, button) {
+				if (!button) {
+					return;
+				}
+				button.classList.toggle("modelmap-touch-active", this._activeTouchDirection === direction);
+			}.bind(this));
+		},
+
+		_handleTouchStart: function(event) {
+			var handled = false;
+			var i;
+			for (i = 0; i < event.changedTouches.length; i++) {
+				var touch = event.changedTouches[i];
+				if (this._touchMoveTouchId === null && this._isTouchInsideMovementPad(touch.clientX, touch.clientY)) {
+					this._touchMoveTouchId = touch.identifier;
+					this._updateTouchMovementFromPoint(touch.clientX, touch.clientY);
+					handled = true;
+				}
+				else if (this._touchLookTouchId === null) {
+					this._touchLookTouchId = touch.identifier;
+					this._touchLookLastX = touch.clientX;
+					this._touchLookLastY = touch.clientY;
+					handled = true;
+				}
+			}
+			if (handled) {
+				event.preventDefault();
+				this._viewerContainer.focus();
+			}
+		},
+
+		_handleTouchMove: function(event) {
+			var handled = false;
+			var moveTouch = this._getTouchByIdentifier(event.touches, this._touchMoveTouchId);
+			if (moveTouch) {
+				this._updateTouchMovementFromPoint(moveTouch.clientX, moveTouch.clientY);
+				handled = true;
+			}
+			var lookTouch = this._getTouchByIdentifier(event.touches, this._touchLookTouchId);
+			if (lookTouch) {
+				this._applyLookDelta(
+					(lookTouch.clientX - this._touchLookLastX) * this._touchLookSensitivity,
+					-(lookTouch.clientY - this._touchLookLastY) * this._touchLookSensitivity
+				);
+				this._touchLookLastX = lookTouch.clientX;
+				this._touchLookLastY = lookTouch.clientY;
+				handled = true;
+			}
+			if (handled) {
+				event.preventDefault();
+			}
+		},
+
+		_handleTouchEnd: function(event) {
+			var handled = false;
+			var i;
+			for (i = 0; i < event.changedTouches.length; i++) {
+				var touch = event.changedTouches[i];
+				if (touch.identifier === this._touchMoveTouchId) {
+					this._touchMoveTouchId = null;
+					this._setTouchDirection(null);
+					handled = true;
+				}
+				if (touch.identifier === this._touchLookTouchId) {
+					this._touchLookTouchId = null;
+					this._touchLookLastX = 0;
+					this._touchLookLastY = 0;
+					handled = true;
+				}
+			}
+			if (handled) {
+				event.preventDefault();
+			}
 		},
 
 		_adjustMoveSpeed: function(direction) {
@@ -596,7 +795,7 @@
 		},
 
 		_updateMovement: function(deltaSeconds) {
-			if (deltaSeconds <= 0 || !this._pointerLocked) {
+			if (deltaSeconds <= 0 || (!this._pointerLocked && this._touchMoveTouchId === null)) {
 				return false;
 			}
 
@@ -605,16 +804,16 @@
 			var forward = this._getForwardVector();
 			var right = this._getRightVector();
 
-			if (this._keysDown[KEY_CODES.FORWARD]) {
+			if (this._keysDown[KEY_CODES.FORWARD] || this._touchMovementKeys[KEY_CODES.FORWARD]) {
 				direction.add(forward);
 			}
-			if (this._keysDown[KEY_CODES.BACKWARD]) {
+			if (this._keysDown[KEY_CODES.BACKWARD] || this._touchMovementKeys[KEY_CODES.BACKWARD]) {
 				direction.sub(forward);
 			}
-			if (this._keysDown[KEY_CODES.RIGHT]) {
+			if (this._keysDown[KEY_CODES.RIGHT] || this._touchMovementKeys[KEY_CODES.RIGHT]) {
 				direction.add(right);
 			}
-			if (this._keysDown[KEY_CODES.LEFT]) {
+			if (this._keysDown[KEY_CODES.LEFT] || this._touchMovementKeys[KEY_CODES.LEFT]) {
 				direction.sub(right);
 			}
 			if (this._keysDown[KEY_CODES.UP] || this._keysDown[KEY_CODES.UP_ALT]) {
