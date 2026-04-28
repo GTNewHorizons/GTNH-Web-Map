@@ -511,8 +511,12 @@ DynMap.prototype = {
 
 		var prevzoom = me.map.getZoom();
 		var prevloc = null;
+		var prevscreenloc = null;
 		if (me.maptype != null) {
 			prevloc = me.maptype.getProjection().fromLatLngToLocation(me.map.getCenter(), 64);
+			var mapSize = me.map.getSize();
+			var screenCenter = me.map.containerPointToLatLng(L.point(mapSize.x * 0.5, mapSize.y * 0.5));
+			prevscreenloc = me.maptype.getProjection().fromLatLngToLocation(screenCenter, 160);
 		}
 
 		var prevworld = me.world;
@@ -570,7 +574,7 @@ DynMap.prototype = {
 		}
 		me.map.addLayer(me.maptype);
 		if (me.maptype.onSelectedMap) {
-			me.maptype.onSelectedMap(prevmap, prevloc);
+			me.maptype.onSelectedMap(prevmap, prevloc, prevscreenloc);
 		}
 		me.setMapInteractionEnabled(!me.maptype.options.is3dviewer);
 		$(me.map.getContainer()).toggleClass('modelmap-mode', !!me.maptype.options.is3dviewer);
