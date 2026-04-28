@@ -23,12 +23,17 @@
 		SPEED_UP: "Equal",
 		SPEED_UP_ALT: "NumpadAdd",
 		SPEED_DOWN: "Minus",
-		SPEED_DOWN_ALT: "NumpadSubtract"
+		SPEED_DOWN_ALT: "NumpadSubtract",
+		VIEW_DISTANCE_UP: "PageUp",
+		VIEW_DISTANCE_DOWN: "PageDown"
 	};
 	var DEFAULT_DAY_AMBIENT_LIGHT = 0.7;
 	var DEFAULT_NIGHT_AMBIENT_LIGHT = 0.14;
 	var DEFAULT_DAY_SUN_LIGHT = 0.8;
 	var DEFAULT_NIGHT_SUN_LIGHT = 0.16;
+	var MAX_RENDER_PIXEL_RATIO = 2.0;
+	var HUD_UPDATE_INTERVAL_MS = 100;
+	var MAX_CONCURRENT_TILE_LOADS = 4;
 
 	var ModelProjection = DynmapProjection.extend({
 		fromLocationToLatLng: function(location) {
@@ -77,6 +82,7 @@
 			this._lookSensitivity = 0.0025;
 			this._loadedTiles = {};
 			this._loadingTiles = {};
+			this._pendingTileLoads = [];
 			this._tileTimestamps = {};
 			this._desiredTiles = {};
 			this._keysDown = {};
@@ -94,9 +100,19 @@
 			this._fpsAverage = 0;
 			this._pendingLeafletMoveEvents = 0;
 			this._pendingLeafletZoomEvents = 0;
+			this._lastSyncedLeafletCenter = null;
+			this._lastSyncedLeafletZoom = null;
 			this._currentAmbientIntensity = null;
 			this._currentSunIntensity = null;
 			this._lastMaterialLightingBlend = null;
+			this._hudState = {};
+			this._hudVisible = null;
+			this._lastHUDUpdateAt = 0;
+			this._frustum = new THREE.Frustum();
+			this._frustumMatrix = new THREE.Matrix4();
+			this._tileCullBounds = new THREE.Box3();
+			this._tileCullMin = new THREE.Vector3();
+			this._tileCullMax = new THREE.Vector3();
 			this._serverTime = (typeof options.dynmap.servertime === "number") ? options.dynmap.servertime : 0;
 			this._serverTimeCapturedAt = Date.now();
 			this._bindDynmapEvents();
@@ -195,7 +211,7 @@
 			me._hudTile = me._hud.querySelector("[data-field='tile']");
 
 			me._renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-			me._renderer.setPixelRatio(window.devicePixelRatio || 1);
+			me._renderer.setPixelRatio(Math.min(MAX_RENDER_PIXEL_RATIO, window.devicePixelRatio || 1));
 			me._renderer.outputEncoding = THREE.sRGBEncoding;
 			me._renderer.toneMapping = THREE.NoToneMapping;
 			me._viewerContainer.appendChild(me._renderer.domElement);
@@ -228,12 +244,7 @@
 			});
 			me._viewerContainer.addEventListener("wheel", function(event) {
 				event.preventDefault();
-				var zoomScale = Math.pow(1.1, -event.deltaY / 120.0);
-				me._viewDistance = THREE.MathUtils.clamp(me._viewDistance * zoomScale, me.options.tileblocksize * 2.0, 32000);
-				me._updateHUD();
-				me._syncLeafletFromViewer(true);
-				me._refreshVisibleTiles();
-				me._requestRender();
+				me._adjustViewDistanceFromWheel(event.deltaY);
 			}, { passive: false });
 
 			document.addEventListener("pointerlockchange", function() {
@@ -253,10 +264,25 @@
 					-1.45,
 					1.45
 				);
+				me._refreshVisibleTiles();
 				me._requestRender();
 			});
+			document.addEventListener("wheel", function(event) {
+				if (!me._pointerLocked || !me._isViewerActive()) {
+					return;
+				}
+				event.preventDefault();
+				me._adjustViewDistanceFromWheel(event.deltaY);
+			}, { passive: false });
 			window.addEventListener("keydown", function(event) {
 				if (!me._isViewerActive() || !me._pointerLocked) {
+					return;
+				}
+				if (me._isViewDistanceAdjustKey(event)) {
+					if (!event.repeat) {
+						me._adjustViewDistanceStep(me._isViewDistanceIncreaseKey(event) ? 16.0 : -16.0);
+					}
+					event.preventDefault();
 					return;
 				}
 				if (me._isSpeedAdjustKey(event.code)) {
@@ -282,7 +308,7 @@
 			});
 
 			me._resizeViewer();
-			me._updateHUD();
+			me._updateHUD(true);
 		},
 
 		_bindMapEvents: function() {
@@ -355,6 +381,18 @@
 				code === KEY_CODES.SPEED_DOWN_ALT;
 		},
 
+		_isViewDistanceAdjustKey: function(event) {
+			return this._isViewDistanceIncreaseKey(event) || this._isViewDistanceDecreaseKey(event);
+		},
+
+		_isViewDistanceIncreaseKey: function(event) {
+			return event.code === KEY_CODES.VIEW_DISTANCE_UP || event.key === "PageUp";
+		},
+
+		_isViewDistanceDecreaseKey: function(event) {
+			return event.code === KEY_CODES.VIEW_DISTANCE_DOWN || event.key === "PageDown";
+		},
+
 		_clearMovementKeys: function() {
 			this._keysDown = {};
 		},
@@ -362,7 +400,23 @@
 		_adjustMoveSpeed: function(direction) {
 			var scale = direction > 0 ? this._moveSpeedStep : (1.0 / this._moveSpeedStep);
 			this._moveSpeed = THREE.MathUtils.clamp(this._moveSpeed * scale, this._minMoveSpeed, this._maxMoveSpeed);
-			this._updateHUD();
+			this._updateHUD(true);
+			this._requestRender();
+		},
+
+		_adjustViewDistanceFromWheel: function(deltaY) {
+			var zoomScale = Math.pow(1.1, -deltaY / 120.0);
+			this._setViewDistance(this._viewDistance * zoomScale);
+		},
+
+		_adjustViewDistanceStep: function(deltaBlocks) {
+			this._setViewDistance(this._viewDistance + deltaBlocks);
+		},
+
+		_setViewDistance: function(distance) {
+			this._viewDistance = THREE.MathUtils.clamp(distance, this.options.tileblocksize * 2.0, 32000);
+			this._updateHUD(true);
+			this._refreshVisibleTiles();
 			this._requestRender();
 		},
 
@@ -396,9 +450,11 @@
 			this._lastLeafletSync = now;
 			if (centerChanged) {
 				this._pendingLeafletMoveEvents++;
+				this._lastSyncedLeafletCenter = targetCenter;
 			}
 			if (zoomChanged) {
 				this._pendingLeafletZoomEvents++;
+				this._lastSyncedLeafletZoom = targetZoom;
 			}
 			this._map.setView(
 				targetCenter,
@@ -416,10 +472,17 @@
 			if (this._pendingLeafletMoveEvents <= 0 || !this._map) {
 				return false;
 			}
-			if (!this._sameLatLng(this._map.getCenter(), this.projection.fromLocationToLatLng(this._cameraPosition))) {
+			if (this._pointerLocked) {
+				this._pendingLeafletMoveEvents--;
+				return true;
+			}
+			if (!this._lastSyncedLeafletCenter || !this._sameLatLng(this._map.getCenter(), this._lastSyncedLeafletCenter)) {
 				return false;
 			}
 			this._pendingLeafletMoveEvents--;
+			if (this._pendingLeafletMoveEvents <= 0) {
+				this._lastSyncedLeafletCenter = null;
+			}
 			return true;
 		},
 
@@ -427,10 +490,17 @@
 			if (this._pendingLeafletZoomEvents <= 0 || !this._map) {
 				return false;
 			}
-			if (!this._sameZoom(this._map.getZoom(), this._zoomFromDistance(this._viewDistance))) {
+			if (this._pointerLocked) {
+				this._pendingLeafletZoomEvents--;
+				return true;
+			}
+			if ((typeof this._lastSyncedLeafletZoom !== "number") || !this._sameZoom(this._map.getZoom(), this._lastSyncedLeafletZoom)) {
 				return false;
 			}
 			this._pendingLeafletZoomEvents--;
+			if (this._pendingLeafletZoomEvents <= 0) {
+				this._lastSyncedLeafletZoom = null;
+			}
 			return true;
 		},
 
@@ -494,6 +564,10 @@
 				var changed = me._updateMovement(deltaSeconds);
 				if (changed) {
 					me._needsRender = true;
+				}
+				if (!changed && !me._needsRender && !me._isLightingTransitionActive()) {
+					me._lastFrameTime = frameTime;
+					return;
 				}
 				me._renderScene();
 				me._updateFPS(frameTime, previousFrameTime);
@@ -567,16 +641,28 @@
 			).normalize();
 		},
 
-		_renderScene: function() {
-			this._applySceneLighting();
-			this._updateTileLighting();
+		_syncCameraTransform: function() {
 			var forward = this._getForwardVector();
 			this._camera.position.copy(this._cameraPosition);
 			this._camera.lookAt(this._cameraPosition.clone().add(forward));
+			this._camera.updateMatrixWorld(true);
+			this._frustumMatrix.multiplyMatrices(this._camera.projectionMatrix, this._camera.matrixWorldInverse);
+			this._frustum.setFromProjectionMatrix(this._frustumMatrix);
+			return forward;
+		},
+
+		_getTileRefreshOrientationKey: function() {
+			return Math.round(this._yaw * 8.0 / Math.PI) + ":" + Math.round(this._pitch * 8.0 / Math.PI);
+		},
+
+		_renderScene: function() {
+			this._applySceneLighting();
+			this._updateTileLighting();
+			this._syncCameraTransform();
 			this._grid.position.x = Math.round(this._cameraPosition.x / this.options.tileblocksize) * this.options.tileblocksize;
 			this._grid.position.z = Math.round(this._cameraPosition.z / this.options.tileblocksize) * this.options.tileblocksize;
 			this._renderer.render(this._scene, this._camera);
-			this._updateHUD();
+			this._updateHUD(false);
 		},
 
 		_updateFPS: function(frameTime, previousFrameTime) {
@@ -591,43 +677,46 @@
 				var roundedFPS = Math.round(this._fpsAverage);
 				if (roundedFPS !== this._displayFPS) {
 					this._displayFPS = roundedFPS;
-					this._updateHUD();
+					this._updateHUD(true);
 				}
 			}
 		},
 
-		_updateHUD: function() {
+		_updateHUD: function(force) {
 			if (!this._hud) {
 				return;
 			}
-			this._hud.style.display = this._isViewerActive() ? "block" : "none";
+			var now = Date.now();
+			if (!force && ((now - this._lastHUDUpdateAt) < HUD_UPDATE_INTERVAL_MS)) {
+				return;
+			}
+			this._lastHUDUpdateAt = now;
+			var visible = this._isViewerActive();
+			if (this._hudVisible !== visible) {
+				this._hudVisible = visible;
+				this._hud.style.display = visible ? "block" : "none";
+			}
 			var tileX = Math.floor(this._cameraPosition.x / this.options.tileblocksize);
 			var tileZ = Math.floor(this._cameraPosition.z / this.options.tileblocksize);
 			var tileName = this._getTileName(tileX, tileZ);
-			if (this._hudFPS) {
-				this._hudFPS.textContent = String(this._displayFPS);
+			this._setHUDField("fps", this._hudFPS, String(this._displayFPS));
+			this._setHUDField("distance", this._hudDistance, Math.max(1, Math.round(this._viewDistance / 16)) + " chunks");
+			this._setHUDField("speed", this._hudSpeed, this._formatHUDNumber(this._moveSpeed) + " blocks/s");
+			this._setHUDField("direction", this._hudDirection, this._getViewDirection());
+			this._setHUDField("position", this._hudPosition, this._formatHUDNumber(this._cameraPosition.x)
+				+ ", " + this._formatHUDNumber(this._cameraPosition.y)
+				+ ", " + this._formatHUDNumber(this._cameraPosition.z));
+			this._setHUDField("chunk", this._hudChunk, Math.floor(this._cameraPosition.x / 16)
+				+ ", " + Math.floor(this._cameraPosition.z / 16));
+			this._setHUDField("tile", this._hudTile, tileName);
+		},
+
+		_setHUDField: function(key, element, value) {
+			if (!element || this._hudState[key] === value) {
+				return;
 			}
-			if (this._hudDistance) {
-				this._hudDistance.textContent = Math.max(1, Math.round(this._viewDistance / 16)) + " chunks";
-			}
-			if (this._hudSpeed) {
-				this._hudSpeed.textContent = this._formatHUDNumber(this._moveSpeed) + " blocks/s";
-			}
-			if (this._hudDirection) {
-				this._hudDirection.textContent = this._getViewDirection();
-			}
-			if (this._hudPosition) {
-				this._hudPosition.textContent = this._formatHUDNumber(this._cameraPosition.x)
-					+ ", " + this._formatHUDNumber(this._cameraPosition.y)
-					+ ", " + this._formatHUDNumber(this._cameraPosition.z);
-			}
-			if (this._hudChunk) {
-				this._hudChunk.textContent = Math.floor(this._cameraPosition.x / 16)
-					+ ", " + Math.floor(this._cameraPosition.z / 16);
-			}
-			if (this._hudTile) {
-				this._hudTile.textContent = tileName;
-			}
+			this._hudState[key] = value;
+			element.textContent = value;
 		},
 
 		_formatHUDNumber: function(value) {
@@ -670,25 +759,32 @@
 		},
 
 		_refreshVisibleTiles: function() {
-			var radius = Math.max(1, Math.min(8, Math.ceil((this._viewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / this.options.tileblocksize)));
+			var radius = Math.max(1, Math.min(8, Math.ceil((this._viewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / this.options.tileblocksize) + 1));
 			var centerTileX = Math.floor(this._cameraPosition.x / this.options.tileblocksize);
 			var centerTileZ = Math.floor(this._cameraPosition.z / this.options.tileblocksize);
-			var refreshKey = centerTileX + ":" + centerTileZ + ":" + radius;
+			var refreshKey = centerTileX + ":" + centerTileZ + ":" + radius + ":" + Math.round(this._viewDistance / 16)
+				+ ":" + this._getTileRefreshOrientationKey();
 			if (this._lastTileRefresh === refreshKey) {
 				return;
 			}
 			this._lastTileRefresh = refreshKey;
+			this._syncCameraTransform();
 
 			var wanted = {};
+			var pendingLoads = [];
 			var x;
 			var z;
+			var maxDistance = this._viewDistance + this.options.tileblocksize * 1.5;
 
 			for (x = centerTileX - radius; x <= centerTileX + radius; x++) {
 				for (z = centerTileZ - radius; z <= centerTileZ + radius; z++) {
-					var tileName = this._getTileName(x, z);
-					wanted[tileName] = { x: x, z: z };
-					if (!this._loadedTiles[tileName] && !this._loadingTiles[tileName]) {
-						this._loadTile(tileName, x, z);
+					var tilePriority = this._getTilePriorityData(x, z, maxDistance);
+					if (!tilePriority) {
+						continue;
+					}
+					wanted[tilePriority.tileName] = { x: x, z: z };
+					if (!this._loadedTiles[tilePriority.tileName] && !this._loadingTiles[tilePriority.tileName]) {
+						pendingLoads.push(tilePriority);
 					}
 				}
 			}
@@ -702,6 +798,50 @@
 				}
 			}
 			this._desiredTiles = wanted;
+			pendingLoads.sort(function(a, b) {
+				if (a.inFrustum !== b.inFrustum) {
+					return a.inFrustum ? -1 : 1;
+				}
+				return a.distanceSq - b.distanceSq;
+			});
+			this._pendingTileLoads = pendingLoads;
+			this._pumpTileLoads();
+		},
+
+		_getTilePriorityData: function(tileX, tileZ, maxDistance) {
+			var centerX = this._getTileCenter(tileX);
+			var centerZ = this._getTileCenter(tileZ);
+			var halfSize = this.options.tileblocksize * 0.5;
+			var maxRadius = maxDistance + halfSize;
+			var dx = centerX - this._cameraPosition.x;
+			var dz = centerZ - this._cameraPosition.z;
+			var distanceSq = (dx * dx) + (dz * dz);
+			if (distanceSq > (maxRadius * maxRadius)) {
+				return null;
+			}
+			this._tileCullMin.set(centerX - halfSize, this.options.world.miny || 0, centerZ - halfSize);
+			this._tileCullMax.set(centerX + halfSize,
+				(typeof this.options.world.worldheight === "number") ? this.options.world.worldheight : (this.options.world.sealevel || 64) + 128,
+				centerZ + halfSize);
+			this._tileCullBounds.min.copy(this._tileCullMin);
+			this._tileCullBounds.max.copy(this._tileCullMax);
+			return {
+				tileName: this._getTileName(tileX, tileZ),
+				x: tileX,
+				z: tileZ,
+				distanceSq: distanceSq,
+				inFrustum: this._frustum.intersectsBox(this._tileCullBounds)
+			};
+		},
+
+		_pumpTileLoads: function() {
+			while (this._pendingTileLoads.length > 0 && Object.keys(this._loadingTiles).length < MAX_CONCURRENT_TILE_LOADS) {
+				var next = this._pendingTileLoads.shift();
+				if (!next || !this._desiredTiles[next.tileName] || this._loadedTiles[next.tileName] || this._loadingTiles[next.tileName]) {
+					continue;
+				}
+				this._loadTile(next.tileName, next.x, next.z);
+			}
 		},
 
 		_configureTexture: function(texture) {
@@ -758,6 +898,17 @@
 
 		_applyDuskLightingBlendCurve: function(progress) {
 			return Math.pow(1.0 - THREE.MathUtils.clamp(progress, 0.0, 1.0), 2.2);
+		},
+
+		_isLightingTransitionActive: function() {
+			if (this.options.lightingmode !== "both") {
+				return false;
+			}
+			var servertime = this._getCurrentServerTime();
+			if (servertime < 0) {
+				return false;
+			}
+			return servertime >= 23000.0 || servertime < 2000.0 || (servertime >= 11000.0 && servertime < 14000.0);
 		},
 
 		_applySceneLighting: function() {
@@ -874,7 +1025,15 @@
 				if (!node.isMesh) {
 					return;
 				}
-				node.frustumCulled = false;
+				node.frustumCulled = true;
+				if (node.geometry) {
+					if (!node.geometry.boundingBox) {
+						node.geometry.computeBoundingBox();
+					}
+					if (!node.geometry.boundingSphere) {
+						node.geometry.computeBoundingSphere();
+					}
+				}
 				if (node.geometry && !node.geometry.attributes.normal) {
 					node.geometry.computeVertexNormals();
 					node.geometry.normalizeNormals();
@@ -903,6 +1062,7 @@
 				}
 				delete me._loadingTiles[tileName];
 				if (!me._desiredTiles[tileName]) {
+					me._pumpTileLoads();
 					return;
 				}
 				me._unloadTile(tileName);
@@ -915,11 +1075,13 @@
 					z: tileZ
 				};
 				me._root.add(scene);
+				me._pumpTileLoads();
 				me._requestRender();
 			}, undefined, function() {
 				if (me._loadingTiles[tileName] === token) {
 					delete me._loadingTiles[tileName];
 				}
+				me._pumpTileLoads();
 			});
 		},
 
@@ -929,6 +1091,9 @@
 				return;
 			}
 			delete this._loadingTiles[tileName];
+			this._pendingTileLoads = $.grep(this._pendingTileLoads, function(entry) {
+				return entry.tileName !== tileName;
+			});
 			this._loadTile(tileName, tile.x, tile.z);
 		},
 
