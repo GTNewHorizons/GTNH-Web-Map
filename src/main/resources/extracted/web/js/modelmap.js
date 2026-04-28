@@ -25,6 +25,10 @@
 		SPEED_DOWN: "Minus",
 		SPEED_DOWN_ALT: "NumpadSubtract"
 	};
+	var DEFAULT_DAY_AMBIENT_LIGHT = 0.7;
+	var DEFAULT_NIGHT_AMBIENT_LIGHT = 0.14;
+	var DEFAULT_DAY_SUN_LIGHT = 0.8;
+	var DEFAULT_NIGHT_SUN_LIGHT = 0.16;
 
 	var ModelProjection = DynmapProjection.extend({
 		fromLocationToLatLng: function(location) {
@@ -49,6 +53,11 @@
 			options.tileformat = options.tileformat || "glb";
 			options.compassview = options.compassview || "N";
 			options.nightandday = false;
+			options.lightingmode = this._normalizeLightingMode(options.lightingmode);
+			options.ambientlightday = this._resolveLightSetting(options.ambientlightday, DEFAULT_DAY_AMBIENT_LIGHT);
+			options.ambientlightnight = this._resolveLightSetting(options.ambientlightnight, DEFAULT_NIGHT_AMBIENT_LIGHT);
+			options.sunlightday = this._resolveLightSetting(options.sunlightday, DEFAULT_DAY_SUN_LIGHT);
+			options.sunlightnight = this._resolveLightSetting(options.sunlightnight, DEFAULT_NIGHT_SUN_LIGHT);
 
 			this.projection = new ModelProjection($.extend({ map: this }, options));
 			L.Util.setOptions(this, options);
@@ -85,6 +94,12 @@
 			this._fpsAverage = 0;
 			this._pendingLeafletMoveEvents = 0;
 			this._pendingLeafletZoomEvents = 0;
+			this._currentAmbientIntensity = null;
+			this._currentSunIntensity = null;
+			this._lastMaterialLightingBlend = null;
+			this._serverTime = (typeof options.dynmap.servertime === "number") ? options.dynmap.servertime : 0;
+			this._serverTimeCapturedAt = Date.now();
+			this._bindDynmapEvents();
 		},
 
 		onAdd: function(map) {
@@ -117,6 +132,34 @@
 
 		getProjection: function() {
 			return this.projection;
+		},
+
+		_bindDynmapEvents: function() {
+			var me = this;
+			if (me._dynmapEventsBound || !me.options.dynmap) {
+				return;
+			}
+			me._dynmapEventsBound = true;
+			$(me.options.dynmap).bind("worldupdated.modelmap", function(event, update) {
+				if (typeof update.servertime === "number") {
+					me._serverTime = update.servertime;
+					me._serverTimeCapturedAt = Date.now();
+				}
+				me._applySceneLighting();
+				me._updateTileLighting();
+				me._requestRender();
+			});
+		},
+
+		_normalizeLightingMode: function(mode) {
+			if (mode === "night" || mode === "both") {
+				return mode;
+			}
+			return "day";
+		},
+
+		_resolveLightSetting: function(value, defaultValue) {
+			return (typeof value === "number" && value >= 0) ? value : defaultValue;
 		},
 
 		updateNamedTile: function(tileName, timestamp) {
@@ -172,6 +215,7 @@
 			me._scene.add(me._grid);
 
 			me._loader = new THREE.GLTFLoader();
+			me._applySceneLighting();
 
 			me._viewerContainer.addEventListener("contextmenu", function(event) {
 				event.preventDefault();
@@ -524,6 +568,8 @@
 		},
 
 		_renderScene: function() {
+			this._applySceneLighting();
+			this._updateTileLighting();
 			var forward = this._getForwardVector();
 			this._camera.position.copy(this._cameraPosition);
 			this._camera.lookAt(this._cameraPosition.clone().add(forward));
@@ -669,7 +715,130 @@
 			texture.needsUpdate = true;
 		},
 
-		_createDisplayMaterial: function(material) {
+		_getCurrentServerTime: function() {
+			if (typeof this._serverTime !== "number" || this._serverTime < 0) {
+				return -1;
+			}
+			var elapsedSeconds = (Date.now() - this._serverTimeCapturedAt) / 1000.0;
+			var servertime = this._serverTime + (elapsedSeconds * 20.0);
+			servertime %= 24000.0;
+			if (servertime < 0) {
+				servertime += 24000.0;
+			}
+			return servertime;
+		},
+
+		_getLightingBlend: function() {
+			if (this.options.lightingmode === "night") {
+				return 0.0;
+			}
+			if (this.options.lightingmode !== "both") {
+				return 1.0;
+			}
+			var servertime = this._getCurrentServerTime();
+			if (servertime < 0) {
+				return 1.0;
+			}
+			if (servertime >= 2000.0 && servertime < 11000.0) {
+				return 1.0;
+			}
+			if (servertime >= 14000.0 && servertime < 23000.0) {
+				return 0.0;
+			}
+			if (servertime >= 11000.0 && servertime < 14000.0) {
+				return this._applyDuskLightingBlendCurve((servertime - 11000.0) / 3000.0);
+			}
+			var dawnProgress = (servertime >= 23000.0) ? (servertime - 23000.0) : (servertime + 1000.0);
+			return this._applyLightingBlendCurve(dawnProgress / 3000.0);
+		},
+
+		_applyLightingBlendCurve: function(progress) {
+			return Math.pow(THREE.MathUtils.clamp(progress, 0.0, 1.0), 2.2);
+		},
+
+		_applyDuskLightingBlendCurve: function(progress) {
+			return Math.pow(1.0 - THREE.MathUtils.clamp(progress, 0.0, 1.0), 2.2);
+		},
+
+		_applySceneLighting: function() {
+			if (!this._ambientLight || !this._sunLight) {
+				return;
+			}
+			var ambient = this.options.ambientlightday;
+			var sun = this.options.sunlightday;
+			if (this._currentAmbientIntensity !== ambient) {
+				this._ambientLight.intensity = ambient;
+				this._currentAmbientIntensity = ambient;
+			}
+			if (this._currentSunIntensity !== sun) {
+				this._sunLight.intensity = sun;
+				this._currentSunIntensity = sun;
+			}
+		},
+
+		_updateMaterialLightingUniforms: function(material, blend) {
+			if (material && material.userData && material.userData.modelmapLightShader) {
+				material.userData.modelmapLightShader.uniforms.modelLightBlend.value = blend;
+			}
+		},
+
+		_updateTileLighting: function() {
+			if (!this._root) {
+				return;
+			}
+			var blend = this._getLightingBlend();
+			if (this._lastMaterialLightingBlend === blend) {
+				return;
+			}
+			this._lastMaterialLightingBlend = blend;
+			this._root.traverse(function(node) {
+				if (!node.isMesh || !node.material) {
+					return;
+				}
+				if ($.isArray(node.material)) {
+					$.each(node.material, function(idx, material) {
+						this._updateMaterialLightingUniforms(material, blend);
+					}.bind(this));
+				}
+				else {
+					this._updateMaterialLightingUniforms(node.material, blend);
+				}
+			}.bind(this));
+		},
+
+		_applyBakedLightingShader: function(material, geometry) {
+			if (!geometry || !geometry.attributes || !geometry.attributes._nightlight) {
+				return;
+			}
+			material.customProgramCacheKey = function() {
+				return "modelmap-baked-lighting-v1";
+			};
+			material.onBeforeCompile = function(shader) {
+				shader.uniforms.modelLightBlend = { value: this._getLightingBlend() };
+				material.userData.modelmapLightShader = shader;
+				shader.vertexShader = "attribute float _nightlight;\nvarying float vNightLight;\n" + shader.vertexShader;
+				shader.vertexShader = shader.vertexShader.replace(
+					"#include <color_vertex>",
+					"#include <color_vertex>\n\tvNightLight = _nightlight;"
+				);
+				shader.fragmentShader = "uniform float modelLightBlend;\nvarying float vNightLight;\n" + shader.fragmentShader;
+				shader.fragmentShader = shader.fragmentShader.replace(
+					"#include <color_fragment>",
+					[
+						"#ifdef USE_COLOR",
+						"\tfloat bakedDayLight = vColor.r;",
+						"#else",
+						"\tfloat bakedDayLight = 1.0;",
+						"#endif",
+						"\tfloat modelMapBakedLight = mix( vNightLight, bakedDayLight, modelLightBlend );",
+						"\tdiffuseColor.rgb *= modelMapBakedLight;"
+					].join("\n")
+				);
+			}.bind(this);
+			material.needsUpdate = true;
+		},
+
+		_createDisplayMaterial: function(material, geometry) {
 			var displayMaterial = new THREE.MeshLambertMaterial({
 				color: material.color ? material.color.clone() : new THREE.Color(0xffffff),
 				map: material.map || null,
@@ -692,6 +861,9 @@
 				displayMaterial.emissiveMap.encoding = THREE.sRGBEncoding;
 				this._configureTexture(displayMaterial.emissiveMap);
 			}
+			if (this.options.lightingmode === "both") {
+				this._applyBakedLightingShader(displayMaterial, geometry);
+			}
 			displayMaterial.needsUpdate = true;
 			return displayMaterial;
 		},
@@ -710,11 +882,11 @@
 				}
 				if ($.isArray(node.material)) {
 					node.material = $.map(node.material, function(material) {
-						return me._createDisplayMaterial(material);
+						return me._createDisplayMaterial(material, node.geometry);
 					});
 				}
 				else if (node.material) {
-					node.material = me._createDisplayMaterial(node.material);
+					node.material = me._createDisplayMaterial(node.material, node.geometry);
 				}
 			});
 		},

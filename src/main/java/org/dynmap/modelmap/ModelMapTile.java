@@ -72,6 +72,7 @@ public class ModelMapTile extends MapTile {
         GLBExport export = new GLBExport(null, map.getShader(), world, core, map.getName() + "_" + tx + "_" + tz);
         export.setRenderBounds(minBlockX, world.minY, minBlockZ, maxBlockX, world.worldheight - 1, maxBlockZ);
         export.setCullExportRegionEdges(map.isCullExportRegionEdges());
+        export.setLightingMode(map.getLightingMode().toExportLightingMode());
 
         BufferOutputStream glb;
         try {
