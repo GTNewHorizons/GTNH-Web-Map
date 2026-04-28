@@ -24,6 +24,7 @@
 		SPEED_UP_ALT: "NumpadAdd",
 		SPEED_DOWN: "Minus",
 		SPEED_DOWN_ALT: "NumpadSubtract",
+		NIGHTVISION: "KeyN",
 		VIEW_DISTANCE_UP: "PageUp",
 		VIEW_DISTANCE_DOWN: "PageDown"
 	};
@@ -102,6 +103,7 @@
 			this._pendingLeafletZoomEvents = 0;
 			this._lastSyncedLeafletCenter = null;
 			this._lastSyncedLeafletZoom = null;
+			this._nightVisionEnabled = false;
 			this._currentAmbientIntensity = null;
 			this._currentSunIntensity = null;
 			this._lastMaterialLightingBlend = null;
@@ -285,6 +287,13 @@
 					event.preventDefault();
 					return;
 				}
+				if (me._isNightVisionToggleKey(event)) {
+					if (!event.repeat) {
+						me._toggleNightVision();
+					}
+					event.preventDefault();
+					return;
+				}
 				if (me._isSpeedAdjustKey(event.code)) {
 					if (!event.repeat) {
 						me._adjustMoveSpeed(event.code === KEY_CODES.SPEED_UP || event.code === KEY_CODES.SPEED_UP_ALT ? 1 : -1);
@@ -393,6 +402,10 @@
 			return event.code === KEY_CODES.VIEW_DISTANCE_DOWN || event.key === "PageDown";
 		},
 
+		_isNightVisionToggleKey: function(event) {
+			return event.code === KEY_CODES.NIGHTVISION || event.key === "n" || event.key === "N";
+		},
+
 		_clearMovementKeys: function() {
 			this._keysDown = {};
 		},
@@ -401,6 +414,12 @@
 			var scale = direction > 0 ? this._moveSpeedStep : (1.0 / this._moveSpeedStep);
 			this._moveSpeed = THREE.MathUtils.clamp(this._moveSpeed * scale, this._minMoveSpeed, this._maxMoveSpeed);
 			this._updateHUD(true);
+			this._requestRender();
+		},
+
+		_toggleNightVision: function() {
+			this._nightVisionEnabled = !this._nightVisionEnabled;
+			this._updateTileLighting(true);
 			this._requestRender();
 		},
 
@@ -930,15 +949,16 @@
 		_updateMaterialLightingUniforms: function(material, blend) {
 			if (material && material.userData && material.userData.modelmapLightShader) {
 				material.userData.modelmapLightShader.uniforms.modelLightBlend.value = blend;
+				material.userData.modelmapLightShader.uniforms.modelNightVision.value = this._nightVisionEnabled ? 1.0 : 0.0;
 			}
 		},
 
-		_updateTileLighting: function() {
+		_updateTileLighting: function(force) {
 			if (!this._root) {
 				return;
 			}
 			var blend = this._getLightingBlend();
-			if (this._lastMaterialLightingBlend === blend) {
+			if (!force && this._lastMaterialLightingBlend === blend) {
 				return;
 			}
 			this._lastMaterialLightingBlend = blend;
@@ -958,21 +978,24 @@
 		},
 
 		_applyBakedLightingShader: function(material, geometry) {
-			if (!geometry || !geometry.attributes || !geometry.attributes._nightlight) {
-				return;
-			}
+			var hasNightLight = !!(geometry && geometry.attributes && geometry.attributes._nightlight);
 			material.customProgramCacheKey = function() {
-				return "modelmap-baked-lighting-v1";
+				return "modelmap-baked-lighting-v2:" + (hasNightLight ? "1" : "0");
 			};
 			material.onBeforeCompile = function(shader) {
 				shader.uniforms.modelLightBlend = { value: this._getLightingBlend() };
+				shader.uniforms.modelNightVision = { value: this._nightVisionEnabled ? 1.0 : 0.0 };
 				material.userData.modelmapLightShader = shader;
-				shader.vertexShader = "attribute float _nightlight;\nvarying float vNightLight;\n" + shader.vertexShader;
-				shader.vertexShader = shader.vertexShader.replace(
-					"#include <color_vertex>",
-					"#include <color_vertex>\n\tvNightLight = _nightlight;"
-				);
-				shader.fragmentShader = "uniform float modelLightBlend;\nvarying float vNightLight;\n" + shader.fragmentShader;
+				if (hasNightLight) {
+					shader.vertexShader = "attribute float _nightlight;\nvarying float vNightLight;\n" + shader.vertexShader;
+					shader.vertexShader = shader.vertexShader.replace(
+						"#include <color_vertex>",
+						"#include <color_vertex>\n\tvNightLight = _nightlight;"
+					);
+				}
+				shader.fragmentShader = "uniform float modelLightBlend;\nuniform float modelNightVision;\n"
+					+ (hasNightLight ? "varying float vNightLight;\n" : "")
+					+ shader.fragmentShader;
 				shader.fragmentShader = shader.fragmentShader.replace(
 					"#include <color_fragment>",
 					[
@@ -981,7 +1004,9 @@
 						"#else",
 						"\tfloat bakedDayLight = 1.0;",
 						"#endif",
-						"\tfloat modelMapBakedLight = mix( vNightLight, bakedDayLight, modelLightBlend );",
+						"\tfloat modelMapBakedLight = bakedDayLight;",
+						hasNightLight ? "\tmodelMapBakedLight = mix( vNightLight, bakedDayLight, modelLightBlend );" : "",
+						"\tmodelMapBakedLight = mix( modelMapBakedLight, 1.0, modelNightVision );",
 						"\tdiffuseColor.rgb *= modelMapBakedLight;"
 					].join("\n")
 				);
@@ -1012,9 +1037,7 @@
 				displayMaterial.emissiveMap.encoding = THREE.sRGBEncoding;
 				this._configureTexture(displayMaterial.emissiveMap);
 			}
-			if (this.options.lightingmode === "both") {
-				this._applyBakedLightingShader(displayMaterial, geometry);
-			}
+			this._applyBakedLightingShader(displayMaterial, geometry);
 			displayMaterial.needsUpdate = true;
 			return displayMaterial;
 		},
