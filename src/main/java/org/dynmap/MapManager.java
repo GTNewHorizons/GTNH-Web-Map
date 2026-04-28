@@ -878,15 +878,6 @@ public class MapManager {
         }
     }
 
-    private class ProcessOBJExport implements Runnable {
-        private OBJExport exp;
-        private DynmapCommandSender sender;
-        
-        public void run() {
-            exp.processExport(sender);
-        }
-    }
-    
     private class CheckWorldTimes implements Runnable {
     	HashMap<String, Polygon> last_worldborder = new HashMap<String, Polygon>();
         public void run() {
@@ -1251,10 +1242,16 @@ public class MapManager {
     }
     
     public void startOBJExport(OBJExport exp, DynmapCommandSender sender) {
-        ProcessOBJExport e = new ProcessOBJExport();
-        e.exp = exp;
-        e.sender = sender;
-        scheduleDelayedJob(e, 0);
+        startExport(new Runnable() {
+            @Override
+            public void run() {
+                exp.processExport(sender);
+            }
+        });
+    }
+
+    public void startExport(Runnable task) {
+        scheduleDelayedJob(task, 0);
     }
 
     void cancelRender(String w, DynmapCommandSender sender) {
