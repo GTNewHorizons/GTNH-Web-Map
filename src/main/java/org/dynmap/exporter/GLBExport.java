@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.zip.GZIPOutputStream;
 
 import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
@@ -219,12 +220,20 @@ public class GLBExport implements BlockModelExportSink {
     }
 
     public boolean processExport(DynmapCommandSender sender) {
+        return processExport(sender, false);
+    }
+
+    public boolean processExport(DynmapCommandSender sender, boolean gzipOutput) {
         try {
+            if (destination == null) {
+                throw new IOException("Export destination not configured");
+            }
             BufferOutputStream glb = exportToBuffer();
             if (glb == null) {
                 throw new IOException("Export produced no geometry");
             }
-            writeGLB(new BufferedOutputStream(new FileOutputStream(destination)), glb.buf, glb.len);
+            BufferOutputStream output = gzipOutput ? gzip(glb) : glb;
+            writeGLB(new BufferedOutputStream(new FileOutputStream(destination)), output.buf, output.len);
             sender.sendMessage("Export completed - " + destination.getPath());
             return true;
         } catch (IOException iox) {
@@ -536,6 +545,17 @@ public class GLBExport implements BlockModelExportSink {
         } finally {
             out.close();
         }
+    }
+
+    private static BufferOutputStream gzip(BufferOutputStream input) throws IOException {
+        BufferOutputStream compressed = new BufferOutputStream();
+        OutputStream gzip = new GZIPOutputStream(compressed);
+        try {
+            gzip.write(input.buf, 0, input.len);
+        } finally {
+            gzip.close();
+        }
+        return compressed;
     }
 
     private static String join(ArrayList<String> items) {
