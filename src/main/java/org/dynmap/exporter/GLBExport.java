@@ -45,7 +45,6 @@ public class GLBExport implements BlockModelExportSink {
     private static final int FILTER_NEAREST = 9728;
     private static final int WRAP_CLAMP_TO_EDGE = 33071;
     private static final int ARRAY_BUFFER_TARGET = 34962;
-    private static final int ELEMENT_ARRAY_BUFFER_TARGET = 34963;
     private static final int COMPONENT_TYPE_BYTE = 5120;
     private static final int COMPONENT_TYPE_UNSIGNED_BYTE = 5121;
     private static final int COMPONENT_TYPE_UNSIGNED_SHORT = 5123;
@@ -409,13 +408,12 @@ public class GLBExport implements BlockModelExportSink {
                 WRAP_CLAMP_TO_EDGE, WRAP_CLAMP_TO_EDGE));
 
         for (int i = 0; i < primitiveList.size(); i++) {
-            PrimitiveData primitive = primitiveList.get(i);
+            PrimitiveData primitive = expandToTriangleList(primitiveList.get(i));
             ExportedTextureData texture = textures.get(i);
             AccessorBinary normalBinary = toNormalizedSignedByteBytes(primitive.normals);
             AccessorBinary colorBinary = toNormalizedUnsignedByteBytes(primitive.colors);
             AccessorBinary nightLightBinary = toNormalizedUnsignedByteBytes(primitive.nightLights);
             AccessorBinary uvBinary = toNormalizedUnsignedShortBytes(primitive.texcoords);
-            AccessorBinary indexBinary = toIndexBytes(primitive.indices);
 
             int positionView = appendSegment(binary, toFloatBytes(primitive.positions), ARRAY_BUFFER_TARGET);
             bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ARRAY_BUFFER_TARGET));
@@ -451,12 +449,6 @@ public class GLBExport implements BlockModelExportSink {
                         "SCALAR", nightLightBinary.normalized, null, null, null, null, null, null));
             }
 
-            int indexView = appendSegment(binary, indexBinary.bytes, ELEMENT_ARRAY_BUFFER_TARGET);
-            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, ELEMENT_ARRAY_BUFFER_TARGET));
-            int indexAccessor = accessors.size();
-            accessors.add(makeAccessor(indexView, indexBinary.componentType, primitive.indices.size(), "SCALAR",
-                    indexBinary.normalized, null, null, null, null, null, null));
-
             int imageView = appendSegment(binary, texture.imagePng, null);
             bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, null));
             int imageIndex = i;
@@ -489,7 +481,7 @@ public class GLBExport implements BlockModelExportSink {
                 attributesJson.append(",\"_NIGHTLIGHT\":").append(nightLightAccessor.intValue());
             }
             appendJsonEntry(primitivesJson, String.format(Locale.US,
-                    "{\"attributes\":{%s},\"indices\":%d,\"material\":%d}", attributesJson.toString(), indexAccessor, i));
+                    "{\"attributes\":{%s},\"material\":%d,\"mode\":4}", attributesJson.toString(), i));
         }
 
         StringBuilder json = new StringBuilder();
@@ -602,6 +594,37 @@ public class GLBExport implements BlockModelExportSink {
         return binary.segmentCount++;
     }
 
+    private PrimitiveData expandToTriangleList(PrimitiveData primitive) throws IOException {
+        PrimitiveData expanded = new PrimitiveData(primitive.material);
+        int vertexCount = primitive.positions.size() / 3;
+        for (int i = 0; i < primitive.indices.size(); i++) {
+            int sourceIndex = primitive.indices.get(i);
+            if ((sourceIndex < 0) || (sourceIndex >= vertexCount)) {
+                throw new IOException("Invalid primitive index " + sourceIndex + " for vertex count " + vertexCount);
+            }
+            copyVertex(expanded, primitive, sourceIndex);
+        }
+        return expanded;
+    }
+
+    private void copyVertex(PrimitiveData target, PrimitiveData source, int vertexIndex) {
+        int positionOffset = vertexIndex * 3;
+        int uvOffset = vertexIndex * 2;
+        target.addVertex(
+                source.positions.get(positionOffset),
+                source.positions.get(positionOffset + 1),
+                source.positions.get(positionOffset + 2),
+                source.normals.get(positionOffset),
+                source.normals.get(positionOffset + 1),
+                source.normals.get(positionOffset + 2),
+                source.colors.get(positionOffset),
+                source.colors.get(positionOffset + 1),
+                source.colors.get(positionOffset + 2),
+                source.nightLights.get(vertexIndex),
+                source.texcoords.get(uvOffset),
+                source.texcoords.get(uvOffset + 1));
+    }
+
     private static byte[] toFloatBytes(FloatArrayBuilder values) {
         ByteBuffer buffer = ByteBuffer.allocate(values.size() * 4).order(ByteOrder.LITTLE_ENDIAN);
         for (int i = 0; i < values.size(); i++) {
@@ -641,32 +664,6 @@ public class GLBExport implements BlockModelExportSink {
             buffer.putShort((short) encoded);
         }
         return new AccessorBinary(buffer.array(), COMPONENT_TYPE_UNSIGNED_SHORT, true);
-    }
-
-    private static AccessorBinary toIndexBytes(IntArrayBuilder values) {
-        int maxValue = 0;
-        for (int i = 0; i < values.size(); i++) {
-            maxValue = Math.max(maxValue, values.get(i));
-        }
-        if (maxValue <= 0xFF) {
-            byte[] bytes = new byte[values.size()];
-            for (int i = 0; i < values.size(); i++) {
-                bytes[i] = (byte) values.get(i);
-            }
-            return new AccessorBinary(bytes, COMPONENT_TYPE_UNSIGNED_BYTE, false);
-        }
-        if (maxValue <= 0xFFFF) {
-            ByteBuffer buffer = ByteBuffer.allocate(values.size() * 2).order(ByteOrder.LITTLE_ENDIAN);
-            for (int i = 0; i < values.size(); i++) {
-                buffer.putShort((short) values.get(i));
-            }
-            return new AccessorBinary(buffer.array(), COMPONENT_TYPE_UNSIGNED_SHORT, false);
-        }
-        ByteBuffer buffer = ByteBuffer.allocate(values.size() * 4).order(ByteOrder.LITTLE_ENDIAN);
-        for (int i = 0; i < values.size(); i++) {
-            buffer.putInt(values.get(i));
-        }
-        return new AccessorBinary(buffer.array(), COMPONENT_TYPE_UNSIGNED_INT, false);
     }
 
     private static byte[] intToBytes(int value) {
