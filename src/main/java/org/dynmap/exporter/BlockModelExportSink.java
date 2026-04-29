@@ -13,4 +13,7 @@ public interface BlockModelExportSink {
             float[] nightVertexLights) throws IOException;
 
     void addQuad(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights) throws IOException;
+
+    void addPolygon(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights)
+            throws IOException;
 }

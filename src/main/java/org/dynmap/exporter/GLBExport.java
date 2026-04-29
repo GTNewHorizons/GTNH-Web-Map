@@ -322,6 +322,43 @@ public class GLBExport implements BlockModelExportSink {
         addGeometry(primitive, ExportPatchGeometry.buildQuad(xyz), vertexColors, nightVertexLights);
     }
 
+    @Override
+    public void addPolygon(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights)
+            throws IOException {
+        if ((material == null) || (xyz == null) || ((xyz.length % 3) != 0) || (xyz.length < 9)) {
+            return;
+        }
+        PrimitiveData primitive = primitives.get(material.getMaterialId());
+        if (primitive == null) {
+            primitive = new PrimitiveData(material);
+            primitives.put(material.getMaterialId(), primitive);
+        }
+        int vertexCount = xyz.length / 3;
+        for (int i = 1; i < vertexCount - 1; i++) {
+            double[] tri = new double[] { xyz[0], xyz[1], xyz[2], xyz[i * 3], xyz[(i * 3) + 1], xyz[(i * 3) + 2],
+                    xyz[(i + 1) * 3], xyz[((i + 1) * 3) + 1], xyz[((i + 1) * 3) + 2] };
+            addGeometry(primitive, ExportPatchGeometry.buildTriangle(tri),
+                    sliceVertexColors(vertexColors, 0, i, i + 1),
+                    (nightVertexLights != null) ? sliceNightLights(nightVertexLights, 0, i, i + 1) : null);
+        }
+    }
+
+    private float[] sliceVertexColors(float[] vertexColors, int i0, int i1, int i2) {
+        if ((vertexColors == null) || (vertexColors.length < 9)) {
+            return new float[] { 1.0F, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F };
+        }
+        return new float[] { vertexColors[i0 * 3], vertexColors[(i0 * 3) + 1], vertexColors[(i0 * 3) + 2],
+                vertexColors[i1 * 3], vertexColors[(i1 * 3) + 1], vertexColors[(i1 * 3) + 2], vertexColors[i2 * 3],
+                vertexColors[(i2 * 3) + 1], vertexColors[(i2 * 3) + 2] };
+    }
+
+    private float[] sliceNightLights(float[] nightVertexLights, int i0, int i1, int i2) {
+        if ((nightVertexLights == null) || (nightVertexLights.length < 3)) {
+            return null;
+        }
+        return new float[] { nightVertexLights[i0], nightVertexLights[i1], nightVertexLights[i2] };
+    }
+
     private void addGeometry(PrimitiveData primitive, ExportPatchGeometry.Geometry geometry, float[] vertexColors,
             float[] nightVertexLights) {
         switch (geometry.sideVisible) {

@@ -314,6 +314,25 @@ public class OBJExport implements BlockModelExportSink {
         exportMaterials.put(material.getMaterialId(), material);
         addPatchToFile(v, uv, SideVisible.TOP, material.getMaterialId(), 0);
     }
+
+    @Override
+    public void addPolygon(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights)
+            throws IOException {
+        if ((material == null) || (xyz == null) || ((xyz.length % 3) != 0) || (xyz.length < 9)) {
+            return;
+        }
+        int vertexCount = xyz.length / 3;
+        int[] v = new int[vertexCount];
+        int[] uv = new int[vertexCount];
+        for (int i = 0; i < vertexCount; i++) {
+            int xyzOff = i * 3;
+            v[i] = vertices.getVectorIndex(xyz[xyzOff], xyz[xyzOff + 1], xyz[xyzOff + 2]);
+            double u = (vertexCount > 1) ? ((double) i / (double) (vertexCount - 1)) : 0.0;
+            uv[i] = uvs.getVectorIndex(u, (i & 1) == 0 ? 0.0 : 1.0, 0);
+        }
+        exportMaterials.put(material.getMaterialId(), material);
+        addPatchToFile(v, uv, SideVisible.TOP, material.getMaterialId(), 0);
+    }
     /**
      * Start adding file to export
      * @param fname - path/name of file in destination zip
