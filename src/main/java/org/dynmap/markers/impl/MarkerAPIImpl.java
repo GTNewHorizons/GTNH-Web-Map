@@ -50,6 +50,7 @@ import org.dynmap.markers.PlayerSet;
 import org.dynmap.markers.PolyLineMarker;
 import org.dynmap.utils.BufferOutputStream;
 import org.dynmap.web.Json;
+import org.yaml.snakeyaml.error.YAMLException;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.Supplier;
 
@@ -878,23 +879,47 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
             }
         }
     }
+
+    private ConfigurationNode loadMarkerPersistence(File file) {
+        if ((file == null) || !file.isFile()) {
+            return null;
+        }
+        ConfigurationNode conf = new ConfigurationNode(file);
+        try {
+            if (!conf.load()) {
+                return null;
+            }
+        } catch (YAMLException yx) {
+            return null;
+        }
+        return conf;
+    }
     
     /**
      * Load persistence
      */
     private boolean loadMarkers() {        
-        ConfigurationNode conf = new ConfigurationNode(api.markerpersist);  /* Make configuration object */
-        conf.load();    /* Load persistence */
+        ConfigurationNode conf = loadMarkerPersistence(api.markerpersist);
+        if (conf == null) {
+            conf = loadMarkerPersistence(api.markerpersist_old);
+            if (conf != null) {
+                Log.warning("Recovered markers from backup file - " + api.markerpersist_old.getPath());
+            }
+        }
+        if (conf == null) {
+            return false;
+        }
         lock.writeLock().lock();
         boolean isSafe = conf.getBoolean("isSafe", false);
         try {
             /* Get icons */
             ConfigurationNode icons = conf.getNode("icons");
-            if(icons == null) return false;
-            for(String id : icons.keySet()) {
-                MarkerIconImpl ico = new MarkerIconImpl(id);
-                if(ico.loadPersistentData(icons.getNode(id), isSafe)) {
-                    markericons.put(id, ico);
+            if(icons != null) {
+                for(String id : icons.keySet()) {
+                    MarkerIconImpl ico = new MarkerIconImpl(id);
+                    if(ico.loadPersistentData(icons.getNode(id), isSafe)) {
+                        markericons.put(id, ico);
+                    }
                 }
             }
             /* Get marker sets */
@@ -912,7 +937,7 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
             if(psets != null) {
                 for(String id: psets.keySet()) {
                     PlayerSetImpl set = new PlayerSetImpl(id);
-                    if(set.loadPersistentData(sets.getNode(id), isSafe)) {
+                    if(set.loadPersistentData(psets.getNode(id), isSafe)) {
                         playersets.put(id, set);
                     }
                 }
@@ -3320,7 +3345,7 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
             }
             HashMap<String, Object> markers = new HashMap<String, Object>();
             for(Marker m : ms.getMarkers()) {
-                if(m.getWorld().equals(wname) == false) continue;
+                if(m.getNormalizedWorld().equals(wname) == false) continue;
                 
                 HashMap<String, Object> mdata = new HashMap<String, Object>();
                 mdata.put("x", m.getX());
@@ -3348,7 +3373,7 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
 
             HashMap<String, Object> areas = new HashMap<String, Object>();
             for(AreaMarker m : ms.getAreaMarkers()) {
-                if(m.getWorld().equals(wname) == false) continue;
+                if(m.getNormalizedWorld().equals(wname) == false) continue;
                 
                 HashMap<String, Object> mdata = new HashMap<String, Object>();
                 int cnt = m.getCornerCount();
@@ -3384,7 +3409,7 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
 
             HashMap<String, Object> lines = new HashMap<String, Object>();
             for(PolyLineMarker m : ms.getPolyLineMarkers()) {
-                if(m.getWorld().equals(wname) == false) continue;
+                if(m.getNormalizedWorld().equals(wname) == false) continue;
                 
                 HashMap<String, Object> mdata = new HashMap<String, Object>();
                 int cnt = m.getCornerCount();
@@ -3419,7 +3444,7 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
 
             HashMap<String, Object> circles = new HashMap<String, Object>();
             for(CircleMarker m : ms.getCircleMarkers()) {
-                if(m.getWorld().equals(wname) == false) continue;
+                if(m.getNormalizedWorld().equals(wname) == false) continue;
                 
                 HashMap<String, Object> mdata = new HashMap<String, Object>();
                 mdata.put("x", m.getCenterX());
