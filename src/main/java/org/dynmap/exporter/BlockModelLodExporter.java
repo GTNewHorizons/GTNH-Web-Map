@@ -546,7 +546,7 @@ final class BlockModelLodExporter {
 
     private ExportMaterial chooseZoomoutCutMaterial(ZoomoutGroup group, boolean useX, boolean minX, boolean useY,
             boolean minY, boolean useZ, boolean minZ) {
-        if (useY && !minY) {
+        if (group.seed.topMaterial != null) {
             return group.seed.topMaterial;
         }
         if (useX) {
@@ -946,6 +946,7 @@ final class BlockModelLodExporter {
             infoCache.put(key, null);
             return null;
         }
+
         ResolvedBlockData block = resolveBlock(iterator, blockId);
         ExportMaterial topMaterial = getSurfaceMaterial(block, BlockStep.Y_PLUS);
         if (topMaterial == null) {
@@ -1681,9 +1682,15 @@ final class BlockModelLodExporter {
             return null;
         }
         int face = getSurfaceMaterialFaceIndex(step);
-        if ((face >= 0) && (face < block.materials.length) && (block.materials[face] != null)) {
+        if ((face >= 0) && (face < block.materials.length) && (block.materials[face] != null) && (block.steps.length > face && block.steps[face] == step.opposite())) {
             return getFirstSolidMaterial(block.materials[face]);
         }
+
+        int opposite = step.opposite().ordinal();
+        if ((opposite < block.materials.length) && (block.materials[opposite] != null) && (block.steps.length > opposite && block.steps[opposite] == step.opposite())) {
+            return getFirstSolidMaterial(block.materials[opposite]);
+        }
+
         return null;
     }
 
