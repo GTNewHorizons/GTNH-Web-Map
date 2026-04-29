@@ -57,6 +57,10 @@ public final class ExportPatchGeometry {
         return new Geometry(xyz, new double[] { 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0 }, 4, SideVisible.TOP);
     }
 
+    public static Geometry buildTriangle(double[] xyz) {
+        return new Geometry(xyz, new double[] { 0.0, 0.0, 1.0, 0.0, 0.0, 1.0 }, 3, SideVisible.TOP);
+    }
+
     private static void fillVertex(double[] xyz, int offset, double x, double y, double z) {
         xyz[offset] = x;
         xyz[offset + 1] = y;

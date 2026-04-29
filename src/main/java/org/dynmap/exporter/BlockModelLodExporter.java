@@ -6,8 +6,11 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -49,6 +52,8 @@ final class BlockModelLodExporter {
     private static final int[][] FLOOD_FILL_DIRECTIONS =
             { { 1, 0, 0 }, { -1, 0, 0 }, { 0, 1, 0 }, { 0, -1, 0 }, { 0, 0, 1 }, { 0, 0, -1 } };
     private static final int MAX_ZOOMOUT_GROUP_SPAN = 8;
+    private static final double ZOOMOUT_TIGHTEN_OVERFILL_RATIO = 1.25;
+    private static final double HULL_EPSILON = 1.0E-5;
     private static final double[][] BOX_PATCH_POINTS = {
             { 0, 0, 0, 1, 0, 0, 0, 0, 1 },
             { 0, 1, 1, 1, 1, 1, 0, 1, 0 },
@@ -198,6 +203,7 @@ final class BlockModelLodExporter {
 
     private static final class ZoomoutGroup {
         final ZoomoutBlockInfo seed;
+        final ArrayList<ZoomoutBlockInfo> members = new ArrayList<ZoomoutBlockInfo>();
         int minX;
         int maxX;
         int minY;
@@ -213,6 +219,24 @@ final class BlockModelLodExporter {
             this.maxY = seed.y;
             this.minZ = seed.z;
             this.maxZ = seed.z;
+        }
+    }
+
+    private static final class HullPlane {
+        final double nx;
+        final double ny;
+        final double nz;
+        final double d;
+        final ExportMaterial material;
+        final boolean emit;
+
+        HullPlane(double nx, double ny, double nz, double d, ExportMaterial material, boolean emit) {
+            this.nx = nx;
+            this.ny = ny;
+            this.nz = nz;
+            this.d = d;
+            this.material = material;
+            this.emit = emit;
         }
     }
 
@@ -375,6 +399,7 @@ final class BlockModelLodExporter {
             }
 
             grouped.add(currentKey);
+            group.members.add(info);
             updateZoomoutGroupBounds(group, info.x, info.y, info.z);
 
             for (int[] direction : FLOOD_FILL_DIRECTIONS) {
@@ -414,7 +439,243 @@ final class BlockModelLodExporter {
         group.maxZ = Math.max(group.maxZ, z);
     }
 
+    private List<HullPlane> buildZoomoutHullPlanes(ZoomoutGroup group) {
+        ArrayList<HullPlane> planes = new ArrayList<HullPlane>();
+        int sizeX = (group.maxX - group.minX) + 1;
+        int sizeY = (group.maxY - group.minY) + 1;
+        int sizeZ = (group.maxZ - group.minZ) + 1;
+
+        planes.add(new HullPlane(1.0, 0.0, 0.0, 0.0, group.seed.westMaterial, true));
+        planes.add(new HullPlane(-1.0, 0.0, 0.0, -sizeX, group.seed.eastMaterial, true));
+        planes.add(new HullPlane(0.0, 1.0, 0.0, 0.0, null, false));
+        planes.add(new HullPlane(0.0, -1.0, 0.0, -sizeY, group.seed.topMaterial, true));
+        planes.add(new HullPlane(0.0, 0.0, 1.0, 0.0, group.seed.northMaterial, true));
+        planes.add(new HullPlane(0.0, 0.0, -1.0, -sizeZ, group.seed.southMaterial, true));
+
+        for (int sx = 0; sx < 2; sx++) {
+            for (int sy = 0; sy < 2; sy++) {
+                int threshold = getZoomoutEdgeThreshold(group, sizeX, sizeY, sizeZ, 0, sx == 0, 1, sy == 0);
+                if (threshold > 0) {
+                    planes.add(buildHullPlane(sizeX, sizeY, sizeZ, true, sx == 0, true, sy == 0, false, true, threshold,
+                            chooseZoomoutCutMaterial(group, true, sx == 0, true, sy == 0, false, true)));
+                }
+            }
+        }
+        for (int sx = 0; sx < 2; sx++) {
+            for (int sz = 0; sz < 2; sz++) {
+                int threshold = getZoomoutEdgeThreshold(group, sizeX, sizeY, sizeZ, 0, sx == 0, 2, sz == 0);
+                if (threshold > 0) {
+                    planes.add(buildHullPlane(sizeX, sizeY, sizeZ, true, sx == 0, false, true, true, sz == 0, threshold,
+                            chooseZoomoutCutMaterial(group, true, sx == 0, false, true, true, sz == 0)));
+                }
+            }
+        }
+        for (int sy = 0; sy < 2; sy++) {
+            for (int sz = 0; sz < 2; sz++) {
+                int threshold = getZoomoutEdgeThreshold(group, sizeX, sizeY, sizeZ, 1, sy == 0, 2, sz == 0);
+                if (threshold > 0) {
+                    planes.add(buildHullPlane(sizeX, sizeY, sizeZ, false, true, true, sy == 0, true, sz == 0, threshold,
+                            chooseZoomoutCutMaterial(group, false, true, true, sy == 0, true, sz == 0)));
+                }
+            }
+        }
+        for (int sx = 0; sx < 2; sx++) {
+            for (int sy = 0; sy < 2; sy++) {
+                for (int sz = 0; sz < 2; sz++) {
+                    int threshold = getZoomoutCornerThreshold(group, sizeX, sizeY, sizeZ, sx == 0, sy == 0, sz == 0);
+                    if (threshold > 0) {
+                        planes.add(buildHullPlane(sizeX, sizeY, sizeZ, true, sx == 0, true, sy == 0, true, sz == 0,
+                                threshold, chooseZoomoutCutMaterial(group, true, sx == 0, true, sy == 0, true, sz == 0)));
+                    }
+                }
+            }
+        }
+        return planes;
+    }
+
+    private HullPlane buildHullPlane(int sizeX, int sizeY, int sizeZ, boolean useX, boolean minX, boolean useY, boolean minY,
+            boolean useZ, boolean minZ, int threshold, ExportMaterial material) {
+        double nx = 0.0;
+        double ny = 0.0;
+        double nz = 0.0;
+        double constant = 0.0;
+        if (useX) {
+            nx = minX ? 1.0 : -1.0;
+            constant += minX ? 0.0 : sizeX;
+        }
+        if (useY) {
+            ny = minY ? 1.0 : -1.0;
+            constant += minY ? 0.0 : sizeY;
+        }
+        if (useZ) {
+            nz = minZ ? 1.0 : -1.0;
+            constant += minZ ? 0.0 : sizeZ;
+        }
+        return new HullPlane(nx, ny, nz, threshold - constant, material, true);
+    }
+
+    private int getZoomoutEdgeThreshold(ZoomoutGroup group, int sizeX, int sizeY, int sizeZ, int axisA, boolean minA,
+            int axisB, boolean minB) {
+        int threshold = Integer.MAX_VALUE;
+        for (ZoomoutBlockInfo member : group.members) {
+            threshold = Math.min(threshold,
+                    getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, axisA, minA)
+                            + getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, axisB, minB));
+        }
+        return (threshold == Integer.MAX_VALUE) ? 0 : threshold;
+    }
+
+    private int getZoomoutCornerThreshold(ZoomoutGroup group, int sizeX, int sizeY, int sizeZ, boolean minX,
+            boolean minY, boolean minZ) {
+        int threshold = Integer.MAX_VALUE;
+        for (ZoomoutBlockInfo member : group.members) {
+            threshold = Math.min(threshold,
+                    getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, 0, minX)
+                            + getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, 1, minY)
+                            + getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, 2, minZ));
+        }
+        return (threshold == Integer.MAX_VALUE) ? 0 : threshold;
+    }
+
+    private int getZoomoutAxisDistance(ZoomoutGroup group, ZoomoutBlockInfo member, int sizeX, int sizeY, int sizeZ,
+            int axis, boolean minSide) {
+        int local = (axis == 0) ? (member.x - group.minX) : ((axis == 1) ? (member.y - group.minY) : (member.z - group.minZ));
+        int size = (axis == 0) ? sizeX : ((axis == 1) ? sizeY : sizeZ);
+        return minSide ? local : (size - (local + 1));
+    }
+
+    private ExportMaterial chooseZoomoutCutMaterial(ZoomoutGroup group, boolean useX, boolean minX, boolean useY,
+            boolean minY, boolean useZ, boolean minZ) {
+        if (useY && !minY) {
+            return group.seed.topMaterial;
+        }
+        if (useX) {
+            return minX ? group.seed.westMaterial : group.seed.eastMaterial;
+        }
+        if (useZ) {
+            return minZ ? group.seed.northMaterial : group.seed.southMaterial;
+        }
+        return group.seed.topMaterial;
+    }
+
+    private List<double[]> computeHullVertices(List<HullPlane> planes) {
+        ArrayList<double[]> vertices = new ArrayList<double[]>();
+        for (int i = 0; i < planes.size(); i++) {
+            for (int j = i + 1; j < planes.size(); j++) {
+                for (int k = j + 1; k < planes.size(); k++) {
+                    double[] point = intersectPlanes(planes.get(i), planes.get(j), planes.get(k));
+                    if ((point == null) || !isInsideHull(point, planes) || containsVertex(vertices, point)) {
+                        continue;
+                    }
+                    vertices.add(point);
+                }
+            }
+        }
+        return vertices;
+    }
+
+    private double[] intersectPlanes(HullPlane a, HullPlane b, HullPlane c) {
+        double det = determinant3(a.nx, a.ny, a.nz, b.nx, b.ny, b.nz, c.nx, c.ny, c.nz);
+        if (Math.abs(det) < HULL_EPSILON) {
+            return null;
+        }
+        double x = determinant3(a.d, a.ny, a.nz, b.d, b.ny, b.nz, c.d, c.ny, c.nz) / det;
+        double y = determinant3(a.nx, a.d, a.nz, b.nx, b.d, b.nz, c.nx, c.d, c.nz) / det;
+        double z = determinant3(a.nx, a.ny, a.d, b.nx, b.ny, b.d, c.nx, c.ny, c.d) / det;
+        return new double[] { x, y, z };
+    }
+
+    private double determinant3(double a00, double a01, double a02, double a10, double a11, double a12, double a20,
+            double a21, double a22) {
+        return (a00 * ((a11 * a22) - (a12 * a21))) - (a01 * ((a10 * a22) - (a12 * a20)))
+                + (a02 * ((a10 * a21) - (a11 * a20)));
+    }
+
+    private boolean isInsideHull(double[] point, List<HullPlane> planes) {
+        for (HullPlane plane : planes) {
+            double value = (plane.nx * point[0]) + (plane.ny * point[1]) + (plane.nz * point[2]);
+            if (value < (plane.d - HULL_EPSILON)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean containsVertex(List<double[]> vertices, double[] point) {
+        for (double[] existing : vertices) {
+            if ((Math.abs(existing[0] - point[0]) < HULL_EPSILON) && (Math.abs(existing[1] - point[1]) < HULL_EPSILON)
+                    && (Math.abs(existing[2] - point[2]) < HULL_EPSILON)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private List<double[]> getPlaneFace(List<double[]> vertices, final HullPlane plane) {
+        ArrayList<double[]> face = new ArrayList<double[]>();
+        for (double[] point : vertices) {
+            double value = (plane.nx * point[0]) + (plane.ny * point[1]) + (plane.nz * point[2]);
+            if (Math.abs(value - plane.d) < HULL_EPSILON) {
+                face.add(point);
+            }
+        }
+        if (face.size() < 3) {
+            return face;
+        }
+        final double[] center = computeCenter(face);
+        final double[] outward = normalize(new double[] { -plane.nx, -plane.ny, -plane.nz });
+        double[] ref = (Math.abs(outward[2]) < 0.9) ? new double[] { 0.0, 0.0, 1.0 } : new double[] { 0.0, 1.0, 0.0 };
+        final double[] tangent = normalize(cross(ref, outward));
+        final double[] bitangent = cross(outward, tangent);
+        Collections.sort(face, new Comparator<double[]>() {
+            @Override
+            public int compare(double[] a, double[] b) {
+                double angleA = Math.atan2(dot(bitangent, subtract(a, center)), dot(tangent, subtract(a, center)));
+                double angleB = Math.atan2(dot(bitangent, subtract(b, center)), dot(tangent, subtract(b, center)));
+                return Double.compare(angleA, angleB);
+            }
+        });
+        return face;
+    }
+
+    private double[] computeCenter(List<double[]> points) {
+        double[] center = new double[3];
+        for (double[] point : points) {
+            center[0] += point[0];
+            center[1] += point[1];
+            center[2] += point[2];
+        }
+        center[0] /= points.size();
+        center[1] /= points.size();
+        center[2] /= points.size();
+        return center;
+    }
+
+    private double[] subtract(double[] a, double[] b) {
+        return new double[] { a[0] - b[0], a[1] - b[1], a[2] - b[2] };
+    }
+
+    private double[] cross(double[] a, double[] b) {
+        return new double[] { (a[1] * b[2]) - (a[2] * b[1]), (a[2] * b[0]) - (a[0] * b[2]),
+                (a[0] * b[1]) - (a[1] * b[0]) };
+    }
+
+    private double dot(double[] a, double[] b) {
+        return (a[0] * b[0]) + (a[1] * b[1]) + (a[2] * b[2]);
+    }
+
+    private double[] normalize(double[] value) {
+        double len = Math.sqrt(dot(value, value));
+        if (len < HULL_EPSILON) {
+            return new double[] { 1.0, 0.0, 0.0 };
+        }
+        return new double[] { value[0] / len, value[1] / len, value[2] / len };
+    }
+
     private void emitZoomoutGroup(BlockModelExportSink sink, MapIterator lightingIterator, ZoomoutGroup group) throws IOException {
+        if (shouldTightenZoomoutGroup(group) && emitTightenedZoomoutGroup(sink, group)) {
+            return;
+        }
         SurfaceCell cell = new SurfaceCell();
         cell.minX = group.minX;
         cell.minZ = group.minZ;
@@ -441,6 +702,42 @@ final class BlockModelLodExporter {
                 minX + width, topY, minZ }, group.seed.northMaterial);
         emitZoomoutSideQuad(sink, new double[] { minX, bottomY, minZ + depth, minX + width, bottomY, minZ + depth,
                 minX + width, topY, minZ + depth, minX, topY, minZ + depth }, group.seed.southMaterial);
+    }
+
+    private boolean shouldTightenZoomoutGroup(ZoomoutGroup group) {
+        double boxVolume = ((group.maxX - group.minX) + 1.0) * ((group.maxY - group.minY) + 1.0)
+                * ((group.maxZ - group.minZ) + 1.0);
+        return boxVolume > (group.members.size() * ZOOMOUT_TIGHTEN_OVERFILL_RATIO);
+    }
+
+    private boolean emitTightenedZoomoutGroup(BlockModelExportSink sink, ZoomoutGroup group) throws IOException {
+        List<HullPlane> planes = buildZoomoutHullPlanes(group);
+        List<double[]> vertices = computeHullVertices(planes);
+        if (vertices.isEmpty()) {
+            return false;
+        }
+        boolean emitted = false;
+        for (HullPlane plane : planes) {
+            if (!plane.emit || (plane.material == null)) {
+                continue;
+            }
+            List<double[]> face = getPlaneFace(vertices, plane);
+            if (face.size() < 3) {
+                continue;
+            }
+            double[] xyz = new double[face.size() * 3];
+            for (int i = 0; i < face.size(); i++) {
+                double[] point = face.get(i);
+                xyz[i * 3] = point[0] + group.minX;
+                xyz[(i * 3) + 1] = point[1] + group.minY;
+                xyz[(i * 3) + 2] = point[2] + group.minZ;
+            }
+            PatchVertexLighting lighting = buildZoomoutPolygonLighting(face.size(), plane.material);
+            sink.setChunk(group.minX >> 4, group.minZ >> 4);
+            sink.addPolygon(xyz, plane.material, lighting.vertexColors, lighting.nightVertexLights);
+            emitted = true;
+        }
+        return emitted;
     }
 
     private void emitZoomoutSideQuad(BlockModelExportSink sink, double[] xyz, ExportMaterial material) throws IOException {
@@ -1526,6 +1823,10 @@ final class BlockModelLodExporter {
             }
         }
         return new PatchVertexLighting(colors, nightLights);
+    }
+
+    private PatchVertexLighting buildZoomoutPolygonLighting(int vertexCount, ExportMaterial material) {
+        return buildZoomoutPatchLighting(vertexCount, material);
     }
 
     private BlockStep[] getVertexNeighborSteps(BlockStep faceStep, double blockX, double blockY, double blockZ,
