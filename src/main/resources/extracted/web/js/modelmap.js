@@ -35,6 +35,14 @@
 	var MAX_RENDER_PIXEL_RATIO = 2.0;
 	var HUD_UPDATE_INTERVAL_MS = 100;
 	var MAX_CONCURRENT_TILE_LOADS = 4;
+	var DEFAULT_MARKER_ICON_VISIBLE_DISTANCE = 240.0;
+	var DEFAULT_MARKER_ICON_FADE_RANGE = 16.0;
+	var DEFAULT_MARKER_ICON_DESCRIPTION_DISTANCE = 16.0;
+	var DEFAULT_MARKER_GRID_VISIBLE_DISTANCE = 48.0;
+	var DEFAULT_MARKER_GRID_FADE_RANGE = 16.0;
+	var MARKER_GRID_MIN_Y = 0.0;
+	var MARKER_GRID_MAX_Y = 256.0;
+	var MARKER_CIRCLE_SEGMENTS = 72;
 
 	var ModelProjection = DynmapProjection.extend({
 		fromLocationToLatLng: function(location) {
@@ -64,6 +72,16 @@
 			options.ambientlightnight = this._resolveLightSetting(options.ambientlightnight, DEFAULT_NIGHT_AMBIENT_LIGHT);
 			options.sunlightday = this._resolveLightSetting(options.sunlightday, DEFAULT_DAY_SUN_LIGHT);
 			options.sunlightnight = this._resolveLightSetting(options.sunlightnight, DEFAULT_NIGHT_SUN_LIGHT);
+			options.markericonvisibledistance =
+				this._resolveDistanceSetting(options.markericonvisibledistance, DEFAULT_MARKER_ICON_VISIBLE_DISTANCE);
+			options.markericonfaderange =
+				this._resolveDistanceSetting(options.markericonfaderange, DEFAULT_MARKER_ICON_FADE_RANGE);
+			options.markerlabeldistance =
+				this._resolveDistanceSetting(options.markerlabeldistance, DEFAULT_MARKER_ICON_DESCRIPTION_DISTANCE);
+			options.markergridvisibledistance =
+				this._resolveDistanceSetting(options.markergridvisibledistance, DEFAULT_MARKER_GRID_VISIBLE_DISTANCE);
+			options.markergridfaderange =
+				this._resolveDistanceSetting(options.markergridfaderange, DEFAULT_MARKER_GRID_FADE_RANGE);
 
 			this.projection = new ModelProjection($.extend({ map: this }, options));
 			L.Util.setOptions(this, options);
@@ -125,6 +143,11 @@
 			this._tileCullMax = new THREE.Vector3();
 			this._serverTime = (typeof options.dynmap.servertime === "number") ? options.dynmap.servertime : 0;
 			this._serverTimeCapturedAt = Date.now();
+			this._markerSets = [];
+			this._markerSetVisuals = {};
+			this._markerSetCheckboxes = {};
+			this._gridMarkers = [];
+			this._screenMarkers = [];
 			this._bindDynmapEvents();
 		},
 
@@ -136,6 +159,7 @@
 			this._viewerContainer.style.display = "block";
 			this._bindMapEvents();
 			this._syncFromLeaflet();
+			this._refresh3DMarkers();
 			this._refreshVisibleTiles();
 			this._requestRender();
 			this._startRenderLoop();
@@ -152,6 +176,7 @@
 				this._viewerContainer.style.display = "none";
 			}
 			this._clearTouchInputs();
+			this._updateMarkerUIVisibility();
 			if (this._hud) {
 				this._hud.style.display = "none";
 			}
@@ -176,6 +201,9 @@
 				me._updateTileLighting();
 				me._requestRender();
 			});
+			$(me.options.dynmap).bind("markersupdated.modelmap worldchanged.modelmap mapchanged.modelmap", function() {
+				me._refresh3DMarkers();
+			});
 		},
 
 		_normalizeLightingMode: function(mode) {
@@ -187,6 +215,424 @@
 
 		_resolveLightSetting: function(value, defaultValue) {
 			return (typeof value === "number" && value >= 0) ? value : defaultValue;
+		},
+
+		_resolveDistanceSetting: function(value, defaultValue) {
+			return (typeof value === "number" && value >= 0) ? value : defaultValue;
+		},
+
+		_getMarkerSets: function() {
+			var sets = [];
+			if (typeof dynmapmarkersets === "undefined" || !dynmapmarkersets) {
+				return sets;
+			}
+			$.each(dynmapmarkersets, function(id, set) {
+				var hasMarkers = set && set.markers && !$.isEmptyObject(set.markers);
+				var hasAreas = set && set.areas && !$.isEmptyObject(set.areas);
+				var hasCircles = set && set.circles && !$.isEmptyObject(set.circles);
+				if (hasMarkers || hasAreas || hasCircles) {
+					sets.push(set);
+				}
+			});
+			sets.sort(function(a, b) {
+				var aprio = a.layerprio || 0;
+				var bprio = b.layerprio || 0;
+				if (aprio !== bprio) {
+					return aprio - bprio;
+				}
+				return (a.label < b.label) ? -1 : ((a.label > b.label) ? 1 : 0);
+			});
+			return sets;
+		},
+
+		_isMarkerSetEnabled: function(set) {
+			if (!set) {
+				return false;
+			}
+			if (this._map && set.layergroup) {
+				return this._map.hasLayer(set.layergroup);
+			}
+			if (typeof set._modelmapEnabled === "boolean") {
+				return set._modelmapEnabled;
+			}
+			return !set.hide;
+		},
+
+		_setMarkerSetEnabled: function(set, enabled) {
+			if (!set) {
+				return;
+			}
+			if (this._map && set.layergroup) {
+				if (enabled) {
+					this._map.addLayer(set.layergroup);
+				}
+				else {
+					this._map.removeLayer(set.layergroup);
+				}
+			}
+			else {
+				set._modelmapEnabled = enabled;
+			}
+			this._syncMarkerSetVisibility();
+		},
+
+		_updateMarkerUIVisibility: function() {
+			var visible = this._isViewerActive() && this._markerSets.length > 0;
+			if (this._markerIconOverlay) {
+				this._markerIconOverlay.style.display = visible ? "block" : "none";
+			}
+			if (this._markerControl) {
+				this._markerControl.style.display = visible ? "block" : "none";
+			}
+		},
+
+		_refreshMarkerControl: function() {
+			var me = this;
+			if (!me._markerControlList) {
+				return;
+			}
+			me._markerControlList.innerHTML = "";
+			me._markerSetCheckboxes = {};
+			$.each(me._markerSets, function(index, set) {
+				var row = document.createElement("label");
+				row.className = "modelmap-marker-control-row";
+				var checkbox = document.createElement("input");
+				checkbox.type = "checkbox";
+				checkbox.checked = me._isMarkerSetEnabled(set);
+				checkbox.addEventListener("change", function(event) {
+					me._setMarkerSetEnabled(set, !!event.target.checked);
+				});
+				var text = document.createElement("span");
+				text.textContent = set.label || set.id;
+				row.appendChild(checkbox);
+				row.appendChild(text);
+				me._markerControlList.appendChild(row);
+				me._markerSetCheckboxes[set.id] = checkbox;
+			});
+			me._updateMarkerUIVisibility();
+		},
+
+		_disposeObject3D: function(object) {
+			if (!object) {
+				return;
+			}
+			object.traverse(function(node) {
+				if (node.geometry) {
+					node.geometry.dispose();
+				}
+				if (node.material) {
+					if ($.isArray(node.material)) {
+						$.each(node.material, function(idx, material) {
+							if (material) {
+								material.dispose();
+							}
+						});
+					}
+					else {
+						node.material.dispose();
+					}
+				}
+			});
+		},
+
+		_clear3DMarkers: function() {
+			var key;
+			for (key in this._markerSetVisuals) {
+				if (!Object.prototype.hasOwnProperty.call(this._markerSetVisuals, key)) {
+					continue;
+				}
+				this._disposeObject3D(this._markerSetVisuals[key]);
+				this._markerGridRoot.remove(this._markerSetVisuals[key]);
+			}
+			this._markerSetVisuals = {};
+			this._gridMarkers = [];
+			this._screenMarkers = [];
+			if (this._markerIconOverlay) {
+				this._markerIconOverlay.innerHTML = "";
+			}
+		},
+
+		_createScreenMarkerElement: function(marker) {
+			var element = document.createElement("div");
+			element.className = "modelmap-screen-marker";
+			var image = document.createElement("img");
+			image.className = "markerIcon" + (marker.dim || "16x16");
+			image.src = concatURL(this.options.dynmap.options.url.markers, "_markers_/" + marker.icon + ".png");
+			image.alt = marker.label || marker.icon || "";
+			element.appendChild(image);
+			var description = document.createElement("div");
+			description.className = "modelmap-screen-marker-desc";
+			description.style.display = "none";
+			if (marker.label) {
+				if (marker.markup) {
+					description.innerHTML = marker.label;
+				}
+				else {
+					description.textContent = marker.label;
+				}
+			}
+			element.appendChild(description);
+			element._description = description;
+			if (marker.label) {
+				element.title = marker.label;
+			}
+			return element;
+		},
+
+		_computeDistanceFade: function(distance, fadeStartDistance, fadeEndDistance) {
+			if (distance >= fadeStartDistance) {
+				return 0.0;
+			}
+			if (distance <= fadeEndDistance) {
+				return 1.0;
+			}
+			return THREE.MathUtils.clamp((fadeStartDistance - distance) / (fadeStartDistance - fadeEndDistance), 0.0, 1.0);
+		},
+
+		_createLineSegmentsObject: function(positions, colorValue, opacityValue) {
+			if (!positions.length) {
+				return null;
+			}
+			var geometry = new THREE.BufferGeometry();
+			geometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
+			geometry.computeBoundingSphere();
+			var material = new THREE.LineBasicMaterial({
+				color: new THREE.Color(colorValue || "#ffffff"),
+				transparent: true,
+				opacity: (typeof opacityValue === "number") ? opacityValue : 0.35,
+				depthTest: true,
+				depthWrite: false,
+				toneMapped: false
+			});
+			var lines = new THREE.LineSegments(geometry, material);
+			lines.frustumCulled = false;
+			return lines;
+		},
+
+		_distanceToSegment2D: function(px, pz, x0, z0, x1, z1) {
+			var dx = x1 - x0;
+			var dz = z1 - z0;
+			var lenSq = (dx * dx) + (dz * dz);
+			var t;
+			if (lenSq <= 0.0) {
+				dx = px - x0;
+				dz = pz - z0;
+				return Math.sqrt((dx * dx) + (dz * dz));
+			}
+			t = (((px - x0) * dx) + ((pz - z0) * dz)) / lenSq;
+			t = THREE.MathUtils.clamp(t, 0.0, 1.0);
+			dx = px - (x0 + (dx * t));
+			dz = pz - (z0 + (dz * t));
+			return Math.sqrt((dx * dx) + (dz * dz));
+		},
+
+		_distanceToPolygonBoundary2D: function(px, pz, xCoords, zCoords) {
+			var distance = Number.POSITIVE_INFINITY;
+			var i;
+			for (i = 0; i < xCoords.length; i++) {
+				var next = (i + 1) % xCoords.length;
+				distance = Math.min(distance, this._distanceToSegment2D(px, pz, xCoords[i], zCoords[i], xCoords[next], zCoords[next]));
+			}
+			return distance;
+		},
+
+		_distanceToEllipseBoundary2D: function(px, pz, centerX, centerZ, radiusX, radiusZ) {
+			var dx = px - centerX;
+			var dz = pz - centerZ;
+			var distanceFromCenter = Math.sqrt((dx * dx) + (dz * dz));
+			var normalizedX;
+			var normalizedZ;
+			var boundaryDistance;
+			if ((distanceFromCenter <= 0.0) || (radiusX <= 0.0) || (radiusZ <= 0.0)) {
+				return 0.0;
+			}
+			normalizedX = dx / distanceFromCenter;
+			normalizedZ = dz / distanceFromCenter;
+			boundaryDistance = 1.0 / Math.sqrt(((normalizedX * normalizedX) / (radiusX * radiusX)) + ((normalizedZ * normalizedZ) / (radiusZ * radiusZ)));
+			return Math.abs(distanceFromCenter - boundaryDistance);
+		},
+
+		_getAreaBoundaryCoords: function(area) {
+			if (area.x.length === 2 && area.z.length === 2) {
+				return {
+					xCoords: [area.x[0], area.x[1], area.x[1], area.x[0]],
+					zCoords: [area.z[0], area.z[0], area.z[1], area.z[1]]
+				};
+			}
+			return {
+				xCoords: area.x.slice(0),
+				zCoords: area.z.slice(0)
+			};
+		},
+
+		_appendGridWallSegments: function(positions, x0, z0, x1, z1) {
+			var y;
+			for (y = MARKER_GRID_MIN_Y; y <= MARKER_GRID_MAX_Y; y += 1.0) {
+				positions.push(x0, y, z0, x1, y, z1);
+			}
+			var dx = x1 - x0;
+			var dz = z1 - z0;
+			var length = Math.sqrt((dx * dx) + (dz * dz));
+			var stepCount = Math.max(1, Math.round(length));
+			var step;
+			for (step = 0; step <= stepCount; step++) {
+				var t = step / stepCount;
+				var x = x0 + (dx * t);
+				var z = z0 + (dz * t);
+				positions.push(x, MARKER_GRID_MIN_Y, z, x, MARKER_GRID_MAX_Y, z);
+			}
+		},
+
+		_createExtrudedGridObject: function(xCoords, zCoords, colorValue, opacityValue) {
+			var positions = [];
+			var i;
+			if (!xCoords || !zCoords || xCoords.length < 2 || zCoords.length < 2) {
+				return null;
+			}
+			for (i = 0; i < xCoords.length; i++) {
+				var next = (i + 1) % xCoords.length;
+				this._appendGridWallSegments(positions, xCoords[i], zCoords[i], xCoords[next], zCoords[next]);
+			}
+			return this._createLineSegmentsObject(positions, colorValue, opacityValue);
+		},
+
+		_createAreaGridObject: function(area) {
+			var boundary = this._getAreaBoundaryCoords(area);
+			return this._createExtrudedGridObject(boundary.xCoords, boundary.zCoords, area.fillcolor || area.color, area.fillopacity);
+		},
+
+		_createCircleGridObject: function(circle) {
+			var xCoords = [];
+			var zCoords = [];
+			var i;
+			for (i = 0; i < MARKER_CIRCLE_SEGMENTS; i++) {
+				var rad = (i / MARKER_CIRCLE_SEGMENTS) * Math.PI * 2.0;
+				xCoords.push((circle.xr * Math.sin(rad)) + circle.x);
+				zCoords.push((circle.zr * Math.cos(rad)) + circle.z);
+			}
+			return this._createExtrudedGridObject(xCoords, zCoords, circle.fillcolor || circle.color, circle.fillopacity);
+		},
+
+		_refresh3DMarkers: function() {
+			var me = this;
+			if (!me._markerGridRoot || !me._markerIconOverlay) {
+				return;
+			}
+			me._markerSets = me._getMarkerSets();
+			me._clear3DMarkers();
+			$.each(me._markerSets, function(index, set) {
+				var setGroup = new THREE.Group();
+				setGroup.visible = me._isMarkerSetEnabled(set);
+				me._markerGridRoot.add(setGroup);
+				me._markerSetVisuals[set.id] = setGroup;
+				$.each(set.areas || {}, function(areaId, area) {
+					var boundary = me._getAreaBoundaryCoords(area);
+					var object = me._createAreaGridObject(area);
+					if (object) {
+						setGroup.add(object);
+						me._gridMarkers.push({
+							set: set,
+							object: object,
+							baseOpacity: object.material.opacity,
+							distanceFn: function(cameraX, cameraZ) {
+								return me._distanceToPolygonBoundary2D(cameraX, cameraZ, boundary.xCoords, boundary.zCoords);
+							}
+						});
+					}
+				});
+				$.each(set.circles || {}, function(circleId, circle) {
+					var object = me._createCircleGridObject(circle);
+					if (object) {
+						setGroup.add(object);
+						me._gridMarkers.push({
+							set: set,
+							object: object,
+							baseOpacity: object.material.opacity,
+							distanceFn: function(cameraX, cameraZ) {
+								return me._distanceToEllipseBoundary2D(cameraX, cameraZ, circle.x, circle.z, circle.xr, circle.zr);
+							}
+						});
+					}
+				});
+				$.each(set.markers || {}, function(markerId, marker) {
+					var element = me._createScreenMarkerElement(marker);
+					me._markerIconOverlay.appendChild(element);
+					me._screenMarkers.push({ set: set, marker: marker, element: element });
+				});
+			});
+			me._refreshMarkerControl();
+			me._syncMarkerSetVisibility();
+		},
+
+		_updateGridMarkers: function() {
+			$.each(this._gridMarkers, function(index, entry) {
+				var opacityFactor;
+				if (!this._isMarkerSetEnabled(entry.set)) {
+					entry.object.visible = false;
+					return;
+				}
+				opacityFactor = this._computeDistanceFade(
+					entry.distanceFn(this._cameraPosition.x, this._cameraPosition.z),
+					this.options.markergridvisibledistance + this.options.markergridfaderange,
+					this.options.markergridvisibledistance
+				);
+				entry.object.visible = opacityFactor > 0.0;
+				entry.object.material.opacity = entry.baseOpacity * opacityFactor;
+			}.bind(this));
+		},
+
+		_syncMarkerSetVisibility: function() {
+			var me = this;
+			$.each(me._markerSets, function(index, set) {
+				var enabled = me._isMarkerSetEnabled(set);
+				if (me._markerSetVisuals[set.id]) {
+					me._markerSetVisuals[set.id].visible = enabled;
+				}
+				if (me._markerSetCheckboxes[set.id]) {
+					me._markerSetCheckboxes[set.id].checked = enabled;
+				}
+			});
+			me._updateMarkerUIVisibility();
+			me._requestRender();
+		},
+
+		_updateScreenMarkers: function() {
+			if (!this._markerIconOverlay || !this._viewerContainer || this._markerIconOverlay.style.display === "none") {
+				return;
+			}
+			var width = this._viewerContainer.clientWidth || 1;
+			var height = this._viewerContainer.clientHeight || 1;
+			var projected = new THREE.Vector3();
+			var world = new THREE.Vector3();
+			$.each(this._screenMarkers, function(index, entry) {
+				var element = entry.element;
+				if (!this._isMarkerSetEnabled(entry.set)) {
+					element.style.display = "none";
+					return;
+				}
+				world.set(entry.marker.x, entry.marker.y, entry.marker.z);
+				var distance = this._cameraPosition.distanceTo(world);
+				if (distance >= (this.options.markericonvisibledistance + this.options.markericonfaderange)) {
+					element.style.display = "none";
+					return;
+				}
+				projected.copy(world).project(this._camera);
+				if (projected.z < -1.0 || projected.z > 1.0 || projected.x < -1.0 || projected.x > 1.0 || projected.y < -1.0 || projected.y > 1.0) {
+					element.style.display = "none";
+					return;
+				}
+				element.style.display = "flex";
+				element.style.opacity = this._computeDistanceFade(
+					distance,
+					this.options.markericonvisibledistance + this.options.markericonfaderange,
+					this.options.markericonvisibledistance
+				).toFixed(3);
+				if (element._description) {
+					element._description.style.display = (entry.marker.label && distance < this.options.markerlabeldistance) ? "block" : "none";
+				}
+				element.style.transform = "translate(" + (((projected.x * 0.5) + 0.5) * width).toFixed(1) + "px, "
+					+ (((-projected.y * 0.5) + 0.5) * height).toFixed(1) + "px) translate(-50%, -50%)";
+			}.bind(this));
 		},
 
 		updateNamedTile: function(tileName, timestamp) {
@@ -212,7 +658,7 @@
 				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Camera</span><span class="modelmap-hud-value" data-field="position">0, 0, 0</span></div>'
 				+ '<div class="modelmap-hud-row"><span class="modelmap-hud-label">Chunk</span><span class="modelmap-hud-value" data-field="chunk">0, 0</span></div>'
 				+ '<div class="modelmap-hud-row modelmap-hud-row-stack"><span class="modelmap-hud-label">Tile GLB</span><span class="modelmap-hud-value" data-field="tile">-</span></div>';
-			parent.appendChild(me._hud);
+			me._viewerContainer.appendChild(me._hud);
 			me._hudFPS = me._hud.querySelector("[data-field='fps']");
 			me._hudDistance = me._hud.querySelector("[data-field='distance']");
 			me._hudSpeed = me._hud.querySelector("[data-field='speed']");
@@ -220,6 +666,25 @@
 			me._hudPosition = me._hud.querySelector("[data-field='position']");
 			me._hudChunk = me._hud.querySelector("[data-field='chunk']");
 			me._hudTile = me._hud.querySelector("[data-field='tile']");
+
+			me._markerIconOverlay = document.createElement("div");
+			me._markerIconOverlay.className = "modelmap-marker-overlay";
+			me._viewerContainer.appendChild(me._markerIconOverlay);
+
+			me._markerControl = document.createElement("div");
+			me._markerControl.className = "modelmap-marker-control";
+			me._markerControl.innerHTML = '<div class="modelmap-marker-control-title">Markers</div><div class="modelmap-marker-control-list"></div>';
+			me._markerControlList = me._markerControl.querySelector(".modelmap-marker-control-list");
+			["click", "dblclick", "mousedown", "mouseup", "touchstart", "touchmove", "touchend", "pointerdown"].forEach(function(eventName) {
+				me._markerControl.addEventListener(eventName, function(event) {
+					event.stopPropagation();
+				});
+			});
+			me._markerControl.addEventListener("wheel", function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+			}, { passive: false });
+			me._viewerContainer.appendChild(me._markerControl);
 
 			me._renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 			me._renderer.setPixelRatio(Math.min(MAX_RENDER_PIXEL_RATIO, window.devicePixelRatio || 1));
@@ -245,6 +710,8 @@
 			me._scene = new THREE.Scene();
 			me._root = new THREE.Group();
 			me._scene.add(me._root);
+			me._markerGridRoot = new THREE.Group();
+			me._scene.add(me._markerGridRoot);
 
 			me._camera = new THREE.PerspectiveCamera(75, 1, 0.1, 50000);
 			me._ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
@@ -390,11 +857,16 @@
 					me._resizeViewer();
 					me._refreshVisibleTiles();
 					me._requestRender();
+				},
+				overlaychange: function() {
+					me._syncMarkerSetVisibility();
 				}
 			};
 			me._map.on("moveend", me._mapEventHandlers.moveend);
 			me._map.on("zoomend", me._mapEventHandlers.zoomend);
 			me._map.on("resize", me._mapEventHandlers.resize);
+			me._map.on("overlayadd", me._mapEventHandlers.overlaychange);
+			me._map.on("overlayremove", me._mapEventHandlers.overlaychange);
 		},
 
 		_unbindMapEvents: function() {
@@ -404,6 +876,8 @@
 			this._map.off("moveend", this._mapEventHandlers.moveend);
 			this._map.off("zoomend", this._mapEventHandlers.zoomend);
 			this._map.off("resize", this._mapEventHandlers.resize);
+			this._map.off("overlayadd", this._mapEventHandlers.overlaychange);
+			this._map.off("overlayremove", this._mapEventHandlers.overlaychange);
 			this._mapEventHandlers = null;
 		},
 
@@ -877,9 +1351,11 @@
 			this._applySceneLighting();
 			this._updateTileLighting();
 			this._syncCameraTransform();
+			this._updateGridMarkers();
 			this._grid.position.x = Math.round(this._cameraPosition.x / this.options.tileblocksize) * this.options.tileblocksize;
 			this._grid.position.z = Math.round(this._cameraPosition.z / this.options.tileblocksize) * this.options.tileblocksize;
 			this._renderer.render(this._scene, this._camera);
+			this._updateScreenMarkers();
 			this._updateHUD(false);
 		},
 

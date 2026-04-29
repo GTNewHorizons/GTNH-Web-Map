@@ -73,6 +73,11 @@ public class ModelMap extends MapType {
     public static final double DEFAULT_NIGHT_AMBIENT_LIGHT = 0.14;
     public static final double DEFAULT_DAY_SUN_LIGHT = 0.8;
     public static final double DEFAULT_NIGHT_SUN_LIGHT = 0.16;
+    public static final double DEFAULT_MARKER_ICON_VISIBLE_DISTANCE = 240.0;
+    public static final double DEFAULT_MARKER_ICON_FADE_RANGE = 16.0;
+    public static final double DEFAULT_MARKER_LABEL_DISTANCE = 16.0;
+    public static final double DEFAULT_MARKER_GRID_VISIBLE_DISTANCE = 48.0;
+    public static final double DEFAULT_MARKER_GRID_FADE_RANGE = 16.0;
 
     public enum AssetFormat {
         GLB("glb", "model/gltf-binary");
@@ -202,6 +207,11 @@ public class ModelMap extends MapType {
     private double nightAmbientLight;
     private double daySunLight;
     private double nightSunLight;
+    private double markerIconVisibleDistance;
+    private double markerIconFadeRange;
+    private double markerLabelDistance;
+    private double markerGridVisibleDistance;
+    private double markerGridFadeRange;
 
     public ModelMap(DynmapCore core, ConfigurationNode configuration) {
         this.core = core;
@@ -241,6 +251,21 @@ public class ModelMap extends MapType {
                         "sunlightday");
         nightSunLight = resolveLightLevel(configuration.getDouble("sunlightnight", DEFAULT_NIGHT_SUN_LIGHT),
                 DEFAULT_NIGHT_SUN_LIGHT, "sunlightnight");
+        markerIconVisibleDistance = resolveDistanceSetting(
+                configuration.getDouble("marker_icon_visible_distance", DEFAULT_MARKER_ICON_VISIBLE_DISTANCE),
+                DEFAULT_MARKER_ICON_VISIBLE_DISTANCE, "marker_icon_visible_distance");
+        markerIconFadeRange = resolveDistanceSetting(
+                configuration.getDouble("marker_icon_fade_range", DEFAULT_MARKER_ICON_FADE_RANGE),
+                DEFAULT_MARKER_ICON_FADE_RANGE, "marker_icon_fade_range");
+        markerLabelDistance = resolveDistanceSetting(
+                configuration.getDouble("marker_label_distance", DEFAULT_MARKER_LABEL_DISTANCE),
+                DEFAULT_MARKER_LABEL_DISTANCE, "marker_label_distance");
+        markerGridVisibleDistance = resolveDistanceSetting(
+                configuration.getDouble("marker_grid_visible_distance", DEFAULT_MARKER_GRID_VISIBLE_DISTANCE),
+                DEFAULT_MARKER_GRID_VISIBLE_DISTANCE, "marker_grid_visible_distance");
+        markerGridFadeRange = resolveDistanceSetting(
+                configuration.getDouble("marker_grid_fade_range", DEFAULT_MARKER_GRID_FADE_RANGE),
+                DEFAULT_MARKER_GRID_FADE_RANGE, "marker_grid_fade_range");
         setProtected(configuration.getBoolean("protected", false));
         setTileUpdateDelay(configuration.getInteger("tileupdatedelay", -1));
     }
@@ -265,6 +290,11 @@ public class ModelMap extends MapType {
         cn.put("ambientlightnight", nightAmbientLight);
         cn.put("sunlightday", daySunLight);
         cn.put("sunlightnight", nightSunLight);
+        cn.put("marker_icon_visible_distance", markerIconVisibleDistance);
+        cn.put("marker_icon_fade_range", markerIconFadeRange);
+        cn.put("marker_label_distance", markerLabelDistance);
+        cn.put("marker_grid_visible_distance", markerGridVisibleDistance);
+        cn.put("marker_grid_fade_range", markerGridFadeRange);
         cn.put("protected", isProtected());
         if (tileupdatedelay > 0) {
             cn.put("tileupdatedelay", tileupdatedelay);
@@ -313,6 +343,14 @@ public class ModelMap extends MapType {
     }
 
     private double resolveLightLevel(double value, double defaultValue, String settingName) {
+        if (value < 0.0) {
+            Log.severe("ModelMap '" + name + "' set invalid " + settingName + " " + value + " - using " + defaultValue);
+            return defaultValue;
+        }
+        return value;
+    }
+
+    private double resolveDistanceSetting(double value, double defaultValue, String settingName) {
         if (value < 0.0) {
             Log.severe("ModelMap '" + name + "' set invalid " + settingName + " " + value + " - using " + defaultValue);
             return defaultValue;
@@ -482,6 +520,11 @@ public class ModelMap extends MapType {
         s(o, "ambientlightnight", nightAmbientLight);
         s(o, "sunlightday", daySunLight);
         s(o, "sunlightnight", nightSunLight);
+        s(o, "markericonvisibledistance", markerIconVisibleDistance);
+        s(o, "markericonfaderange", markerIconFadeRange);
+        s(o, "markerlabeldistance", markerLabelDistance);
+        s(o, "markergridvisibledistance", markerGridVisibleDistance);
+        s(o, "markergridfaderange", markerGridFadeRange);
         if (appendToWorld.length() > 0) {
             s(o, "append_to_world", appendToWorld);
         }
