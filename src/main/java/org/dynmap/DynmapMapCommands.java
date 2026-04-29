@@ -473,6 +473,9 @@ public class DynmapMapCommands {
                 sb.append(", shader=").append(modelmt.getShader().getName()).append(", granularity=")
                         .append(modelmt.getGranularity());
                 sb.append(", compression=").append(modelmt.getOutputCompression().getId());
+                sb.append(", detail-mode=").append(modelmt.getDetailMode().getId());
+                sb.append(", mapzoomout=").append(modelmt.getConfiguredZoomOutLevels());
+                sb.append(", simplified-min-skylight=").append(modelmt.getSimplifiedMinSkyLight());
                 sb.append(", icon=").append(modelmt.getIcon()).append(", append-to-world=")
                         .append(modelmt.getAppendToWorld());
                 sb.append(", protected=").append(modelmt.isProtected());
@@ -809,6 +812,50 @@ public class DynmapMapCommands {
                     return true;
                 }
                 did_update |= ((ModelMap) mt).setOutputCompression(compression);
+            }
+            else if(tok[0].equalsIgnoreCase("detail-mode")) {
+                if (!(mt instanceof ModelMap)) {
+                    sender.sendMessage("detail-mode is only supported on model maps");
+                    return true;
+                }
+                ModelMap.DetailMode detailMode = ModelMap.DetailMode.fromId(tok[1]);
+                if (detailMode == null) {
+                    sender.sendMessage("Invalid detail-mode value: " + tok[1] + " (use full or surface)");
+                    return true;
+                }
+                did_update |= ((ModelMap) mt).setDetailMode(detailMode);
+            }
+            else if(tok[0].equalsIgnoreCase("mapzoomout")) {
+                if (!(mt instanceof ModelMap)) {
+                    sender.sendMessage("mapzoomout is only supported on model maps");
+                    return true;
+                }
+                int mapzoomout = -1;
+                try {
+                    mapzoomout = Integer.valueOf(tok[1]);
+                } catch (NumberFormatException nfx) {
+                }
+                if(mapzoomout < 0) {
+                    sender.sendMessage("Invalid mapzoomout value: " + tok[1]);
+                    return true;
+                }
+                did_update |= ((ModelMap) mt).setMapZoomOut(mapzoomout);
+            }
+            else if(tok[0].equalsIgnoreCase("simplified-min-skylight")) {
+                if (!(mt instanceof ModelMap)) {
+                    sender.sendMessage("simplified-min-skylight is only supported on model maps");
+                    return true;
+                }
+                int minskylight = -1;
+                try {
+                    minskylight = Integer.valueOf(tok[1]);
+                } catch (NumberFormatException nfx) {
+                }
+                if((minskylight < 0) || (minskylight > 15)) {
+                    sender.sendMessage("Invalid simplified-min-skylight value: " + tok[1] + " (use 0-15)");
+                    return true;
+                }
+                did_update |= ((ModelMap) mt).setSimplifiedMinSkyLight(minskylight);
             }
             else if(tok[0].equalsIgnoreCase("order")) {
                 int idx = -1;

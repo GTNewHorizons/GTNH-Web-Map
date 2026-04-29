@@ -133,6 +133,10 @@ public abstract class DynmapWorld {
     private static final int[] stepseq = { 3, 1, 2, 0 };
 
     private void processZoomFile(MapTypeState mts, MapStorageTile tile, boolean firstVariant) {
+        if (tile.map instanceof CustomZoomOutMapType) {
+            ((CustomZoomOutMapType) tile.map).processZoomOutTile(this, mts, tile, firstVariant);
+            return;
+        }
         long mostRecentTimestamp = 0;
         int step = 1 << tile.zoom;
         MapStorageTile ztile = tile.getZoomOutTile();

@@ -59,6 +59,9 @@ public class BlockModelExporter {
     private final int[] brightnessTable;
     private boolean cullExportRegionEdges;
     private GLBExport.LightingMode lightingMode = GLBExport.LightingMode.DAY;
+    private BlockModelExportMode exportMode = BlockModelExportMode.FULL;
+    private int lodZoomLevel;
+    private int simplifiedMinSkyLight = 7;
 
     private int minX;
     private int minY;
@@ -122,6 +125,18 @@ public class BlockModelExporter {
         this.lightingMode = (lightingMode == null) ? GLBExport.LightingMode.DAY : lightingMode;
     }
 
+    public void setExportMode(BlockModelExportMode exportMode) {
+        this.exportMode = (exportMode == null) ? BlockModelExportMode.FULL : exportMode;
+    }
+
+    public void setLodZoomLevel(int lodZoomLevel) {
+        this.lodZoomLevel = Math.max(0, lodZoomLevel);
+    }
+
+    public void setSimplifiedMinSkyLight(int simplifiedMinSkyLight) {
+        this.simplifiedMinSkyLight = Math.max(0, Math.min(15, simplifiedMinSkyLight));
+    }
+
     public void export(BlockModelExportSink sink) throws IOException {
         List<DynmapChunk> requiredChunks = new ArrayList<DynmapChunk>();
         int minChunkX = minX >> 4;
@@ -138,10 +153,7 @@ public class BlockModelExporter {
                 requiredChunks.clear();
                 for (int i = -1; i < 5; i++) {
                     for (int j = -1; j < 5; j++) {
-                        if (((chunkX + i) <= maxChunkX) && ((chunkZ + j) <= maxChunkZ) && ((chunkX + i) >= minChunkX)
-                                && ((chunkZ + j) >= minChunkZ)) {
-                            requiredChunks.add(new DynmapChunk(chunkX + i, chunkZ + j));
-                        }
+                        requiredChunks.add(new DynmapChunk(chunkX + i, chunkZ + j));
                     }
                 }
 
@@ -165,6 +177,21 @@ public class BlockModelExporter {
 
     private void exportLoadedRegion(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX,
             int rangeMinZ, int rangeMaxZ, boolean[] edgeBits) throws IOException {
+        switch (exportMode) {
+            case SIMPLIFIED:
+                new BlockModelLodExporter(this, world, shader, minY, maxY, cullExportRegionEdges, lightingMode,
+                        simplifiedMinSkyLight)
+                        .exportSimplified(cache, sink, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+                return;
+            case ZOOMOUT:
+                new BlockModelLodExporter(this, world, shader, minY, maxY, cullExportRegionEdges, lightingMode,
+                        simplifiedMinSkyLight)
+                        .exportZoomout(cache, sink, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ, lodZoomLevel);
+                return;
+            case FULL:
+            default:
+                break;
+        }
         MapIterator iterator = cache.getIterator(rangeMinX, minY, rangeMinZ);
         for (int x = rangeMinX; x <= rangeMaxX; x++) {
             edgeBits[BlockStep.X_PLUS.ordinal()] = (x == minX);
@@ -286,6 +313,25 @@ public class BlockModelExporter {
                 }
             }
         }
+    }
+
+    void emitCurrentBlock(MapIterator map, BlockModelExportSink sink) throws IOException {
+        int blockId = map.getBlockTypeID();
+        if (blockId <= 0) {
+            return;
+        }
+        boolean[] edgeBits = new boolean[6];
+        fillEdgeBits(map.getX(), map.getY(), map.getZ(), edgeBits);
+        handleBlock(blockId, map, edgeBits, sink);
+    }
+
+    private void fillEdgeBits(int x, int y, int z, boolean[] edgeBits) {
+        edgeBits[BlockStep.X_PLUS.ordinal()] = (x == minX);
+        edgeBits[BlockStep.X_MINUS.ordinal()] = (x == maxX);
+        edgeBits[BlockStep.Z_PLUS.ordinal()] = (z == minZ);
+        edgeBits[BlockStep.Z_MINUS.ordinal()] = (z == maxZ);
+        edgeBits[BlockStep.Y_MINUS.ordinal()] = (y == minY);
+        edgeBits[BlockStep.Y_PLUS.ordinal()] = (y == maxY);
     }
 
     private PatchVertexLighting buildPatchVertexLighting(PatchDefinition patch, double x, double y, double z,
