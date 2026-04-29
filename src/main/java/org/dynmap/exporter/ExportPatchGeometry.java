@@ -10,7 +10,7 @@ public final class ExportPatchGeometry {
         public final int vertexCount;
         public final SideVisible sideVisible;
 
-        private Geometry(double[] xyz, double[] uv, int vertexCount, SideVisible sideVisible) {
+        Geometry(double[] xyz, double[] uv, int vertexCount, SideVisible sideVisible) {
             this.xyz = xyz;
             this.uv = uv;
             this.vertexCount = vertexCount;
@@ -51,6 +51,10 @@ public final class ExportPatchGeometry {
         }
 
         return new Geometry(xyz, uv, vertexCount, patch.sidevis);
+    }
+
+    public static Geometry buildQuad(double[] xyz) {
+        return new Geometry(xyz, new double[] { 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0 }, 4, SideVisible.TOP);
     }
 
     private static void fillVertex(double[] xyz, int offset, double x, double y, double z) {

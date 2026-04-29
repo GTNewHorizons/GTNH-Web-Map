@@ -10,14 +10,15 @@ public class ExportMaterial {
     private final TexturePack.MaterialType materialType;
     private final boolean emissive;
     private final ExportMaterial[] bakedLayers;
+    private final Integer solidColorArgb;
 
     public ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
             TexturePack.MaterialType materialType, boolean emissive) {
-        this(materialId, textureIndex, colorMultiplier, rotation, materialType, emissive, null);
+        this(materialId, textureIndex, colorMultiplier, rotation, materialType, emissive, null, null);
     }
 
     private ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
-            TexturePack.MaterialType materialType, boolean emissive, ExportMaterial[] bakedLayers) {
+            TexturePack.MaterialType materialType, boolean emissive, ExportMaterial[] bakedLayers, Integer solidColorArgb) {
         this.materialId = materialId;
         this.textureIndex = textureIndex;
         this.colorMultiplier = colorMultiplier;
@@ -25,6 +26,7 @@ public class ExportMaterial {
         this.materialType = materialType;
         this.emissive = emissive;
         this.bakedLayers = bakedLayers;
+        this.solidColorArgb = solidColorArgb;
     }
 
     public String getMaterialId() {
@@ -55,6 +57,14 @@ public class ExportMaterial {
         return bakedLayers;
     }
 
+    public boolean isSolidColor() {
+        return solidColorArgb != null;
+    }
+
+    public int getSolidColorArgb() {
+        return (solidColorArgb != null) ? solidColorArgb.intValue() : 0xFFFFFFFF;
+    }
+
     public static ExportMaterial bakeLayers(ExportMaterial[] layers) {
         if ((layers == null) || (layers.length == 0)) {
             return null;
@@ -73,7 +83,7 @@ public class ExportMaterial {
                 materialType = layer.materialType;
             }
         }
-        return new ExportMaterial(materialId.toString(), -1, 0xFFFFFF, 0, materialType, false, layers.clone());
+        return new ExportMaterial(materialId.toString(), -1, 0xFFFFFF, 0, materialType, false, layers.clone(), null);
     }
 
     public static ExportMaterial fromLegacyString(String material) {
@@ -87,5 +97,10 @@ public class ExportMaterial {
             material = material.substring(0, rotationIndex);
         }
         return new ExportMaterial(material, -1, 0xFFFFFF, rotation, null, false);
+    }
+
+    public static ExportMaterial solidColor(String materialId, int argb, TexturePack.MaterialType materialType,
+            boolean emissive) {
+        return new ExportMaterial(materialId, -1, 0xFFFFFF, 0, materialType, emissive, null, Integer.valueOf(argb));
     }
 }

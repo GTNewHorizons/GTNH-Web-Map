@@ -64,6 +64,7 @@
 			options.minZoom = (typeof options.modelminzoom === "number") ? options.modelminzoom : 0;
 			options.maxZoom = (typeof options.modelmaxzoom === "number") ? options.modelmaxzoom : 6;
 			options.tileblocksize = options.tileblocksize || 16;
+			options.modelzoomout = (typeof options.modelzoomout === "number") ? options.modelzoomout : 0;
 			options.tileformat = options.tileformat || "glb";
 			options.compassview = options.compassview || "N";
 			options.nightandday = false;
@@ -1392,7 +1393,7 @@
 			}
 			var tileX = Math.floor(this._cameraPosition.x / this.options.tileblocksize);
 			var tileZ = Math.floor(this._cameraPosition.z / this.options.tileblocksize);
-			var tileName = this._getTileName(tileX, tileZ);
+			var tileName = this._getTileName(tileX, tileZ, 0);
 			this._setHUDField("fps", this._hudFPS, String(this._displayFPS));
 			this._setHUDField("distance", this._hudDistance, Math.max(1, Math.round(this._viewDistance / 16)) + " chunks");
 			this._setHUDField("speed", this._hudSpeed, this._formatHUDNumber(this._moveSpeed) + " blocks/s");
@@ -1453,10 +1454,11 @@
 		},
 
 		_refreshVisibleTiles: function() {
-			var radius = Math.max(1, Math.min(8, Math.ceil((this._viewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / this.options.tileblocksize) + 1));
-			var centerTileX = Math.floor(this._cameraPosition.x / this.options.tileblocksize);
-			var centerTileZ = Math.floor(this._cameraPosition.z / this.options.tileblocksize);
-			var refreshKey = centerTileX + ":" + centerTileZ + ":" + radius + ":" + Math.round(this._viewDistance / 16)
+			var baseTileSize = this.options.tileblocksize;
+			var radius = Math.max(1, Math.min(24, Math.ceil((this._viewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / baseTileSize) + 1));
+			var centerBaseTileX = Math.floor(this._cameraPosition.x / baseTileSize);
+			var centerBaseTileZ = Math.floor(this._cameraPosition.z / baseTileSize);
+			var refreshKey = centerBaseTileX + ":" + centerBaseTileZ + ":" + radius + ":" + Math.round(this._viewDistance / 16)
 				+ ":" + this._getTileRefreshOrientationKey();
 			if (this._lastTileRefresh === refreshKey) {
 				return;
@@ -1466,20 +1468,36 @@
 
 			var wanted = {};
 			var pendingLoads = [];
-			var x;
-			var z;
-			var maxDistance = this._viewDistance + this.options.tileblocksize * 1.5;
+			var baseX;
+			var baseZ;
+			var maxDistance = this._viewDistance + this._getTileBlockSize(this.options.modelzoomout || 0) * 1.5;
 
-			for (x = centerTileX - radius; x <= centerTileX + radius; x++) {
-				for (z = centerTileZ - radius; z <= centerTileZ + radius; z++) {
-					var tilePriority = this._getTilePriorityData(x, z, maxDistance);
+			for (baseX = centerBaseTileX - radius; baseX <= centerBaseTileX + radius; baseX++) {
+				for (baseZ = centerBaseTileZ - radius; baseZ <= centerBaseTileZ + radius; baseZ++) {
+					var baseTilePriority = this._getTilePriorityData(baseX, baseZ, maxDistance, 0);
+					if (!baseTilePriority) {
+						continue;
+					}
+					var detailLevel = this._getTileDetailLevelForDistance(Math.sqrt(baseTilePriority.distanceSq));
+					var tileScale = Math.pow(2, detailLevel);
+					var tileX = Math.floor(baseX / tileScale);
+					var tileZ = Math.floor(baseZ / tileScale);
+					var tilePriority = this._getTilePriorityData(tileX, tileZ, maxDistance, detailLevel);
 					if (!tilePriority) {
 						continue;
 					}
-					wanted[tilePriority.tileName] = { x: x, z: z };
-					if (!this._loadedTiles[tilePriority.tileName] && !this._loadingTiles[tilePriority.tileName]) {
-						pendingLoads.push(tilePriority);
+					if (!wanted[tilePriority.tileName] || tilePriority.distanceSq < wanted[tilePriority.tileName].distanceSq) {
+						wanted[tilePriority.tileName] = tilePriority;
 					}
+				}
+			}
+
+			for (var wantedName in wanted) {
+				if (!Object.prototype.hasOwnProperty.call(wanted, wantedName)) {
+					continue;
+				}
+				if (!this._loadedTiles[wantedName] && !this._loadingTiles[wantedName]) {
+					pendingLoads.push(wanted[wantedName]);
 				}
 			}
 
@@ -1502,10 +1520,11 @@
 			this._pumpTileLoads();
 		},
 
-		_getTilePriorityData: function(tileX, tileZ, maxDistance) {
-			var centerX = this._getTileCenter(tileX);
-			var centerZ = this._getTileCenter(tileZ);
-			var halfSize = this.options.tileblocksize * 0.5;
+		_getTilePriorityData: function(tileX, tileZ, maxDistance, detailLevel) {
+			var tileSize = this._getTileBlockSize(detailLevel);
+			var centerX = this._getTileCenter(tileX, tileSize);
+			var centerZ = this._getTileCenter(tileZ, tileSize);
+			var halfSize = tileSize * 0.5;
 			var maxRadius = maxDistance + halfSize;
 			var dx = centerX - this._cameraPosition.x;
 			var dz = centerZ - this._cameraPosition.z;
@@ -1520,9 +1539,11 @@
 			this._tileCullBounds.min.copy(this._tileCullMin);
 			this._tileCullBounds.max.copy(this._tileCullMax);
 			return {
-				tileName: this._getTileName(tileX, tileZ),
+				tileName: this._getTileName(tileX, tileZ, detailLevel),
 				x: tileX,
 				z: tileZ,
+				detailLevel: detailLevel,
+				tileSize: tileSize,
 				distanceSq: distanceSq,
 				inFrustum: this._frustum.intersectsBox(this._tileCullBounds)
 			};
@@ -1534,8 +1555,25 @@
 				if (!next || !this._desiredTiles[next.tileName] || this._loadedTiles[next.tileName] || this._loadingTiles[next.tileName]) {
 					continue;
 				}
-				this._loadTile(next.tileName, next.x, next.z);
+				this._loadTile(next.tileName, next.x, next.z, next.tileSize);
 			}
+		},
+
+		_getTileDetailLevel: function(viewZoom) {
+			var available = (typeof this.options.modelzoomout === "number") ? this.options.modelzoomout : 0;
+			if (available <= 0) {
+				return 0;
+			}
+			return Math.max(0, Math.min(available, Math.floor((this.options.maxZoom - 1) - viewZoom)));
+		},
+
+		_getTileDetailLevelForDistance: function(distance) {
+			var effectiveDistance = Math.max(this.options.tileblocksize * 2.0, distance);
+			return this._getTileDetailLevel(this._zoomFromDistance(effectiveDistance));
+		},
+
+		_getTileBlockSize: function(detailLevel) {
+			return this.options.tileblocksize * Math.pow(2, detailLevel || 0);
 		},
 
 		_configureTexture: function(texture) {
@@ -1748,7 +1786,7 @@
 			});
 		},
 
-		_loadTile: function(tileName, tileX, tileZ) {
+		_loadTile: function(tileName, tileX, tileZ, tileSize) {
 			var me = this;
 			var token = ++me._loadCounter;
 			var timestamp = me._tileTimestamps[tileName];
@@ -1766,11 +1804,12 @@
 				me._unloadTile(tileName);
 				var scene = gltf.scene || new THREE.Group();
 				me._prepareSceneForDisplay(scene);
-				scene.position.set(me._getTileCenter(tileX), me.options.world.miny || 0, me._getTileCenter(tileZ));
+				scene.position.set(me._getTileCenter(tileX, tileSize), me.options.world.miny || 0, me._getTileCenter(tileZ, tileSize));
 				me._loadedTiles[tileName] = {
 					object: scene,
 					x: tileX,
-					z: tileZ
+					z: tileZ,
+					tileSize: tileSize
 				};
 				me._root.add(scene);
 				me._pumpTileLoads();
@@ -1792,7 +1831,7 @@
 			this._pendingTileLoads = $.grep(this._pendingTileLoads, function(entry) {
 				return entry.tileName !== tileName;
 			});
-			this._loadTile(tileName, tile.x, tile.z);
+			this._loadTile(tileName, tile.x, tile.z, tile.tileSize);
 		},
 
 		_unloadTile: function(tileName) {
@@ -1836,17 +1875,26 @@
 			});
 		},
 
-		_getTileCenter: function(tileCoord) {
-			return (tileCoord * this.options.tileblocksize) + ((this.options.tileblocksize - 1) / 2.0);
+		_getTileCenter: function(tileCoord, tileSize) {
+			var size = tileSize || this.options.tileblocksize;
+			return (tileCoord * size) + ((size - 1) / 2.0);
 		},
 
-		_getTileName: function(tileX, tileZ) {
-			return namedReplace("{prefix}/{bucketx}_{bucketz}/{x}_{z}.{fmt}", {
+		_getTileName: function(tileX, tileZ, detailLevel) {
+			var scale = Math.pow(2, detailLevel || 0);
+			var storageTileX = tileX * scale;
+			var storageTileZ = tileZ * scale;
+			var zoomPrefix = "";
+			if (detailLevel > 0) {
+				zoomPrefix = Array(detailLevel + 1).join("z") + "_";
+			}
+			return namedReplace("{prefix}/{bucketx}_{bucketz}/{zoom}{x}_{z}.{fmt}", {
 				prefix: this.options.prefix,
-				bucketx: Math.floor(tileX / 32),
-				bucketz: Math.floor(tileZ / 32),
-				x: tileX,
-				z: tileZ,
+				bucketx: Math.floor(storageTileX / 32),
+				bucketz: Math.floor(storageTileZ / 32),
+				zoom: zoomPrefix,
+				x: storageTileX,
+				z: storageTileZ,
 				fmt: this.options.tileformat
 			});
 		},

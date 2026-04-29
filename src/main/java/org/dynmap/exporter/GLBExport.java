@@ -156,6 +156,9 @@ public class GLBExport implements BlockModelExportSink {
     private boolean centerOrigin = true;
     private boolean cullExportRegionEdges;
     private LightingMode lightingMode = LightingMode.DAY;
+    private BlockModelExportMode exportMode = BlockModelExportMode.FULL;
+    private int lodZoomLevel;
+    private int simplifiedMinSkyLight = 7;
 
     public GLBExport(File destination, TexturePackHDShader shader, DynmapWorld world, DynmapCore core, String basename) {
         this.destination = destination;
@@ -219,6 +222,18 @@ public class GLBExport implements BlockModelExportSink {
         this.lightingMode = (lightingMode == null) ? LightingMode.DAY : lightingMode;
     }
 
+    public void setExportMode(BlockModelExportMode exportMode) {
+        this.exportMode = (exportMode == null) ? BlockModelExportMode.FULL : exportMode;
+    }
+
+    public void setLodZoomLevel(int lodZoomLevel) {
+        this.lodZoomLevel = Math.max(0, lodZoomLevel);
+    }
+
+    public void setSimplifiedMinSkyLight(int simplifiedMinSkyLight) {
+        this.simplifiedMinSkyLight = Math.max(0, Math.min(15, simplifiedMinSkyLight));
+    }
+
     public boolean processExport(DynmapCommandSender sender) {
         return processExport(sender, false);
     }
@@ -256,6 +271,9 @@ public class GLBExport implements BlockModelExportSink {
         exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
         exporter.setCullExportRegionEdges(cullExportRegionEdges);
         exporter.setLightingMode(lightingMode);
+        exporter.setExportMode(exportMode);
+        exporter.setLodZoomLevel(lodZoomLevel);
+        exporter.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
         if (cache != null) {
             exporter.export(cache, this);
         } else {
@@ -288,6 +306,20 @@ public class GLBExport implements BlockModelExportSink {
         }
         ExportPatchGeometry.Geometry geometry = ExportPatchGeometry.build(patch, x, y, z, material.getRotation());
         addGeometry(primitive, geometry, vertexColors, nightVertexLights);
+    }
+
+    @Override
+    public void addQuad(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights)
+            throws IOException {
+        if ((material == null) || (xyz == null) || (xyz.length != 12)) {
+            return;
+        }
+        PrimitiveData primitive = primitives.get(material.getMaterialId());
+        if (primitive == null) {
+            primitive = new PrimitiveData(material);
+            primitives.put(material.getMaterialId(), primitive);
+        }
+        addGeometry(primitive, ExportPatchGeometry.buildQuad(xyz), vertexColors, nightVertexLights);
     }
 
     private void addGeometry(PrimitiveData primitive, ExportPatchGeometry.Geometry geometry, float[] vertexColors,
@@ -398,11 +430,6 @@ public class GLBExport implements BlockModelExportSink {
 
     private BufferOutputStream buildGLB(TexturePack texturePack) throws IOException {
         ArrayList<PrimitiveData> primitiveList = new ArrayList<PrimitiveData>(primitives.values());
-        ArrayList<ExportedTextureData> textures = new ArrayList<ExportedTextureData>(primitiveList.size());
-        for (PrimitiveData primitive : primitiveList) {
-            textures.add(texturePack.exportTexture(primitive.material));
-        }
-
         ArrayList<String> bufferViews = new ArrayList<String>();
         ArrayList<String> accessors = new ArrayList<String>();
         ByteArrayBuilder binary = new ByteArrayBuilder();
@@ -416,9 +443,9 @@ public class GLBExport implements BlockModelExportSink {
                 "{\"magFilter\":%d,\"minFilter\":%d,\"wrapS\":%d,\"wrapT\":%d}", FILTER_NEAREST, FILTER_NEAREST,
                 WRAP_CLAMP_TO_EDGE, WRAP_CLAMP_TO_EDGE));
 
+        int textureIndex = 0;
         for (int i = 0; i < primitiveList.size(); i++) {
             PrimitiveData primitive = expandToTriangleList(primitiveList.get(i));
-            ExportedTextureData texture = textures.get(i);
             AccessorBinary normalBinary = toNormalizedSignedByteBytes(primitive.normals);
             AccessorBinary colorBinary = toNormalizedUnsignedByteBytes(primitive.colors);
             AccessorBinary nightLightBinary = toNormalizedUnsignedByteBytes(primitive.nightLights);
@@ -458,27 +485,33 @@ public class GLBExport implements BlockModelExportSink {
                         "SCALAR", nightLightBinary.normalized, null, null, null, null, null, null));
             }
 
-            int imageView = appendSegment(binary, texture.imagePng, null);
-            bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, null));
-            int imageIndex = i;
-            appendJsonEntry(imagesJson, String.format(Locale.US, "{\"bufferView\":%d,\"mimeType\":\"image/png\"}",
-                    imageView));
-            appendJsonEntry(texturesJson, String.format(Locale.US, "{\"sampler\":0,\"source\":%d}", imageIndex));
-
             StringBuilder materialJson = new StringBuilder();
-            materialJson.append("{\"name\":\"").append(primitive.material.getMaterialId())
-                    .append("\",\"pbrMetallicRoughness\":{\"baseColorTexture\":{\"index\":").append(i)
-                    .append("},\"metallicFactor\":0.0,\"roughnessFactor\":1.0}");
-            if (texture.hasAlpha) {
-                if (texture.hasTranslucentAlpha) {
-                    materialJson.append(",\"alphaMode\":\"BLEND\"");
-                } else {
-                    materialJson.append(",\"alphaMode\":\"MASK\",\"alphaCutoff\":0.5");
+            materialJson.append("{\"name\":\"").append(primitive.material.getMaterialId()).append("\",");
+            if (primitive.material.isSolidColor()) {
+                appendSolidColorMaterial(materialJson, primitive.material);
+            } else {
+                ExportedTextureData texture = texturePack.exportTexture(primitive.material);
+                int imageView = appendSegment(binary, texture.imagePng, null);
+                bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, null));
+                int imageIndex = textureIndex;
+                appendJsonEntry(imagesJson, String.format(Locale.US, "{\"bufferView\":%d,\"mimeType\":\"image/png\"}",
+                        imageView));
+                appendJsonEntry(texturesJson, String.format(Locale.US, "{\"sampler\":0,\"source\":%d}", imageIndex));
+
+                materialJson.append("\"pbrMetallicRoughness\":{\"baseColorTexture\":{\"index\":").append(textureIndex)
+                        .append("},\"metallicFactor\":0.0,\"roughnessFactor\":1.0}");
+                if (texture.hasAlpha) {
+                    if (texture.hasTranslucentAlpha) {
+                        materialJson.append(",\"alphaMode\":\"BLEND\"");
+                    } else {
+                        materialJson.append(",\"alphaMode\":\"MASK\",\"alphaCutoff\":0.5");
+                    }
                 }
-            }
-            if (primitive.material.isEmissive()) {
-                materialJson.append(",\"emissiveFactor\":[1.0,1.0,1.0],\"emissiveTexture\":{\"index\":").append(i)
-                        .append("}");
+                if (primitive.material.isEmissive()) {
+                    materialJson.append(",\"emissiveFactor\":[1.0,1.0,1.0],\"emissiveTexture\":{\"index\":")
+                            .append(textureIndex).append("}");
+                }
+                textureIndex++;
             }
             materialJson.append("}");
             appendJsonEntry(materialsJson, materialJson.toString());
@@ -537,6 +570,31 @@ public class GLBExport implements BlockModelExportSink {
         out.write(intToBytes(BIN_CHUNK_TYPE));
         out.write(binBytes);
         return out;
+    }
+
+    private void appendSolidColorMaterial(StringBuilder materialJson, ExportMaterial material) {
+        int argb = material.getSolidColorArgb();
+        float alpha = ((argb >> 24) & 0xFF) / 255.0F;
+        float red = srgbToLinear(((argb >> 16) & 0xFF) / 255.0F);
+        float green = srgbToLinear(((argb >> 8) & 0xFF) / 255.0F);
+        float blue = srgbToLinear((argb & 0xFF) / 255.0F);
+        materialJson.append("\"pbrMetallicRoughness\":{\"baseColorFactor\":[")
+                .append(String.format(Locale.US, "%.6f,%.6f,%.6f,%.6f", red, green, blue, alpha))
+                .append("],\"metallicFactor\":0.0,\"roughnessFactor\":1.0}");
+        if (alpha < 0.999F) {
+            materialJson.append(",\"alphaMode\":\"BLEND\"");
+        }
+        if (material.isEmissive()) {
+            materialJson.append(",\"emissiveFactor\":[")
+                    .append(String.format(Locale.US, "%.6f,%.6f,%.6f", red, green, blue)).append("]");
+        }
+    }
+
+    private float srgbToLinear(float value) {
+        if (value <= 0.04045F) {
+            return value / 12.92F;
+        }
+        return (float) Math.pow((value + 0.055F) / 1.055F, 2.4F);
     }
 
     private void writeGLB(OutputStream out, byte[] buffer, int length) throws IOException {

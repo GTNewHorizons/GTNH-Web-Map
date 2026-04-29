@@ -63,16 +63,7 @@ public class ModelMapTile extends MapTile {
     @Override
     public boolean render(MapChunkCache cache, String mapname) {
         DynmapCore core = map.getCore();
-        ModelMap.TileAddress address = map.getTileAddress(tx, tz);
-        int minBlockX = address.getMinChunkX() * 16;
-        int minBlockZ = address.getMinChunkZ() * 16;
-        int maxBlockX = (address.getMaxChunkX() * 16) + 15;
-        int maxBlockZ = (address.getMaxChunkZ() * 16) + 15;
-
-        GLBExport export = new GLBExport(null, map.getShader(), world, core, map.getName() + "_" + tx + "_" + tz);
-        export.setRenderBounds(minBlockX, world.minY, minBlockZ, maxBlockX, world.worldheight - 1, maxBlockZ);
-        export.setCullExportRegionEdges(map.isCullExportRegionEdges());
-        export.setLightingMode(map.getLightingMode().toExportLightingMode());
+        GLBExport export = map.createExport(world, tx, tz, 0, map.getName() + "_" + tx + "_" + tz);
 
         BufferOutputStream glb;
         try {
@@ -84,49 +75,14 @@ public class ModelMapTile extends MapTile {
 
         MapStorage storage = world.getMapStorage();
         MapStorageTile tile = storage.getTile(world, map, tx, tz, 0, MapType.ImageVariant.STANDARD);
-        boolean updated = false;
         boolean rendered = (glb != null);
-        boolean compressOutput = map.getOutputCompression() == ModelMap.OutputCompression.GZIP;
-
-        tile.getWriteLock();
-        try {
-            if (glb == null) {
-                if (tile.exists()) {
-                    if (tile.delete()) {
-                        MapManager.mapman.pushUpdate(world, new Client.Tile(tile.getURI()));
-                        updated = true;
-                    }
-                }
-            } else {
-                long crc = MapStorage.calculateTileHashCode(glb.buf, 0, glb.len);
-                BufferOutputStream output;
-                try {
-                    output = compressOutput ? gzip(glb) : glb;
-                } catch (IOException iox) {
-                    Log.severe("ModelMap compression failed for " + toString() + ": " + iox.getMessage());
-                    return false;
-                }
-                boolean rewrite = !tile.matchesHashCode(crc);
-                if (!rewrite) {
-                    TileRead existing = tile.read();
-                    rewrite = (existing == null) || (isGzipCompressed(existing.image) != compressOutput);
-                }
-                if (rewrite) {
-                    if (tile.write(crc, output, System.currentTimeMillis())) {
-                        MapManager.mapman.pushUpdate(world, new Client.Tile(tile.getURI()));
-                        updated = true;
-                    }
-                }
-            }
-        } finally {
-            tile.releaseWriteLock();
-        }
+        boolean updated = map.writeRenderedTile(world, tile, glb, toString());
 
         MapManager.mapman.updateStatistics(this, map.getPrefix(), rendered, updated, !rendered);
         return updated;
     }
 
-    private static BufferOutputStream gzip(BufferOutputStream input) throws IOException {
+    static BufferOutputStream gzip(BufferOutputStream input) throws IOException {
         BufferOutputStream compressed = new BufferOutputStream();
         OutputStream gzip = new GZIPOutputStream(compressed);
         try {
@@ -137,7 +93,7 @@ public class ModelMapTile extends MapTile {
         return compressed;
     }
 
-    private static boolean isGzipCompressed(org.dynmap.utils.BufferInputStream input) {
+    static boolean isGzipCompressed(org.dynmap.utils.BufferInputStream input) {
         return (input != null) && (input.length() >= 2) && ((input.buffer()[0] & 0xFF) == 0x1F)
                 && ((input.buffer()[1] & 0xFF) == 0x8B);
     }

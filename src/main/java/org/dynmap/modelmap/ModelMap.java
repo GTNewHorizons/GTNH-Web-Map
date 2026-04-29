@@ -3,10 +3,13 @@ package org.dynmap.modelmap;
 import static org.dynmap.JSONUtils.a;
 import static org.dynmap.JSONUtils.s;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.dynmap.CustomZoomOutMapType;
+import org.dynmap.Client;
 import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapCore;
@@ -15,15 +18,19 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.MapTile;
 import org.dynmap.MapType;
+import org.dynmap.MapTypeState;
+import org.dynmap.exporter.BlockModelExportMode;
 import org.dynmap.exporter.GLBExport;
 import org.dynmap.hdmap.TexturePackHDShader;
 import org.dynmap.utils.TileFlags;
+import org.dynmap.utils.BufferOutputStream;
 import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
+import org.dynmap.storage.MapStorageTile.TileRead;
 import org.dynmap.storage.MapStorageTileEnumCB;
 import org.json.simple.JSONObject;
 
-public class ModelMap extends MapType {
+public class ModelMap extends MapType implements CustomZoomOutMapType {
     public enum LightingMode {
         DAY("day"),
         NIGHT("night"),
@@ -69,6 +76,9 @@ public class ModelMap extends MapType {
     public static final boolean DEFAULT_CULL_EXPORT_REGION_EDGES = true;
     public static final OutputCompression DEFAULT_OUTPUT_COMPRESSION = OutputCompression.GZIP;
     public static final LightingMode DEFAULT_LIGHTING_MODE = LightingMode.DAY;
+    public static final DetailMode DEFAULT_DETAIL_MODE = DetailMode.FULL;
+    public static final int DEFAULT_MAP_ZOOMOUT = 0;
+    public static final int DEFAULT_SIMPLIFIED_MIN_SKYLIGHT = 7;
     public static final double DEFAULT_DAY_AMBIENT_LIGHT = 0.7;
     public static final double DEFAULT_NIGHT_AMBIENT_LIGHT = 0.14;
     public static final double DEFAULT_DAY_SUN_LIGHT = 0.8;
@@ -96,6 +106,42 @@ public class ModelMap extends MapType {
 
         public String getContentType() {
             return contentType;
+        }
+    }
+
+    public enum DetailMode {
+        FULL("full", BlockModelExportMode.FULL),
+        SURFACE("surface", BlockModelExportMode.SIMPLIFIED);
+
+        private final String id;
+        private final BlockModelExportMode exportMode;
+
+        DetailMode(String id, BlockModelExportMode exportMode) {
+            this.id = id;
+            this.exportMode = exportMode;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public BlockModelExportMode getExportMode() {
+            return exportMode;
+        }
+
+        public static DetailMode fromId(String value) {
+            if (value == null) {
+                return null;
+            }
+            if ("simplified".equalsIgnoreCase(value)) {
+                return SURFACE;
+            }
+            for (DetailMode mode : values()) {
+                if (mode.id.equalsIgnoreCase(value)) {
+                    return mode;
+                }
+            }
+            return null;
         }
     }
 
@@ -203,6 +249,9 @@ public class ModelMap extends MapType {
     private boolean cullExportRegionEdges;
     private OutputCompression outputCompression;
     private LightingMode lightingMode;
+    private DetailMode detailMode;
+    private int mapZoomOut;
+    private int simplifiedMinSkyLight;
     private double dayAmbientLight;
     private double nightAmbientLight;
     private double daySunLight;
@@ -242,6 +291,10 @@ public class ModelMap extends MapType {
         outputCompression =
                 resolveOutputCompression(configuration.getString("compression", DEFAULT_OUTPUT_COMPRESSION.getId()));
         lightingMode = resolveLightingMode(configuration.getString("lighting_mode", DEFAULT_LIGHTING_MODE.getId()));
+        detailMode = resolveDetailMode(configuration.getString("detail_mode", DEFAULT_DETAIL_MODE.getId()));
+        mapZoomOut = resolveMapZoomOut(configuration.getInteger("mapzoomout", DEFAULT_MAP_ZOOMOUT));
+        simplifiedMinSkyLight = resolveSimplifiedMinSkyLight(
+                configuration.getInteger("simplified_min_skylight", DEFAULT_SIMPLIFIED_MIN_SKYLIGHT));
         dayAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightday", DEFAULT_DAY_AMBIENT_LIGHT),
                 DEFAULT_DAY_AMBIENT_LIGHT, "ambientlightday");
         nightAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightnight", DEFAULT_NIGHT_AMBIENT_LIGHT),
@@ -286,6 +339,9 @@ public class ModelMap extends MapType {
         cn.put("cull_export_region_edges", cullExportRegionEdges);
         cn.put("compression", outputCompression.getId());
         cn.put("lighting_mode", lightingMode.getId());
+        cn.put("detail_mode", detailMode.getId());
+        cn.put("mapzoomout", mapZoomOut);
+        cn.put("simplified_min_skylight", simplifiedMinSkyLight);
         cn.put("ambientlightday", dayAmbientLight);
         cn.put("ambientlightnight", nightAmbientLight);
         cn.put("sunlightday", daySunLight);
@@ -342,6 +398,33 @@ public class ModelMap extends MapType {
         return resolved;
     }
 
+    private DetailMode resolveDetailMode(String detailModeId) {
+        DetailMode resolved = DetailMode.fromId(detailModeId);
+        if (resolved == null) {
+            Log.severe("ModelMap '" + name + "' set invalid detail_mode '" + detailModeId + "' - using '"
+                    + DEFAULT_DETAIL_MODE.getId() + "'");
+            return DEFAULT_DETAIL_MODE;
+        }
+        return resolved;
+    }
+
+    private int resolveMapZoomOut(int value) {
+        if (value < 0) {
+            Log.severe("ModelMap '" + name + "' set invalid mapzoomout " + value + " - using " + DEFAULT_MAP_ZOOMOUT);
+            return DEFAULT_MAP_ZOOMOUT;
+        }
+        return value;
+    }
+
+    private int resolveSimplifiedMinSkyLight(int value) {
+        if ((value < 0) || (value > 15)) {
+            Log.severe("ModelMap '" + name + "' set invalid simplified_min_skylight " + value + " - using "
+                    + DEFAULT_SIMPLIFIED_MIN_SKYLIGHT);
+            return DEFAULT_SIMPLIFIED_MIN_SKYLIGHT;
+        }
+        return value;
+    }
+
     private double resolveLightLevel(double value, double defaultValue, String settingName) {
         if (value < 0.0) {
             Log.severe("ModelMap '" + name + "' set invalid " + settingName + " " + value + " - using " + defaultValue);
@@ -372,6 +455,22 @@ public class ModelMap extends MapType {
 
     public int getBlockSpan() {
         return granularity * 16;
+    }
+
+    public DetailMode getDetailMode() {
+        return detailMode;
+    }
+
+    public int getConfiguredZoomOutLevels() {
+        return mapZoomOut;
+    }
+
+    public int getSimplifiedMinSkyLight() {
+        return simplifiedMinSkyLight;
+    }
+
+    public int getTotalZoomOutLevels(DynmapWorld world) {
+        return world.getExtraZoomOutLevels() + mapZoomOut;
     }
 
     public AssetFormat getAssetFormat() {
@@ -475,7 +574,12 @@ public class ModelMap extends MapType {
 
     @Override
     public boolean isZoomOutSupported() {
-        return false;
+        return true;
+    }
+
+    @Override
+    public int getMapZoomOutLevels() {
+        return mapZoomOut;
     }
 
     @Override
@@ -485,6 +589,9 @@ public class ModelMap extends MapType {
             @Override
             public void tileFound(MapStorageTile tile, ImageEncoding fmt) {
                 if (fmt != getTileEncoding()) {
+                    tile.delete();
+                }
+                else if (tile.zoom > getTotalZoomOutLevels(world)) {
                     tile.delete();
                 }
                 else if ((tile.zoom == 0) && !rendered.getFlag(tile.x, tile.y)) {
@@ -514,7 +621,9 @@ public class ModelMap extends MapType {
         s(o, "compassview", "N");
         s(o, "bigmap", false);
         s(o, "modelminzoom", 0);
-        s(o, "modelmaxzoom", 6);
+        s(o, "modelmaxzoom", Math.max(6, getTotalZoomOutLevels(world) + 1));
+        s(o, "modelzoomout", getTotalZoomOutLevels(world));
+        s(o, "detailmode", detailMode.getId());
         s(o, "lightingmode", lightingMode.getId());
         s(o, "ambientlightday", dayAmbientLight);
         s(o, "ambientlightnight", nightAmbientLight);
@@ -568,6 +677,84 @@ public class ModelMap extends MapType {
 
     public OutputCompression getOutputCompression() {
         return outputCompression;
+    }
+
+    public GLBExport createExport(DynmapWorld world, int tileX, int tileZ, int zoom, String basename) {
+        GLBExport export = new GLBExport(null, getShader(), world, core, basename);
+        int tileChunkSpan = granularity << zoom;
+        int minBlockX = tileX * granularity * 16;
+        int minBlockZ = tileZ * granularity * 16;
+        int maxBlockX = minBlockX + (tileChunkSpan * 16) - 1;
+        int maxBlockZ = minBlockZ + (tileChunkSpan * 16) - 1;
+        export.setRenderBounds(minBlockX, world.minY, minBlockZ, maxBlockX, world.worldheight - 1, maxBlockZ);
+        export.setCullExportRegionEdges(cullExportRegionEdges);
+        export.setLightingMode(getLightingMode().toExportLightingMode());
+        export.setExportMode((zoom > 0) ? BlockModelExportMode.ZOOMOUT : detailMode.getExportMode());
+        export.setLodZoomLevel(zoom);
+        export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
+        return export;
+    }
+
+    public boolean writeRenderedTile(DynmapWorld world, MapStorageTile tile, BufferOutputStream glb, String tileName) {
+        boolean updated = false;
+        boolean compressOutput = outputCompression == OutputCompression.GZIP;
+
+        tile.getWriteLock();
+        try {
+            if (glb == null) {
+                if (tile.exists() && tile.delete()) {
+                    MapManager.mapman.pushUpdate(world, new Client.Tile(tile.getURI()));
+                    updated = true;
+                }
+            } else {
+                long crc = MapStorage.calculateTileHashCode(glb.buf, 0, glb.len);
+                BufferOutputStream output;
+                try {
+                    output = compressOutput ? ModelMapTile.gzip(glb) : glb;
+                } catch (IOException iox) {
+                    Log.severe("ModelMap compression failed for " + tileName + ": " + iox.getMessage());
+                    return false;
+                }
+                boolean rewrite = !tile.matchesHashCode(crc);
+                if (!rewrite) {
+                    TileRead existing = tile.read();
+                    rewrite = (existing == null) || (ModelMapTile.isGzipCompressed(existing.image) != compressOutput);
+                }
+                if (rewrite && tile.write(crc, output, System.currentTimeMillis())) {
+                    MapManager.mapman.pushUpdate(world, new Client.Tile(tile.getURI()));
+                    updated = true;
+                }
+            }
+        } finally {
+            tile.releaseWriteLock();
+        }
+        return updated;
+    }
+
+    @Override
+    public void processZoomOutTile(DynmapWorld world, MapTypeState state, MapStorageTile tile, boolean firstVariant) {
+        if (firstVariant) {
+            state.clearZoomOutInv(tile.x, tile.y, tile.zoom);
+        }
+        MapStorageTile zoomTile = tile.getZoomOutTile();
+        if (zoomTile.zoom > getTotalZoomOutLevels(world)) {
+            return;
+        }
+
+        BufferOutputStream glb = null;
+        String tileName = world.getName() + ":" + getName() + "," + zoomTile.x + "," + zoomTile.y + ",z" + zoomTile.zoom;
+        try {
+            glb = createExport(world, zoomTile.x, zoomTile.y, zoomTile.zoom,
+                    getName() + "_" + zoomTile.x + "_" + zoomTile.y + "_z" + zoomTile.zoom).exportToBuffer();
+        } catch (IOException iox) {
+            Log.severe("ModelMap zoomout export failed for " + tileName + ": " + iox.getMessage());
+            return;
+        }
+
+        boolean updated = writeRenderedTile(world, zoomTile, glb, tileName);
+        if ((zoomTile.zoom < getTotalZoomOutLevels(world)) && ((glb != null) || updated)) {
+            world.enqueueZoomOutUpdate(zoomTile);
+        }
     }
 
     public boolean setPrefix(String value) {
@@ -624,6 +811,36 @@ public class ModelMap extends MapType {
     public boolean setOutputCompression(OutputCompression value) {
         if ((value != null) && (value != outputCompression)) {
             outputCompression = value;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean setDetailMode(DetailMode value) {
+        if ((value != null) && (value != detailMode)) {
+            detailMode = value;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean setMapZoomOut(int value) {
+        if (value < 0) {
+            return false;
+        }
+        if (value != mapZoomOut) {
+            mapZoomOut = value;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean setSimplifiedMinSkyLight(int value) {
+        if ((value < 0) || (value > 15)) {
+            return false;
+        }
+        if (value != simplifiedMinSkyLight) {
+            simplifiedMinSkyLight = value;
             return true;
         }
         return false;

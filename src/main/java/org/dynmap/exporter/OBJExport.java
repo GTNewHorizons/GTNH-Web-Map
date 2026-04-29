@@ -294,6 +294,26 @@ public class OBJExport implements BlockModelExportSink {
         exportMaterials.put(material.getMaterialId(), material);
         addPatchToFile(v, uv, geometry.sideVisible, material.getMaterialId(), 0);
     }
+
+    @Override
+    public void addQuad(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights)
+            throws IOException {
+        if ((material == null) || (xyz == null) || (xyz.length != 12)) {
+            return;
+        }
+        int[] v = new int[4];
+        int[] uv = new int[4];
+        for (int i = 0; i < 4; i++) {
+            int xyzOff = i * 3;
+            v[i] = vertices.getVectorIndex(xyz[xyzOff], xyz[xyzOff + 1], xyz[xyzOff + 2]);
+        }
+        uv[0] = uvs.getVectorIndex(0.0, 0.0, 0);
+        uv[1] = uvs.getVectorIndex(1.0, 0.0, 0);
+        uv[2] = uvs.getVectorIndex(1.0, 1.0, 0);
+        uv[3] = uvs.getVectorIndex(0.0, 1.0, 0);
+        exportMaterials.put(material.getMaterialId(), material);
+        addPatchToFile(v, uv, SideVisible.TOP, material.getMaterialId(), 0);
+    }
     /**
      * Start adding file to export
      * @param fname - path/name of file in destination zip
