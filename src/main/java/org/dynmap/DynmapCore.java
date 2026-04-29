@@ -638,6 +638,9 @@ public class DynmapCore implements DynmapCommonAPI {
             componentManager.add(component);
         }
         Log.verboseinfo("Loaded " + componentManager.components.size() + " components.");
+        if (markerapi != null) {
+            MarkerAPIImpl.completeInitializeMarkerAPI(markerapi);
+        }
 
         if (!isInternalWebServerDisabled) {
             startWebserver();
