@@ -30,7 +30,7 @@ import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.PatchDefinition;
 import org.dynmap.utils.PatchDefinitionFactory;
 
-final class BlockModelLodExporter extends AbstractBlockModelExporter {
+final class BlockModelLowPolyExporter extends AbstractBlockModelExporter {
     private static final double EPSILON = 1.0E-6;
     private static final int WEST = 0;
     private static final int EAST = 1;
@@ -38,8 +38,8 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
     private static final int SOUTH = 3;
     private static final BlockStep[] SIDE_STEPS =
             { BlockStep.X_MINUS, BlockStep.X_PLUS, BlockStep.Z_MINUS, BlockStep.Z_PLUS };
-    private static final int MAX_ZOOMOUT_GROUP_SPAN = 8;
-    private static final double ZOOMOUT_TIGHTEN_OVERFILL_RATIO = 1.25;
+    private static final int MAX_LOW_POLY_GROUP_SPAN = 8;
+    private static final double LOW_POLY_TIGHTEN_OVERFILL_RATIO = 1.25;
     private static final double HULL_EPSILON = 1.0E-5;
 
     private static final class SurfaceCell {
@@ -69,7 +69,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         }
     }
 
-    private static final class ZoomoutBlockInfo {
+    private static final class LowPolyBlockInfo {
         final int x;
         final int y;
         final int z;
@@ -81,7 +81,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         final ExportMaterial northMaterial;
         final ExportMaterial southMaterial;
 
-        ZoomoutBlockInfo(int x, int y, int z, int blockId, String groupKey, ExportMaterial topMaterial,
+        LowPolyBlockInfo(int x, int y, int z, int blockId, String groupKey, ExportMaterial topMaterial,
                 ExportMaterial westMaterial, ExportMaterial eastMaterial, ExportMaterial northMaterial,
                 ExportMaterial southMaterial) {
             this.x = x;
@@ -97,9 +97,9 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         }
     }
 
-    private static final class ZoomoutGroup {
-        final ZoomoutBlockInfo seed;
-        final ArrayList<ZoomoutBlockInfo> members = new ArrayList<ZoomoutBlockInfo>();
+    private static final class LowPolyGroup {
+        final LowPolyBlockInfo seed;
+        final ArrayList<LowPolyBlockInfo> members = new ArrayList<LowPolyBlockInfo>();
         int minX;
         int maxX;
         int minY;
@@ -107,7 +107,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         int minZ;
         int maxZ;
 
-        ZoomoutGroup(ZoomoutBlockInfo seed) {
+        LowPolyGroup(LowPolyBlockInfo seed) {
             this.seed = seed;
             this.minX = seed.x;
             this.maxX = seed.x;
@@ -151,7 +151,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
     private final Map<String, ExportMaterial> solidColorMaterialCache = new HashMap<String, ExportMaterial>();
     private final Map<String, Integer> averageColorCache = new HashMap<String, Integer>();
 
-    BlockModelLodExporter(DynmapWorld world, DynmapCore core, HDShader shader) {
+    BlockModelLowPolyExporter(DynmapWorld world, DynmapCore core, HDShader shader) {
         super(world, core, shader);
         this.patchFactory = HDBlockModels.getPatchDefinitionFactory();
         this.exportTexturePack =
@@ -162,33 +162,33 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
     protected void exportLoadedRegion(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX,
             int rangeMinZ, int rangeMaxZ, boolean[] edgeBits) throws IOException {
         MapIterator geometryIterator = cache.getIterator(rangeMinX, getMaxY(), rangeMinZ);
-        Map<String, ZoomoutBlockInfo> infoCache = new HashMap<String, ZoomoutBlockInfo>();
-        ArrayList<ZoomoutBlockInfo> visibleBlocks =
-                collectZoomoutVisibleBlocks(geometryIterator, infoCache, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+        Map<String, LowPolyBlockInfo> infoCache = new HashMap<String, LowPolyBlockInfo>();
+        ArrayList<LowPolyBlockInfo> visibleBlocks =
+                collectLowPolyVisibleBlocks(geometryIterator, infoCache, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
         if (visibleBlocks.isEmpty()) {
             return;
         }
         MapIterator groupIterator = cache.getIterator(rangeMinX, getMaxY(), rangeMinZ);
         MapIterator lightingIterator = cache.getIterator(rangeMinX, getMinY(), rangeMinZ);
         Set<String> grouped = new HashSet<String>();
-        for (ZoomoutBlockInfo seed : visibleBlocks) {
+        for (LowPolyBlockInfo seed : visibleBlocks) {
             String seedKey = blockKey(seed.x, seed.y, seed.z);
             if (grouped.contains(seedKey)) {
                 continue;
             }
-            ZoomoutGroup group = growZoomoutGroup(groupIterator, infoCache, grouped, seed, rangeMinX, rangeMaxX, rangeMinZ,
+            LowPolyGroup group = growLowPolyGroup(groupIterator, infoCache, grouped, seed, rangeMinX, rangeMaxX, rangeMinZ,
                     rangeMaxZ);
-            emitZoomoutGroup(sink, lightingIterator, group);
+            emitLowPolyGroup(sink, lightingIterator, group);
         }
     }
 
-    private ArrayList<ZoomoutBlockInfo> collectZoomoutVisibleBlocks(MapIterator geometryIterator,
-            Map<String, ZoomoutBlockInfo> infoCache, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ)
+    private ArrayList<LowPolyBlockInfo> collectLowPolyVisibleBlocks(MapIterator geometryIterator,
+            Map<String, LowPolyBlockInfo> infoCache, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ)
             throws IOException {
         Set<String> visited = new HashSet<String>();
         Set<String> visible = new HashSet<String>();
         ArrayDeque<FloodFillNode> queue = new ArrayDeque<FloodFillNode>();
-        ArrayList<ZoomoutBlockInfo> visibleBlocks = new ArrayList<ZoomoutBlockInfo>();
+        ArrayList<LowPolyBlockInfo> visibleBlocks = new ArrayList<LowPolyBlockInfo>();
 
         seedFloodFillQueue(geometryIterator, visited, queue, rangeMinX - 1, getMaxY(), rangeMinZ - 1, rangeMinX, rangeMaxX,
                 rangeMinZ, rangeMaxZ);
@@ -199,7 +199,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
                 if (!visited.add(key)) {
                     continue;
                 }
-                processZoomoutFloodFillPosition(geometryIterator, infoCache, visible, visibleBlocks, queue, x, getMaxY(),
+                processLowPolyFloodFillPosition(geometryIterator, infoCache, visible, visibleBlocks, queue, x, getMaxY(),
                         z, true);
             }
         }
@@ -217,7 +217,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
                 if (!visited.add(key)) {
                     continue;
                 }
-                processZoomoutFloodFillPosition(geometryIterator, infoCache, visible, visibleBlocks, queue, neighborX,
+                processLowPolyFloodFillPosition(geometryIterator, infoCache, visible, visibleBlocks, queue, neighborX,
                         neighborY, neighborZ,
                         isWithinRenderBounds(neighborX, neighborY, neighborZ, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ));
             }
@@ -226,24 +226,24 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return visibleBlocks;
     }
 
-    private void processZoomoutFloodFillPosition(MapIterator geometryIterator, Map<String, ZoomoutBlockInfo> infoCache,
-            Set<String> visible, ArrayList<ZoomoutBlockInfo> visibleBlocks, ArrayDeque<FloodFillNode> queue, int x, int y,
+    private void processLowPolyFloodFillPosition(MapIterator geometryIterator, Map<String, LowPolyBlockInfo> infoCache,
+            Set<String> visible, ArrayList<LowPolyBlockInfo> visibleBlocks, ArrayDeque<FloodFillNode> queue, int x, int y,
             int z, boolean render) throws IOException {
         geometryIterator.initialize(x, y, z);
         int blockId = geometryIterator.getBlockTypeID();
         boolean skylightAllowed = hasSufficientSkyLight(geometryIterator);
         if (render) {
-            ZoomoutBlockInfo info = getZoomoutBlockInfo(geometryIterator, infoCache, x, y, z);
+            LowPolyBlockInfo info = getLowPolyBlockInfo(geometryIterator, infoCache, x, y, z);
             if ((info != null) && visible.add(blockKey(x, y, z))) {
                 visibleBlocks.add(info);
             }
         }
-        if (skylightAllowed && canQueueZoomoutBlock(blockId)) {
+        if (skylightAllowed && canQueueLowPolyBlock(blockId)) {
             queue.addLast(new FloodFillNode(x, y, z));
         }
     }
 
-    private boolean canQueueZoomoutBlock(int blockId) {
+    private boolean canQueueLowPolyBlock(int blockId) {
         return !isSolidTraceBlock(blockId);
     }
 
@@ -254,10 +254,10 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return geometryIterator.getBlockSkyLight() >= getSimplifiedMinSkyLight();
     }
 
-    private ZoomoutGroup growZoomoutGroup(MapIterator geometryIterator, Map<String, ZoomoutBlockInfo> infoCache,
-            Set<String> grouped, ZoomoutBlockInfo seed, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ)
+    private LowPolyGroup growLowPolyGroup(MapIterator geometryIterator, Map<String, LowPolyBlockInfo> infoCache,
+            Set<String> grouped, LowPolyBlockInfo seed, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ)
             throws IOException {
-        ZoomoutGroup group = new ZoomoutGroup(seed);
+        LowPolyGroup group = new LowPolyGroup(seed);
         ArrayDeque<FloodFillNode> queue = new ArrayDeque<FloodFillNode>();
         Set<String> queued = new HashSet<String>();
         queue.addLast(new FloodFillNode(seed.x, seed.y, seed.z));
@@ -269,14 +269,14 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
             if (grouped.contains(currentKey)) {
                 continue;
             }
-            ZoomoutBlockInfo info = getZoomoutBlockInfo(geometryIterator, infoCache, current.x, current.y, current.z);
-            if ((info == null) || !seed.groupKey.equals(info.groupKey) || !canExpandZoomoutGroup(group, info.x, info.y, info.z)) {
+            LowPolyBlockInfo info = getLowPolyBlockInfo(geometryIterator, infoCache, current.x, current.y, current.z);
+            if ((info == null) || !seed.groupKey.equals(info.groupKey) || !canExpandLowPolyGroup(group, info.x, info.y, info.z)) {
                 continue;
             }
 
             grouped.add(currentKey);
             group.members.add(info);
-            updateZoomoutGroupBounds(group, info.x, info.y, info.z);
+            updateLowPolyGroupBounds(group, info.x, info.y, info.z);
 
             for (int[] direction : BlockModelFloodFillSupport.DIRECTIONS) {
                 int neighborX = current.x + direction[0];
@@ -295,18 +295,18 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return group;
     }
 
-    private boolean canExpandZoomoutGroup(ZoomoutGroup group, int x, int y, int z) {
+    private boolean canExpandLowPolyGroup(LowPolyGroup group, int x, int y, int z) {
         int minX = Math.min(group.minX, x);
         int maxX = Math.max(group.maxX, x);
         int minY = Math.min(group.minY, y);
         int maxY = Math.max(group.maxY, y);
         int minZ = Math.min(group.minZ, z);
         int maxZ = Math.max(group.maxZ, z);
-        return ((maxX - minX) < MAX_ZOOMOUT_GROUP_SPAN) && ((maxY - minY) < MAX_ZOOMOUT_GROUP_SPAN)
-                && ((maxZ - minZ) < MAX_ZOOMOUT_GROUP_SPAN);
+        return ((maxX - minX) < MAX_LOW_POLY_GROUP_SPAN) && ((maxY - minY) < MAX_LOW_POLY_GROUP_SPAN)
+                && ((maxZ - minZ) < MAX_LOW_POLY_GROUP_SPAN);
     }
 
-    private void updateZoomoutGroupBounds(ZoomoutGroup group, int x, int y, int z) {
+    private void updateLowPolyGroupBounds(LowPolyGroup group, int x, int y, int z) {
         group.minX = Math.min(group.minX, x);
         group.maxX = Math.max(group.maxX, x);
         group.minY = Math.min(group.minY, y);
@@ -315,7 +315,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         group.maxZ = Math.max(group.maxZ, z);
     }
 
-    private List<HullPlane> buildZoomoutHullPlanes(ZoomoutGroup group) {
+    private List<HullPlane> buildLowPolyHullPlanes(LowPolyGroup group) {
         ArrayList<HullPlane> planes = new ArrayList<HullPlane>();
         int sizeX = (group.maxX - group.minX) + 1;
         int sizeY = (group.maxY - group.minY) + 1;
@@ -330,38 +330,38 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
 
         for (int sx = 0; sx < 2; sx++) {
             for (int sy = 0; sy < 2; sy++) {
-                int threshold = getZoomoutEdgeThreshold(group, sizeX, sizeY, sizeZ, 0, sx == 0, 1, sy == 0);
+                int threshold = getLowPolyEdgeThreshold(group, sizeX, sizeY, sizeZ, 0, sx == 0, 1, sy == 0);
                 if (threshold > 0) {
                     planes.add(buildHullPlane(sizeX, sizeY, sizeZ, true, sx == 0, true, sy == 0, false, true, threshold,
-                            chooseZoomoutCutMaterial(group, true, sx == 0, true, sy == 0, false, true)));
+                            chooseLowPolyCutMaterial(group, true, sx == 0, true, sy == 0, false, true)));
                 }
             }
         }
         for (int sx = 0; sx < 2; sx++) {
             for (int sz = 0; sz < 2; sz++) {
-                int threshold = getZoomoutEdgeThreshold(group, sizeX, sizeY, sizeZ, 0, sx == 0, 2, sz == 0);
+                int threshold = getLowPolyEdgeThreshold(group, sizeX, sizeY, sizeZ, 0, sx == 0, 2, sz == 0);
                 if (threshold > 0) {
                     planes.add(buildHullPlane(sizeX, sizeY, sizeZ, true, sx == 0, false, true, true, sz == 0, threshold,
-                            chooseZoomoutCutMaterial(group, true, sx == 0, false, true, true, sz == 0)));
+                            chooseLowPolyCutMaterial(group, true, sx == 0, false, true, true, sz == 0)));
                 }
             }
         }
         for (int sy = 0; sy < 2; sy++) {
             for (int sz = 0; sz < 2; sz++) {
-                int threshold = getZoomoutEdgeThreshold(group, sizeX, sizeY, sizeZ, 1, sy == 0, 2, sz == 0);
+                int threshold = getLowPolyEdgeThreshold(group, sizeX, sizeY, sizeZ, 1, sy == 0, 2, sz == 0);
                 if (threshold > 0) {
                     planes.add(buildHullPlane(sizeX, sizeY, sizeZ, false, true, true, sy == 0, true, sz == 0, threshold,
-                            chooseZoomoutCutMaterial(group, false, true, true, sy == 0, true, sz == 0)));
+                            chooseLowPolyCutMaterial(group, false, true, true, sy == 0, true, sz == 0)));
                 }
             }
         }
         for (int sx = 0; sx < 2; sx++) {
             for (int sy = 0; sy < 2; sy++) {
                 for (int sz = 0; sz < 2; sz++) {
-                    int threshold = getZoomoutCornerThreshold(group, sizeX, sizeY, sizeZ, sx == 0, sy == 0, sz == 0);
+                    int threshold = getLowPolyCornerThreshold(group, sizeX, sizeY, sizeZ, sx == 0, sy == 0, sz == 0);
                     if (threshold > 0) {
                         planes.add(buildHullPlane(sizeX, sizeY, sizeZ, true, sx == 0, true, sy == 0, true, sz == 0,
-                                threshold, chooseZoomoutCutMaterial(group, true, sx == 0, true, sy == 0, true, sz == 0)));
+                                threshold, chooseLowPolyCutMaterial(group, true, sx == 0, true, sy == 0, true, sz == 0)));
                     }
                 }
             }
@@ -390,37 +390,37 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return new HullPlane(nx, ny, nz, threshold - constant, material, true);
     }
 
-    private int getZoomoutEdgeThreshold(ZoomoutGroup group, int sizeX, int sizeY, int sizeZ, int axisA, boolean minA,
+    private int getLowPolyEdgeThreshold(LowPolyGroup group, int sizeX, int sizeY, int sizeZ, int axisA, boolean minA,
             int axisB, boolean minB) {
         int threshold = Integer.MAX_VALUE;
-        for (ZoomoutBlockInfo member : group.members) {
+        for (LowPolyBlockInfo member : group.members) {
             threshold = Math.min(threshold,
-                    getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, axisA, minA)
-                            + getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, axisB, minB));
+                    getLowPolyAxisDistance(group, member, sizeX, sizeY, sizeZ, axisA, minA)
+                            + getLowPolyAxisDistance(group, member, sizeX, sizeY, sizeZ, axisB, minB));
         }
         return (threshold == Integer.MAX_VALUE) ? 0 : threshold;
     }
 
-    private int getZoomoutCornerThreshold(ZoomoutGroup group, int sizeX, int sizeY, int sizeZ, boolean minX,
+    private int getLowPolyCornerThreshold(LowPolyGroup group, int sizeX, int sizeY, int sizeZ, boolean minX,
             boolean minY, boolean minZ) {
         int threshold = Integer.MAX_VALUE;
-        for (ZoomoutBlockInfo member : group.members) {
+        for (LowPolyBlockInfo member : group.members) {
             threshold = Math.min(threshold,
-                    getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, 0, minX)
-                            + getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, 1, minY)
-                            + getZoomoutAxisDistance(group, member, sizeX, sizeY, sizeZ, 2, minZ));
+                    getLowPolyAxisDistance(group, member, sizeX, sizeY, sizeZ, 0, minX)
+                            + getLowPolyAxisDistance(group, member, sizeX, sizeY, sizeZ, 1, minY)
+                            + getLowPolyAxisDistance(group, member, sizeX, sizeY, sizeZ, 2, minZ));
         }
         return (threshold == Integer.MAX_VALUE) ? 0 : threshold;
     }
 
-    private int getZoomoutAxisDistance(ZoomoutGroup group, ZoomoutBlockInfo member, int sizeX, int sizeY, int sizeZ,
+    private int getLowPolyAxisDistance(LowPolyGroup group, LowPolyBlockInfo member, int sizeX, int sizeY, int sizeZ,
             int axis, boolean minSide) {
         int local = (axis == 0) ? (member.x - group.minX) : ((axis == 1) ? (member.y - group.minY) : (member.z - group.minZ));
         int size = (axis == 0) ? sizeX : ((axis == 1) ? sizeY : sizeZ);
         return minSide ? local : (size - (local + 1));
     }
 
-    private ExportMaterial chooseZoomoutCutMaterial(ZoomoutGroup group, boolean useX, boolean minX, boolean useY,
+    private ExportMaterial chooseLowPolyCutMaterial(LowPolyGroup group, boolean useX, boolean minX, boolean useY,
             boolean minY, boolean useZ, boolean minZ) {
         if (group.seed.topMaterial != null) {
             return group.seed.topMaterial;
@@ -548,8 +548,8 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return new double[] { value[0] / len, value[1] / len, value[2] / len };
     }
 
-    private void emitZoomoutGroup(BlockModelExportSink sink, MapIterator lightingIterator, ZoomoutGroup group) throws IOException {
-        if (shouldTightenZoomoutGroup(group) && emitTightenedZoomoutGroup(sink, group)) {
+    private void emitLowPolyGroup(BlockModelExportSink sink, MapIterator lightingIterator, LowPolyGroup group) throws IOException {
+        if (shouldTightenLowPolyGroup(group) && emitTightenedLowPolyGroup(sink, group)) {
             return;
         }
         SurfaceCell cell = new SurfaceCell();
@@ -570,24 +570,24 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         lightingIterator.initialize(group.seed.x, group.seed.y, group.seed.z);
         sink.setChunk(group.minX >> 4, group.minZ >> 4);
         emitTopArea(sink, lightingIterator, cell, minX, minZ, width, depth, topY, group.seed.topMaterial);
-        emitZoomoutSideQuad(sink, new double[] { minX, bottomY, minZ, minX, bottomY, minZ + depth, minX, topY,
+        emitLowPolySideQuad(sink, new double[] { minX, bottomY, minZ, minX, bottomY, minZ + depth, minX, topY,
                 minZ + depth, minX, topY, minZ }, group.seed.westMaterial);
-        emitZoomoutSideQuad(sink, new double[] { minX + width, bottomY, minZ + depth, minX + width, bottomY, minZ,
+        emitLowPolySideQuad(sink, new double[] { minX + width, bottomY, minZ + depth, minX + width, bottomY, minZ,
                 minX + width, topY, minZ, minX + width, topY, minZ + depth }, group.seed.eastMaterial);
-        emitZoomoutSideQuad(sink, new double[] { minX + width, bottomY, minZ, minX, bottomY, minZ, minX, topY, minZ,
+        emitLowPolySideQuad(sink, new double[] { minX + width, bottomY, minZ, minX, bottomY, minZ, minX, topY, minZ,
                 minX + width, topY, minZ }, group.seed.northMaterial);
-        emitZoomoutSideQuad(sink, new double[] { minX, bottomY, minZ + depth, minX + width, bottomY, minZ + depth,
+        emitLowPolySideQuad(sink, new double[] { minX, bottomY, minZ + depth, minX + width, bottomY, minZ + depth,
                 minX + width, topY, minZ + depth, minX, topY, minZ + depth }, group.seed.southMaterial);
     }
 
-    private boolean shouldTightenZoomoutGroup(ZoomoutGroup group) {
+    private boolean shouldTightenLowPolyGroup(LowPolyGroup group) {
         double boxVolume = ((group.maxX - group.minX) + 1.0) * ((group.maxY - group.minY) + 1.0)
                 * ((group.maxZ - group.minZ) + 1.0);
-        return boxVolume > (group.members.size() * ZOOMOUT_TIGHTEN_OVERFILL_RATIO);
+        return boxVolume > (group.members.size() * LOW_POLY_TIGHTEN_OVERFILL_RATIO);
     }
 
-    private boolean emitTightenedZoomoutGroup(BlockModelExportSink sink, ZoomoutGroup group) throws IOException {
-        List<HullPlane> planes = buildZoomoutHullPlanes(group);
+    private boolean emitTightenedLowPolyGroup(BlockModelExportSink sink, LowPolyGroup group) throws IOException {
+        List<HullPlane> planes = buildLowPolyHullPlanes(group);
         List<double[]> vertices = computeHullVertices(planes);
         if (vertices.isEmpty()) {
             return false;
@@ -618,7 +618,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
                 xyz[(i * 3) + 1] = point[1] + group.minY;
                 xyz[(i * 3) + 2] = point[2] + group.minZ;
             }
-            PatchVertexLighting lighting = buildZoomoutPolygonLighting(face.size(), plane.material);
+            PatchVertexLighting lighting = buildLowPolyPolygonLighting(face.size(), plane.material);
             sink.setChunk(group.minX >> 4, group.minZ >> 4);
             sink.addPolygon(xyz, plane.material, lighting.vertexColors, lighting.nightVertexLights);
             emitted = true;
@@ -626,7 +626,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return emitted;
     }
 
-    private boolean shouldPreferHullFaceCandidate(ZoomoutGroup group, HullPlane candidate, HullPlane current) {
+    private boolean shouldPreferHullFaceCandidate(LowPolyGroup group, HullPlane candidate, HullPlane current) {
         if (current == null) {
             return true;
         }
@@ -641,7 +641,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return false;
     }
 
-    private boolean isTopHullMaterial(ZoomoutGroup group, HullPlane plane) {
+    private boolean isTopHullMaterial(LowPolyGroup group, HullPlane plane) {
         return (group.seed.topMaterial != null) && (plane.material != null)
                 && group.seed.topMaterial.getMaterialId().equals(plane.material.getMaterialId());
     }
@@ -667,14 +667,14 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return Math.round(value / HULL_EPSILON);
     }
 
-    private void emitZoomoutSideQuad(BlockModelExportSink sink, double[] xyz, ExportMaterial material) throws IOException {
+    private void emitLowPolySideQuad(BlockModelExportSink sink, double[] xyz, ExportMaterial material) throws IOException {
         if ((material == null) || (xyz == null) || (xyz.length != 12)) {
             return;
         }
         if ((xyz[7] - xyz[1]) <= EPSILON) {
             return;
         }
-        PatchVertexLighting lighting = buildZoomoutPatchLighting(4, material);
+        PatchVertexLighting lighting = buildLowPolyPatchLighting(4, material);
         sink.addQuad(xyz, material, lighting.vertexColors, lighting.nightVertexLights);
     }
 
@@ -689,7 +689,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         }
         geometryIterator.initialize(x, y, z);
         int blockId = geometryIterator.getBlockTypeID();
-        if (hasSufficientSkyLight(geometryIterator) && canQueueZoomoutBlock(blockId)) {
+        if (hasSufficientSkyLight(geometryIterator) && canQueueLowPolyBlock(blockId)) {
             queue.addLast(new FloodFillNode(x, y, z));
         }
     }
@@ -705,7 +705,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
                 getMinY(), getMaxY());
     }
 
-    private ZoomoutBlockInfo getZoomoutBlockInfo(MapIterator iterator, Map<String, ZoomoutBlockInfo> infoCache, int x, int y,
+    private LowPolyBlockInfo getLowPolyBlockInfo(MapIterator iterator, Map<String, LowPolyBlockInfo> infoCache, int x, int y,
             int z) throws IOException {
         String key = blockKey(x, y, z);
         if (infoCache.containsKey(key)) {
@@ -752,7 +752,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
 
         String groupKey = getSolidColorKey(solidTop) + ":" + getSolidColorKey(solidWest) + ":" + getSolidColorKey(solidEast)
                 + ":" + getSolidColorKey(solidNorth) + ":" + getSolidColorKey(solidSouth);
-        ZoomoutBlockInfo info = new ZoomoutBlockInfo(x, y, z, blockId, groupKey, solidTop, solidWest, solidEast, solidNorth,
+        LowPolyBlockInfo info = new LowPolyBlockInfo(x, y, z, blockId, groupKey, solidTop, solidWest, solidEast, solidNorth,
                 solidSouth);
         infoCache.put(key, info);
         return info;
@@ -1008,12 +1008,12 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
             BlockStep faceStep, MapIterator map, int blockId, ExportMaterial material) {
         int vertexCount = (patch.uplusvmax <= 1.0000001) ? 3 : 4;
         if ((material != null) && material.isSolidColor()) {
-            return buildZoomoutPatchLighting(vertexCount, material);
+            return buildLowPolyPatchLighting(vertexCount, material);
         }
         return super.buildPatchVertexLighting(patch, x, y, z, faceStep, map, blockId, material);
     }
 
-    private PatchVertexLighting buildZoomoutPatchLighting(int vertexCount, ExportMaterial material) {
+    private PatchVertexLighting buildLowPolyPatchLighting(int vertexCount, ExportMaterial material) {
         float[] colors = new float[vertexCount * 3];
         GLBExport.LightingMode lightingMode = getLightingMode();
         float[] nightLights = (lightingMode == GLBExport.LightingMode.BOTH) ? new float[vertexCount] : null;
@@ -1035,7 +1035,7 @@ final class BlockModelLodExporter extends AbstractBlockModelExporter {
         return new PatchVertexLighting(colors, nightLights);
     }
 
-    private PatchVertexLighting buildZoomoutPolygonLighting(int vertexCount, ExportMaterial material) {
-        return buildZoomoutPatchLighting(vertexCount, material);
+    private PatchVertexLighting buildLowPolyPolygonLighting(int vertexCount, ExportMaterial material) {
+        return buildLowPolyPatchLighting(vertexCount, material);
     }
 }
