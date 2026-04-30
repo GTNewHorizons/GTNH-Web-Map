@@ -690,7 +690,6 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         export.setCullExportRegionEdges(cullExportRegionEdges);
         export.setLightingMode(getLightingMode().toExportLightingMode());
         export.setExportMode((zoom > 0) ? BlockModelExportMode.ZOOMOUT : detailMode.getExportMode());
-        export.setLodZoomLevel(zoom);
         export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
         return export;
     }

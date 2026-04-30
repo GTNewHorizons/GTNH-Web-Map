@@ -9,16 +9,18 @@ import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
 import org.dynmap.hdmap.HDShader;
 import org.dynmap.hdmap.TexturePack.BlockTransparency;
+import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 
-final class BlockModelSimplifiedExporter extends BlockModelExporter {
+final class BlockModelSimplifiedExporter extends AbstractBlockModelExporter {
     BlockModelSimplifiedExporter(DynmapWorld world, DynmapCore core, HDShader shader) {
         super(world, core, shader);
     }
 
-    void exportSimplified(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX, int rangeMinZ,
-            int rangeMaxZ) throws IOException {
+    @Override
+    protected void exportLoadedRegion(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX,
+            int rangeMinZ, int rangeMaxZ, boolean[] edgeBits) throws IOException {
         MapIterator geometryIterator = cache.getIterator(rangeMinX, getMaxY(), rangeMinZ);
         Set<String> emittedBlocks = new HashSet<String>();
         Set<String> visited = new HashSet<String>();
@@ -75,6 +77,10 @@ final class BlockModelSimplifiedExporter extends BlockModelExporter {
         }
     }
 
+    private boolean hasRenderableGeometry(MapIterator map, int blockId) throws IOException {
+        return (blockId > 0) && (getAnySurfaceMaterial(resolveBlock(map, blockId)) != null);
+    }
+
     private boolean canQueueSimplifiedBlock(MapIterator geometryIterator, int x, int y, int z) {
         geometryIterator.initialize(x, y, z);
         int blockId = geometryIterator.getBlockTypeID();
@@ -96,5 +102,24 @@ final class BlockModelSimplifiedExporter extends BlockModelExporter {
         geometryIterator.initialize(x, y, z);
         sink.setChunk(x >> 4, z >> 4);
         emitCurrentBlock(geometryIterator, sink);
+    }
+
+    private void emitCurrentBlock(MapIterator map, BlockModelExportSink sink) throws IOException {
+        int blockId = map.getBlockTypeID();
+        if (blockId <= 0) {
+            return;
+        }
+        boolean[] edgeBits = new boolean[6];
+        fillEdgeBits(map.getX(), map.getY(), map.getZ(), edgeBits);
+        handleBlock(blockId, map, edgeBits, sink);
+    }
+
+    private void fillEdgeBits(int x, int y, int z, boolean[] edgeBits) {
+        edgeBits[BlockStep.X_PLUS.ordinal()] = (x == getMinX());
+        edgeBits[BlockStep.X_MINUS.ordinal()] = (x == getMaxX());
+        edgeBits[BlockStep.Z_PLUS.ordinal()] = (z == getMinZ());
+        edgeBits[BlockStep.Z_MINUS.ordinal()] = (z == getMaxZ());
+        edgeBits[BlockStep.Y_MINUS.ordinal()] = (y == getMinY());
+        edgeBits[BlockStep.Y_PLUS.ordinal()] = (y == getMaxY());
     }
 }

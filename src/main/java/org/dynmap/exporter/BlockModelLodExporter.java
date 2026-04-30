@@ -30,7 +30,7 @@ import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.PatchDefinition;
 import org.dynmap.utils.PatchDefinitionFactory;
 
-final class BlockModelLodExporter extends BlockModelExporter {
+final class BlockModelLodExporter extends AbstractBlockModelExporter {
     private static final double EPSILON = 1.0E-6;
     private static final int WEST = 0;
     private static final int EAST = 1;
@@ -146,45 +146,30 @@ final class BlockModelLodExporter extends BlockModelExporter {
         }
     }
 
-    private final DynmapWorld world;
     private final PatchDefinitionFactory patchFactory;
     private final TexturePack exportTexturePack;
-    private final int minY;
-    private final int maxY;
-    private final GLBExport.LightingMode lightingMode;
-    private final int simplifiedMinSkyLight;
     private final Map<String, ExportMaterial> solidColorMaterialCache = new HashMap<String, ExportMaterial>();
     private final Map<String, Integer> averageColorCache = new HashMap<String, Integer>();
 
-    BlockModelLodExporter(BlockModelExporter fullExporter, DynmapWorld world, HDShader shader, int minY, int maxY,
-            boolean cullExportRegionEdges, GLBExport.LightingMode lightingMode, int simplifiedMinSkyLight) {
-        super(world, fullExporter.getCore(), shader);
-        setRenderBounds(fullExporter.getMinX(), fullExporter.getMinY(), fullExporter.getMinZ(), fullExporter.getMaxX(),
-                fullExporter.getMaxY(), fullExporter.getMaxZ());
-        setCullExportRegionEdges(cullExportRegionEdges);
-        setLightingMode(lightingMode);
-        setSimplifiedMinSkyLight(simplifiedMinSkyLight);
-        this.world = world;
+    BlockModelLodExporter(DynmapWorld world, DynmapCore core, HDShader shader) {
+        super(world, core, shader);
         this.patchFactory = HDBlockModels.getPatchDefinitionFactory();
         this.exportTexturePack =
                 (shader instanceof TexturePackHDShader) ? ((TexturePackHDShader) shader).getTexturePackForExport() : null;
-        this.minY = Math.max(0, minY);
-        this.maxY = Math.min(world.worldheight - 1, maxY);
-        this.lightingMode = (lightingMode == null) ? GLBExport.LightingMode.DAY : lightingMode;
-        this.simplifiedMinSkyLight = Math.max(0, Math.min(15, simplifiedMinSkyLight));
     }
 
-    void exportZoomout(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX, int rangeMinZ,
-            int rangeMaxZ, int lodZoomLevel) throws IOException {
-        MapIterator geometryIterator = cache.getIterator(rangeMinX, maxY, rangeMinZ);
+    @Override
+    protected void exportLoadedRegion(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX,
+            int rangeMinZ, int rangeMaxZ, boolean[] edgeBits) throws IOException {
+        MapIterator geometryIterator = cache.getIterator(rangeMinX, getMaxY(), rangeMinZ);
         Map<String, ZoomoutBlockInfo> infoCache = new HashMap<String, ZoomoutBlockInfo>();
         ArrayList<ZoomoutBlockInfo> visibleBlocks =
                 collectZoomoutVisibleBlocks(geometryIterator, infoCache, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
         if (visibleBlocks.isEmpty()) {
             return;
         }
-        MapIterator groupIterator = cache.getIterator(rangeMinX, maxY, rangeMinZ);
-        MapIterator lightingIterator = cache.getIterator(rangeMinX, minY, rangeMinZ);
+        MapIterator groupIterator = cache.getIterator(rangeMinX, getMaxY(), rangeMinZ);
+        MapIterator lightingIterator = cache.getIterator(rangeMinX, getMinY(), rangeMinZ);
         Set<String> grouped = new HashSet<String>();
         for (ZoomoutBlockInfo seed : visibleBlocks) {
             String seedKey = blockKey(seed.x, seed.y, seed.z);
@@ -205,16 +190,17 @@ final class BlockModelLodExporter extends BlockModelExporter {
         ArrayDeque<FloodFillNode> queue = new ArrayDeque<FloodFillNode>();
         ArrayList<ZoomoutBlockInfo> visibleBlocks = new ArrayList<ZoomoutBlockInfo>();
 
-        seedFloodFillQueue(geometryIterator, visited, queue, rangeMinX - 1, maxY, rangeMinZ - 1, rangeMinX, rangeMaxX,
+        seedFloodFillQueue(geometryIterator, visited, queue, rangeMinX - 1, getMaxY(), rangeMinZ - 1, rangeMinX, rangeMaxX,
                 rangeMinZ, rangeMaxZ);
 
         for (int z = rangeMinZ; z <= rangeMaxZ; z++) {
             for (int x = rangeMinX; x <= rangeMaxX; x++) {
-                String key = blockKey(x, maxY, z);
+                String key = blockKey(x, getMaxY(), z);
                 if (!visited.add(key)) {
                     continue;
                 }
-                processZoomoutFloodFillPosition(geometryIterator, infoCache, visible, visibleBlocks, queue, x, maxY, z, true);
+                processZoomoutFloodFillPosition(geometryIterator, infoCache, visible, visibleBlocks, queue, x, getMaxY(),
+                        z, true);
             }
         }
 
@@ -262,10 +248,10 @@ final class BlockModelLodExporter extends BlockModelExporter {
     }
 
     private boolean hasSufficientSkyLight(MapIterator geometryIterator) {
-        if (!world.canGetSkyLightLevel()) {
+        if (!getWorld().canGetSkyLightLevel()) {
             return true;
         }
-        return geometryIterator.getBlockSkyLight() >= simplifiedMinSkyLight;
+        return geometryIterator.getBlockSkyLight() >= getSimplifiedMinSkyLight();
     }
 
     private ZoomoutGroup growZoomoutGroup(MapIterator geometryIterator, Map<String, ZoomoutBlockInfo> infoCache,
@@ -709,14 +695,14 @@ final class BlockModelLodExporter extends BlockModelExporter {
     }
 
     private boolean isWithinRenderBounds(int x, int y, int z, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) {
-        return BlockModelFloodFillSupport.isWithinRenderBounds(x, y, z, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ, minY,
-                maxY);
+        return BlockModelFloodFillSupport.isWithinRenderBounds(x, y, z, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ,
+                getMinY(), getMaxY());
     }
 
     private boolean isWithinFloodFillBounds(int x, int y, int z, int rangeMinX, int rangeMaxX, int rangeMinZ,
             int rangeMaxZ) {
-        return BlockModelFloodFillSupport.isWithinFloodFillBounds(x, y, z, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ, minY,
-                maxY);
+        return BlockModelFloodFillSupport.isWithinFloodFillBounds(x, y, z, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ,
+                getMinY(), getMaxY());
     }
 
     private ZoomoutBlockInfo getZoomoutBlockInfo(MapIterator iterator, Map<String, ZoomoutBlockInfo> infoCache, int x, int y,
@@ -1029,6 +1015,7 @@ final class BlockModelLodExporter extends BlockModelExporter {
 
     private PatchVertexLighting buildZoomoutPatchLighting(int vertexCount, ExportMaterial material) {
         float[] colors = new float[vertexCount * 3];
+        GLBExport.LightingMode lightingMode = getLightingMode();
         float[] nightLights = (lightingMode == GLBExport.LightingMode.BOTH) ? new float[vertexCount] : null;
         float dayLight = 1.0F;
         float nightLight = material.isEmissive() ? 1.0F : 0.0F;

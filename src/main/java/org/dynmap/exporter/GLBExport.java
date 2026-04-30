@@ -157,7 +157,6 @@ public class GLBExport implements BlockModelExportSink {
     private boolean cullExportRegionEdges;
     private LightingMode lightingMode = LightingMode.DAY;
     private BlockModelExportMode exportMode = BlockModelExportMode.FULL;
-    private int lodZoomLevel;
     private int simplifiedMinSkyLight = 7;
 
     public GLBExport(File destination, TexturePackHDShader shader, DynmapWorld world, DynmapCore core, String basename) {
@@ -226,10 +225,6 @@ public class GLBExport implements BlockModelExportSink {
         this.exportMode = (exportMode == null) ? BlockModelExportMode.FULL : exportMode;
     }
 
-    public void setLodZoomLevel(int lodZoomLevel) {
-        this.lodZoomLevel = Math.max(0, lodZoomLevel);
-    }
-
     public void setSimplifiedMinSkyLight(int simplifiedMinSkyLight) {
         this.simplifiedMinSkyLight = Math.max(0, Math.min(15, simplifiedMinSkyLight));
     }
@@ -272,7 +267,6 @@ public class GLBExport implements BlockModelExportSink {
         exporter.setCullExportRegionEdges(cullExportRegionEdges);
         exporter.setLightingMode(lightingMode);
         exporter.setExportMode(exportMode);
-        exporter.setLodZoomLevel(lodZoomLevel);
         exporter.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
         if (cache != null) {
             exporter.export(cache, this);
