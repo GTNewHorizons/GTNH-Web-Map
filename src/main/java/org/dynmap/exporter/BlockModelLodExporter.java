@@ -1040,9 +1040,8 @@ final class BlockModelLodExporter {
         ExportMaterial solidNorth = toSolidColorMaterial(northMaterial);
         ExportMaterial solidSouth = toSolidColorMaterial(southMaterial);
 
-        String groupKey = blockId + ":" + iterator.getBlockData() + ":" + getSolidColorKey(solidTop) + ":"
-                + getSolidColorKey(solidWest) + ":" + getSolidColorKey(solidEast) + ":" + getSolidColorKey(solidNorth) + ":"
-                + getSolidColorKey(solidSouth);
+        String groupKey = getSolidColorKey(solidTop) + ":" + getSolidColorKey(solidWest) + ":" + getSolidColorKey(solidEast)
+                + ":" + getSolidColorKey(solidNorth) + ":" + getSolidColorKey(solidSouth);
         ZoomoutBlockInfo info = new ZoomoutBlockInfo(x, y, z, blockId, groupKey, solidTop, solidWest, solidEast, solidNorth,
                 solidSouth);
         infoCache.put(key, info);
@@ -1053,7 +1052,7 @@ final class BlockModelLodExporter {
         if (material == null) {
             return "null";
         }
-        return Integer.toHexString(material.getSolidColorArgb()) + ":" + material.getMaterialType() + ":" + material.isEmissive();
+        return getSolidMaterialKey(material.getSolidColorArgb(), material.isEmissive());
     }
 
     private SurfaceColumn resolveSurfaceColumn(MapIterator iterator, int x, int z) throws IOException {
@@ -1549,16 +1548,19 @@ final class BlockModelLodExporter {
         if ((material == null) || material.isSolidColor()) {
             return material;
         }
-        String cacheKey = getMaterialCacheKey(material);
-        ExportMaterial cached = solidColorMaterialCache.get(cacheKey);
+        int argb = computeAverageColor(material);
+        String solidKey = getSolidMaterialKey(argb, material.isEmissive());
+        ExportMaterial cached = solidColorMaterialCache.get(solidKey);
         if (cached != null) {
             return cached;
         }
-        int argb = computeAverageColor(material);
-        ExportMaterial solid = ExportMaterial.solidColor("solid_" + cacheKey, argb, material.getMaterialType(),
-                material.isEmissive());
-        solidColorMaterialCache.put(cacheKey, solid);
+        ExportMaterial solid = ExportMaterial.solidColor("solid_" + solidKey, argb, material.getMaterialType(), material.isEmissive());
+        solidColorMaterialCache.put(solidKey, solid);
         return solid;
+    }
+
+    private String getSolidMaterialKey(int argb, boolean emissive) {
+        return Integer.toHexString(argb) + "|" + emissive;
     }
 
     private int computeAverageColor(ExportMaterial material) throws IOException {
