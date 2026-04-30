@@ -240,6 +240,16 @@ final class BlockModelLodExporter {
         }
     }
 
+    private static final class HullFaceCandidate {
+        final HullPlane plane;
+        final List<double[]> face;
+
+        HullFaceCandidate(HullPlane plane, List<double[]> face) {
+            this.plane = plane;
+            this.face = face;
+        }
+    }
+
     private final BlockModelExporter fullExporter;
     private final DynmapWorld world;
     private final HDShader shader;
@@ -716,6 +726,7 @@ final class BlockModelLodExporter {
         if (vertices.isEmpty()) {
             return false;
         }
+        Map<String, HullFaceCandidate> facesByKey = new HashMap<String, HullFaceCandidate>();
         boolean emitted = false;
         for (HullPlane plane : planes) {
             if (!plane.emit || (plane.material == null)) {
@@ -725,6 +736,15 @@ final class BlockModelLodExporter {
             if (face.size() < 3) {
                 continue;
             }
+            String faceKey = getHullFaceKey(face);
+            HullFaceCandidate existing = facesByKey.get(faceKey);
+            if ((existing == null) || shouldPreferHullFaceCandidate(group, plane, existing.plane)) {
+                facesByKey.put(faceKey, new HullFaceCandidate(plane, face));
+            }
+        }
+        for (HullFaceCandidate candidate : facesByKey.values()) {
+            HullPlane plane = candidate.plane;
+            List<double[]> face = candidate.face;
             double[] xyz = new double[face.size() * 3];
             for (int i = 0; i < face.size(); i++) {
                 double[] point = face.get(i);
@@ -738,6 +758,47 @@ final class BlockModelLodExporter {
             emitted = true;
         }
         return emitted;
+    }
+
+    private boolean shouldPreferHullFaceCandidate(ZoomoutGroup group, HullPlane candidate, HullPlane current) {
+        if (current == null) {
+            return true;
+        }
+        if (candidate.material == current.material) {
+            return false;
+        }
+        boolean candidateTop = isTopHullMaterial(group, candidate) && isTopFacingHullPlane(candidate);
+        boolean currentTop = isTopHullMaterial(group, current) && isTopFacingHullPlane(current);
+        if (candidateTop != currentTop) {
+            return candidateTop;
+        }
+        return false;
+    }
+
+    private boolean isTopHullMaterial(ZoomoutGroup group, HullPlane plane) {
+        return (group.seed.topMaterial != null) && (plane.material != null)
+                && group.seed.topMaterial.getMaterialId().equals(plane.material.getMaterialId());
+    }
+
+    private boolean isTopFacingHullPlane(HullPlane plane) {
+        return (-plane.ny) > HULL_EPSILON;
+    }
+
+    private String getHullFaceKey(List<double[]> face) {
+        ArrayList<String> vertexKeys = new ArrayList<String>(face.size());
+        for (double[] point : face) {
+            vertexKeys.add(quantizeHullCoord(point[0]) + "," + quantizeHullCoord(point[1]) + "," + quantizeHullCoord(point[2]));
+        }
+        Collections.sort(vertexKeys);
+        StringBuilder key = new StringBuilder();
+        for (String vertexKey : vertexKeys) {
+            key.append(vertexKey).append(';');
+        }
+        return key.toString();
+    }
+
+    private long quantizeHullCoord(double value) {
+        return Math.round(value / HULL_EPSILON);
     }
 
     private void emitZoomoutSideQuad(BlockModelExportSink sink, double[] xyz, ExportMaterial material) throws IOException {
