@@ -90,7 +90,8 @@ public class BlockModelExporter {
                 exporter = new BlockModelSimplifiedExporter(world, core, shader);
                 break;
             case ZOOMOUT:
-                exporter = new BlockModelLodExporter(world, core, shader);
+            case LOW_POLY:
+                exporter = new BlockModelLowPolyExporter(world, core, shader);
                 break;
             case FULL:
             default:

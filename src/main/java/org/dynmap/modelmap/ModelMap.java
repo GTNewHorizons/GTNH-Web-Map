@@ -111,7 +111,8 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
 
     public enum DetailMode {
         FULL("full", BlockModelExportMode.FULL),
-        SURFACE("surface", BlockModelExportMode.SIMPLIFIED);
+        SURFACE("surface", BlockModelExportMode.SIMPLIFIED),
+        LOW_POLY("low_poly", BlockModelExportMode.LOW_POLY);
 
         private final String id;
         private final BlockModelExportMode exportMode;
@@ -135,6 +136,9 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
             }
             if ("simplified".equalsIgnoreCase(value)) {
                 return SURFACE;
+            }
+            if ("zoomout".equalsIgnoreCase(value) || "lowpoly".equalsIgnoreCase(value)) {
+                return LOW_POLY;
             }
             for (DetailMode mode : values()) {
                 if (mode.id.equalsIgnoreCase(value)) {
