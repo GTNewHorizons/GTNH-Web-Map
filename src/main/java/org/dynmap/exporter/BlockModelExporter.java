@@ -27,13 +27,30 @@ import org.dynmap.utils.PatchDefinition;
 import org.dynmap.utils.PatchDefinitionFactory;
 
 public class BlockModelExporter {
-    private static final class PatchVertexLighting {
+    protected static final class PatchVertexLighting {
         final float[] vertexColors;
         final float[] nightVertexLights;
 
         PatchVertexLighting(float[] vertexColors, float[] nightVertexLights) {
             this.vertexColors = vertexColors;
             this.nightVertexLights = nightVertexLights;
+        }
+    }
+
+    protected static final class ResolvedBlockData {
+        final int blockId;
+        final PatchDefinition[] patches;
+        final BlockStep[] steps;
+        final ExportMaterial[][] materials;
+        final double maxLocalY;
+
+        ResolvedBlockData(int blockId, PatchDefinition[] patches, BlockStep[] steps, ExportMaterial[][] materials,
+                double maxLocalY) {
+            this.blockId = blockId;
+            this.patches = patches;
+            this.steps = steps;
+            this.materials = materials;
+            this.maxLocalY = maxLocalY;
         }
     }
 
@@ -137,6 +154,63 @@ public class BlockModelExporter {
         this.simplifiedMinSkyLight = Math.max(0, Math.min(15, simplifiedMinSkyLight));
     }
 
+    protected final DynmapWorld getWorld() {
+        return world;
+    }
+
+    protected final DynmapCore getCore() {
+        return core;
+    }
+
+    protected final HDShader getShader() {
+        return shader;
+    }
+
+    protected final int getMinY() {
+        return minY;
+    }
+
+    protected final int getMaxY() {
+        return maxY;
+    }
+
+    protected final int getMinX() {
+        return minX;
+    }
+
+    protected final int getMaxX() {
+        return maxX;
+    }
+
+    protected final int getMinZ() {
+        return minZ;
+    }
+
+    protected final int getMaxZ() {
+        return maxZ;
+    }
+
+    protected final int getSimplifiedMinSkyLight() {
+        return simplifiedMinSkyLight;
+    }
+
+    protected final boolean isCullExportRegionEdges() {
+        return cullExportRegionEdges;
+    }
+
+    protected final GLBExport.LightingMode getLightingMode() {
+        return lightingMode;
+    }
+
+    private void copyConfigurationTo(BlockModelExporter exporter) {
+        exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
+        exporter.setCullExportRegionEdges(cullExportRegionEdges);
+        exporter.setLightingMode(lightingMode);
+        exporter.setExportMode(exportMode);
+        exporter.setLodZoomLevel(lodZoomLevel);
+        exporter.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
+    }
+
     public void export(BlockModelExportSink sink) throws IOException {
         List<DynmapChunk> requiredChunks = new ArrayList<DynmapChunk>();
         int minChunkX = minX >> 4;
@@ -179,9 +253,9 @@ public class BlockModelExporter {
             int rangeMinZ, int rangeMaxZ, boolean[] edgeBits) throws IOException {
         switch (exportMode) {
             case SIMPLIFIED:
-                new BlockModelLodExporter(this, world, shader, minY, maxY, cullExportRegionEdges, lightingMode,
-                        simplifiedMinSkyLight)
-                        .exportSimplified(cache, sink, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+                BlockModelSimplifiedExporter simplifiedExporter = new BlockModelSimplifiedExporter(world, core, shader);
+                copyConfigurationTo(simplifiedExporter);
+                simplifiedExporter.exportSimplified(cache, sink, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
                 return;
             case ZOOMOUT:
                 new BlockModelLodExporter(this, world, shader, minY, maxY, cullExportRegionEdges, lightingMode,
@@ -232,62 +306,19 @@ public class BlockModelExporter {
 
     private void handleBlock(int blockId, MapIterator map, boolean[] edgeBits, BlockModelExportSink sink)
             throws IOException {
-        BlockStep[] steps = BlockStep.values();
-        int[] textureIndexes = null;
-        int blockData = map.getBlockData();
-        int renderData = HDBlockModels.getBlockRenderData(blockId, map);
-        CustomRendererData customRenderData = null;
-        boolean patchModelUsesPatchTextureCoords = false;
-
-        RenderPatch[] patches = models.getPatchModel(blockId, blockData, renderData);
-        if (patches == null) {
-            CustomBlockModel customBlockModel = models.getCustomBlockModel(blockId, blockData);
-            if (customBlockModel != null) {
-                customRenderData = customBlockModel.getMeshForBlock(map);
-                if (customRenderData != null) {
-                    patches = customRenderData.getCustomMesh();
-                }
-            }
-        }
-        if (patches != null) {
-            patchModelUsesPatchTextureCoords = true;
-            steps = new BlockStep[patches.length];
-            textureIndexes = new int[patches.length];
-            for (int i = 0; i < textureIndexes.length; i++) {
-                PatchDefinition patch = (PatchDefinition) patches[i];
-                textureIndexes[i] = patch.getTextureIndex();
-                steps[i] = getVisiblePatchStep(patch);
-            }
-        } else {
-            short[] scaledModel = models.getScaledModel(blockId, blockData, renderData);
-            if (scaledModel != null) {
-                patches = getScaledModelAsPatches(scaledModel);
-                steps = new BlockStep[patches.length];
-                textureIndexes = new int[patches.length];
-                for (int i = 0; i < patches.length; i++) {
-                    PatchDefinition patch = (PatchDefinition) patches[i];
-                    steps[i] = getVisiblePatchStep(patch);
-                    textureIndexes[i] = patch.getTextureIndex();
-                }
-            }
-        }
-
-        sink.setBlock(blockId, blockData);
-        ExportMaterial[][] materials =
-                resolveMaterials(blockId, blockData, renderData, map, textureIndexes, steps, customRenderData,
-                        !patchModelUsesPatchTextureCoords);
-        collapseLayeredMaterials(materials);
-
-        if (patches != null) {
-            for (int i = 0; i < patches.length; i++) {
-                PatchDefinition patch = (PatchDefinition) patches[i];
-                ExportMaterial[] patchMaterials = ((materials.length > i) && (materials[i] != null)) ? materials[i] : null;
-                if ((patchMaterials == null) || shouldCullPatchAgainstOpaqueNeighbor(patch, steps[i], map, edgeBits)) {
+        ResolvedBlockData block = resolveBlock(map, blockId);
+        sink.setBlock(blockId, map.getBlockData());
+        if (block.patches != null) {
+            for (int i = 0; i < block.patches.length; i++) {
+                PatchDefinition patch = block.patches[i];
+                ExportMaterial[] patchMaterials =
+                        ((block.materials.length > i) && (block.materials[i] != null)) ? block.materials[i] : null;
+                if ((patchMaterials == null) || shouldCullPatchAgainstOpaqueNeighbor(patch, block.steps[i], map, edgeBits)) {
                     continue;
                 }
                 for (ExportMaterial material : patchMaterials) {
                     PatchVertexLighting lighting =
-                            buildPatchVertexLighting(patch, map.getX(), map.getY(), map.getZ(), steps[i], map, blockId,
+                            buildPatchVertexLighting(patch, map.getX(), map.getY(), map.getZ(), block.steps[i], map, blockId,
                                     material);
                     sink.addPatch(patch, map.getX(), map.getY(), map.getZ(), material,
                             lighting.vertexColors, lighting.nightVertexLights);
@@ -300,19 +331,23 @@ public class BlockModelExporter {
                 if ((!opaque) || (adjacentBlock == 0) || edgeBits[face]
                         || (TexturePack.HDTextureMap.getTransparency(adjacentBlock) != BlockTransparency.OPAQUE)) {
                     ExportMaterial[] faceMaterials =
-                            ((materials.length > face) && (materials[face] != null)) ? materials[face] : null;
+                            ((block.materials.length > face) && (block.materials[face] != null)) ? block.materials[face] : null;
                     if (faceMaterials == null) {
                         continue;
                     }
                     for (ExportMaterial material : faceMaterials) {
                         PatchVertexLighting lighting = buildPatchVertexLighting(defaultPatches[face], map.getX(), map.getY(),
-                                map.getZ(), steps[face], map, blockId, material);
+                                map.getZ(), block.steps[face], map, blockId, material);
                         sink.addPatch(defaultPatches[face], map.getX(), map.getY(), map.getZ(), material,
                                 lighting.vertexColors, lighting.nightVertexLights);
                     }
                 }
             }
         }
+    }
+
+    protected boolean hasRenderableGeometry(MapIterator map, int blockId) throws IOException {
+        return (blockId > 0) && (getAnySurfaceMaterial(resolveBlock(map, blockId)) != null);
     }
 
     void emitCurrentBlock(MapIterator map, BlockModelExportSink sink) throws IOException {
@@ -334,7 +369,7 @@ public class BlockModelExporter {
         edgeBits[BlockStep.Y_PLUS.ordinal()] = (y == maxY);
     }
 
-    private PatchVertexLighting buildPatchVertexLighting(PatchDefinition patch, double x, double y, double z,
+    protected PatchVertexLighting buildPatchVertexLighting(PatchDefinition patch, double x, double y, double z,
             BlockStep faceStep,
             MapIterator map, int blockId, ExportMaterial material) {
         int vertexCount = (patch.uplusvmax <= 1.0000001) ? 3 : 4;
@@ -443,7 +478,7 @@ public class BlockModelExporter {
         return (y >= 0) && (y < map.getWorldHeight());
     }
 
-    private BlockStep getVisiblePatchStep(PatchDefinition patch) {
+    protected BlockStep getVisiblePatchStep(PatchDefinition patch) {
         BlockStep step = patch.step;
         if (step == null) {
             return BlockStep.Y_MINUS;
@@ -459,7 +494,7 @@ public class BlockModelExporter {
         }
     }
 
-    private boolean shouldCullPatchAgainstOpaqueNeighbor(PatchDefinition patch, BlockStep faceStep, MapIterator map,
+    protected boolean shouldCullPatchAgainstOpaqueNeighbor(PatchDefinition patch, BlockStep faceStep, MapIterator map,
             boolean[] edgeBits) {
         BlockStep outwardStep = getVisibleBoundaryStep(patch, faceStep);
         if (outwardStep == null) {
@@ -594,7 +629,7 @@ public class BlockModelExporter {
         ll.sky = sky;
     }
 
-    private ExportMaterial[][] resolveMaterials(int blockId, int blockData, int renderData, MapIterator map,
+    protected ExportMaterial[][] resolveMaterials(int blockId, int blockData, int renderData, MapIterator map,
             int[] textureIndexes, BlockStep[] steps, CustomRendererData customRenderData,
             boolean allowLegacyTopBottomRotationCorrection) {
         if (shader instanceof TexturePackHDShader) {
@@ -615,7 +650,7 @@ public class BlockModelExporter {
         return EMPTY_MATERIALS;
     }
 
-    private void collapseLayeredMaterials(ExportMaterial[][] materials) {
+    protected void collapseLayeredMaterials(ExportMaterial[][] materials) {
         if (materials == null) {
             return;
         }
@@ -624,7 +659,7 @@ public class BlockModelExporter {
         }
     }
 
-    private ExportMaterial[] collapseLayeredMaterials(ExportMaterial[] materials) {
+    protected ExportMaterial[] collapseLayeredMaterials(ExportMaterial[] materials) {
         if ((materials == null) || (materials.length <= 1)) {
             return materials;
         }
@@ -710,7 +745,7 @@ public class BlockModelExporter {
         }
     }
 
-    private PatchDefinition[] getScaledModelAsPatches(short[] model) {
+    protected PatchDefinition[] getScaledModelAsPatches(short[] model) {
         ArrayList<RenderPatch> list = new ArrayList<RenderPatch>();
         short[] copy = Arrays.copyOf(model, model.length);
         for (int y = 0; y < MODELSCALE; y++) {
@@ -728,5 +763,101 @@ public class BlockModelExporter {
             patches[i] = (PatchDefinition) list.get(i);
         }
         return patches;
+    }
+
+    protected ResolvedBlockData resolveBlock(MapIterator map, int blockId) {
+        BlockStep[] steps = BlockStep.values();
+        int[] textureIndexes = null;
+        int blockData = map.getBlockData();
+        int renderData = HDBlockModels.getBlockRenderData(blockId, map);
+        CustomRendererData customRenderData = null;
+        boolean patchModelUsesPatchTextureCoords = false;
+
+        RenderPatch[] patches = models.getPatchModel(blockId, blockData, renderData);
+        if (patches == null) {
+            CustomBlockModel customBlockModel = models.getCustomBlockModel(blockId, blockData);
+            if (customBlockModel != null) {
+                customRenderData = customBlockModel.getMeshForBlock(map);
+                if (customRenderData != null) {
+                    patches = customRenderData.getCustomMesh();
+                }
+            }
+        }
+        if (patches != null) {
+            patchModelUsesPatchTextureCoords = true;
+            steps = new BlockStep[patches.length];
+            textureIndexes = new int[patches.length];
+            for (int i = 0; i < textureIndexes.length; i++) {
+                PatchDefinition patch = (PatchDefinition) patches[i];
+                textureIndexes[i] = patch.getTextureIndex();
+                steps[i] = getVisiblePatchStep(patch);
+            }
+        } else {
+            short[] scaledModel = models.getScaledModel(blockId, blockData, renderData);
+            if (scaledModel != null) {
+                patches = getScaledModelAsPatches(scaledModel);
+                steps = new BlockStep[patches.length];
+                textureIndexes = new int[patches.length];
+                for (int i = 0; i < patches.length; i++) {
+                    PatchDefinition patch = (PatchDefinition) patches[i];
+                    steps[i] = getVisiblePatchStep(patch);
+                    textureIndexes[i] = patch.getTextureIndex();
+                }
+            }
+        }
+
+        ExportMaterial[][] materials =
+                resolveMaterials(blockId, blockData, renderData, map, textureIndexes, steps, customRenderData,
+                        !patchModelUsesPatchTextureCoords);
+        collapseLayeredMaterials(materials);
+        PatchDefinition[] resolvedPatches = (patches != null) ? toPatchDefinitions(patches) : null;
+        return new ResolvedBlockData(blockId, resolvedPatches, steps, materials, computeMaxLocalY(resolvedPatches));
+    }
+
+    protected ExportMaterial getAnySurfaceMaterial(ResolvedBlockData block) throws IOException {
+        if ((block == null) || (block.materials == null)) {
+            return null;
+        }
+        for (ExportMaterial[] materials : block.materials) {
+            ExportMaterial material = getFirstSolidMaterial(materials);
+            if (material != null) {
+                return material;
+            }
+        }
+        return null;
+    }
+
+    protected ExportMaterial getFirstSolidMaterial(ExportMaterial[] materials) throws IOException {
+        if (materials == null) {
+            return null;
+        }
+        for (ExportMaterial material : materials) {
+            if (material != null) {
+                return material;
+            }
+        }
+        return null;
+    }
+
+    private PatchDefinition[] toPatchDefinitions(RenderPatch[] patches) {
+        PatchDefinition[] definitions = new PatchDefinition[patches.length];
+        for (int i = 0; i < patches.length; i++) {
+            definitions[i] = (PatchDefinition) patches[i];
+        }
+        return definitions;
+    }
+
+    private double computeMaxLocalY(PatchDefinition[] patches) {
+        if ((patches == null) || (patches.length == 0)) {
+            return 1.0;
+        }
+        double maxLocalY = 0.0;
+        for (PatchDefinition patch : patches) {
+            ExportPatchGeometry.Geometry geometry = ExportPatchGeometry.build(patch, 0, 0, 0, 0);
+            for (int i = 1; i < geometry.xyz.length; i += 3) {
+                maxLocalY = Math.max(maxLocalY, geometry.xyz[i]);
+            }
+        }
+        return maxLocalY;
     }
 }
