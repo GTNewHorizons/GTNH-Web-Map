@@ -16,6 +16,7 @@ import org.dynmap.forge.GwmSubCommand;
 import org.dynmap.markers.AreaMarker;
 import org.dynmap.markers.MarkerAPI;
 import org.dynmap.markers.MarkerSet;
+import org.dynmap.utils.GreedyRectangleMesher;
 import serverutils.ServerUtilitiesConfig;
 import serverutils.data.ClaimedChunk;
 import serverutils.data.ClaimedChunks;
@@ -30,6 +31,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener {
+    private static final int CHUNK_SIZE = 16;
 
     static ServerUtilitiesClaimedChunksMarkers INSTANCE;
     MarkerSet markerSet;
@@ -70,6 +72,7 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             return;
 
         int claimId = 1;
+        HashMap<ClaimGroupKey, ClaimGroup> claimsByGroup = new HashMap<>();
 
         for(ClaimedChunk cc : ClaimedChunks.instance.getAllChunks()){
             ChunkDimPos pos = cc.getPos();
@@ -79,19 +82,26 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             if(worldId == null)
                 continue;
 
-            double[] x = new double[]{pos.posX*16, pos.posX*16+16};
-            double[] z = new double[]{pos.posZ*16, pos.posZ*16+16};
-
             ForgeTeam team = cc.getTeam();
-            String label = buildLabel(team);
+            ClaimGroupKey key = new ClaimGroupKey(worldId, team.getId());
+            ClaimGroup group = claimsByGroup.computeIfAbsent(key,
+                    ignored -> new ClaimGroup(worldId, buildLabel(team), team.getColor().getColor().rgb()));
+            group.chunks.add(GreedyRectangleMesher.pack(pos.posX, pos.posZ));
+        }
 
-            AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), label, true, worldId, x,z, false);
+        for(ClaimGroup group : claimsByGroup.values()) {
+            for(GreedyRectangleMesher.Rectangle rectangle : GreedyRectangleMesher.mesh(group.chunks)) {
+                double[] x = new double[]{rectangle.x1 * CHUNK_SIZE, rectangle.x2 * CHUNK_SIZE};
+                double[] z = new double[]{rectangle.y1 * CHUNK_SIZE, rectangle.y2 * CHUNK_SIZE};
 
-            if(GwmConfig.boostServerUtilitiesClaimsMarkers)
-                am.setBoostFlag(true);
+                AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), group.label, true, group.worldId, x, z, false);
 
-            am.setLineStyle(0,0,0);
-            am.setFillStyle(0.2, team.getColor().getColor().rgb());
+                if(GwmConfig.boostServerUtilitiesClaimsMarkers)
+                    am.setBoostFlag(true);
+
+                am.setLineStyle(0,0,0);
+                am.setFillStyle(0.2, group.fillColor);
+            }
         }
 
         updateNeeded = false;
@@ -123,8 +133,46 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
                 label += "<br/>" + p.getValue() + ": " +  p.getKey().getName();
             }
         }
-
         return label;
+    }
+
+    private static class ClaimGroupKey {
+        final String worldId;
+        final String teamId;
+
+        private ClaimGroupKey(String worldId, String teamId) {
+            this.worldId = worldId;
+            this.teamId = teamId;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this == obj)
+                return true;
+            if(!(obj instanceof ClaimGroupKey))
+                return false;
+
+            ClaimGroupKey other = (ClaimGroupKey) obj;
+            return worldId.equals(other.worldId) && teamId.equals(other.teamId);
+        }
+
+        @Override
+        public int hashCode() {
+            return 31 * worldId.hashCode() + teamId.hashCode();
+        }
+    }
+
+    private static class ClaimGroup {
+        final String worldId;
+        final String label;
+        final int fillColor;
+        final java.util.HashSet<Long> chunks = new java.util.HashSet<Long>();
+
+        private ClaimGroup(String worldId, String label, int fillColor) {
+            this.worldId = worldId;
+            this.label = label;
+            this.fillColor = fillColor;
+        }
     }
 
     @SubscribeEvent
