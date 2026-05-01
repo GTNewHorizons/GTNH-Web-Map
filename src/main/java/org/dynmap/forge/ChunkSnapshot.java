@@ -386,7 +386,10 @@ public class ChunkSnapshot
             blockdata16[section] = new short[BLOCKS_PER_SECTION];
             blockdata[section] = new byte[BLOCKS_PER_SECTION / 2];
             emitlight[section] = new byte[BLOCKS_PER_SECTION / 2];
-            skylight[section] = new byte[BLOCKS_PER_SECTION / 2];
+            // DH only writes the occupied cells in a synthetic section. Keep the
+            // unwritten air cells sky-lit by default so Dynmap's shadow lighting
+            // does not treat the surrounding empty space as pitch black.
+            skylight[section] = fullData.clone();
         }
     }
 
