@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ListIterator;
@@ -51,6 +52,7 @@ import org.dynmap.utils.VisibilityLimit;
 
 import com.seibel.distanthorizons.common.wrappers.world.ServerLevelWrapper;
 import com.seibel.distanthorizons.core.api.internal.SharedApi;
+import com.seibel.distanthorizons.core.dataObjects.fullData.sources.FullDataSourceV2;
 import com.seibel.distanthorizons.core.level.IDhLevel;
 import com.seibel.distanthorizons.core.pos.DhChunkPos;
 import com.seibel.distanthorizons.core.pos.DhSectionPos;
@@ -99,6 +101,8 @@ public class ForgeMapChunkCache extends MapChunkCache
     private boolean[][] isSectionNotEmpty; /* Indexed by snapshot index, then by section index */
     private Set<?> queue = null;
     private Object queue_mcpc = null;
+    private final HashMap<Long, FullDataSourceV2> dhSectionCache = new HashMap<Long, FullDataSourceV2>();
+    private final HashSet<Long> dhMissingSections = new HashSet<Long>();
 
     private static final BlockStep unstep[] = { BlockStep.X_MINUS, BlockStep.Y_MINUS, BlockStep.Z_MINUS,
             BlockStep.X_PLUS, BlockStep.Y_PLUS, BlockStep.Z_PLUS
@@ -1457,15 +1461,34 @@ public class ForgeMapChunkCache extends MapChunkCache
         long sectionPos = DhSectionPos.encodeContaining(
             DhSectionPos.SECTION_MINIMUM_DETAIL_LEVEL,
             new DhChunkPos(chunk.x, chunk.z));
-        try (com.seibel.distanthorizons.core.dataObjects.fullData.sources.FullDataSourceV2 data =
-                 dhLevel.getFullDataProvider().getAsync(sectionPos).get()) {
-            if (data == null || data.isEmpty) {
-                return null;
-            }
-            return new ChunkSnapshot(data, chunk.x, chunk.z, dw.worldheight);
-        } catch (Exception ignored) {
+        if (dhMissingSections.contains(sectionPos)) {
             return null;
         }
+
+        FullDataSourceV2 data = dhSectionCache.get(sectionPos);
+        if (data == null) {
+            try {
+                data = dhLevel.getFullDataProvider().getAsync(sectionPos).get();
+            } catch (Exception ignored) {
+                dhMissingSections.add(sectionPos);
+                return null;
+            }
+            if (data == null || data.isEmpty) {
+                if (data != null) {
+                    data.close();
+                }
+                dhMissingSections.add(sectionPos);
+                return null;
+            }
+            dhSectionCache.put(sectionPos, data);
+        }
+
+        ChunkSnapshot ss = new ChunkSnapshot(data, chunk.x, chunk.z, dw.worldheight);
+        SnapshotRec ssr = new SnapshotRec();
+        ssr.ss = ss;
+        ssr.tileData = new DynIntHashMap();
+        DynmapPlugin.plugin.sscache.putSnapshot(dw.getName(), chunk.x, chunk.z, ssr, blockdata, biome, biomeraw, highesty);
+        return ss;
     }
 
     private boolean useDistantHorizonsOnly() {
@@ -1702,6 +1725,13 @@ public class ForgeMapChunkCache extends MapChunkCache
      */
     public void unloadChunks()
     {
+        for (FullDataSourceV2 data : dhSectionCache.values()) {
+            if (data != null) {
+                data.close();
+            }
+        }
+        dhSectionCache.clear();
+        dhMissingSections.clear();
         if (snaparray != null)
         {
             for (int i = 0; i < snaparray.length; i++)

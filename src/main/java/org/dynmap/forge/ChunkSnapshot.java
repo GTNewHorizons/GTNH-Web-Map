@@ -2,6 +2,7 @@ package org.dynmap.forge;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.HashMap;
 
 import org.dynmap.Log;
 
@@ -292,6 +293,10 @@ public class ChunkSnapshot
         int minBlockZ = chunkZ << 4;
         int dataMinX = DhSectionPos.getMinCornerBlockX(data.getPos());
         int dataMinZ = DhSectionPos.getMinCornerBlockZ(data.getPos());
+        HashMap<Integer, Integer> blockIdByDhId = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> blockMetaByDhId = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> biomeIdByDhId = new HashMap<Integer, Integer>();
+        HashMap<Integer, Boolean> airByDhId = new HashMap<Integer, Boolean>();
 
         for (int rx = 0; rx < 16; rx++) {
             for (int rz = 0; rz < 16; rz++) {
@@ -305,13 +310,31 @@ public class ChunkSnapshot
                     for (int i = 0; i < column.size(); i++) {
                         long datapoint = column.getLong(i);
                         int id = FullDataPointUtil.getId(datapoint);
-                        BlockStateWrapper blockState = (BlockStateWrapper) data.mapping.getBlockStateWrapper(id);
-                        if (blockState == null || blockState.isAir()) {
-                            continue;
+                        Boolean isAir = airByDhId.get(id);
+                        if (isAir == null) {
+                            BlockStateWrapper blockState = (BlockStateWrapper) data.mapping.getBlockStateWrapper(id);
+                            isAir = (blockState == null) || blockState.isAir() || blockState.blockState == null || blockState.blockState.block == null;
+                            airByDhId.put(id, isAir);
+                            if (!isAir) {
+                                FakeBlockState dhState = blockState.blockState;
+                                blockIdByDhId.put(id, Block.getIdFromBlock(dhState.block));
+                                blockMetaByDhId.put(id, dhState.meta);
+
+                                int resolvedBiomeId = 0;
+                                Object biomeObj = data.mapping.getBiomeWrapper(id).getWrappedMcObject();
+                                if (biomeObj instanceof net.minecraft.world.biome.BiomeGenBase) {
+                                    resolvedBiomeId = ((net.minecraft.world.biome.BiomeGenBase) biomeObj).biomeID;
+                                } else if (data.mapping.getBiomeWrapper(id) instanceof BiomeWrapper) {
+                                    BiomeWrapper bw = (BiomeWrapper) data.mapping.getBiomeWrapper(id);
+                                    if (bw.biome != null) {
+                                        resolvedBiomeId = bw.biome.biomeID;
+                                    }
+                                }
+                                biomeIdByDhId.put(id, resolvedBiomeId);
+                            }
                         }
 
-                        FakeBlockState dhState = blockState.blockState;
-                        if (dhState == null || dhState.block == null) {
+                        if (isAir.booleanValue()) {
                             continue;
                         }
 
@@ -321,8 +344,8 @@ public class ChunkSnapshot
                             continue;
                         }
 
-                        int blockId = Block.getIdFromBlock(dhState.block);
-                        int blockMeta = dhState.meta;
+                        int blockId = blockIdByDhId.get(id);
+                        int blockMeta = blockMetaByDhId.get(id);
                         int blockLight = FullDataPointUtil.getBlockLight(datapoint);
                         int skyLight = FullDataPointUtil.getSkyLight(datapoint);
 
@@ -330,15 +353,7 @@ public class ChunkSnapshot
                             have16bitBlockData = true;
                         }
 
-                        Object biomeObj = data.mapping.getBiomeWrapper(id).getWrappedMcObject();
-                        if (biomeObj instanceof net.minecraft.world.biome.BiomeGenBase) {
-                            biomeId = ((net.minecraft.world.biome.BiomeGenBase) biomeObj).biomeID;
-                        } else if (data.mapping.getBiomeWrapper(id) instanceof BiomeWrapper) {
-                            BiomeWrapper bw = (BiomeWrapper) data.mapping.getBiomeWrapper(id);
-                            if (bw.biome != null) {
-                                biomeId = bw.biome.biomeID;
-                            }
-                        }
+                        biomeId = biomeIdByDhId.get(id);
 
                         int yStart = Math.max(0, bottomY);
                         int yEnd = Math.min(worldheight, topY);
