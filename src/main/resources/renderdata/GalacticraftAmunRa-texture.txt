@@ -129,15 +129,15 @@ block:id=%tile.log1,data=12,stdrot=true,face0-5=0:amunra/log_methane
 
 # %tile.wood1:* (tile.wood1), render=(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockBasicMeta
 block:id=%tile.wood1,data=0,stdrot=true,face0-5=0:amunra/pod_bark
-block:id=%tile.wood1,data=1,stdrot=true,face0-5=0:amunra/podleaves
+block:id=%tile.wood1,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:amunra/podleaves
 block:id=%tile.wood1,data=2,stdrot=true,face0-5=0:amunra/planks_methane
 block:id=%tile.wood1,data=3,stdrot=true,face0-5=0:amunra/planks_pod
 
 # %tile.null:* (tile.null), render=(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockLeafMeta
-block:id=%tile.null,data=0,stdrot=true,face0-5=0:amunra/leaves_methane
-block:id=%tile.null,data=4,stdrot=true,face0-5=0:amunra/leaves_methane
-block:id=%tile.null,data=8,stdrot=true,face0-5=0:amunra/leaves_methane
-block:id=%tile.null,data=12,stdrot=true,face0-5=0:amunra/leaves_methane
+block:id=%tile.null,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:amunra/leaves_methane
+block:id=%tile.null,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:amunra/leaves_methane
+block:id=%tile.null,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:amunra/leaves_methane
+block:id=%tile.null,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:amunra/leaves_methane
 
 # %tile.saplings:* (tile.saplings), render=(CROSSEDSQUARES), opaque=false,cls=de.katzenpapst.amunra.block.bush.BlockBushMulti
 block:id=%tile.saplings,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling

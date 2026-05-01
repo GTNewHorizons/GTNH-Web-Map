@@ -35,7 +35,7 @@ texture:id=immersiveintegration/steelTrapdoor,filename=assets/immersiveintegrati
 
 # %extendablePost:* (extendablePost), render=unwrittenfun.minecraft.immersiveintegration.client.renderers.block.BlockRenderExtendablePost(CUSTOM), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockExtendablePost
 block:id=%extendablePost,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/extendablePost
-block:id=%extendablePost,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:immersiveintegration/extendablePost
+block:id=%extendablePost,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:immersiveintegration/extendablePost,transparency=SEMITRANSPARENT
 
 # %steelTrapdoor:* (steelTrapdoor), render=(STANDARD), opaque=false,cls=unwrittenfun.minecraft.immersiveintegration.blocks.BlockSteelTrapdoor
 block:id=%steelTrapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:immersiveintegration/steelTrapdoor

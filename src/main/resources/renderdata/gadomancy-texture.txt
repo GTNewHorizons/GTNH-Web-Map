@@ -59,16 +59,16 @@ block:id=%BlockRemoteJar,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=
 block:id=%BlockExtendedNodeJar,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:thaumcraft/jar_bottom,face1=0:thaumcraft/jar_top,face2-5=0:thaumcraft/jar_side
 
 # %BlockNodeManipulator:* (BlockNodeManipulator), render=thaumcraft.client.renderers.block.BlockStoneDeviceRenderer(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockNodeManipulator
-block:id=%BlockNodeManipulator,data=0,stdrot=true,face0=0:gadomancy/manipulator_bot,face1=0:thaumcraft/al_furnace_top,face2-5=0:thaumcraft/al_furnace_front_off
+block:id=%BlockNodeManipulator,data=0,stdrot=true,face0=0:gadomancy/manipulator_bot,face1=0:thaumcraft/al_furnace_top,face2-5=0:thaumcraft/al_furnace_front_off,transparency=SEMITRANSPARENT
 block:id=%BlockNodeManipulator,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:gadomancy/manipulator_bot,face2-5=0:thaumcraft/pedestal_side
-block:id=%BlockNodeManipulator,data=2,stdrot=true,face0-5=0:gadomancy/manipulator_bot
+block:id=%BlockNodeManipulator,data=2,stdrot=true,face0-5=0:gadomancy/manipulator_bot,transparency=SEMITRANSPARENT
 block:id=%BlockNodeManipulator,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:gadomancy/manipulator_bot
 block:id=%BlockNodeManipulator,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:gadomancy/manipulator_bot,face1=0:gadomancy/manipulator_top,face2-5=0:gadomancy/manipulator_side
-block:id=%BlockNodeManipulator,data=6,data=7,stdrot=true,face0-5=0:gadomancy/manipulator_bot
+block:id=%BlockNodeManipulator,data=6,data=7,stdrot=true,face0-5=0:gadomancy/manipulator_bot,transparency=SEMITRANSPARENT
 block:id=%BlockNodeManipulator,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:gadomancy/manipulator_focus_bot,face1=0:gadomancy/manipulator_focus_top,face2-5=0:gadomancy/manipulator_focus_side
-block:id=%BlockNodeManipulator,data=9,data=10,data=11,stdrot=true,face0-5=0:gadomancy/manipulator_bot
-block:id=%BlockNodeManipulator,data=12,stdrot=true,face0=0:gadomancy/manipulator_bot,face1=0:thaumcraft/spa_top,face2-5=0:thaumcraft/spa_side
-block:id=%BlockNodeManipulator,data=13,data=14,data=15,stdrot=true,face0-5=0:gadomancy/manipulator_bot
+block:id=%BlockNodeManipulator,data=9,data=10,data=11,stdrot=true,face0-5=0:gadomancy/manipulator_bot,transparency=SEMITRANSPARENT
+block:id=%BlockNodeManipulator,data=12,stdrot=true,face0=0:gadomancy/manipulator_bot,face1=0:thaumcraft/spa_top,face2-5=0:thaumcraft/spa_side,transparency=SEMITRANSPARENT
+block:id=%BlockNodeManipulator,data=13,data=14,data=15,stdrot=true,face0-5=0:gadomancy/manipulator_bot,transparency=SEMITRANSPARENT
 
 # %BlockStoneMachine:* (BlockStoneMachine), render=makeo.gadomancy.client.renderers.block.RenderBlockStoneMachine(CUSTOM), opaque=false,cls=makeo.gadomancy.common.blocks.BlockStoneMachine
 block:id=%BlockStoneMachine,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/thaumiumblock

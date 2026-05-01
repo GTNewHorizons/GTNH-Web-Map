@@ -333,7 +333,7 @@ block:id=%blockRubWood,data=12,data=13,stdrot=true,face0-1=0:ic2/blockRubWood,fa
 block:id=%blockRubWood,data=14,data=15,stdrot=true,face0-1=0:ic2/blockRubWood,face2-5=2:ic2/blockRubWood
 
 # %blockRubLeaves:* (blockRubLeaves), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubLeaves
-block:id=%blockRubLeaves,data=*,stdrot=true,face0-5=14000:ic2/blockRubLeaves
+block:id=%blockRubLeaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=14000:ic2/blockRubLeaves
 
 # %blockRubSapling:* (blockRubSapling), render=(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
 block:id=%blockRubSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockRubSapling
@@ -354,7 +354,7 @@ block:id=%blockAlloy,data=0,stdrot=true,face0-5=0:ic2/blockAlloy
 block:id=%blockBasalt,data=0,stdrot=true,face0-5=0:ic2/blockBasalt
 
 # %blockAlloyGlass:* (blockAlloyGlass), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockTexGlass
-block:id=%blockAlloyGlass,data=0,stdrot=true,face0-5=0:ic2/blockAlloyGlass
+block:id=%blockAlloyGlass,data=0,stdrot=true,face0-5=0:ic2/blockAlloyGlass,transparency=TRANSPARENT
 
 # %blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
 block:id=%blockDoorAlloy,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDoorAlloy.top,patch1=0:ic2/blockDoorAlloy.bottom

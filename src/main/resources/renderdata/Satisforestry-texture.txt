@@ -82,9 +82,9 @@ block:id=%satisforestry_block_log,data=15,stdrot=true,face0-5=0:Satisforestry/pi
 block:id=%satisforestry_block_bamboo,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:Satisforestry/bamboo/top,face2-5=0:Satisforestry/bamboo/side
 
 # %satisforestry_block_leaves:* (satisforestry_block_leaves), render=(STANDARD), opaque=false,cls=Reika.Satisforestry.Blocks.BlockPinkLeaves
-block:id=%satisforestry_block_leaves,data=0,stdrot=true,colorMult=FFE94E78,face0-5=17000:satisforestry/pinkleaf_fancy
-block:id=%satisforestry_block_leaves,data=1,stdrot=true,colorMult=FFED5A83,face0-5=17000:satisforestry/pinkleaf_fancy
-block:id=%satisforestry_block_leaves,data=2,stdrot=true,colorMult=FFBA444E,face0-5=17000:satisforestry/pinkleaf_fancy
+block:id=%satisforestry_block_leaves,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FFE94E78,face0-5=17000:satisforestry/pinkleaf_fancy
+block:id=%satisforestry_block_leaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FFED5A83,face0-5=17000:satisforestry/pinkleaf_fancy
+block:id=%satisforestry_block_leaves,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FFBA444E,face0-5=17000:satisforestry/pinkleaf_fancy
 
 # %satisforestry_block_grass:* (satisforestry_block_grass), render=Reika.Satisforestry.Render.PinkGrassRenderer(CUSTOM), opaque=false,cls=Reika.Satisforestry.Blocks.BlockPinkGrass
 block:id=%satisforestry_block_grass,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:Satisforestry/foliage/peach_fringe
@@ -120,7 +120,7 @@ block:id=%satisforestry_block_terrain,data=3,stdrot=true,face0-5=0:satisforestry
 
 # %satisforestry_block_decoration:* (satisforestry_block_decoration), render=Reika.Satisforestry.Render.DecorationRenderer(CUSTOM), opaque=false,cls=Reika.Satisforestry.Blocks.BlockDecoration
 block:id=%satisforestry_block_decoration,data=0,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:satisforestry/terrain/caveshield
-block:id=%satisforestry_block_decoration,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:satisforestry/terrain/caveshield
+block:id=%satisforestry_block_decoration,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:satisforestry/terrain/caveshield,transparency=SEMITRANSPARENT
 
 # %satisforestry_block_sapling:* (satisforestry_block_sapling), render=Reika.Satisforestry.Render.PinkGrassRenderer(CUSTOM), opaque=false,cls=Reika.Satisforestry.Blocks.BlockPinkSapling
 block:id=%satisforestry_block_sapling,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:satisforestry/foliage/sapling_base
@@ -131,22 +131,22 @@ block:id=%satisforestry_block_harvester,data=1,stdrot=true,face0-5=0:satisforest
 block:id=%satisforestry_block_harvester,data=2,stdrot=true,face0-5=0:satisforestry/miner/rc
 
 # %satisforestry_block_minermulti:* (satisforestry_block_minermulti), render=(STANDARD), opaque=false,cls=Reika.Satisforestry.Blocks.BlockMinerMulti
-block:id=%satisforestry_block_minermulti,data=0,stdrot=true,face0-5=0:satisforestry/miner/0
+block:id=%satisforestry_block_minermulti,data=0,stdrot=true,face0-5=0:satisforestry/miner/0,transparency=SEMITRANSPARENT
 block:id=%satisforestry_block_minermulti,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:satisforestry/miner/1
-block:id=%satisforestry_block_minermulti,data=2,stdrot=true,face0-5=0:satisforestry/miner/2
-block:id=%satisforestry_block_minermulti,data=3,stdrot=true,face0-5=0:satisforestry/miner/3
-block:id=%satisforestry_block_minermulti,data=4,stdrot=true,face0-5=0:satisforestry/miner/4
-block:id=%satisforestry_block_minermulti,data=5,stdrot=true,face0-5=0:satisforestry/miner/5
-block:id=%satisforestry_block_minermulti,data=6,stdrot=true,face0-5=0:satisforestry/miner/6
-block:id=%satisforestry_block_minermulti,data=7,stdrot=true,face0-5=0:satisforestry/miner/7
-block:id=%satisforestry_block_minermulti,data=8,stdrot=true,face0-5=0:satisforestry/miner/0
+block:id=%satisforestry_block_minermulti,data=2,stdrot=true,face0-5=0:satisforestry/miner/2,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=3,stdrot=true,face0-5=0:satisforestry/miner/3,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=4,stdrot=true,face0-5=0:satisforestry/miner/4,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=5,stdrot=true,face0-5=0:satisforestry/miner/5,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=6,stdrot=true,face0-5=0:satisforestry/miner/6,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=7,stdrot=true,face0-5=0:satisforestry/miner/7,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=8,stdrot=true,face0-5=0:satisforestry/miner/0,transparency=SEMITRANSPARENT
 block:id=%satisforestry_block_minermulti,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:satisforestry/miner/1
-block:id=%satisforestry_block_minermulti,data=10,stdrot=true,face0-5=0:satisforestry/miner/2
-block:id=%satisforestry_block_minermulti,data=11,stdrot=true,face0-5=0:satisforestry/miner/3
-block:id=%satisforestry_block_minermulti,data=12,stdrot=true,face0-5=0:satisforestry/miner/4
-block:id=%satisforestry_block_minermulti,data=13,stdrot=true,face0-5=0:satisforestry/miner/5
-block:id=%satisforestry_block_minermulti,data=14,stdrot=true,face0-5=0:satisforestry/miner/6
-block:id=%satisforestry_block_minermulti,data=15,stdrot=true,face0-5=0:satisforestry/miner/7
+block:id=%satisforestry_block_minermulti,data=10,stdrot=true,face0-5=0:satisforestry/miner/2,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=11,stdrot=true,face0-5=0:satisforestry/miner/3,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=12,stdrot=true,face0-5=0:satisforestry/miner/4,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=13,stdrot=true,face0-5=0:satisforestry/miner/5,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=14,stdrot=true,face0-5=0:satisforestry/miner/6,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_minermulti,data=15,stdrot=true,face0-5=0:satisforestry/miner/7,transparency=SEMITRANSPARENT
 
 # %satisforestry_block_slug:* (satisforestry_block_slug), render=(CUSTOM), opaque=false,cls=Reika.Satisforestry.Blocks.BlockPowerSlug
 block:id=%satisforestry_block_slug,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/MISSING_ICON_BLOCK_1945_slug
@@ -163,22 +163,22 @@ block:id=%satisforestry_block_fracker,data=1,stdrot=true,face0-5=0:satisforestry
 block:id=%satisforestry_block_fracker,data=2,stdrot=true,face0-5=0:satisforestry/miner/rc
 
 # %satisforestry_block_frackermulti:* (satisforestry_block_frackermulti), render=(STANDARD), opaque=false,cls=Reika.Satisforestry.Blocks.BlockFrackerMulti
-block:id=%satisforestry_block_frackermulti,data=0,stdrot=true,face0-5=0:satisforestry/fracker/0
+block:id=%satisforestry_block_frackermulti,data=0,stdrot=true,face0-5=0:satisforestry/fracker/0,transparency=SEMITRANSPARENT
 block:id=%satisforestry_block_frackermulti,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:satisforestry/fracker/1
-block:id=%satisforestry_block_frackermulti,data=2,stdrot=true,face0-5=0:satisforestry/fracker/2
-block:id=%satisforestry_block_frackermulti,data=3,stdrot=true,face0-5=0:satisforestry/fracker/3
-block:id=%satisforestry_block_frackermulti,data=4,stdrot=true,face0-5=0:satisforestry/fracker/4
-block:id=%satisforestry_block_frackermulti,data=5,stdrot=true,face0-5=0:satisforestry/fracker/5
-block:id=%satisforestry_block_frackermulti,data=6,stdrot=true,face0-5=0:satisforestry/fracker/6
-block:id=%satisforestry_block_frackermulti,data=7,stdrot=true,face0-5=0:satisforestry/fracker/7
-block:id=%satisforestry_block_frackermulti,data=8,stdrot=true,face0-5=0:satisforestry/fracker/0
+block:id=%satisforestry_block_frackermulti,data=2,stdrot=true,face0-5=0:satisforestry/fracker/2,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=3,stdrot=true,face0-5=0:satisforestry/fracker/3,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=4,stdrot=true,face0-5=0:satisforestry/fracker/4,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=5,stdrot=true,face0-5=0:satisforestry/fracker/5,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=6,stdrot=true,face0-5=0:satisforestry/fracker/6,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=7,stdrot=true,face0-5=0:satisforestry/fracker/7,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=8,stdrot=true,face0-5=0:satisforestry/fracker/0,transparency=SEMITRANSPARENT
 block:id=%satisforestry_block_frackermulti,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:satisforestry/fracker/1
-block:id=%satisforestry_block_frackermulti,data=10,stdrot=true,face0-5=0:satisforestry/fracker/2
-block:id=%satisforestry_block_frackermulti,data=11,stdrot=true,face0-5=0:satisforestry/fracker/3
-block:id=%satisforestry_block_frackermulti,data=12,stdrot=true,face0-5=0:satisforestry/fracker/4
-block:id=%satisforestry_block_frackermulti,data=13,stdrot=true,face0-5=0:satisforestry/fracker/5
-block:id=%satisforestry_block_frackermulti,data=14,stdrot=true,face0-5=0:satisforestry/fracker/6
-block:id=%satisforestry_block_frackermulti,data=15,stdrot=true,face0-5=0:satisforestry/fracker/7
+block:id=%satisforestry_block_frackermulti,data=10,stdrot=true,face0-5=0:satisforestry/fracker/2,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=11,stdrot=true,face0-5=0:satisforestry/fracker/3,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=12,stdrot=true,face0-5=0:satisforestry/fracker/4,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=13,stdrot=true,face0-5=0:satisforestry/fracker/5,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=14,stdrot=true,face0-5=0:satisforestry/fracker/6,transparency=SEMITRANSPARENT
+block:id=%satisforestry_block_frackermulti,data=15,stdrot=true,face0-5=0:satisforestry/fracker/7,transparency=SEMITRANSPARENT
 
 # %satisforestry_block_crashsite:* (satisforestry_block_crashsite), render=(STANDARD), opaque=true,cls=Reika.Satisforestry.Blocks.BlockCrashSite
 block:id=%satisforestry_block_crashsite,data=0,stdrot=true,face0-5=0:satisforestry/crashsite

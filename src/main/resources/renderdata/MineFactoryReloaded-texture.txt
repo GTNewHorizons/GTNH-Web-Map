@@ -331,18 +331,18 @@ block:id=%rubberwood.log,data=8,data=9,data=10,data=11,face0-1=4000:minefactoryr
 block:id=%rubberwood.log,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minefactoryreloaded/tile.mfr.rubberwood.log.side
 
 # %rubberwood.leaves:* (rubberwood.leaves), render=(STANDARD), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRubberLeaves
-block:id=%rubberwood.leaves,data=0,stdrot=true,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
-block:id=%rubberwood.leaves,data=1,stdrot=true,face0-5=0:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
-block:id=%rubberwood.leaves,data=2,data=3,stdrot=true,face0-5=2000:minecraft/bedrock
-block:id=%rubberwood.leaves,data=4,stdrot=true,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
-block:id=%rubberwood.leaves,data=5,stdrot=true,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
-block:id=%rubberwood.leaves,data=6,data=7,stdrot=true,face0-5=2000:minecraft/bedrock
-block:id=%rubberwood.leaves,data=8,stdrot=true,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
-block:id=%rubberwood.leaves,data=9,stdrot=true,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
-block:id=%rubberwood.leaves,data=10,data=11,stdrot=true,face0-5=2000:minecraft/bedrock
-block:id=%rubberwood.leaves,data=12,stdrot=true,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
-block:id=%rubberwood.leaves,data=13,stdrot=true,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
-block:id=%rubberwood.leaves,data=14,data=15,stdrot=true,face0-5=2000:minecraft/bedrock
+block:id=%rubberwood.leaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
+block:id=%rubberwood.leaves,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
+block:id=%rubberwood.leaves,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/bedrock
+block:id=%rubberwood.leaves,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
+block:id=%rubberwood.leaves,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
+block:id=%rubberwood.leaves,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/bedrock
+block:id=%rubberwood.leaves,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
+block:id=%rubberwood.leaves,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
+block:id=%rubberwood.leaves,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/bedrock
+block:id=%rubberwood.leaves,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.transparent
+block:id=%rubberwood.leaves,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minefactoryreloaded/tile.mfr.rubberwood.leaves.dry.transparent
+block:id=%rubberwood.leaves,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/bedrock
 
 # %stainedglass.block:* (stainedglass.block), render=powercrystals.minefactoryreloaded.render.block.FactoryGlassRenderer(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.decor.BlockFactoryGlass
 block:id=%stainedglass.block,data=0,stdrot=true,colorMult=F0F0F0,face0-5=17000:minefactoryreloaded/tile.mfr.stainedglass

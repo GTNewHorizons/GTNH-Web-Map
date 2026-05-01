@@ -477,7 +477,7 @@ block:id=%electrostaticCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/Bl
 
 # %aphorismTile:* (aphorismTile), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockAphorismTile
 block:id=%aphorismTile,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/AphorismTile
-block:id=%aphorismTile,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/AphorismTile
+block:id=%aphorismTile,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/AphorismTile,transparency=SEMITRANSPARENT
 
 # %omnidirectionalHopper:* (omnidirectionalHopper), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockOmnidirectionalHopper
 block:id=%omnidirectionalHopper,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
@@ -505,7 +505,7 @@ block:id=%advancedLiquidCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/B
 
 # %heatSink:* (heatSink), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockHeatSink
 block:id=%heatSink,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
-block:id=%heatSink,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+block:id=%heatSink,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube,transparency=SEMITRANSPARENT
 
 # %vortexTube:* (vortexTube), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockVortexTube
 block:id=%vortexTube,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube

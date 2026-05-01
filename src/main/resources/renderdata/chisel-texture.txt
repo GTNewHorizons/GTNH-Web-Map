@@ -3128,15 +3128,15 @@ block:id=%leadblock,data=5,stdrot=true,face0-5=0:chisel/metals/lead/bolted
 block:id=%leadblock,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
 
 # %leaves:* (leaves), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=false,cls=team.chisel.block.BlockLeaf
-block:id=%leaves,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,face0-5=0:minecraft/missingno
-block:id=%leaves,data=6,stdrot=true,face0-5=0:chisel/leaves/dead
-block:id=%leaves,data=7,stdrot=true,face0-5=0:chisel/leaves/fancy
-block:id=%leaves,data=8,stdrot=true,face0-5=0:chisel/leaves/pinkpetal
-block:id=%leaves,data=9,stdrot=true,face0-5=0:chisel/leaves/red_roses
-block:id=%leaves,data=10,stdrot=true,face0-5=0:chisel/leaves/roses
-block:id=%leaves,data=11,stdrot=true,face0-5=0:chisel/leaves/christmasBalls
-block:id=%leaves,data=12,stdrot=true,face0-5=0:chisel/leaves/christmasLights
-block:id=%leaves,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/missingno
+block:id=%leaves,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/missingno
+block:id=%leaves,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:chisel/leaves/dead
+block:id=%leaves,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:chisel/leaves/fancy
+block:id=%leaves,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:chisel/leaves/pinkpetal
+block:id=%leaves,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:chisel/leaves/red_roses
+block:id=%leaves,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:chisel/leaves/roses
+block:id=%leaves,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:chisel/leaves/christmasBalls
+block:id=%leaves,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:chisel/leaves/christmasLights
+block:id=%leaves,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/missingno
 
 # %limestone:* (limestone), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 block:id=%limestone,data=0,stdrot=true,face0-5=0:chisel/limestone

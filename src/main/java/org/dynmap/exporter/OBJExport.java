@@ -22,6 +22,7 @@ import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.hdmap.HDBlockModels;
 import org.dynmap.hdmap.HDShader;
 import org.dynmap.hdmap.TexturePack;
+import org.dynmap.hdmap.TexturePackHDShader;
 import org.dynmap.hdmap.HDBlockModels.CustomBlockModel;
 import org.dynmap.hdmap.HDBlockModels.HDScaledBlockModels;
 import org.dynmap.hdmap.TexturePack.BlockTransparency;
@@ -37,7 +38,7 @@ import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.PatchDefinition;
 import org.dynmap.utils.PatchDefinitionFactory;
 
-public class OBJExport {
+public class OBJExport implements BlockModelExportSink {
     private final File destZipFile;     // Destination ZIP file
     private final HDShader shader;      // Shader to be used for textures
     private final DynmapWorld world;    // World to be rendered
@@ -59,6 +60,7 @@ public class OBJExport {
     }
     
     private HashMap<String, List<Face>> facesByTexture = new HashMap<String, List<Face>>();
+    private HashMap<String, ExportMaterial> exportMaterials = new HashMap<String, ExportMaterial>();
     private static final int MODELSCALE = 16;
     private static final double BLKSIZE = 1.0 / (double) MODELSCALE;
     
@@ -208,96 +210,44 @@ public class OBJExport {
         try {
             // Open ZIP file destination
             zos = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(destZipFile)));
-            
-            List<DynmapChunk> requiredChunks = new ArrayList<DynmapChunk>();
-            int mincx = (minX >> 4);
-            int maxcx = (maxX + 15) >> 4;
-            int mincz = (minZ >> 4);
-            int maxcz = (maxZ + 15) >> 4;
-            boolean[] edgebits = new boolean[6];
 
             startExportedFile(basename + ".obj");
             // Add material library
             addStringToExportedFile("mtllib " + basename + ".mtl\n");
 
-            // Loop through - do 8x8 chunks at a time (plus 1 border each way)
-            for (int cx = mincx; cx <= maxcx; cx += 4) {
-                for (int cz = mincz; cz <= maxcz; cz += 4) {
-                    // Build chunk cache for block of chunks
-                    requiredChunks.clear();
-                    for (int i = -1; i < 5; i++) {
-                        for (int j = -1; j < 5; j++) {
-                            if (((cx+i) <= maxcx) && ((cz+j) <= maxcz) && ((cx+i) >= mincx) && ((cz+j) >= mincz)) {
-                                requiredChunks.add(new DynmapChunk(cx + i, cz + j));
-                            }
-                        }
+            exportMaterials.clear();
+            BlockModelExporter exporter = new BlockModelExporter(world, core, shader);
+            exporter.setRenderBounds(minX, minY, minZ, maxX, maxY, maxZ);
+            exporter.setCullExportRegionEdges(false);
+            exporter.export(this);
+
+            String grp = "";
+            for (String material : facesByTexture.keySet()) {
+                List<Face> faces = facesByTexture.get(material);
+                matIDs.add(material);
+                addStringToExportedFile(String.format("usemtl %s\n", material));
+                for (Face face : faces) {
+                    if ((face.groupLine != null) && (!face.groupLine.equals(grp))) {
+                        grp = face.groupLine;
+                        addStringToExportedFile(grp);
                     }
-                    // Get the chunk buffer
-                    MapChunkCache cache = core.getServer().createMapChunkCache(world, requiredChunks, true, false, true, false);
-                    if (cache == null) {
-                        throw new IOException("Error loading chunk cache");
-                    }
-                    MapIterator iter = cache.getIterator(minX, minY, minZ);
-                    for (int x = cx * 16; (x < (cx * 16 + 64)) && (x <= maxX); x++) {
-                        if (x < minX) x = minX;
-                        edgebits[BlockStep.X_PLUS.ordinal()] = (x == minX);
-                        edgebits[BlockStep.X_MINUS.ordinal()] = (x == maxX);
-                        for (int z = cz * 16; (z < (cz * 16 + 64)) && (z <= maxZ); z++) {
-                            if (z < minZ) z = minZ;
-                            edgebits[BlockStep.Z_PLUS.ordinal()] = (z == minZ);
-                            edgebits[BlockStep.Z_MINUS.ordinal()] = (z == maxZ);
-                            iter.initialize(x, minY, z);
-                            updateGroup(GROUP_CHUNK, "chunk" + (x >> 4) + "_" + (z >> 4));
-                            // Do first (bottom)
-                            edgebits[BlockStep.Y_MINUS.ordinal()] = true;
-                            edgebits[BlockStep.Y_PLUS.ordinal()] = false;
-                            int id = iter.getBlockTypeID();
-                            if (id > 0) {  // Not air
-                                handleBlock(id, iter, edgebits);
-                            }
-                            // Do middle
-                            edgebits[BlockStep.Y_MINUS.ordinal()] = false;
-                            for (int y = minY + 1; y < maxY; y++) {
-                                iter.setY(y);
-                                id = iter.getBlockTypeID();
-                                if (id > 0) {  // Not air
-                                    handleBlock(id, iter, edgebits);
-                                }
-                            }
-                            // Do top
-                            edgebits[BlockStep.Y_PLUS.ordinal()] = true;
-                            iter.setY(maxY);
-                            id = iter.getBlockTypeID();
-                            if (id > 0) {  // Not air
-                                handleBlock(id, iter, edgebits);
-                            }
-                        }
-                    }
-                    // Output faces by texture
-                    String grp = "";
-                    for (String material : facesByTexture.keySet()) {
-                        List<Face> faces = facesByTexture.get(material);
-                        matIDs.add(material);   // Record material use
-                        addStringToExportedFile(String.format("usemtl %s\n", material)); 
-                        for (Face face : faces) {
-                            if ((face.groupLine != null) && (!face.groupLine.equals(grp))) {
-                                grp = face.groupLine;
-                                addStringToExportedFile(grp);
-                            }
-                            addStringToExportedFile(face.faceLine);
-                        }
-                    }
-                    // Clear face table
-                    facesByTexture.clear();
-                    // Clean up vertices we've moved past
-                    vertices.resetSet(minX, minY, minZ, cx * 16 + 64, maxY, cz * 16 + 64);
+                    addStringToExportedFile(face.faceLine);
                 }
             }
+            facesByTexture.clear();
             finishExportedFile();
             // If shader provided, add shader content to ZIP
             if (shader != null) {
                 sender.sendMessage("Adding textures from shader " + shader.getName());
-                shader.exportAsMaterialLibrary(sender, this);
+                if (shader instanceof TexturePackHDShader) {
+                    TexturePack tp = ((TexturePackHDShader) shader).getTexturePackForExport();
+                    if (tp == null) {
+                        throw new IOException("Export unsupported - invalid texture pack");
+                    }
+                    tp.exportAsOBJMaterialLibrary(this, basename, exportMaterials.values());
+                } else {
+                    shader.exportAsMaterialLibrary(sender, this);
+                }
                 sender.sendMessage("Texture export completed");
             }
             // And close the ZIP
@@ -316,6 +266,72 @@ public class OBJExport {
             }
         }
         return good;
+    }
+    @Override
+    public void setChunk(int chunkX, int chunkZ) {
+        updateGroup(GROUP_CHUNK, "chunk" + chunkX + "_" + chunkZ);
+    }
+    @Override
+    public void setBlock(int blockId, int blockData) {
+        updateGroup(GROUP_BLOCKID, "blk" + blockId);
+        updateGroup(GROUP_BLOCKIDMETA, "blk" + blockId + "_" + blockData);
+    }
+    @Override
+    public void addPatch(PatchDefinition pd, double x, double y, double z, ExportMaterial material, float[] vertexColors,
+            float[] nightVertexLights) throws IOException {
+        if (material == null) {
+            return;
+        }
+        ExportPatchGeometry.Geometry geometry = ExportPatchGeometry.build(pd, x, y, z, material.getRotation());
+        int[] v = new int[geometry.vertexCount];
+        int[] uv = new int[geometry.vertexCount];
+        for (int i = 0; i < geometry.vertexCount; i++) {
+            int xyzOff = i * 3;
+            int uvOff = i * 2;
+            v[i] = vertices.getVectorIndex(geometry.xyz[xyzOff], geometry.xyz[xyzOff + 1], geometry.xyz[xyzOff + 2]);
+            uv[i] = uvs.getVectorIndex(geometry.uv[uvOff], geometry.uv[uvOff + 1], 0);
+        }
+        exportMaterials.put(material.getMaterialId(), material);
+        addPatchToFile(v, uv, geometry.sideVisible, material.getMaterialId(), 0);
+    }
+
+    @Override
+    public void addQuad(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights)
+            throws IOException {
+        if ((material == null) || (xyz == null) || (xyz.length != 12)) {
+            return;
+        }
+        int[] v = new int[4];
+        int[] uv = new int[4];
+        for (int i = 0; i < 4; i++) {
+            int xyzOff = i * 3;
+            v[i] = vertices.getVectorIndex(xyz[xyzOff], xyz[xyzOff + 1], xyz[xyzOff + 2]);
+        }
+        uv[0] = uvs.getVectorIndex(0.0, 0.0, 0);
+        uv[1] = uvs.getVectorIndex(1.0, 0.0, 0);
+        uv[2] = uvs.getVectorIndex(1.0, 1.0, 0);
+        uv[3] = uvs.getVectorIndex(0.0, 1.0, 0);
+        exportMaterials.put(material.getMaterialId(), material);
+        addPatchToFile(v, uv, SideVisible.TOP, material.getMaterialId(), 0);
+    }
+
+    @Override
+    public void addPolygon(double[] xyz, ExportMaterial material, float[] vertexColors, float[] nightVertexLights)
+            throws IOException {
+        if ((material == null) || (xyz == null) || ((xyz.length % 3) != 0) || (xyz.length < 9)) {
+            return;
+        }
+        int vertexCount = xyz.length / 3;
+        int[] v = new int[vertexCount];
+        int[] uv = new int[vertexCount];
+        for (int i = 0; i < vertexCount; i++) {
+            int xyzOff = i * 3;
+            v[i] = vertices.getVectorIndex(xyz[xyzOff], xyz[xyzOff + 1], xyz[xyzOff + 2]);
+            double u = (vertexCount > 1) ? ((double) i / (double) (vertexCount - 1)) : 0.0;
+            uv[i] = uvs.getVectorIndex(u, (i & 1) == 0 ? 0.0 : 1.0, 0);
+        }
+        exportMaterials.put(material.getMaterialId(), material);
+        addPatchToFile(v, uv, SideVisible.TOP, material.getMaterialId(), 0);
     }
     /**
      * Start adding file to export
@@ -526,21 +542,45 @@ public class OBJExport {
         f.groupLine = updateGroup(GROUP_TEXTURE, material);
         switch (sv) {
             case TOP:
-                f.faceLine = String.format("f %d/%d %d/%d %d/%d %d/%d\n", v[0], uv[0], v[1], uv[1], v[2], uv[2], v[3], uv[3]); 
+                f.faceLine = buildFaceLine(v, uv, false);
                 break;
             case BOTTOM:
-                f.faceLine = String.format("f %d/%d %d/%d %d/%d %d/%d\n", v[3], uv[3], v[2], uv[2], v[1], uv[1], v[0], uv[0]); 
+                f.faceLine = buildFaceLine(v, uv, true);
                 break;
             case BOTH:
-                f.faceLine = String.format("f %d/%d %d/%d %d/%d %d/%d\n", v[0], uv[0], v[1], uv[1], v[2], uv[2], v[3], uv[3]); 
-                f.faceLine += String.format("f %d/%d %d/%d %d/%d %d/%d\n", v[3], uv[3], v[2], uv[2], v[1], uv[1], v[0], uv[0]); 
+                f.faceLine = buildFaceLine(v, uv, false);
+                f.faceLine += buildFaceLine(v, uv, true);
                 break;
             case FLIP:
-                f.faceLine = String.format("f %d/%d %d/%d %d/%d %d/%d\n", v[0], uv[0], v[1], uv[1], v[2], uv[2], v[3], uv[3]); 
-                f.faceLine += String.format("f %d/%d %d/%d %d/%d %d/%d\n", v[3], uv[2], v[2], uv[3], v[1], uv[0], v[0], uv[1]); 
+                f.faceLine = buildFaceLine(v, uv, false);
+                f.faceLine += buildFaceLine(v, buildFlipBackUVs(uv), true);
                 break;
         }
         faces.add(f);
+    }
+    private String buildFaceLine(int[] v, int[] uv, boolean reverse) {
+        StringBuilder line = new StringBuilder("f");
+        if (reverse) {
+            for (int i = v.length - 1; i >= 0; i--) {
+                line.append(' ').append(v[i]).append('/').append(uv[i]);
+            }
+        }
+        else {
+            for (int i = 0; i < v.length; i++) {
+                line.append(' ').append(v[i]).append('/').append(uv[i]);
+            }
+        }
+        line.append('\n');
+        return line.toString();
+    }
+    private int[] buildFlipBackUVs(int[] uv) {
+        if (uv.length == 4) {
+            return new int[] { uv[1], uv[0], uv[3], uv[2] };
+        }
+        if (uv.length == 3) {
+            return new int[] { uv[0], uv[2], uv[1] };
+        }
+        return uv;
     }
     
     public Set<String> getMaterialIDs() {

@@ -134,7 +134,7 @@ block:id=%trophy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblock
 block:id=%beartrap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/beartrap
 
 # %sprinkler:* (sprinkler), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockSprinkler
-block:id=%sprinkler,data=*,stdrot=true,face0-5=0:openblocks/sprinkler
+block:id=%sprinkler,data=*,stdrot=true,face0-5=0:openblocks/sprinkler,transparency=SEMITRANSPARENT
 
 # %cannon:* (cannon), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openblocks.common.block.BlockCannon
 block:id=%cannon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/cannon
