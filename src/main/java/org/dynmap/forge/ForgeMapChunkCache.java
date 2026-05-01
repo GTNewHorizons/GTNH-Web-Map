@@ -49,6 +49,13 @@ import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.VisibilityLimit;
 
+import com.seibel.distanthorizons.common.wrappers.world.ServerLevelWrapper;
+import com.seibel.distanthorizons.core.api.internal.SharedApi;
+import com.seibel.distanthorizons.core.level.IDhLevel;
+import com.seibel.distanthorizons.core.pos.DhChunkPos;
+import com.seibel.distanthorizons.core.pos.DhSectionPos;
+import com.seibel.distanthorizons.core.world.IDhServerWorld;
+
 /**
  * Container for managing chunks - dependent upon using chunk snapshots, since rendering is off server thread
  */
@@ -1427,6 +1434,58 @@ public class ForgeMapChunkCache extends MapChunkCache
         
         return ssr;
     }
+
+    private ChunkSnapshot readDhChunkSnapshot(DynmapChunk chunk) {
+        if (!(w instanceof WorldServer)) {
+            return null;
+        }
+
+        IDhServerWorld dhWorld = SharedApi.tryGetDhServerWorld();
+        if (dhWorld == null) {
+            return null;
+        }
+
+        ServerLevelWrapper levelWrapper = ServerLevelWrapper.getWrapper((WorldServer) w);
+        IDhLevel dhLevel = dhWorld.getLevel(levelWrapper);
+        if (dhLevel == null) {
+            dhLevel = levelWrapper.getDhLevel();
+        }
+        if (dhLevel == null) {
+            return null;
+        }
+
+        long sectionPos = DhSectionPos.encodeContaining(
+            DhSectionPos.SECTION_MINIMUM_DETAIL_LEVEL,
+            new DhChunkPos(chunk.x, chunk.z));
+        try (com.seibel.distanthorizons.core.dataObjects.fullData.sources.FullDataSourceV2 data =
+                 dhLevel.getFullDataProvider().getAsync(sectionPos).get()) {
+            if (data == null || data.isEmpty) {
+                return null;
+            }
+            return new ChunkSnapshot(data, chunk.x, chunk.z, dw.worldheight);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    private boolean useDistantHorizonsOnly() {
+        return true;
+    }
+
+    private ChunkSnapshot getVisibleSnapshotFromDh(DynmapChunk chunk, boolean vis) {
+        if (!vis) {
+            if (hidestyle == HiddenChunkStyle.FILL_STONE_PLAIN) {
+                return STONE;
+            }
+            else if (hidestyle == HiddenChunkStyle.FILL_OCEAN) {
+                return OCEAN;
+            }
+            else {
+                return EMPTY;
+            }
+        }
+        return readDhChunkSnapshot(chunk);
+    }
     
     /** 
      * Read NBT data from loaded chunks - needs to be called from server/world thread to be safe
@@ -1452,6 +1511,15 @@ public class ForgeMapChunkCache extends MapChunkCache
             if (tryChunkCache(chunk, vis)) {
                 endChunkLoad(startTime, ChunkStats.CACHED_SNAPSHOT_HIT);
                 cnt++;
+            }
+            else if (useDistantHorizonsOnly()) {
+                ChunkSnapshot ss = getVisibleSnapshotFromDh(chunk, vis);
+                if (ss != null) {
+                    snaparray[chunkindex] = ss;
+                    snaptile[chunkindex] = new DynIntHashMap();
+                    endChunkLoad(startTime, ChunkStats.LOADED_CHUNKS);
+                    cnt++;
+                }
             }
             // If chunk is loaded and not being unloaded, we're grabbing its NBT data
             else if (cps.chunkExists(chunk.x, chunk.z) && (!isChunkUnloadPending(chunk))) {
@@ -1531,6 +1599,17 @@ public class ForgeMapChunkCache extends MapChunkCache
             if (tryChunkCache(chunk, vis)) {
                 endChunkLoad(startTime, ChunkStats.CACHED_SNAPSHOT_HIT);
             }
+            else if (useDistantHorizonsOnly()) {
+                ChunkSnapshot ss = getVisibleSnapshotFromDh(chunk, vis);
+                if (ss != null) {
+                    snaparray[chunkindex] = ss;
+                    snaptile[chunkindex] = new DynIntHashMap();
+                    endChunkLoad(startTime, ChunkStats.UNLOADED_CHUNKS);
+                }
+                else {
+                    endChunkLoad(startTime, ChunkStats.UNGENERATED_CHUNKS);
+                }
+            }
             else {
                 NBTTagCompound nbt = readChunk(chunk.x, chunk.z);
                 // If read was good
@@ -1561,7 +1640,15 @@ public class ForgeMapChunkCache extends MapChunkCache
                     endChunkLoad(startTime, ChunkStats.UNLOADED_CHUNKS);
                 }
                 else {
-                    endChunkLoad(startTime, ChunkStats.UNGENERATED_CHUNKS);
+                    ChunkSnapshot dhss = readDhChunkSnapshot(chunk);
+                    if (dhss != null) {
+                        snaparray[chunkindex] = dhss;
+                        snaptile[chunkindex] = new DynIntHashMap();
+                        endChunkLoad(startTime, ChunkStats.UNLOADED_CHUNKS);
+                    }
+                    else {
+                        endChunkLoad(startTime, ChunkStats.UNGENERATED_CHUNKS);
+                    }
                 }
             }
             cnt++;

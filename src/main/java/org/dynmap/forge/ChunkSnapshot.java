@@ -5,6 +5,15 @@ import java.lang.reflect.Method;
 
 import org.dynmap.Log;
 
+import com.seibel.distanthorizons.common.wrappers.block.BiomeWrapper;
+import com.seibel.distanthorizons.common.wrappers.block.BlockStateWrapper;
+import com.seibel.distanthorizons.common.wrappers.block.FakeBlockState;
+import com.seibel.distanthorizons.core.dataObjects.fullData.sources.FullDataSourceV2;
+import com.seibel.distanthorizons.core.pos.DhSectionPos;
+import com.seibel.distanthorizons.core.util.FullDataPointUtil;
+
+import it.unimi.dsi.fastutil.longs.LongArrayList;
+import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.chunk.Chunk;
@@ -274,6 +283,102 @@ public class ChunkSnapshot
 
         /* Save height map */
         System.arraycopy(chunk.heightMap, 0, this.hmap, 0, hmap.length);
+    }
+
+    public ChunkSnapshot(FullDataSourceV2 data, int chunkX, int chunkZ, int worldheight) {
+        this(worldheight, chunkX, chunkZ, 0L, 0L);
+
+        int minBlockX = chunkX << 4;
+        int minBlockZ = chunkZ << 4;
+        int dataMinX = DhSectionPos.getMinCornerBlockX(data.getPos());
+        int dataMinZ = DhSectionPos.getMinCornerBlockZ(data.getPos());
+
+        for (int rx = 0; rx < 16; rx++) {
+            for (int rz = 0; rz < 16; rz++) {
+                int relX = (minBlockX + rx) - dataMinX;
+                int relZ = (minBlockZ + rz) - dataMinZ;
+                LongArrayList column = data.tryGetColumnAtRelPos(relX, relZ);
+                int highestY = 0;
+                int biomeId = 0;
+
+                if (column != null) {
+                    for (int i = 0; i < column.size(); i++) {
+                        long datapoint = column.getLong(i);
+                        int id = FullDataPointUtil.getId(datapoint);
+                        BlockStateWrapper blockState = (BlockStateWrapper) data.mapping.getBlockStateWrapper(id);
+                        if (blockState == null || blockState.isAir()) {
+                            continue;
+                        }
+
+                        FakeBlockState dhState = blockState.blockState;
+                        if (dhState == null || dhState.block == null) {
+                            continue;
+                        }
+
+                        int bottomY = FullDataPointUtil.getBottomY(datapoint);
+                        int topY = bottomY + FullDataPointUtil.getHeight(datapoint);
+                        if (topY <= 0 || bottomY >= worldheight) {
+                            continue;
+                        }
+
+                        int blockId = Block.getIdFromBlock(dhState.block);
+                        int blockMeta = dhState.meta;
+                        int blockLight = FullDataPointUtil.getBlockLight(datapoint);
+                        int skyLight = FullDataPointUtil.getSkyLight(datapoint);
+
+                        if (blockMeta > 0xF) {
+                            have16bitBlockData = true;
+                        }
+
+                        Object biomeObj = data.mapping.getBiomeWrapper(id).getWrappedMcObject();
+                        if (biomeObj instanceof net.minecraft.world.biome.BiomeGenBase) {
+                            biomeId = ((net.minecraft.world.biome.BiomeGenBase) biomeObj).biomeID;
+                        } else if (data.mapping.getBiomeWrapper(id) instanceof BiomeWrapper) {
+                            BiomeWrapper bw = (BiomeWrapper) data.mapping.getBiomeWrapper(id);
+                            if (bw.biome != null) {
+                                biomeId = bw.biome.biomeID;
+                            }
+                        }
+
+                        int yStart = Math.max(0, bottomY);
+                        int yEnd = Math.min(worldheight, topY);
+                        for (int y = yStart; y < yEnd; y++) {
+                            initSectionForWrite(y >> 4);
+                            int idx = ((y & 0xF) << 8) | (rz << 4) | rx;
+                            blockids[y >> 4][idx] = (short) blockId;
+                            blockdata16[y >> 4][idx] = (short) blockMeta;
+                            setNibble(blockdata[y >> 4], idx, blockMeta);
+                            setNibble(emitlight[y >> 4], idx, blockLight);
+                            setNibble(skylight[y >> 4], idx, skyLight);
+                        }
+
+                        if (topY - 1 > highestY) {
+                            highestY = topY - 1;
+                        }
+                    }
+                }
+
+                hmap[(rz << 4) | rx] = highestY;
+                biome[(rz << 4) | rx] = (byte) biomeId;
+            }
+        }
+    }
+
+    private void initSectionForWrite(int section) {
+        if (empty[section]) {
+            empty[section] = false;
+            blockids[section] = new short[BLOCKS_PER_SECTION];
+            blockdata16[section] = new short[BLOCKS_PER_SECTION];
+            blockdata[section] = new byte[BLOCKS_PER_SECTION / 2];
+            emitlight[section] = new byte[BLOCKS_PER_SECTION / 2];
+            skylight[section] = new byte[BLOCKS_PER_SECTION / 2];
+        }
+    }
+
+    private static void setNibble(byte[] data, int index, int value) {
+        int off = index >> 1;
+        int shift = (index & 1) << 2;
+        data[off] = (byte) ((data[off] & ~(0xF << shift)) | ((value & 0xF) << shift));
     }
 
     public int getX()
