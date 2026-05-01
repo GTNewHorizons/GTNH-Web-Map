@@ -83,31 +83,7 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             double[] z = new double[]{pos.posZ*16, pos.posZ*16+16};
 
             ForgeTeam team = cc.getTeam();
-            String teamName = team.getId();
-//            String title = team.getTitle().getUnformattedText();
-//            if (title != null && !teamName.equals(""))
-//                teamName = "[" + title + "] " + teamName;
-            String label = "Claimed by <b>"+ teamName +"</b>";
-            String desc = team.getDesc();
-            if(desc != null && !desc.equals(""))
-                label += "<br/><i>" + team.getDesc() + "</i>";
-
-            if(team.owner != null)
-                label += "<br/><b>Founder: </b>" + team.owner.getName();
-
-            List<ForgePlayer> members = team.getMembers();
-            if(members != null){
-                for(ForgePlayer m : members){
-                    if(m != team.owner)
-                        label += "<br/>Member: " + m.getName();
-                }
-            }
-
-            if(team.players != null){
-                for(Map.Entry<ForgePlayer, EnumTeamStatus> p : team.players.entrySet()){
-                    label += "<br/>" + p.getValue() + ": " +  p.getKey().getName();
-                }
-            }
+            String label = buildLabel(team);
 
             AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), label, true, worldId, x,z, false);
 
@@ -119,6 +95,36 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
         }
 
         updateNeeded = false;
+    }
+
+    private static String buildLabel(ForgeTeam team) {
+        String teamName = team.getId();
+//        String title = team.getTitle().getUnformattedText();
+//        if (title != null && !teamName.equals(""))
+//            teamName = "[" + title + "] " + teamName;
+        String label = "Claimed by <b>" + teamName + "</b>";
+        String desc = team.getDesc();
+        if(desc != null && !desc.equals(""))
+            label += "<br/><i>" + team.getDesc() + "</i>";
+
+        if(team.owner != null)
+            label += "<br/><b>Founder: </b>" + team.owner.getName();
+
+        List<ForgePlayer> members = team.getMembers();
+        if(members != null){
+            for(ForgePlayer m : members){
+                if(m != team.owner)
+                    label += "<br/>Member: " + m.getName();
+            }
+        }
+
+        if(team.players != null){
+            for(Map.Entry<ForgePlayer, EnumTeamStatus> p : team.players.entrySet()){
+                label += "<br/>" + p.getValue() + ": " +  p.getKey().getName();
+            }
+        }
+
+        return label;
     }
 
     @SubscribeEvent
