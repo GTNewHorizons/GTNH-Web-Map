@@ -1,8 +1,139 @@
 
 var dynmapmarkersets = {};
+var dynmapclaimsteams = {};
+var SUCLAIMS_SET_ID = 'suclaims';
 
 componentconstructors['markers'] = function(dynmap, configuration) {
 	var me = this;
+	var claimsControl = null;
+
+	function parseTeamFromArea(area) {
+		if(!area || !area.label) return null;
+		var m = area.label.match(/Claimed by <b>([^<]+)<\/b>/);
+		return m ? m[1] : null;
+	}
+
+	function tagClaimArea(set, area) {
+		if(!set || set.id !== SUCLAIMS_SET_ID) return;
+		var teamId = parseTeamFromArea(area);
+		if(!teamId) return;
+		area.teamId = teamId;
+		var team = dynmapclaimsteams[teamId];
+		if(!team) {
+			dynmapclaimsteams[teamId] = { id: teamId, label: teamId, color: area.fillcolor, visible: true };
+		} else if(!team.color && area.fillcolor) {
+			team.color = area.fillcolor;
+		}
+	}
+
+	function isClaimVisible(set, marker) {
+		if(!set || set.id !== SUCLAIMS_SET_ID || !marker.teamId) return true;
+		var team = dynmapclaimsteams[marker.teamId];
+		return !team || team.visible;
+	}
+
+	function ensureClaimsControl() {
+		if(claimsControl) return;
+		var ClaimsControl = L.Control.extend({
+			options: { position: 'topleft' },
+			onAdd: function() {
+				var container = L.DomUtil.create('div', 'leaflet-control-layers leaflet-control-claims');
+				var toggle = L.DomUtil.create('a', 'leaflet-control-layers-toggle', container);
+				toggle.href = '#';
+				toggle.title = 'Claims';
+				toggle.innerHTML = 'C';
+				toggle.style.fontWeight = 'bold';
+				toggle.style.textAlign = 'center';
+				toggle.style.lineHeight = '36px';
+				toggle.style.textDecoration = 'none';
+				toggle.style.color = '#333';
+				toggle.style.backgroundImage = 'none';
+				var form = L.DomUtil.create('form', 'leaflet-control-layers-list', container);
+				this._form = form;
+				L.DomEvent.disableClickPropagation(container);
+				L.DomEvent.on(container, 'mousewheel', L.DomEvent.stopPropagation);
+				L.DomEvent.on(container, 'mouseenter', function() { L.DomUtil.addClass(container, 'leaflet-control-layers-expanded'); });
+				L.DomEvent.on(container, 'mouseleave', function() { L.DomUtil.removeClass(container, 'leaflet-control-layers-expanded'); });
+				this.refresh();
+				return container;
+			},
+			refresh: function() {
+				if(!this._form) return;
+				var form = this._form;
+				form.innerHTML = '';
+				var teamIds = Object.keys(dynmapclaimsteams).sort(function(a, b) {
+					return a.toLowerCase() < b.toLowerCase() ? -1 : (a.toLowerCase() > b.toLowerCase() ? 1 : 0);
+				});
+				teamIds.forEach(function(tid) {
+					var team = dynmapclaimsteams[tid];
+					var label = L.DomUtil.create('label', '', form);
+					label.style.display = 'block';
+					var cb = L.DomUtil.create('input', 'leaflet-control-layers-selector', label);
+					cb.type = 'checkbox';
+					cb.checked = team.visible;
+					L.DomEvent.on(cb, 'change', function() {
+						team.visible = cb.checked;
+						applyTeamVisibility(team.id);
+					});
+					if(team.color) {
+						var swatch = L.DomUtil.create('span', '', label);
+						swatch.style.display = 'inline-block';
+						swatch.style.width = '10px';
+						swatch.style.height = '10px';
+						swatch.style.margin = '0 4px';
+						swatch.style.background = team.color;
+						swatch.style.border = '1px solid #888';
+					}
+					var name = L.DomUtil.create('span', '', label);
+					name.appendChild(document.createTextNode(' ' + team.label));
+				});
+			}
+		});
+		claimsControl = new ClaimsControl();
+		dynmap.map.addControl(claimsControl);
+	}
+
+	function applyTeamVisibility(teamId) {
+		var set = dynmapmarkersets[SUCLAIMS_SET_ID];
+		if(!set) return;
+		var zoom = dynmap.map.getZoom();
+		$.each(set.areas, function(aname, area) {
+			if(area.teamId === teamId) updateMarker(set, area, zoom);
+		});
+	}
+
+	function isClaimsLayerActive() {
+		var set = dynmapmarkersets[SUCLAIMS_SET_ID];
+		return !!(set && set.layergroup && dynmap.map.hasLayer(set.layergroup));
+	}
+
+	function refreshClaimsControl() {
+		var set = dynmapmarkersets[SUCLAIMS_SET_ID];
+		var seen = {};
+		if(set) {
+			$.each(set.areas, function(aname, area) {
+				if(area.teamId) seen[area.teamId] = true;
+			});
+		}
+		Object.keys(dynmapclaimsteams).forEach(function(tid) {
+			if(!seen[tid]) delete dynmapclaimsteams[tid];
+		});
+		var hasTeams = Object.keys(dynmapclaimsteams).length > 0;
+		if(!hasTeams || !isClaimsLayerActive()) {
+			if(claimsControl) {
+				dynmap.map.removeControl(claimsControl);
+				claimsControl = null;
+			}
+		} else {
+			ensureClaimsControl();
+			claimsControl.refresh();
+		}
+	}
+
+	dynmap.map.on('overlayadd overlayremove layeradd layerremove', function(e) {
+		var set = dynmapmarkersets[SUCLAIMS_SET_ID];
+		if(set && e.layer === set.layergroup) refreshClaimsControl();
+	});
 
 	function removeAllMarkers() {
 		$.each(dynmapmarkersets, function(setname, set) {
@@ -66,6 +197,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 						color: area.color != null ? area.color : template.color, weight: area.weight != null ? area.weight : template.weight,
 						opacity: area.opacity != null ? area.opacity : template.opacity, fillcolor: area.fillcolor != null ? area.fillcolor : template.fillcolor,
 						fillopacity: area.fillopacity != null ? area.fillopacity : template.fillopacity, minzoom: area.minzoom || -1, maxzoom: area.maxzoom || -1 };
+					tagClaimArea(ms, ms.areas[aname]);
 					createArea(ms, ms.areas[aname], ts);
 				});
 				$.each(markerset.lines, function(lname, line) {
@@ -81,10 +213,11 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 				});
 			});
 			
+			refreshClaimsControl();
 			$(dynmap).trigger('markersupdated', [dynmapmarkersets]);
 		});
 	}
-	
+
 	function getPosition(marker) {
 		return dynmap.getProjection().fromLocationToLatLng({ x: marker.x, y: marker.y, z: marker.z });
 	}
@@ -134,7 +267,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 			var maxzoom = (marker.maxzoom >= 0) ? marker.maxzoom : set.maxzoom;
 			if (maxzoom < 0) maxzoom = 100;
 			set.layergroup.removeLayer(marker.our_layer);
-			if ((mapzoom >= minzoom) && (mapzoom <= maxzoom)) {  
+			if ((mapzoom >= minzoom) && (mapzoom <= maxzoom) && isClaimVisible(set, marker)) {
 				set.layergroup.addLayer(marker.our_layer);
 			}
 		}
@@ -401,6 +534,7 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 				dynmap.removeFromLayerSelector(dynmapmarkersets[msg.id].layergroup);
 				delete dynmapmarkersets[msg.id].layergroup;
 				delete dynmapmarkersets[msg.id];
+				if(msg.id === SUCLAIMS_SET_ID) refreshClaimsControl();
 			}
 		}		
 		else if(msg.msg == 'areaupdated') {
@@ -411,13 +545,16 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 			var area = { x: msg.x, ytop: msg.ytop, ybottom: msg.ybottom, z: msg.z, label: msg.label, markup: msg.markup, desc: msg.desc,
 				color: msg.color, weight: msg.weight, opacity: msg.opacity, fillcolor: msg.fillcolor, fillopacity: msg.fillopacity, minzoom: msg.minzoom || -1, maxzoom: msg.maxzoom || -1 };
 			set.areas[msg.id] = area;
+			tagClaimArea(set, area);
 			createArea(set, area, msg.timestamp);
+			if(set.id === SUCLAIMS_SET_ID) refreshClaimsControl();
 		}
 		else if(msg.msg == 'areadeleted') {
 			var set = dynmapmarkersets[msg.set];
 			if (!set) return;
 			deleteMarker(set, set.areas[msg.id]);
 			delete set.areas[msg.id];
+			if(set.id === SUCLAIMS_SET_ID) refreshClaimsControl();
 		}
 		else if(msg.msg == 'lineupdated') {
 			var set = dynmapmarkersets[msg.set];
