@@ -28,6 +28,7 @@ import serverutils.lib.math.ChunkDimPos;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -73,6 +74,27 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             return;
 
         int claimId = 1;
+        List<Claimer> claimers = buildClaimers();
+
+        for(Claimer claimer : claimers) {
+            for(ClaimRectangle rectangle : claimer.rectangles) {
+                double[] x = new double[]{rectangle.x1 * CHUNK_SIZE, rectangle.x2 * CHUNK_SIZE};
+                double[] z = new double[]{rectangle.z1 * CHUNK_SIZE, rectangle.z2 * CHUNK_SIZE};
+
+                AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), claimer.label, true, rectangle.worldId, x, z, false);
+
+                if(GwmConfig.boostServerUtilitiesClaimsMarkers)
+                    am.setBoostFlag(true);
+
+                am.setLineStyle(0,0,0);
+                am.setFillStyle(0.2, claimer.fillColor);
+            }
+        }
+
+        updateNeeded = false;
+    }
+
+    private List<Claimer> buildClaimers() {
         HashMap<ClaimGroupKey, ClaimGroup> claimsByGroup = new HashMap<>();
 
         for(ClaimedChunk cc : ClaimedChunks.instance.getAllChunks()){
@@ -86,26 +108,20 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             ForgeTeam team = cc.getTeam();
             ClaimGroupKey key = new ClaimGroupKey(worldId, team.getId());
             ClaimGroup group = claimsByGroup.computeIfAbsent(key,
-                    ignored -> new ClaimGroup(worldId, buildLabel(team), team.getColor().getColor().rgb()));
+                    ignored -> new ClaimGroup(worldId, team.getId(), buildLabel(team), team.getColor().getColor().rgb()));
             group.chunks.add(GreedyRectangleMesher.pack(pos.posX, pos.posZ));
         }
 
+        HashMap<String, Claimer> claimersById = new HashMap<>();
         for(ClaimGroup group : claimsByGroup.values()) {
+            Claimer claimer = claimersById.computeIfAbsent(group.teamId,
+                    ignored -> new Claimer(group.teamId, group.label, group.fillColor));
             for(GreedyRectangleMesher.Rectangle rectangle : GreedyRectangleMesher.mesh(group.chunks)) {
-                double[] x = new double[]{rectangle.x1 * CHUNK_SIZE, rectangle.x2 * CHUNK_SIZE};
-                double[] z = new double[]{rectangle.y1 * CHUNK_SIZE, rectangle.y2 * CHUNK_SIZE};
-
-                AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), group.label, true, group.worldId, x, z, false);
-
-                if(GwmConfig.boostServerUtilitiesClaimsMarkers)
-                    am.setBoostFlag(true);
-
-                am.setLineStyle(0,0,0);
-                am.setFillStyle(0.2, group.fillColor);
+                claimer.rectangles.add(new ClaimRectangle(group.worldId, rectangle.x1, rectangle.x2, rectangle.y1, rectangle.y2));
             }
         }
 
-        updateNeeded = false;
+        return new ArrayList<>(claimersById.values());
     }
 
     private static String buildLabel(ForgeTeam team) {
@@ -165,14 +181,45 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
 
     private static class ClaimGroup {
         final String worldId;
+        final String teamId;
         final String label;
         final int fillColor;
         final HashSet<Long> chunks = new HashSet<>();
 
-        private ClaimGroup(String worldId, String label, int fillColor) {
+        private ClaimGroup(String worldId, String teamId, String label, int fillColor) {
             this.worldId = worldId;
+            this.teamId = teamId;
             this.label = label;
             this.fillColor = fillColor;
+        }
+    }
+
+    private static class Claimer {
+        final String id;
+        final String label;
+        final int fillColor;
+        final List<ClaimRectangle> rectangles = new ArrayList<>();
+
+        private Claimer(String id, String label, int fillColor) {
+            this.id = id;
+            this.label = label;
+            this.fillColor = fillColor;
+        }
+    }
+
+    private static class ClaimRectangle {
+        final String worldId;
+        final int x1;
+        final int x2;
+        final int z1;
+        final int z2;
+
+        private ClaimRectangle(String worldId, int x1, int x2, int z1, int z2) {
+            this.worldId = worldId;
+            this.x1 = x1;
+            this.x2 = x2;
+            this.z1 = z1;
+            this.z2 = z2;
         }
     }
 

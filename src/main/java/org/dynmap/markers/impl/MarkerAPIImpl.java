@@ -308,6 +308,16 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
         }
     }
 
+    private static class AreaTemplateRef {
+        final String id;
+        final Map<String, Object> data;
+
+        private AreaTemplateRef(String id, Map<String, Object> data) {
+            this.id = id;
+            this.data = data;
+        }
+    }
+
     public static class MarkerSetUpdated extends MarkerComponentMessage {
         public String msg;
         public String id;
@@ -3320,6 +3330,35 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
         }
         return true;
     }
+
+    private static String getAreaTemplateKey(AreaMarker marker) {
+        StringBuilder key = new StringBuilder();
+        key.append(marker.getLabel()).append('\n');
+        key.append(marker.isLabelMarkup()).append('\n');
+        key.append(marker.getDescription()).append('\n');
+        key.append(marker.getLineColor()).append('\n');
+        key.append(marker.getFillColor()).append('\n');
+        key.append(marker.getLineOpacity()).append('\n');
+        key.append(marker.getFillOpacity()).append('\n');
+        key.append(marker.getLineWeight());
+        return key.toString();
+    }
+
+    private static HashMap<String, Object> buildAreaTemplateData(AreaMarker marker) {
+        HashMap<String, Object> data = new HashMap<String, Object>();
+        data.put("color", String.format("#%06X", marker.getLineColor()));
+        data.put("fillcolor", String.format("#%06X", marker.getFillColor()));
+        data.put("opacity", marker.getLineOpacity());
+        data.put("fillopacity", marker.getFillOpacity());
+        data.put("weight", marker.getLineWeight());
+        data.put("label", marker.getLabel());
+        data.put("markup", marker.isLabelMarkup());
+        if(marker.getDescription() != null) {
+            data.put("desc", marker.getDescription());
+        }
+        return data;
+    }
+
     /**
      * Write markers file for given world
      */
@@ -3371,6 +3410,35 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
             }
             msdata.put("markers", markers); /* Add markers to set data */
 
+            HashMap<String, List<AreaMarker>> areaMarkersByTemplateKey = new HashMap<String, List<AreaMarker>>();
+            for(AreaMarker m : ms.getAreaMarkers()) {
+                if(m.getNormalizedWorld().equals(wname) == false) continue;
+
+                String templateKey = getAreaTemplateKey(m);
+                List<AreaMarker> members = areaMarkersByTemplateKey.get(templateKey);
+                if(members == null) {
+                    members = new ArrayList<AreaMarker>();
+                    areaMarkersByTemplateKey.put(templateKey, members);
+                }
+                members.add(m);
+            }
+
+            HashMap<String, AreaTemplateRef> areaTemplatesByKey = new HashMap<String, AreaTemplateRef>();
+            HashMap<String, Object> areaTemplates = new HashMap<String, Object>();
+            int nextAreaTemplateId = 1;
+            for(Map.Entry<String, List<AreaMarker>> entry : areaMarkersByTemplateKey.entrySet()) {
+                if(entry.getValue().size() < 2) {
+                    continue;
+                }
+
+                AreaTemplateRef ref = new AreaTemplateRef("t" + nextAreaTemplateId++, buildAreaTemplateData(entry.getValue().get(0)));
+                areaTemplatesByKey.put(entry.getKey(), ref);
+                areaTemplates.put(ref.id, ref.data);
+            }
+            if(!areaTemplates.isEmpty()) {
+                msdata.put("areatemplates", areaTemplates);
+            }
+
             HashMap<String, Object> areas = new HashMap<String, Object>();
             for(AreaMarker m : ms.getAreaMarkers()) {
                 if(m.getNormalizedWorld().equals(wname) == false) continue;
@@ -3387,15 +3455,21 @@ public class MarkerAPIImpl implements MarkerAPI, Event.Listener<DynmapWorld> {
                 mdata.put("ytop", m.getTopY());
                 mdata.put("ybottom", m.getBottomY());
                 mdata.put("z", zz);
-                mdata.put("color", String.format("#%06X", m.getLineColor()));
-                mdata.put("fillcolor", String.format("#%06X", m.getFillColor()));
-                mdata.put("opacity", m.getLineOpacity());
-                mdata.put("fillopacity", m.getFillOpacity());
-                mdata.put("weight", m.getLineWeight());
-                mdata.put("label", m.getLabel());
-                mdata.put("markup", m.isLabelMarkup());
-                if(m.getDescription() != null)
-                    mdata.put("desc", m.getDescription());
+                AreaTemplateRef templateRef = areaTemplatesByKey.get(getAreaTemplateKey(m));
+                if(templateRef != null) {
+                    mdata.put("template", templateRef.id);
+                }
+                else {
+                    mdata.put("color", String.format("#%06X", m.getLineColor()));
+                    mdata.put("fillcolor", String.format("#%06X", m.getFillColor()));
+                    mdata.put("opacity", m.getLineOpacity());
+                    mdata.put("fillopacity", m.getFillOpacity());
+                    mdata.put("weight", m.getLineWeight());
+                    mdata.put("label", m.getLabel());
+                    mdata.put("markup", m.isLabelMarkup());
+                    if(m.getDescription() != null)
+                        mdata.put("desc", m.getDescription());
+                }
                 if (m.getMinZoom() >= 0) {
                     mdata.put("minzoom", m.getMinZoom());
                 }

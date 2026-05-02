@@ -53,15 +53,19 @@ componentconstructors['markers'] = function(dynmap, configuration) {
 					ms.timestamp = ts;
 				}
 				dynmapmarkersets[name] = ms;
+				var areaTemplates = markerset.areatemplates || {};
 				$.each(markerset.markers, function(mname, marker) {
 					ms.markers[mname] = { label: marker.label, markup: marker.markup, x: marker.x, y: marker.y, z:marker.z,
 						icon: marker.icon, desc: marker.desc, dim: marker.dim, minzoom: marker.minzoom || -1, maxzoom: marker.maxzoom || -1 };
 					createMarker(ms, ms.markers[mname], ts);
 				});
 				$.each(markerset.areas, function(aname, area) {
-					ms.areas[aname] = { label: area.label, markup: area.markup, desc: area.desc, x: area.x, z: area.z,
-						ytop: area.ytop, ybottom: area.ybottom, color: area.color, weight: area.weight, opacity: area.opacity,
-						fillcolor: area.fillcolor, fillopacity: area.fillopacity, minzoom: area.minzoom || -1, maxzoom: area.maxzoom || -1 };
+					var template = area.template ? areaTemplates[area.template] || {} : {};
+					ms.areas[aname] = { label: area.label != null ? area.label : template.label, markup: area.markup != null ? area.markup : template.markup,
+						desc: area.desc != null ? area.desc : template.desc, x: area.x, z: area.z, ytop: area.ytop, ybottom: area.ybottom,
+						color: area.color != null ? area.color : template.color, weight: area.weight != null ? area.weight : template.weight,
+						opacity: area.opacity != null ? area.opacity : template.opacity, fillcolor: area.fillcolor != null ? area.fillcolor : template.fillcolor,
+						fillopacity: area.fillopacity != null ? area.fillopacity : template.fillopacity, minzoom: area.minzoom || -1, maxzoom: area.maxzoom || -1 };
 					createArea(ms, ms.areas[aname], ts);
 				});
 				$.each(markerset.lines, function(lname, line) {
