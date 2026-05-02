@@ -27,6 +27,7 @@ import serverutils.lib.data.ForgeTeam;
 import serverutils.lib.math.ChunkDimPos;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
@@ -166,7 +167,7 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
         final String worldId;
         final String label;
         final int fillColor;
-        final java.util.HashSet<Long> chunks = new java.util.HashSet<Long>();
+        final HashSet<Long> chunks = new HashSet<>();
 
         private ClaimGroup(String worldId, String label, int fillColor) {
             this.worldId = worldId;
