@@ -2,17 +2,22 @@ package org.dynmap.utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
  * Adapted from jetp250's 2D greedy meshing gist:
  * https://gist.github.com/jetp250/9ca4d583f7f387bc4a2665e001b0c8fd
  *
- * This version emits rectangles for filled cells in an arbitrary bounding box,
- * rather than for empty cells in a fixed-size chunk-local grid.
+ * This version emits rectangles for filled cells and meshes them tile-by-tile
+ * to keep memory usage bounded for sparse, far-apart claims.
  */
 public final class GreedyRectangleMesher {
+    public static final int TILE_SIZE = 256;
+    private static final int TILE_AREA = TILE_SIZE * TILE_SIZE;
+
     private GreedyRectangleMesher() {
     }
 
@@ -25,52 +30,44 @@ public final class GreedyRectangleMesher {
             return Collections.emptyList();
         }
 
-        int minX = Integer.MAX_VALUE;
-        int minY = Integer.MAX_VALUE;
-        int maxX = Integer.MIN_VALUE;
-        int maxY = Integer.MIN_VALUE;
-
+        Map<Long, byte[]> tileMaps = new HashMap<Long, byte[]>();
         for(long cell : cells) {
             int x = unpackX(cell);
             int y = unpackY(cell);
-            if(x < minX) minX = x;
-            if(y < minY) minY = y;
-            if(x > maxX) maxX = x;
-            if(y > maxY) maxY = y;
+            int tileX = Math.floorDiv(x, TILE_SIZE);
+            int tileY = Math.floorDiv(y, TILE_SIZE);
+            int localX = Math.floorMod(x, TILE_SIZE);
+            int localY = Math.floorMod(y, TILE_SIZE);
+
+            long tileKey = pack(tileX, tileY);
+            byte[] map = tileMaps.get(tileKey);
+            if(map == null) {
+                map = new byte[TILE_AREA];
+                tileMaps.put(tileKey, map);
+            }
+
+            map[localX + localY * TILE_SIZE] = 1;
         }
 
-        int width = maxX - minX + 1;
-        int height = maxY - minY + 1;
-        byte[] map = new byte[width * height];
-
-        for(long cell : cells) {
-            int x = unpackX(cell) - minX;
-            int y = unpackY(cell) - minY;
-            map[x + y * width] = 1;
+        List<Rectangle> rectangles = new ArrayList<Rectangle>();
+        short[] skipMap = new short[TILE_AREA];
+        for(Map.Entry<Long, byte[]> entry : tileMaps.entrySet()) {
+            int tileX = unpackX(entry.getKey());
+            int tileY = unpackY(entry.getKey());
+            rectangles.addAll(greedyMesh(entry.getValue(), skipMap, tileX * TILE_SIZE, tileY * TILE_SIZE));
         }
-
-        List<Rectangle> rectangles = greedyMesh(map, width, height);
-        for(int i = 0; i < rectangles.size(); i++) {
-            Rectangle rectangle = rectangles.get(i);
-            rectangles.set(i, new Rectangle(
-                    rectangle.x1 + minX,
-                    rectangle.y1 + minY,
-                    rectangle.x2 + minX,
-                    rectangle.y2 + minY));
-        }
-
         return rectangles;
     }
 
-    private static List<Rectangle> greedyMesh(byte[] map, int width, int height) {
-        List<Rectangle> rectangles = new ArrayList<>();
-        int[] skipMap = new int[width * height];
+    private static List<Rectangle> greedyMesh(byte[] map, short[] skipMap, int xOffset, int yOffset) {
+        List<Rectangle> rectangles = new ArrayList<Rectangle>();
+        clear(skipMap);
 
-        for(int x1 = 0; x1 < width; ++x1) {
+        for(int x1 = 0; x1 < TILE_SIZE; ++x1) {
             int y1 = 0;
             int y2 = 0;
-            while(y2 < height) {
-                int idx = x1 + y2 * width;
+            while(y2 < TILE_SIZE) {
+                int idx = x1 + y2 * TILE_SIZE;
                 int skip = skipMap[idx];
                 if(skip == 0 && map[idx] != 0) {
                     y2 += 1;
@@ -84,11 +81,11 @@ public final class GreedyRectangleMesher {
                     continue;
                 }
 
-                int x2 = findRectangleX2(map, width, height, x1, y1, y2);
-                rectangles.add(new Rectangle(x1, y1, x2, y2));
+                int x2 = findRectangleX2(map, x1, y1, y2);
+                rectangles.add(new Rectangle(x1 + xOffset, y1 + yOffset, x2 + xOffset, y2 + yOffset));
 
                 for(int x = x1 + 1; x < x2; ++x) {
-                    skipMap[x + y1 * width] = y2 - y1;
+                    skipMap[x + y1 * TILE_SIZE] = (short) (y2 - y1);
                 }
 
                 y2 += Math.max(skip, 1);
@@ -96,11 +93,11 @@ public final class GreedyRectangleMesher {
             }
 
             if(y1 != y2) {
-                int x2 = findRectangleX2(map, width, height, x1, y1, y2);
-                rectangles.add(new Rectangle(x1, y1, x2, y2));
+                int x2 = findRectangleX2(map, x1, y1, y2);
+                rectangles.add(new Rectangle(x1 + xOffset, y1 + yOffset, x2 + xOffset, y2 + yOffset));
 
                 for(int x = x1 + 1; x < x2; ++x) {
-                    skipMap[x + y1 * width] = y2 - y1;
+                    skipMap[x + y1 * TILE_SIZE] = (short) (y2 - y1);
                 }
             }
         }
@@ -108,16 +105,22 @@ public final class GreedyRectangleMesher {
         return rectangles;
     }
 
-    private static int findRectangleX2(byte[] map, int width, int height, int x1, int y1, int y2) {
-        for(int x2 = x1 + 1; x2 < width; ++x2) {
+    private static int findRectangleX2(byte[] map, int x1, int y1, int y2) {
+        for(int x2 = x1 + 1; x2 < TILE_SIZE; ++x2) {
             for(int y = y1; y < y2; ++y) {
-                if(map[x2 + y * width] == 0) {
+                if(map[x2 + y * TILE_SIZE] == 0) {
                     return x2;
                 }
             }
         }
 
-        return width;
+        return TILE_SIZE;
+    }
+
+    private static void clear(short[] skipMap) {
+        for(int i = 0; i < TILE_AREA; ++i) {
+            skipMap[i] = 0;
+        }
     }
 
     private static int unpackX(long cell) {
