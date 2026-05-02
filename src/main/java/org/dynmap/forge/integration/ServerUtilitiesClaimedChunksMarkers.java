@@ -16,6 +16,7 @@ import org.dynmap.forge.GwmSubCommand;
 import org.dynmap.markers.AreaMarker;
 import org.dynmap.markers.MarkerAPI;
 import org.dynmap.markers.MarkerSet;
+import org.dynmap.utils.GreedyRectangleMesher;
 import serverutils.ServerUtilitiesConfig;
 import serverutils.data.ClaimedChunk;
 import serverutils.data.ClaimedChunks;
@@ -26,10 +27,12 @@ import serverutils.lib.data.ForgeTeam;
 import serverutils.lib.math.ChunkDimPos;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
 public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener {
+    private static final int CHUNK_SIZE = 16;
 
     static ServerUtilitiesClaimedChunksMarkers INSTANCE;
     MarkerSet markerSet;
@@ -70,6 +73,7 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             return;
 
         int claimId = 1;
+        HashMap<ClaimGroupKey, ClaimGroup> claimsByGroup = new HashMap<>();
 
         for(ClaimedChunk cc : ClaimedChunks.instance.getAllChunks()){
             ChunkDimPos pos = cc.getPos();
@@ -79,46 +83,97 @@ public class ServerUtilitiesClaimedChunksMarkers extends DynmapCommonAPIListener
             if(worldId == null)
                 continue;
 
-            double[] x = new double[]{pos.posX*16, pos.posX*16+16};
-            double[] z = new double[]{pos.posZ*16, pos.posZ*16+16};
-
             ForgeTeam team = cc.getTeam();
-            String teamName = team.getId();
-//            String title = team.getTitle().getUnformattedText();
-//            if (title != null && !teamName.equals(""))
-//                teamName = "[" + title + "] " + teamName;
-            String label = "Claimed by <b>"+ teamName +"</b>";
-            String desc = team.getDesc();
-            if(desc != null && !desc.equals(""))
-                label += "<br/><i>" + team.getDesc() + "</i>";
+            ClaimGroupKey key = new ClaimGroupKey(worldId, team.getId());
+            ClaimGroup group = claimsByGroup.computeIfAbsent(key,
+                    ignored -> new ClaimGroup(worldId, buildLabel(team), team.getColor().getColor().rgb()));
+            group.chunks.add(GreedyRectangleMesher.pack(pos.posX, pos.posZ));
+        }
 
-            if(team.owner != null)
-                label += "<br/><b>Founder: </b>" + team.owner.getName();
+        for(ClaimGroup group : claimsByGroup.values()) {
+            for(GreedyRectangleMesher.Rectangle rectangle : GreedyRectangleMesher.mesh(group.chunks)) {
+                double[] x = new double[]{rectangle.x1 * CHUNK_SIZE, rectangle.x2 * CHUNK_SIZE};
+                double[] z = new double[]{rectangle.y1 * CHUNK_SIZE, rectangle.y2 * CHUNK_SIZE};
 
-            List<ForgePlayer> members = team.getMembers();
-            if(members != null){
-                for(ForgePlayer m : members){
-                    if(m != team.owner)
-                        label += "<br/>Member: " + m.getName();
-                }
+                AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), group.label, true, group.worldId, x, z, false);
+
+                if(GwmConfig.boostServerUtilitiesClaimsMarkers)
+                    am.setBoostFlag(true);
+
+                am.setLineStyle(0,0,0);
+                am.setFillStyle(0.2, group.fillColor);
             }
-
-            if(team.players != null){
-                for(Map.Entry<ForgePlayer, EnumTeamStatus> p : team.players.entrySet()){
-                    label += "<br/>" + p.getValue() + ": " +  p.getKey().getName();
-                }
-            }
-
-            AreaMarker am = markerSet.createAreaMarker("c_" + (claimId++), label, true, worldId, x,z, false);
-
-            if(GwmConfig.boostServerUtilitiesClaimsMarkers)
-                am.setBoostFlag(true);
-
-            am.setLineStyle(0,0,0);
-            am.setFillStyle(0.2, team.getColor().getColor().rgb());
         }
 
         updateNeeded = false;
+    }
+
+    private static String buildLabel(ForgeTeam team) {
+        String teamName = team.getId();
+//        String title = team.getTitle().getUnformattedText();
+//        if (title != null && !teamName.equals(""))
+//            teamName = "[" + title + "] " + teamName;
+        String label = "Claimed by <b>" + teamName + "</b>";
+        String desc = team.getDesc();
+        if(desc != null && !desc.equals(""))
+            label += "<br/><i>" + team.getDesc() + "</i>";
+
+        if(team.owner != null)
+            label += "<br/><b>Founder: </b>" + team.owner.getName();
+
+        List<ForgePlayer> members = team.getMembers();
+        if(members != null){
+            for(ForgePlayer m : members){
+                if(m != team.owner)
+                    label += "<br/>Member: " + m.getName();
+            }
+        }
+
+        if(team.players != null){
+            for(Map.Entry<ForgePlayer, EnumTeamStatus> p : team.players.entrySet()){
+                label += "<br/>" + p.getValue() + ": " +  p.getKey().getName();
+            }
+        }
+        return label;
+    }
+
+    private static class ClaimGroupKey {
+        final String worldId;
+        final String teamId;
+
+        private ClaimGroupKey(String worldId, String teamId) {
+            this.worldId = worldId;
+            this.teamId = teamId;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this == obj)
+                return true;
+            if(!(obj instanceof ClaimGroupKey))
+                return false;
+
+            ClaimGroupKey other = (ClaimGroupKey) obj;
+            return worldId.equals(other.worldId) && teamId.equals(other.teamId);
+        }
+
+        @Override
+        public int hashCode() {
+            return 31 * worldId.hashCode() + teamId.hashCode();
+        }
+    }
+
+    private static class ClaimGroup {
+        final String worldId;
+        final String label;
+        final int fillColor;
+        final HashSet<Long> chunks = new HashSet<>();
+
+        private ClaimGroup(String worldId, String label, int fillColor) {
+            this.worldId = worldId;
+            this.label = label;
+            this.fillColor = fillColor;
+        }
     }
 
     @SubscribeEvent
