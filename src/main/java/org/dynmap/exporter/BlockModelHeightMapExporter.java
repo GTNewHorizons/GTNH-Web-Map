@@ -115,8 +115,14 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
 
     private void exportHeightMap(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX, int rangeMinZ,
             int rangeMaxZ) throws IOException {
-        ColumnData[] columns = collectColumnData(cache, rangeMinX - 1, rangeMaxX, rangeMinZ - 1, rangeMaxZ);
-        BufferedImage textureImage = buildTextureImage(cache, columns, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+        int columnMinX = rangeMinX - 1;
+        int columnMaxX = rangeMaxX + 1;
+        int columnMinZ = rangeMinZ - 1;
+        int columnMaxZ = rangeMaxZ + 1;
+        ColumnData[] columns = collectColumnData(cache, columnMinX, columnMaxX, columnMinZ, columnMaxZ);
+        BufferedImage textureImage =
+                buildTextureImage(cache, columns, columnMinX, columnMaxX, columnMinZ, columnMaxZ, rangeMinX, rangeMaxX,
+                        rangeMinZ, rangeMaxZ);
         ExportMaterial material = ExportMaterial.customTexture(buildHeightMapMaterialId(rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ),
                 encodeTextureImage(textureImage), false);
         int minChunkX = rangeMinX >> 4;
@@ -129,8 +135,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             for (int chunkZ = minChunkZ; chunkZ <= maxChunkZ; chunkZ++) {
                 int chunkMinZ = Math.max(rangeMinZ, chunkZ << 4);
                 int chunkMaxZ = Math.min(rangeMaxZ, (chunkZ << 4) + 15);
-                emitChunkHeightMesh(sink, columns, material, chunkMinX, chunkMaxX, chunkMinZ, chunkMaxZ, rangeMinX, rangeMaxX,
-                        rangeMinZ, rangeMaxZ);
+                emitChunkHeightMesh(sink, columns, material, chunkMinX, chunkMaxX, chunkMinZ, chunkMaxZ, columnMinX, columnMaxX,
+                        columnMinZ, columnMaxZ, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
             }
         }
     }
@@ -168,16 +174,16 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         return new ColumnData(false, getMinY(), null);
     }
 
-    private BufferedImage buildTextureImage(MapChunkCache cache, ColumnData[] columns, int rangeMinX, int rangeMaxX,
-            int rangeMinZ, int rangeMaxZ) throws IOException {
+    private BufferedImage buildTextureImage(MapChunkCache cache, ColumnData[] columns, int columnMinX, int columnMaxX,
+            int columnMinZ, int columnMaxZ, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) throws IOException {
         int width = (rangeMaxX - rangeMinX) + 1;
         int depth = (rangeMaxZ - rangeMinZ) + 1;
         BufferedImage image = new BufferedImage(width, depth, BufferedImage.TYPE_INT_ARGB);
         SourceMapSampler sourceSampler = resolveSourceMapSampler();
-        int columnStride = (rangeMaxX - (rangeMinX - 1)) + 1;
+        int columnStride = getColumnStride(columnMinX, columnMaxX);
         for (int z = rangeMinZ; z <= rangeMaxZ; z++) {
             for (int x = rangeMinX; x <= rangeMaxX; x++) {
-                ColumnData column = columns[((z - (rangeMinZ - 1)) * columnStride) + (x - (rangeMinX - 1))];
+                ColumnData column = columns[getColumnIndex(x, z, columnMinX, columnMinZ, columnStride)];
                 int fallbackArgb = column.hasSurface ? colorResolver.computeAverageColor(column.topMaterial) : 0x00000000;
                 int argb = fallbackArgb;
                 if ((sourceSampler != null) && column.hasSurface) {
@@ -190,11 +196,11 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
     }
 
     private void emitChunkHeightMesh(BlockModelExportSink sink, ColumnData[] columns, ExportMaterial material, int chunkMinX,
-            int chunkMaxX, int chunkMinZ, int chunkMaxZ, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ)
-            throws IOException {
+            int chunkMaxX, int chunkMinZ, int chunkMaxZ, int columnMinX, int columnMaxX, int columnMinZ, int columnMaxZ,
+            int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) throws IOException {
         int widthColumns = (rangeMaxX - rangeMinX) + 1;
         int depthColumns = (rangeMaxZ - rangeMinZ) + 1;
-        int columnStride = (rangeMaxX - (rangeMinX - 1)) + 1;
+        int columnStride = getColumnStride(columnMinX, columnMaxX);
         int vertexWidth = (chunkMaxX - chunkMinX) + 2;
         int vertexDepth = (chunkMaxZ - chunkMinZ) + 2;
         double[] xyz = new double[vertexWidth * vertexDepth * 3];
@@ -204,7 +210,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             int worldZ = chunkMinZ + vz;
             for (int vx = 0; vx < vertexWidth; vx++) {
                 int worldX = chunkMinX + vx;
-                VertexData vertex = buildVertex(columns, worldX, worldZ, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ, columnStride);
+                VertexData vertex = buildVertex(columns, worldX, worldZ, columnMinX, columnMaxX, columnMinZ, columnMaxZ,
+                        columnStride);
                 int index = (vz * vertexWidth) + vx;
                 vertices[index] = vertex;
                 int xyzOffset = index * 3;
@@ -251,20 +258,18 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         sink.addTriangleMesh(xyz, uv, indices, material, vertexColors, nightLights);
     }
 
-    private VertexData buildVertex(ColumnData[] columns, int worldX, int worldZ, int rangeMinX, int rangeMaxX, int rangeMinZ,
-            int rangeMaxZ, int columnStride) {
+    private VertexData buildVertex(ColumnData[] columns, int worldX, int worldZ, int columnMinX, int columnMaxX,
+            int columnMinZ, int columnMaxZ, int columnStride) {
         double maxY = getMinY();
         boolean valid = false;
         for (int dz = -1; dz <= 0; dz++) {
             for (int dx = -1; dx <= 0; dx++) {
                 int sampleX = worldX + dx;
                 int sampleZ = worldZ + dz;
-                if ((sampleX < (rangeMinX - 1)) || (sampleX > rangeMaxX) || (sampleZ < (rangeMinZ - 1))
-                        || (sampleZ > rangeMaxZ)) {
+                if ((sampleX < columnMinX) || (sampleX > columnMaxX) || (sampleZ < columnMinZ) || (sampleZ > columnMaxZ)) {
                     continue;
                 }
-                ColumnData column =
-                        columns[((sampleZ - (rangeMinZ - 1)) * columnStride) + (sampleX - (rangeMinX - 1))];
+                ColumnData column = columns[getColumnIndex(sampleX, sampleZ, columnMinX, columnMinZ, columnStride)];
                 if (column.hasSurface) {
                     valid = true;
                     maxY = Math.max(maxY, column.topY);
@@ -291,6 +296,14 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             nightLights[i] = 1.0F;
         }
         return nightLights;
+    }
+
+    private static int getColumnStride(int columnMinX, int columnMaxX) {
+        return (columnMaxX - columnMinX) + 1;
+    }
+
+    private static int getColumnIndex(int x, int z, int columnMinX, int columnMinZ, int columnStride) {
+        return ((z - columnMinZ) * columnStride) + (x - columnMinX);
     }
 
     private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {
