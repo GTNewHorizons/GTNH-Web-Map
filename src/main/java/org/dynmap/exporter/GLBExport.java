@@ -159,6 +159,7 @@ public class GLBExport implements BlockModelExportSink {
     private BlockModelExportMode exportMode = BlockModelExportMode.FULL;
     private int simplifiedMinSkyLight = 7;
     private String heightMapTextureMap;
+    private int heightMapTextureDetail = 1;
 
     public GLBExport(File destination, TexturePackHDShader shader, DynmapWorld world, DynmapCore core, String basename) {
         this.destination = destination;
@@ -234,6 +235,10 @@ public class GLBExport implements BlockModelExportSink {
         this.heightMapTextureMap = heightMapTextureMap;
     }
 
+    public void setHeightMapTextureDetail(int heightMapTextureDetail) {
+        this.heightMapTextureDetail = Math.max(1, heightMapTextureDetail);
+    }
+
     public boolean processExport(DynmapCommandSender sender) {
         return processExport(sender, false);
     }
@@ -274,6 +279,7 @@ public class GLBExport implements BlockModelExportSink {
         exporter.setExportMode(exportMode);
         exporter.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
         exporter.setHeightMapTextureMap(heightMapTextureMap);
+        exporter.setHeightMapTextureDetail(heightMapTextureDetail);
         if (cache != null) {
             exporter.export(cache, this);
         } else {

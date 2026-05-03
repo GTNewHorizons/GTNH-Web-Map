@@ -13,8 +13,10 @@ import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
 import org.dynmap.Log;
 import org.dynmap.MapType;
+import org.dynmap.hdmap.HDPerspective;
 import org.dynmap.hdmap.HDMap;
 import org.dynmap.hdmap.HDShader;
+import org.dynmap.hdmap.IsoHDPerspective;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.hdmap.TexturePack.ExportedTextureData;
 import org.dynmap.hdmap.TexturePackHDShader;
@@ -56,6 +58,7 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
     private final TexturePack exportTexturePack;
     private final ExportMaterialColorResolver colorResolver;
     private String heightMapTextureMap;
+    private int heightMapTextureDetail = 1;
 
     BlockModelHeightMapExporter(DynmapWorld world, DynmapCore core, HDShader shader) {
         super(world, core, shader);
@@ -72,6 +75,10 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         } else {
             this.heightMapTextureMap = heightMapTextureMap;
         }
+    }
+
+    void setHeightMapTextureDetail(int heightMapTextureDetail) {
+        this.heightMapTextureDetail = Math.max(1, heightMapTextureDetail);
     }
 
     @Override
@@ -120,9 +127,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         int columnMinZ = rangeMinZ - 1;
         int columnMaxZ = rangeMaxZ + 1;
         ColumnData[] columns = collectColumnData(cache, columnMinX, columnMaxX, columnMinZ, columnMaxZ);
-        BufferedImage textureImage =
-                buildTextureImage(cache, columns, columnMinX, columnMaxX, columnMinZ, columnMaxZ, rangeMinX, rangeMaxX,
-                        rangeMinZ, rangeMaxZ);
+        BufferedImage textureImage = buildTextureImage(columns, columnMinX, columnMaxX, columnMinZ, columnMaxZ, rangeMinX,
+                rangeMaxX, rangeMinZ, rangeMaxZ);
         ExportMaterial material = ExportMaterial.customTexture(buildHeightMapMaterialId(rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ),
                 encodeTextureImage(textureImage), false);
         int minChunkX = rangeMinX >> 4;
@@ -174,22 +180,27 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         return new ColumnData(false, getMinY(), null);
     }
 
-    private BufferedImage buildTextureImage(MapChunkCache cache, ColumnData[] columns, int columnMinX, int columnMaxX,
-            int columnMinZ, int columnMaxZ, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) throws IOException {
-        int width = (rangeMaxX - rangeMinX) + 1;
-        int depth = (rangeMaxZ - rangeMinZ) + 1;
-        BufferedImage image = new BufferedImage(width, depth, BufferedImage.TYPE_INT_ARGB);
+    private BufferedImage buildTextureImage(ColumnData[] columns, int columnMinX, int columnMaxX, int columnMinZ,
+            int columnMaxZ, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) throws IOException {
         SourceMapSampler sourceSampler = resolveSourceMapSampler();
+        int textureDetail = (sourceSampler != null) ? sourceSampler.getTextureDetail() : 1;
+        int width = ((rangeMaxX - rangeMinX) + 1) * textureDetail;
+        int depth = ((rangeMaxZ - rangeMinZ) + 1) * textureDetail;
+        BufferedImage image = new BufferedImage(width, depth, BufferedImage.TYPE_INT_ARGB);
         int columnStride = getColumnStride(columnMinX, columnMaxX);
-        for (int z = rangeMinZ; z <= rangeMaxZ; z++) {
-            for (int x = rangeMinX; x <= rangeMaxX; x++) {
-                ColumnData column = columns[getColumnIndex(x, z, columnMinX, columnMinZ, columnStride)];
+        for (int pixelZ = 0; pixelZ < depth; pixelZ++) {
+            int worldBlockZ = rangeMaxZ - (pixelZ / textureDetail);
+            double sampleWorldZ = (rangeMaxZ + 1) - ((pixelZ + 0.5) / textureDetail);
+            for (int pixelX = 0; pixelX < width; pixelX++) {
+                int worldBlockX = rangeMinX + (pixelX / textureDetail);
+                double sampleWorldX = rangeMinX + ((pixelX + 0.5) / textureDetail);
+                ColumnData column = columns[getColumnIndex(worldBlockX, worldBlockZ, columnMinX, columnMinZ, columnStride)];
                 int fallbackArgb = column.hasSurface ? colorResolver.computeAverageColor(column.topMaterial) : 0x00000000;
                 int argb = fallbackArgb;
                 if ((sourceSampler != null) && column.hasSurface) {
-                    argb = sourceSampler.sample(x + 0.5, column.topY, z + 0.5, fallbackArgb);
+                    argb = sourceSampler.sample(sampleWorldX, column.topY, sampleWorldZ, fallbackArgb);
                 }
-                image.setRGB(x - rangeMinX, z - rangeMinZ, argb);
+                image.setRGB(pixelX, pixelZ, argb);
             }
         }
         return image;
@@ -357,7 +368,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
 
     private String buildHeightMapMaterialId(int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) {
         String source = (heightMapTextureMap != null) ? heightMapTextureMap : "generated";
-        return "height_map_" + source + "_" + rangeMinX + "_" + rangeMaxX + "_" + rangeMinZ + "_" + rangeMaxZ;
+        return "height_map_" + source + "_" + heightMapTextureDetail + "_" + rangeMinX + "_" + rangeMaxX + "_" + rangeMinZ
+                + "_" + rangeMaxZ;
     }
 
     private SourceMapSampler resolveSourceMapSampler() {
@@ -368,11 +380,40 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             if (!(mapType instanceof HDMap) || !heightMapTextureMap.equals(mapType.getName())) {
                 continue;
             }
-            return new SourceMapSampler(getWorld(), (HDMap) mapType);
+            HDMap sourceMap = (HDMap) mapType;
+            HDPerspective perspective = sourceMap.getPerspective();
+            if (!(perspective instanceof IsoHDPerspective)) {
+                Log.warning("Height map texture source map '" + heightMapTextureMap + "' does not use an isometric perspective in world '"
+                        + getWorld().getName() + "' - falling back to generated texture");
+                return null;
+            }
+            IsoHDPerspective isoPerspective = (IsoHDPerspective) perspective;
+            if (!isTopDownPerspective(isoPerspective)) {
+                Log.warning("Height map texture source map '" + heightMapTextureMap + "' must use azimuth 180 and inclination 90 in world '"
+                        + getWorld().getName() + "' - falling back to generated texture");
+                return null;
+            }
+            return new SourceMapSampler(getWorld(), sourceMap, heightMapTextureDetail);
         }
         Log.warning("Height map texture source map '" + heightMapTextureMap + "' was not found for world '" + getWorld().getName()
                 + "' - falling back to generated texture");
         return null;
+    }
+
+    private static boolean isTopDownPerspective(IsoHDPerspective perspective) {
+        double configuredAzimuth = normalizeConfiguredAzimuth(perspective.azimuth);
+        return (Math.abs(configuredAzimuth - 180.0) < 0.0001) && (Math.abs(perspective.inclination - 90.0) < 0.0001);
+    }
+
+    private static double normalizeConfiguredAzimuth(double internalAzimuth) {
+        double configuredAzimuth = internalAzimuth - 90.0;
+        while (configuredAzimuth < 0.0) {
+            configuredAzimuth += 360.0;
+        }
+        while (configuredAzimuth >= 360.0) {
+            configuredAzimuth -= 360.0;
+        }
+        return configuredAzimuth;
     }
 
     private ExportMaterial getSurfaceMaterial(ResolvedBlockData block, BlockStep step) throws IOException {
@@ -415,15 +456,26 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         private final HDMap sourceMap;
         private final MapStorage storage;
         private final int tileSize;
+        private final int textureDetail;
         private final Map<String, BufferedImage> tileImages = new HashMap<String, BufferedImage>();
         private final Vector3D input = new Vector3D();
         private final Vector3D output = new Vector3D();
 
-        SourceMapSampler(DynmapWorld world, HDMap sourceMap) {
+        SourceMapSampler(DynmapWorld world, HDMap sourceMap, int requestedTextureDetail) {
             this.world = world;
             this.sourceMap = sourceMap;
             this.storage = world.getMapStorage();
             this.tileSize = sourceMap.getTileSize();
+            int maxTextureDetail = Math.max(1, sourceMap.getPerspective().getModelScale());
+            this.textureDetail = Math.max(1, Math.min(requestedTextureDetail, maxTextureDetail));
+            if (requestedTextureDetail > maxTextureDetail) {
+                Log.warning("Height map texture detail " + requestedTextureDetail + " exceeds source map scale " + maxTextureDetail
+                        + " for map '" + sourceMap.getName() + "' - clamping to " + maxTextureDetail);
+            }
+        }
+
+        int getTextureDetail() {
+            return textureDetail;
         }
 
         int sample(double worldX, double worldY, double worldZ, int fallbackArgb) throws IOException {
@@ -431,21 +483,22 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             input.y = worldY;
             input.z = worldZ;
             sourceMap.getPerspective().transformWorldToMapCoord(input, output);
-            int pixelX = (int) Math.floor(output.x);
-            int pixelY = (int) Math.floor(output.y);
-            int tileX = Math.floorDiv(pixelX, tileSize);
-            int tileY = Math.floorDiv(pixelY, tileSize);
+            double pixelX = output.x;
+            double pixelY = output.y;
+            int tileX = (int) Math.floor(pixelX / tileSize);
+            int tileY = (int) Math.floor(pixelY / tileSize);
             BufferedImage image = getTileImage(tileX, tileY);
             if (image == null) {
                 return fallbackArgb;
             }
-            int localX = pixelX - (tileX * tileSize);
-            int localY = pixelY - (tileY * tileSize);
-            if ((localX < 0) || (localY < 0) || (localX >= tileSize) || (localY >= tileSize)) {
+            double localX = pixelX - (tileX * tileSize);
+            double localY = pixelY - (tileY * tileSize);
+            if ((localX < 0.0) || (localY < 0.0) || (localX >= tileSize) || (localY >= tileSize)) {
                 return fallbackArgb;
             }
-            int sampleX = Math.min(image.getWidth() - 1, (int) ((localX / (double) tileSize) * image.getWidth()));
-            int sampleY = Math.min(image.getHeight() - 1, (int) ((localY / (double) tileSize) * image.getHeight()));
+            int sampleX = Math.min(image.getWidth() - 1, Math.max(0, (int) Math.floor((localX / tileSize) * image.getWidth())));
+            int sampleY = Math.min(image.getHeight() - 1,
+                    Math.max(0, (int) Math.floor((1.0 - (localY / tileSize)) * image.getHeight())));
             return image.getRGB(sampleX, sampleY);
         }
 
