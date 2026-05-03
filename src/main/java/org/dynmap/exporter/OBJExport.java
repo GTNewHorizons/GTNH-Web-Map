@@ -333,6 +333,45 @@ public class OBJExport implements BlockModelExportSink {
         exportMaterials.put(material.getMaterialId(), material);
         addPatchToFile(v, uv, SideVisible.TOP, material.getMaterialId(), 0);
     }
+
+    @Override
+    public void addTriangleMesh(double[] xyz, double[] uvValues, int[] indices, ExportMaterial material, float[] vertexColors,
+            float[] nightVertexLights) throws IOException {
+        if ((material == null) || (xyz == null) || (uvValues == null) || (indices == null) || ((xyz.length % 3) != 0)
+                || ((uvValues.length % 2) != 0) || ((indices.length % 3) != 0)) {
+            return;
+        }
+        int vertexCount = xyz.length / 3;
+        if ((vertexCount <= 0) || (uvValues.length != (vertexCount * 2))) {
+            return;
+        }
+        int[] v = new int[vertexCount];
+        int[] uv = new int[vertexCount];
+        for (int i = 0; i < vertexCount; i++) {
+            int xyzOff = i * 3;
+            int uvOff = i * 2;
+            v[i] = vertices.getVectorIndex(xyz[xyzOff], xyz[xyzOff + 1], xyz[xyzOff + 2]);
+            uv[i] = uvs.getVectorIndex(uvValues[uvOff], uvValues[uvOff + 1], 0);
+        }
+        exportMaterials.put(material.getMaterialId(), material);
+        List<Face> faces = facesByTexture.get(material.getMaterialId());
+        if (faces == null) {
+            faces = new ArrayList<Face>();
+            facesByTexture.put(material.getMaterialId(), faces);
+        }
+        for (int i = 0; i < indices.length; i += 3) {
+            int i0 = indices[i];
+            int i1 = indices[i + 1];
+            int i2 = indices[i + 2];
+            if ((i0 < 0) || (i0 >= vertexCount) || (i1 < 0) || (i1 >= vertexCount) || (i2 < 0) || (i2 >= vertexCount)) {
+                throw new IOException("Invalid mesh index for OBJ export");
+            }
+            Face f = new Face();
+            f.groupLine = updateGroup(GROUP_TEXTURE, material.getMaterialId());
+            f.faceLine = buildFaceLine(new int[] { v[i0], v[i1], v[i2] }, new int[] { uv[i0], uv[i1], uv[i2] }, false);
+            faces.add(f);
+        }
+    }
     /**
      * Start adding file to export
      * @param fname - path/name of file in destination zip

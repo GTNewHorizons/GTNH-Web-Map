@@ -3739,7 +3739,8 @@ public class TexturePack {
         if (etp.txtids.containsKey(material.getMaterialId())) {
             return;
         }
-        ExportedTextureData data = buildExportedTextureData(material, etp.img);
+        ExportedTextureData data =
+                material.hasCustomTexture() ? material.getCustomTextureData() : buildExportedTextureData(material, etp.img);
 
         String fname = etp.name + "/" + material.getMaterialId() + ".png";
         etp.exp.startExportedFile(fname);

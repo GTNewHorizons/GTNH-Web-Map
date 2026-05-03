@@ -4,5 +4,6 @@ public enum BlockModelExportMode {
     FULL,
     SIMPLIFIED,
     ZOOMOUT,
-    LOW_POLY
+    LOW_POLY,
+    HEIGHT_MAP
 }
