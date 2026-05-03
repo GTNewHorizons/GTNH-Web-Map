@@ -11,14 +11,16 @@ public class ExportMaterial {
     private final boolean emissive;
     private final ExportMaterial[] bakedLayers;
     private final Integer solidColorArgb;
+    private final TexturePack.ExportedTextureData customTextureData;
 
     public ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
             TexturePack.MaterialType materialType, boolean emissive) {
-        this(materialId, textureIndex, colorMultiplier, rotation, materialType, emissive, null, null);
+        this(materialId, textureIndex, colorMultiplier, rotation, materialType, emissive, null, null, null);
     }
 
     private ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
-            TexturePack.MaterialType materialType, boolean emissive, ExportMaterial[] bakedLayers, Integer solidColorArgb) {
+            TexturePack.MaterialType materialType, boolean emissive, ExportMaterial[] bakedLayers, Integer solidColorArgb,
+            TexturePack.ExportedTextureData customTextureData) {
         this.materialId = materialId;
         this.textureIndex = textureIndex;
         this.colorMultiplier = colorMultiplier;
@@ -27,6 +29,7 @@ public class ExportMaterial {
         this.emissive = emissive;
         this.bakedLayers = bakedLayers;
         this.solidColorArgb = solidColorArgb;
+        this.customTextureData = customTextureData;
     }
 
     public String getMaterialId() {
@@ -65,6 +68,14 @@ public class ExportMaterial {
         return (solidColorArgb != null) ? solidColorArgb.intValue() : 0xFFFFFFFF;
     }
 
+    public boolean hasCustomTexture() {
+        return customTextureData != null;
+    }
+
+    public TexturePack.ExportedTextureData getCustomTextureData() {
+        return customTextureData;
+    }
+
     public static ExportMaterial bakeLayers(ExportMaterial[] layers) {
         if ((layers == null) || (layers.length == 0)) {
             return null;
@@ -83,7 +94,7 @@ public class ExportMaterial {
                 materialType = layer.materialType;
             }
         }
-        return new ExportMaterial(materialId.toString(), -1, 0xFFFFFF, 0, materialType, false, layers.clone(), null);
+        return new ExportMaterial(materialId.toString(), -1, 0xFFFFFF, 0, materialType, false, layers.clone(), null, null);
     }
 
     public static ExportMaterial fromLegacyString(String material) {
@@ -96,11 +107,16 @@ public class ExportMaterial {
             rotation = material.charAt(rotationIndex + 1) - '0';
             material = material.substring(0, rotationIndex);
         }
-        return new ExportMaterial(material, -1, 0xFFFFFF, rotation, null, false);
+        return new ExportMaterial(material, -1, 0xFFFFFF, rotation, null, false, null, null, null);
     }
 
     public static ExportMaterial solidColor(String materialId, int argb, TexturePack.MaterialType materialType,
             boolean emissive) {
-        return new ExportMaterial(materialId, -1, 0xFFFFFF, 0, materialType, emissive, null, Integer.valueOf(argb));
+        return new ExportMaterial(materialId, -1, 0xFFFFFF, 0, materialType, emissive, null, Integer.valueOf(argb), null);
+    }
+
+    public static ExportMaterial customTexture(String materialId, TexturePack.ExportedTextureData textureData,
+            boolean emissive) {
+        return new ExportMaterial(materialId, -1, 0xFFFFFF, 0, textureData.material, emissive, null, null, textureData);
     }
 }

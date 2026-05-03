@@ -1,0 +1,460 @@
+package org.dynmap.exporter;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.dynmap.DynmapChunk;
+import org.dynmap.Color;
+import org.dynmap.DynmapCore;
+import org.dynmap.DynmapWorld;
+import org.dynmap.Log;
+import org.dynmap.MapType;
+import org.dynmap.hdmap.HDMap;
+import org.dynmap.hdmap.HDShader;
+import org.dynmap.hdmap.TexturePack;
+import org.dynmap.hdmap.TexturePack.ExportedTextureData;
+import org.dynmap.hdmap.TexturePackHDShader;
+import org.dynmap.storage.MapStorage;
+import org.dynmap.storage.MapStorageTile;
+import org.dynmap.storage.MapStorageTile.TileRead;
+import org.dynmap.utils.BlockStep;
+import org.dynmap.utils.BufferOutputStream;
+import org.dynmap.utils.ImageIOManager;
+import org.dynmap.utils.MapChunkCache;
+import org.dynmap.utils.MapIterator;
+import org.dynmap.utils.Vector3D;
+
+final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
+    private static final class ColumnData {
+        final boolean hasSurface;
+        final double topY;
+        final ExportMaterial topMaterial;
+
+        ColumnData(boolean hasSurface, double topY, ExportMaterial topMaterial) {
+            this.hasSurface = hasSurface;
+            this.topY = topY;
+            this.topMaterial = topMaterial;
+        }
+    }
+
+    private static final class VertexData {
+        final double y;
+        final boolean valid;
+
+        VertexData(double y, boolean valid) {
+            this.y = y;
+            this.valid = valid;
+        }
+    }
+
+    private final DynmapCore core;
+    private final HDShader shader;
+    private final TexturePack exportTexturePack;
+    private final ExportMaterialColorResolver colorResolver;
+    private String heightMapTextureMap;
+
+    BlockModelHeightMapExporter(DynmapWorld world, DynmapCore core, HDShader shader) {
+        super(world, core, shader);
+        this.core = core;
+        this.shader = shader;
+        this.exportTexturePack =
+                (shader instanceof TexturePackHDShader) ? ((TexturePackHDShader) shader).getTexturePackForExport() : null;
+        this.colorResolver = new ExportMaterialColorResolver(exportTexturePack);
+    }
+
+    void setHeightMapTextureMap(String heightMapTextureMap) {
+        if ((heightMapTextureMap != null) && (heightMapTextureMap.trim().length() == 0)) {
+            this.heightMapTextureMap = null;
+        } else {
+            this.heightMapTextureMap = heightMapTextureMap;
+        }
+    }
+
+    @Override
+    public void export(BlockModelExportSink sink) throws IOException {
+        MapChunkCache cache = createFullRegionCache();
+        if (cache == null) {
+            throw new IOException("Error loading chunk cache");
+        }
+        export(cache, sink);
+    }
+
+    @Override
+    public void export(MapChunkCache cache, BlockModelExportSink sink) throws IOException {
+        if (cache == null) {
+            throw new IOException("Error loading chunk cache");
+        }
+        exportHeightMap(cache, sink, getMinX(), getMaxX(), getMinZ(), getMaxZ());
+    }
+
+    @Override
+    protected void exportLoadedRegion(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX,
+            int rangeMinZ, int rangeMaxZ, boolean[] edgeBits) throws IOException {
+        exportHeightMap(cache, sink, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+    }
+
+    private MapChunkCache createFullRegionCache() {
+        List<DynmapChunk> requiredChunks = new ArrayList<DynmapChunk>();
+        int minChunkX = getMinX() >> 4;
+        int maxChunkX = getMaxX() >> 4;
+        int minChunkZ = getMinZ() >> 4;
+        int maxChunkZ = getMaxZ() >> 4;
+        boolean needBiome = (shader == null) || shader.isBiomeDataNeeded();
+        boolean needRawBiome = (shader != null) && shader.isRawBiomeDataNeeded();
+        for (int chunkX = minChunkX - 1; chunkX <= maxChunkX + 1; chunkX++) {
+            for (int chunkZ = minChunkZ - 1; chunkZ <= maxChunkZ + 1; chunkZ++) {
+                requiredChunks.add(new DynmapChunk(chunkX, chunkZ));
+            }
+        }
+        return core.getServer().createMapChunkCache(getWorld(), requiredChunks, true, false, needBiome, needRawBiome);
+    }
+
+    private void exportHeightMap(MapChunkCache cache, BlockModelExportSink sink, int rangeMinX, int rangeMaxX, int rangeMinZ,
+            int rangeMaxZ) throws IOException {
+        ColumnData[] columns = collectColumnData(cache, rangeMinX - 1, rangeMaxX, rangeMinZ - 1, rangeMaxZ);
+        BufferedImage textureImage = buildTextureImage(cache, columns, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+        ExportMaterial material = ExportMaterial.customTexture(buildHeightMapMaterialId(rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ),
+                encodeTextureImage(textureImage), false);
+        int minChunkX = rangeMinX >> 4;
+        int maxChunkX = rangeMaxX >> 4;
+        int minChunkZ = rangeMinZ >> 4;
+        int maxChunkZ = rangeMaxZ >> 4;
+        for (int chunkX = minChunkX; chunkX <= maxChunkX; chunkX++) {
+            int chunkMinX = Math.max(rangeMinX, chunkX << 4);
+            int chunkMaxX = Math.min(rangeMaxX, (chunkX << 4) + 15);
+            for (int chunkZ = minChunkZ; chunkZ <= maxChunkZ; chunkZ++) {
+                int chunkMinZ = Math.max(rangeMinZ, chunkZ << 4);
+                int chunkMaxZ = Math.min(rangeMaxZ, (chunkZ << 4) + 15);
+                emitChunkHeightMesh(sink, columns, material, chunkMinX, chunkMaxX, chunkMinZ, chunkMaxZ, rangeMinX, rangeMaxX,
+                        rangeMinZ, rangeMaxZ);
+            }
+        }
+    }
+
+    private ColumnData[] collectColumnData(MapChunkCache cache, int minX, int maxX, int minZ, int maxZ) throws IOException {
+        int width = (maxX - minX) + 1;
+        int depth = (maxZ - minZ) + 1;
+        ColumnData[] columns = new ColumnData[width * depth];
+        MapIterator iterator = cache.getIterator(minX, getMaxY(), minZ);
+        for (int z = minZ; z <= maxZ; z++) {
+            for (int x = minX; x <= maxX; x++) {
+                columns[((z - minZ) * width) + (x - minX)] = resolveTopColumn(iterator, x, z);
+            }
+        }
+        return columns;
+    }
+
+    private ColumnData resolveTopColumn(MapIterator iterator, int x, int z) throws IOException {
+        iterator.initialize(x, getMaxY(), z);
+        for (int y = getMaxY(); y >= getMinY(); y--) {
+            iterator.setY(y);
+            int blockId = iterator.getBlockTypeID();
+            if (blockId <= 0) {
+                continue;
+            }
+            ResolvedBlockData block = resolveBlock(iterator, blockId);
+            ExportMaterial topMaterial = getSurfaceMaterial(block, BlockStep.Y_PLUS);
+            if (topMaterial == null) {
+                topMaterial = getAnySurfaceMaterial(block);
+            }
+            if (topMaterial != null) {
+                return new ColumnData(true, y + block.maxLocalY, topMaterial);
+            }
+        }
+        return new ColumnData(false, getMinY(), null);
+    }
+
+    private BufferedImage buildTextureImage(MapChunkCache cache, ColumnData[] columns, int rangeMinX, int rangeMaxX,
+            int rangeMinZ, int rangeMaxZ) throws IOException {
+        int width = (rangeMaxX - rangeMinX) + 1;
+        int depth = (rangeMaxZ - rangeMinZ) + 1;
+        BufferedImage image = new BufferedImage(width, depth, BufferedImage.TYPE_INT_ARGB);
+        SourceMapSampler sourceSampler = resolveSourceMapSampler();
+        int columnStride = (rangeMaxX - (rangeMinX - 1)) + 1;
+        for (int z = rangeMinZ; z <= rangeMaxZ; z++) {
+            for (int x = rangeMinX; x <= rangeMaxX; x++) {
+                ColumnData column = columns[((z - (rangeMinZ - 1)) * columnStride) + (x - (rangeMinX - 1))];
+                int fallbackArgb = column.hasSurface ? colorResolver.computeAverageColor(column.topMaterial) : 0x00000000;
+                int argb = fallbackArgb;
+                if ((sourceSampler != null) && column.hasSurface) {
+                    argb = sourceSampler.sample(x + 0.5, column.topY, z + 0.5, fallbackArgb);
+                }
+                image.setRGB(x - rangeMinX, z - rangeMinZ, argb);
+            }
+        }
+        return image;
+    }
+
+    private void emitChunkHeightMesh(BlockModelExportSink sink, ColumnData[] columns, ExportMaterial material, int chunkMinX,
+            int chunkMaxX, int chunkMinZ, int chunkMaxZ, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ)
+            throws IOException {
+        int widthColumns = (rangeMaxX - rangeMinX) + 1;
+        int depthColumns = (rangeMaxZ - rangeMinZ) + 1;
+        int columnStride = (rangeMaxX - (rangeMinX - 1)) + 1;
+        int vertexWidth = (chunkMaxX - chunkMinX) + 2;
+        int vertexDepth = (chunkMaxZ - chunkMinZ) + 2;
+        double[] xyz = new double[vertexWidth * vertexDepth * 3];
+        double[] uv = new double[vertexWidth * vertexDepth * 2];
+        VertexData[] vertices = new VertexData[vertexWidth * vertexDepth];
+        for (int vz = 0; vz < vertexDepth; vz++) {
+            int worldZ = chunkMinZ + vz;
+            for (int vx = 0; vx < vertexWidth; vx++) {
+                int worldX = chunkMinX + vx;
+                VertexData vertex = buildVertex(columns, worldX, worldZ, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ, columnStride);
+                int index = (vz * vertexWidth) + vx;
+                vertices[index] = vertex;
+                int xyzOffset = index * 3;
+                int uvOffset = index * 2;
+                xyz[xyzOffset] = worldX;
+                xyz[xyzOffset + 1] = vertex.y;
+                xyz[xyzOffset + 2] = worldZ;
+                uv[uvOffset] = (double) (worldX - rangeMinX) / (double) widthColumns;
+                uv[uvOffset + 1] = (double) (worldZ - rangeMinZ) / (double) depthColumns;
+            }
+        }
+
+        ArrayList<Integer> indexList = new ArrayList<Integer>();
+        for (int z = chunkMinZ; z <= chunkMaxZ; z++) {
+            for (int x = chunkMinX; x <= chunkMaxX; x++) {
+                int localX = x - chunkMinX;
+                int localZ = z - chunkMinZ;
+                int v00 = (localZ * vertexWidth) + localX;
+                int v10 = v00 + 1;
+                int v01 = ((localZ + 1) * vertexWidth) + localX;
+                int v11 = v01 + 1;
+                if (!(vertices[v00].valid || vertices[v10].valid || vertices[v01].valid || vertices[v11].valid)) {
+                    continue;
+                }
+                indexList.add(Integer.valueOf(v00));
+                indexList.add(Integer.valueOf(v01));
+                indexList.add(Integer.valueOf(v11));
+                indexList.add(Integer.valueOf(v00));
+                indexList.add(Integer.valueOf(v11));
+                indexList.add(Integer.valueOf(v10));
+            }
+        }
+        if (indexList.isEmpty()) {
+            return;
+        }
+
+        int[] indices = new int[indexList.size()];
+        for (int i = 0; i < indexList.size(); i++) {
+            indices[i] = indexList.get(i).intValue();
+        }
+        float[] vertexColors = buildFullBrightVertexColors(vertexWidth * vertexDepth);
+        float[] nightLights = buildFullBrightNightLights(vertexWidth * vertexDepth);
+        sink.setChunk(chunkMinX >> 4, chunkMinZ >> 4);
+        sink.addTriangleMesh(xyz, uv, indices, material, vertexColors, nightLights);
+    }
+
+    private VertexData buildVertex(ColumnData[] columns, int worldX, int worldZ, int rangeMinX, int rangeMaxX, int rangeMinZ,
+            int rangeMaxZ, int columnStride) {
+        double maxY = getMinY();
+        boolean valid = false;
+        for (int dz = -1; dz <= 0; dz++) {
+            for (int dx = -1; dx <= 0; dx++) {
+                int sampleX = worldX + dx;
+                int sampleZ = worldZ + dz;
+                if ((sampleX < (rangeMinX - 1)) || (sampleX > rangeMaxX) || (sampleZ < (rangeMinZ - 1))
+                        || (sampleZ > rangeMaxZ)) {
+                    continue;
+                }
+                ColumnData column =
+                        columns[((sampleZ - (rangeMinZ - 1)) * columnStride) + (sampleX - (rangeMinX - 1))];
+                if (column.hasSurface) {
+                    valid = true;
+                    maxY = Math.max(maxY, column.topY);
+                }
+            }
+        }
+        return new VertexData(maxY, valid);
+    }
+
+    private float[] buildFullBrightVertexColors(int vertexCount) {
+        float[] colors = new float[vertexCount * 3];
+        for (int i = 0; i < colors.length; i++) {
+            colors[i] = 1.0F;
+        }
+        return colors;
+    }
+
+    private float[] buildFullBrightNightLights(int vertexCount) {
+        if (getLightingMode() != GLBExport.LightingMode.BOTH) {
+            return null;
+        }
+        float[] nightLights = new float[vertexCount];
+        for (int i = 0; i < nightLights.length; i++) {
+            nightLights[i] = 1.0F;
+        }
+        return nightLights;
+    }
+
+    private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {
+        BufferOutputStream imageStream = ImageIOManager.imageIOEncode(image, MapType.ImageFormat.FORMAT_PNG);
+        if (imageStream == null) {
+            throw new IOException("Failed to encode height map texture");
+        }
+        ExportedTextureData data = new ExportedTextureData();
+        data.imagePng = java.util.Arrays.copyOf(imageStream.buf, imageStream.len);
+        long red = 0;
+        long green = 0;
+        long blue = 0;
+        long weight = 0;
+        boolean hasAlpha = false;
+        boolean hasTranslucentAlpha = false;
+        int[] pixels = image.getRGB(0, 0, image.getWidth(), image.getHeight(), null, 0, image.getWidth());
+        for (int pixel : pixels) {
+            int alpha = (pixel >> 24) & 0xFF;
+            if (alpha != 0xFF) {
+                hasAlpha = true;
+                if (alpha != 0) {
+                    hasTranslucentAlpha = true;
+                }
+            }
+            red += alpha * ((pixel >> 16) & 0xFF);
+            green += alpha * ((pixel >> 8) & 0xFF);
+            blue += alpha * (pixel & 0xFF);
+            weight += alpha;
+        }
+        data.diffuseColor = (weight > 0) ? new Color((int) (red / weight), (int) (green / weight), (int) (blue / weight))
+                : new Color();
+        data.material = null;
+        data.hasAlpha = hasAlpha;
+        data.hasTranslucentAlpha = hasTranslucentAlpha;
+        if (hasAlpha) {
+            BufferedImage alphaImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
+            for (int z = 0; z < image.getHeight(); z++) {
+                for (int x = 0; x < image.getWidth(); x++) {
+                    int alpha = (image.getRGB(x, z) >> 24) & 0xFF;
+                    int argb = (alpha << 24) | (alpha << 16) | (alpha << 8) | alpha;
+                    alphaImage.setRGB(x, z, argb);
+                }
+            }
+            BufferOutputStream alphaStream = ImageIOManager.imageIOEncode(alphaImage, MapType.ImageFormat.FORMAT_PNG);
+            if (alphaStream != null) {
+                data.alphaPng = java.util.Arrays.copyOf(alphaStream.buf, alphaStream.len);
+            }
+        }
+        return data;
+    }
+
+    private String buildHeightMapMaterialId(int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) {
+        String source = (heightMapTextureMap != null) ? heightMapTextureMap : "generated";
+        return "height_map_" + source + "_" + rangeMinX + "_" + rangeMaxX + "_" + rangeMinZ + "_" + rangeMaxZ;
+    }
+
+    private SourceMapSampler resolveSourceMapSampler() {
+        if (heightMapTextureMap == null) {
+            return null;
+        }
+        for (org.dynmap.MapType mapType : getWorld().maps) {
+            if (!(mapType instanceof HDMap) || !heightMapTextureMap.equals(mapType.getName())) {
+                continue;
+            }
+            return new SourceMapSampler(getWorld(), (HDMap) mapType);
+        }
+        Log.warning("Height map texture source map '" + heightMapTextureMap + "' was not found for world '" + getWorld().getName()
+                + "' - falling back to generated texture");
+        return null;
+    }
+
+    private ExportMaterial getSurfaceMaterial(ResolvedBlockData block, BlockStep step) throws IOException {
+        if ((block == null) || (block.materials == null)) {
+            return null;
+        }
+        if (block.patches != null) {
+            for (int i = 0; i < block.patches.length; i++) {
+                if ((block.steps[i] == step) && (block.materials.length > i) && (block.materials[i] != null)) {
+                    ExportMaterial material = getFirstSolidMaterial(block.materials[i]);
+                    if (material != null) {
+                        return material;
+                    }
+                }
+            }
+            for (int i = 0; i < block.patches.length; i++) {
+                if ((block.steps[i] == step.opposite()) && (block.materials.length > i) && (block.materials[i] != null)) {
+                    ExportMaterial material = getFirstSolidMaterial(block.materials[i]);
+                    if (material != null) {
+                        return material;
+                    }
+                }
+            }
+            return null;
+        }
+
+        int face = step.opposite().getFaceEntered();
+        if ((face >= 0) && (face < block.materials.length)) {
+            return getFirstSolidMaterial(block.materials[face]);
+        }
+        int opposite = step.getFaceEntered();
+        if ((opposite >= 0) && (opposite < block.materials.length)) {
+            return getFirstSolidMaterial(block.materials[opposite]);
+        }
+        return null;
+    }
+
+    private static final class SourceMapSampler {
+        private final DynmapWorld world;
+        private final HDMap sourceMap;
+        private final MapStorage storage;
+        private final int tileSize;
+        private final Map<String, BufferedImage> tileImages = new HashMap<String, BufferedImage>();
+        private final Vector3D input = new Vector3D();
+        private final Vector3D output = new Vector3D();
+
+        SourceMapSampler(DynmapWorld world, HDMap sourceMap) {
+            this.world = world;
+            this.sourceMap = sourceMap;
+            this.storage = world.getMapStorage();
+            this.tileSize = sourceMap.getTileSize();
+        }
+
+        int sample(double worldX, double worldY, double worldZ, int fallbackArgb) throws IOException {
+            input.x = worldX;
+            input.y = worldY;
+            input.z = worldZ;
+            sourceMap.getPerspective().transformWorldToMapCoord(input, output);
+            int pixelX = (int) Math.floor(output.x);
+            int pixelY = (int) Math.floor(output.y);
+            int tileX = Math.floorDiv(pixelX, tileSize);
+            int tileY = Math.floorDiv(pixelY, tileSize);
+            BufferedImage image = getTileImage(tileX, tileY);
+            if (image == null) {
+                return fallbackArgb;
+            }
+            int localX = pixelX - (tileX * tileSize);
+            int localY = pixelY - (tileY * tileSize);
+            if ((localX < 0) || (localY < 0) || (localX >= tileSize) || (localY >= tileSize)) {
+                return fallbackArgb;
+            }
+            int sampleX = Math.min(image.getWidth() - 1, (int) ((localX / (double) tileSize) * image.getWidth()));
+            int sampleY = Math.min(image.getHeight() - 1, (int) ((localY / (double) tileSize) * image.getHeight()));
+            return image.getRGB(sampleX, sampleY);
+        }
+
+        private BufferedImage getTileImage(int tileX, int tileY) throws IOException {
+            String key = tileX + ":" + tileY;
+            if (tileImages.containsKey(key)) {
+                return tileImages.get(key);
+            }
+            MapStorageTile tile = storage.getTile(world, sourceMap, tileX, tileY, 0, MapType.ImageVariant.STANDARD);
+            BufferedImage image = null;
+            if ((tile != null) && tile.getReadLock(5000)) {
+                try {
+                    TileRead read = tile.read();
+                    if (read != null) {
+                        image = ImageIOManager.imageIODecode(read);
+                    }
+                } finally {
+                    tile.releaseReadLock();
+                }
+            }
+            tileImages.put(key, image);
+            return image;
+        }
+    }
+}

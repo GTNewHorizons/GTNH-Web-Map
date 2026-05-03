@@ -158,6 +158,7 @@ public class GLBExport implements BlockModelExportSink {
     private LightingMode lightingMode = LightingMode.DAY;
     private BlockModelExportMode exportMode = BlockModelExportMode.FULL;
     private int simplifiedMinSkyLight = 7;
+    private String heightMapTextureMap;
 
     public GLBExport(File destination, TexturePackHDShader shader, DynmapWorld world, DynmapCore core, String basename) {
         this.destination = destination;
@@ -229,6 +230,10 @@ public class GLBExport implements BlockModelExportSink {
         this.simplifiedMinSkyLight = Math.max(0, Math.min(15, simplifiedMinSkyLight));
     }
 
+    public void setHeightMapTextureMap(String heightMapTextureMap) {
+        this.heightMapTextureMap = heightMapTextureMap;
+    }
+
     public boolean processExport(DynmapCommandSender sender) {
         return processExport(sender, false);
     }
@@ -268,6 +273,7 @@ public class GLBExport implements BlockModelExportSink {
         exporter.setLightingMode(lightingMode);
         exporter.setExportMode(exportMode);
         exporter.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
+        exporter.setHeightMapTextureMap(heightMapTextureMap);
         if (cache != null) {
             exporter.export(cache, this);
         } else {
@@ -334,6 +340,46 @@ public class GLBExport implements BlockModelExportSink {
             addGeometry(primitive, ExportPatchGeometry.buildTriangle(tri),
                     sliceVertexColors(vertexColors, 0, i, i + 1),
                     (nightVertexLights != null) ? sliceNightLights(nightVertexLights, 0, i, i + 1) : null);
+        }
+    }
+
+    @Override
+    public void addTriangleMesh(double[] xyz, double[] uv, int[] indices, ExportMaterial material, float[] vertexColors,
+            float[] nightVertexLights) throws IOException {
+        if ((material == null) || (xyz == null) || (uv == null) || (indices == null) || ((xyz.length % 3) != 0)
+                || ((uv.length % 2) != 0) || ((indices.length % 3) != 0)) {
+            return;
+        }
+        int vertexCount = xyz.length / 3;
+        if ((vertexCount <= 0) || (uv.length != (vertexCount * 2))) {
+            return;
+        }
+        PrimitiveData primitive = primitives.get(material.getMaterialId());
+        if (primitive == null) {
+            primitive = new PrimitiveData(material);
+            primitives.put(material.getMaterialId(), primitive);
+        }
+        float[] normals = buildMeshNormals(xyz, indices, vertexCount);
+        int[] mappedIndices = new int[vertexCount];
+        for (int i = 0; i < vertexCount; i++) {
+            int xyzOffset = i * 3;
+            int uvOffset = i * 2;
+            int colorOffset = i * 3;
+            float red = ((vertexColors != null) && (vertexColors.length >= (colorOffset + 3))) ? vertexColors[colorOffset] : 1.0F;
+            float green =
+                    ((vertexColors != null) && (vertexColors.length >= (colorOffset + 3))) ? vertexColors[colorOffset + 1] : 1.0F;
+            float blue =
+                    ((vertexColors != null) && (vertexColors.length >= (colorOffset + 3))) ? vertexColors[colorOffset + 2] : 1.0F;
+            float nightLight = ((nightVertexLights != null) && (nightVertexLights.length > i)) ? nightVertexLights[i] : 0.0F;
+            mappedIndices[i] = primitive.addVertex(transform(xyz[xyzOffset], originX), transform(xyz[xyzOffset + 1], originY),
+                    transform(xyz[xyzOffset + 2], originZ), normals[xyzOffset], normals[xyzOffset + 1], normals[xyzOffset + 2],
+                    red, green, blue, nightLight, (float) uv[uvOffset], flipV((float) uv[uvOffset + 1]));
+        }
+        for (int index : indices) {
+            if ((index < 0) || (index >= vertexCount)) {
+                throw new IOException("Invalid mesh index " + index + " for vertex count " + vertexCount);
+            }
+            primitive.indices.add(mappedIndices[index]);
         }
     }
 
@@ -459,6 +505,53 @@ public class GLBExport implements BlockModelExportSink {
         return 1.0F - v;
     }
 
+    private float[] buildMeshNormals(double[] xyz, int[] indices, int vertexCount) {
+        float[] normals = new float[vertexCount * 3];
+        for (int i = 0; i < indices.length; i += 3) {
+            int i0 = indices[i];
+            int i1 = indices[i + 1];
+            int i2 = indices[i + 2];
+            if ((i0 < 0) || (i0 >= vertexCount) || (i1 < 0) || (i1 >= vertexCount) || (i2 < 0) || (i2 >= vertexCount)) {
+                continue;
+            }
+            int off0 = i0 * 3;
+            int off1 = i1 * 3;
+            int off2 = i2 * 3;
+            double ax = xyz[off1] - xyz[off0];
+            double ay = xyz[off1 + 1] - xyz[off0 + 1];
+            double az = xyz[off1 + 2] - xyz[off0 + 2];
+            double bx = xyz[off2] - xyz[off0];
+            double by = xyz[off2 + 1] - xyz[off0 + 1];
+            double bz = xyz[off2 + 2] - xyz[off0 + 2];
+            float nx = (float) ((ay * bz) - (az * by));
+            float ny = (float) ((az * bx) - (ax * bz));
+            float nz = (float) ((ax * by) - (ay * bx));
+            normals[off0] += nx;
+            normals[off0 + 1] += ny;
+            normals[off0 + 2] += nz;
+            normals[off1] += nx;
+            normals[off1 + 1] += ny;
+            normals[off1 + 2] += nz;
+            normals[off2] += nx;
+            normals[off2 + 1] += ny;
+            normals[off2 + 2] += nz;
+        }
+        for (int i = 0; i < normals.length; i += 3) {
+            double len = Math.sqrt((normals[i] * normals[i]) + (normals[i + 1] * normals[i + 1])
+                    + (normals[i + 2] * normals[i + 2]));
+            if (len < 1.0E-9) {
+                normals[i] = 0.0F;
+                normals[i + 1] = 1.0F;
+                normals[i + 2] = 0.0F;
+            } else {
+                normals[i] /= len;
+                normals[i + 1] /= len;
+                normals[i + 2] /= len;
+            }
+        }
+        return normals;
+    }
+
     private BufferOutputStream buildGLB(TexturePack texturePack) throws IOException {
         ArrayList<PrimitiveData> primitiveList = new ArrayList<PrimitiveData>(primitives.values());
         ArrayList<String> bufferViews = new ArrayList<String>();
@@ -521,7 +614,8 @@ public class GLBExport implements BlockModelExportSink {
             if (primitive.material.isSolidColor()) {
                 appendSolidColorMaterial(materialJson, primitive.material);
             } else {
-                ExportedTextureData texture = texturePack.exportTexture(primitive.material);
+                ExportedTextureData texture = primitive.material.hasCustomTexture() ? primitive.material.getCustomTextureData()
+                        : texturePack.exportTexture(primitive.material);
                 int imageView = appendSegment(binary, texture.imagePng, null);
                 bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, null));
                 int imageIndex = textureIndex;

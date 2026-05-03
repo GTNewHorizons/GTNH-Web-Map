@@ -79,6 +79,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     public static final DetailMode DEFAULT_DETAIL_MODE = DetailMode.FULL;
     public static final int DEFAULT_MAP_ZOOMOUT = 0;
     public static final int DEFAULT_SIMPLIFIED_MIN_SKYLIGHT = 7;
+    public static final String DEFAULT_HEIGHT_MAP_TEXTURE_MAP = null;
     public static final double DEFAULT_DAY_AMBIENT_LIGHT = 0.7;
     public static final double DEFAULT_NIGHT_AMBIENT_LIGHT = 0.14;
     public static final double DEFAULT_DAY_SUN_LIGHT = 0.8;
@@ -112,7 +113,8 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     public enum DetailMode {
         FULL("full", BlockModelExportMode.FULL),
         SURFACE("surface", BlockModelExportMode.SIMPLIFIED),
-        LOW_POLY("low_poly", BlockModelExportMode.LOW_POLY);
+        LOW_POLY("low_poly", BlockModelExportMode.LOW_POLY),
+        HEIGHT_MAP("height_map", BlockModelExportMode.HEIGHT_MAP);
 
         private final String id;
         private final BlockModelExportMode exportMode;
@@ -139,6 +141,9 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
             }
             if ("zoomout".equalsIgnoreCase(value) || "lowpoly".equalsIgnoreCase(value)) {
                 return LOW_POLY;
+            }
+            if ("heightmap".equalsIgnoreCase(value)) {
+                return HEIGHT_MAP;
             }
             for (DetailMode mode : values()) {
                 if (mode.id.equalsIgnoreCase(value)) {
@@ -256,6 +261,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     private DetailMode detailMode;
     private int mapZoomOut;
     private int simplifiedMinSkyLight;
+    private String heightMapTextureMap;
     private double dayAmbientLight;
     private double nightAmbientLight;
     private double daySunLight;
@@ -299,6 +305,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         mapZoomOut = resolveMapZoomOut(configuration.getInteger("mapzoomout", DEFAULT_MAP_ZOOMOUT));
         simplifiedMinSkyLight = resolveSimplifiedMinSkyLight(
                 configuration.getInteger("simplified_min_skylight", DEFAULT_SIMPLIFIED_MIN_SKYLIGHT));
+        heightMapTextureMap = configuration.getString("height_map_texture_map", DEFAULT_HEIGHT_MAP_TEXTURE_MAP);
         dayAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightday", DEFAULT_DAY_AMBIENT_LIGHT),
                 DEFAULT_DAY_AMBIENT_LIGHT, "ambientlightday");
         nightAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightnight", DEFAULT_NIGHT_AMBIENT_LIGHT),
@@ -346,6 +353,9 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         cn.put("detail_mode", detailMode.getId());
         cn.put("mapzoomout", mapZoomOut);
         cn.put("simplified_min_skylight", simplifiedMinSkyLight);
+        if (heightMapTextureMap != null) {
+            cn.put("height_map_texture_map", heightMapTextureMap);
+        }
         cn.put("ambientlightday", dayAmbientLight);
         cn.put("ambientlightnight", nightAmbientLight);
         cn.put("sunlightday", daySunLight);
@@ -695,6 +705,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         export.setLightingMode(getLightingMode().toExportLightingMode());
         export.setExportMode((zoom > 0) ? BlockModelExportMode.ZOOMOUT : detailMode.getExportMode());
         export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
+        export.setHeightMapTextureMap(heightMapTextureMap);
         return export;
     }
 
