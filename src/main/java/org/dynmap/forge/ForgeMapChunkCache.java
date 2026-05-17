@@ -54,7 +54,9 @@ import org.dynmap.utils.VisibilityLimit;
  */
 public class ForgeMapChunkCache extends MapChunkCache
 {
+    private static final int MAX_CHUNK_NBT_DEBUG_LOGS = 20;
     private static boolean init = false;
+    private static int chunkNBTDebugLogs = 0;
     private static Field unloadqueue = null;
     private static Field unloadqueue_mcpc = null;
     private static Method unloadqueue_mcpc_contains = null;
@@ -1024,6 +1026,7 @@ public class ForgeMapChunkCache extends MapChunkCache
     	        if ((p.length == 3) && (p[0].equals(Chunk.class)) && (p[1].equals(World.class)) && (p[2].equals(NBTTagCompound.class))) {
     	            writechunktonbt = m;
     	            m.setAccessible(true);
+                    Log.info("Using chunk NBT writer method " + m.getDeclaringClass().getName() + "." + m.getName());
     	            break;
     	        }
     	    }
@@ -1383,6 +1386,41 @@ public class ForgeMapChunkCache extends MapChunkCache
         return isunloadpending;
     }
 
+    private static synchronized boolean shouldLogChunkNBTDebug() {
+        if (chunkNBTDebugLogs >= MAX_CHUNK_NBT_DEBUG_LOGS) {
+            return false;
+        }
+        chunkNBTDebugLogs++;
+        return true;
+    }
+
+    private NBTTagCompound normalizeChunkNBT(DynmapChunk chunk, NBTTagCompound nbt, String source) {
+        if (nbt == null) {
+            return null;
+        }
+
+        boolean hasSections = nbt.hasKey("Sections", 9);
+        boolean hasWrappedLevel = nbt.hasKey("Level", 10);
+
+        if (!hasSections && hasWrappedLevel) {
+            NBTTagCompound level = nbt.getCompoundTag("Level");
+            nbt = level;
+            hasSections = nbt.hasKey("Sections", 9);
+        }
+
+        int nbtX = nbt.getInteger("xPos");
+        int nbtZ = nbt.getInteger("zPos");
+        boolean coordMismatch = (nbtX != chunk.x) || (nbtZ != chunk.z);
+        if ((!hasSections || coordMismatch) && shouldLogChunkNBTDebug()) {
+            Log.warning(String.format(
+                    "Suspicious chunk NBT from %s for %s %d,%d: nbt x=%d z=%d sections=%s levelTag=%s",
+                    source, dw.getName(), chunk.x, chunk.z, nbtX, nbtZ, hasSections,
+                    hasWrappedLevel));
+        }
+
+        return nbt;
+    }
+
     // Prep snapshot and add to cache
     private SnapshotRec prepChunkSnapshot(DynmapChunk chunk, NBTTagCompound nbt) {
         ChunkSnapshot ss = new ChunkSnapshot(nbt, dw.worldheight);
@@ -1464,7 +1502,8 @@ public class ForgeMapChunkCache extends MapChunkCache
                     } catch (IllegalAccessException e) {
                     } catch (IllegalArgumentException e) {
                     } catch (InvocationTargetException e) {
-                    }                
+                    }
+                    nbt = normalizeChunkNBT(chunk, nbt, "loaded chunk");
                     SnapshotRec ssr = prepChunkSnapshot(chunk, nbt);
                     ss = ssr.ss;
                     tileData = ssr.tileData;
