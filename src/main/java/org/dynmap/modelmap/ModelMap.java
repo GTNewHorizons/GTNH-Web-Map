@@ -22,9 +22,13 @@ import org.dynmap.MapType;
 import org.dynmap.MapTypeState;
 import org.dynmap.exporter.BlockModelExportMode;
 import org.dynmap.exporter.GLBExport;
+import org.dynmap.hdmap.HDPerspective;
+import org.dynmap.hdmap.IsoHDPerspective;
 import org.dynmap.hdmap.TexturePackHDShader;
+import org.dynmap.markers.impl.MarkerAPIImpl;
 import org.dynmap.utils.TileFlags;
 import org.dynmap.utils.BufferOutputStream;
+import org.dynmap.utils.Vector3D;
 import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
 import org.dynmap.storage.MapStorageTile.TileRead;
@@ -301,6 +305,13 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     private OutputCompression outputCompression;
     private LightingMode lightingMode;
     private DetailMode detailMode;
+    private boolean hasBoostSettings;
+    private boolean boostCullExportRegionEdges;
+    private LightingMode boostLightingMode;
+    private DetailMode boostDetailMode;
+    private int boostSimplifiedMinSkyLight;
+    private String boostHeightMapTextureMap;
+    private int boostHeightMapTextureDetail;
     private ZoomOutStrategy zoomOutStrategy;
     private String zoomOutHeightMapTextureMap;
     private int zoomOutHeightMapTextureDetail;
@@ -317,6 +328,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     private double markerLabelDistance;
     private double markerGridVisibleDistance;
     private double markerGridFadeRange;
+    private transient HDPerspective boostPerspective;
 
     public ModelMap(DynmapCore core, ConfigurationNode configuration) {
         this.core = core;
@@ -354,6 +366,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         heightMapTextureMap = configuration.getString("height_map_texture_map", DEFAULT_HEIGHT_MAP_TEXTURE_MAP);
         heightMapTextureDetail = resolveHeightMapTextureDetail(configuration.getInteger("height_map_texture_detail",
                 configuration.getInteger("height_map_texture_scale", DEFAULT_HEIGHT_MAP_TEXTURE_DETAIL)));
+        loadBoostSettings(configuration);
         loadZoomOutStrategy(configuration);
         dayAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightday", DEFAULT_DAY_AMBIENT_LIGHT),
                 DEFAULT_DAY_AMBIENT_LIGHT, "ambientlightday");
@@ -400,6 +413,18 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         cn.put("compression", outputCompression.getId());
         cn.put("lighting_mode", lightingMode.getId());
         cn.put("detail_mode", detailMode.getId());
+        if (hasBoostSettings) {
+            ConfigurationNode boostNode = new ConfigurationNode();
+            boostNode.put("detail_mode", boostDetailMode.getId());
+            boostNode.put("cull_export_region_edges", boostCullExportRegionEdges);
+            boostNode.put("lighting_mode", boostLightingMode.getId());
+            boostNode.put("simplified_min_skylight", boostSimplifiedMinSkyLight);
+            if (boostHeightMapTextureMap != null) {
+                boostNode.put("height_map_texture_map", boostHeightMapTextureMap);
+            }
+            boostNode.put("height_map_texture_detail", boostHeightMapTextureDetail);
+            cn.put("boost", boostNode);
+        }
         ConfigurationNode zoomOutStrategyNode = new ConfigurationNode();
         zoomOutStrategyNode.put("mode", zoomOutStrategy.getId());
         if (zoomOutStrategy == ZoomOutStrategy.HEIGHT_MAP) {
@@ -479,6 +504,30 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
             return DEFAULT_DETAIL_MODE;
         }
         return resolved;
+    }
+
+    private void loadBoostSettings(ConfigurationNode configuration) {
+        ConfigurationNode boostNode = configuration.getNode("boost");
+        if (boostNode == null) {
+            hasBoostSettings = false;
+            boostCullExportRegionEdges = cullExportRegionEdges;
+            boostLightingMode = lightingMode;
+            boostDetailMode = detailMode;
+            boostSimplifiedMinSkyLight = simplifiedMinSkyLight;
+            boostHeightMapTextureMap = heightMapTextureMap;
+            boostHeightMapTextureDetail = heightMapTextureDetail;
+            return;
+        }
+
+        hasBoostSettings = true;
+        boostCullExportRegionEdges = boostNode.getBoolean("cull_export_region_edges", cullExportRegionEdges);
+        boostLightingMode = resolveLightingMode(boostNode.getString("lighting_mode", lightingMode.getId()));
+        boostDetailMode = resolveDetailMode(boostNode.getString("detail_mode", detailMode.getId()));
+        boostSimplifiedMinSkyLight =
+                resolveSimplifiedMinSkyLight(boostNode.getInteger("simplified_min_skylight", simplifiedMinSkyLight));
+        boostHeightMapTextureMap = boostNode.getString("height_map_texture_map", heightMapTextureMap);
+        boostHeightMapTextureDetail = resolveHeightMapTextureDetail(boostNode.getInteger("height_map_texture_detail",
+                boostNode.getInteger("height_map_texture_scale", heightMapTextureDetail)));
     }
 
     private void loadZoomOutStrategy(ConfigurationNode configuration) {
@@ -797,13 +846,76 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         int maxBlockX = minBlockX + (tileChunkSpan * 16) - 1;
         int maxBlockZ = minBlockZ + (tileChunkSpan * 16) - 1;
         export.setRenderBounds(minBlockX, world.minY, minBlockZ, maxBlockX, world.worldheight - 1, maxBlockZ);
-        export.setCullExportRegionEdges(cullExportRegionEdges);
-        export.setLightingMode(getLightingMode().toExportLightingMode());
-        export.setExportMode((zoom > 0) ? zoomOutStrategy.getExportMode() : detailMode.getExportMode());
-        export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
-        export.setHeightMapTextureMap((zoom > 0) ? zoomOutHeightMapTextureMap : heightMapTextureMap);
-        export.setHeightMapTextureDetail((zoom > 0) ? zoomOutHeightMapTextureDetail : heightMapTextureDetail);
+        if (zoom > 0) {
+            export.setCullExportRegionEdges(cullExportRegionEdges);
+            export.setLightingMode(getLightingMode().toExportLightingMode());
+            export.setExportMode(zoomOutStrategy.getExportMode());
+            export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
+            export.setHeightMapTextureMap(zoomOutHeightMapTextureMap);
+            export.setHeightMapTextureDetail(zoomOutHeightMapTextureDetail);
+        } else if (isBoostedTile(world, tileX, tileZ)) {
+            export.setCullExportRegionEdges(boostCullExportRegionEdges);
+            export.setLightingMode(boostLightingMode.toExportLightingMode());
+            export.setExportMode(boostDetailMode.getExportMode());
+            export.setSimplifiedMinSkyLight(boostSimplifiedMinSkyLight);
+            export.setHeightMapTextureMap(boostHeightMapTextureMap);
+            export.setHeightMapTextureDetail(boostHeightMapTextureDetail);
+        } else {
+            export.setCullExportRegionEdges(cullExportRegionEdges);
+            export.setLightingMode(getLightingMode().toExportLightingMode());
+            export.setExportMode(detailMode.getExportMode());
+            export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
+            export.setHeightMapTextureMap(heightMapTextureMap);
+            export.setHeightMapTextureDetail(heightMapTextureDetail);
+        }
         return export;
+    }
+
+    private boolean isBoostedTile(DynmapWorld world, int tileX, int tileZ) {
+        if (!hasBoostSettings) {
+            return false;
+        }
+        HDPerspective perspective = getBoostPerspective();
+        int tileBlockSpan = granularity * 16;
+        double minBlockX = tileX * tileBlockSpan;
+        double minBlockZ = tileZ * tileBlockSpan;
+        double maxBlockX = minBlockX + tileBlockSpan;
+        double maxBlockZ = minBlockZ + tileBlockSpan;
+        double sampleY = (world.minY + world.worldheight - 1) * 0.5;
+        Vector3D input = new Vector3D();
+        Vector3D output = new Vector3D();
+        double tileMinX = Double.MAX_VALUE;
+        double tileMinY = Double.MAX_VALUE;
+        double tileMaxX = -Double.MAX_VALUE;
+        double tileMaxY = -Double.MAX_VALUE;
+        double[] worldXs = new double[] { minBlockX, maxBlockX };
+        double[] worldZs = new double[] { minBlockZ, maxBlockZ };
+        for (double worldX : worldXs) {
+            for (double worldZ : worldZs) {
+                input.x = worldX;
+                input.y = sampleY;
+                input.z = worldZ;
+                perspective.transformWorldToMapCoord(input, output);
+                tileMinX = Math.min(tileMinX, output.x);
+                tileMinY = Math.min(tileMinY, output.y);
+                tileMaxX = Math.max(tileMaxX, output.x);
+                tileMaxY = Math.max(tileMaxY, output.y);
+            }
+        }
+        double tileDim = Math.max(tileMaxX - tileMinX, tileMaxY - tileMinY);
+        return MarkerAPIImpl.testTileForBoostMarkers(world, perspective, tileMinX, tileMinY, tileDim);
+    }
+
+    private HDPerspective getBoostPerspective() {
+        if (boostPerspective == null) {
+            ConfigurationNode perspectiveConfig = new ConfigurationNode();
+            perspectiveConfig.put("name", "modelmap_boost_" + name);
+            perspectiveConfig.put("azimuth", 180.0);
+            perspectiveConfig.put("inclination", 90.0);
+            perspectiveConfig.put("scale", 1.0);
+            boostPerspective = new IsoHDPerspective(core, perspectiveConfig);
+        }
+        return boostPerspective;
     }
 
     public boolean writeRenderedTile(DynmapWorld world, MapStorageTile tile, BufferOutputStream glb, String tileName) {
