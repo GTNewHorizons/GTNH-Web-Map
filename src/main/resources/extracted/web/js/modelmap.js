@@ -34,7 +34,9 @@
 	var DEFAULT_NIGHT_SUN_LIGHT = 0.16;
 	var MAX_RENDER_PIXEL_RATIO = 2.0;
 	var HUD_UPDATE_INTERVAL_MS = 100;
-	var TILE_FADE_DURATION_SECONDS = 0.2;
+	var TILE_FADE_IN_DURATION_SECONDS = 0.48;
+	var TILE_FADE_OUT_DURATION_SECONDS = 0.48;
+	var TILE_REPLACEMENT_START_OPACITY = 2.0 / 3.0;
 	var MAX_CONCURRENT_TILE_LOADS = 4;
 	var DEFAULT_MARKER_ICON_VISIBLE_DISTANCE = 240.0;
 	var DEFAULT_MARKER_ICON_FADE_RANGE = 16.0;
@@ -1837,7 +1839,8 @@
 				isHeightMap: !!scene.userData.modelmapIsHeightMap,
 				hasHeightMapQuarters: !!scene.userData.modelmapHasHeightMapQuarters,
 				quarterOpacity: [1.0, 1.0, 1.0, 1.0],
-				quarterTargetOpacity: [1.0, 1.0, 1.0, 1.0]
+				quarterTargetOpacity: [1.0, 1.0, 1.0, 1.0],
+				pendingRetireTile: null
 			};
 		},
 
@@ -1899,10 +1902,12 @@
 		},
 
 		_stepOpacityValue: function(currentValue, targetValue, deltaSeconds) {
+			var duration;
 			if (currentValue === targetValue) {
 				return currentValue;
 			}
-			var step = (deltaSeconds > 0) ? Math.min(1.0, deltaSeconds / TILE_FADE_DURATION_SECONDS) : 1.0;
+			duration = (targetValue > currentValue) ? TILE_FADE_IN_DURATION_SECONDS : TILE_FADE_OUT_DURATION_SECONDS;
+			var step = (deltaSeconds > 0) ? Math.min(1.0, deltaSeconds / duration) : 1.0;
 			if (Math.abs(targetValue - currentValue) <= step) {
 				return targetValue;
 			}
@@ -1939,18 +1944,41 @@
 		},
 
 		_isTileEntryCoveringParent: function(tileEntry) {
-			return !!(tileEntry && !tileEntry.removeWhenHidden && tileEntry.targetOpacity > 0.0 && tileEntry.opacity >= 0.999);
+			return !!(tileEntry && !tileEntry.removeWhenHidden && tileEntry.targetOpacity > 0.0
+				&& tileEntry.opacity >= TILE_REPLACEMENT_START_OPACITY);
 		},
 
-		_shouldShowTileImmediately: function(tileEntry) {
+		_getQuarterIndexInParent: function(tileEntry, parentEntry) {
+			if (!tileEntry || !parentEntry) {
+				return -1;
+			}
+			return ((tileEntry.z - (parentEntry.z * 2)) << 1) + (tileEntry.x - (parentEntry.x * 2));
+		},
+
+		_getQuarterVisibilityFactor: function(tileEntry, quarterIndex) {
+			if (!tileEntry) {
+				return 0.0;
+			}
+			return tileEntry.opacity * ((quarterIndex >= 0 && quarterIndex < tileEntry.quarterOpacity.length) ? tileEntry.quarterOpacity[quarterIndex] : 1.0);
+		},
+
+		_shouldKeepTileUntilParentReady: function(tileEntry) {
 			var parentInfo;
 			var parentEntry;
-			if (!tileEntry) {
+			var quarterIndex;
+			if (!tileEntry || !!this._desiredTiles[tileEntry.tileName]) {
 				return false;
 			}
 			parentInfo = this._getParentTileInfo(tileEntry);
 			parentEntry = parentInfo ? this._loadedTiles[parentInfo.tileName] : null;
-			return !!(parentEntry && parentEntry.hasHeightMapQuarters && this._isTileEntryCoveringParent(parentEntry));
+			if (!parentEntry || !parentEntry.hasHeightMapQuarters || parentEntry.removeWhenHidden || parentEntry.targetOpacity <= 0.0) {
+				return false;
+			}
+			quarterIndex = this._getQuarterIndexInParent(tileEntry, parentEntry);
+			if (quarterIndex < 0 || quarterIndex >= 4) {
+				return false;
+			}
+			return this._getQuarterVisibilityFactor(parentEntry, quarterIndex) < TILE_REPLACEMENT_START_OPACITY;
 		},
 
 		_isQuarterCoveredByLoadedChild: function(tileEntry, quarterIndex) {
@@ -1999,16 +2027,13 @@
 					continue;
 				}
 				var tileEntry = this._loadedTiles[tileName];
-				var shouldShowTile = !!this._desiredTiles[tileName] || this._shouldKeepTileAsFallback(tileEntry);
+				var shouldShowTile = !!this._desiredTiles[tileName] || this._shouldKeepTileAsFallback(tileEntry)
+					|| this._shouldKeepTileUntilParentReady(tileEntry);
 				changed = this._setTileOpacityTarget(tileEntry, shouldShowTile ? 1.0 : 0.0, !shouldShowTile) || changed;
 				for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
 					var quarterTarget = (tileEntry.hasHeightMapQuarters && tileEntry.detailLevel > 0
 						&& this._isQuarterCoveredByLoadedChild(tileEntry, quarterIndex)) ? 0.0 : 1.0;
-					var quarterChanged = this._setQuarterOpacityTarget(tileEntry, quarterIndex, quarterTarget);
-					if (quarterChanged) {
-						tileEntry.quarterOpacity[quarterIndex] = quarterTarget;
-						changed = true;
-					}
+					changed = this._setQuarterOpacityTarget(tileEntry, quarterIndex, quarterTarget) || changed;
 				}
 				this._applyTileDisplayState(tileEntry);
 			}
@@ -2046,6 +2071,7 @@
 			if (!tileEntry) {
 				return;
 			}
+			tileEntry.pendingRetireTile = null;
 			tileEntry.targetOpacity = 0.0;
 			tileEntry.removeWhenHidden = true;
 			this._retiredTiles.push(tileEntry);
@@ -2072,6 +2098,11 @@
 						tileEntry.quarterOpacity[quarterIndex] = nextQuarterOpacity;
 						changed = true;
 					}
+				}
+				if (tileEntry.pendingRetireTile && tileEntry.opacity >= TILE_REPLACEMENT_START_OPACITY) {
+					this._retireTileEntry(tileEntry.pendingRetireTile);
+					tileEntry.pendingRetireTile = null;
+					changed = true;
 				}
 				this._applyTileDisplayState(tileEntry);
 				if (tileEntry.removeWhenHidden && tileEntry.opacity <= 0.001 && !this._desiredTiles[tileName]) {
@@ -2123,13 +2154,10 @@
 				me._prepareSceneForDisplay(scene);
 				scene.position.set(me._getTileCenter(tileX, tileSize), me.options.world.miny || 0, me._getTileCenter(tileZ, tileSize));
 				var tileEntry = me._createTileEntry(tileName, scene, tileX, tileZ, tileSize, detailLevel);
-				if (me._shouldShowTileImmediately(tileEntry)) {
-					tileEntry.opacity = 1.0;
-				}
 				me._loadedTiles[tileName] = tileEntry;
 				me._root.add(scene);
 				if (existing) {
-					me._retireTileEntry(existing);
+					tileEntry.pendingRetireTile = existing;
 				}
 				me._applyTileDisplayState(tileEntry);
 				me._updateHeightMapTileVisibilityTargets();
