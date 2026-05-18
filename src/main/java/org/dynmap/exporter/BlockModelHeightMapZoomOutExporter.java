@@ -30,6 +30,8 @@ import org.json.simple.parser.ParseException;
 
 public final class BlockModelHeightMapZoomOutExporter {
     private static final int[] ZOOMOUT_STEP_SEQUENCE = { 3, 1, 2, 0 };
+    private static final int HEIGHT_MAP_QUARTER_COUNT = 4;
+    private static final int[] DOUBLE_SIDED_QUAD_INDICES = { 0, 1, 2, 0, 2, 3, 3, 2, 1, 3, 1, 0 };
 
     public enum ResultStatus {
         COMBINED,
@@ -168,20 +170,31 @@ public final class BlockModelHeightMapZoomOutExporter {
             }
         }
 
-        int[] indices = buildTriangleIndices(validVertices, vertexWidth, vertexDepth);
-        if (indices.length == 0) {
-            return Result.noData();
-        }
-
         GLBExport export = new GLBExport(null, map.getShader(), world, core, basename);
         export.setRenderBounds(minBlockX, world.minY, minBlockZ, minBlockX + widthBlocks - 1, world.worldheight - 1,
                 minBlockZ + depthBlocks - 1);
         export.setLightingMode(map.getLightingMode().toExportLightingMode());
         export.setChunk(zoomTile.x, zoomTile.y);
-        export.addTriangleMesh(xyz, uv, indices,
-                ExportMaterial.customTexture(buildMaterialId(zoomTile), encodeTextureImage(outputTexture), false),
-                buildFullBrightVertexColors(vertexWidth * vertexDepth),
-                buildFullBrightNightLights(vertexWidth * vertexDepth, map.getLightingMode().toExportLightingMode()));
+        ExportedTextureData textureData = encodeTextureImage(outputTexture);
+        ExportMaterial[] quarterMaterials = buildQuarterMaterials(buildMaterialId(zoomTile), textureData);
+        int[][] quarterBounds = buildQuarterBounds(minBlockX, widthBlocks, minBlockZ, depthBlocks, outputVertexStep);
+        boolean emittedGeometry = false;
+        for (int quarter = 0; quarter < HEIGHT_MAP_QUARTER_COUNT; quarter++) {
+            int[] indices = buildTriangleIndices(validVertices, vertexWidth, vertexDepth, minBlockX, minBlockZ, outputVertexStep,
+                    quarterBounds[quarter][0], quarterBounds[quarter][1], quarterBounds[quarter][2], quarterBounds[quarter][3]);
+            if (indices.length > 0) {
+                export.addTriangleMesh(xyz, uv, indices, quarterMaterials[quarter], buildFullBrightVertexColors(vertexWidth * vertexDepth),
+                        buildFullBrightNightLights(vertexWidth * vertexDepth, map.getLightingMode().toExportLightingMode()));
+                emittedGeometry = true;
+            }
+            emittedGeometry |= emitEdgeCurtains(export, quarterMaterials[quarter], xyz, uv, validVertices, vertexWidth, vertexDepth,
+                    minBlockX, minBlockZ, outputVertexStep, quarterBounds[quarter][0], quarterBounds[quarter][1], quarterBounds[quarter][2],
+                    quarterBounds[quarter][3], minBlockX, minBlockX + widthBlocks - outputVertexStep, minBlockZ,
+                    minBlockZ + depthBlocks - outputVertexStep, map.getLightingMode().toExportLightingMode());
+        }
+        if (!emittedGeometry) {
+            return Result.noData();
+        }
         return Result.combined(export.finishToBuffer());
     }
 
@@ -254,91 +267,43 @@ public final class BlockModelHeightMapZoomOutExporter {
         }
         JSONObject mesh = asObject(meshes.get(0));
         JSONArray primitives = getArray(mesh, "primitives");
-        if (primitives.size() != 1) {
+        if (primitives.isEmpty()) {
             throw new IncompatibleHeightMapTileException();
         }
-        JSONObject primitive = asObject(primitives.get(0));
-        JSONObject attributes = asObject(primitive.get("attributes"));
-        Number positionAccessorIndex = asNumber(attributes.get("POSITION"));
-        if (positionAccessorIndex == null) {
-            throw new IncompatibleHeightMapTileException();
-        }
-
         JSONArray materials = getArray(root, "materials");
-        if (materials.size() != 1) {
-            throw new IncompatibleHeightMapTileException();
-        }
-        JSONObject material = asObject(materials.get(0));
-        String materialName = asString(material.get("name"));
-        if ((materialName == null) || !materialName.startsWith("height_map_")) {
-            throw new IncompatibleHeightMapTileException();
-        }
-
         JSONArray textures = getArray(root, "textures");
         JSONArray images = getArray(root, "images");
         JSONArray accessors = getArray(root, "accessors");
         JSONArray bufferViews = getArray(root, "bufferViews");
-
-        JSONObject pbr = asObject(material.get("pbrMetallicRoughness"));
-        JSONObject baseColorTexture = asObject(pbr.get("baseColorTexture"));
-        Number textureIndex = asNumber(baseColorTexture.get("index"));
-        if (textureIndex == null) {
-            throw new IncompatibleHeightMapTileException();
-        }
-        JSONObject texture = asObject(textures.get(textureIndex.intValue()));
-        Number imageIndex = asNumber(texture.get("source"));
-        if (imageIndex == null) {
-            throw new IncompatibleHeightMapTileException();
-        }
-        JSONObject image = asObject(images.get(imageIndex.intValue()));
-        Number imageViewIndex = asNumber(image.get("bufferView"));
-        if (imageViewIndex == null) {
-            throw new IncompatibleHeightMapTileException();
-        }
-
-        BufferedImage textureImage = decodePng(getBufferViewBytes(bufferViews, imageViewIndex.intValue(), binBytes, 0, 0));
-        if (textureImage == null) {
-            throw new IncompatibleHeightMapTileException();
-        }
-
-        ParsedHeightMapTile parsed = new ParsedHeightMapTile(textureImage);
+        ParsedHeightMapTile parsed = null;
         int minBlockX = getTileMinBlockX(tileX);
         int minBlockZ = getTileMinBlockZ(tileZ);
         int widthBlocks = getTileWidthBlocks(zoom);
         double originX = minBlockX + ((widthBlocks - 1) / 2.0);
         double originZ = minBlockZ + ((widthBlocks - 1) / 2.0);
-
-        JSONObject accessor = asObject(accessors.get(positionAccessorIndex.intValue()));
-        Number count = asNumber(accessor.get("count"));
-        Number componentType = asNumber(accessor.get("componentType"));
-        String accessorType = asString(accessor.get("type"));
-        Number viewIndex = asNumber(accessor.get("bufferView"));
-        int accessorOffset = getInt(accessor.get("byteOffset"), 0);
-        if ((count == null) || (componentType == null) || (viewIndex == null) || (componentType.intValue() != COMPONENT_TYPE_FLOAT)
-                || !"VEC3".equals(accessorType)) {
-            throw new IncompatibleHeightMapTileException();
-        }
-
-        byte[] positionBytes = getBufferViewBytes(bufferViews, viewIndex.intValue(), binBytes, accessorOffset,
-                count.intValue() * 12);
-        if (positionBytes.length < (count.intValue() * 12)) {
-            throw new IncompatibleHeightMapTileException();
-        }
-        ByteBuffer positions = ByteBuffer.wrap(positionBytes).order(ByteOrder.LITTLE_ENDIAN);
-        for (int i = 0; i < count.intValue(); i++) {
-            double worldX = positions.getFloat() + originX;
-            double y = positions.getFloat();
-            double worldZ = positions.getFloat() + originZ;
-            int gridX = roundCoordinate(worldX);
-            int gridZ = roundCoordinate(worldZ);
-            if ((Math.abs(worldX - gridX) > 0.01) || (Math.abs(worldZ - gridZ) > 0.01)) {
+        for (int primitiveIndex = 0; primitiveIndex < primitives.size(); primitiveIndex++) {
+            JSONObject primitive = asObject(primitives.get(primitiveIndex));
+            Number materialIndex = asNumber(primitive.get("material"));
+            if (materialIndex == null) {
                 throw new IncompatibleHeightMapTileException();
             }
-            if ((gridX < minBlockX) || (gridX > (minBlockX + widthBlocks)) || (gridZ < minBlockZ)
-                    || (gridZ > (minBlockZ + widthBlocks))) {
+            JSONObject material = asObject(materials.get(materialIndex.intValue()));
+            String materialName = asString(material.get("name"));
+            if ((materialName == null) || !materialName.startsWith("height_map_")) {
                 throw new IncompatibleHeightMapTileException();
             }
-            putVertex(parsed.vertices, gridX, gridZ, y);
+            if (parsed == null) {
+                BufferedImage textureImage = resolveMaterialTexture(material, textures, images, bufferViews, binBytes);
+                if (textureImage == null) {
+                    throw new IncompatibleHeightMapTileException();
+                }
+                parsed = new ParsedHeightMapTile(textureImage);
+            }
+            mergePrimitiveVertices(parsed.vertices, primitive, accessors, bufferViews, binBytes, originX, originZ, minBlockX, minBlockZ,
+                    widthBlocks);
+        }
+        if (parsed == null) {
+            throw new IncompatibleHeightMapTileException();
         }
         return parsed;
     }
@@ -402,6 +367,64 @@ public final class BlockModelHeightMapZoomOutExporter {
         byte[] out = new byte[resultLength];
         System.arraycopy(binBytes, byteOffset, out, 0, resultLength);
         return out;
+    }
+
+    private BufferedImage resolveMaterialTexture(JSONObject material, JSONArray textures, JSONArray images, JSONArray bufferViews,
+            byte[] binBytes) throws IOException, IncompatibleHeightMapTileException {
+        JSONObject pbr = asObject(material.get("pbrMetallicRoughness"));
+        JSONObject baseColorTexture = asObject(pbr.get("baseColorTexture"));
+        Number textureIndex = asNumber(baseColorTexture.get("index"));
+        if (textureIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject texture = asObject(textures.get(textureIndex.intValue()));
+        Number imageIndex = asNumber(texture.get("source"));
+        if (imageIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject image = asObject(images.get(imageIndex.intValue()));
+        Number imageViewIndex = asNumber(image.get("bufferView"));
+        if (imageViewIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        return decodePng(getBufferViewBytes(bufferViews, imageViewIndex.intValue(), binBytes, 0, 0));
+    }
+
+    private void mergePrimitiveVertices(Map<Long, VertexSample> vertices, JSONObject primitive, JSONArray accessors, JSONArray bufferViews,
+            byte[] binBytes, double originX, double originZ, int minBlockX, int minBlockZ, int widthBlocks)
+            throws IncompatibleHeightMapTileException {
+        JSONObject attributes = asObject(primitive.get("attributes"));
+        Number positionAccessorIndex = asNumber(attributes.get("POSITION"));
+        if (positionAccessorIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject accessor = asObject(accessors.get(positionAccessorIndex.intValue()));
+        Number count = asNumber(accessor.get("count"));
+        Number componentType = asNumber(accessor.get("componentType"));
+        String accessorType = asString(accessor.get("type"));
+        Number viewIndex = asNumber(accessor.get("bufferView"));
+        int accessorOffset = getInt(accessor.get("byteOffset"), 0);
+        if ((count == null) || (componentType == null) || (viewIndex == null) || (componentType.intValue() != COMPONENT_TYPE_FLOAT)
+                || !"VEC3".equals(accessorType)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        byte[] positionBytes = getBufferViewBytes(bufferViews, viewIndex.intValue(), binBytes, accessorOffset, count.intValue() * 12);
+        ByteBuffer positions = ByteBuffer.wrap(positionBytes).order(ByteOrder.LITTLE_ENDIAN);
+        for (int i = 0; i < count.intValue(); i++) {
+            double worldX = positions.getFloat() + originX;
+            double y = positions.getFloat();
+            double worldZ = positions.getFloat() + originZ;
+            int gridX = roundCoordinate(worldX);
+            int gridZ = roundCoordinate(worldZ);
+            if ((Math.abs(worldX - gridX) > 0.01) || (Math.abs(worldZ - gridZ) > 0.01)) {
+                throw new IncompatibleHeightMapTileException();
+            }
+            if ((gridX < minBlockX) || (gridX > (minBlockX + widthBlocks)) || (gridZ < minBlockZ)
+                    || (gridZ > (minBlockZ + widthBlocks))) {
+                throw new IncompatibleHeightMapTileException();
+            }
+            putVertex(vertices, gridX, gridZ, y);
+        }
     }
 
     private static BufferedImage decodePng(byte[] bytes) throws IOException {
@@ -493,10 +516,37 @@ public final class BlockModelHeightMapZoomOutExporter {
         return valid ? new VertexSample(maxY) : null;
     }
 
-    private static int[] buildTriangleIndices(boolean[] validVertices, int vertexWidth, int vertexDepth) {
+    private ExportMaterial[] buildQuarterMaterials(String baseMaterialId, ExportedTextureData textureData) {
+        ExportMaterial[] materials = new ExportMaterial[HEIGHT_MAP_QUARTER_COUNT];
+        for (int quarter = 0; quarter < HEIGHT_MAP_QUARTER_COUNT; quarter++) {
+            materials[quarter] = ExportMaterial.customTexture(baseMaterialId + "_q" + quarter, textureData, false);
+        }
+        return materials;
+    }
+
+    private int[][] buildQuarterBounds(int minBlockX, int widthBlocks, int minBlockZ, int depthBlocks, int cellStep) {
+        int halfWidth = widthBlocks / 2;
+        int halfDepth = depthBlocks / 2;
+        return new int[][] {
+                { minBlockX, minBlockX + halfWidth - cellStep, minBlockZ, minBlockZ + halfDepth - cellStep },
+                { minBlockX + halfWidth, minBlockX + widthBlocks - cellStep, minBlockZ, minBlockZ + halfDepth - cellStep },
+                { minBlockX, minBlockX + halfWidth - cellStep, minBlockZ + halfDepth, minBlockZ + depthBlocks - cellStep },
+                { minBlockX + halfWidth, minBlockX + widthBlocks - cellStep, minBlockZ + halfDepth, minBlockZ + depthBlocks - cellStep } };
+    }
+
+    private static int[] buildTriangleIndices(boolean[] validVertices, int vertexWidth, int vertexDepth, int minWorldX, int minWorldZ,
+            int vertexStep, int cellMinX, int cellMaxX, int cellMinZ, int cellMaxZ) {
         int quadCount = 0;
         for (int z = 0; z < vertexDepth - 1; z++) {
+            int worldZ = minWorldZ + (z * vertexStep);
+            if ((worldZ < cellMinZ) || (worldZ > cellMaxZ)) {
+                continue;
+            }
             for (int x = 0; x < vertexWidth - 1; x++) {
+                int worldX = minWorldX + (x * vertexStep);
+                if ((worldX < cellMinX) || (worldX > cellMaxX)) {
+                    continue;
+                }
                 int v00 = (z * vertexWidth) + x;
                 int v10 = v00 + 1;
                 int v01 = ((z + 1) * vertexWidth) + x;
@@ -509,7 +559,15 @@ public final class BlockModelHeightMapZoomOutExporter {
         int[] indices = new int[quadCount * 6];
         int offset = 0;
         for (int z = 0; z < vertexDepth - 1; z++) {
+            int worldZ = minWorldZ + (z * vertexStep);
+            if ((worldZ < cellMinZ) || (worldZ > cellMaxZ)) {
+                continue;
+            }
             for (int x = 0; x < vertexWidth - 1; x++) {
+                int worldX = minWorldX + (x * vertexStep);
+                if ((worldX < cellMinX) || (worldX > cellMaxX)) {
+                    continue;
+                }
                 int v00 = (z * vertexWidth) + x;
                 int v10 = v00 + 1;
                 int v01 = ((z + 1) * vertexWidth) + x;
@@ -526,6 +584,53 @@ public final class BlockModelHeightMapZoomOutExporter {
             }
         }
         return indices;
+    }
+
+    private boolean emitEdgeCurtains(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, boolean[] validVertices,
+            int vertexWidth, int vertexDepth, int minWorldX, int minWorldZ, int vertexStep, int meshMinX, int meshMaxX, int meshMinZ,
+            int meshMaxZ, int tileMinX, int tileMaxX, int tileMinZ, int tileMaxZ, GLBExport.LightingMode lightingMode)
+            throws IOException {
+        boolean emitted = false;
+        if (meshMinX == tileMinX) {
+            for (int localZ = 0; localZ < vertexDepth - 1; localZ++) {
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, localZ * vertexWidth,
+                        (localZ + 1) * vertexWidth, lightingMode);
+            }
+        }
+        if (meshMaxX == tileMaxX) {
+            for (int localZ = 0; localZ < vertexDepth - 1; localZ++) {
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, (localZ * vertexWidth) + (vertexWidth - 1),
+                        ((localZ + 1) * vertexWidth) + (vertexWidth - 1), lightingMode);
+            }
+        }
+        if (meshMinZ == tileMinZ) {
+            for (int localX = 0; localX < vertexWidth - 1; localX++) {
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, localX, localX + 1, lightingMode);
+            }
+        }
+        if (meshMaxZ == tileMaxZ) {
+            int rowStart = (vertexDepth - 1) * vertexWidth;
+            for (int localX = 0; localX < vertexWidth - 1; localX++) {
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, rowStart + localX, rowStart + localX + 1,
+                        lightingMode);
+            }
+        }
+        return emitted;
+    }
+
+    private boolean emitCurtainSegment(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, boolean[] validVertices,
+            int topIndex0, int topIndex1, GLBExport.LightingMode lightingMode) throws IOException {
+        if (!(validVertices[topIndex0] || validVertices[topIndex1])) {
+            return false;
+        }
+        double[] curtainXyz = new double[] { xyz[topIndex0 * 3], xyz[(topIndex0 * 3) + 1], xyz[(topIndex0 * 3) + 2],
+                xyz[topIndex1 * 3], xyz[(topIndex1 * 3) + 1], xyz[(topIndex1 * 3) + 2], xyz[topIndex1 * 3], 0.0,
+                xyz[(topIndex1 * 3) + 2], xyz[topIndex0 * 3], 0.0, xyz[(topIndex0 * 3) + 2] };
+        double[] curtainUv = new double[] { uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1], uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1],
+                uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1], uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1] };
+        sink.addTriangleMesh(curtainXyz, curtainUv, DOUBLE_SIDED_QUAD_INDICES, material, buildFullBrightVertexColors(4),
+                buildFullBrightNightLights(4, lightingMode));
+        return true;
     }
 
     private float[] buildFullBrightNightLights(int vertexCount, GLBExport.LightingMode lightingMode) {

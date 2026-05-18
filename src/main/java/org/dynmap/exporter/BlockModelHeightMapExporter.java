@@ -31,6 +31,9 @@ import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.Vector3D;
 
 final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
+    private static final int HEIGHT_MAP_QUARTER_COUNT = 4;
+    private static final int[] DOUBLE_SIDED_QUAD_INDICES = { 0, 1, 2, 0, 2, 3, 3, 2, 1, 3, 1, 0 };
+
     private static final class ColumnData {
         final boolean hasSurface;
         final double topY;
@@ -129,8 +132,10 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         ColumnData[] columns = collectColumnData(cache, columnMinX, columnMaxX, columnMinZ, columnMaxZ);
         BufferedImage textureImage = buildTextureImage(columns, columnMinX, columnMaxX, columnMinZ, columnMaxZ, rangeMinX,
                 rangeMaxX, rangeMinZ, rangeMaxZ);
-        ExportMaterial material = ExportMaterial.customTexture(buildHeightMapMaterialId(rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ),
-                encodeTextureImage(textureImage), false);
+        ExportedTextureData textureData = encodeTextureImage(textureImage);
+        ExportMaterial[] quarterMaterials =
+                buildQuarterMaterials(buildHeightMapMaterialId(rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ), textureData);
+        int[][] quarterBounds = buildQuarterBounds(rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
         int minChunkX = rangeMinX >> 4;
         int maxChunkX = rangeMaxX >> 4;
         int minChunkZ = rangeMinZ >> 4;
@@ -141,8 +146,17 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             for (int chunkZ = minChunkZ; chunkZ <= maxChunkZ; chunkZ++) {
                 int chunkMinZ = Math.max(rangeMinZ, chunkZ << 4);
                 int chunkMaxZ = Math.min(rangeMaxZ, (chunkZ << 4) + 15);
-                emitChunkHeightMesh(sink, columns, material, chunkMinX, chunkMaxX, chunkMinZ, chunkMaxZ, columnMinX, columnMaxX,
-                        columnMinZ, columnMaxZ, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+                for (int quarter = 0; quarter < HEIGHT_MAP_QUARTER_COUNT; quarter++) {
+                    int meshMinX = Math.max(chunkMinX, quarterBounds[quarter][0]);
+                    int meshMaxX = Math.min(chunkMaxX, quarterBounds[quarter][1]);
+                    int meshMinZ = Math.max(chunkMinZ, quarterBounds[quarter][2]);
+                    int meshMaxZ = Math.min(chunkMaxZ, quarterBounds[quarter][3]);
+                    if ((meshMinX > meshMaxX) || (meshMinZ > meshMaxZ)) {
+                        continue;
+                    }
+                    emitChunkHeightMesh(sink, columns, quarterMaterials[quarter], meshMinX, meshMaxX, meshMinZ, meshMaxZ, columnMinX,
+                            columnMaxX, columnMinZ, columnMaxZ, rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
+                }
             }
         }
     }
@@ -267,6 +281,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         float[] nightLights = buildFullBrightNightLights(vertexWidth * vertexDepth);
         sink.setChunk(chunkMinX >> 4, chunkMinZ >> 4);
         sink.addTriangleMesh(xyz, uv, indices, material, vertexColors, nightLights);
+        emitEdgeCurtains(sink, material, xyz, uv, vertices, vertexWidth, vertexDepth, chunkMinX, chunkMaxX, chunkMinZ, chunkMaxZ,
+                rangeMinX, rangeMaxX, rangeMinZ, rangeMaxZ);
     }
 
     private VertexData buildVertex(ColumnData[] columns, int worldX, int worldZ, int columnMinX, int columnMaxX,
@@ -315,6 +331,65 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
 
     private static int getColumnIndex(int x, int z, int columnMinX, int columnMinZ, int columnStride) {
         return ((z - columnMinZ) * columnStride) + (x - columnMinX);
+    }
+
+    private ExportMaterial[] buildQuarterMaterials(String baseMaterialId, ExportedTextureData textureData) {
+        ExportMaterial[] materials = new ExportMaterial[HEIGHT_MAP_QUARTER_COUNT];
+        for (int quarter = 0; quarter < HEIGHT_MAP_QUARTER_COUNT; quarter++) {
+            materials[quarter] = ExportMaterial.customTexture(baseMaterialId + "_q" + quarter, textureData, false);
+        }
+        return materials;
+    }
+
+    private int[][] buildQuarterBounds(int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) {
+        int halfWidth = ((rangeMaxX - rangeMinX) + 1) / 2;
+        int halfDepth = ((rangeMaxZ - rangeMinZ) + 1) / 2;
+        return new int[][] {
+                { rangeMinX, rangeMinX + halfWidth - 1, rangeMinZ, rangeMinZ + halfDepth - 1 },
+                { rangeMinX + halfWidth, rangeMaxX, rangeMinZ, rangeMinZ + halfDepth - 1 },
+                { rangeMinX, rangeMinX + halfWidth - 1, rangeMinZ + halfDepth, rangeMaxZ },
+                { rangeMinX + halfWidth, rangeMaxX, rangeMinZ + halfDepth, rangeMaxZ } };
+    }
+
+    private void emitEdgeCurtains(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, VertexData[] vertices,
+            int vertexWidth, int vertexDepth, int meshMinX, int meshMaxX, int meshMinZ, int meshMaxZ, int rangeMinX, int rangeMaxX,
+            int rangeMinZ, int rangeMaxZ) throws IOException {
+        if (meshMinX == rangeMinX) {
+            for (int localZ = 0; localZ < vertexDepth - 1; localZ++) {
+                emitCurtainSegment(sink, material, xyz, uv, vertices, localZ * vertexWidth, (localZ + 1) * vertexWidth);
+            }
+        }
+        if (meshMaxX == rangeMaxX) {
+            for (int localZ = 0; localZ < vertexDepth - 1; localZ++) {
+                emitCurtainSegment(sink, material, xyz, uv, vertices, (localZ * vertexWidth) + (vertexWidth - 1),
+                        ((localZ + 1) * vertexWidth) + (vertexWidth - 1));
+            }
+        }
+        if (meshMinZ == rangeMinZ) {
+            for (int localX = 0; localX < vertexWidth - 1; localX++) {
+                emitCurtainSegment(sink, material, xyz, uv, vertices, localX, localX + 1);
+            }
+        }
+        if (meshMaxZ == rangeMaxZ) {
+            int rowStart = (vertexDepth - 1) * vertexWidth;
+            for (int localX = 0; localX < vertexWidth - 1; localX++) {
+                emitCurtainSegment(sink, material, xyz, uv, vertices, rowStart + localX, rowStart + localX + 1);
+            }
+        }
+    }
+
+    private void emitCurtainSegment(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, VertexData[] vertices,
+            int topIndex0, int topIndex1) throws IOException {
+        if (!(vertices[topIndex0].valid || vertices[topIndex1].valid)) {
+            return;
+        }
+        double[] curtainXyz = new double[] { xyz[topIndex0 * 3], xyz[(topIndex0 * 3) + 1], xyz[(topIndex0 * 3) + 2],
+                xyz[topIndex1 * 3], xyz[(topIndex1 * 3) + 1], xyz[(topIndex1 * 3) + 2], xyz[topIndex1 * 3], 0.0,
+                xyz[(topIndex1 * 3) + 2], xyz[topIndex0 * 3], 0.0, xyz[(topIndex0 * 3) + 2] };
+        double[] curtainUv = new double[] { uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1], uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1],
+                uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1], uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1] };
+        sink.addTriangleMesh(curtainXyz, curtainUv, DOUBLE_SIDED_QUAD_INDICES, material, buildFullBrightVertexColors(4),
+                buildFullBrightNightLights(4));
     }
 
     private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {

@@ -34,6 +34,7 @@
 	var DEFAULT_NIGHT_SUN_LIGHT = 0.16;
 	var MAX_RENDER_PIXEL_RATIO = 2.0;
 	var HUD_UPDATE_INTERVAL_MS = 100;
+	var TILE_FADE_DURATION_SECONDS = 0.2;
 	var MAX_CONCURRENT_TILE_LOADS = 4;
 	var DEFAULT_MARKER_ICON_VISIBLE_DISTANCE = 240.0;
 	var DEFAULT_MARKER_ICON_FADE_RANGE = 16.0;
@@ -102,6 +103,7 @@
 			this._lookSensitivity = 0.0025;
 			this._touchLookSensitivity = this._lookSensitivity * 1.5;
 			this._loadedTiles = {};
+			this._retiredTiles = [];
 			this._loadingTiles = {};
 			this._pendingTileLoads = [];
 			this._tileTimestamps = {};
@@ -1254,11 +1256,12 @@
 				if (previousFrameTime > 0) {
 					deltaSeconds = Math.min(0.1, (frameTime - previousFrameTime) / 1000.0);
 				}
+				var transitionsChanged = me._updateTileTransitions(deltaSeconds);
 				var changed = me._updateMovement(deltaSeconds);
-				if (changed) {
+				if (changed || transitionsChanged) {
 					me._needsRender = true;
 				}
-				if (!changed && !me._needsRender && !me._isLightingTransitionActive()) {
+				if (!changed && !transitionsChanged && !me._needsRender && !me._isLightingTransitionActive() && !me._hasActiveTileTransitions()) {
 					me._lastFrameTime = frameTime;
 					return;
 				}
@@ -1501,14 +1504,6 @@
 				}
 			}
 
-			for (var existing in this._loadedTiles) {
-				if (!Object.prototype.hasOwnProperty.call(this._loadedTiles, existing)) {
-					continue;
-				}
-				if (!wanted[existing]) {
-					this._unloadTile(existing);
-				}
-			}
 			this._desiredTiles = wanted;
 			pendingLoads.sort(function(a, b) {
 				if (a.inFrustum !== b.inFrustum) {
@@ -1517,6 +1512,7 @@
 				return a.distanceSq - b.distanceSq;
 			});
 			this._pendingTileLoads = pendingLoads;
+			this._updateHeightMapTileVisibilityTargets();
 			this._pumpTileLoads();
 		},
 
@@ -1555,7 +1551,7 @@
 				if (!next || !this._desiredTiles[next.tileName] || this._loadedTiles[next.tileName] || this._loadingTiles[next.tileName]) {
 					continue;
 				}
-				this._loadTile(next.tileName, next.x, next.z, next.tileSize);
+				this._loadTile(next.tileName, next.x, next.z, next.tileSize, next.detailLevel);
 			}
 		},
 
@@ -1729,6 +1725,7 @@
 
 		_createDisplayMaterial: function(material, geometry) {
 			var displayMaterial = new THREE.MeshLambertMaterial({
+				name: material.name || "",
 				color: material.color ? material.color.clone() : new THREE.Color(0xffffff),
 				map: material.map || null,
 				transparent: material.transparent,
@@ -1750,13 +1747,27 @@
 				displayMaterial.emissiveMap.encoding = THREE.sRGBEncoding;
 				this._configureTexture(displayMaterial.emissiveMap);
 			}
+			displayMaterial.userData.modelmapBaseOpacity = displayMaterial.opacity;
+			displayMaterial.userData.modelmapWasTransparent = !!displayMaterial.transparent;
 			this._applyBakedLightingShader(displayMaterial, geometry);
 			displayMaterial.needsUpdate = true;
 			return displayMaterial;
 		},
 
+		_getHeightMapQuarterIndex: function(material) {
+			var name = material && material.name ? material.name : "";
+			var match = /^height_map_.*_q([0-3])$/.exec(name);
+			return match ? parseInt(match[1], 10) : -1;
+		},
+
+		_isHeightMapMaterial: function(material) {
+			return !!(material && material.name && material.name.indexOf("height_map_") === 0);
+		},
+
 		_prepareSceneForDisplay: function(scene) {
 			var me = this;
+			var hasHeightMap = false;
+			var quarterCounts = [0, 0, 0, 0];
 			scene.traverse(function(node) {
 				if (!node.isMesh) {
 					return;
@@ -1783,10 +1794,250 @@
 				else if (node.material) {
 					node.material = me._createDisplayMaterial(node.material, node.geometry);
 				}
+				var material = $.isArray(node.material) ? node.material[0] : node.material;
+				var quarterIndex = me._getHeightMapQuarterIndex(material);
+				if (quarterIndex >= 0) {
+					node.userData.modelmapQuarterIndex = quarterIndex;
+					quarterCounts[quarterIndex]++;
+					hasHeightMap = true;
+				}
+				else if (me._isHeightMapMaterial(material)) {
+					hasHeightMap = true;
+				}
 			});
+			scene.userData.modelmapIsHeightMap = hasHeightMap;
+			scene.userData.modelmapHasHeightMapQuarters = quarterCounts[0] > 0 || quarterCounts[1] > 0 || quarterCounts[2] > 0 || quarterCounts[3] > 0;
 		},
 
-		_loadTile: function(tileName, tileX, tileZ, tileSize) {
+		_createTileEntry: function(tileName, scene, tileX, tileZ, tileSize, detailLevel) {
+			return {
+				tileName: tileName,
+				object: scene,
+				x: tileX,
+				z: tileZ,
+				tileSize: tileSize,
+				detailLevel: detailLevel || 0,
+				opacity: 0.0,
+				targetOpacity: 1.0,
+				removeWhenHidden: false,
+				isHeightMap: !!scene.userData.modelmapIsHeightMap,
+				hasHeightMapQuarters: !!scene.userData.modelmapHasHeightMapQuarters,
+				quarterOpacity: [1.0, 1.0, 1.0, 1.0],
+				quarterTargetOpacity: [1.0, 1.0, 1.0, 1.0]
+			};
+		},
+
+		_applyMaterialFade: function(material, opacityFactor) {
+			if (!material) {
+				return;
+			}
+			var baseOpacity = (material.userData && typeof material.userData.modelmapBaseOpacity === "number")
+				? material.userData.modelmapBaseOpacity : 1.0;
+			var wasTransparent = !!(material.userData && material.userData.modelmapWasTransparent);
+			material.opacity = THREE.MathUtils.clamp(baseOpacity * opacityFactor, 0.0, baseOpacity);
+			material.transparent = wasTransparent || material.opacity < 0.999;
+			material.depthWrite = !material.transparent;
+			material.needsUpdate = true;
+		},
+
+		_applyTileDisplayState: function(tileEntry) {
+			if (!tileEntry || !tileEntry.object) {
+				return;
+			}
+			tileEntry.object.traverse(function(node) {
+				if (!node.isMesh || !node.material) {
+					return;
+				}
+				var quarterIndex = (typeof node.userData.modelmapQuarterIndex === "number") ? node.userData.modelmapQuarterIndex : -1;
+				var quarterOpacity = (quarterIndex >= 0) ? tileEntry.quarterOpacity[quarterIndex] : 1.0;
+				var opacityFactor = tileEntry.opacity * quarterOpacity;
+				node.visible = opacityFactor > 0.001;
+				if ($.isArray(node.material)) {
+					$.each(node.material, function(idx, material) {
+						this._applyMaterialFade(material, opacityFactor);
+					}.bind(this));
+				}
+				else {
+					this._applyMaterialFade(node.material, opacityFactor);
+				}
+			}.bind(this));
+		},
+
+		_setTileOpacityTarget: function(tileEntry, targetOpacity, removeWhenHidden) {
+			if (!tileEntry) {
+				return false;
+			}
+			var changed = tileEntry.targetOpacity !== targetOpacity || (!!tileEntry.removeWhenHidden !== !!removeWhenHidden);
+			tileEntry.targetOpacity = targetOpacity;
+			tileEntry.removeWhenHidden = !!removeWhenHidden;
+			return changed;
+		},
+
+		_setQuarterOpacityTarget: function(tileEntry, quarterIndex, targetOpacity) {
+			if (!tileEntry || quarterIndex < 0 || quarterIndex >= tileEntry.quarterTargetOpacity.length) {
+				return false;
+			}
+			if (tileEntry.quarterTargetOpacity[quarterIndex] === targetOpacity) {
+				return false;
+			}
+			tileEntry.quarterTargetOpacity[quarterIndex] = targetOpacity;
+			return true;
+		},
+
+		_stepOpacityValue: function(currentValue, targetValue, deltaSeconds) {
+			if (currentValue === targetValue) {
+				return currentValue;
+			}
+			var step = (deltaSeconds > 0) ? Math.min(1.0, deltaSeconds / TILE_FADE_DURATION_SECONDS) : 1.0;
+			if (Math.abs(targetValue - currentValue) <= step) {
+				return targetValue;
+			}
+			return currentValue + ((targetValue > currentValue) ? step : -step);
+		},
+
+		_getChildTileInfo: function(tileEntry, quarterIndex) {
+			var childDetailLevel = tileEntry.detailLevel - 1;
+			var xOffset = quarterIndex & 1;
+			var zOffset = quarterIndex >> 1;
+			var childX = (tileEntry.x * 2) + xOffset;
+			var childZ = (tileEntry.z * 2) + zOffset;
+			return {
+				tileName: this._getTileName(childX, childZ, childDetailLevel),
+				x: childX,
+				z: childZ,
+				detailLevel: childDetailLevel
+			};
+		},
+
+		_isQuarterCoveredByLoadedChild: function(tileEntry, quarterIndex) {
+			if (!tileEntry || !tileEntry.hasHeightMapQuarters || tileEntry.detailLevel <= 0) {
+				return false;
+			}
+			var childInfo = this._getChildTileInfo(tileEntry, quarterIndex);
+			return !!this._loadedTiles[childInfo.tileName];
+		},
+
+		_shouldKeepTileAsFallback: function(tileEntry) {
+			if (!tileEntry || !tileEntry.hasHeightMapQuarters || tileEntry.detailLevel <= 0) {
+				return false;
+			}
+			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
+				var childInfo = this._getChildTileInfo(tileEntry, quarterIndex);
+				if (this._desiredTiles[childInfo.tileName] && !this._loadedTiles[childInfo.tileName]) {
+					return true;
+				}
+			}
+			return false;
+		},
+
+		_updateHeightMapTileVisibilityTargets: function() {
+			var changed = false;
+			for (var tileName in this._loadedTiles) {
+				if (!Object.prototype.hasOwnProperty.call(this._loadedTiles, tileName)) {
+					continue;
+				}
+				var tileEntry = this._loadedTiles[tileName];
+				var shouldShowTile = !!this._desiredTiles[tileName] || this._shouldKeepTileAsFallback(tileEntry);
+				changed = this._setTileOpacityTarget(tileEntry, shouldShowTile ? 1.0 : 0.0, !shouldShowTile) || changed;
+				for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
+					var quarterTarget = (tileEntry.hasHeightMapQuarters && tileEntry.detailLevel > 0
+						&& this._isQuarterCoveredByLoadedChild(tileEntry, quarterIndex)) ? 0.0 : 1.0;
+					changed = this._setQuarterOpacityTarget(tileEntry, quarterIndex, quarterTarget) || changed;
+				}
+				this._applyTileDisplayState(tileEntry);
+			}
+			if (changed) {
+				this._requestRender();
+			}
+		},
+
+		_hasActiveTileTransitions: function() {
+			var hasActive = false;
+			$.each(this._loadedTiles, function(tileName, tileEntry) {
+				if (tileEntry.opacity !== tileEntry.targetOpacity) {
+					hasActive = true;
+					return false;
+				}
+				for (var quarterIndex = 0; quarterIndex < tileEntry.quarterOpacity.length; quarterIndex++) {
+					if (tileEntry.quarterOpacity[quarterIndex] !== tileEntry.quarterTargetOpacity[quarterIndex]) {
+						hasActive = true;
+						return false;
+					}
+				}
+			});
+			if (!hasActive) {
+				$.each(this._retiredTiles, function(index, tileEntry) {
+					if (tileEntry.opacity !== tileEntry.targetOpacity) {
+						hasActive = true;
+						return false;
+					}
+				});
+			}
+			return hasActive;
+		},
+
+		_retireTileEntry: function(tileEntry) {
+			if (!tileEntry) {
+				return;
+			}
+			tileEntry.targetOpacity = 0.0;
+			tileEntry.removeWhenHidden = true;
+			this._retiredTiles.push(tileEntry);
+			this._applyTileDisplayState(tileEntry);
+		},
+
+		_updateTileTransitions: function(deltaSeconds) {
+			var changed = false;
+			var removedTileNames = [];
+			var removedTiles = false;
+			$.each(this._loadedTiles, function(tileName, tileEntry) {
+				var nextOpacity = this._stepOpacityValue(tileEntry.opacity, tileEntry.targetOpacity, deltaSeconds);
+				if (nextOpacity !== tileEntry.opacity) {
+					tileEntry.opacity = nextOpacity;
+					changed = true;
+				}
+				for (var quarterIndex = 0; quarterIndex < tileEntry.quarterOpacity.length; quarterIndex++) {
+					var nextQuarterOpacity = this._stepOpacityValue(
+						tileEntry.quarterOpacity[quarterIndex],
+						tileEntry.quarterTargetOpacity[quarterIndex],
+						deltaSeconds
+					);
+					if (nextQuarterOpacity !== tileEntry.quarterOpacity[quarterIndex]) {
+						tileEntry.quarterOpacity[quarterIndex] = nextQuarterOpacity;
+						changed = true;
+					}
+				}
+				this._applyTileDisplayState(tileEntry);
+				if (tileEntry.removeWhenHidden && tileEntry.opacity <= 0.001 && !this._desiredTiles[tileName]) {
+					removedTileNames.push(tileName);
+				}
+			}.bind(this));
+			for (var i = 0; i < removedTileNames.length; i++) {
+				this._unloadTile(removedTileNames[i], true);
+				changed = true;
+				removedTiles = true;
+			}
+			for (var retiredIndex = this._retiredTiles.length - 1; retiredIndex >= 0; retiredIndex--) {
+				var retiredTile = this._retiredTiles[retiredIndex];
+				var nextRetiredOpacity = this._stepOpacityValue(retiredTile.opacity, retiredTile.targetOpacity, deltaSeconds);
+				if (nextRetiredOpacity !== retiredTile.opacity) {
+					retiredTile.opacity = nextRetiredOpacity;
+					changed = true;
+				}
+				this._applyTileDisplayState(retiredTile);
+				if (retiredTile.opacity <= 0.001) {
+					this._disposeLoadedTile(retiredTile);
+					this._retiredTiles.splice(retiredIndex, 1);
+					changed = true;
+				}
+			}
+			if (removedTiles) {
+				this._updateHeightMapTileVisibilityTargets();
+			}
+			return changed;
+		},
+
+		_loadTile: function(tileName, tileX, tileZ, tileSize, detailLevel) {
 			var me = this;
 			var token = ++me._loadCounter;
 			var timestamp = me._tileTimestamps[tileName];
@@ -1801,17 +2052,18 @@
 					me._pumpTileLoads();
 					return;
 				}
-				me._unloadTile(tileName);
+				var existing = me._loadedTiles[tileName];
 				var scene = gltf.scene || new THREE.Group();
 				me._prepareSceneForDisplay(scene);
 				scene.position.set(me._getTileCenter(tileX, tileSize), me.options.world.miny || 0, me._getTileCenter(tileZ, tileSize));
-				me._loadedTiles[tileName] = {
-					object: scene,
-					x: tileX,
-					z: tileZ,
-					tileSize: tileSize
-				};
+				var tileEntry = me._createTileEntry(tileName, scene, tileX, tileZ, tileSize, detailLevel);
+				me._loadedTiles[tileName] = tileEntry;
 				me._root.add(scene);
+				if (existing) {
+					me._retireTileEntry(existing);
+				}
+				me._applyTileDisplayState(tileEntry);
+				me._updateHeightMapTileVisibilityTargets();
 				me._pumpTileLoads();
 				me._requestRender();
 			}, undefined, function() {
@@ -1831,17 +2083,32 @@
 			this._pendingTileLoads = $.grep(this._pendingTileLoads, function(entry) {
 				return entry.tileName !== tileName;
 			});
-			this._loadTile(tileName, tile.x, tile.z, tile.tileSize);
+			this._loadTile(tileName, tile.x, tile.z, tile.tileSize, tile.detailLevel);
 		},
 
-		_unloadTile: function(tileName) {
+		_unloadTile: function(tileName, skipVisibilityRefresh) {
 			var existing = this._loadedTiles[tileName];
 			if (!existing) {
 				return;
 			}
-			this._disposeObject(existing.object);
-			this._root.remove(existing.object);
+			this._disposeLoadedTile(existing);
 			delete this._loadedTiles[tileName];
+			if (!skipVisibilityRefresh) {
+				this._updateHeightMapTileVisibilityTargets();
+			}
+			this._requestRender();
+		},
+
+		_disposeLoadedTile: function(tileEntry) {
+			if (!tileEntry || !tileEntry.object) {
+				return;
+			}
+			this._disposeObject(tileEntry.object);
+			this._root.remove(tileEntry.object);
+		},
+
+		_disposeRetiredTile: function(tileEntry) {
+			this._disposeLoadedTile(tileEntry);
 			this._requestRender();
 		},
 
