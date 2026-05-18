@@ -370,6 +370,11 @@ abstract class AbstractBlockModelExporter {
         return (y >= 0) && (y < map.getWorldHeight());
     }
 
+    protected final float computeFaceLightScale(int blockId, BlockStep faceStep, MapIterator map, ExportMaterial material,
+            boolean emittedOnly) {
+        return computeLightScale(blockId, faceStep, map, material, emittedOnly);
+    }
+
     private boolean isCurrentYInBounds(MapIterator map) {
         int y = map.getY();
         return (y >= 0) && (y < map.getWorldHeight());
