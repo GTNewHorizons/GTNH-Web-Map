@@ -29,6 +29,8 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public final class BlockModelHeightMapZoomOutExporter {
+    private static final int[] ZOOMOUT_STEP_SEQUENCE = { 3, 1, 2, 0 };
+
     public enum ResultStatus {
         COMBINED,
         NO_DATA,
@@ -99,40 +101,38 @@ public final class BlockModelHeightMapZoomOutExporter {
         int childZoom = zoomTile.zoom - 1;
         int childStep = 1 << childZoom;
         Map<Long, VertexSample> sourceVertices = new HashMap<Long, VertexSample>();
-        BufferedImage stitchedTexture = null;
+        BufferedImage outputTexture = null;
         int childTextureWidth = -1;
         int childTextureHeight = -1;
         boolean foundAny = false;
         MapStorage storage = world.getMapStorage();
+        int childTileXBase = zoomTile.x;
+        int childTileZBase = zoomTile.y - childStep;
 
-        for (int tileRow = 0; tileRow < 2; tileRow++) {
-            int childTileZ = zoomTile.y - (tileRow * childStep);
-            for (int tileColumn = 0; tileColumn < 2; tileColumn++) {
-                int childTileX = zoomTile.x + (tileColumn * childStep);
-                MapStorageTile childTile = storage.getTile(world, map, childTileX, childTileZ, childZoom, zoomTile.var);
-                ParsedHeightMapTile childData;
-                try {
-                    childData = loadHeightMapTile(childTile, childTileX, childTileZ, childZoom);
-                } catch (IncompatibleHeightMapTileException ignored) {
-                    return Result.incompatible();
-                }
-                if (childData == null) {
-                    continue;
-                }
-                if (stitchedTexture == null) {
-                    childTextureWidth = childData.textureImage.getWidth();
-                    childTextureHeight = childData.textureImage.getHeight();
-                    stitchedTexture = new BufferedImage(childTextureWidth * 2, childTextureHeight * 2,
-                            BufferedImage.TYPE_INT_ARGB);
-                } else if ((childData.textureImage.getWidth() != childTextureWidth)
-                        || (childData.textureImage.getHeight() != childTextureHeight)) {
-                    return Result.incompatible();
-                }
-                copyTextureQuadrant(stitchedTexture, childData.textureImage, tileColumn * childTextureWidth,
-                        tileRow * childTextureHeight);
-                mergeVertices(sourceVertices, childData.vertices);
-                foundAny = true;
+        for (int i = 0; i < 4; i++) {
+            int childTileX = childTileXBase + childStep * (ZOOMOUT_STEP_SEQUENCE[i] & 1);
+            int childTileZ = childTileZBase + childStep * (ZOOMOUT_STEP_SEQUENCE[i] >> 1);
+            MapStorageTile childTile = storage.getTile(world, map, childTileX, childTileZ, childZoom, zoomTile.var);
+            ParsedHeightMapTile childData;
+            try {
+                childData = loadHeightMapTile(childTile, childTileX, childTileZ, childZoom);
+            } catch (IncompatibleHeightMapTileException ignored) {
+                return Result.incompatible();
             }
+            if (childData == null) {
+                continue;
+            }
+            if (outputTexture == null) {
+                childTextureWidth = childData.textureImage.getWidth();
+                childTextureHeight = childData.textureImage.getHeight();
+                outputTexture = new BufferedImage(childTextureWidth, childTextureHeight, BufferedImage.TYPE_INT_ARGB);
+            } else if ((childData.textureImage.getWidth() != childTextureWidth)
+                    || (childData.textureImage.getHeight() != childTextureHeight)) {
+                return Result.incompatible();
+            }
+            blitZoomOutChildTexture(outputTexture, childData.textureImage, i);
+            mergeVertices(sourceVertices, childData.vertices);
+            foundAny = true;
         }
 
         if (!foundAny) {
@@ -143,18 +143,20 @@ public final class BlockModelHeightMapZoomOutExporter {
         int minBlockZ = getTileMinBlockZ(zoomTile.y);
         int widthBlocks = getTileWidthBlocks(zoomTile.zoom);
         int depthBlocks = widthBlocks;
-        int vertexWidth = (widthBlocks / 2) + 1;
-        int vertexDepth = (depthBlocks / 2) + 1;
+        int sourceVertexStep = 1 << childZoom;
+        int outputVertexStep = sourceVertexStep << 1;
+        int vertexWidth = (widthBlocks / outputVertexStep) + 1;
+        int vertexDepth = (depthBlocks / outputVertexStep) + 1;
         double[] xyz = new double[vertexWidth * vertexDepth * 3];
         double[] uv = new double[vertexWidth * vertexDepth * 2];
         boolean[] validVertices = new boolean[vertexWidth * vertexDepth];
 
         for (int vz = 0; vz < vertexDepth; vz++) {
-            int worldZ = minBlockZ + (vz * 2);
+            int worldZ = minBlockZ + (vz * outputVertexStep);
             for (int vx = 0; vx < vertexWidth; vx++) {
-                int worldX = minBlockX + (vx * 2);
+                int worldX = minBlockX + (vx * outputVertexStep);
                 int index = (vz * vertexWidth) + vx;
-                VertexSample sample = buildOutputVertex(sourceVertices, worldX, worldZ);
+                VertexSample sample = buildOutputVertex(sourceVertices, worldX, worldZ, sourceVertexStep);
                 validVertices[index] = sample != null;
                 int xyzOffset = index * 3;
                 int uvOffset = index * 2;
@@ -177,7 +179,7 @@ public final class BlockModelHeightMapZoomOutExporter {
         export.setLightingMode(map.getLightingMode().toExportLightingMode());
         export.setChunk(zoomTile.x, zoomTile.y);
         export.addTriangleMesh(xyz, uv, indices,
-                ExportMaterial.customTexture(buildMaterialId(zoomTile), encodeTextureImage(stitchedTexture), false),
+                ExportMaterial.customTexture(buildMaterialId(zoomTile), encodeTextureImage(outputTexture), false),
                 buildFullBrightVertexColors(vertexWidth * vertexDepth),
                 buildFullBrightNightLights(vertexWidth * vertexDepth, map.getLightingMode().toExportLightingMode()));
         return Result.combined(export.finishToBuffer());
@@ -429,9 +431,34 @@ public final class BlockModelHeightMapZoomOutExporter {
         return new BufferInputStream(out.buf, out.len);
     }
 
-    private void copyTextureQuadrant(BufferedImage output, BufferedImage quadrant, int offsetX, int offsetY) {
-        int[] pixels = quadrant.getRGB(0, 0, quadrant.getWidth(), quadrant.getHeight(), null, 0, quadrant.getWidth());
-        output.setRGB(offsetX, offsetY, quadrant.getWidth(), quadrant.getHeight(), pixels, 0, quadrant.getWidth());
+    private void blitZoomOutChildTexture(BufferedImage outputTexture, BufferedImage childTexture, int index) {
+        int width = childTexture.getWidth();
+        int height = childTexture.getHeight();
+        int[] argb = childTexture.getRGB(0, 0, width, height, null, 0, width);
+        int[] scaled = downsampleZoomOutChild(argb, width, height);
+        outputTexture.setRGB(((index >> 1) != 0) ? 0 : width / 2, (index & 1) * (height / 2), width / 2, height / 2, scaled, 0,
+                width / 2);
+    }
+
+    private int[] downsampleZoomOutChild(int[] argb, int width, int height) {
+        int[] scaled = new int[(width / 2) * (height / 2)];
+        for (int y = 0; y < height; y += 2) {
+            int sourceOffset = y * width;
+            for (int x = 0; x < width; x += 2, sourceOffset += 2) {
+                int p0 = argb[sourceOffset];
+                int p1 = argb[sourceOffset + 1];
+                int p2 = argb[sourceOffset + width];
+                int p3 = argb[sourceOffset + width + 1];
+                int alpha = ((p0 >> 24) & 0xFF) + ((p1 >> 24) & 0xFF) + ((p2 >> 24) & 0xFF) + ((p3 >> 24) & 0xFF);
+                int red = ((p0 >> 16) & 0xFF) + ((p1 >> 16) & 0xFF) + ((p2 >> 16) & 0xFF) + ((p3 >> 16) & 0xFF);
+                int green = ((p0 >> 8) & 0xFF) + ((p1 >> 8) & 0xFF) + ((p2 >> 8) & 0xFF) + ((p3 >> 8) & 0xFF);
+                int blue = (p0 & 0xFF) + (p1 & 0xFF) + (p2 & 0xFF) + (p3 & 0xFF);
+                scaled[(y / 2) * (width / 2) + (x / 2)] =
+                        (((alpha >> 2) & 0xFF) << 24) | (((red >> 2) & 0xFF) << 16) | (((green >> 2) & 0xFF) << 8)
+                                | ((blue >> 2) & 0xFF);
+            }
+        }
+        return scaled;
     }
 
     private static void mergeVertices(Map<Long, VertexSample> target, Map<Long, VertexSample> incoming) {
@@ -451,11 +478,11 @@ public final class BlockModelHeightMapZoomOutExporter {
         }
     }
 
-    private VertexSample buildOutputVertex(Map<Long, VertexSample> sourceVertices, int worldX, int worldZ) {
+    private VertexSample buildOutputVertex(Map<Long, VertexSample> sourceVertices, int worldX, int worldZ, int sourceVertexStep) {
         double maxY = world.minY;
         boolean valid = false;
-        for (int dz = 0; dz <= 1; dz++) {
-            for (int dx = 0; dx <= 1; dx++) {
+        for (int dz = 0; dz <= sourceVertexStep; dz += sourceVertexStep) {
+            for (int dx = 0; dx <= sourceVertexStep; dx += sourceVertexStep) {
                 VertexSample sample = sourceVertices.get(vertexKey(worldX + dx, worldZ + dz));
                 if (sample != null) {
                     valid = true;
