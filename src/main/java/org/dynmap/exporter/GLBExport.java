@@ -45,6 +45,7 @@ public class GLBExport implements BlockModelExportSink {
 
     private static final Charset UTF8 = Charset.forName("UTF-8");
     private static final int FILTER_NEAREST = 9728;
+    private static final int FILTER_LINEAR = 9729;
     private static final int WRAP_CLAMP_TO_EDGE = 33071;
     private static final int ARRAY_BUFFER_TARGET = 34962;
     private static final int COMPONENT_TYPE_BYTE = 5120;
@@ -583,7 +584,7 @@ public class GLBExport implements BlockModelExportSink {
         Map<ExportedTextureData, Integer> customTextureIndices = new HashMap<ExportedTextureData, Integer>();
 
         appendJsonEntry(samplersJson, String.format(Locale.US,
-                "{\"magFilter\":%d,\"minFilter\":%d,\"wrapS\":%d,\"wrapT\":%d}", FILTER_NEAREST, FILTER_NEAREST,
+                "{\"magFilter\":%d,\"minFilter\":%d,\"wrapS\":%d,\"wrapT\":%d}", FILTER_NEAREST, FILTER_LINEAR,
                 WRAP_CLAMP_TO_EDGE, WRAP_CLAMP_TO_EDGE));
 
         int textureIndex = 0;
