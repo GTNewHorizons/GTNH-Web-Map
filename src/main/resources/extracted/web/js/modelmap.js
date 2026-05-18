@@ -1458,7 +1458,8 @@
 
 		_refreshVisibleTiles: function() {
 			var baseTileSize = this.options.tileblocksize;
-			var radius = Math.max(1, Math.min(24, Math.ceil((this._viewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / baseTileSize) + 1));
+			var zoomOutViewDistance = this._getZoomOutViewDistance();
+			var radius = Math.max(1, Math.min(24, Math.ceil((zoomOutViewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / baseTileSize) + 1));
 			var centerBaseTileX = Math.floor(this._cameraPosition.x / baseTileSize);
 			var centerBaseTileZ = Math.floor(this._cameraPosition.z / baseTileSize);
 			var refreshKey = centerBaseTileX + ":" + centerBaseTileZ + ":" + radius + ":" + Math.round(this._viewDistance / 16)
@@ -1473,7 +1474,7 @@
 			var pendingLoads = [];
 			var baseX;
 			var baseZ;
-			var maxDistance = this._viewDistance + this._getTileBlockSize(this.options.modelzoomout || 0) * 1.5;
+			var maxDistance = zoomOutViewDistance + this._getTileBlockSize(this.options.modelzoomout || 0) * 1.5;
 
 			for (baseX = centerBaseTileX - radius; baseX <= centerBaseTileX + radius; baseX++) {
 				for (baseZ = centerBaseTileZ - radius; baseZ <= centerBaseTileZ + radius; baseZ++) {
@@ -1564,8 +1565,21 @@
 		},
 
 		_getTileDetailLevelForDistance: function(distance) {
-			var effectiveDistance = Math.max(this.options.tileblocksize * 2.0, distance);
-			return this._getTileDetailLevel(this._zoomFromDistance(effectiveDistance));
+			var fullDetailDistance = Math.max(this.options.tileblocksize * 2.0, this._viewDistance);
+			var zoomOutViewDistance = this._getZoomOutViewDistance();
+			var available = (typeof this.options.modelzoomout === "number") ? this.options.modelzoomout : 0;
+			if (distance <= fullDetailDistance || available <= 0) {
+				return 0;
+			}
+			if (distance >= zoomOutViewDistance) {
+				return available;
+			}
+			var normalizedDistance = ((distance - fullDetailDistance) / Math.max(1.0, zoomOutViewDistance - fullDetailDistance));
+			return Math.max(1, Math.min(available, Math.ceil(normalizedDistance * available)));
+		},
+
+		_getZoomOutViewDistance: function() {
+			return Math.max(64.0, this._viewDistance * 3.0);
 		},
 
 		_getTileBlockSize: function(detailLevel) {
