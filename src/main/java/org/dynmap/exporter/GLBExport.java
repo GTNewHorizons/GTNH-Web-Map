@@ -291,6 +291,17 @@ public class GLBExport implements BlockModelExportSink {
         return buildGLB(texturePack);
     }
 
+    public BufferOutputStream finishToBuffer() throws IOException {
+        TexturePack texturePack = shader.getTexturePackForExport();
+        if (texturePack == null) {
+            throw new IOException("Export unsupported - invalid texture pack");
+        }
+        if (primitives.isEmpty()) {
+            return null;
+        }
+        return buildGLB(texturePack);
+    }
+
     @Override
     public void setChunk(int chunkX, int chunkZ) throws IOException {
     }

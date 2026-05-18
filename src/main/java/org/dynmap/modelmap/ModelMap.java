@@ -20,6 +20,7 @@ import org.dynmap.MapManager;
 import org.dynmap.MapTile;
 import org.dynmap.MapType;
 import org.dynmap.MapTypeState;
+import org.dynmap.exporter.BlockModelHeightMapZoomOutExporter;
 import org.dynmap.exporter.BlockModelExportMode;
 import org.dynmap.exporter.GLBExport;
 import org.dynmap.hdmap.HDPerspective;
@@ -965,10 +966,20 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         }
 
         BufferOutputStream glb = null;
+        String basename = getName() + "_" + zoomTile.x + "_" + zoomTile.y + "_z" + zoomTile.zoom;
         String tileName = world.getName() + ":" + getName() + "," + zoomTile.x + "," + zoomTile.y + ",z" + zoomTile.zoom;
         try {
-            glb = createExport(world, zoomTile.x, zoomTile.y, zoomTile.zoom,
-                    getName() + "_" + zoomTile.x + "_" + zoomTile.y + "_z" + zoomTile.zoom).exportToBuffer();
+            if (zoomOutStrategy == ZoomOutStrategy.HEIGHT_MAP) {
+                BlockModelHeightMapZoomOutExporter.Result zoomOutResult =
+                        new BlockModelHeightMapZoomOutExporter(this, world).export(zoomTile, basename);
+                if (zoomOutResult.status == BlockModelHeightMapZoomOutExporter.ResultStatus.INCOMPATIBLE) {
+                    glb = createExport(world, zoomTile.x, zoomTile.y, zoomTile.zoom, basename).exportToBuffer();
+                } else {
+                    glb = zoomOutResult.glb;
+                }
+            } else {
+                glb = createExport(world, zoomTile.x, zoomTile.y, zoomTile.zoom, basename).exportToBuffer();
+            }
         } catch (IOException iox) {
             Log.severe("ModelMap zoomout export failed for " + tileName + ": " + iox.getMessage());
             return;

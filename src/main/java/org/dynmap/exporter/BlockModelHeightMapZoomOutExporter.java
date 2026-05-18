@@ -1,0 +1,586 @@
+package org.dynmap.exporter;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.zip.GZIPInputStream;
+
+import javax.imageio.ImageIO;
+
+import org.dynmap.Color;
+import org.dynmap.DynmapCore;
+import org.dynmap.DynmapWorld;
+import org.dynmap.MapType;
+import org.dynmap.hdmap.TexturePack.ExportedTextureData;
+import org.dynmap.modelmap.ModelMap;
+import org.dynmap.storage.MapStorage;
+import org.dynmap.storage.MapStorageTile;
+import org.dynmap.storage.MapStorageTile.TileRead;
+import org.dynmap.utils.BufferInputStream;
+import org.dynmap.utils.BufferOutputStream;
+import org.dynmap.utils.ImageIOManager;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public final class BlockModelHeightMapZoomOutExporter {
+    public enum ResultStatus {
+        COMBINED,
+        NO_DATA,
+        INCOMPATIBLE
+    }
+
+    public static final class Result {
+        public final ResultStatus status;
+        public final BufferOutputStream glb;
+
+        private Result(ResultStatus status, BufferOutputStream glb) {
+            this.status = status;
+            this.glb = glb;
+        }
+
+        static Result combined(BufferOutputStream glb) {
+            return new Result(ResultStatus.COMBINED, glb);
+        }
+
+        static Result noData() {
+            return new Result(ResultStatus.NO_DATA, null);
+        }
+
+        static Result incompatible() {
+            return new Result(ResultStatus.INCOMPATIBLE, null);
+        }
+    }
+
+    private static final class VertexSample {
+        final double y;
+
+        VertexSample(double y) {
+            this.y = y;
+        }
+    }
+
+    private static final class ParsedHeightMapTile {
+        final Map<Long, VertexSample> vertices = new HashMap<Long, VertexSample>();
+        final BufferedImage textureImage;
+
+        ParsedHeightMapTile(BufferedImage textureImage) {
+            this.textureImage = textureImage;
+        }
+    }
+
+    private static final int GLB_MAGIC = 0x46546C67;
+    private static final int GLB_VERSION = 2;
+    private static final int JSON_CHUNK_TYPE = 0x4E4F534A;
+    private static final int BIN_CHUNK_TYPE = 0x004E4942;
+    private static final int COMPONENT_TYPE_FLOAT = 5126;
+    private static final Charset UTF8 = Charset.forName("UTF-8");
+
+    private final ModelMap map;
+    private final DynmapWorld world;
+    private final DynmapCore core;
+
+    public BlockModelHeightMapZoomOutExporter(ModelMap map, DynmapWorld world) {
+        this.map = map;
+        this.world = world;
+        this.core = map.getCore();
+    }
+
+    public Result export(MapStorageTile zoomTile, String basename) throws IOException {
+        if ((zoomTile == null) || (zoomTile.zoom <= 0)) {
+            return Result.incompatible();
+        }
+
+        int childZoom = zoomTile.zoom - 1;
+        int childStep = 1 << childZoom;
+        Map<Long, VertexSample> sourceVertices = new HashMap<Long, VertexSample>();
+        BufferedImage stitchedTexture = null;
+        int childTextureWidth = -1;
+        int childTextureHeight = -1;
+        boolean foundAny = false;
+        MapStorage storage = world.getMapStorage();
+
+        for (int tileRow = 0; tileRow < 2; tileRow++) {
+            int childTileZ = zoomTile.y - (tileRow * childStep);
+            for (int tileColumn = 0; tileColumn < 2; tileColumn++) {
+                int childTileX = zoomTile.x + (tileColumn * childStep);
+                MapStorageTile childTile = storage.getTile(world, map, childTileX, childTileZ, childZoom, zoomTile.var);
+                ParsedHeightMapTile childData;
+                try {
+                    childData = loadHeightMapTile(childTile, childTileX, childTileZ, childZoom);
+                } catch (IncompatibleHeightMapTileException ignored) {
+                    return Result.incompatible();
+                }
+                if (childData == null) {
+                    continue;
+                }
+                if (stitchedTexture == null) {
+                    childTextureWidth = childData.textureImage.getWidth();
+                    childTextureHeight = childData.textureImage.getHeight();
+                    stitchedTexture = new BufferedImage(childTextureWidth * 2, childTextureHeight * 2,
+                            BufferedImage.TYPE_INT_ARGB);
+                } else if ((childData.textureImage.getWidth() != childTextureWidth)
+                        || (childData.textureImage.getHeight() != childTextureHeight)) {
+                    return Result.incompatible();
+                }
+                copyTextureQuadrant(stitchedTexture, childData.textureImage, tileColumn * childTextureWidth,
+                        tileRow * childTextureHeight);
+                mergeVertices(sourceVertices, childData.vertices);
+                foundAny = true;
+            }
+        }
+
+        if (!foundAny) {
+            return Result.noData();
+        }
+
+        int minBlockX = getTileMinBlockX(zoomTile.x);
+        int minBlockZ = getTileMinBlockZ(zoomTile.y);
+        int widthBlocks = getTileWidthBlocks(zoomTile.zoom);
+        int depthBlocks = widthBlocks;
+        int vertexWidth = (widthBlocks / 2) + 1;
+        int vertexDepth = (depthBlocks / 2) + 1;
+        double[] xyz = new double[vertexWidth * vertexDepth * 3];
+        double[] uv = new double[vertexWidth * vertexDepth * 2];
+        boolean[] validVertices = new boolean[vertexWidth * vertexDepth];
+
+        for (int vz = 0; vz < vertexDepth; vz++) {
+            int worldZ = minBlockZ + (vz * 2);
+            for (int vx = 0; vx < vertexWidth; vx++) {
+                int worldX = minBlockX + (vx * 2);
+                int index = (vz * vertexWidth) + vx;
+                VertexSample sample = buildOutputVertex(sourceVertices, worldX, worldZ);
+                validVertices[index] = sample != null;
+                int xyzOffset = index * 3;
+                int uvOffset = index * 2;
+                xyz[xyzOffset] = worldX;
+                xyz[xyzOffset + 1] = (sample != null) ? sample.y : world.minY;
+                xyz[xyzOffset + 2] = worldZ;
+                uv[uvOffset] = (double) (worldX - minBlockX) / (double) widthBlocks;
+                uv[uvOffset + 1] = (double) (worldZ - minBlockZ) / (double) depthBlocks;
+            }
+        }
+
+        int[] indices = buildTriangleIndices(validVertices, vertexWidth, vertexDepth);
+        if (indices.length == 0) {
+            return Result.noData();
+        }
+
+        GLBExport export = new GLBExport(null, map.getShader(), world, core, basename);
+        export.setRenderBounds(minBlockX, world.minY, minBlockZ, minBlockX + widthBlocks - 1, world.worldheight - 1,
+                minBlockZ + depthBlocks - 1);
+        export.setLightingMode(map.getLightingMode().toExportLightingMode());
+        export.setChunk(zoomTile.x, zoomTile.y);
+        export.addTriangleMesh(xyz, uv, indices,
+                ExportMaterial.customTexture(buildMaterialId(zoomTile), encodeTextureImage(stitchedTexture), false),
+                buildFullBrightVertexColors(vertexWidth * vertexDepth),
+                buildFullBrightNightLights(vertexWidth * vertexDepth, map.getLightingMode().toExportLightingMode()));
+        return Result.combined(export.finishToBuffer());
+    }
+
+    private ParsedHeightMapTile loadHeightMapTile(MapStorageTile tile, int tileX, int tileZ, int zoom)
+            throws IOException, IncompatibleHeightMapTileException {
+        if (tile == null) {
+            return null;
+        }
+        if (!tile.getReadLock(5000)) {
+            throw new IOException("Failed to lock child height map tile for read");
+        }
+        try {
+            TileRead read = tile.read();
+            if ((read == null) || (read.image == null)) {
+                return null;
+            }
+            BufferInputStream input = read.image;
+            if (isGzipCompressed(input)) {
+                input = gunzip(input);
+            }
+            byte[] glbBytes = new byte[input.length()];
+            System.arraycopy(input.buffer(), 0, glbBytes, 0, input.length());
+            return parseHeightMapTile(glbBytes, tileX, tileZ, zoom);
+        } finally {
+            tile.releaseReadLock();
+        }
+    }
+
+    private ParsedHeightMapTile parseHeightMapTile(byte[] glbBytes, int tileX, int tileZ, int zoom)
+            throws IOException, IncompatibleHeightMapTileException {
+        ByteBuffer glb = ByteBuffer.wrap(glbBytes).order(ByteOrder.LITTLE_ENDIAN);
+        if (glb.remaining() < 20) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        if (glb.getInt() != GLB_MAGIC) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        if (glb.getInt() != GLB_VERSION) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        int totalLength = glb.getInt();
+        if ((totalLength <= 0) || (totalLength > glbBytes.length)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+
+        byte[] jsonBytes = null;
+        byte[] binBytes = null;
+        while (glb.remaining() >= 8) {
+            int chunkLength = glb.getInt();
+            int chunkType = glb.getInt();
+            if ((chunkLength < 0) || (chunkLength > glb.remaining())) {
+                throw new IncompatibleHeightMapTileException();
+            }
+            byte[] chunkBytes = new byte[chunkLength];
+            glb.get(chunkBytes);
+            if (chunkType == JSON_CHUNK_TYPE) {
+                jsonBytes = chunkBytes;
+            } else if (chunkType == BIN_CHUNK_TYPE) {
+                binBytes = chunkBytes;
+            }
+        }
+        if ((jsonBytes == null) || (binBytes == null)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+
+        JSONObject root = parseJson(jsonBytes);
+        JSONArray meshes = getArray(root, "meshes");
+        if (meshes.size() != 1) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject mesh = asObject(meshes.get(0));
+        JSONArray primitives = getArray(mesh, "primitives");
+        if (primitives.size() != 1) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject primitive = asObject(primitives.get(0));
+        JSONObject attributes = asObject(primitive.get("attributes"));
+        Number positionAccessorIndex = asNumber(attributes.get("POSITION"));
+        if (positionAccessorIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+
+        JSONArray materials = getArray(root, "materials");
+        if (materials.size() != 1) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject material = asObject(materials.get(0));
+        String materialName = asString(material.get("name"));
+        if ((materialName == null) || !materialName.startsWith("height_map_")) {
+            throw new IncompatibleHeightMapTileException();
+        }
+
+        JSONArray textures = getArray(root, "textures");
+        JSONArray images = getArray(root, "images");
+        JSONArray accessors = getArray(root, "accessors");
+        JSONArray bufferViews = getArray(root, "bufferViews");
+
+        JSONObject pbr = asObject(material.get("pbrMetallicRoughness"));
+        JSONObject baseColorTexture = asObject(pbr.get("baseColorTexture"));
+        Number textureIndex = asNumber(baseColorTexture.get("index"));
+        if (textureIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject texture = asObject(textures.get(textureIndex.intValue()));
+        Number imageIndex = asNumber(texture.get("source"));
+        if (imageIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        JSONObject image = asObject(images.get(imageIndex.intValue()));
+        Number imageViewIndex = asNumber(image.get("bufferView"));
+        if (imageViewIndex == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+
+        BufferedImage textureImage = decodePng(getBufferViewBytes(bufferViews, imageViewIndex.intValue(), binBytes, 0, 0));
+        if (textureImage == null) {
+            throw new IncompatibleHeightMapTileException();
+        }
+
+        ParsedHeightMapTile parsed = new ParsedHeightMapTile(textureImage);
+        int minBlockX = getTileMinBlockX(tileX);
+        int minBlockZ = getTileMinBlockZ(tileZ);
+        int widthBlocks = getTileWidthBlocks(zoom);
+        double originX = minBlockX + ((widthBlocks - 1) / 2.0);
+        double originZ = minBlockZ + ((widthBlocks - 1) / 2.0);
+
+        JSONObject accessor = asObject(accessors.get(positionAccessorIndex.intValue()));
+        Number count = asNumber(accessor.get("count"));
+        Number componentType = asNumber(accessor.get("componentType"));
+        String accessorType = asString(accessor.get("type"));
+        Number viewIndex = asNumber(accessor.get("bufferView"));
+        int accessorOffset = getInt(accessor.get("byteOffset"), 0);
+        if ((count == null) || (componentType == null) || (viewIndex == null) || (componentType.intValue() != COMPONENT_TYPE_FLOAT)
+                || !"VEC3".equals(accessorType)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+
+        byte[] positionBytes = getBufferViewBytes(bufferViews, viewIndex.intValue(), binBytes, accessorOffset,
+                count.intValue() * 12);
+        if (positionBytes.length < (count.intValue() * 12)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        ByteBuffer positions = ByteBuffer.wrap(positionBytes).order(ByteOrder.LITTLE_ENDIAN);
+        for (int i = 0; i < count.intValue(); i++) {
+            double worldX = positions.getFloat() + originX;
+            double y = positions.getFloat();
+            double worldZ = positions.getFloat() + originZ;
+            int gridX = roundCoordinate(worldX);
+            int gridZ = roundCoordinate(worldZ);
+            if ((Math.abs(worldX - gridX) > 0.01) || (Math.abs(worldZ - gridZ) > 0.01)) {
+                throw new IncompatibleHeightMapTileException();
+            }
+            if ((gridX < minBlockX) || (gridX > (minBlockX + widthBlocks)) || (gridZ < minBlockZ)
+                    || (gridZ > (minBlockZ + widthBlocks))) {
+                throw new IncompatibleHeightMapTileException();
+            }
+            putVertex(parsed.vertices, gridX, gridZ, y);
+        }
+        return parsed;
+    }
+
+    private JSONObject parseJson(byte[] jsonBytes) throws IOException, IncompatibleHeightMapTileException {
+        String json = new String(jsonBytes, UTF8);
+        int end = json.length();
+        while ((end > 0) && (json.charAt(end - 1) <= ' ')) {
+            end--;
+        }
+        try {
+            return (JSONObject) new JSONParser().parse(json.substring(0, end));
+        } catch (ParseException | ClassCastException ex) {
+            throw new IncompatibleHeightMapTileException();
+        }
+    }
+
+    private static JSONArray getArray(JSONObject object, String key) throws IncompatibleHeightMapTileException {
+        Object value = object.get(key);
+        if (!(value instanceof JSONArray)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        return (JSONArray) value;
+    }
+
+    private static JSONObject asObject(Object value) throws IncompatibleHeightMapTileException {
+        if (!(value instanceof JSONObject)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        return (JSONObject) value;
+    }
+
+    private static Number asNumber(Object value) {
+        return (value instanceof Number) ? (Number) value : null;
+    }
+
+    private static String asString(Object value) {
+        return (value instanceof String) ? (String) value : null;
+    }
+
+    private static int getInt(Object value, int defaultValue) {
+        return (value instanceof Number) ? ((Number) value).intValue() : defaultValue;
+    }
+
+    private static byte[] getBufferViewBytes(JSONArray bufferViews, int bufferViewIndex, byte[] binBytes, int accessorOffset,
+            int requestedLength) throws IncompatibleHeightMapTileException {
+        JSONObject bufferView = asObject(bufferViews.get(bufferViewIndex));
+        int byteOffset = getInt(bufferView.get("byteOffset"), 0) + accessorOffset;
+        int byteLength = getInt(bufferView.get("byteLength"), 0);
+        if ((accessorOffset < 0) || (byteOffset < 0) || (byteLength < 0) || (byteOffset > binBytes.length)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        int availableLength = Math.min(byteLength - accessorOffset, binBytes.length - byteOffset);
+        if (availableLength < 0) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        int resultLength = (requestedLength > 0) ? requestedLength : availableLength;
+        if (availableLength < resultLength) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        byte[] out = new byte[resultLength];
+        System.arraycopy(binBytes, byteOffset, out, 0, resultLength);
+        return out;
+    }
+
+    private static BufferedImage decodePng(byte[] bytes) throws IOException {
+        ImageIO.setUseCache(false);
+        return ImageIO.read(new BufferInputStream(bytes));
+    }
+
+    private static boolean isGzipCompressed(BufferInputStream input) {
+        return (input != null) && (input.length() >= 2) && ((input.buffer()[0] & 0xFF) == 0x1F)
+                && ((input.buffer()[1] & 0xFF) == 0x8B);
+    }
+
+    private static BufferInputStream gunzip(BufferInputStream compressed) throws IOException {
+        GZIPInputStream gzip = new GZIPInputStream(compressed);
+        BufferOutputStream out = new BufferOutputStream();
+        byte[] buffer = new byte[8192];
+        try {
+            int len;
+            while ((len = gzip.read(buffer)) >= 0) {
+                if (len > 0) {
+                    out.write(buffer, 0, len);
+                }
+            }
+        } finally {
+            gzip.close();
+        }
+        return new BufferInputStream(out.buf, out.len);
+    }
+
+    private void copyTextureQuadrant(BufferedImage output, BufferedImage quadrant, int offsetX, int offsetY) {
+        int[] pixels = quadrant.getRGB(0, 0, quadrant.getWidth(), quadrant.getHeight(), null, 0, quadrant.getWidth());
+        output.setRGB(offsetX, offsetY, quadrant.getWidth(), quadrant.getHeight(), pixels, 0, quadrant.getWidth());
+    }
+
+    private static void mergeVertices(Map<Long, VertexSample> target, Map<Long, VertexSample> incoming) {
+        for (Map.Entry<Long, VertexSample> entry : incoming.entrySet()) {
+            VertexSample existing = target.get(entry.getKey());
+            if ((existing == null) || (entry.getValue().y > existing.y)) {
+                target.put(entry.getKey(), entry.getValue());
+            }
+        }
+    }
+
+    private static void putVertex(Map<Long, VertexSample> vertices, int x, int z, double y) {
+        long key = vertexKey(x, z);
+        VertexSample existing = vertices.get(key);
+        if ((existing == null) || (y > existing.y)) {
+            vertices.put(key, new VertexSample(y));
+        }
+    }
+
+    private VertexSample buildOutputVertex(Map<Long, VertexSample> sourceVertices, int worldX, int worldZ) {
+        double maxY = world.minY;
+        boolean valid = false;
+        for (int dz = 0; dz <= 1; dz++) {
+            for (int dx = 0; dx <= 1; dx++) {
+                VertexSample sample = sourceVertices.get(vertexKey(worldX + dx, worldZ + dz));
+                if (sample != null) {
+                    valid = true;
+                    maxY = Math.max(maxY, sample.y);
+                }
+            }
+        }
+        return valid ? new VertexSample(maxY) : null;
+    }
+
+    private static int[] buildTriangleIndices(boolean[] validVertices, int vertexWidth, int vertexDepth) {
+        int quadCount = 0;
+        for (int z = 0; z < vertexDepth - 1; z++) {
+            for (int x = 0; x < vertexWidth - 1; x++) {
+                int v00 = (z * vertexWidth) + x;
+                int v10 = v00 + 1;
+                int v01 = ((z + 1) * vertexWidth) + x;
+                int v11 = v01 + 1;
+                if (validVertices[v00] || validVertices[v10] || validVertices[v01] || validVertices[v11]) {
+                    quadCount++;
+                }
+            }
+        }
+        int[] indices = new int[quadCount * 6];
+        int offset = 0;
+        for (int z = 0; z < vertexDepth - 1; z++) {
+            for (int x = 0; x < vertexWidth - 1; x++) {
+                int v00 = (z * vertexWidth) + x;
+                int v10 = v00 + 1;
+                int v01 = ((z + 1) * vertexWidth) + x;
+                int v11 = v01 + 1;
+                if (!(validVertices[v00] || validVertices[v10] || validVertices[v01] || validVertices[v11])) {
+                    continue;
+                }
+                indices[offset++] = v00;
+                indices[offset++] = v01;
+                indices[offset++] = v11;
+                indices[offset++] = v00;
+                indices[offset++] = v11;
+                indices[offset++] = v10;
+            }
+        }
+        return indices;
+    }
+
+    private float[] buildFullBrightNightLights(int vertexCount, GLBExport.LightingMode lightingMode) {
+        if (lightingMode != GLBExport.LightingMode.BOTH) {
+            return null;
+        }
+        float[] nightLights = new float[vertexCount];
+        for (int i = 0; i < nightLights.length; i++) {
+            nightLights[i] = 1.0F;
+        }
+        return nightLights;
+    }
+
+    private float[] buildFullBrightVertexColors(int vertexCount) {
+        float[] colors = new float[vertexCount * 3];
+        for (int i = 0; i < colors.length; i++) {
+            colors[i] = 1.0F;
+        }
+        return colors;
+    }
+
+    private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {
+        BufferOutputStream imageStream = ImageIOManager.imageIOEncode(image, MapType.ImageFormat.FORMAT_PNG);
+        if (imageStream == null) {
+            throw new IOException("Failed to encode height map zoomout texture");
+        }
+        ExportedTextureData data = new ExportedTextureData();
+        data.imagePng = new byte[imageStream.len];
+        System.arraycopy(imageStream.buf, 0, data.imagePng, 0, imageStream.len);
+        long red = 0;
+        long green = 0;
+        long blue = 0;
+        long weight = 0;
+        boolean hasAlpha = false;
+        boolean hasTranslucentAlpha = false;
+        int[] pixels = image.getRGB(0, 0, image.getWidth(), image.getHeight(), null, 0, image.getWidth());
+        for (int pixel : pixels) {
+            int alpha = (pixel >> 24) & 0xFF;
+            if (alpha != 0xFF) {
+                hasAlpha = true;
+                if (alpha != 0) {
+                    hasTranslucentAlpha = true;
+                }
+            }
+            red += alpha * ((pixel >> 16) & 0xFF);
+            green += alpha * ((pixel >> 8) & 0xFF);
+            blue += alpha * (pixel & 0xFF);
+            weight += alpha;
+        }
+        data.diffuseColor = (weight > 0) ? new Color((int) (red / weight), (int) (green / weight), (int) (blue / weight))
+                : new Color();
+        data.material = null;
+        data.hasAlpha = hasAlpha;
+        data.hasTranslucentAlpha = hasTranslucentAlpha;
+        return data;
+    }
+
+    private int getTileWidthBlocks(int zoom) {
+        return (map.getGranularity() << zoom) * 16;
+    }
+
+    private int getTileMinBlockX(int tileX) {
+        return tileX * map.getGranularity() * 16;
+    }
+
+    private int getTileMinBlockZ(int tileZ) {
+        return tileZ * map.getGranularity() * 16;
+    }
+
+    private static String buildMaterialId(MapStorageTile zoomTile) {
+        return "height_map_zoomout_" + zoomTile.x + "_" + zoomTile.y + "_z" + zoomTile.zoom;
+    }
+
+    private static int roundCoordinate(double value) {
+        return (int) Math.round(value);
+    }
+
+    private static long vertexKey(int x, int z) {
+        return (((long) x) << 32) ^ (z & 0xFFFFFFFFL);
+    }
+
+    private static final class IncompatibleHeightMapTileException extends Exception {
+        private static final long serialVersionUID = 1L;
+    }
+}
