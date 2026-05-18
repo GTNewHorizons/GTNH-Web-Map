@@ -1484,7 +1484,7 @@
 					if (!baseTilePriority) {
 						continue;
 					}
-					var detailLevel = this._getTileDetailLevelForDistance(Math.sqrt(baseTilePriority.distanceSq));
+					var detailLevel = this._getTileDetailLevelForDistance(Math.sqrt(baseTilePriority.distanceSq), baseX, baseZ);
 					var tileScale = Math.pow(2, detailLevel);
 					var tileX = Math.floor(baseX / tileScale);
 					var tileZ = Math.floor(baseZ / tileScale);
@@ -1566,10 +1566,62 @@
 			return Math.max(0, Math.min(available, Math.floor((this.options.maxZoom - 1) - viewZoom)));
 		},
 
-		_getTileDetailLevelForDistance: function(distance) {
+		_findCoveringTileDetailLevel: function(tileSet, baseX, baseZ) {
+			var bestDetail = null;
+			for (var tileName in tileSet) {
+				if (!Object.prototype.hasOwnProperty.call(tileSet, tileName)) {
+					continue;
+				}
+				var tileEntry = tileSet[tileName];
+				if (!tileEntry || typeof tileEntry.detailLevel !== "number") {
+					continue;
+				}
+				var scale = Math.pow(2, tileEntry.detailLevel);
+				var minBaseX = tileEntry.x * scale;
+				var minBaseZ = tileEntry.z * scale;
+				if (baseX < minBaseX || baseX >= (minBaseX + scale) || baseZ < minBaseZ || baseZ >= (minBaseZ + scale)) {
+					continue;
+				}
+				if (bestDetail === null || tileEntry.detailLevel < bestDetail) {
+					bestDetail = tileEntry.detailLevel;
+				}
+			}
+			return bestDetail;
+		},
+
+		_getExistingDetailLevelForBaseTile: function(baseX, baseZ) {
+			var desiredDetail = this._findCoveringTileDetailLevel(this._desiredTiles, baseX, baseZ);
+			if (desiredDetail !== null) {
+				return desiredDetail;
+			}
+			return this._findCoveringTileDetailLevel(this._loadedTiles, baseX, baseZ);
+		},
+
+		_shouldKeepExistingDetailLevel: function(distance, existingDetailLevel, available, fullDetailDistance, zoomOutViewDistance) {
+			var zoomOutSpan;
+			var padding;
+			var minDistance;
+			var maxDistance;
+			if (existingDetailLevel === null || existingDetailLevel < 0 || existingDetailLevel > available) {
+				return false;
+			}
+			if (existingDetailLevel === 0) {
+				padding = Math.max(this.options.tileblocksize * 2.0, fullDetailDistance * 0.08);
+				return distance <= (fullDetailDistance + padding);
+			}
+			zoomOutSpan = Math.max(1.0, zoomOutViewDistance - fullDetailDistance);
+			padding = Math.min(zoomOutSpan / Math.max(1.0, available * 3.0), Math.max(this.options.tileblocksize * 2.0, zoomOutSpan * 0.08));
+			minDistance = fullDetailDistance + (((existingDetailLevel - 1) / available) * zoomOutSpan);
+			maxDistance = (existingDetailLevel >= available) ? zoomOutViewDistance
+				: fullDetailDistance + ((existingDetailLevel / available) * zoomOutSpan);
+			return distance >= (minDistance - padding) && distance <= (maxDistance + padding);
+		},
+
+		_getTileDetailLevelForDistance: function(distance, baseX, baseZ) {
 			var fullDetailDistance = Math.max(this.options.tileblocksize * 2.0, this._viewDistance);
 			var zoomOutViewDistance = this._getZoomOutViewDistance();
 			var available = (typeof this.options.modelzoomout === "number") ? this.options.modelzoomout : 0;
+			var existingDetailLevel;
 			if (distance <= fullDetailDistance || available <= 0) {
 				return 0;
 			}
@@ -1577,7 +1629,12 @@
 				return available;
 			}
 			var normalizedDistance = ((distance - fullDetailDistance) / Math.max(1.0, zoomOutViewDistance - fullDetailDistance));
-			return Math.max(1, Math.min(available, Math.ceil(normalizedDistance * available)));
+			var computedDetailLevel = Math.max(1, Math.min(available, Math.ceil(normalizedDistance * available)));
+			existingDetailLevel = this._getExistingDetailLevelForBaseTile(baseX, baseZ);
+			if (this._shouldKeepExistingDetailLevel(distance, existingDetailLevel, available, fullDetailDistance, zoomOutViewDistance)) {
+				return existingDetailLevel;
+			}
+			return computedDetailLevel;
 		},
 
 		_getZoomOutViewDistance: function() {
