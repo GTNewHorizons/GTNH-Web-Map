@@ -106,7 +106,7 @@ public final class BlockModelHeightMapZoomOutExporter {
         BufferedImage outputTexture = null;
         int childTextureWidth = -1;
         int childTextureHeight = -1;
-        boolean foundAny = false;
+        int foundChildCount = 0;
         MapStorage storage = world.getMapStorage();
         int childTileXBase = zoomTile.x;
         int childTileZBase = zoomTile.y;
@@ -134,11 +134,11 @@ public final class BlockModelHeightMapZoomOutExporter {
             }
             blitZoomOutChildTexture(outputTexture, childData.textureImage, i);
             mergeVertices(sourceVertices, childData.vertices);
-            foundAny = true;
+            foundChildCount++;
         }
 
-        if (!foundAny) {
-            return Result.noData();
+        if (foundChildCount < 4) {
+            return Result.incompatible();
         }
 
         int minBlockX = getTileMinBlockX(zoomTile.x);

@@ -1947,17 +1947,35 @@
 			return this._isTileEntryCoveringParent(this._loadedTiles[childInfo.tileName]);
 		},
 
+		_areAllQuartersCoveredByLoadedChildren: function(tileEntry) {
+			var quarterIndex;
+			if (!tileEntry || !tileEntry.hasHeightMapQuarters || tileEntry.detailLevel <= 0) {
+				return false;
+			}
+			for (quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
+				if (!this._isQuarterCoveredByLoadedChild(tileEntry, quarterIndex)) {
+					return false;
+				}
+			}
+			return true;
+		},
+
 		_shouldKeepTileAsFallback: function(tileEntry) {
+			var childInterest = false;
 			if (!tileEntry || !tileEntry.hasHeightMapQuarters || tileEntry.detailLevel <= 0) {
 				return false;
 			}
 			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
 				var childInfo = this._getChildTileInfo(tileEntry, quarterIndex);
-				if (this._desiredTiles[childInfo.tileName] && !this._isTileEntryCoveringParent(this._loadedTiles[childInfo.tileName])) {
+				var childLoaded = this._isTileEntryCoveringParent(this._loadedTiles[childInfo.tileName]);
+				if (this._desiredTiles[childInfo.tileName] || childLoaded) {
+					childInterest = true;
+				}
+				if (this._desiredTiles[childInfo.tileName] && !childLoaded) {
 					return true;
 				}
 			}
-			return false;
+			return childInterest && !this._areAllQuartersCoveredByLoadedChildren(tileEntry);
 		},
 
 		_updateHeightMapTileVisibilityTargets: function() {
