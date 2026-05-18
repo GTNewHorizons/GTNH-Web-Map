@@ -109,7 +109,7 @@ public final class BlockModelHeightMapZoomOutExporter {
         boolean foundAny = false;
         MapStorage storage = world.getMapStorage();
         int childTileXBase = zoomTile.x;
-        int childTileZBase = zoomTile.y - childStep;
+        int childTileZBase = zoomTile.y;
 
         for (int i = 0; i < 4; i++) {
             int childTileX = childTileXBase + childStep * (ZOOMOUT_STEP_SEQUENCE[i] & 1);
