@@ -63,9 +63,13 @@ public final class BlockModelHeightMapZoomOutExporter {
 
     private static final class VertexSample {
         final double y;
+        final float dayLight;
+        final float nightLight;
 
-        VertexSample(double y) {
+        VertexSample(double y, float dayLight, float nightLight) {
             this.y = y;
+            this.dayLight = dayLight;
+            this.nightLight = nightLight;
         }
     }
 
@@ -82,6 +86,10 @@ public final class BlockModelHeightMapZoomOutExporter {
     private static final int GLB_VERSION = 2;
     private static final int JSON_CHUNK_TYPE = 0x4E4F534A;
     private static final int BIN_CHUNK_TYPE = 0x004E4942;
+    private static final int COMPONENT_TYPE_BYTE = 5120;
+    private static final int COMPONENT_TYPE_UNSIGNED_BYTE = 5121;
+    private static final int COMPONENT_TYPE_SHORT = 5122;
+    private static final int COMPONENT_TYPE_UNSIGNED_SHORT = 5123;
     private static final int COMPONENT_TYPE_FLOAT = 5126;
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
@@ -152,6 +160,9 @@ public final class BlockModelHeightMapZoomOutExporter {
         double[] xyz = new double[vertexWidth * vertexDepth * 3];
         double[] uv = new double[vertexWidth * vertexDepth * 2];
         boolean[] validVertices = new boolean[vertexWidth * vertexDepth];
+        float[] vertexColors = new float[vertexWidth * vertexDepth * 3];
+        float[] nightLights = (map.getLightingMode().toExportLightingMode() == GLBExport.LightingMode.BOTH)
+                ? new float[vertexWidth * vertexDepth] : null;
 
         for (int vz = 0; vz < vertexDepth; vz++) {
             int worldZ = minBlockZ + (vz * outputVertexStep);
@@ -167,6 +178,14 @@ public final class BlockModelHeightMapZoomOutExporter {
                 xyz[xyzOffset + 2] = worldZ;
                 uv[uvOffset] = (double) (worldX - minBlockX) / (double) widthBlocks;
                 uv[uvOffset + 1] = (double) (worldZ - minBlockZ) / (double) depthBlocks;
+                float primaryLight = (sample != null) ? getPrimaryLight(sample.dayLight, sample.nightLight,
+                        map.getLightingMode().toExportLightingMode()) : 0.0F;
+                vertexColors[xyzOffset] = primaryLight;
+                vertexColors[xyzOffset + 1] = primaryLight;
+                vertexColors[xyzOffset + 2] = primaryLight;
+                if (nightLights != null) {
+                    nightLights[index] = (sample != null) ? sample.nightLight : 0.0F;
+                }
             }
         }
 
@@ -183,14 +202,14 @@ public final class BlockModelHeightMapZoomOutExporter {
             int[] indices = buildTriangleIndices(validVertices, vertexWidth, vertexDepth, minBlockX, minBlockZ, outputVertexStep,
                     quarterBounds[quarter][0], quarterBounds[quarter][1], quarterBounds[quarter][2], quarterBounds[quarter][3]);
             if (indices.length > 0) {
-                export.addTriangleMesh(xyz, uv, indices, quarterMaterials[quarter], buildFullBrightVertexColors(vertexWidth * vertexDepth),
-                        buildFullBrightNightLights(vertexWidth * vertexDepth, map.getLightingMode().toExportLightingMode()));
+                export.addTriangleMesh(xyz, uv, indices, quarterMaterials[quarter], vertexColors, nightLights);
                 emittedGeometry = true;
             }
-            emittedGeometry |= emitEdgeCurtains(export, quarterMaterials[quarter], xyz, uv, validVertices, vertexWidth, vertexDepth,
-                    minBlockX, minBlockZ, outputVertexStep, quarterBounds[quarter][0], quarterBounds[quarter][1], quarterBounds[quarter][2],
-                    quarterBounds[quarter][3], minBlockX, minBlockX + widthBlocks - outputVertexStep, minBlockZ,
-                    minBlockZ + depthBlocks - outputVertexStep, map.getLightingMode().toExportLightingMode());
+            emittedGeometry |= emitEdgeCurtains(export, quarterMaterials[quarter], xyz, uv, vertexColors, nightLights, validVertices,
+                    vertexWidth, vertexDepth, minBlockX, minBlockZ, outputVertexStep, quarterBounds[quarter][0],
+                    quarterBounds[quarter][1], quarterBounds[quarter][2], quarterBounds[quarter][3], minBlockX,
+                    minBlockX + widthBlocks - outputVertexStep, minBlockZ, minBlockZ + depthBlocks - outputVertexStep,
+                    map.getLightingMode().toExportLightingMode());
         }
         if (!emittedGeometry) {
             return Result.noData();
@@ -395,22 +414,27 @@ public final class BlockModelHeightMapZoomOutExporter {
             throws IncompatibleHeightMapTileException {
         JSONObject attributes = asObject(primitive.get("attributes"));
         Number positionAccessorIndex = asNumber(attributes.get("POSITION"));
+        Number colorAccessorIndex = asNumber(attributes.get("COLOR_0"));
+        Number nightLightAccessorIndex = asNumber(attributes.get("_NIGHTLIGHT"));
         if (positionAccessorIndex == null) {
             throw new IncompatibleHeightMapTileException();
         }
-        JSONObject accessor = asObject(accessors.get(positionAccessorIndex.intValue()));
-        Number count = asNumber(accessor.get("count"));
-        Number componentType = asNumber(accessor.get("componentType"));
-        String accessorType = asString(accessor.get("type"));
-        Number viewIndex = asNumber(accessor.get("bufferView"));
-        int accessorOffset = getInt(accessor.get("byteOffset"), 0);
+        JSONObject positionAccessor = asObject(accessors.get(positionAccessorIndex.intValue()));
+        Number count = asNumber(positionAccessor.get("count"));
+        Number componentType = asNumber(positionAccessor.get("componentType"));
+        String accessorType = asString(positionAccessor.get("type"));
+        Number viewIndex = asNumber(positionAccessor.get("bufferView"));
+        int accessorOffset = getInt(positionAccessor.get("byteOffset"), 0);
         if ((count == null) || (componentType == null) || (viewIndex == null) || (componentType.intValue() != COMPONENT_TYPE_FLOAT)
                 || !"VEC3".equals(accessorType)) {
             throw new IncompatibleHeightMapTileException();
         }
-        byte[] positionBytes = getBufferViewBytes(bufferViews, viewIndex.intValue(), binBytes, accessorOffset, count.intValue() * 12);
+        int vertexCount = count.intValue();
+        byte[] positionBytes = getBufferViewBytes(bufferViews, viewIndex.intValue(), binBytes, accessorOffset, vertexCount * 12);
         ByteBuffer positions = ByteBuffer.wrap(positionBytes).order(ByteOrder.LITTLE_ENDIAN);
-        for (int i = 0; i < count.intValue(); i++) {
+        float[] colors = readAccessorFloats(accessors, bufferViews, binBytes, colorAccessorIndex, vertexCount, 3);
+        float[] primitiveNightLights = readAccessorFloats(accessors, bufferViews, binBytes, nightLightAccessorIndex, vertexCount, 1);
+        for (int i = 0; i < vertexCount; i++) {
             double worldX = positions.getFloat() + originX;
             double y = positions.getFloat();
             double worldZ = positions.getFloat() + originZ;
@@ -423,7 +447,9 @@ public final class BlockModelHeightMapZoomOutExporter {
                     || (gridZ > (minBlockZ + widthBlocks))) {
                 throw new IncompatibleHeightMapTileException();
             }
-            putVertex(vertices, gridX, gridZ, y);
+            float dayLight = (colors != null) ? colors[i * 3] : 1.0F;
+            float nightLight = (primitiveNightLights != null) ? primitiveNightLights[i] : 0.0F;
+            putVertex(vertices, gridX, gridZ, y, dayLight, nightLight);
         }
     }
 
@@ -484,36 +510,138 @@ public final class BlockModelHeightMapZoomOutExporter {
         return scaled;
     }
 
-    private static void mergeVertices(Map<Long, VertexSample> target, Map<Long, VertexSample> incoming) {
-        for (Map.Entry<Long, VertexSample> entry : incoming.entrySet()) {
-            VertexSample existing = target.get(entry.getKey());
-            if ((existing == null) || (entry.getValue().y > existing.y)) {
-                target.put(entry.getKey(), entry.getValue());
-            }
+    private float[] readAccessorFloats(JSONArray accessors, JSONArray bufferViews, byte[] binBytes, Number accessorIndex,
+            int expectedCount, int componentCount) throws IncompatibleHeightMapTileException {
+        if (accessorIndex == null) {
+            return null;
+        }
+        JSONObject accessor = asObject(accessors.get(accessorIndex.intValue()));
+        Number count = asNumber(accessor.get("count"));
+        Number componentType = asNumber(accessor.get("componentType"));
+        String accessorType = asString(accessor.get("type"));
+        Number viewIndex = asNumber(accessor.get("bufferView"));
+        int accessorOffset = getInt(accessor.get("byteOffset"), 0);
+        boolean normalized = Boolean.TRUE.equals(accessor.get("normalized"));
+        if ((count == null) || (componentType == null) || (viewIndex == null) || (count.intValue() != expectedCount)
+                || !matchesAccessorType(accessorType, componentCount)) {
+            throw new IncompatibleHeightMapTileException();
+        }
+        int componentSize = getComponentSize(componentType.intValue());
+        int requestedLength = expectedCount * componentCount * componentSize;
+        byte[] valueBytes = getBufferViewBytes(bufferViews, viewIndex.intValue(), binBytes, accessorOffset, requestedLength);
+        ByteBuffer values = ByteBuffer.wrap(valueBytes).order(ByteOrder.LITTLE_ENDIAN);
+        float[] out = new float[expectedCount * componentCount];
+        for (int i = 0; i < out.length; i++) {
+            out[i] = readComponentValue(values, componentType.intValue(), normalized);
+        }
+        return out;
+    }
+
+    private static boolean matchesAccessorType(String accessorType, int componentCount) {
+        if (componentCount == 1) {
+            return "SCALAR".equals(accessorType);
+        }
+        if (componentCount == 2) {
+            return "VEC2".equals(accessorType);
+        }
+        if (componentCount == 3) {
+            return "VEC3".equals(accessorType);
+        }
+        if (componentCount == 4) {
+            return "VEC4".equals(accessorType);
+        }
+        return false;
+    }
+
+    private static int getComponentSize(int componentType) throws IncompatibleHeightMapTileException {
+        switch (componentType) {
+            case COMPONENT_TYPE_BYTE:
+            case COMPONENT_TYPE_UNSIGNED_BYTE:
+                return 1;
+            case COMPONENT_TYPE_SHORT:
+            case COMPONENT_TYPE_UNSIGNED_SHORT:
+                return 2;
+            case COMPONENT_TYPE_FLOAT:
+                return 4;
+            default:
+                throw new IncompatibleHeightMapTileException();
         }
     }
 
-    private static void putVertex(Map<Long, VertexSample> vertices, int x, int z, double y) {
+    private static float readComponentValue(ByteBuffer values, int componentType, boolean normalized)
+            throws IncompatibleHeightMapTileException {
+        switch (componentType) {
+            case COMPONENT_TYPE_BYTE: {
+                int value = values.get();
+                if (!normalized) {
+                    return value;
+                }
+                return Math.max(-1.0F, value / 127.0F);
+            }
+            case COMPONENT_TYPE_UNSIGNED_BYTE: {
+                int value = values.get() & 0xFF;
+                return normalized ? (value / 255.0F) : value;
+            }
+            case COMPONENT_TYPE_SHORT: {
+                int value = values.getShort();
+                if (!normalized) {
+                    return value;
+                }
+                return Math.max(-1.0F, value / 32767.0F);
+            }
+            case COMPONENT_TYPE_UNSIGNED_SHORT: {
+                int value = values.getShort() & 0xFFFF;
+                return normalized ? (value / 65535.0F) : value;
+            }
+            case COMPONENT_TYPE_FLOAT:
+                return values.getFloat();
+            default:
+                throw new IncompatibleHeightMapTileException();
+        }
+    }
+
+    private static void mergeVertices(Map<Long, VertexSample> target, Map<Long, VertexSample> incoming) {
+        for (Map.Entry<Long, VertexSample> entry : incoming.entrySet()) {
+            VertexSample existing = target.get(entry.getKey());
+            VertexSample incomingSample = entry.getValue();
+            target.put(entry.getKey(), mergeSamples(existing, incomingSample));
+        }
+    }
+
+    private static void putVertex(Map<Long, VertexSample> vertices, int x, int z, double y, float dayLight, float nightLight) {
         long key = vertexKey(x, z);
         VertexSample existing = vertices.get(key);
-        if ((existing == null) || (y > existing.y)) {
-            vertices.put(key, new VertexSample(y));
+        vertices.put(key, mergeSamples(existing, new VertexSample(y, dayLight, nightLight)));
+    }
+
+    private static VertexSample mergeSamples(VertexSample existing, VertexSample incoming) {
+        if (existing == null) {
+            return incoming;
         }
+        if (incoming == null) {
+            return existing;
+        }
+        return new VertexSample(Math.max(existing.y, incoming.y), Math.max(existing.dayLight, incoming.dayLight),
+                Math.max(existing.nightLight, incoming.nightLight));
     }
 
     private VertexSample buildOutputVertex(Map<Long, VertexSample> sourceVertices, int worldX, int worldZ, int sourceVertexStep) {
         double maxY = world.minY;
         boolean valid = false;
+        float dayLight = 0.0F;
+        float nightLight = 0.0F;
         for (int dz = 0; dz <= sourceVertexStep; dz += sourceVertexStep) {
             for (int dx = 0; dx <= sourceVertexStep; dx += sourceVertexStep) {
                 VertexSample sample = sourceVertices.get(vertexKey(worldX + dx, worldZ + dz));
                 if (sample != null) {
                     valid = true;
                     maxY = Math.max(maxY, sample.y);
+                    dayLight = Math.max(dayLight, sample.dayLight);
+                    nightLight = Math.max(nightLight, sample.nightLight);
                 }
             }
         }
-        return valid ? new VertexSample(maxY) : null;
+        return valid ? new VertexSample(maxY, dayLight, nightLight) : null;
     }
 
     private ExportMaterial[] buildQuarterMaterials(String baseMaterialId, ExportedTextureData textureData) {
@@ -586,40 +714,43 @@ public final class BlockModelHeightMapZoomOutExporter {
         return indices;
     }
 
-    private boolean emitEdgeCurtains(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, boolean[] validVertices,
-            int vertexWidth, int vertexDepth, int minWorldX, int minWorldZ, int vertexStep, int meshMinX, int meshMaxX, int meshMinZ,
-            int meshMaxZ, int tileMinX, int tileMaxX, int tileMinZ, int tileMaxZ, GLBExport.LightingMode lightingMode)
-            throws IOException {
+    private boolean emitEdgeCurtains(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, float[] vertexColors,
+            float[] nightLights, boolean[] validVertices, int vertexWidth, int vertexDepth, int minWorldX, int minWorldZ, int vertexStep,
+            int meshMinX, int meshMaxX, int meshMinZ, int meshMaxZ, int tileMinX, int tileMaxX, int tileMinZ, int tileMaxZ,
+            GLBExport.LightingMode lightingMode) throws IOException {
         boolean emitted = false;
         if (meshMinX == tileMinX) {
             for (int localZ = 0; localZ < vertexDepth - 1; localZ++) {
-                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, localZ * vertexWidth,
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, vertexColors, nightLights, validVertices, localZ * vertexWidth,
                         (localZ + 1) * vertexWidth, lightingMode);
             }
         }
         if (meshMaxX == tileMaxX) {
             for (int localZ = 0; localZ < vertexDepth - 1; localZ++) {
-                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, (localZ * vertexWidth) + (vertexWidth - 1),
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, vertexColors, nightLights, validVertices,
+                        (localZ * vertexWidth) + (vertexWidth - 1),
                         ((localZ + 1) * vertexWidth) + (vertexWidth - 1), lightingMode);
             }
         }
         if (meshMinZ == tileMinZ) {
             for (int localX = 0; localX < vertexWidth - 1; localX++) {
-                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, localX, localX + 1, lightingMode);
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, vertexColors, nightLights, validVertices, localX, localX + 1,
+                        lightingMode);
             }
         }
         if (meshMaxZ == tileMaxZ) {
             int rowStart = (vertexDepth - 1) * vertexWidth;
             for (int localX = 0; localX < vertexWidth - 1; localX++) {
-                emitted |= emitCurtainSegment(sink, material, xyz, uv, validVertices, rowStart + localX, rowStart + localX + 1,
-                        lightingMode);
+                emitted |= emitCurtainSegment(sink, material, xyz, uv, vertexColors, nightLights, validVertices, rowStart + localX,
+                        rowStart + localX + 1, lightingMode);
             }
         }
         return emitted;
     }
 
-    private boolean emitCurtainSegment(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, boolean[] validVertices,
-            int topIndex0, int topIndex1, GLBExport.LightingMode lightingMode) throws IOException {
+    private boolean emitCurtainSegment(BlockModelExportSink sink, ExportMaterial material, double[] xyz, double[] uv, float[] vertexColors,
+            float[] nightLights, boolean[] validVertices, int topIndex0, int topIndex1, GLBExport.LightingMode lightingMode)
+            throws IOException {
         if (!(validVertices[topIndex0] || validVertices[topIndex1])) {
             return false;
         }
@@ -628,28 +759,28 @@ public final class BlockModelHeightMapZoomOutExporter {
                 xyz[(topIndex1 * 3) + 2], xyz[topIndex0 * 3], 0.0, xyz[(topIndex0 * 3) + 2] };
         double[] curtainUv = new double[] { uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1], uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1],
                 uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1], uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1] };
-        sink.addTriangleMesh(curtainXyz, curtainUv, DOUBLE_SIDED_QUAD_INDICES, material, buildFullBrightVertexColors(4),
-                buildFullBrightNightLights(4, lightingMode));
+        sink.addTriangleMesh(curtainXyz, curtainUv, DOUBLE_SIDED_QUAD_INDICES, material,
+                buildCurtainVertexColors(vertexColors, topIndex0, topIndex1),
+                buildCurtainNightLights(nightLights, topIndex0, topIndex1, lightingMode));
         return true;
     }
 
-    private float[] buildFullBrightNightLights(int vertexCount, GLBExport.LightingMode lightingMode) {
+    private float[] buildCurtainNightLights(float[] nightLights, int topIndex0, int topIndex1, GLBExport.LightingMode lightingMode) {
         if (lightingMode != GLBExport.LightingMode.BOTH) {
             return null;
         }
-        float[] nightLights = new float[vertexCount];
-        for (int i = 0; i < nightLights.length; i++) {
-            nightLights[i] = 1.0F;
-        }
-        return nightLights;
+        return new float[] { nightLights[topIndex0], nightLights[topIndex1], nightLights[topIndex1], nightLights[topIndex0] };
     }
 
-    private float[] buildFullBrightVertexColors(int vertexCount) {
-        float[] colors = new float[vertexCount * 3];
-        for (int i = 0; i < colors.length; i++) {
-            colors[i] = 1.0F;
-        }
-        return colors;
+    private float[] buildCurtainVertexColors(float[] vertexColors, int topIndex0, int topIndex1) {
+        return new float[] { vertexColors[topIndex0 * 3], vertexColors[(topIndex0 * 3) + 1], vertexColors[(topIndex0 * 3) + 2],
+                vertexColors[topIndex1 * 3], vertexColors[(topIndex1 * 3) + 1], vertexColors[(topIndex1 * 3) + 2],
+                vertexColors[topIndex1 * 3], vertexColors[(topIndex1 * 3) + 1], vertexColors[(topIndex1 * 3) + 2],
+                vertexColors[topIndex0 * 3], vertexColors[(topIndex0 * 3) + 1], vertexColors[(topIndex0 * 3) + 2] };
+    }
+
+    private float getPrimaryLight(float dayLight, float nightLight, GLBExport.LightingMode lightingMode) {
+        return (lightingMode == GLBExport.LightingMode.NIGHT) ? nightLight : dayLight;
     }
 
     private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {

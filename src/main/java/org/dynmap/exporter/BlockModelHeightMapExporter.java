@@ -38,21 +38,29 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         final boolean hasSurface;
         final double topY;
         final ExportMaterial topMaterial;
+        final float dayLight;
+        final float nightLight;
 
-        ColumnData(boolean hasSurface, double topY, ExportMaterial topMaterial) {
+        ColumnData(boolean hasSurface, double topY, ExportMaterial topMaterial, float dayLight, float nightLight) {
             this.hasSurface = hasSurface;
             this.topY = topY;
             this.topMaterial = topMaterial;
+            this.dayLight = dayLight;
+            this.nightLight = nightLight;
         }
     }
 
     private static final class VertexData {
         final double y;
         final boolean valid;
+        final float dayLight;
+        final float nightLight;
 
-        VertexData(double y, boolean valid) {
+        VertexData(double y, boolean valid, float dayLight, float nightLight) {
             this.y = y;
             this.valid = valid;
+            this.dayLight = dayLight;
+            this.nightLight = nightLight;
         }
     }
 
@@ -188,10 +196,12 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 topMaterial = getAnySurfaceMaterial(block);
             }
             if (topMaterial != null) {
-                return new ColumnData(true, y + block.maxLocalY, topMaterial);
+                float dayLight = computeFaceLightScale(blockId, BlockStep.Y_MINUS, iterator, topMaterial, false);
+                float nightLight = computeFaceLightScale(blockId, BlockStep.Y_MINUS, iterator, topMaterial, true);
+                return new ColumnData(true, y + block.maxLocalY, topMaterial, dayLight, nightLight);
             }
         }
-        return new ColumnData(false, getMinY(), null);
+        return new ColumnData(false, getMinY(), null, 0.0F, 0.0F);
     }
 
     private BufferedImage buildTextureImage(ColumnData[] columns, int columnMinX, int columnMaxX, int columnMinZ,
@@ -277,8 +287,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         for (int i = 0; i < indexList.size(); i++) {
             indices[i] = indexList.get(i).intValue();
         }
-        float[] vertexColors = buildFullBrightVertexColors(vertexWidth * vertexDepth);
-        float[] nightLights = buildFullBrightNightLights(vertexWidth * vertexDepth);
+        float[] vertexColors = buildVertexColors(vertices);
+        float[] nightLights = buildNightLights(vertices);
         sink.setChunk(chunkMinX >> 4, chunkMinZ >> 4);
         sink.addTriangleMesh(xyz, uv, indices, material, vertexColors, nightLights);
         emitEdgeCurtains(sink, material, xyz, uv, vertices, vertexWidth, vertexDepth, chunkMinX, chunkMaxX, chunkMinZ, chunkMaxZ,
@@ -289,6 +299,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             int columnMinZ, int columnMaxZ, int columnStride) {
         double maxY = getMinY();
         boolean valid = false;
+        float dayLight = 0.0F;
+        float nightLight = 0.0F;
         for (int dz = -1; dz <= 0; dz++) {
             for (int dx = -1; dx <= 0; dx++) {
                 int sampleX = worldX + dx;
@@ -299,30 +311,69 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 ColumnData column = columns[getColumnIndex(sampleX, sampleZ, columnMinX, columnMinZ, columnStride)];
                 if (column.hasSurface) {
                     valid = true;
-                    maxY = Math.max(maxY, column.topY);
+                    if (column.topY > maxY) {
+                        maxY = column.topY;
+                        dayLight = column.dayLight;
+                        nightLight = column.nightLight;
+                    } else if (column.topY == maxY) {
+                        dayLight = Math.max(dayLight, column.dayLight);
+                        nightLight = Math.max(nightLight, column.nightLight);
+                    }
                 }
             }
         }
-        return new VertexData(maxY, valid);
+        return new VertexData(maxY, valid, dayLight, nightLight);
     }
 
-    private float[] buildFullBrightVertexColors(int vertexCount) {
-        float[] colors = new float[vertexCount * 3];
-        for (int i = 0; i < colors.length; i++) {
-            colors[i] = 1.0F;
+    private float[] buildVertexColors(VertexData[] vertices) {
+        float[] colors = new float[vertices.length * 3];
+        for (int i = 0; i < vertices.length; i++) {
+            float light = getPrimaryLight(vertices[i].dayLight, vertices[i].nightLight);
+            int offset = i * 3;
+            colors[offset] = light;
+            colors[offset + 1] = light;
+            colors[offset + 2] = light;
         }
         return colors;
     }
 
-    private float[] buildFullBrightNightLights(int vertexCount) {
+    private float[] buildNightLights(VertexData[] vertices) {
         if (getLightingMode() != GLBExport.LightingMode.BOTH) {
             return null;
         }
-        float[] nightLights = new float[vertexCount];
-        for (int i = 0; i < nightLights.length; i++) {
-            nightLights[i] = 1.0F;
+        float[] nightLights = new float[vertices.length];
+        for (int i = 0; i < vertices.length; i++) {
+            nightLights[i] = vertices[i].nightLight;
         }
         return nightLights;
+    }
+
+    private float[] buildCurtainVertexColors(VertexData[] vertices, int topIndex0, int topIndex1) {
+        return new float[] {
+                getPrimaryLight(vertices[topIndex0].dayLight, vertices[topIndex0].nightLight),
+                getPrimaryLight(vertices[topIndex0].dayLight, vertices[topIndex0].nightLight),
+                getPrimaryLight(vertices[topIndex0].dayLight, vertices[topIndex0].nightLight),
+                getPrimaryLight(vertices[topIndex1].dayLight, vertices[topIndex1].nightLight),
+                getPrimaryLight(vertices[topIndex1].dayLight, vertices[topIndex1].nightLight),
+                getPrimaryLight(vertices[topIndex1].dayLight, vertices[topIndex1].nightLight),
+                getPrimaryLight(vertices[topIndex1].dayLight, vertices[topIndex1].nightLight),
+                getPrimaryLight(vertices[topIndex1].dayLight, vertices[topIndex1].nightLight),
+                getPrimaryLight(vertices[topIndex1].dayLight, vertices[topIndex1].nightLight),
+                getPrimaryLight(vertices[topIndex0].dayLight, vertices[topIndex0].nightLight),
+                getPrimaryLight(vertices[topIndex0].dayLight, vertices[topIndex0].nightLight),
+                getPrimaryLight(vertices[topIndex0].dayLight, vertices[topIndex0].nightLight) };
+    }
+
+    private float[] buildCurtainNightLights(VertexData[] vertices, int topIndex0, int topIndex1) {
+        if (getLightingMode() != GLBExport.LightingMode.BOTH) {
+            return null;
+        }
+        return new float[] { vertices[topIndex0].nightLight, vertices[topIndex1].nightLight, vertices[topIndex1].nightLight,
+                vertices[topIndex0].nightLight };
+    }
+
+    private float getPrimaryLight(float dayLight, float nightLight) {
+        return (getLightingMode() == GLBExport.LightingMode.NIGHT) ? nightLight : dayLight;
     }
 
     private static int getColumnStride(int columnMinX, int columnMaxX) {
@@ -388,8 +439,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 xyz[(topIndex1 * 3) + 2], xyz[topIndex0 * 3], 0.0, xyz[(topIndex0 * 3) + 2] };
         double[] curtainUv = new double[] { uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1], uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1],
                 uv[topIndex1 * 2], uv[(topIndex1 * 2) + 1], uv[topIndex0 * 2], uv[(topIndex0 * 2) + 1] };
-        sink.addTriangleMesh(curtainXyz, curtainUv, DOUBLE_SIDED_QUAD_INDICES, material, buildFullBrightVertexColors(4),
-                buildFullBrightNightLights(4));
+        sink.addTriangleMesh(curtainXyz, curtainUv, DOUBLE_SIDED_QUAD_INDICES, material,
+                buildCurtainVertexColors(vertices, topIndex0, topIndex1), buildCurtainNightLights(vertices, topIndex0, topIndex1));
     }
 
     private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {
