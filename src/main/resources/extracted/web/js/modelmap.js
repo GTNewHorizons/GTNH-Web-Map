@@ -1590,11 +1590,18 @@
 		},
 
 		_getExistingDetailLevelForBaseTile: function(baseX, baseZ) {
+			var loadedDetail = this._findCoveringTileDetailLevel(this._loadedTiles, baseX, baseZ);
 			var desiredDetail = this._findCoveringTileDetailLevel(this._desiredTiles, baseX, baseZ);
+			if (loadedDetail !== null && desiredDetail !== null) {
+				return Math.min(loadedDetail, desiredDetail);
+			}
+			if (loadedDetail !== null) {
+				return loadedDetail;
+			}
 			if (desiredDetail !== null) {
 				return desiredDetail;
 			}
-			return this._findCoveringTileDetailLevel(this._loadedTiles, baseX, baseZ);
+			return null;
 		},
 
 		_shouldKeepExistingDetailLevel: function(distance, existingDetailLevel, available, fullDetailDistance, zoomOutViewDistance) {
