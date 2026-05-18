@@ -9,6 +9,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -579,6 +580,7 @@ public class GLBExport implements BlockModelExportSink {
         StringBuilder samplersJson = new StringBuilder();
         StringBuilder texturesJson = new StringBuilder();
         StringBuilder materialsJson = new StringBuilder();
+        Map<ExportedTextureData, Integer> customTextureIndices = new HashMap<ExportedTextureData, Integer>();
 
         appendJsonEntry(samplersJson, String.format(Locale.US,
                 "{\"magFilter\":%d,\"minFilter\":%d,\"wrapS\":%d,\"wrapT\":%d}", FILTER_NEAREST, FILTER_NEAREST,
@@ -633,14 +635,25 @@ public class GLBExport implements BlockModelExportSink {
             } else {
                 ExportedTextureData texture = primitive.material.hasCustomTexture() ? primitive.material.getCustomTextureData()
                         : texturePack.exportTexture(primitive.material);
-                int imageView = appendSegment(binary, texture.imagePng, null);
-                bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, null));
-                int imageIndex = textureIndex;
-                appendJsonEntry(imagesJson, String.format(Locale.US, "{\"bufferView\":%d,\"mimeType\":\"image/png\"}",
-                        imageView));
-                appendJsonEntry(texturesJson, String.format(Locale.US, "{\"sampler\":0,\"source\":%d}", imageIndex));
+                Integer existingTextureIndex =
+                        primitive.material.hasCustomTexture() ? customTextureIndices.get(texture) : null;
+                int imageIndex;
+                if (existingTextureIndex != null) {
+                    imageIndex = existingTextureIndex.intValue();
+                } else {
+                    int imageView = appendSegment(binary, texture.imagePng, null);
+                    bufferViews.add(makeBufferView(binary.lastOffset, binary.lastLength, null));
+                    imageIndex = textureIndex;
+                    appendJsonEntry(imagesJson, String.format(Locale.US, "{\"bufferView\":%d,\"mimeType\":\"image/png\"}",
+                            imageView));
+                    appendJsonEntry(texturesJson, String.format(Locale.US, "{\"sampler\":0,\"source\":%d}", imageIndex));
+                    if (primitive.material.hasCustomTexture()) {
+                        customTextureIndices.put(texture, Integer.valueOf(imageIndex));
+                    }
+                    textureIndex++;
+                }
 
-                materialJson.append("\"pbrMetallicRoughness\":{\"baseColorTexture\":{\"index\":").append(textureIndex)
+                materialJson.append("\"pbrMetallicRoughness\":{\"baseColorTexture\":{\"index\":").append(imageIndex)
                         .append("},\"metallicFactor\":0.0,\"roughnessFactor\":1.0}");
                 if (texture.hasAlpha) {
                     if (texture.hasTranslucentAlpha) {
@@ -651,9 +664,8 @@ public class GLBExport implements BlockModelExportSink {
                 }
                 if (primitive.material.isEmissive()) {
                     materialJson.append(",\"emissiveFactor\":[1.0,1.0,1.0],\"emissiveTexture\":{\"index\":")
-                            .append(textureIndex).append("}");
+                            .append(imageIndex).append("}");
                 }
-                textureIndex++;
             }
             materialJson.append("}");
             appendJsonEntry(materialsJson, materialJson.toString());
