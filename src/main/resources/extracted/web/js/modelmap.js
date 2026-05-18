@@ -1577,7 +1577,7 @@
 				return;
 			}
 			texture.magFilter = THREE.NearestFilter;
-			texture.minFilter = THREE.NearestFilter;
+			texture.minFilter = THREE.LinearFilter;
 			texture.generateMipmaps = false;
 			texture.anisotropy = 1;
 			texture.needsUpdate = true;
