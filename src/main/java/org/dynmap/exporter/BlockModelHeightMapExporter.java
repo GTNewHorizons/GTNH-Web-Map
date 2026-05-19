@@ -193,7 +193,7 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             ResolvedBlockData block = resolveBlock(iterator, blockId);
             ExportMaterial topMaterial = getSurfaceMaterial(block, BlockStep.Y_PLUS);
             if (topMaterial == null) {
-                topMaterial = getAnySurfaceMaterial(block);
+                topMaterial = getAnyTexturedMaterial(block);
             }
             if (topMaterial != null) {
                 float dayLight = computeFaceLightScale(blockId, BlockStep.Y_MINUS, iterator, topMaterial, false);
@@ -553,7 +553,7 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         if (block.patches != null) {
             for (int i = 0; i < block.patches.length; i++) {
                 if ((block.steps[i] == step) && (block.materials.length > i) && (block.materials[i] != null)) {
-                    ExportMaterial material = getFirstSolidMaterial(block.materials[i]);
+                    ExportMaterial material = getFirstTexturedMaterial(block.materials[i]);
                     if (material != null) {
                         return material;
                     }
@@ -561,7 +561,7 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             }
             for (int i = 0; i < block.patches.length; i++) {
                 if ((block.steps[i] == step.opposite()) && (block.materials.length > i) && (block.materials[i] != null)) {
-                    ExportMaterial material = getFirstSolidMaterial(block.materials[i]);
+                    ExportMaterial material = getFirstTexturedMaterial(block.materials[i]);
                     if (material != null) {
                         return material;
                     }
@@ -572,13 +572,56 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
 
         int face = step.opposite().getFaceEntered();
         if ((face >= 0) && (face < block.materials.length)) {
-            return getFirstSolidMaterial(block.materials[face]);
+            return getFirstTexturedMaterial(block.materials[face]);
         }
         int opposite = step.getFaceEntered();
         if ((opposite >= 0) && (opposite < block.materials.length)) {
-            return getFirstSolidMaterial(block.materials[opposite]);
+            return getFirstTexturedMaterial(block.materials[opposite]);
         }
         return null;
+    }
+
+    private ExportMaterial getAnyTexturedMaterial(ResolvedBlockData block) throws IOException {
+        if ((block == null) || (block.materials == null)) {
+            return null;
+        }
+        for (ExportMaterial[] materials : block.materials) {
+            ExportMaterial material = getFirstTexturedMaterial(materials);
+            if (material != null) {
+                return material;
+            }
+        }
+        return null;
+    }
+
+    private ExportMaterial getFirstTexturedMaterial(ExportMaterial[] materials) throws IOException {
+        if (materials == null) {
+            return null;
+        }
+        for (ExportMaterial material : materials) {
+            if (hasDefinedTexture(material)) {
+                return material;
+            }
+        }
+        return null;
+    }
+
+    private boolean hasDefinedTexture(ExportMaterial material) {
+        if (material == null) {
+            return false;
+        }
+        if ((material.getTextureIndex() >= 0) || material.hasCustomTexture()) {
+            return true;
+        }
+        ExportMaterial[] bakedLayers = material.getBakedLayers();
+        if (bakedLayers != null) {
+            for (ExportMaterial layer : bakedLayers) {
+                if (hasDefinedTexture(layer)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private static final class SourceMapSampler {
