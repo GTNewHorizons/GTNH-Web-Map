@@ -74,8 +74,7 @@ public final class BlockModelHeightMapZoomOutExporter {
     }
 
     private static final class ParsedHeightMapTile {
-        final Map<Long, VertexSample> cornerVertices = new HashMap<Long, VertexSample>();
-        final Map<Long, VertexSample> centerVertices = new HashMap<Long, VertexSample>();
+        final Map<Long, VertexSample> vertices = new HashMap<Long, VertexSample>();
         final BufferedImage textureImage;
 
         ParsedHeightMapTile(BufferedImage textureImage) {
@@ -111,8 +110,7 @@ public final class BlockModelHeightMapZoomOutExporter {
 
         int childZoom = zoomTile.zoom - 1;
         int childStep = 1 << childZoom;
-        Map<Long, VertexSample> sourceCornerVertices = new HashMap<Long, VertexSample>();
-        Map<Long, VertexSample> sourceCenterVertices = new HashMap<Long, VertexSample>();
+        Map<Long, VertexSample> sourceVertices = new HashMap<Long, VertexSample>();
         BufferedImage outputTexture = null;
         int childTextureWidth = -1;
         int childTextureHeight = -1;
@@ -143,8 +141,7 @@ public final class BlockModelHeightMapZoomOutExporter {
                 return Result.incompatible();
             }
             blitZoomOutChildTexture(outputTexture, childData.textureImage, i);
-            mergeVertices(sourceCornerVertices, childData.cornerVertices);
-            mergeVertices(sourceCenterVertices, childData.centerVertices);
+            mergeVertices(sourceVertices, childData.vertices);
             foundChildCount++;
         }
 
@@ -158,30 +155,22 @@ public final class BlockModelHeightMapZoomOutExporter {
         int depthBlocks = widthBlocks;
         int sourceVertexStep = 1 << childZoom;
         int outputVertexStep = sourceVertexStep << 1;
-        int cellWidth = widthBlocks / outputVertexStep;
-        int cellDepth = depthBlocks / outputVertexStep;
         int vertexWidth = (widthBlocks / outputVertexStep) + 1;
         int vertexDepth = (depthBlocks / outputVertexStep) + 1;
-        int cornerVertexCount = vertexWidth * vertexDepth;
-        int centerVertexCount = cellWidth * cellDepth;
-        int totalVertexCount = cornerVertexCount + centerVertexCount;
-        double[] xyz = new double[totalVertexCount * 3];
-        double[] uv = new double[totalVertexCount * 2];
-        boolean[] validCornerVertices = new boolean[cornerVertexCount];
-        boolean[] validCenterVertices = new boolean[centerVertexCount];
-        float[] vertexColors = new float[totalVertexCount * 3];
+        double[] xyz = new double[vertexWidth * vertexDepth * 3];
+        double[] uv = new double[vertexWidth * vertexDepth * 2];
+        boolean[] validVertices = new boolean[vertexWidth * vertexDepth];
+        float[] vertexColors = new float[vertexWidth * vertexDepth * 3];
         float[] nightLights = (map.getLightingMode().toExportLightingMode() == GLBExport.LightingMode.BOTH)
-                ? new float[totalVertexCount] : null;
-        int sourceVertexStep2 = sourceVertexStep * 2;
-        int outputVertexStep2 = outputVertexStep * 2;
+                ? new float[vertexWidth * vertexDepth] : null;
 
         for (int vz = 0; vz < vertexDepth; vz++) {
             int worldZ = minBlockZ + (vz * outputVertexStep);
             for (int vx = 0; vx < vertexWidth; vx++) {
                 int worldX = minBlockX + (vx * outputVertexStep);
                 int index = (vz * vertexWidth) + vx;
-                VertexSample sample = buildOutputCornerVertex(sourceCornerVertices, worldX * 2, worldZ * 2, sourceVertexStep2);
-                validCornerVertices[index] = sample != null;
+                VertexSample sample = buildOutputVertex(sourceVertices, worldX, worldZ, sourceVertexStep);
+                validVertices[index] = sample != null;
                 int xyzOffset = index * 3;
                 int uvOffset = index * 2;
                 xyz[xyzOffset] = worldX;
@@ -189,31 +178,6 @@ public final class BlockModelHeightMapZoomOutExporter {
                 xyz[xyzOffset + 2] = worldZ;
                 uv[uvOffset] = (double) (worldX - minBlockX) / (double) widthBlocks;
                 uv[uvOffset + 1] = (double) (worldZ - minBlockZ) / (double) depthBlocks;
-                float primaryLight = (sample != null) ? getPrimaryLight(sample.dayLight, sample.nightLight,
-                        map.getLightingMode().toExportLightingMode()) : 0.0F;
-                vertexColors[xyzOffset] = primaryLight;
-                vertexColors[xyzOffset + 1] = primaryLight;
-                vertexColors[xyzOffset + 2] = primaryLight;
-                if (nightLights != null) {
-                    nightLights[index] = (sample != null) ? sample.nightLight : 0.0F;
-                }
-            }
-        }
-        for (int cz = 0; cz < cellDepth; cz++) {
-            int worldZ = minBlockZ + (cz * outputVertexStep);
-            for (int cx = 0; cx < cellWidth; cx++) {
-                int worldX = minBlockX + (cx * outputVertexStep);
-                int index = cornerVertexCount + (cz * cellWidth) + cx;
-                VertexSample sample = buildOutputCenterVertex(sourceCornerVertices, sourceCenterVertices, worldX * 2, worldZ * 2,
-                        sourceVertexStep2, outputVertexStep2);
-                validCenterVertices[index - cornerVertexCount] = sample != null;
-                int xyzOffset = index * 3;
-                int uvOffset = index * 2;
-                xyz[xyzOffset] = worldX + (outputVertexStep / 2.0);
-                xyz[xyzOffset + 1] = (sample != null) ? sample.y : world.minY;
-                xyz[xyzOffset + 2] = worldZ + (outputVertexStep / 2.0);
-                uv[uvOffset] = (xyz[xyzOffset] - minBlockX) / (double) widthBlocks;
-                uv[uvOffset + 1] = (xyz[xyzOffset + 2] - minBlockZ) / (double) depthBlocks;
                 float primaryLight = (sample != null) ? getPrimaryLight(sample.dayLight, sample.nightLight,
                         map.getLightingMode().toExportLightingMode()) : 0.0F;
                 vertexColors[xyzOffset] = primaryLight;
@@ -235,15 +199,14 @@ public final class BlockModelHeightMapZoomOutExporter {
         int[][] quarterBounds = buildQuarterBounds(minBlockX, widthBlocks, minBlockZ, depthBlocks, outputVertexStep);
         boolean emittedGeometry = false;
         for (int quarter = 0; quarter < HEIGHT_MAP_QUARTER_COUNT; quarter++) {
-            int[] indices = buildTriangleIndices(validCenterVertices, cornerVertexCount, cellWidth, vertexWidth, minBlockX, minBlockZ,
-                    outputVertexStep, quarterBounds[quarter][0], quarterBounds[quarter][1], quarterBounds[quarter][2],
-                    quarterBounds[quarter][3]);
+            int[] indices = buildTriangleIndices(validVertices, vertexWidth, vertexDepth, minBlockX, minBlockZ, outputVertexStep,
+                    quarterBounds[quarter][0], quarterBounds[quarter][1], quarterBounds[quarter][2], quarterBounds[quarter][3]);
             if (indices.length > 0) {
                 export.addTriangleMesh(xyz, uv, indices, quarterMaterials[quarter], vertexColors, nightLights);
                 emittedGeometry = true;
             }
             emittedGeometry |= emitEdgeCurtains(export, quarterMaterials[quarter], xyz, uv, vertexColors, nightLights,
-                    validCornerVertices, vertexWidth, vertexDepth, minBlockX, minBlockZ, outputVertexStep, quarterBounds[quarter][0],
+                    validVertices, vertexWidth, vertexDepth, minBlockX, minBlockZ, outputVertexStep, quarterBounds[quarter][0],
                     quarterBounds[quarter][1], quarterBounds[quarter][2], quarterBounds[quarter][3], minBlockX,
                     minBlockX + widthBlocks - outputVertexStep, minBlockZ, minBlockZ + depthBlocks - outputVertexStep,
                     map.getLightingMode().toExportLightingMode());
@@ -471,33 +434,22 @@ public final class BlockModelHeightMapZoomOutExporter {
         ByteBuffer positions = ByteBuffer.wrap(positionBytes).order(ByteOrder.LITTLE_ENDIAN);
         float[] colors = readAccessorFloats(accessors, bufferViews, binBytes, colorAccessorIndex, vertexCount, 3);
         float[] primitiveNightLights = readAccessorFloats(accessors, bufferViews, binBytes, nightLightAccessorIndex, vertexCount, 1);
-        int minBlockX2 = minBlockX * 2;
-        int minBlockZ2 = minBlockZ * 2;
-        int widthBlocks2 = widthBlocks * 2;
-        int vertexStep2 = (1 << zoom) * 2;
         for (int i = 0; i < vertexCount; i++) {
             double worldX = positions.getFloat() + originX;
             double y = positions.getFloat();
             double worldZ = positions.getFloat() + originZ;
-            int gridX2 = roundCoordinate(worldX * 2.0);
-            int gridZ2 = roundCoordinate(worldZ * 2.0);
-            if ((Math.abs((worldX * 2.0) - gridX2) > 0.01) || (Math.abs((worldZ * 2.0) - gridZ2) > 0.01)) {
+            int gridX = roundCoordinate(worldX);
+            int gridZ = roundCoordinate(worldZ);
+            if ((Math.abs(worldX - gridX) > 0.01) || (Math.abs(worldZ - gridZ) > 0.01)) {
                 throw new IncompatibleHeightMapTileException();
             }
-            if ((gridX2 < minBlockX2) || (gridX2 > (minBlockX2 + widthBlocks2)) || (gridZ2 < minBlockZ2)
-                    || (gridZ2 > (minBlockZ2 + widthBlocks2))) {
+            if ((gridX < minBlockX) || (gridX > (minBlockX + widthBlocks)) || (gridZ < minBlockZ)
+                    || (gridZ > (minBlockZ + widthBlocks))) {
                 throw new IncompatibleHeightMapTileException();
             }
             float dayLight = (colors != null) ? colors[i * 3] : 1.0F;
             float nightLight = (primitiveNightLights != null) ? primitiveNightLights[i] : 0.0F;
-            if (isGridCoordinate(gridX2, minBlockX2, vertexStep2) && isGridCoordinate(gridZ2, minBlockZ2, vertexStep2)) {
-                putVertex(tile.cornerVertices, gridX2, gridZ2, y, dayLight, nightLight);
-            } else if (isCenterCoordinate(gridX2, minBlockX2, vertexStep2)
-                    && isCenterCoordinate(gridZ2, minBlockZ2, vertexStep2)) {
-                putVertex(tile.centerVertices, gridX2, gridZ2, y, dayLight, nightLight);
-            } else {
-                throw new IncompatibleHeightMapTileException();
-            }
+            putVertex(tile.vertices, gridX, gridZ, y, dayLight, nightLight);
         }
     }
 
@@ -656,8 +608,8 @@ public final class BlockModelHeightMapZoomOutExporter {
         }
     }
 
-    private static void putVertex(Map<Long, VertexSample> vertices, int x2, int z2, double y, float dayLight, float nightLight) {
-        long key = vertexKey(x2, z2);
+    private static void putVertex(Map<Long, VertexSample> vertices, int x, int z, double y, float dayLight, float nightLight) {
+        long key = vertexKey(x, z);
         VertexSample existing = vertices.get(key);
         vertices.put(key, mergeSamples(existing, new VertexSample(y, dayLight, nightLight)));
     }
@@ -673,36 +625,14 @@ public final class BlockModelHeightMapZoomOutExporter {
                 Math.max(existing.nightLight, incoming.nightLight));
     }
 
-    private VertexSample buildOutputCornerVertex(Map<Long, VertexSample> sourceVertices, int worldX2, int worldZ2,
-            int sourceVertexStep2) {
-        double[] heights = new double[4];
-        float[] dayLights = new float[4];
-        float[] nightLights = new float[4];
-        int count = 0;
-        for (int dz = 0; dz <= sourceVertexStep2; dz += sourceVertexStep2) {
-            for (int dx = 0; dx <= sourceVertexStep2; dx += sourceVertexStep2) {
-                VertexSample sample = sourceVertices.get(vertexKey(worldX2 + dx, worldZ2 + dz));
-                if (sample != null) {
-                    heights[count] = sample.y;
-                    dayLights[count] = sample.dayLight;
-                    nightLights[count] = sample.nightLight;
-                    count++;
-                }
-            }
-        }
-        return buildLowerMedianSample(heights, dayLights, nightLights, count);
-    }
-
-    private VertexSample buildOutputCenterVertex(Map<Long, VertexSample> sourceCornerVertices,
-            Map<Long, VertexSample> sourceCenterVertices, int worldX2, int worldZ2, int sourceVertexStep2, int outputVertexStep2) {
+    private VertexSample buildOutputVertex(Map<Long, VertexSample> sourceVertices, int worldX, int worldZ, int sourceVertexStep) {
         double maxY = world.minY;
         boolean valid = false;
         float dayLight = 0.0F;
         float nightLight = 0.0F;
-        int sourceCenterOffset2 = sourceVertexStep2 / 2;
-        for (int dz = sourceCenterOffset2; dz < outputVertexStep2; dz += sourceVertexStep2) {
-            for (int dx = sourceCenterOffset2; dx < outputVertexStep2; dx += sourceVertexStep2) {
-                VertexSample sample = sourceCenterVertices.get(vertexKey(worldX2 + dx, worldZ2 + dz));
+        for (int dz = 0; dz <= sourceVertexStep; dz += sourceVertexStep) {
+            for (int dx = 0; dx <= sourceVertexStep; dx += sourceVertexStep) {
+                VertexSample sample = sourceVertices.get(vertexKey(worldX + dx, worldZ + dz));
                 if (sample != null) {
                     valid = true;
                     maxY = Math.max(maxY, sample.y);
@@ -711,49 +641,7 @@ public final class BlockModelHeightMapZoomOutExporter {
                 }
             }
         }
-        if (!valid) {
-            VertexSample fallback = sourceCornerVertices.get(vertexKey(worldX2 + sourceVertexStep2, worldZ2 + sourceVertexStep2));
-            if (fallback != null) {
-                return fallback;
-            }
-        }
         return valid ? new VertexSample(maxY, dayLight, nightLight) : null;
-    }
-
-    private VertexSample buildLowerMedianSample(double[] heights, float[] dayLights, float[] nightLights, int count) {
-        if (count <= 0) {
-            return null;
-        }
-        sortSampleTriples(heights, dayLights, nightLights, count);
-        int medianIndex = (count - 1) / 2;
-        double selectedHeight = heights[medianIndex];
-        float selectedDayLight = dayLights[medianIndex];
-        float selectedNightLight = nightLights[medianIndex];
-        for (int i = 0; i < count; i++) {
-            if (Math.abs(heights[i] - selectedHeight) < 0.0000001) {
-                selectedDayLight = Math.max(selectedDayLight, dayLights[i]);
-                selectedNightLight = Math.max(selectedNightLight, nightLights[i]);
-            }
-        }
-        return new VertexSample(selectedHeight, selectedDayLight, selectedNightLight);
-    }
-
-    private void sortSampleTriples(double[] heights, float[] dayLights, float[] nightLights, int count) {
-        for (int i = 1; i < count; i++) {
-            double height = heights[i];
-            float dayLight = dayLights[i];
-            float nightLight = nightLights[i];
-            int insert = i;
-            while ((insert > 0) && (heights[insert - 1] > height)) {
-                heights[insert] = heights[insert - 1];
-                dayLights[insert] = dayLights[insert - 1];
-                nightLights[insert] = nightLights[insert - 1];
-                insert--;
-            }
-            heights[insert] = height;
-            dayLights[insert] = dayLight;
-            nightLights[insert] = nightLight;
-        }
     }
 
     private ExportMaterial[] buildQuarterMaterials(String baseMaterialId, ExportedTextureData textureData) {
@@ -774,57 +662,53 @@ public final class BlockModelHeightMapZoomOutExporter {
                 { minBlockX + halfWidth, minBlockX + widthBlocks - cellStep, minBlockZ + halfDepth, minBlockZ + depthBlocks - cellStep } };
     }
 
-    private static int[] buildTriangleIndices(boolean[] validCenters, int cornerVertexCount, int cellWidth, int vertexWidth,
-            int minWorldX, int minWorldZ, int vertexStep, int cellMinX, int cellMaxX, int cellMinZ, int cellMaxZ) {
-        int cellCount = 0;
-        int cellDepth = validCenters.length / cellWidth;
-        for (int z = 0; z < cellDepth; z++) {
+    private static int[] buildTriangleIndices(boolean[] validVertices, int vertexWidth, int vertexDepth, int minWorldX, int minWorldZ,
+            int vertexStep, int cellMinX, int cellMaxX, int cellMinZ, int cellMaxZ) {
+        int quadCount = 0;
+        for (int z = 0; z < vertexDepth - 1; z++) {
             int worldZ = minWorldZ + (z * vertexStep);
             if ((worldZ < cellMinZ) || (worldZ > cellMaxZ)) {
                 continue;
             }
-            for (int x = 0; x < cellWidth; x++) {
+            for (int x = 0; x < vertexWidth - 1; x++) {
                 int worldX = minWorldX + (x * vertexStep);
                 if ((worldX < cellMinX) || (worldX > cellMaxX)) {
-                    continue;
-                }
-                if (validCenters[(z * cellWidth) + x]) {
-                    cellCount++;
-                }
-            }
-        }
-        int[] indices = new int[cellCount * 12];
-        int offset = 0;
-        for (int z = 0; z < cellDepth; z++) {
-            int worldZ = minWorldZ + (z * vertexStep);
-            if ((worldZ < cellMinZ) || (worldZ > cellMaxZ)) {
-                continue;
-            }
-            for (int x = 0; x < cellWidth; x++) {
-                int worldX = minWorldX + (x * vertexStep);
-                if ((worldX < cellMinX) || (worldX > cellMaxX)) {
-                    continue;
-                }
-                if (!validCenters[(z * cellWidth) + x]) {
                     continue;
                 }
                 int v00 = (z * vertexWidth) + x;
                 int v10 = v00 + 1;
                 int v01 = ((z + 1) * vertexWidth) + x;
                 int v11 = v01 + 1;
-                int centerIndex = cornerVertexCount + (z * cellWidth) + x;
-                indices[offset++] = centerIndex;
+                if (validVertices[v00] || validVertices[v10] || validVertices[v01] || validVertices[v11]) {
+                    quadCount++;
+                }
+            }
+        }
+        int[] indices = new int[quadCount * 6];
+        int offset = 0;
+        for (int z = 0; z < vertexDepth - 1; z++) {
+            int worldZ = minWorldZ + (z * vertexStep);
+            if ((worldZ < cellMinZ) || (worldZ > cellMaxZ)) {
+                continue;
+            }
+            for (int x = 0; x < vertexWidth - 1; x++) {
+                int worldX = minWorldX + (x * vertexStep);
+                if ((worldX < cellMinX) || (worldX > cellMaxX)) {
+                    continue;
+                }
+                int v00 = (z * vertexWidth) + x;
+                int v10 = v00 + 1;
+                int v01 = ((z + 1) * vertexWidth) + x;
+                int v11 = v01 + 1;
+                if (!(validVertices[v00] || validVertices[v10] || validVertices[v01] || validVertices[v11])) {
+                    continue;
+                }
                 indices[offset++] = v00;
                 indices[offset++] = v01;
-                indices[offset++] = centerIndex;
-                indices[offset++] = v01;
                 indices[offset++] = v11;
-                indices[offset++] = centerIndex;
-                indices[offset++] = v11;
-                indices[offset++] = v10;
-                indices[offset++] = centerIndex;
-                indices[offset++] = v10;
                 indices[offset++] = v00;
+                indices[offset++] = v11;
+                indices[offset++] = v10;
             }
         }
         return indices;
@@ -955,21 +839,8 @@ public final class BlockModelHeightMapZoomOutExporter {
         return (int) Math.round(value);
     }
 
-    private static boolean isGridCoordinate(int coord2, int minCoord2, int step2) {
-        return modulo(coord2 - minCoord2, step2) == 0;
-    }
-
-    private static boolean isCenterCoordinate(int coord2, int minCoord2, int step2) {
-        return modulo(coord2 - minCoord2, step2) == (step2 / 2);
-    }
-
-    private static int modulo(int value, int divisor) {
-        int result = value % divisor;
-        return (result < 0) ? (result + divisor) : result;
-    }
-
-    private static long vertexKey(int x2, int z2) {
-        return (((long) x2) << 32) ^ (z2 & 0xFFFFFFFFL);
+    private static long vertexKey(int x, int z) {
+        return (((long) x) << 32) ^ (z & 0xFFFFFFFFL);
     }
 
     private static final class IncompatibleHeightMapTileException extends Exception {
