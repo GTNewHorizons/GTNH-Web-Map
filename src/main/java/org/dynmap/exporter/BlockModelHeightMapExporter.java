@@ -240,11 +240,16 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         int widthColumns = (rangeMaxX - rangeMinX) + 1;
         int depthColumns = (rangeMaxZ - rangeMinZ) + 1;
         int columnStride = getColumnStride(columnMinX, columnMaxX);
+        int cellWidth = (chunkMaxX - chunkMinX) + 1;
+        int cellDepth = (chunkMaxZ - chunkMinZ) + 1;
         int vertexWidth = (chunkMaxX - chunkMinX) + 2;
         int vertexDepth = (chunkMaxZ - chunkMinZ) + 2;
-        double[] xyz = new double[vertexWidth * vertexDepth * 3];
-        double[] uv = new double[vertexWidth * vertexDepth * 2];
-        VertexData[] vertices = new VertexData[vertexWidth * vertexDepth];
+        int cornerVertexCount = vertexWidth * vertexDepth;
+        int centerVertexCount = cellWidth * cellDepth;
+        int totalVertexCount = cornerVertexCount + centerVertexCount;
+        double[] xyz = new double[totalVertexCount * 3];
+        double[] uv = new double[totalVertexCount * 2];
+        VertexData[] vertices = new VertexData[totalVertexCount];
         for (int vz = 0; vz < vertexDepth; vz++) {
             int worldZ = chunkMinZ + vz;
             for (int vx = 0; vx < vertexWidth; vx++) {
@@ -262,6 +267,23 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 uv[uvOffset + 1] = (double) (worldZ - rangeMinZ) / (double) depthColumns;
             }
         }
+        for (int cz = 0; cz < cellDepth; cz++) {
+            int worldZ = chunkMinZ + cz;
+            for (int cx = 0; cx < cellWidth; cx++) {
+                int worldX = chunkMinX + cx;
+                VertexData centerVertex = buildCenterVertex(columns, worldX, worldZ, columnMinX, columnMaxX, columnMinZ,
+                        columnMaxZ, columnStride);
+                int index = cornerVertexCount + (cz * cellWidth) + cx;
+                vertices[index] = centerVertex;
+                int xyzOffset = index * 3;
+                int uvOffset = index * 2;
+                xyz[xyzOffset] = worldX + 0.5;
+                xyz[xyzOffset + 1] = centerVertex.y;
+                xyz[xyzOffset + 2] = worldZ + 0.5;
+                uv[uvOffset] = (double) ((worldX + 0.5) - rangeMinX) / (double) widthColumns;
+                uv[uvOffset + 1] = (double) ((worldZ + 0.5) - rangeMinZ) / (double) depthColumns;
+            }
+        }
 
         ArrayList<Integer> indexList = new ArrayList<Integer>();
         for (int z = chunkMinZ; z <= chunkMaxZ; z++) {
@@ -272,15 +294,22 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 int v10 = v00 + 1;
                 int v01 = ((localZ + 1) * vertexWidth) + localX;
                 int v11 = v01 + 1;
-                if (!(vertices[v00].valid || vertices[v10].valid || vertices[v01].valid || vertices[v11].valid)) {
+                int centerIndex = cornerVertexCount + (localZ * cellWidth) + localX;
+                if (!vertices[centerIndex].valid) {
                     continue;
                 }
+                indexList.add(Integer.valueOf(centerIndex));
                 indexList.add(Integer.valueOf(v00));
                 indexList.add(Integer.valueOf(v01));
+                indexList.add(Integer.valueOf(centerIndex));
+                indexList.add(Integer.valueOf(v01));
                 indexList.add(Integer.valueOf(v11));
-                indexList.add(Integer.valueOf(v00));
+                indexList.add(Integer.valueOf(centerIndex));
                 indexList.add(Integer.valueOf(v11));
                 indexList.add(Integer.valueOf(v10));
+                indexList.add(Integer.valueOf(centerIndex));
+                indexList.add(Integer.valueOf(v10));
+                indexList.add(Integer.valueOf(v00));
             }
         }
         if (indexList.isEmpty()) {
@@ -301,10 +330,10 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
 
     private VertexData buildVertex(ColumnData[] columns, int worldX, int worldZ, int columnMinX, int columnMaxX,
             int columnMinZ, int columnMaxZ, int columnStride) {
-        double maxY = getMinY();
-        boolean valid = false;
-        float dayLight = 0.0F;
-        float nightLight = 0.0F;
+        double[] heights = new double[4];
+        float[] dayLights = new float[4];
+        float[] nightLights = new float[4];
+        int count = 0;
         for (int dz = -1; dz <= 0; dz++) {
             for (int dx = -1; dx <= 0; dx++) {
                 int sampleX = worldX + dx;
@@ -314,19 +343,62 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 }
                 ColumnData column = columns[getColumnIndex(sampleX, sampleZ, columnMinX, columnMinZ, columnStride)];
                 if (column.hasSurface) {
-                    valid = true;
-                    if (column.topY > maxY) {
-                        maxY = column.topY;
-                        dayLight = column.dayLight;
-                        nightLight = column.nightLight;
-                    } else if (column.topY == maxY) {
-                        dayLight = Math.max(dayLight, column.dayLight);
-                        nightLight = Math.max(nightLight, column.nightLight);
-                    }
+                    heights[count] = column.topY;
+                    dayLights[count] = column.dayLight;
+                    nightLights[count] = column.nightLight;
+                    count++;
                 }
             }
         }
-        return new VertexData(maxY, valid, dayLight, nightLight);
+        return buildLowerMedianVertexData(heights, dayLights, nightLights, count);
+    }
+
+    private VertexData buildCenterVertex(ColumnData[] columns, int worldX, int worldZ, int columnMinX, int columnMaxX,
+            int columnMinZ, int columnMaxZ, int columnStride) {
+        if ((worldX < columnMinX) || (worldX > columnMaxX) || (worldZ < columnMinZ) || (worldZ > columnMaxZ)) {
+            return new VertexData(getMinY(), false, 0.0F, 0.0F);
+        }
+        ColumnData column = columns[getColumnIndex(worldX, worldZ, columnMinX, columnMinZ, columnStride)];
+        if ((column == null) || !column.hasSurface) {
+            return new VertexData(getMinY(), false, 0.0F, 0.0F);
+        }
+        return new VertexData(column.topY, true, column.dayLight, column.nightLight);
+    }
+
+    private VertexData buildLowerMedianVertexData(double[] heights, float[] dayLights, float[] nightLights, int count) {
+        if (count <= 0) {
+            return new VertexData(getMinY(), false, 0.0F, 0.0F);
+        }
+        sortSampleTriples(heights, dayLights, nightLights, count);
+        int medianIndex = (count - 1) / 2;
+        double selectedHeight = heights[medianIndex];
+        float selectedDayLight = dayLights[medianIndex];
+        float selectedNightLight = nightLights[medianIndex];
+        for (int i = 0; i < count; i++) {
+            if (Math.abs(heights[i] - selectedHeight) < 0.0000001) {
+                selectedDayLight = Math.max(selectedDayLight, dayLights[i]);
+                selectedNightLight = Math.max(selectedNightLight, nightLights[i]);
+            }
+        }
+        return new VertexData(selectedHeight, true, selectedDayLight, selectedNightLight);
+    }
+
+    private void sortSampleTriples(double[] heights, float[] dayLights, float[] nightLights, int count) {
+        for (int i = 1; i < count; i++) {
+            double height = heights[i];
+            float dayLight = dayLights[i];
+            float nightLight = nightLights[i];
+            int insert = i;
+            while ((insert > 0) && (heights[insert - 1] > height)) {
+                heights[insert] = heights[insert - 1];
+                dayLights[insert] = dayLights[insert - 1];
+                nightLights[insert] = nightLights[insert - 1];
+                insert--;
+            }
+            heights[insert] = height;
+            dayLights[insert] = dayLight;
+            nightLights[insert] = nightLight;
+        }
     }
 
     private float[] buildVertexColors(VertexData[] vertices) {
