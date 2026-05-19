@@ -12,9 +12,22 @@ import org.dynmap.hdmap.TexturePack;
 import org.dynmap.hdmap.TexturePack.ExportedTextureData;
 
 final class ExportMaterialColorResolver {
+    private static final class SampledTextureData {
+        final int width;
+        final int height;
+        final int[] pixels;
+
+        SampledTextureData(int width, int height, int[] pixels) {
+            this.width = width;
+            this.height = height;
+            this.pixels = pixels;
+        }
+    }
+
     private final TexturePack exportTexturePack;
     private final Map<String, Integer> averageColorCache = new HashMap<String, Integer>();
     private final Map<String, ExportMaterial> solidColorMaterialCache = new HashMap<String, ExportMaterial>();
+    private final Map<String, SampledTextureData> sampledTextureCache = new HashMap<String, SampledTextureData>();
 
     ExportMaterialColorResolver(TexturePack exportTexturePack) {
         this.exportTexturePack = exportTexturePack;
@@ -82,6 +95,26 @@ final class ExportMaterialColorResolver {
         return argb;
     }
 
+    int sampleColor(ExportMaterial material, double u, double v) throws IOException {
+        if (material == null) {
+            return 0xFFFFFFFF;
+        }
+        if (material.isSolidColor()) {
+            return material.getSolidColorArgb();
+        }
+
+        SampledTextureData sampledTexture = getSampledTextureData(material);
+        if (sampledTexture == null) {
+            return computeAverageColor(material);
+        }
+
+        double clampedU = Math.max(0.0, Math.min(0.999999, u));
+        double clampedV = Math.max(0.0, Math.min(0.999999, v));
+        int sampleX = Math.min(sampledTexture.width - 1, Math.max(0, (int) Math.floor(clampedU * sampledTexture.width)));
+        int sampleY = Math.min(sampledTexture.height - 1, Math.max(0, (int) Math.floor(clampedV * sampledTexture.height)));
+        return sampledTexture.pixels[(sampleY * sampledTexture.width) + sampleX];
+    }
+
     private String getMaterialCacheKey(ExportMaterial material) {
         if (material == null) {
             return "null";
@@ -124,5 +157,30 @@ final class ExportMaterialColorResolver {
             }
         }
         return -1;
+    }
+
+    private SampledTextureData getSampledTextureData(ExportMaterial material) throws IOException {
+        String cacheKey = getMaterialCacheKey(material);
+        if (sampledTextureCache.containsKey(cacheKey)) {
+            return sampledTextureCache.get(cacheKey);
+        }
+        if (exportTexturePack == null) {
+            return null;
+        }
+        if ((material.getTextureIndex() < 0) && !material.hasCustomTexture() && (material.getBakedLayers() == null)) {
+            return null;
+        }
+
+        ExportedTextureData texture = exportTexturePack.exportTexture(material);
+        BufferedImage image = ImageIO.read(new ByteArrayInputStream(texture.imagePng));
+        if (image == null) {
+            sampledTextureCache.put(cacheKey, null);
+            return null;
+        }
+
+        SampledTextureData sampledTexture = new SampledTextureData(image.getWidth(), image.getHeight(),
+                image.getRGB(0, 0, image.getWidth(), image.getHeight(), null, 0, image.getWidth()));
+        sampledTextureCache.put(cacheKey, sampledTexture);
+        return sampledTexture;
     }
 }
