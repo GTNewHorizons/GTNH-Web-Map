@@ -498,13 +498,24 @@ public final class BlockModelHeightMapZoomOutExporter {
                 int p1 = argb[sourceOffset + 1];
                 int p2 = argb[sourceOffset + width];
                 int p3 = argb[sourceOffset + width + 1];
-                int alpha = ((p0 >> 24) & 0xFF) + ((p1 >> 24) & 0xFF) + ((p2 >> 24) & 0xFF) + ((p3 >> 24) & 0xFF);
-                int red = ((p0 >> 16) & 0xFF) + ((p1 >> 16) & 0xFF) + ((p2 >> 16) & 0xFF) + ((p3 >> 16) & 0xFF);
-                int green = ((p0 >> 8) & 0xFF) + ((p1 >> 8) & 0xFF) + ((p2 >> 8) & 0xFF) + ((p3 >> 8) & 0xFF);
-                int blue = (p0 & 0xFF) + (p1 & 0xFF) + (p2 & 0xFF) + (p3 & 0xFF);
-                scaled[(y / 2) * (width / 2) + (x / 2)] =
-                        (((alpha >> 2) & 0xFF) << 24) | (((red >> 2) & 0xFF) << 16) | (((green >> 2) & 0xFF) << 8)
-                                | ((blue >> 2) & 0xFF);
+                int a0 = (p0 >> 24) & 0xFF;
+                int a1 = (p1 >> 24) & 0xFF;
+                int a2 = (p2 >> 24) & 0xFF;
+                int a3 = (p3 >> 24) & 0xFF;
+                int alpha = a0 + a1 + a2 + a3;
+                int outAlpha = (alpha + 2) >> 2;
+                int red = 0;
+                int green = 0;
+                int blue = 0;
+                if (alpha > 0) {
+                    red = ((((p0 >> 16) & 0xFF) * a0) + (((p1 >> 16) & 0xFF) * a1) + (((p2 >> 16) & 0xFF) * a2)
+                            + (((p3 >> 16) & 0xFF) * a3) + (alpha / 2)) / alpha;
+                    green = ((((p0 >> 8) & 0xFF) * a0) + (((p1 >> 8) & 0xFF) * a1) + (((p2 >> 8) & 0xFF) * a2)
+                            + (((p3 >> 8) & 0xFF) * a3) + (alpha / 2)) / alpha;
+                    blue = (((p0 & 0xFF) * a0) + ((p1 & 0xFF) * a1) + ((p2 & 0xFF) * a2) + ((p3 & 0xFF) * a3)
+                            + (alpha / 2)) / alpha;
+                }
+                scaled[(y / 2) * (width / 2) + (x / 2)] = (outAlpha << 24) | (red << 16) | (green << 8) | blue;
             }
         }
         return scaled;
@@ -621,7 +632,13 @@ public final class BlockModelHeightMapZoomOutExporter {
         if (incoming == null) {
             return existing;
         }
-        return new VertexSample(Math.max(existing.y, incoming.y), Math.max(existing.dayLight, incoming.dayLight),
+        if (incoming.y > existing.y) {
+            return incoming;
+        }
+        if (incoming.y < existing.y) {
+            return existing;
+        }
+        return new VertexSample(existing.y, Math.max(existing.dayLight, incoming.dayLight),
                 Math.max(existing.nightLight, incoming.nightLight));
     }
 
@@ -635,9 +652,14 @@ public final class BlockModelHeightMapZoomOutExporter {
                 VertexSample sample = sourceVertices.get(vertexKey(worldX + dx, worldZ + dz));
                 if (sample != null) {
                     valid = true;
-                    maxY = Math.max(maxY, sample.y);
-                    dayLight = Math.max(dayLight, sample.dayLight);
-                    nightLight = Math.max(nightLight, sample.nightLight);
+                    if (sample.y > maxY) {
+                        maxY = sample.y;
+                        dayLight = sample.dayLight;
+                        nightLight = sample.nightLight;
+                    } else if (sample.y == maxY) {
+                        dayLight = Math.max(dayLight, sample.dayLight);
+                        nightLight = Math.max(nightLight, sample.nightLight);
+                    }
                 }
             }
         }
@@ -784,7 +806,17 @@ public final class BlockModelHeightMapZoomOutExporter {
     }
 
     private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {
-        BufferOutputStream imageStream = ImageIOManager.imageIOEncode(image, MapType.ImageFormat.FORMAT_PNG);
+        int width = image.getWidth();
+        int height = image.getHeight();
+        BufferedImage opaqueImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        int[] pixels = image.getRGB(0, 0, width, height, null, 0, width);
+        int[] fallbackPixels = computeOpaqueFallbackPixels(pixels, width, height);
+        for (int i = 0; i < pixels.length; i++) {
+            pixels[i] = flattenToOpaque(pixels[i], fallbackPixels[i]);
+        }
+        opaqueImage.setRGB(0, 0, width, height, pixels, 0, width);
+
+        BufferOutputStream imageStream = ImageIOManager.imageIOEncode(opaqueImage, MapType.ImageFormat.FORMAT_PNG);
         if (imageStream == null) {
             throw new IOException("Failed to encode height map zoomout texture");
         }
@@ -795,17 +827,8 @@ public final class BlockModelHeightMapZoomOutExporter {
         long green = 0;
         long blue = 0;
         long weight = 0;
-        boolean hasAlpha = false;
-        boolean hasTranslucentAlpha = false;
-        int[] pixels = image.getRGB(0, 0, image.getWidth(), image.getHeight(), null, 0, image.getWidth());
         for (int pixel : pixels) {
             int alpha = (pixel >> 24) & 0xFF;
-            if (alpha != 0xFF) {
-                hasAlpha = true;
-                if (alpha != 0) {
-                    hasTranslucentAlpha = true;
-                }
-            }
             red += alpha * ((pixel >> 16) & 0xFF);
             green += alpha * ((pixel >> 8) & 0xFF);
             blue += alpha * (pixel & 0xFF);
@@ -814,9 +837,101 @@ public final class BlockModelHeightMapZoomOutExporter {
         data.diffuseColor = (weight > 0) ? new Color((int) (red / weight), (int) (green / weight), (int) (blue / weight))
                 : new Color();
         data.material = null;
-        data.hasAlpha = hasAlpha;
-        data.hasTranslucentAlpha = hasTranslucentAlpha;
+        data.hasAlpha = false;
+        data.hasTranslucentAlpha = false;
         return data;
+    }
+
+    private int[] computeOpaqueFallbackPixels(int[] pixels, int width, int height) {
+        int[] filled = new int[pixels.length];
+        boolean[] valid = new boolean[pixels.length];
+        for (int i = 0; i < pixels.length; i++) {
+            int alpha = (pixels[i] >> 24) & 0xFF;
+            if (alpha > 0) {
+                filled[i] = 0xFF000000 | (pixels[i] & 0x00FFFFFF);
+                valid[i] = true;
+            }
+        }
+        boolean changed = true;
+        while (changed) {
+            changed = false;
+            int[] nextFilled = new int[filled.length];
+            System.arraycopy(filled, 0, nextFilled, 0, filled.length);
+            boolean[] nextValid = new boolean[valid.length];
+            System.arraycopy(valid, 0, nextValid, 0, valid.length);
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    int index = (y * width) + x;
+                    if (valid[index]) {
+                        continue;
+                    }
+                    int red = 0;
+                    int green = 0;
+                    int blue = 0;
+                    int count = 0;
+                    for (int dy = -1; dy <= 1; dy++) {
+                        int sampleY = y + dy;
+                        if ((sampleY < 0) || (sampleY >= height)) {
+                            continue;
+                        }
+                        for (int dx = -1; dx <= 1; dx++) {
+                            int sampleX = x + dx;
+                            if ((dx == 0) && (dy == 0)) {
+                                continue;
+                            }
+                            if ((sampleX < 0) || (sampleX >= width)) {
+                                continue;
+                            }
+                            int sampleIndex = (sampleY * width) + sampleX;
+                            if (!valid[sampleIndex]) {
+                                continue;
+                            }
+                            int sample = filled[sampleIndex];
+                            red += (sample >> 16) & 0xFF;
+                            green += (sample >> 8) & 0xFF;
+                            blue += sample & 0xFF;
+                            count++;
+                        }
+                    }
+                    if (count <= 0) {
+                        continue;
+                    }
+                    nextFilled[index] =
+                            0xFF000000 | (((red / count) & 0xFF) << 16) | (((green / count) & 0xFF) << 8) | ((blue / count) & 0xFF);
+                    nextValid[index] = true;
+                    changed = true;
+                }
+            }
+            filled = nextFilled;
+            valid = nextValid;
+        }
+        for (int i = 0; i < filled.length; i++) {
+            if (!valid[i]) {
+                filled[i] = 0xFF000000;
+            }
+        }
+        return filled;
+    }
+
+    private int flattenToOpaque(int pixel, int fallbackOpaque) {
+        int alpha = (pixel >> 24) & 0xFF;
+        if (alpha <= 0) {
+            return fallbackOpaque;
+        }
+        if (alpha >= 0xFF) {
+            return 0xFF000000 | (pixel & 0x00FFFFFF);
+        }
+        int srcRed = (pixel >> 16) & 0xFF;
+        int srcGreen = (pixel >> 8) & 0xFF;
+        int srcBlue = pixel & 0xFF;
+        int fallbackRed = (fallbackOpaque >> 16) & 0xFF;
+        int fallbackGreen = (fallbackOpaque >> 8) & 0xFF;
+        int fallbackBlue = fallbackOpaque & 0xFF;
+        int inverseAlpha = 0xFF - alpha;
+        int red = ((srcRed * alpha) + (fallbackRed * inverseAlpha) + 127) / 255;
+        int green = ((srcGreen * alpha) + (fallbackGreen * inverseAlpha) + 127) / 255;
+        int blue = ((srcBlue * alpha) + (fallbackBlue * inverseAlpha) + 127) / 255;
+        return 0xFF000000 | (red << 16) | (green << 8) | blue;
     }
 
     private int getTileWidthBlocks(int zoom) {

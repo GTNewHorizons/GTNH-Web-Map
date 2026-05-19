@@ -207,7 +207,7 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
     private BufferedImage buildTextureImage(ColumnData[] columns, int columnMinX, int columnMaxX, int columnMinZ,
             int columnMaxZ, int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) throws IOException {
         SourceMapSampler sourceSampler = resolveSourceMapSampler();
-        int textureDetail = (sourceSampler != null) ? sourceSampler.getTextureDetail() : 1;
+        int textureDetail = (sourceSampler != null) ? sourceSampler.getTextureDetail() : heightMapTextureDetail;
         int width = ((rangeMaxX - rangeMinX) + 1) * textureDetail;
         int depth = ((rangeMaxZ - rangeMinZ) + 1) * textureDetail;
         BufferedImage image = new BufferedImage(width, depth, BufferedImage.TYPE_INT_ARGB);
@@ -226,7 +226,7 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 } else if (column.hasSurface) {
                     double localU = sampleWorldX - worldBlockX;
                     double localV = 1.0 - (sampleWorldZ - worldBlockZ);
-                    argb = colorResolver.sampleColor(column.topMaterial, localU, localV);
+                    argb = colorResolver.sampleColor(column.topMaterial, localU, localV, textureDetail);
                 }
                 image.setRGB(pixelX, pixelZ, argb);
             }
@@ -448,7 +448,17 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
     }
 
     private ExportedTextureData encodeTextureImage(BufferedImage image) throws IOException {
-        BufferOutputStream imageStream = ImageIOManager.imageIOEncode(image, MapType.ImageFormat.FORMAT_PNG);
+        int width = image.getWidth();
+        int height = image.getHeight();
+        BufferedImage opaqueImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        int[] pixels = image.getRGB(0, 0, width, height, null, 0, width);
+        int[] fallbackPixels = computeOpaqueFallbackPixels(pixels, width, height);
+        for (int i = 0; i < pixels.length; i++) {
+            pixels[i] = flattenToOpaque(pixels[i], fallbackPixels[i]);
+        }
+        opaqueImage.setRGB(0, 0, width, height, pixels, 0, width);
+
+        BufferOutputStream imageStream = ImageIOManager.imageIOEncode(opaqueImage, MapType.ImageFormat.FORMAT_PNG);
         if (imageStream == null) {
             throw new IOException("Failed to encode height map texture");
         }
@@ -458,17 +468,8 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         long green = 0;
         long blue = 0;
         long weight = 0;
-        boolean hasAlpha = false;
-        boolean hasTranslucentAlpha = false;
-        int[] pixels = image.getRGB(0, 0, image.getWidth(), image.getHeight(), null, 0, image.getWidth());
         for (int pixel : pixels) {
             int alpha = (pixel >> 24) & 0xFF;
-            if (alpha != 0xFF) {
-                hasAlpha = true;
-                if (alpha != 0) {
-                    hasTranslucentAlpha = true;
-                }
-            }
             red += alpha * ((pixel >> 16) & 0xFF);
             green += alpha * ((pixel >> 8) & 0xFF);
             blue += alpha * (pixel & 0xFF);
@@ -477,23 +478,102 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
         data.diffuseColor = (weight > 0) ? new Color((int) (red / weight), (int) (green / weight), (int) (blue / weight))
                 : new Color();
         data.material = null;
-        data.hasAlpha = hasAlpha;
-        data.hasTranslucentAlpha = hasTranslucentAlpha;
-        if (hasAlpha) {
-            BufferedImage alphaImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
-            for (int z = 0; z < image.getHeight(); z++) {
-                for (int x = 0; x < image.getWidth(); x++) {
-                    int alpha = (image.getRGB(x, z) >> 24) & 0xFF;
-                    int argb = (alpha << 24) | (alpha << 16) | (alpha << 8) | alpha;
-                    alphaImage.setRGB(x, z, argb);
-                }
-            }
-            BufferOutputStream alphaStream = ImageIOManager.imageIOEncode(alphaImage, MapType.ImageFormat.FORMAT_PNG);
-            if (alphaStream != null) {
-                data.alphaPng = java.util.Arrays.copyOf(alphaStream.buf, alphaStream.len);
+        data.hasAlpha = false;
+        data.hasTranslucentAlpha = false;
+        data.alphaPng = null;
+        return data;
+    }
+
+    private int[] computeOpaqueFallbackPixels(int[] pixels, int width, int height) {
+        int[] filled = new int[pixels.length];
+        boolean[] valid = new boolean[pixels.length];
+        for (int i = 0; i < pixels.length; i++) {
+            int alpha = (pixels[i] >> 24) & 0xFF;
+            if (alpha > 0) {
+                filled[i] = 0xFF000000 | (pixels[i] & 0x00FFFFFF);
+                valid[i] = true;
             }
         }
-        return data;
+        boolean changed = true;
+        while (changed) {
+            changed = false;
+            int[] nextFilled = new int[filled.length];
+            System.arraycopy(filled, 0, nextFilled, 0, filled.length);
+            boolean[] nextValid = new boolean[valid.length];
+            System.arraycopy(valid, 0, nextValid, 0, valid.length);
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    int index = (y * width) + x;
+                    if (valid[index]) {
+                        continue;
+                    }
+                    int red = 0;
+                    int green = 0;
+                    int blue = 0;
+                    int count = 0;
+                    for (int dy = -1; dy <= 1; dy++) {
+                        int sampleY = y + dy;
+                        if ((sampleY < 0) || (sampleY >= height)) {
+                            continue;
+                        }
+                        for (int dx = -1; dx <= 1; dx++) {
+                            int sampleX = x + dx;
+                            if ((dx == 0) && (dy == 0)) {
+                                continue;
+                            }
+                            if ((sampleX < 0) || (sampleX >= width)) {
+                                continue;
+                            }
+                            int sampleIndex = (sampleY * width) + sampleX;
+                            if (!valid[sampleIndex]) {
+                                continue;
+                            }
+                            int sample = filled[sampleIndex];
+                            red += (sample >> 16) & 0xFF;
+                            green += (sample >> 8) & 0xFF;
+                            blue += sample & 0xFF;
+                            count++;
+                        }
+                    }
+                    if (count <= 0) {
+                        continue;
+                    }
+                    nextFilled[index] =
+                            0xFF000000 | (((red / count) & 0xFF) << 16) | (((green / count) & 0xFF) << 8) | ((blue / count) & 0xFF);
+                    nextValid[index] = true;
+                    changed = true;
+                }
+            }
+            filled = nextFilled;
+            valid = nextValid;
+        }
+        for (int i = 0; i < filled.length; i++) {
+            if (!valid[i]) {
+                filled[i] = 0xFF000000;
+            }
+        }
+        return filled;
+    }
+
+    private int flattenToOpaque(int pixel, int fallbackOpaque) {
+        int alpha = (pixel >> 24) & 0xFF;
+        if (alpha <= 0) {
+            return fallbackOpaque;
+        }
+        if (alpha >= 0xFF) {
+            return 0xFF000000 | (pixel & 0x00FFFFFF);
+        }
+        int srcRed = (pixel >> 16) & 0xFF;
+        int srcGreen = (pixel >> 8) & 0xFF;
+        int srcBlue = pixel & 0xFF;
+        int fallbackRed = (fallbackOpaque >> 16) & 0xFF;
+        int fallbackGreen = (fallbackOpaque >> 8) & 0xFF;
+        int fallbackBlue = fallbackOpaque & 0xFF;
+        int inverseAlpha = 0xFF - alpha;
+        int red = ((srcRed * alpha) + (fallbackRed * inverseAlpha) + 127) / 255;
+        int green = ((srcGreen * alpha) + (fallbackGreen * inverseAlpha) + 127) / 255;
+        int blue = ((srcBlue * alpha) + (fallbackBlue * inverseAlpha) + 127) / 255;
+        return 0xFF000000 | (red << 16) | (green << 8) | blue;
     }
 
     private String buildHeightMapMaterialId(int rangeMinX, int rangeMaxX, int rangeMinZ, int rangeMaxZ) {
