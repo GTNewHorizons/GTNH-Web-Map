@@ -671,7 +671,7 @@ texture:id=gregtech/iconsets/MACHINE_CASING_ADVANCEDGAS,filename=assets/gregtech
 texture:id=gregtech/iconsets/MACHINE_CASING_ADVANCEDRADIATIONPROOF,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ADVANCEDRADIATIONPROOF.png
 texture:id=gregtech/iconsets/MACHINE_CASING_ASSEMBLER,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_ASSEMBLER.png
 texture:id=gregtech/iconsets/MACHINE_CASING_BIOHAZARD,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_BIOHAZARD.png
-texture:id=gregtech/iconsets/MACHINE_CASING_CHEMICALLY_INERT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CHEMICALLY_INERT.png
+texture:id=gregtech/iconsets/MACHINE_CASING_CHEMICALLY_INERT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CHEMICALLY_INERT.png,processor=org.dynmap.hdmap.textureprocessor.RemoveTranslucencyProcessor
 texture:id=gregtech/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CLEAN_STAINLESSSTEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_CONTAINMENT_FIELD,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CONTAINMENT_FIELD.png
 texture:id=gregtech/iconsets/MACHINE_CASING_DATA_DRIVE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_DATA_DRIVE.png
@@ -709,7 +709,7 @@ texture:id=gregtech/iconsets/MACHINE_CASING_PCB_TIER_2,filename=assets/gregtech/
 texture:id=gregtech/iconsets/MACHINE_CASING_PCB_TIER_3,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PCB_TIER_3.png
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_BRONZE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_BRONZE.png
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_POLYBENZIMIDAZOLE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_POLYBENZIMIDAZOLE.png
-texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE.png
+texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE.png,processor=org.dynmap.hdmap.textureprocessor.RemoveTranslucencyProcessor
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_STEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_STEEL.png
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_TITANIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_TITANIUM.png
 texture:id=gregtech/iconsets/MACHINE_CASING_PIPE_TUNGSTENSTEEL,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_TUNGSTENSTEEL.png
@@ -963,8 +963,8 @@ texture:id=mte/dysonSwarm/ControlCasing_Side,filename=assets/gtnhintergalactic/t
 texture:id=mte/dysonSwarm/DeploymentUnitCasing_Side,filename=assets/gtnhintergalactic/textures/blocks/dysonSwarm/DeploymentUnitCasing_Side.png
 texture:id=mte/dysonSwarm/Floor_Side,filename=assets/gtnhintergalactic/textures/blocks/dysonSwarm/Floor_Side.png
 texture:id=mte/gasSiphon/SiphonCasing,filename=assets/gtnhintergalactic/textures/blocks/gasSiphon/SiphonCasing.png
-texture:id=mte/iconsets/MACHINE_CASING_CHEMICALLY_INERT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CHEMICALLY_INERT.png
-texture:id=mte/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE.png
+texture:id=mte/iconsets/MACHINE_CASING_CHEMICALLY_INERT,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_CHEMICALLY_INERT.png,processor=org.dynmap.hdmap.textureprocessor.RemoveTranslucencyProcessor
+texture:id=mte/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_PIPE_POLYTETRAFLUOROETHYLENE.png,processor=org.dynmap.hdmap.textureprocessor.RemoveTranslucencyProcessor
 texture:id=mte/iconsets/MACHINE_CASING_MINING_NEUTRONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_MINING_NEUTRONIUM.png
 texture:id=mte/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_MINING_BLACKPLUTONIUM.png
 texture:id=mte/iconsets/MACHINE_CASING_EXTREME_ENGINE_INTAKE,filename=assets/gregtech/textures/blocks/iconsets/MACHINE_CASING_EXTREME_ENGINE_INTAKE.png

@@ -166,22 +166,22 @@ block:id=%blockMagicalLog,data=14,stdrot=true,face0-5=0:thaumcraft/silverwoodkno
 block:id=%blockMagicalLog,data=15,stdrot=true,face0-5=0:thaumcraft/greatwoodside
 
 # %blockMagicalLeaves:* (blockMagicalLeaves), render=(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockMagicalLeaves
-block:id=%blockMagicalLeaves,data=0,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=1,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
-block:id=%blockMagicalLeaves,data=2,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=3,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
-block:id=%blockMagicalLeaves,data=4,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=5,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
-block:id=%blockMagicalLeaves,data=6,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=7,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
-block:id=%blockMagicalLeaves,data=8,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=9,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
-block:id=%blockMagicalLeaves,data=10,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=11,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
-block:id=%blockMagicalLeaves,data=12,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=13,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
-block:id=%blockMagicalLeaves,data=14,stdrot=true,face0-5=2000:thaumcraft/greatwoodleaves
-block:id=%blockMagicalLeaves,data=15,stdrot=true,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
+block:id=%blockMagicalLeaves,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=2000:thaumcraft/greatwoodleaves
+block:id=%blockMagicalLeaves,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=8899AA,face0-5=17000:thaumcraft/silverwoodleaves
 
 # %blockCustomPlant:* (blockCustomPlant), render=(CROSSEDSQUARES), opaque=false,cls=thaumcraft.common.blocks.BlockCustomPlant
 block:id=%blockCustomPlant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumcraft/greatwoodsapling
@@ -238,48 +238,48 @@ block:id=%blockTube,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:gw
 block:id=%blockTube,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,transparency=SEMITRANSPARENT,stdrot=true,face0-5=0:gwmcustom/tc4pipe
 
 # %blockMetalDevice:* (blockMetalDevice), render=thaumcraft.client.renderers.block.BlockMetalDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
-block:id=%blockMetalDevice,data=0,data=1,stdrot=true,face0-5=0:thaumcraft/metalbase
+block:id=%blockMetalDevice,data=0,data=1,stdrot=true,face0-5=0:thaumcraft/metalbase,transparency=SEMITRANSPARENT
 block:id=%blockMetalDevice,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/metalbase
-block:id=%blockMetalDevice,data=3,stdrot=true,face0-5=0:thaumcraft/alchemyblockadv
-block:id=%blockMetalDevice,data=4,stdrot=true,face0-5=0:thaumcraft/goldbase
+block:id=%blockMetalDevice,data=3,stdrot=true,face0-5=0:thaumcraft/alchemyblockadv,transparency=SEMITRANSPARENT
+block:id=%blockMetalDevice,data=4,stdrot=true,face0-5=0:thaumcraft/goldbase,transparency=SEMITRANSPARENT
 block:id=%blockMetalDevice,data=5,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/metalbase
 block:id=%blockMetalDevice,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/lamp_side
 block:id=%blockMetalDevice,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/lamp_grow_side
-block:id=%blockMetalDevice,data=9,stdrot=true,face0-5=0:thaumcraft/alchemyblock
+block:id=%blockMetalDevice,data=9,stdrot=true,face0-5=0:thaumcraft/alchemyblock,transparency=SEMITRANSPARENT
 block:id=%blockMetalDevice,data=10,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/alchemyblock
 block:id=%blockMetalDevice,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/brainbox
 block:id=%blockMetalDevice,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/lamp_fert_side
 block:id=%blockMetalDevice,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/metalbase
-block:id=%blockMetalDevice,data=15,stdrot=true,face0-5=0:thaumcraft/goldbase
+block:id=%blockMetalDevice,data=15,stdrot=true,face0-5=0:thaumcraft/goldbase,transparency=SEMITRANSPARENT
 
 # %blockWoodenDevice:* (blockWoodenDevice), render=thaumcraft.client.renderers.block.BlockWoodenDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWoodenDevice
 block:id=%blockWoodenDevice,data=0,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:gwmcustom/tc4bellows,patch1=1:gwmcustom/tc4bellows
-block:id=%blockWoodenDevice,data=1,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon
+block:id=%blockWoodenDevice,data=1,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon,transparency=SEMITRANSPARENT
 block:id=%blockWoodenDevice,data=2,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/applate1
-block:id=%blockWoodenDevice,data=4,data=5,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon
-block:id=%blockWoodenDevice,data=6,stdrot=true,face0-5=0:thaumcraft/planks_greatwood
-block:id=%blockWoodenDevice,data=7,stdrot=true,face0-5=0:thaumcraft/planks_silverwood
-block:id=%blockWoodenDevice,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon
+block:id=%blockWoodenDevice,data=4,data=5,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon,transparency=SEMITRANSPARENT
+block:id=%blockWoodenDevice,data=6,stdrot=true,face0-5=0:thaumcraft/planks_greatwood,transparency=SEMITRANSPARENT
+block:id=%blockWoodenDevice,data=7,stdrot=true,face0-5=0:thaumcraft/planks_silverwood,transparency=SEMITRANSPARENT
+block:id=%blockWoodenDevice,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:thaumcraft/arcaneearbottom,face1=0:thaumcraft/arcaneeartopoff,face2-5=0:thaumcraft/arcaneearsideon,transparency=SEMITRANSPARENT
 
 # %blockStoneDevice:* (blockStoneDevice), render=thaumcraft.client.renderers.block.BlockStoneDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockStoneDevice
-block:id=%blockStoneDevice,data=0,stdrot=true,face0=0:thaumcraft/pedestal_top,face1=0:thaumcraft/al_furnace_top,face2-5=0:thaumcraft/al_furnace_front_off
+block:id=%blockStoneDevice,data=0,stdrot=true,face0=0:thaumcraft/pedestal_top,face1=0:thaumcraft/al_furnace_top,face2-5=0:thaumcraft/al_furnace_front_off,transparency=SEMITRANSPARENT
 block:id=%blockStoneDevice,data=1,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:thaumcraft/pedestal_top,patch1=0:thaumcraft/pedestal_side
-block:id=%blockStoneDevice,data=2,stdrot=true,face0-5=0:thaumcraft/arcane_stone
+block:id=%blockStoneDevice,data=2,stdrot=true,face0-5=0:thaumcraft/arcane_stone,transparency=SEMITRANSPARENT
 block:id=%blockStoneDevice,data=3,data=4,stdrot=true,transparency=SEMITRANSPARENT,patch0=0:thaumcraft/arcane_stone
 block:id=%blockStoneDevice,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0=0:thaumcraft/pedestal_top,face1=0:thaumcraft/wandpedestal_top,face2-5=0:thaumcraft/wandpedestal_side
-block:id=%blockStoneDevice,data=6,data=7,stdrot=true,patch0=0:thaumcraft/arcane_stone
+block:id=%blockStoneDevice,data=6,data=7,stdrot=true,patch0=0:thaumcraft/arcane_stone,transparency=SEMITRANSPARENT
 block:id=%blockStoneDevice,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0=0:thaumcraft/wandpedestal_focus_bot,face1=0:thaumcraft/wandpedestal_focus_top,face2-5=0:thaumcraft/wandpedestal_focus_side
-block:id=%blockStoneDevice,data=9,data=10,data=11,stdrot=true,face0-5=0:thaumcraft/arcane_stone
-block:id=%blockStoneDevice,data=12,stdrot=true,face0=0:thaumcraft/arcane_stone,face1=0:thaumcraft/spa_top,face2-5=0:thaumcraft/spa_side
-block:id=%blockStoneDevice,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/arcane_stone
+block:id=%blockStoneDevice,data=9,data=10,data=11,stdrot=true,face0-5=0:thaumcraft/arcane_stone,transparency=SEMITRANSPARENT
+block:id=%blockStoneDevice,data=12,stdrot=true,face0=0:thaumcraft/arcane_stone,face1=0:thaumcraft/spa_top,face2-5=0:thaumcraft/spa_side,transparency=SEMITRANSPARENT
+block:id=%blockStoneDevice,data=13,data=14,data=15,stdrot=true,face0-5=0:thaumcraft/arcane_stone,transparency=SEMITRANSPARENT
 
 # %blockMirror:* (blockMirror), render=(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMirror
 block:id=%blockMirror,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/mirrorframe
 block:id=%blockMirror,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumcraft/mirrorframe2
 
 # %blockTable:* (blockTable), render=thaumcraft.client.renderers.block.BlockTableRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTable
-block:id=%blockTable,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,face0-5=1:thaumcraft/table
-block:id=%blockTable,data=15,stdrot=true,patch0=2:thaumcraft/worktable,patch1=1:thaumcraft/worktable,patch2=8:thaumcraft/worktable
+block:id=%blockTable,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,face0-5=1:thaumcraft/table,transparency=SEMITRANSPARENT
+block:id=%blockTable,data=15,stdrot=true,patch0=2:thaumcraft/worktable,patch1=1:thaumcraft/worktable,patch2=8:thaumcraft/worktable,transparency=SEMITRANSPARENT
 
 # %blockChestHungry:* (blockChestHungry), render=thaumcraft.client.renderers.block.BlockChestHungryRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockChestHungry
 block:id=%blockChestHungry,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:thaumcraft/woodplain
@@ -339,7 +339,7 @@ block:id=%blockManaPod,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:thau
 block:id=%blockManaPod,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:thaumcraft/manapod_stem_2
 
 # %blockWarded:* (blockWarded), render=thaumcraft.client.renderers.block.BlockWardedRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWarded
-block:id=%blockWarded,data=*,stdrot=true,face0-5=0:thaumcraft/blank
+block:id=%blockWarded,data=*,stdrot=true,face0-5=0:thaumcraft/blank,transparency=SEMITRANSPARENT
 
 # %blockHole:* (blockHole), render=(STANDARD), opaque=false,cls=thaumcraft.common.blocks.BlockHole
 block:id=%blockHole,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,face0-5=0:thaumcraft/blank

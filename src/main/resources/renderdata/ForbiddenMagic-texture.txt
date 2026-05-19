@@ -54,7 +54,7 @@ block:id=%TaintLog,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:forbidd
 block:id=%TaintPlank,data=*,stdrot=true,face0-5=0:forbidden/taint_planks
 
 # %TaintLeaves:* (TaintLeaves), render=(STANDARD), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockLeavesTainted
-block:id=%TaintLeaves,data=*,stdrot=true,face0-5=0:forbidden/taint_leaves
+block:id=%TaintLeaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:forbidden/taint_leaves
 
 # %TaintSapling:* (TaintSapling), render=(CROSSEDSQUARES), opaque=false,cls=fox.spiteful.forbidden.blocks.BlockSaplingTainted
 block:id=%TaintSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:forbidden/sapling_taint

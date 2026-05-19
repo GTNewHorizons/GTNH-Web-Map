@@ -403,19 +403,19 @@ block:id=%geostrata_block_slab,data=*,stdrot=true,transparency=SEMITRANSPARENT,f
 block:id=%geostrata_block_lavarock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/0
 block:id=%geostrata_block_lavarock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/1
 block:id=%geostrata_block_lavarock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/2
-block:id=%geostrata_block_lavarock,data=3,stdrot=true,face0-5=0:geostrata/semilava/3
+block:id=%geostrata_block_lavarock,data=3,stdrot=true,face0-5=0:geostrata/semilava/3,transparency=SEMITRANSPARENT
 block:id=%geostrata_block_lavarock,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/0
 block:id=%geostrata_block_lavarock,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/1
 block:id=%geostrata_block_lavarock,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/2
-block:id=%geostrata_block_lavarock,data=7,stdrot=true,face0-5=0:geostrata/semilava/3
+block:id=%geostrata_block_lavarock,data=7,stdrot=true,face0-5=0:geostrata/semilava/3,transparency=SEMITRANSPARENT
 block:id=%geostrata_block_lavarock,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/0
 block:id=%geostrata_block_lavarock,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/1
 block:id=%geostrata_block_lavarock,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/2
-block:id=%geostrata_block_lavarock,data=11,stdrot=true,face0-5=0:geostrata/semilava/3
+block:id=%geostrata_block_lavarock,data=11,stdrot=true,face0-5=0:geostrata/semilava/3,transparency=SEMITRANSPARENT
 block:id=%geostrata_block_lavarock,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/0
 block:id=%geostrata_block_lavarock,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/1
 block:id=%geostrata_block_lavarock,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:geostrata/semilava/2
-block:id=%geostrata_block_lavarock,data=15,stdrot=true,face0-5=0:geostrata/semilava/3
+block:id=%geostrata_block_lavarock,data=15,stdrot=true,face0-5=0:geostrata/semilava/3,transparency=SEMITRANSPARENT
 
 # %geostrata_block_decogen:* (geostrata_block_decogen), render=Reika.GeoStrata.Rendering.DecoGenRenderer(CUSTOM), opaque=false,cls=Reika.GeoStrata.Blocks.BlockDecoGen
 block:id=%geostrata_block_decogen,data=0,stdrot=true,face0-5=12000:geostrata/deco/0
@@ -429,7 +429,7 @@ block:id=%geostrata_block_glowcrys,data=3,stdrot=true,colorMult=FFB700FF,face0-5
 block:id=%geostrata_block_glowcrys,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:geostrata/glowcrystal/a
 
 # %geostrata_block_partial:* (geostrata_block_partial), render=(STANDARD), opaque=false,cls=Reika.GeoStrata.Blocks.BlockPartialBounds
-block:id=%geostrata_block_partial,data=*,stdrot=true,face0=12000:minecraft/obsidian,face1=12000:minecraft/cobblestone,face2=12000:minecraft/dirt,face3=12000:minecraft/ice,face4=12000:minecraft/leaves_oak,face5=12000:minecraft/planks_oak
+block:id=%geostrata_block_partial,data=*,stdrot=true,transparency=TRANSPARENT,face0=12000:minecraft/obsidian,face1=12000:minecraft/cobblestone,face2=12000:minecraft/dirt,face3=12000:minecraft/ice,face4=12000:minecraft/leaves_oak,face5=12000:minecraft/planks_oak
 
 # %geostrata_block_glowvine:* (geostrata_block_glowvine), render=Reika.GeoStrata.Rendering.GlowVineRenderer(CUSTOM), opaque=false,cls=Reika.GeoStrata.Blocks.BlockGlowingVines
 block:id=%geostrata_block_glowvine,data=*,stdrot=true,face0-5=12000:geostrata/glowvine_anim4

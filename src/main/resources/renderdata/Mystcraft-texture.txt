@@ -74,9 +74,9 @@ block:id=%BlockCrystal,data=*,stdrot=true,face0-5=0:mystcraft/crystal
 block:id=%LinkPortal,data=*,stdrot=true,transparency=TRANSPARENT,colorMult=3333FF,face0-5=17000:mystcraft/portal
 
 # %WritingDesk:* (WritingDesk), render=(CUSTOM), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockWritingDesk
-block:id=%WritingDesk,data=0,data=1,data=2,data=3,stdrot=true,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
+block:id=%WritingDesk,data=0,data=1,data=2,data=3,stdrot=true,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf,transparency=SEMITRANSPARENT
 block:id=%WritingDesk,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
-block:id=%WritingDesk,data=8,data=9,data=10,data=11,stdrot=true,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
+block:id=%WritingDesk,data=8,data=9,data=10,data=11,stdrot=true,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf,transparency=SEMITRANSPARENT
 block:id=%WritingDesk,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:minecraft/crafting_table_top,face2-5=0:minecraft/bookshelf
 
 # %BlockFluidMyst:* (BlockFluidMyst), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.xcompwiz.mystcraft.block.BlockFluidWrapper

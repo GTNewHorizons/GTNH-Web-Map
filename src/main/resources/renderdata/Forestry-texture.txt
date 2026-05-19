@@ -372,7 +372,7 @@ block:id=%stairsFireproof,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-
 block:id=%saplingGE,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/germlings/sapling.treeBalsa
 
 # %leaves:* (leaves), render=forestry.arboriculture.render.RenderLeavesBlock(CUSTOM), opaque=true,cls=forestry.arboriculture.blocks.BlockForestryLeaves
-block:id=%leaves,data=*,stdrot=true,face0-5=2000:forestry/leaves/deciduous.fancy
+block:id=%leaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=2000:forestry/leaves/deciduous.fancy
 
 # %pods:* (pods), render=forestry.arboriculture.render.RenderFruitPodBlock(CUSTOM), opaque=false,cls=forestry.arboriculture.blocks.BlockFruitPod
 block:id=%pods,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/pods/papaya.2

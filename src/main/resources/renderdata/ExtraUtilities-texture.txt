@@ -210,11 +210,11 @@ block:id=%chestFull,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,da
 block:id=%enderCollector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/enderCollectorBottom
 
 # %endConstructor:* (endConstructor), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.enderconstructor.BlockEnderConstructor
-block:id=%endConstructor,data=0,stdrot=true,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_top,face2-5=0:extrautils/enderConstructor_side
-block:id=%endConstructor,data=1,stdrot=true,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_top_enabled,face2-5=0:extrautils/enderConstructor_side_enabled
+block:id=%endConstructor,data=0,stdrot=true,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_top,face2-5=0:extrautils/enderConstructor_side,transparency=SEMITRANSPARENT
+block:id=%endConstructor,data=1,stdrot=true,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_top_enabled,face2-5=0:extrautils/enderConstructor_side_enabled,transparency=SEMITRANSPARENT
 block:id=%endConstructor,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_pillar_top,face2-5=0:extrautils/enderConstructor_pillar
 block:id=%endConstructor,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_pillar_top_enabled,face2-5=0:extrautils/enderConstructor_pillar_enabled
-block:id=%endConstructor,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_top,face2-5=0:extrautils/enderConstructor_side
+block:id=%endConstructor,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:extrautils/enderConstructor_pillar_bottom,face1=0:extrautils/enderConstructor_top,face2-5=0:extrautils/enderConstructor_side,transparency=SEMITRANSPARENT
 
 # %endMarker:* (endMarker), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.enderquarry.BlockEnderMarkers
 block:id=%endMarker,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/endMarker
@@ -580,21 +580,21 @@ block:id=%sound_muffler,data=1,stdrot=true,face0-5=0:extrautils/rain_muffler
 block:id=%sound_muffler,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/sound_muffler
 
 # %extractor_base:* (extractor_base), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockTransferNode
-block:id=%extractor_base,data=0,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
-block:id=%extractor_base,data=1,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
-block:id=%extractor_base,data=2,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
-block:id=%extractor_base,data=3,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
-block:id=%extractor_base,data=4,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
-block:id=%extractor_base,data=5,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract
-block:id=%extractor_base,data=6,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=7,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=8,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=9,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=10,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=11,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid
-block:id=%extractor_base,data=12,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy
-block:id=%extractor_base,data=13,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy_hyper
-block:id=%extractor_base,data=14,data=15,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy
+block:id=%extractor_base,data=0,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=1,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=2,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=3,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=4,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=5,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=6,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=7,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=8,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=9,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=10,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=11,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_liquid,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=12,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=13,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy_hyper,transparency=SEMITRANSPARENT
+block:id=%extractor_base,data=14,data=15,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_energy,transparency=SEMITRANSPARENT
 
 # %extractor_base_remote:* (extractor_base_remote), render=com.rwtema.extrautils.block.render.RenderBlockMultiBlock(CUSTOM), opaque=false,cls=com.rwtema.extrautils.tileentity.transfernodes.BlockRetrievalNode
 block:id=%extractor_base_remote,data=0,stdrot=true,patch0-5=0:extrautils/pipes,patch6=0:extrautils/extractor_extract_remote

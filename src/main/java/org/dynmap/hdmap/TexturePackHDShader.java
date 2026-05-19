@@ -3,6 +3,7 @@ package org.dynmap.hdmap;
 import static org.dynmap.JSONUtils.s;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
 
@@ -12,7 +13,9 @@ import org.dynmap.DynmapCore;
 import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.common.DynmapCommandSender;
+import org.dynmap.exporter.ExportMaterial;
 import org.dynmap.exporter.OBJExport;
+import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.DynLongHashMap;
 import org.dynmap.utils.MapChunkCache;
@@ -61,6 +64,10 @@ public class TexturePackHDShader implements HDShader {
             did_tp_load = true;
         }
         return tp;
+    }
+
+    public final TexturePack getTexturePackForExport() {
+        return getTexturePack();
     }
     
     @Override
@@ -368,8 +375,37 @@ public class TexturePackHDShader implements HDShader {
             getTexturePack();   // Make sure its loaded
         }
         if (tp != null) {
-            return tp.getCurrentBlockMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps);
+            ExportMaterial[][] layered = tp.getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx,
+                    steps, null);
+            String[] materials = new String[layered.length];
+            for (int i = 0; i < layered.length; i++) {
+                if ((layered[i] != null) && (layered[i].length > 0)) {
+                    materials[i] = layered[i][0].getMaterialId() + ((layered[i][0].getRotation() != 0)
+                            ? ("@" + layered[i][0].getRotation())
+                            : "");
+                }
+            }
+            return materials;
         }
         return new String[txtidx.length];
+    }
+
+    public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
+            int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData) {
+        return getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps, customRenderData,
+                true);
+    }
+
+    public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
+            int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData,
+            boolean allowLegacyTopBottomRotationCorrection) {
+        if (tp == null) {
+            getTexturePack();
+        }
+        if (tp != null) {
+            return tp.getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps,
+                    customRenderData, allowLegacyTopBottomRotationCorrection);
+        }
+        return new ExportMaterial[txtidx.length][];
     }
 }

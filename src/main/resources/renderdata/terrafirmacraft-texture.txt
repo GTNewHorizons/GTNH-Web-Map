@@ -965,7 +965,7 @@ block:id=%LogPile,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data
 
 # %Charcoal:* (Charcoal), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockCharcoal
 block:id=%Charcoal,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Charcoal
-block:id=%Charcoal,data=8,stdrot=true,face0-5=0:terrafirmacraft/devices/Charcoal
+block:id=%Charcoal,data=8,stdrot=true,face0-5=0:terrafirmacraft/devices/Charcoal,transparency=SEMITRANSPARENT
 block:id=%Charcoal,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Charcoal
 
 # %tilledSoil:* (tilledSoil), render=(STANDARD), opaque=true,cls=com.bioxx.tfc.Blocks.BlockFarmland
@@ -1079,25 +1079,25 @@ block:id=%log2,data=14,stdrot=true,face0-1=0:terrafirmacraft/wood/trees/Willow L
 block:id=%log2,data=15,stdrot=true,face0-1=0:terrafirmacraft/wood/trees/Kapok Log Top,face2-5=0:terrafirmacraft/wood/trees/Kapok Log
 
 # %leaves:* (leaves), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomLeaves
-block:id=%leaves,data=0,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Oak Leaves Fancy
-block:id=%leaves,data=1,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Aspen Leaves Fancy
-block:id=%leaves,data=2,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Birch Leaves Fancy
-block:id=%leaves,data=3,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Chestnut Leaves Fancy
-block:id=%leaves,data=4,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Douglas Fir Leaves Fancy
-block:id=%leaves,data=5,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Hickory Leaves Fancy
-block:id=%leaves,data=6,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Maple Leaves Fancy
-block:id=%leaves,data=7,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Ash Leaves Fancy
-block:id=%leaves,data=8,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Pine Leaves Fancy
-block:id=%leaves,data=9,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Sequoia Leaves Fancy
-block:id=%leaves,data=10,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Spruce Leaves Fancy
-block:id=%leaves,data=11,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Sycamore Leaves Fancy
-block:id=%leaves,data=12,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/White Cedar Leaves Fancy
-block:id=%leaves,data=13,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/White Elm Leaves Fancy
-block:id=%leaves,data=14,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Willow Leaves Fancy
-block:id=%leaves,data=15,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Kapok Leaves Fancy
+block:id=%leaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Oak Leaves Fancy
+block:id=%leaves,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Aspen Leaves Fancy
+block:id=%leaves,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Birch Leaves Fancy
+block:id=%leaves,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Chestnut Leaves Fancy
+block:id=%leaves,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Douglas Fir Leaves Fancy
+block:id=%leaves,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Hickory Leaves Fancy
+block:id=%leaves,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Maple Leaves Fancy
+block:id=%leaves,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Ash Leaves Fancy
+block:id=%leaves,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Pine Leaves Fancy
+block:id=%leaves,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Sequoia Leaves Fancy
+block:id=%leaves,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Spruce Leaves Fancy
+block:id=%leaves,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Sycamore Leaves Fancy
+block:id=%leaves,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/White Cedar Leaves Fancy
+block:id=%leaves,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/White Elm Leaves Fancy
+block:id=%leaves,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Willow Leaves Fancy
+block:id=%leaves,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Kapok Leaves Fancy
 
 # %leaves2:* (leaves2), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomLeaves2
-block:id=%leaves2,data=*,stdrot=true,face0-5=2000:terrafirmacraft/wood/trees/Acacia Leaves Fancy
+block:id=%leaves2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=2000:terrafirmacraft/wood/trees/Acacia Leaves Fancy
 
 # %sapling:* (sapling), render=(CROSSEDSQUARES), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockSapling
 block:id=%sapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:terrafirmacraft/wood/trees/Oak Sapling
@@ -1183,9 +1183,9 @@ block:id=%Forge,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,d
 
 # %Molten:* (Molten), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockMolten
 block:id=%Molten,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Molten Rock Off
-block:id=%Molten,data=7,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock Off
+block:id=%Molten,data=7,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock Off,transparency=SEMITRANSPARENT
 block:id=%Molten,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Molten Rock
-block:id=%Molten,data=15,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock
+block:id=%Molten,data=15,stdrot=true,face0-5=0:terrafirmacraft/devices/Molten Rock,transparency=SEMITRANSPARENT
 
 # %Bloomery:* (Bloomery), render=(STANDARD), opaque=true,cls=com.bioxx.tfc.Blocks.Devices.BlockBlastFurnace
 block:id=%Bloomery,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:terrafirmacraft/devices/Blast Furnace Bottom Off,face2-5=0:terrafirmacraft/devices/Blast Furnace Off
@@ -1199,8 +1199,8 @@ block:id=%EarlyBloomery,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRA
 block:id=%EarlyBloomery,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/devices/Bloomery Off
 
 # %Sluice:* (Sluice), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Devices.BlockSluice
-block:id=%Sluice,data=0,data=1,data=2,data=3,stdrot=true,face0-5=0:terrafirmacraft/wood/WoodSheet/Pine
-block:id=%Sluice,data=4,data=5,data=6,data=7,stdrot=true,face0=0:terrafirmacraft/wood/WoodSheet/Pine,face1=0:minecraft/water_flow,face2-5=0:terrafirmacraft/wood/WoodSheet/Pine
+block:id=%Sluice,data=0,data=1,data=2,data=3,stdrot=true,face0-5=0:terrafirmacraft/wood/WoodSheet/Pine,transparency=SEMITRANSPARENT
+block:id=%Sluice,data=4,data=5,data=6,data=7,stdrot=true,face0=0:terrafirmacraft/wood/WoodSheet/Pine,face1=0:minecraft/water_flow,face2-5=0:terrafirmacraft/wood/WoodSheet/Pine,transparency=SEMITRANSPARENT
 block:id=%Sluice,data=8,data=9,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/WoodSheet/Pine
 block:id=%Sluice,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:terrafirmacraft/wood/WoodSheet/Pine,face1=0:minecraft/water_flow,face2-5=0:terrafirmacraft/wood/WoodSheet/Pine
 
@@ -1219,40 +1219,40 @@ block:id=%fruitTreeWood,data=7,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit 
 block:id=%fruitTreeWood,data=8,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Plum Wood
 
 # %fruitTreeLeaves:* (fruitTreeLeaves), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockFruitLeaves
-block:id=%fruitTreeLeaves,data=0,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
-block:id=%fruitTreeLeaves,data=1,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
-block:id=%fruitTreeLeaves,data=2,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
-block:id=%fruitTreeLeaves,data=3,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
-block:id=%fruitTreeLeaves,data=4,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
-block:id=%fruitTreeLeaves,data=5,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
-block:id=%fruitTreeLeaves,data=6,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
-block:id=%fruitTreeLeaves,data=7,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
-block:id=%fruitTreeLeaves,data=8,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
-block:id=%fruitTreeLeaves,data=9,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
-block:id=%fruitTreeLeaves,data=10,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
-block:id=%fruitTreeLeaves,data=11,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
-block:id=%fruitTreeLeaves,data=12,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
-block:id=%fruitTreeLeaves,data=13,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
-block:id=%fruitTreeLeaves,data=14,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
-block:id=%fruitTreeLeaves,data=15,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
+block:id=%fruitTreeLeaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
+block:id=%fruitTreeLeaves,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
+block:id=%fruitTreeLeaves,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
+block:id=%fruitTreeLeaves,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
+block:id=%fruitTreeLeaves,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
+block:id=%fruitTreeLeaves,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
+block:id=%fruitTreeLeaves,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
+block:id=%fruitTreeLeaves,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
+block:id=%fruitTreeLeaves,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
+block:id=%fruitTreeLeaves,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
+block:id=%fruitTreeLeaves,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
+block:id=%fruitTreeLeaves,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
+block:id=%fruitTreeLeaves,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
+block:id=%fruitTreeLeaves,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
+block:id=%fruitTreeLeaves,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
+block:id=%fruitTreeLeaves,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
 
 # %fruitTreeLeaves2:* (fruitTreeLeaves2), render=com.bioxx.tfc.Handlers.Client.BlockRenderHandler(CUSTOM), opaque=false,cls=com.bioxx.tfc.Blocks.Flora.BlockFruitLeaves
-block:id=%fruitTreeLeaves2,data=0,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
-block:id=%fruitTreeLeaves2,data=1,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
-block:id=%fruitTreeLeaves2,data=2,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
-block:id=%fruitTreeLeaves2,data=3,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
-block:id=%fruitTreeLeaves2,data=4,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
-block:id=%fruitTreeLeaves2,data=5,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
-block:id=%fruitTreeLeaves2,data=6,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
-block:id=%fruitTreeLeaves2,data=7,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
-block:id=%fruitTreeLeaves2,data=8,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
-block:id=%fruitTreeLeaves2,data=9,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
-block:id=%fruitTreeLeaves2,data=10,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
-block:id=%fruitTreeLeaves2,data=11,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
-block:id=%fruitTreeLeaves2,data=12,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
-block:id=%fruitTreeLeaves2,data=13,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
-block:id=%fruitTreeLeaves2,data=14,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
-block:id=%fruitTreeLeaves2,data=15,stdrot=true,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
+block:id=%fruitTreeLeaves2,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
+block:id=%fruitTreeLeaves2,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
+block:id=%fruitTreeLeaves2,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
+block:id=%fruitTreeLeaves2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
+block:id=%fruitTreeLeaves2,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
+block:id=%fruitTreeLeaves2,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
+block:id=%fruitTreeLeaves2,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
+block:id=%fruitTreeLeaves2,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
+block:id=%fruitTreeLeaves2,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Red Apple Leaves
+block:id=%fruitTreeLeaves2,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Banana Leaves
+block:id=%fruitTreeLeaves2,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Orange Leaves
+block:id=%fruitTreeLeaves2,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Green Apple Leaves
+block:id=%fruitTreeLeaves2,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Lemon Leaves
+block:id=%fruitTreeLeaves2,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Olive Leaves
+block:id=%fruitTreeLeaves2,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Cherry Leaves
+block:id=%fruitTreeLeaves2,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/fruit trees/Peach Leaves
 
 # %stoneStalac:* (stoneStalac), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.BlockStalactite
 block:id=%stoneStalac,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/Invisible
@@ -1899,7 +1899,7 @@ block:id=%Pumpkin,data=3,stdrot=true,face0-1=0:minecraft/pumpkin_top,face2-4=0:m
 block:id=%Pumpkin,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:minecraft/pumpkin_top,face2-5=0:minecraft/pumpkin_side
 
 # %ButtonWood:* (ButtonWood), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomButtonWood
-block:id=%ButtonWood,data=0,stdrot=true,face0-5=0:terrafirmacraft/wood/Oak Plank
+block:id=%ButtonWood,data=0,stdrot=true,face0-5=0:terrafirmacraft/wood/Oak Plank,transparency=SEMITRANSPARENT
 block:id=%ButtonWood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/wood/Oak Plank
 
 # %Vine:* (Vine), render=(VINE), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomVine
@@ -1969,6 +1969,6 @@ block:id=%SmokeRack,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:terraf
 
 # %Snow:* (Snow), render=(STANDARD), opaque=false,cls=com.bioxx.tfc.Blocks.Vanilla.BlockCustomSnow
 block:id=%Snow,data=0,data=1,data=2,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/snow
-block:id=%Snow,data=7,stdrot=true,face0-5=0:terrafirmacraft/snow
+block:id=%Snow,data=7,stdrot=true,face0-5=0:terrafirmacraft/snow,transparency=SEMITRANSPARENT
 block:id=%Snow,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:terrafirmacraft/snow
-block:id=%Snow,data=15,stdrot=true,face0-5=0:terrafirmacraft/snow
+block:id=%Snow,data=15,stdrot=true,face0-5=0:terrafirmacraft/snow,transparency=SEMITRANSPARENT

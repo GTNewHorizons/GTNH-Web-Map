@@ -17,15 +17,15 @@ texture:id=sgcraft/naquadahOre,filename=assets/sgcraft/textures/blocks/naquadahO
 block:id=%stargateRing,data=*,stdrot=true,face0-5=12000:minecraft/stone
 
 # %stargateBase:* (stargateBase), render=gcewing.sg.BaseModClient$BlockRenderDispatcher(CUSTOM), opaque=false,cls=gcewing.sg.blocks.SGBaseBlock
-block:id=%stargateBase,data=0,data=1,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=0,data=1,stdrot=true,face0-5=12000:minecraft/stone,transparency=SEMITRANSPARENT
 block:id=%stargateBase,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
-block:id=%stargateBase,data=3,data=4,data=5,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=3,data=4,data=5,stdrot=true,face0-5=12000:minecraft/stone,transparency=SEMITRANSPARENT
 block:id=%stargateBase,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
-block:id=%stargateBase,data=7,data=8,data=9,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=7,data=8,data=9,stdrot=true,face0-5=12000:minecraft/stone,transparency=SEMITRANSPARENT
 block:id=%stargateBase,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
-block:id=%stargateBase,data=11,data=12,data=13,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=11,data=12,data=13,stdrot=true,face0-5=12000:minecraft/stone,transparency=SEMITRANSPARENT
 block:id=%stargateBase,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
-block:id=%stargateBase,data=15,stdrot=true,face0-5=12000:minecraft/stone
+block:id=%stargateBase,data=15,stdrot=true,face0-5=12000:minecraft/stone,transparency=SEMITRANSPARENT
 
 # %stargateController:* (stargateController), render=(CUSTOM), opaque=false,cls=gcewing.sg.blocks.DHDBlock
 block:id=%stargateController,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone

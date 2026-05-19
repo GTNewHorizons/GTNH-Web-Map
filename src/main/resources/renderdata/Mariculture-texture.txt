@@ -274,12 +274,12 @@ block:id=%machines_single_rendered,data=8,data=9,data=10,data=11,data=12,data=13
 block:id=%ticking,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mariculture/net
 
 # %tanks:* (tanks), render=mariculture.core.render.RenderHandler(CUSTOM), opaque=false,cls=mariculture.core.blocks.BlockTank
-block:id=%tanks,data=0,stdrot=true,face0-5=12000:mariculture/normalTank
-block:id=%tanks,data=1,stdrot=true,face0-5=12000:mariculture/fishTank/1
+block:id=%tanks,data=0,stdrot=true,face0-5=12000:mariculture/normalTank,transparency=SEMITRANSPARENT
+block:id=%tanks,data=1,stdrot=true,face0-5=12000:mariculture/fishTank/1,transparency=SEMITRANSPARENT
 block:id=%tanks,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:mariculture/bottleTank
-block:id=%tanks,data=3,stdrot=true,face0-5=12000:mariculture/fluidtionaryTank
-block:id=%tanks,data=4,stdrot=true,face0-5=12000:mariculture/hatcheryTank
-block:id=%tanks,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:mariculture/normalTank
+block:id=%tanks,data=3,stdrot=true,face0-5=12000:mariculture/fluidtionaryTank,transparency=SEMITRANSPARENT
+block:id=%tanks,data=4,stdrot=true,face0-5=12000:mariculture/hatcheryTank,transparency=SEMITRANSPARENT
+block:id=%tanks,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:mariculture/normalTank,transparency=SEMITRANSPARENT
 
 # %pearl_brick:* (pearl_brick), render=(STANDARD), opaque=true,cls=mariculture.core.blocks.BlockPearlBlock
 block:id=%pearl_brick,data=0,stdrot=true,face0-5=0:mariculture/pearlBrick_white

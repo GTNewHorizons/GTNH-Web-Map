@@ -220,7 +220,7 @@ block:id=%custom_spawner,data=*,stdrot=true,face0-5=0:minecraft/mob_spawner
 block:id=%cinder,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/cinder
 
 # %spooky_leaves:* (spooky_leaves), render=chylex.hee.render.block.RenderBlockSpookyLeaves(CUSTOM), opaque=false,cls=chylex.hee.block.BlockSpookyLeaves
-block:id=%spooky_leaves,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/spooky_leaves
+block:id=%spooky_leaves,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:hardcoreenderexpansion/spooky_leaves
 
 # %igneous_rock_ore:* (igneous_rock_ore), render=(STANDARD), opaque=true,cls=chylex.hee.block.BlockIgneousRockOre
 block:id=%igneous_rock_ore,data=*,stdrot=true,face0-5=0:hardcoreenderexpansion/igneous_rock_ore

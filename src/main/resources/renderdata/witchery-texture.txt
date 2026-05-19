@@ -331,19 +331,19 @@ block:id=%witchlog,data=14,stdrot=true,face0-5=0:witchery/log_hawthorn
 block:id=%witchlog,data=15,stdrot=true,face0-5=0:witchery/log_rowan
 
 # %witchleaves:* (witchleaves), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchLeaves
-block:id=%witchleaves,data=0,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=1,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=2,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=3,data=4,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=5,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=6,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=7,data=8,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=9,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=10,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=11,data=12,stdrot=true,face0-5=2000:witchery/leaves_rowan
-block:id=%witchleaves,data=13,stdrot=true,colorMult=399933,face0-5=17000:witchery/leaves_alder
-block:id=%witchleaves,data=14,stdrot=true,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
-block:id=%witchleaves,data=15,stdrot=true,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=7,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=11,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
+block:id=%witchleaves,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=399933,face0-5=17000:witchery/leaves_alder
+block:id=%witchleaves,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=66AA66,face0-5=17000:witchery/leaves_hawthorn
+block:id=%witchleaves,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:witchery/leaves_rowan
 
 # %voidbramble:* (voidbramble), render=(CROPS), opaque=false,cls=com.emoniph.witchery.blocks.BlockVoidBramble
 block:id=%voidbramble,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/voidBramble
@@ -398,7 +398,7 @@ block:id=%somniancotton,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:wit
 block:id=%web,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/web
 
 # %vine:* (vine), render=com.emoniph.witchery.brewing.RenderWitchVine(CUSTOM), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchVine
-block:id=%vine,data=0,data=1,stdrot=true,face0-5=2000:minecraft/vine
+block:id=%vine,data=0,data=1,stdrot=true,face0-5=2000:minecraft/vine,transparency=SEMITRANSPARENT
 block:id=%vine,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/vine
 
 # %cactus:* (cactus), render=(CACTUS), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchCactus
@@ -546,9 +546,9 @@ block:id=%pitdirt,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=
 block:id=%pitgrass,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
 
 # %garlicgarland:* (garlicgarland), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockGarlicGarland
-block:id=%garlicgarland,data=0,data=1,stdrot=true,face0-5=0:witchery/garlicgarlanditem
+block:id=%garlicgarland,data=0,data=1,stdrot=true,face0-5=0:witchery/garlicgarlanditem,transparency=SEMITRANSPARENT
 block:id=%garlicgarland,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/garlicgarlanditem
-block:id=%garlicgarland,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:witchery/garlicgarlanditem
+block:id=%garlicgarland,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:witchery/garlicgarlanditem,transparency=SEMITRANSPARENT
 
 # %bloodedwool:* (bloodedwool), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockBloodedWool
 block:id=%bloodedwool,data=*,stdrot=true,face0-5=0:witchery/bloodedwool
@@ -618,9 +618,9 @@ block:id=%kettle,data=*,stdrot=true,face0-5=0:witchery/kettle
 block:id=%poppetshelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/poppetShelf
 
 # %dreamcatcher:* (dreamcatcher), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDreamCatcher
-block:id=%dreamcatcher,data=0,data=1,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%dreamcatcher,data=0,data=1,stdrot=true,face0-5=0:minecraft/planks_oak,transparency=SEMITRANSPARENT
 block:id=%dreamcatcher,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
-block:id=%dreamcatcher,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%dreamcatcher,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/planks_oak,transparency=SEMITRANSPARENT
 
 # %crystalball:* (crystalball), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCrystalBall
 block:id=%crystalball,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/crystalball
@@ -787,9 +787,9 @@ block:id=%cstonepressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-
 block:id=%csnowpressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/snow
 
 # %cbuttonwood:* (cbuttonwood), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$1
-block:id=%cbuttonwood,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%cbuttonwood,data=0,stdrot=true,face0-5=0:minecraft/planks_oak,transparency=SEMITRANSPARENT
 block:id=%cbuttonwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
 # %cbuttonstone:* (cbuttonstone), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$2
-block:id=%cbuttonstone,data=0,stdrot=true,face0-5=0:minecraft/stone
+block:id=%cbuttonstone,data=0,stdrot=true,face0-5=0:minecraft/stone,transparency=SEMITRANSPARENT
 block:id=%cbuttonstone,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone

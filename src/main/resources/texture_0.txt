@@ -367,29 +367,29 @@ block:id=52,allfaces=65,stdrot=true,transparency=TRANSPARENT
 # Wooden stairs
 block:id=53,data=*,patch0-2=4,transparency=SEMITRANSPARENT
 # Chest - single, facing west
-block:id=54,data=0,top=6000,bottom=6005,south=2,north=1,east=4,west=3,userenderdata=true,txtid=chest
+block:id=54,data=0,top=6000,bottom=6005,south=2,north=1,east=4,west=3,userenderdata=true,transparency=SEMITRANSPARENT,txtid=chest
 # Chest - single, facing south
-block:id=54,data=1,top=0,bottom=5,south=3,north=4,east=2,west=1,userenderdata=true,txtid=chest
+block:id=54,data=1,top=0,bottom=5,south=3,north=4,east=2,west=1,userenderdata=true,txtid,transparency=SEMITRANSPARENT=chest
 # Chest - single, facing east
-block:id=54,data=2,top=4000,bottom=4005,south=1,north=2,east=3,west=4,userenderdata=true,txtid=chest
+block:id=54,data=2,top=4000,bottom=4005,south=1,north=2,east=3,west=4,userenderdata=true,transparency=SEMITRANSPARENT,txtid=chest
 # Chest - single, facing north
-block:id=54,data=3,top=5000,bottom=5005,south=4,north=3,east=1,west=2,userenderdata=true,txtid=chest
+block:id=54,data=3,top=5000,bottom=5005,south=4,north=3,east=1,west=2,userenderdata=true,transparency=SEMITRANSPARENT,txtid=chest
 # Chest - left side of double, facing west
-block:id=54,data=4,top=6000,bottom=6008,south=5,north=4,east=6,west=2,userenderdata=true,txtid=bigchest
+block:id=54,data=4,top=6000,bottom=6008,south=5,north=4,east=6,west=2,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Chest - left side of double, facing south
-block:id=54,data=5,top=0,bottom=8,south=2,north=6,east=5,west=4,userenderdata=true,txtid=bigchest
+block:id=54,data=5,top=0,bottom=8,south=2,north=6,east=5,west=4,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Chest - left side of double, facing east
-block:id=54,data=6,top=4000,bottom=4008,south=4,north=5,east=2,west=6,userenderdata=true,txtid=bigchest
+block:id=54,data=6,top=4000,bottom=4008,south=4,north=5,east=2,west=6,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Chest - left side of double, facing north
-block:id=54,data=7,top=5000,bottom=5008,south=6,north=2,east=4,west=5,userenderdata=true,txtid=bigchest
+block:id=54,data=7,top=5000,bottom=5008,south=6,north=2,east=4,west=5,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Chest - right side of double, facing west
-block:id=54,data=8,top=6001,bottom=6009,south=5,north=4,east=7,west=3,userenderdata=true,txtid=bigchest
+block:id=54,data=8,top=6001,bottom=6009,south=5,north=4,east=7,west=3,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Chest - right side of double, facing south
-block:id=54,data=9,top=1,bottom=9,south=3,north=7,east=5,west=4,userenderdata=true,txtid=bigchest
+block:id=54,data=9,top=1,bottom=9,south=3,north=7,east=5,west=4,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Chest - right side of double, facing east
-block:id=54,data=10,top=4001,bottom=4009,south=4,north=5,east=3,west=7,userenderdata=true,txtid=bigchest
+block:id=54,data=10,top=4001,bottom=4009,south=4,north=5,east=3,west=7,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Chest - right side of double, facing north
-block:id=54,data=11,top=5001,bottom=5009,south=7,north=3,east=4,west=5,userenderdata=true,txtid=bigchest
+block:id=54,data=11,top=5001,bottom=5009,south=7,north=3,east=4,west=5,userenderdata=true,transparency=SEMITRANSPARENT,txtid=bigchest
 # Redstone wire
 block:id=55,data=*,patch0=181,patch1=180,transparency=TRANSPARENT
 # Diamond ore
@@ -676,13 +676,13 @@ block:id=128,data=*,patch0=192,patch1=176,patch2=208,transparency=SEMITRANSPAREN
 # Emerald Ore
 block:id=129,data=*,allfaces=171,stdrot=true
 # Ender Chest (facing east)
-block:id=130,data=2,top=6000,east=3,south=1,north=2,west=4,bottom=6005,txtid=enderchest
+block:id=130,data=2,top=6000,east=3,south=1,north=2,west=4,bottom=6005,transparency=SEMITRANSPARENT,txtid=enderchest
 # Ender Chest (facing west)
-block:id=130,data=3,top=4000,west=3,south=2,north=1,east=4,bottom=4005,txtid=enderchest
+block:id=130,data=3,top=4000,west=3,south=2,north=1,east=4,bottom=4005,transparency=SEMITRANSPARENT,txtid=enderchest
 # Ender Chest (facing north)
-block:id=130,data=4,top=5000,north=3,south=4,east=1,west=2,bottom=5005,txtid=enderchest
+block:id=130,data=4,top=5000,north=3,south=4,east=1,west=2,bottom=5005,transparency=SEMITRANSPARENT,txtid=enderchest
 # Ender Chest (facing south)
-block:id=130,data=5,top=0,south=3,north=4,east=2,west=1,bottom=5,txtid=enderchest
+block:id=130,data=5,top=0,south=3,north=4,east=2,west=1,bottom=5,transparency=SEMITRANSPARENT,txtid=enderchest
 # Tripwire Hook
 block:id=131,data=*,patch0-5=4,patch6-7=172,transparency=TRANSPARENT
 # Tripwire
@@ -749,18 +749,18 @@ block:id=145,data=4,data=5,data=6,data=7,patch0-19=215,patch20=6216,transparency
 block:id=145,data=8,data=9,data=10,data=11,patch0-19=215,patch20=6232,transparency=TRANSPARENT
 
 # Trap Chest
-block:id=146,data=0,top=6000,bottom=6005,south=2,north=1,east=4,west=3,userenderdata=true,txtid=trapchest
-block:id=146,data=1,top=0,bottom=5,south=3,north=4,east=2,west=1,userenderdata=true,txtid=trapchest
-block:id=146,data=2,top=4000,bottom=4005,south=1,north=2,east=3,west=4,userenderdata=true,txtid=trapchest
-block:id=146,data=3,top=5000,bottom=5005,south=4,north=3,east=1,west=2,userenderdata=true,txtid=trapchest
-block:id=146,data=4,top=6000,bottom=6008,south=5,north=4,east=6,west=2,userenderdata=true,txtid=bigtrapchest
-block:id=146,data=5,top=0,bottom=8,south=2,north=6,east=5,west=4,userenderdata=true,txtid=bigtrapchest
-block:id=146,data=6,top=4000,bottom=4008,south=4,north=5,east=2,west=6,userenderdata=true,txtid=bigtrapchest
-block:id=146,data=7,top=5000,bottom=5008,south=6,north=2,east=4,west=5,userenderdata=true,txtid=bigtrapchest
-block:id=146,data=8,top=6001,bottom=6009,south=5,north=4,east=7,west=3,userenderdata=true,txtid=bigtrapchest
-block:id=146,data=9,top=1,bottom=9,south=3,north=7,east=5,west=4,userenderdata=true,txtid=bigtrapchest
-block:id=146,data=10,top=4001,bottom=4009,south=4,north=5,east=3,west=7,userenderdata=true,txtid=bigtrapchest
-block:id=146,data=11,top=5001,bottom=5009,south=7,north=3,east=4,west=5,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=0,transparency=SEMITRANSPARENT,top=6000,bottom=6005,south=2,north=1,east=4,west=3,userenderdata=true,txtid=trapchest
+block:id=146,data=1,transparency=SEMITRANSPARENT,top=0,bottom=5,south=3,north=4,east=2,west=1,userenderdata=true,txtid=trapchest
+block:id=146,data=2,transparency=SEMITRANSPARENT,top=4000,bottom=4005,south=1,north=2,east=3,west=4,userenderdata=true,txtid=trapchest
+block:id=146,data=3,transparency=SEMITRANSPARENT,top=5000,bottom=5005,south=4,north=3,east=1,west=2,userenderdata=true,txtid=trapchest
+block:id=146,data=4,transparency=SEMITRANSPARENT,top=6000,bottom=6008,south=5,north=4,east=6,west=2,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=5,transparency=SEMITRANSPARENT,top=0,bottom=8,south=2,north=6,east=5,west=4,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=6,transparency=SEMITRANSPARENT,top=4000,bottom=4008,south=4,north=5,east=2,west=6,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=7,transparency=SEMITRANSPARENT,top=5000,bottom=5008,south=6,north=2,east=4,west=5,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=8,transparency=SEMITRANSPARENT,top=6001,bottom=6009,south=5,north=4,east=7,west=3,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=9,transparency=SEMITRANSPARENT,top=1,bottom=9,south=3,north=7,east=5,west=4,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=10,transparency=SEMITRANSPARENT,top=4001,bottom=4009,south=4,north=5,east=3,west=7,userenderdata=true,txtid=bigtrapchest
+block:id=146,data=11,transparency=SEMITRANSPARENT,top=5001,bottom=5009,south=7,north=3,east=4,west=5,userenderdata=true,txtid=bigtrapchest
 
 # Light weighted pressure plate
 block:id=147,allfaces=23,stdrot=true,transparency=TRANSPARENT

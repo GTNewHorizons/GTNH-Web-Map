@@ -211,7 +211,7 @@ block:id=%constructionMarkerBlock,data=*,stdrot=true,transparency=TRANSPARENT,pa
 block:id=%filteredBufferBlock,data=*,stdrot=true,face0-5=0:BuildCraftTransport/filteredBufferBlock/default
 
 # %pipeBlock:* (pipeBlock), render=buildcraft.transport.render.PipeRendererWorld(CUSTOM), opaque=false,cls=buildcraft.transport.BlockGenericPipeCompat
-block:id=%pipeBlock,data=*,stdrot=true,face0-5=12000:buildcrafttransport/pipes/pipeItemsStone
+block:id=%pipeBlock,data=*,stdrot=true,face0-5=12000:buildcrafttransport/pipes/pipeItemsStone,transparency=SEMITRANSPARENT
 
 # %laserBlock:* (laserBlock), render=buildcraft.silicon.render.RenderLaserBlock(CUSTOM), opaque=false,cls=buildcraft.silicon.BlockLaser
 block:id=%laserBlock,data=0,stdrot=true,face0=0:BuildCraftSilicon/laserBlock/top,face1=0:BuildCraftSilicon/laserBlock/bottom,face2-5=0:BuildCraftSilicon/laserBlock/side

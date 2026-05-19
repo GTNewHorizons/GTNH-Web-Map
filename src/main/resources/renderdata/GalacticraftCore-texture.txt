@@ -248,14 +248,14 @@ block:id=%tile.enclosed,data=15,stdrot=true,face0-5=0:galacticraftcore/enclosed_
 block:id=%tile.spaceStationBase,data=*,stdrot=true,face0=0:galacticraftcore/space_station_side,face1=0:galacticraftcore/space_station_top,face2-5=0:galacticraftcore/space_station_side
 
 # %tile.dummyblock:* (tile.dummyblock), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockMulti
-block:id=%tile.dummyblock,data=0,stdrot=true,face0-5=0:galacticraftcore/solar_basic_0
-block:id=%tile.dummyblock,data=1,stdrot=true,face0-5=0:galacticraftcore/launch_pad
+block:id=%tile.dummyblock,data=0,stdrot=true,face0-5=0:galacticraftcore/solar_basic_0,transparency=SEMITRANSPARENT
+block:id=%tile.dummyblock,data=1,stdrot=true,face0-5=0:galacticraftcore/launch_pad,transparency=SEMITRANSPARENT
 block:id=%tile.dummyblock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
-block:id=%tile.dummyblock,data=3,stdrot=true,face0-5=0:galacticraftcore/workbench_nasa_top
-block:id=%tile.dummyblock,data=4,stdrot=true,face0-5=0:galacticraftcore/solar_basic_0
-block:id=%tile.dummyblock,data=5,stdrot=true,face0-5=0:galacticraftmars/cryoDummy
+block:id=%tile.dummyblock,data=3,stdrot=true,face0-5=0:galacticraftcore/workbench_nasa_top,transparency=SEMITRANSPARENT
+block:id=%tile.dummyblock,data=4,stdrot=true,face0-5=0:galacticraftcore/solar_basic_0,transparency=SEMITRANSPARENT
+block:id=%tile.dummyblock,data=5,stdrot=true,face0-5=0:galacticraftmars/cryoDummy,transparency=SEMITRANSPARENT
 block:id=%tile.dummyblock,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/buggy_fueler_blank
-block:id=%tile.dummyblock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/launch_pad
+block:id=%tile.dummyblock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/launch_pad,transparency=SEMITRANSPARENT
 
 # %tile.parachest:* (tile.parachest), render=micdoodle8.mods.galacticraft.core.client.render.block.BlockRendererParachest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.BlockParaChest
 block:id=%tile.parachest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
