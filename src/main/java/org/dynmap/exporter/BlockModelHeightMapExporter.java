@@ -219,10 +219,14 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
                 int worldBlockX = rangeMinX + (pixelX / textureDetail);
                 double sampleWorldX = rangeMinX + ((pixelX + 0.5) / textureDetail);
                 ColumnData column = columns[getColumnIndex(worldBlockX, worldBlockZ, columnMinX, columnMinZ, columnStride)];
-                int fallbackArgb = column.hasSurface ? colorResolver.computeAverageColor(column.topMaterial) : 0x00000000;
-                int argb = fallbackArgb;
+                int argb = 0x00000000;
                 if ((sourceSampler != null) && column.hasSurface) {
+                    int fallbackArgb = colorResolver.computeAverageColor(column.topMaterial);
                     argb = sourceSampler.sample(sampleWorldX, column.topY, sampleWorldZ, fallbackArgb);
+                } else if (column.hasSurface) {
+                    double localU = sampleWorldX - worldBlockX;
+                    double localV = 1.0 - (sampleWorldZ - worldBlockZ);
+                    argb = colorResolver.sampleColor(column.topMaterial, localU, localV);
                 }
                 image.setRGB(pixelX, pixelZ, argb);
             }
