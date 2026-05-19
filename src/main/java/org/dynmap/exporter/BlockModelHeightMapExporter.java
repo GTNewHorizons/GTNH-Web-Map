@@ -641,15 +641,23 @@ final class BlockModelHeightMapExporter extends AbstractBlockModelExporter {
             }
             return null;
         }
-
         int face = step.opposite().getFaceEntered();
-        if ((face >= 0) && (face < block.materials.length)) {
-            return getFirstTexturedMaterial(block.materials[face]);
+        if ((face >= 0) && (face < block.materials.length) && (block.materials[face] != null) && (block.steps.length > face && block.steps[face] == step.opposite())) {
+            return getFirstSolidMaterial(block.materials[face]);
         }
-        int opposite = step.getFaceEntered();
-        if ((opposite >= 0) && (opposite < block.materials.length)) {
-            return getFirstTexturedMaterial(block.materials[opposite]);
+
+        int opposite = step.opposite().ordinal();
+        if ((opposite < block.materials.length) && (block.materials[opposite] != null) && (block.steps.length > opposite && block.steps[opposite] == step.opposite())) {
+            return getFirstSolidMaterial(block.materials[opposite]);
         }
+//        int face = step.opposite().getFaceEntered();
+//        if ((face >= 0) && (face < block.materials.length)) {
+//            return getFirstTexturedMaterial(block.materials[face]);
+//        }
+//        int opposite = step.getFaceEntered();
+//        if ((opposite >= 0) && (opposite < block.materials.length)) {
+//            return getFirstTexturedMaterial(block.materials[opposite]);
+//        }
         return null;
     }
 
