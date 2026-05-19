@@ -1576,6 +1576,9 @@
 				if (!tileEntry || typeof tileEntry.detailLevel !== "number") {
 					continue;
 				}
+				if (tileEntry.removeWhenHidden && tileEntry.targetOpacity <= 0.0) {
+					continue;
+				}
 				var scale = Math.pow(2, tileEntry.detailLevel);
 				var minBaseX = tileEntry.x * scale;
 				var minBaseZ = tileEntry.z * scale;
@@ -2019,6 +2022,61 @@
 			return ((tileEntry.z - (parentEntry.z * 2)) << 1) + (tileEntry.x - (parentEntry.x * 2));
 		},
 
+		_isTileSubtreeCoveredByLoadedTiles: function(tileX, tileZ, detailLevel) {
+			var tileName = this._getTileName(tileX, tileZ, detailLevel);
+			if (this._isTileEntryCoveringParent(this._loadedTiles[tileName])) {
+				return true;
+			}
+			if (detailLevel <= 0) {
+				return false;
+			}
+			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
+				var xOffset = quarterIndex & 1;
+				var zOffset = quarterIndex >> 1;
+				if (!this._isTileSubtreeCoveredByLoadedTiles((tileX * 2) + xOffset, (tileZ * 2) + zOffset, detailLevel - 1)) {
+					return false;
+				}
+			}
+			return true;
+		},
+
+		_isTileSubtreeActive: function(tileX, tileZ, detailLevel) {
+			var tileName = this._getTileName(tileX, tileZ, detailLevel);
+			var tileEntry = this._loadedTiles[tileName];
+			if (tileEntry && (!tileEntry.removeWhenHidden || tileEntry.targetOpacity > 0.0 || tileEntry.opacity > 0.001)) {
+				return true;
+			}
+			if (detailLevel <= 0) {
+				return false;
+			}
+			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
+				var xOffset = quarterIndex & 1;
+				var zOffset = quarterIndex >> 1;
+				if (this._isTileSubtreeActive((tileX * 2) + xOffset, (tileZ * 2) + zOffset, detailLevel - 1)) {
+					return true;
+				}
+			}
+			return false;
+		},
+
+		_isTileSubtreeDesired: function(tileX, tileZ, detailLevel) {
+			var tileName = this._getTileName(tileX, tileZ, detailLevel);
+			if (this._desiredTiles[tileName]) {
+				return true;
+			}
+			if (detailLevel <= 0) {
+				return false;
+			}
+			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
+				var xOffset = quarterIndex & 1;
+				var zOffset = quarterIndex >> 1;
+				if (this._isTileSubtreeDesired((tileX * 2) + xOffset, (tileZ * 2) + zOffset, detailLevel - 1)) {
+					return true;
+				}
+			}
+			return false;
+		},
+
 		_getQuarterVisibilityFactor: function(tileEntry, quarterIndex) {
 			if (!tileEntry) {
 				return 0.0;
@@ -2050,7 +2108,7 @@
 				return false;
 			}
 			var childInfo = this._getChildTileInfo(tileEntry, quarterIndex);
-			return this._isTileEntryCoveringParent(this._loadedTiles[childInfo.tileName]);
+			return this._isTileSubtreeCoveredByLoadedTiles(childInfo.x, childInfo.z, childInfo.detailLevel);
 		},
 
 		_areAllQuartersCoveredByLoadedChildren: function(tileEntry) {
@@ -2073,11 +2131,12 @@
 			}
 			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
 				var childInfo = this._getChildTileInfo(tileEntry, quarterIndex);
-				var childLoaded = this._isTileEntryCoveringParent(this._loadedTiles[childInfo.tileName]);
-				if (this._desiredTiles[childInfo.tileName] || childLoaded) {
+				var childCovered = this._isTileSubtreeCoveredByLoadedTiles(childInfo.x, childInfo.z, childInfo.detailLevel);
+				var childDesired = this._isTileSubtreeDesired(childInfo.x, childInfo.z, childInfo.detailLevel);
+				if (childDesired || this._isTileSubtreeActive(childInfo.x, childInfo.z, childInfo.detailLevel)) {
 					childInterest = true;
 				}
-				if (this._desiredTiles[childInfo.tileName] && !childLoaded) {
+				if (childDesired && !childCovered) {
 					return true;
 				}
 			}
