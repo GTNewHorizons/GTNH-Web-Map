@@ -95,7 +95,7 @@ final class ExportMaterialColorResolver {
         return argb;
     }
 
-    int sampleColor(ExportMaterial material, double u, double v) throws IOException {
+    int sampleColor(ExportMaterial material, double u, double v, int targetDetail) throws IOException {
         if (material == null) {
             return 0xFFFFFFFF;
         }
@@ -112,7 +112,48 @@ final class ExportMaterialColorResolver {
         double clampedV = Math.max(0.0, Math.min(0.999999, v));
         int sampleX = Math.min(sampledTexture.width - 1, Math.max(0, (int) Math.floor(clampedU * sampledTexture.width)));
         int sampleY = Math.min(sampledTexture.height - 1, Math.max(0, (int) Math.floor(clampedV * sampledTexture.height)));
+        if ((targetDetail > 0) && ((targetDetail * 2) < sampledTexture.width) && ((targetDetail * 2) < sampledTexture.height)) {
+            return sampleAveragedNeighborColor(sampledTexture, clampedU, clampedV, sampleX, sampleY);
+        }
         return sampledTexture.pixels[(sampleY * sampledTexture.width) + sampleX];
+    }
+
+    private int sampleAveragedNeighborColor(SampledTextureData sampledTexture, double u, double v, int fallbackX, int fallbackY) {
+        double scaledX = u * sampledTexture.width;
+        double scaledY = v * sampledTexture.height;
+        int sampleX0 = clampSampleCoordinate((int) Math.floor(scaledX - 0.5), sampledTexture.width);
+        int sampleX1 = clampSampleCoordinate(sampleX0 + 1, sampledTexture.width);
+        int sampleY0 = clampSampleCoordinate((int) Math.floor(scaledY - 0.5), sampledTexture.height);
+        int sampleY1 = clampSampleCoordinate(sampleY0 + 1, sampledTexture.height);
+        long alpha = 0;
+        long red = 0;
+        long green = 0;
+        long blue = 0;
+        int count = 0;
+        int[] sampleXs = new int[] { sampleX0, sampleX1 };
+        int[] sampleYs = new int[] { sampleY0, sampleY1 };
+        for (int sampleY : sampleYs) {
+            for (int sampleX : sampleXs) {
+                int pixel = sampledTexture.pixels[(sampleY * sampledTexture.width) + sampleX];
+                if (((pixel >> 24) & 0xFF) <= 0) {
+                    continue;
+                }
+                alpha += (pixel >> 24) & 0xFF;
+                red += (pixel >> 16) & 0xFF;
+                green += (pixel >> 8) & 0xFF;
+                blue += pixel & 0xFF;
+                count++;
+            }
+        }
+        if (count <= 0) {
+            return sampledTexture.pixels[(fallbackY * sampledTexture.width) + fallbackX];
+        }
+        return (((int) (alpha / count)) << 24) | (((int) (red / count)) << 16) | (((int) (green / count)) << 8)
+                | ((int) (blue / count));
+    }
+
+    private int clampSampleCoordinate(int value, int limit) {
+        return Math.min(limit - 1, Math.max(0, value));
     }
 
     private String getMaterialCacheKey(ExportMaterial material) {
