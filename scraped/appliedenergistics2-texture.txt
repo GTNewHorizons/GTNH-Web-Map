@@ -1,4 +1,4 @@
-# appliedenergistics2 rv3-beta-652-GTNH
+# appliedenergistics2 rv3-beta-977-GTNH
 version:1.7
 modname:appliedenergistics2
 
@@ -8,6 +8,9 @@ modname:appliedenergistics2
 
 
 texturepath:assets/appliedenergistics2/textures/blocks/
+texture:id=appliedenergistics2/BlockAdvancedInscriberSideOff,filename=assets/appliedenergistics2/textures/blocks/BlockAdvancedInscriberSideOff.png
+texture:id=appliedenergistics2/BlockAdvancedInscriberSideOn,filename=assets/appliedenergistics2/textures/blocks/BlockAdvancedInscriberSideOn.png
+texture:id=appliedenergistics2/BlockAdvancedInscriberTop,filename=assets/appliedenergistics2/textures/blocks/BlockAdvancedInscriberTop.png
 texture:id=appliedenergistics2/BlockCellWorkbench,filename=assets/appliedenergistics2/textures/blocks/BlockCellWorkbench.png
 texture:id=appliedenergistics2/BlockCellWorkbenchBottom,filename=assets/appliedenergistics2/textures/blocks/BlockCellWorkbenchBottom.png
 texture:id=appliedenergistics2/BlockCellWorkbenchSide,filename=assets/appliedenergistics2/textures/blocks/BlockCellWorkbenchSide.png
@@ -87,6 +90,7 @@ texture:id=appliedenergistics2/BlockIOPortSide,filename=assets/appliedenergistic
 texture:id=appliedenergistics2/BlockInscriber,filename=assets/appliedenergistics2/textures/blocks/BlockInscriber.png
 texture:id=appliedenergistics2/BlockInterface,filename=assets/appliedenergistics2/textures/blocks/BlockInterface.png
 texture:id=appliedenergistics2/BlockLightDetector,filename=assets/appliedenergistics2/textures/blocks/BlockLightDetector.png
+texture:id=appliedenergistics2/BlockMatrixFrame,filename=assets/appliedenergistics2/textures/blocks/BlockMatrixFrame.png
 texture:id=appliedenergistics2/BlockMolecularAssembler,filename=assets/appliedenergistics2/textures/blocks/BlockMolecularAssembler.png
 texture:id=appliedenergistics2/BlockPaint,filename=assets/appliedenergistics2/textures/blocks/BlockPaint.png
 texture:id=appliedenergistics2/BlockPatternOptimizationMatrix,filename=assets/appliedenergistics2/textures/blocks/BlockPatternOptimizationMatrix.png
@@ -103,10 +107,14 @@ texture:id=appliedenergistics2/BlockQuartzLamp,filename=assets/appliedenergistic
 texture:id=appliedenergistics2/BlockQuartzPillar,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzPillar.png
 texture:id=appliedenergistics2/BlockQuartzPillarSide,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzPillarSide.png
 texture:id=appliedenergistics2/BlockQuartzTorch,filename=assets/appliedenergistics2/textures/blocks/BlockQuartzTorch.png
+texture:id=appliedenergistics2/BlockReshuffleBack,filename=assets/appliedenergistics2/textures/blocks/BlockReshuffleBack.png
+texture:id=appliedenergistics2/BlockReshuffleBottom,filename=assets/appliedenergistics2/textures/blocks/BlockReshuffleBottom.png
+texture:id=appliedenergistics2/BlockReshuffleFrontAll,filename=assets/appliedenergistics2/textures/blocks/BlockReshuffleFrontAll.png
+texture:id=appliedenergistics2/BlockReshuffleSide,filename=assets/appliedenergistics2/textures/blocks/BlockReshuffleSide.png
+texture:id=appliedenergistics2/BlockReshuffleTop,filename=assets/appliedenergistics2/textures/blocks/BlockReshuffleTop.png
 texture:id=appliedenergistics2/BlockSecurity,filename=assets/appliedenergistics2/textures/blocks/BlockSecurity.png
 texture:id=appliedenergistics2/BlockSecurityBottom,filename=assets/appliedenergistics2/textures/blocks/BlockSecurityBottom.png
 texture:id=appliedenergistics2/BlockSecuritySide,filename=assets/appliedenergistics2/textures/blocks/BlockSecuritySide.png
-texture:id=appliedenergistics2/BlockSingularityCraftingStorage,filename=assets/appliedenergistics2/textures/blocks/BlockSingularityCraftingStorage.png
 texture:id=appliedenergistics2/BlockSkyStone,filename=assets/appliedenergistics2/textures/blocks/BlockSkyStone.png
 texture:id=appliedenergistics2/BlockSkyStone.Block,filename=assets/appliedenergistics2/textures/blocks/BlockSkyStone.Block.png
 texture:id=appliedenergistics2/BlockSkyStone.Brick,filename=assets/appliedenergistics2/textures/blocks/BlockSkyStone.Brick.png
@@ -114,12 +122,50 @@ texture:id=appliedenergistics2/BlockSkyStone.SmallBrick,filename=assets/appliede
 texture:id=appliedenergistics2/BlockSpatialIOPort,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialIOPort.png
 texture:id=appliedenergistics2/BlockSpatialIOPortBottom,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialIOPortBottom.png
 texture:id=appliedenergistics2/BlockSpatialIOPortSide,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialIOPortSide.png
+texture:id=appliedenergistics2/BlockSpatialLinkChamber,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialLinkChamber.png
+texture:id=appliedenergistics2/BlockSpatialLinkChamberBottom,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialLinkChamberBottom.png
+texture:id=appliedenergistics2/BlockSpatialLinkChamberFront,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialLinkChamberFront.png
+texture:id=appliedenergistics2/BlockSpatialLinkChamberSide,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialLinkChamberSide.png
+texture:id=appliedenergistics2/BlockSpatialNetworkRelay,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialNetworkRelay.png
 texture:id=appliedenergistics2/BlockSpatialPylon,filename=assets/appliedenergistics2/textures/blocks/BlockSpatialPylon.png
 texture:id=appliedenergistics2/BlockVibrationChamber,filename=assets/appliedenergistics2/textures/blocks/BlockVibrationChamber.png
 texture:id=appliedenergistics2/BlockVibrationChamberFront,filename=assets/appliedenergistics2/textures/blocks/BlockVibrationChamberFront.png
 texture:id=appliedenergistics2/BlockWireless,filename=assets/appliedenergistics2/textures/blocks/BlockWireless.png
+texture:id=appliedenergistics2/CrystalGrowthChamber/main_on,filename=assets/appliedenergistics2/textures/blocks/CrystalGrowthChamber/main_on.png
 texture:id=appliedenergistics2/OreQuartz,filename=assets/appliedenergistics2/textures/blocks/OreQuartz.png
 texture:id=appliedenergistics2/OreQuartzCharged,filename=assets/appliedenergistics2/textures/blocks/OreQuartzCharged.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnBlue,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnBlue.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnBrown,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnBrown.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnCyan,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnCyan.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnGreen,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnGreen.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnGrey,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnGrey.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnLightBlue,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnLightBlue.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnLightGrey,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnLightGrey.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnLime,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnLime.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnMagenta,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnMagenta.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnOrange,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnOrange.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnPink,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnPink.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnPurple,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnPurple.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnRed,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnRed.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnTransparent,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnTransparent.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnWhite,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnWhite.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessConnectorOnYellow,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessConnectorOnYellow.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnBlue,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnBlue.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnBrown,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnBrown.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnCyan,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnCyan.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnGreen,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnGreen.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnGrey,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnGrey.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnLightBlue,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnLightBlue.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnLightGrey,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnLightGrey.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnLime,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnLime.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnMagenta,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnMagenta.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnOrange,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnOrange.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnPink,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnPink.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnPurple,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnPurple.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnRed,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnRed.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnTransparent,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnTransparent.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnWhite,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnWhite.png
+texture:id=appliedenergistics2/Wireless/BlockWirelessHubOnYellow,filename=assets/appliedenergistics2/textures/blocks/Wireless/BlockWirelessHubOnYellow.png
 texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
 texture:id=minecraft/tnt_bottom,filename=assets/minecraft/textures/blocks/tnt_bottom.png
 texture:id=minecraft/tnt_side,filename=assets/minecraft/textures/blocks/tnt_side.png
@@ -132,6 +178,9 @@ block:id=%tile.OreQuartz,data=*,stdrot=true,face0-5=0:appliedenergistics2/OreQua
 
 # %tile.OreQuartzCharged:* (tile.OreQuartzCharged), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.OreQuartzCharged
 block:id=%tile.OreQuartzCharged,data=*,stdrot=true,face0-5=0:appliedenergistics2/OreQuartzCharged
+
+# %tile.BlockMatrixFrame:* (tile.BlockMatrixFrame), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.spatial.BlockMatrixFrame
+block:id=%tile.BlockMatrixFrame,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockMatrixFrame
 
 # %tile.BlockQuartz:* (tile.BlockQuartz), render=(STANDARD), opaque=true,cls=appeng.block.solids.BlockQuartz
 block:id=%tile.BlockQuartz,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockQuartz
@@ -174,6 +223,11 @@ block:id=%tile.BlockSkyCompass,data=*,stdrot=true,face0-5=0:minecraft/iron_block
 # %tile.BlockInscriber:* (tile.BlockInscriber), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.misc.BlockInscriber
 block:id=%tile.BlockInscriber,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockInscriber
 
+# %tile.BlockAdvancedInscriber:* (tile.BlockAdvancedInscriber), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockAdvancedInscriber
+block:id=%tile.BlockAdvancedInscriber,data=0,stdrot=true,face0-1=0:appliedenergistics2/BlockAdvancedInscriberTop,face2-5=0:appliedenergistics2/BlockAdvancedInscriberSideOff
+block:id=%tile.BlockAdvancedInscriber,data=1,stdrot=true,face0-1=0:appliedenergistics2/BlockAdvancedInscriberTop,face2-5=0:appliedenergistics2/BlockAdvancedInscriberSideOn
+block:id=%tile.BlockAdvancedInscriber,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:appliedenergistics2/BlockAdvancedInscriberTop,face2-5=0:appliedenergistics2/BlockAdvancedInscriberSideOff
+
 # %tile.BlockWireless:* (tile.BlockWireless), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockWireless
 block:id=%tile.BlockWireless,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockWireless
 
@@ -186,6 +240,9 @@ block:id=%tile.BlockTinyTNT,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:
 # %tile.BlockSecurity:* (tile.BlockSecurity), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockSecurity
 block:id=%tile.BlockSecurity,data=*,stdrot=true,face0=0:appliedenergistics2/BlockSecurityBottom,face1=0:appliedenergistics2/BlockSecurity,face2-5=0:appliedenergistics2/BlockSecuritySide
 
+# %tile.BlockStorageReshuffle:* (tile.BlockStorageReshuffle), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockStorageReshuffle
+block:id=%tile.BlockStorageReshuffle,data=*,stdrot=true,face0=0:appliedenergistics2/BlockReshuffleBottom,face1=0:appliedenergistics2/BlockReshuffleTop,face2=0:appliedenergistics2/BlockReshuffleBack,face3=0:appliedenergistics2/BlockReshuffleFrontAll,face4-5=0:appliedenergistics2/BlockReshuffleSide
+
 # %tile.BlockQuantumRing:* (tile.BlockQuantumRing), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.qnb.BlockQuantumRing
 block:id=%tile.BlockQuantumRing,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:appliedenergistics2/BlockQuantumRing
 
@@ -197,6 +254,12 @@ block:id=%tile.BlockSpatialPylon,data=*,stdrot=true,face0-5=0:appliedenergistics
 
 # %tile.BlockSpatialIOPort:* (tile.BlockSpatialIOPort), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialIOPort
 block:id=%tile.BlockSpatialIOPort,data=*,stdrot=true,face0=0:appliedenergistics2/BlockSpatialIOPortBottom,face1=0:appliedenergistics2/BlockSpatialIOPort,face2-5=0:appliedenergistics2/BlockSpatialIOPortSide
+
+# %tile.BlockSpatialLinkChamber:* (tile.BlockSpatialLinkChamber), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialLinkChamber
+block:id=%tile.BlockSpatialLinkChamber,data=*,stdrot=true,face0=0:appliedenergistics2/BlockSpatialLinkChamberBottom,face1=0:appliedenergistics2/BlockSpatialLinkChamber,face2=0:appliedenergistics2/BlockSpatialLinkChamberSide,face3=0:appliedenergistics2/BlockSpatialLinkChamberFront,face4-5=0:appliedenergistics2/BlockSpatialLinkChamberSide
+
+# %tile.BlockSpatialNetworkRelay:* (tile.BlockSpatialNetworkRelay), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialNetworkRelay
+block:id=%tile.BlockSpatialNetworkRelay,data=*,stdrot=true,face0-5=0:appliedenergistics2/BlockSpatialNetworkRelay
 
 # %tile.BlockCableBus:* (tile.BlockCableBus), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.networking.BlockCableBus
 block:id=%tile.BlockCableBus,data=*,stdrot=true,face0-5=12000:appliedenergistics2/BlockQuartzGlassB
@@ -320,22 +383,15 @@ block:id=%tile.BlockAdvancedCraftingStorage,data=14,stdrot=true,face0-5=0:applie
 block:id=%tile.BlockAdvancedCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorage16384kFit
 
 # %tile.BlockSingularityCraftingStorage:* (tile.BlockSingularityCraftingStorage), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockSingularityCraftingStorage
-block:id=%tile.BlockSingularityCraftingStorage,data=0,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
-block:id=%tile.BlockSingularityCraftingStorage,data=1,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
-block:id=%tile.BlockSingularityCraftingStorage,data=2,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
-block:id=%tile.BlockSingularityCraftingStorage,data=3,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
-block:id=%tile.BlockSingularityCraftingStorage,data=4,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
-block:id=%tile.BlockSingularityCraftingStorage,data=5,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
-block:id=%tile.BlockSingularityCraftingStorage,data=6,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
-block:id=%tile.BlockSingularityCraftingStorage,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
 block:id=%tile.BlockSingularityCraftingStorage,data=8,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
-block:id=%tile.BlockSingularityCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=9,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
 block:id=%tile.BlockSingularityCraftingStorage,data=10,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
-block:id=%tile.BlockSingularityCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=11,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
 block:id=%tile.BlockSingularityCraftingStorage,data=12,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
-block:id=%tile.BlockSingularityCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=13,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
 block:id=%tile.BlockSingularityCraftingStorage,data=14,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularityFit
-block:id=%tile.BlockSingularityCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockSingularityCraftingStorage
+block:id=%tile.BlockSingularityCraftingStorage,data=15,stdrot=true,face0-5=0:appliedenergistics2/BlockCraftingStorageSingularity
 
 # %tile.BlockCraftingMonitor:* (tile.BlockCraftingMonitor), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.crafting.BlockCraftingMonitor
 block:id=%tile.BlockCraftingMonitor,data=0,stdrot=true,face0-2=0:appliedenergistics2/BlockCraftingUnit,face3=0:appliedenergistics2/BlockCraftingMonitor,face4-5=0:appliedenergistics2/BlockCraftingUnit
@@ -432,3 +488,42 @@ block:id=%tile.QuartzPillarSlabBlock,data=*,stdrot=true,transparency=SEMITRANSPA
 
 # %tile.QuartzPillarSlabBlock.double:* (tile.QuartzPillarSlabBlock.double), render=(STANDARD), opaque=true,cls=appeng.block.AEBaseSlabBlock
 block:id=%tile.QuartzPillarSlabBlock.double,data=*,stdrot=true,face0-1=0:appliedenergistics2/BlockQuartzPillar,face2-5=0:appliedenergistics2/BlockQuartzPillarSide
+
+# %tile.BlockWirelessConnector:* (tile.BlockWirelessConnector), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockWirelessConnector
+block:id=%tile.BlockWirelessConnector,data=0,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnTransparent
+block:id=%tile.BlockWirelessConnector,data=1,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnWhite
+block:id=%tile.BlockWirelessConnector,data=2,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnOrange
+block:id=%tile.BlockWirelessConnector,data=3,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnMagenta
+block:id=%tile.BlockWirelessConnector,data=4,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnLightBlue
+block:id=%tile.BlockWirelessConnector,data=5,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnYellow
+block:id=%tile.BlockWirelessConnector,data=6,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnLime
+block:id=%tile.BlockWirelessConnector,data=7,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnPink
+block:id=%tile.BlockWirelessConnector,data=8,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnGrey
+block:id=%tile.BlockWirelessConnector,data=9,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnLightGrey
+block:id=%tile.BlockWirelessConnector,data=10,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnCyan
+block:id=%tile.BlockWirelessConnector,data=11,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnPurple
+block:id=%tile.BlockWirelessConnector,data=12,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnBlue
+block:id=%tile.BlockWirelessConnector,data=13,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnBrown
+block:id=%tile.BlockWirelessConnector,data=14,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnGreen
+block:id=%tile.BlockWirelessConnector,data=15,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessConnectorOnRed
+
+# %tile.BlockWirelessHub:* (tile.BlockWirelessHub), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockWirelessHub
+block:id=%tile.BlockWirelessHub,data=0,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnTransparent
+block:id=%tile.BlockWirelessHub,data=1,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnWhite
+block:id=%tile.BlockWirelessHub,data=2,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnOrange
+block:id=%tile.BlockWirelessHub,data=3,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnMagenta
+block:id=%tile.BlockWirelessHub,data=4,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnLightBlue
+block:id=%tile.BlockWirelessHub,data=5,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnYellow
+block:id=%tile.BlockWirelessHub,data=6,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnLime
+block:id=%tile.BlockWirelessHub,data=7,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnPink
+block:id=%tile.BlockWirelessHub,data=8,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnGrey
+block:id=%tile.BlockWirelessHub,data=9,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnLightGrey
+block:id=%tile.BlockWirelessHub,data=10,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnCyan
+block:id=%tile.BlockWirelessHub,data=11,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnPurple
+block:id=%tile.BlockWirelessHub,data=12,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnBlue
+block:id=%tile.BlockWirelessHub,data=13,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnBrown
+block:id=%tile.BlockWirelessHub,data=14,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnGreen
+block:id=%tile.BlockWirelessHub,data=15,stdrot=true,face0-5=0:appliedenergistics2/Wireless/BlockWirelessHubOnRed
+
+# %tile.BlockCrystalGrowthChamber:* (tile.BlockCrystalGrowthChamber), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockCrystalGrowthChamber
+block:id=%tile.BlockCrystalGrowthChamber,data=*,stdrot=true,face0-5=0:appliedenergistics2/CrystalGrowthChamber/main_on
