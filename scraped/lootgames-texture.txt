@@ -1,4 +1,4 @@
-# lootgames 2.2.0
+# lootgames 2.2.12
 version:1.7
 modname:lootgames
 
@@ -25,6 +25,7 @@ texture:id=lootgames/border/vertical,filename=assets/lootgames/textures/blocks/b
 texture:id=lootgames/gol_activator,filename=assets/lootgames/textures/blocks/gol_activator.png
 texture:id=lootgames/ms_activator,filename=assets/lootgames/textures/blocks/ms_activator.png
 texture:id=lootgames/puzzle_master,filename=assets/lootgames/textures/blocks/puzzle_master.png
+texture:id=lootgames/sdk_activator,filename=assets/lootgames/textures/blocks/sdk_activator.png
 texture:id=lootgames/shielded_dungeon_floor,filename=assets/lootgames/textures/blocks/shielded_dungeon_floor.png
 
 
@@ -62,11 +63,17 @@ block:id=%gol_activator,data=*,stdrot=true,face0-5=0:lootgames/gol_activator
 # %ms_activator:* (ms_activator), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.MSActivatorBlock
 block:id=%ms_activator,data=*,stdrot=true,face0-5=0:lootgames/ms_activator
 
+# %sdk_activator:* (sdk_activator), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.common.block.SudokuActivatorBlock
+block:id=%sdk_activator,data=*,stdrot=true,face0-5=0:lootgames/sdk_activator
+
 # %gol_master:* (gol_master), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.GameMasterBlock
 block:id=%gol_master,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor
 
 # %ms_master:* (ms_master), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.GameMasterBlock
 block:id=%ms_master,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor
+
+# %sdk_master:* (sdk_master), render=(STANDARD), opaque=true,cls=ru.timeconqueror.lootgames.api.block.GameMasterBlock
+block:id=%sdk_master,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor
 
 # %GOLMasterBlock:* (GOLMasterBlock), render=(STANDARD), opaque=true,cls=eu.usrv.legacylootgames.gol.blocks.LegacyLightGameBlock
 block:id=%GOLMasterBlock,data=*,stdrot=true,face0-5=0:lootgames/shielded_dungeon_floor

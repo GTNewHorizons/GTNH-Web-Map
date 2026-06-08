@@ -1,4 +1,4 @@
-# thaumicenergistics 1.7.8-GTNH
+# thaumicenergistics 1.7.53-GTNH
 version:1.7
 modname:thaumicenergistics
 
@@ -11,9 +11,6 @@ texture:id=thaumicenergistics/arcane.assembler.fallback,filename=assets/thaumice
 texture:id=thaumicenergistics/distillation.encoder.face,filename=assets/thaumicenergistics/textures/blocks/distillation.encoder.face.png
 texture:id=thaumicenergistics/e.vibration.face.off,filename=assets/thaumicenergistics/textures/blocks/e.vibration.face.off.png
 texture:id=thaumicenergistics/e.vibration.input,filename=assets/thaumicenergistics/textures/blocks/e.vibration.input.png
-texture:id=thaumicenergistics/essentia.cell.workbench.bottom,filename=assets/thaumicenergistics/textures/blocks/essentia.cell.workbench.bottom.png
-texture:id=thaumicenergistics/essentia.cell.workbench.side,filename=assets/thaumicenergistics/textures/blocks/essentia.cell.workbench.side.png
-texture:id=thaumicenergistics/essentia.cell.workbench.top,filename=assets/thaumicenergistics/textures/blocks/essentia.cell.workbench.top.png
 texture:id=thaumicenergistics/essentia.provider,filename=assets/thaumicenergistics/textures/blocks/essentia.provider.png
 texture:id=thaumicenergistics/gear.box.fallback,filename=assets/thaumicenergistics/textures/blocks/gear.box.fallback.png
 texture:id=thaumicenergistics/golem.gear.box.fallback,filename=assets/thaumicenergistics/textures/blocks/golem.gear.box.fallback.png
@@ -38,9 +35,6 @@ block:id=%thaumicenergistics.block.gear.box,data=*,stdrot=true,transparency=TRAN
 
 # %thaumicenergistics.block.golem.gear.box:* (thaumicenergistics.block.golem.gear.box), render=(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockGolemGearBox
 block:id=%thaumicenergistics.block.golem.gear.box,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thaumicenergistics/golem.gear.box.fallback
-
-# %thaumicenergistics.block.essentia.cell.workbench:* (thaumicenergistics.block.essentia.cell.workbench), render=(STANDARD), opaque=true,cls=thaumicenergistics.common.blocks.BlockEssentiaCellWorkbench
-block:id=%thaumicenergistics.block.essentia.cell.workbench,data=*,stdrot=true,face0=0:thaumicenergistics/essentia.cell.workbench.bottom,face1=0:thaumicenergistics/essentia.cell.workbench.top,face2-5=0:thaumicenergistics/essentia.cell.workbench.side
 
 # %thaumicenergistics.block.arcane.assembler:* (thaumicenergistics.block.arcane.assembler), render=(STANDARD), opaque=false,cls=thaumicenergistics.common.blocks.BlockArcaneAssembler
 block:id=%thaumicenergistics.block.arcane.assembler,data=*,stdrot=true,face0-5=0:thaumicenergistics/arcane.assembler.fallback
