@@ -1021,15 +1021,34 @@ public class ForgeMapChunkCache extends MapChunkCache
     		}
     		// Get writeChunkToNBT method
     	    Method[] ma = AnvilChunkLoader.class.getDeclaredMethods();
+            String firstFound = null;
+            HashMap<String, Method> candidates = new HashMap<>();
     	    for (Method m : ma) {
     	        Class<?>[] p = m.getParameterTypes();
     	        if ((p.length == 3) && (p[0].equals(Chunk.class)) && (p[1].equals(World.class)) && (p[2].equals(NBTTagCompound.class))) {
-    	            writechunktonbt = m;
-    	            m.setAccessible(true);
-                    Log.info("Using chunk NBT writer method " + m.getDeclaringClass().getName() + "." + m.getName());
-    	            break;
+                    if(writechunktonbt == null) {
+                        writechunktonbt = m;
+                        m.setAccessible(true);
+                        firstFound = m.getName();
+                    }
+                    Log.info("Chunk NBT writer method candidate: " + m.getDeclaringClass().getName() + "." + m.getName());
+                    candidates.put(m.getName(), m);
     	        }
     	    }
+            if(candidates.containsKey("writeChunkToNBT")){
+                writechunktonbt = candidates.get("writeChunkToNBT");
+                writechunktonbt.setAccessible(true);
+                Log.info("Selected chunk NBT writer method: writeChunkToNBT");
+            }
+            else if(candidates.containsKey("func_75820_a")){
+                writechunktonbt = candidates.get("func_75820_a");
+                writechunktonbt.setAccessible(true);
+                Log.info("Selected chunk NBT writer method: func_75820_a");
+            }
+            else {
+                if(firstFound != null)
+                    Log.info("Could not reliably detect chunk NBT writer method, using first candidate: " + firstFound);
+            }
     		
             if (((unloadqueue == null) && ((unloadqueue_mcpc == null) || (unloadqueue_mcpc_contains == null))) || 
                     (currentchunkloader == null) || (writechunktonbt == null))
