@@ -165,8 +165,8 @@ texture:id=thaumicbases/voidblock,filename=assets/thaumicbases/textures/blocks/v
 # %quicksilverBlock:* (quicksilverBlock), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlock
 block:id=%quicksilverBlock,data=*,stdrot=true,face0-5=0:thaumicbases/quicksilverBlock
 
-# %quicksilverBrick:* (quicksilverBrick), render=(STANDARD), opaque=false,cls=tb.common.block.TBBlock
-block:id=%quicksilverBrick,data=*,stdrot=true,face0-5=12000:thaumicbases/quicksilverBrick
+# %quicksilverBrick:* (quicksilverBrick), render=(STANDARD), opaque=true,cls=tb.common.block.TBBlockDeco
+block:id=%quicksilverBrick,data=*,stdrot=true,face0-5=0:thaumicbases/quicksilverBrick
 
 # %crystalBlock:* (crystalBlock), render=(STANDARD), opaque=true,cls=tb.common.block.BlockCrystalBlock
 block:id=%crystalBlock,data=0,stdrot=true,face0-5=0:thaumicbases/crystal/air
