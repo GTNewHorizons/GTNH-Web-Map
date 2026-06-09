@@ -1,4 +1,4 @@
-# tectech 5.09.51.382
+# tectech 5.09.52.594
 version:1.7
 modname:tectech
 
@@ -116,10 +116,10 @@ block:id=%gt.blockcasingsTT,data=13,stdrot=true,face0-5=0:gregtech/iconsets/EM_U
 block:id=%gt.blockcasingsTT,data=14,stdrot=true,face0-5=0:gregtech/iconsets/EM_ULTIMATE_FIELD
 block:id=%gt.blockcasingsTT,data=15,stdrot=true,face0=0:gregtech/iconsets/DEBUG_0,face1=0:gregtech/iconsets/DEBUG_1,face2=0:gregtech/iconsets/DEBUG_2,face3=0:gregtech/iconsets/DEBUG_3,face4=0:gregtech/iconsets/DEBUG_4,face5=0:gregtech/iconsets/DEBUG_5
 
-# %Eye of Harmony Renderer:* (Eye of Harmony Renderer), render=(STANDARD), opaque=false,cls=tectech.thing.block.BlockEOHRender
+# %Eye of Harmony Renderer:* (Eye of Harmony Renderer), render=(CUSTOM), opaque=false,cls=tectech.thing.block.BlockEOHRender
 block:id=%Eye of Harmony Renderer,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
 
-# %ForgeOfGodsRenderBlock:* (ForgeOfGodsRenderBlock), render=(STANDARD), opaque=false,cls=tectech.thing.block.BlockForgeOfGods
+# %ForgeOfGodsRenderBlock:* (ForgeOfGodsRenderBlock), render=(CUSTOM), opaque=false,cls=tectech.thing.block.BlockForgeOfGods
 block:id=%ForgeOfGodsRenderBlock,data=*,stdrot=true,face0-5=0:gregtech/iconsets/TRANSPARENT
 
 # %gt.blockcasingsBA0:* (gt.blockcasingsBA0), render=gregtech.common.render.GTRendererCasing(CUSTOM), opaque=true,cls=tectech.thing.casing.BlockGTCasingsBA0
