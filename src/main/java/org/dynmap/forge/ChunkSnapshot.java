@@ -18,31 +18,30 @@ import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 public class ChunkSnapshot
 {
     private final int x, z;
-    private final short[][] blockids; /* Block IDs, by section */
-    private final byte[][] blockdata;
+    private final int[][] blockids; /* Block IDs, by section */
     private final short[][] blockdata16;
     private final byte[][] skylight;
     private final byte[][] emitlight;
     private final boolean[] empty;
     private final int[] hmap; // Height map
-    private final byte[] biome;
+    private final short[] biome;
     private final long captureFulltime;
     private final int sectionCnt;
     private final long inhabitedTicks;
-    private boolean have16bitBlockData;
 
     private static final int BLOCKS_PER_SECTION = 16 * 16 * 16;
     private static final int COLUMNS_PER_CHUNK = 16 * 16;
-    private static final short[] emptyIDs = new short[BLOCKS_PER_SECTION];
-    private static final byte[] emptyData = new byte[BLOCKS_PER_SECTION / 2];
-    private static final byte[] fullData = new byte[BLOCKS_PER_SECTION / 2];
+    private static final int[] emptyIDs = new int[BLOCKS_PER_SECTION];
+    private static final short[] emptyData = new short[BLOCKS_PER_SECTION];
+    private static final byte[] fullHalfByteData = new byte[BLOCKS_PER_SECTION / 2];
+    private static final byte[] emptyHalfByteData = new byte[BLOCKS_PER_SECTION / 2];
     private static Method getvalarray = null;
 
     static
     {
-        for (int i = 0; i < fullData.length; i++)
+        for (int i = 0; i < fullHalfByteData.length; i++)
         {
-            fullData[i] = (byte)0xFF;
+            fullHalfByteData[i] = (byte)0xFF;
         }
         try {
             Method[] m = NibbleArray.class.getDeclaredMethods();
@@ -67,12 +66,11 @@ public class ChunkSnapshot
         this.x = x;
         this.z = z;
         this.captureFulltime = captime;
-        this.biome = new byte[COLUMNS_PER_CHUNK];
+        this.biome = new short[COLUMNS_PER_CHUNK];
         this.sectionCnt = worldheight / 16;
         /* Allocate arrays indexed by section */
-        this.blockids = new short[this.sectionCnt][];
+        this.blockids = new int[this.sectionCnt][];
         this.blockdata16 = new short[this.sectionCnt][];
-        this.blockdata = new byte[this.sectionCnt][];
         this.skylight = new byte[this.sectionCnt][];
         this.emitlight = new byte[this.sectionCnt][];
         this.empty = new boolean[this.sectionCnt];
@@ -82,10 +80,9 @@ public class ChunkSnapshot
         {
             this.empty[i] = true;
             this.blockids[i] = emptyIDs;
-            this.blockdata16[i] = emptyIDs;
-            this.blockdata[i] = emptyData;
-            this.emitlight[i] = emptyData;
-            this.skylight[i] = fullData;
+            this.blockdata16[i] = emptyData;
+            this.emitlight[i] = emptyHalfByteData;
+            this.skylight[i] = fullHalfByteData;
         }
 
         /* Create empty height map */
@@ -95,6 +92,7 @@ public class ChunkSnapshot
     }
 
     public ChunkSnapshot(NBTTagCompound nbt, int worldheight) {
+
         this.x = nbt.getInteger("xPos");
         this.z = nbt.getInteger("zPos");
         this.captureFulltime = 0;
@@ -102,14 +100,12 @@ public class ChunkSnapshot
         this.sectionCnt = worldheight / 16;
         if (nbt.hasKey("InhabitedTime")) {
             this.inhabitedTicks = nbt.getLong("InhabitedTime");
-        }
-        else {
+        } else {
             this.inhabitedTicks = 0;
         }
         /* Allocate arrays indexed by section */
-        this.blockids = new short[this.sectionCnt][];
+        this.blockids = new int[this.sectionCnt][];
         this.blockdata16 = new short[this.sectionCnt][];
-        this.blockdata = new byte[this.sectionCnt][];
         this.skylight = new byte[this.sectionCnt][];
         this.emitlight = new byte[this.sectionCnt][];
         this.empty = new boolean[this.sectionCnt];
@@ -117,10 +113,9 @@ public class ChunkSnapshot
         for (int i = 0; i < this.sectionCnt; i++) {
             this.empty[i] = true;
             this.blockids[i] = emptyIDs;
-            this.blockdata16[i] = emptyIDs;
-            this.blockdata[i] = emptyData;
-            this.emitlight[i] = emptyData;
-            this.skylight[i] = fullData;
+            this.blockdata16[i] = emptyData;
+            this.emitlight[i] = emptyHalfByteData;
+            this.skylight[i] = fullHalfByteData;
         }
         /* Get sections */
         NBTTagList sect = nbt.getTagList("Sections", 10);
@@ -131,19 +126,17 @@ public class ChunkSnapshot
                 Log.info("Section " + (int) secnum + " above world height " + worldheight);
                 continue;
             }
-            short[] blkids = new short[BLOCKS_PER_SECTION];
+            int[] blkids = new int[BLOCKS_PER_SECTION];
             this.blockids[secnum] = blkids;
             int len = BLOCKS_PER_SECTION;
 
             byte[] blocks16 = sec.getByteArray("Blocks16");
 
-            if(blocks16 != null && blocks16.length > 0)
-            {
-                for(int b = 0; b < blkids.length; b++){
-                    blkids[b] = (short) (((0xFF & blocks16[2*b]) << 8) | (0xFF & blocks16[2*b+1]));
+            if (blocks16 != null && blocks16.length > 0) {
+                for (int b = 0; b < blkids.length; b++) {
+                    blkids[b] = (((0xFF & blocks16[2 * b]) << 8) | (0xFF & blocks16[2 * b + 1]));
                 }
-            }
-            else {
+            } else {
                 byte[] lsb_bytes = sec.getByteArray("Blocks");
                 if (len > lsb_bytes.length) len = lsb_bytes.length;
                 for (int j = 0; j < len; j++) {
@@ -162,25 +155,71 @@ public class ChunkSnapshot
                         blkids[(j << 1) + 1] |= (b & 0xF0) << 4;
                     }
                 }
+                if (sec.hasKey("BlocksB2Hi")) {
+                    byte[] msb = sec.getByteArray("BlocksB2Hi");
+                    len = BLOCKS_PER_SECTION / 2;
+                    if (len > msb.length) len = msb.length;
+                    for (int j = 0; j < len; j++) {
+                        short b = (short) (msb[j] & 0xFF);
+                        if (b == 0) {
+                            continue;
+                        }
+                        blkids[j << 1] |= (b & 0x0F) << 12;
+                        blkids[(j << 1) + 1] |= (b & 0xF0) << 8;
+                    }
+                }
+                if (sec.hasKey("BlocksB3")) {
+                    byte[] msb = sec.getByteArray("BlocksB3");
+                    len = BLOCKS_PER_SECTION;
+                    if (len > msb.length) len = msb.length;
+                    for (int j = 0; j < len; j++)
+                        blkids[j] |= (msb[j] & 0xFF) << 16;
+                }
             }
 
-            this.blockdata[secnum] = sec.getByteArray("Data");
             byte[] data16 = sec.getByteArray("Data16");
-            if(data16 != null && data16.length > 0){
-                have16bitBlockData = true;
+            if (data16 != null && data16.length > 0) {
                 short[] blkdata = new short[BLOCKS_PER_SECTION];
-                for(int b = 0; b < blkdata.length; b++){
-                    blkdata[b] = (short) (((0xFF & data16[2*b]) << 8) | (0xFF & data16[2*b+1]));
+                for (int b = 0; b < blkdata.length; b++) {
+                    blkdata[b] = (short) (((0xFF & data16[2 * b]) << 8) | (0xFF & data16[2 * b + 1]));
                 }
                 blockdata16[secnum] = blkdata;
-
-                if(this.blockdata[secnum].length == 0) {
-                    byte[] olddata = new byte[BLOCKS_PER_SECTION / 2];
-                    for (int b = 0; b < olddata.length; b++) {
-                        olddata[b] = (byte) ((blkdata[2 * b] & 0xF) | ((blkdata[2 * b + 1] & 0xF) << 4));
+            } else if (sec.hasKey("Data")) {
+                byte[] data = sec.getByteArray("Data");
+                short[] blkdata = new short[BLOCKS_PER_SECTION];
+                len = BLOCKS_PER_SECTION / 2;
+                if (len > data.length) len = data.length;
+                if (data != null) {
+                    for (int b = 0; b < len; b++) {
+                        blkdata[b << 1] = (short) (data[b] & 0xF);
+                        blkdata[(b << 1) + 1] = (short) (((data[b] & 0xF0) >> 4) & 0xF);
                     }
-                    this.blockdata[secnum] = olddata;
+                    blockdata16[secnum] = blkdata;
                 }
+
+                if (sec.hasKey("Data1High")) {
+                    byte[] msb = sec.getByteArray("Data1High");
+                    len = BLOCKS_PER_SECTION / 2;
+                    if (len > msb.length) len = msb.length;
+                    for (int j = 0; j < len; j++) {
+                        short b = (short) (msb[j] & 0xFF);
+                        if (b == 0) {
+                            continue;
+                        }
+                        blkdata[j << 1] |= (short) ((b & 0x0F) << 4);
+                        blkdata[(j << 1) + 1] |= (short) (b & 0xF0);
+                    }
+                }
+                if (sec.hasKey("Data2")) {
+                    byte[] msb = sec.getByteArray("Data2");
+                    len = BLOCKS_PER_SECTION;
+                    if (len > msb.length) len = msb.length;
+                    for (int j = 0; j < len; j++) {
+                        short b = (short) (msb[j] & 0xFF);
+                        blkdata[j] = (short) (blkdata[j] | (b << 8));
+                    }
+                }
+
             }
 
             this.emitlight[secnum] = sec.getByteArray("BlockLight");
@@ -191,10 +230,23 @@ public class ChunkSnapshot
         }
         /* Get biome data */
         if (nbt.hasKey("Biomes")) {
-            this.biome = nbt.getByteArray("Biomes");
-        }
-        else {
-            this.biome = new byte[COLUMNS_PER_CHUNK];
+            byte[] biomes8 = nbt.getByteArray("Biomes");
+            short[] biomes16 = new short[biomes8.length];
+            if (biomes8 != null && biomes8.length > 0) {
+                for (int i = 0; i < biomes8.length; i++) {
+                    biomes16[i] = (short) (biomes8[i] & 0xFF);
+                }
+            }
+            this.biome = biomes16;
+        } else if (nbt.hasKey("Biomes16v2")) {
+            byte[] biomes = nbt.getByteArray("Biomes16v2");
+            short[] biomes16 = new short[COLUMNS_PER_CHUNK];
+            for (int i = 0; i < biomes16.length; i++) {
+                biomes16[i] = (short) ((biomes[i << 1] & 0xFF) | (biomes[(i << 1) + 1] & 0xFF) << 8);
+            }
+            this.biome = biomes16;
+        } else {
+            this.biome = new short[COLUMNS_PER_CHUNK];
         }
     }
     
@@ -208,72 +260,6 @@ public class ChunkSnapshot
             }
         }
         return na.data;
-    }
-    public ChunkSnapshot(Chunk chunk, int worldheight)
-    {
-        this(worldheight, chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime(), chunk.inhabitedTime);
-        /* Copy biome data */
-        System.arraycopy(chunk.getBiomeArray(), 0, biome, 0, COLUMNS_PER_CHUNK);
-        ExtendedBlockStorage[] ebs = chunk.getBlockStorageArray();
-
-        /* Copy sections */
-        for (int i = 0; i < this.sectionCnt; i++)
-        {
-            ExtendedBlockStorage eb = (i < ebs.length) ? ebs[i] : null;
-
-            if ((eb != null) && (eb.isEmpty() == false))
-            {
-                this.empty[i] = false;
-                /* Copy base IDs */
-                byte[] baseids = eb.getBlockLSBArray();
-                short blockids[] = new short[BLOCKS_PER_SECTION];
-
-                for (int j = 0; j < BLOCKS_PER_SECTION; j++)
-                {
-                    blockids[j] = (short)(baseids[j] & 0xFF);
-                }
-
-                /* Add MSB data, if section has any */
-                NibbleArray msb = eb.getBlockMSBArray();
-
-                if (msb != null)
-                {
-                    byte[] extids = getValueArray(msb);
-
-                    for (int j = 0; j < extids.length; j++)
-                    {
-                        short b = (short)(extids[j] & 0xFF);
-
-                        if (b == 0)
-                        {
-                            continue;
-                        }
-
-                        blockids[j << 1] |= (b & 0x0F) << 8;
-                        blockids[(j << 1) + 1] |= (b & 0xF0) << 4;
-                    }
-                }
-
-                this.blockids[i] = blockids;
-                /* Copy block data */
-                this.blockdata[i] = new byte[BLOCKS_PER_SECTION / 2];
-                System.arraycopy(getValueArray(eb.getMetadataArray()), 0, this.blockdata[i], 0, BLOCKS_PER_SECTION / 2);
-                /* Copy block lighting data */
-                this.emitlight[i] = new byte[BLOCKS_PER_SECTION / 2];
-                System.arraycopy(getValueArray(eb.getBlocklightArray()), 0, this.emitlight[i], 0, BLOCKS_PER_SECTION / 2);
-                /* Copy sky lighting data */
-                if(eb.getSkylightArray() != null) {
-                	this.skylight[i] = new byte[BLOCKS_PER_SECTION / 2];
-                	System.arraycopy(getValueArray(eb.getSkylightArray()), 0, this.skylight[i], 0, BLOCKS_PER_SECTION / 2);
-                }
-                else {
-                	this.skylight[i] = ChunkSnapshot.emptyData;
-                }
-            }
-        }
-
-        /* Save height map */
-        System.arraycopy(chunk.heightMap, 0, this.hmap, 0, hmap.length);
     }
 
     public int getX()
@@ -296,11 +282,11 @@ public class ChunkSnapshot
 
     public int getBlockData(int x, int y, int z)
     {
-        if(y > 255)
+        if (y > 255)
             return 0;
 
-        int off = ((y & 0xF) << 7) | (z << 3) | (x >> 1);
-        return (blockdata[y >> 4][off] >> ((x & 1) << 2)) & 0xF;
+        int data = (blockdata16[y >> 4][((y & 0xF) << 8) | (z << 4) | x]) & 0xF;
+        return data;
     }
 
     public int getBlockSkyLight(int x, int y, int z)
@@ -349,15 +335,12 @@ public class ChunkSnapshot
         if(y > 255)
             return 0;
 
-        if(have16bitBlockData) {
-            int tmp = blockdata16[y >> 4][((y & 0xF) << 8) | (bz << 4) | bx];
+        int tmp = blockdata16[y >> 4][((y & 0xF) << 8) | (bz << 4) | bx];
 
-            if(tmp < 0)
-                tmp += 0x10000;
+        if(tmp < 0)
+            tmp += 0x10000;
 
-            return tmp;
-        }
+        return tmp;
 
-        return getBlockData(bx, y, bz);
     }
 }

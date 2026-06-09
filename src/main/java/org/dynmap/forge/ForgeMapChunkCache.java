@@ -54,7 +54,9 @@ import org.dynmap.utils.VisibilityLimit;
  */
 public class ForgeMapChunkCache extends MapChunkCache
 {
+    private static final int MAX_CHUNK_NBT_DEBUG_LOGS = 20;
     private static boolean init = false;
+    private static int chunkNBTDebugLogs = 0;
     private static Field unloadqueue = null;
     private static Field unloadqueue_mcpc = null;
     private static Method unloadqueue_mcpc_contains = null;
@@ -1019,14 +1021,34 @@ public class ForgeMapChunkCache extends MapChunkCache
     		}
     		// Get writeChunkToNBT method
     	    Method[] ma = AnvilChunkLoader.class.getDeclaredMethods();
+            String firstFound = null;
+            HashMap<String, Method> candidates = new HashMap<>();
     	    for (Method m : ma) {
     	        Class<?>[] p = m.getParameterTypes();
     	        if ((p.length == 3) && (p[0].equals(Chunk.class)) && (p[1].equals(World.class)) && (p[2].equals(NBTTagCompound.class))) {
-    	            writechunktonbt = m;
-    	            m.setAccessible(true);
-    	            break;
+                    if(writechunktonbt == null) {
+                        writechunktonbt = m;
+                        m.setAccessible(true);
+                        firstFound = m.getName();
+                    }
+                    Log.info("Chunk NBT writer method candidate: " + m.getDeclaringClass().getName() + "." + m.getName());
+                    candidates.put(m.getName(), m);
     	        }
     	    }
+            if(candidates.containsKey("writeChunkToNBT")){
+                writechunktonbt = candidates.get("writeChunkToNBT");
+                writechunktonbt.setAccessible(true);
+                Log.info("Selected chunk NBT writer method: writeChunkToNBT");
+            }
+            else if(candidates.containsKey("func_75820_a")){
+                writechunktonbt = candidates.get("func_75820_a");
+                writechunktonbt.setAccessible(true);
+                Log.info("Selected chunk NBT writer method: func_75820_a");
+            }
+            else {
+                if(firstFound != null)
+                    Log.info("Could not reliably detect chunk NBT writer method, using first candidate: " + firstFound);
+            }
     		
             if (((unloadqueue == null) && ((unloadqueue_mcpc == null) || (unloadqueue_mcpc_contains == null))) || 
                     (currentchunkloader == null) || (writechunktonbt == null))
@@ -1383,6 +1405,41 @@ public class ForgeMapChunkCache extends MapChunkCache
         return isunloadpending;
     }
 
+    private static synchronized boolean shouldLogChunkNBTDebug() {
+        if (chunkNBTDebugLogs >= MAX_CHUNK_NBT_DEBUG_LOGS) {
+            return false;
+        }
+        chunkNBTDebugLogs++;
+        return true;
+    }
+
+    private NBTTagCompound normalizeChunkNBT(DynmapChunk chunk, NBTTagCompound nbt, String source) {
+        if (nbt == null) {
+            return null;
+        }
+
+        boolean hasSections = nbt.hasKey("Sections", 9);
+        boolean hasWrappedLevel = nbt.hasKey("Level", 10);
+
+        if (!hasSections && hasWrappedLevel) {
+            NBTTagCompound level = nbt.getCompoundTag("Level");
+            nbt = level;
+            hasSections = nbt.hasKey("Sections", 9);
+        }
+
+        int nbtX = nbt.getInteger("xPos");
+        int nbtZ = nbt.getInteger("zPos");
+        boolean coordMismatch = (nbtX != chunk.x) || (nbtZ != chunk.z);
+        if ((!hasSections || coordMismatch) && shouldLogChunkNBTDebug()) {
+            Log.warning(String.format(
+                    "Suspicious chunk NBT from %s for %s %d,%d: nbt x=%d z=%d sections=%s levelTag=%s",
+                    source, dw.getName(), chunk.x, chunk.z, nbtX, nbtZ, hasSections,
+                    hasWrappedLevel));
+        }
+
+        return nbt;
+    }
+
     // Prep snapshot and add to cache
     private SnapshotRec prepChunkSnapshot(DynmapChunk chunk, NBTTagCompound nbt) {
         ChunkSnapshot ss = new ChunkSnapshot(nbt, dw.worldheight);
@@ -1464,7 +1521,8 @@ public class ForgeMapChunkCache extends MapChunkCache
                     } catch (IllegalAccessException e) {
                     } catch (IllegalArgumentException e) {
                     } catch (InvocationTargetException e) {
-                    }                
+                    }
+                    nbt = normalizeChunkNBT(chunk, nbt, "loaded chunk");
                     SnapshotRec ssr = prepChunkSnapshot(chunk, nbt);
                     ss = ssr.ss;
                     tileData = ssr.tileData;
