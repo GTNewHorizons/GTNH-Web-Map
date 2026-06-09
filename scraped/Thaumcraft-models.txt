@@ -144,6 +144,9 @@ boxblock:id=%blockAiry,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.30
 # %blockManaPod:* (blockManaPod), render=(CROSSEDSQUARES), opaque=false,cls=thaumcraft.common.blocks.BlockManaPod
 patchblock:id=%blockManaPod,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
+# %blockEssentiaReservoir:* (blockEssentiaReservoir), render=thaumcraft.client.renderers.block.BlockEssentiaReservoirRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockEssentiaReservoir
+boxblock:id=%blockEssentiaReservoir,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.875,zmin=0.125,zmax=0.875,data=*
+
 # %blockEldritchNothing:* (blockEldritchNothing), render=(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockEldritchNothing
 
 # %blockStairsArcaneStone:* (blockStairsArcaneStone), render=(STAIRS), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticStairs
