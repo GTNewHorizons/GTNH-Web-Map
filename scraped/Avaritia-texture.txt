@@ -1,4 +1,4 @@
-# Avaritia 1.68
+# Avaritia 1.97
 version:1.7
 modname:Avaritia
 
@@ -10,6 +10,9 @@ texturepath:assets/avaritia/textures/blocks/
 texture:id=avaritia/block_crystal_matrix,filename=assets/avaritia/textures/blocks/block_crystal_matrix.png
 texture:id=avaritia/block_infinity,filename=assets/avaritia/textures/blocks/block_infinity.png
 texture:id=avaritia/block_neutronium,filename=assets/avaritia/textures/blocks/block_neutronium.png
+texture:id=avaritia/cluster_opener/front,filename=assets/avaritia/textures/blocks/cluster_opener/front.png
+texture:id=avaritia/cluster_opener/side,filename=assets/avaritia/textures/blocks/cluster_opener/side.png
+texture:id=avaritia/cluster_opener/top,filename=assets/avaritia/textures/blocks/cluster_opener/top.png
 texture:id=avaritia/collector_front,filename=assets/avaritia/textures/blocks/collector_front.png
 texture:id=avaritia/collector_side,filename=assets/avaritia/textures/blocks/collector_side.png
 texture:id=avaritia/collector_top,filename=assets/avaritia/textures/blocks/collector_top.png
@@ -58,3 +61,6 @@ block:id=%Neutron_Collector,data=*,stdrot=true,face0=0:avaritia/collector_side,f
 
 # %Neutronium_Compressor:* (Neutronium_Compressor), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockCompressor
 block:id=%Neutronium_Compressor,data=*,stdrot=true,face0=0:avaritia/compressor_side,face1=0:avaritia/compressor_top,face2=0:avaritia/compressor_side,face3=0:avaritia/compressor_front,face4-5=0:avaritia/compressor_side
+
+# %cluster_opener:* (cluster_opener), render=(STANDARD), opaque=true,cls=fox.spiteful.avaritia.blocks.BlockMatterClusterOpener
+block:id=%cluster_opener,data=*,stdrot=true,face0-1=0:avaritia/cluster_opener/top,face2=0:avaritia/cluster_opener/side,face3=0:avaritia/cluster_opener/front,face4-5=0:avaritia/cluster_opener/side
