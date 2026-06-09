@@ -23,12 +23,6 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
-patchblock:id=%ectoplasm,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %flower:* (flower), render=binnie.botany.flower.RendererBotany(CUSTOM), opaque=false,cls=binnie.botany.flower.BlockFlower
-boxblock:id=%flower,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.6000000238418579,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
-
 # %plant:* (plant), render=(CROSSEDSQUARES), opaque=false,cls=binnie.botany.gardening.BlockPlant
 patchblock:id=%plant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
@@ -41,31 +35,16 @@ boxblock:id=%loam,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=
 # %flowerbed:* (flowerbed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
 boxblock:id=%flowerbed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
 
-# %soilNoWeed:* (soilNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%soilNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %loamNoWeed:* (loamNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%loamNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %flowerbedNoWeed:* (flowerbedNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
-boxblock:id=%flowerbedNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
-
-# %ceramicPattern:* (ceramicPattern), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicPatterned
-
-# %ceramicBrick:* (ceramicBrick), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.botany.ceramic.BlockCeramicBrick
-
-# %fence:* (fence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockFence
-boxblock:id=%fence,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
+customblock:id=%ceramicBrick,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*,type=brick
+customblock:id=%ceramicPattern,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*
+customblock:id=%ceramic,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*,type=basic
+customblock:id=%stained,class=org.dynmap.hdmap.renderer.BinnieCeramicsRenderer,data=*,type=basic
 
 # %multifence:* (multifence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockMultiFence
 boxblock:id=%multifence,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
 
 # %gate:* (gate), render=(FENCEGATE), opaque=false,cls=binnie.extratrees.block.decor.BlockGate
-customblock:id=%gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
-
-# %slab:* (slab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
-boxblock:id=%slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+customblock:id=%gate,class=org.dynmap.hdmap.renderer.ExtraTreesFenceGateRenderer,type=fence,link0=107,data=*
 
 # %doubleSlab:* (doubleSlab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
 boxblock:id=%doubleSlab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
@@ -81,7 +60,38 @@ boxblock:id=%door,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=
 boxblock:id=%door,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=6
 boxblock:id=%door,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
-# %carpentry:* (carpentry), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=true,cls=binnie.extratrees.carpentry.BlockCarpentry
+# %hedge:* (hedge), render=binnie.extratrees.block.decor.HedgeRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockHedge
+boxblock:id=%hedge,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
 
-# %panel:* (panel), render=binnie.core.block.MultipassBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockCarpentryPanel
+# %carpentry:* (carpentry), render=binnie.extratrees.carpentry.DesignBlockRenderer(CUSTOM), opaque=true,cls=binnie.extratrees.carpentry.BlockCarpentry
+
+# %panel:* (panel), render=binnie.extratrees.carpentry.DesignBlockRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.carpentry.BlockCarpentryPanel
 boxblock:id=%panel,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+customblock:id=%log,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=meta,max=40,type=Wood
+customblock:id=%planks,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=meta,max=35,type=Plank
+customblock:id=%stairs,class=org.dynmap.hdmap.renderer.ForestryStairBlockRenderer,data=*,key=meta,max=35,type=Plank
+customblock:id=%fence,class=org.dynmap.hdmap.renderer.ForestryFenceBlockRenderer,data=*,key=meta,max=35,type=Plank
+customblock:id=%slab,class=org.dynmap.hdmap.renderer.ForestryWoodEtcRenderer,data=*,key=meta,max=35,type=Slab
+
+# %ectoplasm:* (ectoplasm), render=(CROSSEDSQUARES), opaque=false,cls=binnie.extrabees.genetics.effect.BlockEctoplasm
+patchblock:id=%ectoplasm,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %flower:* (flower), render=binnie.botany.flower.RendererBotany(CUSTOM), opaque=false,cls=binnie.botany.flower.BlockFlower
+boxblock:id=%flower,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.6000000238418579,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
+
+# %soilNoWeed:* (soilNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%soilNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %loamNoWeed:* (loamNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%loamNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %flowerbedNoWeed:* (flowerbedNoWeed), render=(STANDARD), opaque=false,cls=binnie.botany.gardening.BlockSoil
+boxblock:id=%flowerbedNoWeed,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.9375,zmin=0.0,zmax=1.0,data=*
+
+# %fence:* (fence), render=binnie.extratrees.block.decor.FenceRenderer(CUSTOM), opaque=false,cls=binnie.extratrees.block.decor.BlockFence
+boxblock:id=%fence,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=*
+
+# %slab:* (slab), render=(STANDARD), opaque=false,cls=binnie.extratrees.block.BlockETSlab
+boxblock:id=%slab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%slab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
