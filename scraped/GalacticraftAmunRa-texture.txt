@@ -1,4 +1,4 @@
-# GalacticraftAmunRa 0.8.2
+# GalacticraftAmunRa 0.8.12
 version:1.7
 modname:GalacticraftAmunRa
 
@@ -144,10 +144,6 @@ block:id=%tile.saplings,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:amu
 block:id=%tile.saplings,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
 block:id=%tile.saplings,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling
 block:id=%tile.saplings,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
-block:id=%tile.saplings,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling
-block:id=%tile.saplings,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
-block:id=%tile.saplings,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/methane_tree_sapling
-block:id=%tile.saplings,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:amunra/lumipod_sapling
 
 # %tile.machines1:* (tile.machines1), render=(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockMachineMeta
 block:id=%tile.machines1,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_output,face3=0:amunra/machine_nuclear,face4-5=0:galacticraftcore/machine_output
@@ -239,11 +235,6 @@ block:id=%tile.rockDoubleslab,data=1,stdrot=true,face0-5=0:amunra/basaltbrick
 block:id=%tile.rockDoubleslab,data=2,stdrot=true,face0-5=0:amunra/smoothbasalt
 block:id=%tile.rockDoubleslab,data=3,stdrot=true,face0-5=0:amunra/obsidianbrick
 block:id=%tile.rockDoubleslab,data=4,stdrot=true,face0-5=0:amunra/alucrate
-block:id=%tile.rockDoubleslab,data=8,stdrot=true,face0-5=0:amunra/basalt
-block:id=%tile.rockDoubleslab,data=9,stdrot=true,face0-5=0:amunra/basaltbrick
-block:id=%tile.rockDoubleslab,data=10,stdrot=true,face0-5=0:amunra/smoothbasalt
-block:id=%tile.rockDoubleslab,data=11,stdrot=true,face0-5=0:amunra/obsidianbrick
-block:id=%tile.rockDoubleslab,data=12,stdrot=true,face0-5=0:amunra/alucrate
 
 # %tile.rockSlab:* (tile.rockSlab), render=(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
 block:id=%tile.rockSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/basalt
@@ -260,8 +251,6 @@ block:id=%tile.rockSlab,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5
 # %tile.woodDoubleslab:* (tile.woodDoubleslab), render=(STANDARD), opaque=true,cls=de.katzenpapst.amunra.block.BlockDoubleslabMeta
 block:id=%tile.woodDoubleslab,data=0,stdrot=true,face0-5=0:amunra/planks_pod
 block:id=%tile.woodDoubleslab,data=1,stdrot=true,face0-5=0:amunra/planks_methane
-block:id=%tile.woodDoubleslab,data=8,stdrot=true,face0-5=0:amunra/planks_pod
-block:id=%tile.woodDoubleslab,data=9,stdrot=true,face0-5=0:amunra/planks_methane
 
 # %tile.woodSlab:* (tile.woodSlab), render=(STANDARD), opaque=false,cls=de.katzenpapst.amunra.block.BlockSlabMeta
 block:id=%tile.woodSlab,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:amunra/planks_pod
