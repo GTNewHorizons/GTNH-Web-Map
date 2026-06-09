@@ -1,4 +1,4 @@
-# GalacticraftAmunRa 0.8.2
+# GalacticraftAmunRa 0.8.12
 version:1.7
 modname:GalacticraftAmunRa
 
@@ -38,8 +38,6 @@ patchblock:id=%tile.basePlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0
 # %tile.saplings:* (tile.saplings), render=(CROSSEDSQUARES), opaque=false,cls=de.katzenpapst.amunra.block.bush.BlockBushMulti
 patchblock:id=%tile.saplings,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1
 patchblock:id=%tile.saplings,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=4,data=5
-patchblock:id=%tile.saplings,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=8,data=9
-patchblock:id=%tile.saplings,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=12,data=13
 
 # %tile.blockFake:* (tile.blockFake), render=(CUSTOM), opaque=true,cls=de.katzenpapst.amunra.block.BlockMetaFake
 

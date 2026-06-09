@@ -1,4 +1,4 @@
-# structurelib 1.4.12
+# structurelib 1.4.38
 version:1.7
 modname:structurelib
 
@@ -27,18 +27,18 @@ texture:id=structurelib/iconsets/HINT_NOAIR,filename=assets/structurelib/texture
 
 
 # %blockhint:* (blockhint), render=(STANDARD), opaque=true,cls=com.gtnewhorizon.structurelib.block.BlockHint
-block:id=%blockhint,data=0,stdrot=true,face0-5=0:structurelib/iconsets/HINT_0
-block:id=%blockhint,data=1,stdrot=true,face0-5=0:structurelib/iconsets/HINT_1
-block:id=%blockhint,data=2,stdrot=true,face0-5=0:structurelib/iconsets/HINT_2
-block:id=%blockhint,data=3,stdrot=true,face0-5=0:structurelib/iconsets/HINT_3
-block:id=%blockhint,data=4,stdrot=true,face0-5=0:structurelib/iconsets/HINT_4
-block:id=%blockhint,data=5,stdrot=true,face0-5=0:structurelib/iconsets/HINT_5
-block:id=%blockhint,data=6,stdrot=true,face0-5=0:structurelib/iconsets/HINT_6
-block:id=%blockhint,data=7,stdrot=true,face0-5=0:structurelib/iconsets/HINT_7
-block:id=%blockhint,data=8,stdrot=true,face0-5=0:structurelib/iconsets/HINT_8
-block:id=%blockhint,data=9,stdrot=true,face0-5=0:structurelib/iconsets/HINT_9
-block:id=%blockhint,data=10,stdrot=true,face0-5=0:structurelib/iconsets/HINT_10
-block:id=%blockhint,data=11,stdrot=true,face0-5=0:structurelib/iconsets/HINT_11
+block:id=%blockhint,data=0,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_0
+block:id=%blockhint,data=1,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_1
+block:id=%blockhint,data=2,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_2
+block:id=%blockhint,data=3,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_3
+block:id=%blockhint,data=4,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_4
+block:id=%blockhint,data=5,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_5
+block:id=%blockhint,data=6,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_6
+block:id=%blockhint,data=7,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_7
+block:id=%blockhint,data=8,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_8
+block:id=%blockhint,data=9,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_9
+block:id=%blockhint,data=10,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_10
+block:id=%blockhint,data=11,stdrot=true,face0-1=0:structurelib/iconsets/HINT_AIR,face2-5=0:structurelib/iconsets/HINT_11
 block:id=%blockhint,data=12,stdrot=true,face0-5=0:structurelib/iconsets/HINT_DEFAULT
 block:id=%blockhint,data=13,stdrot=true,face0-5=0:structurelib/iconsets/HINT_AIR
 block:id=%blockhint,data=14,stdrot=true,face0-5=0:structurelib/iconsets/HINT_NOAIR

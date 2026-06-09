@@ -113,6 +113,7 @@ texture:id=enderio/vapor_of_levity_still,filename=assets/enderio/textures/blocks
 texture:id=enderio/vividAlloyBlock,filename=assets/enderio/textures/blocks/vividAlloyBlock.png
 texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
 texture:id=minecraft/cobblestone_mossy,filename=assets/minecraft/textures/blocks/cobblestone_mossy.png
+texture:id=minecraft/glowstone,filename=assets/minecraft/textures/blocks/glowstone.png
 texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 texture:id=minecraft/wool_colored_black,filename=assets/minecraft/textures/blocks/wool_colored_black.png
@@ -194,7 +195,7 @@ block:id=%blockPaintedDoubleSlab,data=*,stdrot=true,face0-5=0:enderio/conduitCon
 block:id=%blockCrafter,data=*,stdrot=true,face0=0:enderio/machineBottom,face1=0:enderio/crafterTop,face2=0:enderio/crafterSide,face3=0:enderio/crafter,face4-5=0:enderio/crafterSide
 
 # %blockPaintedGlowstone:* (blockPaintedGlowstone), render=crazypants.enderio.machine.painter.PaintedBlockRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.painter.BlockPaintedGlowstone
-block:id=%blockPaintedGlowstone,data=*,stdrot=true,face0-5=0:enderio/conduitConnector
+block:id=%blockPaintedGlowstone,data=*,stdrot=true,face0-5=0:minecraft/glowstone
 
 # %blockPaintedCarpet:* (blockPaintedCarpet), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.painter.BlockPaintedCarpet
 block:id=%blockPaintedCarpet,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/wool_colored_white

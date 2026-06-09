@@ -41,6 +41,8 @@ boxblock:id=%autoChisel,xmin=0.125,xmax=0.875,ymin=0.0,ymax=0.8125,zmin=0.125,zm
 
 # %bookshelf:* (bookshelf), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableBookshelf
 
+# %brickCustom2:* (brickCustom2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
 # %brickCustom:* (brickCustom), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 # %bronzeblock:* (bronzeblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
@@ -55,6 +57,12 @@ boxblock:id=%carpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,dat
 # %mossy_cobblestone:* (mossy_cobblestone), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 # %concrete:* (concrete), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockConcrete
+
+# %concrete_slab:* (concrete_slab), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvableConcreteSlab
+boxblock:id=%concrete_slab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %concrete_slab_top:* (concrete_slab_top), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvableConcreteSlab
+boxblock:id=%concrete_slab_top,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
 # %copperblock:* (copperblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
 
@@ -121,6 +129,74 @@ boxblock:id=%stained_glass_pane_red,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zm
 
 # %grimstone:* (grimstone), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockGrimstone
 
+# %hardened_clay:* (hardened_clay), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay2:* (hardened_clay2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_white:* (hardened_clay_white), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_white2:* (hardened_clay_white2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_orange:* (hardened_clay_orange), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_orange2:* (hardened_clay_orange2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_magenta:* (hardened_clay_magenta), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_magenta2:* (hardened_clay_magenta2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_lightblue:* (hardened_clay_lightblue), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_lightblue2:* (hardened_clay_lightblue2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_yellow:* (hardened_clay_yellow), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_yellow2:* (hardened_clay_yellow2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_lime:* (hardened_clay_lime), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_lime2:* (hardened_clay_lime2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_pink:* (hardened_clay_pink), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_pink2:* (hardened_clay_pink2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_gray:* (hardened_clay_gray), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_gray2:* (hardened_clay_gray2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_lightgray:* (hardened_clay_lightgray), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_lightgray2:* (hardened_clay_lightgray2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_cyan:* (hardened_clay_cyan), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_cyan2:* (hardened_clay_cyan2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_purple:* (hardened_clay_purple), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_purple2:* (hardened_clay_purple2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_blue:* (hardened_clay_blue), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_blue2:* (hardened_clay_blue2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_brown:* (hardened_clay_brown), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_brown2:* (hardened_clay_brown2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_green:* (hardened_clay_green), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_green2:* (hardened_clay_green2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_red:* (hardened_clay_red), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_red2:* (hardened_clay_red2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_black:* (hardened_clay_black), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %hardened_clay_black2:* (hardened_clay_black2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
 # %hexPlating:* (hexPlating), render=team.chisel.client.render.RendererLayeredGlow(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlow
 
 # %hexLargePlating:* (hexLargePlating), render=team.chisel.client.render.RendererLayeredGlow(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvableGlow
@@ -178,7 +254,7 @@ boxblock:id=%marble_pillar_slab_top,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0
 
 # %nether_brick:* (nether_brick), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
-# %netherrack:* (netherrack), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.Features$64$1
+# %netherrack:* (netherrack), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.Features$66$1
 
 # %nucrete:* (nucrete), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
@@ -386,6 +462,57 @@ patchblock:id=%torch10,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04
 # %woolen_clay:* (woolen_clay), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 # %froglight:* (froglight), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %lantern:* (lantern), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %sheetmetal:* (sheetmetal), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %moss:* (moss), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %moss_carpet:* (moss_carpet), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=false,cls=team.chisel.block.BlockCarvableCarpet
+boxblock:id=%moss_carpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# %electrumblock:* (electrumblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %invarblock:* (invarblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %nickelblock:* (nickelblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %platinumblock:* (platinumblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %wroughtironblock:* (wroughtironblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %titaniumblock:* (titaniumblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %stainlesssteelblock:* (stainlesssteelblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %tungstensteelblock:* (tungstensteelblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %rppblock:* (rppblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %iridiumblock:* (iridiumblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %osmiumblock:* (osmiumblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %cobaltblock:* (cobaltblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockBeaconBase
+
+# %coral:* (coral), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %mud:* (mud), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %albumblock2:* (albumblock2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %albumblock:* (albumblock), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %brutalism:* (brutalism), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %porcelain:* (porcelain), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %alabaster:* (alabaster), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %road2:* (road2), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
+
+# %road:* (road), render=team.chisel.client.render.RendererCTM(CUSTOM), opaque=true,cls=team.chisel.block.BlockCarvable
 
 boxblock:id=%aluminumblock,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=2,data=3,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 customblock:id=%aluminumblock,class=org.dynmap.hdmap.renderer.ChiselCTMBlockRenderer,data=0,data=1,data=4

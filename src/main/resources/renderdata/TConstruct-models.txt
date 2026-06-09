@@ -103,8 +103,8 @@ patchblock:id=%rail.wood,patch0=SlopeXUpZTop@270,data=12
 patchblock:id=%rail.wood,patch0=SlopeXUpZTop@90,data=13
 
 # %CraftingSlab:* (CraftingSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.CraftingSlab
-boxblock:id=%CraftingSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5
-boxblock:id=%CraftingSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13
+boxblock:id=%CraftingSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6
+boxblock:id=%CraftingSlab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14
 
 # %FurnaceSlab:* (FurnaceSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.FurnaceSlab
 boxblock:id=%FurnaceSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1
@@ -636,9 +636,6 @@ boxblock:id=%SearedBlockNether,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.625,zmin=0.2
 
 # %CastingChannel:* (CastingChannel), render=tconstruct.smeltery.model.BlockRenderCastingChannel(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.CastingChannelBlock
 boxblock:id=%CastingChannel,xmin=0.0,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.0,zmax=1.0,data=*
-
-# %GlassPaneClearStained:* (GlassPaneClearStained), render=tconstruct.smeltery.model.PaneRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneStained
-boxblock:id=%GlassPaneClearStained,xmin=0.4375,xmax=0.5625,ymin=0.0,ymax=1.0,zmin=0.4375,zmax=0.5625,data=*
 
 # %Redstone.Landmine:* (Redstone.Landmine), render=tconstruct.world.model.RenderLandmine(CUSTOM), opaque=false,cls=tconstruct.mechworks.blocks.BlockLandmine
 boxblock:id=%Redstone.Landmine,xmin=0.0625,xmax=0.9375,ymin=0.9375,ymax=1.0,zmin=0.0625,zmax=0.9375,data=0

@@ -294,6 +294,10 @@ texture:id=tinker/partbuilder_slab_side,filename=assets/tinker/textures/blocks/p
 texture:id=tinker/partbuilder_spruce_bottom,filename=assets/tinker/textures/blocks/partbuilder_spruce_bottom.png
 texture:id=tinker/partbuilder_spruce_side,filename=assets/tinker/textures/blocks/partbuilder_spruce_side.png
 texture:id=tinker/partbuilder_spruce_top,filename=assets/tinker/textures/blocks/partbuilder_spruce_top.png
+texture:id=tinker/partchest_bottom,filename=assets/tinker/textures/blocks/partchest_bottom.png
+texture:id=tinker/partchest_side,filename=assets/tinker/textures/blocks/partchest_side.png
+texture:id=tinker/partchest_slab_side,filename=assets/tinker/textures/blocks/partchest_slab_side.png
+texture:id=tinker/partchest_top,filename=assets/tinker/textures/blocks/partchest_top.png
 texture:id=tinker/patternchest_bottom,filename=assets/tinker/textures/blocks/patternchest_bottom.png
 texture:id=tinker/patternchest_side,filename=assets/tinker/textures/blocks/patternchest_side.png
 texture:id=tinker/patternchest_slab_side,filename=assets/tinker/textures/blocks/patternchest_slab_side.png
@@ -593,7 +597,8 @@ block:id=%ToolStationBlock,data=1,stdrot=true,patch0=0:tinker/partbuilder_oak_bo
 block:id=%ToolStationBlock,data=2,stdrot=true,patch0=0:tinker/partbuilder_spruce_bottom,patch1=0:tinker/partbuilder_spruce_top,patch2-5=0:tinker/partbuilder_spruce_side
 block:id=%ToolStationBlock,data=3,stdrot=true,patch0=0:tinker/partbuilder_birch_bottom,patch1=0:tinker/partbuilder_birch_top,patch2-5=0:tinker/partbuilder_birch_side
 block:id=%ToolStationBlock,data=4,stdrot=true,patch0=0:tinker/partbuilder_jungle_bottom,patch1=0:tinker/partbuilder_jungle_top,patch2-5=0:tinker/partbuilder_jungle_side
-block:id=%ToolStationBlock,data=5,data=6,data=7,data=8,data=9,stdrot=true,patch0=0:tinker/patternchest_bottom,patch1=0:tinker/patternchest_top,patch2-5=0:tinker/patternchest_side
+block:id=%ToolStationBlock,data=5,stdrot=true,face0=0:tinker/patternchest_bottom,face1=0:tinker/patternchest_top,face2-5=0:tinker/patternchest_side
+block:id=%ToolStationBlock,data=6,data=7,data=8,data=9,stdrot=true,face0=0:tinker/partchest_bottom,face1=0:tinker/partchest_top,face2-5=0:tinker/partchest_side
 block:id=%ToolStationBlock,data=10,stdrot=true,patch0=0:tinker/stenciltable_oak_bottom,patch1=0:tinker/stenciltable_oak_top,patch2-5=0:tinker/stenciltable_oak_side
 block:id=%ToolStationBlock,data=11,stdrot=true,patch0=0:tinker/stenciltable_spruce_bottom,patch1=0:tinker/stenciltable_spruce_top,patch2-5=0:tinker/stenciltable_spruce_side
 block:id=%ToolStationBlock,data=12,stdrot=true,patch0=0:tinker/stenciltable_birch_bottom,patch1=0:tinker/stenciltable_birch_top,patch2-5=0:tinker/stenciltable_birch_side
@@ -627,12 +632,14 @@ block:id=%CraftingSlab,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:tinke
 block:id=%CraftingSlab,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/stenciltable_oak_bottom,face1=0:tinker/stenciltable_oak_top,face2-5=0:tinker/stenciltable_slab_side
 block:id=%CraftingSlab,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/patternchest_bottom,face1=0:tinker/patternchest_top,face2-5=0:tinker/patternchest_slab_side
 block:id=%CraftingSlab,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_slab_side
+block:id=%CraftingSlab,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/partchest_bottom,face1=0:tinker/partchest_top,face2-5=0:tinker/partchest_slab_side
 block:id=%CraftingSlab,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/craftingstation_bottom,face1=0:tinker/craftingstation_top,face2-5=0:tinker/craftingstation_slab_side
 block:id=%CraftingSlab,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/toolstation_bottom,face1=0:tinker/toolstation_top,face2-5=0:tinker/toolstation_slab_side
 block:id=%CraftingSlab,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/partbuilder_oak_bottom,face1=0:tinker/partbuilder_oak_top,face2-5=0:tinker/partbuilder_slab_side
 block:id=%CraftingSlab,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/stenciltable_oak_bottom,face1=0:tinker/stenciltable_oak_top,face2-5=0:tinker/stenciltable_slab_side
 block:id=%CraftingSlab,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/patternchest_bottom,face1=0:tinker/patternchest_top,face2-5=0:tinker/patternchest_slab_side
 block:id=%CraftingSlab,data=13,stdrot=true,transparency=TRANSPARENT,face0-1=0:tinker/toolforge_top,face2-5=0:tinker/toolforge_slab_side
+block:id=%CraftingSlab,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:tinker/partchest_bottom,face1=0:tinker/partchest_top,face2-5=0:tinker/partchest_slab_side
 
 # %FurnaceSlab:* (FurnaceSlab), render=(STANDARD), opaque=false,cls=tconstruct.tools.blocks.FurnaceSlab
 block:id=%FurnaceSlab,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/furnace_top,face2=0:tinker/furnaceslab_side,face3=0:tinker/furnaceslab_front,face4-5=0:tinker/furnaceslab_side
@@ -875,23 +882,23 @@ block:id=%GlassBlock.StainedClear,data=13,stdrot=true,face0-5=12000:tinker/glass
 block:id=%GlassBlock.StainedClear,data=14,stdrot=true,face0-5=12000:tinker/glass/stained/red/glass
 block:id=%GlassBlock.StainedClear,data=15,stdrot=true,face0-5=12000:tinker/glass/stained/black/glass
 
-# %GlassPaneClearStained:* (GlassPaneClearStained), render=tconstruct.smeltery.model.PaneRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneStained
-block:id=%GlassPaneClearStained,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_white
-block:id=%GlassPaneClearStained,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_orange
-block:id=%GlassPaneClearStained,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_magenta
-block:id=%GlassPaneClearStained,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_lightblue
-block:id=%GlassPaneClearStained,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_yellow
-block:id=%GlassPaneClearStained,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_lime
-block:id=%GlassPaneClearStained,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_pink
-block:id=%GlassPaneClearStained,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_gray
-block:id=%GlassPaneClearStained,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_lightgray
-block:id=%GlassPaneClearStained,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_cyan
-block:id=%GlassPaneClearStained,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_purple
-block:id=%GlassPaneClearStained,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_blue
-block:id=%GlassPaneClearStained,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_brown
-block:id=%GlassPaneClearStained,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_green
-block:id=%GlassPaneClearStained,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_red
-block:id=%GlassPaneClearStained,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stainedglass_black
+# %GlassPaneClearStained:* (GlassPaneClearStained), render=tconstruct.smeltery.model.PaneConnectedRender(CUSTOM), opaque=false,cls=tconstruct.smeltery.blocks.GlassPaneConnectedMeta
+block:id=%GlassPaneClearStained,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/white/glass
+block:id=%GlassPaneClearStained,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/orange/glass
+block:id=%GlassPaneClearStained,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/magenta/glass
+block:id=%GlassPaneClearStained,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/light_blue/glass
+block:id=%GlassPaneClearStained,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/yellow/glass
+block:id=%GlassPaneClearStained,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/lime/glass
+block:id=%GlassPaneClearStained,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/pink/glass
+block:id=%GlassPaneClearStained,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/gray/glass
+block:id=%GlassPaneClearStained,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/light_gray/glass
+block:id=%GlassPaneClearStained,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/cyan/glass
+block:id=%GlassPaneClearStained,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/purple/glass
+block:id=%GlassPaneClearStained,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/blue/glass
+block:id=%GlassPaneClearStained,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/brown/glass
+block:id=%GlassPaneClearStained,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/green/glass
+block:id=%GlassPaneClearStained,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/red/glass
+block:id=%GlassPaneClearStained,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=12000:tinker/glass/stained/black/glass
 
 # %Redstone.Landmine:* (Redstone.Landmine), render=tconstruct.world.model.RenderLandmine(CUSTOM), opaque=false,cls=tconstruct.mechworks.blocks.BlockLandmine
 block:id=%Redstone.Landmine,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/Landmine

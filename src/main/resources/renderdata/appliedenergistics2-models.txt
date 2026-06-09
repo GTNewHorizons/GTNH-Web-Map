@@ -1,4 +1,4 @@
-# appliedenergistics2 rv3-beta-173-GTNH
+# appliedenergistics2 rv3-beta-977-GTNH
 version:1.7
 modname:appliedenergistics2
 
@@ -31,8 +31,12 @@ customblock:id=%tile.BlockCableBus,class=org.dynmap.hdmap.renderer.MECableRender
 
 # %tile.BlockSkyStone:* (tile.BlockSkyStone), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.solids.BlockSkyStone
 
+# %tile.BlockAdvancedInscriber:* (tile.BlockAdvancedInscriber), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockAdvancedInscriber
+
 # %tile.BlockTinyTNT:* (tile.BlockTinyTNT), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.misc.BlockTinyTNT
 boxblock:id=%tile.BlockTinyTNT,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=*
+
+# %tile.BlockStorageReshuffle:* (tile.BlockStorageReshuffle), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockStorageReshuffle
 
 # %tile.BlockSecurity:* (tile.BlockSecurity), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockSecurity
 
@@ -41,6 +45,10 @@ boxblock:id=%tile.BlockQuantumRing,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.875,z
 
 # %tile.BlockQuantumLinkChamber:* (tile.BlockQuantumLinkChamber), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=appeng.block.qnb.BlockQuantumLinkChamber
 boxblock:id=%tile.BlockQuantumLinkChamber,xmin=0.125,xmax=0.875,ymin=0.125,ymax=0.875,zmin=0.125,zmax=0.875,data=*
+
+# %tile.BlockSpatialLinkChamber:* (tile.BlockSpatialLinkChamber), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialLinkChamber
+
+# %tile.BlockSpatialNetworkRelay:* (tile.BlockSpatialNetworkRelay), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialNetworkRelay
 
 # %tile.BlockSpatialPylon:* (tile.BlockSpatialPylon), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.spatial.BlockSpatialPylon
 
@@ -139,3 +147,9 @@ boxblock:id=%tile.ChiseledQuartzSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11
 # %tile.QuartzPillarSlabBlock:* (tile.QuartzPillarSlabBlock), render=(STANDARD), opaque=false,cls=appeng.block.AEBaseSlabBlock
 boxblock:id=%tile.QuartzPillarSlabBlock,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 boxblock:id=%tile.QuartzPillarSlabBlock,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %tile.BlockWirelessConnector:* (tile.BlockWirelessConnector), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockWirelessConnector
+
+# %tile.BlockWirelessHub:* (tile.BlockWirelessHub), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.networking.BlockWirelessHub
+
+# %tile.BlockCrystalGrowthChamber:* (tile.BlockCrystalGrowthChamber), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=appeng.block.misc.BlockCrystalGrowthChamber

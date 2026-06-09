@@ -1,4 +1,4 @@
-# dreamcraft 2.7.220
+# dreamcraft 2.8.279
 version:1.7
 modname:dreamcraft
 
@@ -8,6 +8,7 @@ modname:dreamcraft
 
 
 texturepath:assets/dreamcraft/textures/blocks/
+texture:id=dreamcraft/blockAluminiumBars,filename=assets/dreamcraft/textures/blocks/blockAluminiumBars.png
 texture:id=dreamcraft/blockBlackPlutonium,filename=assets/dreamcraft/textures/blocks/blockBlackPlutonium.png
 texture:id=dreamcraft/blockBloodyIchorium,filename=assets/dreamcraft/textures/blocks/blockBloodyIchorium.png
 texture:id=dreamcraft/blockBloodyThaumium,filename=assets/dreamcraft/textures/blocks/blockBloodyThaumium.png
@@ -15,6 +16,7 @@ texture:id=dreamcraft/blockBloodyVoid,filename=assets/dreamcraft/textures/blocks
 texture:id=dreamcraft/blockBronzePlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockBronzePlatedReinforcedStone.png
 texture:id=dreamcraft/blockCallistoColdIce,filename=assets/dreamcraft/textures/blocks/blockCallistoColdIce.png
 texture:id=dreamcraft/blockCharcoal,filename=assets/dreamcraft/textures/blocks/blockCharcoal.png
+texture:id=dreamcraft/blockChromeBars,filename=assets/dreamcraft/textures/blocks/blockChromeBars.png
 texture:id=dreamcraft/blockCompressedCharcoal,filename=assets/dreamcraft/textures/blocks/blockCompressedCharcoal.png
 texture:id=dreamcraft/blockCompressedCoal,filename=assets/dreamcraft/textures/blocks/blockCompressedCoal.png
 texture:id=dreamcraft/blockCompressedCoalCoke,filename=assets/dreamcraft/textures/blocks/blockCompressedCoalCoke.png
@@ -24,13 +26,16 @@ texture:id=dreamcraft/blockDoubleCompressedCharcoal,filename=assets/dreamcraft/t
 texture:id=dreamcraft/blockDoubleCompressedCoal,filename=assets/dreamcraft/textures/blocks/blockDoubleCompressedCoal.png
 texture:id=dreamcraft/blockDoubleCompressedCoalCoke,filename=assets/dreamcraft/textures/blocks/blockDoubleCompressedCoalCoke.png
 texture:id=dreamcraft/blockGaia,filename=assets/dreamcraft/textures/blocks/blockGaia.png
+texture:id=dreamcraft/blockIridiumBars,filename=assets/dreamcraft/textures/blocks/blockIridiumBars.png
 texture:id=dreamcraft/blockLedox,filename=assets/dreamcraft/textures/blocks/blockLedox.png
 texture:id=dreamcraft/blockManaPearl,filename=assets/dreamcraft/textures/blocks/blockManaPearl.png
 texture:id=dreamcraft/blockManaPowder,filename=assets/dreamcraft/textures/blocks/blockManaPowder.png
-texture:id=dreamcraft/blockMysteriousCrystal,filename=assets/dreamcraft/textures/blocks/blockMysteriousCrystal.png
+texture:id=dreamcraft/blockMysteriousCrystalBlock,filename=assets/dreamcraft/textures/blocks/blockMysteriousCrystalBlock.png
 texture:id=dreamcraft/blockMytryl,filename=assets/dreamcraft/textures/blocks/blockMytryl.png
 texture:id=dreamcraft/blockNaquadahPlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockNaquadahPlatedReinforcedStone.png
+texture:id=dreamcraft/blockNeutroniumBars,filename=assets/dreamcraft/textures/blocks/blockNeutroniumBars.png
 texture:id=dreamcraft/blockNeutroniumPlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockNeutroniumPlatedReinforcedStone.png
+texture:id=dreamcraft/blockOsmiumBars,filename=assets/dreamcraft/textures/blocks/blockOsmiumBars.png
 texture:id=dreamcraft/blockPistonBlock,filename=assets/dreamcraft/textures/blocks/blockPistonBlock.png
 texture:id=dreamcraft/blockPixieDust,filename=assets/dreamcraft/textures/blocks/blockPixieDust.png
 texture:id=dreamcraft/blockQuadrupleCompressedCharcoal,filename=assets/dreamcraft/textures/blocks/blockQuadrupleCompressedCharcoal.png
@@ -41,181 +46,172 @@ texture:id=dreamcraft/blockQuintupleCompressedCharcoal,filename=assets/dreamcraf
 texture:id=dreamcraft/blockQuintupleCompressedCoal,filename=assets/dreamcraft/textures/blocks/blockQuintupleCompressedCoal.png
 texture:id=dreamcraft/blockQuintupleCompressedCoalCoke,filename=assets/dreamcraft/textures/blocks/blockQuintupleCompressedCoalCoke.png
 texture:id=dreamcraft/blockSandClayMix,filename=assets/dreamcraft/textures/blocks/blockSandClayMix.png
+texture:id=dreamcraft/blockStainlessSteelBars,filename=assets/dreamcraft/textures/blocks/blockStainlessSteelBars.png
+texture:id=dreamcraft/blockSteelBars,filename=assets/dreamcraft/textures/blocks/blockSteelBars.png
 texture:id=dreamcraft/blockSteelPlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockSteelPlatedReinforcedStone.png
+texture:id=dreamcraft/blockSulfur,filename=assets/dreamcraft/textures/blocks/blockSulfur.png
+texture:id=dreamcraft/blockTitaniumBars,filename=assets/dreamcraft/textures/blocks/blockTitaniumBars.png
 texture:id=dreamcraft/blockTitaniumPlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockTitaniumPlatedReinforcedStone.png
 texture:id=dreamcraft/blockTripleCompressedCharcoal,filename=assets/dreamcraft/textures/blocks/blockTripleCompressedCharcoal.png
 texture:id=dreamcraft/blockTripleCompressedCoal,filename=assets/dreamcraft/textures/blocks/blockTripleCompressedCoal.png
 texture:id=dreamcraft/blockTripleCompressedCoalCoke,filename=assets/dreamcraft/textures/blocks/blockTripleCompressedCoalCoke.png
+texture:id=dreamcraft/blockTungstenSteelBars,filename=assets/dreamcraft/textures/blocks/blockTungstenSteelBars.png
 texture:id=dreamcraft/blockTungstensteelPlatedReinforcedStone,filename=assets/dreamcraft/textures/blocks/blockTungstensteelPlatedReinforcedStone.png
-texture:id=dreamcraft/fluidAmmonia_flow,filename=assets/dreamcraft/textures/blocks/fluidAmmonia_flow.png
-texture:id=dreamcraft/fluidAmmonia_still,filename=assets/dreamcraft/textures/blocks/fluidAmmonia_still.png
-texture:id=dreamcraft/fluidCompressedNitrogen_flow,filename=assets/dreamcraft/textures/blocks/fluidCompressedNitrogen_flow.png
-texture:id=dreamcraft/fluidCompressedNitrogen_still,filename=assets/dreamcraft/textures/blocks/fluidCompressedNitrogen_still.png
-texture:id=dreamcraft/fluidCompressedOxygen_flow,filename=assets/dreamcraft/textures/blocks/fluidCompressedOxygen_flow.png
-texture:id=dreamcraft/fluidCompressedOxygen_still,filename=assets/dreamcraft/textures/blocks/fluidCompressedOxygen_still.png
+texture:id=dreamcraft/blockZincGravelOre,filename=assets/dreamcraft/textures/blocks/blockZincGravelOre.png
 texture:id=dreamcraft/fluidConcrete_flow,filename=assets/dreamcraft/textures/blocks/fluidConcrete_flow.png
 texture:id=dreamcraft/fluidConcrete_still,filename=assets/dreamcraft/textures/blocks/fluidConcrete_still.png
-texture:id=dreamcraft/fluidEnrichedBacterialSludge_flow,filename=assets/dreamcraft/textures/blocks/fluidEnrichedBacterialSludge_flow.png
-texture:id=dreamcraft/fluidEnrichedBacterialSludge_still,filename=assets/dreamcraft/textures/blocks/fluidEnrichedBacterialSludge_still.png
-texture:id=dreamcraft/fluidFermentedBacterialSludge_flow,filename=assets/dreamcraft/textures/blocks/fluidFermentedBacterialSludge_flow.png
-texture:id=dreamcraft/fluidFermentedBacterialSludge_still,filename=assets/dreamcraft/textures/blocks/fluidFermentedBacterialSludge_still.png
-texture:id=dreamcraft/fluidNitricAcid_flow,filename=assets/dreamcraft/textures/blocks/fluidNitricAcid_flow.png
-texture:id=dreamcraft/fluidNitricAcid_still,filename=assets/dreamcraft/textures/blocks/fluidNitricAcid_still.png
-texture:id=dreamcraft/fluidPollution_flow,filename=assets/dreamcraft/textures/blocks/fluidPollution_flow.png
-texture:id=dreamcraft/fluidPollution_still,filename=assets/dreamcraft/textures/blocks/fluidPollution_still.png
-texture:id=dreamcraft/fluidSodiumPotassium_flow,filename=assets/dreamcraft/textures/blocks/fluidSodiumPotassium_flow.png
-texture:id=dreamcraft/fluidSodiumPotassium_still,filename=assets/dreamcraft/textures/blocks/fluidSodiumPotassium_still.png
-texture:id=dreamcraft/ore_zinc_gravel,filename=assets/dreamcraft/textures/blocks/ore_zinc_gravel.png
-texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
 
 
 
-# %tile.QuadrupleCompressedCoalCoke:* (tile.QuadrupleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.QuadrupleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuadrupleCompressedCoalCoke
+# %SandClayMix:* (SandClayMix), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%SandClayMix,data=*,stdrot=true,face0-5=0:dreamcraft/blockSandClayMix
 
-# %tile.CompressedCoalCoke:* (tile.CompressedCoalCoke), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.CompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedCoalCoke
+# %PistonBlock:* (PistonBlock), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%PistonBlock,data=*,stdrot=true,face0-5=0:dreamcraft/blockPistonBlock
 
-# %tile.SandClayMix:* (tile.SandClayMix), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.SandClayMix,data=*,stdrot=true,face0-5=0:dreamcraft/blockSandClayMix
+# %DiamondFrameBox:* (DiamondFrameBox), render=(STANDARD), opaque=false,cls=com.dreammaster.block.DiamondFrameBox
+block:id=%DiamondFrameBox,data=*,stdrot=true,face0-5=0:dreamcraft/blockDiamondFrameBox
 
-# %tile.NaquadahPlatedReinforcedStone:* (tile.NaquadahPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.NaquadahPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockNaquadahPlatedReinforcedStone
+# %CompressedGraphite:* (CompressedGraphite), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%CompressedGraphite,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedGraphite
 
-# %tile.QuintupleCompressedCoalCoke:* (tile.QuintupleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.QuintupleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuintupleCompressedCoalCoke
+# %ZincGravelOre:* (ZincGravelOre), render=(STANDARD), opaque=true,cls=com.dreammaster.block.ZincGravelOre
+block:id=%ZincGravelOre,data=*,stdrot=true,face0-5=0:dreamcraft/blockZincGravelOre
 
-# %tile.Ledox:* (tile.Ledox), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.Ledox,data=*,stdrot=true,face0-5=0:dreamcraft/blockLedox
+# %AluminiumBars:* (AluminiumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%AluminiumBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockAluminiumBars
 
-# %tile.SteelPlatedReinforcedStone:* (tile.SteelPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.SteelPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockSteelPlatedReinforcedStone
+# %ChromeBars:* (ChromeBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%ChromeBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockChromeBars
 
-# %tile.CallistoColdIce:* (tile.CallistoColdIce), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.CallistoColdIce,data=*,stdrot=true,face0-5=0:dreamcraft/blockCallistoColdIce
+# %IridiumBars:* (IridiumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%IridiumBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockIridiumBars
 
-# %tile.PistonBlock:* (tile.PistonBlock), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.PistonBlock,data=*,stdrot=true,face0-5=0:dreamcraft/blockPistonBlock
+# %NeutroniumBars:* (NeutroniumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%NeutroniumBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockNeutroniumBars
 
-# %tile.TitaniumPlatedReinforcedStone:* (tile.TitaniumPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.TitaniumPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockTitaniumPlatedReinforcedStone
+# %OsmiumBars:* (OsmiumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%OsmiumBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockOsmiumBars
 
-# %tile.QuadrupleCompressedCoal:* (tile.QuadrupleCompressedCoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.QuadrupleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuadrupleCompressedCoal
+# %StainlessSteelBars:* (StainlessSteelBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%StainlessSteelBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockStainlessSteelBars
 
-# %tile.CompressedCoal:* (tile.CompressedCoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.CompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedCoal
+# %SteelBars:* (SteelBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%SteelBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockSteelBars
 
-# %tile.Mytryl:* (tile.Mytryl), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.Mytryl,data=*,stdrot=true,face0-5=0:dreamcraft/blockMytryl
+# %TitaniumBars:* (TitaniumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%TitaniumBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockTitaniumBars
 
-# %tile.BloodyThaumium:* (tile.BloodyThaumium), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.BloodyThaumium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyThaumium
+# %TungstenSteelBars:* (TungstenSteelBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+block:id=%TungstenSteelBars,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:dreamcraft/blockTungstenSteelBars
 
-# %tile.NeutroniumPlatedReinforcedStone:* (tile.NeutroniumPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.NeutroniumPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockNeutroniumPlatedReinforcedStone
+# %CallistoColdIce:* (CallistoColdIce), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%CallistoColdIce,data=*,stdrot=true,face0-5=0:dreamcraft/blockCallistoColdIce
 
-# %tile.BloodyIchorium:* (tile.BloodyIchorium), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.BloodyIchorium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyIchorium
+# %Ledox:* (Ledox), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%Ledox,data=*,stdrot=true,face0-5=0:dreamcraft/blockLedox
 
-# %tile.ManaPowder:* (tile.ManaPowder), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.ManaPowder,data=*,stdrot=true,face0-5=0:dreamcraft/blockManaPowder
+# %MysteriousCrystalBlock:* (MysteriousCrystalBlock), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%MysteriousCrystalBlock,data=*,stdrot=true,face0-5=0:dreamcraft/blockMysteriousCrystalBlock
 
-# %tile.MysteriousCrystal:* (tile.MysteriousCrystal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.MysteriousCrystal,data=*,stdrot=true,face0-5=0:dreamcraft/blockMysteriousCrystal
+# %Mytryl:* (Mytryl), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%Mytryl,data=*,stdrot=true,face0-5=0:dreamcraft/blockMytryl
 
-# %tile.TripleCompressedCoal:* (tile.TripleCompressedCoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.TripleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockTripleCompressedCoal
+# %Quantinum:* (Quantinum), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%Quantinum,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuantinum
 
-# %tile.TripleCompressedCharcoal:* (tile.TripleCompressedCharcoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.TripleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockTripleCompressedCharcoal
+# %BlackPlutonium:* (BlackPlutonium), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%BlackPlutonium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBlackPlutonium
 
-# %tile.BronzePlatedReinforcedStone:* (tile.BronzePlatedReinforcedStone), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.BronzePlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockBronzePlatedReinforcedStone
+# %Sulfur:* (Sulfur), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%Sulfur,data=*,stdrot=true,face0-5=0:dreamcraft/blockSulfur
 
-# %tile.QuintupleCompressedCoal:* (tile.QuintupleCompressedCoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.QuintupleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuintupleCompressedCoal
+# %BronzePlatedReinforcedStone:* (BronzePlatedReinforcedStone), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%BronzePlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockBronzePlatedReinforcedStone
 
-# %tile.TripleCompressedCoalCoke:* (tile.TripleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.TripleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockTripleCompressedCoalCoke
+# %SteelPlatedReinforcedStone:* (SteelPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%SteelPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockSteelPlatedReinforcedStone
 
-# %tile.QuintupleCompressedCharcoal:* (tile.QuintupleCompressedCharcoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.QuintupleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuintupleCompressedCharcoal
+# %TitaniumPlatedReinforcedStone:* (TitaniumPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%TitaniumPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockTitaniumPlatedReinforcedStone
 
-# %tile.TungstensteelPlatedReinforcedStone:* (tile.TungstensteelPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.TungstensteelPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockTungstensteelPlatedReinforcedStone
+# %TungstensteelPlatedReinforcedStone:* (TungstensteelPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%TungstensteelPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockTungstensteelPlatedReinforcedStone
 
-# %tile.BloodyVoid:* (tile.BloodyVoid), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.BloodyVoid,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyVoid
+# %NaquadahPlatedReinforcedStone:* (NaquadahPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%NaquadahPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockNaquadahPlatedReinforcedStone
 
-# %tile.PixieDust:* (tile.PixieDust), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.PixieDust,data=*,stdrot=true,face0-5=0:dreamcraft/blockPixieDust
+# %NeutroniumPlatedReinforcedStone:* (NeutroniumPlatedReinforcedStone), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%NeutroniumPlatedReinforcedStone,data=*,stdrot=true,face0-5=0:dreamcraft/blockNeutroniumPlatedReinforcedStone
 
-# %tile.BlackPlutonium:* (tile.BlackPlutonium), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.BlackPlutonium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBlackPlutonium
+# %Charcoal:* (Charcoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%Charcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockCharcoal
 
-# %tile.ManaPearl:* (tile.ManaPearl), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.ManaPearl,data=*,stdrot=true,face0-5=0:dreamcraft/blockManaPearl
+# %CompressedCharcoal:* (CompressedCharcoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%CompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedCharcoal
 
-# %tile.DoubleCompressedCoal:* (tile.DoubleCompressedCoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.DoubleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockDoubleCompressedCoal
+# %CompressedCoal:* (CompressedCoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%CompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedCoal
 
-# %tile.DoubleCompressedCharcoal:* (tile.DoubleCompressedCharcoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.DoubleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockDoubleCompressedCharcoal
+# %CompressedCoalCoke:* (CompressedCoalCoke), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%CompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedCoalCoke
 
-# %tile.CompressedGraphite:* (tile.CompressedGraphite), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.CompressedGraphite,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedGraphite
+# %DoubleCompressedCharcoal:* (DoubleCompressedCharcoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%DoubleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockDoubleCompressedCharcoal
 
-# %tile.Gaia:* (tile.Gaia), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.Gaia,data=*,stdrot=true,face0-5=0:dreamcraft/blockGaia
+# %DoubleCompressedCoal:* (DoubleCompressedCoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%DoubleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockDoubleCompressedCoal
 
-# %tile.Quantinum:* (tile.Quantinum), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.Quantinum,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuantinum
+# %DoubleCompressedCoalCoke:* (DoubleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%DoubleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockDoubleCompressedCoalCoke
 
-# %tile.CompressedCharcoal:* (tile.CompressedCharcoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.CompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockCompressedCharcoal
+# %TripleCompressedCharcoal:* (TripleCompressedCharcoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%TripleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockTripleCompressedCharcoal
 
-# %tile.DoubleCompressedCoalCoke:* (tile.DoubleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.DoubleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockDoubleCompressedCoalCoke
+# %TripleCompressedCoal:* (TripleCompressedCoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%TripleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockTripleCompressedCoal
 
-# %tile.QuadrupleCompressedCharcoal:* (tile.QuadrupleCompressedCharcoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.QuadrupleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuadrupleCompressedCharcoal
+# %TripleCompressedCoalCoke:* (TripleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%TripleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockTripleCompressedCoalCoke
 
-# %tile.DiamondFrameBox:* (tile.DiamondFrameBox), render=(STANDARD), opaque=false,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.DiamondFrameBox,data=*,stdrot=true,face0-5=0:dreamcraft/blockDiamondFrameBox
+# %QuadrupleCompressedCharcoal:* (QuadrupleCompressedCharcoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%QuadrupleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuadrupleCompressedCharcoal
 
-# %tile.Charcoal:* (tile.Charcoal), render=(STANDARD), opaque=true,cls=eu.usrv.yamcore.blocks.BlockBase
-block:id=%tile.Charcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockCharcoal
+# %QuadrupleCompressedCoal:* (QuadrupleCompressedCoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%QuadrupleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuadrupleCompressedCoal
 
-# %dreamcraft_SodiumPotassium:* (dreamcraft_SodiumPotassium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_SodiumPotassium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidSodiumPotassium_still,face2-5=12000:dreamcraft/fluidSodiumPotassium_flow
+# %QuadrupleCompressedCoalCoke:* (QuadrupleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%QuadrupleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuadrupleCompressedCoalCoke
 
-# %dreamcraft_NitricAcid:* (dreamcraft_NitricAcid), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_NitricAcid,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidNitricAcid_still,face2-5=12000:dreamcraft/fluidNitricAcid_flow
+# %QuintupleCompressedCharcoal:* (QuintupleCompressedCharcoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%QuintupleCompressedCharcoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuintupleCompressedCharcoal
 
-# %dreamcraft_Ammonia:* (dreamcraft_Ammonia), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_Ammonia,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidAmmonia_still,face2-5=12000:dreamcraft/fluidAmmonia_flow
+# %QuintupleCompressedCoal:* (QuintupleCompressedCoal), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%QuintupleCompressedCoal,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuintupleCompressedCoal
 
-# %dreamcraft_CompressedOxygen:* (dreamcraft_CompressedOxygen), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_CompressedOxygen,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidCompressedOxygen_still,face2-5=12000:dreamcraft/fluidCompressedOxygen_flow
+# %QuintupleCompressedCoalCoke:* (QuintupleCompressedCoalCoke), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%QuintupleCompressedCoalCoke,data=*,stdrot=true,face0-5=0:dreamcraft/blockQuintupleCompressedCoalCoke
 
-# %dreamcraft_EnrichedBacterialSludge:* (dreamcraft_EnrichedBacterialSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_EnrichedBacterialSludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidEnrichedBacterialSludge_still,face2-5=12000:dreamcraft/fluidEnrichedBacterialSludge_flow
+# %BloodyThaumium:* (BloodyThaumium), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%BloodyThaumium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyThaumium
 
-# %dreamcraft_FermentedBacterialSludge:* (dreamcraft_FermentedBacterialSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_FermentedBacterialSludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidFermentedBacterialSludge_still,face2-5=12000:dreamcraft/fluidFermentedBacterialSludge_flow
+# %BloodyVoid:* (BloodyVoid), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%BloodyVoid,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyVoid
+
+# %BloodyIchorium:* (BloodyIchorium), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%BloodyIchorium,data=*,stdrot=true,face0-5=0:dreamcraft/blockBloodyIchorium
+
+# %Gaia:* (Gaia), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%Gaia,data=*,stdrot=true,face0-5=0:dreamcraft/blockGaia
+
+# %ManaPowder:* (ManaPowder), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%ManaPowder,data=*,stdrot=true,face0-5=0:dreamcraft/blockManaPowder
+
+# %ManaPearl:* (ManaPearl), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%ManaPearl,data=*,stdrot=true,face0-5=0:dreamcraft/blockManaPearl
+
+# %PixieDust:* (PixieDust), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=%PixieDust,data=*,stdrot=true,face0-5=0:dreamcraft/blockPixieDust
 
 # %dreamcraft_Concrete:* (dreamcraft_Concrete), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
 block:id=%dreamcraft_Concrete,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidConcrete_still,face2-5=12000:dreamcraft/fluidConcrete_flow
-
-# %dreamcraft_CompressedNitrogen:* (dreamcraft_CompressedNitrogen), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_CompressedNitrogen,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidCompressedNitrogen_still,face2-5=12000:dreamcraft/fluidCompressedNitrogen_flow
-
-# %dreamcraft_Pollution:* (dreamcraft_Pollution), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-block:id=%dreamcraft_Pollution,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:dreamcraft/fluidPollution_still,face2-5=12000:dreamcraft/fluidPollution_flow
-
-# %ZincGravelOre:* (ZincGravelOre), render=(STANDARD), opaque=true,cls=com.dreammaster.tinkersConstruct.worldgen.ZincGravelOre
-block:id=%ZincGravelOre,data=*,stdrot=true,face0-5=0:dreamcraft/ore_zinc_gravel
-
-# %BabyChest:* (BabyChest), render=(CUSTOM), opaque=false,cls=com.dreammaster.modbabychest.BlockBabyChest
-block:id=%BabyChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak

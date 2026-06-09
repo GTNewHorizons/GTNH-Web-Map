@@ -1,4 +1,4 @@
-# etfuturum 2.6.2.24-GTNH
+# etfuturum 2.6.40-GTNH
 version:1.7
 modname:etfuturum
 
@@ -480,6 +480,10 @@ boxblock:id=%chain,xmin=0.40625,xmax=0.59375,ymin=0.0,ymax=1.0,zmin=0.40625,zmax
 # %enchantment_table:* (enchantment_table), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockNewEnchantmentTable
 boxblock:id=%enchantment_table,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
 
+# %bubble_column:* (bubble_column), render=ganymedes01.etfuturum.client.renderer.block.BlockBubbleColumnRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockBubbleColumn
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%bubble_column,xmin=0.0,xmax=1.0E-4,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0E-4,data=*
+
 # %barrel:* (barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
 
 # %iron_barrel:* (iron_barrel), render=ganymedes01.etfuturum.client.renderer.block.BlockBarrelRenderer(CUSTOM), opaque=true,cls=ganymedes01.etfuturum.blocks.BlockBarrel
@@ -632,6 +636,258 @@ boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.
 boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
 boxblock:id=%cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
 
+# %bop_sacredoak_button:* (bop_sacredoak_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_sacredoak_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_sacredoak_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_sacredoak_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_sacredoak_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_sacredoak_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_cherry_button:* (bop_cherry_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_cherry_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_cherry_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_cherry_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_cherry_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_cherry_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_dark_button:* (bop_dark_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_dark_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_dark_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_dark_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_dark_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_dark_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_fir_button:* (bop_fir_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_fir_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_fir_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_fir_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_fir_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_fir_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_ethereal_button:* (bop_ethereal_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_ethereal_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_ethereal_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_ethereal_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_ethereal_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_ethereal_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_magic_button:* (bop_magic_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_magic_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_magic_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_magic_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_magic_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_magic_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_mangrove_button:* (bop_mangrove_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_mangrove_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_mangrove_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_mangrove_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_mangrove_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_mangrove_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_palm_button:* (bop_palm_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_palm_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_palm_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_palm_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_palm_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_palm_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_redwood_button:* (bop_redwood_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_redwood_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_redwood_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_redwood_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_redwood_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_redwood_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_willow_button:* (bop_willow_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_willow_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_willow_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_willow_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_willow_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_willow_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_bamboo_button:* (bop_bamboo_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_bamboo_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_bamboo_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_bamboo_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_bamboo_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_bamboo_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_pine_button:* (bop_pine_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_pine_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_pine_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_pine_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_pine_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_pine_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_hellbark_button:* (bop_hellbark_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_hellbark_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_hellbark_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_hellbark_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_hellbark_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_hellbark_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_jacaranda_button:* (bop_jacaranda_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_jacaranda_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_jacaranda_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_jacaranda_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_jacaranda_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_jacaranda_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %bop_mahogany_button:* (bop_mahogany_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%bop_mahogany_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%bop_mahogany_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%bop_mahogany_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%bop_mahogany_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%bop_mahogany_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %witchery_rowan_button:* (witchery_rowan_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%witchery_rowan_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%witchery_rowan_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%witchery_rowan_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%witchery_rowan_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%witchery_rowan_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %witchery_alder_button:* (witchery_alder_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%witchery_alder_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%witchery_alder_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%witchery_alder_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%witchery_alder_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%witchery_alder_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
+# %witchery_hawthorn_button:* (witchery_hawthorn_button), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodButton
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.875,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+boxblock:id=%witchery_hawthorn_button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%witchery_hawthorn_button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.125,zmin=0.375,zmax=0.625,data=5,data=6,data=7
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.9375,ymax=1.0,zmin=0.375,zmax=0.625,data=8
+boxblock:id=%witchery_hawthorn_button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%witchery_hawthorn_button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12
+boxblock:id=%witchery_hawthorn_button,xmin=0.3125,xmax=0.6875,ymin=0.0,ymax=0.0625,zmin=0.375,zmax=0.625,data=13,data=14,data=15
+
 # %pressure_plate_spruce:* (pressure_plate_spruce), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
 boxblock:id=%pressure_plate_spruce,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%pressure_plate_spruce,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
@@ -661,6 +917,96 @@ boxblock:id=%pressure_plate_dark_oak,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.062
 boxblock:id=%cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
 boxblock:id=%cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
 boxblock:id=%cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_sacredoak_pressure_plate:* (bop_sacredoak_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_sacredoak_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_sacredoak_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_sacredoak_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_cherry_pressure_plate:* (bop_cherry_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_cherry_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_dark_pressure_plate:* (bop_dark_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_dark_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_dark_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_dark_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_fir_pressure_plate:* (bop_fir_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_fir_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_fir_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_fir_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_ethereal_pressure_plate:* (bop_ethereal_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_ethereal_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_ethereal_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_ethereal_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_magic_pressure_plate:* (bop_magic_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_magic_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_magic_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_magic_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_mangrove_pressure_plate:* (bop_mangrove_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_mangrove_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_mangrove_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_mangrove_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_palm_pressure_plate:* (bop_palm_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_palm_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_palm_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_palm_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_redwood_pressure_plate:* (bop_redwood_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_redwood_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_redwood_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_redwood_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_willow_pressure_plate:* (bop_willow_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_willow_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_willow_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_willow_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_bamboo_pressure_plate:* (bop_bamboo_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_bamboo_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_bamboo_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_bamboo_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_pine_pressure_plate:* (bop_pine_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_pine_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_pine_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_pine_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_hellbark_pressure_plate:* (bop_hellbark_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_hellbark_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_hellbark_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_hellbark_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_jacaranda_pressure_plate:* (bop_jacaranda_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_jacaranda_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_jacaranda_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_jacaranda_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %bop_mahogany_pressure_plate:* (bop_mahogany_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%bop_mahogany_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%bop_mahogany_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%bop_mahogany_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %witchery_rowan_pressure_plate:* (witchery_rowan_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%witchery_rowan_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%witchery_rowan_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%witchery_rowan_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %witchery_alder_pressure_plate:* (witchery_alder_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%witchery_alder_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%witchery_alder_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%witchery_alder_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %witchery_hawthorn_pressure_plate:* (witchery_hawthorn_pressure_plate), render=(STANDARD), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodPressurePlate
+boxblock:id=%witchery_hawthorn_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%witchery_hawthorn_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%witchery_hawthorn_pressure_plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %cherry_trapdoor:* (cherry_trapdoor), render=ganymedes01.etfuturum.client.renderer.block.BlockTrapDoorRenderer(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BaseTrapdoor
 boxblock:id=%cherry_trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
@@ -727,6 +1073,168 @@ boxblock:id=%cherry_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0
 boxblock:id=%cherry_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
 boxblock:id=%cherry_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
 boxblock:id=%cherry_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_sacredoak_sign:* (bop_sacredoak_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_sacredoak_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_sacredoak_wall_sign:* (bop_sacredoak_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_sacredoak_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_sacredoak_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_sacredoak_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_sacredoak_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_cherry_sign:* (bop_cherry_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_cherry_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_cherry_wall_sign:* (bop_cherry_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_cherry_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_cherry_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_cherry_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_cherry_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_dark_sign:* (bop_dark_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_dark_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_dark_wall_sign:* (bop_dark_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_dark_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_dark_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_dark_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_dark_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_fir_sign:* (bop_fir_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_fir_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_fir_wall_sign:* (bop_fir_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_fir_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_fir_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_fir_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_fir_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_ethereal_sign:* (bop_ethereal_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_ethereal_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_ethereal_wall_sign:* (bop_ethereal_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_ethereal_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_ethereal_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_ethereal_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_ethereal_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_magic_sign:* (bop_magic_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_magic_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_magic_wall_sign:* (bop_magic_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_magic_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_magic_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_magic_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_magic_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_mangrove_sign:* (bop_mangrove_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_mangrove_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_mangrove_wall_sign:* (bop_mangrove_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_mangrove_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_mangrove_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_mangrove_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_mangrove_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_palm_sign:* (bop_palm_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_palm_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_palm_wall_sign:* (bop_palm_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_palm_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_palm_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_palm_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_palm_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_redwood_sign:* (bop_redwood_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_redwood_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_redwood_wall_sign:* (bop_redwood_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_redwood_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_redwood_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_redwood_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_redwood_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_willow_sign:* (bop_willow_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_willow_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_willow_wall_sign:* (bop_willow_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_willow_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_willow_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_willow_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_willow_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_bamboo_sign:* (bop_bamboo_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_bamboo_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_bamboo_wall_sign:* (bop_bamboo_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_bamboo_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_bamboo_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_bamboo_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_bamboo_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_pine_sign:* (bop_pine_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_pine_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_pine_wall_sign:* (bop_pine_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_pine_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_pine_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_pine_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_pine_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_hellbark_sign:* (bop_hellbark_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_hellbark_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_hellbark_wall_sign:* (bop_hellbark_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_hellbark_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_hellbark_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_hellbark_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_hellbark_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_jacaranda_sign:* (bop_jacaranda_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_jacaranda_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_jacaranda_wall_sign:* (bop_jacaranda_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_jacaranda_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_jacaranda_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_jacaranda_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_jacaranda_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %bop_mahogany_sign:* (bop_mahogany_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_mahogany_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %bop_mahogany_wall_sign:* (bop_mahogany_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%bop_mahogany_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%bop_mahogany_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%bop_mahogany_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%bop_mahogany_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %witchery_rowan_sign:* (witchery_rowan_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%witchery_rowan_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %witchery_rowan_wall_sign:* (witchery_rowan_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%witchery_rowan_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%witchery_rowan_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%witchery_rowan_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%witchery_rowan_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %witchery_alder_sign:* (witchery_alder_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%witchery_alder_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %witchery_alder_wall_sign:* (witchery_alder_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%witchery_alder_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%witchery_alder_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%witchery_alder_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%witchery_alder_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
+
+# %witchery_hawthorn_sign:* (witchery_hawthorn_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%witchery_hawthorn_sign,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=*
+
+# %witchery_hawthorn_wall_sign:* (witchery_hawthorn_wall_sign), render=(CUSTOM), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockWoodSign
+boxblock:id=%witchery_hawthorn_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%witchery_hawthorn_wall_sign,xmin=0.0,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%witchery_hawthorn_wall_sign,xmin=0.875,xmax=1.0,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%witchery_hawthorn_wall_sign,xmin=0.0,xmax=0.125,ymin=0.28125,ymax=0.78125,zmin=0.0,zmax=1.0,data=5
 
 # %white_bed:* (white_bed), render=(BED), opaque=false,cls=ganymedes01.etfuturum.blocks.BlockDyedBed
 

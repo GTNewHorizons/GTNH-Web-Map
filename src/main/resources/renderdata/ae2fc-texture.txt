@@ -1,4 +1,4 @@
-# ae2fc 1.1.21-gtnh
+# ae2fc 1.5.88-gtnh
 version:1.7
 modname:ae2fc
 
@@ -15,7 +15,6 @@ texture:id=ae2fc/certus_quartz_tank/side_top,filename=assets/ae2fc/textures/bloc
 texture:id=ae2fc/certus_quartz_tank/top,filename=assets/ae2fc/textures/blocks/certus_quartz_tank/top.png
 texture:id=ae2fc/fluid_auto_filler,filename=assets/ae2fc/textures/blocks/fluid_auto_filler.png
 texture:id=ae2fc/fluid_buffer,filename=assets/ae2fc/textures/blocks/fluid_buffer.png
-texture:id=ae2fc/fluid_discretizer,filename=assets/ae2fc/textures/blocks/fluid_discretizer.png
 texture:id=ae2fc/fluid_interface,filename=assets/ae2fc/textures/blocks/fluid_interface.png
 texture:id=ae2fc/fluid_packet_decoder,filename=assets/ae2fc/textures/blocks/fluid_packet_decoder.png
 texture:id=ae2fc/fluid_pattern_encoder,filename=assets/ae2fc/textures/blocks/fluid_pattern_encoder.png
@@ -40,9 +39,6 @@ block:id=%certus_quartz_tank,data=4,data=5,data=6,data=7,data=8,data=9,data=10,d
 
 # %fluid_auto_filler:* (fluid_auto_filler), render=appeng.client.render.WorldRender(CUSTOM), opaque=false,cls=com.glodblock.github.common.block.BlockFluidAutoFiller
 block:id=%fluid_auto_filler,data=*,stdrot=true,face0-5=0:ae2fc/fluid_auto_filler
-
-# %fluid_discretizer:* (fluid_discretizer), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockFluidDiscretizer
-block:id=%fluid_discretizer,data=*,stdrot=true,face0-5=0:ae2fc/fluid_discretizer
 
 # %level_maintainer:* (level_maintainer), render=appeng.client.render.WorldRender(CUSTOM), opaque=true,cls=com.glodblock.github.common.block.BlockLevelMaintainer
 block:id=%level_maintainer,data=*,stdrot=true,face0-2=0:ae2fc/level_maintainer,face3=0:ae2fc/level_maintainerFront,face4-5=0:ae2fc/level_maintainer

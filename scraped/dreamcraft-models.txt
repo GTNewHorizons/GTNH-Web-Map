@@ -1,4 +1,4 @@
-# dreamcraft 2.7.220
+# dreamcraft 2.8.279
 version:1.7
 modname:dreamcraft
 
@@ -23,101 +23,32 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %dreamcraft_SodiumPotassium:* (dreamcraft_SodiumPotassium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.875,data=1
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.75,data=2
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.625,data=3
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.5,data=4
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.375,data=5
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.25,data=6
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.125,data=7
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.875,data=9
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.75,data=10
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.625,data=11
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.5,data=12
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.375,data=13
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.25,data=14
-boxblock:id=%dreamcraft_SodiumPotassium,ymax=0.125,data=15
+# %AluminiumBars:* (AluminiumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%AluminiumBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
-# %dreamcraft_NitricAcid:* (dreamcraft_NitricAcid), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.875,data=1
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.75,data=2
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.625,data=3
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.5,data=4
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.375,data=5
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.25,data=6
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.125,data=7
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.875,data=9
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.75,data=10
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.625,data=11
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.5,data=12
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.375,data=13
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.25,data=14
-boxblock:id=%dreamcraft_NitricAcid,ymax=0.125,data=15
+# %ChromeBars:* (ChromeBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%ChromeBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
-# %dreamcraft_Ammonia:* (dreamcraft_Ammonia), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_Ammonia,ymax=0.875,data=1
-boxblock:id=%dreamcraft_Ammonia,ymax=0.75,data=2
-boxblock:id=%dreamcraft_Ammonia,ymax=0.625,data=3
-boxblock:id=%dreamcraft_Ammonia,ymax=0.5,data=4
-boxblock:id=%dreamcraft_Ammonia,ymax=0.375,data=5
-boxblock:id=%dreamcraft_Ammonia,ymax=0.25,data=6
-boxblock:id=%dreamcraft_Ammonia,ymax=0.125,data=7
-boxblock:id=%dreamcraft_Ammonia,ymax=0.875,data=9
-boxblock:id=%dreamcraft_Ammonia,ymax=0.75,data=10
-boxblock:id=%dreamcraft_Ammonia,ymax=0.625,data=11
-boxblock:id=%dreamcraft_Ammonia,ymax=0.5,data=12
-boxblock:id=%dreamcraft_Ammonia,ymax=0.375,data=13
-boxblock:id=%dreamcraft_Ammonia,ymax=0.25,data=14
-boxblock:id=%dreamcraft_Ammonia,ymax=0.125,data=15
+# %IridiumBars:* (IridiumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%IridiumBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
-# %dreamcraft_CompressedOxygen:* (dreamcraft_CompressedOxygen), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.875,data=1
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.75,data=2
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.625,data=3
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.5,data=4
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.375,data=5
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.25,data=6
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.125,data=7
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.875,data=9
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.75,data=10
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.625,data=11
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.5,data=12
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.375,data=13
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.25,data=14
-boxblock:id=%dreamcraft_CompressedOxygen,ymax=0.125,data=15
+# %NeutroniumBars:* (NeutroniumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%NeutroniumBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
-# %dreamcraft_EnrichedBacterialSludge:* (dreamcraft_EnrichedBacterialSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.875,data=1
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.75,data=2
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.625,data=3
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.5,data=4
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.375,data=5
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.25,data=6
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.125,data=7
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.875,data=9
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.75,data=10
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.625,data=11
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.5,data=12
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.375,data=13
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.25,data=14
-boxblock:id=%dreamcraft_EnrichedBacterialSludge,ymax=0.125,data=15
+# %OsmiumBars:* (OsmiumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%OsmiumBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
-# %dreamcraft_FermentedBacterialSludge:* (dreamcraft_FermentedBacterialSludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.875,data=1
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.75,data=2
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.625,data=3
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.5,data=4
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.375,data=5
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.25,data=6
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.125,data=7
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.875,data=9
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.75,data=10
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.625,data=11
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.5,data=12
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.375,data=13
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.25,data=14
-boxblock:id=%dreamcraft_FermentedBacterialSludge,ymax=0.125,data=15
+# %StainlessSteelBars:* (StainlessSteelBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%StainlessSteelBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %SteelBars:* (SteelBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%SteelBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %TitaniumBars:* (TitaniumBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%TitaniumBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
+
+# %TungstenSteelBars:* (TungstenSteelBars), render=(PANE), opaque=false,cls=com.dreammaster.block.MetalBars
+customblock:id=%TungstenSteelBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
 # %dreamcraft_Concrete:* (dreamcraft_Concrete), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
 boxblock:id=%dreamcraft_Concrete,ymax=0.875,data=1
@@ -134,38 +65,3 @@ boxblock:id=%dreamcraft_Concrete,ymax=0.5,data=12
 boxblock:id=%dreamcraft_Concrete,ymax=0.375,data=13
 boxblock:id=%dreamcraft_Concrete,ymax=0.25,data=14
 boxblock:id=%dreamcraft_Concrete,ymax=0.125,data=15
-
-# %dreamcraft_CompressedNitrogen:* (dreamcraft_CompressedNitrogen), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.875,data=1
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.75,data=2
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.625,data=3
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.5,data=4
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.375,data=5
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.25,data=6
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.125,data=7
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.875,data=9
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.75,data=10
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.625,data=11
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.5,data=12
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.375,data=13
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.25,data=14
-boxblock:id=%dreamcraft_CompressedNitrogen,ymax=0.125,data=15
-
-# %dreamcraft_Pollution:* (dreamcraft_Pollution), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=eu.usrv.yamcore.fluids.ModSimpleBaseFluid
-boxblock:id=%dreamcraft_Pollution,ymax=0.875,data=1
-boxblock:id=%dreamcraft_Pollution,ymax=0.75,data=2
-boxblock:id=%dreamcraft_Pollution,ymax=0.625,data=3
-boxblock:id=%dreamcraft_Pollution,ymax=0.5,data=4
-boxblock:id=%dreamcraft_Pollution,ymax=0.375,data=5
-boxblock:id=%dreamcraft_Pollution,ymax=0.25,data=6
-boxblock:id=%dreamcraft_Pollution,ymax=0.125,data=7
-boxblock:id=%dreamcraft_Pollution,ymax=0.875,data=9
-boxblock:id=%dreamcraft_Pollution,ymax=0.75,data=10
-boxblock:id=%dreamcraft_Pollution,ymax=0.625,data=11
-boxblock:id=%dreamcraft_Pollution,ymax=0.5,data=12
-boxblock:id=%dreamcraft_Pollution,ymax=0.375,data=13
-boxblock:id=%dreamcraft_Pollution,ymax=0.25,data=14
-boxblock:id=%dreamcraft_Pollution,ymax=0.125,data=15
-
-# %BabyChest:* (BabyChest), render=(CUSTOM), opaque=false,cls=com.dreammaster.modbabychest.BlockBabyChest
-boxblock:id=%BabyChest,xmin=0.2800000011920929,xmax=0.7200000286102295,ymin=0.0,ymax=0.44999998807907104,zmin=0.2800000011920929,zmax=0.7200000286102295,data=*

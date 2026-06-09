@@ -1,4 +1,4 @@
-# harvestcraft 1.3.2-GTNH
+# harvestcraft 1.3.11-GTNH
 version:1.7
 modname:harvestcraft
 
@@ -64,50 +64,26 @@ patchblock:id=%tropicalgarden,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0
 # %watergarden:* (watergarden), render=(LILYPAD), opaque=false,cls=com.pam.harvestcraft.BlockPamWaterGarden
 patchblock:id=%watergarden,patch0=HorizY001ZTop,data=*
 
-# %pamApple:* (pamApple), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamApple,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamappleSapling:* (pamappleSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamappleSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamAlmond:* (pamAlmond), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamAlmond,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamalmondSapling:* (pamalmondSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamalmondSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamApricot:* (pamApricot), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamApricot,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamapricotSapling:* (pamapricotSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamapricotSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamAvocado:* (pamAvocado), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamAvocado,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamavocadoSapling:* (pamavocadoSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamavocadoSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamBanana:* (pamBanana), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamBanana,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pambananaSapling:* (pambananaSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pambananaSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamCashew:* (pamCashew), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamCashew,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamcashewSapling:* (pamcashewSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamcashewSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamCherry:* (pamCherry), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamCherry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamcherrySapling:* (pamcherrySapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamcherrySapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamChestnut:* (pamChestnut), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamChestnut,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamchestnutSapling:* (pamchestnutSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamchestnutSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
@@ -115,50 +91,26 @@ patchblock:id=%pamchestnutSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@
 # %pamcinnamonSapling:* (pamcinnamonSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamcinnamonSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamCoconut:* (pamCoconut), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamCoconut,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamcoconutSapling:* (pamcoconutSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamcoconutSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamDate:* (pamDate), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamDate,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamdateSapling:* (pamdateSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamdateSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamDragonfruit:* (pamDragonfruit), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamDragonfruit,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamdragonfruitSapling:* (pamdragonfruitSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamdragonfruitSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamDurian:* (pamDurian), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamDurian,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamdurianSapling:* (pamdurianSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamdurianSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamFig:* (pamFig), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamFig,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamfigSapling:* (pamfigSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamfigSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamGrapefruit:* (pamGrapefruit), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamGrapefruit,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamgrapefruitSapling:* (pamgrapefruitSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamgrapefruitSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamLemon:* (pamLemon), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamLemon,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamlemonSapling:* (pamlemonSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamlemonSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamLime:* (pamLime), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamLime,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamlimeSapling:* (pamlimeSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamlimeSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
@@ -166,32 +118,17 @@ patchblock:id=%pamlimeSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0
 # %pammapleSapling:* (pammapleSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pammapleSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamMango:* (pamMango), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamMango,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pammangoSapling:* (pammangoSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pammangoSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamNutmeg:* (pamNutmeg), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamNutmeg,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamnutmegSapling:* (pamnutmegSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamnutmegSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamOlive:* (pamOlive), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamOlive,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamoliveSapling:* (pamoliveSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamoliveSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamOrange:* (pamOrange), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamOrange,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamorangeSapling:* (pamorangeSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamorangeSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamPapaya:* (pamPapaya), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPapaya,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pampapayaSapling:* (pampapayaSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampapayaSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
@@ -199,77 +136,140 @@ patchblock:id=%pampapayaSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90
 # %pampaperbarkSapling:* (pampaperbarkSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampaperbarkSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamPeach:* (pamPeach), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPeach,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pampeachSapling:* (pampeachSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampeachSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamPear:* (pamPear), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPear,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pampearSapling:* (pampearSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampearSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamPecan:* (pamPecan), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPecan,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pampecanSapling:* (pampecanSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampecanSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamPeppercorn:* (pamPeppercorn), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPeppercorn,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pampeppercornSapling:* (pampeppercornSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampeppercornSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamPersimmon:* (pamPersimmon), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPersimmon,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pampersimmonSapling:* (pampersimmonSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampersimmonSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamPistachio:* (pamPistachio), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPistachio,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pampistachioSapling:* (pampistachioSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampistachioSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamPlum:* (pamPlum), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPlum,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamplumSapling:* (pamplumSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamplumSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamPomegranate:* (pamPomegranate), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamPomegranate,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pampomegranateSapling:* (pampomegranateSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pampomegranateSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamStarfruit:* (pamStarfruit), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamStarfruit,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamstarfruitSapling:* (pamstarfruitSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamstarfruitSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
-# %pamVanillabean:* (pamVanillabean), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamVanillabean,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamvanillabeanSapling:* (pamvanillabeanSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamvanillabeanSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamWalnut:* (pamWalnut), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamWalnut,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamwalnutSapling:* (pamwalnutSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamwalnutSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %pamGooseberry:* (pamGooseberry), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
-patchblock:id=%pamGooseberry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
-
 # %pamgooseberrySapling:* (pamgooseberrySapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamgooseberrySapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamApple:* (pamApple), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamApple,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamAlmond:* (pamAlmond), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamAlmond,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamApricot:* (pamApricot), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamApricot,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamAvocado:* (pamAvocado), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamAvocado,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamBanana:* (pamBanana), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamBanana,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamCashew:* (pamCashew), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamCashew,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamCherry:* (pamCherry), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamCherry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamChestnut:* (pamChestnut), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamChestnut,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamCoconut:* (pamCoconut), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamCoconut,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamDate:* (pamDate), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamDate,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamDragonfruit:* (pamDragonfruit), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamDragonfruit,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamDurian:* (pamDurian), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamDurian,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamFig:* (pamFig), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamFig,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamGrapefruit:* (pamGrapefruit), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamGrapefruit,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamLemon:* (pamLemon), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamLemon,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamLime:* (pamLime), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamLime,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamMango:* (pamMango), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamMango,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamNutmeg:* (pamNutmeg), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamNutmeg,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamOlive:* (pamOlive), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamOlive,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamOrange:* (pamOrange), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamOrange,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPapaya:* (pamPapaya), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPapaya,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPeach:* (pamPeach), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPeach,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPear:* (pamPear), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPear,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPecan:* (pamPecan), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPecan,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPeppercorn:* (pamPeppercorn), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPeppercorn,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPersimmon:* (pamPersimmon), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPersimmon,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPistachio:* (pamPistachio), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPistachio,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPlum:* (pamPlum), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPlum,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamPomegranate:* (pamPomegranate), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamPomegranate,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamStarfruit:* (pamStarfruit), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamStarfruit,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamVanillabean:* (pamVanillabean), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamVanillabean,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamWalnut:* (pamWalnut), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamWalnut,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamGooseberry:* (pamGooseberry), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamGooseberry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
 # %pamblackberryCrop:* (pamblackberryCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
 patchblock:id=%pamblackberryCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
