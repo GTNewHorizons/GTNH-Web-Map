@@ -1245,12 +1245,12 @@ public class ForgeMapChunkCache extends MapChunkCache
             }
 
             if (rslt == null) {
-                DataInputStream str = RegionFileCache.getChunkInputStream(acl.chunkSaveLocation, x, z);
-
-                if (str == null) {
-                    return null;
+                try (DataInputStream str = RegionFileCache.getChunkInputStream(acl.chunkSaveLocation, x, z)) {
+                    if (str == null) {
+                        return null;
+                    }
+                    rslt = CompressedStreamTools.read(str);
                 }
-                rslt = CompressedStreamTools.read(str);
             }
             if(rslt != null) 
                 rslt = rslt.getCompoundTag("Level");
