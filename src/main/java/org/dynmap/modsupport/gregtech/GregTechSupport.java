@@ -1,18 +1,21 @@
 package org.dynmap.modsupport.gregtech;
 
+import com.ruling_0.materiallib.api.Material;
+import com.ruling_0.materiallib.api.MaterialLibAPI;
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.GregTechAPI;
-import gregtech.api.enums.Materials;
+import gregtech.api.enums.TextureSet;
 import gregtech.api.enums.Textures;
+import gregtech.api.enums.materials.LegacyMaterialIDIndex;
 import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
+import gregtech.api.material.MaterialUtils;
 import gregtech.api.metatileentity.MetaPipeEntity;
 import gregtech.api.metatileentity.implementations.MTECable;
 import gregtech.api.metatileentity.implementations.MTEFluidPipe;
 import gregtech.api.metatileentity.implementations.MTEFrame;
 import gregtech.api.metatileentity.implementations.MTEItemPipe;
 import gregtech.common.render.GTCopiedBlockTextureRender;
-import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.GTPPMTEFluidPipe;
 import net.minecraft.block.Block;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
@@ -259,6 +262,19 @@ public class GregTechSupport {
 
     }
 
+    private static String iconSetName(Material material){
+        TextureSet iconSet = MaterialUtils.iconSet(material);
+        return iconSet == null ? null : iconSet.mSetName;
+    }
+
+    private static String colorHex(Material material){
+        short[] rgba = MaterialUtils.rgba(material);
+        if(rgba == null)
+            return "FFFFFF";
+
+        return String.format("%02X%02X%02X", rgba[0]&0xFF, rgba[1]&0xFF, rgba[2]&0xFF);
+    }
+
     public class GTDumpCommand extends GwmSubCommand {
         public GTDumpCommand() {
             super("gtdump");
@@ -287,23 +303,13 @@ public class GregTechSupport {
                         dumpMetaTileEntity(writerMteUnhadled, i, imte);
                 }
 
-                for(Materials mat : Materials.values()){
-                    writerMaterials.write("name=" + mat.mName );
-
-                    if(mat.mIconSet != null && mat.mIconSet.mSetName != null){
-                        writerMaterials.write(",iconset=" + mat.mIconSet.mSetName);
-                    }
-                    if(mat.mCustomID != null) {
-                        writerMaterials.write(",customid=" + mat.mCustomID);
-                    }
-                    writerMaterials.write(",color=" + String.format("%02X%02X%02X", mat.mRGBa[0], mat.mRGBa[1], mat.mRGBa[2])  );
-
-                    writerMaterials.write("\r\n");
+                for(Material mat : MaterialLibAPI.getMaterials()){
+                    dumpMaterial(writerMaterials, mat);
                 }
 
-                Materials[] sGeneratedMaterials = GregTechAPI.sGeneratedMaterials;
-                for (int i = 0; i < sGeneratedMaterials.length; i++) {
-                    Materials mat = sGeneratedMaterials[i];
+                // Keyed by legacy sub id, so the dump spans the whole id space -- empty slots included.
+                for (int i = 0; i < materialEntries.length; i++) {
+                    Material mat = LegacyMaterialIDIndex.get(i);
                     writerMaterials2.write("idx=" + i);
 
                     if(mat == null) {
@@ -311,17 +317,8 @@ public class GregTechSupport {
                         continue;
                     }
 
-                    writerMaterials2.write(",name=" + mat.mName);
-
-                    if (mat.mIconSet != null && mat.mIconSet.mSetName != null) {
-                        writerMaterials2.write(",iconset=" + mat.mIconSet.mSetName);
-                    }
-                    if (mat.mCustomID != null) {
-                        writerMaterials2.write(",customid=" + mat.mCustomID);
-                    }
-                    writerMaterials2.write(",color=" + String.format("%02X%02X%02X", mat.mRGBa[0], mat.mRGBa[1], mat.mRGBa[2]));
-
-                    writerMaterials2.write("\r\n");
+                    writerMaterials2.write(",");
+                    dumpMaterial(writerMaterials2, mat);
                 }
 
                 writerMteAll.close();
@@ -371,6 +368,23 @@ public class GregTechSupport {
             }
         }
 
+        private void dumpMaterial(BufferedWriter writer, Material mat) throws IOException {
+            writer.write("name=" + MaterialUtils.internalName(mat));
+
+            String iconSet = iconSetName(mat);
+            if(iconSet != null){
+                writer.write(",iconset=" + iconSet);
+            }
+
+            int subId = MaterialUtils.oldSubId(mat);
+            if(subId >= 0) {
+                writer.write(",customid=" + subId);
+            }
+            writer.write(",color=" + colorHex(mat));
+
+            writer.write("\r\n");
+        }
+
         private void dumpMetaTileEntity(BufferedWriter writer, int i, IMetaTileEntity imte) throws IOException {
             writer.write("id=" + i + ",name=");
             writer.write(imte.getMetaName());
@@ -379,68 +393,32 @@ public class GregTechSupport {
                 writer.write(",thickness="+mpe.getThickness());
                 writer.write(",capacity="+mpe.getCapacity());
 
-                Materials mat = null;
+                Material mat = null;
                 if(mpe instanceof MTEFrame){
                     MTEFrame frm = (MTEFrame) mpe;
-                    mat =frm.mMaterial;
+                    mat = frm.getMaterial();
                 }
                 else if(mpe instanceof MTEItemPipe){
                     MTEItemPipe frm = (MTEItemPipe) mpe;
-                    mat =frm.mMaterial;
+                    mat = frm.getMaterial();
                 }
                 else if(mpe instanceof MTEFluidPipe){
                     MTEFluidPipe frm = (MTEFluidPipe) mpe;
-                    mat =frm.mMaterial;
+                    mat = frm.getMaterial();
                 }
                 else if(mpe instanceof MTECable){
                     MTECable frm = (MTECable) mpe;
-                    mat =frm.mMaterial;
+                    mat = frm.getMaterial();
                 }
 
                 if(mat != null) {
-                    writer.write(",material=" + mat.mName);
-                    writer.write(",matCol="+String.format("%02X%02X%02X",  mat.mRGBa[0]&0xFF,  mat.mRGBa[1]&0xFF,  mat.mRGBa[2]&0xFF) );
-                    writer.write(",matIcons=" );
-                    if(mat.mIconSet != null){
-                        writer.write(mat.mIconSet.mSetName);
-                    }
-                    else{
-                        writer.write("NULL");
-                    }
+                    String iconSet = iconSetName(mat);
+                    writer.write(",material=" + MaterialUtils.internalName(mat));
+                    writer.write(",matCol=" + colorHex(mat));
+                    writer.write(",matIcons=" + (iconSet != null ? iconSet : "NULL"));
                 }
                 else{
-                    if(mpe instanceof GTPPMTEFluidPipe){
-                        GTPPMTEFluidPipe ppfp = (GTPPMTEFluidPipe) mpe;
-                        Materials ppmat = ppfp.mMaterial;
-                        if(ppmat != null){
-                            writer.write(",material=" + ppmat.name());
-                            writer.write(",matCol="+String.format("%02X%02X%02X",  ppmat.mRGBa[0]&0xFF,  ppmat.mRGBa[1]&0xFF,  ppmat.mRGBa[2]&0xFF) );
-                            writer.write(",matIcons=" );
-                            if(ppmat.mIconSet != null){
-                                writer.write(ppmat.mIconSet.mSetName);
-                            }
-                            else{
-                                writer.write("NULL");
-                            }
-                        } else {
-                            if(ppfp.pipeStats != null){
-                                writer.write(",material=" + ppfp.pipeStats.name());
-                                writer.write(",matCol=" + String.format("%02X%02X%02X", ppfp.pipeStats.rgba[0] & 0xFF, ppfp.pipeStats.rgba[1] & 0xFF, ppfp.pipeStats.rgba[2] & 0xFF));
-                                writer.write(",matIcons=" );
-                                if( ppfp.pipeStats.iconSet != null){
-                                    writer.write(ppfp.pipeStats.iconSet.mSetName);
-                                }
-                                else{
-                                    writer.write("NULL");
-                                }
-                            } else {
-                                writer.write(",material=NULL,matCol=000000,matIcons=NULL");
-                            }
-                        }
-                    }
-                    else {
-                        writer.write(",material=NULL,matCol=000000,matIcons=NULL");
-                    }
+                    writer.write(",material=NULL,matCol=000000,matIcons=NULL");
                 }
             }
             writer.write(",class=" + imte.getClass().toString().replace("class ",""));
