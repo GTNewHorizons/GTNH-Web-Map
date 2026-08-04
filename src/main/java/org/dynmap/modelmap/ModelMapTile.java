@@ -63,7 +63,7 @@ public class ModelMapTile extends MapTile {
     @Override
     public boolean render(MapChunkCache cache, String mapname) {
         DynmapCore core = map.getCore();
-        GLBExport export = map.createExport(world, tx, tz, 0, map.getName() + "_" + tx + "_" + tz);
+        GLBExport export = map.createExport(world, tx, tz, map.getName() + "_" + tx + "_" + tz);
 
         BufferOutputStream glb;
         try {

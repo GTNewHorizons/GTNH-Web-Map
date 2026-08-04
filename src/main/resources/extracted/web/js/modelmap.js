@@ -67,7 +67,6 @@
 			options.minZoom = (typeof options.modelminzoom === "number") ? options.modelminzoom : 0;
 			options.maxZoom = (typeof options.modelmaxzoom === "number") ? options.modelmaxzoom : 6;
 			options.tileblocksize = options.tileblocksize || 16;
-			options.modelzoomout = (typeof options.modelzoomout === "number") ? options.modelzoomout : 0;
 			options.tileformat = options.tileformat || "glb";
 			options.compassview = options.compassview || "N";
 			options.nightandday = false;
@@ -1398,7 +1397,7 @@
 			}
 			var tileX = Math.floor(this._cameraPosition.x / this.options.tileblocksize);
 			var tileZ = Math.floor(this._cameraPosition.z / this.options.tileblocksize);
-			var tileName = this._getTileName(tileX, tileZ, 0);
+			var tileName = this._getTileName(tileX, tileZ);
 			this._setHUDField("fps", this._hudFPS, String(this._displayFPS));
 			this._setHUDField("distance", this._hudDistance, Math.max(1, Math.round(this._viewDistance / 16)) + " chunks");
 			this._setHUDField("speed", this._hudSpeed, this._formatHUDNumber(this._moveSpeed) + " blocks/s");
@@ -1460,8 +1459,7 @@
 
 		_refreshVisibleTiles: function() {
 			var baseTileSize = this.options.tileblocksize;
-			var zoomOutViewDistance = this._getZoomOutViewDistance();
-			var radius = Math.max(1, Math.min(24, Math.ceil((zoomOutViewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / baseTileSize) + 1));
+			var radius = Math.max(1, Math.min(24, Math.ceil((this._viewDistance * Math.tan(THREE.MathUtils.degToRad(this._camera.fov * 0.5))) / baseTileSize) + 1));
 			var centerBaseTileX = Math.floor(this._cameraPosition.x / baseTileSize);
 			var centerBaseTileZ = Math.floor(this._cameraPosition.z / baseTileSize);
 			var refreshKey = centerBaseTileX + ":" + centerBaseTileZ + ":" + radius + ":" + Math.round(this._viewDistance / 16)
@@ -1476,19 +1474,11 @@
 			var pendingLoads = [];
 			var baseX;
 			var baseZ;
-			var maxDistance = zoomOutViewDistance + this._getTileBlockSize(this.options.modelzoomout || 0) * 1.5;
+			var maxDistance = this._viewDistance + (baseTileSize * 1.5);
 
 			for (baseX = centerBaseTileX - radius; baseX <= centerBaseTileX + radius; baseX++) {
 				for (baseZ = centerBaseTileZ - radius; baseZ <= centerBaseTileZ + radius; baseZ++) {
-					var baseTilePriority = this._getTilePriorityData(baseX, baseZ, maxDistance, 0);
-					if (!baseTilePriority) {
-						continue;
-					}
-					var detailLevel = this._getTileDetailLevelForDistance(Math.sqrt(baseTilePriority.distanceSq), baseX, baseZ);
-					var tileScale = Math.pow(2, detailLevel);
-					var tileX = Math.floor(baseX / tileScale);
-					var tileZ = Math.floor(baseZ / tileScale);
-					var tilePriority = this._getTilePriorityData(tileX, tileZ, maxDistance, detailLevel);
+					var tilePriority = this._getTilePriorityData(baseX, baseZ, maxDistance);
 					if (!tilePriority) {
 						continue;
 					}
@@ -1515,12 +1505,12 @@
 				return a.distanceSq - b.distanceSq;
 			});
 			this._pendingTileLoads = pendingLoads;
-			this._updateHeightMapTileVisibilityTargets();
+			this._updateTileVisibilityTargets();
 			this._pumpTileLoads();
 		},
 
-		_getTilePriorityData: function(tileX, tileZ, maxDistance, detailLevel) {
-			var tileSize = this._getTileBlockSize(detailLevel);
+		_getTilePriorityData: function(tileX, tileZ, maxDistance) {
+			var tileSize = this.options.tileblocksize;
 			var centerX = this._getTileCenter(tileX, tileSize);
 			var centerZ = this._getTileCenter(tileZ, tileSize);
 			var halfSize = tileSize * 0.5;
@@ -1538,10 +1528,9 @@
 			this._tileCullBounds.min.copy(this._tileCullMin);
 			this._tileCullBounds.max.copy(this._tileCullMax);
 			return {
-				tileName: this._getTileName(tileX, tileZ, detailLevel),
+				tileName: this._getTileName(tileX, tileZ),
 				x: tileX,
 				z: tileZ,
-				detailLevel: detailLevel,
 				tileSize: tileSize,
 				distanceSq: distanceSq,
 				inFrustum: this._frustum.intersectsBox(this._tileCullBounds)
@@ -1554,105 +1543,8 @@
 				if (!next || !this._desiredTiles[next.tileName] || this._loadedTiles[next.tileName] || this._loadingTiles[next.tileName]) {
 					continue;
 				}
-				this._loadTile(next.tileName, next.x, next.z, next.tileSize, next.detailLevel);
+				this._loadTile(next.tileName, next.x, next.z, next.tileSize);
 			}
-		},
-
-		_getTileDetailLevel: function(viewZoom) {
-			var available = (typeof this.options.modelzoomout === "number") ? this.options.modelzoomout : 0;
-			if (available <= 0) {
-				return 0;
-			}
-			return Math.max(0, Math.min(available, Math.floor((this.options.maxZoom - 1) - viewZoom)));
-		},
-
-		_findCoveringTileDetailLevel: function(tileSet, baseX, baseZ) {
-			var bestDetail = null;
-			for (var tileName in tileSet) {
-				if (!Object.prototype.hasOwnProperty.call(tileSet, tileName)) {
-					continue;
-				}
-				var tileEntry = tileSet[tileName];
-				if (!tileEntry || typeof tileEntry.detailLevel !== "number") {
-					continue;
-				}
-				if (tileEntry.removeWhenHidden && tileEntry.targetOpacity <= 0.0) {
-					continue;
-				}
-				var scale = Math.pow(2, tileEntry.detailLevel);
-				var minBaseX = tileEntry.x * scale;
-				var minBaseZ = tileEntry.z * scale;
-				if (baseX < minBaseX || baseX >= (minBaseX + scale) || baseZ < minBaseZ || baseZ >= (minBaseZ + scale)) {
-					continue;
-				}
-				if (bestDetail === null || tileEntry.detailLevel < bestDetail) {
-					bestDetail = tileEntry.detailLevel;
-				}
-			}
-			return bestDetail;
-		},
-
-		_getExistingDetailLevelForBaseTile: function(baseX, baseZ) {
-			var loadedDetail = this._findCoveringTileDetailLevel(this._loadedTiles, baseX, baseZ);
-			var desiredDetail = this._findCoveringTileDetailLevel(this._desiredTiles, baseX, baseZ);
-			if (loadedDetail !== null && desiredDetail !== null) {
-				return Math.min(loadedDetail, desiredDetail);
-			}
-			if (loadedDetail !== null) {
-				return loadedDetail;
-			}
-			if (desiredDetail !== null) {
-				return desiredDetail;
-			}
-			return null;
-		},
-
-		_shouldKeepExistingDetailLevel: function(distance, existingDetailLevel, available, fullDetailDistance, zoomOutViewDistance) {
-			var zoomOutSpan;
-			var padding;
-			var minDistance;
-			var maxDistance;
-			if (existingDetailLevel === null || existingDetailLevel < 0 || existingDetailLevel > available) {
-				return false;
-			}
-			if (existingDetailLevel === 0) {
-				padding = Math.max(this.options.tileblocksize * 2.0, fullDetailDistance * 0.08);
-				return distance <= (fullDetailDistance + padding);
-			}
-			zoomOutSpan = Math.max(1.0, zoomOutViewDistance - fullDetailDistance);
-			padding = Math.min(zoomOutSpan / Math.max(1.0, available * 3.0), Math.max(this.options.tileblocksize * 2.0, zoomOutSpan * 0.08));
-			minDistance = fullDetailDistance + (((existingDetailLevel - 1) / available) * zoomOutSpan);
-			maxDistance = (existingDetailLevel >= available) ? zoomOutViewDistance
-				: fullDetailDistance + ((existingDetailLevel / available) * zoomOutSpan);
-			return distance >= (minDistance - padding) && distance <= (maxDistance + padding);
-		},
-
-		_getTileDetailLevelForDistance: function(distance, baseX, baseZ) {
-			var fullDetailDistance = Math.max(this.options.tileblocksize * 2.0, this._viewDistance);
-			var zoomOutViewDistance = this._getZoomOutViewDistance();
-			var available = (typeof this.options.modelzoomout === "number") ? this.options.modelzoomout : 0;
-			var existingDetailLevel;
-			if (distance <= fullDetailDistance || available <= 0) {
-				return 0;
-			}
-			if (distance >= zoomOutViewDistance) {
-				return available;
-			}
-			var normalizedDistance = ((distance - fullDetailDistance) / Math.max(1.0, zoomOutViewDistance - fullDetailDistance));
-			var computedDetailLevel = Math.max(1, Math.min(available, Math.ceil(normalizedDistance * available)));
-			existingDetailLevel = this._getExistingDetailLevelForBaseTile(baseX, baseZ);
-			if (this._shouldKeepExistingDetailLevel(distance, existingDetailLevel, available, fullDetailDistance, zoomOutViewDistance)) {
-				return existingDetailLevel;
-			}
-			return computedDetailLevel;
-		},
-
-		_getZoomOutViewDistance: function() {
-			return Math.max(64.0, this._viewDistance * 3.0);
-		},
-
-		_getTileBlockSize: function(detailLevel) {
-			return this.options.tileblocksize * Math.pow(2, detailLevel || 0);
 		},
 
 		_configureTexture: function(texture) {
@@ -1837,20 +1729,8 @@
 			return displayMaterial;
 		},
 
-		_getHeightMapQuarterIndex: function(material) {
-			var name = material && material.name ? material.name : "";
-			var match = /^height_map_.*_q([0-3])$/.exec(name);
-			return match ? parseInt(match[1], 10) : -1;
-		},
-
-		_isHeightMapMaterial: function(material) {
-			return !!(material && material.name && material.name.indexOf("height_map_") === 0);
-		},
-
 		_prepareSceneForDisplay: function(scene) {
 			var me = this;
-			var hasHeightMap = false;
-			var quarterCounts = [0, 0, 0, 0];
 			scene.traverse(function(node) {
 				if (!node.isMesh) {
 					return;
@@ -1877,36 +1757,19 @@
 				else if (node.material) {
 					node.material = me._createDisplayMaterial(node.material, node.geometry);
 				}
-				var material = $.isArray(node.material) ? node.material[0] : node.material;
-				var quarterIndex = me._getHeightMapQuarterIndex(material);
-				if (quarterIndex >= 0) {
-					node.userData.modelmapQuarterIndex = quarterIndex;
-					quarterCounts[quarterIndex]++;
-					hasHeightMap = true;
-				}
-				else if (me._isHeightMapMaterial(material)) {
-					hasHeightMap = true;
-				}
 			});
-			scene.userData.modelmapIsHeightMap = hasHeightMap;
-			scene.userData.modelmapHasHeightMapQuarters = quarterCounts[0] > 0 || quarterCounts[1] > 0 || quarterCounts[2] > 0 || quarterCounts[3] > 0;
 		},
 
-		_createTileEntry: function(tileName, scene, tileX, tileZ, tileSize, detailLevel) {
+		_createTileEntry: function(tileName, scene, tileX, tileZ, tileSize) {
 			return {
 				tileName: tileName,
 				object: scene,
 				x: tileX,
 				z: tileZ,
 				tileSize: tileSize,
-				detailLevel: detailLevel || 0,
 				opacity: 0.0,
 				targetOpacity: 1.0,
 				removeWhenHidden: false,
-				isHeightMap: !!scene.userData.modelmapIsHeightMap,
-				hasHeightMapQuarters: !!scene.userData.modelmapHasHeightMapQuarters,
-				quarterOpacity: [1.0, 1.0, 1.0, 1.0],
-				quarterTargetOpacity: [1.0, 1.0, 1.0, 1.0],
 				pendingRetireTile: null
 			};
 		},
@@ -1932,9 +1795,7 @@
 				if (!node.isMesh || !node.material) {
 					return;
 				}
-				var quarterIndex = (typeof node.userData.modelmapQuarterIndex === "number") ? node.userData.modelmapQuarterIndex : -1;
-				var quarterOpacity = (quarterIndex >= 0) ? tileEntry.quarterOpacity[quarterIndex] : 1.0;
-				var opacityFactor = tileEntry.opacity * quarterOpacity;
+				var opacityFactor = tileEntry.opacity;
 				node.visible = opacityFactor > 0.001;
 				if ($.isArray(node.material)) {
 					$.each(node.material, function(idx, material) {
@@ -1957,17 +1818,6 @@
 			return changed;
 		},
 
-		_setQuarterOpacityTarget: function(tileEntry, quarterIndex, targetOpacity) {
-			if (!tileEntry || quarterIndex < 0 || quarterIndex >= tileEntry.quarterTargetOpacity.length) {
-				return false;
-			}
-			if (tileEntry.quarterTargetOpacity[quarterIndex] === targetOpacity) {
-				return false;
-			}
-			tileEntry.quarterTargetOpacity[quarterIndex] = targetOpacity;
-			return true;
-		},
-
 		_stepOpacityValue: function(currentValue, targetValue, deltaSeconds) {
 			var duration;
 			if (currentValue === targetValue) {
@@ -1981,183 +1831,15 @@
 			return currentValue + ((targetValue > currentValue) ? step : -step);
 		},
 
-		_getChildTileInfo: function(tileEntry, quarterIndex) {
-			var childDetailLevel = tileEntry.detailLevel - 1;
-			var xOffset = quarterIndex & 1;
-			var zOffset = quarterIndex >> 1;
-			var childX = (tileEntry.x * 2) + xOffset;
-			var childZ = (tileEntry.z * 2) + zOffset;
-			return {
-				tileName: this._getTileName(childX, childZ, childDetailLevel),
-				x: childX,
-				z: childZ,
-				detailLevel: childDetailLevel
-			};
-		},
-
-		_getParentTileInfo: function(tileEntry) {
-			if (!tileEntry) {
-				return null;
-			}
-			var parentDetailLevel = tileEntry.detailLevel + 1;
-			var parentX = Math.floor(tileEntry.x / 2);
-			var parentZ = Math.floor(tileEntry.z / 2);
-			return {
-				tileName: this._getTileName(parentX, parentZ, parentDetailLevel),
-				x: parentX,
-				z: parentZ,
-				detailLevel: parentDetailLevel
-			};
-		},
-
-		_isTileEntryCoveringParent: function(tileEntry) {
-			return !!(tileEntry && !tileEntry.removeWhenHidden && tileEntry.targetOpacity > 0.0
-				&& tileEntry.opacity >= TILE_REPLACEMENT_START_OPACITY);
-		},
-
-		_getQuarterIndexInParent: function(tileEntry, parentEntry) {
-			if (!tileEntry || !parentEntry) {
-				return -1;
-			}
-			return ((tileEntry.z - (parentEntry.z * 2)) << 1) + (tileEntry.x - (parentEntry.x * 2));
-		},
-
-		_isTileSubtreeCoveredByLoadedTiles: function(tileX, tileZ, detailLevel) {
-			var tileName = this._getTileName(tileX, tileZ, detailLevel);
-			if (this._isTileEntryCoveringParent(this._loadedTiles[tileName])) {
-				return true;
-			}
-			if (detailLevel <= 0) {
-				return false;
-			}
-			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
-				var xOffset = quarterIndex & 1;
-				var zOffset = quarterIndex >> 1;
-				if (!this._isTileSubtreeCoveredByLoadedTiles((tileX * 2) + xOffset, (tileZ * 2) + zOffset, detailLevel - 1)) {
-					return false;
-				}
-			}
-			return true;
-		},
-
-		_isTileSubtreeActive: function(tileX, tileZ, detailLevel) {
-			var tileName = this._getTileName(tileX, tileZ, detailLevel);
-			var tileEntry = this._loadedTiles[tileName];
-			if (tileEntry && (!tileEntry.removeWhenHidden || tileEntry.targetOpacity > 0.0 || tileEntry.opacity > 0.001)) {
-				return true;
-			}
-			if (detailLevel <= 0) {
-				return false;
-			}
-			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
-				var xOffset = quarterIndex & 1;
-				var zOffset = quarterIndex >> 1;
-				if (this._isTileSubtreeActive((tileX * 2) + xOffset, (tileZ * 2) + zOffset, detailLevel - 1)) {
-					return true;
-				}
-			}
-			return false;
-		},
-
-		_isTileSubtreeDesired: function(tileX, tileZ, detailLevel) {
-			var tileName = this._getTileName(tileX, tileZ, detailLevel);
-			if (this._desiredTiles[tileName]) {
-				return true;
-			}
-			if (detailLevel <= 0) {
-				return false;
-			}
-			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
-				var xOffset = quarterIndex & 1;
-				var zOffset = quarterIndex >> 1;
-				if (this._isTileSubtreeDesired((tileX * 2) + xOffset, (tileZ * 2) + zOffset, detailLevel - 1)) {
-					return true;
-				}
-			}
-			return false;
-		},
-
-		_getQuarterVisibilityFactor: function(tileEntry, quarterIndex) {
-			if (!tileEntry) {
-				return 0.0;
-			}
-			return tileEntry.opacity * ((quarterIndex >= 0 && quarterIndex < tileEntry.quarterOpacity.length) ? tileEntry.quarterOpacity[quarterIndex] : 1.0);
-		},
-
-		_shouldKeepTileUntilParentReady: function(tileEntry) {
-			var parentInfo;
-			var parentEntry;
-			var quarterIndex;
-			if (!tileEntry || !!this._desiredTiles[tileEntry.tileName]) {
-				return false;
-			}
-			parentInfo = this._getParentTileInfo(tileEntry);
-			parentEntry = parentInfo ? this._loadedTiles[parentInfo.tileName] : null;
-			if (!parentEntry || !parentEntry.hasHeightMapQuarters || parentEntry.removeWhenHidden || parentEntry.targetOpacity <= 0.0) {
-				return false;
-			}
-			quarterIndex = this._getQuarterIndexInParent(tileEntry, parentEntry);
-			if (quarterIndex < 0 || quarterIndex >= 4) {
-				return false;
-			}
-			return this._getQuarterVisibilityFactor(parentEntry, quarterIndex) < TILE_REPLACEMENT_START_OPACITY;
-		},
-
-		_isQuarterCoveredByLoadedChild: function(tileEntry, quarterIndex) {
-			if (!tileEntry || !tileEntry.hasHeightMapQuarters || tileEntry.detailLevel <= 0) {
-				return false;
-			}
-			var childInfo = this._getChildTileInfo(tileEntry, quarterIndex);
-			return this._isTileSubtreeCoveredByLoadedTiles(childInfo.x, childInfo.z, childInfo.detailLevel);
-		},
-
-		_areAllQuartersCoveredByLoadedChildren: function(tileEntry) {
-			var quarterIndex;
-			if (!tileEntry || !tileEntry.hasHeightMapQuarters || tileEntry.detailLevel <= 0) {
-				return false;
-			}
-			for (quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
-				if (!this._isQuarterCoveredByLoadedChild(tileEntry, quarterIndex)) {
-					return false;
-				}
-			}
-			return true;
-		},
-
-		_shouldKeepTileAsFallback: function(tileEntry) {
-			var childInterest = false;
-			if (!tileEntry || !tileEntry.hasHeightMapQuarters || tileEntry.detailLevel <= 0) {
-				return false;
-			}
-			for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
-				var childInfo = this._getChildTileInfo(tileEntry, quarterIndex);
-				var childCovered = this._isTileSubtreeCoveredByLoadedTiles(childInfo.x, childInfo.z, childInfo.detailLevel);
-				var childDesired = this._isTileSubtreeDesired(childInfo.x, childInfo.z, childInfo.detailLevel);
-				if (childDesired || this._isTileSubtreeActive(childInfo.x, childInfo.z, childInfo.detailLevel)) {
-					childInterest = true;
-				}
-				if (childDesired && !childCovered) {
-					return true;
-				}
-			}
-			return childInterest && !this._areAllQuartersCoveredByLoadedChildren(tileEntry);
-		},
-
-		_updateHeightMapTileVisibilityTargets: function() {
+		_updateTileVisibilityTargets: function() {
 			var changed = false;
 			for (var tileName in this._loadedTiles) {
 				if (!Object.prototype.hasOwnProperty.call(this._loadedTiles, tileName)) {
 					continue;
 				}
 				var tileEntry = this._loadedTiles[tileName];
-				var shouldShowTile = !!this._desiredTiles[tileName] || this._shouldKeepTileAsFallback(tileEntry)
-					|| this._shouldKeepTileUntilParentReady(tileEntry);
+				var shouldShowTile = !!this._desiredTiles[tileName];
 				changed = this._setTileOpacityTarget(tileEntry, shouldShowTile ? 1.0 : 0.0, !shouldShowTile) || changed;
-				for (var quarterIndex = 0; quarterIndex < 4; quarterIndex++) {
-					var quarterTarget = (tileEntry.hasHeightMapQuarters && tileEntry.detailLevel > 0
-						&& this._isQuarterCoveredByLoadedChild(tileEntry, quarterIndex)) ? 0.0 : 1.0;
-					changed = this._setQuarterOpacityTarget(tileEntry, quarterIndex, quarterTarget) || changed;
-				}
 				this._applyTileDisplayState(tileEntry);
 			}
 			if (changed) {
@@ -2171,12 +1853,6 @@
 				if (tileEntry.opacity !== tileEntry.targetOpacity) {
 					hasActive = true;
 					return false;
-				}
-				for (var quarterIndex = 0; quarterIndex < tileEntry.quarterOpacity.length; quarterIndex++) {
-					if (tileEntry.quarterOpacity[quarterIndex] !== tileEntry.quarterTargetOpacity[quarterIndex]) {
-						hasActive = true;
-						return false;
-					}
 				}
 			});
 			if (!hasActive) {
@@ -2204,23 +1880,11 @@
 		_updateTileTransitions: function(deltaSeconds) {
 			var changed = false;
 			var removedTileNames = [];
-			var removedTiles = false;
 			$.each(this._loadedTiles, function(tileName, tileEntry) {
 				var nextOpacity = this._stepOpacityValue(tileEntry.opacity, tileEntry.targetOpacity, deltaSeconds);
 				if (nextOpacity !== tileEntry.opacity) {
 					tileEntry.opacity = nextOpacity;
 					changed = true;
-				}
-				for (var quarterIndex = 0; quarterIndex < tileEntry.quarterOpacity.length; quarterIndex++) {
-					var nextQuarterOpacity = this._stepOpacityValue(
-						tileEntry.quarterOpacity[quarterIndex],
-						tileEntry.quarterTargetOpacity[quarterIndex],
-						deltaSeconds
-					);
-					if (nextQuarterOpacity !== tileEntry.quarterOpacity[quarterIndex]) {
-						tileEntry.quarterOpacity[quarterIndex] = nextQuarterOpacity;
-						changed = true;
-					}
 				}
 				if (tileEntry.pendingRetireTile && tileEntry.opacity >= TILE_REPLACEMENT_START_OPACITY) {
 					this._retireTileEntry(tileEntry.pendingRetireTile);
@@ -2233,9 +1897,8 @@
 				}
 			}.bind(this));
 			for (var i = 0; i < removedTileNames.length; i++) {
-				this._unloadTile(removedTileNames[i], true);
+				this._unloadTile(removedTileNames[i]);
 				changed = true;
-				removedTiles = true;
 			}
 			for (var retiredIndex = this._retiredTiles.length - 1; retiredIndex >= 0; retiredIndex--) {
 				var retiredTile = this._retiredTiles[retiredIndex];
@@ -2251,13 +1914,10 @@
 					changed = true;
 				}
 			}
-			if (removedTiles) {
-				this._updateHeightMapTileVisibilityTargets();
-			}
 			return changed;
 		},
 
-		_loadTile: function(tileName, tileX, tileZ, tileSize, detailLevel) {
+		_loadTile: function(tileName, tileX, tileZ, tileSize) {
 			var me = this;
 			var token = ++me._loadCounter;
 			var timestamp = me._tileTimestamps[tileName];
@@ -2276,14 +1936,14 @@
 				var scene = gltf.scene || new THREE.Group();
 				me._prepareSceneForDisplay(scene);
 				scene.position.set(me._getTileCenter(tileX, tileSize), me.options.world.miny || 0, me._getTileCenter(tileZ, tileSize));
-				var tileEntry = me._createTileEntry(tileName, scene, tileX, tileZ, tileSize, detailLevel);
+				var tileEntry = me._createTileEntry(tileName, scene, tileX, tileZ, tileSize);
 				me._loadedTiles[tileName] = tileEntry;
 				me._root.add(scene);
 				if (existing) {
 					tileEntry.pendingRetireTile = existing;
 				}
 				me._applyTileDisplayState(tileEntry);
-				me._updateHeightMapTileVisibilityTargets();
+				me._updateTileVisibilityTargets();
 				me._pumpTileLoads();
 				me._requestRender();
 			}, undefined, function() {
@@ -2303,19 +1963,16 @@
 			this._pendingTileLoads = $.grep(this._pendingTileLoads, function(entry) {
 				return entry.tileName !== tileName;
 			});
-			this._loadTile(tileName, tile.x, tile.z, tile.tileSize, tile.detailLevel);
+			this._loadTile(tileName, tile.x, tile.z, tile.tileSize);
 		},
 
-		_unloadTile: function(tileName, skipVisibilityRefresh) {
+		_unloadTile: function(tileName) {
 			var existing = this._loadedTiles[tileName];
 			if (!existing) {
 				return;
 			}
 			this._disposeLoadedTile(existing);
 			delete this._loadedTiles[tileName];
-			if (!skipVisibilityRefresh) {
-				this._updateHeightMapTileVisibilityTargets();
-			}
 			this._requestRender();
 		},
 
@@ -2367,21 +2024,13 @@
 			return (tileCoord * size) + ((size - 1) / 2.0);
 		},
 
-		_getTileName: function(tileX, tileZ, detailLevel) {
-			var scale = Math.pow(2, detailLevel || 0);
-			var storageTileX = tileX * scale;
-			var storageTileZ = tileZ * scale;
-			var zoomPrefix = "";
-			if (detailLevel > 0) {
-				zoomPrefix = Array(detailLevel + 1).join("z") + "_";
-			}
-			return namedReplace("{prefix}/{bucketx}_{bucketz}/{zoom}{x}_{z}.{fmt}", {
+		_getTileName: function(tileX, tileZ) {
+			return namedReplace("{prefix}/{bucketx}_{bucketz}/{x}_{z}.{fmt}", {
 				prefix: this.options.prefix,
-				bucketx: Math.floor(storageTileX / 32),
-				bucketz: Math.floor(storageTileZ / 32),
-				zoom: zoomPrefix,
-				x: storageTileX,
-				z: storageTileZ,
+				bucketx: Math.floor(tileX / 32),
+				bucketz: Math.floor(tileZ / 32),
+				x: tileX,
+				z: tileZ,
 				fmt: this.options.tileformat
 			});
 		},

@@ -15,8 +15,6 @@ public class BlockModelExporter {
     private GLBExport.LightingMode lightingMode = GLBExport.LightingMode.DAY;
     private BlockModelExportMode exportMode = BlockModelExportMode.FULL;
     private int simplifiedMinSkyLight = 7;
-    private String heightMapTextureMap;
-    private int heightMapTextureDetail = 1;
 
     private int minX;
     private int minY;
@@ -77,14 +75,6 @@ public class BlockModelExporter {
         this.simplifiedMinSkyLight = Math.max(0, Math.min(15, simplifiedMinSkyLight));
     }
 
-    public void setHeightMapTextureMap(String heightMapTextureMap) {
-        this.heightMapTextureMap = heightMapTextureMap;
-    }
-
-    public void setHeightMapTextureDetail(int heightMapTextureDetail) {
-        this.heightMapTextureDetail = Math.max(1, heightMapTextureDetail);
-    }
-
     public void export(BlockModelExportSink sink) throws IOException {
         createModeExporter().export(sink);
     }
@@ -99,23 +89,12 @@ public class BlockModelExporter {
             case SIMPLIFIED:
                 exporter = new BlockModelSimplifiedExporter(world, core, shader);
                 break;
-            case ZOOMOUT:
-            case LOW_POLY:
-                exporter = new BlockModelLowPolyExporter(world, core, shader);
-                break;
-            case HEIGHT_MAP:
-                exporter = new BlockModelHeightMapExporter(world, core, shader);
-                break;
             case FULL:
             default:
                 exporter = new BlockModelFullExporter(world, core, shader);
                 break;
         }
         copyConfigurationTo(exporter);
-        if (exporter instanceof BlockModelHeightMapExporter) {
-            ((BlockModelHeightMapExporter) exporter).setHeightMapTextureMap(heightMapTextureMap);
-            ((BlockModelHeightMapExporter) exporter).setHeightMapTextureDetail(heightMapTextureDetail);
-        }
         return exporter;
     }
 

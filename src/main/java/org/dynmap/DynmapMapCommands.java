@@ -474,7 +474,6 @@ public class DynmapMapCommands {
                         .append(modelmt.getGranularity());
                 sb.append(", compression=").append(modelmt.getOutputCompression().getId());
                 sb.append(", detail-mode=").append(modelmt.getDetailMode().getId());
-                sb.append(", mapzoomout=").append(modelmt.getConfiguredZoomOutLevels());
                 sb.append(", simplified-min-skylight=").append(modelmt.getSimplifiedMinSkyLight());
                 sb.append(", icon=").append(modelmt.getIcon()).append(", append-to-world=")
                         .append(modelmt.getAppendToWorld());
@@ -824,22 +823,6 @@ public class DynmapMapCommands {
                     return true;
                 }
                 did_update |= ((ModelMap) mt).setDetailMode(detailMode);
-            }
-            else if(tok[0].equalsIgnoreCase("mapzoomout")) {
-                if (!(mt instanceof ModelMap)) {
-                    sender.sendMessage("mapzoomout is only supported on model maps");
-                    return true;
-                }
-                int mapzoomout = -1;
-                try {
-                    mapzoomout = Integer.valueOf(tok[1]);
-                } catch (NumberFormatException nfx) {
-                }
-                if(mapzoomout < 0) {
-                    sender.sendMessage("Invalid mapzoomout value: " + tok[1]);
-                    return true;
-                }
-                did_update |= ((ModelMap) mt).setMapZoomOut(mapzoomout);
             }
             else if(tok[0].equalsIgnoreCase("simplified-min-skylight")) {
                 if (!(mt instanceof ModelMap)) {

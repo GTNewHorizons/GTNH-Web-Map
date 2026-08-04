@@ -7,9 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
-import org.dynmap.CustomZoomOutMapType;
 import org.dynmap.Client;
 import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapChunk;
@@ -19,8 +17,6 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.MapTile;
 import org.dynmap.MapType;
-import org.dynmap.MapTypeState;
-import org.dynmap.exporter.BlockModelHeightMapZoomOutExporter;
 import org.dynmap.exporter.BlockModelExportMode;
 import org.dynmap.exporter.GLBExport;
 import org.dynmap.hdmap.HDPerspective;
@@ -36,7 +32,7 @@ import org.dynmap.storage.MapStorageTile.TileRead;
 import org.dynmap.storage.MapStorageTileEnumCB;
 import org.json.simple.JSONObject;
 
-public class ModelMap extends MapType implements CustomZoomOutMapType {
+public class ModelMap extends MapType {
     public enum LightingMode {
         DAY("day"),
         NIGHT("night"),
@@ -83,11 +79,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     public static final OutputCompression DEFAULT_OUTPUT_COMPRESSION = OutputCompression.GZIP;
     public static final LightingMode DEFAULT_LIGHTING_MODE = LightingMode.DAY;
     public static final DetailMode DEFAULT_DETAIL_MODE = DetailMode.FULL;
-    public static final ZoomOutStrategy DEFAULT_ZOOMOUT_STRATEGY = ZoomOutStrategy.HEIGHT_MAP;
-    public static final int DEFAULT_MAP_ZOOMOUT = 0;
     public static final int DEFAULT_SIMPLIFIED_MIN_SKYLIGHT = 7;
-    public static final String DEFAULT_HEIGHT_MAP_TEXTURE_MAP = null;
-    public static final int DEFAULT_HEIGHT_MAP_TEXTURE_DETAIL = 1;
     public static final double DEFAULT_DAY_AMBIENT_LIGHT = 0.7;
     public static final double DEFAULT_NIGHT_AMBIENT_LIGHT = 0.14;
     public static final double DEFAULT_DAY_SUN_LIGHT = 0.8;
@@ -120,9 +112,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
 
     public enum DetailMode {
         FULL("full", BlockModelExportMode.FULL),
-        SURFACE("surface", BlockModelExportMode.SIMPLIFIED),
-        LOW_POLY("low_poly", BlockModelExportMode.LOW_POLY),
-        HEIGHT_MAP("height_map", BlockModelExportMode.HEIGHT_MAP);
+        SURFACE("surface", BlockModelExportMode.SIMPLIFIED);
 
         private final String id;
         private final BlockModelExportMode exportMode;
@@ -147,54 +137,9 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
             if ("simplified".equalsIgnoreCase(value)) {
                 return SURFACE;
             }
-            if ("zoomout".equalsIgnoreCase(value) || "lowpoly".equalsIgnoreCase(value)) {
-                return LOW_POLY;
-            }
-            if ("heightmap".equalsIgnoreCase(value)) {
-                return HEIGHT_MAP;
-            }
             for (DetailMode mode : values()) {
                 if (mode.id.equalsIgnoreCase(value)) {
                     return mode;
-                }
-            }
-            return null;
-        }
-    }
-
-    public enum ZoomOutStrategy {
-        HEIGHT_MAP("height_map", BlockModelExportMode.HEIGHT_MAP),
-        LOW_POLY("low_poly", BlockModelExportMode.LOW_POLY);
-
-        private final String id;
-        private final BlockModelExportMode exportMode;
-
-        ZoomOutStrategy(String id, BlockModelExportMode exportMode) {
-            this.id = id;
-            this.exportMode = exportMode;
-        }
-
-        public String getId() {
-            return id;
-        }
-
-        public BlockModelExportMode getExportMode() {
-            return exportMode;
-        }
-
-        public static ZoomOutStrategy fromId(String value) {
-            if (value == null) {
-                return null;
-            }
-            if ("zoomout".equalsIgnoreCase(value) || "lowpoly".equalsIgnoreCase(value)) {
-                return LOW_POLY;
-            }
-            if ("heightmap".equalsIgnoreCase(value)) {
-                return HEIGHT_MAP;
-            }
-            for (ZoomOutStrategy strategy : values()) {
-                if (strategy.id.equalsIgnoreCase(value)) {
-                    return strategy;
                 }
             }
             return null;
@@ -311,15 +256,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     private LightingMode boostLightingMode;
     private DetailMode boostDetailMode;
     private int boostSimplifiedMinSkyLight;
-    private String boostHeightMapTextureMap;
-    private int boostHeightMapTextureDetail;
-    private ZoomOutStrategy zoomOutStrategy;
-    private String zoomOutHeightMapTextureMap;
-    private int zoomOutHeightMapTextureDetail;
-    private int mapZoomOut;
     private int simplifiedMinSkyLight;
-    private String heightMapTextureMap;
-    private int heightMapTextureDetail;
     private double dayAmbientLight;
     private double nightAmbientLight;
     private double daySunLight;
@@ -361,14 +298,9 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
                 resolveOutputCompression(configuration.getString("compression", DEFAULT_OUTPUT_COMPRESSION.getId()));
         lightingMode = resolveLightingMode(configuration.getString("lighting_mode", DEFAULT_LIGHTING_MODE.getId()));
         detailMode = resolveDetailMode(configuration.getString("detail_mode", DEFAULT_DETAIL_MODE.getId()));
-        mapZoomOut = resolveMapZoomOut(configuration.getInteger("mapzoomout", DEFAULT_MAP_ZOOMOUT));
         simplifiedMinSkyLight = resolveSimplifiedMinSkyLight(
                 configuration.getInteger("simplified_min_skylight", DEFAULT_SIMPLIFIED_MIN_SKYLIGHT));
-        heightMapTextureMap = configuration.getString("height_map_texture_map", DEFAULT_HEIGHT_MAP_TEXTURE_MAP);
-        heightMapTextureDetail = resolveHeightMapTextureDetail(configuration.getInteger("height_map_texture_detail",
-                configuration.getInteger("height_map_texture_scale", DEFAULT_HEIGHT_MAP_TEXTURE_DETAIL)));
         loadBoostSettings(configuration);
-        loadZoomOutStrategy(configuration);
         dayAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightday", DEFAULT_DAY_AMBIENT_LIGHT),
                 DEFAULT_DAY_AMBIENT_LIGHT, "ambientlightday");
         nightAmbientLight = resolveLightLevel(configuration.getDouble("ambientlightnight", DEFAULT_NIGHT_AMBIENT_LIGHT),
@@ -420,27 +352,9 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
             boostNode.put("cull_export_region_edges", boostCullExportRegionEdges);
             boostNode.put("lighting_mode", boostLightingMode.getId());
             boostNode.put("simplified_min_skylight", boostSimplifiedMinSkyLight);
-            if (boostHeightMapTextureMap != null) {
-                boostNode.put("height_map_texture_map", boostHeightMapTextureMap);
-            }
-            boostNode.put("height_map_texture_detail", boostHeightMapTextureDetail);
             cn.put("boost", boostNode);
         }
-        ConfigurationNode zoomOutStrategyNode = new ConfigurationNode();
-        zoomOutStrategyNode.put("mode", zoomOutStrategy.getId());
-        if (zoomOutStrategy == ZoomOutStrategy.HEIGHT_MAP) {
-            if (zoomOutHeightMapTextureMap != null) {
-                zoomOutStrategyNode.put("height_map_texture_map", zoomOutHeightMapTextureMap);
-            }
-            zoomOutStrategyNode.put("height_map_texture_detail", zoomOutHeightMapTextureDetail);
-        }
-        cn.put("zoomout_strategy", zoomOutStrategyNode);
-        cn.put("mapzoomout", mapZoomOut);
         cn.put("simplified_min_skylight", simplifiedMinSkyLight);
-        if (heightMapTextureMap != null) {
-            cn.put("height_map_texture_map", heightMapTextureMap);
-        }
-        cn.put("height_map_texture_detail", heightMapTextureDetail);
         cn.put("ambientlightday", dayAmbientLight);
         cn.put("ambientlightnight", nightAmbientLight);
         cn.put("sunlightday", daySunLight);
@@ -515,8 +429,6 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
             boostLightingMode = lightingMode;
             boostDetailMode = detailMode;
             boostSimplifiedMinSkyLight = simplifiedMinSkyLight;
-            boostHeightMapTextureMap = heightMapTextureMap;
-            boostHeightMapTextureDetail = heightMapTextureDetail;
             return;
         }
 
@@ -526,45 +438,6 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         boostDetailMode = resolveDetailMode(boostNode.getString("detail_mode", detailMode.getId()));
         boostSimplifiedMinSkyLight =
                 resolveSimplifiedMinSkyLight(boostNode.getInteger("simplified_min_skylight", simplifiedMinSkyLight));
-        boostHeightMapTextureMap = boostNode.getString("height_map_texture_map", heightMapTextureMap);
-        boostHeightMapTextureDetail = resolveHeightMapTextureDetail(boostNode.getInteger("height_map_texture_detail",
-                boostNode.getInteger("height_map_texture_scale", heightMapTextureDetail)));
-    }
-
-    private void loadZoomOutStrategy(ConfigurationNode configuration) {
-        Object zoomOutStrategyValue = configuration.getObject("zoomout_strategy");
-        if (zoomOutStrategyValue instanceof Map<?, ?>) {
-            ConfigurationNode zoomOutStrategyNode = configuration.getNode("zoomout_strategy");
-            zoomOutStrategy = resolveZoomOutStrategy(zoomOutStrategyNode.getString("mode", DEFAULT_ZOOMOUT_STRATEGY.getId()));
-            zoomOutHeightMapTextureMap =
-                    zoomOutStrategyNode.getString("height_map_texture_map", heightMapTextureMap);
-            zoomOutHeightMapTextureDetail = resolveHeightMapTextureDetail(zoomOutStrategyNode.getInteger(
-                    "height_map_texture_detail",
-                    zoomOutStrategyNode.getInteger("height_map_texture_scale", heightMapTextureDetail)));
-            return;
-        }
-
-        zoomOutStrategy = resolveZoomOutStrategy(configuration.getString("zoomout_strategy", DEFAULT_ZOOMOUT_STRATEGY.getId()));
-        zoomOutHeightMapTextureMap = heightMapTextureMap;
-        zoomOutHeightMapTextureDetail = heightMapTextureDetail;
-    }
-
-    private ZoomOutStrategy resolveZoomOutStrategy(String zoomOutStrategyId) {
-        ZoomOutStrategy resolved = ZoomOutStrategy.fromId(zoomOutStrategyId);
-        if (resolved == null) {
-            Log.severe("ModelMap '" + name + "' set invalid zoomout_strategy '" + zoomOutStrategyId + "' - using '"
-                    + DEFAULT_ZOOMOUT_STRATEGY.getId() + "'");
-            return DEFAULT_ZOOMOUT_STRATEGY;
-        }
-        return resolved;
-    }
-
-    private int resolveMapZoomOut(int value) {
-        if (value < 0) {
-            Log.severe("ModelMap '" + name + "' set invalid mapzoomout " + value + " - using " + DEFAULT_MAP_ZOOMOUT);
-            return DEFAULT_MAP_ZOOMOUT;
-        }
-        return value;
     }
 
     private int resolveSimplifiedMinSkyLight(int value) {
@@ -572,15 +445,6 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
             Log.severe("ModelMap '" + name + "' set invalid simplified_min_skylight " + value + " - using "
                     + DEFAULT_SIMPLIFIED_MIN_SKYLIGHT);
             return DEFAULT_SIMPLIFIED_MIN_SKYLIGHT;
-        }
-        return value;
-    }
-
-    private int resolveHeightMapTextureDetail(int value) {
-        if (value < 1) {
-            Log.severe("ModelMap '" + name + "' set invalid height_map_texture_detail " + value + " - using "
-                    + DEFAULT_HEIGHT_MAP_TEXTURE_DETAIL);
-            return DEFAULT_HEIGHT_MAP_TEXTURE_DETAIL;
         }
         return value;
     }
@@ -621,16 +485,8 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         return detailMode;
     }
 
-    public int getConfiguredZoomOutLevels() {
-        return mapZoomOut;
-    }
-
     public int getSimplifiedMinSkyLight() {
         return simplifiedMinSkyLight;
-    }
-
-    public int getTotalZoomOutLevels(DynmapWorld world) {
-        return world.getExtraZoomOutLevels() + mapZoomOut;
     }
 
     public AssetFormat getAssetFormat() {
@@ -734,12 +590,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
 
     @Override
     public boolean isZoomOutSupported() {
-        return true;
-    }
-
-    @Override
-    public int getMapZoomOutLevels() {
-        return mapZoomOut;
+        return false;
     }
 
     @Override
@@ -751,10 +602,10 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
                 if (fmt != getTileEncoding()) {
                     tile.delete();
                 }
-                else if (tile.zoom > getTotalZoomOutLevels(world)) {
+                else if (tile.zoom != 0) {
                     tile.delete();
                 }
-                else if ((tile.zoom == 0) && !rendered.getFlag(tile.x, tile.y)) {
+                else if (!rendered.getFlag(tile.x, tile.y)) {
                     tile.delete();
                 }
             }
@@ -781,8 +632,7 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         s(o, "compassview", "N");
         s(o, "bigmap", false);
         s(o, "modelminzoom", 0);
-        s(o, "modelmaxzoom", Math.max(6, getTotalZoomOutLevels(world) + 1));
-        s(o, "modelzoomout", getTotalZoomOutLevels(world));
+        s(o, "modelmaxzoom", 6);
         s(o, "detailmode", detailMode.getId());
         s(o, "lightingmode", lightingMode.getId());
         s(o, "ambientlightday", dayAmbientLight);
@@ -839,35 +689,23 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         return outputCompression;
     }
 
-    public GLBExport createExport(DynmapWorld world, int tileX, int tileZ, int zoom, String basename) {
+    public GLBExport createExport(DynmapWorld world, int tileX, int tileZ, String basename) {
         GLBExport export = new GLBExport(null, getShader(), world, core, basename);
-        int tileChunkSpan = granularity << zoom;
         int minBlockX = tileX * granularity * 16;
         int minBlockZ = tileZ * granularity * 16;
-        int maxBlockX = minBlockX + (tileChunkSpan * 16) - 1;
-        int maxBlockZ = minBlockZ + (tileChunkSpan * 16) - 1;
+        int maxBlockX = minBlockX + (granularity * 16) - 1;
+        int maxBlockZ = minBlockZ + (granularity * 16) - 1;
         export.setRenderBounds(minBlockX, world.minY, minBlockZ, maxBlockX, world.worldheight - 1, maxBlockZ);
-        if (zoom > 0) {
-            export.setCullExportRegionEdges(cullExportRegionEdges);
-            export.setLightingMode(getLightingMode().toExportLightingMode());
-            export.setExportMode(zoomOutStrategy.getExportMode());
-            export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
-            export.setHeightMapTextureMap(zoomOutHeightMapTextureMap);
-            export.setHeightMapTextureDetail(zoomOutHeightMapTextureDetail);
-        } else if (isBoostedTile(world, tileX, tileZ)) {
+        if (isBoostedTile(world, tileX, tileZ)) {
             export.setCullExportRegionEdges(boostCullExportRegionEdges);
             export.setLightingMode(boostLightingMode.toExportLightingMode());
             export.setExportMode(boostDetailMode.getExportMode());
             export.setSimplifiedMinSkyLight(boostSimplifiedMinSkyLight);
-            export.setHeightMapTextureMap(boostHeightMapTextureMap);
-            export.setHeightMapTextureDetail(boostHeightMapTextureDetail);
         } else {
             export.setCullExportRegionEdges(cullExportRegionEdges);
             export.setLightingMode(getLightingMode().toExportLightingMode());
             export.setExportMode(detailMode.getExportMode());
             export.setSimplifiedMinSkyLight(simplifiedMinSkyLight);
-            export.setHeightMapTextureMap(heightMapTextureMap);
-            export.setHeightMapTextureDetail(heightMapTextureDetail);
         }
         return export;
     }
@@ -955,42 +793,6 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
         return updated;
     }
 
-    @Override
-    public void processZoomOutTile(DynmapWorld world, MapTypeState state, MapStorageTile tile, boolean firstVariant) {
-        if (firstVariant) {
-            state.clearZoomOutInv(tile.x, tile.y, tile.zoom);
-        }
-        MapStorageTile zoomTile = tile.getZoomOutTile();
-        if (zoomTile.zoom > getTotalZoomOutLevels(world)) {
-            return;
-        }
-
-        BufferOutputStream glb = null;
-        String basename = getName() + "_" + zoomTile.x + "_" + zoomTile.y + "_z" + zoomTile.zoom;
-        String tileName = world.getName() + ":" + getName() + "," + zoomTile.x + "," + zoomTile.y + ",z" + zoomTile.zoom;
-        try {
-            if (zoomOutStrategy == ZoomOutStrategy.HEIGHT_MAP) {
-                BlockModelHeightMapZoomOutExporter.Result zoomOutResult =
-                        new BlockModelHeightMapZoomOutExporter(this, world).export(zoomTile, basename);
-                if (zoomOutResult.status == BlockModelHeightMapZoomOutExporter.ResultStatus.INCOMPATIBLE) {
-                    glb = createExport(world, zoomTile.x, zoomTile.y, zoomTile.zoom, basename).exportToBuffer();
-                } else {
-                    glb = zoomOutResult.glb;
-                }
-            } else {
-                glb = createExport(world, zoomTile.x, zoomTile.y, zoomTile.zoom, basename).exportToBuffer();
-            }
-        } catch (IOException iox) {
-            Log.severe("ModelMap zoomout export failed for " + tileName + ": " + iox.getMessage());
-            return;
-        }
-
-        boolean updated = writeRenderedTile(world, zoomTile, glb, tileName);
-        if ((zoomTile.zoom < getTotalZoomOutLevels(world)) && ((glb != null) || updated)) {
-            world.enqueueZoomOutUpdate(zoomTile);
-        }
-    }
-
     public boolean setPrefix(String value) {
         if (!value.equals(prefix)) {
             prefix = value;
@@ -1053,17 +855,6 @@ public class ModelMap extends MapType implements CustomZoomOutMapType {
     public boolean setDetailMode(DetailMode value) {
         if ((value != null) && (value != detailMode)) {
             detailMode = value;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setMapZoomOut(int value) {
-        if (value < 0) {
-            return false;
-        }
-        if (value != mapZoomOut) {
-            mapZoomOut = value;
             return true;
         }
         return false;
