@@ -64,10 +64,10 @@ public class MySQLMapStorage extends MapStorage {
             mapkey = getMapKey(world, map, var);
 
             if (zoom > 0) {
-                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz".substring(0, zoom) + "_" + x + "_" + y + "." + map.getImageFormat().getFileExt();
+                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz".substring(0, zoom) + "_" + x + "_" + y + "." + map.getTileFileExt();
             }
             else {
-                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + x + "_" + y + "." + map.getImageFormat().getFileExt();
+                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + x + "_" + y + "." + map.getTileFileExt();
             }
         }
 
@@ -181,7 +181,7 @@ public class MySQLMapStorage extends MapStorage {
                     stmt = c.prepareStatement("UPDATE " + tableTiles + " SET HashCode=?, LastUpdate=?, Format=?, NewImage=?, Image=NULL WHERE MapID=? AND x=? and y=? AND zoom=?;");
                     stmt.setLong(1, hash);
                     stmt.setLong(2, timestamp);
-                    stmt.setInt(3, map.getImageFormat().getEncoding().ordinal());
+                    stmt.setInt(3, map.getTileEncoding().ordinal());
                     stmt.setBinaryStream(4, new BufferInputStream(encImage.buf, encImage.len), encImage.len);
                     stmt.setInt(5, mapkey);
                     stmt.setInt(6, x);
@@ -196,7 +196,7 @@ public class MySQLMapStorage extends MapStorage {
                     stmt.setInt(4, zoom);
                     stmt.setLong(5, hash);
                     stmt.setLong(6, timestamp);
-                    stmt.setInt(7, map.getImageFormat().getEncoding().ordinal());
+                    stmt.setInt(7, map.getTileEncoding().ordinal());
                     stmt.setBinaryStream(8, new BufferInputStream(encImage.buf, encImage.len), encImage.len);
                }
                 stmt.executeUpdate();

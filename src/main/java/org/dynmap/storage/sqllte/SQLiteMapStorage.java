@@ -48,10 +48,10 @@ public class SQLiteMapStorage extends MapStorage {
             mapkey = getMapKey(world, map, var);
 
             if (zoom > 0) {
-                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz".substring(0, zoom) + "_" + x + "_" + y + "." + map.getImageFormat().getFileExt();
+                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz".substring(0, zoom) + "_" + x + "_" + y + "." + map.getTileFileExt();
             }
             else {
-                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + x + "_" + y + "." + map.getImageFormat().getFileExt();
+                uri = map.getPrefix() + var.variantSuffix + "/"+ (x >> 5) + "_" + (y >> 5) + "/" + x + "_" + y + "." + map.getTileFileExt();
             }
         }
 
@@ -173,7 +173,7 @@ public class SQLiteMapStorage extends MapStorage {
                     stmt = c.prepareStatement("UPDATE Tiles SET HashCode=?, LastUpdate=?, Format=?, Image=?, ImageLen=? WHERE MapID=? AND x=? and y=? AND zoom=?;");
                     stmt.setLong(1, hash);
                     stmt.setLong(2, timestamp);
-                    stmt.setInt(3, map.getImageFormat().getEncoding().ordinal());
+                    stmt.setInt(3, map.getTileEncoding().ordinal());
                     stmt.setBytes(4, encImage.buf);
                     stmt.setInt(5, encImage.len);
                     stmt.setInt(6, mapkey);
@@ -189,7 +189,7 @@ public class SQLiteMapStorage extends MapStorage {
                     stmt.setInt(4, zoom);
                     stmt.setLong(5, hash);
                     stmt.setLong(6, timestamp);
-                    stmt.setInt(7, map.getImageFormat().getEncoding().ordinal());
+                    stmt.setInt(7, map.getTileEncoding().ordinal());
                     stmt.setBytes(8, encImage.buf);
                     stmt.setInt(9, encImage.len);
                 }

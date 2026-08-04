@@ -53,6 +53,7 @@ public class ClientConfigurationComponent extends Component {
                     s(wo, "center/x", center.x);
                     s(wo, "center/y", center.y);
                     s(wo, "center/z", center.z);
+                    s(wo, "miny", world.minY);
                     s(wo, "extrazoomout", world.getExtraZoomOutLevels());
                     s(wo, "sealevel", world.sealevel);
                     s(wo, "worldheight", world.worldheight);

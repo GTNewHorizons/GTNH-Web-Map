@@ -207,7 +207,7 @@ public abstract class DynmapWorld {
                         blank = false;
                     }
                     else {
-                        if (tile1.map.getImageFormat().getEncoding() == ImageEncoding.JPG) {
+                        if (tile1.map.getTileEncoding() == ImageEncoding.JPG) {
                             Arrays.fill(argb, tile1.map.getBackgroundARGB(tile1.var));
                         }
                         else {
@@ -217,7 +217,7 @@ public abstract class DynmapWorld {
                     }
                 }
                 else {
-                    if (tile1.map.getImageFormat().getEncoding() == ImageEncoding.JPG) {
+                    if (tile1.map.getTileEncoding() == ImageEncoding.JPG) {
                         Arrays.fill(argb, tile1.map.getBackgroundARGB(tile1.var));
                     }
                     else {

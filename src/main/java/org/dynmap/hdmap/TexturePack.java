@@ -7,7 +7,11 @@ import org.dynmap.DynmapCore;
 import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.common.BiomeMap;
+import org.dynmap.exporter.ExportedTextureData;
+import org.dynmap.exporter.ExportMaterial;
 import org.dynmap.exporter.OBJExport;
+import org.dynmap.exporter.OBJMaterialLibraryExporter;
+import org.dynmap.exporter.TextureExportEncoder;
 import org.dynmap.forge.GwmConfig;
 import org.dynmap.hdmap.textureprocessor.CustomTextureProcessor;
 import org.dynmap.modsupport.GWM_Util;
@@ -16,7 +20,6 @@ import org.dynmap.renderer.CustomModSupportLoader;
 import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.CustomTextureMapper;
 import org.dynmap.utils.BlockStep;
-import org.dynmap.utils.BufferOutputStream;
 import org.dynmap.utils.DynIntHashMap;
 import org.dynmap.utils.DynmapBufferedImage;
 import org.dynmap.utils.ForgeConfigFile;
@@ -612,6 +615,10 @@ public class TexturePack {
             }
         }
         return rslt;
+    }
+
+    public int getNativeScale() {
+        return native_scale;
     }
     /**
      * Add texture to texture map
@@ -3513,103 +3520,14 @@ public class TexturePack {
         return 0xFFFFFF;
     }
 
-    private static class ExportedTexture {
-        public String filename;
-        public Color diffuseColor;
-        public String filename_a;
-        public MaterialType material;
+    public ExportedTextureData exportTexture(ExportMaterial material) throws IOException {
+        return TextureExportEncoder.encode(this, material);
     }
 
-    private static class ExportedTexturePack {
-        Map<String, ExportedTexture> txtids = new HashMap<String, ExportedTexture>();
-        DynmapBufferedImage img;
-        OBJExport exp;
-        String name;
-    }
-
-    // Encode image as PNG and add to ZIP
-    private void addImageToZip(String idstr, int idx, int colormult, ExportedTexturePack etp) throws IOException {
-        if (etp.txtids.containsKey(idstr)) {   // Already in set?
-            return;
-        }
-        colormult = colormult & 0xFFFFFF;   // Mask multiplier
-        int[] argb = getTileARGB(idx);  // Look up tile data
-        if (colormult != 0xFFFFFF) {   // Non-trivial color multiplier
-            colormult |= 0xFF000000;
-            for (int i = 0; i < etp.img.argb_buf.length; i++) {
-                etp.img.argb_buf[i] = Color.blendColor(argb[i], colormult);
-            }
-        }
-        else {  // Else, just copy into destination
-            for (int i = 0; i < etp.img.argb_buf.length; i++) {
-                etp.img.argb_buf[i] = argb[i];
-            }
-        }
-        boolean hasAlpha = false;
-        // Compute simple color
-        double r = 0.0, g = 0.0, b = 0.0, w = 0.0;
-        for (int i = 0; i < etp.img.argb_buf.length; i++) {
-            int v = etp.img.argb_buf[i];
-            int ww = (v >> 24) & 0xFF;
-            int rr = (v >> 16) & 0xFF;
-            int gg = (v >> 8) & 0xFF;
-            int bb = v & 0xFF;
-            r += ww * rr;
-            g += ww * gg;
-            b += ww * bb;
-            w += ww;
-            if (ww != 0xFF) {   // Non-trivial alpha?
-                hasAlpha = true;
-            }
-        }
-        BufferOutputStream baos = new BufferOutputStream();
-
-        ImageIO.setUseCache(false); /* Don't use file cache - too small to be worth it */
-
-        String fname = etp.name + "/" + idstr + ".png";
-        etp.exp.startExportedFile(fname);
-
-        ImageIO.write(etp.img.buf_img, "png", baos);
-
-        etp.exp.addBytesToExportedFile(baos.buf, 0, baos.len);
-        etp.exp.finishExportedFile();
-        String fname_a = null;
-        // If has alpha, convert to gray scale for alpha image
-        if (hasAlpha) {
-            for (int i = 0; i < etp.img.argb_buf.length; i++) {
-                int v = etp.img.argb_buf[i];
-                int ww = (v >> 24) & 0xFF;
-                etp.img.argb_buf[i] = (ww << 24) | (ww << 16) | (ww << 8) | ww;
-            }
-            fname_a = etp.name + "/" + idstr + "_a.png";
-            etp.exp.startExportedFile(fname_a);
-
-            baos.reset();
-            ImageIO.write(etp.img.buf_img, "png", baos);
-
-            etp.exp.addBytesToExportedFile(baos.buf, 0, baos.len);
-            etp.exp.finishExportedFile();
-        }
-
-        ExportedTexture et = new ExportedTexture();
-        et.filename = fname;
-        et.filename_a = fname_a;
-        if (w > 0)
-            et.diffuseColor = new Color((int)(r / w), (int)(g / w), (int)(b / w));
-        else
-            et.diffuseColor = new Color();
-        et.material = getMaterialTypeByTile(idx);
-        etp.txtids.put(idstr, et);  // Add to set
-    }
     // Export texture pack as OBJ format material library
     public void exportAsOBJMaterialLibrary(OBJExport exp, String name) throws IOException {
-        ExportedTexturePack etp = new ExportedTexturePack();
-        etp.img = DynmapBufferedImage.allocateBufferedImage(this.native_scale, this.native_scale);
-        etp.name = name;
-        etp.exp = exp;
-        // Get set of texture references from export
+        List<ExportMaterial> materials = new ArrayList<ExportMaterial>();
         Set<String> txtids = exp.getMaterialIDs();
-        // Loop through them, adding the textures needed
         for (String txt : txtids) {
             int off = txt.lastIndexOf("__");
             int mult = -1;
@@ -3639,178 +3557,278 @@ public class TexturePack {
                 id = txt_id;
             }
             if (id >= 0) {
-                addImageToZip(txt, id, mult, etp);
+                materials.add(new ExportMaterial(txt, id, mult, 0, getMaterialTypeByTile(id), false));
             }
         }
-        // Build MTL file
-        exp.startExportedFile(etp.name + ".mtl");
-        TreeSet<String> ids = new TreeSet<String>(etp.txtids.keySet());
-        for (String id : ids) {
-            ExportedTexture et = etp.txtids.get(id);
-            String lines = "newmtl " + id + "\n";
-            lines += String.format(Locale.US, "Ka %.3f %.3f %.3f\n", (double)et.diffuseColor.getRed() / 256.0, (double)et.diffuseColor.getGreen() / 256.0, (double) et.diffuseColor.getBlue() / 256.0);
-            lines += String.format(Locale.US, "Kd %.3f %.3f %.3f\n", (double)et.diffuseColor.getRed() / 256.0, (double)et.diffuseColor.getGreen() / 256.0, (double) et.diffuseColor.getBlue() / 256.0);
-            lines += "map_Kd " + et.filename + "\n";
-            lines += "map_Ka " + et.filename + "\n";
-            if (et.filename_a != null) {
-                lines += "map_d " + et.filename_a + "\n";
-            }
-            if (et.material != null) {
-                lines += String.format(Locale.US, "Ni %.3f\n", et.material.Ni);
-                lines += String.format(Locale.US, "Ns %.3f\n", et.material.Ns);
-                lines += "Ks 0.500 0.500 0.500\n";
-                lines += String.format("illum %d\n", et.material.illum);
-            }
-            else {
-                lines += "Ks 0.000 0.000 0.000\n";
-            }
-            lines += "\n";
-            exp.addStringToExportedFile(lines);
-        }
-        exp.finishExportedFile();
+        OBJMaterialLibraryExporter.export(this, exp, name, materials);
+    }
+
+    public void exportAsOBJMaterialLibrary(OBJExport exp, String name, Iterable<ExportMaterial> materials)
+            throws IOException {
+        OBJMaterialLibraryExporter.export(this, exp, name, materials);
     }
     private static final int[] deftxtidx = { 0, 1, 2, 3, 4, 5 };
 
-    public String[] getCurrentBlockMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter, int[] txtidx, BlockStep[] steps) {
-        HDTextureMap map = HDTextureMap.getMap(blkid, blkdata, renderdata);
-        int blkindex = indexByIDMeta(blkid, blkdata);
-        if (txtidx == null) txtidx = deftxtidx;
-        String[] rslt = new String[txtidx.length];   // One for each face
-        boolean handlestdrot = (steps != null) && (!map.stdrotate);
-        boolean hasblockcoloring = hasBlockColoring.get(blkindex);
-        int custclrmult = -1;
-        // If block has custom coloring
-        if (hasblockcoloring) {
-            Integer idx = (Integer) this.blockColoring.get(blkindex);
-            LoadedImage img = imgs[idx];
-            if (img.argb != null) {
-                custclrmult = mapiter.getSmoothWaterColorMultiplier(img.argb);
-            }
-            else {
-                hasblockcoloring = false;
-            }
-        }
-        for (int patchidx = 0; patchidx < txtidx.length; patchidx++) {
-            int faceindex = txtidx[patchidx];
-            int textid = map.faces[faceindex];
-            int mod = textid / COLORMOD_MULT_INTERNAL;
-            textid = textid % COLORMOD_MULT_INTERNAL;
-            BlockStep step = steps[patchidx];
-            /* If clear-inside op, get out early */
-            if((mod == COLORMOD_CLEARINSIDE) || (mod == COLORMOD_MULTTONED_CLEARINSIDE)) {
-                BlockStep dir = step.opposite();
-                /* Check if previous block is same block type as we are: surface is transparent if it is */
-                if((blkid == mapiter.getBlockTypeIDAt(dir)) && (blkdata == mapiter.getBlockDataAt(dir.xoff, dir.yoff, dir.zoff))) {
-                    continue;   // Skip: no texture
-                }
-                /* If water block, to watercolor tone op */
-                if ((blkid == 8) || (blkid == 9)) {
-                    mod = COLORMOD_WATERTONED;
-                }
-                else if (mod == COLORMOD_MULTTONED_CLEARINSIDE) {
-                    mod = COLORMOD_MULTTONED;
-                }
-            }
-
-            if (ctm != null) {
-                textid = ctm.mapTexture(mapiter, blkid, blkdata, step, textid, null);
-            }
-            if (textid >= 0) {
-                rslt[patchidx] = getMatIDForTileID(textid);   // Default texture
-                int mult = 0xFFFFFF;
-                BiomeMap bio;
-                if (!hasblockcoloring) {
-
-                switch (mod) {
-                    case COLORMOD_GRASSTONED:
-                    case COLORMOD_GRASSTONED270:
-                        bio = mapiter.getBiome();
-                        if ((bio == BiomeMap.SWAMPLAND) && (imgs[IMG_SWAMPGRASSCOLOR] != null)) {
-                            mult = getBiomeTonedColor(imgs[IMG_SWAMPGRASSCOLOR], -1, bio, blkindex);
-                        }
-                        else {
-                            mult = getBiomeTonedColor(imgs[IMG_GRASSCOLOR], -1, bio, blkindex);
-                        }
-                        break;
-                    case COLORMOD_FOLIAGETONED:
-                    case COLORMOD_FOLIAGETONED270:
-                    case COLORMOD_FOLIAGEMULTTONED:
-                        mult = getBiomeTonedColor(imgs[IMG_FOLIAGECOLOR], -1, mapiter.getBiome(), blkindex);
-                        break;
-                    case COLORMOD_WATERTONED:
-                    case COLORMOD_WATERTONED270:
-                        mult = getBiomeTonedColor(imgs[IMG_WATERCOLORX], -1, mapiter.getBiome(), blkindex);
-                        break;
-                    case COLORMOD_PINETONED:
-                        mult = getBiomeTonedColor(imgs[IMG_PINECOLOR], colorMultPine, mapiter.getBiome(), blkindex);
-                        break;
-                    case COLORMOD_BIRCHTONED:
-                        mult = getBiomeTonedColor(imgs[IMG_BIRCHCOLOR], colorMultBirch, mapiter.getBiome(), blkindex);
-                        break;
-                    case COLORMOD_LILYTONED:
-                        mult = getBiomeTonedColor(null, colorMultLily, mapiter.getBiome(), blkindex);
-                        break;
-                    case COLORMOD_MULTTONED:
-                    case COLORMOD_MULTTONED_CLEARINSIDE:
-                        if(map.custColorMult == null) {
-                            mult = getBiomeTonedColor(null, map.colorMult, mapiter.getBiome(), blkindex);
-                        }
-                        else {
-                            mult = map.custColorMult.getColorMultiplier(mapiter);
-                        }
-                        break;
-                    default:
-                        mult = getBiomeTonedColor(null, -1, mapiter.getBiome(), blkindex);
-                        break;
-                }
-                }
-                else {
-                    mult = custclrmult;
-                }
-                if ((mult & 0xFFFFFF) != 0xFFFFFF) {
-                    rslt[patchidx] += String.format("__%06X", mult & 0xFFFFFF);
-                }
-                if (handlestdrot && (!map.stdrotate) && ((step == BlockStep.Y_MINUS) || (step == BlockStep.Y_PLUS))) {
-                    // Handle rotations
-                    switch (mod) {
-                        case COLORMOD_ROT90:
-                            mod = COLORMOD_ROT180;
-                            break;
-                        case COLORMOD_ROT180:
-                            mod = COLORMOD_ROT270;
-                            break;
-                        case COLORMOD_ROT270:
-                        case COLORMOD_GRASSTONED270:
-                        case COLORMOD_FOLIAGETONED270:
-                        case COLORMOD_WATERTONED270:
-                            mod = 0;
-                            break;
-                        default:
-                            mod = COLORMOD_ROT90;
-                            break;
-                    }
-                }
-                // Handle rotations
-                switch (mod) {
-                    case COLORMOD_ROT90:
-                        rslt[patchidx] += "@" + OBJExport.ROT90;
-                        break;
-                    case COLORMOD_ROT180:
-                        rslt[patchidx] += "@" + OBJExport.ROT180;
-                        break;
-                    case COLORMOD_ROT270:
-                    case COLORMOD_GRASSTONED270:
-                    case COLORMOD_FOLIAGETONED270:
-                    case COLORMOD_WATERTONED270:
-                        rslt[patchidx] += "@" +  + OBJExport.ROT270;
-                        break;
-                    case COLORMOD_FLIPHORIZ:
-                        rslt[patchidx] += "@" + OBJExport.HFLIP;
-                        break;
+    public String[] getCurrentBlockMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter, int[] txtidx,
+            BlockStep[] steps) {
+        ExportMaterial[][] exported = getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps,
+                null, true);
+        String[] rslt = new String[exported.length];
+        for (int i = 0; i < exported.length; i++) {
+            if ((exported[i] != null) && (exported[i].length > 0)) {
+                rslt[i] = exported[i][0].getMaterialId();
+                if (exported[i][0].getRotation() != 0) {
+                    rslt[i] += "@" + exported[i][0].getRotation();
                 }
             }
         }
         return rslt;
+    }
+
+    public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
+            int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData) {
+        return getCurrentBlockExportMaterials(blkid, blkdata, renderdata, mapiter, txtidx, steps, customRenderData,
+                true);
+    }
+
+    public ExportMaterial[][] getCurrentBlockExportMaterials(int blkid, int blkdata, int renderdata, MapIterator mapiter,
+            int[] txtidx, BlockStep[] steps, CustomRendererData customRenderData,
+            boolean allowLegacyTopBottomRotationCorrection) {
+        HDTextureMap map = HDTextureMap.getMap(blkid, blkdata, renderdata);
+        int blkindex = indexByIDMeta(blkid, blkdata);
+        if (txtidx == null) {
+            txtidx = deftxtidx;
+        }
+        if (steps == null) {
+            steps = BlockStep.values();
+        }
+
+        ExportMaterial[][] rslt = new ExportMaterial[txtidx.length][];
+        boolean handleStdRotation = allowLegacyTopBottomRotationCorrection && !map.stdrotate;
+        boolean blockHasColoring = hasBlockColoring.get(blkindex);
+        int customBlockColorMultiplier = -1;
+        if (blockHasColoring) {
+            Integer idx = (Integer) this.blockColoring.get(blkindex);
+            LoadedImage img = imgs[idx];
+            if (img.argb != null) {
+                customBlockColorMultiplier = mapiter.getSmoothWaterColorMultiplier(img.argb);
+            } else {
+                blockHasColoring = false;
+            }
+        }
+
+        for (int patchidx = 0; patchidx < txtidx.length; patchidx++) {
+            int patchId = txtidx[patchidx];
+            BlockStep step = (patchidx < steps.length) ? steps[patchidx] : BlockStep.Y_MINUS;
+            ArrayList<ExportMaterial> materials = new ArrayList<ExportMaterial>();
+            CustomColorMultiplier customColorMultiplier = null;
+
+            boolean handledByCustomRendering = false;
+            if (customRenderData != null) {
+                CustomTextureMapper customTextureMapper = customRenderData.getCustomTextureMapper();
+                if (customTextureMapper != null) {
+                    int[] layers = customTextureMapper.getTextureLayersForPatchId(patchId);
+                    if ((layers != null) && (layers.length > 0)) {
+                        for (int layer = layers.length - 1; layer >= 0; layer--) {
+                            customColorMultiplier = customRenderData.getCustomColorMultiplier(patchId, layer);
+                            int textureId = mapTextureWithCtm(layers[layer], mapiter, blkid, blkdata, step);
+                            ExportMaterial material =
+                                    buildExportMaterial(map, blkid, blkdata, blkindex, mapiter, step, textureId,
+                                            handleStdRotation, blockHasColoring, customBlockColorMultiplier,
+                                            customColorMultiplier);
+                            if (material != null) {
+                                materials.add(material);
+                            }
+                        }
+                        handledByCustomRendering = true;
+                    } else {
+                        customColorMultiplier = customRenderData.getCustomColorMultiplier(patchId, 0);
+                    }
+                } else {
+                    customColorMultiplier = customRenderData.getCustomColorMultiplier(patchId, 0);
+                }
+            }
+
+            if (!handledByCustomRendering) {
+                int faceIndex = patchId;
+                int textureId = (faceIndex >= map.faces.length) ? 2 : map.faces[faceIndex];
+                textureId = mapTextureWithCtm(textureId, mapiter, blkid, blkdata, step);
+                ExportMaterial material =
+                        buildExportMaterial(map, blkid, blkdata, blkindex, mapiter, step, textureId, handleStdRotation,
+                                blockHasColoring, customBlockColorMultiplier, customColorMultiplier);
+                if (material != null) {
+                    materials.add(material);
+                }
+                if ((map.layers != null) && (faceIndex < map.layers.length)) {
+                    while (map.layers[faceIndex] >= 0) {
+                        faceIndex = map.layers[faceIndex];
+                        textureId = map.faces[faceIndex];
+                        textureId = mapTextureWithCtm(textureId, mapiter, blkid, blkdata, step);
+                        material = buildExportMaterial(map, blkid, blkdata, blkindex, mapiter, step, textureId,
+                                handleStdRotation, blockHasColoring, customBlockColorMultiplier,
+                                customColorMultiplier);
+                        if (material != null) {
+                            materials.add(material);
+                        }
+                        if (faceIndex >= map.layers.length) {
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (!materials.isEmpty()) {
+                rslt[patchidx] = materials.toArray(new ExportMaterial[materials.size()]);
+            }
+        }
+        return rslt;
+    }
+
+    private int mapTextureWithCtm(int textureId, MapIterator mapiter, int blkid, int blkdata, BlockStep step) {
+        if (ctm == null) {
+            return textureId;
+        }
+        int mod = 0;
+        if (textureId >= COLORMOD_MULT_INTERNAL) {
+            mod = (textureId / COLORMOD_MULT_INTERNAL) * COLORMOD_MULT_INTERNAL;
+            textureId -= mod;
+        }
+        textureId = ctm.mapTexture(mapiter, blkid, blkdata, step, textureId, null);
+        return (textureId >= 0) ? (mod + textureId) : textureId;
+    }
+
+    private ExportMaterial buildExportMaterial(HDTextureMap map, int blkid, int blkdata, int blkindex,
+            MapIterator mapiter, BlockStep step, int textureId, boolean handleStdRotation, boolean hasBlockColoring,
+            int customBlockColorMultiplier, CustomColorMultiplier customColorMultiplier) {
+        if (textureId < 0) {
+            return null;
+        }
+
+        int mod = textureId / COLORMOD_MULT_INTERNAL;
+        textureId = textureId % COLORMOD_MULT_INTERNAL;
+        if ((mod == COLORMOD_CLEARINSIDE) || (mod == COLORMOD_MULTTONED_CLEARINSIDE)) {
+            BlockStep dir = step.opposite();
+            if ((blkid == mapiter.getBlockTypeIDAt(dir))
+                    && (blkdata == mapiter.getBlockDataAt(dir.xoff, dir.yoff, dir.zoff))) {
+                return null;
+            }
+            if ((blkid == 8) || (blkid == 9)) {
+                mod = COLORMOD_WATERTONED;
+            } else if (mod == COLORMOD_MULTTONED_CLEARINSIDE) {
+                mod = COLORMOD_MULTTONED;
+            }
+        }
+
+        String materialId = getMatIDForTileID(textureId);
+        int multiplier = 0xFFFFFF;
+        if (!hasBlockColoring) {
+            BiomeMap biome;
+            switch (mod) {
+                case COLORMOD_GRASSTONED:
+                case COLORMOD_GRASSTONED270:
+                    biome = mapiter.getBiome();
+                    if ((biome == BiomeMap.SWAMPLAND) && (imgs[IMG_SWAMPGRASSCOLOR] != null)) {
+                        multiplier = getBiomeTonedColor(imgs[IMG_SWAMPGRASSCOLOR], -1, biome, blkindex);
+                    } else {
+                        multiplier = getBiomeTonedColor(imgs[IMG_GRASSCOLOR], -1, biome, blkindex);
+                    }
+                    break;
+                case COLORMOD_FOLIAGETONED:
+                case COLORMOD_FOLIAGETONED270:
+                    multiplier = getBiomeTonedColor(imgs[IMG_FOLIAGECOLOR], -1, mapiter.getBiome(), blkindex);
+                    break;
+                case COLORMOD_FOLIAGEMULTTONED:
+                    multiplier = getBiomeTonedColor(imgs[IMG_FOLIAGECOLOR], -1, mapiter.getBiome(), blkindex);
+                    if (customColorMultiplier != null) {
+                        multiplier = ((multiplier & 0xFEFEFE) + customColorMultiplier.getColorMultiplier(mapiter)) / 2;
+                    } else if (map.custColorMult != null) {
+                        multiplier = ((multiplier & 0xFEFEFE) + map.custColorMult.getColorMultiplier(mapiter)) / 2;
+                    } else {
+                        multiplier = ((multiplier & 0xFEFEFE) + map.colorMult) / 2;
+                    }
+                    break;
+                case COLORMOD_WATERTONED:
+                case COLORMOD_WATERTONED270:
+                    multiplier = getBiomeTonedColor(imgs[IMG_WATERCOLORX], -1, mapiter.getBiome(), blkindex);
+                    break;
+                case COLORMOD_PINETONED:
+                    multiplier = getBiomeTonedColor(imgs[IMG_PINECOLOR], colorMultPine, mapiter.getBiome(), blkindex);
+                    break;
+                case COLORMOD_BIRCHTONED:
+                    multiplier =
+                            getBiomeTonedColor(imgs[IMG_BIRCHCOLOR], colorMultBirch, mapiter.getBiome(), blkindex);
+                    break;
+                case COLORMOD_LILYTONED:
+                    multiplier = getBiomeTonedColor(null, colorMultLily, mapiter.getBiome(), blkindex);
+                    break;
+                case COLORMOD_MULTTONED:
+                case COLORMOD_IGNORE_LIGHT_MULTTONED:
+                    if (customColorMultiplier != null) {
+                        multiplier = customColorMultiplier.getColorMultiplier(mapiter);
+                    } else if (map.custColorMult != null) {
+                        multiplier = map.custColorMult.getColorMultiplier(mapiter);
+                    } else {
+                        multiplier = getBiomeTonedColor(null, map.colorMult, mapiter.getBiome(), blkindex);
+                    }
+                    break;
+                default:
+                    multiplier = getBiomeTonedColor(null, -1, mapiter.getBiome(), blkindex);
+                    break;
+            }
+        } else {
+            multiplier = customBlockColorMultiplier;
+        }
+
+        if ((multiplier & 0xFFFFFF) != 0xFFFFFF) {
+            materialId += String.format("__%06X", multiplier & 0xFFFFFF);
+        }
+
+        if (handleStdRotation && ((step == BlockStep.Y_MINUS) || (step == BlockStep.Y_PLUS))) {
+            switch (mod) {
+                case COLORMOD_ROT90:
+                    mod = COLORMOD_ROT180;
+                    break;
+                case COLORMOD_ROT180:
+                    mod = COLORMOD_ROT270;
+                    break;
+                case COLORMOD_ROT270:
+                case COLORMOD_GRASSTONED270:
+                case COLORMOD_FOLIAGETONED270:
+                case COLORMOD_WATERTONED270:
+                    mod = 0;
+                    break;
+                default:
+                    mod = COLORMOD_ROT90;
+                    break;
+            }
+        }
+
+        int rotation = 0;
+        switch (mod) {
+            case COLORMOD_ROT90:
+                rotation = OBJExport.ROT90;
+                break;
+            case COLORMOD_ROT180:
+                rotation = OBJExport.ROT180;
+                break;
+            case COLORMOD_ROT270:
+            case COLORMOD_GRASSTONED270:
+            case COLORMOD_FOLIAGETONED270:
+            case COLORMOD_WATERTONED270:
+                rotation = OBJExport.ROT270;
+                break;
+            case COLORMOD_FLIPHORIZ:
+                rotation = OBJExport.HFLIP;
+                break;
+        }
+
+        boolean emissive = (mod == COLORMOD_IGNORE_LIGHT) || (mod == COLORMOD_IGNORE_LIGHT_MULTTONED);
+        if (emissive) {
+            materialId += "__EM";
+        }
+
+        return new ExportMaterial(materialId, textureId, multiplier, rotation, getMaterialTypeByTile(textureId),
+                emissive);
     }
 
     // Get biome-specific color multpliers

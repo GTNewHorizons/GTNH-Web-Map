@@ -1,0 +1,126 @@
+package org.dynmap.exporter;
+
+import org.dynmap.renderer.RenderPatchFactory.SideVisible;
+import org.dynmap.utils.PatchDefinition;
+
+public final class ExportPatchGeometry {
+    public static final class Geometry {
+        public final double[] xyz;
+        public final double[] uv;
+        public final int vertexCount;
+        public final SideVisible sideVisible;
+
+        Geometry(double[] xyz, double[] uv, int vertexCount, SideVisible sideVisible) {
+            this.xyz = xyz;
+            this.uv = uv;
+            this.vertexCount = vertexCount;
+            this.sideVisible = sideVisible;
+        }
+    }
+
+    private ExportPatchGeometry() {
+    }
+
+    public static Geometry build(PatchDefinition patch, double x, double y, double z, int rotation) {
+        boolean triangle = patch.uplusvmax <= 1.0000001;
+        int vertexCount = triangle ? 3 : 4;
+        double[] xyz = new double[vertexCount * 3];
+        double[] uv = new double[vertexCount * 2];
+
+        double ux = patch.xu - patch.x0;
+        double uy = patch.yu - patch.y0;
+        double uz = patch.zu - patch.z0;
+        double vx = patch.xv - patch.x0;
+        double vy = patch.yv - patch.y0;
+        double vz = patch.zv - patch.z0;
+
+        x = x + patch.x0;
+        y = y + patch.y0;
+        z = z + patch.z0;
+
+        double[] patchU = triangle ? new double[] { patch.umin, patch.umax, patch.umin }
+                : new double[] { patch.umin, patch.umax, patch.umax, patch.umin };
+        double[] patchV = triangle ? new double[] { patch.vmin, patch.vmin, patch.vmax }
+                : new double[] { patch.vmin, patch.vmin, patch.vmax, patch.vmax };
+
+        for (int i = 0; i < vertexCount; i++) {
+            double u = patchU[i];
+            double v = patchV[i];
+            fillVertex(xyz, i * 3, x + ux * u + vx * v, y + uy * u + vy * v, z + uz * u + vz * v);
+            setUV(uv, i, rotateUV(getTextureCoordinates(patch, i, u, v, triangle), rotation));
+        }
+
+        return new Geometry(xyz, uv, vertexCount, patch.sidevis);
+    }
+
+    public static Geometry buildQuad(double[] xyz) {
+        return new Geometry(xyz, new double[] { 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0 }, 4, SideVisible.TOP);
+    }
+
+    public static Geometry buildTriangle(double[] xyz) {
+        return new Geometry(xyz, new double[] { 0.0, 0.0, 1.0, 0.0, 0.0, 1.0 }, 3, SideVisible.TOP);
+    }
+
+    private static void fillVertex(double[] xyz, int offset, double x, double y, double z) {
+        xyz[offset] = x;
+        xyz[offset + 1] = y;
+        xyz[offset + 2] = z;
+    }
+
+    private static double[] getTextureCoordinates(PatchDefinition patch, int vertexIndex, double u, double v, boolean triangle) {
+        if (patch.explicitTexCoords != null) {
+            if (!triangle) {
+                switch (vertexIndex) {
+                    case 0:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[0]), normalizeUV(patch.explicitTexCoords[1]) };
+                    case 1:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[2]), normalizeUV(patch.explicitTexCoords[3]) };
+                    case 2:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[2] + patch.explicitTexCoords[4]
+                                - patch.explicitTexCoords[0]), normalizeUV(patch.explicitTexCoords[3]
+                                + patch.explicitTexCoords[5] - patch.explicitTexCoords[1]) };
+                    case 3:
+                        return new double[] { normalizeUV(patch.explicitTexCoords[4]), normalizeUV(patch.explicitTexCoords[5]) };
+                    default:
+                        break;
+                }
+            }
+            return new double[] {
+                    normalizeUV(
+                            u * patch.explicitTexCoords[2] + v * patch.explicitTexCoords[4] + (1 - u - v) * patch.explicitTexCoords[0]),
+                    normalizeUV(
+                            u * patch.explicitTexCoords[3] + v * patch.explicitTexCoords[5] + (1 - u - v) * patch.explicitTexCoords[1]) };
+        }
+        return new double[] { u, v };
+    }
+
+    private static double normalizeUV(double value) {
+        while (value > 1.0) {
+            value -= 1.0;
+        }
+        while (value < 0.0) {
+            value += 1.0;
+        }
+        return value;
+    }
+
+    private static double[] rotateUV(double[] uv, int rotation) {
+        double u = uv[0];
+        double v = uv[1];
+        if (rotation == 1) {
+            return new double[] { 1.0 - v, u };
+        } else if (rotation == 2) {
+            return new double[] { 1.0 - u, 1.0 - v };
+        } else if (rotation == 3) {
+            return new double[] { v, 1.0 - u };
+        } else if (rotation == 4) {
+            return new double[] { 1.0 - u, v };
+        }
+        return new double[] { u, v };
+    }
+
+    private static void setUV(double[] uv, int vertexIndex, double[] rotated) {
+        uv[vertexIndex * 2] = rotated[0];
+        uv[vertexIndex * 2 + 1] = rotated[1];
+    }
+}
