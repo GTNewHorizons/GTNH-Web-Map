@@ -11,7 +11,7 @@ public class ExportMaterial {
     private final boolean emissive;
     private final ExportMaterial[] bakedLayers;
     private final Integer solidColorArgb;
-    private final TexturePack.ExportedTextureData customTextureData;
+    private final ExportedTextureData customTextureData;
 
     public ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
             TexturePack.MaterialType materialType, boolean emissive) {
@@ -20,7 +20,7 @@ public class ExportMaterial {
 
     private ExportMaterial(String materialId, int textureIndex, int colorMultiplier, int rotation,
             TexturePack.MaterialType materialType, boolean emissive, ExportMaterial[] bakedLayers, Integer solidColorArgb,
-            TexturePack.ExportedTextureData customTextureData) {
+            ExportedTextureData customTextureData) {
         this.materialId = materialId;
         this.textureIndex = textureIndex;
         this.colorMultiplier = colorMultiplier;
@@ -72,7 +72,7 @@ public class ExportMaterial {
         return customTextureData != null;
     }
 
-    public TexturePack.ExportedTextureData getCustomTextureData() {
+    public ExportedTextureData getCustomTextureData() {
         return customTextureData;
     }
 
@@ -115,7 +115,7 @@ public class ExportMaterial {
         return new ExportMaterial(materialId, -1, 0xFFFFFF, 0, materialType, emissive, null, Integer.valueOf(argb), null);
     }
 
-    public static ExportMaterial customTexture(String materialId, TexturePack.ExportedTextureData textureData,
+    public static ExportMaterial customTexture(String materialId, ExportedTextureData textureData,
             boolean emissive) {
         return new ExportMaterial(materialId, -1, 0xFFFFFF, 0, textureData.material, emissive, null, null, textureData);
     }

@@ -9,7 +9,6 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 
 import org.dynmap.hdmap.TexturePack;
-import org.dynmap.hdmap.TexturePack.ExportedTextureData;
 
 final class ExportMaterialColorResolver {
     private static final class SampledTextureData {

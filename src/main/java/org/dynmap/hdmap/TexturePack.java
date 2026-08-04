@@ -7,8 +7,11 @@ import org.dynmap.DynmapCore;
 import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.common.BiomeMap;
+import org.dynmap.exporter.ExportedTextureData;
 import org.dynmap.exporter.ExportMaterial;
 import org.dynmap.exporter.OBJExport;
+import org.dynmap.exporter.OBJMaterialLibraryExporter;
+import org.dynmap.exporter.TextureExportEncoder;
 import org.dynmap.forge.GwmConfig;
 import org.dynmap.hdmap.textureprocessor.CustomTextureProcessor;
 import org.dynmap.modsupport.GWM_Util;
@@ -17,7 +20,6 @@ import org.dynmap.renderer.CustomModSupportLoader;
 import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.CustomTextureMapper;
 import org.dynmap.utils.BlockStep;
-import org.dynmap.utils.BufferOutputStream;
 import org.dynmap.utils.DynIntHashMap;
 import org.dynmap.utils.DynmapBufferedImage;
 import org.dynmap.utils.ForgeConfigFile;
@@ -613,6 +615,10 @@ public class TexturePack {
             }
         }
         return rslt;
+    }
+
+    public int getNativeScale() {
+        return native_scale;
     }
     /**
      * Add texture to texture map
@@ -3514,264 +3520,14 @@ public class TexturePack {
         return 0xFFFFFF;
     }
 
-    private static class ExportedTexture {
-        public String filename;
-        public Color diffuseColor;
-        public String filename_a;
-        public MaterialType material;
-        public boolean emissive;
-    }
-
-    public static class ExportedTextureData {
-        public byte[] imagePng;
-        public byte[] alphaPng;
-        public Color diffuseColor;
-        public MaterialType material;
-        public boolean hasAlpha;
-        public boolean hasTranslucentAlpha;
-    }
-
-    private static class ExportedTexturePack {
-        Map<String, ExportedTexture> txtids = new HashMap<String, ExportedTexture>();
-        DynmapBufferedImage img;
-        OBJExport exp;
-        String name;
-    }
-
     public ExportedTextureData exportTexture(ExportMaterial material) throws IOException {
-        DynmapBufferedImage image = DynmapBufferedImage.allocateBufferedImage(this.native_scale, this.native_scale);
-        try {
-            return buildExportedTextureData(material, image);
-        } finally {
-            DynmapBufferedImage.freeBufferedImage(image);
-        }
+        return TextureExportEncoder.encode(this, material);
     }
 
-    private ExportedTextureData buildExportedTextureData(ExportMaterial material, DynmapBufferedImage image)
-            throws IOException {
-        fillExportedTextureData(material, image.argb_buf);
-        return encodeExportedTextureData(image, material.getMaterialType());
-    }
-
-    private ExportedTextureData buildExportedTextureData(int idx, int colormult, DynmapBufferedImage image)
-            throws IOException {
-        fillExportedTextureData(idx, colormult, 0, image.argb_buf);
-        return encodeExportedTextureData(image, getMaterialTypeByTile(idx));
-    }
-
-    private void fillExportedTextureData(ExportMaterial material, int[] argbOut) {
-        ExportMaterial[] bakedLayers = material.getBakedLayers();
-        if ((bakedLayers != null) && (bakedLayers.length > 0)) {
-            Arrays.fill(argbOut, 0);
-            int[] layerArgb = new int[argbOut.length];
-            for (int i = bakedLayers.length - 1; i >= 0; i--) {
-                fillExportedTextureData(bakedLayers[i], layerArgb);
-                blendExportedTextureData(argbOut, layerArgb);
-            }
-            return;
-        }
-        fillExportedTextureData(material.getTextureIndex(), material.getColorMultiplier(), material.getRotation(), argbOut);
-    }
-
-    private void fillExportedTextureData(int idx, int colormult, int rotation, int[] argbOut) {
-        colormult = colormult & 0xFFFFFF;
-        int[] argb = getTileARGB(idx);
-        if (colormult != 0xFFFFFF) {
-            colormult |= 0xFF000000;
-        }
-        for (int y = 0; y < this.native_scale; y++) {
-            int rowOff = y * this.native_scale;
-            for (int x = 0; x < this.native_scale; x++) {
-                int pixel = argb[getRotatedExportTextureIndex(x, y, rotation)];
-                if (colormult != 0xFFFFFF) {
-                    pixel = Color.blendColor(pixel, colormult);
-                }
-                argbOut[rowOff + x] = pixel;
-            }
-        }
-    }
-
-    private int getRotatedExportTextureIndex(int x, int y, int rotation) {
-        int srcX = x;
-        int srcY = y;
-        switch (rotation) {
-            case OBJExport.ROT90:
-                srcX = this.native_scale - 1 - y;
-                srcY = x;
-                break;
-            case OBJExport.ROT180:
-                srcX = this.native_scale - 1 - x;
-                srcY = this.native_scale - 1 - y;
-                break;
-            case OBJExport.ROT270:
-                srcX = y;
-                srcY = this.native_scale - 1 - x;
-                break;
-            case OBJExport.HFLIP:
-                srcX = this.native_scale - 1 - x;
-                break;
-            default:
-                break;
-        }
-        return (srcY * this.native_scale) + srcX;
-    }
-
-    private void blendExportedTextureData(int[] dst, int[] src) {
-        for (int i = 0; i < dst.length; i++) {
-            int srcPixel = src[i];
-            int srcAlpha = (srcPixel >> 24) & 0xFF;
-            if (srcAlpha == 0) {
-                continue;
-            }
-            if (srcAlpha == 0xFF) {
-                dst[i] = srcPixel;
-                continue;
-            }
-
-            int dstPixel = dst[i];
-            int dstAlpha = (dstPixel >> 24) & 0xFF;
-            if (dstAlpha == 0) {
-                dst[i] = srcPixel;
-                continue;
-            }
-
-            int outAlpha = srcAlpha + ((dstAlpha * (255 - srcAlpha) + 127) / 255);
-            int srcRed = (srcPixel >> 16) & 0xFF;
-            int srcGreen = (srcPixel >> 8) & 0xFF;
-            int srcBlue = srcPixel & 0xFF;
-            int dstRed = (dstPixel >> 16) & 0xFF;
-            int dstGreen = (dstPixel >> 8) & 0xFF;
-            int dstBlue = dstPixel & 0xFF;
-            int outRed =
-                    ((srcRed * srcAlpha * 255) + (dstRed * dstAlpha * (255 - srcAlpha)) + (outAlpha * 127))
-                            / (outAlpha * 255);
-            int outGreen =
-                    ((srcGreen * srcAlpha * 255) + (dstGreen * dstAlpha * (255 - srcAlpha)) + (outAlpha * 127))
-                            / (outAlpha * 255);
-            int outBlue =
-                    ((srcBlue * srcAlpha * 255) + (dstBlue * dstAlpha * (255 - srcAlpha)) + (outAlpha * 127))
-                            / (outAlpha * 255);
-            dst[i] = (outAlpha << 24) | (outRed << 16) | (outGreen << 8) | outBlue;
-        }
-    }
-
-    private ExportedTextureData encodeExportedTextureData(DynmapBufferedImage image, MaterialType materialType)
-            throws IOException {
-        boolean hasAlpha = false;
-        boolean hasTranslucentAlpha = false;
-        double r = 0.0;
-        double g = 0.0;
-        double b = 0.0;
-        double w = 0.0;
-        for (int i = 0; i < image.argb_buf.length; i++) {
-            int v = image.argb_buf[i];
-            int ww = (v >> 24) & 0xFF;
-            int rr = (v >> 16) & 0xFF;
-            int gg = (v >> 8) & 0xFF;
-            int bb = v & 0xFF;
-            r += ww * rr;
-            g += ww * gg;
-            b += ww * bb;
-            w += ww;
-            if (ww != 0xFF) {
-                hasAlpha = true;
-                if (ww != 0) {
-                    hasTranslucentAlpha = true;
-                }
-            }
-        }
-
-        BufferOutputStream baos = new BufferOutputStream();
-        ImageIO.setUseCache(false);
-        ImageIO.write(image.buf_img, "png", baos);
-
-        ExportedTextureData data = new ExportedTextureData();
-        data.imagePng = Arrays.copyOf(baos.buf, baos.len);
-        if (w > 0) {
-            data.diffuseColor = new Color((int) (r / w), (int) (g / w), (int) (b / w));
-        } else {
-            data.diffuseColor = new Color();
-        }
-        data.material = materialType;
-        data.hasAlpha = hasAlpha;
-        data.hasTranslucentAlpha = hasTranslucentAlpha;
-
-        if (hasAlpha) {
-            for (int i = 0; i < image.argb_buf.length; i++) {
-                int v = image.argb_buf[i];
-                int ww = (v >> 24) & 0xFF;
-                image.argb_buf[i] = (ww << 24) | (ww << 16) | (ww << 8) | ww;
-            }
-            baos.reset();
-            ImageIO.write(image.buf_img, "png", baos);
-            data.alphaPng = Arrays.copyOf(baos.buf, baos.len);
-        }
-        return data;
-    }
-
-    // Encode image as PNG and add to ZIP
-    private void addImageToZip(String idstr, int idx, int colormult, ExportedTexturePack etp) throws IOException {
-        if (etp.txtids.containsKey(idstr)) {   // Already in set?
-            return;
-        }
-        ExportedTextureData data = buildExportedTextureData(idx, colormult, etp.img);
-
-        String fname = etp.name + "/" + idstr + ".png";
-        etp.exp.startExportedFile(fname);
-        etp.exp.addBytesToExportedFile(data.imagePng, 0, data.imagePng.length);
-        etp.exp.finishExportedFile();
-        String fname_a = null;
-        if (data.alphaPng != null) {
-            fname_a = etp.name + "/" + idstr + "_a.png";
-            etp.exp.startExportedFile(fname_a);
-            etp.exp.addBytesToExportedFile(data.alphaPng, 0, data.alphaPng.length);
-            etp.exp.finishExportedFile();
-        }
-
-        ExportedTexture et = new ExportedTexture();
-        et.filename = fname;
-        et.filename_a = fname_a;
-        et.diffuseColor = data.diffuseColor;
-        et.material = data.material;
-        etp.txtids.put(idstr, et);  // Add to set
-    }
-    private void addImageToZip(ExportMaterial material, ExportedTexturePack etp) throws IOException {
-        if (etp.txtids.containsKey(material.getMaterialId())) {
-            return;
-        }
-        ExportedTextureData data =
-                material.hasCustomTexture() ? material.getCustomTextureData() : buildExportedTextureData(material, etp.img);
-
-        String fname = etp.name + "/" + material.getMaterialId() + ".png";
-        etp.exp.startExportedFile(fname);
-        etp.exp.addBytesToExportedFile(data.imagePng, 0, data.imagePng.length);
-        etp.exp.finishExportedFile();
-
-        String fname_a = null;
-        if (data.alphaPng != null) {
-            fname_a = etp.name + "/" + material.getMaterialId() + "_a.png";
-            etp.exp.startExportedFile(fname_a);
-            etp.exp.addBytesToExportedFile(data.alphaPng, 0, data.alphaPng.length);
-            etp.exp.finishExportedFile();
-        }
-
-        ExportedTexture et = new ExportedTexture();
-        et.filename = fname;
-        et.filename_a = fname_a;
-        et.diffuseColor = data.diffuseColor;
-        et.material = material.getMaterialType();
-        et.emissive = material.isEmissive();
-        etp.txtids.put(material.getMaterialId(), et);
-    }
     // Export texture pack as OBJ format material library
     public void exportAsOBJMaterialLibrary(OBJExport exp, String name) throws IOException {
-        ExportedTexturePack etp = new ExportedTexturePack();
-        etp.img = DynmapBufferedImage.allocateBufferedImage(this.native_scale, this.native_scale);
-        etp.name = name;
-        etp.exp = exp;
-        // Get set of texture references from export
+        List<ExportMaterial> materials = new ArrayList<ExportMaterial>();
         Set<String> txtids = exp.getMaterialIDs();
-        // Loop through them, adding the textures needed
         for (String txt : txtids) {
             int off = txt.lastIndexOf("__");
             int mult = -1;
@@ -3801,56 +3557,15 @@ public class TexturePack {
                 id = txt_id;
             }
             if (id >= 0) {
-                addImageToZip(txt, id, mult, etp);
+                materials.add(new ExportMaterial(txt, id, mult, 0, getMaterialTypeByTile(id), false));
             }
         }
-        // Build MTL file
-        writeMaterialLibrary(exp, etp);
-    }
-    public void exportAsOBJMaterialLibrary(OBJExport exp, String name, Iterable<ExportMaterial> materials)
-            throws IOException {
-        ExportedTexturePack etp = new ExportedTexturePack();
-        etp.img = DynmapBufferedImage.allocateBufferedImage(this.native_scale, this.native_scale);
-        etp.name = name;
-        etp.exp = exp;
-        for (ExportMaterial material : materials) {
-            if (material != null) {
-                addImageToZip(material, etp);
-            }
-        }
-        writeMaterialLibrary(exp, etp);
+        OBJMaterialLibraryExporter.export(this, exp, name, materials);
     }
 
-    private void writeMaterialLibrary(OBJExport exp, ExportedTexturePack etp) throws IOException {
-        exp.startExportedFile(etp.name + ".mtl");
-        TreeSet<String> ids = new TreeSet<String>(etp.txtids.keySet());
-        for (String id : ids) {
-            ExportedTexture et = etp.txtids.get(id);
-            String lines = "newmtl " + id + "\n";
-            lines += String.format(Locale.US, "Ka %.3f %.3f %.3f\n", (double)et.diffuseColor.getRed() / 256.0, (double)et.diffuseColor.getGreen() / 256.0, (double) et.diffuseColor.getBlue() / 256.0);
-            lines += String.format(Locale.US, "Kd %.3f %.3f %.3f\n", (double)et.diffuseColor.getRed() / 256.0, (double)et.diffuseColor.getGreen() / 256.0, (double) et.diffuseColor.getBlue() / 256.0);
-            lines += "map_Kd " + et.filename + "\n";
-            lines += "map_Ka " + et.filename + "\n";
-            if (et.filename_a != null) {
-                lines += "map_d " + et.filename_a + "\n";
-            }
-            if (et.emissive) {
-                lines += "Ke 1.000 1.000 1.000\n";
-                lines += "map_Ke " + et.filename + "\n";
-            }
-            if (et.material != null) {
-                lines += String.format(Locale.US, "Ni %.3f\n", et.material.Ni);
-                lines += String.format(Locale.US, "Ns %.3f\n", et.material.Ns);
-                lines += "Ks 0.500 0.500 0.500\n";
-                lines += String.format("illum %d\n", et.material.illum);
-            }
-            else {
-                lines += "Ks 0.000 0.000 0.000\n";
-            }
-            lines += "\n";
-            exp.addStringToExportedFile(lines);
-        }
-        exp.finishExportedFile();
+    public void exportAsOBJMaterialLibrary(OBJExport exp, String name, Iterable<ExportMaterial> materials)
+            throws IOException {
+        OBJMaterialLibraryExporter.export(this, exp, name, materials);
     }
     private static final int[] deftxtidx = { 0, 1, 2, 3, 4, 5 };
 

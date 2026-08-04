@@ -19,7 +19,6 @@ import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
 import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.hdmap.TexturePack;
-import org.dynmap.hdmap.TexturePack.ExportedTextureData;
 import org.dynmap.hdmap.TexturePackHDShader;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 import org.dynmap.utils.BufferOutputStream;
