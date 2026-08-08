@@ -104,16 +104,19 @@ public final class TriangleMesh {
      * block-sized pieces. The mesh itself is not modified.
      *
      * @param patchFactory factory used to create render patches
+     * @param autoTextureCoordinates true to generate texture coordinates from
+     *        each patch's block-local position
      * @return patches grouped by their block offset
      */
-    public Map<BlockOffset, RenderPatch[]> exportFullModelToRenderPatches(RenderPatchFactory patchFactory) {
+    public Map<BlockOffset, RenderPatch[]> exportFullModelToRenderPatches(RenderPatchFactory patchFactory,
+            boolean autoTextureCoordinates) {
         if (patchFactory == null) {
             throw new IllegalArgumentException("Patch factory must be provided");
         }
 
         Map<BlockOffset, List<RenderPatch>> patchesByBlock = new LinkedHashMap<BlockOffset, List<RenderPatch>>();
         for (MeshTriangle triangle : triangles) {
-            exportTriangle(triangle, patchFactory, patchesByBlock);
+            exportTriangle(triangle, patchFactory, autoTextureCoordinates, patchesByBlock);
         }
 
         Map<BlockOffset, RenderPatch[]> result = new LinkedHashMap<BlockOffset, RenderPatch[]>();
@@ -133,10 +136,13 @@ public final class TriangleMesh {
      *
      * @param block block offset to export
      * @param patchFactory factory used to create render patches
+     * @param autoTextureCoordinates true to generate texture coordinates from
+     *        each patch's block-local position
      * @return block-relative patches, or an empty array when the mesh does not
      *         intersect the requested block
      */
-    public RenderPatch[] exportSingleBlockSpaceToRenderPatches(BlockOffset block, RenderPatchFactory patchFactory) {
+    public RenderPatch[] exportSingleBlockSpaceToRenderPatches(BlockOffset block, RenderPatchFactory patchFactory,
+            boolean autoTextureCoordinates) {
         if (block == null) {
             throw new IllegalArgumentException("Block offset must be provided");
         }
@@ -146,7 +152,7 @@ public final class TriangleMesh {
 
         Map<BlockOffset, List<RenderPatch>> patchesByBlock = new LinkedHashMap<BlockOffset, List<RenderPatch>>();
         for (MeshTriangle triangle : triangles) {
-            exportTriangleToBlock(triangle, block, patchFactory, patchesByBlock);
+            exportTriangleToBlock(triangle, block, patchFactory, autoTextureCoordinates, patchesByBlock);
         }
         List<RenderPatch> patches = patchesByBlock.get(block);
         return patches == null ? new RenderPatch[0] : patches.toArray(new RenderPatch[patches.size()]);
@@ -192,6 +198,7 @@ public final class TriangleMesh {
     }
 
     private static void exportTriangle(MeshTriangle triangle, RenderPatchFactory patchFactory,
+            boolean autoTextureCoordinates,
             Map<BlockOffset, List<RenderPatch>> patchesByBlock) {
         MeshVertex vertex0 = triangle.getVertex0();
         MeshVertex vertex1 = triangle.getVertex1();
@@ -203,11 +210,13 @@ public final class TriangleMesh {
         vertices.add(vertex0);
         vertices.add(vertex1);
         vertices.add(vertex2);
-        exportPolygon(vertices, triangle.getSideVisible(), triangle.getTextureIndex(), patchFactory, patchesByBlock);
+        exportPolygon(vertices, triangle.getSideVisible(), triangle.getTextureIndex(), patchFactory,
+                autoTextureCoordinates, patchesByBlock);
     }
 
     private static void exportTriangleToBlock(MeshTriangle triangle, BlockOffset block,
-            RenderPatchFactory patchFactory, Map<BlockOffset, List<RenderPatch>> patchesByBlock) {
+            RenderPatchFactory patchFactory, boolean autoTextureCoordinates,
+            Map<BlockOffset, List<RenderPatch>> patchesByBlock) {
         MeshVertex vertex0 = triangle.getVertex0();
         MeshVertex vertex1 = triangle.getVertex1();
         MeshVertex vertex2 = triangle.getVertex2();
@@ -223,7 +232,7 @@ public final class TriangleMesh {
         }
         List<MeshVertex> clipped = clipToBlock(vertices, block);
         addClippedPatches(clipped, block.getX(), block.getY(), block.getZ(), triangle.getSideVisible(),
-                triangle.getTextureIndex(), patchFactory, patchesByBlock);
+                triangle.getTextureIndex(), patchFactory, autoTextureCoordinates, patchesByBlock);
     }
 
     private static boolean intersectsBlock(List<MeshVertex> vertices, BlockOffset block) {
@@ -246,7 +255,8 @@ public final class TriangleMesh {
     }
 
     private static void exportPolygon(List<MeshVertex> vertices, SideVisible sideVisible, int textureIndex,
-            RenderPatchFactory patchFactory, Map<BlockOffset, List<RenderPatch>> patchesByBlock) {
+            RenderPatchFactory patchFactory, boolean autoTextureCoordinates,
+            Map<BlockOffset, List<RenderPatch>> patchesByBlock) {
         if (!hasArea(vertices)) {
             return;
         }
@@ -254,7 +264,8 @@ public final class TriangleMesh {
         int axis = getSplitAxis(vertices);
         if (axis < 0) {
             addClippedPatches(vertices, getBlockCoordinate(vertices, 0), getBlockCoordinate(vertices, 1),
-                    getBlockCoordinate(vertices, 2), sideVisible, textureIndex, patchFactory, patchesByBlock);
+                    getBlockCoordinate(vertices, 2), sideVisible, textureIndex, patchFactory, autoTextureCoordinates,
+                    patchesByBlock);
             return;
         }
 
@@ -262,9 +273,9 @@ public final class TriangleMesh {
         double plane = range.minimum
                 + ((double) range.maximum - (double) range.minimum + 1.0) / 2.0;
         exportPolygon(clipAgainstPlane(vertices, axis, plane, false), sideVisible, textureIndex, patchFactory,
-                patchesByBlock);
+                autoTextureCoordinates, patchesByBlock);
         exportPolygon(clipAgainstPlane(vertices, axis, plane, true), sideVisible, textureIndex, patchFactory,
-                patchesByBlock);
+                autoTextureCoordinates, patchesByBlock);
     }
 
     private static List<MeshVertex> clipAgainstPlane(List<MeshVertex> vertices, int axis, double plane,
@@ -330,6 +341,7 @@ public final class TriangleMesh {
 
     private static void addClippedPatches(List<MeshVertex> vertices, int x, int y, int z, SideVisible sideVisible,
             int textureIndex, RenderPatchFactory patchFactory,
+            boolean autoTextureCoordinates,
             Map<BlockOffset, List<RenderPatch>> patchesByBlock) {
         if (vertices.size() < 3) {
             return;
@@ -348,11 +360,19 @@ public final class TriangleMesh {
                 patches = new ArrayList<RenderPatch>();
                 patchesByBlock.put(block, patches);
             }
-            patches.add(patchFactory.getTriangleExplTexCoords(
-                    vertex0.getX(), vertex0.getY(), vertex0.getZ(), vertex0.getTextureU(), vertex0.getTextureV(),
-                    vertex1.getX(), vertex1.getY(), vertex1.getZ(), vertex1.getTextureU(), vertex1.getTextureV(),
-                    vertex2.getX(), vertex2.getY(), vertex2.getZ(), vertex2.getTextureU(), vertex2.getTextureV(),
-                    sideVisible, textureIndex));
+            if (autoTextureCoordinates) {
+                patches.add(patchFactory.getTriangleAutoTexCoords(
+                        vertex0.getX(), vertex0.getY(), vertex0.getZ(),
+                        vertex1.getX(), vertex1.getY(), vertex1.getZ(),
+                        vertex2.getX(), vertex2.getY(), vertex2.getZ(),
+                        sideVisible, textureIndex));
+            } else {
+                patches.add(patchFactory.getTriangleExplTexCoords(
+                        vertex0.getX(), vertex0.getY(), vertex0.getZ(), vertex0.getTextureU(), vertex0.getTextureV(),
+                        vertex1.getX(), vertex1.getY(), vertex1.getZ(), vertex1.getTextureU(), vertex1.getTextureV(),
+                        vertex2.getX(), vertex2.getY(), vertex2.getZ(), vertex2.getTextureU(), vertex2.getTextureV(),
+                        sideVisible, textureIndex));
+            }
         }
     }
 
