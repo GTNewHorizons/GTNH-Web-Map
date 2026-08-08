@@ -4,6 +4,10 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 /**
  * A textured triangle in a {@link TriangleMesh}.
+ *
+ * The vertex order determines winding and therefore the front-facing side
+ * for {@link SideVisible}. The constructor copies its vertices, so later
+ * changes to source objects cannot alter this triangle.
  */
 public final class MeshTriangle {
     private final MeshVertex vertex0;
@@ -12,6 +16,15 @@ public final class MeshTriangle {
     private final SideVisible sideVisible;
     private final int textureIndex;
 
+    /**
+     * Create a triangle face.
+     *
+     * @param vertex0 first vertex in winding order
+     * @param vertex1 second vertex in winding order
+     * @param vertex2 third vertex in winding order
+     * @param sideVisible face visibility
+     * @param textureIndex texture index passed to the render patch factory
+     */
     public MeshTriangle(MeshVertex vertex0, MeshVertex vertex1, MeshVertex vertex2, SideVisible sideVisible, int textureIndex) {
         if (vertex0 == null || vertex1 == null || vertex2 == null || sideVisible == null) {
             throw new IllegalArgumentException("Triangle vertices and visibility must be provided");

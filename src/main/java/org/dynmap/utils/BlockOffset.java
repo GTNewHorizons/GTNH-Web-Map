@@ -1,13 +1,24 @@
 package org.dynmap.utils;
 
 /**
- * Integer offset of a block from a model origin.
+ * Integer block-space offset from a {@link TriangleMesh} model origin.
+ *
+ * Offsets key the block-relative patch arrays produced by mesh export.
+ * They do not represent world coordinates until the caller places the model
+ * at a world position.
  */
 public final class BlockOffset {
     private final int x;
     private final int y;
     private final int z;
 
+    /**
+     * Create an offset in block units.
+     *
+     * @param x X-axis block offset
+     * @param y Y-axis block offset
+     * @param z Z-axis block offset
+     */
     public BlockOffset(int x, int y, int z) {
         this.x = x;
         this.y = y;

@@ -1,7 +1,11 @@
 package org.dynmap.utils;
 
 /**
- * A mesh vertex with its texture coordinates.
+ * A mesh vertex in model-space coordinates with texture coordinates.
+ *
+ * Position values are measured in block units relative to the containing
+ * {@link TriangleMesh} model origin. Texture values are retained when export
+ * uses explicit texture coordinates.
  */
 public final class MeshVertex {
     private double x;
@@ -10,6 +14,15 @@ public final class MeshVertex {
     private final double textureU;
     private final double textureV;
 
+    /**
+     * Create a model-space vertex.
+     *
+     * @param x X-axis position in block units
+     * @param y Y-axis position in block units
+     * @param z Z-axis position in block units
+     * @param textureU texture U coordinate
+     * @param textureV texture V coordinate
+     */
     public MeshVertex(double x, double y, double z, double textureU, double textureV) {
         this.x = x;
         this.y = y;

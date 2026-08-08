@@ -13,9 +13,14 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 /**
  * Mutable collection of textured triangles in model-space coordinates.
  *
- * Transformations are applied in call order and do not partition geometry
- * into blocks. Block-relative {@code RenderPatch} export is performed
- * separately.
+ * Coordinates are measured in block units relative to this mesh's model
+ * origin and may extend beyond one block. The mesh accepts triangles only;
+ * callers must triangulate other face types before adding them.
+ *
+ * Transformations are applied in call order around the model origin and
+ * mutate this mesh without partitioning its geometry. Use {@link #copy()} or
+ * {@link #clone()} to save an independent transformed state. Only export
+ * methods split geometry into block-relative {@code RenderPatch} arrays.
  */
 public final class TriangleMesh {
     private final List<MeshTriangle> triangles = new ArrayList<MeshTriangle>();
@@ -104,8 +109,9 @@ public final class TriangleMesh {
      * block-sized pieces. The mesh itself is not modified.
      *
      * @param patchFactory factory used to create render patches
-     * @param autoTextureCoordinates true to generate texture coordinates from
-     *        each patch's block-local position
+     * @param autoTextureCoordinates true to derive texture coordinates from
+     *        each generated patch's block-local position; false to preserve
+     *        interpolated {@link MeshVertex} texture coordinates
      * @return patches grouped by their block offset
      */
     public Map<BlockOffset, RenderPatch[]> exportFullModelToRenderPatches(RenderPatchFactory patchFactory,
@@ -136,8 +142,9 @@ public final class TriangleMesh {
      *
      * @param block block offset to export
      * @param patchFactory factory used to create render patches
-     * @param autoTextureCoordinates true to generate texture coordinates from
-     *        each patch's block-local position
+     * @param autoTextureCoordinates true to derive texture coordinates from
+     *        each generated patch's block-local position; false to preserve
+     *        interpolated {@link MeshVertex} texture coordinates
      * @return block-relative patches, or an empty array when the mesh does not
      *         intersect the requested block
      */
