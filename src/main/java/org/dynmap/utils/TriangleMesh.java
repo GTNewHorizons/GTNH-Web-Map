@@ -106,7 +106,7 @@ public final class TriangleMesh {
      * @param patchFactory factory used to create render patches
      * @return patches grouped by their block offset
      */
-    public Map<BlockOffset, RenderPatch[]> exportToRenderPatches(RenderPatchFactory patchFactory) {
+    public Map<BlockOffset, RenderPatch[]> exportFullModelToRenderPatches(RenderPatchFactory patchFactory) {
         if (patchFactory == null) {
             throw new IllegalArgumentException("Patch factory must be provided");
         }
@@ -128,15 +128,15 @@ public final class TriangleMesh {
      * Convert only the part of this mesh contained by one block into render
      * patches.
      *
-     * <p>The mesh itself is not modified. This method avoids splitting or
-     * creating patches for blocks other than the requested offset.</p>
+     * The mesh itself is not modified. This method avoids splitting or
+     * creating patches for blocks other than the requested offset.
      *
      * @param block block offset to export
      * @param patchFactory factory used to create render patches
      * @return block-relative patches, or an empty array when the mesh does not
      *         intersect the requested block
      */
-    public RenderPatch[] exportBlockToRenderPatches(BlockOffset block, RenderPatchFactory patchFactory) {
+    public RenderPatch[] exportSingleBlockSpaceToRenderPatches(BlockOffset block, RenderPatchFactory patchFactory) {
         if (block == null) {
             throw new IllegalArgumentException("Block offset must be provided");
         }
