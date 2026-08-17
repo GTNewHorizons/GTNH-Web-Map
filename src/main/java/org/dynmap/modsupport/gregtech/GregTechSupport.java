@@ -2,9 +2,10 @@ package org.dynmap.modsupport.gregtech;
 
 import com.ruling_0.materiallib.api.Material;
 import com.ruling_0.materiallib.api.MaterialLibAPI;
+import com.ruling_0.materiallib.api.StandardProperties;
+import com.ruling_0.materiallib.api.TextureSet;
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.GregTechAPI;
-import gregtech.api.enums.TextureSet;
 import gregtech.api.enums.Textures;
 import gregtech.api.enums.materials.LegacyMaterialIDIndex;
 import gregtech.api.interfaces.ITexture;
@@ -263,8 +264,8 @@ public class GregTechSupport {
     }
 
     private static String iconSetName(Material material){
-        TextureSet iconSet = MaterialUtils.iconSet(material);
-        return iconSet == null ? null : iconSet.mSetName;
+        TextureSet textureSet = material.getProperty(StandardProperties.TEXTURE_SET);
+        return textureSet == null ? null : textureSet.getName();
     }
 
     private static String colorHex(Material material){
