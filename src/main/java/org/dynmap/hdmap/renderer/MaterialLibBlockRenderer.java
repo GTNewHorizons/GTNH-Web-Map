@@ -46,7 +46,7 @@ public class MaterialLibBlockRenderer extends CustomRenderer {
     }
 
     /// Render data drawing the material's tile, or the block's own texture map where the renderdata declared no
-    /// art for this shape. A lookup failure is cached like any other outcome, so it is reported once per index.
+    /// art for this shape.
     private CustomRendererData buildRenderData(int materialIndex) {
         MaterialLibSupport.MaterialArt art;
 

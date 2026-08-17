@@ -308,7 +308,6 @@ public class GregTechSupport {
                     dumpMaterial(writerMaterials, mat);
                 }
 
-                // Keyed by legacy sub id, so the dump spans the whole id space -- empty slots included.
                 for (int i = 0; i < materialEntries.length; i++) {
                     Material mat = LegacyMaterialIDIndex.get(i);
                     writerMaterials2.write("idx=" + i);

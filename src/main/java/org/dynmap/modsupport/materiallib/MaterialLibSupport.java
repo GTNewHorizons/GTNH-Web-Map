@@ -14,16 +14,15 @@ import java.util.Locale;
 import java.util.Map;
 
 /// The art tables declared by `materiallib-texture.txt`, resolved against the live MaterialLib registry.
-/// A MaterialLib block carries a material index as its metadata, so the tile and tint one of its blocks draws
-/// are only known once that index is mapped back to a material -- the renderdata therefore names shapes and
-/// texture sets, never indices.
+/// A MaterialLib block carries a material index as its metadata, so its tile and tint are only known once that
+/// index maps back to a material. The renderdata therefore names shapes and texture sets, never indices.
 ///
 /// Tile choice follows MaterialLib's own icon binding: a shape's per-material art, then the material's texture
 /// set, then its fallback sets, then the shape's fallback tile. Tint follows a plain block shape's:
 /// [StandardProperties#BLOCK_TINT] where set, [StandardProperties#TINT] otherwise.
 ///
-/// This class references MaterialLib and GregTech classes, so nothing outside the renderdata file -- which stops
-/// at its `modname:materiallib` gate when MaterialLib is absent -- may reach it.
+/// This class references MaterialLib and GregTech classes, so nothing outside the renderdata file may reach it.
+/// That file stops at its `modname:materiallib` gate when MaterialLib is absent.
 public class MaterialLibSupport {
 
     public static final MaterialLibSupport INSTANCE = new MaterialLibSupport();
