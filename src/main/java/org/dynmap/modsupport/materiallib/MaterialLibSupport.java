@@ -13,16 +13,16 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-/// The art tables declared by `materiallib-texture.txt`, resolved against the live MaterialLib registry.
-/// A MaterialLib block carries a material index as its metadata, so its tile and tint are only known once that
-/// index maps back to a material. The renderdata therefore names shapes and texture sets, never indices.
+/// The art tables declared by `materiallib-texture.txt`, keyed by shape and texture set and resolved against
+/// the live MaterialLib registry. A MaterialLib block carries a material index as its metadata, so its tile
+/// and tint are only known once that index maps back to a material.
 ///
-/// Tile choice follows MaterialLib's own icon binding: a shape's per-material art, then the material's texture
-/// set, then its fallback sets, then the shape's fallback tile. Tint follows a plain block shape's:
-/// [StandardProperties#BLOCK_TINT] where set, [StandardProperties#TINT] otherwise.
+/// Tile choice follows MaterialLib's icon binding: a shape's per-material art, then the material's texture set,
+/// then its fallback sets, then the shape's fallback tile. Tint comes from [StandardProperties#BLOCK_TINT]
+/// where set and [StandardProperties#TINT] otherwise.
 ///
-/// This class references MaterialLib and GregTech classes, so nothing outside the renderdata file may reach it.
-/// That file stops at its `modname:materiallib` gate when MaterialLib is absent.
+/// Only the renderdata file may reach this class, which touches MaterialLib and GregTech types directly. That
+/// file stops at its `modname:materiallib` gate when MaterialLib is absent.
 public class MaterialLibSupport {
 
     public static final MaterialLibSupport INSTANCE = new MaterialLibSupport();
@@ -128,8 +128,8 @@ public class MaterialLibSupport {
         return rgb == 0xFFFFFF ? null : new SimpleColorMultiplier(rgb);
     }
 
-    /// The tile a material draws on one shape, with the multiplier tinting it -- null where the material's tint
-    /// leaves the art untouched.
+    /// The tile a material draws on one shape, and the multiplier tinting it. The multiplier is null for an
+    /// untinted material.
     public static class MaterialArt {
         public final int tile;
         public final SimpleColorMultiplier multiplier;
