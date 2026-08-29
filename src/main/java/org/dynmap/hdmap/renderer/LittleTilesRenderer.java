@@ -1,5 +1,6 @@
 package org.dynmap.hdmap.renderer;
 
+import org.dynmap.Log;
 import org.dynmap.hdmap.TexturePack;
 import org.dynmap.modsupport.GWM_Util;
 import org.dynmap.modsupport.SimpleColorMultiplier;
@@ -9,13 +10,56 @@ import org.dynmap.renderer.CustomRendererData;
 import org.dynmap.renderer.CustomTextureMapper;
 import org.dynmap.renderer.MapDataContext;
 import org.dynmap.renderer.RenderPatch;
+import org.dynmap.renderer.RenderPatchFactory;
+import org.dynmap.utils.BlockOffset;
+import org.dynmap.utils.TriangleMesh;
+import org.dynmap.utils.objloader.ObjLoader;
 
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class LittleTilesRenderer extends CustomRenderer {
     private static final int fullBlockPatchList[] = { 0, 1, 4, 5, 2, 3 };
     static final int MaxTiles = 4096;
+    static final TriangleMesh[] meshes =  new TriangleMesh[10];
+
+    @Override
+    public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
+
+        meshes[1] = loadMesh("slope.obj");
+        //meshes[2] = loadMesh("pillar.obj");
+        meshes[3] = loadMesh("slope_concave.obj");
+        meshes[4] = loadMesh("slope_convex.obj");
+        meshes[5] = loadMesh("slope_triangle.obj");
+        meshes[6] = loadMesh("slope_triangle_corner.obj");
+        meshes[7] = loadMesh("slope_outer.obj");
+        meshes[8] = loadMesh("slope_inner.obj");
+        meshes[9] = loadMesh("slope_triangle_alternate.obj");
+
+        return super.initializeRenderer(rpf, blkid, blockdatamask, custparm);
+    }
+
+    TriangleMesh loadMesh(String name){
+        try {
+            InputStreamReader reader = new InputStreamReader(LittleTilesRenderer.class.getResourceAsStream("/assets/littletiles/models/" + name));
+            Map<String, TriangleMesh> result = ObjLoader.load(reader, null);
+            TriangleMesh ret = result.get("default/default");
+
+            if(ret != null){
+                ret.translate(-.5,-.5,-.5);
+            }
+
+            return ret;
+        }
+        catch (IOException ex){
+            Log.warning("Failed to load LittleTiles model " + name);
+        }
+        return null;
+    }
 
     @Override
     public RenderPatch[] getRenderPatchList(MapDataContext mapDataCtx) {
@@ -70,22 +114,152 @@ public class LittleTilesRenderer extends CustomRenderer {
                 textures[subTilePatchIds[j]][0] = map.getIndexForFace(fullBlockPatchList[j]);
             }
 
-            int numSub = GWM_Util.objectToInt(subTile.get("bSize"),0);
-            for(int b = 0; b < numSub; b++){
-                int minX = GWM_Util.objectToInt(subTile.get("bBox"+b+"minX"),0);
-                int maxX = GWM_Util.objectToInt(subTile.get("bBox"+b+"maxX"),0);
-                int minY = GWM_Util.objectToInt(subTile.get("bBox"+b+"minY"),0);
-                int maxY = GWM_Util.objectToInt(subTile.get("bBox"+b+"maxY"),0);
-                int minZ = GWM_Util.objectToInt(subTile.get("bBox"+b+"minZ"),0);
-                int maxZ = GWM_Util.objectToInt(subTile.get("bBox"+b+"maxZ"),0);
+            int cutoutType = GWM_Util.objectToInt(subTile.get("cutoutType"), 0);
+            switch(cutoutType){
+                case 1:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                {
+                    if(meshes[cutoutType] != null){
+                        TriangleMesh mesh = meshes[cutoutType].clone();
+                        int orientation = GWM_Util.objectToInt(subTile.get("cutoutOrientation"), 0);
+                        rotateMesh(mesh, orientation);
+                        mesh.translate(.5,.5,.5);
+                        int posX =  GWM_Util.objectToInt(subTile.get("cutoutPosX"), 0);
+                        int posY =  GWM_Util.objectToInt(subTile.get("cutoutPosY"), 0);
+                        int posZ =  GWM_Util.objectToInt(subTile.get("cutoutPosZ"), 0);
+                        int sizeX =  GWM_Util.objectToInt(subTile.get("cutoutSizeX"), 0);
+                        int sizeY =  GWM_Util.objectToInt(subTile.get("cutoutSizeY"), 0);
+                        int sizeZ =  GWM_Util.objectToInt(subTile.get("cutoutSizeZ"), 0);
+                        mesh.scale(sizeX/16.0, sizeY/16.0, sizeZ/16.0);
+                        mesh.translate(posX / 16.0,posY/16.0,posZ/16.0);
+                        RenderPatch[] gwmMesh = mesh.exportSingleBlockSpaceToRenderPatches(new BlockOffset(0,0,0), mapDataCtx.getPatchFactory(), true);
+                        list.addAll(Arrays.asList(gwmMesh));
+                    }
+                    break;
+                }
 
-                CustomRenderer.addBox(mapDataCtx.getPatchFactory(), list, minX / 16.0, maxX/ 16.0, minY/ 16.0, maxY/ 16.0,minZ/ 16.0, maxZ/ 16.0, subTilePatchIds);
+                default:
+                {
+                    int numSub = GWM_Util.objectToInt(subTile.get("bSize"),0);
+                    for(int b = 0; b < numSub; b++){
+                        int minX = GWM_Util.objectToInt(subTile.get("bBox"+b+"minX"),0);
+                        int maxX = GWM_Util.objectToInt(subTile.get("bBox"+b+"maxX"),0);
+                        int minY = GWM_Util.objectToInt(subTile.get("bBox"+b+"minY"),0);
+                        int maxY = GWM_Util.objectToInt(subTile.get("bBox"+b+"maxY"),0);
+                        int minZ = GWM_Util.objectToInt(subTile.get("bBox"+b+"minZ"),0);
+                        int maxZ = GWM_Util.objectToInt(subTile.get("bBox"+b+"maxZ"),0);
+
+                        CustomRenderer.addBox(mapDataCtx.getPatchFactory(), list, minX / 16.0, maxX/ 16.0, minY/ 16.0, maxY/ 16.0,minZ/ 16.0, maxZ/ 16.0, subTilePatchIds);
+                    }
+                    break;
+                }
             }
-
         }
         RenderPatch[] model = list.toArray(new RenderPatch[list.size()]);
 
         return new CustomData(model, textures, multipliers);
+    }
+
+    void rotateMesh(TriangleMesh mesh, int orientation){
+        if(orientation >= 24){
+            mesh.scale(-1,1,1);
+        }
+        switch(orientation % 24){
+            case 1:
+                mesh.rotateZ(270);
+                break;
+            case 2:
+                mesh.rotateZ(180);
+                break;
+            case 3:
+                mesh.rotateZ(90);
+                break;
+            case 4:
+                mesh.rotateY(270);
+                break;
+            case 5:
+                mesh.rotateZ(270);
+                mesh.rotateY(270);
+                break;
+            case 6:
+                mesh.rotateZ(180);
+                mesh.rotateY(270);
+                break;
+            case 7:
+                mesh.rotateZ(90);
+                mesh.rotateY(270);
+                break;
+            case 8:
+                mesh.rotateY(180);
+                break;
+            case 9:
+                mesh.rotateZ(270);
+                mesh.rotateY(180);
+                break;
+            case 10:
+                mesh.rotateZ(180);
+                mesh.rotateY(180);
+                break;
+            case 11:
+                mesh.rotateZ(90);
+                mesh.rotateY(180);
+                break;
+            case 12:
+                mesh.rotateY(90);
+                break;
+            case 13:
+                mesh.rotateZ(270);
+                mesh.rotateY(90);
+                break;
+            case 14:
+                mesh.rotateZ(180);
+                mesh.rotateY(90);
+                break;
+            case 15:
+                mesh.rotateZ(90);
+                mesh.rotateY(90);
+                break;
+            case 16:
+                mesh.rotateX(270);
+                break;
+            case 17:
+                mesh.rotateZ(270);
+                mesh.rotateX(270);
+                break;
+            case 18:
+                mesh.rotateZ(180);
+                mesh.rotateX(270);
+                break;
+            case 19:
+                mesh.rotateZ(90);
+                mesh.rotateX(270);
+                break;
+            case 20:
+                mesh.rotateY(180);
+                mesh.rotateX(270);
+                break;
+            case 21:
+                mesh.rotateZ(270);
+                mesh.rotateY(180);
+                mesh.rotateX(270);
+                break;
+            case 22:
+                mesh.rotateZ(180);
+                mesh.rotateY(180);
+                mesh.rotateX(270);
+                break;
+            case 23:
+                mesh.rotateZ(90);
+                mesh.rotateY(180);
+                mesh.rotateX(270);
+                break;
+        }
     }
 
     static String[] nbtFieldsNeeded = null;
