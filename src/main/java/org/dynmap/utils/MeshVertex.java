@@ -73,15 +73,66 @@ public final class MeshVertex {
         y = newY;
     }
 
+    void rotateX90() {
+        double oldY = y;
+        y = z;
+        z = -oldY;
+    }
+
+    void rotateX180() {
+        y = -y;
+        z = -z;
+    }
+
+    void rotateX270() {
+        double oldY = y;
+        y = -z;
+        z = oldY;
+    }
+
     void rotateY(double sine, double cosine) {
         double newX = x * cosine - z * sine;
         z = x * sine + z * cosine;
         x = newX;
     }
 
+    void rotateY90() {
+        double oldX = x;
+        x = -z;
+        z = oldX;
+    }
+
+    void rotateY180() {
+        x = -x;
+        z = -z;
+    }
+
+    void rotateY270() {
+        double oldX = x;
+        x = z;
+        z = -oldX;
+    }
+
     void rotateZ(double sine, double cosine) {
         double newX = y * sine + x * cosine;
         y = y * cosine - x * sine;
         x = newX;
+    }
+
+    void rotateZ90() {
+        double oldX = x;
+        x = y;
+        y = -oldX;
+    }
+
+    void rotateZ180() {
+        x = -x;
+        y = -y;
+    }
+
+    void rotateZ270() {
+        double oldX = x;
+        x = -y;
+        y = oldX;
     }
 }

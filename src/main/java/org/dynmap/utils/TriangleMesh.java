@@ -78,8 +78,28 @@ public final class TriangleMesh {
      * @param degrees rotation in degrees
      * @return this mesh
      */
-    public TriangleMesh rotateX(double degrees) {
-        return rotateX(getSine(degrees), getCosine(degrees));
+    public TriangleMesh rotateX(int degrees) {
+        switch (normalizeDegrees(degrees)) {
+            case 0:
+                return this;
+            case 90:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateX90();
+                }
+                return this;
+            case 180:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateX180();
+                }
+                return this;
+            case 270:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateX270();
+                }
+                return this;
+            default:
+                return rotateX(Math.sin(Math.toRadians(degrees)), Math.cos(Math.toRadians(degrees)));
+        }
     }
 
     /**
@@ -88,8 +108,28 @@ public final class TriangleMesh {
      * @param degrees rotation in degrees
      * @return this mesh
      */
-    public TriangleMesh rotateY(double degrees) {
-        return rotateY(getSine(degrees), getCosine(degrees));
+    public TriangleMesh rotateY(int degrees) {
+        switch (normalizeDegrees(degrees)) {
+            case 0:
+                return this;
+            case 90:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateY90();
+                }
+                return this;
+            case 180:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateY180();
+                }
+                return this;
+            case 270:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateY270();
+                }
+                return this;
+            default:
+                return rotateY(Math.sin(Math.toRadians(degrees)), Math.cos(Math.toRadians(degrees)));
+        }
     }
 
     /**
@@ -98,8 +138,28 @@ public final class TriangleMesh {
      * @param degrees rotation in degrees
      * @return this mesh
      */
-    public TriangleMesh rotateZ(double degrees) {
-        return rotateZ(getSine(degrees), getCosine(degrees));
+    public TriangleMesh rotateZ(int degrees) {
+        switch (normalizeDegrees(degrees)) {
+            case 0:
+                return this;
+            case 90:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateZ90();
+                }
+                return this;
+            case 180:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateZ180();
+                }
+                return this;
+            case 270:
+                for (MeshTriangle triangle : triangles) {
+                    triangle.rotateZ270();
+                }
+                return this;
+            default:
+                return rotateZ(Math.sin(Math.toRadians(degrees)), Math.cos(Math.toRadians(degrees)));
+        }
     }
 
     /**
@@ -476,35 +536,9 @@ public final class TriangleMesh {
         return !Double.isInfinite(value) && !Double.isNaN(value);
     }
 
-    private static double getSine(double degrees) {
-        double normalized = degrees % 360.0;
-        if (normalized == 0.0 || normalized == -0.0) {
-            return 0.0;
-        }
-        if (normalized == 90.0 || normalized == -270.0) {
-            return 1.0;
-        }
-        if (normalized == -90.0 || normalized == 270.0) {
-            return -1.0;
-        }
-        if (normalized == 180.0 || normalized == -180.0) {
-            return 0.0;
-        }
-        return Math.sin(Math.toRadians(degrees));
-    }
-
-    private static double getCosine(double degrees) {
-        double normalized = degrees % 360.0;
-        if (normalized == 0.0 || normalized == -0.0) {
-            return 1.0;
-        }
-        if (normalized == 90.0 || normalized == -90.0 || normalized == 270.0 || normalized == -270.0) {
-            return 0.0;
-        }
-        if (normalized == 180.0 || normalized == -180.0) {
-            return -1.0;
-        }
-        return Math.cos(Math.toRadians(degrees));
+    private static int normalizeDegrees(int degrees) {
+        int normalized = degrees % 360;
+        return normalized < 0 ? normalized + 360 : normalized;
     }
 
     private static final class BlockRange {

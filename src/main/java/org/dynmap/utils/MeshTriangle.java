@@ -78,15 +78,69 @@ public final class MeshTriangle {
         vertex2.rotateX(sine, cosine);
     }
 
+    void rotateX90() {
+        vertex0.rotateX90();
+        vertex1.rotateX90();
+        vertex2.rotateX90();
+    }
+
+    void rotateX180() {
+        vertex0.rotateX180();
+        vertex1.rotateX180();
+        vertex2.rotateX180();
+    }
+
+    void rotateX270() {
+        vertex0.rotateX270();
+        vertex1.rotateX270();
+        vertex2.rotateX270();
+    }
+
     void rotateY(double sine, double cosine) {
         vertex0.rotateY(sine, cosine);
         vertex1.rotateY(sine, cosine);
         vertex2.rotateY(sine, cosine);
     }
 
+    void rotateY90() {
+        vertex0.rotateY90();
+        vertex1.rotateY90();
+        vertex2.rotateY90();
+    }
+
+    void rotateY180() {
+        vertex0.rotateY180();
+        vertex1.rotateY180();
+        vertex2.rotateY180();
+    }
+
+    void rotateY270() {
+        vertex0.rotateY270();
+        vertex1.rotateY270();
+        vertex2.rotateY270();
+    }
+
     void rotateZ(double sine, double cosine) {
         vertex0.rotateZ(sine, cosine);
         vertex1.rotateZ(sine, cosine);
         vertex2.rotateZ(sine, cosine);
+    }
+
+    void rotateZ90() {
+        vertex0.rotateZ90();
+        vertex1.rotateZ90();
+        vertex2.rotateZ90();
+    }
+
+    void rotateZ180() {
+        vertex0.rotateZ180();
+        vertex1.rotateZ180();
+        vertex2.rotateZ180();
+    }
+
+    void rotateZ270() {
+        vertex0.rotateZ270();
+        vertex1.rotateZ270();
+        vertex2.rotateZ270();
     }
 }
