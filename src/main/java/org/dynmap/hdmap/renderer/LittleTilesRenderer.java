@@ -25,7 +25,7 @@ import java.util.Map;
 public class LittleTilesRenderer extends CustomRenderer {
     private static final int fullBlockPatchList[] = { 0, 1, 4, 5, 2, 3 };
     static final int MaxTiles = 4096;
-    static final TriangleMesh[] meshes =  new TriangleMesh[10];
+    static final TriangleMesh[][] meshes =  new TriangleMesh[10][];
 
     @Override
     public boolean initializeRenderer(RenderPatchFactory rpf, int blkid, int blockdatamask, Map<String, String> custparm) {
@@ -43,17 +43,26 @@ public class LittleTilesRenderer extends CustomRenderer {
         return super.initializeRenderer(rpf, blkid, blockdatamask, custparm);
     }
 
-    TriangleMesh loadMesh(String name){
+    TriangleMesh[] loadMesh(String name){
         try {
             InputStreamReader reader = new InputStreamReader(LittleTilesRenderer.class.getResourceAsStream("/assets/littletiles/models/" + name));
             Map<String, TriangleMesh> result = ObjLoader.load(reader, null);
-            TriangleMesh ret = result.get("default/default");
+            TriangleMesh base = result.get("default/default");
 
-            if(ret != null){
-                ret.translate(-.5,-.5,-.5);
+            if(base != null){
+                TriangleMesh[] ret = new TriangleMesh[48];
+                ret[0] = base.clone();
+                base.translate(-.5, -.5, -.5);
+                for(int i = 1; i < 48; i++){
+                    TriangleMesh tmp = base.clone();
+                    rotateMesh(tmp, i);
+                    tmp.translate(.5,.5,.5);
+                    ret[i] = tmp;
+                }
+                return ret;
             }
 
-            return ret;
+            return null;
         }
         catch (IOException ex){
             Log.warning("Failed to load LittleTiles model " + name);
@@ -125,11 +134,9 @@ public class LittleTilesRenderer extends CustomRenderer {
                 case 8:
                 case 9:
                 {
-                    if(meshes[cutoutType] != null){
-                        TriangleMesh mesh = meshes[cutoutType].clone();
-                        int orientation = GWM_Util.objectToInt(subTile.get("cutoutOrientation"), 0);
-                        rotateMesh(mesh, orientation);
-                        mesh.translate(.5,.5,.5);
+                    int orientation = GWM_Util.objectToInt(subTile.get("cutoutOrientation"), 0);
+                    if(meshes[cutoutType] != null && meshes[cutoutType][orientation] != null){
+                        TriangleMesh mesh = meshes[cutoutType][orientation].clone();
                         int posX =  GWM_Util.objectToInt(subTile.get("cutoutPosX"), 0);
                         int posY =  GWM_Util.objectToInt(subTile.get("cutoutPosY"), 0);
                         int posZ =  GWM_Util.objectToInt(subTile.get("cutoutPosZ"), 0);
