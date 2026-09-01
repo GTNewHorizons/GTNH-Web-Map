@@ -143,8 +143,11 @@ public class LittleTilesRenderer extends CustomRenderer {
                         int sizeX =  GWM_Util.objectToInt(subTile.get("cutoutSizeX"), 0);
                         int sizeY =  GWM_Util.objectToInt(subTile.get("cutoutSizeY"), 0);
                         int sizeZ =  GWM_Util.objectToInt(subTile.get("cutoutSizeZ"), 0);
+                        int cVecX = GWM_Util.objectToInt(subTile.get("cVecx"), 0);
+                        int cVecY = GWM_Util.objectToInt(subTile.get("cVecy"), 0);
+                        int cVecZ = GWM_Util.objectToInt(subTile.get("cVecz"), 0);
                         mesh.scale(sizeX/16.0, sizeY/16.0, sizeZ/16.0);
-                        mesh.translate(posX / 16.0,posY/16.0,posZ/16.0);
+                        mesh.translate((posX+cVecX) / 16.0,(posY+cVecY)/16.0,(posZ+cVecZ)/16.0);
                         RenderPatch[] gwmMesh = mesh.exportSingleBlockSpaceToRenderPatches(new BlockOffset(0,0,0), mapDataCtx.getPatchFactory(), true);
                         list.addAll(Arrays.asList(gwmMesh));
                     }
