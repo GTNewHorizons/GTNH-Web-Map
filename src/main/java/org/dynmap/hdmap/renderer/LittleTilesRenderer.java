@@ -91,17 +91,17 @@ public class LittleTilesRenderer extends CustomRenderer {
 
             TexturePack.HDTextureMap map = TexturePack.HDTextureMap.getMap(blkid, meta, 0);
 
-            int col = map.getColorMult();
-            int colFromBlock = GWM_Util.objectToInt(subTile.get("color"), -1);
+            int colFromImitatedBlock = map.getColorMult();
+            int colFromTile = GWM_Util.objectToInt(subTile.get("color"), -1);
 
-            if((col & 0xFFFFFF) != 0xFFFFFF){
-                if((colFromBlock & 0xFFFFFF) != 0xFFFFFF){
-                    int ra = (col & 0xFF0000) >> 16;
-                    int rb = (colFromBlock & 0xFF0000) >> 16;
-                    int ga = (col & 0xFF00) >> 8;
-                    int gb = (colFromBlock & 0xFF00) >> 8;
-                    int ba = (col & 0xFF);
-                    int bb = (colFromBlock & 0xFF);
+            if((colFromImitatedBlock & 0xFFFFFF) != 0xFFFFFF && colFromImitatedBlock != 0){
+                if((colFromTile & 0xFFFFFF) != 0xFFFFFF){
+                    int ra = (colFromImitatedBlock & 0xFF0000) >> 16;
+                    int rb = (colFromTile & 0xFF0000) >> 16;
+                    int ga = (colFromImitatedBlock & 0xFF00) >> 8;
+                    int gb = (colFromTile & 0xFF00) >> 8;
+                    int ba = (colFromImitatedBlock & 0xFF);
+                    int bb = (colFromTile & 0xFF);
 
                     int combR = (ra*rb) >> 8;
                     int combG = (ga*gb) >> 8;
@@ -110,17 +110,36 @@ public class LittleTilesRenderer extends CustomRenderer {
                     multipliers[i] = new SimpleColorMultiplier((combR << 16) | (combG << 8) | combB);
                 }
                 else {
-                    multipliers[i] = new SimpleColorMultiplier(col);
+                    multipliers[i] = new SimpleColorMultiplier(colFromImitatedBlock);
                 }
             }
-            else if((colFromBlock & 0xFFFFFF) != 0xFFFFFF){
-                multipliers[i] = new SimpleColorMultiplier(colFromBlock);
+            else if((colFromTile & 0xFFFFFF) != 0xFFFFFF){
+                multipliers[i] = new SimpleColorMultiplier(colFromTile);
             }
 
             int[] subTilePatchIds = new int[6];
             for(int j = 0; j < 6; j++){
                 subTilePatchIds[j] = fullBlockPatchList[j] + 6*i;
-                textures[subTilePatchIds[j]][0] = map.getIndexForFace(fullBlockPatchList[j]);
+                int texForFace = map.getIndexForFace(fullBlockPatchList[j]);
+
+                if(multipliers[i] != null){
+                    int colorMod = texForFace / TexturePack.COLORMOD_MULT_INTERNAL;
+                    switch(colorMod){
+                        case 0:
+                            colorMod =  TexturePack.COLORMOD_MULTTONED;
+                            break;
+                        case TexturePack.COLORMOD_CLEARINSIDE:
+                            colorMod = TexturePack.COLORMOD_MULTTONED_CLEARINSIDE;
+                            break;
+                        case TexturePack.COLORMOD_IGNORE_LIGHT:
+                            colorMod = TexturePack.COLORMOD_IGNORE_LIGHT_MULTTONED;
+                            break;
+                    }
+
+                    texForFace = colorMod * TexturePack.COLORMOD_MULT_INTERNAL + (texForFace % TexturePack.COLORMOD_MULT_INTERNAL);
+                }
+
+                textures[subTilePatchIds[j]][0] = texForFace;
             }
 
             int cutoutType = GWM_Util.objectToInt(subTile.get("cutoutType"), 0);
