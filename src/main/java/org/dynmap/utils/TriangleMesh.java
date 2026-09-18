@@ -19,8 +19,10 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
  *
  * Transformations are applied in call order around the model origin and
  * mutate this mesh without partitioning its geometry. Use {@link #copy()} or
- * {@link #clone()} to save an independent transformed state. Only export
- * methods split geometry into block-relative {@code RenderPatch} arrays.
+ * {@link #clone()} to save an independent transformed state. Export methods
+ * split geometry into block-relative {@code RenderPatch} arrays, and
+ * {@link #clipToBox} splits geometry against an arbitrary box; neither
+ * mutates this mesh.
  */
 public final class TriangleMesh {
     private final List<MeshTriangle> triangles = new ArrayList<MeshTriangle>();
@@ -223,6 +225,49 @@ public final class TriangleMesh {
         }
         List<RenderPatch> patches = patchesByBlock.get(block);
         return patches == null ? new RenderPatch[0] : patches.toArray(new RenderPatch[patches.size()]);
+    }
+
+    /**
+     * Create a new mesh containing only the portion of this mesh's geometry
+     * that lies within the given axis-aligned box, expressed in this mesh's
+     * model-space coordinates.
+     *
+     * Triangles that cross a box boundary are clipped and re-triangulated so
+     * that no geometry outside the box remains in the result. This mesh is
+     * not modified; unlike {@link #translate}, {@link #scale} and the
+     * {@code rotate} methods, this is not a mutating transform, so use the
+     * returned mesh.
+     *
+     * @return new mesh containing the clipped geometry
+     */
+    public TriangleMesh clipToBox(double minX, double maxX, double minY, double maxY, double minZ, double maxZ) {
+        TriangleMesh result = new TriangleMesh();
+        for (MeshTriangle triangle : triangles) {
+            List<MeshVertex> vertices = new ArrayList<MeshVertex>(3);
+            vertices.add(triangle.getVertex0());
+            vertices.add(triangle.getVertex1());
+            vertices.add(triangle.getVertex2());
+            vertices = clipAgainstPlane(vertices, 0, minX, true);
+            vertices = clipAgainstPlane(vertices, 0, maxX, false);
+            vertices = clipAgainstPlane(vertices, 1, minY, true);
+            vertices = clipAgainstPlane(vertices, 1, maxY, false);
+            vertices = clipAgainstPlane(vertices, 2, minZ, true);
+            vertices = clipAgainstPlane(vertices, 2, maxZ, false);
+            if (!hasArea(vertices)) {
+                continue;
+            }
+            for (int vertexIndex = 1; vertexIndex < vertices.size() - 1; vertexIndex++) {
+                MeshVertex vertex0 = vertices.get(0);
+                MeshVertex vertex1 = vertices.get(vertexIndex);
+                MeshVertex vertex2 = vertices.get(vertexIndex + 1);
+                if (!hasArea(vertex0, vertex1, vertex2)) {
+                    continue;
+                }
+                result.triangles.add(new MeshTriangle(vertex0, vertex1, vertex2, triangle.getSideVisible(),
+                        triangle.getTextureIndex()));
+            }
+        }
+        return result;
     }
 
     /**

@@ -148,7 +148,17 @@ public class LittleTilesRenderer extends CustomRenderer {
                         int cVecZ = GWM_Util.objectToInt(subTile.get("cVecz"), 0);
                         mesh.scale(sizeX/16.0, sizeY/16.0, sizeZ/16.0);
                         mesh.translate((posX+cVecX) / 16.0,(posY+cVecY)/16.0,(posZ+cVecZ)/16.0);
-                        RenderPatch[] gwmMesh = mesh.exportSingleBlockSpaceToRenderPatches(new BlockOffset(0,0,0), mapDataCtx.getPatchFactory(), true);
+
+                        int boxMinX = GWM_Util.objectToInt(subTile.get("bBox0minX"), 0);
+                        int boxMaxX = GWM_Util.objectToInt(subTile.get("bBox0maxX"), 16);
+                        int boxMinY = GWM_Util.objectToInt(subTile.get("bBox0minY"), 0);
+                        int boxMaxY = GWM_Util.objectToInt(subTile.get("bBox0maxY"), 16);
+                        int boxMinZ = GWM_Util.objectToInt(subTile.get("bBox0minZ"), 0);
+                        int boxMaxZ = GWM_Util.objectToInt(subTile.get("bBox0maxZ"), 16);
+
+                        TriangleMesh clippedMesh = mesh.clipToBox(boxMinX / 16.0, boxMaxX / 16.0,
+                                boxMinY / 16.0, boxMaxY / 16.0, boxMinZ / 16.0, boxMaxZ / 16.0);
+                        RenderPatch[] gwmMesh = clippedMesh.exportSingleBlockSpaceToRenderPatches(new BlockOffset(0,0,0), mapDataCtx.getPatchFactory(), true);
                         list.addAll(Arrays.asList(gwmMesh));
                     }
                     break;
