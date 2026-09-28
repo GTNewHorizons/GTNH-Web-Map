@@ -66,7 +66,7 @@ dependencies {
     shadowImplementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20180219.1") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:GT5-Unofficial:5.99.99-mu17:dev"){
+    compileOnly("com.github.GTNewHorizons:GT5-Unofficial:5.99.99-mu18:dev"){
         transitive = false
     }
     compileOnly("com.ruling_0:MaterialLib:0.11.0-mu:dev"){
@@ -90,7 +90,7 @@ dependencies {
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:ServerUtilities:2.3.0:dev')
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:Hodgepodge:2.7.160:dev")
 
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:GT5-Unofficial:5.99.99-mu17:dev")
+    runtimeOnlyNonPublishable("com.github.GTNewHorizons:GT5-Unofficial:5.99.99-mu18:dev")
     runtimeOnlyNonPublishable("com.ruling_0:MaterialLib:0.11.0-mu:dev")
     runtimeOnlyNonPublishable("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:Railcraft:9.17.26:dev")
