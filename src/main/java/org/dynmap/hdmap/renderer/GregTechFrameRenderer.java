@@ -17,7 +17,7 @@ public class GregTechFrameRenderer extends CustomRenderer {
     private static final int fullBlockPatchList[] = { 0, 1, 4, 5, 2, 3 };
     private static RenderPatch[] fullBlock;
 
-    static FrameRenderData[]oreRenderDataCache = new FrameRenderData[4096];
+    static FrameRenderData[]oreRenderDataCache = new FrameRenderData[65536];
 
     private int blkid;
 
