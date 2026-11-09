@@ -132,6 +132,9 @@ public class IsoHDPerspective implements HDPerspective {
         double patch_v[] = new double[HDBlockModels.getMaxPatchCount()];
         BlockStep patch_step[] = new BlockStep[HDBlockModels.getMaxPatchCount()];
         int patch_id[] = new int[HDBlockModels.getMaxPatchCount()];
+        PatchDefinition patch_def[] = new PatchDefinition[HDBlockModels.getMaxPatchCount()];
+        PatchDefinition cur_patch_def;
+        final Vector3D patch_normal = new Vector3D();
         int cur_patch = -1;
         double cur_patch_u;
         double cur_patch_v;
@@ -544,6 +547,7 @@ public class IsoHDPerspective implements HDPerspective {
                     patch_u[hitcnt] = actualU;
                     patch_v[hitcnt] = actualV;
                     patch_id[hitcnt] = pd.textureindex;
+                    patch_def[hitcnt] = pd;
                     if(det > 0) {
                         patch_step[hitcnt] = pd.step.opposite();
                     }
@@ -575,6 +579,7 @@ public class IsoHDPerspective implements HDPerspective {
                 cur_patch = patch_id[best_patch]; /* Mark this as current patch */
                 cur_patch_u = patch_u[best_patch];
                 cur_patch_v = patch_v[best_patch];
+                cur_patch_def = patch_def[best_patch];
                 laststep = patch_step[best_patch];
                 cur_patch_t = best_t;
                 /* Process the shaders */
@@ -585,6 +590,7 @@ public class IsoHDPerspective implements HDPerspective {
                     done = done && shaderdone[j];
                 }
                 cur_patch = -1;
+                cur_patch_def = null;
                 /* If all are done, we're out */
                 if(done) {
                     laststep = old_laststep;
@@ -914,6 +920,28 @@ public class IsoHDPerspective implements HDPerspective {
          */
         public double getPatchV() {
             return cur_patch_v;
+        }
+        /**
+         * Get unit normal of current patch, facing the viewer (computed on demand; null if not in a patch)
+         */
+        public Vector3D getPatchNormal() {
+            PatchDefinition pd = cur_patch_def;
+            if (pd == null) {
+                return null;
+            }
+            patch_normal.set(pd.u);
+            patch_normal.crossProduct(pd.v);
+            double len = Math.sqrt(patch_normal.innerProduct(patch_normal));
+            if (len < 1e-9) {
+                return null;
+            }
+            if (patch_normal.innerProduct(direction) > 0) {
+                len = -len;
+            }
+            patch_normal.x /= len;
+            patch_normal.y /= len;
+            patch_normal.z /= len;
+            return patch_normal;
         }
         /**
          * Light level cache

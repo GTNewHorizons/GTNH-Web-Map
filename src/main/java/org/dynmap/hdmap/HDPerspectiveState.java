@@ -96,6 +96,11 @@ public interface HDPerspectiveState {
      */
     double getPatchV();
     /**
+     * Get unit normal of current patch, facing the viewer. Computed on demand.
+     * @return normal (shared, do not retain), or null if not currently in a patch
+     */
+    org.dynmap.utils.Vector3D getPatchNormal();
+    /**
      * Light level cache
      * @param idx - index of light level (0-3)
      * @return light level
