@@ -329,7 +329,7 @@ public class HDMap extends MapType {
         ms.enumMapTiles(world, this, new MapStorageTileEnumCB() {
             @Override
             public void tileFound(MapStorageTile tile, ImageEncoding fmt) {
-                if (fmt != getImageFormat().getEncoding()) { // Wrong format?  toss it
+                if (fmt != getTileEncoding()) { // Wrong format?  toss it
                     /* Otherwise, delete tile */
                     tile.delete();
                 }

@@ -10,12 +10,36 @@ import org.dynmap.MapManager;
 import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.common.DynmapPlayer;
 import org.dynmap.hdmap.HDShader;
+import org.dynmap.hdmap.TexturePackHDShader;
 
 /**
  * Handler for export commands (/dynmapexp)
  */
 public class DynmapExpCommands {
     private HashMap<String, ExportContext> sessions = new HashMap<String, ExportContext>();
+
+    private enum ExportFormat {
+        OBJ("obj", ".zip"),
+        GLB("glb", ".glb"),
+        GLBZ("glbz", ".glbz");
+
+        private final String id;
+        private final String extension;
+
+        ExportFormat(String id, String extension) {
+            this.id = id;
+            this.extension = extension;
+        }
+
+        static ExportFormat fromArgument(String value) {
+            for (ExportFormat format : values()) {
+                if (format.id.equalsIgnoreCase(value)) {
+                    return format;
+                }
+            }
+            return null;
+        }
+    }
 
     private static class ExportContext {
         public String shader = "stdtexture";
@@ -30,6 +54,26 @@ public class DynmapExpCommands {
         public boolean groupByBlockID;
         public boolean groupByBlockIDData;
         public boolean groupByTexture;
+    }
+
+    private static class ExportRequest {
+        public final ExportFormat format;
+        public final String basename;
+
+        ExportRequest(ExportFormat format, String basename) {
+            this.format = format;
+            this.basename = basename;
+        }
+    }
+
+    private static class ExportTarget {
+        public final String basename;
+        public final File file;
+
+        ExportTarget(String basename, File file) {
+            this.basename = basename;
+            this.file = file;
+        }
     }
 
     private String getContextID(DynmapCommandSender sender) {
@@ -251,31 +295,39 @@ public class DynmapExpCommands {
             sender.sendMessage("Invalid shader - " + ctx.shader);
             return true;
         }
-        
-        String basename = "dynmapexp";
-        if (args.length > 1) {
-            basename = args[1];
+
+        ExportRequest request = parseExportRequest(args);
+        if ((request.format != ExportFormat.OBJ) && !(s instanceof TexturePackHDShader)) {
+            sender.sendMessage("Shader '" + ctx.shader + "' does not support GLB export");
+            return true;
         }
-        basename = basename.replace('/', '_');
-        basename = basename.replace('\\', '_');
-        File f = new File(core.getExportFolder(), basename + ".zip");
-        int idx = 0;
-        String finalBasename = basename;
-        while (f.exists()) {
-            idx++;
-            finalBasename = basename + "_" + idx;
-            f = new File(core.getExportFolder(), finalBasename + ".zip");
+
+        ExportTarget target = resolveExportTarget(core, request);
+        sender.sendMessage("Exporting to " + target.file.getPath());
+
+        if (request.format == ExportFormat.OBJ) {
+            OBJExport exp = new OBJExport(target.file, s, w, core, target.basename);
+            exp.setRenderBounds(ctx.xmin, ctx.ymin, ctx.zmin, ctx.xmax, ctx.ymax, ctx.zmax);
+            exp.setGroupEnabled(OBJExport.GROUP_CHUNK, ctx.groupByChunk);
+            exp.setGroupEnabled(OBJExport.GROUP_TEXTURE, ctx.groupByTexture);
+            exp.setGroupEnabled(OBJExport.GROUP_BLOCKID, ctx.groupByBlockID);
+            exp.setGroupEnabled(OBJExport.GROUP_BLOCKIDMETA, ctx.groupByBlockIDData);
+            MapManager.mapman.startOBJExport(exp, sender);
         }
-        sender.sendMessage("Exporting to " + f.getPath());
-        
-        OBJExport exp = new OBJExport(f, s, w, core, finalBasename);
-        exp.setRenderBounds(ctx.xmin, ctx.ymin, ctx.zmin, ctx.xmax, ctx.ymax, ctx.zmax);
-        exp.setGroupEnabled(OBJExport.GROUP_CHUNK, ctx.groupByChunk);
-        exp.setGroupEnabled(OBJExport.GROUP_TEXTURE, ctx.groupByTexture);
-        exp.setGroupEnabled(OBJExport.GROUP_BLOCKID, ctx.groupByBlockID);
-        exp.setGroupEnabled(OBJExport.GROUP_BLOCKIDMETA, ctx.groupByBlockIDData);
-        MapManager.mapman.startOBJExport(exp, sender);
-        
+        else {
+            final GLBExport exp = new GLBExport(target.file, (TexturePackHDShader) s, w, core, target.basename);
+            exp.setRenderBounds(ctx.xmin, ctx.ymin, ctx.zmin, ctx.xmax, ctx.ymax, ctx.zmax);
+            exp.setCullExportRegionEdges(false);
+            final DynmapCommandSender exportSender = sender;
+            final boolean gzipOutput = request.format == ExportFormat.GLBZ;
+            MapManager.mapman.startExport(new Runnable() {
+                @Override
+                public void run() {
+                    exp.processExport(exportSender, gzipOutput);
+                }
+            });
+        }
+         
         return true;
     }
     
@@ -286,10 +338,8 @@ public class DynmapExpCommands {
     
     private boolean handlePurgeExport(DynmapCommandSender sender, String[] args, ExportContext ctx, DynmapCore core) {
         if (args.length > 1) {
-            String basename = args[1];
-            basename = basename.replace('/', '_');
-            basename = basename.replace('\\', '_');
-            File f = new File(core.getExportFolder(), basename + ".zip");
+            ExportRequest request = parseExportRequest(args);
+            File f = new File(core.getExportFolder(), request.basename + request.format.extension);
             if (f.exists()) {
                 f.delete();
                 sender.sendMessage("Removed " + f.getPath());
@@ -299,6 +349,41 @@ public class DynmapExpCommands {
             }
         }
         return true;
+    }
+
+    private ExportRequest parseExportRequest(String[] args) {
+        ExportFormat format = ExportFormat.OBJ;
+        int basenameIndex = 1;
+        if (args.length > 1) {
+            ExportFormat requestedFormat = ExportFormat.fromArgument(args[1]);
+            if (requestedFormat != null) {
+                format = requestedFormat;
+                basenameIndex = 2;
+            }
+        }
+        String basename = "dynmapexp";
+        if (args.length > basenameIndex) {
+            basename = args[basenameIndex];
+        }
+        return new ExportRequest(format, sanitizeBasename(basename));
+    }
+
+    private ExportTarget resolveExportTarget(DynmapCore core, ExportRequest request) {
+        File f = new File(core.getExportFolder(), request.basename + request.format.extension);
+        int idx = 0;
+        String finalBasename = request.basename;
+        while (f.exists()) {
+            idx++;
+            finalBasename = request.basename + "_" + idx;
+            f = new File(core.getExportFolder(), finalBasename + request.format.extension);
+        }
+        return new ExportTarget(finalBasename, f);
+    }
+
+    private String sanitizeBasename(String basename) {
+        basename = basename.replace('/', '_');
+        basename = basename.replace('\\', '_');
+        return basename;
     }
     
     private String val(int v) {

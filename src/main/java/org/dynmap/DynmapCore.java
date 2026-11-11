@@ -1273,22 +1273,22 @@ public class DynmapCore implements DynmapCommonAPI {
         new CommandInfo("dmap", "worldset", "<world> extrazoomout:<N>", "Set extra zoom out levels for world <world>."),
         new CommandInfo("dmap", "maplist", "<world>", "List all maps for world <world>"),
         new CommandInfo("dmap", "mapdelete", "<world>:<map>", "Delete map <map> from world <world>."),
-        new CommandInfo("dmap", "mapadd", "<world>:<map> <attrib>:<value> <attrib>:<value>", "Create map for world <world> with name <map> using provided attributes."),
-        new CommandInfo("dmap", "mapset", "<world>:<map> <attrib>:<value> <attrib>:<value>", "Update map <map> of world <world> with new attribute values."),
+        new CommandInfo("dmap", "mapadd", "<world>:<map> [class:<fqcn>|type:<hdmap|modelmap>] <attrib>:<value> ...", "Create map for world <world> with name <map>. Defaults to HDMap if class/type is omitted."),
+        new CommandInfo("dmap", "mapset", "<world>:<map> <attrib>:<value> ...", "Update map <map> of world <world> with new attribute values. Existing map class cannot be changed."),
         new CommandInfo("dmap", "worldreset", "<world>", "Reset world <world> to default template for world type"),
         new CommandInfo("dmap", "worldreset", "<world> <templatename>", "Reset world <world> to temaplte <templatename>."),
         new CommandInfo("dmap", "disableworlds", "<world0> <world1> ...", "Disable all worlds in list."),
         new CommandInfo("dmap", "setorder", "<world0> <world1> ...", "Set the top worlds to the ones listed. Worlds not listed will be pushed down."),
         new CommandInfo("dmap", "enableonly", "<world0> <world1> ...", "Enable all worlds in list, disable the rest, and set the order of the enabled worlds to order of args."),
         new CommandInfo("dmap", "exploremode", "<world0> <world1> ...", "Disable all currently enabled worlds not in args, and mark them as enable on visit. If list is empty, overworld will remain enabled."),
-        new CommandInfo("dynmapexp", "", "Set and execute exports in OBJ format."),
-        new CommandInfo("dynmapexp", "set", "<attrib> <value> ...", "Set bounds attributes for OBJ export."),
-        new CommandInfo("dynmapexp", "reset", "Reset all bounds for OBJ export."),
+        new CommandInfo("dynmapexp", "", "Set and execute exports in OBJ, GLB, or GLBZ format."),
+        new CommandInfo("dynmapexp", "set", "<attrib> <value> ...", "Set bounds attributes for export."),
+        new CommandInfo("dynmapexp", "reset", "Reset all bounds for export."),
         new CommandInfo("dynmapexp", "pos0", "Set first corner of bounds to player's position."),
         new CommandInfo("dynmapexp", "pos1", "Set second corner of bounds to player's position."),
         new CommandInfo("dynmapexp", "radius", "<radius>", "Set bounds to radius <radius> around player's position."),
-        new CommandInfo("dynmapexp", "export", "<name>", "Export map data to <name>.zip in export path."),
-        new CommandInfo("dynmapexp", "purge", "<name>", "Purge exported map data <name>.zip from export path.")
+        new CommandInfo("dynmapexp", "export", "[obj|glb|glbz] [name]", "Export map data in the selected format (OBJ default)."),
+        new CommandInfo("dynmapexp", "purge", "[obj|glb|glbz] <name>", "Purge exported map data in the selected format (OBJ default).")
     };
 
     public void printCommandHelp(DynmapCommandSender sender, String cmd, String subcmd) {
@@ -2688,4 +2688,3 @@ public class DynmapCore implements DynmapCommonAPI {
         return defaultStorage;
     }
 }
-

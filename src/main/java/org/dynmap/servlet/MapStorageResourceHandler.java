@@ -7,6 +7,7 @@ import org.dynmap.storage.MapStorage;
 import org.dynmap.storage.MapStorageTile;
 import org.dynmap.storage.MapStorageTile.TileRead;
 import org.dynmap.utils.BufferInputStream;
+import org.dynmap.utils.BufferOutputStream;
 import org.eclipse.jetty.http.HttpStatus;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
@@ -22,6 +23,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.OutputStream;
+import java.util.zip.GZIPInputStream;
+
+import org.dynmap.MapType.ImageEncoding;
 
 public class MapStorageResourceHandler extends AbstractHandler {
 
@@ -58,6 +62,7 @@ public class MapStorageResourceHandler extends AbstractHandler {
         }
         String world = path.substring(soff, eoff);
         String uri = path.substring(eoff+1);
+        ImageEncoding requestedEncoding = getRequestedEncoding(uri);
         // If faces directory, handle faces
         if (world.equals("faces")) {
             handleFace(response, uri);
@@ -75,18 +80,18 @@ public class MapStorageResourceHandler extends AbstractHandler {
         }
         // If world not found quit
         if (w == null) {
-            response.setContentType("image/png");
-            OutputStream os = response.getOutputStream();
-            os.write(blankpng);
+            if (!writeBlankImage(response, requestedEncoding)) {
+                response.sendError(HttpStatus.NOT_FOUND_404);
+            }
             return;
         }
         MapStorage store = w.getMapStorage();    // Get storage handler
         // Get tile reference, based on URI and world
         MapStorageTile tile = store.getTile(w, uri);
         if (tile == null) {
-            response.setContentType("image/png");
-            OutputStream os = response.getOutputStream();
-            os.write(blankpng);
+            if (!writeBlankImage(response, requestedEncoding)) {
+                response.sendError(HttpStatus.NOT_FOUND_404);
+            }
             return;
         }
         // Read tile
@@ -110,20 +115,77 @@ public class MapStorageResourceHandler extends AbstractHandler {
         	return;
         }
         if (tr == null) {
-            response.setContentType("image/png");
-            response.setIntHeader("Content-Length", blankpng.length);
-            OutputStream os = response.getOutputStream();
-            os.write(blankpng);
+            if (!writeBlankImage(response, requestedEncoding)) {
+                response.sendError(HttpStatus.NOT_FOUND_404);
+            }
             return;
         }
         // Got tile, package up for response
         response.setDateHeader("Last-Modified", tr.lastModified);
-        response.setIntHeader("Content-Length", tr.image.length());
         response.setContentType(tr.format.getContentType());
+        byte[] responseBody = tr.image.buffer();
+        int responseLength = tr.image.length();
+        if (isGzipCompressed(tr)) {
+            response.setHeader("Vary", "Accept-Encoding");
+        }
+        if (isGzipCompressed(tr) && !clientAcceptsGzip(request)) {
+            BufferInputStream uncompressed = gunzip(tr.image);
+            responseBody = uncompressed.buffer();
+            responseLength = uncompressed.length();
+        } else if (isGzipCompressed(tr)) {
+            response.setHeader("Content-Encoding", "gzip");
+        }
+        response.setIntHeader("Content-Length", responseLength);
         ServletOutputStream out = response.getOutputStream();
-        out.write(tr.image.buffer(), 0, tr.image.length());
+        out.write(responseBody, 0, responseLength);
         out.flush();
 
+    }
+
+    private boolean isGzipCompressed(TileRead tr) {
+        return (tr != null) && (tr.image != null) && (tr.image.length() >= 2) && ((tr.image.buffer()[0] & 0xFF) == 0x1F)
+                && ((tr.image.buffer()[1] & 0xFF) == 0x8B);
+    }
+
+    private boolean clientAcceptsGzip(HttpServletRequest request) {
+        String acceptEncoding = request.getHeader("Accept-Encoding");
+        return (acceptEncoding != null) && acceptEncoding.toLowerCase().contains("gzip");
+    }
+
+    private BufferInputStream gunzip(BufferInputStream compressed) throws IOException {
+        GZIPInputStream gzip = new GZIPInputStream(compressed);
+        BufferOutputStream out = new BufferOutputStream();
+        byte[] buffer = new byte[8192];
+        try {
+            int len;
+            while ((len = gzip.read(buffer)) >= 0) {
+                if (len > 0) {
+                    out.write(buffer, 0, len);
+                }
+            }
+        } finally {
+            gzip.close();
+        }
+        return new BufferInputStream(out.buf, out.len);
+    }
+
+    private ImageEncoding getRequestedEncoding(String uri) {
+        int extoff = uri.lastIndexOf('.');
+        if ((extoff < 0) || (extoff == (uri.length() - 1))) {
+            return null;
+        }
+        return ImageEncoding.fromExt(uri.substring(extoff + 1));
+    }
+
+    private boolean writeBlankImage(HttpServletResponse response, ImageEncoding requestedEncoding) throws IOException {
+        if ((requestedEncoding != null) && (requestedEncoding != ImageEncoding.PNG) && (requestedEncoding != ImageEncoding.JPG) && (requestedEncoding != ImageEncoding.WEBP)) {
+            return false;
+        }
+        response.setContentType("image/png");
+        response.setIntHeader("Content-Length", blankpng.length);
+        OutputStream os = response.getOutputStream();
+        os.write(blankpng);
+        return true;
     }
 
     private void handleFace(HttpServletResponse response, String uri) throws IOException, ServletException {

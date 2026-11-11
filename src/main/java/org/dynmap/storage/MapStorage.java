@@ -194,6 +194,19 @@ public abstract class MapStorage {
         }
         return crc32.getValue();
     }
+
+    /**
+     * Calculate hashcode for encoded tile buffer
+     * @param buf - encoded tile bytes
+     * @param off - offset of start in array
+     * @param len - length of tile data
+     * @return hashcode (greater than or equals to 0)
+     */
+    public static long calculateTileHashCode(byte[] buf, int off, int len) {
+        CRC32 crc32 = new CRC32();
+        crc32.update(buf, off, len);
+        return crc32.getValue();
+    }
     
     /**
      * URI to use for loading marker data (for external web server)
