@@ -1,0 +1,11 @@
+# materiallib (mu)
+version:1.7
+# Not also gated on gregtech: a modname: line returns when an earlier renderdata file claimed that mod,
+# and gregtech-models.txt claims gregtech.
+modname:materiallib
+
+customblock:id=%block,class=org.dynmap.hdmap.renderer.MaterialLibBlockRenderer,data=*,mlshape=block
+customblock:id=%blockCasing,class=org.dynmap.hdmap.renderer.MaterialLibBlockRenderer,data=*,mlshape=blockCasing
+customblock:id=%blockCasingAdvanced,class=org.dynmap.hdmap.renderer.MaterialLibBlockRenderer,data=*,mlshape=blockCasingAdvanced
+customblock:id=%sheetmetal,class=org.dynmap.hdmap.renderer.MaterialLibBlockRenderer,data=*,mlshape=sheetmetal
+customblock:id=%frameGt,class=org.dynmap.hdmap.renderer.MaterialLibBlockRenderer,data=*,mlshape=frameGt
