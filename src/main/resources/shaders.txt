@@ -86,6 +86,13 @@ shaders:
     name: stdtexture-mcr-grid
     texturepack: standard
     grid-scale: 512
+
+  # Texture pack based shader with smooth, normal-based shading for patch (non-cube) models
+  # (default smooth-shading is false)
+  - class: org.dynmap.hdmap.TexturePackHDShader
+    name: stdtexture-smooth
+    texturepack: standard
+    smooth-shading: true
     
   # Topological map shader    
   - class: org.dynmap.hdmap.TopoHDShader

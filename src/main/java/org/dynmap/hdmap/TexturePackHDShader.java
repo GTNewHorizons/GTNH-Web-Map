@@ -17,6 +17,7 @@ import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.DynLongHashMap;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
+import org.dynmap.utils.Vector3D;
 import org.json.simple.JSONObject;
 
 public class TexturePackHDShader implements HDShader {
@@ -26,6 +27,7 @@ public class TexturePackHDShader implements HDShader {
     private boolean did_tp_load = false;
     private final boolean biome_shaded;
     private final boolean bettergrass;
+    private final boolean smooth_shading;
     private final int gridscale;
     private final DynmapCore core;
     private final BitSet hiddenids;
@@ -37,6 +39,7 @@ public class TexturePackHDShader implements HDShader {
         biome_shaded = configuration.getBoolean("biomeshaded", true);
         bettergrass = configuration.getBoolean("better-grass", MapManager.mapman.getBetterGrass());
         gridscale = configuration.getInteger("grid-scale", 0);
+        smooth_shading = configuration.getBoolean("smooth-shading", false);
         List<Object> hidden = configuration.getList("hiddenids");
         if(hidden != null) {
             hiddenids = new BitSet();
@@ -109,6 +112,7 @@ public class TexturePackHDShader implements HDShader {
         private int lastblkid;
         final boolean do_biome_shading;
         final boolean do_better_grass;
+        final boolean do_smooth_shading;
         DynLongHashMap ctm_cache;
         final int[] lightingTable;
         boolean ignoreLight;
@@ -134,6 +138,7 @@ public class TexturePackHDShader implements HDShader {
             /* Biome raw data only works on normal worlds at this point */
             do_biome_shading = biome_shaded; // && (cache.getWorld().getEnvironment() == Environment.NORMAL);
             do_better_grass = bettergrass;
+            do_smooth_shading = smooth_shading;
             if (MapManager.mapman.useBrightnessTable()) {
                 lightingTable = cache.getWorld().getBrightnessTable();
             }
@@ -196,8 +201,35 @@ public class TexturePackHDShader implements HDShader {
 
             if (c.getAlpha() > 0) {
                 if (!ignoreLight) {
+                    Vector3D normal = do_smooth_shading ? ps.getPatchNormal() : null;
+                    if (normal != null) {
+                        /* Blend per-axis shade values weighted by the surface normal */
+                        double wx = Math.abs(normal.x);
+                        double wy = Math.abs(normal.y);
+                        double wz = Math.abs(normal.z);
+                        double wsum = wx + wy + wz;
+                        boolean even = (mapiter.getY() & 0x01) == 0;
+                        int xs, ys, zs;
+                        if (this.lightingTable != null) {
+                            xs = 0x99;
+                            zs = 0xCD;
+                            if (normal.y > 0) {
+                                ys = even ? 0xF3 : 0xFF;
+                            } else {
+                                ys = 0x80;
+                            }
+                        } else {
+                            xs = 0xA0;
+                            zs = 0xFF;
+                            ys = even ? 0xD9 : 0xE6;
+                        }
+                        int v = (int) Math.round((wx * xs + wy * ys + wz * zs) / wsum);
+                        if (v < 0xFF) {
+                            c.blendColor(0xFF000000 | (v << 16) | (v << 8) | v);
+                        }
+                    }
                     /* Scale brightness depending upon face */
-                    if (this.lightingTable != null) {
+                    else if (this.lightingTable != null) {
                         switch (ps.getLastBlockStep()) {
                             case X_MINUS:
                             case X_PLUS:
