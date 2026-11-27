@@ -28,7 +28,7 @@ public class MapTypeState {
         type = mt;
         invTSPeriod = DEF_INV_PERIOD * NANOS_PER_SECOND;
         nextInvTS = System.nanoTime() + invTSPeriod;
-        zoomOutLevels = world.getExtraZoomOutLevels() + mt.getMapZoomOutLevels();
+        zoomOutLevels = mt.isZoomOutSupported() ? (world.getExtraZoomOutLevels() + mt.getMapZoomOutLevels()) : 0;
         for (int i = 0; i < zoomOutLevels; i++) {
             zoomOutInv.add(null);
             zoomOutInvAccum.add(null);

@@ -73,6 +73,267 @@
     z-index: 0;
 }
 
+.dynmap > .map.modelmap-mode .leaflet-map-pane,
+.dynmap > .map.modelmap-mode .leaflet-control-container,
+.dynmap > .map.modelmap-mode .leaflet-tile-pane,
+.dynmap > .map.modelmap-mode .leaflet-overlay-pane,
+.dynmap > .map.modelmap-mode .leaflet-shadow-pane,
+.dynmap > .map.modelmap-mode .leaflet-marker-pane,
+.dynmap > .map.modelmap-mode .leaflet-tooltip-pane,
+.dynmap > .map.modelmap-mode .leaflet-popup-pane {
+    visibility: hidden;
+}
+
+.modelmap-view {
+    position: absolute;
+    inset: 0;
+    z-index: 350;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.modelmap-view.modelmap-captured {
+    cursor: none;
+}
+
+.modelmap-view canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.modelmap-marker-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 356;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.modelmap-screen-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+    text-align: center;
+}
+
+.modelmap-screen-marker img {
+    display: block;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+}
+
+.modelmap-screen-marker-desc {
+    max-width: 240px;
+    padding: 4px 6px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: left;
+    overflow-wrap: anywhere;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.modelmap-screen-marker .markerIcon16x16 {
+    width: 16px;
+    height: 16px;
+}
+
+.modelmap-screen-marker .markerIcon8x8 {
+    width: 8px;
+    height: 8px;
+}
+
+.modelmap-screen-marker .markerIcon32x32 {
+    width: 32px;
+    height: 32px;
+}
+
+.modelmap-marker-control {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 360;
+    min-width: 180px;
+    max-width: 260px;
+    padding: 8px 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.modelmap-marker-control-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.modelmap-marker-control-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.modelmap-marker-control-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.modelmap-marker-control-row input {
+    margin: 0;
+}
+
+.modelmap-touch-controls {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    width: 168px;
+    height: 168px;
+    z-index: 355;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.modelmap-touch-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.modelmap-touch-button.modelmap-touch-active {
+    background: rgba(70, 130, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+.modelmap-touch-forward {
+    top: 0;
+    left: 52px;
+}
+
+.modelmap-touch-left {
+    top: 52px;
+    left: 0;
+}
+
+.modelmap-touch-right {
+    top: 52px;
+    right: 0;
+}
+
+.modelmap-touch-backward {
+    bottom: 0;
+    left: 52px;
+}
+
+.modelmap-hud {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 362;
+    min-width: 240px;
+    max-width: 360px;
+    padding: 8px 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .modelmap-marker-control {
+        min-width: 160px;
+        max-width: 220px;
+        font-size: 11px;
+    }
+
+    .modelmap-touch-controls {
+        width: 144px;
+        height: 144px;
+    }
+
+    .modelmap-touch-button {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .modelmap-touch-forward {
+        left: 44px;
+    }
+
+    .modelmap-touch-left,
+    .modelmap-touch-right {
+        top: 44px;
+    }
+
+    .modelmap-touch-backward {
+        left: 44px;
+    }
+
+    .modelmap-hud {
+        min-width: 220px;
+        max-width: 300px;
+        font-size: 11px;
+    }
+}
+
+.modelmap-hud-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.modelmap-hud-row.modelmap-hud-row-stack {
+    display: block;
+}
+
+.modelmap-hud-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.modelmap-hud-value {
+    font-weight: bold;
+    text-align: right;
+}
+
+.modelmap-hud-row.modelmap-hud-row-stack .modelmap-hud-value {
+    display: block;
+    margin-top: 2px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
 /* Map Controls */
 .gmnoprint{
     margin-top:-75px;
